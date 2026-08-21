@@ -1,0 +1,47 @@
+# Build baseline
+
+Official upstream recipe:
+
+    latexmk -pdf -pdflatex="xelatex -shell-escape -interaction=nonstopmode %O %S" Al-jabr-1
+
+Upstream documents XeLaTeX/xeCJK, latexmk, xindy, biber, texlive-science,
+Fandol, TeX Gyre Heros, and Noto Sans CJK SC. It does not lock the TeX
+distribution, package versions, fonts, build date, or pgfplots version.
+Therefore it is a functional recipe, not a byte-reproducible specification.
+
+Windows replay on 2026-08-21 required a task-local portability shim:
+
+- local Noto CJK font paths instead of unavailable system font names;
+- makeindex in place of a failing MiKTeX xindy invocation;
+- three build-only symbol-index normalization fixes for F_q and Z_p.
+
+The replay completed successfully:
+
+- Local witness: `build/upstream-functional-replay/Al-jabr-1.pdf`
+- 446 pages; 3,646,137 bytes
+- SHA-256 80ebb3bc2d8f9864fd0ff6cbfbbe0c3585c861d84cd81b1fe5f506c104ca1261
+- Producer: MiKTeX-dvipdfmx (20260404)
+- Untagged; unencrypted
+- Log: 104,361 bytes, SHA-256
+  2f1c38b3dc04069918e896e70f276120f07ec6dd4f2a67aaf2166470f9f0ebaa
+
+This proves functional closure only. The one-page difference from the official
+445-page PDF is a reflow/toolchain difference and remains an explicit adverse
+condition. Before final publication, freeze a portable task-local build,
+static edition date, font hashes, index procedure, and visual comparison.
+
+## Admitted Unit 001 build
+
+`scripts/build_unit_001.ps1` supplies the portable unit build: XeLaTeX with
+shell escape disabled, Biber, MakeIndex, and three convergence passes. It pins
+`SOURCE_DATE_EPOCH=1784878369`, uses the task-local Noto font closure, and the
+cover uses PGF seed `20260821`.
+
+The admitted reader is `artifacts/unit-001-pendahuluan.pdf`: 21 pages, 199,917
+bytes, SHA-256
+`c74ce05494e07cb55e70186f391227d62d7f7da7c984788b9415cefb54083d5d`.
+It has no TeX error, undefined citation/reference, duplicate destination, or
+missing-character warning. MuPDF and Poppler rendered all 21 pages; all pages
+were inspected. Two independent clean builds produced 21/21 pairwise
+pixel-identical MuPDF pages. Their PDF byte hashes differed slightly because
+of non-visible XeTeX serialization, so bit-identical containers are not claimed.

@@ -1,0 +1,64 @@
+entity_type,id,stable_key,parent_id,order,label_id,status
+build_surface,urn:uuid:1f162bae-f101-54ee-90d9-8603adedf24f,build-surface/unit-001-pdf,urn:uuid:d89144e1-3e29-5650-aa43-e1e0f12633b6,,unit-001-pdf,pass
+citation,urn:uuid:f7f72cac-957a-598f-957c-6348e95ee191,citation/bou-alg1,urn:uuid:9e2cf2f1-0b2d-5821-9326-7a1253d00305,,Bou-Alg1,admitted:admitted
+citation,urn:uuid:00217811-4480-5b66-beb2-447d22b800f3,citation/bou-alg2,urn:uuid:9e2cf2f1-0b2d-5821-9326-7a1253d00305,,Bou-Alg2,admitted:admitted
+citation,urn:uuid:7bf31283-1e5f-5bb4-8f7f-e6b9f654a87a,citation/dn00,urn:uuid:9e2cf2f1-0b2d-5821-9326-7a1253d00305,,DN00,admitted:admitted
+citation,urn:uuid:bf1c3a3d-ac22-5287-af21-73b447182df7,citation/ja85,urn:uuid:9e2cf2f1-0b2d-5821-9326-7a1253d00305,,Ja85,admitted:admitted
+citation,urn:uuid:5ad62d89-0e41-5d80-a443-739d387dbdfe,citation/ja89,urn:uuid:9e2cf2f1-0b2d-5821-9326-7a1253d00305,,Ja89,admitted:admitted
+citation,urn:uuid:9257f496-677a-5164-93ea-7038300c59c9,citation/lang02,urn:uuid:9e2cf2f1-0b2d-5821-9326-7a1253d00305,,Lang02,admitted:admitted
+citation,urn:uuid:0f20a28e-0313-5d59-81d0-9954873c95e5,citation/ml98,urn:uuid:9e2cf2f1-0b2d-5821-9326-7a1253d00305,,ML98,admitted:admitted
+citation,urn:uuid:0c9920b1-d13b-5227-8302-fe853aa38f3d,citation/vdw1,urn:uuid:9e2cf2f1-0b2d-5821-9326-7a1253d00305,,vdW1,admitted:admitted
+citation,urn:uuid:efd2f324-0d9d-5279-abe1-736fcb2249db,citation/vdw2,urn:uuid:9e2cf2f1-0b2d-5821-9326-7a1253d00305,,vdW2,admitted:admitted
+citation,urn:uuid:e20ade66-c8b6-5d3d-9669-8df04b202f5a,citation/xi16,urn:uuid:542ad815-ed88-5a2a-9832-f5e54c103646,,Xi16,admitted:admitted
+citation,urn:uuid:95717bb6-5d74-5d12-9c4f-35d821cf4cbe,citation/xi18,urn:uuid:542ad815-ed88-5a2a-9832-f5e54c103646,,Xi18,admitted:admitted
+citation,urn:uuid:21f50f3d-6566-5881-8e83-ad569a706988,citation/zg,urn:uuid:8e2bc79c-87f7-5693-9f02-1b57778a1bef,,ZG,admitted:admitted
+citation,urn:uuid:d655bd0e-2e00-53c0-baf1-1804ae735200,citation/zhr,urn:uuid:9e2cf2f1-0b2d-5821-9326-7a1253d00305,,ZHR,admitted:admitted
+concept,urn:uuid:ed2acba4-26ec-51d1-9717-25936eed001e,concept/algebraic-structure,,,struktur aljabar,admitted:admitted
+concept,urn:uuid:384d63bc-a442-50ef-a7db-4b6cd053888f,concept/category,,,kategori,admitted:admitted
+concept,urn:uuid:0fce79e8-20d5-5f66-9a39-e23d04ce3169,concept/commutative-diagram,,,diagram komutatif,admitted:admitted
+concept,urn:uuid:4a2460a0-df05-55b1-aefe-7c5a2fabdf30,concept/field,,,medan,admitted:admitted
+concept,urn:uuid:bebc06eb-5535-546b-afc8-082aec1de0ab,concept/galois-theory,,,teori Galois,admitted:admitted
+concept,urn:uuid:77854c19-0ff8-5138-94bd-20553f53f88e,concept/group,,,grup,admitted:admitted
+concept,urn:uuid:0b49866d-d6f7-5788-99ee-75492a41e628,concept/homomorphism,,,homomorfisme,admitted:admitted
+concept,urn:uuid:775ba7e4-3cbe-5f92-ab3b-a75e61207b0f,concept/isomorphism,,,isomorfisme,admitted:admitted
+concept,urn:uuid:66494c2e-8bf1-5a0c-ae91-d7b8de698a01,concept/mathematical-notation,,,notasi matematika,admitted:admitted
+concept,urn:uuid:35f8c060-3da8-55d9-bcfc-c5157ea40669,concept/module,,,modul,admitted:admitted
+concept,urn:uuid:168a49b3-f968-5460-883e-75f186b10488,concept/monoidal-category,,,kategori monoidal,admitted:admitted
+concept,urn:uuid:304e676e-9029-5814-8bcc-b9d28a89fc0e,concept/ring,,,gelanggang,admitted:admitted
+concept,urn:uuid:cab6f5ea-c892-5176-8877-4f4a4fe94b79,concept/set-theory,,,teori himpunan,admitted:admitted
+concept,urn:uuid:bcc204c3-ea84-5a39-a9fb-e1524dd050d7,concept/valuation,,,valuasi,admitted:admitted
+course,urn:uuid:a5f3ad58-ce3c-5f5f-b581-1f842ae79192,course/o013,urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78,,Graduate Algebra,admitted:admitted
+diagram,urn:uuid:4c7e8510-0b18-5919-913b-aa9bb5e57755,diagram/commutative-grid,urn:uuid:3a6bdd48-d768-54e8-8dc7-36f39b99aebf,5,commutative-grid,admitted:admitted
+diagram,urn:uuid:f5d70e5e-8d4a-5a72-85fc-296edd8212c6,diagram/commutative-triangle,urn:uuid:3a6bdd48-d768-54e8-8dc7-36f39b99aebf,4,commutative-triangle,admitted:admitted
+diagram,urn:uuid:be375237-2aba-51c1-9901-d91929819cef,diagram/inverse-homomorphisms,urn:uuid:3a6bdd48-d768-54e8-8dc7-36f39b99aebf,3,inverse-homomorphisms,admitted:admitted
+diagram,urn:uuid:c26c5563-a8d8-59f3-a3ce-10dbf207742a,diagram/matrix-indexing,urn:uuid:8e2bc79c-87f7-5693-9f02-1b57778a1bef,2,matrix-indexing,admitted:admitted
+diagram,urn:uuid:4de6ef7c-1a1f-5d77-8bc7-59351fe113af,diagram/number-system-inclusions,urn:uuid:8e2bc79c-87f7-5693-9f02-1b57778a1bef,1,number-system-inclusions,admitted:admitted
+diagram,urn:uuid:7a8f64cc-8a4c-55f1-adfa-20ed119925a2,diagram/square-subdiagram,urn:uuid:3a6bdd48-d768-54e8-8dc7-36f39b99aebf,7,square-subdiagram,admitted:admitted
+diagram,urn:uuid:59a233fd-f2d9-5a3c-9e1b-4e104d392bbb,diagram/triangle-subdiagram,urn:uuid:3a6bdd48-d768-54e8-8dc7-36f39b99aebf,6,triangle-subdiagram,admitted:admitted
+edition,urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49,edition/wenweili/aljabr-1/c4f7a01f68f5f407906b4b970640cddbbad85f6b,urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397,,c4f7a01f68f5f407906b4b970640cddbbad85f6b,admitted:admitted
+index_entry,urn:uuid:aa9927dc-26f8-5914-9a1e-092c9ec2156e,index-entry/well-defined,urn:uuid:8e2bc79c-87f7-5693-9f02-1b57778a1bef,1,well-defined,admitted:admitted
+prerequisite,urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7,prerequisite/basic-mathematical-literacy,,,kematangan matematika dasar,admitted:admitted
+prerequisite,urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f,prerequisite/cauchy-sequences-and-completeness,,,barisan Cauchy dan kelengkapan,admitted:admitted
+prerequisite,urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee,prerequisite/elementary-number-theory,,,teori bilangan elementer,admitted:admitted
+prerequisite,urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4,prerequisite/elementary-set-theory,,,teori himpunan elementer,admitted:admitted
+prerequisite,urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec,prerequisite/linear-transformations,,,transformasi linear,admitted:admitted
+prerequisite,urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7,prerequisite/mathematical-logic,,,bahasa logika dan penalaran,admitted:admitted
+prerequisite,urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288,prerequisite/matrices,,,matriks,admitted:admitted
+prerequisite,urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8,prerequisite/permutations-and-symmetric-groups,,,permutasi dan grup simetris,admitted:admitted
+prerequisite,urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96,prerequisite/point-set-topology,,,topologi himpunan titik elementer,admitted:admitted
+prerequisite,urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14,prerequisite/polynomials,,,polinom,admitted:admitted
+prerequisite,urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f,prerequisite/real-analysis-basics,,,dasar-dasar analisis real,admitted:admitted
+prerequisite,urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396,prerequisite/vector-spaces,,,ruang vektor,admitted:admitted
+program,urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78,program/open-mathematics-curriculum/2026,,,Open Mathematics Curriculum,admitted:admitted
+qa_event,urn:uuid:f910c21e-b564-5b09-9114-1b5e75893976,qa/unit-001/backend-binding,urn:uuid:d89144e1-3e29-5650-aa43-e1e0f12633b6,,backend-binding,pass
+resource,urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397,resource/wenweili/aljabr-1,,,"Metode Aljabar, Jilid 1: Arsitektur Dasar",admitted:admitted
+rights,urn:uuid:10faf5cd-990f-5850-87b4-26922b062485,rights/ajbook-fragment-cc-by-sa-3.0,,,AJbook.cls DeclareSourcemap fragment,applies
+rights,urn:uuid:e18339ae-66cd-5304-b544-b220dd41380d,rights/lanzhou-cc-by-sa-3.0,,,Lanzhou.png,retained_not_used_by_unit
+rights,urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430,rights/noto-fonts-ofl-1.1,,,Noto Sans CJK SC and Noto Serif CJK SC fonts,applies
+rights,urn:uuid:0baf6c47-021d-5310-9475-81519e710250,rights/principal-cc-by-4.0,,,"Principal text, source, PDF, and Indonesian translation",applies
+section,urn:uuid:3a6bdd48-d768-54e8-8dc7-36f39b99aebf,unit/prelude/section/common-algebraic-structures,urn:uuid:d89144e1-3e29-5650-aa43-e1e0f12633b6,5,Struktur aljabar yang umum,admitted:admitted
+section,urn:uuid:d8ad3a18-6e66-5779-915e-137ea4c2e7e5,unit/prelude/section/contents-summary,urn:uuid:d89144e1-3e29-5650-aa43-e1e0f12633b6,3,Ringkasan isi,admitted:admitted
+section,urn:uuid:8e2bc79c-87f7-5693-9f02-1b57778a1bef,unit/prelude/section/conventions,urn:uuid:d89144e1-3e29-5650-aa43-e1e0f12633b6,4,Konvensi,admitted:admitted
+section,urn:uuid:9e2cf2f1-0b2d-5821-9326-7a1253d00305,unit/prelude/section/overview,urn:uuid:d89144e1-3e29-5650-aa43-e1e0f12633b6,1,Gambaran umum,admitted:admitted
+section,urn:uuid:542ad815-ed88-5a2a-9832-f5e54c103646,unit/prelude/section/prerequisites,urn:uuid:d89144e1-3e29-5650-aa43-e1e0f12633b6,2,Prasyarat,admitted:admitted
+unit,urn:uuid:d89144e1-3e29-5650-aa43-e1e0f12633b6,unit/prelude,urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49,1,Pendahuluan,admitted:admitted
