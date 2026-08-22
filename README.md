@@ -22,6 +22,8 @@ Status saat ini: **Pendahuluan, seluruh Bab 1, serta pengantar Bab 2 telah diter
 
 Versi preservasi `0.2.0` yang memuat kedelapan reader, sumber yang dapat dibangun, backend modular, bukti ringkas, dan manifest hash tersedia pada [Zenodo DOI 10.5281/zenodo.22060005](https://doi.org/10.5281/zenodo.22060005). Seluruh pembaruan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat.
 
+Catatan penemuan metadata saja tersedia pada [Figshare DOI 10.6084/m9.figshare.33314766.v1](https://doi.org/10.6084/m9.figshare.33314766.v1). Catatan itu tidak menyalin berkas karya: CC0 berlaku hanya pada metadata Figshare, sedangkan berkas Zenodo mempertahankan hak per komponennya.
+
 ## Identitas sumber
 
 - Karya: Wen-Wei Li, *Methods in Algebra, Volume 1*
