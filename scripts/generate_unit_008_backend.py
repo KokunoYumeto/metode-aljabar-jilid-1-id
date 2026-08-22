@@ -43,7 +43,7 @@ FINAL_LOG = "qa/UNIT_008_BUILD_FINAL.log"
 SPAN_START = 1
 SPAN_END = 37
 EXPECTED_SOURCE_SPAN_SHA256 = "30e31fc7ba682acb3291cfa37cc29ad0567b5f8b7955b974713fc565d62a9874"
-EXPECTED_TARGET_SPAN_SHA256 = "c48ee98fc25e1dab9c581b618b492a4d2e40930c066b69c686b2c13bef5a7471"
+EXPECTED_TARGET_SPAN_SHA256 = "5a9bf7812b024dbed7b5b2fb69df14a98a417e5db8a633573fecf9f43733c9a1"
 
 REQUIRED_FINAL_INPUTS = (
     ARTIFACT,
@@ -376,11 +376,11 @@ def main() -> None:
         ("concept/category-object", "对象", "objek kategori"),
         ("concept/morphism", "态射", "morfisme"),
         ("concept/arrow-notation", "箭头记号", "notasi panah"),
-        ("concept/functor", "函子", "funktor"),
+        ("concept/functor", "函子", "fungtor"),
         ("concept/natural-transformation", "自然变换", "transformasi natural"),
         ("concept/category-equivalence", "范畴等价", "ekuivalensi kategori"),
         ("concept/structure-preserving-map", "保结构映射", "peta pelestari struktur"),
-        ("concept/homology-functor", "同调群函子", "funktor grup homologi"),
+        ("concept/homology-functor", "同调群函子", "fungtor grup homologi"),
         ("concept/commutative-diagram", "交换图表", "diagram komutatif"),
         ("concept/universal-property", "泛性质", "sifat universal"),
         ("concept/natural-map", "自然映射", "peta natural"),
@@ -388,7 +388,7 @@ def main() -> None:
         ("concept/monoidal-category", "幺半范畴", "kategori monoidal"),
         ("concept/product", "积", "produk"),
         ("concept/coproduct", "余积", "koproduk"),
-        ("concept/adjoint-functor", "伴随函子", "funktor adjoin"),
+        ("concept/adjoint-functor", "伴随函子", "fungtor adjoin"),
         ("concept/limit-category-theory", "极限", "limit dalam teori kategori"),
         ("concept/grothendieck-universe", "Grothendieck 宇宙", "semesta Grothendieck"),
         ("concept/category-size", "范畴与集合的大小", "ukuran himpunan dalam teori kategori"),

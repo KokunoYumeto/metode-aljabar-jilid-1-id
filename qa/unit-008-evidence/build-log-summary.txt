@@ -1,21 +1,20 @@
 Unit 008 admitted build summary
 Date: 2026-08-22
+QA boundary: Indonesian terminology verification correction
 Frozen source range: chapter2.tex lines 1-37
 Driver: repo/source/unit-008-bab-2-pengantar-teori-kategori.tex
-Build command: pwsh -NoProfile -File scripts/build_unit_008.ps1 -OutputDirectory build/unit-008-final-r5
+Build command: pwsh -NoProfile -File scripts/build_unit_008.ps1 -OutputDirectory build/unit-008-termqa-b
 Admitted artifact: artifacts/unit-008-bab-2-pengantar-teori-kategori.pdf
 PDF pages: 5
-PDF bytes: 100795
-PDF SHA-256: d4234cb0080a60ad06fcb004d4d75e7daea85b3846bbbd05f0261b03e9f66258
+PDF bytes: 100805
+PDF SHA-256: 0db18bfbae3ffd2194447781a77effb4f57f8bd8521baa3acb334b474f0773cd
 Full build log: qa/UNIT_008_BUILD_FINAL.log
 Build-log bytes: 80397
-Build-log SHA-256: 8db2b6b52b77654f17527dd0f6d096cd70171df52605c085f49dd7ce8638aa47
+Build-log SHA-256: d0f0da38335af5520cf7f74e37ddb9734242d7b1beaa24007f211259a4a7ab2d
 
-Clean comparison build: build/unit-008-final-r6-replay/unit-008-bab-2-pengantar-teori-kategori.pdf
-Comparison PDF bytes: 100814
-Comparison PDF SHA-256: 458586404b5689e629d51fbb6bee937f2f953fbf5f4fd2907c84912dda0e399b
-Comparison log bytes: 80439
-Comparison log SHA-256: ebd0e51a4e071424d83c65f969398a613320a371390fba20140e8b5c3479e408
+Clean comparison build: build/unit-008-termqa-a/unit-008-bab-2-pengantar-teori-kategori.pdf
+Comparison PDF bytes: 100804
+Comparison PDF SHA-256: 61d0b2aff153a1893a9c02df7148eb3958f3d0a72fb15d485f65edd1e3889375
 
 TeX errors: 0
 Undefined references/citations: 0
@@ -31,43 +30,37 @@ reference witness supplies the printed numbers for sec:limits,
 sec:Grot-universe, and prop:preorder-complete while an empty external-document
 URL prevents false links to a PDF that this standalone reader does not ship.
 
-Rendered-content replay: pass. The admitted and clean-comparison XeTeX PDF
-containers are not byte-identical, but Poppler and MuPDF each produced five
-pairwise byte-identical 144-dpi page PNGs. Extracted semantic text is also
-byte-identical.
+Rendered-content replay: pass. The two XeTeX PDF containers are not
+byte-identical, but Poppler and MuPDF each produced five pairwise byte-identical
+144-dpi page PNGs. Extracted semantic text is pairwise byte-identical, SHA-256
+07112f4a0b684ca5e203c643b39555ed810a6893413b1bc8c7053e6c9d6de44c.
 
 Poppler page SHA-256 values:
 1 804c8dcb3ffbe64b9f498a7412ec0d580dab280b1090caf0874c2bdd98fd895a
 2 ed9c0d56949eb0a8435b81a966574c5edf81130e50b5d564edceddc753ee8799
-3 6e10f12c955fa3b8d6305f529e9cc87d4724755dee63e661fdaac6ed428f0fc0
-4 032e021305cc61c8c6c4313d12f42d5860dceaf6cb14e708d6d011b050290ef8
+3 c3c62812596530a0a81dbdb8cb1cb848b4dc0a957124e5a58e4be1e3dc52fe9b
+4 041ceaa5656132bb9013a2b551a7ae37b581937d610b66fe42ce7be106b1d04d
 5 1e9bb68f119c6c0084c385abb2d6c6cc628b17f2d6af7a326818461cc452d19a
 
 MuPDF page SHA-256 values:
 1 de1dfb8ee95775d90a9d4542f29dfa00e996c303fa02898d4142d4239b738a16
 2 fc7204bc626d76914c76bc83472a1d0889d2cb902abb773459ec709fd5d7ab26
-3 d9d4d3725528cb08a641a392610609b21530f5b532e702822afe499ba175f6f5
-4 b2ccd98daf1d53f71562504f0c7d23dbee99af7ef8f08e9722cb30dfa034ff8c
+3 894c31c447f5a319adde9c0cad09c410c1ed6cd789d25895bdd0dd0c2ed3d3f2
+4 3d489c395e48ff61b88c89aa57952bd870b7a99338326b36e1b8d8808cae6b84
 5 6a35dd46badf0af4fa7e0567462b89bb6d68b13f427e6554bc1a8f1807fba49b
 
-Visual review: all five pages were inspected in both Poppler and MuPDF. The
-cover and rights notice are complete; the chapter opening uses the full first
-text page; the comparison table fills the available text width and remains
-legible; the reading-guidance box stays intact on one page; bibliography role
-labels are Indonesian; and there is no clipping, collision, blank page,
-missing glyph, or unreadable mathematical content.
+Visual review: all five pages were inspected in both renderers. The cover and
+rights notice are complete; the chapter opening uses the full first text page;
+the comparison table fills the available text width and remains legible; the
+reading-guidance box stays intact; and there is no clipping, collision, blank
+page, missing glyph, or unreadable mathematical content.
 
 PDF structure: unencrypted PDF 1.7; catalog language id-ID; five nonblank
 pages; two outline entries; ten named destinations; eight internal GoTo and
 seven intentional URI annotations; no form, widget, embedded file, JavaScript,
-GoToR, or Launch action; ordinary page-fit OpenAction; zero Han, replacement,
-or NUL characters in extracted text. With `pdftotext -layout -enc UTF-8`, the
-extracted-text SHA-256 is
-39d50390e769e20858cbe374cf1080fdb5820c1d9ae0c5b03c5119455f304701.
+GoToR, or Launch action; ordinary page-fit OpenAction. All 21 fonts are embedded
+and subset; only CMSY10 lacks a ToUnicode map. The inherited PDF is untagged.
 
-Fonts: pdffonts reports 21/21 fonts embedded and subset. Twenty expose a
-ToUnicode mapping; the sole exception is the subset CMSY10 mathematics font.
-Indonesian prose and mathematics extract coherently and render correctly in
-both engines. Accessibility limitation: the inherited source pipeline still
-emits an untagged PDF; correct id-ID metadata and a text-native table do not
-constitute tagged-PDF conformance.
+Terminology change: every target funktor surface and PDF keyword is now fungtor,
+as attested by the recorded Indonesian primary sources; formulas, identifiers,
+source topology, and pagination are unchanged.

@@ -133,11 +133,11 @@
     },
     "target_binding": {
       "path": "repo/source/chapter2.tex",
-      "bytes": 141271,
-      "sha256": "d809e0f60420f6c19194b45734d6c042f2315619803c58119f20f68f09b9538a",
+      "bytes": 145511,
+      "sha256": "09231954639e6c12b1dd3107e9e4ff5af6113de1970010a49f23dc2ec8fb5f7b",
       "line_start": 1,
       "line_end": 37,
-      "span_sha256": "c48ee98fc25e1dab9c581b618b492a4d2e40930c066b69c686b2c13bef5a7471",
+      "span_sha256": "5a9bf7812b024dbed7b5b2fb69df14a98a417e5db8a633573fecf9f43733c9a1",
       "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
     },
     "section_ids": [
@@ -247,11 +247,11 @@
       },
       "target_binding": {
         "path": "repo/source/chapter2.tex",
-        "bytes": 141271,
-        "sha256": "d809e0f60420f6c19194b45734d6c042f2315619803c58119f20f68f09b9538a",
+        "bytes": 145511,
+        "sha256": "09231954639e6c12b1dd3107e9e4ff5af6113de1970010a49f23dc2ec8fb5f7b",
         "line_start": 1,
         "line_end": 37,
-        "span_sha256": "c48ee98fc25e1dab9c581b618b492a4d2e40930c066b69c686b2c13bef5a7471",
+        "span_sha256": "5a9bf7812b024dbed7b5b2fb69df14a98a417e5db8a633573fecf9f43733c9a1",
         "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
       },
       "concept_ids": [
@@ -368,7 +368,7 @@
         },
         {
           "language": "id-ID",
-          "text": "funktor"
+          "text": "fungtor"
         }
       ]
     },
@@ -428,7 +428,7 @@
         },
         {
           "language": "id-ID",
-          "text": "funktor grup homologi"
+          "text": "fungtor grup homologi"
         }
       ]
     },
@@ -548,7 +548,7 @@
         },
         {
           "language": "id-ID",
-          "text": "funktor adjoin"
+          "text": "fungtor adjoin"
         }
       ]
     },
@@ -1132,13 +1132,13 @@
       "artifact_path": "artifacts/unit-008-bab-2-pengantar-teori-kategori.pdf",
       "artifact_binding": {
         "path": "artifacts/unit-008-bab-2-pengantar-teori-kategori.pdf",
-        "bytes": 100795,
-        "sha256": "d4234cb0080a60ad06fcb004d4d75e7daea85b3846bbbd05f0261b03e9f66258"
+        "bytes": 100805,
+        "sha256": "0db18bfbae3ffd2194447781a77effb4f57f8bd8521baa3acb334b474f0773cd"
       },
       "log_binding": {
         "path": "qa/unit-008-evidence/build-log-summary.txt",
-        "bytes": 3764,
-        "sha256": "38554240cf6e0705432ba184bebe15aea80195496ad4e9794e5c0e42c46d7f4e"
+        "bytes": 3395,
+        "sha256": "8de6e045e57c1a41ff8b167897652374bb95c0ac6eb3714dfc58d72ceda8258f"
       },
       "build_script": {
         "path": "scripts/build_unit_008.ps1",
@@ -1150,7 +1150,7 @@
       "driver": {
         "path": "repo/source/unit-008-bab-2-pengantar-teori-kategori.tex",
         "bytes": 5110,
-        "sha256": "b433d175c2e6fec24fa8df7ab75067eb44c06983c3135d49b641db68eb54a60c"
+        "sha256": "d5cc67cd54869aabe619efa8c46f949f32df45e147dd9e8b0bebce2593436fe5"
       },
       "input_bindings": [
         {
@@ -1260,8 +1260,8 @@
       "visual_state": "pass",
       "witness_binding": {
         "path": "qa/UNIT_008_ADMISSION_20260822.md",
-        "bytes": 7686,
-        "sha256": "ef7bf91364afd75663aa8d9021f801160dce2a622b5dd82a42b9f897885a9aa1"
+        "bytes": 8052,
+        "sha256": "056cf03c173b6824d96af3e9b7e278576021fe420b17d17f9b7e005104624402"
       }
     }
   ]

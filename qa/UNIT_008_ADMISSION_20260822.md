@@ -10,8 +10,8 @@ Decision: admitted as the eighth independently buildable `id-ID` reader unit.
 - Upstream commit/tree: `c4f7a01f68f5f407906b4b970640cddbbad85f6b` / `0f9fd52748165ec89a85ba602ccb949a2ce04694`
 - Complete frozen `chapter2.tex`: 139,983 bytes; SHA-256 `56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840`.
 - Complete Chapter 2 introduction and reading-guidance boundary, lines 1-37: 3,659 bytes; SHA-256 `30e31fc7ba682acb3291cfa37cc29ad0567b5f8b7955b974713fc565d62a9874` under `sha256-utf8-lines-lf-v1`.
-- Current target `repo/source/chapter2.tex`: 141,271 bytes; SHA-256 `d809e0f60420f6c19194b45734d6c042f2315619803c58119f20f68f09b9538a`.
-- Indonesian target boundary, lines 1-37: 4,947 bytes; SHA-256 `c48ee98fc25e1dab9c581b618b492a4d2e40930c066b69c686b2c13bef5a7471` under `sha256-utf8-lines-lf-v1`.
+- Current target `repo/source/chapter2.tex`: 145,511 bytes; SHA-256 `09231954639e6c12b1dd3107e9e4ff5af6113de1970010a49f23dc2ec8fb5f7b`.
+- Indonesian target boundary, lines 1-37: 4,947 bytes; SHA-256 `5a9bf7812b024dbed7b5b2fb69df14a98a417e5db8a633573fecf9f43733c9a1` under `sha256-utf8-lines-lf-v1`.
 
 ## Translation, mathematics, and topology
 
@@ -27,14 +27,14 @@ Independent structural, mathematical, semantic, and Indonesian-language review f
 
 ## Exact admitted build
 
-- Driver: `repo/source/unit-008-bab-2-pengantar-teori-kategori.tex`, 5,110 bytes, SHA-256 `b433d175c2e6fec24fa8df7ab75067eb44c06983c3135d49b641db68eb54a60c`
+- Driver: `repo/source/unit-008-bab-2-pengantar-teori-kategori.tex`, 5,110 bytes, SHA-256 `d5cc67cd54869aabe619efa8c46f949f32df45e147dd9e8b0bebce2593436fe5`
 - Cover: `repo/source/coverpage-id-unit-008.tex`, 4,340 bytes, SHA-256 `7e3dc485dee2e3fac9e6c8e2fb180369814dd9923e71c211c551ff4b6a0e88ba`
 - Frozen cross-reference witness: `repo/source/unit-008-crossrefs.aux`, 371 bytes, SHA-256 `008786a603c7ab6e19af02e7632daf2ca2f310c1035c5f73616a510b5c66a541`
 - Build script: `scripts/build_unit_008.ps1`, 2,854 bytes, SHA-256 `9d5f1f1de9424a240d7487c89b605809ce3c8f1e2bd5d6f9ed94c6c52d3a43bb`
-- Backend generator: `scripts/generate_unit_008_backend.py`, 28,389 bytes, SHA-256 `7bc9a7e2a545f1ee898b2cfd3443a8bad7339b8f565dd4d1bb08dfba6709cc71`
-- Reader: `artifacts/unit-008-bab-2-pengantar-teori-kategori.pdf`, 5 pages, 100,795 bytes, SHA-256 `d4234cb0080a60ad06fcb004d4d75e7daea85b3846bbbd05f0261b03e9f66258`
-- Final log: `qa/UNIT_008_BUILD_FINAL.log`, 80,397 bytes, SHA-256 `8db2b6b52b77654f17527dd0f6d096cd70171df52605c085f49dd7ce8638aa47`
-- Clean comparison PDF: 100,814 bytes, SHA-256 `458586404b5689e629d51fbb6bee937f2f953fbf5f4fd2907c84912dda0e399b`; all five Poppler and all five MuPDF page PNGs and extracted text are pairwise identical to the admitted build.
+- Backend generator: `scripts/generate_unit_008_backend.py`, 28,389 bytes, SHA-256 `e12963a907bc84e95b2826e98be484642a55232a013326b5ea78cb1c4905f739`
+- Reader: `artifacts/unit-008-bab-2-pengantar-teori-kategori.pdf`, 5 pages, 100,805 bytes, SHA-256 `0db18bfbae3ffd2194447781a77effb4f57f8bd8521baa3acb334b474f0773cd`
+- Final log: `qa/UNIT_008_BUILD_FINAL.log`, 80,397 bytes, SHA-256 `d0f0da38335af5520cf7f74e37ddb9734242d7b1beaa24007f211259a4a7ab2d`
+- Clean comparison PDF: 100,804 bytes, SHA-256 `61d0b2aff153a1893a9c02df7148eb3958f3d0a72fb15d485f65edd1e3889375`; all five Poppler and all five MuPDF page PNGs and extracted text are pairwise identical to the admitted build.
 
 The final log has zero TeX errors, undefined citations or references, duplicate destinations, missing characters, or overfull boxes. One inherited underfull cover-table alignment is visually acceptable. Three hyperref warnings are the deliberate consequence of suppressing false external links while retaining frozen reference numbers. Deterministic rendered pages and semantic text equality are established; bit-identical XeTeX PDF containers across output directories are not claimed.
 
@@ -53,6 +53,13 @@ The build gate cross-checks the live artifact byte count and SHA-256, live final
 ## Rights and provenance
 
 The source text and Indonesian translation are handled under CC BY 4.0 with Wen-Wei Li credited and independent, non-endorsed derivative status stated. The attributed `AJbook.cls` fragment remains CC BY-SA 3.0 and bundled Noto fonts remain OFL 1.1. No component rights are flattened.
+
+The 2026-08-22 terminology QA changed the attested technical term `funktor` to
+`fungtor` throughout this unit, its PDF keyword, and backend labels. The
+decision and primary evidence are recorded in
+`qa/TERMINOLOGY_QA_INDONESIAN_CATEGORY_ALGEBRA_20260822.md`. Mathematics,
+identifiers, topology, and pagination are unchanged. Model: OpenAI Codex
+gpt-5.6-sol, Ultra.
 
 ## Cursor and publication state
 

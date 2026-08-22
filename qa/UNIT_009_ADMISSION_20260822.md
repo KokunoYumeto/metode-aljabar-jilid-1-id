@@ -10,8 +10,8 @@ Decision: admitted as the ninth independently buildable `id-ID` reader unit.
 - Upstream commit/tree: `c4f7a01f68f5f407906b4b970640cddbbad85f6b` / `0f9fd52748165ec89a85ba602ccb949a2ce04694`
 - Complete frozen `chapter2.tex`: 139,983 bytes; SHA-256 `56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840`.
 - Complete Section 2.1 boundary, lines 39-198: 16,442 bytes; SHA-256 `1fa6ecc8f3ec477611f05ddd07297f9e115b7bb118e5fd5be4b7981cde7747ae` under `sha256-utf8-lines-lf-v1`.
-- Current target `repo/source/chapter2.tex`: 145,511 bytes; SHA-256 `d25c97dc3f4535d46db1d355ee872079f647bf24bda5e53a466fb853ad91f025`.
-- Indonesian target boundary, lines 39-198: 20,682 bytes; SHA-256 `c53172a8a6f845a79a07ff51dee7c52433f79912e7872d21ebe832627a5331e7` under `sha256-utf8-lines-lf-v1`.
+- Current target `repo/source/chapter2.tex`: 145,511 bytes; SHA-256 `09231954639e6c12b1dd3107e9e4ff5af6113de1970010a49f23dc2ec8fb5f7b`.
+- Indonesian target boundary, lines 39-198: 20,682 bytes; SHA-256 `b20dfbefb909ffe91c4857df6c183dffbdd7fd2c316156f5d7d9274efa3b41e2` under `sha256-utf8-lines-lf-v1`.
 
 ## Translation, mathematics, and topology
 
@@ -71,10 +71,10 @@ an absent companion PDF.
 - Frozen cross-reference witness: `repo/source/unit-009-crossrefs.aux`, 554 bytes, SHA-256 `95ec27bcb09377a1a90f1d956bda68242191b53f50db2a091d8e42c1d9fcb755`
 - Build script: `scripts/build_unit_009.ps1`, 2,851 bytes, SHA-256 `8242117c53dd3ad9176416311ef3953ca33e1baaf0ed553ed777f0d808639add`
 - Structural gate: `scripts/check_unit_009_structure.py`, 10,719 bytes, SHA-256 `fc463ca895eca1ae783c74cba1ff1f68dcfbe5a1f30f4cc25596a0ff24701932`
-- Backend generator: `scripts/generate_unit_009_backend.py`, 41,880 bytes, SHA-256 `a0dfd98f5836e932fe7478f7ca861002ffedb14b3abf5ee4c82a0843b7830870`
-- Reader: `artifacts/unit-009-bab-2-kategori-dan-morfisme.pdf`, 13 pages, 143,177 bytes, SHA-256 `6928daf6df3063ec616dfaef1942c27e545ff9fc10135c02ea95591f3a2eed8f`
-- Final log: `qa/UNIT_009_BUILD_FINAL.log`, 85,072 bytes, SHA-256 `fbab8f8be02ca80b63b7d00c8fa31b89f45fe2fb6ca6eb0b21ebec4994d1ec6d`
-- Clean comparison PDF: 143,186 bytes, SHA-256 `53da461f1841a2e7d2fcfe7d6afb9168d68d0e86ab008fa68f9e8af02fb429d9`; all thirteen Poppler page PNGs and extracted text are pairwise identical to the admitted build.
+- Backend generator: `scripts/generate_unit_009_backend.py`, 41,880 bytes, SHA-256 `3e21c8738fdbcea91f6b06aeb59737361f34fe60b64904387ef2ac4f6d9a1d70`
+- Reader: `artifacts/unit-009-bab-2-kategori-dan-morfisme.pdf`, 13 pages, 143,207 bytes, SHA-256 `1a71610ba997348ce22db69944fec3529d9d6e6c2ef6ece48faa30df90ac5ce6`
+- Final log: `qa/UNIT_009_BUILD_FINAL.log`, 85,064 bytes, SHA-256 `523242a89f71a31d03a3bd753e125a4dac4bb7e79b4a3e93fafb0cd122c689bf`
+- Clean comparison PDF: 143,192 bytes, SHA-256 `ea4f2845bdb0b3dc04aac01fe6fd1b15a2227e69b0ae0c7f69a1496d479e777b`; all thirteen Poppler and all thirteen MuPDF page PNGs and extracted text are pairwise identical to the admitted build.
 
 The final log has zero TeX errors, undefined citations or references, duplicate
 destinations, missing characters, or overfull boxes. One inherited underfull
@@ -115,6 +115,13 @@ The source text and Indonesian translation are handled under CC BY 4.0 with
 Wen-Wei Li credited and independent, non-endorsed derivative status stated.
 The attributed `AJbook.cls` fragment remains CC BY-SA 3.0 and bundled Noto
 fonts remain OFL 1.1. No component rights are flattened.
+
+The 2026-08-22 terminology QA changed the attested technical term `funktor` to
+`fungtor` in this unit. The primary evidence and keep/change adjudications are
+recorded in `qa/TERMINOLOGY_QA_INDONESIAN_CATEGORY_ALGEBRA_20260822.md`.
+The structural gate and all-page QA were rerun; mathematics, identifiers,
+topology, and pagination are unchanged. Model: OpenAI Codex gpt-5.6-sol,
+Ultra.
 
 ## Cursor and publication state
 

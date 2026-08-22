@@ -1,13 +1,17 @@
 Unit 001 admitted build log summary
-Date: 2026-08-21
+Date: 2026-08-22
+QA boundary: Indonesian terminology verification correction
 Toolchain: MiKTeX 26.5 XeLaTeX; Biber 2.21; MakeIndex; three final XeLaTeX convergence passes
 Shell escape: disabled
 SOURCE_DATE_EPOCH: 1784878369
+Build command: pwsh -NoProfile -File scripts/build_unit_001.ps1 -OutputDirectory build/unit-001-termqa-b
 PDF pages: 21
-PDF bytes: 199917
-PDF SHA-256: c74ce05494e07cb55e70186f391227d62d7f7da7c984788b9415cefb54083d5d
-Raw final log bytes: 85344
-Raw final log SHA-256: 2e4bd66d60ac5e4dac63d4844d6359f8aa93e665d554208cd43fc9654bd254de
+PDF bytes: 199926
+PDF SHA-256: b3fca2af76b793a19877ffc822d6ec89c2494641f7e1dfa468b158c7bec30a3e
+Raw final log bytes: 87018
+Raw final log SHA-256: 923d8b61f5e47da1cfba3fc4167fa876128eb7417334eb6fc3e75b52aa88a292
+Comparison PDF bytes: 199925
+Comparison PDF SHA-256: 20fbb6c3db8f66a176315bc47fcf48ff768169cc7a2fac91af2950a9d11eca0b
 TeX errors: 0
 Undefined control sequences: 0
 Undefined citations: 0
@@ -17,4 +21,7 @@ Missing characters: 0
 Overfull hbox notices: 13
 Largest overfull hbox: 18.76993 pt, bibliography entry, visually contained
 Suppressed empty-target link notices: 5, intentional unit-only cross-reference behavior
+Rendered-content replay: 21/21 Poppler pages and 21/21 MuPDF pages pairwise byte-identical; extracted text pairwise identical, SHA-256 3366ec368c7528b5b668c44533ae4473e0aebac702d39565d718f8ae9a26bb64.
+Visual review: all 21 final pages inspected. No clipping, collision, blank content, broken diagram, unreadable table, or pagination defect. MuPDF is the authoritative CJK visual witness because this Poppler installation lacks the Adobe-GB1 CMap.
+Terminology change: funktor -> fungtor and the lone chapter-overview transformasi alami -> transformasi natural; formulas, identifiers, source topology, and pagination unchanged.
 Raw build log retained locally; this portable summary omits machine-specific absolute paths.

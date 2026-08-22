@@ -38,7 +38,7 @@ Checkpoint pembaca yang sama tersedia sebagai item karya publik pada [Figshare D
 Edisi ini dibuat secara independen dan tidak disahkan oleh penulis atau penerbit sumber.
 
 Catatan provenance: penerjemahan, penataan ulang digital, QA, dan backend edisi
-ini dikerjakan oleh **OpenAI Codex gpt-5.6-sol, Ultra**, atas instruksi pengguna.
+ini dikerjakan atas instruksi pengguna. Model: OpenAI Codex gpt-5.6-sol, Ultra.
 Keterangan ini tidak menggantikan kredit Wen-Wei Li sebagai penulis karya
 sumber maupun kredit dan lisensi setiap komponen yang dipertahankan di bawah.
 
@@ -63,8 +63,8 @@ Skrip menjalankan XeLaTeX tanpa shell escape, indeks dan bibliografi yang dibutu
 Artefak Unit 1 yang diterima:
 
 - 21 halaman
-- 199.917 byte
-- SHA-256 `c74ce05494e07cb55e70186f391227d62d7f7da7c984788b9415cefb54083d5d`
+- 199.926 byte
+- SHA-256 `b3fca2af76b793a19877ffc822d6ec89c2494641f7e1dfa468b158c7bec30a3e`
 - bahasa PDF `id-ID`
 - 4 akar outline dan 36 destinasi bernama
 - tidak ada galat TeX, sitasi/rujukan tak terdefinisi, destinasi ganda, atau karakter hilang
@@ -131,23 +131,25 @@ Artefak Unit 7 yang diterima:
 Artefak Unit 8 yang diterima:
 
 - 5 halaman; tidak ada halaman kosong atau baris tunggal yang terdampar
-- 100.795 byte
-- SHA-256 `d4234cb0080a60ad06fcb004d4d75e7daea85b3846bbbd05f0261b03e9f66258`
+- 100.805 byte
+- SHA-256 `0db18bfbae3ffd2194447781a77effb4f57f8bd8521baa3acb334b474f0773cd`
 - bahasa PDF `id-ID`
 - 2 entri outline, 10 destinasi bernama, 8 tautan internal, dan 7 URI yang disengaja
 - label `sec:category`, tiga rujukan buku-global, empat sitasi, 8 fragmen matematika sebaris, dan 1 blok display terpelihara
 - tabel empat-baris lima-kolom ditata ulang menjadi `tabularx` selebar teks dan dipasangkan dengan semantik pembacaan linear di backend; kotak petunjuk tetap utuh pada satu halaman
+- QA terminologi primer membakukan `fungtor` dan `transformasi natural` tanpa mengubah matematika, struktur, atau paginasi
 - label peran bibliografi telah dilokalkan; tidak ada galat TeX, rujukan/sitasi tak terdefinisi, kotak meluber, karakter hilang, halaman kosong, atau residu aksara Han
 
 Artefak Unit 9 yang diterima:
 
 - 13 halaman; tidak ada halaman kosong
-- 143.177 byte
-- SHA-256 `6928daf6df3063ec616dfaef1942c27e545ff9fc10135c02ea95591f3a2eed8f`
+- 143.207 byte
+- SHA-256 `1a71610ba997348ce22db69944fec3529d9d6e6c2ef6ece48faa30df90ac5ce6`
 - bahasa PDF `id-ID`
 - 4 entri outline, 49 destinasi bernama, 42 tautan internal, dan 3 URI yang disengaja
 - tujuh label, sepuluh kemunculan rujukan, lima kemunculan sitasi, 31 entri indeks, 268 permukaan matematika, empat diagram `tikzcd`, dan satu gambar `tikzpicture` terpelihara
 - rantai ordinal yang lebar ditata ulang secara tipografis agar terpusat dan terbaca tanpa mengubah matematika; koreksi, catatan sumber, dan klarifikasi diperinci dalam receipt penerimaan
+- QA terminologi primer membakukan `fungtor`; matematika, identitas, topologi, dan paginasi tetap sama
 - tidak ada galat TeX, rujukan/sitasi tak terdefinisi, kotak meluber, karakter hilang, halaman kosong, atau residu aksara Han pada halaman isi
 
 ## Backend modular
