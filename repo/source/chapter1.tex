@@ -202,89 +202,89 @@ Hal ini disebut paradoks Burali--Forti (1897)\index{paradoks Burali--Forti@parad
 	Hingga isomorfisme, ordinal $\omega = \{n : n=0, 1, \ldots \}$ tidak lain ialah himpunan terurut baik $\Z_{\geq 0}$ yang kita kenal secara intuitif. Konstruksi ini juga dapat dipandang sebagai cara mendefinisikan himpunan bilangan bulat taknegatif dengan bertolak dari himpunan kosong dalam kerangka ZFC. Lebih tepatnya, $\omega$, bersama operasi penerus pada elemen-elemennya $n \mapsto n+1$, memenuhi aksioma aritmetika Peano (lihat \cite[Bab 0, \S 2]{DN00}); itulah seluruh sifat yang kita perlukan untuk bekerja dengan bilangan bulat dalam praktik. Teorema \ref{prop:transfinite-induction} akan membahas salah satu sifat kunci tersebut: induksi matematika.
 \end{example}
 
-\section{超穷递归及其应用}
-定理 \ref{prop:On-wellorder} 表明真类 $\textbf{On}$ 对 $\leq$ 也有良序性质: 任何由序数构成的类都有极小元. 这立即导向以下结果.
-\begin{theorem}[超穷归纳法]\label{prop:transfinite-induction} \index{chaoqiongguinafa@超穷归纳法 (transfinite induction)}
-	令 $C$ 为一个由序数构成的类. 假设
+\section{Rekursi Transfinit dan Penerapannya}
+Teorema \ref{prop:On-wellorder} menunjukkan bahwa kelas sejati $\textbf{On}$ juga memiliki sifat keterurutan baik terhadap $\leq$: setiap kelas tak kosong yang terdiri atas ordinal mempunyai elemen minimal. Hal ini langsung menghasilkan teorema berikut.
+\begin{theorem}[Induksi transfinit]\label{prop:transfinite-induction} \index{induksi transfinit@induksi transfinit (transfinite induction)}
+	Misalkan $C$ suatu kelas yang terdiri atas ordinal. Andaikan
 	\begin{compactenum}[(i)]
 		\item $0 \in C$,
 		\item $\alpha \in C \implies \alpha+1 \in C$,
-		\item 设 $\alpha$ 为极限序数, 若对每个 $\beta < \alpha$ 皆有 $\beta \in C$, 则 $\alpha \in C$,
+		\item jika $\alpha$ merupakan ordinal limit dan, untuk setiap $\beta < \alpha$, berlaku $\beta \in C$, maka $\alpha \in C$,
 	\end{compactenum}
-	那么 $C = \textbf{On}$. 如果仅考虑小于某 $\theta$ 的序数而非 $\textbf{On}$ 整体, 断言依然成立.
+	maka $C = \textbf{On}$. Pernyataan ini tetap berlaku jika yang ditinjau hanya ordinal-ordinal yang lebih kecil daripada suatu $\theta$, bukan seluruh $\textbf{On}$.
 \end{theorem}
 \begin{proof}
-	设若不然, 取不在 $C$  中的最小序数 $\alpha \neq 0$, 无论它是后继或极限序数都导致矛盾.
+	Andaikan sebaliknya, lalu ambil ordinal terkecil $\alpha \neq 0$ yang tidak berada dalam $C$. Baik dalam kasus penerus maupun kasus limit, kita memperoleh kontradiksi.
 \end{proof}
 \begin{remark}
-	回忆到 $\theta = \{\alpha \in \textbf{On}: \alpha < \theta \}$. 如取 $\theta = \omega$ 则得到经典的数学归纳法, 此时不涉及情况 (iii).
+	Ingat bahwa $\theta = \{\alpha \in \textbf{On}: \alpha < \theta \}$. Dengan mengambil $\theta = \omega$, kita memperoleh induksi matematika klasik; dalam hal ini kasus (iii) tidak muncul.
 \end{remark}
 
-定理 \ref{prop:transfinite-induction} 常用以递归地构造一列以序数枚举的数学对象, 它基于某规则 $G$ 如下:
+Teorema \ref{prop:transfinite-induction} sering digunakan untuk mengonstruksi secara rekursif suatu barisan objek matematika yang diindeks oleh ordinal, berdasarkan aturan $G$ sebagai berikut:
 \begin{compactdesc}
-	\item[第零项] $a_0 = G(0)$ 给定,
-	\item[后继项] 设 $\alpha = \beta+1$, 已知 $a_\beta$, 则可以确定 $a_\alpha = a_{\beta + 1} = G(a_\beta)$,
-	\item[极限项] 设 $\alpha$ 是极限序数, 已知 $\{a_\beta : \beta < \alpha \}$, 则可以确定 $a_\alpha = G(\{a_\beta : \beta < \alpha \})$.
+	\item[Suku ke-nol] $a_0 = G(0)$ diberikan,
+	\item[Suku penerus] jika $\alpha = \beta+1$ dan $a_\beta$ telah diketahui, maka $a_\alpha = a_{\beta + 1} = G(a_\beta)$ dapat ditentukan,
+	\item[Suku limit] jika $\alpha$ merupakan ordinal limit dan $\{a_\beta : \beta < \alpha \}$ telah diketahui, maka $a_\alpha = G(\{a_\beta : \beta < \alpha \})$ dapat ditentukan.
 \end{compactdesc}
-不难想象这将唯一确定一列集合 $a_\alpha$, 兹改述并证明如下. 考虑函数 $G: \textbf{V} \to \textbf{V}$, 虽然 $\textbf{V}$ 是真类, 然而如早先所述, $G$ 可以诠释为一阶逻辑中的某类公式而不影响以下操作. 引入 $\theta$-列的概念: 这是指函数 $a: \theta \to \textbf{V}$, 亦可理解为形如 $\{a_\alpha : \alpha < \theta \}$ 的列.
+Mudah dibayangkan bahwa prosedur ini menentukan secara unik suatu barisan himpunan $a_\alpha$; berikut ini kita merumuskan ulang dan membuktikannya. Tinjau fungsi $G: \textbf{V} \to \textbf{V}$. Walaupun $\textbf{V}$ merupakan kelas sejati, sebagaimana dijelaskan sebelumnya, $G$ dapat ditafsirkan sebagai suatu jenis formula dalam logika orde pertama tanpa memengaruhi operasi berikut. Perkenalkan konsep \emph{barisan-$\theta$}: yang dimaksud ialah fungsi $a: \theta \to \textbf{V}$, yang juga dapat dipahami sebagai barisan berbentuk $\{a_\alpha : \alpha < \theta \}$.
 
-\begin{theorem}[超穷递归原理]
-	对任意序数 $\theta$, 存在唯一的 $\theta$-列 $a$ 使得 $\alpha < \theta \implies a(\alpha) = G(a|_\alpha)$. 特别地, 存在唯一的函数 $a: \textbf{On} \to \textbf{V}$ 使得对每个序数 $\alpha$ 皆有 $a(\alpha) = G(a|_\alpha)$.
+\begin{theorem}[Prinsip rekursi transfinit]
+	Untuk setiap ordinal $\theta$, terdapat tepat satu barisan-$\theta$ $a$ sehingga $\alpha < \theta \implies a(\alpha) = G(a|_\alpha)$. Khususnya, terdapat tepat satu fungsi $a: \textbf{On} \to \textbf{V}$ sehingga, untuk setiap ordinal $\alpha$, berlaku $a(\alpha) = G(a|_\alpha)$.
 \end{theorem}
-几点说明:
+Beberapa penjelasan:
 \begin{inparaenum}[(a)]
-	\item 替换公理模式 \textbf{A.7} 确保函数限制 $a|_\alpha$ 可以按寻常方法等同于集合 $\{ (\beta, a(\beta)) : \beta \in \alpha \}$, 故 $G$ 对之可以取值;
-	\item 我们将函数限制 $a|_0$ 理解为空集 $0$, 故按定义 $a(0) = G(0)$;
-	\item 定理前半段只要求 $G$ 对形如 $\alpha \to \textbf{V}$ 的函数有定义, 其中 $\alpha < \theta$.
+	\item skema aksioma penggantian \textbf{A.7} memastikan bahwa pembatasan fungsi $a|_\alpha$ dapat diidentifikasi, dengan cara biasa, dengan himpunan $\{ (\beta, a(\beta)) : \beta \in \alpha \}$, sehingga $G$ dapat diterapkan padanya;
+	\item pembatasan fungsi $a|_0$ kita pahami sebagai himpunan kosong $0$, sehingga menurut definisi $a(0) = G(0)$;
+	\item bagian pertama teorema hanya mensyaratkan bahwa $G$ terdefinisi pada fungsi-fungsi berbentuk $\alpha \to \textbf{V}$, dengan $\alpha < \theta$.
 \end{inparaenum}
 \begin{proof}
-	第一步, 若 $\theta$-列 $a, a'$ 皆满足所示性质, 我们断言 $\alpha < \theta$ 蕴涵 $a(\alpha) = a'(\alpha)$, 如是则 $a=a'$: 这对 $\alpha=0$ 已知; 设若这对所有 $\beta < \alpha$ 成立, 那么 $a|_\alpha = a'|_\alpha$ 故 $a(\alpha) = a'(\alpha)$; 应用定理 \ref{prop:transfinite-induction} 遂得以上断言.
+	Pertama, misalkan dua barisan-$\theta$, yakni $a, a'$, memenuhi sifat tersebut. Kita mengeklaim bahwa $\alpha < \theta$ mengakibatkan $a(\alpha) = a'(\alpha)$; dengan demikian $a=a'$. Klaim ini telah diketahui untuk $\alpha=0$. Jika klaim berlaku untuk semua $\beta < \alpha$, maka $a|_\alpha = a'|_\alpha$, sehingga $a(\alpha) = a'(\alpha)$. Dengan menerapkan Teorema \ref{prop:transfinite-induction}, diperoleh klaim di atas.
 	
-	第二步是 $\theta$-列 $a$ 的存在性. 当 $\theta=0$ 时为显然. 今设 $\theta > 0$, 并且对任意 $\xi < \theta$, 所求 $\xi$-列 $a[\xi]$ 皆存在, 则由替换公理模式知 $a[\xi]$ 确实是集合间的映射; 由第一步可将诸 $a[\xi]$ 拼接为定义在 $\theta$ 上的函数 $a$ 使得 $a|_\xi = a[\xi]$, 而且使性质 $\alpha < \theta \implies a(\alpha) = G(a|_\alpha)$ 成立, 这是容易的.
+	Langkah kedua ialah keberadaan barisan-$\theta$ $a$. Untuk $\theta=0$, hal ini jelas. Sekarang andaikan $\theta > 0$ dan, untuk setiap $\xi < \theta$, barisan-$\xi$ $a[\xi]$ yang dicari telah ada. Skema aksioma penggantian memastikan bahwa $a[\xi]$ memang merupakan peta antara himpunan. Berdasarkan langkah pertama, semua $a[\xi]$ dapat dirangkai menjadi fungsi yang terdefinisi pada $\theta$, yakni $a$, dan memenuhi $a|_\xi = a[\xi]$, serta memenuhi sifat $\alpha < \theta \implies a(\alpha) = G(a|_\alpha)$; hal ini mudah.
 	
-	最后, 由于 $\textbf{On}$ 无极大元, 根据前两步可以唯一地定义 $a: \textbf{On} \to \textbf{V}$.
+	Terakhir, karena $\textbf{On}$ tidak mempunyai elemen maksimal, berdasarkan dua langkah di atas dapat didefinisikan secara unik fungsi kelas $a: \textbf{On} \to \textbf{V}$.
 \end{proof}
 
-借助超穷递归原理, 能对序数定义类似于非负整数的运算如次. 以下在情形 (iii) 总假设 $\beta$ 是极限序数:
+Dengan prinsip rekursi transfinit, kita dapat mendefinisikan operasi pada ordinal yang serupa dengan operasi pada bilangan bulat taknegatif sebagai berikut. Dalam kasus (iii) di bawah, selalu diandaikan bahwa $\beta$ merupakan ordinal limit:
 \begin{itemize}
-	\item 加法: \begin{inparaenum}[(i)] \item $\alpha + 0 := \alpha$,  \item $\alpha + (\beta + 1) = (\alpha + \beta) + 1$, \item $\alpha + \beta = \sup\{ \alpha + \xi : \xi < \beta\}$. \end{inparaenum}
-	\item 乘法: \begin{inparaenum}[(i)] \item $\alpha \cdot 0 := 0$, \item $\alpha \cdot (\beta + 1) = \alpha \cdot \beta + \alpha$, \item $\alpha \cdot \beta = \sup\{\alpha \cdot \xi : \xi < \beta\}$. \end{inparaenum}
-	\item 指数: \begin{inparaenum}[(i)] \item $\alpha^0 := 1$, \item $\alpha^{\beta + 1} = \alpha^\beta \cdot \alpha$, \item $\alpha^\beta = \sup\{\alpha^\xi : \xi < \beta\}$. \end{inparaenum}
+	\item Penjumlahan: \begin{inparaenum}[(i)] \item $\alpha + 0 := \alpha$,  \item $\alpha + (\beta + 1) = (\alpha + \beta) + 1$, \item $\alpha + \beta = \sup\{ \alpha + \xi : \xi < \beta\}$. \end{inparaenum}
+	\item Perkalian: \begin{inparaenum}[(i)] \item $\alpha \cdot 0 := 0$, \item $\alpha \cdot (\beta + 1) = \alpha \cdot \beta + \alpha$, \item $\alpha \cdot \beta = \sup\{\alpha \cdot \xi : \xi < \beta\}$. \end{inparaenum}
+	\item Perpangkatan: \begin{inparaenum}[(i)] \item $\alpha^0 := 1$, \item $\alpha^{\beta + 1} = \alpha^\beta \cdot \alpha$, \item $\alpha^\beta = \sup\{\alpha^\xi : \xi < \beta\}$. \end{inparaenum}
 \end{itemize}
-可以验证序数对加法和乘法都满足结合律, 但一般不满足交换律. 施之于 $\alpha, \beta < \omega$ 便得到非负整数上的加法和乘法 (当然这时必须验证交换律). 至此, 我们已经基于公理集合论为 $\Z_{\geq 0}$ 上的算术奠定了基础, 将之加工为 $\Z$ 及 $\Q$ 则可以说是代数学的任务, 手法是大家熟知的. 一般性的工具将在定义--定理 \ref{def:K-group} 和 \S\ref{sec:comm-ring-intro} 予以介绍.
+Dapat diverifikasi bahwa penjumlahan dan perkalian ordinal sama-sama memenuhi hukum asosiatif, tetapi pada umumnya tidak memenuhi hukum komutatif. Ketika diterapkan pada $\alpha, \beta < \omega$, definisi tersebut memberikan penjumlahan dan perkalian pada bilangan bulat taknegatif (tentu saja, dalam hal ini hukum komutatif harus diverifikasi). Dengan demikian, berdasarkan teori himpunan aksiomatik, kita telah meletakkan dasar bagi aritmetika pada $\Z_{\geq 0}$. Mengonstruksi $\Z$ dan $\Q$ darinya dapat dikatakan merupakan tugas aljabar, dengan cara-cara yang telah dikenal. Perangkat umum yang diperlukan akan diperkenalkan dalam Definisi--Teorema \ref{def:K-group} dan \S\ref{sec:comm-ring-intro}.
 
 \begin{proposition}\label{prop:ordinal-ordertype}
-	对任意良序集 $P$, 存在唯一的序数 $\alpha$ 和良序集之间的同构 $\phi: P \rightiso \alpha$.
+	Untuk setiap himpunan terurut baik $P$, terdapat tepat satu ordinal $\alpha$ dan tepat satu isomorfisme himpunan terurut baik $\phi: P \rightiso \alpha$.
 \end{proposition}
 \begin{proof}
-	序数和同构的唯一性源自引理 \ref{prop:wellorder-automorphism} 和引理 \ref{prop:ordinal-property}. 可设 $P \neq \emptyset$, 并选取 $\mho \notin P$ (易见存在性). 以下将以超穷递归定义一族元素 $a_\alpha \in P \sqcup \{\mho\}$, 其中 $\alpha$ 取遍所有序数. 设 $a_0 := \text{min}(P)$, 并递归地定义
+	Keunikan ordinal dan isomorfisme mengikuti dari Lema \ref{prop:wellorder-automorphism} dan Lema \ref{prop:ordinal-property}. Kita boleh mengandaikan $P \neq \emptyset$ dan memilih $\mho \notin P$ (keberadaannya jelas). Dengan rekursi transfinit, kita akan mendefinisikan suatu keluarga elemen $a_\alpha \in P \sqcup \{\mho\}$, dengan $\alpha$ merentang semua ordinal. Tetapkan $a_0 := \text{min}(P)$ dan definisikan secara rekursif
 	\[ a_\alpha := \begin{cases}
 		\text{min}\left( P \smallsetminus \{a_\beta : \beta < \alpha \} \right), & \{a_\beta : \beta < \alpha \} \subsetneq P \\
 		\mho, & \{a_\beta : \beta < \alpha \} = P.
 	\end{cases}\]
-	由于 $P$ 是集合, 必存在最小的序数 $\theta$ 使得 $a_\theta = \mho$, 否则这将蕴涵单射 $a: \textbf{On} \to P$, 分离公理模式 \textbf{A.3} 确保 $a(\textbf{On}) \subset P$ 是集合, 而替换公理模式 \textbf{A.7} 蕴涵 $\textbf{On} = a^{-1}(a(\textbf{On}))$ 亦是集合, 此与命题 \ref{prop:Ord-class} 矛盾. 可验证 $a_\alpha \mapsto \alpha$ 定义了偏序集的同构 $P \to \{\beta : \beta < \theta\} = \theta$.
+	Karena $P$ merupakan himpunan, harus ada ordinal terkecil $\theta$ sehingga $a_\theta = \mho$. Jika tidak, terdapat injeksi $a: \textbf{On} \to P$. Skema aksioma pemisahan \textbf{A.3} memastikan bahwa $a(\textbf{On}) \subset P$ merupakan himpunan, sedangkan skema aksioma penggantian \textbf{A.7} mengakibatkan bahwa $\textbf{On} = a^{-1}(a(\textbf{On}))$ juga merupakan himpunan, bertentangan dengan Proposisi \ref{prop:Ord-class}. Dapat diverifikasi bahwa $a_\alpha \mapsto \alpha$ mendefinisikan isomorfisme poset $P \to \{\beta : \beta < \theta\} = \theta$.
 \end{proof}
 
-以下两个重要结果都依赖于选择公理 \textbf{A.9}. 其中 Zorn 引理是代数学的基本工具之一. 之前的论证技巧还会反复出现.
-\begin{theorem}[Zermelo 良序定理, 1904]\label{prop:wellorder-principle}\index{Zermelo 良序定理}
-	任意集合 $S$ 都能被赋予良序.
+Dua hasil penting berikut sama-sama bergantung pada aksioma pilihan \textbf{A.9}. Di antaranya, lema Zorn merupakan salah satu perangkat dasar aljabar. Teknik pembuktian sebelumnya akan kembali digunakan berulang kali.
+\begin{theorem}[Teorema pengurutan baik Zermelo, 1904]\label{prop:wellorder-principle}\index{teorema pengurutan baik Zermelo@teorema pengurutan baik Zermelo}
+	Setiap himpunan $S$ dapat diberi suatu urutan baik.
 \end{theorem}
 \begin{proof}
-	我们断言 $S$ 和某个序数 $\theta$ 间存在双射. 选取元素 $\mho \notin S$ 如上. 由选择公理, 可以在 $S$ 的每个非空子集 $S'$ 里拣选元素 $g(S')$. 不妨设 $S$ 非空, 命 $a_0 := g(S)$, 并用超穷递归对每个序数 $\alpha$ 定义
+	Kita mengeklaim bahwa terdapat bijeksi antara $S$ dan suatu ordinal $\theta$. Pilih $\mho \notin S$ seperti di atas. Berdasarkan aksioma pilihan, dari setiap subhimpunan tak kosong $S'$ dari $S$ kita dapat memilih suatu elemen $g(S')$ di dalamnya. Kita boleh mengandaikan bahwa $S$ tak kosong, menetapkan $a_0 := g(S)$, dan dengan rekursi transfinit mendefinisikan, untuk setiap ordinal $\alpha$,
 	\[ a_\alpha := \begin{cases}
 		g \left( S \smallsetminus \{ a_\beta : \beta < \alpha \} \right), & S \neq \{ a_\beta : \beta < \alpha \} \\
 		\mho, & S = \{ a_\beta : \beta < \alpha \}.
 	\end{cases}\]
-	与先前类似, 因 $S$ 是集合, 故可取极小的 $\theta$ 使得 $a_\theta = \mho$, $S = \{a_\beta: \beta < \theta\}$, 后者和序数 $\theta = \{\beta : \beta < \theta \}$ 之间有显然的双射, 于是导出 $S$ 上的良序.
+	Seperti sebelumnya, karena $S$ merupakan himpunan, dapat diambil $\theta$ terkecil sehingga $a_\theta = \mho$ dan $S = \{a_\beta: \beta < \theta\}$. Terdapat bijeksi yang jelas antara himpunan terakhir ini dan ordinal $\theta = \{\beta : \beta < \theta \}$, sehingga diperoleh suatu urutan baik pada $S$.
 \end{proof}
 
-\begin{theorem}[Zorn 引理]\label{prop:Zorn}\index{Zorn 引理}
-	设 $P$ 为非空偏序集, 而且 $P$ 中每个链都有上界, 则 $P$ 含有极大元.
+\begin{theorem}[Lema Zorn]\label{prop:Zorn}\index{lema Zorn@lema Zorn}
+	Misalkan $P$ suatu poset tak kosong dan setiap rantai dalam $P$ mempunyai batas atas. Maka $P$ memuat elemen maksimal.
 \end{theorem}
 \begin{proof}
-	类似于前一个证明. 假定 $P$ 不含极大元. 任取 $a_0 \in P$, 并用超穷递归对每个序数 $\alpha$ 定义 $a_\alpha \in P$, 使得 $\alpha < \beta \Rightarrow a_\alpha < a_\beta$, 其方法如次: 设对每个 $\beta < \alpha$ 都定义了 $a_\beta$ 如上, 则 $(a_\beta)_{\beta < \alpha}$ 在 $P$ 中成一链. 若 $\alpha$ 是极限序数, 则此链必有上界 $a_\alpha \notin \{ a_\beta \}_{\beta < \alpha}$; 若 $\alpha = \gamma + 1$ 是后继序数, 因 $P$ 无极大元故存在 $a_\alpha \in P$ 使得 $a_\alpha > a_\gamma$. 真类 $\textbf{On}$ 据此可以嵌入 $P$, 仿照命题 \ref{prop:ordinal-ordertype} 的论证导出 $\textbf{On}$ 亦是集合, 矛盾.
+	Buktinya serupa dengan bukti sebelumnya. Andaikan $P$ tidak memuat elemen maksimal. Ambil sebarang $a_0 \in P$, lalu dengan rekursi transfinit, untuk setiap ordinal $\alpha$, definisikan $a_\alpha \in P$ sedemikian sehingga $\alpha < \beta \Rightarrow a_\alpha < a_\beta$, sebagai berikut. Andaikan, untuk setiap $\beta < \alpha$, $a_\beta$ telah didefinisikan seperti di atas; maka $(a_\beta)_{\beta < \alpha}$ membentuk rantai dalam $P$. Jika $\alpha$ merupakan ordinal limit, rantai ini mempunyai batas atas $a_\alpha \notin \{ a_\beta \}_{\beta < \alpha}$. Jika $\alpha = \gamma + 1$ merupakan ordinal penerus, karena $P$ tidak mempunyai elemen maksimal, terdapat $a_\alpha \in P$ sehingga $a_\alpha > a_\gamma$. Dengan demikian kelas sejati $\textbf{On}$ dapat dibenamkan ke dalam $P$. Dengan meniru argumen dalam Proposisi \ref{prop:ordinal-ordertype}, diperoleh bahwa $\textbf{On}$ juga merupakan himpunan, suatu kontradiksi.
 \end{proof}
-已知选择公理, 良序定理和 Zorn 引理相互等价, 任择一者连同 \textbf{A.1} -- \textbf{A.8} 皆给出 ZFC. 本书以选择公理为出发点.
+Diketahui bahwa aksioma pilihan, teorema pengurutan baik, dan lema Zorn saling ekuivalen; salah satu di antaranya, bersama \textbf{A.1} -- \textbf{A.8}, memberikan ZFC. Buku ini menggunakan aksioma pilihan sebagai titik tolak.
 
 \section{基数}\label{sec:cardinal-number}
 基数是描述集合大小的一种标杆, 我们从等势的概念出发, 随后联系到序数.

@@ -59,3 +59,12 @@ interface layer. Its admitted artifact is 11 pages, 147,784 bytes, SHA-256
 `67f3b0594f65917cf78361886aef6616c0875bc584a95758f06e4d11b182082c`.
 Two clean builds produced 11/11 pixel-identical MuPDF pages. Neither unit claims
 byte-identical XeTeX PDF-container serialization across output directories.
+
+Unit 004 uses the same target-only digital reflow and a shell-escape-disabled
+XeLaTeX/MakeIndex procedure. Its admitted artifact is 8 pages, 107,332 bytes,
+SHA-256
+`e48aa97d15ad9c192df5d744bfc8290fc816c4b681322295352517a02e267c13`.
+Two clean builds produced 8/8 pixel-identical MuPDF pages at 144 dpi. MuPDF and
+Poppler rendered every page without clipping, collision, blank pages, or
+missing glyphs. The PDF container hashes differ across output directories, so
+only deterministic rendered content is claimed.
