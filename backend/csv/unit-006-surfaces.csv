@@ -1,0 +1,9 @@
+entity_type,id,stable_key,section_id,ordinal,source_value,target_value,format,status
+build_surface,urn:uuid:311858dc-41d7-5fb0-bb5c-10452513b9b2,build-surface/unit-006-pdf,,,pwsh -NoProfile -File scripts/build_unit_006.ps1 -OutputDirectory build/unit-006-replay-id,artifacts/unit-006-bab-1-semesta-grothendieck.pdf,pdf,pass
+citation,urn:uuid:16d41363-ee55-5b49-9126-2aea6b35da2c,citation/je03,urn:uuid:88d44457-fbcb-5621-96f8-ca00661b5455,,Je03,Je03,biblatex-key,preserved
+citation,urn:uuid:e89235f2-d88f-516f-8497-08c96a810071,citation/sga4-1,urn:uuid:b61408d9-ce17-5160-9238-5912633f6cc2,,SGA4-1,SGA4-1,biblatex-key,preserved
+citation,urn:uuid:b8e28ebc-e7da-50f6-b862-9e9433c55c5a,citation/shu08,urn:uuid:21c924ad-5769-53ea-9841-4dd485ce9ef8,,Shu08,Shu08,biblatex-key,preserved
+index_entry,urn:uuid:33055369-9491-5e8c-bbec-94cedfa3449b,index-entry/unit-006/cumulative-hierarchy,urn:uuid:ffe4db8a-7826-58fe-be6d-87e781443133,3,jihelun!层垒谱系 (cumulative hierachy),teori himpunan!hierarki kumulatif (cumulative hierarchy),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:abd6e4e5-9ca5-5bdb-8404-2cf16b7883a8,index-entry/unit-006/strongly-inaccessible-cardinal,urn:uuid:88d44457-fbcb-5621-96f8-ca00661b5455,4,jishu!强不可达 (strongly inaccessible),kardinal!tak terjangkau kuat (strongly inaccessible),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:ebbc17ae-f9dd-5853-a7af-9c09db1c344d,index-entry/unit-006/u-set,urn:uuid:b61408d9-ce17-5160-9238-5912633f6cc2,2,U-ji@$\mathcal{U}$-集,himpunan-U@himpunan-$\mathcal{U}$,latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:4c43e5f8-b102-5134-85ec-d61a19658d6b,index-entry/unit-006/universe,urn:uuid:b61408d9-ce17-5160-9238-5912633f6cc2,1,yuzhou@宇宙 (universe),semesta@semesta (universe),latex-index-key,source_key_preserved_target_key_localized

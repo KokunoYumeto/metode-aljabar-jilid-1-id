@@ -1,0 +1,1368 @@
+{
+  "$schema": "../schema/open-math-corpus-unit.schema.v1.json",
+  "schema_name": "open-math-corpus-unit",
+  "schema_version": "1.1.0",
+  "profile": "curriculum-modular-backend-v0",
+  "dataset_id": "urn:uuid:eebaa287-ae10-56f3-aa00-8cb2ef430d84",
+  "dataset_stable_key": "dataset/unit-006/id-id",
+  "id_namespace": {
+    "algorithm": "uuid5",
+    "namespace_uuid": "urn:uuid:5d74a443-839a-5a09-b2c6-0bc48a097f2b",
+    "name_root": "https://github.com/wenweili/AlJabr-1#o013-backend-v1"
+  },
+  "workflow": {
+    "responsible_task": "01a02163-e2bf-7a93-950a-b9ab84d7e8b9",
+    "updated": "2026-08-22",
+    "status": "admitted",
+    "admission_state": "admitted",
+    "translation_state": "visually_checked",
+    "qa_state": "translation_backend_build_visual_pass"
+  },
+  "program": {
+    "id": "urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78",
+    "stable_key": "program/open-mathematics-curriculum/2026",
+    "entity_type": "program",
+    "label": "Open Mathematics Curriculum",
+    "version": "2026"
+  },
+  "course": {
+    "id": "urn:uuid:a5f3ad58-ce3c-5f5f-b581-1f842ae79192",
+    "stable_key": "course/o013",
+    "entity_type": "course",
+    "program_id": "urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78",
+    "role_code": "O013",
+    "course_code": "D70",
+    "label": "Graduate Algebra",
+    "prerequisite_ids": [
+      "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
+      "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7",
+      "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+      "urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288",
+      "urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396",
+      "urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14",
+      "urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec",
+      "urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8",
+      "urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee",
+      "urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f",
+      "urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96",
+      "urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f"
+    ]
+  },
+  "resource": {
+    "id": "urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397",
+    "stable_key": "resource/wenweili/aljabr-1",
+    "entity_type": "resource",
+    "canonical_uri": "https://github.com/wenweili/AlJabr-1",
+    "author": "Wen-Wei Li",
+    "titles": [
+      {
+        "language": "zh-Hans",
+        "text": "代数学方法，卷一：基础架构"
+      },
+      {
+        "language": "en",
+        "text": "Methods in Algebra, Volume 1: Basic Architecture"
+      },
+      {
+        "language": "id-ID",
+        "text": "Metode Aljabar, Jilid 1: Arsitektur Dasar"
+      }
+    ],
+    "original_language": "zh-Hans",
+    "rights_component_ids": [
+      "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "urn:uuid:e18339ae-66cd-5304-b544-b220dd41380d",
+      "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+      "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430"
+    ]
+  },
+  "edition": {
+    "id": "urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49",
+    "stable_key": "edition/wenweili/aljabr-1/c4f7a01f68f5f407906b4b970640cddbbad85f6b",
+    "entity_type": "edition",
+    "resource_id": "urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397",
+    "branch": "master",
+    "commit": "c4f7a01f68f5f407906b4b970640cddbbad85f6b",
+    "tree": "0f9fd52748165ec89a85ba602ccb949a2ce04694",
+    "archive": {
+      "path": "authority/archives/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b.zip",
+      "bytes": 6050739,
+      "sha256": "6c8c416baa8f5ffc8810bbad6470c780413bd7917af739e07340e4b07e7eaff6"
+    },
+    "official_pdf": {
+      "path": "authority/pdfs/Al-jabr-1.pdf",
+      "bytes": 3647113,
+      "sha256": "dc751a2d5146edc9f9638471ff3fac4107eab8dd0d3331803581a06998663c38"
+    },
+    "source_manifest": {
+      "path": "00_control/SOURCE_MANIFEST.csv",
+      "bytes": 3383,
+      "sha256": "40125010171d4fa37c3312c454c3c2767325bcb27c4229c255a25b297265eb99"
+    }
+  },
+  "unit": {
+    "id": "urn:uuid:1420a147-151a-5369-a6e7-5ee987791fd0",
+    "stable_key": "unit/bab-1-semesta-grothendieck",
+    "entity_type": "unit",
+    "program_id": "urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78",
+    "course_id": "urn:uuid:a5f3ad58-ce3c-5f5f-b581-1f842ae79192",
+    "resource_id": "urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397",
+    "edition_id": "urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49",
+    "order": 6,
+    "source_local_id": "chapter1.tex:436-506",
+    "titles": [
+      {
+        "language": "zh-Hans",
+        "text": "第一章：集合论；Grothendieck 宇宙"
+      },
+      {
+        "language": "id-ID",
+        "text": "Bab 1: Teori Himpunan; Semesta Grothendieck"
+      }
+    ],
+    "source_language": "zh-Hans",
+    "target_language": "id-ID",
+    "source_binding": {
+      "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+      "bytes": 49874,
+      "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+      "line_start": 436,
+      "line_end": 506,
+      "span_sha256": "4f1e14be25a0387c335ad11850aea1e3d71314e8578fa642ffecb6dbf80ffe05",
+      "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+    },
+    "target_binding": {
+      "path": "repo/source/chapter1.tex",
+      "bytes": 63465,
+      "sha256": "30205d23cfaf29ae97ac63e4edb94ccb908fe23e29bef343907129b28b217c04",
+      "line_start": 436,
+      "line_end": 506,
+      "span_sha256": "f255debb4b19eab59c524ea80c24b0dd3320e0b899b20d77c1d4a874645c0324",
+      "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+    },
+    "section_ids": [
+      "urn:uuid:b61408d9-ce17-5160-9238-5912633f6cc2",
+      "urn:uuid:ffe4db8a-7826-58fe-be6d-87e781443133",
+      "urn:uuid:7e6674ac-e8c2-5139-a1e8-201b20d52ef5",
+      "urn:uuid:88d44457-fbcb-5621-96f8-ca00661b5455",
+      "urn:uuid:21c924ad-5769-53ea-9841-4dd485ce9ef8"
+    ],
+    "concept_ids": [
+      "urn:uuid:89acb040-b11f-593e-b1c8-67c63da94923",
+      "urn:uuid:360aaae7-6528-5bfd-9b1b-e431ccf3cd68",
+      "urn:uuid:f946f2e1-e5c8-512a-a699-d8be0e2c09c1",
+      "urn:uuid:87cf3ade-6171-5860-bc97-30e4abce3f2a",
+      "urn:uuid:7aa026bc-9f77-567c-8061-e237b64c359d",
+      "urn:uuid:1dc9511b-c275-58a6-b38c-df96eb445f8e",
+      "urn:uuid:d7ba2a42-9113-59f2-bf9a-096209246c03",
+      "urn:uuid:261f194b-28f4-57dd-9c34-b8c311bf3f0f",
+      "urn:uuid:f2c9eabe-2f6d-5f71-bd9f-71332c552bc5",
+      "urn:uuid:e159f50c-16fe-5fbc-b04e-2848bf1a4f8f",
+      "urn:uuid:396c42e7-8b30-5f1d-8774-b89bf407cfd0",
+      "urn:uuid:88389156-c45c-5e2d-909b-c4f4aa6be286",
+      "urn:uuid:3d160a38-9bc9-572e-9318-aee29d4e64b6",
+      "urn:uuid:8abff15d-e34f-5f75-a0cb-9ecf8dc4f873",
+      "urn:uuid:e87ea9ad-5098-544e-86b4-3d72a418718c",
+      "urn:uuid:06214225-740f-50c6-ae8d-5ad99adb34b2"
+    ],
+    "prerequisite_ids": [
+      "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+      "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7"
+    ],
+    "rights_component_ids": [
+      "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+      "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430"
+    ],
+    "citation_ids": [
+      "urn:uuid:e89235f2-d88f-516f-8497-08c96a810071",
+      "urn:uuid:16d41363-ee55-5b49-9126-2aea6b35da2c",
+      "urn:uuid:b8e28ebc-e7da-50f6-b862-9e9433c55c5a"
+    ],
+    "diagram_ids": [],
+    "index_entry_ids": [
+      "urn:uuid:4c43e5f8-b102-5134-85ec-d61a19658d6b",
+      "urn:uuid:ebbc17ae-f9dd-5853-a7af-9c09db1c344d",
+      "urn:uuid:33055369-9491-5e8c-bbec-94cedfa3449b",
+      "urn:uuid:abd6e4e5-9ca5-5bdb-8404-2cf16b7883a8"
+    ],
+    "build_surface_ids": [
+      "urn:uuid:311858dc-41d7-5fb0-bb5c-10452513b9b2"
+    ],
+    "qa_event_ids": [
+      "urn:uuid:a3df2a8e-d5ad-5720-a442-13b0dea9ae32"
+    ],
+    "outcome_keys": [
+      "outcome/define-grothendieck-universes-u-sets-and-u-small-sets",
+      "outcome/derive-the-standard-closure-properties-of-a-grothendieck-universe",
+      "outcome/explain-the-grothendieck-universe-hypothesis-and-its-purpose",
+      "outcome/construct-the-cumulative-hierarchy-by-transfinite-recursion",
+      "outcome/prove-that-every-set-belongs-to-some-cumulative-hierarchy-stage",
+      "outcome/distinguish-hereditarily-finite-sets-and-the-books-universe-definition",
+      "outcome/characterize-universes-by-strongly-inaccessible-cardinals",
+      "outcome/interpret-v-kappa-as-a-zfc-model-and-assess-the-assumptions-strength"
+    ],
+    "surface_counts": {
+      "sections": 5,
+      "exercises": 0,
+      "hints": 0,
+      "answers": 0,
+      "solutions": 0,
+      "citations": 3,
+      "diagrams": 0,
+      "index_entries": 4
+    },
+    "translation_state": "visually_checked",
+    "admission_state": "admitted"
+  },
+  "sections": [
+    {
+      "id": "urn:uuid:b61408d9-ce17-5160-9238-5912633f6cc2",
+      "stable_key": "unit/bab-1-semesta-grothendieck/section/universe-definition-closure-and-hypothesis",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:1420a147-151a-5369-a6e7-5ee987791fd0",
+      "order": 1,
+      "source_local_id": "chapter1.tex:436-463",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "Grothendieck 宇宙、封闭性质与宇宙假设"
+        },
+        {
+          "language": "id-ID",
+          "text": "Definisi, Ketertutupan, dan Hipotesis Semesta Grothendieck"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 436,
+        "line_end": 463,
+        "span_sha256": "17f94beb7929a361afd326ffef6111929331b56193fe704f559f56614fdf2850",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 63465,
+        "sha256": "30205d23cfaf29ae97ac63e4edb94ccb908fe23e29bef343907129b28b217c04",
+        "line_start": 436,
+        "line_end": 463,
+        "span_sha256": "ad3c85e07108887bdc059da8c5d2e5265041b7d3fd87c1ba8b71e4cc2654832e",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:89acb040-b11f-593e-b1c8-67c63da94923",
+        "urn:uuid:360aaae7-6528-5bfd-9b1b-e431ccf3cd68",
+        "urn:uuid:f946f2e1-e5c8-512a-a699-d8be0e2c09c1",
+        "urn:uuid:87cf3ade-6171-5860-bc97-30e4abce3f2a",
+        "urn:uuid:7aa026bc-9f77-567c-8061-e237b64c359d",
+        "urn:uuid:1dc9511b-c275-58a6-b38c-df96eb445f8e",
+        "urn:uuid:d7ba2a42-9113-59f2-bf9a-096209246c03"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+        "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:ffe4db8a-7826-58fe-be6d-87e781443133",
+      "stable_key": "unit/bab-1-semesta-grothendieck/section/cumulative-hierarchy-and-set-membership",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:1420a147-151a-5369-a6e7-5ee987791fd0",
+      "order": 2,
+      "source_local_id": "chapter1.tex:465-483",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "层垒谱系与集合的归属"
+        },
+        {
+          "language": "id-ID",
+          "text": "Hierarki Kumulatif dan Keanggotaan Setiap Himpunan"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 465,
+        "line_end": 483,
+        "span_sha256": "621d01c5f28aaa175163710fc3e481ea8b48ecb47355a143eaffe1b67c288439",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 63465,
+        "sha256": "30205d23cfaf29ae97ac63e4edb94ccb908fe23e29bef343907129b28b217c04",
+        "line_start": 465,
+        "line_end": 483,
+        "span_sha256": "d57fd3ad16a906d1f59e90eeea888ef5b8d92079c38b0a6484591da52186f9de",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:261f194b-28f4-57dd-9c34-b8c311bf3f0f",
+        "urn:uuid:360aaae7-6528-5bfd-9b1b-e431ccf3cd68",
+        "urn:uuid:f2c9eabe-2f6d-5f71-bd9f-71332c552bc5"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+        "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:7e6674ac-e8c2-5139-a1e8-201b20d52ef5",
+      "stable_key": "unit/bab-1-semesta-grothendieck/section/hereditarily-finite-sets-and-universe-definition",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:1420a147-151a-5369-a6e7-5ee987791fd0",
+      "order": 3,
+      "source_local_id": "chapter1.tex:485-485",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "遗传有限集与宇宙定义"
+        },
+        {
+          "language": "id-ID",
+          "text": "Himpunan Berhingga secara Herediter dan Definisi Semesta"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 485,
+        "line_end": 485,
+        "span_sha256": "957b88537267a3eb256fda0d837132f8edb40c8c4912f82f18f6c73cecb4a4c0",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 63465,
+        "sha256": "30205d23cfaf29ae97ac63e4edb94ccb908fe23e29bef343907129b28b217c04",
+        "line_start": 485,
+        "line_end": 485,
+        "span_sha256": "48d04649d041c75c529bf775031bc90de87156bc0caed5e0599232c5e83a6ffb",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:e159f50c-16fe-5fbc-b04e-2848bf1a4f8f",
+        "urn:uuid:89acb040-b11f-593e-b1c8-67c63da94923"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+        "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:88d44457-fbcb-5621-96f8-ca00661b5455",
+      "stable_key": "unit/bab-1-semesta-grothendieck/section/strongly-inaccessible-cardinals-and-universe-characterization",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:1420a147-151a-5369-a6e7-5ee987791fd0",
+      "order": 4,
+      "source_local_id": "chapter1.tex:487-498",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "强不可达基数与宇宙刻画"
+        },
+        {
+          "language": "id-ID",
+          "text": "Kardinal Tak Terjangkau Kuat dan Karakterisasi Semesta"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 487,
+        "line_end": 498,
+        "span_sha256": "7a1de0466712b56fa58e782eff4324e5e71182488689ae4ca1668a99c0ab3f0b",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 63465,
+        "sha256": "30205d23cfaf29ae97ac63e4edb94ccb908fe23e29bef343907129b28b217c04",
+        "line_start": 487,
+        "line_end": 498,
+        "span_sha256": "e6bf90a93022d4922ccb303c487853697044c65410dca533b4f6364e4dd7c23f",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:396c42e7-8b30-5f1d-8774-b89bf407cfd0",
+        "urn:uuid:e87ea9ad-5098-544e-86b4-3d72a418718c",
+        "urn:uuid:88389156-c45c-5e2d-909b-c4f4aa6be286",
+        "urn:uuid:261f194b-28f4-57dd-9c34-b8c311bf3f0f"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+        "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:21c924ad-5769-53ea-9841-4dd485ce9ef8",
+      "stable_key": "unit/bab-1-semesta-grothendieck/section/zfc-models-and-strength-of-the-universe-hypothesis",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:1420a147-151a-5369-a6e7-5ee987791fd0",
+      "order": 5,
+      "source_local_id": "chapter1.tex:500-506",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "ZFC 模型与宇宙假设的强度"
+        },
+        {
+          "language": "id-ID",
+          "text": "Model ZFC dan Kekuatan Hipotesis Semesta"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 500,
+        "line_end": 506,
+        "span_sha256": "56412fd79805a6403ea37147581f5d652a861be6316b7d2faec715780b8f458b",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 63465,
+        "sha256": "30205d23cfaf29ae97ac63e4edb94ccb908fe23e29bef343907129b28b217c04",
+        "line_start": 500,
+        "line_end": 506,
+        "span_sha256": "dfbac01754ba3dd29b3cc64cc748a1cc24661f22d48ebb9c027dc23df933f368",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:3d160a38-9bc9-572e-9318-aee29d4e64b6",
+        "urn:uuid:8abff15d-e34f-5f75-a0cb-9ecf8dc4f873",
+        "urn:uuid:d7ba2a42-9113-59f2-bf9a-096209246c03",
+        "urn:uuid:396c42e7-8b30-5f1d-8774-b89bf407cfd0",
+        "urn:uuid:e87ea9ad-5098-544e-86b4-3d72a418718c",
+        "urn:uuid:06214225-740f-50c6-ae8d-5ad99adb34b2"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+        "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "urn:uuid:89acb040-b11f-593e-b1c8-67c63da94923",
+      "stable_key": "concept/grothendieck-universe",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "Grothendieck 宇宙"
+        },
+        {
+          "language": "id-ID",
+          "text": "semesta Grothendieck"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:360aaae7-6528-5bfd-9b1b-e431ccf3cd68",
+      "stable_key": "concept/transitive-set",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "传递集"
+        },
+        {
+          "language": "id-ID",
+          "text": "himpunan transitif"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:f946f2e1-e5c8-512a-a699-d8be0e2c09c1",
+      "stable_key": "concept/universe-closure-properties",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "宇宙的封闭性质"
+        },
+        {
+          "language": "id-ID",
+          "text": "sifat ketertutupan semesta"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:87cf3ade-6171-5860-bc97-30e4abce3f2a",
+      "stable_key": "concept/u-set",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "\\mathcal{U}-集"
+        },
+        {
+          "language": "id-ID",
+          "text": "himpunan-$\\mathcal{U}$"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:7aa026bc-9f77-567c-8061-e237b64c359d",
+      "stable_key": "concept/u-small-set",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "\\mathcal{U}-小集"
+        },
+        {
+          "language": "id-ID",
+          "text": "himpunan kecil relatif terhadap $\\mathcal{U}$"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:1dc9511b-c275-58a6-b38c-df96eb445f8e",
+      "stable_key": "concept/proper-class-firewall",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "真类问题的防火墙"
+        },
+        {
+          "language": "id-ID",
+          "text": "sekat pelindung terhadap persoalan kelas sejati"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:d7ba2a42-9113-59f2-bf9a-096209246c03",
+      "stable_key": "concept/grothendieck-universe-hypothesis",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "Grothendieck 宇宙假设"
+        },
+        {
+          "language": "id-ID",
+          "text": "hipotesis semesta Grothendieck"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:261f194b-28f4-57dd-9c34-b8c311bf3f0f",
+      "stable_key": "concept/cumulative-hierarchy",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "层垒谱系"
+        },
+        {
+          "language": "id-ID",
+          "text": "hierarki kumulatif"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:f2c9eabe-2f6d-5f71-bd9f-71332c552bc5",
+      "stable_key": "concept/membership-minimal-element",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "关于属于关系的极小元"
+        },
+        {
+          "language": "id-ID",
+          "text": "elemen minimal terhadap relasi keanggotaan"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:e159f50c-16fe-5fbc-b04e-2848bf1a4f8f",
+      "stable_key": "concept/hereditarily-finite-set",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "遗传有限集"
+        },
+        {
+          "language": "id-ID",
+          "text": "himpunan yang berhingga secara herediter"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:396c42e7-8b30-5f1d-8774-b89bf407cfd0",
+      "stable_key": "concept/strongly-inaccessible-cardinal",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "强不可达基数"
+        },
+        {
+          "language": "id-ID",
+          "text": "kardinal tak terjangkau kuat"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:88389156-c45c-5e2d-909b-c4f4aa6be286",
+      "stable_key": "concept/universe-characterization",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "宇宙的层垒谱系刻画"
+        },
+        {
+          "language": "id-ID",
+          "text": "karakterisasi semesta dalam hierarki kumulatif"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:3d160a38-9bc9-572e-9318-aee29d4e64b6",
+      "stable_key": "concept/zfc-model",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "ZFC 模型"
+        },
+        {
+          "language": "id-ID",
+          "text": "model ZFC"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:8abff15d-e34f-5f75-a0cb-9ecf8dc4f873",
+      "stable_key": "concept/internal-set-class-viewpoint",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "模型内部的集合与类"
+        },
+        {
+          "language": "id-ID",
+          "text": "sudut pandang internal tentang himpunan dan kelas"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:e87ea9ad-5098-544e-86b4-3d72a418718c",
+      "stable_key": "concept/large-cardinal-strength",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "大基数假设的强度"
+        },
+        {
+          "language": "id-ID",
+          "text": "kekuatan asumsi kardinal besar"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:06214225-740f-50c6-ae8d-5ad99adb34b2",
+      "stable_key": "concept/single-universe-practice",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "单个宇宙的数学实践"
+        },
+        {
+          "language": "id-ID",
+          "text": "praktik matematika dengan satu semesta"
+        }
+      ]
+    }
+  ],
+  "prerequisites": [
+    {
+      "id": "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
+      "stable_key": "prerequisite/basic-mathematical-literacy",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "基本素养"
+        },
+        {
+          "language": "id-ID",
+          "text": "kematangan matematika dasar"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 54,
+        "line_end": 54
+      }
+    },
+    {
+      "id": "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7",
+      "stable_key": "prerequisite/mathematical-logic",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "逻辑用语与论证"
+        },
+        {
+          "language": "id-ID",
+          "text": "bahasa logika dan penalaran"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 54,
+        "line_end": 54
+      }
+    },
+    {
+      "id": "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+      "stable_key": "prerequisite/elementary-set-theory",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "集合常识"
+        },
+        {
+          "language": "id-ID",
+          "text": "teori himpunan elementer"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 54,
+        "line_end": 54
+      }
+    },
+    {
+      "id": "urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288",
+      "stable_key": "prerequisite/matrices",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "矩阵"
+        },
+        {
+          "language": "id-ID",
+          "text": "matriks"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396",
+      "stable_key": "prerequisite/vector-spaces",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "向量空间"
+        },
+        {
+          "language": "id-ID",
+          "text": "ruang vektor"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14",
+      "stable_key": "prerequisite/polynomials",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "多项式"
+        },
+        {
+          "language": "id-ID",
+          "text": "polinom"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec",
+      "stable_key": "prerequisite/linear-transformations",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "线性变换"
+        },
+        {
+          "language": "id-ID",
+          "text": "transformasi linear"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8",
+      "stable_key": "prerequisite/permutations-and-symmetric-groups",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "置换与对称群"
+        },
+        {
+          "language": "id-ID",
+          "text": "permutasi dan grup simetris"
+        }
+      ],
+      "requiredness": "recommended",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee",
+      "stable_key": "prerequisite/elementary-number-theory",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "初等数论"
+        },
+        {
+          "language": "id-ID",
+          "text": "teori bilangan elementer"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 56,
+        "line_end": 56
+      }
+    },
+    {
+      "id": "urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f",
+      "stable_key": "prerequisite/real-analysis-basics",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "实数与分析常识"
+        },
+        {
+          "language": "id-ID",
+          "text": "dasar-dasar analisis real"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 57,
+        "line_end": 57
+      }
+    },
+    {
+      "id": "urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96",
+      "stable_key": "prerequisite/point-set-topology",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "点集拓扑学初步"
+        },
+        {
+          "language": "id-ID",
+          "text": "topologi himpunan titik elementer"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 57,
+        "line_end": 57
+      }
+    },
+    {
+      "id": "urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f",
+      "stable_key": "prerequisite/cauchy-sequences-and-completeness",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "Cauchy 列与完备性"
+        },
+        {
+          "language": "id-ID",
+          "text": "barisan Cauchy dan kelengkapan"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 57,
+        "line_end": 57
+      }
+    }
+  ],
+  "rights": [
+    {
+      "id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "stable_key": "rights/principal-cc-by-4.0",
+      "entity_type": "rights",
+      "component": "Principal text, source, PDF, and Indonesian translation",
+      "holder_or_source": "Wen-Wei Li; Indonesian translation contributors for translation expression",
+      "license": "CC BY 4.0",
+      "required_treatment": "Attribute author and source, identify the Indonesian translation and changes, link the license, and imply no endorsement.",
+      "applies_to_unit": true,
+      "bindings": [
+        {
+          "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+          "bytes": 49874,
+          "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92"
+        },
+        {
+          "path": "repo/source/LICENSE",
+          "bytes": 19045,
+          "sha256": "48a83a6e39f7b2f166763b30776132c9a99aa816f17cb06f87ad5b8542a7b71f"
+        },
+        {
+          "path": "repo/source/ccby.png",
+          "bytes": 12588,
+          "sha256": "633aae44a5d5b8915debc82f56a8e05c1b62b567b1aefeabc18617b81d8a04a9"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:e18339ae-66cd-5304-b544-b220dd41380d",
+      "stable_key": "rights/lanzhou-cc-by-sa-3.0",
+      "entity_type": "rights",
+      "component": "Lanzhou.png",
+      "holder_or_source": "Chk2011; derived from Wikimedia Administrative_Division_Lanzhou.svg",
+      "license": "CC BY-SA 3.0",
+      "required_treatment": "Keep separate attribution and source/license link, identify rasterization or other changes, and preserve share-alike treatment.",
+      "applies_to_unit": false,
+      "bindings": [
+        {
+          "path": "repo/source/Lanzhou.png",
+          "bytes": 276766,
+          "sha256": "6000d7740aab58f1959c07af2c057680e2518dcc75b225f3180ed4b996fe9455"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+      "stable_key": "rights/ajbook-fragment-cc-by-sa-3.0",
+      "entity_type": "rights",
+      "component": "AJbook.cls DeclareSourcemap fragment",
+      "holder_or_source": "Guido; revision edited by dpprdan; TeX.StackExchange answer 119136",
+      "license": "CC BY-SA 3.0",
+      "required_treatment": "Keep separate attribution and source/license link, or replace with independently written equivalent code.",
+      "applies_to_unit": true,
+      "bindings": [
+        {
+          "path": "repo/source/AJbook.cls",
+          "bytes": 13780,
+          "sha256": "f35dbe8942a880dfe70c072bcfe0491d8cc83f562c28a481b949ca4cc84f0b04"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430",
+      "stable_key": "rights/noto-fonts-ofl-1.1",
+      "entity_type": "rights",
+      "component": "Noto Sans CJK SC and Noto Serif CJK SC fonts",
+      "holder_or_source": "Google and Adobe Noto contributors",
+      "license": "OFL 1.1",
+      "required_treatment": "Retain the OFL text and font notices; do not relicense fonts as book content.",
+      "applies_to_unit": true,
+      "bindings": [
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Black.otf",
+          "bytes": 17797908,
+          "sha256": "2267c4a0312d267dff8c0d1609948f7d949a3da8be3e126f5e2690cb9cc883b4"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Medium.otf",
+          "bytes": 16523632,
+          "sha256": "ca094f6b0001fb048ca39ddd797a0cdb0179e1e55c6561e111c49c3e6a61d7b7"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Regular.otf",
+          "bytes": 16437364,
+          "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+        },
+        {
+          "path": "repo/fonts/NotoSerifCJKsc-Bold.otf",
+          "bytes": 25521460,
+          "sha256": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73"
+        },
+        {
+          "path": "repo/fonts/OFL-1.1-Noto-CJK.txt",
+          "bytes": 4301,
+          "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+        }
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "id": "urn:uuid:e89235f2-d88f-516f-8497-08c96a810071",
+      "stable_key": "citation/sga4-1",
+      "entity_type": "citation",
+      "bib_key": "SGA4-1",
+      "bibliography_path": "repo/source/Al-jabr.bib",
+      "bibliography_sha256": "4979570eb4e3a9edcddd2f975790e56c98dcb3201e03e0a1fbdd64ba60c8263e",
+      "source_line": 437,
+      "target_line": 437,
+      "section_id": "urn:uuid:b61408d9-ce17-5160-9238-5912633f6cc2"
+    },
+    {
+      "id": "urn:uuid:16d41363-ee55-5b49-9126-2aea6b35da2c",
+      "stable_key": "citation/je03",
+      "entity_type": "citation",
+      "bib_key": "Je03",
+      "bibliography_path": "repo/source/Al-jabr.bib",
+      "bibliography_sha256": "4979570eb4e3a9edcddd2f975790e56c98dcb3201e03e0a1fbdd64ba60c8263e",
+      "source_line": 495,
+      "target_line": 495,
+      "section_id": "urn:uuid:88d44457-fbcb-5621-96f8-ca00661b5455"
+    },
+    {
+      "id": "urn:uuid:b8e28ebc-e7da-50f6-b862-9e9433c55c5a",
+      "stable_key": "citation/shu08",
+      "entity_type": "citation",
+      "bib_key": "Shu08",
+      "bibliography_path": "repo/source/Al-jabr.bib",
+      "bibliography_sha256": "4979570eb4e3a9edcddd2f975790e56c98dcb3201e03e0a1fbdd64ba60c8263e",
+      "source_line": 506,
+      "target_line": 506,
+      "section_id": "urn:uuid:21c924ad-5769-53ea-9841-4dd485ce9ef8"
+    }
+  ],
+  "diagrams": [],
+  "index_entries": [
+    {
+      "id": "urn:uuid:4c43e5f8-b102-5134-85ec-d61a19658d6b",
+      "stable_key": "index-entry/unit-006/universe",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:b61408d9-ce17-5160-9238-5912633f6cc2",
+      "ordinal_in_unit": 1,
+      "source_key": "yuzhou@宇宙 (universe)",
+      "target_key": "semesta@semesta (universe)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 439,
+        "line_end": 439,
+        "span_sha256": "d9cf4c883378b4f98df449baf79304f68afca884a9aaf4cd257decd3d9dec230",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 63465,
+        "sha256": "30205d23cfaf29ae97ac63e4edb94ccb908fe23e29bef343907129b28b217c04",
+        "line_start": 439,
+        "line_end": 439,
+        "span_sha256": "655d6c58caa91c5f1de0c373700e3da98efcd1fe69799d476babe36d4996ad63",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:ebbc17ae-f9dd-5853-a7af-9c09db1c344d",
+      "stable_key": "index-entry/unit-006/u-set",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:b61408d9-ce17-5160-9238-5912633f6cc2",
+      "ordinal_in_unit": 2,
+      "source_key": "U-ji@$\\mathcal{U}$-集",
+      "target_key": "himpunan-U@himpunan-$\\mathcal{U}$",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 448,
+        "line_end": 448,
+        "span_sha256": "8dbe8eb2a1a95ce61a7e495b4a2790422d9407aae291916e9c4dae4aba33b846",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 63465,
+        "sha256": "30205d23cfaf29ae97ac63e4edb94ccb908fe23e29bef343907129b28b217c04",
+        "line_start": 448,
+        "line_end": 448,
+        "span_sha256": "8c6327ec9fa5051b5b0c87a4c5a9007ffaa6f9c71dc5b6ec20b1716a1356c78e",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:33055369-9491-5e8c-bbec-94cedfa3449b",
+      "stable_key": "index-entry/unit-006/cumulative-hierarchy",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:ffe4db8a-7826-58fe-be6d-87e781443133",
+      "ordinal_in_unit": 3,
+      "source_key": "jihelun!层垒谱系 (cumulative hierachy)",
+      "target_key": "teori himpunan!hierarki kumulatif (cumulative hierarchy)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 465,
+        "line_end": 465,
+        "span_sha256": "9d2ba8a54a88a936c937d9c47893c1216446d821407edd620c1e0d3228e6a235",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 63465,
+        "sha256": "30205d23cfaf29ae97ac63e4edb94ccb908fe23e29bef343907129b28b217c04",
+        "line_start": 465,
+        "line_end": 465,
+        "span_sha256": "dd8597e2682e94f1c094abae1e11c192a03832032d977459de5cd17b03b53fd6",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:abd6e4e5-9ca5-5bdb-8404-2cf16b7883a8",
+      "stable_key": "index-entry/unit-006/strongly-inaccessible-cardinal",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:88d44457-fbcb-5621-96f8-ca00661b5455",
+      "ordinal_in_unit": 4,
+      "source_key": "jishu!强不可达 (strongly inaccessible)",
+      "target_key": "kardinal!tak terjangkau kuat (strongly inaccessible)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 487,
+        "line_end": 487,
+        "span_sha256": "19ae19b1f7d507d0cd02093656846d3cacf6f4ac277275a0f06b18c6e65cca5c",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 63465,
+        "sha256": "30205d23cfaf29ae97ac63e4edb94ccb908fe23e29bef343907129b28b217c04",
+        "line_start": 487,
+        "line_end": 487,
+        "span_sha256": "c25a5191fc98e2e47a0cee5ad9cdec0a790a59ed874372f61e82eec2ccddc07b",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    }
+  ],
+  "build_surfaces": [
+    {
+      "id": "urn:uuid:311858dc-41d7-5fb0-bb5c-10452513b9b2",
+      "stable_key": "build-surface/unit-006-pdf",
+      "entity_type": "build_surface",
+      "unit_id": "urn:uuid:1420a147-151a-5369-a6e7-5ee987791fd0",
+      "kind": "pdf",
+      "working_directory": ".",
+      "command": "pwsh -NoProfile -File scripts/build_unit_006.ps1 -OutputDirectory build/unit-006-replay-id",
+      "artifact_path": "artifacts/unit-006-bab-1-semesta-grothendieck.pdf",
+      "artifact_binding": {
+        "path": "artifacts/unit-006-bab-1-semesta-grothendieck.pdf",
+        "bytes": 120808,
+        "sha256": "1fe15c59de6021b376643269423f2ef12e7b986f048ae39a31d8b1df9f7562c4"
+      },
+      "log_binding": {
+        "path": "qa/unit-006-evidence/build-log-summary.txt",
+        "bytes": 2958,
+        "sha256": "de1618aef885047cd41b26e63d7e000271c06a1980bf2d733178a386d0c2065f"
+      },
+      "build_script": {
+        "path": "scripts/build_unit_006.ps1",
+        "bytes": 2850,
+        "sha256": "68d6dd118d0e4ef467c9eeedd72f52debc37cf5307bba1c42c7e80fb9ebb90ff"
+      },
+      "page_count": 9,
+      "status": "pass",
+      "driver": {
+        "path": "repo/source/unit-006-bab-1-semesta-grothendieck.tex",
+        "bytes": 4394,
+        "sha256": "6cc523e0a13c366045513f46f703a5aeaf01d825946ca0fdcac4066dd7d61458"
+      },
+      "input_bindings": [
+        {
+          "path": "repo/source/coverpage-id-unit-006.tex",
+          "bytes": 4336,
+          "sha256": "06390c2127b5caf5ac95d0b158196c3406af5121c935b6df02a744cacad64d15"
+        },
+        {
+          "path": "repo/source/font-setup-id.tex",
+          "bytes": 2563,
+          "sha256": "19c03e7fc4abaf7c433a85cf8adf32dbe5259d3de5106c8d1dd712af37dcd280"
+        },
+        {
+          "path": "repo/source/AJbook.cls",
+          "bytes": 13780,
+          "sha256": "f35dbe8942a880dfe70c072bcfe0491d8cc83f562c28a481b949ca4cc84f0b04"
+        },
+        {
+          "path": "repo/source/titles-setup-id.tex",
+          "bytes": 329,
+          "sha256": "db020adff03242f1f2fe8bcb6ec74b6072d9db6bd44971caadde3ce231a51f1b"
+        },
+        {
+          "path": "repo/source/locale-ui-id.tex",
+          "bytes": 2972,
+          "sha256": "9d6c6aa162d11ce8f491703f640a808cdcf61280b300f22032d4caaa0035f3b9"
+        },
+        {
+          "path": "repo/source/titles-setup.tex",
+          "bytes": 6274,
+          "sha256": "f5a81e5ec9f0f2023b93d9b713f0bdc18171a1505863f44a15d65c8757eeadf7"
+        },
+        {
+          "path": "repo/source/mycommand.sty",
+          "bytes": 5925,
+          "sha256": "4d8cdc54597197b8d207cec69fc9af93f9b02c49628e77ab1e9a6d046275d9bc"
+        },
+        {
+          "path": "repo/source/myarrows.sty",
+          "bytes": 3650,
+          "sha256": "59ff5dc0d470674894c5369f6ee79442b71ce08fc02433be7c58387f9a684dd4"
+        },
+        {
+          "path": "repo/source/Al-jabr.bib",
+          "bytes": 29580,
+          "sha256": "4979570eb4e3a9edcddd2f975790e56c98dcb3201e03e0a1fbdd64ba60c8263e"
+        },
+        {
+          "path": "repo/source/ccby.png",
+          "bytes": 12588,
+          "sha256": "633aae44a5d5b8915debc82f56a8e05c1b62b567b1aefeabc18617b81d8a04a9"
+        },
+        {
+          "path": "repo/source/unit-006-crossrefs.aux",
+          "bytes": 367,
+          "sha256": "ff3508473c788979e314fcbe1f9470a99bbc2b83bf618aa15247350703301963"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Black.otf",
+          "bytes": 17797908,
+          "sha256": "2267c4a0312d267dff8c0d1609948f7d949a3da8be3e126f5e2690cb9cc883b4"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Medium.otf",
+          "bytes": 16523632,
+          "sha256": "ca094f6b0001fb048ca39ddd797a0cdb0179e1e55c6561e111c49c3e6a61d7b7"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Regular.otf",
+          "bytes": 16437364,
+          "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+        },
+        {
+          "path": "repo/fonts/NotoSerifCJKsc-Bold.otf",
+          "bytes": 25521460,
+          "sha256": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73"
+        }
+      ],
+      "external_dependencies": [
+        "XeLaTeX",
+        "PowerShell 7",
+        "biber",
+        "makeindex (default and sym1 indexes)",
+        "Fandol fonts from TeX distribution",
+        "TeX Gyre Heros",
+        "packages loaded by unit-006-bab-1-semesta-grothendieck.tex and AJbook.cls"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+        "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+        "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430"
+      ]
+    }
+  ],
+  "qa_events": [
+    {
+      "id": "urn:uuid:a3df2a8e-d5ad-5720-a442-13b0dea9ae32",
+      "stable_key": "qa/unit-006/admission-gate",
+      "entity_type": "qa_event",
+      "unit_id": "urn:uuid:1420a147-151a-5369-a6e7-5ee987791fd0",
+      "check_type": "admission_gate",
+      "result": "pass",
+      "scope": "Complete source-order translation and independent audit for chapter1.tex lines 436-506; documented correction O013-LI-U006-COR-001 repairing the upstream English index typo 'cumulative hierachy' to 'cumulative hierarchy' at line 465; schema and stable-ID integrity; live inclusive line-span hashes; three unique citation keys across six protected citation occurrences (SGA4-1 twice, Je03 three times, and Shu08 once); two labels and four protected reference occurrences over four unique keys, including three frozen cross-unit references; four brace-aware index entries; zero diagrams, exercises, hints, answers, or solutions; localized Indonesian reader interface; standalone digital reflow; two clean builds; structural PDF checks; and all-page MuPDF and Poppler visual inspection.",
+      "witness": "qa/UNIT_006_ADMISSION_20260822.md",
+      "translation_audit_state": "pass",
+      "build_state": "pass",
+      "visual_state": "pass",
+      "witness_binding": {
+        "path": "qa/UNIT_006_ADMISSION_20260822.md",
+        "bytes": 6714,
+        "sha256": "57c4a8bbd36f0006bf9b81adddc1f228b8040d8a46a58ae1453c9ed844eaf77f"
+      }
+    }
+  ]
+}

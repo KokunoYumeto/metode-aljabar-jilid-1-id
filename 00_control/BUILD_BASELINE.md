@@ -81,3 +81,15 @@ Two clean builds produced 12/12 pixel-identical MuPDF pages at 144 dpi. MuPDF
 and Poppler rendered every page without clipping, collision, blank pages, or
 missing glyphs. The PDF container hashes differ across output directories, so
 only deterministic rendered content is claimed.
+
+Unit 006 uses the same target-only digital reflow, bundled Noto CJK closure,
+shell-escape-disabled XeLaTeX/Biber/MakeIndex procedure, and frozen external
+reference numbers. Its admitted artifact is 9 pages, 120,808 bytes, SHA-256
+`1fe15c59de6021b376643269423f2ef12e7b986f048ae39a31d8b1df9f7562c4`.
+The target-only bibliography interface localizes the inherited Chinese `in`
+label to Indonesian `Dalam:`. Two clean builds produced 9/9 pixel-identical
+MuPDF and Poppler pages at 144 dpi. All pages were inspected without clipping,
+collision, blank pages, missing glyphs, or Han residue. The PDF container hashes
+differ across output directories, so only deterministic rendered content is
+claimed. The reader remains untagged; correct `id-ID` catalog language does not
+remove that inherited accessibility limitation.

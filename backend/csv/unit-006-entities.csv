@@ -1,0 +1,52 @@
+entity_type,id,stable_key,parent_id,order,label_id,status
+build_surface,urn:uuid:311858dc-41d7-5fb0-bb5c-10452513b9b2,build-surface/unit-006-pdf,urn:uuid:1420a147-151a-5369-a6e7-5ee987791fd0,,unit-006-pdf,pass
+citation,urn:uuid:16d41363-ee55-5b49-9126-2aea6b35da2c,citation/je03,urn:uuid:88d44457-fbcb-5621-96f8-ca00661b5455,,Je03,admitted:admitted
+citation,urn:uuid:e89235f2-d88f-516f-8497-08c96a810071,citation/sga4-1,urn:uuid:b61408d9-ce17-5160-9238-5912633f6cc2,,SGA4-1,admitted:admitted
+citation,urn:uuid:b8e28ebc-e7da-50f6-b862-9e9433c55c5a,citation/shu08,urn:uuid:21c924ad-5769-53ea-9841-4dd485ce9ef8,,Shu08,admitted:admitted
+concept,urn:uuid:261f194b-28f4-57dd-9c34-b8c311bf3f0f,concept/cumulative-hierarchy,,,hierarki kumulatif,admitted:admitted
+concept,urn:uuid:89acb040-b11f-593e-b1c8-67c63da94923,concept/grothendieck-universe,,,semesta Grothendieck,admitted:admitted
+concept,urn:uuid:d7ba2a42-9113-59f2-bf9a-096209246c03,concept/grothendieck-universe-hypothesis,,,hipotesis semesta Grothendieck,admitted:admitted
+concept,urn:uuid:e159f50c-16fe-5fbc-b04e-2848bf1a4f8f,concept/hereditarily-finite-set,,,himpunan yang berhingga secara herediter,admitted:admitted
+concept,urn:uuid:8abff15d-e34f-5f75-a0cb-9ecf8dc4f873,concept/internal-set-class-viewpoint,,,sudut pandang internal tentang himpunan dan kelas,admitted:admitted
+concept,urn:uuid:e87ea9ad-5098-544e-86b4-3d72a418718c,concept/large-cardinal-strength,,,kekuatan asumsi kardinal besar,admitted:admitted
+concept,urn:uuid:f2c9eabe-2f6d-5f71-bd9f-71332c552bc5,concept/membership-minimal-element,,,elemen minimal terhadap relasi keanggotaan,admitted:admitted
+concept,urn:uuid:1dc9511b-c275-58a6-b38c-df96eb445f8e,concept/proper-class-firewall,,,sekat pelindung terhadap persoalan kelas sejati,admitted:admitted
+concept,urn:uuid:06214225-740f-50c6-ae8d-5ad99adb34b2,concept/single-universe-practice,,,praktik matematika dengan satu semesta,admitted:admitted
+concept,urn:uuid:396c42e7-8b30-5f1d-8774-b89bf407cfd0,concept/strongly-inaccessible-cardinal,,,kardinal tak terjangkau kuat,admitted:admitted
+concept,urn:uuid:360aaae7-6528-5bfd-9b1b-e431ccf3cd68,concept/transitive-set,,,himpunan transitif,admitted:admitted
+concept,urn:uuid:87cf3ade-6171-5860-bc97-30e4abce3f2a,concept/u-set,,,himpunan-$\mathcal{U}$,admitted:admitted
+concept,urn:uuid:7aa026bc-9f77-567c-8061-e237b64c359d,concept/u-small-set,,,himpunan kecil relatif terhadap $\mathcal{U}$,admitted:admitted
+concept,urn:uuid:88389156-c45c-5e2d-909b-c4f4aa6be286,concept/universe-characterization,,,karakterisasi semesta dalam hierarki kumulatif,admitted:admitted
+concept,urn:uuid:f946f2e1-e5c8-512a-a699-d8be0e2c09c1,concept/universe-closure-properties,,,sifat ketertutupan semesta,admitted:admitted
+concept,urn:uuid:3d160a38-9bc9-572e-9318-aee29d4e64b6,concept/zfc-model,,,model ZFC,admitted:admitted
+course,urn:uuid:a5f3ad58-ce3c-5f5f-b581-1f842ae79192,course/o013,urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78,,Graduate Algebra,admitted:admitted
+edition,urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49,edition/wenweili/aljabr-1/c4f7a01f68f5f407906b4b970640cddbbad85f6b,urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397,,c4f7a01f68f5f407906b4b970640cddbbad85f6b,admitted:admitted
+index_entry,urn:uuid:33055369-9491-5e8c-bbec-94cedfa3449b,index-entry/unit-006/cumulative-hierarchy,urn:uuid:ffe4db8a-7826-58fe-be6d-87e781443133,3,cumulative-hierarchy,admitted:admitted
+index_entry,urn:uuid:abd6e4e5-9ca5-5bdb-8404-2cf16b7883a8,index-entry/unit-006/strongly-inaccessible-cardinal,urn:uuid:88d44457-fbcb-5621-96f8-ca00661b5455,4,strongly-inaccessible-cardinal,admitted:admitted
+index_entry,urn:uuid:ebbc17ae-f9dd-5853-a7af-9c09db1c344d,index-entry/unit-006/u-set,urn:uuid:b61408d9-ce17-5160-9238-5912633f6cc2,2,u-set,admitted:admitted
+index_entry,urn:uuid:4c43e5f8-b102-5134-85ec-d61a19658d6b,index-entry/unit-006/universe,urn:uuid:b61408d9-ce17-5160-9238-5912633f6cc2,1,universe,admitted:admitted
+prerequisite,urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7,prerequisite/basic-mathematical-literacy,,,kematangan matematika dasar,admitted:admitted
+prerequisite,urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f,prerequisite/cauchy-sequences-and-completeness,,,barisan Cauchy dan kelengkapan,admitted:admitted
+prerequisite,urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee,prerequisite/elementary-number-theory,,,teori bilangan elementer,admitted:admitted
+prerequisite,urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4,prerequisite/elementary-set-theory,,,teori himpunan elementer,admitted:admitted
+prerequisite,urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec,prerequisite/linear-transformations,,,transformasi linear,admitted:admitted
+prerequisite,urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7,prerequisite/mathematical-logic,,,bahasa logika dan penalaran,admitted:admitted
+prerequisite,urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288,prerequisite/matrices,,,matriks,admitted:admitted
+prerequisite,urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8,prerequisite/permutations-and-symmetric-groups,,,permutasi dan grup simetris,admitted:admitted
+prerequisite,urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96,prerequisite/point-set-topology,,,topologi himpunan titik elementer,admitted:admitted
+prerequisite,urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14,prerequisite/polynomials,,,polinom,admitted:admitted
+prerequisite,urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f,prerequisite/real-analysis-basics,,,dasar-dasar analisis real,admitted:admitted
+prerequisite,urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396,prerequisite/vector-spaces,,,ruang vektor,admitted:admitted
+program,urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78,program/open-mathematics-curriculum/2026,,,Open Mathematics Curriculum,admitted:admitted
+qa_event,urn:uuid:a3df2a8e-d5ad-5720-a442-13b0dea9ae32,qa/unit-006/admission-gate,urn:uuid:1420a147-151a-5369-a6e7-5ee987791fd0,,admission-gate,pass
+resource,urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397,resource/wenweili/aljabr-1,,,"Metode Aljabar, Jilid 1: Arsitektur Dasar",admitted:admitted
+rights,urn:uuid:10faf5cd-990f-5850-87b4-26922b062485,rights/ajbook-fragment-cc-by-sa-3.0,,,AJbook.cls DeclareSourcemap fragment,applies
+rights,urn:uuid:e18339ae-66cd-5304-b544-b220dd41380d,rights/lanzhou-cc-by-sa-3.0,,,Lanzhou.png,retained_not_used_by_unit
+rights,urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430,rights/noto-fonts-ofl-1.1,,,Noto Sans CJK SC and Noto Serif CJK SC fonts,applies
+rights,urn:uuid:0baf6c47-021d-5310-9475-81519e710250,rights/principal-cc-by-4.0,,,"Principal text, source, PDF, and Indonesian translation",applies
+section,urn:uuid:ffe4db8a-7826-58fe-be6d-87e781443133,unit/bab-1-semesta-grothendieck/section/cumulative-hierarchy-and-set-membership,urn:uuid:1420a147-151a-5369-a6e7-5ee987791fd0,2,Hierarki Kumulatif dan Keanggotaan Setiap Himpunan,admitted:admitted
+section,urn:uuid:7e6674ac-e8c2-5139-a1e8-201b20d52ef5,unit/bab-1-semesta-grothendieck/section/hereditarily-finite-sets-and-universe-definition,urn:uuid:1420a147-151a-5369-a6e7-5ee987791fd0,3,Himpunan Berhingga secara Herediter dan Definisi Semesta,admitted:admitted
+section,urn:uuid:88d44457-fbcb-5621-96f8-ca00661b5455,unit/bab-1-semesta-grothendieck/section/strongly-inaccessible-cardinals-and-universe-characterization,urn:uuid:1420a147-151a-5369-a6e7-5ee987791fd0,4,Kardinal Tak Terjangkau Kuat dan Karakterisasi Semesta,admitted:admitted
+section,urn:uuid:b61408d9-ce17-5160-9238-5912633f6cc2,unit/bab-1-semesta-grothendieck/section/universe-definition-closure-and-hypothesis,urn:uuid:1420a147-151a-5369-a6e7-5ee987791fd0,1,"Definisi, Ketertutupan, dan Hipotesis Semesta Grothendieck",admitted:admitted
+section,urn:uuid:21c924ad-5769-53ea-9841-4dd485ce9ef8,unit/bab-1-semesta-grothendieck/section/zfc-models-and-strength-of-the-universe-hypothesis,urn:uuid:1420a147-151a-5369-a6e7-5ee987791fd0,5,Model ZFC dan Kekuatan Hipotesis Semesta,admitted:admitted
+unit,urn:uuid:1420a147-151a-5369-a6e7-5ee987791fd0,unit/bab-1-semesta-grothendieck,urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49,6,Bab 1: Teori Himpunan; Semesta Grothendieck,admitted:admitted

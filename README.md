@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Unit 1 - Pendahuluan, Unit 2 - pembukaan Bab 1 dan Bagian 1.1 tentang aksioma ZFC, Unit 3 - Bagian 1.2 tentang struktur urutan dan ordinal, Unit 4 - Bagian 1.3 tentang rekursi transfinit dan penerapannya, serta Unit 5 - Bagian 1.4 tentang bilangan kardinal telah diterjemahkan, diaudit, dibangun, dan diterima. Bagian 1.5 dan seterusnya masih dalam bahasa sumber dan akan diterjemahkan berurutan.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Unit 1 - Pendahuluan, Unit 2 - pembukaan Bab 1 dan Bagian 1.1 tentang aksioma ZFC, Unit 3 - Bagian 1.2 tentang struktur urutan dan ordinal, Unit 4 - Bagian 1.3 tentang rekursi transfinit dan penerapannya, Unit 5 - Bagian 1.4 tentang bilangan kardinal, serta Unit 6 - Bagian 1.5 tentang semesta Grothendieck telah diterjemahkan, diaudit, dibangun, dan diterima. Latihan penutup Bab 1 dan bab-bab selanjutnya masih dalam bahasa sumber dan akan diterjemahkan berurutan.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh PDF Unit 1](artifacts/unit-001-pendahuluan.pdf)
 
@@ -13,6 +13,8 @@ Status saat ini: **Unit 1 - Pendahuluan, Unit 2 - pembukaan Bab 1 dan Bagian 1.1
 [Baca atau unduh PDF Unit 4](artifacts/unit-004-bab-1-rekursi-transfinit-dan-penerapannya.pdf)
 
 [Baca atau unduh PDF Unit 5](artifacts/unit-005-bab-1-kardinal.pdf)
+
+[Baca atau unduh PDF Unit 6](artifacts/unit-006-bab-1-semesta-grothendieck.pdf)
 
 ## Identitas sumber
 
@@ -35,6 +37,7 @@ pwsh -NoProfile -File scripts/build_unit_002.ps1 -OutputDirectory build/unit-002
 pwsh -NoProfile -File scripts/build_unit_003.ps1 -OutputDirectory build/unit-003-replay
 pwsh -NoProfile -File scripts/build_unit_004.ps1 -OutputDirectory build/unit-004-replay
 pwsh -NoProfile -File scripts/build_unit_005.ps1 -OutputDirectory build/unit-005-replay
+pwsh -NoProfile -File scripts/build_unit_006.ps1 -OutputDirectory build/unit-006-replay
 ```
 
 Skrip menjalankan XeLaTeX tanpa shell escape, indeks dan bibliografi yang dibutuhkan setiap unit, lalu lintasan konvergensi XeLaTeX. Tanggal sumber dan seed gambar sampul dipatok. Dua build bersih untuk setiap unit menghasilkan halaman yang identik piksel demi piksel ketika dirender, meskipun serialisasi kontainer PDF XeTeX belum identik byte di direktori keluaran yang berbeda.
@@ -87,9 +90,19 @@ Artefak Unit 5 yang diterima:
 - 163 fragmen matematika sebaris terpelihara; koreksi sejarah hipotesis kontinuum dan klarifikasi komposisi injeksi didokumentasikan secara eksplisit
 - tidak ada galat TeX, sitasi/rujukan tak terdefinisi, destinasi ganda, karakter hilang, halaman kosong, residu aksara Han, atau tajuk `Lemma`
 
+Artefak Unit 6 yang diterima:
+
+- 9 halaman; tidak ada halaman kosong
+- 120.808 byte
+- SHA-256 `1fe15c59de6021b376643269423f2ef12e7b986f048ae39a31d8b1df9f7562c4`
+- bahasa PDF `id-ID`
+- 5 entri outline, 31 destinasi bernama, 21 tautan internal, dan 4 URI yang disengaja
+- 99 fragmen matematika sebaris dan seluruh struktur Bagian 1.5 terpelihara; koreksi ejaan indeks sumber `cumulative hierachy` didokumentasikan
+- label bibliografi telah dilokalkan ke `Dalam:`; tidak ada galat TeX, rujukan/sitasi tak terdefinisi, karakter hilang, halaman kosong, atau residu aksara Han
+
 ## Backend modular
 
-`backend/data/unit-001-pendahuluan.json`, `backend/data/unit-002-bab-1-zfc.json`, `backend/data/unit-003-bab-1-struktur-urutan-dan-ordinal.json`, `backend/data/unit-004-bab-1-rekursi-transfinit-dan-penerapannya.json`, dan `backend/data/unit-005-bab-1-kardinal.json` adalah catatan kanonik unit yang telah diterima. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik.
+`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-006-bab-1-semesta-grothendieck.json` adalah catatan kanonik keenam unit yang telah diterima. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik.
 
 Validasi:
 
@@ -99,6 +112,7 @@ python scripts/validate_backend.py --data backend/data/unit-002-bab-1-zfc.json
 python scripts/validate_backend.py --data backend/data/unit-003-bab-1-struktur-urutan-dan-ordinal.json
 python scripts/validate_backend.py --data backend/data/unit-004-bab-1-rekursi-transfinit-dan-penerapannya.json
 python scripts/validate_backend.py --data backend/data/unit-005-bab-1-kardinal.json
+python scripts/validate_backend.py --data backend/data/unit-006-bab-1-semesta-grothendieck.json
 ```
 
 Validator memeriksa skema, keunikan dan relasi ID, urutan bagian, hash file dan rentang baris, penutupan sitasi/rujukan/diagram/indeks, bukti build, serta kesesuaian byte proyeksi CSV.
@@ -125,7 +139,8 @@ Teks sumber dan terjemahan ditangani menurut Creative Commons Attribution 4.0 In
   - [x] Bagian 1.2 — Struktur Urutan dan Ordinal
   - [x] Bagian 1.3 — Rekursi Transfinit dan Penerapannya
   - [x] Bagian 1.4 — Bilangan Kardinal
-  - [ ] Bagian 1.5 dan seterusnya
+  - [x] Bagian 1.5 - Semesta Grothendieck
+  - [ ] Latihan Bab 1
 - [ ] Bab 2 — Dasar-dasar teori kategori
 - [ ] Bab 3 — Kategori monoidal
 - [ ] Bab 4 — Teori grup

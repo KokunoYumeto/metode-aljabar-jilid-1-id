@@ -433,77 +433,77 @@ Konsep kardinal reguler akan digunakan dalam \S\ref{sec:Grot-universe}. Secara i
 
 Sebagai contoh, berikut ini ditunjukkan bahwa setiap kardinal berbentuk $\aleph_{\gamma+\omega}$ tidak reguler, dengan $\gamma$ sebarang ordinal. Dalam definisi, ambil $\beta := \gamma + \omega$ dan $a_\xi := \aleph_\xi$. Jelas bahwa $\alpha := \aleph_\beta > \beta$, sedangkan definisi bilangan $\aleph$ memberikan $\sup \{ a_\xi : \xi < \beta \} = \sup \{ \aleph_{\gamma + n} : n < \omega \} = \aleph_{\gamma+\omega}$.
 
-\section{Grothendieck 宇宙}\label{sec:Grot-universe}
-关于 Grothendieck 宇宙的第一手材料是 \cite[Exp.\ I, Appendice]{SGA4-1}.
+\section{Semesta Grothendieck}\label{sec:Grot-universe}
+Sumber primer mengenai semesta Grothendieck adalah \cite[Exp.\ I, Appendice]{SGA4-1}.
 
-\begin{definition}\index{yuzhou@宇宙 (universe)}
-	本书所谓的\emph{宇宙}, 意谓一个满足下述性质的集合 $\mathcal{U}$.
+\begin{definition}\index{semesta@semesta (universe)}
+	Yang dimaksud dengan \emph{semesta} dalam buku ini ialah suatu himpunan $\mathcal{U}$ yang memenuhi sifat-sifat berikut.
 	\begin{enumerate}[\bfseries {U}.1]
-		\item $u \in \mathcal{U} \implies u \subset \mathcal{U}$, 即: $\mathcal{U}$ 是传递集;
+		\item $u \in \mathcal{U} \implies u \subset \mathcal{U}$, yakni $\mathcal{U}$ merupakan himpunan transitif;
 		\item $u,v \in \mathcal{U} \implies \{u, v\} \in \mathcal{U}$;
 		\item $u \in \mathcal{U} \implies P(u) \in \mathcal{U}$;
-		\item 若 $I \in \mathcal{U}$, 一族集合 $\{u_i : i \in I\}$ 满足 $\forall i, \; u_i \in \mathcal{U}$, 则 $\bigcup_{i \in I} u_i \in \mathcal{U}$;
-		\item $\Z_{\geq 0} \in \mathcal{U}$, 因此: $\emptyset \in \mathcal{U}$ (请回忆 \S\ref{sec:order} 中构造非负整数的方法).
+		\item jika $I \in \mathcal{U}$ dan suatu keluarga himpunan $\{u_i : i \in I\}$ memenuhi $\forall i, \; u_i \in \mathcal{U}$, maka $\bigcup_{i \in I} u_i \in \mathcal{U}$;
+		\item $\Z_{\geq 0} \in \mathcal{U}$, dan akibatnya $\emptyset \in \mathcal{U}$ (ingat kembali cara mengonstruksi bilangan bulat taknegatif dalam \S\ref{sec:order}).
 	\end{enumerate}
-	对于集合 $X$, 若 $X \in \mathcal{U}$ 则称为 $\mathcal{U}$-集; 若 $X$ 和一个 $\mathcal{U}$-集等势, 则称为 $\mathcal{U}$-小集.\index{U-ji@$\mathcal{U}$-集}
+	Untuk suatu himpunan $X$, jika $X \in \mathcal{U}$, himpunan itu disebut himpunan-$\mathcal{U}$; jika $X$ ekuipoten dengan suatu himpunan-$\mathcal{U}$, himpunan itu disebut himpunan kecil relatif terhadap $\mathcal{U}$.\index{himpunan-U@himpunan-$\mathcal{U}$}
 \end{definition}
 
-给定宇宙 $\mathcal{U}$, 不难验证以下推论:
+Untuk suatu semesta $\mathcal{U}$, konsekuensi-konsekuensi berikut mudah diverifikasi:
 \begin{itemize}
 	\item $u \subset v \in \mathcal{U} \implies u \in \mathcal{U}$;
 	\item $u \in \mathcal{U} \implies \bigcup u = \bigcup_{x \in u} x  \in \mathcal{U}$;
 	\item $u, v \in \mathcal{U} \implies u \times v \in \mathcal{U}$;
-	\item 若 $I \in \mathcal{U}$, 一族集合 $\{u_i : i \in I\}$ 满足 $\forall i, \; u_i \in \mathcal{U}$, 则 $\prod_{i \in I} u_i \in \mathcal{U}$.
+	\item jika $I \in \mathcal{U}$ dan suatu keluarga himpunan $\{u_i : i \in I\}$ memenuhi $\forall i, \; u_i \in \mathcal{U}$, maka $\prod_{i \in I} u_i \in \mathcal{U}$.
 \end{itemize}
 
-这套概念的神髓在于在 $\mathcal{U}$ 内部可以实行大部分常见的数学操作而不涉及真类, 这就为棘手的集合论问题建起一道防火墙. 然而是否有充分多、充分大的宇宙可资调用则是另一个问题, 为此我们引入以下假设.
+Inti konsep ini ialah bahwa sebagian besar operasi matematika yang lazim dapat dilakukan di dalam $\mathcal{U}$ tanpa melibatkan kelas sejati; dengan demikian, semesta menjadi sekat pelindung terhadap persoalan teori himpunan yang rumit. Akan tetapi, apakah tersedia cukup banyak semesta yang cukup besar merupakan persoalan lain. Untuk itu, kita ajukan hipotesis berikut.
 
 \begin{hypothesis}[A.\ Grothendieck]\label{hyp:universe}
-	对任何集合 $X$, 存在宇宙 $\mathcal{U}$ 使得 $X \in \mathcal{U}$.
+	Untuk setiap himpunan $X$, terdapat semesta $\mathcal{U}$ sedemikian sehingga $X \in \mathcal{U}$.
 \end{hypothesis}
 
-展开相关讨论前, 不妨先勾勒集合的层垒谱系. 以超穷递归定义一族由序数枚举的集合 $V_\alpha$ 如下: \index{jihelun!层垒谱系 (cumulative hierachy)}
+Sebelum menguraikan pembahasan tersebut, mari kita sketsakan terlebih dahulu hierarki kumulatif himpunan. Dengan rekursi transfinit, definisikan keluarga himpunan yang diindeks oleh ordinal, $V_\alpha$, sebagai berikut: \index{teori himpunan!hierarki kumulatif (cumulative hierarchy)}
 \begin{align*}
 	V_0 & := \emptyset, \\
 	V_{\alpha+1} & := P(V_\alpha), \\
-	V_\alpha & :=\bigcup_{\beta < \alpha} V_\beta, \quad \text{如果 $\alpha$ 是极限序数}.
+	V_\alpha & :=\bigcup_{\beta < \alpha} V_\beta, \quad \text{jika $\alpha$ merupakan ordinal limit}.
 \end{align*}
 
-不难验证每个 $V_\alpha$ 都是传递集 (定义 \ref{def:ordinal}), 并包含 $\alpha$ 作为子集, 而且 $\alpha < \beta \implies V_\alpha \subset V_\beta$.
+Mudah diverifikasi bahwa setiap $V_\alpha$ merupakan himpunan transitif (Definisi \ref{def:ordinal}), memuat $\alpha$ sebagai subhimpunan, dan memenuhi $\alpha < \beta \implies V_\alpha \subset V_\beta$.
 
 \begin{proposition}
-	任一集合都属于某个 $V_\alpha$, 其中 $\alpha$ 是序数.
+	Setiap himpunan merupakan anggota suatu $V_\alpha$, untuk suatu ordinal $\alpha$.
 \end{proposition}
 \begin{proof}
-	首先证明以下性质: 任何非空的类 $C$ 都有一个相对于 $\in$ 的极小元 $x$. 任取 $S \in C$. 若 $S \cap C = \emptyset$ 则 $S$ 即所求的极小元. 若 $S \cap C \neq \emptyset$, 则存在传递集 $T$ 使得 $T \supset S$, 其递归构造如下:
+	Pertama-tama kita buktikan sifat berikut: setiap kelas tak kosong $C$ mempunyai suatu elemen minimal $x$ terhadap relasi keanggotaan $\in$. Ambil sebarang $S \in C$. Jika $S \cap C = \emptyset$, maka $S$ adalah elemen minimal yang dicari. Jika $S \cap C \neq \emptyset$, terdapat himpunan transitif $T$ dengan $T \supset S$, yang dibangun secara rekursif sebagai berikut:
 	\[ S_0 := S, \quad S_{n+1} := \bigcup S_n, \quad T := \bigcup_{n \in \Z_{\geq 0}} S_n; \]
-	循定义可见 $T$ 是传递的. 令 $X := T \cap C$, 这是非空集故正则公理 \textbf{A.8} 确保 $X$ 中有相对于 $\in$ 的极小元 $x$. 仅须说明 $x$ 相对于 $(C, \in)$ 同样极小: 设若不然, 存在 $y \in x \cap C$, 则 $T$ 传递和 $x \in T$ 将蕴涵 $y \in T \cap C = X$, 与 $x$ 对 $(X, \in)$ 极小相悖.
+	Dari definisi tampak bahwa $T$ transitif. Tetapkan $X := T \cap C$. Himpunan ini tak kosong, sehingga aksioma regularitas \textbf{A.8} menjamin adanya elemen minimal $x$ dalam $X$ terhadap relasi keanggotaan $\in$. Tinggal ditunjukkan bahwa $x$ juga minimal dalam $(C, \in)$: andaikan tidak, terdapat $y \in x \cap C$; transitivitas $T$ dan fakta bahwa $x \in T$ akan memberikan $y \in T \cap C = X$, bertentangan dengan minimalitas $x$ dalam $(X, \in)$.
 
-	现在取 $C$ 为所有不在任一个 $V_\alpha$ 内的集合构成的类. 假设 $C$ 不空, 应用上述性质可知 $C$ 中存在一个相对于 $\in$ 的极小元 $x$. 因此若 $z \in x$ 则 $z$ 属于某个 $V_\alpha$; 对之取最小的 $\alpha = \alpha(z)$ 使得 $z \in V_\alpha$. 由于 $x$ 是集合, 应用替换公理模式 \textbf{A.7} 知 $\mathcal{O} := \{\alpha(z) : z \in x \}$ 是一个由序数组成之集合, 置 $\theta := \sup \mathcal{O}$. 于是 $x \subset V_\theta$ 故 $x \in V_{\theta+1}$, 矛盾.
+	Sekarang ambil $C$ sebagai kelas semua himpunan yang tidak merupakan anggota satu pun $V_\alpha$. Andaikan $C$ tak kosong. Berdasarkan sifat di atas, $C$ mempunyai suatu elemen minimal $x$ terhadap relasi keanggotaan $\in$. Karena itu, untuk setiap $z \in x$, himpunan $z$ merupakan anggota suatu $V_\alpha$; ambil ordinal terkecil $\alpha = \alpha(z)$ sedemikian sehingga $z \in V_\alpha$. Karena $x$ merupakan himpunan, skema aksioma penggantian \textbf{A.7} menjamin bahwa $\mathcal{O} := \{\alpha(z) : z \in x \}$ merupakan suatu himpunan yang terdiri atas ordinal-ordinal. Tetapkan $\theta := \sup \mathcal{O}$. Maka $x \subset V_\theta$, sehingga $x \in V_{\theta+1}$, suatu kontradiksi.
 \end{proof}
 
-集合 $V_\omega$ 的元素称作遗传有限集, 这些集合皆有限, 这对于一些组合学或计算机方面的应用或许足够, 但很难想象如何在其中开展分析或几何学等理论. 因此 $V_\omega$ 对数学家是远远不够用的. Grothendieck 学派原来的定义不含 $\Z_{\geq 0} \in \mathcal{U}$, 导致 $V_0, V_\omega$ 都是它们意义下的宇宙; 本书的假设排除了这两者.
+Elemen-elemen $V_\omega$ disebut himpunan yang berhingga secara herediter; semuanya berhingga. Himpunan-himpunan ini mungkin memadai untuk beberapa penerapan dalam kombinatorika atau ilmu komputer, tetapi sukar dibayangkan bagaimana teori seperti analisis atau geometri dapat dikembangkan di dalamnya. Karena itu, $V_\omega$ sama sekali tidak memadai bagi matematikawan. Definisi asli mazhab Grothendieck tidak memuat syarat $\Z_{\geq 0} \in \mathcal{U}$, sehingga $V_0, V_\omega$ keduanya merupakan semesta dalam pengertian mereka; syarat tambahan dalam definisi buku ini mengecualikan keduanya.
 
-\begin{definition}\index{jishu!强不可达 (strongly inaccessible)}
-	满足以下性质的基数 $\kappa$ 称为强不可达基数:
+\begin{definition}\index{kardinal!tak terjangkau kuat (strongly inaccessible)}
+	Kardinal $\kappa$ yang memenuhi sifat-sifat berikut disebut kardinal tak terjangkau kuat:
 	\begin{enumerate}[\bfseries {I}.1]
-		\item $\kappa$ 不可数,
-		\item $\kappa$ 是正则基数 (定义 \ref{def:regular-cardinal}),
-		\item 对任意基数 $\lambda$ 皆有 $\lambda < \kappa \implies 2^\lambda < \kappa$.
+		\item $\kappa$ tak terhitung,
+		\item $\kappa$ merupakan kardinal reguler (Definisi \ref{def:regular-cardinal}),
+		\item untuk setiap kardinal $\lambda$ berlaku $\lambda < \kappa \implies 2^\lambda < \kappa$.
 	\end{enumerate}
 \end{definition}
-可以证明 \textbf{I}.3 蕴涵 $\lambda, \nu < \kappa \implies \lambda^\nu < \kappa$, 见 \cite[p.58]{Je03}. 强不可达基数是现代集合论着力研究的大基数的一员. Bourbaki 在 \cite[Exp. I, Appendice]{SGA4-1} 中证明了以下结果.
+Dapat dibuktikan bahwa \textbf{I}.3 mengakibatkan $\lambda, \nu < \kappa \implies \lambda^\nu < \kappa$; lihat \cite[p.58]{Je03}. Kardinal tak terjangkau kuat merupakan salah satu jenis kardinal besar yang menjadi pokok kajian teori himpunan modern. Dalam \cite[Exp. I, Appendice]{SGA4-1}, Bourbaki membuktikan hasil berikut.
 \begin{theorem}
-	宇宙正是层垒谱系中形如 $V_\kappa$ 的成员, 其中 $\kappa$ 是一个强不可达基数.
+	Suatu himpunan merupakan semesta jika dan hanya jika ia berbentuk $V_\kappa$ dalam hierarki kumulatif, dengan $\kappa$ suatu kardinal tak terjangkau kuat.
 \end{theorem}
 
-强不可达基数的性质告诉我们: 从 $V_\kappa$ 的元素出发, 在 ZFC 系统内无论怎么操作都不会超出 $V_\kappa$. 假若读者对数理逻辑有些了解, 则可以更精确地说: 对于强不可达基数 $\kappa$, 宇宙 $\mathcal{U} := V_\kappa$ 连同属于关系 $\in$ 构成了 ZFC 的一个\emph{模型} \cite[Lemma 12.13]{Je03}, 相当于在集合论内部虚拟地运行了一套集合论. 不妨这么看: 若把 $V_\kappa$ 的元素看作 ``集合'', 则就模型 $(V_\kappa, \in)$ 观之, ``类''就是 $V_{\kappa+1} = P(V_\kappa)$ 的元素.
+Sifat kardinal tak terjangkau kuat memberi tahu kita bahwa, jika kita bertolak dari elemen-elemen $V_\kappa$, operasi apa pun yang dilakukan di dalam sistem ZFC tidak akan membawa kita keluar dari $V_\kappa$. Jika pembaca memiliki sedikit pengetahuan tentang logika matematika, hal ini dapat dinyatakan dengan lebih tepat: untuk kardinal tak terjangkau kuat $\kappa$, semesta $\mathcal{U} := V_\kappa$ bersama relasi keanggotaan $\in$ membentuk suatu \emph{model} ZFC \cite[Lemma 12.13]{Je03}; dengan kata lain, hal ini seolah-olah menjalankan suatu teori himpunan secara virtual di dalam teori himpunan itu sendiri. Hal ini dapat dipandang sebagai berikut: jika elemen-elemen $V_\kappa$ dianggap sebagai ``himpunan'', maka dari sudut pandang model $(V_\kappa, \in)$, ``kelas'' adalah elemen-elemen $V_{\kappa+1} = P(V_\kappa)$.
 
 \begin{remark}
-	假设 \ref{hyp:universe} 等价于对任意基数 $\lambda$, 存在强不可达基数 $\kappa$ 使得 $\lambda < \kappa$. 这是颇强的要求. 对于大多数的范畴论构造和数学论证, 我们顶多只要求存在某个宇宙 $\mathcal{U}$; 换言之, 日常生活中只需要单个强不可达基数. 这个要求依然有些奢侈, 原因是在 ZFC 系统内无法证明强不可达基数的存在性 \cite[Theorem 12.12]{Je03}.
+	Hipotesis \ref{hyp:universe} ekuivalen dengan pernyataan bahwa, untuk setiap kardinal $\lambda$, terdapat kardinal tak terjangkau kuat $\kappa$ sedemikian sehingga $\lambda < \kappa$. Ini merupakan tuntutan yang cukup kuat. Untuk kebanyakan konstruksi teori kategori dan argumen matematika, yang paling jauh diperlukan hanyalah keberadaan suatu semesta $\mathcal{U}$; dengan kata lain, dalam praktik sehari-hari hanya diperlukan satu kardinal tak terjangkau kuat. Tuntutan ini tetap cukup berlebihan, sebab keberadaan kardinal tak terjangkau kuat tidak dapat dibuktikan di dalam sistem ZFC \cite[Theorem 12.12]{Je03}.
 \end{remark}
 
-数学工作者究竟需不需要宇宙? 如何看待强不可达基数假设? 这些议题处在数学, 哲学与群体心理学的交界, 请有兴趣的读者移步 \cite{Shu08}.
+Apakah matematikawan sungguh memerlukan semesta? Bagaimana sebaiknya hipotesis kardinal tak terjangkau kuat dipandang? Persoalan-persoalan ini terletak di persimpangan matematika, filsafat, dan psikologi kelompok; pembaca yang berminat dipersilakan melihat \cite{Shu08}.
 
 \begin{Exercises}
 	\item 设 $X, Y$ 为全序集, 定义新的全序集
