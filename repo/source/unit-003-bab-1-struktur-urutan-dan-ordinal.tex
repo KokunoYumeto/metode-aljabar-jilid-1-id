@@ -7,7 +7,7 @@
 
 \documentclass[
 	colors = true,
-	coverpage = coverpage-id-unit-002.tex,
+	coverpage = coverpage-id-unit-003.tex,
 	fontsetup = font-setup-id.tex,
 	titlesetup = titles-setup-id.tex,
 	CJKthechapter = false
@@ -55,21 +55,54 @@
 \usepackage[unicode, bookmarksnumbered]{hyperref}
 % Import only frozen numbers. The empty URL prevents false links to a PDF
 % that is not part of this standalone reader.
-\externaldocument{unit-002-crossrefs}[]
+\externaldocument{unit-003-crossrefs}[]
 \hypersetup{
 	pdfauthor = {Wen-Wei Li},
-	pdftitle = {Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 2: Aksioma ZFC},
+	pdftitle = {Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 3: Struktur Urutan dan Ordinal},
 	pdfsubject = {Terjemahan Bahasa Indonesia independen},
-	pdfkeywords = {aljabar, teori himpunan, ZFC, id-ID},
+	pdfkeywords = {aljabar, teori himpunan, urutan parsial, ordinal, id-ID},
 	pdflang = {id-ID},
 	CJKbookmarks = true}
 
 \addbibresource{Al-jabr.bib}
 
+% Load an inclusive UTF-8 source-line span without copying a mutable source
+% fragment into the repository. The strings are retokenized under normal TeX
+% category codes so comments, mathematics, labels, and environments retain
+% their source semantics.
+\ExplSyntaxOn
+\ior_new:N \l__unit_three_source_ior
+\tl_new:N \l__unit_three_source_tl
+\int_new:N \l__unit_three_line_int
+\cs_new_protected:Npn \unit_three_input_range:nnn #1#2#3
+  {
+    \tl_clear:N \l__unit_three_source_tl
+    \int_zero:N \l__unit_three_line_int
+    \ior_open:Nn \l__unit_three_source_ior {#1}
+    \ior_str_map_inline:Nn \l__unit_three_source_ior
+      {
+        \int_incr:N \l__unit_three_line_int
+        \int_compare:nNnT {\l__unit_three_line_int} > {#2 - 1}
+          {
+            \int_compare:nNnT {\l__unit_three_line_int} < {#3 + 1}
+              {
+                \tl_put_right:Nn \l__unit_three_source_tl {##1}
+                \tl_put_right:Nx \l__unit_three_source_tl
+                  {\char_generate:nn {10} {12}}
+              }
+          }
+      }
+    \ior_close:N \l__unit_three_source_ior
+    \exp_args:NV \scantokens \l__unit_three_source_tl
+  }
+\NewDocumentCommand{\InputSourceLineRange}{mmm}
+  {\unit_three_input_range:nnn {#1} {#2} {#3}}
+\ExplSyntaxOff
+
 \begin{document}
 	\hypersetup{pageanchor=false}
 	\pagestyle{empty}
-	\input{coverpage-id-unit-002.tex}
+	\input{coverpage-id-unit-003.tex}
 	\pagestyle{fancy}
 	\pagenumbering{roman}
 	\setcounter{page}{1}
@@ -78,10 +111,9 @@
 
 	\mainmatter
 	\hypersetup{pageanchor=true}
-	% The guard occupies the blank source boundary after Section 1.1. A full
-	% book build does not define this macro and therefore remains unchanged.
-	\ifdefined\FullChapterWitness\else\def\UnitTwoZFCReader{}\fi
-	\include{chapter1}
+	\chapter{Teori himpunan}
+	\setcounter{section}{1}
+	\InputSourceLineRange{chapter1.tex}{87}{203}
 
 	\backmatter
 	\printbibliography[heading=bibintoc, title={Daftar Pustaka}]

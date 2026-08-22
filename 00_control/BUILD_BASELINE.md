@@ -45,3 +45,17 @@ missing-character warning. MuPDF and Poppler rendered all 21 pages; all pages
 were inspected. Two independent clean builds produced 21/21 pairwise
 pixel-identical MuPDF pages. Their PDF byte hashes differed slightly because
 of non-visible XeTeX serialization, so bit-identical containers are not claimed.
+
+## Admitted standalone digital-reader builds
+
+Unit 002 was reflowed after admission so print-only blank verso pages no longer
+appear in its standalone digital reader. The corrected artifact is 12 pages,
+161,147 bytes, SHA-256
+`ff2eb3fd1ec5abaa7989d0c29c419c04f99368dc3f278799be460e30042bfe58`.
+Two clean builds produced 12/12 pixel-identical MuPDF pages.
+
+Unit 003 uses the same pinned shell-escape-disabled procedure and target-only
+interface layer. Its admitted artifact is 11 pages, 147,784 bytes, SHA-256
+`67f3b0594f65917cf78361886aef6616c0875bc584a95758f06e4d11b182082c`.
+Two clean builds produced 11/11 pixel-identical MuPDF pages. Neither unit claims
+byte-identical XeTeX PDF-container serialization across output directories.

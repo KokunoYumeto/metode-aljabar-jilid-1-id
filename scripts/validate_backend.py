@@ -24,7 +24,7 @@ UUID_URN_RE = re.compile(
 )
 CITE_RE = re.compile(r"\\cite(?:\[[^\]]*\])?\{([^}]*)\}")
 REF_RE = re.compile(r"\\(?:ref|pageref)\{([^}]*)\}")
-INDEX_RE = re.compile(r"\\index(?:\[([^\]]+)\])?\{([^{}]*)\}")
+INDEX_START_RE = re.compile(r"\\index(?:\[([^\]]+)\])?\{")
 LABEL_RE = re.compile(r"\\label\{([^}]*)\}")
 
 
@@ -263,6 +263,32 @@ def parse_citations(text: str) -> list[str]:
     return values
 
 
+def parse_indexes(text: str) -> list[tuple[str, str]]:
+    """Return TeX index names and balanced payloads, including nested braces."""
+    values: list[tuple[str, str]] = []
+    for match in INDEX_START_RE.finditer(text):
+        depth = 1
+        cursor = match.end()
+        payload_start = cursor
+        while cursor < len(text) and depth:
+            character = text[cursor]
+            preceding_backslashes = 0
+            lookbehind = cursor - 1
+            while lookbehind >= 0 and text[lookbehind] == "\\":
+                preceding_backslashes += 1
+                lookbehind -= 1
+            escaped = preceding_backslashes % 2 == 1
+            if not escaped:
+                if character == "{":
+                    depth += 1
+                elif character == "}":
+                    depth -= 1
+            cursor += 1
+        if depth == 0:
+            values.append((match.group(1) or "default", text[payload_start : cursor - 1]))
+    return values
+
+
 def line_contains(path: Path, line_number: int, fragment: str) -> bool:
     lines = path.read_text(encoding="utf-8").splitlines()
     return 1 <= line_number <= len(lines) and fragment in lines[line_number - 1]
@@ -414,8 +440,8 @@ def semantic_validation(data: dict[str, Any], lane_root: Path, result: Validatio
             result.require([item["source_occurrence_index"] for item in records] == list(range(1, len(records) + 1)), f"{fmt} occurrence indexes are not contiguous")
         result.require(sorted(item["ordinal_in_unit"] for item in data["diagrams"]) == list(range(1, len(data["diagrams"]) + 1)), "diagram ordinals are not contiguous")
 
-        source_index = [(name or "default", key) for name, key in INDEX_RE.findall(source_text)]
-        target_index = [(name or "default", key) for name, key in INDEX_RE.findall(target_text)]
+        source_index = parse_indexes(source_text)
+        target_index = parse_indexes(target_text)
         result.require(
             [name for name, _ in source_index] == [name for name, _ in target_index],
             f"protected index-name sequence drift: source={source_index}, target={target_index}",

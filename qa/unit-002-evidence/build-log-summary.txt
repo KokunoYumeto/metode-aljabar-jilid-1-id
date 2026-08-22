@@ -1,13 +1,15 @@
-Unit 002 admitted build log summary
+Unit 002 corrected digital-reader build summary
 Date: 2026-08-22
 Toolchain: MiKTeX 26.5 XeLaTeX; Biber 2.21; MakeIndex; three final XeLaTeX convergence passes
 Shell escape: disabled
 SOURCE_DATE_EPOCH: 1787356800
-PDF pages: 15
-PDF bytes: 161687
-PDF SHA-256: df709d43505dabd365d04fd8f9a90dac7d9c4ab686d677bbae50bed7bf7d61d2
-Raw final log bytes: 83934
-Raw final log SHA-256: aeb93bd15d55c6308812e9058c923108605176e6fa7e7afd48cce1433f66e9eb
+Digital reflow: target-only cleardoublepage-to-clearpage mapping; no print-only blank verso pages
+Interface localization: Indonesian reading box, theorem, proof, example, exercise, bibliography, and index labels
+PDF pages: 12
+PDF bytes: 161147
+PDF SHA-256: ff2eb3fd1ec5abaa7989d0c29c419c04f99368dc3f278799be460e30042bfe58
+Raw final log bytes: 83917
+Raw final log SHA-256: 4891c6c8f1c802a59792c1bbda102bb64544b02c95792c149560faab275d264e
 TeX errors: 0
 Undefined control sequences: 0
 Undefined citations: 0
@@ -16,8 +18,12 @@ Duplicate destinations: 0
 Missing characters: 0
 Overfull hbox notices: 2
 Largest overfull hbox: 7.93658 pt, axiom A.2 opening line, visually contained
+Underfull hbox notices: 1, cover attribution table, visually acceptable
 Suppressed empty-target link notices: 3, intentional frozen forward-reference behavior
-Replay PDF bytes: 161692
-Replay PDF SHA-256: b8f077d62239f2b4116a9231ac4d35845e18368de4cf0f3b3f0f679ef0f2a8ee
-Replay result: 15 of 15 MuPDF pages pixel-identical to the admitted PDF at 144 dpi
-Raw build logs remain local; this portable summary omits machine-specific absolute paths.
+PDF structure: id-ID; 12 nonblank pages; 5 outline roots / 6 total entries; 33 named destinations; 29 GoTo and 6 URI actions; no GoToR or Launch action
+Text checks: zero literal ??; zero replacement characters; zero unlocalized Chinese environment headers
+Replay PDF bytes: 161147
+Replay PDF SHA-256: 6f28396b9a37c115939272c400ac7789791aa3c3c867f9e612520e84e56413ef
+Replay result: 12 of 12 MuPDF pages pixel-identical to the admitted PDF at 144 dpi
+Visual review: all 12 MuPDF and all 12 Poppler pages inspected; no clipping, collision, unreadable glyph, unintended blank page, or broken formula
+Raw build logs and page renders remain local; this portable summary omits machine-specific absolute paths.

@@ -2,8 +2,9 @@
 
 This directory contains the language-neutral, hash-bound backend for the O013
 edition. Canonical records for the admitted reader units are
-`data/unit-001-pendahuluan.json` and `data/unit-002-bab-1-zfc.json`; files in
-`csv/` are deterministic projections, not independent sources of truth.
+`data/unit-001-pendahuluan.json`, `data/unit-002-bab-1-zfc.json`, and
+`data/unit-003-bab-1-struktur-urutan-dan-ordinal.json`; files in `csv/` are
+deterministic projections, not independent sources of truth.
 
 ## Identity model
 
@@ -28,13 +29,13 @@ file identity is retained as the admission-time witness while the normalized
 span is the live integrity boundary. Later translation outside an admitted
 span therefore cannot invalidate the earlier unit.
 
-Units 001 and 002 are `admitted` and `visually_checked`. Admission requires passing
-translation, build, and visual states plus bound reader, build-summary, build
-script, and QA-receipt evidence. A green backend validation proves that the
-schema, identities, references, order, hashes, citations, diagrams, index
-provenance, admission state, and projections agree with the live files; it
-does not substitute for the human language and all-page visual audits recorded
-in the bound receipt.
+Units 001, 002, and 003 are `admitted` and `visually_checked`. Admission
+requires passing translation, build, and visual states plus bound reader,
+build-summary, build script, and QA-receipt evidence. A green backend
+validation proves that the schema, identities, references, order, hashes,
+citations, diagrams, brace-aware index provenance, admission state, and
+projections agree with the live files; it does not substitute for the human
+language and all-page visual audits recorded in the bound receipt.
 
 ## Validation and export
 
@@ -43,16 +44,24 @@ From the lane root, run:
 ```text
 python -B scripts/validate_backend.py --data backend/data/unit-001-pendahuluan.json --write-csv
 python -B scripts/validate_backend.py --data backend/data/unit-002-bab-1-zfc.json --write-csv
+python -B scripts/validate_backend.py --data backend/data/unit-003-bab-1-struktur-urutan-dan-ordinal.json --write-csv
 python -B scripts/validate_backend.py --data backend/data/unit-001-pendahuluan.json
 python -B scripts/validate_backend.py --data backend/data/unit-002-bab-1-zfc.json
+python -B scripts/validate_backend.py --data backend/data/unit-003-bab-1-struktur-urutan-dan-ordinal.json
 ```
 
-The first command validates the canonical JSON and then rewrites all CSV views
-deterministically. The second command validates again and compares every CSV
-byte-for-byte. The script uses only the Python standard library and rejects
+Each command with `--write-csv` validates one canonical JSON record and then
+rewrites that unit's six CSV views deterministically. The commands without the
+flag validate again and compare every projection byte-for-byte. The script uses
+only the Python standard library and rejects
 unsafe paths, missing files, hash drift, duplicate or nondeterministic IDs,
 unresolved references, unordered sections, citation/ref drift, diagram-count
 drift, index-key drift, and stale projections.
+
+`scripts/generate_unit_003_backend.py` reconstructs Unit 003's canonical JSON
+from its reviewed source/target spans, artifact, build inputs, and bound QA
+evidence. It is deterministic for unchanged admitted inputs; rerun it only when
+intentionally re-admitting that exact unit boundary.
 
 After a reviewed derivative-source edit changes an unranged bound file, or
 changes bytes inside a recorded semantic line range, the explicit

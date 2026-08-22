@@ -1,7 +1,7 @@
-# Unit 002 admission receipt — Bab 1: Ikhtisar aksioma ZFC
+# Unit 002 admission receipt - Bab 1: Ikhtisar aksioma ZFC
 
 Date: 2026-08-22  
-Decision: admitted as the second independently buildable `id-ID` reader unit.
+Decision: admitted as the second independently buildable `id-ID` reader unit. The corrected 12-page digital reflow recorded below supersedes the original 15-page standalone rendering without changing the admitted translation span. Earlier 15-page figures in this receipt are retained as historical admission evidence only.
 
 ## Frozen source and target
 
@@ -50,6 +50,43 @@ Local all-page evidence is under `qa/unit-002-final-r7/`; the deterministic repl
 ## Rights and provenance
 
 The source text and Indonesian translation are handled under CC BY 4.0 with Wen-Wei Li credited and the independent, non-endorsed derivative status stated. Component exceptions remain separately recorded: the source-map fragment in `AJbook.cls` and `Lanzhou.png` are CC BY-SA 3.0, while bundled Noto fonts use OFL 1.1. Admission does not flatten these component rights.
+
+## Corrected digital-reader boundary
+
+After the original admission, the shared target interface exposed that all
+theorem-family headings inherited Chinese labels from `AJbook.cls`, and the
+standalone digital reader retained three print-only blank verso pages. The
+target-only wrapper now localizes the reading box, theorem, proof, example,
+exercise, bibliography, and index labels while preserving the frozen upstream
+class byte-for-byte. The driver maps `cleardoublepage` to `clearpage` for this
+standalone reader only.
+
+- Current shared target `repo/source/chapter1.tex`: 56,831 bytes, SHA-256
+  `eedc388ca9ea681701e4306095674fcadcf93a82bc6a1c02dfcfe5d1a528a10a`.
+  Unit 002's live ranged boundary remains lines 9-85 with normalized SHA-256
+  `f67693ca54f1881c8f91f20655e82d89a08833611eafc41ce352a6dfddec67d0`.
+- Corrected driver: 2,705 bytes, SHA-256
+  `b502a4ea48b6affce447e78ad148681458a1fac778d9146a9bd56d4d3f6802d4`.
+- Corrected localization wrapper: 2,972 bytes, SHA-256
+  `9d6c6aa162d11ce8f491703f640a808cdcf61280b300f22032d4caaa0035f3b9`.
+- Corrected reader: 12 pages, 161,147 bytes, SHA-256
+  `ff2eb3fd1ec5abaa7989d0c29c419c04f99368dc3f278799be460e30042bfe58`.
+- Final log: 83,917 bytes, SHA-256
+  `4891c6c8f1c802a59792c1bbda102bb64544b02c95792c149560faab275d264e`.
+- Replay PDF: 161,147 bytes, SHA-256
+  `6f28396b9a37c115939272c400ac7789791aa3c3c867f9e612520e84e56413ef`;
+  all 12 MuPDF pages are pixel-identical at 144 dpi.
+
+The corrected PDF has catalog language `id-ID`, 12 nonblank pages, five
+outline roots/six total entries, 33 named destinations, 29 internal GoTo
+actions, six intentional URI actions, and no GoToR or Launch action. It has no
+literal `??`, replacement character, or Chinese environment heading. The log
+has no TeX error, undefined citation/reference, duplicate destination, or
+missing character. Two overfull boxes, largest 7.93658 pt, remain visually
+contained; three suppressed empty-target warnings are intentional frozen
+forward-reference behavior. MuPDF and Poppler rendered all 12 pages, and every
+page was re-inspected without clipping, collision, broken formula, unreadable
+glyph, unintended blank page, or index defect.
 
 ## Cursor
 

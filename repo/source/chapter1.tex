@@ -84,122 +84,122 @@ Untuk $I=\emptyset$, gabungan dan gabungan saling lepas keduanya adalah $\emptys
 
 Teori himpunan aksiomatik merupakan landasan ortodoks matematika modern. Cakupan pengungkapannya begitu luas dan taraf formalisasinya begitu tinggi sehingga matematika itu sendiri dapat menjadi objek penelitian matematika. Pertanyaan seperti apakah yang dimaksud dengan bukti, apakah suatu pernyataan dapat dibuktikan, dan apakah suatu sistem aksioma konsisten (bebas kontradiksi), semuanya dapat diberi kandungan matematis yang jelas; bidang penelitian semacam ini secara kolektif disebut metamatematika\index{metamatematika@metamatematika (metamathematics)}. Definisi, argumen, dan praktik matematika lain yang biasanya disampaikan dalam bahasa alami ``pada prinsipnya'' dapat ditulis ulang dalam bahasa formal ZFC atau teori himpunan aksiomatik lainnya, sehingga perumusan dan verifikasinya memperoleh landasan yang kukuh. Entah itu suatu keberuntungan atau kemalangan, selama ini landasan tersebut tak lebih daripada suatu sikap pada tataran prinsip: bahkan perumusan formal teorema teori himpunan yang tampak sederhana pun sering sangat bertele-tele, apalagi jika harus diverifikasi atau bahkan dipahami secara manual. Namun, seiring kemajuan berkelanjutan dalam logika simbolik, teori komputasi, dan teknologi terkait, keadaan ini berangsur-angsur berubah. Hasil-hasil seperti teorema empat warna, teorema bilangan prima, dan dugaan Kepler kini telah memiliki verifikasi formal, dan penerapan metode formal tidak terbatas pada matematika. Gagasan-gagasan di luar teori himpunan, seperti teori tipe, tampaknya diperlukan untuk tujuan ini, atau setidaknya memberikan penyederhanaan yang sangat besar. Satu hal dapat dipastikan: seiring teori dan teknologi berkembang bersama, pemahaman manusia mengenai landasan maupun praktik matematika akan terus ditulis ulang.
 \ifdefined\UnitTwoZFCReader\expandafter\endinput\fi
-\section{序结构与序数}\label{sec:order}
-按照 Bourbaki 的观点, 序结构连同拓扑和代数结构一道组成了数学结构的三大母体. 以下依序介绍偏序, 全序与良序的概念.
+\section{Struktur Urutan dan Ordinal}\label{sec:order}
+Menurut pandangan Bourbaki, struktur urutan, bersama struktur topologis dan struktur aljabar, membentuk tiga struktur induk utama matematika. Berikut ini diperkenalkan secara berurutan konsep urutan parsial, urutan total, dan urutan baik.
 
-\begin{definition}\label{def:partial-order}\index{pianxuji@偏序集 (partially ordered set/poset)}\index{yuxuji@预序集 (pre-ordered set)}
-	\emph{偏序集}意指资料 $(P, \leq)$, 其中 $P$ 是集合而 $\leq$ 是 $P$ 上的二元关系 (偏序), 满足于
+\begin{definition}\label{def:partial-order}\index{himpunan terurut parsial@himpunan terurut parsial (partially ordered set/poset)}\index{himpunan praterurut@himpunan praterurut (pre-ordered set)}
+	Suatu \emph{himpunan terurut parsial} (atau \emph{poset}) adalah data $(P, \leq)$, dengan $P$ suatu himpunan dan $\leq$ suatu relasi biner pada $P$ (urutan parsial), yang memenuhi
 	\begin{compactdesc}
-		\item[反身性] $\forall x \in P, \; x \leq x$;
-		\item[传递性] $(x \leq y) \wedge (y \leq z) \implies x \leq z$;
-		\item[反称性] $(x \leq y) \wedge (y \leq x) \implies x=y$.
+		\item[Refleksivitas] $\forall x \in P, \; x \leq x$;
+		\item[Transitivitas] $(x \leq y) \wedge (y \leq z) \implies x \leq z$;
+		\item[Antisimetri] $(x \leq y) \wedge (y \leq x) \implies x=y$.
 	\end{compactdesc}
-	仅满足反身性与传递性的结构称为\emph{预序集}. 预序集间满足 $x \leq y \implies f(x) \leq f(y)$ 的映射称为\emph{保序映射}.
+	Struktur dengan refleksivitas dan transitivitas saja disebut \emph{himpunan praterurut}. Untuk himpunan praterurut, peta yang memenuhi $x \leq y \implies f(x) \leq f(y)$ disebut \emph{peta pelestari urutan}.
 
-	一般用 $x < y$ 表示 $x \leq y$ 且 $x \neq y$. 符号 $\geq$ 和 $>$ 的意义是自明的. 今后谈及偏序集时经常省略其中的关系 $\leq$.
+	Pada umumnya, $x < y$ digunakan untuk menyatakan $x \leq y$ dan $x \neq y$. Makna simbol $\geq$ dan $>$ jelas dengan sendirinya. Selanjutnya, ketika membicarakan himpunan terurut parsial, relasi $\leq$ di dalamnya sering dihilangkan dari notasi.
 \end{definition}
 
-设 $P, Q$ 为偏序集, 若映射 $\phi: P \to Q$ 满足 $(x < x') \implies (\phi(x) < \phi(x'))$, 则称 $\phi$ 是严格增的. 若 $\phi: P \to Q$ 是双射而且 $\phi, \phi^{-1}$ 皆保序, 则称 $\phi$ 为偏序集 $P,Q$ 之间的同构. 偏序集的同构类称为\emph{序型}. 偏序集的子集继承了自然的偏序结构.
+Misalkan $P, Q$ himpunan terurut parsial. Jika peta $\phi: P \to Q$ memenuhi $(x < x') \implies (\phi(x) < \phi(x'))$, maka $\phi$ disebut naik tegas. Jika $\phi: P \to Q$ merupakan bijeksi dan $\phi, \phi^{-1}$ keduanya merupakan peta pelestari urutan, maka $\phi$ disebut isomorfisme antara himpunan terurut parsial $P,Q$. Kelas isomorfisme dari suatu himpunan terurut parsial disebut \emph{tipe urutan}. Setiap subhimpunan dari himpunan terurut parsial mewarisi struktur urutan parsial yang alami.
 
-\begin{definition}\label{def:max-sup}\index{jidayuan@极大元 (maximal element)}\index{shangjie@上界 (upper bound), 上确界 (supremum)}\index{xiajie@下界 (lower bound), 下确界 (infimum)}
-	设 $P' \subset P$, 而 $P$ 是预序集,
+\begin{definition}\label{def:max-sup}\index{elemen maksimal@elemen maksimal (maximal element)}\index{batas atas@batas atas (upper bound), supremum}\index{batas bawah@batas bawah (lower bound), infimum}
+	Misalkan $P' \subset P$, dengan $P$ suatu himpunan praterurut.
 	\begin{compactitem}
-		\item 称 $x \in P$ 是 $P$ 的极大元, 如果不存在满足 $x < y$ 的元素 $y \in P$;
-		\item 称 $x \in P$ 是 $P'$ 的上界, 如果对每个 $x' \in P'$ 都有 $x' \leq x$;
-		\item 称 $x \in P$ 是 $P'$ 的上确界, 如果 $x$ 是其上界, 而且对每个上界 $y$ 皆有 $x \leq y$.
+		\item Elemen $x \in P$ disebut elemen maksimal dari $P$ jika tidak terdapat $y \in P$ yang memenuhi $x < y$;
+		\item Elemen $x \in P$ disebut batas atas dari $P'$ jika $x' \leq x$ untuk setiap $x' \in P'$;
+		\item Elemen $x \in P$ disebut supremum dari $P'$ jika $x$ merupakan batas atasnya dan $x \leq y$ untuk setiap batas atas $y$.
 	\end{compactitem}
-	同理可以定义极小元, 下界和下确界, 仅须把以上的 $\leq$ 换成 $\geq$. 对于偏序集 $P$, 根据反称性, 其子集 $P'$ 的上确界或下确界若存在则是唯一的, 分别记为 $\sup P'$ 和 $\inf P'$. \index[sym1]{sup@$\sup$}\index[sym1]{inf@$\inf$}
+	Dengan cara serupa dapat didefinisikan elemen minimal, batas bawah, dan infimum, cukup dengan mengganti $\leq$ di atas dengan $\geq$. Untuk himpunan terurut parsial $P$, antisimetri memastikan bahwa supremum atau infimum suatu subhimpunan $P'$, jika ada, bersifat unik; masing-masing dinotasikan dengan $\sup P'$ dan $\inf P'$. \index[sym1]{sup@$\sup$}\index[sym1]{inf@$\inf$}
 \end{definition}
 
-\begin{definition}\label{def:filtrant-poset}\index{luguoxuji@滤过偏序集 (filtered poset)}
-	若偏序集 $P$ 非空, 而且对任何 $x,y \in P$ 子集 $\{x,y\}$ 皆有上界, 则称 $P$ 是\emph{滤过序集}.
+\begin{definition}\label{def:filtrant-poset}\index{poset terarah ke atas@poset terarah ke atas (filtered poset)}
+	Jika himpunan terurut parsial $P$ tidak kosong dan, untuk setiap $x,y \in P$, subhimpunan $\{x,y\}$ mempunyai batas atas, maka $P$ disebut \emph{poset terarah ke atas} (\emph{filtered poset}).
 \end{definition}
 
-\begin{definition}\index{quanxuji@全序集 (totally ordered set)}\index{lian@链 (chain)}
-	若偏序集 $P$ 中的任一对元素 $x,y$ 皆可比大小 (即: 或者 $x \leq y$, 或者 $y \leq x$), 则称 $P$ 为\emph{全序集}. 全序集又称作\emph{线序集}或\emph{链}.
+\begin{definition}\index{himpunan terurut total@himpunan terurut total (totally ordered set)}\index{rantai@rantai (chain)}
+	Jika setiap pasangan elemen $x,y$ dalam himpunan terurut parsial $P$ dapat dibandingkan (yakni, $x \leq y$ atau $y \leq x$), maka $P$ disebut \emph{himpunan terurut total}. Himpunan terurut total juga disebut \emph{himpunan terurut linear} atau \emph{rantai}.
 \end{definition}
-显然全序集皆是滤过的.
+Jelas bahwa setiap himpunan terurut total terarah ke atas.
 
-我们偶尔也会谈论一些类上的序或全序, 及其上界下界等等, 例如以下将考虑的序数类 $\textbf{On}$. 定义同上.
+Sesekali kita juga akan membicarakan urutan atau urutan total pada kelas tertentu, beserta batas atas, batas bawah, dan sebagainya; contohnya ialah kelas ordinal $\textbf{On}$ yang akan dibahas di bawah. Definisinya sama seperti di atas.
 
-\begin{definition}[G.\ Cantor]\label{def:well-ordered}\index{liangxuji@良序集 (well-ordered set)}
-	全序集 $P$ 如满足下述性质则称作\emph{良序集}: 每个 $P$ 的非空子集都有极小元.
+\begin{definition}[G.\ Cantor]\label{def:well-ordered}\index{himpunan terurut baik@himpunan terurut baik (well-ordered set)}
+	Himpunan terurut total $P$ disebut \emph{himpunan terurut baik} jika memenuhi sifat berikut: setiap subhimpunan tak kosong dari $P$ mempunyai elemen minimal.
 \end{definition}
 
 \begin{example}
-	取任一集合$X$, 则幂集 $P(X)$ 相对于包含关系 $\subset$ 成为滤过偏序集, 但一般不是全序. 后面要构作的非负整数集 $\Z_{\geq 0}$ 和实数集 $\R$ 都具有标准的全序结构; 其中$\Z_{\geq 0}$ 显然是良序集, $\R$ 则不是.
+	Untuk sebarang himpunan $X$, himpunan kuasa $P(X)$, terhadap relasi inklusi $\subset$, merupakan poset terarah ke atas, tetapi pada umumnya tidak terurut total. Himpunan bilangan bulat taknegatif $\Z_{\geq 0}$ dan himpunan bilangan real $\R$, yang akan dikonstruksi kemudian, keduanya mempunyai struktur urutan total baku; di antaranya, $\Z_{\geq 0}$ jelas terurut baik, sedangkan $\R$ tidak.
 \end{example}
 
 \begin{lemma}\label{prop:wellorder-automorphism}
-	设 $P$ 为良序集, 映射 $\phi: P \to P$ 严格增, 则对每个 $x \in P$ 皆有 $\phi(x) \geq x$. 特别地:
+	Misalkan $P$ himpunan terurut baik dan peta $\phi: P \to P$ naik tegas. Maka $\phi(x) \geq x$ untuk setiap $x \in P$. Khususnya:
 	\begin{inparaenum}[(i)]
-		\item $P$ 没有非平凡的自同构,
-		\item 对任意 $x \in P$, 不存在从 $P$ 到 $P_{< x} := \{y \in P : y < x \}$ 的同构.
+		\item $P$ tidak mempunyai automorfisme taktrivial,
+		\item untuk setiap $x \in P$, tidak terdapat isomorfisme dari $P$ ke $P_{< x} := \{y \in P : y < x \}$.
 	\end{inparaenum}
 \end{lemma}
-形如 $P_{< x}$ 的子集继承 $P$ 的良序, 称作 $P$ 的一个\emph{前段}.
+Subhimpunan berbentuk $P_{< x}$ mewarisi urutan baik dari $P$ dan disebut sebuah \emph{segmen awal} dari $P$.
 \begin{proof}
-	假设集合 $P_0 := \{x \in P : \phi(x) < x \}$ 非空, 对任意 $z \in P_0$ 由 $\phi$ 严格增可知 $\phi(\phi(z)) < \phi(z)$, 取 $z$ 为 $P_0$ 的极小元便导致矛盾. 第一个断言得证.
+	Andaikan himpunan $P_0 := \{x \in P : \phi(x) < x \}$ tidak kosong. Untuk setiap $z \in P_0$, karena $\phi$ naik tegas, diperoleh $\phi(\phi(z)) < \phi(z)$. Mengambil $z$ sebagai elemen minimal dari $P_0$ menghasilkan kontradiksi. Pernyataan pertama pun terbukti.
 
-	对于 (i), 代入 $\phi$ 和 $\phi^{-1}$ 以得到 $\forall x \; \phi(x)=x$. 对于 (ii), 一个同构 $\phi: P \to P_{< x}$ 必然是 $P$ 到自身的严格增映射并满足 $\phi(x) < x$, 与之前结果矛盾.
+	Untuk (i), terapkan pernyataan pertama kepada $\phi$ dan $\phi^{-1}$ sehingga diperoleh $\forall x \; \phi(x)=x$. Untuk (ii), suatu isomorfisme $\phi: P \to P_{< x}$ tentu merupakan peta naik tegas dari $P$ ke dirinya sendiri dan memenuhi $\phi(x) < x$, bertentangan dengan hasil sebelumnya.
 \end{proof}
 
-序数的原初想法是良序集的序型; 假如循此进路, 则必须视之为类而非集合, 那么谈论序数全体 $\textbf{On}$ 便相当于操作``类的类'', 显然有些棘手. 幸亏我们能从每个良序型中挑出一个标准的良序集, 从而得到更精确的描述, 为此需要 von Neumann 的如下定义.
-\begin{definition}\label{def:ordinal}\index{xushu@序数 (ordinal)}
-	如果一个集合 $\alpha$ 的每个元素都是 $\alpha$ 的子集 (换言之, $\alpha \subset P(\alpha)$), 则称 $\alpha$ 为\emph{传递}的. 若传递集 $\alpha$ 对于 $x < y \stackrel{\text{定义}}{\iff} x \in y$ 成为良序集, 则称 $\alpha$ 为\emph{序数}.
+Gagasan awal mengenai ordinal ialah tipe urutan dari suatu himpunan terurut baik. Jika pendekatan ini diikuti, tipe urutan tersebut harus dipandang sebagai kelas, bukan himpunan. Dengan demikian, membicarakan kelas semua ordinal $\textbf{On}$ sama dengan menangani ``kelas dari kelas'', yang jelas agak rumit. Untungnya, dari setiap tipe urutan baik kita dapat memilih sebuah himpunan terurut baik yang baku sehingga memperoleh deskripsi yang lebih tepat. Untuk itu diperlukan definisi von Neumann berikut.
+\begin{definition}\label{def:ordinal}\index{ordinal@ordinal}
+	Jika setiap elemen suatu himpunan $\alpha$ merupakan subhimpunan dari $\alpha$ (dengan kata lain, $\alpha \subset P(\alpha)$), maka $\alpha$ disebut \emph{transitif}. Jika relasi $x < y \stackrel{\text{def}}{\iff} x \in y$ memberikan urutan baik pada himpunan transitif $\alpha$, maka $\alpha$ disebut \emph{ordinal}.
 \end{definition}
 
-显然 $\emptyset$ 是序数. 若 $\alpha$ 是序数, 则 $\alpha \sqcup \{\alpha\}$ 亦然. 序数的完整理论可参阅 \cite[\S 2]{Je03} 或 \cite[第四章]{HY14}, 以下仅摘录部分重要性质. 关于序数与良序型的联系请见命题 \ref{prop:ordinal-ordertype}.
+Jelas bahwa $\emptyset$ merupakan ordinal. Jika $\alpha$ merupakan ordinal, maka $\alpha \sqcup \{\alpha\}$ juga demikian. Teori lengkap ordinal dapat ditemukan dalam \cite[\S 2]{Je03} atau \cite[Bab 4]{HY14}; berikut ini hanya dirangkum beberapa sifat penting. Hubungan antara ordinal dan tipe urutan baik diberikan dalam Proposisi \ref{prop:ordinal-ordertype}.
 
 \begin{lemma}\label{prop:ordinal-property}
-	序数满足下述性质.
+	Ordinal memenuhi sifat-sifat berikut.
 	\begin{compactenum}[(i)]
-		\item 若 $\alpha$ 是序数, $\beta \in \alpha$, 则 $\beta$ 也是序数.
-		\item 对任两个序数 $\alpha, \beta$, 若 $\alpha \subsetneq \beta$ 则 $\alpha \in \beta$.
-		\item 对任两个序数 $\alpha, \beta$, 必有 $\alpha \subset \beta$ 或 $\beta \subset \alpha$.
+		\item Jika $\alpha$ merupakan ordinal dan $\beta \in \alpha$, maka $\beta$ juga merupakan ordinal.
+		\item Bagi setiap pasangan ordinal $\alpha, \beta$, jika $\alpha \subsetneq \beta$, maka $\alpha \in \beta$.
+		\item Bagi setiap pasangan ordinal $\alpha, \beta$, berlaku $\alpha \subset \beta$ atau $\beta \subset \alpha$.
 	\end{compactenum}
 \end{lemma}
 \begin{proof}
-	先证 (i). 据 $\alpha$ 的传递性可知 $\beta \subset \alpha$, 且 $(\beta, \in)$ 也是良序集. 接着证明 $\beta$ 传递: 设 $\tau \in \beta \subset \alpha$,  仅需证明 $x \in \tau \implies x \in \beta$ 即可. 由于 $\in$ 赋予 $\alpha$ 序结构, 由 $x \in \tau \in \beta$ 可知 $x \in \beta$.
+	Pertama, kita buktikan (i). Dari transitivitas $\alpha$ diperoleh $\beta \subset \alpha$, dan $(\beta, \in)$ juga merupakan himpunan terurut baik. Selanjutnya, kita buktikan bahwa $\beta$ transitif: misalkan $\tau \in \beta \subset \alpha$; cukup dibuktikan bahwa $x \in \tau \implies x \in \beta$. Karena $\in$ memberikan struktur urutan pada $\alpha$, dari $x \in \tau \in \beta$ diperoleh $x \in \beta$.
 
-	对于 (ii), 以 $<$ 表示 $\in$ 并令 $\gamma$ 为 $(\beta \smallsetminus \alpha, <)$ 的极小元. 我们断言 $\alpha = \{x \in \beta : x < \gamma \}$, 而后者无非是 $\gamma$. 包含关系 $\supset$ 是显然的. 对于 $\subset$, 给定 $y \in \alpha \subset \beta$, 首先排除 $\gamma = y$; 其次, 由 $\alpha$ 的传递性有 $y \subset \alpha$, 依此排除 $\gamma < y$, 故 $y < \gamma$.
+	Untuk (ii), tuliskan $<$ bagi $\in$ dan ambil $\gamma$ sebagai elemen minimal dari $(\beta \smallsetminus \alpha, <)$. Kita akan menunjukkan bahwa $\alpha = \{x \in \beta : x < \gamma \}$, sedangkan himpunan di ruas kanan tidak lain adalah $\gamma$. Inklusi $\supset$ mengikuti minimalitas elemen tersebut. Untuk inklusi $\subset$, ambil $y \in \alpha \subset \beta$. Pertama, $\gamma = y$ tidak mungkin; selanjutnya, dari transitivitas $\alpha$ diperoleh $y \subset \alpha$, sehingga kemungkinan $\gamma < y$ juga tersingkir. Jadi $y < \gamma$.
 
-	对于 (iii), 显见 $\gamma := \alpha \cap \beta$ 也是序数. 我们断言 $\gamma = \alpha$ 或 $\gamma = \beta$ 必居其一, 否则由上述结果可得 $\gamma \in \alpha$, $\gamma \in \beta$, 于是有 $\gamma \in \gamma$, 亦即在偏序集 $(\alpha, \leq)$ 中 $\gamma < \gamma$, 这同 $<$ 的涵义 ($\leq$ 但 $\neq$) 矛盾.
+	Untuk (iii), jelas bahwa $\gamma := \alpha \cap \beta$ juga merupakan ordinal. Kita akan menunjukkan bahwa $\gamma = \alpha$ atau $\gamma = \beta$ harus berlaku. Jika tidak, hasil di atas memberikan $\gamma \in \alpha$ dan $\gamma \in \beta$, sehingga $\gamma \in \gamma$; dengan kata lain, $\gamma < \gamma$ dalam himpunan terurut parsial $(\alpha, \leq)$. Ini bertentangan dengan makna $<$, yakni $\leq$ tetapi $\neq$.
 \end{proof}
 
-从引理立得以下直接推论.
+Lemma tersebut langsung memberikan akibat berikut.
 \begin{theorem}\label{prop:On-wellorder}
-	定义 $\textbf{On}$ 为序数构成的类. \index[sym1]{$\textbf{On}$}
+	Definisikan $\textbf{On}$ sebagai kelas yang terdiri atas semua ordinal. \index[sym1]{$\textbf{On}$}
 	\begin{compactitem}
-		\item 对序数定义 $\beta < \alpha$ 当且仅当 $\beta \in \alpha$, 则这定义了 $\textbf{On}$ 上的一个全序, 而且对任意序数 $\alpha$ 都有 $\alpha = \{ \beta : \beta < \alpha \}$.
-		\item 若 $C$ 是一个由序数构成的类, $C \neq \emptyset$, 则 $\inf C := \bigcap C$ 也是序数, 而且 $\inf C \in C$; 我们有 $\alpha \sqcup \{\alpha\} = \inf\{ \beta: \beta > \alpha \}$.
-		\item 若 $S$ 是一个由序数构成的集合, $S \neq \emptyset$, 则 $\sup S := \bigcup S$ 也是序数.
+		\item Untuk ordinal, definisikan $\beta < \alpha$ jika dan hanya jika $\beta \in \alpha$. Relasi ini memberikan urutan total pada $\textbf{On}$, dan untuk setiap ordinal $\alpha$ berlaku $\alpha = \{ \beta : \beta < \alpha \}$.
+		\item Jika $C$ merupakan kelas yang terdiri atas ordinal dan $C \neq \emptyset$, maka $\inf C := \bigcap C$ juga merupakan ordinal, dan $\inf C \in C$; selain itu, $\alpha \sqcup \{\alpha\} = \inf\{ \beta: \beta > \alpha \}$.
+		\item Jika $S$ merupakan himpunan yang terdiri atas ordinal dan $S \neq \emptyset$, maka $\sup S := \bigcup S$ juga merupakan ordinal.
 	\end{compactitem}
 \end{theorem}
-由此可知 $\beta < \alpha$ 蕴涵 $\beta$ 是 $\alpha$ 的前段. 性质 $\alpha = \{\beta: \beta < \alpha \}$ 是理解序数构造的钥匙.
+Dari sini, $\beta < \alpha$ menyiratkan bahwa $\beta$ merupakan segmen awal dari $\alpha$. Sifat $\alpha = \{\beta: \beta < \alpha \}$ adalah kunci untuk memahami konstruksi ordinal.
 
-给定序数 $\alpha$, 置 $\alpha + 1 := \alpha \sqcup \{\alpha\} > \alpha$, 称为 $\alpha$ 的\emph{后继}; 它是大于 $\alpha$ 的最小序数. 若 $\alpha$ 不是任何序数的后继, 则不难看出 $\alpha = \sup\{\beta: \beta < \alpha\}$, 这样的 $\alpha$ 称为\emph{极限序数}\index{xushu!极限序数 (limit ordinal)}. 约定空 $\sup$ 为 $\emptyset$ 使得``零序数'' $\emptyset$ 是极限序数.
+Untuk suatu ordinal $\alpha$, tetapkan $\alpha + 1 := \alpha \sqcup \{\alpha\} > \alpha$, yang disebut \emph{penerus} $\alpha$; ini merupakan ordinal terkecil yang lebih besar daripada $\alpha$. Jika $\alpha$ bukan penerus dari ordinal mana pun, mudah dilihat bahwa $\alpha = \sup\{\beta: \beta < \alpha\}$. Ordinal $\alpha$ seperti ini disebut \emph{ordinal limit}\index{ordinal!ordinal limit (limit ordinal)}. Dengan konvensi bahwa $\sup$ dari himpunan kosong bernilai $\emptyset$, ``ordinal nol'' $\emptyset$ merupakan ordinal limit.
 
 \begin{proposition}\label{prop:Ord-class}
-	序数类 $\textbf{On}$ 是真类.
+	Kelas ordinal $\textbf{On}$ merupakan kelas sejati.
 \end{proposition}
 \begin{proof}
-	前述结果表明若 $\textbf{On}$ 是集合, 则 $\sup(\textbf{On})$ 有定义, 而且序数 $\sup(\textbf{On}) + 1$ 将严格大于所有序数, 包括它自己!
+	Hasil sebelumnya menunjukkan bahwa jika $\textbf{On}$ merupakan himpunan, maka $\sup(\textbf{On})$ terdefinisi, dan ordinal $\sup(\textbf{On}) + 1$ akan lebih besar daripada setiap ordinal, termasuk dirinya sendiri!
 \end{proof}
-这被称为 Burali-Forti 佯谬 (1897年)\index{Burali-Forti 佯谬}, 它面世要早于 Russell 佯谬 (1902年), 尽管后者影响更大.
+Hal ini disebut paradoks Burali--Forti (1897)\index{paradoks Burali--Forti@paradoks Burali--Forti}; paradoks tersebut muncul lebih dahulu daripada paradoks Russell (1902), meskipun pengaruh paradoks yang terakhir lebih besar.
 
-\begin{example}[无穷序数 $\omega$ 的构造] \index[sym1]{omega@$\omega$}
-	考虑序数 $0 := \emptyset$, 不断取后继得到序数
+\begin{example}[Konstruksi ordinal tak hingga $\omega$] \index[sym1]{omega@$\omega$}\leavevmode\par
+	Tinjau ordinal $0 := \emptyset$. Dengan mengambil penerus berulang kali, diperoleh ordinal
 	\[ 1 := 0 + 1, \quad 2 := 1+1, \quad 3=2+1, \ldots \]
-	等等. 现在我们着手定义最小的非零极限序数 $\omega$, 这样的序数如存在则必包含所有 $0,1,2, \ldots$, 而且实由它们构成. 首务是证明非零极限序数存在: 回忆无穷公理 \textbf{A.6} 中归纳集的概念, 若 $x$ 是归纳集, 取 $\alpha := \{y \in x : y \subset x, \; y \in \textbf{On} \}$. 按定义直接验证以下性质:
+	dan seterusnya. Sekarang kita hendak mendefinisikan ordinal limit tak nol terkecil $\omega$. Jika ordinal seperti itu ada, ia harus memuat semua $0,1,2, \ldots$, dan sesungguhnya ordinal-ordinal itulah seluruh anggotanya. Langkah pertama ialah membuktikan keberadaan ordinal limit tak nol. Ingat kembali konsep himpunan induktif dalam aksioma ketakhinggaan \textbf{A.6}. Jika $x$ merupakan himpunan induktif, ambil $\alpha := \{y \in x : y \subset x, \; y \in \textbf{On} \}$. Langsung dari definisi dapat diverifikasi sifat-sifat berikut:
 	\begin{inparaenum}[(a)]
-		\item $\emptyset \in \alpha$ 故 $\alpha$ 非空,
-		\item $\alpha$ 是序数,
-		\item $y \in \alpha \implies y + 1 \in \alpha$, 因此 $\alpha$ 确为极限序数.
+		\item $\emptyset \in \alpha$, sehingga $\alpha$ tidak kosong,
+		\item $\alpha$ merupakan ordinal,
+		\item $y \in \alpha \implies y + 1 \in \alpha$, sehingga $\alpha$ memang merupakan ordinal limit.
 	\end{inparaenum}
-	取序数 $\omega := \inf\{ \text{非零极限序数} \}$ 即所求. 满足 $n < \omega$ 的序数 $n$ 称为\emph{有限序数}.
+	Ambil ordinal $\omega := \inf\{ \text{ordinal limit tak nol} \}$. Inilah ordinal yang dicari. Ordinal $n$ yang memenuhi $n < \omega$ disebut \emph{ordinal berhingga}.
 
-	在同构意义下, 序数 $\omega = \{n : n=0, 1, \ldots \}$ 不外是我们直觉中的良序集 $\Z_{\geq 0}$; 这也可以看作是从空集出发, 在 ZFC 框架下定义非负整数集的一种手法. 更明确地说, $\omega$ 连同其中元素的后继运算 $n \mapsto n+1$ 满足 Peano 的算术公理 (见 \cite[第零章, \S 2]{DN00}), 而这是我们实际操作整数时所需的全部性质, 定理 \ref{prop:transfinite-induction} 将触及其中关键的一条: 数学归纳法.
+	Hingga isomorfisme, ordinal $\omega = \{n : n=0, 1, \ldots \}$ tidak lain ialah himpunan terurut baik $\Z_{\geq 0}$ yang kita kenal secara intuitif. Konstruksi ini juga dapat dipandang sebagai cara mendefinisikan himpunan bilangan bulat taknegatif dengan bertolak dari himpunan kosong dalam kerangka ZFC. Lebih tepatnya, $\omega$, bersama operasi penerus pada elemen-elemennya $n \mapsto n+1$, memenuhi aksioma aritmetika Peano (lihat \cite[Bab 0, \S 2]{DN00}); itulah seluruh sifat yang kita perlukan untuk bekerja dengan bilangan bulat dalam praktik. Teorema \ref{prop:transfinite-induction} akan membahas salah satu sifat kunci tersebut: induksi matematika.
 \end{example}
 
 \section{超穷递归及其应用}

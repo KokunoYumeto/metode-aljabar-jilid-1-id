@@ -1,5 +1,33 @@
 % Target-only Indonesian labels for source-class reader interface elements.
 % The upstream AJbook.cls remains byte-identical to the frozen source closure.
+\providecommand{\refname}{}
+\renewcommand{\refname}{Daftar Pustaka}
+\renewcommand{\bibname}{Daftar Pustaka}
+\renewcommand{\listfigurename}{Daftar Gambar}
+\renewcommand{\listtablename}{Daftar Tabel}
+
+\renewenvironment{Exercises}{%
+	\markright{Latihan}%
+	\addcontentsline{toc}{section}{Latihan}%
+	\vspace{1em}\begin{center}%
+		\Large\CJKfamily{sectionfont} Latihan
+	\end{center}\vspace{0.7em}%
+	\begin{small}\begin{enumerate}[\bfseries 1.]%
+}{%
+	\end{enumerate}\end{small}%
+}
+
+\renewenvironment{hint}{%
+	\ifvmode
+		\ignorespaces
+	\else
+		\quad
+	\fi
+	\begin{tikzpicture}[baseline=(H.base), every node/.style={signal, draw, very thin, signal to=east, signal from=nowhere, signal pointer angle=120, inner sep=2pt}]
+		\node[anchor=mid west] (H) at (0,0) {\sffamily\bfseries\footnotesize Petunjuk};
+	\end{tikzpicture}%
+}{}
+
 \renewtcolorbox{wenxintishi}{
 	breakable,
 	enhanced,
@@ -15,3 +43,25 @@
 	bottom = 3mm,
 	title = {Petunjuk membaca}
 }
+
+% AJbook creates its ntheorem environments in its own AtBeginDocument hook.
+% Replace only their generated header macros in a later hook. This preserves
+% the source counters, shared numbering, styles, bodies, and proof end marks.
+\makeatletter
+\AtBeginDocument{%
+	\gdef\mkheader@theorem{\setparms@theorem\@thm{theorem}{theorem}{Teorema}}%
+	\gdef\mkheader@corollary{\setparms@corollary\@thm{corollary}{theorem}{Korolari}}%
+	\gdef\mkheader@lemma{\setparms@lemma\@thm{lemma}{theorem}{Lemma}}%
+	\gdef\mkheader@proposition{\setparms@proposition\@thm{proposition}{theorem}{Proposisi}}%
+	\gdef\mkheader@definition{\setparms@definition\@thm{definition}{theorem}{Definisi}}%
+	\expandafter\gdef\csname mkheader@definition-theorem\endcsname{\csname setparms@definition-theorem\endcsname\@thm{definition-theorem}{theorem}{Definisi--Teorema}}%
+	\expandafter\gdef\csname mkheader@definition-proposition\endcsname{\csname setparms@definition-proposition\endcsname\@thm{definition-proposition}{theorem}{Definisi--Proposisi}}%
+	\gdef\mkheader@hypothesis{\setparms@hypothesis\@thm{hypothesis}{theorem}{Hipotesis}}%
+	\gdef\mkheader@conjecture{\setparms@conjecture\@thm{conjecture}{theorem}{Konjektur}}%
+	\gdef\mkheader@example{\setparms@example\@thm{example}{theorem}{Contoh}}%
+	\gdef\mkheader@remark{\setparms@remark\@thm{remark}{theorem}{Catatan}}%
+	\gdef\mkheader@convention{\setparms@convention\@thm{convention}{theorem}{Konvensi}}%
+	\gdef\mkheader@exercise{\setparms@exercise\@thm{exercise}{theorem}{Latihan}}%
+	\gdef\mkheader@proof{\setparms@proof\@thm{proof}{proof}{Bukti}}%
+}
+\makeatother

@@ -2,11 +2,13 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Unit 1 — Pendahuluan dan Unit 2 — pembukaan Bab 1 beserta Bagian 1.1 tentang aksioma ZFC telah diterjemahkan, diaudit, dibangun, dan diterima. Bagian 1.2 dan seterusnya masih dalam bahasa sumber dan akan diterjemahkan berurutan.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Unit 1 - Pendahuluan, Unit 2 - pembukaan Bab 1 dan Bagian 1.1 tentang aksioma ZFC, serta Unit 3 - Bagian 1.2 tentang struktur urutan dan ordinal telah diterjemahkan, diaudit, dibangun, dan diterima. Bagian 1.3 dan seterusnya masih dalam bahasa sumber dan akan diterjemahkan berurutan.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh PDF Unit 1](artifacts/unit-001-pendahuluan.pdf)
 
 [Baca atau unduh PDF Unit 2](artifacts/unit-002-bab-1-zfc.pdf)
+
+[Baca atau unduh PDF Unit 3](artifacts/unit-003-bab-1-struktur-urutan-dan-ordinal.pdf)
 
 ## Identitas sumber
 
@@ -26,6 +28,7 @@ Prasyarat: PowerShell 7, XeLaTeX, Biber, MakeIndex, serta paket-paket TeX yang d
 ```powershell
 pwsh -NoProfile -File scripts/build_unit_001.ps1 -OutputDirectory build/unit-001-replay
 pwsh -NoProfile -File scripts/build_unit_002.ps1 -OutputDirectory build/unit-002-replay
+pwsh -NoProfile -File scripts/build_unit_003.ps1 -OutputDirectory build/unit-003-replay
 ```
 
 Skrip menjalankan XeLaTeX tanpa shell escape, Biber, MakeIndex, lalu tiga lintasan XeLaTeX. Tanggal sumber dan seed gambar sampul dipatok. Dua build bersih untuk setiap unit menghasilkan halaman yang identik piksel demi piksel ketika dirender, meskipun serialisasi kontainer PDF XeTeX belum identik byte di direktori keluaran yang berbeda.
@@ -41,22 +44,33 @@ Artefak Unit 1 yang diterima:
 
 Artefak Unit 2 yang diterima:
 
-- 15 halaman
-- 161.687 byte
-- SHA-256 `df709d43505dabd365d04fd8f9a90dac7d9c4ab686d677bbae50bed7bf7d61d2`
+- 12 halaman; halaman verso kosong khusus cetak telah dihapus dari reader digital
+- 161.147 byte
+- SHA-256 `ff2eb3fd1ec5abaa7989d0c29c419c04f99368dc3f278799be460e30042bfe58`
 - bahasa PDF `id-ID`
-- 5 akar outline, 35 destinasi bernama, indeks istilah, dan indeks simbol
+- 5 akar outline, 33 destinasi bernama, indeks istilah, dan indeks simbol
 - tidak ada galat TeX, sitasi/rujukan tak terdefinisi, destinasi ganda, karakter hilang, atau tautan eksternal palsu
+
+Artefak Unit 3 yang diterima:
+
+- 11 halaman; tidak ada halaman kosong
+- 147.784 byte
+- SHA-256 `67f3b0594f65917cf78361886aef6616c0875bc584a95758f06e4d11b182082c`
+- bahasa PDF `id-ID`
+- 5 akar outline, 43 destinasi bernama, indeks istilah, dan indeks simbol
+- judul definisi, lema, teorema, proposisi, contoh, dan bukti telah dilokalkan ke bahasa Indonesia
+- tidak ada galat TeX, sitasi/rujukan tak terdefinisi, destinasi ganda, karakter hilang, halaman kosong, atau tajuk lingkungan berbahasa Tionghoa
 
 ## Backend modular
 
-`backend/data/unit-001-pendahuluan.json` dan `backend/data/unit-002-bab-1-zfc.json` adalah catatan kanonik unit yang telah diterima. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik.
+`backend/data/unit-001-pendahuluan.json`, `backend/data/unit-002-bab-1-zfc.json`, dan `backend/data/unit-003-bab-1-struktur-urutan-dan-ordinal.json` adalah catatan kanonik unit yang telah diterima. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik.
 
 Validasi:
 
 ```powershell
 python scripts/validate_backend.py
 python scripts/validate_backend.py --data backend/data/unit-002-bab-1-zfc.json
+python scripts/validate_backend.py --data backend/data/unit-003-bab-1-struktur-urutan-dan-ordinal.json
 ```
 
 Validator memeriksa skema, keunikan dan relasi ID, urutan bagian, hash file dan rentang baris, penutupan sitasi/rujukan/diagram/indeks, bukti build, serta kesesuaian byte proyeksi CSV.
@@ -80,7 +94,8 @@ Teks sumber dan terjemahan ditangani menurut Creative Commons Attribution 4.0 In
 - [x] Pendahuluan
 - [ ] Bab 1 — Teori himpunan
   - [x] Pembukaan bab dan Bagian 1.1 — Ikhtisar aksioma ZFC
-  - [ ] Bagian 1.2 dan seterusnya
+  - [x] Bagian 1.2 — Struktur Urutan dan Ordinal
+  - [ ] Bagian 1.3 dan seterusnya
 - [ ] Bab 2 — Dasar-dasar teori kategori
 - [ ] Bab 3 — Kategori monoidal
 - [ ] Bab 4 — Teori grup

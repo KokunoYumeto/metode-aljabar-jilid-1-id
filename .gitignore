@@ -5,6 +5,7 @@
 # Full-page render evidence is retained locally; compact receipts are tracked.
 /qa/unit-001-final-*/
 /qa/unit-002-final-*/
+/qa/unit-003-final-*/
 
 # Task-local recovery and user-instruction records are not publication metadata.
 /00_control/CURRENT_*
@@ -34,7 +35,9 @@ __pycache__/
 # This AUX file is a frozen source input, not a transient build file.
 !repo/source/unit-001-crossrefs.aux
 !repo/source/unit-002-crossrefs.aux
+!repo/source/unit-003-crossrefs.aux
 
 # Machine-specific validation output is regenerated locally.
 /qa/unit-001-evidence/backend-validation-latest.json
 /qa/unit-002-evidence/backend-validation-latest.json
+/qa/unit-003-evidence/backend-validation-latest.json
