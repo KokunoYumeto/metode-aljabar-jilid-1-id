@@ -1,0 +1,6 @@
+entity_type,id,stable_key,section_id,ordinal,source_value,target_value,format,status
+build_surface,urn:uuid:9c319b3f-26d9-5ed4-b0f5-dfd504a82a24,build-surface/unit-008-pdf,,,pwsh -NoProfile -File scripts/build_unit_008.ps1 -OutputDirectory build/unit-008-replay-id,artifacts/unit-008-bab-2-pengantar-teori-kategori.pdf,pdf,pass
+citation,urn:uuid:d75b3ee8-87f7-51ba-8d47-4bda359520e4,citation/co11,urn:uuid:f3833791-2f47-5b85-97a6-839cfe1d5f42,,Co11,Co11,biblatex-key,preserved
+citation,urn:uuid:84f3b6e3-d270-55eb-bcdf-9ef0e92a3ede,citation/em45,urn:uuid:f3833791-2f47-5b85-97a6-839cfe1d5f42,,EM45,EM45,biblatex-key,preserved
+citation,urn:uuid:0f20a28e-0313-5d59-81d0-9954873c95e5,citation/ml98,urn:uuid:f3833791-2f47-5b85-97a6-839cfe1d5f42,,ML98,ML98,biblatex-key,preserved
+citation,urn:uuid:a1e5e886-47d5-5132-821d-5fd1414d235d,citation/sep-category-theory,urn:uuid:f3833791-2f47-5b85-97a6-839cfe1d5f42,,sep-category-theory,sep-category-theory,biblatex-key,preserved

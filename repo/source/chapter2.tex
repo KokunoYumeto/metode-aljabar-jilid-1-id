@@ -6,34 +6,34 @@
 % http://creativecommons.org/licenses/by/4.0/
 
 % To be included
-\chapter{范畴论基础}\label{sec:category}
-概括地说, 范畴是由对象及其间的态射组成的数学结构, 从对象 $X$ 到对象 $Y$ 的态射 $f$ 习惯以箭头来表述
+\chapter{Dasar-Dasar Teori Kategori}\label{sec:category}
+Secara garis besar, kategori adalah struktur matematika yang tersusun atas objek-objek dan morfisme di antaranya. Morfisme $f$ dari objek $X$ ke objek $Y$ lazim dinyatakan dengan panah
 \[ X \xrightarrow{f} Y; \]
-而函子则可视作是范畴间保持箭头结构的某种``映射'', 函子之间的关系由自然变换描述. 这套体系原是 Eilenberg 与 MacLane \cite{EM45} 为研究代数拓扑学而引进的, 它很快便发展为一门深入的学科, 并成为同调代数, 同伦论和代数几何等领域的基本语言.
+Adapun funktor dapat dipandang sebagai semacam ``peta'' antarkategori yang mempertahankan struktur panah; hubungan antara funktor dijelaskan oleh transformasi natural. Kerangka ini semula diperkenalkan oleh Eilenberg dan MacLane \cite{EM45} untuk mengkaji topologi aljabar. Kerangka tersebut segera berkembang menjadi bidang yang mendalam dan menjadi bahasa dasar bagi bidang-bidang seperti aljabar homologis, teori homotopi, dan geometri aljabar.
 
-数学中考虑的范畴经常以一类特定的结构为对象, 例如群, 环, 向量空间, 偏序集, 拓扑空间等, 而范畴中的态射经常是保结构的映射, 如群同态, 连续映射等. 函子与自然变换在这种种结构之间搭起桥梁. 譬如代数拓扑学中的同调群 $X \mapsto H_n(X, \Z)$ 就是一族从拓扑空间范畴 $\cate{Top}$ 到交换群范畴 $\cate{Ab}$ 的函子 ($n=0,1,2,\ldots$). 范畴论的本意不止于研究它们各自的性质, 还在于研究其间的联系.
+Kategori yang dikaji dalam matematika sering memiliki struktur dari suatu jenis tertentu sebagai objek-objeknya, misalnya grup, gelanggang, ruang vektor, poset, dan ruang topologis; morfismenya sering berupa peta pelestari struktur, seperti homomorfisme grup atau peta kontinu. Funktor dan transformasi natural membangun jembatan di antara berbagai struktur tersebut. Sebagai contoh, grup homologi $X \mapsto H_n(X, \Z)$ dalam topologi aljabar merupakan keluarga funktor dari kategori ruang topologis $\cate{Top}$ ke kategori grup abelian $\cate{Ab}$ ($n=0,1,2,\ldots$). Tujuan teori kategori bukan hanya mengkaji sifat masing-masing struktur, melainkan juga hubungan di antaranya.
 
-范畴视角的特色正在于重视关联甚于数学对象本身, 并以同构代替严格等式, 最明显的例证是代数学中无所不在的泛性质. 是以从集合过渡到范畴不仅意味着在抽象的梯级上爬得更高, 还包含思维范式的转变. 数学中常见的``自然映射''和``典范映射''等说法, 在范畴框架下都能得到允当的解释.
+Ciri khas sudut pandang kategorial terletak pada kecenderungannya untuk lebih mengutamakan hubungan daripada objek matematika itu sendiri, serta menggunakan isomorfisme alih-alih kesamaan ketat; contoh paling nyata ialah sifat universal yang hadir di mana-mana dalam aljabar. Karena itu, beralih dari himpunan ke kategori bukan hanya berarti naik ke tingkat abstraksi yang lebih tinggi, tetapi juga mencakup perubahan paradigma berpikir. Ungkapan yang lazim dalam matematika seperti ``peta natural'' dan ``peta kanonik'' memperoleh penjelasan yang tepat dalam kerangka kategori.
 
-一如所有成功的数学理论, 范畴论的成果远远超出了创立时的初衷. 纳结构于范畴的想法符合 Bourbaki 学派的数学观, 但是它仅反映了实践的一隅. 范畴里的对象未必是建立在集合上的结构, 而态射也未必是映射. 以下例子借自 \cite{Co11} 中 Baez 和 Stay 的文章, 也敬邀读者进一步阅读原文:
+Seperti semua teori matematika yang berhasil, capaian teori kategori jauh melampaui tujuan awal pembentukannya. Gagasan menempatkan struktur di dalam kategori selaras dengan pandangan matematika mazhab Bourbaki, tetapi hanya mencerminkan sebagian kecil praktik. Objek dalam kategori tidak harus merupakan struktur yang dibangun di atas himpunan, dan morfisme pun tidak harus berupa peta. Contoh berikut diambil dari artikel Baez dan Stay dalam \cite{Co11}; pembaca juga dianjurkan membaca artikel aslinya:
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|} \hline
-	& 拓扑学 & 量子物理 & 数理逻辑 & 计算机科学 \\
-	& (配边理论) & & (形式演绎系统) & (带类型的 $\lambda$-演算) \\ \hline
-	对象 &  流形 &  物理系统 &  命题 & 资料型态 \\ \hline
-	态射 &  配边关系 &  过程 & 证明 & 程序 \\ \hline
-\end{tabular}
+\small \setlength{\tabcolsep}{3pt} \renewcommand{\arraystretch}{1.2} \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{0.13\textwidth}|*{4}{>{\centering\arraybackslash}X|}} \hline
+	& Topologi & Fisika Kuantum & Logika Matematis & Ilmu Komputer \\
+	& (teori kobordisme) & & (sistem deduksi formal) & (kalkulus-$\lambda$ bertipe) \\ \hline
+	Objek & manifold & sistem fisik & proposisi & tipe data \\ \hline
+	Morfisme & kobordisme & proses & bukti & program \\ \hline
+\end{tabularx}
 \end{center}
-当然, 物理方面的应用终归要由实践来检验.
+Tentu saja, penerapan dalam fisika pada akhirnya harus diuji dalam praktik.
 
-实用中往往会考虑带有特殊结构的范畴. 幺半范畴是最常见的结构之一, 其中具有类似于乘法的操作, 我们将在下一章作进一步探讨.
+Dalam praktik, orang sering mempertimbangkan kategori yang dilengkapi struktur khusus. Kategori monoidal merupakan salah satu struktur yang paling umum; di dalamnya terdapat operasi yang menyerupai perkalian, yang akan kita bahas lebih lanjut pada bab berikutnya.
 
-关于范畴论的发展简史, 可参看 MacLane 在 \cite{ML98} 给出的注记和文献, 哲学面向的评述请见 \cite{sep-category-theory}.
+Untuk sejarah singkat perkembangan teori kategori, lihat catatan dan daftar pustaka MacLane dalam \cite{ML98}; untuk ulasan aspek filosofisnya, lihat \cite{sep-category-theory}.
 
 \begin{wenxintishi}
-	学习这部分的诀窍在于掌握例子. 只要对代数结构有最初步的概念, 可以尝试先掌握函子, 自然变换与范畴等价的定义, 交换图表的操作, 以及 \S\ref{sec:limits} 中积和余积的泛性质刻画. 时机成熟时再补全其余. 然而本章介绍的所有概念终归都是必要的; 一旦读者对具体的代数构造有了进一步感觉, 就应该试着以泛性质, 伴随函子和极限这些范畴概念交互印证.
+	Kunci mempelajari bagian ini adalah menguasai contoh. Dengan hanya memiliki pemahaman paling dasar tentang struktur aljabar, pembaca dapat mencoba terlebih dahulu menguasai definisi funktor, transformasi natural, dan ekuivalensi kategori; manipulasi diagram komutatif; serta karakterisasi produk dan koproduk melalui sifat universal dalam \S\ref{sec:limits}. Sisanya dapat dipelajari kemudian ketika waktunya sudah tepat. Namun, pada akhirnya semua konsep yang diperkenalkan dalam bab ini diperlukan; setelah pembaca semakin memahami konstruksi aljabar konkret, ia sebaiknya mencoba saling mencocokkan dan menguji konstruksi-konstruksi tersebut dengan konsep-konsep kategorial seperti sifat universal, funktor adjoin, dan limit.
 
-	为避免某些集合论的悖论, 我们必要时会采用 Grothendieck 宇宙的语言 (见 \S\ref{sec:Grot-universe}) 避开矛盾; 初学者可无视之. 然而集合的大小对于范畴的性质有实实在在的影响, 命题 \ref{prop:preorder-complete} 是为一例.
+	Untuk menghindari paradoks tertentu dalam teori himpunan, bila diperlukan kita akan menggunakan bahasa semesta Grothendieck (lihat \S\ref{sec:Grot-universe}); pembaca pemula boleh mengabaikannya. Namun, ukuran himpunan sungguh memengaruhi sifat-sifat kategori; Proposisi \ref{prop:preorder-complete} merupakan salah satu contohnya.
 \end{wenxintishi}
 
 \section{范畴与态射}\label{sec:cat-and-morphism}

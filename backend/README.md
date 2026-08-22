@@ -7,7 +7,8 @@ edition. Canonical records for the admitted reader units are
 `data/unit-004-bab-1-rekursi-transfinit-dan-penerapannya.json`,
 `data/unit-005-bab-1-kardinal.json`,
 `data/unit-006-bab-1-semesta-grothendieck.json`, and
-`data/unit-007-bab-1-latihan.json`; files in `csv/` are deterministic
+`data/unit-007-bab-1-latihan.json`, and
+`data/unit-008-bab-2-pengantar-teori-kategori.json`; files in `csv/` are deterministic
 projections, not independent sources of truth.
 
 ## Identity model
@@ -33,7 +34,7 @@ file identity is retained as the admission-time witness while the normalized
 span is the live integrity boundary. Later translation outside an admitted
 span therefore cannot invalidate the earlier unit.
 
-Units 001 through 007 are `admitted` and `visually_checked`. Admission
+Units 001 through 008 are `admitted` and `visually_checked`. Admission
 requires passing translation, build, and visual states plus bound reader,
 build-summary, build script, and QA-receipt evidence. A green backend
 validation proves that the schema, identities, references, order, hashes,
@@ -49,6 +50,13 @@ entity linked to the parent exercise. The live topology gate and QA event record
 the true `6/6/6` surface census; this compatibility encoding does not relabel
 learner exercises as ordinary exposition concepts.
 
+Schema v1.1.0 likewise has no first-class TeX-label, standalone external-
+reference, native-table, or accessibility-description entities. Unit 008 gives
+those six protected surfaces deterministic concept-compatible UUIDv5 IDs whose
+stable keys explicitly identify them as surfaces. Its text-native four-row,
+five-column comparison table is paired with a linear-reading semantics entity;
+neither compatibility record is presented as an ordinary mathematical concept.
+
 ## Validation and export
 
 From the lane root, run:
@@ -61,6 +69,7 @@ python -B scripts/validate_backend.py --data backend/data/unit-004-bab-1-rekursi
 python -B scripts/validate_backend.py --data backend/data/unit-005-bab-1-kardinal.json --write-csv
 python -B scripts/validate_backend.py --data backend/data/unit-006-bab-1-semesta-grothendieck.json --write-csv
 python -B scripts/validate_backend.py --data backend/data/unit-007-bab-1-latihan.json --write-csv
+python -B scripts/validate_backend.py --data backend/data/unit-008-bab-2-pengantar-teori-kategori.json --write-csv
 python -B scripts/validate_backend.py --data backend/data/unit-001-pendahuluan.json
 python -B scripts/validate_backend.py --data backend/data/unit-002-bab-1-zfc.json
 python -B scripts/validate_backend.py --data backend/data/unit-003-bab-1-struktur-urutan-dan-ordinal.json
@@ -68,6 +77,7 @@ python -B scripts/validate_backend.py --data backend/data/unit-004-bab-1-rekursi
 python -B scripts/validate_backend.py --data backend/data/unit-005-bab-1-kardinal.json
 python -B scripts/validate_backend.py --data backend/data/unit-006-bab-1-semesta-grothendieck.json
 python -B scripts/validate_backend.py --data backend/data/unit-007-bab-1-latihan.json
+python -B scripts/validate_backend.py --data backend/data/unit-008-bab-2-pengantar-teori-kategori.json
 ```
 
 Each command with `--write-csv` validates one canonical JSON record and then
@@ -82,7 +92,8 @@ drift, index-key drift, and stale projections.
 `scripts/generate_unit_004_backend.py` and
 `scripts/generate_unit_005_backend.py` and
 `scripts/generate_unit_006_backend.py` and
-`scripts/generate_unit_007_backend.py` reconstruct their units' canonical JSON
+`scripts/generate_unit_007_backend.py` and
+`scripts/generate_unit_008_backend.py` reconstruct their units' canonical JSON
 from reviewed source/target spans, artifacts, build inputs, and bound QA
 evidence. They are deterministic for unchanged admitted inputs; rerun one only
 when intentionally re-admitting that exact unit boundary.

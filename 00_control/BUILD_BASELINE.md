@@ -110,3 +110,18 @@ equal. All pages were inspected without clipping, collision, blank pages,
 missing glyphs, or Han residue. The PDF remains untagged; deterministic
 rendered content, not byte-identical XeTeX PDF-container serialization, is
 claimed.
+
+Unit 008 uses the same pinned shell-escape-disabled XeLaTeX/Biber/MakeIndex
+procedure and a frozen external-reference witness for Section 1.5, Section 2.7,
+and Proposition 2.8.2. Its admitted artifact is 5 pages, 100,795 bytes,
+SHA-256
+`d4234cb0080a60ad06fcb004d4d75e7daea85b3846bbbd05f0261b03e9f66258`.
+The standalone driver reflows the source's four-row, five-column table into a
+full-width text-native `tabularx`, reduces only the chapter-opening and reading-
+box spacing, and localizes inherited bibliography role labels. Two clean builds
+produced 5/5 pixel-identical Poppler and 5/5 pixel-identical MuPDF pages at 144
+dpi; extracted text was also identical. All pages were inspected without
+clipping, collision, blank pages, missing glyphs, or Han residue. The PDF
+containers differ by 19 bytes, so only deterministic rendered content and
+semantic-text equality are claimed. The PDF remains untagged; the backend's
+paired linear table semantics do not constitute tagged-PDF conformance.

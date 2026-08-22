@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Unit 1 - Pendahuluan serta seluruh Bab 1 telah diterjemahkan, diaudit, dibangun, dan diterima dalam tujuh unit pembaca. Unit 7 memuat keenam latihan penutup Bab 1 beserta enam subbagian dan enam petunjuknya. Bab 2 dan bab-bab selanjutnya masih dalam bahasa sumber dan akan diterjemahkan berurutan.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan, seluruh Bab 1, serta pengantar Bab 2 telah diterjemahkan, diaudit, dibangun, dan diterima dalam delapan unit pembaca. Unit 8 memperkenalkan teori kategori, mempertahankan seluruh rujukan dan sitasi sumber, serta menata ulang tabel perbandingan agar memenuhi lebar area teks. Bagian 2.1 dan bagian-bagian selanjutnya masih dalam bahasa sumber dan akan diterjemahkan berurutan.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh PDF Unit 1](artifacts/unit-001-pendahuluan.pdf)
 
@@ -18,7 +18,9 @@ Status saat ini: **Unit 1 - Pendahuluan serta seluruh Bab 1 telah diterjemahkan,
 
 [Baca atau unduh PDF Unit 7](artifacts/unit-007-bab-1-latihan.pdf)
 
-Versi preservasi `0.1.0` yang memuat ketujuh reader, sumber yang dapat dibangun, backend modular, bukti ringkas, dan manifest hash tersedia pada [Zenodo DOI 10.5281/zenodo.22059760](https://doi.org/10.5281/zenodo.22059760). Pembaruan berikutnya akan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat.
+[Baca atau unduh PDF Unit 8](artifacts/unit-008-bab-2-pengantar-teori-kategori.pdf)
+
+Versi preservasi `0.2.0` yang memuat kedelapan reader, sumber yang dapat dibangun, backend modular, bukti ringkas, dan manifest hash tersedia pada [Zenodo DOI 10.5281/zenodo.22060005](https://doi.org/10.5281/zenodo.22060005). Seluruh pembaruan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat.
 
 ## Identitas sumber
 
@@ -43,6 +45,7 @@ pwsh -NoProfile -File scripts/build_unit_004.ps1 -OutputDirectory build/unit-004
 pwsh -NoProfile -File scripts/build_unit_005.ps1 -OutputDirectory build/unit-005-replay
 pwsh -NoProfile -File scripts/build_unit_006.ps1 -OutputDirectory build/unit-006-replay
 pwsh -NoProfile -File scripts/build_unit_007.ps1 -OutputDirectory build/unit-007-replay
+pwsh -NoProfile -File scripts/build_unit_008.ps1 -OutputDirectory build/unit-008-replay
 ```
 
 Skrip menjalankan XeLaTeX tanpa shell escape, indeks dan bibliografi yang dibutuhkan setiap unit, lalu lintasan konvergensi XeLaTeX. Tanggal sumber dan seed gambar sampul dipatok. Dua build bersih untuk setiap unit menghasilkan halaman yang identik piksel demi piksel ketika dirender, meskipun serialisasi kontainer PDF XeTeX belum identik byte di direktori keluaran yang berbeda.
@@ -115,9 +118,20 @@ Artefak Unit 7 yang diterima:
 - enam latihan, enam subbagian, enam petunjuk, 64 fragmen matematika sebaris, dan 3 blok display terpelihara; koreksi tipe matematis pada petunjuk baris sumber 519 didokumentasikan
 - daftar isi satu halaman yang jarang serta permukaan bibliografi/indeks kosong ditiadakan khusus untuk reader digital; tidak ada galat TeX, rujukan/sitasi tak terdefinisi, kotak meluber, karakter hilang, halaman kosong, atau residu aksara Han
 
+Artefak Unit 8 yang diterima:
+
+- 5 halaman; tidak ada halaman kosong atau baris tunggal yang terdampar
+- 100.795 byte
+- SHA-256 `d4234cb0080a60ad06fcb004d4d75e7daea85b3846bbbd05f0261b03e9f66258`
+- bahasa PDF `id-ID`
+- 2 entri outline, 10 destinasi bernama, 8 tautan internal, dan 7 URI yang disengaja
+- label `sec:category`, tiga rujukan buku-global, empat sitasi, 8 fragmen matematika sebaris, dan 1 blok display terpelihara
+- tabel empat-baris lima-kolom ditata ulang menjadi `tabularx` selebar teks dan dipasangkan dengan semantik pembacaan linear di backend; kotak petunjuk tetap utuh pada satu halaman
+- label peran bibliografi telah dilokalkan; tidak ada galat TeX, rujukan/sitasi tak terdefinisi, kotak meluber, karakter hilang, halaman kosong, atau residu aksara Han
+
 ## Backend modular
 
-`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-007-bab-1-latihan.json` adalah catatan kanonik ketujuh unit yang telah diterima. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7 mempertahankan keenam latihan sebagai entitas bagian terurut dan setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya.
+`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-008-bab-2-pengantar-teori-kategori.json` adalah catatan kanonik kedelapan unit yang telah diterima. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7 mempertahankan keenam latihan sebagai entitas bagian terurut dan setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear.
 
 Validasi:
 
@@ -129,6 +143,7 @@ python scripts/validate_backend.py --data backend/data/unit-004-bab-1-rekursi-tr
 python scripts/validate_backend.py --data backend/data/unit-005-bab-1-kardinal.json
 python scripts/validate_backend.py --data backend/data/unit-006-bab-1-semesta-grothendieck.json
 python scripts/validate_backend.py --data backend/data/unit-007-bab-1-latihan.json
+python scripts/validate_backend.py --data backend/data/unit-008-bab-2-pengantar-teori-kategori.json
 ```
 
 Validator memeriksa skema, keunikan dan relasi ID, urutan bagian, hash file dan rentang baris, penutupan sitasi/rujukan/diagram/indeks, bukti build, serta kesesuaian byte proyeksi CSV.
@@ -158,6 +173,8 @@ Teks sumber dan terjemahan ditangani menurut Creative Commons Attribution 4.0 In
   - [x] Bagian 1.5 - Semesta Grothendieck
   - [x] Latihan Bab 1
 - [ ] Bab 2 — Dasar-dasar teori kategori
+  - [x] Pengantar bab dan petunjuk membaca
+  - [ ] Bagian 2.1 dan seterusnya
 - [ ] Bab 3 — Kategori monoidal
 - [ ] Bab 4 — Teori grup
 - [ ] Bab 5 — Dasar-dasar teori gelanggang
