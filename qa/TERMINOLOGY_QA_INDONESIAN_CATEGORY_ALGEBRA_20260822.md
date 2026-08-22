@@ -94,3 +94,25 @@ all source/component credits. Model: OpenAI Codex gpt-5.6-sol, Ultra.
 Terminology comparison, translation correction, build integration, and QA were
 performed on instructions of the user. This does not imply endorsement by the source
 author, UNDIP, UGM, Pusat Bahasa, ITB, or any cited contributor.
+
+## Independent bounded recheck
+
+Before scaling the next translation unit, the primary-source search and fallback
+witnesses were checked again. Two official arXiv API queries returned HTTP 200
+with zero results: `all:fungtor OR all:"teori kategori" OR all:gelanggang`, and
+`all:"Bahasa Indonesia" AND cat:math*`. This corroborates the earlier decision
+that no suitable same-field Indonesian arXiv source package was available within
+the bounded search; it does not claim that no such source can ever exist.
+
+Fresh downloads from the two official fallback hosts reproduced the exact PDF
+hashes above. All four UNDIP pages and all seven UGM pages were extracted and
+inspected. Their durable local identities, page counts, byte counts, extraction
+hashes, URLs, and non-redistribution boundary are recorded in
+`authority/terminology-qa-20260822/MANIFEST.json` (local authority evidence,
+excluded from Git and release packages).
+
+The recheck found no stale `funktor`, `transformasi alami`, `obyek`, `morfisma`,
+or `ruang topologi` in the admitted Indonesian spans or their backend records.
+The already-used form `isomorfisme natural` lacked its own controlled glossary
+row, so `natural isomorphism -> isomorfisme natural` was added. No translated
+prose, mathematics, identifiers, or reader bytes required correction.
