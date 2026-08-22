@@ -37,14 +37,18 @@ shell escape disabled, Biber, MakeIndex, and three convergence passes. It pins
 `SOURCE_DATE_EPOCH=1784878369`, uses the task-local Noto font closure, and the
 cover uses PGF seed `20260821`.
 
-The admitted reader is `artifacts/unit-001-pendahuluan.pdf`: 21 pages, 199,917
-bytes, SHA-256
-`c74ce05494e07cb55e70186f391227d62d7f7da7c984788b9415cefb54083d5d`.
+The current terminology-corrected reader is
+`artifacts/unit-001-pendahuluan.pdf`: 21 pages, 199,926 bytes, SHA-256
+`b3fca2af76b793a19877ffc822d6ec89c2494641f7e1dfa468b158c7bec30a3e`.
 It has no TeX error, undefined citation/reference, duplicate destination, or
 missing-character warning. MuPDF and Poppler rendered all 21 pages; all pages
-were inspected. Two independent clean builds produced 21/21 pairwise
-pixel-identical MuPDF pages. Their PDF byte hashes differed slightly because
-of non-visible XeTeX serialization, so bit-identical containers are not claimed.
+were inspected. The clean comparison build is 199,925 bytes, SHA-256
+`20fbb6c3db8f66a176315bc47fcf48ff768169cc7a2fac91af2950a9d11eca0b`;
+both engines produced 21/21 pairwise pixel-identical pages. The final log is
+87,018 bytes, SHA-256
+`923d8b61f5e47da1cfba3fc4167fa876128eb7417334eb6fc3e75b52aa88a292`.
+Their PDF byte hashes differ slightly because of non-visible XeTeX
+serialization, so bit-identical containers are not claimed.
 
 ## Admitted standalone digital-reader builds
 
@@ -113,15 +117,73 @@ claimed.
 
 Unit 008 uses the same pinned shell-escape-disabled XeLaTeX/Biber/MakeIndex
 procedure and a frozen external-reference witness for Section 1.5, Section 2.7,
-and Proposition 2.8.2. Its admitted artifact is 5 pages, 100,795 bytes,
+and Proposition 2.8.2. Its current terminology-corrected artifact is 5 pages,
+100,805 bytes,
 SHA-256
-`d4234cb0080a60ad06fcb004d4d75e7daea85b3846bbbd05f0261b03e9f66258`.
+`0db18bfbae3ffd2194447781a77effb4f57f8bd8521baa3acb334b474f0773cd`.
 The standalone driver reflows the source's four-row, five-column table into a
 full-width text-native `tabularx`, reduces only the chapter-opening and reading-
 box spacing, and localizes inherited bibliography role labels. Two clean builds
 produced 5/5 pixel-identical Poppler and 5/5 pixel-identical MuPDF pages at 144
-dpi; extracted text was also identical. All pages were inspected without
+dpi; extracted text was also identical. The clean comparison PDF is 100,804
+bytes, SHA-256
+`61d0b2aff153a1893a9c02df7148eb3958f3d0a72fb15d485f65edd1e3889375`,
+and the final log is 80,397 bytes, SHA-256
+`d0f0da38335af5520cf7f74e37ddb9734242d7b1beaa24007f211259a4a7ab2d`.
+All pages were inspected without
 clipping, collision, blank pages, missing glyphs, or Han residue. The PDF
-containers differ by 19 bytes, so only deterministic rendered content and
+containers differ by one byte, so only deterministic rendered content and
 semantic-text equality are claimed. The PDF remains untagged; the backend's
 paired linear table semantics do not constitute tagged-PDF conformance.
+
+## Admitted Unit 009 build
+
+Unit 009 uses the pinned shell-escape-disabled XeLaTeX/Biber/MakeIndex
+procedure, the task-local Noto font closure, and a frozen external-reference
+witness for eight destinations outside complete Section 2.1. Its current
+terminology-corrected artifact is
+`artifacts/unit-009-bab-2-kategori-dan-morfisme.pdf`: 13 pages, 143,207 bytes,
+SHA-256
+`1a71610ba997348ce22db69944fec3529d9d6e6c2ef6ece48faa30df90ac5ce6`.
+The clean comparison build is 143,192 bytes, SHA-256
+`ea4f2845bdb0b3dc04aac01fe6fd1b15a2227e69b0ae0c7f69a1496d479e777b`.
+All thirteen Poppler and all thirteen MuPDF page PNGs are pairwise identical,
+and extracted text is identical. The final log is 85,064 bytes, SHA-256
+`523242a89f71a31d03a3bd753e125a4dac4bb7e79b4a3e93fafb0cd122c689bf`,
+with no TeX error, undefined citation/reference, duplicate destination,
+missing-character warning, or overfull box. The standalone reader has four
+outline entries, 49 named destinations, 42 internal GoTo annotations, and
+three intentional URI annotations; it has no form, widget, embedded file,
+JavaScript, GoToR, Launch action, or encryption. All 28 fonts are embedded and
+subset, with only the inherited CMSY10 mathematics subset lacking a ToUnicode
+map. Every page was inspected without clipping, collision, blank pages,
+missing glyphs, or unreadable mathematics. The PDF remains untagged, and only
+deterministic rendered content and semantic-text equality are claimed.
+
+The 2026-08-22 terminology correction (`funktor` to `fungtor`, plus one
+`transformasi alami` to `transformasi natural`) affected Units 001, 008, and
+009. Each was rebuilt twice, compared in both renderers, visually checked on
+all pages, and rebound to its current backend before translation resumed.
+
+## Combined checkpoint reader 0.3.0
+
+`scripts/build_checkpoint_reader_0_3_0.py` merges the current admitted Unit
+001-009 readers behind one reader-first status/rights cover while namespacing
+their named destinations and rebuilding their outline hierarchy. The final
+artifact is
+`output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf`: 96
+pages, 1,517,117 bytes, SHA-256
+`1752f4535ea2f564aa6931ea0c4ba1da0daa4e7e90ae0c2433bedbb3f22d0dda`.
+Unit starts are physical pages 2, 23, 35, 46, 54, 66, 75, 79, and 84.
+
+An independent deterministic replay produced the same PDF hash. All 95 merged
+source-unit content streams are byte-identical to their admitted unit pages,
+and separately rendered source pages are pixel-identical to checkpoint pages
+2-96. Poppler and MuPDF each rendered all 96 pages; the cover, intentional
+blank page 5, every unit boundary, the final page, and eight contact sheets
+covering the entire reader passed visual inspection. The PDF is `id-ID`, has
+299 named destinations, 194 internal GoTo and 40 intentional URI actions,
+zero broken destinations or unsafe actions, and 234/234 embedded font objects.
+It remains untagged. Exact machine and human-readable evidence is in
+`qa/checkpoint-0.3.0-evidence/structure-and-render-qa.json` and
+`qa/checkpoint-0.3.0-evidence/QA_SUMMARY.md`.

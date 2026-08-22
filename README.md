@@ -4,6 +4,8 @@ Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-
 
 Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, dan Bagian 2.1 telah diterjemahkan, diaudit, dibangun, dan diterima dalam sembilan unit pembaca. Unit 9 menyajikan kategori dan morfisme, termasuk kategori kecil relatif terhadap semesta, contoh-contoh dasar, morfisme mono/epi, grupoid fundamental, dan kategori lawan. Bagian 2.2 dan bagian-bagian selanjutnya masih dalam bahasa sumber dan akan diterjemahkan berurutan.** Repositori ini belum merupakan terjemahan lengkap buku.
 
+[Baca atau unduh checkpoint pembaca 0.3.0 (96 halaman; Unit 1-9)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf)
+
 [Baca atau unduh PDF Unit 1](artifacts/unit-001-pendahuluan.pdf)
 
 [Baca atau unduh PDF Unit 2](artifacts/unit-002-bab-1-zfc.pdf)
@@ -22,9 +24,9 @@ Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, dan Bagian 2.1 t
 
 [Baca atau unduh PDF Unit 9](artifacts/unit-009-bab-2-kategori-dan-morfisme.pdf)
 
-Versi preservasi `0.2.0` yang memuat kedelapan reader, sumber yang dapat dibangun, backend modular, bukti ringkas, dan manifest hash tersedia pada [Zenodo DOI 10.5281/zenodo.22060005](https://doi.org/10.5281/zenodo.22060005). Seluruh pembaruan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat.
+Versi preservasi `0.3.0` yang memuat checkpoint gabungan 96 halaman, kesembilan reader, sumber yang dapat dibangun, backend modular, bukti ringkas, dan manifest hash tersedia pada [Zenodo DOI 10.5281/zenodo.22062228](https://doi.org/10.5281/zenodo.22062228). Seluruh pembaruan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat.
 
-Checkpoint pembaca yang sama tersedia sebagai item karya publik pada [Figshare DOI 10.6084/m9.figshare.33314766.v2](https://doi.org/10.6084/m9.figshare.33314766.v2). PDF gabungan 83 halaman tampil sebagai berkas pertama, disertai paket sumber/backend ringkas, pemberitahuan hak, manifest, dan checksum. Lisensi item CC BY 4.0 berlaku pada teks utama dan adaptasi Indonesia; `Lanzhou.png` dan fragmen `AJbook.cls` yang dikreditkan tetap CC BY-SA 3.0, sedangkan font Noto tetap OFL 1.1, sebagaimana dirinci dalam `LICENSES.md`.
+Checkpoint pembaca yang sama tersedia sebagai item karya publik pada [Figshare DOI 10.6084/m9.figshare.33314766.v3](https://doi.org/10.6084/m9.figshare.33314766.v3). PDF gabungan 96 halaman tampil sebagai berkas pertama, disertai paket sumber/backend ringkas, pemberitahuan hak, manifest, dan checksum. Lisensi item CC BY 4.0 berlaku pada teks utama dan adaptasi Indonesia; `Lanzhou.png` dan fragmen `AJbook.cls` yang dikreditkan tetap CC BY-SA 3.0, sedangkan font Noto tetap OFL 1.1, sebagaimana dirinci dalam `LICENSES.md`.
 
 ## Identitas sumber
 

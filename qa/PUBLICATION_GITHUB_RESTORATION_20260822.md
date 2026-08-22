@@ -13,7 +13,7 @@ Admitted content and preservation-receipt commit:
 
 ## Restored route
 
-Floris reported that GitHub reinstated the account. Before mutation, bounded
+The user reported that GitHub reinstated the account. Before mutation, bounded
 unauthenticated checks returned HTTP 200 for the exact repository, raw main
 README, and smart-fetch advertisement. The conventional GitHub Pages URL
 remains unconfigured and returns 404; no Pages publication is claimed.

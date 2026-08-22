@@ -1,0 +1,1988 @@
+{
+  "schema": "checkpoint-reader-qa/v1",
+  "status": "PASS",
+  "artifact": {
+    "path": "output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf",
+    "bytes": 1517117,
+    "sha256": "1752f4535ea2f564aa6931ea0c4ba1da0daa4e7e90ae0c2433bedbb3f22d0dda",
+    "pages": 96
+  },
+  "deterministic_rebuild": true,
+  "coverage": "Pendahuluan lengkap; Bab 1 lengkap; pengantar Bab 2; Bagian 2.1 lengkap; Bagian 2.2 dan sesudahnya belum disertakan.",
+  "unit_start_pages_1_based": [
+    2,
+    23,
+    35,
+    46,
+    54,
+    66,
+    75,
+    79,
+    84
+  ],
+  "source_units": [
+    {
+      "filename": "unit-001-pendahuluan.pdf",
+      "pages": 21,
+      "bytes": 199926,
+      "sha256": "b3fca2af76b793a19877ffc822d6ec89c2494641f7e1dfa468b158c7bec30a3e"
+    },
+    {
+      "filename": "unit-002-bab-1-zfc.pdf",
+      "pages": 12,
+      "bytes": 161147,
+      "sha256": "ff2eb3fd1ec5abaa7989d0c29c419c04f99368dc3f278799be460e30042bfe58"
+    },
+    {
+      "filename": "unit-003-bab-1-struktur-urutan-dan-ordinal.pdf",
+      "pages": 11,
+      "bytes": 134858,
+      "sha256": "031e231bc5d2ac74cada865700d8f76dda327941c7f442e6d47324b848103df8"
+    },
+    {
+      "filename": "unit-004-bab-1-rekursi-transfinit-dan-penerapannya.pdf",
+      "pages": 8,
+      "bytes": 107332,
+      "sha256": "e48aa97d15ad9c192df5d744bfc8290fc816c4b681322295352517a02e267c13"
+    },
+    {
+      "filename": "unit-005-bab-1-kardinal.pdf",
+      "pages": 12,
+      "bytes": 128556,
+      "sha256": "232d41f4e7f03123818ae14272958c8269242ebcbec68b832aaaf7ba295ebf3e"
+    },
+    {
+      "filename": "unit-006-bab-1-semesta-grothendieck.pdf",
+      "pages": 9,
+      "bytes": 120808,
+      "sha256": "1fe15c59de6021b376643269423f2ef12e7b986f048ae39a31d8b1df9f7562c4"
+    },
+    {
+      "filename": "unit-007-bab-1-latihan.pdf",
+      "pages": 4,
+      "bytes": 100435,
+      "sha256": "e7d4d6745f88b56c7ef840499c8e1d759b2bbbc14a245e8fc477fb0a6504a2b1"
+    },
+    {
+      "filename": "unit-008-bab-2-pengantar-teori-kategori.pdf",
+      "pages": 5,
+      "bytes": 100805,
+      "sha256": "0db18bfbae3ffd2194447781a77effb4f57f8bd8521baa3acb334b474f0773cd"
+    },
+    {
+      "filename": "unit-009-bab-2-kategori-dan-morfisme.pdf",
+      "pages": 13,
+      "bytes": 143207,
+      "sha256": "1a71610ba997348ce22db69944fec3529d9d6e6c2ef6ece48faa30df90ac5ce6"
+    }
+  ],
+  "source_content_stream_identity": {
+    "pages_checked": 95,
+    "mismatches": 0
+  },
+  "render_qa": {
+    "renderer": "MuPDF mutool 1.23.0, 120 dpi",
+    "secondary_renderer": "Poppler pdftoppm, 120 dpi",
+    "checkpoint_pages_rendered": 96,
+    "secondary_renderer_pages": 96,
+    "renderer_message_counts": {
+      "mupdf_stderr": 0,
+      "poppler_stderr": 149
+    },
+    "source_unit_pages_rendered": 95,
+    "source_to_checkpoint_pixel_identical_pages": 95,
+    "raster_mismatches": 0,
+    "blank_pages": [
+      5
+    ],
+    "page_records": [
+      {
+        "page": 1,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-001.png",
+        "bytes": 102695,
+        "sha256": "9cb7dab957b3d897121ec91dee6a8b795de26bed1383125528ffcad76065840e",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 208.163,
+        "gray_stddev": 85.221,
+        "nonwhite_bbox": [
+          0,
+          0,
+          832,
+          1147
+        ]
+      },
+      {
+        "page": 2,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-002.png",
+        "bytes": 54806,
+        "sha256": "b6c358a0921bb8a4e9189708cfca896e1633043a5ee96cc30fe313fa67528860",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 251.548,
+        "gray_stddev": 19.686,
+        "nonwhite_bbox": [
+          169,
+          135,
+          738,
+          1044
+        ]
+      },
+      {
+        "page": 3,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-003.png",
+        "bytes": 76181,
+        "sha256": "01917530600d69a0cb3b8677cf177b5e2ed7acf64a239ea88dd5f80710b915c9",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 248.921,
+        "gray_stddev": 34.062,
+        "nonwhite_bbox": [
+          83,
+          99,
+          693,
+          1036
+        ]
+      },
+      {
+        "page": 4,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-004.png",
+        "bytes": 16961,
+        "sha256": "f1067d7b7e736934c34d8b9c77a4bb1a5370b710d484c67cd5bdae32040dab81",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 253.665,
+        "gray_stddev": 14.323,
+        "nonwhite_bbox": [
+          84,
+          256,
+          707,
+          658
+        ]
+      },
+      {
+        "page": 5,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-005.png",
+        "bytes": 5572,
+        "sha256": "e47a9e7e83fb27e3c9a10455ce99780bd64dac6ced895e9ec7b1d2ed6a3bbaf1",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 255.0,
+        "gray_stddev": 0.0,
+        "nonwhite_bbox": null
+      },
+      {
+        "page": 6,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-006.png",
+        "bytes": 125415,
+        "sha256": "fcec357f37ce4e39ce6e1fb310ca1198af34ac30835e290ba2f190367aa98657",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 246.321,
+        "gray_stddev": 37.046,
+        "nonwhite_bbox": [
+          83,
+          264,
+          707,
+          1040
+        ]
+      },
+      {
+        "page": 7,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-007.png",
+        "bytes": 203584,
+        "sha256": "5a06b4eeabd12b0196589e49605c70163e43333e6a3ddf92c99ab5e35833794b",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 242.173,
+        "gray_stddev": 43.821,
+        "nonwhite_bbox": [
+          83,
+          44,
+          711,
+          1039
+        ]
+      },
+      {
+        "page": 8,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-008.png",
+        "bytes": 189918,
+        "sha256": "ed4c819e83af44600e97d527193c8bed324e17c1ee401c9ff53b12868b9383bc",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 243.396,
+        "gray_stddev": 41.781,
+        "nonwhite_bbox": [
+          82,
+          44,
+          707,
+          1039
+        ]
+      },
+      {
+        "page": 9,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-009.png",
+        "bytes": 181458,
+        "sha256": "2e14598dae973016b73556b30378497bf69cc7c28885bdc85206a3d505f9809f",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 244.136,
+        "gray_stddev": 40.56,
+        "nonwhite_bbox": [
+          82,
+          44,
+          708,
+          1019
+        ]
+      },
+      {
+        "page": 10,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-010.png",
+        "bytes": 162115,
+        "sha256": "bad6b995aa557b37de6667e3498e8f286ea78084d99ea656725bec5be56018f5",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 245.121,
+        "gray_stddev": 38.992,
+        "nonwhite_bbox": [
+          83,
+          44,
+          726,
+          1039
+        ]
+      },
+      {
+        "page": 11,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-011.png",
+        "bytes": 168423,
+        "sha256": "8ed3cfcd8a1ceff628b8140950de22f6598e59081fb76a733c87ab53d349d6ba",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 244.843,
+        "gray_stddev": 39.639,
+        "nonwhite_bbox": [
+          82,
+          44,
+          709,
+          1039
+        ]
+      },
+      {
+        "page": 12,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-012.png",
+        "bytes": 199939,
+        "sha256": "9f200078406bb375b3b6f076d0160f1374e92ace09c9cd0647a31a23ea4cab0d",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 242.834,
+        "gray_stddev": 42.664,
+        "nonwhite_bbox": [
+          83,
+          44,
+          711,
+          1039
+        ]
+      },
+      {
+        "page": 13,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-013.png",
+        "bytes": 184797,
+        "sha256": "679d1f465fb769339ec71b253cec31848b0a8e57d2e44c5318ca9c608ddba134",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 243.986,
+        "gray_stddev": 40.835,
+        "nonwhite_bbox": [
+          82,
+          44,
+          709,
+          942
+        ]
+      },
+      {
+        "page": 14,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-014.png",
+        "bytes": 175015,
+        "sha256": "1aad0a75211612b36de3ff834f00d947299cf13efe0f65789ce8dbeb7c2d9308",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 244.606,
+        "gray_stddev": 40.135,
+        "nonwhite_bbox": [
+          82,
+          44,
+          707,
+          1039
+        ]
+      },
+      {
+        "page": 15,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-015.png",
+        "bytes": 162964,
+        "sha256": "fd2bd063f29d131ac10111f5a974afc83c0197c9c894026d3b241864859b5692",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 246.21,
+        "gray_stddev": 36.755,
+        "nonwhite_bbox": [
+          84,
+          44,
+          709,
+          1039
+        ]
+      },
+      {
+        "page": 16,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-016.png",
+        "bytes": 136210,
+        "sha256": "2cb2c385201dd394966827fd9be6ea19232fdcac677973780579db83ae9d849a",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 247.692,
+        "gray_stddev": 33.783,
+        "nonwhite_bbox": [
+          108,
+          44,
+          707,
+          1039
+        ]
+      },
+      {
+        "page": 17,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-017.png",
+        "bytes": 133580,
+        "sha256": "0a022de499dfbb48b2b066e7b1fe4e4f74ce9179d9faf7d2c9d4826e5964ec48",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 246.747,
+        "gray_stddev": 35.594,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          1043
+        ]
+      },
+      {
+        "page": 18,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-018.png",
+        "bytes": 187286,
+        "sha256": "93c4decd70f9ce5585af4fa12d4fcac451a6d371ad5806a37400cb6724771692",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 244.314,
+        "gray_stddev": 40.32,
+        "nonwhite_bbox": [
+          82,
+          44,
+          707,
+          1039
+        ]
+      },
+      {
+        "page": 19,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-019.png",
+        "bytes": 58799,
+        "sha256": "c09a026f477270105d1db0eb3818d6a81fef5eaa3cff687d7881c1e47f3d9a33",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 252.191,
+        "gray_stddev": 21.153,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          626
+        ]
+      },
+      {
+        "page": 20,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-020.png",
+        "bytes": 128061,
+        "sha256": "61eacc824731135b3ef77d4d8f96994e0e99c48b852f0971251e0efee655f610",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 248.294,
+        "gray_stddev": 32.47,
+        "nonwhite_bbox": [
+          93,
+          256,
+          737,
+          1036
+        ]
+      },
+      {
+        "page": 21,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-021.png",
+        "bytes": 49036,
+        "sha256": "d8131bbdfb01dd700e1b839dd7f6460f6b8982063155d3c588c82d309e8c0b4b",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 253.172,
+        "gray_stddev": 16.622,
+        "nonwhite_bbox": [
+          84,
+          44,
+          706,
+          315
+        ]
+      },
+      {
+        "page": 22,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-022.png",
+        "bytes": 20594,
+        "sha256": "a87ca007a8a2ef3d78b2f0dc4505b53d51cbfb8173f68fc7f8d03c95363ae2ae",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 253.246,
+        "gray_stddev": 17.176,
+        "nonwhite_bbox": [
+          83,
+          256,
+          707,
+          554
+        ]
+      },
+      {
+        "page": 23,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-023.png",
+        "bytes": 55345,
+        "sha256": "4237b4938f888093a5e43994c939cd5bb21e65f1ecbe103beb7c2f95fa323fcc",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 251.542,
+        "gray_stddev": 19.705,
+        "nonwhite_bbox": [
+          169,
+          135,
+          738,
+          1044
+        ]
+      },
+      {
+        "page": 24,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-024.png",
+        "bytes": 76126,
+        "sha256": "145dc6edfc0b2e440fff74367e87f961aede001be701e81e2894140493a3a024",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 248.909,
+        "gray_stddev": 34.102,
+        "nonwhite_bbox": [
+          83,
+          99,
+          693,
+          1036
+        ]
+      },
+      {
+        "page": 25,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-025.png",
+        "bytes": 22562,
+        "sha256": "c9fc87753b1a43cab3ee120f8357b07251fb1910a518b87882d0976cef354463",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 253.413,
+        "gray_stddev": 15.607,
+        "nonwhite_bbox": [
+          84,
+          256,
+          707,
+          736
+        ]
+      },
+      {
+        "page": 26,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-026.png",
+        "bytes": 112340,
+        "sha256": "4a2100addd7f352e90ca1c30c067fe4cd9da1a315d4e323f9388f0bfcb5eb997",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 245.496,
+        "gray_stddev": 36.02,
+        "nonwhite_bbox": [
+          83,
+          254,
+          712,
+          1039
+        ]
+      },
+      {
+        "page": 27,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-027.png",
+        "bytes": 176362,
+        "sha256": "d5a21afe69d7e05d8324953ba405c4e9e6cc5646dc9eb83b6d798754c1c3a68f",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 244.282,
+        "gray_stddev": 40.841,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          1039
+        ]
+      },
+      {
+        "page": 28,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-028.png",
+        "bytes": 178825,
+        "sha256": "ca2f2df53449feaa61c4462db4349f7a792ed24d674c1f7bcebe41c64e16daef",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 245.051,
+        "gray_stddev": 39.33,
+        "nonwhite_bbox": [
+          83,
+          44,
+          720,
+          1040
+        ]
+      },
+      {
+        "page": 29,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-029.png",
+        "bytes": 166135,
+        "sha256": "64c5567274d13a3019010aaaef95413f731616365c229d211969002eff29ee1e",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 245.744,
+        "gray_stddev": 37.865,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          1040
+        ]
+      },
+      {
+        "page": 30,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-030.png",
+        "bytes": 188260,
+        "sha256": "efede3fb41f01d4a9c9ad0812586a5297b83eb48ca5ce6fc9a050ccc76004391",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 244.348,
+        "gray_stddev": 40.314,
+        "nonwhite_bbox": [
+          82,
+          44,
+          707,
+          1040
+        ]
+      },
+      {
+        "page": 31,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-031.png",
+        "bytes": 150282,
+        "sha256": "9137f29626b174c6d40ce91e207bfadf5bda660c3004482f57908f6d62d7c363",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 246.037,
+        "gray_stddev": 37.054,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          877
+        ]
+      },
+      {
+        "page": 32,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-032.png",
+        "bytes": 86558,
+        "sha256": "ad6e3d0a5d58847ee1353c206ff18b37b7640a8dabdee7e202e5e14ebfba61cd",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 250.282,
+        "gray_stddev": 27.317,
+        "nonwhite_bbox": [
+          85,
+          256,
+          707,
+          808
+        ]
+      },
+      {
+        "page": 33,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-033.png",
+        "bytes": 12268,
+        "sha256": "510618f7a9da97b98342c5f11d3359fb7cfc3b2f8cf05fc177e35b48a4650821",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 253.667,
+        "gray_stddev": 15.366,
+        "nonwhite_bbox": [
+          84,
+          256,
+          623,
+          485
+        ]
+      },
+      {
+        "page": 34,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-034.png",
+        "bytes": 33417,
+        "sha256": "03003a117a53570e0cd354c7ae973a8421f1619b3427d412a215d073bed86a96",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 252.686,
+        "gray_stddev": 19.456,
+        "nonwhite_bbox": [
+          83,
+          256,
+          707,
+          670
+        ]
+      },
+      {
+        "page": 35,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-035.png",
+        "bytes": 56400,
+        "sha256": "521721c94d772ddbdf7e768e082f15916f4bf6411915b23194004c460950249a",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 251.481,
+        "gray_stddev": 19.943,
+        "nonwhite_bbox": [
+          169,
+          135,
+          738,
+          1044
+        ]
+      },
+      {
+        "page": 36,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-036.png",
+        "bytes": 74933,
+        "sha256": "23ae13c227333e92d62083b680c42a8d68fc34f2b97c748cb0d50746726d0482",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 248.945,
+        "gray_stddev": 34.034,
+        "nonwhite_bbox": [
+          83,
+          99,
+          693,
+          1036
+        ]
+      },
+      {
+        "page": 37,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-037.png",
+        "bytes": 23042,
+        "sha256": "63fb2aa4ba96b14502d12ab8e40887fd77fedd4d8a56ef830685d54782320cf9",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 253.393,
+        "gray_stddev": 15.699,
+        "nonwhite_bbox": [
+          84,
+          256,
+          707,
+          736
+        ]
+      },
+      {
+        "page": 38,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-038.png",
+        "bytes": 95583,
+        "sha256": "ab0947288f019b25f3caf9b2f4a97b3575c41885bcb7effed75c07030ca7703d",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 246.251,
+        "gray_stddev": 35.424,
+        "nonwhite_bbox": [
+          83,
+          263,
+          707,
+          1040
+        ]
+      },
+      {
+        "page": 39,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-039.png",
+        "bytes": 178842,
+        "sha256": "1029505840bd3bd4ec775bdc07dbb1dc6677580d1c682538d0f34b2c51634108",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 244.516,
+        "gray_stddev": 40.72,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          1040
+        ]
+      },
+      {
+        "page": 40,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-040.png",
+        "bytes": 176038,
+        "sha256": "ee91b16e3e82c89c5ff168e738f4537a0b292b2c2743cdc3e6eac5706bfac9cf",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 245.309,
+        "gray_stddev": 38.714,
+        "nonwhite_bbox": [
+          82,
+          44,
+          707,
+          1040
+        ]
+      },
+      {
+        "page": 41,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-041.png",
+        "bytes": 163668,
+        "sha256": "b27b2432b4d26d06886a63457eb60c65c6ffc1cb58e1897d3ed8692e35eaa723",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 245.861,
+        "gray_stddev": 38.062,
+        "nonwhite_bbox": [
+          82,
+          44,
+          707,
+          1039
+        ]
+      },
+      {
+        "page": 42,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-042.png",
+        "bytes": 105528,
+        "sha256": "0537decebe349fd3d25615d386254b93daf6d0020a3bfc96efeb87a40cd84454",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 248.998,
+        "gray_stddev": 30.741,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          607
+        ]
+      },
+      {
+        "page": 43,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-043.png",
+        "bytes": 52361,
+        "sha256": "ad6538ff4fb4c43610521d7809bf88077bf693984ed7f982917db1f0cc5ee752",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 251.28,
+        "gray_stddev": 25.37,
+        "nonwhite_bbox": [
+          85,
+          256,
+          707,
+          645
+        ]
+      },
+      {
+        "page": 44,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-044.png",
+        "bytes": 12661,
+        "sha256": "d683c0f387cba87cf1c7cdf6431b50740b729059628e2abf908f464b01b9cba5",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 253.655,
+        "gray_stddev": 15.439,
+        "nonwhite_bbox": [
+          83,
+          256,
+          623,
+          516
+        ]
+      },
+      {
+        "page": 45,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-045.png",
+        "bytes": 44065,
+        "sha256": "f070d6b809408f7c2c94783657a44a3766ff80dd0ab85b718b4d09c075113139",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 252.134,
+        "gray_stddev": 21.46,
+        "nonwhite_bbox": [
+          83,
+          256,
+          707,
+          736
+        ]
+      },
+      {
+        "page": 46,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-046.png",
+        "bytes": 56860,
+        "sha256": "9d3a9934789317acb4cbd01dfd81d9df13c3f7264f162f414f94fd8576b67f0b",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 251.443,
+        "gray_stddev": 20.075,
+        "nonwhite_bbox": [
+          169,
+          135,
+          738,
+          1044
+        ]
+      },
+      {
+        "page": 47,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-047.png",
+        "bytes": 79124,
+        "sha256": "4ead2198773fcb3b4bcc6124aa9b7a32ed0408c0e4e67cc235f77ac4881ca5ec",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 248.695,
+        "gray_stddev": 34.679,
+        "nonwhite_bbox": [
+          83,
+          99,
+          693,
+          1036
+        ]
+      },
+      {
+        "page": 48,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-048.png",
+        "bytes": 19308,
+        "sha256": "8f427dd818477b6834f9c161a13ef66b751a171c7a65f1fdebc07e9a73697a7d",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 253.571,
+        "gray_stddev": 14.786,
+        "nonwhite_bbox": [
+          84,
+          256,
+          707,
+          634
+        ]
+      },
+      {
+        "page": 49,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-049.png",
+        "bytes": 83485,
+        "sha256": "a4fa1e9a64122687b45ed6dd55ddcd3ac134713958157f1065e533f923a935de",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 246.563,
+        "gray_stddev": 35.285,
+        "nonwhite_bbox": [
+          83,
+          276,
+          707,
+          1040
+        ]
+      },
+      {
+        "page": 50,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-050.png",
+        "bytes": 192248,
+        "sha256": "811f2301c6e8f1d7e9c8dadb310fa7f7cd5a27108ffd9b03507a03f8bd95496f",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 244.201,
+        "gray_stddev": 40.728,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          1039
+        ]
+      },
+      {
+        "page": 51,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-051.png",
+        "bytes": 176835,
+        "sha256": "e8282c1d14ebf9c971fd0da9ddadcb198bd9f9e4f700b70381d5d2bd576a3377",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 244.968,
+        "gray_stddev": 39.615,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          1039
+        ]
+      },
+      {
+        "page": 52,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-052.png",
+        "bytes": 133045,
+        "sha256": "467c613c868e6b8598508a41c3470b45993f7be87f0fad6472a1db559042c7d4",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 247.594,
+        "gray_stddev": 34.19,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          776
+        ]
+      },
+      {
+        "page": 53,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-053.png",
+        "bytes": 23071,
+        "sha256": "f741e040a75f890cff995bf7756514cfdf980cdcf8138fa3cc2ee1734b0e2422",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 253.101,
+        "gray_stddev": 17.819,
+        "nonwhite_bbox": [
+          83,
+          256,
+          707,
+          585
+        ]
+      },
+      {
+        "page": 54,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-054.png",
+        "bytes": 54783,
+        "sha256": "1f1aac54966c7b4944aecc41abfab3b96a1ca8bfb8f1017729571aeb432d7840",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 251.561,
+        "gray_stddev": 19.617,
+        "nonwhite_bbox": [
+          169,
+          135,
+          738,
+          1044
+        ]
+      },
+      {
+        "page": 55,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-055.png",
+        "bytes": 79830,
+        "sha256": "dd9798587beaa80e1403540332c77224f389d0172fa840a1a22d64885fc51d15",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 248.608,
+        "gray_stddev": 34.892,
+        "nonwhite_bbox": [
+          83,
+          99,
+          693,
+          1036
+        ]
+      },
+      {
+        "page": 56,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-056.png",
+        "bytes": 22064,
+        "sha256": "f2fa612cb7369b10f2b6dc5c5b4ed07a95a2f7c01ee9e704a42c75a3352bf39f",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 253.422,
+        "gray_stddev": 15.571,
+        "nonwhite_bbox": [
+          84,
+          256,
+          707,
+          736
+        ]
+      },
+      {
+        "page": 57,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-057.png",
+        "bytes": 90743,
+        "sha256": "8301aa5a7cf908adc9d7d514a38ca0b91e84e4f2fdb703315e6f84de214af139",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 246.499,
+        "gray_stddev": 34.957,
+        "nonwhite_bbox": [
+          83,
+          262,
+          707,
+          1039
+        ]
+      },
+      {
+        "page": 58,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-058.png",
+        "bytes": 105320,
+        "sha256": "8b15fb1bcc86cec82d3f5fd7cbbe5a7cb46f2d50a64bbc3fd3bc3cd33b2b1827",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 249.848,
+        "gray_stddev": 28.574,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          1040
+        ]
+      },
+      {
+        "page": 59,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-059.png",
+        "bytes": 182691,
+        "sha256": "6f6dae4efab8a2d1c5a2f9b723d860dbbef60902b48e5066d2a7594e4d222abd",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 244.311,
+        "gray_stddev": 41.0,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          1040
+        ]
+      },
+      {
+        "page": 60,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-060.png",
+        "bytes": 169880,
+        "sha256": "ed29cd25553580fbcf2128bfc1ba59f16ae423a3bf5df4fb78d70855e47335ec",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 245.859,
+        "gray_stddev": 37.961,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          1042
+        ]
+      },
+      {
+        "page": 61,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-061.png",
+        "bytes": 135961,
+        "sha256": "ca547a8acf066c0f68c283db3bb3e03d7c4ebc5e972667f368c2a879162c54dd",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 248.123,
+        "gray_stddev": 32.68,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          1039
+        ]
+      },
+      {
+        "page": 62,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-062.png",
+        "bytes": 64062,
+        "sha256": "3ce5da02d6d68ec6c275ee3c27c56445aa9ab6a8e4f11f20af4e5bb67bdf8b00",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 251.906,
+        "gray_stddev": 22.402,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          430
+        ]
+      },
+      {
+        "page": 63,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-063.png",
+        "bytes": 28026,
+        "sha256": "04b6e06ee4d6118fafb5ceb4ba6f1a3f5495045af5b6c9952fc4123b97b929a2",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 252.842,
+        "gray_stddev": 19.283,
+        "nonwhite_bbox": [
+          85,
+          256,
+          706,
+          532
+        ]
+      },
+      {
+        "page": 64,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-064.png",
+        "bytes": 11190,
+        "sha256": "726e6a6bd20236f2d094d9d9fbc5caf4dec32a89288b35e77b7d5982af8dc60b",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 253.701,
+        "gray_stddev": 15.2,
+        "nonwhite_bbox": [
+          84,
+          256,
+          623,
+          484
+        ]
+      },
+      {
+        "page": 65,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-065.png",
+        "bytes": 26383,
+        "sha256": "6eaa5f70a1e43cfcde69bce27ebcfff20597fa2d0b364f521ff95a4a0a46e5af",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 252.943,
+        "gray_stddev": 18.423,
+        "nonwhite_bbox": [
+          83,
+          256,
+          707,
+          611
+        ]
+      },
+      {
+        "page": 66,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-066.png",
+        "bytes": 56007,
+        "sha256": "bcfc18ec4ba08735e38cdef20032f239783837dd2da50fb38c28d00b95e83ab1",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 251.506,
+        "gray_stddev": 19.83,
+        "nonwhite_bbox": [
+          169,
+          135,
+          738,
+          1044
+        ]
+      },
+      {
+        "page": 67,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-067.png",
+        "bytes": 75755,
+        "sha256": "f7b99d11d87170099086ce5e959607173f2c42ee461d0be44362e71c0579ebfb",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 248.931,
+        "gray_stddev": 34.073,
+        "nonwhite_bbox": [
+          83,
+          99,
+          693,
+          1036
+        ]
+      },
+      {
+        "page": 68,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-068.png",
+        "bytes": 20442,
+        "sha256": "1ad0d7f3937605dcf7e22c3abfadc4b90142a558cc2c25acfac60c3a78823319",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 253.517,
+        "gray_stddev": 15.078,
+        "nonwhite_bbox": [
+          84,
+          256,
+          707,
+          685
+        ]
+      },
+      {
+        "page": 69,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-069.png",
+        "bytes": 75889,
+        "sha256": "b9872cae86d9426c6f109284c081904ff5132e01b558bba24686ca081717291e",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 247.655,
+        "gray_stddev": 32.306,
+        "nonwhite_bbox": [
+          83,
+          259,
+          708,
+          1039
+        ]
+      },
+      {
+        "page": 70,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-070.png",
+        "bytes": 130299,
+        "sha256": "be661d60dbc02d15d469a3eba2e7aa2f968a07dec1787a6f128303cdd55967b9",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 247.869,
+        "gray_stddev": 33.682,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          1039
+        ]
+      },
+      {
+        "page": 71,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-071.png",
+        "bytes": 179298,
+        "sha256": "e38ad9265083c26452452dceabd22fc5b215ccc5dc3c283e980382a32d8bf678",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 244.731,
+        "gray_stddev": 39.658,
+        "nonwhite_bbox": [
+          82,
+          44,
+          707,
+          1039
+        ]
+      },
+      {
+        "page": 72,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-072.png",
+        "bytes": 88767,
+        "sha256": "6ee7432efb5bdf35160ebbabdc4ced92f5dce81821e97dc3a4489ec84b2319a9",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 249.945,
+        "gray_stddev": 28.328,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          492
+        ]
+      },
+      {
+        "page": 73,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-073.png",
+        "bytes": 72999,
+        "sha256": "9ff462c603dc14c030bc9d072871ccbde0949c99187f0e255594558327f4490b",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 250.73,
+        "gray_stddev": 26.368,
+        "nonwhite_bbox": [
+          85,
+          256,
+          707,
+          744
+        ]
+      },
+      {
+        "page": 74,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-074.png",
+        "bytes": 27786,
+        "sha256": "66d2224df9247bc9dd445c5f2a6bc0f1c1ae8766d6577d33a4bbdc12d5cdb015",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 252.93,
+        "gray_stddev": 18.495,
+        "nonwhite_bbox": [
+          83,
+          256,
+          707,
+          630
+        ]
+      },
+      {
+        "page": 75,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-075.png",
+        "bytes": 55176,
+        "sha256": "cc2b3cf85db8946a8321ec69d0fe68499628ffe23ef16dd449c0eb431c92a2be",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 251.543,
+        "gray_stddev": 19.699,
+        "nonwhite_bbox": [
+          169,
+          135,
+          738,
+          1044
+        ]
+      },
+      {
+        "page": 76,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-076.png",
+        "bytes": 75755,
+        "sha256": "f7b99d11d87170099086ce5e959607173f2c42ee461d0be44362e71c0579ebfb",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 248.931,
+        "gray_stddev": 34.073,
+        "nonwhite_bbox": [
+          83,
+          99,
+          693,
+          1036
+        ]
+      },
+      {
+        "page": 77,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-077.png",
+        "bytes": 83751,
+        "sha256": "3555faa727a2dd32b07d79fca1d394bc899c5c4c9824ac867d55c8f0059c3c4e",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 247.947,
+        "gray_stddev": 30.494,
+        "nonwhite_bbox": [
+          84,
+          266,
+          707,
+          1035
+        ]
+      },
+      {
+        "page": 78,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-078.png",
+        "bytes": 103221,
+        "sha256": "cf5e7d38489b8d4bd48010ea385e355c71b3cd6df8e01074c5e1114f07f78e15",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 249.726,
+        "gray_stddev": 28.516,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          754
+        ]
+      },
+      {
+        "page": 79,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-079.png",
+        "bytes": 56237,
+        "sha256": "4e4355abe98558ea8faf0273f6b5841bde0f50bc09575860d39195dfb7eed7c3",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 251.493,
+        "gray_stddev": 19.886,
+        "nonwhite_bbox": [
+          169,
+          135,
+          738,
+          1044
+        ]
+      },
+      {
+        "page": 80,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-080.png",
+        "bytes": 75755,
+        "sha256": "f7b99d11d87170099086ce5e959607173f2c42ee461d0be44362e71c0579ebfb",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 248.931,
+        "gray_stddev": 34.073,
+        "nonwhite_bbox": [
+          83,
+          99,
+          693,
+          1036
+        ]
+      },
+      {
+        "page": 81,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-081.png",
+        "bytes": 140178,
+        "sha256": "66f4e456d4a0f8bdf05f3cdafa766fd364b937eedd71a393c71994678b8f8800",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 243.224,
+        "gray_stddev": 40.774,
+        "nonwhite_bbox": [
+          83,
+          163,
+          707,
+          1039
+        ]
+      },
+      {
+        "page": 82,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-082.png",
+        "bytes": 178089,
+        "sha256": "54b7552a4a16e23f52c32d35c87679f5919083a32534aab86a01523fd1a091ef",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 244.342,
+        "gray_stddev": 39.759,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          1035
+        ]
+      },
+      {
+        "page": 83,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-083.png",
+        "bytes": 81767,
+        "sha256": "bfebbc4847ffb66734a073350e0a9592cd57415123e99f653da40712543aadf5",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 250.47,
+        "gray_stddev": 26.941,
+        "nonwhite_bbox": [
+          85,
+          256,
+          710,
+          801
+        ]
+      },
+      {
+        "page": 84,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-084.png",
+        "bytes": 56301,
+        "sha256": "af2bba165b4c4e32657a16e02e3b717d3268f3f9d2fdc5814e4b285ff7e52a33",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 251.502,
+        "gray_stddev": 19.849,
+        "nonwhite_bbox": [
+          169,
+          135,
+          738,
+          1044
+        ]
+      },
+      {
+        "page": 85,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-085.png",
+        "bytes": 75755,
+        "sha256": "f7b99d11d87170099086ce5e959607173f2c42ee461d0be44362e71c0579ebfb",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 248.931,
+        "gray_stddev": 34.073,
+        "nonwhite_bbox": [
+          83,
+          99,
+          693,
+          1036
+        ]
+      },
+      {
+        "page": 86,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-086.png",
+        "bytes": 128275,
+        "sha256": "befeaf3e848983b6b4cc217aabd21e13a3e1249f8524126fb2f3ec1004563e03",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 247.952,
+        "gray_stddev": 34.119,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          1039
+        ]
+      },
+      {
+        "page": 87,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-087.png",
+        "bytes": 157662,
+        "sha256": "087dcd06431baec7831d9e8e7eebe523e27889487103a595eb7039efdf3f7a9a",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 246.942,
+        "gray_stddev": 35.524,
+        "nonwhite_bbox": [
+          84,
+          44,
+          707,
+          1036
+        ]
+      },
+      {
+        "page": 88,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-088.png",
+        "bytes": 186487,
+        "sha256": "f99fdddae50a6a3f5df5c59ca7385d57a063acffb1f99e6b55d8e8ef51c715cc",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 244.466,
+        "gray_stddev": 40.344,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          1039
+        ]
+      },
+      {
+        "page": 89,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-089.png",
+        "bytes": 165207,
+        "sha256": "f3bd81bc4246c20b95d03c62dd760500f03f069c06f3b61f8ee626757f7af970",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 246.062,
+        "gray_stddev": 37.11,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          1039
+        ]
+      },
+      {
+        "page": 90,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-090.png",
+        "bytes": 161815,
+        "sha256": "55e536a90794999925b4ca06c4b4803510a6733140443241d403ffdb8e251df2",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 245.848,
+        "gray_stddev": 37.816,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          1040
+        ]
+      },
+      {
+        "page": 91,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-091.png",
+        "bytes": 185472,
+        "sha256": "17ade755c98f6ba16b6050666feaea38677c37e4c84a64e8b51baeeae58fe50a",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 244.575,
+        "gray_stddev": 40.156,
+        "nonwhite_bbox": [
+          82,
+          44,
+          707,
+          1039
+        ]
+      },
+      {
+        "page": 92,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-092.png",
+        "bytes": 160053,
+        "sha256": "21e68e7955f25c8176b2210b8bceda4f84c1602acb9e0ee20c945ddf0505d8e3",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 246.241,
+        "gray_stddev": 36.86,
+        "nonwhite_bbox": [
+          82,
+          44,
+          707,
+          1040
+        ]
+      },
+      {
+        "page": 93,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-093.png",
+        "bytes": 35839,
+        "sha256": "e050ebcef38978a8cd21b483242775c55b75e1e2574c43b89b40024e0121be3b",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 253.321,
+        "gray_stddev": 16.406,
+        "nonwhite_bbox": [
+          83,
+          44,
+          707,
+          219
+        ]
+      },
+      {
+        "page": 94,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-094.png",
+        "bytes": 44667,
+        "sha256": "be565600b81ab48e54b20c2962195c714d7239c6355b5c5bcb09180d02ad390d",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 251.885,
+        "gray_stddev": 23.221,
+        "nonwhite_bbox": [
+          85,
+          256,
+          707,
+          620
+        ]
+      },
+      {
+        "page": 95,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-095.png",
+        "bytes": 62212,
+        "sha256": "fb957dae4f4cc3c9dd6fdb1995482c4c83ee933c5e0649a5c5196bb47aafcdf5",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 251.541,
+        "gray_stddev": 23.725,
+        "nonwhite_bbox": [
+          83,
+          256,
+          697,
+          868
+        ]
+      },
+      {
+        "page": 96,
+        "path": "tmp/pdfs/checkpoint-0.3.0-mupdf-final/page-096.png",
+        "bytes": 21174,
+        "sha256": "b34da89c0eebaa130007e6c67673320281fe924b918c75d0f6ecd3859f0dafa6",
+        "pixels": [
+          832,
+          1182
+        ],
+        "gray_mean": 253.326,
+        "gray_stddev": 17.209,
+        "nonwhite_bbox": [
+          83,
+          256,
+          623,
+          643
+        ]
+      }
+    ],
+    "contact_sheets": [
+      {
+        "path": "qa/checkpoint-0.3.0-evidence/contact-01-pages-001-012.png",
+        "pages": [
+          1,
+          12
+        ],
+        "bytes": 2001869,
+        "sha256": "d8d1084aa9db4a0fc68cfcfeff3318598e44eaebffca14793a8bc0b31cc6d85b"
+      },
+      {
+        "path": "qa/checkpoint-0.3.0-evidence/contact-02-pages-013-024.png",
+        "pages": [
+          13,
+          24
+        ],
+        "bytes": 1716999,
+        "sha256": "176afac68406460fcaf40a78c8ba18f2b95621fe2cd3177a2c54a78c7c14b6c7"
+      },
+      {
+        "path": "qa/checkpoint-0.3.0-evidence/contact-03-pages-025-036.png",
+        "pages": [
+          25,
+          36
+        ],
+        "bytes": 1619762,
+        "sha256": "9f82e3bd01e9c3f7f89c5a9ce84250abbbfd0e1f36574ca5dd839f9135b05810"
+      },
+      {
+        "path": "qa/checkpoint-0.3.0-evidence/contact-04-pages-037-048.png",
+        "pages": [
+          37,
+          48
+        ],
+        "bytes": 1266936,
+        "sha256": "d16a9af49975584f9f4d8d07706d1f15ec705fbb40e0ff109e6c5b57b8d4dd67"
+      },
+      {
+        "path": "qa/checkpoint-0.3.0-evidence/contact-05-pages-049-060.png",
+        "pages": [
+          49,
+          60
+        ],
+        "bytes": 1668212,
+        "sha256": "5f22b2abf494bcdecdd1a21be1e17b73443d89b2c8db919fe1c5d9dfb45d2361"
+      },
+      {
+        "path": "qa/checkpoint-0.3.0-evidence/contact-06-pages-061-072.png",
+        "pages": [
+          61,
+          72
+        ],
+        "bytes": 1118454,
+        "sha256": "b75177331c189019ed4a8b6490db2301cbf5ecf1f8951067ed25ca7fb0ee0a79"
+      },
+      {
+        "path": "qa/checkpoint-0.3.0-evidence/contact-07-pages-073-084.png",
+        "pages": [
+          73,
+          84
+        ],
+        "bytes": 1228007,
+        "sha256": "ae0c44e5568ae2614522a5b4825168519133d372e53f542f916930659280238f"
+      },
+      {
+        "path": "qa/checkpoint-0.3.0-evidence/contact-08-pages-085-096.png",
+        "pages": [
+          85,
+          96
+        ],
+        "bytes": 1740841,
+        "sha256": "3d71f90c9a2dc401310749a3c1641446b031318521349008d94b9cda08d1832d"
+      }
+    ],
+    "visual_review": "PASS: all eight contact sheets covering pages 1-96 and all nine unit boundaries were inspected; no clipping, overlap, missing content, broken diagrams, or unreadable pages were observed. Checkpoint page 5 is the intentional blank recto/verso separator in the admitted Pendahuluan unit."
+  },
+  "structure": {
+    "page_sizes": {
+      "498.9x708.66": 96
+    },
+    "rotations": {
+      "0": 96
+    },
+    "language": "id-ID",
+    "page_mode": "/UseOutlines",
+    "named_destinations": 299,
+    "named_destination_prefix_counts": {
+      "u001": 36,
+      "u002": 33,
+      "u003": 43,
+      "u004": 37,
+      "u005": 42,
+      "u006": 31,
+      "u007": 17,
+      "u008": 10,
+      "u009": 49
+    },
+    "broken_named_links": [],
+    "top_level_outline_titles": [
+      "Status dan isi checkpoint",
+      "Pendahuluan",
+      "Bab 1 - ZFC",
+      "Bab 1 - Struktur Urutan dan Ordinal",
+      "Bab 1 - Rekursi Transfinit dan Penerapannya",
+      "Bab 1 - Bilangan Kardinal",
+      "Bab 1 - Semesta Grothendieck",
+      "Bab 1 - Latihan",
+      "Bab 2 - Pengantar Teori Kategori",
+      "Bab 2 - Kategori dan Morfisme (Bagian 2.1)"
+    ],
+    "annotation_subtypes": {
+      "/Link": 234
+    },
+    "actions": {
+      "/URI": 40,
+      "/GoTo": 194
+    },
+    "unsafe_actions": [],
+    "additional_actions": 0,
+    "open_action": false,
+    "acroform": false
+  },
+  "fonts": {
+    "unique_font_objects": 234,
+    "embedded": 234,
+    "unembedded": 0,
+    "to_unicode": 218,
+    "without_to_unicode": [
+      "/CCEIKU+CMSY10",
+      "/DCTDGV+CMSY10",
+      "/DJGSLF+CMSY10",
+      "/DYPRUF+CMSY10",
+      "/HOYKMY+FandolSong-Regular-Identity-H",
+      "/LGPOPN+CMSY10",
+      "/MSERYK+CMMI9",
+      "/NKMPXE+FandolKai-Regular-Identity-H",
+      "/QFXPZW+CMSY10",
+      "/TUARQM+CMMI10",
+      "/UOCVMJ+CMSY7",
+      "/VPFBAH+CMSY10",
+      "/VXXWYO+CMEX10",
+      "/XMUFIA+FandolKai-Regular-Identity-H",
+      "/ZNHSXJ+CMMI10",
+      "/ZPAWCT+FandolSong-Regular-Identity-H"
+    ]
+  },
+  "text": {
+    "cover_phrases_checked": [
+      "Pendahuluan lengkap",
+      "Bab 1 lengkap",
+      "pengantar Bab 2",
+      "Bagian 2.1 lengkap",
+      "Bagian 2.2 dan seluruh bagian sesudahnya belum disertakan",
+      "Wen-Wei Li",
+      "CC BY 4.0",
+      "CC BY-SA 3.0",
+      "OFL 1.1",
+      "OpenAI Codex gpt-5.6-sol, Ultra."
+    ],
+    "missing_cover_phrases": [],
+    "creator_metadata": "OpenAI Codex gpt-5.6-sol, Ultra.",
+    "pages_with_empty_extracted_text": [
+      5
+    ]
+  }
+}
