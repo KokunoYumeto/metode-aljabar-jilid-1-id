@@ -1,0 +1,2 @@
+entity_type,id,stable_key,section_id,ordinal,source_value,target_value,format,status
+build_surface,urn:uuid:87d62f93-933b-5bb7-b0ec-3972438b2b6b,build-surface/unit-007-pdf,,,pwsh -NoProfile -File scripts/build_unit_007.ps1 -OutputDirectory build/unit-007-replay-id,artifacts/unit-007-bab-1-latihan.pdf,pdf,pass

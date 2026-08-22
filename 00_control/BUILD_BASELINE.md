@@ -93,3 +93,20 @@ collision, blank pages, missing glyphs, or Han residue. The PDF container hashes
 differ across output directories, so only deterministic rendered content is
 claimed. The reader remains untagged; correct `id-ID` catalog language does not
 remove that inherited accessibility limitation.
+
+Unit 007 uses the same pinned shell-escape-disabled XeLaTeX/Biber/MakeIndex
+procedure and a frozen empty cross-reference witness because the Chapter 1
+exercise set contains no symbolic cross-unit reference. Its admitted artifact
+is 4 pages, 100,435 bytes, SHA-256
+`e7d4d6745f88b56c7ef840499c8e1d759b2bbbc14a245e8fc477fb0a6504a2b1`.
+For this two-page exercise body, the standalone digital driver omits a sparse
+one-page print-style contents surface and empty bibliography/index surfaces;
+the PDF outline still preserves chapter/exercise navigation. An independent
+clean post-polish comparison build has PDF SHA-256
+`0c4ab3f05d7e7f0be87e017e01dc72cada33c4a55eac855f3912a89939e72912`.
+Both Poppler and MuPDF produced 4/4 pairwise byte-identical 144-dpi page PNGs,
+and extracted text, metadata, outline, named destinations, and annotations are
+equal. All pages were inspected without clipping, collision, blank pages,
+missing glyphs, or Han residue. The PDF remains untagged; deterministic
+rendered content, not byte-identical XeTeX PDF-container serialization, is
+claimed.

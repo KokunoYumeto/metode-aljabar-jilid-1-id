@@ -506,31 +506,31 @@ Sifat kardinal tak terjangkau kuat memberi tahu kita bahwa, jika kita bertolak d
 Apakah matematikawan sungguh memerlukan semesta? Bagaimana sebaiknya hipotesis kardinal tak terjangkau kuat dipandang? Persoalan-persoalan ini terletak di persimpangan matematika, filsafat, dan psikologi kelompok; pembaca yang berminat dipersilakan melihat \cite{Shu08}.
 
 \begin{Exercises}
-	\item 设 $X, Y$ 为全序集, 定义新的全序集
+	\item Misalkan $X, Y$ adalah himpunan terurut total. Definisikan dua himpunan terurut total baru berikut:
 		\begin{compactenum}[(i)]
-			\item $X \sqcup Y$, 其序结构限制到 $X$ 和 $Y$ 上分别是原给定的序, 并且对所有 $x \in X$, $y \in Y$ 都有 $x < y$;
-			\item $X \times Y$, 配备反字典序: $(x_1, y_1) < (x_2, y_2)$ 当且仅当 $y_1 < y_2$, 或 $y_1=y_2$ 而 $x_1 < x_2$.
+			\item $X \sqcup Y$, yang struktur urutannya, jika dibatasi pada $X$ dan $Y$, masing-masing sama dengan urutan semula, dan memenuhi $x < y$ untuk semua $x \in X$, $y \in Y$;
+			\item $X \times Y$, yang dilengkapi dengan urutan leksikografis terbalik: $(x_1, y_1) < (x_2, y_2)$ jika dan hanya jika $y_1 < y_2$, atau $y_1=y_2$ dan $x_1 < x_2$.
 		\end{compactenum}
-		证明对于序数 $\alpha, \beta$, 序数 $\alpha + \beta$ 与 $\alpha \beta$ 作为良序集分别同构于 $\alpha \sqcup \beta$ 与 $\alpha \times \beta$.
-		\begin{hint} 对 $\beta$ 行超穷归纳. \end{hint}
-	\item 证明序数运算的下述性质.
+		Buktikan bahwa, untuk ordinal $\alpha, \beta$, jika dipandang sebagai himpunan terurut baik, ordinal $\alpha + \beta$ dan $\alpha \beta$ masing-masing isomorfik dengan $\alpha \sqcup \beta$ dan $\alpha \times \beta$.
+		\begin{hint} Lakukan induksi transfinit terhadap $\beta$. \end{hint}
+	\item Buktikan sifat-sifat operasi ordinal berikut.
 		\begin{compactenum}[(i)]
 			\item $\beta < \gamma \implies \alpha + \beta < \alpha + \gamma$;
-			\item 若 $\alpha < \beta$, 则存在唯一的 $\delta$ 使得 $\beta = \alpha + \delta$. \begin{hint} 取 $\delta$ 为良序集 $\{\xi : \alpha \leq \xi < \beta \}$;\end{hint}
-			\item (带余除法) 对于 $\gamma, \alpha > 0$, 存在唯一的 $\beta, \rho$ 使得 $\rho < \alpha$ 且 $\gamma = \alpha \beta + \rho$. \begin{hint}取满足 $\alpha\beta \leq \gamma$ 的最大序数 $\beta$, 并应用 (ii); \end{hint}
-			\item 若 $\alpha > 1$, 则 $\beta < \gamma \implies \alpha^\beta < \alpha^\gamma$.
+			\item jika $\alpha < \beta$, terdapat tepat satu $\delta$ sedemikian sehingga $\beta = \alpha + \delta$. \begin{hint} Ambil $\delta$ sebagai tipe urutan dari himpunan terurut baik $\{\xi : \alpha \leq \xi < \beta \}$;\end{hint}
+			\item (pembagian dengan sisa) untuk $\gamma, \alpha > 0$, terdapat tepat satu pasangan $\beta, \rho$ sedemikian sehingga $\rho < \alpha$ dan $\gamma = \alpha \beta + \rho$. \begin{hint} Ambil ordinal terbesar $\beta$ yang memenuhi $\alpha\beta \leq \gamma$, lalu terapkan (ii); \end{hint}
+			\item jika $\alpha > 1$, maka $\beta < \gamma \implies \alpha^\beta < \alpha^\gamma$.
 		\end{compactenum}
-	\item 举例说明对于序数 $\alpha, \beta$, 一般而言 $\alpha \beta \neq \beta \alpha$. \begin{hint}不妨取 $\alpha < \beta = \omega$.\end{hint}
-	\item 证明任意序数 $\gamma > 0$ 皆有唯一的 Cantor 标准形
+	\item Berikan contoh yang menunjukkan bahwa, untuk ordinal $\alpha, \beta$, pada umumnya $\alpha \beta \neq \beta \alpha$. \begin{hint} Cukup ambil $\alpha < \beta = \omega$.\end{hint}
+	\item Buktikan bahwa setiap ordinal $\gamma > 0$ mempunyai bentuk normal Cantor yang unik:
 		\[ \gamma= \omega^{\alpha_1} k_1 + \cdots + \omega^{\alpha_n} k_n, \]
-		其中 $n \in \Z_{\geq 1}$, $\gamma \geq \alpha_1 > \cdots > \alpha_n$ 皆为序数, 而 $k_1, \ldots, k_n \in \Z_{\geq 1}$. \begin{hint}对 $\gamma$ 作超穷递归: 取最大的 $\alpha$ 使得 $\gamma \geq \omega^\alpha $, 再用带余除法表 $\gamma = \omega^\alpha k + \rho$, 这里的 $k$ 必为有限序数. 用超穷归纳法可证唯一性.\end{hint}
-	\item 证明 $f(a,b) = 2^a(2b+1)-1$ 是从 $\Z_{\geq 0} \times \Z_{\geq 0}$ 到 $\Z_{\geq 0}$ 的双射.
-	\item 以下结果称作 König 引理: 设 $\kappa_i, \lambda_i$ 为两族以 $i \in I$ 为下标的基数, 且对每个 $i \in I$ 皆有 $\kappa_i < \lambda_i$. 证明
+		dengan $n \in \Z_{\geq 1}$, ordinal-ordinal $\gamma \geq \alpha_1 > \cdots > \alpha_n$, dan $k_1, \ldots, k_n \in \Z_{\geq 1}$. \begin{hint} Gunakan rekursi transfinit pada $\gamma$: ambil $\alpha$ terbesar yang memenuhi $\gamma \geq \omega^\alpha $, lalu gunakan pembagian dengan sisa untuk menuliskan $\gamma = \omega^\alpha k + \rho$; di sini $k$ harus merupakan ordinal berhingga. Gunakan induksi transfinit untuk membuktikan keunikannya.\end{hint}
+	\item Buktikan bahwa $f(a,b) = 2^a(2b+1)-1$ merupakan bijeksi dari $\Z_{\geq 0} \times \Z_{\geq 0}$ ke $\Z_{\geq 0}$.
+	\item Hasil berikut disebut lema König. Misalkan $\kappa_i, \lambda_i$ merupakan dua keluarga kardinal yang diindeks oleh $i \in I$, dan $\kappa_i < \lambda_i$ untuk setiap $i \in I$. Buktikan bahwa
 		\[ \sum_{i \in I} \kappa_i < \prod_{i \in I} \lambda_i. \]
-		导出 Cantor 定理 $\kappa < 2^\kappa$ 作为特例.
+		Turunkan teorema Cantor $\kappa < 2^\kappa$ sebagai kasus khusus.
 		\begin{hint}
-			容易看出 $\leq$ 成立. 接着取 $E := \prod_i E_i$, 其中 $|E_i| = \lambda_i$; 若断言不成立, 则存在分解 $E = \bigcup_i F_i$, 其中 $F_i \subset E$, $|F_i| = \kappa_i$. 为导出矛盾, 将每个 $f \in E$ 按分量表成 $(f_j)_{j \in I}$, $f_j \in E_j$, 并考虑集合
-			\[ G_i := \Image\left[ F_i \hookrightarrow E \xrightarrow{\text{取 $i$ 分量}} E_i \right], \quad i \in I. \]
-			说明 $G_i \subsetneq E_i$. 然后取 $f \in \prod_i (E_i \smallsetminus G_i)$ 并导出 $f \notin \bigcup_i F_i$, 矛盾. 这里和 Cantor 定理一样使用了对角线论证法.
+			Mudah dilihat bahwa ketaksamaan dengan $\leq$ berlaku. Selanjutnya, ambil $E := \prod_i E_i$, dengan $|E_i| = \lambda_i$; jika ketaksamaan tegas yang dinyatakan dalam soal tidak berlaku, terdapat dekomposisi $E = \bigcup_i F_i$, dengan $F_i \subset E$ dan $|F_i| = \kappa_i$. Untuk memperoleh kontradiksi, tuliskan setiap $f \in E$ menurut komponen-komponennya sebagai $(f_j)_{j \in I}$, dengan $f_j \in E_j$, lalu pertimbangkan himpunan
+			\[ G_i := \Image\left[ F_i \hookrightarrow E \xrightarrow{\text{ambil komponen ke-$i$}} E_i \right], \quad i \in I. \]
+			Tunjukkan bahwa $G_i \subsetneq E_i$. Kemudian, ambil $f \in \prod_i (E_i \smallsetminus G_i)$ dan simpulkan bahwa $f \notin \bigcup_i F_i$, suatu kontradiksi. Seperti dalam teorema Cantor, di sini digunakan argumen diagonal.
 		\end{hint}
 \end{Exercises}

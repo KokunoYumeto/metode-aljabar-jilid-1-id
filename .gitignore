@@ -1,6 +1,7 @@
 # Immutable authority witnesses and local build products
 /authority/
 /build/
+/tmp/
 
 # Full-page render evidence is retained locally; compact receipts are tracked.
 /qa/unit-001-final-*/
@@ -40,6 +41,7 @@ __pycache__/
 !repo/source/unit-004-crossrefs.aux
 !repo/source/unit-005-crossrefs.aux
 !repo/source/unit-006-crossrefs.aux
+!repo/source/unit-007-crossrefs.aux
 
 # Machine-specific validation output is regenerated locally.
 /qa/unit-001-evidence/backend-validation-latest.json
@@ -48,3 +50,4 @@ __pycache__/
 /qa/unit-004-evidence/backend-validation-latest.json
 /qa/unit-005-evidence/backend-validation-latest.json
 /qa/unit-006-evidence/backend-validation-latest.json
+/qa/unit-007-evidence/backend-validation-latest.json

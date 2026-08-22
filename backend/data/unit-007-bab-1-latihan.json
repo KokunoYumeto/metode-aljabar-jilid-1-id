@@ -1,0 +1,1443 @@
+{
+  "$schema": "../schema/open-math-corpus-unit.schema.v1.json",
+  "schema_name": "open-math-corpus-unit",
+  "schema_version": "1.1.0",
+  "profile": "curriculum-modular-backend-v0",
+  "dataset_id": "urn:uuid:928dc586-7540-5bc3-a895-394b05ab7b0a",
+  "dataset_stable_key": "dataset/unit-007/id-id",
+  "id_namespace": {
+    "algorithm": "uuid5",
+    "namespace_uuid": "urn:uuid:5d74a443-839a-5a09-b2c6-0bc48a097f2b",
+    "name_root": "https://github.com/wenweili/AlJabr-1#o013-backend-v1"
+  },
+  "workflow": {
+    "responsible_task": "01a02163-e2bf-7a93-950a-b9ab84d7e8b9",
+    "updated": "2026-08-22",
+    "status": "admitted",
+    "admission_state": "admitted",
+    "translation_state": "visually_checked",
+    "qa_state": "translation_backend_build_visual_pass"
+  },
+  "program": {
+    "id": "urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78",
+    "stable_key": "program/open-mathematics-curriculum/2026",
+    "entity_type": "program",
+    "label": "Open Mathematics Curriculum",
+    "version": "2026"
+  },
+  "course": {
+    "id": "urn:uuid:a5f3ad58-ce3c-5f5f-b581-1f842ae79192",
+    "stable_key": "course/o013",
+    "entity_type": "course",
+    "program_id": "urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78",
+    "role_code": "O013",
+    "course_code": "D70",
+    "label": "Graduate Algebra",
+    "prerequisite_ids": [
+      "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
+      "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7",
+      "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+      "urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288",
+      "urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396",
+      "urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14",
+      "urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec",
+      "urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8",
+      "urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee",
+      "urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f",
+      "urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96",
+      "urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f"
+    ]
+  },
+  "resource": {
+    "id": "urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397",
+    "stable_key": "resource/wenweili/aljabr-1",
+    "entity_type": "resource",
+    "canonical_uri": "https://github.com/wenweili/AlJabr-1",
+    "author": "Wen-Wei Li",
+    "titles": [
+      {
+        "language": "zh-Hans",
+        "text": "代数学方法，卷一：基础架构"
+      },
+      {
+        "language": "en",
+        "text": "Methods in Algebra, Volume 1: Basic Architecture"
+      },
+      {
+        "language": "id-ID",
+        "text": "Metode Aljabar, Jilid 1: Arsitektur Dasar"
+      }
+    ],
+    "original_language": "zh-Hans",
+    "rights_component_ids": [
+      "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "urn:uuid:e18339ae-66cd-5304-b544-b220dd41380d",
+      "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+      "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430"
+    ]
+  },
+  "edition": {
+    "id": "urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49",
+    "stable_key": "edition/wenweili/aljabr-1/c4f7a01f68f5f407906b4b970640cddbbad85f6b",
+    "entity_type": "edition",
+    "resource_id": "urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397",
+    "branch": "master",
+    "commit": "c4f7a01f68f5f407906b4b970640cddbbad85f6b",
+    "tree": "0f9fd52748165ec89a85ba602ccb949a2ce04694",
+    "archive": {
+      "path": "authority/archives/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b.zip",
+      "bytes": 6050739,
+      "sha256": "6c8c416baa8f5ffc8810bbad6470c780413bd7917af739e07340e4b07e7eaff6"
+    },
+    "official_pdf": {
+      "path": "authority/pdfs/Al-jabr-1.pdf",
+      "bytes": 3647113,
+      "sha256": "dc751a2d5146edc9f9638471ff3fac4107eab8dd0d3331803581a06998663c38"
+    },
+    "source_manifest": {
+      "path": "00_control/SOURCE_MANIFEST.csv",
+      "bytes": 3383,
+      "sha256": "40125010171d4fa37c3312c454c3c2767325bcb27c4229c255a25b297265eb99"
+    }
+  },
+  "unit": {
+    "id": "urn:uuid:ea5bcda3-9f4b-58ba-8258-348e2e1b88e4",
+    "stable_key": "unit/bab-1-latihan",
+    "entity_type": "unit",
+    "program_id": "urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78",
+    "course_id": "urn:uuid:a5f3ad58-ce3c-5f5f-b581-1f842ae79192",
+    "resource_id": "urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397",
+    "edition_id": "urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49",
+    "order": 7,
+    "source_local_id": "chapter1.tex:508-536",
+    "titles": [
+      {
+        "language": "zh-Hans",
+        "text": "第一章：习题"
+      },
+      {
+        "language": "id-ID",
+        "text": "Bab 1: Latihan"
+      }
+    ],
+    "source_language": "zh-Hans",
+    "target_language": "id-ID",
+    "source_binding": {
+      "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+      "bytes": 49874,
+      "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+      "line_start": 508,
+      "line_end": 536,
+      "span_sha256": "2a2dd555d54526fe8ccd88413210fc6d63b7365cd198cd623248a96014e2702e",
+      "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+    },
+    "target_binding": {
+      "path": "repo/source/chapter1.tex",
+      "bytes": 64180,
+      "sha256": "f40dcba1bc87d886f6b83bd6962e9cd044d0b39282c17e326e6afbedd4f6ceee",
+      "line_start": 508,
+      "line_end": 536,
+      "span_sha256": "314d78e029031e48b1549ee56a4cca331159a1c1cb4531f5ba6d3be2c9c18432",
+      "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+    },
+    "section_ids": [
+      "urn:uuid:497aa4c5-8cf1-5350-99d4-424a80b423e6",
+      "urn:uuid:a3a9b52e-4391-53f9-8dae-1323b270f405",
+      "urn:uuid:c84039bf-e817-5d7f-b075-4da3fbb02e24",
+      "urn:uuid:dad70e1c-d5b5-5833-b304-fcd986ab4304",
+      "urn:uuid:cff8499e-dc04-507b-aa73-8b3506cf3c10",
+      "urn:uuid:18470c4e-f06d-501e-8282-3504088311d8"
+    ],
+    "concept_ids": [
+      "urn:uuid:07ee2ab8-f12a-57f2-b3d7-ccaf926162cd",
+      "urn:uuid:419a23a0-bd63-5d10-a6f9-c62f8f6f511c",
+      "urn:uuid:38e39a7a-bdbf-5da4-98ad-1eeed5884efe",
+      "urn:uuid:8a65f0cc-f226-5ebc-8345-f9051f27a659",
+      "urn:uuid:889220fa-9315-533a-b711-3a8e0a79b19d",
+      "urn:uuid:de3f0d32-d26c-5f33-941b-7ae2980922ff",
+      "urn:uuid:965fcb4e-99a1-571e-ab07-13d4327d16ec",
+      "urn:uuid:c852dcda-6390-5d25-afb3-351b8385a53e",
+      "urn:uuid:9a92b6cb-ab0c-54f9-b0ad-ecb97dd0341f",
+      "urn:uuid:e88e0a52-5468-5122-8b90-21738e9c18e2",
+      "urn:uuid:d5df6f66-6b77-55d6-bbf6-bc4d0a4b5ae3",
+      "urn:uuid:b94ea0c6-56af-595c-b651-c81e95a13095",
+      "urn:uuid:5c7eaaa4-f2b6-5406-b14b-45bddce8a4dd",
+      "urn:uuid:9913da36-b9b8-50b5-aa46-7bf7ebf79b5e",
+      "urn:uuid:ee0127a6-56b2-5296-aee9-5c592e0ee1b3",
+      "urn:uuid:5951a534-d8d8-5254-8aa8-bcb6d5243e7b",
+      "urn:uuid:7a04579f-e603-5096-a00b-61562d327bb5",
+      "urn:uuid:2f406ce6-5240-51b1-91aa-c569eb72314c",
+      "urn:uuid:4b7e0cdc-538c-5cc6-9901-485421d51fe4",
+      "urn:uuid:e3d5f12e-52fc-53a8-ad5a-a717fa06f37f",
+      "urn:uuid:b3f80245-c185-59ed-a214-ba97c89391e5",
+      "urn:uuid:5ab5de0b-f355-59d2-a8fb-d384565e8bfd",
+      "urn:uuid:6b8af36c-3b10-54e8-91df-76e49924a323",
+      "urn:uuid:b042893d-0435-544a-9736-9acfc95d7d8c",
+      "urn:uuid:f438f38e-edeb-5863-8a52-14f76e9ccf62",
+      "urn:uuid:14e8ea64-bed2-50b0-a35e-e511d0d2173d",
+      "urn:uuid:ae64b5dd-3d71-51f0-b9ab-3f949a8a5fd7"
+    ],
+    "prerequisite_ids": [
+      "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
+      "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7",
+      "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4"
+    ],
+    "rights_component_ids": [
+      "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+      "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430"
+    ],
+    "citation_ids": [],
+    "diagram_ids": [],
+    "index_entry_ids": [],
+    "build_surface_ids": [
+      "urn:uuid:87d62f93-933b-5bb7-b0ec-3972438b2b6b"
+    ],
+    "qa_event_ids": [
+      "urn:uuid:422b25db-9974-590f-89ed-aa98d5c17321"
+    ],
+    "outcome_keys": [
+      "outcome/model-ordinal-addition-and-multiplication-by-ordered-constructions",
+      "outcome/prove-monotonicity-and-division-properties-of-ordinal-operations",
+      "outcome/exhibit-noncommutativity-of-ordinal-multiplication",
+      "outcome/prove-existence-and-uniqueness-of-cantor-normal-form",
+      "outcome/construct-a-bijection-between-pairs-and-natural-numbers",
+      "outcome/prove-konigs-lemma-and-deduce-cantors-theorem"
+    ],
+    "surface_counts": {
+      "sections": 6,
+      "exercises": 0,
+      "hints": 0,
+      "answers": 0,
+      "solutions": 0,
+      "citations": 0,
+      "diagrams": 0,
+      "index_entries": 0
+    },
+    "translation_state": "visually_checked",
+    "admission_state": "admitted"
+  },
+  "sections": [
+    {
+      "id": "urn:uuid:497aa4c5-8cf1-5350-99d4-424a80b423e6",
+      "stable_key": "unit/bab-1-latihan/exercise/01",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:ea5bcda3-9f4b-58ba-8258-348e2e1b88e4",
+      "order": 1,
+      "source_local_id": "chapter1.tex:509-515",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 1：序数加法与乘法的序型"
+        },
+        {
+          "language": "id-ID",
+          "text": "Latihan 1: Tipe Urutan Penjumlahan dan Perkalian Ordinal"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 509,
+        "line_end": 515,
+        "span_sha256": "cf5bf2d58167bd764b5eff9321bdf7ab7bcbd0463eb22e414db14348b2666ff7",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 64180,
+        "sha256": "f40dcba1bc87d886f6b83bd6962e9cd044d0b39282c17e326e6afbedd4f6ceee",
+        "line_start": 509,
+        "line_end": 515,
+        "span_sha256": "68deff056ecbc1af1bb24231aa10b77c47c1272825ed4eb83543ae5f8850a790",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:07ee2ab8-f12a-57f2-b3d7-ccaf926162cd",
+        "urn:uuid:419a23a0-bd63-5d10-a6f9-c62f8f6f511c",
+        "urn:uuid:38e39a7a-bdbf-5da4-98ad-1eeed5884efe",
+        "urn:uuid:8a65f0cc-f226-5ebc-8345-f9051f27a659",
+        "urn:uuid:889220fa-9315-533a-b711-3a8e0a79b19d",
+        "urn:uuid:5951a534-d8d8-5254-8aa8-bcb6d5243e7b",
+        "urn:uuid:7a04579f-e603-5096-a00b-61562d327bb5",
+        "urn:uuid:5ab5de0b-f355-59d2-a8fb-d384565e8bfd"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
+        "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7",
+        "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:a3a9b52e-4391-53f9-8dae-1323b270f405",
+      "stable_key": "unit/bab-1-latihan/exercise/02",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:ea5bcda3-9f4b-58ba-8258-348e2e1b88e4",
+      "order": 2,
+      "source_local_id": "chapter1.tex:516-522",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 2：序数运算的性质"
+        },
+        {
+          "language": "id-ID",
+          "text": "Latihan 2: Sifat-Sifat Operasi Ordinal"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 516,
+        "line_end": 522,
+        "span_sha256": "46af10c638b0ae5cef506b98440910d28e3ea279454b4864b97b91ea7c98bee7",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 64180,
+        "sha256": "f40dcba1bc87d886f6b83bd6962e9cd044d0b39282c17e326e6afbedd4f6ceee",
+        "line_start": 516,
+        "line_end": 522,
+        "span_sha256": "9cd209233f934f1c31132eca934033f54895bfeb6d105652a81c55c0d2ef4552",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:38e39a7a-bdbf-5da4-98ad-1eeed5884efe",
+        "urn:uuid:de3f0d32-d26c-5f33-941b-7ae2980922ff",
+        "urn:uuid:965fcb4e-99a1-571e-ab07-13d4327d16ec",
+        "urn:uuid:2f406ce6-5240-51b1-91aa-c569eb72314c",
+        "urn:uuid:4b7e0cdc-538c-5cc6-9901-485421d51fe4",
+        "urn:uuid:e3d5f12e-52fc-53a8-ad5a-a717fa06f37f",
+        "urn:uuid:b3f80245-c185-59ed-a214-ba97c89391e5",
+        "urn:uuid:6b8af36c-3b10-54e8-91df-76e49924a323",
+        "urn:uuid:b042893d-0435-544a-9736-9acfc95d7d8c"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
+        "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7",
+        "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:c84039bf-e817-5d7f-b075-4da3fbb02e24",
+      "stable_key": "unit/bab-1-latihan/exercise/03",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:ea5bcda3-9f4b-58ba-8258-348e2e1b88e4",
+      "order": 3,
+      "source_local_id": "chapter1.tex:523-523",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 3：序数乘法的非交换性"
+        },
+        {
+          "language": "id-ID",
+          "text": "Latihan 3: Ketidakkomutatifan Perkalian Ordinal"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 523,
+        "line_end": 523,
+        "span_sha256": "4a3b9bbd3abb0cc534586e51c86dcc17596d8e8c751c90e901bf3550101c1a57",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 64180,
+        "sha256": "f40dcba1bc87d886f6b83bd6962e9cd044d0b39282c17e326e6afbedd4f6ceee",
+        "line_start": 523,
+        "line_end": 523,
+        "span_sha256": "d0734812ff40994d6fa31ea012a15debc0ab8d0a713a9fec927b093b4c91f414",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:c852dcda-6390-5d25-afb3-351b8385a53e",
+        "urn:uuid:f438f38e-edeb-5863-8a52-14f76e9ccf62"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
+        "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7",
+        "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:dad70e1c-d5b5-5833-b304-fcd986ab4304",
+      "stable_key": "unit/bab-1-latihan/exercise/04",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:ea5bcda3-9f4b-58ba-8258-348e2e1b88e4",
+      "order": 4,
+      "source_local_id": "chapter1.tex:524-526",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 4：Cantor 标准形"
+        },
+        {
+          "language": "id-ID",
+          "text": "Latihan 4: Bentuk Normal Cantor"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 524,
+        "line_end": 526,
+        "span_sha256": "48b55540f963d0a5823942c9bc963f6dd57de8cd361320d5b70b74e4226f0d6f",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 64180,
+        "sha256": "f40dcba1bc87d886f6b83bd6962e9cd044d0b39282c17e326e6afbedd4f6ceee",
+        "line_start": 524,
+        "line_end": 526,
+        "span_sha256": "795ca114e51f837ae987afece36e8906009b7b2ffba995f366f8fd3d55cd48d9",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:9a92b6cb-ab0c-54f9-b0ad-ecb97dd0341f",
+        "urn:uuid:de3f0d32-d26c-5f33-941b-7ae2980922ff",
+        "urn:uuid:889220fa-9315-533a-b711-3a8e0a79b19d",
+        "urn:uuid:14e8ea64-bed2-50b0-a35e-e511d0d2173d"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
+        "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7",
+        "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:cff8499e-dc04-507b-aa73-8b3506cf3c10",
+      "stable_key": "unit/bab-1-latihan/exercise/05",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:ea5bcda3-9f4b-58ba-8258-348e2e1b88e4",
+      "order": 5,
+      "source_local_id": "chapter1.tex:527-527",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 5：自然数对的双射编码"
+        },
+        {
+          "language": "id-ID",
+          "text": "Latihan 5: Pengodean Bijektif Pasangan Bilangan Cacah"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 527,
+        "line_end": 527,
+        "span_sha256": "5233378336b0e34b7936a953349cc4e24b5aaedcf772f439fe3863308255bfbb",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 64180,
+        "sha256": "f40dcba1bc87d886f6b83bd6962e9cd044d0b39282c17e326e6afbedd4f6ceee",
+        "line_start": 527,
+        "line_end": 527,
+        "span_sha256": "1585a5159d5f76987d7a3cf66d2baee98ae002087524b9060e6529b4eaedf878",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:e88e0a52-5468-5122-8b90-21738e9c18e2"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
+        "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7",
+        "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:18470c4e-f06d-501e-8282-3504088311d8",
+      "stable_key": "unit/bab-1-latihan/exercise/06",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:ea5bcda3-9f4b-58ba-8258-348e2e1b88e4",
+      "order": 6,
+      "source_local_id": "chapter1.tex:528-535",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 6：König 引理与 Cantor 定理"
+        },
+        {
+          "language": "id-ID",
+          "text": "Latihan 6: Lema König dan Teorema Cantor"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 528,
+        "line_end": 535,
+        "span_sha256": "b92b677d0aa1d858d579027397870942089fd298d1f4f674869912e054b44197",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 64180,
+        "sha256": "f40dcba1bc87d886f6b83bd6962e9cd044d0b39282c17e326e6afbedd4f6ceee",
+        "line_start": 528,
+        "line_end": 535,
+        "span_sha256": "145ea1db8a8310bce725595ed07d422b5eceee15924b6d3c2cf7b141ab5d7d23",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:d5df6f66-6b77-55d6-bbf6-bc4d0a4b5ae3",
+        "urn:uuid:b94ea0c6-56af-595c-b651-c81e95a13095",
+        "urn:uuid:5c7eaaa4-f2b6-5406-b14b-45bddce8a4dd",
+        "urn:uuid:9913da36-b9b8-50b5-aa46-7bf7ebf79b5e",
+        "urn:uuid:ee0127a6-56b2-5296-aee9-5c592e0ee1b3",
+        "urn:uuid:ae64b5dd-3d71-51f0-b9ab-3f949a8a5fd7"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
+        "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7",
+        "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "urn:uuid:07ee2ab8-f12a-57f2-b3d7-ccaf926162cd",
+      "stable_key": "concept/ordered-sum",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "有序和"
+        },
+        {
+          "language": "id-ID",
+          "text": "jumlah terurut"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:419a23a0-bd63-5d10-a6f9-c62f8f6f511c",
+      "stable_key": "concept/reverse-lexicographic-order",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "反字典序"
+        },
+        {
+          "language": "id-ID",
+          "text": "urutan leksikografis terbalik"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:38e39a7a-bdbf-5da4-98ad-1eeed5884efe",
+      "stable_key": "concept/ordinal-addition",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "序数加法"
+        },
+        {
+          "language": "id-ID",
+          "text": "penjumlahan ordinal"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:8a65f0cc-f226-5ebc-8345-f9051f27a659",
+      "stable_key": "concept/ordinal-multiplication",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "序数乘法"
+        },
+        {
+          "language": "id-ID",
+          "text": "perkalian ordinal"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:889220fa-9315-533a-b711-3a8e0a79b19d",
+      "stable_key": "concept/transfinite-induction",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "超穷归纳"
+        },
+        {
+          "language": "id-ID",
+          "text": "induksi transfinit"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:de3f0d32-d26c-5f33-941b-7ae2980922ff",
+      "stable_key": "concept/ordinal-division-with-remainder",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "序数带余除法"
+        },
+        {
+          "language": "id-ID",
+          "text": "pembagian ordinal dengan sisa"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:965fcb4e-99a1-571e-ab07-13d4327d16ec",
+      "stable_key": "concept/ordinal-exponentiation",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "序数幂"
+        },
+        {
+          "language": "id-ID",
+          "text": "perpangkatan ordinal"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:c852dcda-6390-5d25-afb3-351b8385a53e",
+      "stable_key": "concept/noncommutative-ordinal-multiplication",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "序数乘法的非交换性"
+        },
+        {
+          "language": "id-ID",
+          "text": "ketidakkomutatifan perkalian ordinal"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:9a92b6cb-ab0c-54f9-b0ad-ecb97dd0341f",
+      "stable_key": "concept/cantor-normal-form",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "Cantor 标准形"
+        },
+        {
+          "language": "id-ID",
+          "text": "bentuk normal Cantor"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:e88e0a52-5468-5122-8b90-21738e9c18e2",
+      "stable_key": "concept/natural-number-pairing-bijection",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "自然数对的双射编码"
+        },
+        {
+          "language": "id-ID",
+          "text": "pengodean bijektif pasangan bilangan cacah"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:d5df6f66-6b77-55d6-bbf6-bc4d0a4b5ae3",
+      "stable_key": "concept/konig-lemma-cardinals",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "König 引理"
+        },
+        {
+          "language": "id-ID",
+          "text": "lema König untuk kardinal"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:b94ea0c6-56af-595c-b651-c81e95a13095",
+      "stable_key": "concept/cardinal-sum",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "基数和"
+        },
+        {
+          "language": "id-ID",
+          "text": "jumlah kardinal"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:5c7eaaa4-f2b6-5406-b14b-45bddce8a4dd",
+      "stable_key": "concept/cardinal-product",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "基数积"
+        },
+        {
+          "language": "id-ID",
+          "text": "hasil kali kardinal"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:9913da36-b9b8-50b5-aa46-7bf7ebf79b5e",
+      "stable_key": "concept/cantor-theorem",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "Cantor 定理"
+        },
+        {
+          "language": "id-ID",
+          "text": "teorema Cantor"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:ee0127a6-56b2-5296-aee9-5c592e0ee1b3",
+      "stable_key": "concept/diagonal-argument",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "对角线论证"
+        },
+        {
+          "language": "id-ID",
+          "text": "argumen diagonal"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:5951a534-d8d8-5254-8aa8-bcb6d5243e7b",
+      "stable_key": "unit/bab-1-latihan/exercise/01/subpart/i",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 1(i)"
+        },
+        {
+          "language": "id-ID",
+          "text": "Latihan 1(i)"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:7a04579f-e603-5096-a00b-61562d327bb5",
+      "stable_key": "unit/bab-1-latihan/exercise/01/subpart/ii",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 1(ii)"
+        },
+        {
+          "language": "id-ID",
+          "text": "Latihan 1(ii)"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:2f406ce6-5240-51b1-91aa-c569eb72314c",
+      "stable_key": "unit/bab-1-latihan/exercise/02/subpart/i",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 2(i)"
+        },
+        {
+          "language": "id-ID",
+          "text": "Latihan 2(i)"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:4b7e0cdc-538c-5cc6-9901-485421d51fe4",
+      "stable_key": "unit/bab-1-latihan/exercise/02/subpart/ii",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 2(ii)"
+        },
+        {
+          "language": "id-ID",
+          "text": "Latihan 2(ii)"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:e3d5f12e-52fc-53a8-ad5a-a717fa06f37f",
+      "stable_key": "unit/bab-1-latihan/exercise/02/subpart/iii",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 2(iii)"
+        },
+        {
+          "language": "id-ID",
+          "text": "Latihan 2(iii)"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:b3f80245-c185-59ed-a214-ba97c89391e5",
+      "stable_key": "unit/bab-1-latihan/exercise/02/subpart/iv",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 2(iv)"
+        },
+        {
+          "language": "id-ID",
+          "text": "Latihan 2(iv)"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:5ab5de0b-f355-59d2-a8fb-d384565e8bfd",
+      "stable_key": "unit/bab-1-latihan/exercise/01/hint/01",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 1 的提示"
+        },
+        {
+          "language": "id-ID",
+          "text": "Petunjuk Latihan 1"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:6b8af36c-3b10-54e8-91df-76e49924a323",
+      "stable_key": "unit/bab-1-latihan/exercise/02/subpart/ii/hint/01",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 2(ii) 的提示"
+        },
+        {
+          "language": "id-ID",
+          "text": "Petunjuk Latihan 2(ii)"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:b042893d-0435-544a-9736-9acfc95d7d8c",
+      "stable_key": "unit/bab-1-latihan/exercise/02/subpart/iii/hint/01",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 2(iii) 的提示"
+        },
+        {
+          "language": "id-ID",
+          "text": "Petunjuk Latihan 2(iii)"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:f438f38e-edeb-5863-8a52-14f76e9ccf62",
+      "stable_key": "unit/bab-1-latihan/exercise/03/hint/01",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 3 的提示"
+        },
+        {
+          "language": "id-ID",
+          "text": "Petunjuk Latihan 3"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:14e8ea64-bed2-50b0-a35e-e511d0d2173d",
+      "stable_key": "unit/bab-1-latihan/exercise/04/hint/01",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 4 的提示"
+        },
+        {
+          "language": "id-ID",
+          "text": "Petunjuk Latihan 4"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:ae64b5dd-3d71-51f0-b9ab-3f949a8a5fd7",
+      "stable_key": "unit/bab-1-latihan/exercise/06/hint/01",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 6 的提示"
+        },
+        {
+          "language": "id-ID",
+          "text": "Petunjuk Latihan 6"
+        }
+      ]
+    }
+  ],
+  "prerequisites": [
+    {
+      "id": "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
+      "stable_key": "prerequisite/basic-mathematical-literacy",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "基本素养"
+        },
+        {
+          "language": "id-ID",
+          "text": "kematangan matematika dasar"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 54,
+        "line_end": 54
+      }
+    },
+    {
+      "id": "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7",
+      "stable_key": "prerequisite/mathematical-logic",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "逻辑用语与论证"
+        },
+        {
+          "language": "id-ID",
+          "text": "bahasa logika dan penalaran"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 54,
+        "line_end": 54
+      }
+    },
+    {
+      "id": "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+      "stable_key": "prerequisite/elementary-set-theory",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "集合常识"
+        },
+        {
+          "language": "id-ID",
+          "text": "teori himpunan elementer"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 54,
+        "line_end": 54
+      }
+    },
+    {
+      "id": "urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288",
+      "stable_key": "prerequisite/matrices",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "矩阵"
+        },
+        {
+          "language": "id-ID",
+          "text": "matriks"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396",
+      "stable_key": "prerequisite/vector-spaces",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "向量空间"
+        },
+        {
+          "language": "id-ID",
+          "text": "ruang vektor"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14",
+      "stable_key": "prerequisite/polynomials",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "多项式"
+        },
+        {
+          "language": "id-ID",
+          "text": "polinom"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec",
+      "stable_key": "prerequisite/linear-transformations",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "线性变换"
+        },
+        {
+          "language": "id-ID",
+          "text": "transformasi linear"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8",
+      "stable_key": "prerequisite/permutations-and-symmetric-groups",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "置换与对称群"
+        },
+        {
+          "language": "id-ID",
+          "text": "permutasi dan grup simetris"
+        }
+      ],
+      "requiredness": "recommended",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee",
+      "stable_key": "prerequisite/elementary-number-theory",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "初等数论"
+        },
+        {
+          "language": "id-ID",
+          "text": "teori bilangan elementer"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 56,
+        "line_end": 56
+      }
+    },
+    {
+      "id": "urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f",
+      "stable_key": "prerequisite/real-analysis-basics",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "实数与分析常识"
+        },
+        {
+          "language": "id-ID",
+          "text": "dasar-dasar analisis real"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 57,
+        "line_end": 57
+      }
+    },
+    {
+      "id": "urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96",
+      "stable_key": "prerequisite/point-set-topology",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "点集拓扑学初步"
+        },
+        {
+          "language": "id-ID",
+          "text": "topologi himpunan titik elementer"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 57,
+        "line_end": 57
+      }
+    },
+    {
+      "id": "urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f",
+      "stable_key": "prerequisite/cauchy-sequences-and-completeness",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "Cauchy 列与完备性"
+        },
+        {
+          "language": "id-ID",
+          "text": "barisan Cauchy dan kelengkapan"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 57,
+        "line_end": 57
+      }
+    }
+  ],
+  "rights": [
+    {
+      "id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "stable_key": "rights/principal-cc-by-4.0",
+      "entity_type": "rights",
+      "component": "Principal text, source, PDF, and Indonesian translation",
+      "holder_or_source": "Wen-Wei Li; Indonesian translation contributors for translation expression",
+      "license": "CC BY 4.0",
+      "required_treatment": "Attribute author and source, identify the Indonesian translation and changes, link the license, and imply no endorsement.",
+      "applies_to_unit": true,
+      "bindings": [
+        {
+          "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+          "bytes": 49874,
+          "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92"
+        },
+        {
+          "path": "repo/source/LICENSE",
+          "bytes": 19045,
+          "sha256": "48a83a6e39f7b2f166763b30776132c9a99aa816f17cb06f87ad5b8542a7b71f"
+        },
+        {
+          "path": "repo/source/ccby.png",
+          "bytes": 12588,
+          "sha256": "633aae44a5d5b8915debc82f56a8e05c1b62b567b1aefeabc18617b81d8a04a9"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:e18339ae-66cd-5304-b544-b220dd41380d",
+      "stable_key": "rights/lanzhou-cc-by-sa-3.0",
+      "entity_type": "rights",
+      "component": "Lanzhou.png",
+      "holder_or_source": "Chk2011; derived from Wikimedia Administrative_Division_Lanzhou.svg",
+      "license": "CC BY-SA 3.0",
+      "required_treatment": "Keep separate attribution and source/license link, identify rasterization or other changes, and preserve share-alike treatment.",
+      "applies_to_unit": false,
+      "bindings": [
+        {
+          "path": "repo/source/Lanzhou.png",
+          "bytes": 276766,
+          "sha256": "6000d7740aab58f1959c07af2c057680e2518dcc75b225f3180ed4b996fe9455"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+      "stable_key": "rights/ajbook-fragment-cc-by-sa-3.0",
+      "entity_type": "rights",
+      "component": "AJbook.cls DeclareSourcemap fragment",
+      "holder_or_source": "Guido; revision edited by dpprdan; TeX.StackExchange answer 119136",
+      "license": "CC BY-SA 3.0",
+      "required_treatment": "Keep separate attribution and source/license link, or replace with independently written equivalent code.",
+      "applies_to_unit": true,
+      "bindings": [
+        {
+          "path": "repo/source/AJbook.cls",
+          "bytes": 13780,
+          "sha256": "f35dbe8942a880dfe70c072bcfe0491d8cc83f562c28a481b949ca4cc84f0b04"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430",
+      "stable_key": "rights/noto-fonts-ofl-1.1",
+      "entity_type": "rights",
+      "component": "Noto Sans CJK SC and Noto Serif CJK SC fonts",
+      "holder_or_source": "Google and Adobe Noto contributors",
+      "license": "OFL 1.1",
+      "required_treatment": "Retain the OFL text and font notices; do not relicense fonts as book content.",
+      "applies_to_unit": true,
+      "bindings": [
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Black.otf",
+          "bytes": 17797908,
+          "sha256": "2267c4a0312d267dff8c0d1609948f7d949a3da8be3e126f5e2690cb9cc883b4"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Medium.otf",
+          "bytes": 16523632,
+          "sha256": "ca094f6b0001fb048ca39ddd797a0cdb0179e1e55c6561e111c49c3e6a61d7b7"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Regular.otf",
+          "bytes": 16437364,
+          "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+        },
+        {
+          "path": "repo/fonts/NotoSerifCJKsc-Bold.otf",
+          "bytes": 25521460,
+          "sha256": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73"
+        },
+        {
+          "path": "repo/fonts/OFL-1.1-Noto-CJK.txt",
+          "bytes": 4301,
+          "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+        }
+      ]
+    }
+  ],
+  "citations": [],
+  "diagrams": [],
+  "index_entries": [],
+  "build_surfaces": [
+    {
+      "id": "urn:uuid:87d62f93-933b-5bb7-b0ec-3972438b2b6b",
+      "stable_key": "build-surface/unit-007-pdf",
+      "entity_type": "build_surface",
+      "unit_id": "urn:uuid:ea5bcda3-9f4b-58ba-8258-348e2e1b88e4",
+      "kind": "pdf",
+      "working_directory": ".",
+      "command": "pwsh -NoProfile -File scripts/build_unit_007.ps1 -OutputDirectory build/unit-007-replay-id",
+      "artifact_path": "artifacts/unit-007-bab-1-latihan.pdf",
+      "artifact_binding": {
+        "path": "artifacts/unit-007-bab-1-latihan.pdf",
+        "bytes": 100435,
+        "sha256": "e7d4d6745f88b56c7ef840499c8e1d759b2bbbc14a245e8fc477fb0a6504a2b1"
+      },
+      "log_binding": {
+        "path": "qa/unit-007-evidence/build-log-summary.txt",
+        "bytes": 3432,
+        "sha256": "3e7af15048ac2e999218c930d341663aad275eeb166b1b9e6e9aa3ff6738c236"
+      },
+      "build_script": {
+        "path": "scripts/build_unit_007.ps1",
+        "bytes": 2837,
+        "sha256": "eb7a6deef2379e54064e654c42a586b3abed3b146d41da9a7b69a14c4a166441"
+      },
+      "page_count": 4,
+      "status": "pass",
+      "driver": {
+        "path": "repo/source/unit-007-bab-1-latihan.tex",
+        "bytes": 4259,
+        "sha256": "539a79f1f819b8236b4d1fc94608a8c16a4f83d9af05090f36cadd73382fddb5"
+      },
+      "input_bindings": [
+        {
+          "path": "repo/source/coverpage-id-unit-007.tex",
+          "bytes": 4329,
+          "sha256": "f42a061f4d5b8d390b50ca4a11ccf16dd3979937ad38f9a026e04efa687126b4"
+        },
+        {
+          "path": "repo/source/font-setup-id.tex",
+          "bytes": 2563,
+          "sha256": "19c03e7fc4abaf7c433a85cf8adf32dbe5259d3de5106c8d1dd712af37dcd280"
+        },
+        {
+          "path": "repo/source/AJbook.cls",
+          "bytes": 13780,
+          "sha256": "f35dbe8942a880dfe70c072bcfe0491d8cc83f562c28a481b949ca4cc84f0b04"
+        },
+        {
+          "path": "repo/source/titles-setup-id.tex",
+          "bytes": 329,
+          "sha256": "db020adff03242f1f2fe8bcb6ec74b6072d9db6bd44971caadde3ce231a51f1b"
+        },
+        {
+          "path": "repo/source/locale-ui-id.tex",
+          "bytes": 2972,
+          "sha256": "9d6c6aa162d11ce8f491703f640a808cdcf61280b300f22032d4caaa0035f3b9"
+        },
+        {
+          "path": "repo/source/titles-setup.tex",
+          "bytes": 6274,
+          "sha256": "f5a81e5ec9f0f2023b93d9b713f0bdc18171a1505863f44a15d65c8757eeadf7"
+        },
+        {
+          "path": "repo/source/mycommand.sty",
+          "bytes": 5925,
+          "sha256": "4d8cdc54597197b8d207cec69fc9af93f9b02c49628e77ab1e9a6d046275d9bc"
+        },
+        {
+          "path": "repo/source/myarrows.sty",
+          "bytes": 3650,
+          "sha256": "59ff5dc0d470674894c5369f6ee79442b71ce08fc02433be7c58387f9a684dd4"
+        },
+        {
+          "path": "repo/source/ccby.png",
+          "bytes": 12588,
+          "sha256": "633aae44a5d5b8915debc82f56a8e05c1b62b567b1aefeabc18617b81d8a04a9"
+        },
+        {
+          "path": "repo/source/unit-007-crossrefs.aux",
+          "bytes": 233,
+          "sha256": "ffebaaea98b3088dc9445182d0a0ec0edaf12f4f40491d4b6ed5491b6fc0110e"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Black.otf",
+          "bytes": 17797908,
+          "sha256": "2267c4a0312d267dff8c0d1609948f7d949a3da8be3e126f5e2690cb9cc883b4"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Medium.otf",
+          "bytes": 16523632,
+          "sha256": "ca094f6b0001fb048ca39ddd797a0cdb0179e1e55c6561e111c49c3e6a61d7b7"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Regular.otf",
+          "bytes": 16437364,
+          "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+        },
+        {
+          "path": "repo/fonts/NotoSerifCJKsc-Bold.otf",
+          "bytes": 25521460,
+          "sha256": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73"
+        }
+      ],
+      "external_dependencies": [
+        "XeLaTeX",
+        "PowerShell 7",
+        "makeindex (default and sym1 indexes)",
+        "Fandol fonts from TeX distribution",
+        "TeX Gyre Heros",
+        "packages loaded by unit-007-bab-1-latihan.tex and AJbook.cls"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+        "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+        "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430"
+      ]
+    }
+  ],
+  "qa_events": [
+    {
+      "id": "urn:uuid:422b25db-9974-590f-89ed-aa98d5c17321",
+      "stable_key": "qa/unit-007/admission-gate",
+      "entity_type": "qa_event",
+      "unit_id": "urn:uuid:ea5bcda3-9f4b-58ba-8258-348e2e1b88e4",
+      "check_type": "admission_gate",
+      "result": "pass",
+      "scope": "Complete source-order translation and independent audit for chapter1.tex lines 508-536; documented correction O013-LI-U007-COR-001 repairing the source's type error at line 519 by taking delta to be the order type of the displayed well-ordered tail; schema and stable-ID integrity; live inclusive line-span hashes; six top-level exercises, six enumerated subparts, six source hints, and twelve total item tokens preserved in the target; deterministic compatibility IDs for every exercise, subpart, and hint with each subpart and hint linked to its parent exercise; zero citations, diagrams, index entries, answers, or solutions; component-rights preservation; localized Indonesian reader interface; standalone digital reflow; two clean builds; structural PDF checks; and all-page MuPDF and Poppler visual inspection. Backend v1.1.0 lacks first-class exercise and hint arrays, so the six exercises are encoded as ordered section entities and the six subparts plus six hints as stable concept entities; scalar exercise and hint surface counts remain zero solely for current validator compatibility.",
+      "witness": "qa/UNIT_007_ADMISSION_20260822.md",
+      "translation_audit_state": "pass",
+      "build_state": "pass",
+      "visual_state": "pass",
+      "witness_binding": {
+        "path": "qa/UNIT_007_ADMISSION_20260822.md",
+        "bytes": 7225,
+        "sha256": "eadece8bd1f53c630d76c24e519feb3bd515411a51ae114efae671384d6f23ee"
+      }
+    }
+  ]
+}

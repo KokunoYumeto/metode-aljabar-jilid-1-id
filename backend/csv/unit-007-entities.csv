@@ -1,0 +1,57 @@
+entity_type,id,stable_key,parent_id,order,label_id,status
+build_surface,urn:uuid:87d62f93-933b-5bb7-b0ec-3972438b2b6b,build-surface/unit-007-pdf,urn:uuid:ea5bcda3-9f4b-58ba-8258-348e2e1b88e4,,unit-007-pdf,pass
+concept,urn:uuid:9a92b6cb-ab0c-54f9-b0ad-ecb97dd0341f,concept/cantor-normal-form,,,bentuk normal Cantor,admitted:admitted
+concept,urn:uuid:9913da36-b9b8-50b5-aa46-7bf7ebf79b5e,concept/cantor-theorem,,,teorema Cantor,admitted:admitted
+concept,urn:uuid:5c7eaaa4-f2b6-5406-b14b-45bddce8a4dd,concept/cardinal-product,,,hasil kali kardinal,admitted:admitted
+concept,urn:uuid:b94ea0c6-56af-595c-b651-c81e95a13095,concept/cardinal-sum,,,jumlah kardinal,admitted:admitted
+concept,urn:uuid:ee0127a6-56b2-5296-aee9-5c592e0ee1b3,concept/diagonal-argument,,,argumen diagonal,admitted:admitted
+concept,urn:uuid:d5df6f66-6b77-55d6-bbf6-bc4d0a4b5ae3,concept/konig-lemma-cardinals,,,lema König untuk kardinal,admitted:admitted
+concept,urn:uuid:e88e0a52-5468-5122-8b90-21738e9c18e2,concept/natural-number-pairing-bijection,,,pengodean bijektif pasangan bilangan cacah,admitted:admitted
+concept,urn:uuid:c852dcda-6390-5d25-afb3-351b8385a53e,concept/noncommutative-ordinal-multiplication,,,ketidakkomutatifan perkalian ordinal,admitted:admitted
+concept,urn:uuid:07ee2ab8-f12a-57f2-b3d7-ccaf926162cd,concept/ordered-sum,,,jumlah terurut,admitted:admitted
+concept,urn:uuid:38e39a7a-bdbf-5da4-98ad-1eeed5884efe,concept/ordinal-addition,,,penjumlahan ordinal,admitted:admitted
+concept,urn:uuid:de3f0d32-d26c-5f33-941b-7ae2980922ff,concept/ordinal-division-with-remainder,,,pembagian ordinal dengan sisa,admitted:admitted
+concept,urn:uuid:965fcb4e-99a1-571e-ab07-13d4327d16ec,concept/ordinal-exponentiation,,,perpangkatan ordinal,admitted:admitted
+concept,urn:uuid:8a65f0cc-f226-5ebc-8345-f9051f27a659,concept/ordinal-multiplication,,,perkalian ordinal,admitted:admitted
+concept,urn:uuid:419a23a0-bd63-5d10-a6f9-c62f8f6f511c,concept/reverse-lexicographic-order,,,urutan leksikografis terbalik,admitted:admitted
+concept,urn:uuid:889220fa-9315-533a-b711-3a8e0a79b19d,concept/transfinite-induction,,,induksi transfinit,admitted:admitted
+concept,urn:uuid:5ab5de0b-f355-59d2-a8fb-d384565e8bfd,unit/bab-1-latihan/exercise/01/hint/01,,,Petunjuk Latihan 1,admitted:admitted
+concept,urn:uuid:5951a534-d8d8-5254-8aa8-bcb6d5243e7b,unit/bab-1-latihan/exercise/01/subpart/i,,,Latihan 1(i),admitted:admitted
+concept,urn:uuid:7a04579f-e603-5096-a00b-61562d327bb5,unit/bab-1-latihan/exercise/01/subpart/ii,,,Latihan 1(ii),admitted:admitted
+concept,urn:uuid:2f406ce6-5240-51b1-91aa-c569eb72314c,unit/bab-1-latihan/exercise/02/subpart/i,,,Latihan 2(i),admitted:admitted
+concept,urn:uuid:4b7e0cdc-538c-5cc6-9901-485421d51fe4,unit/bab-1-latihan/exercise/02/subpart/ii,,,Latihan 2(ii),admitted:admitted
+concept,urn:uuid:6b8af36c-3b10-54e8-91df-76e49924a323,unit/bab-1-latihan/exercise/02/subpart/ii/hint/01,,,Petunjuk Latihan 2(ii),admitted:admitted
+concept,urn:uuid:e3d5f12e-52fc-53a8-ad5a-a717fa06f37f,unit/bab-1-latihan/exercise/02/subpart/iii,,,Latihan 2(iii),admitted:admitted
+concept,urn:uuid:b042893d-0435-544a-9736-9acfc95d7d8c,unit/bab-1-latihan/exercise/02/subpart/iii/hint/01,,,Petunjuk Latihan 2(iii),admitted:admitted
+concept,urn:uuid:b3f80245-c185-59ed-a214-ba97c89391e5,unit/bab-1-latihan/exercise/02/subpart/iv,,,Latihan 2(iv),admitted:admitted
+concept,urn:uuid:f438f38e-edeb-5863-8a52-14f76e9ccf62,unit/bab-1-latihan/exercise/03/hint/01,,,Petunjuk Latihan 3,admitted:admitted
+concept,urn:uuid:14e8ea64-bed2-50b0-a35e-e511d0d2173d,unit/bab-1-latihan/exercise/04/hint/01,,,Petunjuk Latihan 4,admitted:admitted
+concept,urn:uuid:ae64b5dd-3d71-51f0-b9ab-3f949a8a5fd7,unit/bab-1-latihan/exercise/06/hint/01,,,Petunjuk Latihan 6,admitted:admitted
+course,urn:uuid:a5f3ad58-ce3c-5f5f-b581-1f842ae79192,course/o013,urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78,,Graduate Algebra,admitted:admitted
+edition,urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49,edition/wenweili/aljabr-1/c4f7a01f68f5f407906b4b970640cddbbad85f6b,urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397,,c4f7a01f68f5f407906b4b970640cddbbad85f6b,admitted:admitted
+prerequisite,urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7,prerequisite/basic-mathematical-literacy,,,kematangan matematika dasar,admitted:admitted
+prerequisite,urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f,prerequisite/cauchy-sequences-and-completeness,,,barisan Cauchy dan kelengkapan,admitted:admitted
+prerequisite,urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee,prerequisite/elementary-number-theory,,,teori bilangan elementer,admitted:admitted
+prerequisite,urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4,prerequisite/elementary-set-theory,,,teori himpunan elementer,admitted:admitted
+prerequisite,urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec,prerequisite/linear-transformations,,,transformasi linear,admitted:admitted
+prerequisite,urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7,prerequisite/mathematical-logic,,,bahasa logika dan penalaran,admitted:admitted
+prerequisite,urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288,prerequisite/matrices,,,matriks,admitted:admitted
+prerequisite,urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8,prerequisite/permutations-and-symmetric-groups,,,permutasi dan grup simetris,admitted:admitted
+prerequisite,urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96,prerequisite/point-set-topology,,,topologi himpunan titik elementer,admitted:admitted
+prerequisite,urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14,prerequisite/polynomials,,,polinom,admitted:admitted
+prerequisite,urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f,prerequisite/real-analysis-basics,,,dasar-dasar analisis real,admitted:admitted
+prerequisite,urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396,prerequisite/vector-spaces,,,ruang vektor,admitted:admitted
+program,urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78,program/open-mathematics-curriculum/2026,,,Open Mathematics Curriculum,admitted:admitted
+qa_event,urn:uuid:422b25db-9974-590f-89ed-aa98d5c17321,qa/unit-007/admission-gate,urn:uuid:ea5bcda3-9f4b-58ba-8258-348e2e1b88e4,,admission-gate,pass
+resource,urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397,resource/wenweili/aljabr-1,,,"Metode Aljabar, Jilid 1: Arsitektur Dasar",admitted:admitted
+rights,urn:uuid:10faf5cd-990f-5850-87b4-26922b062485,rights/ajbook-fragment-cc-by-sa-3.0,,,AJbook.cls DeclareSourcemap fragment,applies
+rights,urn:uuid:e18339ae-66cd-5304-b544-b220dd41380d,rights/lanzhou-cc-by-sa-3.0,,,Lanzhou.png,retained_not_used_by_unit
+rights,urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430,rights/noto-fonts-ofl-1.1,,,Noto Sans CJK SC and Noto Serif CJK SC fonts,applies
+rights,urn:uuid:0baf6c47-021d-5310-9475-81519e710250,rights/principal-cc-by-4.0,,,"Principal text, source, PDF, and Indonesian translation",applies
+section,urn:uuid:497aa4c5-8cf1-5350-99d4-424a80b423e6,unit/bab-1-latihan/exercise/01,urn:uuid:ea5bcda3-9f4b-58ba-8258-348e2e1b88e4,1,Latihan 1: Tipe Urutan Penjumlahan dan Perkalian Ordinal,admitted:admitted
+section,urn:uuid:a3a9b52e-4391-53f9-8dae-1323b270f405,unit/bab-1-latihan/exercise/02,urn:uuid:ea5bcda3-9f4b-58ba-8258-348e2e1b88e4,2,Latihan 2: Sifat-Sifat Operasi Ordinal,admitted:admitted
+section,urn:uuid:c84039bf-e817-5d7f-b075-4da3fbb02e24,unit/bab-1-latihan/exercise/03,urn:uuid:ea5bcda3-9f4b-58ba-8258-348e2e1b88e4,3,Latihan 3: Ketidakkomutatifan Perkalian Ordinal,admitted:admitted
+section,urn:uuid:dad70e1c-d5b5-5833-b304-fcd986ab4304,unit/bab-1-latihan/exercise/04,urn:uuid:ea5bcda3-9f4b-58ba-8258-348e2e1b88e4,4,Latihan 4: Bentuk Normal Cantor,admitted:admitted
+section,urn:uuid:cff8499e-dc04-507b-aa73-8b3506cf3c10,unit/bab-1-latihan/exercise/05,urn:uuid:ea5bcda3-9f4b-58ba-8258-348e2e1b88e4,5,Latihan 5: Pengodean Bijektif Pasangan Bilangan Cacah,admitted:admitted
+section,urn:uuid:18470c4e-f06d-501e-8282-3504088311d8,unit/bab-1-latihan/exercise/06,urn:uuid:ea5bcda3-9f4b-58ba-8258-348e2e1b88e4,6,Latihan 6: Lema König dan Teorema Cantor,admitted:admitted
+unit,urn:uuid:ea5bcda3-9f4b-58ba-8258-348e2e1b88e4,unit/bab-1-latihan,urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49,7,Bab 1: Latihan,admitted:admitted

@@ -1,0 +1,67 @@
+Unit 007 admitted build summary
+Date: 2026-08-22
+Frozen source range: chapter1.tex lines 508-536
+Driver: repo/source/unit-007-bab-1-latihan.tex
+Build command: pwsh -NoProfile -File scripts/build_unit_007.ps1 -OutputDirectory build/unit-007-final-r3-id
+Admitted artifact: artifacts/unit-007-bab-1-latihan.pdf
+PDF pages: 4
+PDF bytes: 100435
+PDF SHA-256: e7d4d6745f88b56c7ef840499c8e1d759b2bbbc14a245e8fc477fb0a6504a2b1
+Full build log: qa/UNIT_007_BUILD_FINAL.log
+Build-log bytes: 79993
+Build-log SHA-256: 853e06d6f385c61427f6c785ae6469f561dc9fd9fb1013fea0907aa3cbe6c554
+
+Clean comparison build: build/unit-007-final-r4-id/unit-007-bab-1-latihan.pdf
+Comparison PDF bytes: 100428
+Comparison PDF SHA-256: 0c4ab3f05d7e7f0be87e017e01dc72cada33c4a55eac855f3912a89939e72912
+Comparison log bytes: 79993
+Comparison log SHA-256: b4756b9763b10a638c43d6eeae67255976159239c092e9f556d548b28d7c7e3a
+
+TeX errors: 0
+Undefined references/citations: 0
+Overfull hboxes: 0
+Overfull vboxes: 0
+Missing characters: 0
+Duplicate destinations: 0
+Underfull hboxes: 1 (accepted inherited cover-page alignment at cover lines 85-91)
+Underfull vboxes: 0
+
+Rendered-content replay: pass. The admitted and post-polish comparison PDF containers are
+not byte-identical, but Poppler and MuPDF each produced four pairwise
+byte-identical 144-dpi page PNGs. Extracted semantic text, metadata, outline,
+named destinations, annotations, and corrected `König` keyword metadata are also equal.
+
+Poppler page SHA-256 values:
+1 c63b891cc4e1953715c57dbdc43009d5f217d6b47fa627fe8b89998d63fe57f5
+2 ed9c0d56949eb0a8435b81a966574c5edf81130e50b5d564edceddc753ee8799
+3 132d7f0e0a6bd368e341c93ea9f039de32f094c7063dada9bf443290a1c69946
+4 255addef93054f4ac54962ca51aa4cd699504a05b9b2da0ccf78d825e2451433
+
+MuPDF page SHA-256 values:
+1 ca2c380d51e9cd97f4792f800c1598ce721080335cbc151df5814c250022ee03
+2 fc7204bc626d76914c76bc83472a1d0889d2cb902abb773459ec709fd5d7ab26
+3 e8346f4cfb4355964686b34d34d1d6ed17cdb5e8d0d691190d54f65e5565e81a
+4 2a6b2f0996516bb394b1d0f91c19b5017c91e3f15901d6d5f8e6dd4e8ba0c8c2
+
+Visual review: all four pages were inspected in both Poppler and MuPDF. The
+cover and rights notice are complete; both exercise pages use the available
+text width without clipping, collision, missing glyphs, or unreadable content;
+all six Petunjuk surfaces are visually distinct; and there are no blank pages.
+The standalone digital reader intentionally omits a sparse one-page print-style
+contents surface and empty bibliography/index surfaces. Its two-entry PDF
+outline retains chapter and exercise navigation.
+
+PDF structure: unencrypted PDF 1.7; catalog language id-ID; four nonblank
+pages; two outline entries; seventeen named destinations; three intentional
+URI link annotations; no forms, widgets, embedded files, JavaScript, GoToR, or
+Launch actions; ordinary page-fit OpenAction; zero Han, replacement, or NUL
+characters in extracted text. With `pdftotext -layout -enc UTF-8`, the
+extracted-text SHA-256 is
+ec47f4adfc0cdb1efa1328774bdff6d5d24b8e0d7f2e22298c2da4961520721e.
+
+Fonts: pdffonts reports 27/27 fonts embedded and subset. Twenty-six expose a
+ToUnicode mapping; the sole exception is the subset CMMI9 mathematics font.
+All mathematical and Indonesian text extracted coherently and rendered
+correctly in both engines. Accessibility limitation: the inherited source
+pipeline still emits an untagged PDF; correct id-ID metadata does not make it
+a tagged accessible document.
