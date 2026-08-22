@@ -1,0 +1,53 @@
+entity_type,id,stable_key,parent_id,order,label_id,status
+build_surface,urn:uuid:09603339-2736-58ad-a2bf-7d6954e2ab77,build-surface/unit-005-pdf,urn:uuid:0c28f7f3-2695-5fa3-bd38-84fb12c5f901,,unit-005-pdf,pass
+citation,urn:uuid:16d41363-ee55-5b49-9126-2aea6b35da2c,citation/je03,urn:uuid:aed73438-c353-540f-b013-46007941a91f,,Je03,admitted:admitted
+concept,urn:uuid:6d8bf070-3139-5f0e-9be2-28df2588b6ba,concept/aleph-hierarchy,,,hierarki bilangan alef,admitted:admitted
+concept,urn:uuid:2a373153-1a0c-52be-86aa-088b83b3bfc6,concept/canonical-well-order-on-ordinal-pairs,,,urutan baik kanonik pada pasangan ordinal,admitted:admitted
+concept,urn:uuid:9913da36-b9b8-50b5-aa46-7bf7ebf79b5e,concept/cantor-theorem,,,teorema Cantor,admitted:admitted
+concept,urn:uuid:a851cd65-b636-5b38-8aa8-5e5f33071340,concept/cardinal-arithmetic,,,aritmetika kardinal,admitted:admitted
+concept,urn:uuid:f8518119-7019-5a04-ab79-92e53dc85b7f,concept/cardinal-as-initial-ordinal,,,kardinal sebagai ordinal awal,admitted:admitted
+concept,urn:uuid:587fecc1-c428-5c32-a93a-fa506f401f47,concept/cardinal-supremum,,,supremum kardinal,admitted:admitted
+concept,urn:uuid:c2007bc7-e3a6-5d4e-ae12-a1742f73049e,concept/continuum,,,kontinuum,admitted:admitted
+concept,urn:uuid:3bcf4e49-eafe-505d-9a01-6c5d6ce211e3,concept/continuum-hypothesis,,,hipotesis kontinuum,admitted:admitted
+concept,urn:uuid:fab582e0-365c-5cc4-8f6f-ad3163855fd1,concept/continuum-hypothesis-independence,,,independensi hipotesis kontinuum,admitted:admitted
+concept,urn:uuid:38490c99-c776-5562-aa10-d1320c072231,concept/countable-and-uncountable-sets,,,himpunan terhitung dan tak terhitung,admitted:admitted
+concept,urn:uuid:d87e1975-2672-5912-8d4f-557cd45a5ab8,concept/equipollence,,,ekuipotensi,admitted:admitted
+concept,urn:uuid:afc5b608-76e0-533d-bc85-3eed5b51e2c2,concept/infinite-cardinal-arithmetic,,,aritmetika kardinal tak hingga,admitted:admitted
+concept,urn:uuid:0efabae1-9bd4-520a-91cf-37bfff002181,concept/infinite-cardinal-sum-and-product,,,jumlah dan hasil kali kardinal tak hingga,admitted:admitted
+concept,urn:uuid:27bc57ea-6662-5c68-b1f1-b67e57cd9c82,concept/regular-cardinal,,,kardinal reguler,admitted:admitted
+concept,urn:uuid:753f3252-3849-5214-ae50-3434b260b4f2,concept/schroeder-bernstein-theorem,,,teorema Schröder--Bernstein,admitted:admitted
+course,urn:uuid:a5f3ad58-ce3c-5f5f-b581-1f842ae79192,course/o013,urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78,,Graduate Algebra,admitted:admitted
+diagram,urn:uuid:c4dfdd8a-478a-50e2-ae6a-20748d20a550,diagram/aleph-zero-square-axes,urn:uuid:12d80325-f84b-5ade-90aa-8ede1682fee3,2,aleph-zero-square-axes,admitted:admitted
+diagram,urn:uuid:0d9988a3-3dec-52fe-86dd-d3e1cf9ebd6e,diagram/aleph-zero-square-enumeration,urn:uuid:12d80325-f84b-5ade-90aa-8ede1682fee3,1,aleph-zero-square-enumeration,admitted:admitted
+edition,urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49,edition/wenweili/aljabr-1/c4f7a01f68f5f407906b4b970640cddbbad85f6b,urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397,,c4f7a01f68f5f407906b4b970640cddbbad85f6b,admitted:admitted
+index_entry,urn:uuid:fecb7968-b8d9-530e-86a5-747e32d39be8,index-entry/unit-005/aleph-symbol,urn:uuid:dccb3728-7233-5f98-807d-a2ad83c099b4,4,aleph-symbol,admitted:admitted
+index_entry,urn:uuid:70e0535d-bc4d-5077-b940-b1cdf07d4e9f,index-entry/unit-005/cardinal,urn:uuid:dccb3728-7233-5f98-807d-a2ad83c099b4,2,cardinal,admitted:admitted
+index_entry,urn:uuid:2b8d0f6e-1c6f-55e8-9190-7611f644530e,index-entry/unit-005/countable-set,urn:uuid:dccb3728-7233-5f98-807d-a2ad83c099b4,3,countable-set,admitted:admitted
+index_entry,urn:uuid:31f3e70c-e713-5a52-8ff8-b0107662c7e9,index-entry/unit-005/equipollence,urn:uuid:eb7b4872-39fd-53b4-86bc-58e9c452202b,1,equipollence,admitted:admitted
+index_entry,urn:uuid:252a70b9-04de-564d-94e1-b53310160c44,index-entry/unit-005/regular-cardinal,urn:uuid:13229aaa-f365-5106-be4b-606af24c63f0,5,regular-cardinal,admitted:admitted
+prerequisite,urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7,prerequisite/basic-mathematical-literacy,,,kematangan matematika dasar,admitted:admitted
+prerequisite,urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f,prerequisite/cauchy-sequences-and-completeness,,,barisan Cauchy dan kelengkapan,admitted:admitted
+prerequisite,urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee,prerequisite/elementary-number-theory,,,teori bilangan elementer,admitted:admitted
+prerequisite,urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4,prerequisite/elementary-set-theory,,,teori himpunan elementer,admitted:admitted
+prerequisite,urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec,prerequisite/linear-transformations,,,transformasi linear,admitted:admitted
+prerequisite,urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7,prerequisite/mathematical-logic,,,bahasa logika dan penalaran,admitted:admitted
+prerequisite,urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288,prerequisite/matrices,,,matriks,admitted:admitted
+prerequisite,urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8,prerequisite/permutations-and-symmetric-groups,,,permutasi dan grup simetris,admitted:admitted
+prerequisite,urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96,prerequisite/point-set-topology,,,topologi himpunan titik elementer,admitted:admitted
+prerequisite,urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14,prerequisite/polynomials,,,polinom,admitted:admitted
+prerequisite,urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f,prerequisite/real-analysis-basics,,,dasar-dasar analisis real,admitted:admitted
+prerequisite,urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396,prerequisite/vector-spaces,,,ruang vektor,admitted:admitted
+program,urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78,program/open-mathematics-curriculum/2026,,,Open Mathematics Curriculum,admitted:admitted
+qa_event,urn:uuid:7186f225-fb83-57af-9b70-689f622d7f05,qa/unit-005/admission-gate,urn:uuid:0c28f7f3-2695-5fa3-bd38-84fb12c5f901,,admission-gate,pass
+resource,urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397,resource/wenweili/aljabr-1,,,"Metode Aljabar, Jilid 1: Arsitektur Dasar",admitted:admitted
+rights,urn:uuid:10faf5cd-990f-5850-87b4-26922b062485,rights/ajbook-fragment-cc-by-sa-3.0,,,AJbook.cls DeclareSourcemap fragment,applies
+rights,urn:uuid:e18339ae-66cd-5304-b544-b220dd41380d,rights/lanzhou-cc-by-sa-3.0,,,Lanzhou.png,retained_not_used_by_unit
+rights,urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430,rights/noto-fonts-ofl-1.1,,,Noto Sans CJK SC and Noto Serif CJK SC fonts,applies
+rights,urn:uuid:0baf6c47-021d-5310-9475-81519e710250,rights/principal-cc-by-4.0,,,"Principal text, source, PDF, and Indonesian translation",applies
+section,urn:uuid:12d80325-f84b-5ade-90aa-8ede1682fee3,unit/bab-1-kardinal/section/canonical-well-order-and-infinite-cardinal-arithmetic,urn:uuid:0c28f7f3-2695-5fa3-bd38-84fb12c5f901,5,Urutan Baik Kanonik dan Aritmetika Kardinal Tak Hingga,admitted:admitted
+section,urn:uuid:aed73438-c353-540f-b013-46007941a91f,unit/bab-1-kardinal/section/cardinal-arithmetic-and-cantor,urn:uuid:0c28f7f3-2695-5fa3-bd38-84fb12c5f901,2,Aritmetika Kardinal dan Teorema Cantor,admitted:admitted
+section,urn:uuid:dccb3728-7233-5f98-807d-a2ad83c099b4,unit/bab-1-kardinal/section/cardinal-representatives-and-alephs,urn:uuid:0c28f7f3-2695-5fa3-bd38-84fb12c5f901,3,Wakil Kardinal dan Bilangan Alef,admitted:admitted
+section,urn:uuid:5ce07f6e-7a6e-5434-8313-7be32b972b13,unit/bab-1-kardinal/section/continuum-and-continuum-hypothesis,urn:uuid:0c28f7f3-2695-5fa3-bd38-84fb12c5f901,4,Kontinuum dan Hipotesis Kontinuum,admitted:admitted
+section,urn:uuid:eb7b4872-39fd-53b4-86bc-58e9c452202b,unit/bab-1-kardinal/section/equipollence-and-schroeder-bernstein,urn:uuid:0c28f7f3-2695-5fa3-bd38-84fb12c5f901,1,Ekuipotensi dan Teorema Schröder--Bernstein,admitted:admitted
+section,urn:uuid:13229aaa-f365-5106-be4b-606af24c63f0,unit/bab-1-kardinal/section/regular-cardinals,urn:uuid:0c28f7f3-2695-5fa3-bd38-84fb12c5f901,6,Kardinal Reguler,admitted:admitted
+unit,urn:uuid:0c28f7f3-2695-5fa3-bd38-84fb12c5f901,unit/bab-1-kardinal,urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49,5,Bab 1: Teori Himpunan; Bilangan Kardinal,admitted:admitted

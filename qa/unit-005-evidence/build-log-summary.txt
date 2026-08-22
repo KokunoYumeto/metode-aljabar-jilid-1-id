@@ -1,0 +1,40 @@
+Unit 005 admitted build summary
+Date: 2026-08-22
+Toolchain: MiKTeX 26.5 XeLaTeX; Biber 2.21; MakeIndex for the default and sym1 indexes; four XeLaTeX passes total
+Shell escape: disabled
+SOURCE_DATE_EPOCH: 1787356800
+Digital reflow: target-only cleardoublepage-to-clearpage mapping; no print-only blank verso pages
+Interface localization: Indonesian theorem, proof, example, lemma, bibliography, back-reference, and index labels
+Frozen source range: chapter1.tex lines 289-434
+Frozen source span bytes: 11170
+Frozen source span SHA-256: fa1fec18021ed96b4fcbcbbf4e887741c566862fa2b7d407059b2c4b89bff518
+Target span bytes: 13786
+Target span SHA-256: 57a5051ca741afdeb2d1e9c88413908442844b7eadff5a464fa79e453dc683af
+Protected topology: 163 normalized inline math fragments, 27 balanced environments, 10 labels, 6 reference occurrences, 1 citation, 5 index entries, 7 item tokens, 2 TikZ pictures; source and target match
+Editorial correction: O013-LI-U005-COR-001 repairs the reversed Gödel/Cohen attribution at source line 379
+Editorial clarification: O013-LI-U005-CLR-001 makes the implicit composed injection explicit at source line 304
+PDF pages: 12
+PDF bytes: 128556
+PDF SHA-256: 232d41f4e7f03123818ae14272958c8269242ebcbec68b832aaaf7ba295ebf3e
+Raw final log bytes: 87065
+Raw final log SHA-256: 9292dfda9928a49fd397f0e44fa7e57a2d8a7cce40f6038bd61f8b8608b04f63
+TeX errors: 0
+Undefined control sequences: 0
+Undefined citations: 0
+Undefined references: 0
+Duplicate destinations: 0
+Missing characters: 0
+Overfull box notices: 0
+Underfull hbox notices: 1, cover attribution table, visually acceptable
+Underfull vbox notices: 1, natural section-ending whitespace, visually acceptable
+Suppressed empty-target link notices: 2, intentional standalone cross-unit reference behavior; visible reference numbers are correct
+PDF structure: id-ID; 12 nonblank pages; 6 outline entries; 42 named destinations; 17 GoTo and 3 URI actions; no GoToR, Launch, JavaScript, form, or encryption
+Text checks: zero literal ??; zero replacement characters; zero Han residue; zero NUL; standard Lema heading; Indonesian bibliography back-reference
+Replay PDF bytes: 128553
+Replay PDF SHA-256: 1e6770a30e0872a581235e5fd8a1a9f98cbdb90d15ec3488018eb018b7920342
+Raw replay log bytes: 87074
+Raw replay log SHA-256: d90073eba3ce06685a466a6a9c3faf9c932ad9c423973726d6775336ee66243f
+Replay result: 12 of 12 MuPDF pages pixel-identical to the admitted PDF at 144 dpi
+Visual review: all 12 MuPDF and all 12 Poppler pages inspected; no clipping, collision, missing glyph, unreadable text, unintended blank page, or broken formula
+Accessibility limitation: the PDF remains untagged and has no structure tree; this is an inherited open lane-level limitation, not a hidden pass claim
+Raw build logs and page renders remain local; this portable summary omits machine-specific absolute paths.

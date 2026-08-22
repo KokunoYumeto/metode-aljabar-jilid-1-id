@@ -55,10 +55,14 @@ appear in its standalone digital reader. The corrected artifact is 12 pages,
 Two clean builds produced 12/12 pixel-identical MuPDF pages.
 
 Unit 003 uses the same pinned shell-escape-disabled procedure and target-only
-interface layer. Its admitted artifact is 11 pages, 147,784 bytes, SHA-256
-`67f3b0594f65917cf78361886aef6616c0875bc584a95758f06e4d11b182082c`.
-Two clean builds produced 11/11 pixel-identical MuPDF pages. Neither unit claims
-byte-identical XeTeX PDF-container serialization across output directories.
+interface layer. Its portability-corrected admitted artifact is 11 pages,
+134,858 bytes, SHA-256
+`031e231bc5d2ac74cada865700d8f76dda327941c7f442e6d47324b848103df8`.
+The unit now uses the bundled Noto CJK closure for its intentional Chinese
+bibliography metadata, standard Indonesian `Lema`, and Indonesian bibliography
+back-reference strings. Two clean builds produced 11/11 pixel-identical MuPDF
+pages. Neither unit claims byte-identical XeTeX PDF-container serialization
+across output directories.
 
 Unit 004 uses the same target-only digital reflow and a shell-escape-disabled
 XeLaTeX/MakeIndex procedure. Its admitted artifact is 8 pages, 107,332 bytes,
@@ -66,5 +70,14 @@ SHA-256
 `e48aa97d15ad9c192df5d744bfc8290fc816c4b681322295352517a02e267c13`.
 Two clean builds produced 8/8 pixel-identical MuPDF pages at 144 dpi. MuPDF and
 Poppler rendered every page without clipping, collision, blank pages, or
+missing glyphs. The PDF container hashes differ across output directories, so
+only deterministic rendered content is claimed.
+
+Unit 005 uses the same target-only digital reflow, bundled Noto CJK closure,
+and shell-escape-disabled XeLaTeX/MakeIndex procedure. Its admitted artifact is
+12 pages, 128,556 bytes, SHA-256
+`232d41f4e7f03123818ae14272958c8269242ebcbec68b832aaaf7ba295ebf3e`.
+Two clean builds produced 12/12 pixel-identical MuPDF pages at 144 dpi. MuPDF
+and Poppler rendered every page without clipping, collision, blank pages, or
 missing glyphs. The PDF container hashes differ across output directories, so
 only deterministic rendered content is claimed.

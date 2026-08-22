@@ -225,7 +225,7 @@ def main() -> None:
         "unit_id": unit_id,
         "check_type": "admission_gate",
         "result": "pass",
-        "scope": "Complete source-order translation and semantic audit for chapter1.tex lines 87-203; schema and stable-ID integrity; live inclusive line-span hashes; three unique citations; ten labels and two protected forward references; sixteen brace-aware index entries (twelve default and four sym1); zero diagrams/exercises/hints/answers/solutions; localized Indonesian theorem interface; 11-page standalone digital reflow; two clean builds; structural PDF checks; and all-page visual inspection.",
+        "scope": "Complete source-order translation and semantic audit for chapter1.tex lines 87-203; schema and stable-ID integrity; live inclusive line-span hashes; three unique citations; ten labels and two protected forward references; sixteen brace-aware index entries (twelve default and four sym1); zero diagrams/exercises/hints/answers/solutions; standard Indonesian Lema heading; Indonesian bibliography back-references; bundled-Noto rendering of retained Chinese bibliography metadata; 11-page standalone digital reflow; two clean builds; structural PDF checks; and all-page MuPDF/Poppler visual inspection.",
         "witness": "qa/UNIT_003_ADMISSION_20260822.md",
         "translation_audit_state": "pass",
         "build_state": "pass",

@@ -4,8 +4,9 @@ This directory contains the language-neutral, hash-bound backend for the O013
 edition. Canonical records for the admitted reader units are
 `data/unit-001-pendahuluan.json`, `data/unit-002-bab-1-zfc.json`,
 `data/unit-003-bab-1-struktur-urutan-dan-ordinal.json`, and
-`data/unit-004-bab-1-rekursi-transfinit-dan-penerapannya.json`; files in `csv/` are
-deterministic projections, not independent sources of truth.
+`data/unit-004-bab-1-rekursi-transfinit-dan-penerapannya.json`, and
+`data/unit-005-bab-1-kardinal.json`; files in `csv/` are deterministic
+projections, not independent sources of truth.
 
 ## Identity model
 
@@ -30,7 +31,7 @@ file identity is retained as the admission-time witness while the normalized
 span is the live integrity boundary. Later translation outside an admitted
 span therefore cannot invalidate the earlier unit.
 
-Units 001, 002, 003, and 004 are `admitted` and `visually_checked`. Admission
+Units 001 through 005 are `admitted` and `visually_checked`. Admission
 requires passing translation, build, and visual states plus bound reader,
 build-summary, build script, and QA-receipt evidence. A green backend
 validation proves that the schema, identities, references, order, hashes,
@@ -47,10 +48,12 @@ python -B scripts/validate_backend.py --data backend/data/unit-001-pendahuluan.j
 python -B scripts/validate_backend.py --data backend/data/unit-002-bab-1-zfc.json --write-csv
 python -B scripts/validate_backend.py --data backend/data/unit-003-bab-1-struktur-urutan-dan-ordinal.json --write-csv
 python -B scripts/validate_backend.py --data backend/data/unit-004-bab-1-rekursi-transfinit-dan-penerapannya.json --write-csv
+python -B scripts/validate_backend.py --data backend/data/unit-005-bab-1-kardinal.json --write-csv
 python -B scripts/validate_backend.py --data backend/data/unit-001-pendahuluan.json
 python -B scripts/validate_backend.py --data backend/data/unit-002-bab-1-zfc.json
 python -B scripts/validate_backend.py --data backend/data/unit-003-bab-1-struktur-urutan-dan-ordinal.json
 python -B scripts/validate_backend.py --data backend/data/unit-004-bab-1-rekursi-transfinit-dan-penerapannya.json
+python -B scripts/validate_backend.py --data backend/data/unit-005-bab-1-kardinal.json
 ```
 
 Each command with `--write-csv` validates one canonical JSON record and then
@@ -62,7 +65,8 @@ unresolved references, unordered sections, citation/ref drift, diagram-count
 drift, index-key drift, and stale projections.
 
 `scripts/generate_unit_003_backend.py` and
-`scripts/generate_unit_004_backend.py` reconstruct their units' canonical JSON
+`scripts/generate_unit_004_backend.py` and
+`scripts/generate_unit_005_backend.py` reconstruct their units' canonical JSON
 from reviewed source/target spans, artifacts, build inputs, and bound QA
 evidence. They are deterministic for unchanged admitted inputs; rerun one only
 when intentionally re-admitting that exact unit boundary.

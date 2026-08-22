@@ -1,0 +1,1459 @@
+{
+  "$schema": "../schema/open-math-corpus-unit.schema.v1.json",
+  "schema_name": "open-math-corpus-unit",
+  "schema_version": "1.1.0",
+  "profile": "curriculum-modular-backend-v0",
+  "dataset_id": "urn:uuid:3d69a248-2713-57d3-ae10-749ef79b0fc2",
+  "dataset_stable_key": "dataset/unit-005/id-id",
+  "id_namespace": {
+    "algorithm": "uuid5",
+    "namespace_uuid": "urn:uuid:5d74a443-839a-5a09-b2c6-0bc48a097f2b",
+    "name_root": "https://github.com/wenweili/AlJabr-1#o013-backend-v1"
+  },
+  "workflow": {
+    "responsible_task": "01a02163-e2bf-7a93-950a-b9ab84d7e8b9",
+    "updated": "2026-08-22",
+    "status": "admitted",
+    "admission_state": "admitted",
+    "translation_state": "visually_checked",
+    "qa_state": "translation_backend_build_visual_pass"
+  },
+  "program": {
+    "id": "urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78",
+    "stable_key": "program/open-mathematics-curriculum/2026",
+    "entity_type": "program",
+    "label": "Open Mathematics Curriculum",
+    "version": "2026"
+  },
+  "course": {
+    "id": "urn:uuid:a5f3ad58-ce3c-5f5f-b581-1f842ae79192",
+    "stable_key": "course/o013",
+    "entity_type": "course",
+    "program_id": "urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78",
+    "role_code": "O013",
+    "course_code": "D70",
+    "label": "Graduate Algebra",
+    "prerequisite_ids": [
+      "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
+      "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7",
+      "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+      "urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288",
+      "urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396",
+      "urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14",
+      "urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec",
+      "urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8",
+      "urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee",
+      "urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f",
+      "urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96",
+      "urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f"
+    ]
+  },
+  "resource": {
+    "id": "urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397",
+    "stable_key": "resource/wenweili/aljabr-1",
+    "entity_type": "resource",
+    "canonical_uri": "https://github.com/wenweili/AlJabr-1",
+    "author": "Wen-Wei Li",
+    "titles": [
+      {
+        "language": "zh-Hans",
+        "text": "代数学方法，卷一：基础架构"
+      },
+      {
+        "language": "en",
+        "text": "Methods in Algebra, Volume 1: Basic Architecture"
+      },
+      {
+        "language": "id-ID",
+        "text": "Metode Aljabar, Jilid 1: Arsitektur Dasar"
+      }
+    ],
+    "original_language": "zh-Hans",
+    "rights_component_ids": [
+      "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "urn:uuid:e18339ae-66cd-5304-b544-b220dd41380d",
+      "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+      "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430"
+    ]
+  },
+  "edition": {
+    "id": "urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49",
+    "stable_key": "edition/wenweili/aljabr-1/c4f7a01f68f5f407906b4b970640cddbbad85f6b",
+    "entity_type": "edition",
+    "resource_id": "urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397",
+    "branch": "master",
+    "commit": "c4f7a01f68f5f407906b4b970640cddbbad85f6b",
+    "tree": "0f9fd52748165ec89a85ba602ccb949a2ce04694",
+    "archive": {
+      "path": "authority/archives/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b.zip",
+      "bytes": 6050739,
+      "sha256": "6c8c416baa8f5ffc8810bbad6470c780413bd7917af739e07340e4b07e7eaff6"
+    },
+    "official_pdf": {
+      "path": "authority/pdfs/Al-jabr-1.pdf",
+      "bytes": 3647113,
+      "sha256": "dc751a2d5146edc9f9638471ff3fac4107eab8dd0d3331803581a06998663c38"
+    },
+    "source_manifest": {
+      "path": "00_control/SOURCE_MANIFEST.csv",
+      "bytes": 3383,
+      "sha256": "40125010171d4fa37c3312c454c3c2767325bcb27c4229c255a25b297265eb99"
+    }
+  },
+  "unit": {
+    "id": "urn:uuid:0c28f7f3-2695-5fa3-bd38-84fb12c5f901",
+    "stable_key": "unit/bab-1-kardinal",
+    "entity_type": "unit",
+    "program_id": "urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78",
+    "course_id": "urn:uuid:a5f3ad58-ce3c-5f5f-b581-1f842ae79192",
+    "resource_id": "urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397",
+    "edition_id": "urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49",
+    "order": 5,
+    "source_local_id": "chapter1.tex:289-434",
+    "titles": [
+      {
+        "language": "zh-Hans",
+        "text": "第一章：集合论；基数"
+      },
+      {
+        "language": "id-ID",
+        "text": "Bab 1: Teori Himpunan; Bilangan Kardinal"
+      }
+    ],
+    "source_language": "zh-Hans",
+    "target_language": "id-ID",
+    "source_binding": {
+      "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+      "bytes": 49874,
+      "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+      "line_start": 289,
+      "line_end": 434,
+      "span_sha256": "fa1fec18021ed96b4fcbcbbf4e887741c566862fa2b7d407059b2c4b89bff518",
+      "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+    },
+    "target_binding": {
+      "path": "repo/source/chapter1.tex",
+      "bytes": 61676,
+      "sha256": "83c2f7c0abe4964dfdf61225757feba2f442cf020364fd511df1dd3deb2fc58e",
+      "line_start": 289,
+      "line_end": 434,
+      "span_sha256": "57a5051ca741afdeb2d1e9c88413908442844b7eadff5a464fa79e453dc683af",
+      "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+    },
+    "section_ids": [
+      "urn:uuid:eb7b4872-39fd-53b4-86bc-58e9c452202b",
+      "urn:uuid:aed73438-c353-540f-b013-46007941a91f",
+      "urn:uuid:dccb3728-7233-5f98-807d-a2ad83c099b4",
+      "urn:uuid:5ce07f6e-7a6e-5434-8313-7be32b972b13",
+      "urn:uuid:12d80325-f84b-5ade-90aa-8ede1682fee3",
+      "urn:uuid:13229aaa-f365-5106-be4b-606af24c63f0"
+    ],
+    "concept_ids": [
+      "urn:uuid:d87e1975-2672-5912-8d4f-557cd45a5ab8",
+      "urn:uuid:753f3252-3849-5214-ae50-3434b260b4f2",
+      "urn:uuid:a851cd65-b636-5b38-8aa8-5e5f33071340",
+      "urn:uuid:0efabae1-9bd4-520a-91cf-37bfff002181",
+      "urn:uuid:9913da36-b9b8-50b5-aa46-7bf7ebf79b5e",
+      "urn:uuid:f8518119-7019-5a04-ab79-92e53dc85b7f",
+      "urn:uuid:38490c99-c776-5562-aa10-d1320c072231",
+      "urn:uuid:587fecc1-c428-5c32-a93a-fa506f401f47",
+      "urn:uuid:6d8bf070-3139-5f0e-9be2-28df2588b6ba",
+      "urn:uuid:c2007bc7-e3a6-5d4e-ae12-a1742f73049e",
+      "urn:uuid:3bcf4e49-eafe-505d-9a01-6c5d6ce211e3",
+      "urn:uuid:fab582e0-365c-5cc4-8f6f-ad3163855fd1",
+      "urn:uuid:2a373153-1a0c-52be-86aa-088b83b3bfc6",
+      "urn:uuid:afc5b608-76e0-533d-bc85-3eed5b51e2c2",
+      "urn:uuid:27bc57ea-6662-5c68-b1f1-b67e57cd9c82"
+    ],
+    "prerequisite_ids": [
+      "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+      "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7"
+    ],
+    "rights_component_ids": [
+      "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+      "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430"
+    ],
+    "citation_ids": [
+      "urn:uuid:16d41363-ee55-5b49-9126-2aea6b35da2c"
+    ],
+    "diagram_ids": [
+      "urn:uuid:0d9988a3-3dec-52fe-86dd-d3e1cf9ebd6e",
+      "urn:uuid:c4dfdd8a-478a-50e2-ae6a-20748d20a550"
+    ],
+    "index_entry_ids": [
+      "urn:uuid:31f3e70c-e713-5a52-8ff8-b0107662c7e9",
+      "urn:uuid:70e0535d-bc4d-5077-b940-b1cdf07d4e9f",
+      "urn:uuid:2b8d0f6e-1c6f-55e8-9190-7611f644530e",
+      "urn:uuid:fecb7968-b8d9-530e-86a5-747e32d39be8",
+      "urn:uuid:252a70b9-04de-564d-94e1-b53310160c44"
+    ],
+    "build_surface_ids": [
+      "urn:uuid:09603339-2736-58ad-a2bf-7d6954e2ab77"
+    ],
+    "qa_event_ids": [
+      "urn:uuid:7186f225-fb83-57af-9b70-689f622d7f05"
+    ],
+    "outcome_keys": [
+      "outcome/compare-cardinalities-with-injections-and-bijections",
+      "outcome/apply-schroeder-bernstein-and-cantor-theorems",
+      "outcome/compute-cardinal-sums-products-and-powers",
+      "outcome/represent-cardinals-by-initial-ordinals-and-alephs",
+      "outcome/explain-the-continuum-hypothesis-and-its-independence",
+      "outcome/use-canonical-well-orders-in-infinite-cardinal-arithmetic",
+      "outcome/recognize-regular-and-singular-cardinal-behavior"
+    ],
+    "surface_counts": {
+      "sections": 6,
+      "exercises": 0,
+      "hints": 0,
+      "answers": 0,
+      "solutions": 0,
+      "citations": 1,
+      "diagrams": 2,
+      "index_entries": 5
+    },
+    "translation_state": "visually_checked",
+    "admission_state": "admitted"
+  },
+  "sections": [
+    {
+      "id": "urn:uuid:eb7b4872-39fd-53b4-86bc-58e9c452202b",
+      "stable_key": "unit/bab-1-kardinal/section/equipollence-and-schroeder-bernstein",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:0c28f7f3-2695-5fa3-bd38-84fb12c5f901",
+      "order": 1,
+      "source_local_id": "chapter1.tex:289-317",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "等势与 Schröder--Bernstein 定理"
+        },
+        {
+          "language": "id-ID",
+          "text": "Ekuipotensi dan Teorema Schröder--Bernstein"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 289,
+        "line_end": 317,
+        "span_sha256": "ade6b0aa831392544d7d4bc76f54e0185f79054fc26f57859efd21497ded5fb2",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 61676,
+        "sha256": "83c2f7c0abe4964dfdf61225757feba2f442cf020364fd511df1dd3deb2fc58e",
+        "line_start": 289,
+        "line_end": 317,
+        "span_sha256": "f7bc4e54efd15b09eeeaf477482ae986accc678812917353e98838594f5505c7",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:d87e1975-2672-5912-8d4f-557cd45a5ab8",
+        "urn:uuid:753f3252-3849-5214-ae50-3434b260b4f2"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+        "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:aed73438-c353-540f-b013-46007941a91f",
+      "stable_key": "unit/bab-1-kardinal/section/cardinal-arithmetic-and-cantor",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:0c28f7f3-2695-5fa3-bd38-84fb12c5f901",
+      "order": 2,
+      "source_local_id": "chapter1.tex:319-342",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "基数运算与 Cantor 定理"
+        },
+        {
+          "language": "id-ID",
+          "text": "Aritmetika Kardinal dan Teorema Cantor"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 319,
+        "line_end": 342,
+        "span_sha256": "91ca62ef4f82f720fc4ce1380137e83372fad1fbac9bf61643a3d57e3775adc3",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 61676,
+        "sha256": "83c2f7c0abe4964dfdf61225757feba2f442cf020364fd511df1dd3deb2fc58e",
+        "line_start": 319,
+        "line_end": 342,
+        "span_sha256": "6b27535e5a674fac2982fdd5a0e6df26e2146983b82716743b1294e37ebc0184",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:a851cd65-b636-5b38-8aa8-5e5f33071340",
+        "urn:uuid:0efabae1-9bd4-520a-91cf-37bfff002181",
+        "urn:uuid:9913da36-b9b8-50b5-aa46-7bf7ebf79b5e"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+        "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:dccb3728-7233-5f98-807d-a2ad83c099b4",
+      "stable_key": "unit/bab-1-kardinal/section/cardinal-representatives-and-alephs",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:0c28f7f3-2695-5fa3-bd38-84fb12c5f901",
+      "order": 3,
+      "source_local_id": "chapter1.tex:344-371",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "基数代表与 aleph 数"
+        },
+        {
+          "language": "id-ID",
+          "text": "Wakil Kardinal dan Bilangan Alef"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 344,
+        "line_end": 371,
+        "span_sha256": "37788f327396eaa64f06e940009db8735f58a8066cde7c349251e1e1ef9d0ee1",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 61676,
+        "sha256": "83c2f7c0abe4964dfdf61225757feba2f442cf020364fd511df1dd3deb2fc58e",
+        "line_start": 344,
+        "line_end": 371,
+        "span_sha256": "12f184f2c8195c845696398df0514a7dfefc8c1e24375f4429db5393ef21962c",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:f8518119-7019-5a04-ab79-92e53dc85b7f",
+        "urn:uuid:38490c99-c776-5562-aa10-d1320c072231",
+        "urn:uuid:587fecc1-c428-5c32-a93a-fa506f401f47",
+        "urn:uuid:6d8bf070-3139-5f0e-9be2-28df2588b6ba"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+        "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:5ce07f6e-7a6e-5434-8313-7be32b972b13",
+      "stable_key": "unit/bab-1-kardinal/section/continuum-and-continuum-hypothesis",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:0c28f7f3-2695-5fa3-bd38-84fb12c5f901",
+      "order": 4,
+      "source_local_id": "chapter1.tex:373-379",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "连续统与连续统假设"
+        },
+        {
+          "language": "id-ID",
+          "text": "Kontinuum dan Hipotesis Kontinuum"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 373,
+        "line_end": 379,
+        "span_sha256": "f5d30f1d30fcef229e1ef668d215206f0c55bdd88db3f4461528e82b88b2141a",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 61676,
+        "sha256": "83c2f7c0abe4964dfdf61225757feba2f442cf020364fd511df1dd3deb2fc58e",
+        "line_start": 373,
+        "line_end": 379,
+        "span_sha256": "dcb04b297c82105d46ecf9ce1dedf56bce5bdccac4c380ec2c89042c894ed4eb",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:c2007bc7-e3a6-5d4e-ae12-a1742f73049e",
+        "urn:uuid:3bcf4e49-eafe-505d-9a01-6c5d6ce211e3",
+        "urn:uuid:fab582e0-365c-5cc4-8f6f-ad3163855fd1"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+        "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:12d80325-f84b-5ade-90aa-8ede1682fee3",
+      "stable_key": "unit/bab-1-kardinal/section/canonical-well-order-and-infinite-cardinal-arithmetic",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:0c28f7f3-2695-5fa3-bd38-84fb12c5f901",
+      "order": 5,
+      "source_local_id": "chapter1.tex:381-427",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "典范良序与无穷基数算术"
+        },
+        {
+          "language": "id-ID",
+          "text": "Urutan Baik Kanonik dan Aritmetika Kardinal Tak Hingga"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 381,
+        "line_end": 427,
+        "span_sha256": "4291753e6ed8795bbefd592d288ac0c2150a7fc71e5e19f12b3d290f8740d994",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 61676,
+        "sha256": "83c2f7c0abe4964dfdf61225757feba2f442cf020364fd511df1dd3deb2fc58e",
+        "line_start": 381,
+        "line_end": 427,
+        "span_sha256": "2ba4481cef61c0dbe1fe9e98eecd5fc0a84f901651be015f989f5d1651c781ee",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:2a373153-1a0c-52be-86aa-088b83b3bfc6",
+        "urn:uuid:afc5b608-76e0-533d-bc85-3eed5b51e2c2"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+        "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:13229aaa-f365-5106-be4b-606af24c63f0",
+      "stable_key": "unit/bab-1-kardinal/section/regular-cardinals",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:0c28f7f3-2695-5fa3-bd38-84fb12c5f901",
+      "order": 6,
+      "source_local_id": "chapter1.tex:429-434",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "正则基数"
+        },
+        {
+          "language": "id-ID",
+          "text": "Kardinal Reguler"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 429,
+        "line_end": 434,
+        "span_sha256": "083f99eac79cbb88e2b5d31df6284a3922c25453a47986ed4d4eb725e8258f1b",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 61676,
+        "sha256": "83c2f7c0abe4964dfdf61225757feba2f442cf020364fd511df1dd3deb2fc58e",
+        "line_start": 429,
+        "line_end": 434,
+        "span_sha256": "754a009dbac728c0593409c39d4ad5a1ff7f80fa33f1bfa84d24a2fd8e92142c",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:27bc57ea-6662-5c68-b1f1-b67e57cd9c82"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+        "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "urn:uuid:d87e1975-2672-5912-8d4f-557cd45a5ab8",
+      "stable_key": "concept/equipollence",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "等势"
+        },
+        {
+          "language": "id-ID",
+          "text": "ekuipotensi"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:753f3252-3849-5214-ae50-3434b260b4f2",
+      "stable_key": "concept/schroeder-bernstein-theorem",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "Schröder--Bernstein 定理"
+        },
+        {
+          "language": "id-ID",
+          "text": "teorema Schröder--Bernstein"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:a851cd65-b636-5b38-8aa8-5e5f33071340",
+      "stable_key": "concept/cardinal-arithmetic",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "基数算术"
+        },
+        {
+          "language": "id-ID",
+          "text": "aritmetika kardinal"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:0efabae1-9bd4-520a-91cf-37bfff002181",
+      "stable_key": "concept/infinite-cardinal-sum-and-product",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "无穷基数和与积"
+        },
+        {
+          "language": "id-ID",
+          "text": "jumlah dan hasil kali kardinal tak hingga"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:9913da36-b9b8-50b5-aa46-7bf7ebf79b5e",
+      "stable_key": "concept/cantor-theorem",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "Cantor 定理"
+        },
+        {
+          "language": "id-ID",
+          "text": "teorema Cantor"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:f8518119-7019-5a04-ab79-92e53dc85b7f",
+      "stable_key": "concept/cardinal-as-initial-ordinal",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "作为初始序数的基数"
+        },
+        {
+          "language": "id-ID",
+          "text": "kardinal sebagai ordinal awal"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:38490c99-c776-5562-aa10-d1320c072231",
+      "stable_key": "concept/countable-and-uncountable-sets",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "可数集与不可数集"
+        },
+        {
+          "language": "id-ID",
+          "text": "himpunan terhitung dan tak terhitung"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:587fecc1-c428-5c32-a93a-fa506f401f47",
+      "stable_key": "concept/cardinal-supremum",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "基数上确界"
+        },
+        {
+          "language": "id-ID",
+          "text": "supremum kardinal"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:6d8bf070-3139-5f0e-9be2-28df2588b6ba",
+      "stable_key": "concept/aleph-hierarchy",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "aleph 数层级"
+        },
+        {
+          "language": "id-ID",
+          "text": "hierarki bilangan alef"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:c2007bc7-e3a6-5d4e-ae12-a1742f73049e",
+      "stable_key": "concept/continuum",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "连续统"
+        },
+        {
+          "language": "id-ID",
+          "text": "kontinuum"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:3bcf4e49-eafe-505d-9a01-6c5d6ce211e3",
+      "stable_key": "concept/continuum-hypothesis",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "连续统假设"
+        },
+        {
+          "language": "id-ID",
+          "text": "hipotesis kontinuum"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:fab582e0-365c-5cc4-8f6f-ad3163855fd1",
+      "stable_key": "concept/continuum-hypothesis-independence",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "连续统假设的独立性"
+        },
+        {
+          "language": "id-ID",
+          "text": "independensi hipotesis kontinuum"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:2a373153-1a0c-52be-86aa-088b83b3bfc6",
+      "stable_key": "concept/canonical-well-order-on-ordinal-pairs",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "序数对上的典范良序"
+        },
+        {
+          "language": "id-ID",
+          "text": "urutan baik kanonik pada pasangan ordinal"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:afc5b608-76e0-533d-bc85-3eed5b51e2c2",
+      "stable_key": "concept/infinite-cardinal-arithmetic",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "无穷基数算术"
+        },
+        {
+          "language": "id-ID",
+          "text": "aritmetika kardinal tak hingga"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:27bc57ea-6662-5c68-b1f1-b67e57cd9c82",
+      "stable_key": "concept/regular-cardinal",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "正则基数"
+        },
+        {
+          "language": "id-ID",
+          "text": "kardinal reguler"
+        }
+      ]
+    }
+  ],
+  "prerequisites": [
+    {
+      "id": "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
+      "stable_key": "prerequisite/basic-mathematical-literacy",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "基本素养"
+        },
+        {
+          "language": "id-ID",
+          "text": "kematangan matematika dasar"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 54,
+        "line_end": 54
+      }
+    },
+    {
+      "id": "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7",
+      "stable_key": "prerequisite/mathematical-logic",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "逻辑用语与论证"
+        },
+        {
+          "language": "id-ID",
+          "text": "bahasa logika dan penalaran"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 54,
+        "line_end": 54
+      }
+    },
+    {
+      "id": "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+      "stable_key": "prerequisite/elementary-set-theory",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "集合常识"
+        },
+        {
+          "language": "id-ID",
+          "text": "teori himpunan elementer"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 54,
+        "line_end": 54
+      }
+    },
+    {
+      "id": "urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288",
+      "stable_key": "prerequisite/matrices",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "矩阵"
+        },
+        {
+          "language": "id-ID",
+          "text": "matriks"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396",
+      "stable_key": "prerequisite/vector-spaces",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "向量空间"
+        },
+        {
+          "language": "id-ID",
+          "text": "ruang vektor"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14",
+      "stable_key": "prerequisite/polynomials",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "多项式"
+        },
+        {
+          "language": "id-ID",
+          "text": "polinom"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec",
+      "stable_key": "prerequisite/linear-transformations",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "线性变换"
+        },
+        {
+          "language": "id-ID",
+          "text": "transformasi linear"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8",
+      "stable_key": "prerequisite/permutations-and-symmetric-groups",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "置换与对称群"
+        },
+        {
+          "language": "id-ID",
+          "text": "permutasi dan grup simetris"
+        }
+      ],
+      "requiredness": "recommended",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee",
+      "stable_key": "prerequisite/elementary-number-theory",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "初等数论"
+        },
+        {
+          "language": "id-ID",
+          "text": "teori bilangan elementer"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 56,
+        "line_end": 56
+      }
+    },
+    {
+      "id": "urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f",
+      "stable_key": "prerequisite/real-analysis-basics",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "实数与分析常识"
+        },
+        {
+          "language": "id-ID",
+          "text": "dasar-dasar analisis real"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 57,
+        "line_end": 57
+      }
+    },
+    {
+      "id": "urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96",
+      "stable_key": "prerequisite/point-set-topology",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "点集拓扑学初步"
+        },
+        {
+          "language": "id-ID",
+          "text": "topologi himpunan titik elementer"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 57,
+        "line_end": 57
+      }
+    },
+    {
+      "id": "urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f",
+      "stable_key": "prerequisite/cauchy-sequences-and-completeness",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "Cauchy 列与完备性"
+        },
+        {
+          "language": "id-ID",
+          "text": "barisan Cauchy dan kelengkapan"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 57,
+        "line_end": 57
+      }
+    }
+  ],
+  "rights": [
+    {
+      "id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "stable_key": "rights/principal-cc-by-4.0",
+      "entity_type": "rights",
+      "component": "Principal text, source, PDF, and Indonesian translation",
+      "holder_or_source": "Wen-Wei Li; Indonesian translation contributors for translation expression",
+      "license": "CC BY 4.0",
+      "required_treatment": "Attribute author and source, identify the Indonesian translation and changes, link the license, and imply no endorsement.",
+      "applies_to_unit": true,
+      "bindings": [
+        {
+          "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+          "bytes": 49874,
+          "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92"
+        },
+        {
+          "path": "repo/source/LICENSE",
+          "bytes": 19045,
+          "sha256": "48a83a6e39f7b2f166763b30776132c9a99aa816f17cb06f87ad5b8542a7b71f"
+        },
+        {
+          "path": "repo/source/ccby.png",
+          "bytes": 12588,
+          "sha256": "633aae44a5d5b8915debc82f56a8e05c1b62b567b1aefeabc18617b81d8a04a9"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:e18339ae-66cd-5304-b544-b220dd41380d",
+      "stable_key": "rights/lanzhou-cc-by-sa-3.0",
+      "entity_type": "rights",
+      "component": "Lanzhou.png",
+      "holder_or_source": "Chk2011; derived from Wikimedia Administrative_Division_Lanzhou.svg",
+      "license": "CC BY-SA 3.0",
+      "required_treatment": "Keep separate attribution and source/license link, identify rasterization or other changes, and preserve share-alike treatment.",
+      "applies_to_unit": false,
+      "bindings": [
+        {
+          "path": "repo/source/Lanzhou.png",
+          "bytes": 276766,
+          "sha256": "6000d7740aab58f1959c07af2c057680e2518dcc75b225f3180ed4b996fe9455"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+      "stable_key": "rights/ajbook-fragment-cc-by-sa-3.0",
+      "entity_type": "rights",
+      "component": "AJbook.cls DeclareSourcemap fragment",
+      "holder_or_source": "Guido; revision edited by dpprdan; TeX.StackExchange answer 119136",
+      "license": "CC BY-SA 3.0",
+      "required_treatment": "Keep separate attribution and source/license link, or replace with independently written equivalent code.",
+      "applies_to_unit": true,
+      "bindings": [
+        {
+          "path": "repo/source/AJbook.cls",
+          "bytes": 13780,
+          "sha256": "f35dbe8942a880dfe70c072bcfe0491d8cc83f562c28a481b949ca4cc84f0b04"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430",
+      "stable_key": "rights/noto-fonts-ofl-1.1",
+      "entity_type": "rights",
+      "component": "Noto Sans CJK SC and Noto Serif CJK SC fonts",
+      "holder_or_source": "Google and Adobe Noto contributors",
+      "license": "OFL 1.1",
+      "required_treatment": "Retain the OFL text and font notices; do not relicense fonts as book content.",
+      "applies_to_unit": true,
+      "bindings": [
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Black.otf",
+          "bytes": 17797908,
+          "sha256": "2267c4a0312d267dff8c0d1609948f7d949a3da8be3e126f5e2690cb9cc883b4"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Medium.otf",
+          "bytes": 16523632,
+          "sha256": "ca094f6b0001fb048ca39ddd797a0cdb0179e1e55c6561e111c49c3e6a61d7b7"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Regular.otf",
+          "bytes": 16437364,
+          "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+        },
+        {
+          "path": "repo/fonts/NotoSerifCJKsc-Bold.otf",
+          "bytes": 25521460,
+          "sha256": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73"
+        },
+        {
+          "path": "repo/fonts/OFL-1.1-Noto-CJK.txt",
+          "bytes": 4301,
+          "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+        }
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "id": "urn:uuid:16d41363-ee55-5b49-9126-2aea6b35da2c",
+      "stable_key": "citation/je03",
+      "entity_type": "citation",
+      "bib_key": "Je03",
+      "bibliography_path": "repo/source/Al-jabr.bib",
+      "bibliography_sha256": "4979570eb4e3a9edcddd2f975790e56c98dcb3201e03e0a1fbdd64ba60c8263e",
+      "source_line": 333,
+      "target_line": 333,
+      "section_id": "urn:uuid:aed73438-c353-540f-b013-46007941a91f"
+    }
+  ],
+  "diagrams": [
+    {
+      "id": "urn:uuid:0d9988a3-3dec-52fe-86dd-d3e1cf9ebd6e",
+      "stable_key": "diagram/aleph-zero-square-enumeration",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:12d80325-f84b-5ade-90aa-8ede1682fee3",
+      "ordinal_in_unit": 1,
+      "source_format": "tikzpicture",
+      "source_occurrence_index": 1,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 395,
+        "line_end": 402,
+        "span_sha256": "c2fb0c3f3b638b9676526c2c26ca3d60cf460c50de78b1cc3f69d4d66dd3d79a",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 61676,
+        "sha256": "83c2f7c0abe4964dfdf61225757feba2f442cf020364fd511df1dd3deb2fc58e",
+        "line_start": 395,
+        "line_end": 402,
+        "span_sha256": "c2fb0c3f3b638b9676526c2c26ca3d60cf460c50de78b1cc3f69d4d66dd3d79a",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:c4dfdd8a-478a-50e2-ae6a-20748d20a550",
+      "stable_key": "diagram/aleph-zero-square-axes",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:12d80325-f84b-5ade-90aa-8ede1682fee3",
+      "ordinal_in_unit": 2,
+      "source_format": "tikzpicture",
+      "source_occurrence_index": 2,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 403,
+        "line_end": 406,
+        "span_sha256": "1ffba200d4ac6337164074dedcb3d412aa57ee1bbd59678ba9050d7cdef0e631",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 61676,
+        "sha256": "83c2f7c0abe4964dfdf61225757feba2f442cf020364fd511df1dd3deb2fc58e",
+        "line_start": 403,
+        "line_end": 406,
+        "span_sha256": "1ffba200d4ac6337164074dedcb3d412aa57ee1bbd59678ba9050d7cdef0e631",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    }
+  ],
+  "index_entries": [
+    {
+      "id": "urn:uuid:31f3e70c-e713-5a52-8ff8-b0107662c7e9",
+      "stable_key": "index-entry/unit-005/equipollence",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:eb7b4872-39fd-53b4-86bc-58e9c452202b",
+      "ordinal_in_unit": 1,
+      "source_key": "dengshi@等势 (equipollence)",
+      "target_key": "ekuipotensi@ekuipotensi (equipollence)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 292,
+        "line_end": 292,
+        "span_sha256": "d36b64a60d31440bde1b1c498f5ef17b98933092cf0561bb7199cc3a00350746",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 61676,
+        "sha256": "83c2f7c0abe4964dfdf61225757feba2f442cf020364fd511df1dd3deb2fc58e",
+        "line_start": 292,
+        "line_end": 292,
+        "span_sha256": "983a68b532d939d7a35cb1d2d4be11955feda59b278df36d4874cb12a9c5044a",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:70e0535d-bc4d-5077-b940-b1cdf07d4e9f",
+      "stable_key": "index-entry/unit-005/cardinal",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:dccb3728-7233-5f98-807d-a2ad83c099b4",
+      "ordinal_in_unit": 2,
+      "source_key": "jishu@基数 (cardinal)",
+      "target_key": "bilangan kardinal@bilangan kardinal (cardinal)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 344,
+        "line_end": 344,
+        "span_sha256": "146a647d7320b2e53ea4dd2a15c8283593cdcbacc4f7b81f7e81d1072e9972d5",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 61676,
+        "sha256": "83c2f7c0abe4964dfdf61225757feba2f442cf020364fd511df1dd3deb2fc58e",
+        "line_start": 344,
+        "line_end": 344,
+        "span_sha256": "a251b999b0482a2c3cbc20244d29e327087d4f9e4cf1c257ec1cc74039ddc358",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:2b8d0f6e-1c6f-55e8-9190-7611f644530e",
+      "stable_key": "index-entry/unit-005/countable-set",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:dccb3728-7233-5f98-807d-a2ad83c099b4",
+      "ordinal_in_unit": 3,
+      "source_key": "keshuji@可数集 (countable set)",
+      "target_key": "himpunan terhitung@himpunan terhitung (countable set)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 356,
+        "line_end": 356,
+        "span_sha256": "fdd3bd800dc7daa5dae1a57c4ce0a1b6c6b7f7ef43e30e2399fee74e90f76ba8",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 61676,
+        "sha256": "83c2f7c0abe4964dfdf61225757feba2f442cf020364fd511df1dd3deb2fc58e",
+        "line_start": 356,
+        "line_end": 356,
+        "span_sha256": "a92a9c636458baf14fe8148e80f4a0789063f4447b7d8f9f12a1b8a6d86da8f7",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:fecb7968-b8d9-530e-86a5-747e32d39be8",
+      "stable_key": "index-entry/unit-005/aleph-symbol",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:dccb3728-7233-5f98-807d-a2ad83c099b4",
+      "ordinal_in_unit": 4,
+      "source_key": "aleph@$\\aleph_\\alpha$",
+      "target_key": "aleph@$\\aleph_\\alpha$",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 365,
+        "line_end": 365,
+        "span_sha256": "830c0e3bb78d3b6cb1c5c299a4ee839c5de907b2be038f8c2dac3054b76d51e5",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 61676,
+        "sha256": "83c2f7c0abe4964dfdf61225757feba2f442cf020364fd511df1dd3deb2fc58e",
+        "line_start": 365,
+        "line_end": 365,
+        "span_sha256": "7bc0b4177a8b137dc6ff49cbfb33712bf915b0c0d5095f717cf2f6384b824369",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:252a70b9-04de-564d-94e1-b53310160c44",
+      "stable_key": "index-entry/unit-005/regular-cardinal",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:13229aaa-f365-5106-be4b-606af24c63f0",
+      "ordinal_in_unit": 5,
+      "source_key": "jishu!正则基数 (regular cardinal)",
+      "target_key": "kardinal!kardinal reguler (regular cardinal)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "line_start": 429,
+        "line_end": 429,
+        "span_sha256": "63ef1ddf00c9baaefcb0b24a072366fb7bb37f5295b2881fa00c9d7a2dc3f5b7",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter1.tex",
+        "bytes": 61676,
+        "sha256": "83c2f7c0abe4964dfdf61225757feba2f442cf020364fd511df1dd3deb2fc58e",
+        "line_start": 429,
+        "line_end": 429,
+        "span_sha256": "2a5d38c49481793437119f4b3933f3ce48bb93f00e06b98f38adb626c05293ee",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    }
+  ],
+  "build_surfaces": [
+    {
+      "id": "urn:uuid:09603339-2736-58ad-a2bf-7d6954e2ab77",
+      "stable_key": "build-surface/unit-005-pdf",
+      "entity_type": "build_surface",
+      "unit_id": "urn:uuid:0c28f7f3-2695-5fa3-bd38-84fb12c5f901",
+      "kind": "pdf",
+      "working_directory": ".",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build_unit_005.ps1 -OutputDirectory build/unit-005-replay",
+      "artifact_path": "artifacts/unit-005-bab-1-kardinal.pdf",
+      "artifact_binding": {
+        "path": "artifacts/unit-005-bab-1-kardinal.pdf",
+        "bytes": 128556,
+        "sha256": "232d41f4e7f03123818ae14272958c8269242ebcbec68b832aaaf7ba295ebf3e"
+      },
+      "log_binding": {
+        "path": "qa/unit-005-evidence/build-log-summary.txt",
+        "bytes": 2851,
+        "sha256": "ae02a0622ed73a1ec71f74ff003505099afb3de3edef2e0b7a29ee3994086689"
+      },
+      "build_script": {
+        "path": "scripts/build_unit_005.ps1",
+        "bytes": 2838,
+        "sha256": "9e82eee4e4688d1b7add4026f850bdd3dc30bc7d9012e3e42cd054409b895f01"
+      },
+      "page_count": 12,
+      "status": "pass",
+      "driver": {
+        "path": "repo/source/unit-005-bab-1-kardinal.tex",
+        "bytes": 4357,
+        "sha256": "cdf7f235f4c4e000a0c063dae0ab0d24f7b76d5218e80d9d5e870933ae038733"
+      },
+      "input_bindings": [
+        {
+          "path": "repo/source/coverpage-id-unit-005.tex",
+          "bytes": 4386,
+          "sha256": "fc754187209c46b9a39731510004c6aa0645036dcc4ef003c693d4f6ca37fc11"
+        },
+        {
+          "path": "repo/source/font-setup-id.tex",
+          "bytes": 2563,
+          "sha256": "19c03e7fc4abaf7c433a85cf8adf32dbe5259d3de5106c8d1dd712af37dcd280"
+        },
+        {
+          "path": "repo/source/AJbook.cls",
+          "bytes": 13780,
+          "sha256": "f35dbe8942a880dfe70c072bcfe0491d8cc83f562c28a481b949ca4cc84f0b04"
+        },
+        {
+          "path": "repo/source/titles-setup-id.tex",
+          "bytes": 329,
+          "sha256": "db020adff03242f1f2fe8bcb6ec74b6072d9db6bd44971caadde3ce231a51f1b"
+        },
+        {
+          "path": "repo/source/locale-ui-id.tex",
+          "bytes": 2972,
+          "sha256": "9d6c6aa162d11ce8f491703f640a808cdcf61280b300f22032d4caaa0035f3b9"
+        },
+        {
+          "path": "repo/source/titles-setup.tex",
+          "bytes": 6274,
+          "sha256": "f5a81e5ec9f0f2023b93d9b713f0bdc18171a1505863f44a15d65c8757eeadf7"
+        },
+        {
+          "path": "repo/source/mycommand.sty",
+          "bytes": 5925,
+          "sha256": "4d8cdc54597197b8d207cec69fc9af93f9b02c49628e77ab1e9a6d046275d9bc"
+        },
+        {
+          "path": "repo/source/myarrows.sty",
+          "bytes": 3650,
+          "sha256": "59ff5dc0d470674894c5369f6ee79442b71ce08fc02433be7c58387f9a684dd4"
+        },
+        {
+          "path": "repo/source/Al-jabr.bib",
+          "bytes": 29580,
+          "sha256": "4979570eb4e3a9edcddd2f975790e56c98dcb3201e03e0a1fbdd64ba60c8263e"
+        },
+        {
+          "path": "repo/source/ccby.png",
+          "bytes": 12588,
+          "sha256": "633aae44a5d5b8915debc82f56a8e05c1b62b567b1aefeabc18617b81d8a04a9"
+        },
+        {
+          "path": "repo/source/unit-005-crossrefs.aux",
+          "bytes": 340,
+          "sha256": "cd05c6135e62cb225eefdc49e49d04c3c9a9c7098633c7935fb89ac9b988407d"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Black.otf",
+          "bytes": 17797908,
+          "sha256": "2267c4a0312d267dff8c0d1609948f7d949a3da8be3e126f5e2690cb9cc883b4"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Medium.otf",
+          "bytes": 16523632,
+          "sha256": "ca094f6b0001fb048ca39ddd797a0cdb0179e1e55c6561e111c49c3e6a61d7b7"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Regular.otf",
+          "bytes": 16437364,
+          "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+        },
+        {
+          "path": "repo/fonts/NotoSerifCJKsc-Bold.otf",
+          "bytes": 25521460,
+          "sha256": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73"
+        }
+      ],
+      "external_dependencies": [
+        "XeLaTeX",
+        "PowerShell 7",
+        "biber",
+        "makeindex (default and sym1 indexes)",
+        "Fandol fonts from TeX distribution",
+        "TeX Gyre Heros",
+        "packages loaded by unit-005-bab-1-kardinal.tex and AJbook.cls"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+        "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+        "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430"
+      ]
+    }
+  ],
+  "qa_events": [
+    {
+      "id": "urn:uuid:7186f225-fb83-57af-9b70-689f622d7f05",
+      "stable_key": "qa/unit-005/admission-gate",
+      "entity_type": "qa_event",
+      "unit_id": "urn:uuid:0c28f7f3-2695-5fa3-bd38-84fb12c5f901",
+      "check_type": "admission_gate",
+      "result": "pass",
+      "scope": "Complete source-order translation and independent audit for chapter1.tex lines 289-434; documented correction O013-LI-U005-COR-001 repairing the reversed Gödel/Cohen attribution at line 379; documented clarification O013-LI-U005-CLR-001 making the composed injection explicit at line 304; schema and stable-ID integrity; live inclusive line-span hashes; one unique citation; ten preserved labels; six protected reference occurrences over five unique keys, comprising four internal occurrences over three keys and two frozen external references; five brace-aware index entries (four default and one sym1); two source-preserved TikZ pictures; zero exercises, hints, answers, or solutions; localized Indonesian reader interface; 12-page standalone digital reflow; two clean builds; structural PDF checks; and all-page MuPDF and Poppler visual inspection.",
+      "witness": "qa/UNIT_005_ADMISSION_20260822.md",
+      "translation_audit_state": "pass",
+      "build_state": "pass",
+      "visual_state": "pass",
+      "witness_binding": {
+        "path": "qa/UNIT_005_ADMISSION_20260822.md",
+        "bytes": 6691,
+        "sha256": "61bad412426425fccb061c23355b91b7f0f2feaf78cabba40e8c21370441652c"
+      }
+    }
+  ]
+}
