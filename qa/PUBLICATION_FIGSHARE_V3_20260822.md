@@ -2,10 +2,14 @@
 
 Date: 2026-08-22
 
-Article: `https://figshare.com/articles/book/33314766`  
-Version DOI: `10.6084/m9.figshare.33314766.v3`  
-Project: `https://figshare.com/projects/Open_and_Share-Alike_Educational_Materials_Translations/280296`  
-Indonesian collection DOI at readback: `10.6084/m9.figshare.c.8668413.v40`  
+Article: `https://figshare.com/articles/book/33314766`
+
+Version DOI: `10.6084/m9.figshare.33314766.v3`
+
+Project: `https://figshare.com/projects/Open_and_Share-Alike_Educational_Materials_Translations/280296`
+
+Indonesian collection DOI at readback: `10.6084/m9.figshare.c.8668413.v40`
+
 Edition commit: `46c80bcee66dd62235f33e339ababaebbccf3619`
 
 ## Identity and scope

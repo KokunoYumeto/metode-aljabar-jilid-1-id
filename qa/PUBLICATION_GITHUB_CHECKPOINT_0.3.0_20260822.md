@@ -2,9 +2,12 @@
 
 Date: 2026-08-22
 
-Repository: `https://github.com/KokunoYumeto/metode-aljabar-jilid-1-id`  
-Branch: `main`  
-Content commit: `46c80bcee66dd62235f33e339ababaebbccf3619`  
+Repository: `https://github.com/KokunoYumeto/metode-aljabar-jilid-1-id`
+
+Branch: `main`
+
+Content commit: `46c80bcee66dd62235f33e339ababaebbccf3619`
+
 Commit subject: `Publish checkpoint 0.3 reader`
 
 ## Published scope
@@ -38,3 +41,15 @@ SHA-256:
 | `scripts/build_release_0_3_0.py` | 9,046 | `7e3939a30af8fb79ca381933f044329df2316b82f56741339cfbc5a0f85e51e4` |
 
 Result: **PASS**. This receipt contains no credential material.
+
+## Receipt and publication-state boundary
+
+The terminology recheck, Zenodo/Figshare v3 state records, and all three 0.3.0
+receipts were committed at
+`3d9053b5f6ceb7b27c27b078cb31ccab773ece43`. Remote `main` resolved to that
+exact commit. Seven critical receipt/state files were fetched anonymously from
+its immutable raw URL and matched the local byte counts and SHA-256 hashes,
+including the 17,649-byte controlled glossary
+`db556c0687c33b575ceb6254b41c45d95e837562eb6fa8eb9660296cadba5542`
+and the 7,089-byte terminology record
+`b7ffdeb11afa8f7351100f5b7611fce8a39c7cdc6f35f86c9d0ad1e52aec00fc`.

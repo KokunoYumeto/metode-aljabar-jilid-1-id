@@ -2,10 +2,14 @@
 
 Date: 2026-08-22
 
-Record: `https://zenodo.org/records/22062228`  
-Version DOI: `10.5281/zenodo.22062228`  
-Concept DOI: `10.5281/zenodo.22059759`  
-Version: `0.3.0`  
+Record: `https://zenodo.org/records/22062228`
+
+Version DOI: `10.5281/zenodo.22062228`
+
+Concept DOI: `10.5281/zenodo.22059759`
+
+Version: `0.3.0`
+
 Edition commit: `46c80bcee66dd62235f33e339ababaebbccf3619`
 
 ## Identity and scope
