@@ -1,4 +1,4 @@
-% LaTeX source for book ``代数学方法'' in Chinese
+% Indonesian LaTeX source for book ``Methods in Algebra''
 % Copyright 2018  李文威 (Wen-Wei Li).
 % Permission is granted to copy, distribute and/or modify this
 % document under the terms of the Creative Commons
@@ -6,84 +6,84 @@
 % http://creativecommons.org/licenses/by/4.0/
 
 % To be included
-\chapter{集合论}
-集合的基本概念和操作是中学数学或大学基础课的内容, 本章的目的是在这些基础上进行加固, 更新, 并补全一些常被遗漏的基本知识. 主角是:
+\chapter{Teori himpunan}
+Konsep dan operasi dasar himpunan merupakan materi matematika sekolah menengah atau mata kuliah dasar di perguruan tinggi. Bab ini bertujuan memperkukuh dan memperbarui landasan tersebut, serta melengkapinya dengan beberapa pengetahuan dasar yang kerap terlewatkan. Pokok bahasannya ialah:
 \begin{compactitem}
-	\item Zermelo--Fraenkel 公理集合论和选择公理的明确表述.
-	\item 序数理论和 Zorn 引理; 这是由于序数和超穷递归在一般代数教材中较少提及, 而 Zorn 引理即使有证明也往往十分迂回.
-	\item 关于基数的基本定义和操作.
-	\item 阐述 Grothendieck 宇宙的概念, 借以安全地运用范畴论.
+	\item perumusan eksplisit teori himpunan aksiomatik Zermelo--Fraenkel beserta aksioma pilihan;
+	\item teori ordinal dan lemma Zorn; ordinal dan rekursi transfinit jarang dibahas dalam buku teks aljabar umum, sedangkan pembuktian lemma Zorn pun sering kali sangat berputar-putar;
+	\item definisi dan operasi dasar bilangan kardinal;
+	\item penjelasan mengenai semesta Grothendieck, yang memungkinkan teori kategori digunakan dengan aman.
 \end{compactitem}
 
-格于本书体裁, 对上述主题只能点到为止. 多数情形下, 数学工作者毋须直面集合论的深层结构, 需要时也可以视作已知结果. 因此读者可选择在必要时再回头查阅本章. 但严肃的范畴论研究绕不过集合. 另一方面, 序数, 基数和超穷递归是数理逻辑与集合论工作者的常备工具, 许多代数教材不谈则已, 一谈便是云山雾罩; 鉴于逻辑方法, 尤其是模型论 \cite{Feng17} 近来对几何与数论等领域的渗透, 了解这些内容应当是不无裨益的. \index{moxinglun@模型论 (model theory)}
+Karena corak dan keterbatasan ruang buku ini, topik-topik tersebut hanya dapat disinggung secara ringkas. Dalam kebanyakan keadaan, matematikawan tidak perlu berhadapan langsung dengan struktur terdalam teori himpunan; hasil yang diperlukan pun dapat dianggap telah diketahui. Karena itu, pembaca boleh kembali ke bab ini hanya bila diperlukan. Namun, kajian teori kategori yang serius tidak dapat menghindari persoalan himpunan. Di pihak lain, ordinal, kardinal, dan rekursi transfinit merupakan perangkat sehari-hari bagi peneliti logika matematika dan teori himpunan. Banyak buku aljabar sama sekali tidak membahasnya, atau membahasnya dengan cara yang sukar ditembus. Mengingat metode logika---khususnya teori model \cite{Feng17}---belakangan ini makin merambah geometri, teori bilangan, dan bidang lain, pemahaman atas materi ini tentu bermanfaat. \index{teori model@teori model (model theory)}
 
 \begin{wenxintishi}
-	读者必须对朴素集合论有最初步的了解. Grothendieck 宇宙仅在触及较深课题, 须对范畴进行高阶操作时才会用上. 建议初学代数的读者暂且略过本章.
+	Pembaca harus memiliki pengetahuan paling dasar tentang teori himpunan naif. Semesta Grothendieck hanya diperlukan ketika topik yang lebih lanjut menuntut operasi tingkat tinggi pada kategori. Pembaca yang baru mulai mempelajari aljabar disarankan untuk melewati bab ini untuk sementara.
 \end{wenxintishi}
 
-\section{ZFC 公理一览}\label{sec:ZFC}
-何谓集合? G.\ Cantor 在 1895 年\cite[p.481]{Cantor95}作如是界说: ``集合意谓吾人感知或思想中一些确定的, 并且相互区别的对象汇集而成的整体, 这些对象称为该集合的元素.'' 百余年后回首, 仍然得承认 Cantor 的说法审慎而精当. 即便如此, 不加节制地操作这些``确定的'', ``相区别''的对象将导致悖论, 譬如著名的 Russell 佯谬\index{Russell 佯谬}便考虑了所有集合构成的``集合'' $\textbf{V}$, 构造其子``集合'' $\{x \in \textbf{V} : x \notin x\}$ 而导出矛盾. 现代集合论处理此问题的主流方法是限制概括原理 $\left\{x : x \text{ 满足性质 } P\right \}$ 的应用范围, 并在一阶逻辑与合适的公理系统下进行演绎. 例如: 以上提到的``集合'' $\textbf{V}$ 实非集合, 强名之只能称作类.\index{jihelun@集合论}
+\section{Ikhtisar aksioma ZFC}\label{sec:ZFC}
+Apakah himpunan itu? Pada tahun 1895, G.\ Cantor memberikan penjelasan berikut \cite[p.481]{Cantor95}: ``Yang dimaksud dengan himpunan ialah suatu keseluruhan yang terbentuk dengan menghimpun sejumlah objek tertentu dan saling berbeda yang terdapat dalam persepsi atau pikiran kita; objek-objek tersebut disebut anggota himpunan itu.'' Lebih dari seabad kemudian, rumusan Cantor masih harus diakui cermat dan tepat. Meskipun demikian, memanipulasi objek-objek yang ``tertentu'' dan ``saling berbeda'' itu tanpa batas akan menimbulkan paradoks. Paradoks Russell yang termasyhur, misalnya, mempertimbangkan ``himpunan'' $\textbf{V}$ dari semua himpunan, lalu membentuk ``subhimpunan'' $\{x \in \textbf{V} : x \notin x\}$ dan memperoleh kontradiksi.\index{paradoks Russell@paradoks Russell} Pendekatan utama teori himpunan modern ialah membatasi ruang penerapan prinsip komprehensi $\left\{x : x \text{ memenuhi sifat } P\right \}$, lalu melakukan deduksi dalam logika orde pertama dengan sistem aksioma yang sesuai. Sebagai contoh, ``himpunan'' $\textbf{V}$ di atas sebenarnya bukan himpunan; paling jauh ia dapat disebut kelas.\index{teori himpunan@teori himpunan}
 
-本书采用通行的 Zermelo--Fraenkel 公理集合论, 并承认选择公理; 这套系统简称 ZFC\index{jihelun!ZFC}. 我们稍后将另加一条关于大基数的公理 (假设 \ref{hyp:universe}). 极笼统地说, ZFC 构筑于:
+Buku ini menggunakan teori himpunan aksiomatik Zermelo--Fraenkel yang lazim dan menerima aksioma pilihan; sistem ini disingkat ZFC.\index{teori himpunan!ZFC} Kelak kita akan menambahkan satu aksioma mengenai kardinal besar (Hipotesis \ref{hyp:universe}). Secara sangat garis besar, ZFC dibangun di atas:
 \begin{itemize}
-	\item 一阶逻辑, 其中具有常见的 $\wedge$, $\neg$, $\implies$, $\forall$, $\exists$ 等逻辑联词与量词, 括号 $(\;)$, 变元 $x, y, z, \ldots$ 和等号 $=$ (视为二元谓词) 等; 可以判定一个公式是否合乎语言的规则, 例如括号的左右配对, 合规者称为合式公式. 这套语言是形式逻辑的标准基础, 可参看 \cite[第 2 章]{Feng17}.
-	\item 集合论所需的二元谓词 $\in$ 和以下将列出的公理 \textbf{A.1} --- \textbf{A.9}. 若 $x \in y$ 则称 $x$ 为 $y$ 的元素. ZFC 处理的所有对象 $x,y$ 等都应该理解为集合; 特别地, 集合的元素本身也是一个集合, 而集合 $s$ 和仅含 $s$ 的集合 $\{s\}$ 是两回事.
+	\item logika orde pertama, yang memuat konektif logis dan kuantor seperti $\wedge$, $\neg$, $\implies$, $\forall$, dan $\exists$, tanda kurung $(\;)$, variabel $x, y, z, \ldots$, tanda sama dengan $=$ (dipandang sebagai predikat biner), dan sebagainya; dapat ditentukan apakah suatu formula mengikuti kaidah bahasa itu---misalnya, apakah tanda kurungnya berpasangan dengan benar---dan formula yang memenuhi kaidah disebut formula terbentuk baik. Bahasa ini merupakan landasan baku logika formal; lihat \cite[Bab 2]{Feng17}.
+	\item predikat biner $\in$ yang diperlukan teori himpunan, beserta aksioma \textbf{A.1} --- \textbf{A.9} yang akan dicantumkan di bawah. Jika $x \in y$, maka $x$ disebut anggota $y$. Semua objek $x,y$, dan seterusnya yang ditangani ZFC harus dipahami sebagai himpunan. Secara khusus, anggota suatu himpunan juga merupakan himpunan, sedangkan himpunan $s$ dan himpunan tunggal (\emph{singleton}) yang hanya beranggotakan $s$, yakni $\{s\}$, adalah dua hal yang berbeda.
 \end{itemize}
 
-本书在逻辑层面诉诸常识, 我们不采取一阶逻辑的严格形式, 仅以数学工作者日用的素朴语言勾勒 ZFC 的公理, 后续的形式推导一并省去. 细节见诸任一本集合论书籍, 如 \cite{Je03,HY14}; 简明的综述则可参阅 \cite{sep-set-theory}.
+Pada tataran logika, buku ini mengandalkan pemahaman umum. Kita tidak memakai formalisme ketat logika orde pertama, tetapi hanya menguraikan aksioma ZFC dalam bahasa informal yang digunakan matematikawan sehari-hari; seluruh deduksi formal selanjutnya dihilangkan. Rinciannya dapat ditemukan dalam buku teori himpunan mana pun, misalnya \cite{Je03,HY14}; untuk ikhtisar ringkas, lihat \cite{sep-set-theory}.
 \begin{enumerate}[\bfseries {A}.1]
-	\item \emph{外延公理}: 若两集合有相同元素, 则两者相等.
+	\item \emph{Aksioma ekstensionalitas}: jika dua himpunan mempunyai anggota yang sama, maka kedua himpunan itu sama.
 
-		空集 $\emptyset$ 的形式定义是 $\{u \in X: u \neq u\}$, 其中 $X$ 是任意集合. 外延公理一个近乎无聊的应用是证明 $\emptyset$ 无关 $X$ 的选取, 前提是集合确实存在, 这点既可以独立成另一条``存在公理'', 也可以划入稍后的无穷公理.
-	\item \emph{配对公理}: 对任意 $x,y$, 存在集合 $\{x,y\}$, 其元素恰好是 $x$ 与 $y$.
+		Definisi formal himpunan kosong $\emptyset$ ialah $\{u \in X: u \neq u\}$, dengan $X$ suatu himpunan sembarang. Salah satu penerapan aksioma ekstensionalitas yang nyaris sepele ialah membuktikan bahwa $\emptyset$ tidak bergantung pada pilihan $X$, asalkan suatu himpunan memang ada. Syarat keberadaan ini dapat dijadikan ``aksioma eksistensi'' tersendiri atau dimasukkan ke dalam aksioma ketakhinggaan di bawah.
+	\item \emph{Aksioma pasangan}: untuk setiap $x,y$, terdapat himpunan $\{x,y\}$ yang anggotanya tepat $x$ dan $y$.
 	
-		有序对 $(x,y)$ 的概念可用配对公理来实作: 我们能定义 $(x,y) := \{\{x\}, \{x,y\} \}$, 由此定义积集 $X \times Y := \{(x,y) : x \in X,\; y \in Y \}$; 准此要领可定义有限多个集合的积 $X \times Y \times \cdots$. 集合间的映射 $f: X \to Y$ 等同于它的图形 $\Gamma_f \subset X \times Y$: 对每个 $x \in X$, 交集 $\Gamma_f \cap (\{x\} \times Y)$ 是独点集, 记作 $\{(x, f(x))\}$.
-	\item \emph{分离公理模式}: 设 $P$ 为关于集合的一个性质, 并以 $P(u)$ 表示集合 $u$ 满足性质 $P$, 则对任意集合 $X$ 存在集合 $Y = \{u \in X : P(u) \}$.
-	\item \emph{并集公理}:  对任意集合 $X$, 存在相应的并集 $\bigcup X := \{u : \exists v \in X \; \text{ 使得 }\; u \in v\}$.
+		Konsep pasangan berurutan $(x,y)$ dapat direalisasikan dengan aksioma pasangan: kita dapat mendefinisikan $(x,y) := \{\{x\}, \{x,y\} \}$, lalu mendefinisikan hasil kali Kartesius $X \times Y := \{(x,y) : x \in X,\; y \in Y \}$; dengan cara yang sama dapat didefinisikan hasil kali sejumlah berhingga himpunan $X \times Y \times \cdots$. Suatu pemetaan antarahimpunan $f: X \to Y$ diidentifikasi dengan grafnya $\Gamma_f \subset X \times Y$: untuk setiap $x \in X$, irisan $\Gamma_f \cap (\{x\} \times Y)$ merupakan himpunan tunggal, yang ditulis $\{(x, f(x))\}$.
+	\item \emph{Skema aksioma pemisahan}: misalkan $P$ suatu sifat himpunan, dan $P(u)$ menyatakan bahwa himpunan $u$ memenuhi sifat $P$. Untuk setiap himpunan $X$, terdapat himpunan $Y = \{u \in X : P(u) \}$.
+	\item \emph{Aksioma gabungan}: untuk setiap himpunan $X$, terdapat gabungan yang bersesuaian, yaitu $\bigcup X := \{u : \exists v \in X \; \text{ sedemikian sehingga }\; u \in v\}$.
 	
-		公理中的 $X$ 通常视作一族集合, $\bigcup X$ 也相应地写成 $\bigcup_{v \in X} v$.
-	\item \emph{幂集公理}: 对任意集合 $X$, 其子集构成一集合 $P(X) := \{u : u \subset X \}$.\index[sym1]{$P(X)$}
-	\item \emph{无穷公理}: 存在无穷集.
+		Dalam aksioma ini, $X$ biasanya dipandang sebagai suatu keluarga himpunan; karena itu, $\bigcup X$ juga ditulis sebagai $\bigcup_{v \in X} v$.
+	\item \emph{Aksioma himpunan kuasa}: untuk setiap himpunan $X$, seluruh subhimpunannya membentuk suatu himpunan $P(X) := \{u : u \subset X \}$.\index[sym1]{$P(X)$}
+	\item \emph{Aksioma ketakhinggaan}: terdapat suatu himpunan tak hingga.
 
-		何谓无穷集? 此性质的刻画并不显然, 无穷公理可以用形式语言表作
+		Apakah yang dimaksud dengan himpunan tak hingga? Karakterisasi sifat ini tidak langsung tampak. Dalam bahasa formal, aksioma ketakhinggaan dapat ditulis sebagai
 		\begin{gather}\label{eqn:infinity-axiom}
 			\exists x \bigl[ (\emptyset \in x) \;\wedge \;\forall y \in x \left(y \cup \{y\} \in x \right)  \bigr].
 		\end{gather}
-		这般的 $x$ 称为归纳集, 预设归纳集存在的用意在于萃取它的子集
+		Himpunan $x$ semacam ini disebut himpunan induktif. Tujuan mengandaikan keberadaan himpunan induktif ialah mengambil darinya subhimpunan
 		\[ \left\{\emptyset, \{\emptyset\}, \{  \emptyset, \{\emptyset\}\}, \{  \emptyset, \{\emptyset\}, \{  \emptyset, \{\emptyset\}\}\}, \ldots \right\}, \]
-		这是我们马上要构造的可数无穷序数 $\omega$.
-	\item \emph{替换公理模式}: 设 $F$ 为以一个集合 $X$ 为定义域的函数, 则存在集合 $F(X) = \{ F(x) : x \in X\}$.
+		yaitu ordinal tak hingga terhitung $\omega$ yang akan segera kita konstruksi.
+	\item \emph{Skema aksioma penggantian}: misalkan $F$ suatu fungsi dengan domain berupa himpunan $X$. Maka terdapat himpunan $F(X) = \{ F(x) : x \in X\}$.
 	
-		分离和替换公理模式里的性质 $P$ 和函数 $F$ 并非集合论意义下的寻常定义, 故无循环论证之虞, 它们实际是由一阶逻辑的合式公式定义的: 以函数 $x \mapsto y$ 为例, 这可以诠释为一阶逻辑中带有两个自由变元 $x,y$ 的合式公式 $\varphi$, 适合于 $\forall x\; \exists! y\; \varphi(x,y)$. 由于对每个 $P$ 或 $F$ 都产生一条相应的公理, 它们被称作公理模式.
-	\item \emph{正则公理}: 任意非空集都含有一个对从属关系 $\in$ 极小的元素.
+		Sifat $P$ dan fungsi $F$ dalam skema aksioma pemisahan dan penggantian bukan definisi biasa dalam pengertian teori himpunan, sehingga tidak menimbulkan penalaran melingkar. Keduanya sebenarnya didefinisikan oleh formula terbentuk baik dalam logika orde pertama. Sebagai contoh, fungsi $x \mapsto y$ dapat ditafsirkan sebagai formula terbentuk baik dalam logika orde pertama dengan dua variabel bebas $x,y$, katakanlah $\varphi$, yang memenuhi $\forall x\; \exists! y\; \varphi(x,y)$. Karena setiap pilihan $P$ atau $F$ menghasilkan satu aksioma yang bersesuaian, aksioma pemisahan dan penggantian masing-masing berbentuk skema aksioma.
+	\item \emph{Aksioma regularitas}: setiap himpunan tak kosong memuat suatu anggota yang minimal terhadap relasi keanggotaan $\in$.
 	
-		正则公理的一个重要推论是对于任意集合 $x$, 不存在无穷的从属链 $x \ni x_1 \ni x_2 \ni \cdots$, 特别地 $x \notin x$. 由之可建立集合的层垒谱系, 见 \S\ref{sec:Grot-universe}.
-	\item \emph{选择公理}: 设集合 $X$ 的每个元素皆非空 , 则存在函数 $g: X \to \bigcup X$ 使得 $\forall x \in X, \; g(x) \in x$ (称作选择函数).\index{xuanzegongli@选择公理 (axiom of choice)}
+		Salah satu akibat penting aksioma regularitas ialah bahwa, untuk setiap himpunan $x$, tidak ada rantai keanggotaan tak hingga $x \ni x_1 \ni x_2 \ni \cdots$; khususnya, $x \notin x$. Dari sini dapat dibangun hierarki kumulatif himpunan; lihat \S\ref{sec:Grot-universe}.
+	\item \emph{Aksioma pilihan}: misalkan setiap anggota himpunan $X$ merupakan himpunan tak kosong. Maka terdapat fungsi $g: X \to \bigcup X$ sedemikian sehingga $\forall x \in X, \; g(x) \in x$ (disebut fungsi pilihan).\index{aksioma pilihan@aksioma pilihan (axiom of choice)}
 
-		选择公理中的 $X$ 应该设想为一族非空集, 选择函数 $g(x) \in x$ 意味着从每个集合 $x \in X$ 中挑出一个元素.
+		Dalam aksioma pilihan, $X$ hendaknya dibayangkan sebagai suatu keluarga himpunan tak kosong. Fungsi pilihan $g(x) \in x$ berarti bahwa satu anggota dipilih dari setiap himpunan $x \in X$.
 \end{enumerate}
 
-严格来说, 在 ZFC 的形式系统内仅谈论集合. 一些常见的公理集合论如 NBG 系统 (von Neumann--Bernays--Gödel)\index{jihelun!NBG} 还定义了\emph{类}的概念: 凡集合都是类, 但还存在非集合的类, 称作\emph{真类}\index{zhenlei@真类 (proper class)}. 对于 ZFC 系统, 类只是权宜之计: 它只能在元语言的层次理解为满足某一给定性质的所有集合, 譬如所有的集合构成一类; 对类的操作化约为对一阶逻辑中合式公式的操作. 本书力求避开真类, 但在本章将不得不予处理.
+Secara ketat, sistem formal ZFC hanya membicarakan himpunan. Beberapa teori himpunan aksiomatik yang lazim, seperti sistem NBG (von Neumann--Bernays--Gödel)\index{teori himpunan!NBG}, juga mendefinisikan konsep \emph{kelas}: setiap himpunan merupakan kelas, tetapi terdapat pula kelas yang bukan himpunan, yang disebut \emph{kelas sejati}\index{kelas sejati@kelas sejati (proper class)}. Dalam sistem ZFC, kelas hanyalah alat bantu: pada tingkat metabahasa, kelas dipahami sebagai semua himpunan yang memenuhi suatu sifat tertentu; misalnya, semua himpunan membentuk suatu kelas. Operasi pada kelas direduksi menjadi operasi pada formula terbentuk baik dalam logika orde pertama. Buku ini berusaha menghindari kelas sejati, tetapi dalam bab ini kita tetap harus menanganinya.
 
-集合的并 $X \cup Y$, 交 $X \cap Y$, 差 $X \smallsetminus Y$, 积 $X \times Y$ 和子集$X \subset Y$ 等运算, 以及函数等都是派生的概念. 读者想必知之甚详, 故不再赘述. 由此出发, 可以进一步构造非负整数集 $\Z_{\geq 0}$, 整数集 $\Z$, 有理数集 $\Q$ 和实数集 $\R$ 等等. 我们将在 \S\ref{sec:order} 回顾集合论里构造 $\Z_{\geq 0}$ 的方式.
+Gabungan $X \cup Y$, irisan $X \cap Y$, selisih $X \smallsetminus Y$, hasil kali $X \times Y$, relasi subhimpunan $X \subset Y$, fungsi, dan sebagainya merupakan konsep-konsep turunan. Pembaca tentu telah sangat mengenalnya, sehingga tidak akan diuraikan lagi. Dari konsep-konsep ini selanjutnya dapat dikonstruksi himpunan bilangan bulat taknegatif $\Z_{\geq 0}$, himpunan bilangan bulat $\Z$, himpunan bilangan rasional $\Q$, himpunan bilangan real $\R$, dan seterusnya. Dalam \S\ref{sec:order}, kita akan meninjau kembali cara mengonstruksi $\Z_{\geq 0}$ dalam teori himpunan.
 
-以下简述商集的概念. 对于任意 $n \geq 1$, 集合 $X$ 上的 $n$ 元关系按定义是 $X^n = \underbracket{X \times \cdots \times X}_{n\; \text{项}}$ 的一个子集 $R$. 多数场合考虑的是二元关系, 此时以 $xRy$ 表示 $(x,y) \in R$. 满足以下性质的(二元)关系 $\sim$ 称作\emph{等价关系}:
+Berikut ini kita uraikan secara ringkas konsep himpunan hasil bagi. Untuk setiap $n \geq 1$, pada himpunan $X$, relasi $n$-er didefinisikan sebagai suatu subhimpunan dari $X^n = \underbracket{X \times \cdots \times X}_{n\; \text{faktor}}$, yang dinyatakan dengan $R$. Dalam kebanyakan keadaan, yang dipertimbangkan ialah relasi biner; dalam hal ini, $xRy$ menyatakan $(x,y) \in R$. Suatu relasi biner $\sim$ yang memenuhi sifat-sifat berikut disebut \emph{relasi ekuivalensi}:
 \begin{compactdesc}
-	\item[反身性] $x \sim x$,
-	\item[对称性] $x \sim y \implies y \sim x$,
-	\item[传递性] $(x \sim y) \wedge (y \sim z) \implies (x \sim z)$.
+	\item[Refleksif] $x \sim x$,
+	\item[Simetris] $x \sim y \implies y \sim x$,
+	\item[Transitif] $(x \sim y) \wedge (y \sim z) \implies (x \sim z)$.
 \end{compactdesc}
-对于 $X$ 上的等价关系 $\sim$ 和任意 $x \in X$, 含 $x$ 的等价类记为 $[x] := \{y \in X: y \sim x \}$. \emph{商集}\index{shang@商 (quotient)}定义为全体等价类, 亦即 $X/\sim\; := \{[x] : x \in X \}$. 如此得到 $X$ 的无交并分解 (又称 $X$ 的划分) $X = \bigcup_{[x] \in X/\sim} [x]$, 而且 $x \sim y$ 当且仅当 $x,y$ 属于划分中的同一个子集. 易见 $X$ 上的等价关系一一对应于 $X$ 的划分.
+Untuk $X$ dengan relasi ekuivalensi $\sim$ dan setiap $x \in X$, kelas ekuivalensi yang memuat $x$ ditulis $[x] := \{y \in X: y \sim x \}$. \emph{Himpunan hasil bagi}\index{himpunan hasil bagi@himpunan hasil bagi (quotient)} didefinisikan sebagai himpunan seluruh kelas ekuivalensi, yaitu $X/\sim\; := \{[x] : x \in X \}$. Dengan demikian diperoleh dekomposisi $X$ sebagai gabungan saling lepas (juga disebut partisi $X$), yakni $X = \bigcup_{[x] \in X/\sim} [x]$. Selain itu, $x \sim y$ jika dan hanya jika $x,y$ termasuk dalam subhimpunan yang sama pada partisi tersebut. Mudah dilihat bahwa relasi ekuivalensi pada $X$ berkorespondensi satu-satu dengan partisi $X$.
 
-我们将采用习见的集合论符号, 例如 $X \subsetneq Y$ 代表 $X \subset Y$ 且 $X \neq Y$, 以 $X \sqcup Y$ 代表 $X$ 和 $Y$ 的无交并, $X^Y$ \index[sym1]{$X^Y$}代表所有函数 $f: Y \to X$ 构成的集合, 特别地 $2^X = P(X)$\index[sym1]{$2^X$}, 这里 $2$ 代表恰有两个元素的集合. 我们将用 $\{\text{pt}\}$ 表示仅有一个元素的集合. 进一步, 对于以某集合 $I$ 为指标的一族集合 $(X_i)_{i \in I}$ 可以定义
+Kita akan menggunakan notasi teori himpunan yang lazim. Misalnya, $X \subsetneq Y$ berarti $X \subset Y$ dan $X \neq Y$; $X \sqcup Y$ menyatakan gabungan saling lepas $X$ dan $Y$; sedangkan $X^Y$ \index[sym1]{$X^Y$} menyatakan himpunan semua fungsi $f: Y \to X$. Khususnya, $2^X = P(X)$\index[sym1]{$2^X$}, dengan $2$ menyatakan suatu himpunan yang mempunyai tepat dua anggota. Kita akan menggunakan $\{\text{pt}\}$ untuk menyatakan himpunan yang mempunyai tepat satu anggota. Selanjutnya, untuk suatu himpunan indeks $I$ dan suatu keluarga himpunan $(X_i)_{i \in I}$, dapat didefinisikan
 \[ \begin{array}{ll}
-	\text{并 } \; \bigcup_{i \in I} X_i, & \text{交} \; \bigcap_{i \in I} X_i, \quad (I \neq \emptyset), \\
-	\text{无交并 } \; \bigsqcup_{i \in I} X_i, & \text{积} \; \prod_{i \in I} X_i.
+	\text{gabungan } \; \bigcup_{i \in I} X_i, & \text{irisan } \; \bigcap_{i \in I} X_i, \quad (I \neq \emptyset), \\
+	\text{gabungan saling lepas } \; \bigsqcup_{i \in I} X_i, & \text{hasil kali } \; \prod_{i \in I} X_i.
 \end{array}\]
-对应于 $I=\emptyset$ 的并与无交并都是 $\emptyset$, 而积是 $\{\emptyset\}$. 空交的合理定义只能是全体集合构成的类 $\textbf{V}$, 这在 ZFC 系统内是犯规的.
+Untuk $I=\emptyset$, gabungan dan gabungan saling lepas keduanya adalah $\emptyset$, sedangkan hasil kalinya adalah $\{\emptyset\}$. Satu-satunya definisi yang wajar bagi irisan kosong ialah kelas $\textbf{V}$ yang terdiri atas semua himpunan, tetapi hal ini tidak diperbolehkan dalam sistem ZFC.
 
-公理集合论是当代数学的正统基础. 它的表述范围之广, 形式化程度之高, 以至于数学本身也堪成为数学研究的对象, 诸如何谓证明, 一个命题能否被证明, 公理系统的一致性(无矛盾)等等都能被赋予明晰的数学内容, 这类研究统称元数学\index{yuanshuxue@元数学 (metamathematics)}. 数学实践中平素基于自然语言的定义和论证等等, ``原则上''都能改写为 ZFC 或其他公理集合论里的形式语言, 从而为其陈述和验证赋予一套坚实的基础. 幸抑不幸, 这种基础长期以来仅仅是一种姿态: 即便对看似单纯的集合论定理, 其形式表述往往都极尽繁琐, 遑论靠人工来验证乃至于领略. 然而随着符号逻辑, 计算机理论与相关技术的持续进展, 形势逐渐在起变化. 如四色定理, 素数定理, Kepler 猜想等结果现在已有了形式的验证, 而形式化方法的应用还不限于数学. 集合论之外的思想 (如类型论) 对此似乎是必要的, 至少是起了极大的简化效果. 可以确定的是: 随着理论与技术携手并进, 人们对数学基础与数学实践两方面的认知还会不断被改写.
-
+Teori himpunan aksiomatik merupakan landasan ortodoks matematika modern. Cakupan pengungkapannya begitu luas dan taraf formalisasinya begitu tinggi sehingga matematika itu sendiri dapat menjadi objek penelitian matematika. Pertanyaan seperti apakah yang dimaksud dengan bukti, apakah suatu pernyataan dapat dibuktikan, dan apakah suatu sistem aksioma konsisten (bebas kontradiksi), semuanya dapat diberi kandungan matematis yang jelas; bidang penelitian semacam ini secara kolektif disebut metamatematika\index{metamatematika@metamatematika (metamathematics)}. Definisi, argumen, dan praktik matematika lain yang biasanya disampaikan dalam bahasa alami ``pada prinsipnya'' dapat ditulis ulang dalam bahasa formal ZFC atau teori himpunan aksiomatik lainnya, sehingga perumusan dan verifikasinya memperoleh landasan yang kukuh. Entah itu suatu keberuntungan atau kemalangan, selama ini landasan tersebut tak lebih daripada suatu sikap pada tataran prinsip: bahkan perumusan formal teorema teori himpunan yang tampak sederhana pun sering sangat bertele-tele, apalagi jika harus diverifikasi atau bahkan dipahami secara manual. Namun, seiring kemajuan berkelanjutan dalam logika simbolik, teori komputasi, dan teknologi terkait, keadaan ini berangsur-angsur berubah. Hasil-hasil seperti teorema empat warna, teorema bilangan prima, dan dugaan Kepler kini telah memiliki verifikasi formal, dan penerapan metode formal tidak terbatas pada matematika. Gagasan-gagasan di luar teori himpunan, seperti teori tipe, tampaknya diperlukan untuk tujuan ini, atau setidaknya memberikan penyederhanaan yang sangat besar. Satu hal dapat dipastikan: seiring teori dan teknologi berkembang bersama, pemahaman manusia mengenai landasan maupun praktik matematika akan terus ditulis ulang.
+\ifdefined\UnitTwoZFCReader\expandafter\endinput\fi
 \section{序结构与序数}\label{sec:order}
 按照 Bourbaki 的观点, 序结构连同拓扑和代数结构一道组成了数学结构的三大母体. 以下依序介绍偏序, 全序与良序的概念.
 

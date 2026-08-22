@@ -1,9 +1,9 @@
 # Modular backend
 
 This directory contains the language-neutral, hash-bound backend for the O013
-edition. The canonical record for the first reader unit is
-`data/unit-001-pendahuluan.json`; files in `csv/` are deterministic projections,
-not independent sources of truth.
+edition. Canonical records for the admitted reader units are
+`data/unit-001-pendahuluan.json` and `data/unit-002-bab-1-zfc.json`; files in
+`csv/` are deterministic projections, not independent sources of truth.
 
 ## Identity model
 
@@ -22,11 +22,13 @@ the recorded namespace and stable key rather than assigned ad hoc.
 File bindings carry exact byte counts and SHA-256 hashes. Semantic TeX spans
 also carry a normalized line-span hash named `sha256-utf8-lines-lf-v1`: decode
 as UTF-8, select the inclusive one-based line range, join lines with LF, append
-one LF, and hash the resulting UTF-8 bytes. Exact file hashes detect every byte
-change; normalized span hashes let equivalent line-ending changes be compared
-without weakening the exact binding.
+one LF, and hash the resulting UTF-8 bytes. For an unranged binding, the live
+file must match its exact byte count and hash. For a ranged binding, the exact
+file identity is retained as the admission-time witness while the normalized
+span is the live integrity boundary. Later translation outside an admitted
+span therefore cannot invalidate the earlier unit.
 
-Unit 001 is `admitted` and `visually_checked`. Its admission requires passing
+Units 001 and 002 are `admitted` and `visually_checked`. Admission requires passing
 translation, build, and visual states plus bound reader, build-summary, build
 script, and QA-receipt evidence. A green backend validation proves that the
 schema, identities, references, order, hashes, citations, diagrams, index
@@ -39,8 +41,10 @@ in the bound receipt.
 From the lane root, run:
 
 ```text
-python -B scripts/validate_backend.py --write-csv
-python -B scripts/validate_backend.py
+python -B scripts/validate_backend.py --data backend/data/unit-001-pendahuluan.json --write-csv
+python -B scripts/validate_backend.py --data backend/data/unit-002-bab-1-zfc.json --write-csv
+python -B scripts/validate_backend.py --data backend/data/unit-001-pendahuluan.json
+python -B scripts/validate_backend.py --data backend/data/unit-002-bab-1-zfc.json
 ```
 
 The first command validates the canonical JSON and then rewrites all CSV views
@@ -50,20 +54,22 @@ unsafe paths, missing files, hash drift, duplicate or nondeterministic IDs,
 unresolved references, unordered sections, citation/ref drift, diagram-count
 drift, index-key drift, and stale projections.
 
-After a reviewed derivative-source edit changes bytes without changing the
-recorded semantic line ranges, `--refresh-derivative-bindings` may be added to
-the first command. It refreshes only paths under `repo/`; immutable
-`authority/` and `00_control/` bindings are never rewritten automatically.
+After a reviewed derivative-source edit changes an unranged bound file, or
+changes bytes inside a recorded semantic line range, the explicit
+`--refresh-derivative-bindings` option may be added to that unit's export
+command. It refreshes only paths under `repo/`; immutable `authority/` and
+`00_control/` bindings are never rewritten automatically. Ranged bindings keep
+their admission-time whole-file witness and refresh only their live span hash.
 
 ## CSV views
 
-- `unit-001-entities.csv`: normalized entity inventory;
-- `unit-001-relations.csv`: contains/covers/requires/rights/surface links;
-- `unit-001-bindings.csv`: exact source, target, authority, rights, and build
+- `unit-NNN-entities.csv`: normalized entity inventory;
+- `unit-NNN-relations.csv`: contains/covers/requires/rights/surface links;
+- `unit-NNN-bindings.csv`: exact source, target, authority, rights, and build
   bindings;
-- `unit-001-rights.csv`: component-level rights and required treatment;
-- `unit-001-surfaces.csv`: citations, diagrams, index entries, and build surface;
-- `unit-001-qa.csv`: narrowly typed QA event state.
+- `unit-NNN-rights.csv`: component-level rights and required treatment;
+- `unit-NNN-surfaces.csv`: citations, diagrams, index entries, and build surface;
+- `unit-NNN-qa.csv`: narrowly typed QA event state.
 
 JSON is retained as the lossless representation because nested localized
 labels, component rights, and source/target spans become awkward and fragile in

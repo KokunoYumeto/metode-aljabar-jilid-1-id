@@ -24,7 +24,8 @@ UUID_URN_RE = re.compile(
 )
 CITE_RE = re.compile(r"\\cite(?:\[[^\]]*\])?\{([^}]*)\}")
 REF_RE = re.compile(r"\\(?:ref|pageref)\{([^}]*)\}")
-INDEX_RE = re.compile(r"\\index\{([^}]*)\}")
+INDEX_RE = re.compile(r"\\index(?:\[([^\]]+)\])?\{([^{}]*)\}")
+LABEL_RE = re.compile(r"\\label\{([^}]*)\}")
 
 
 class Validation:
@@ -196,10 +197,10 @@ def validate_file_binding(
             lines = []
         cache[path] = (len(payload), sha256_bytes(payload), lines)
     actual_bytes, actual_hash, lines = cache[path]
-    result.require(actual_bytes == binding["bytes"], f"{where}: byte count drift for {binding['path']}: expected {binding['bytes']}, found {actual_bytes}")
-    result.require(actual_hash == binding["sha256"], f"{where}: SHA-256 drift for {binding['path']}: expected {binding['sha256']}, found {actual_hash}")
-
-    if "line_start" in binding:
+    if "line_start" not in binding:
+        result.require(actual_bytes == binding["bytes"], f"{where}: byte count drift for {binding['path']}: expected {binding['bytes']}, found {actual_bytes}")
+        result.require(actual_hash == binding["sha256"], f"{where}: SHA-256 drift for {binding['path']}: expected {binding['sha256']}, found {actual_hash}")
+    else:
         start = binding["line_start"]
         end = binding["line_end"]
         result.require(bool(lines), f"{where}: line binding is not valid UTF-8 text")
@@ -232,8 +233,6 @@ def refresh_derivative_bindings(value: Any, lane_root: Path, result: Validation,
             path = safe_lane_path(lane_root, value["path"], result, where)
             if path is not None and path.is_file():
                 payload = path.read_bytes()
-                value["bytes"] = len(payload)
-                value["sha256"] = sha256_bytes(payload)
                 if "line_start" in value:
                     try:
                         lines = payload.decode("utf-8").splitlines()
@@ -247,6 +246,9 @@ def refresh_derivative_bindings(value: Any, lane_root: Path, result: Validation,
                         else:
                             normalized = ("\n".join(lines[start - 1 : end]) + "\n").encode("utf-8")
                             value["span_sha256"] = sha256_bytes(normalized)
+                else:
+                    value["bytes"] = len(payload)
+                    value["sha256"] = sha256_bytes(payload)
         for key, item in value.items():
             refresh_derivative_bindings(item, lane_root, result, f"{where}.{key}")
     elif isinstance(value, list):
@@ -264,6 +266,17 @@ def parse_citations(text: str) -> list[str]:
 def line_contains(path: Path, line_number: int, fragment: str) -> bool:
     lines = path.read_text(encoding="utf-8").splitlines()
     return 1 <= line_number <= len(lines) and fragment in lines[line_number - 1]
+
+
+def bound_text(path: Path, binding: dict[str, Any]) -> str:
+    """Read only the inclusive line span represented by a unit binding."""
+    text = path.read_text(encoding="utf-8")
+    if "line_start" not in binding:
+        return text
+    lines = text.splitlines()
+    start = binding["line_start"]
+    end = binding["line_end"]
+    return "\n".join(lines[start - 1 : end]) + "\n"
 
 
 def expect_refs(
@@ -369,8 +382,8 @@ def semantic_validation(data: dict[str, Any], lane_root: Path, result: Validatio
     source_path = safe_lane_path(lane_root, data["unit"]["source_binding"]["path"], result, "unit.source_binding")
     target_path = safe_lane_path(lane_root, data["unit"]["target_binding"]["path"], result, "unit.target_binding")
     if source_path and target_path and source_path.is_file() and target_path.is_file():
-        source_text = source_path.read_text(encoding="utf-8")
-        target_text = target_path.read_text(encoding="utf-8")
+        source_text = bound_text(source_path, data["unit"]["source_binding"])
+        target_text = bound_text(target_path, data["unit"]["target_binding"])
         source_citations = sorted(set(parse_citations(source_text)))
         target_citations = sorted(set(parse_citations(target_text)))
         recorded_citations = sorted(item["bib_key"] for item in data["citations"])
@@ -379,6 +392,9 @@ def semantic_validation(data: dict[str, Any], lane_root: Path, result: Validatio
         source_refs = sorted(set(REF_RE.findall(source_text)))
         target_refs = sorted(set(REF_RE.findall(target_text)))
         result.require(source_refs == target_refs, f"protected ref-key set drift: source={source_refs}, target={target_refs}")
+        source_labels = sorted(set(LABEL_RE.findall(source_text)))
+        target_labels = sorted(set(LABEL_RE.findall(target_text)))
+        result.require(source_labels == target_labels, f"protected label-key set drift: source={source_labels}, target={target_labels}")
         for citation in data["citations"]:
             needle = citation["bib_key"]
             result.require(line_contains(source_path, citation["source_line"], needle), f"{citation['stable_key']}: bib key absent from declared source line")
@@ -398,10 +414,14 @@ def semantic_validation(data: dict[str, Any], lane_root: Path, result: Validatio
             result.require([item["source_occurrence_index"] for item in records] == list(range(1, len(records) + 1)), f"{fmt} occurrence indexes are not contiguous")
         result.require(sorted(item["ordinal_in_unit"] for item in data["diagrams"]) == list(range(1, len(data["diagrams"]) + 1)), "diagram ordinals are not contiguous")
 
-        source_index = INDEX_RE.findall(source_text)
-        target_index = INDEX_RE.findall(target_text)
-        result.require([item["source_key"] for item in data["index_entries"]] == source_index, f"source index-entry provenance mismatch: {source_index}")
-        result.require([item["target_key"] for item in data["index_entries"]] == target_index, f"target index-entry provenance mismatch: {target_index}")
+        source_index = [(name or "default", key) for name, key in INDEX_RE.findall(source_text)]
+        target_index = [(name or "default", key) for name, key in INDEX_RE.findall(target_text)]
+        result.require(
+            [name for name, _ in source_index] == [name for name, _ in target_index],
+            f"protected index-name sequence drift: source={source_index}, target={target_index}",
+        )
+        result.require([item["source_key"] for item in data["index_entries"]] == [key for _, key in source_index], f"source index-entry provenance mismatch: {source_index}")
+        result.require([item["target_key"] for item in data["index_entries"]] == [key for _, key in target_index], f"target index-entry provenance mismatch: {target_index}")
 
     workflow = data["workflow"]
     if workflow["admission_state"] == "admitted":
@@ -458,6 +478,8 @@ def render_csvs(data: dict[str, Any]) -> dict[str, bytes]:
     by_id = {entity["id"]: entity for entity in entities}
     namespace = uuid_from_urn(data["id_namespace"]["namespace_uuid"])
     unit_status = f"{data['workflow']['status']}:{data['workflow']['admission_state']}"
+    csv_prefix = f"unit-{data['unit']['order']:03d}"
+    source_leaf = PurePosixPath(data["unit"]["source_binding"]["path"]).name
 
     parent_by_type = {
         "course": data["program"]["id"],
@@ -523,12 +545,12 @@ def render_csvs(data: dict[str, Any]) -> dict[str, bytes]:
     for rights_id in data["unit"]["rights_component_ids"]:
         add_relation(data["unit"]["id"], "governed-by", rights_id)
     for citation in data["citations"]:
-        add_relation(citation["section_id"], "cites", citation["id"], f"prelude.tex:{citation['source_line']}")
+        add_relation(citation["section_id"], "cites", citation["id"], f"{source_leaf}:{citation['source_line']}")
     for diagram in data["diagrams"]:
-        add_relation(diagram["section_id"], "includes-diagram", diagram["id"], f"prelude.tex:{diagram['source_binding']['line_start']}-{diagram['source_binding']['line_end']}")
+        add_relation(diagram["section_id"], "includes-diagram", diagram["id"], f"{source_leaf}:{diagram['source_binding']['line_start']}-{diagram['source_binding']['line_end']}")
         add_relation(diagram["id"], "governed-by", diagram["rights_component_id"])
     for entry in data["index_entries"]:
-        add_relation(entry["section_id"], "indexes", entry["id"], f"prelude.tex:{entry['source_binding']['line_start']}")
+        add_relation(entry["section_id"], "indexes", entry["id"], f"{source_leaf}:{entry['source_binding']['line_start']}")
     for surface in data["build_surfaces"]:
         add_relation(data["unit"]["id"], "built-by", surface["id"])
         for rights_id in surface["rights_component_ids"]:
@@ -621,12 +643,12 @@ def render_csvs(data: dict[str, Any]) -> dict[str, bytes]:
     ]
 
     return {
-        "unit-001-entities.csv": csv_payload(["entity_type", "id", "stable_key", "parent_id", "order", "label_id", "status"], entity_rows),
-        "unit-001-relations.csv": csv_payload(["relation_id", "relation_key", "source_id", "predicate", "target_id", "evidence"], relation_rows),
-        "unit-001-bindings.csv": csv_payload(["owner_id", "binding_role", "language", "path", "line_start", "line_end", "bytes", "sha256", "span_sha256", "span_hash_algorithm"], binding_rows),
-        "unit-001-rights.csv": csv_payload(["id", "stable_key", "component", "holder_or_source", "license", "applies_to_unit", "required_treatment"], rights_rows),
-        "unit-001-surfaces.csv": csv_payload(["entity_type", "id", "stable_key", "section_id", "ordinal", "source_value", "target_value", "format", "status"], surface_rows),
-        "unit-001-qa.csv": csv_payload(["id", "stable_key", "unit_id", "check_type", "result", "scope", "witness", "translation_audit_state", "build_state", "visual_state"], qa_rows),
+        f"{csv_prefix}-entities.csv": csv_payload(["entity_type", "id", "stable_key", "parent_id", "order", "label_id", "status"], entity_rows),
+        f"{csv_prefix}-relations.csv": csv_payload(["relation_id", "relation_key", "source_id", "predicate", "target_id", "evidence"], relation_rows),
+        f"{csv_prefix}-bindings.csv": csv_payload(["owner_id", "binding_role", "language", "path", "line_start", "line_end", "bytes", "sha256", "span_sha256", "span_hash_algorithm"], binding_rows),
+        f"{csv_prefix}-rights.csv": csv_payload(["id", "stable_key", "component", "holder_or_source", "license", "applies_to_unit", "required_treatment"], rights_rows),
+        f"{csv_prefix}-surfaces.csv": csv_payload(["entity_type", "id", "stable_key", "section_id", "ordinal", "source_value", "target_value", "format", "status"], surface_rows),
+        f"{csv_prefix}-qa.csv": csv_payload(["id", "stable_key", "unit_id", "check_type", "result", "scope", "witness", "translation_audit_state", "build_state", "visual_state"], qa_rows),
     }
 
 

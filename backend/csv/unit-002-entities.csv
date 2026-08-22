@@ -1,0 +1,53 @@
+entity_type,id,stable_key,parent_id,order,label_id,status
+build_surface,urn:uuid:2c9fc26e-18f3-573f-a3d8-1a160d7d2e5a,build-surface/unit-002-pdf,urn:uuid:82f9b1e6-0371-5e44-b7ea-fe1bd202df7b,,unit-002-pdf,pass
+citation,urn:uuid:ded9f0e5-13fa-5531-9f72-af51148a5552,citation/cantor95,urn:uuid:43310d89-d34f-58da-b359-78b7d57701fc,,Cantor95,admitted:admitted
+citation,urn:uuid:a6724c18-bb2d-577b-abca-381a649e9555,citation/feng17,urn:uuid:1d218110-cddd-5c96-919f-795f5356cfcf,,Feng17,admitted:admitted
+citation,urn:uuid:57da2863-0a0e-5081-a6db-68b384345e19,citation/hy14,urn:uuid:43310d89-d34f-58da-b359-78b7d57701fc,,HY14,admitted:admitted
+citation,urn:uuid:16d41363-ee55-5b49-9126-2aea6b35da2c,citation/je03,urn:uuid:43310d89-d34f-58da-b359-78b7d57701fc,,Je03,admitted:admitted
+citation,urn:uuid:a9894bdc-4a6b-57dd-abea-b1703f6ab702,citation/sep-set-theory,urn:uuid:43310d89-d34f-58da-b359-78b7d57701fc,,sep-set-theory,admitted:admitted
+concept,urn:uuid:468a069d-2ec1-5ca5-bfa6-b7314df25aba,concept/axiom-of-choice,,,aksioma pilihan,admitted:admitted
+concept,urn:uuid:aa7cf241-34ff-5cfb-bdea-b3e0e6941f70,concept/axiom-schema,,,skema aksioma,admitted:admitted
+concept,urn:uuid:98228b0d-8fa7-59fb-8e6d-7ab59dbc34c6,concept/equivalence-relation,,,relasi ekuivalensi,admitted:admitted
+concept,urn:uuid:cf149ca5-2ace-57aa-a52d-5cf575d43712,concept/first-order-logic,,,logika orde pertama,admitted:admitted
+concept,urn:uuid:9ed2909a-bcfb-58eb-b3f3-3497d015d36b,concept/formal-verification,,,verifikasi formal,admitted:admitted
+concept,urn:uuid:d4494be7-d930-5462-b5ba-2cba74195ac1,concept/metamathematics,,,metamatematika,admitted:admitted
+concept,urn:uuid:ecfdee71-1691-534b-b51b-abdc996d9015,concept/proper-class,,,kelas sejati,admitted:admitted
+concept,urn:uuid:2cc6450d-7b2b-5bfa-b5bf-a4d934e9431d,concept/quotient-set,,,himpunan hasil bagi,admitted:admitted
+concept,urn:uuid:cab6f5ea-c892-5176-8877-4f4a4fe94b79,concept/set-theory,,,teori himpunan,admitted:admitted
+concept,urn:uuid:466bbf41-662d-52dc-b8d7-a925f6dc10e2,concept/zfc,,,teori himpunan aksiomatik ZFC,admitted:admitted
+course,urn:uuid:a5f3ad58-ce3c-5f5f-b581-1f842ae79192,course/o013,urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78,,Graduate Algebra,admitted:admitted
+edition,urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49,edition/wenweili/aljabr-1/c4f7a01f68f5f407906b4b970640cddbbad85f6b,urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397,,c4f7a01f68f5f407906b4b970640cddbbad85f6b,admitted:admitted
+index_entry,urn:uuid:41048104-99bf-57c5-a9e3-66c573f433e8,index-entry/unit-002/axiom-of-choice,urn:uuid:43310d89-d34f-58da-b359-78b7d57701fc,6,axiom-of-choice,admitted:admitted
+index_entry,urn:uuid:4584a98e-2080-592e-8631-e0d7fe3d0c00,index-entry/unit-002/function-set,urn:uuid:43310d89-d34f-58da-b359-78b7d57701fc,10,function-set,admitted:admitted
+index_entry,urn:uuid:721d5377-b7b8-5626-9ce2-dec35ee7a3e7,index-entry/unit-002/metamathematics,urn:uuid:43310d89-d34f-58da-b359-78b7d57701fc,12,metamathematics,admitted:admitted
+index_entry,urn:uuid:9495c68d-08fd-57e5-a401-29f8905e8733,index-entry/unit-002/model-theory,urn:uuid:1d218110-cddd-5c96-919f-795f5356cfcf,1,model-theory,admitted:admitted
+index_entry,urn:uuid:350c0bb3-ce4b-5c9f-a331-4028acf0acb6,index-entry/unit-002/nbg,urn:uuid:43310d89-d34f-58da-b359-78b7d57701fc,7,nbg,admitted:admitted
+index_entry,urn:uuid:e620a69a-edf4-56f3-a77b-91c006b488ee,index-entry/unit-002/power-set,urn:uuid:43310d89-d34f-58da-b359-78b7d57701fc,5,power-set,admitted:admitted
+index_entry,urn:uuid:bbe2745f-2249-53c1-9718-bac678084e5b,index-entry/unit-002/power-set-functions,urn:uuid:43310d89-d34f-58da-b359-78b7d57701fc,11,power-set-functions,admitted:admitted
+index_entry,urn:uuid:232dab91-138e-5958-ae18-d3a9e75b9b16,index-entry/unit-002/proper-class,urn:uuid:43310d89-d34f-58da-b359-78b7d57701fc,8,proper-class,admitted:admitted
+index_entry,urn:uuid:97468411-bd72-50d4-a9f5-ff6acae8a97c,index-entry/unit-002/quotient-set,urn:uuid:43310d89-d34f-58da-b359-78b7d57701fc,9,quotient-set,admitted:admitted
+index_entry,urn:uuid:a0db3106-805a-5cb1-b7e7-ca15b8409262,index-entry/unit-002/russell-paradox,urn:uuid:43310d89-d34f-58da-b359-78b7d57701fc,2,russell-paradox,admitted:admitted
+index_entry,urn:uuid:73bd7f0a-0ba7-5abd-b26a-034180e830ee,index-entry/unit-002/set-theory,urn:uuid:43310d89-d34f-58da-b359-78b7d57701fc,3,set-theory,admitted:admitted
+index_entry,urn:uuid:3c065646-2a23-54d4-b9ae-1db15ac62e50,index-entry/unit-002/zfc,urn:uuid:43310d89-d34f-58da-b359-78b7d57701fc,4,zfc,admitted:admitted
+prerequisite,urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7,prerequisite/basic-mathematical-literacy,,,kematangan matematika dasar,admitted:admitted
+prerequisite,urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f,prerequisite/cauchy-sequences-and-completeness,,,barisan Cauchy dan kelengkapan,admitted:admitted
+prerequisite,urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee,prerequisite/elementary-number-theory,,,teori bilangan elementer,admitted:admitted
+prerequisite,urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4,prerequisite/elementary-set-theory,,,teori himpunan elementer,admitted:admitted
+prerequisite,urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec,prerequisite/linear-transformations,,,transformasi linear,admitted:admitted
+prerequisite,urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7,prerequisite/mathematical-logic,,,bahasa logika dan penalaran,admitted:admitted
+prerequisite,urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288,prerequisite/matrices,,,matriks,admitted:admitted
+prerequisite,urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8,prerequisite/permutations-and-symmetric-groups,,,permutasi dan grup simetris,admitted:admitted
+prerequisite,urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96,prerequisite/point-set-topology,,,topologi himpunan titik elementer,admitted:admitted
+prerequisite,urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14,prerequisite/polynomials,,,polinom,admitted:admitted
+prerequisite,urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f,prerequisite/real-analysis-basics,,,dasar-dasar analisis real,admitted:admitted
+prerequisite,urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396,prerequisite/vector-spaces,,,ruang vektor,admitted:admitted
+program,urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78,program/open-mathematics-curriculum/2026,,,Open Mathematics Curriculum,admitted:admitted
+qa_event,urn:uuid:0e313e95-e090-50d5-afb6-24c3970650fd,qa/unit-002/admission-gate,urn:uuid:82f9b1e6-0371-5e44-b7ea-fe1bd202df7b,,admission-gate,pass
+resource,urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397,resource/wenweili/aljabr-1,,,"Metode Aljabar, Jilid 1: Arsitektur Dasar",admitted:admitted
+rights,urn:uuid:10faf5cd-990f-5850-87b4-26922b062485,rights/ajbook-fragment-cc-by-sa-3.0,,,AJbook.cls DeclareSourcemap fragment,applies
+rights,urn:uuid:e18339ae-66cd-5304-b544-b220dd41380d,rights/lanzhou-cc-by-sa-3.0,,,Lanzhou.png,retained_not_used_by_unit
+rights,urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430,rights/noto-fonts-ofl-1.1,,,Noto Sans CJK SC and Noto Serif CJK SC fonts,applies
+rights,urn:uuid:0baf6c47-021d-5310-9475-81519e710250,rights/principal-cc-by-4.0,,,"Principal text, source, PDF, and Indonesian translation",applies
+section,urn:uuid:1d218110-cddd-5c96-919f-795f5356cfcf,unit/bab-1-zfc/section/orientation,urn:uuid:82f9b1e6-0371-5e44-b7ea-fe1bd202df7b,1,Teori himpunan: orientasi bab,admitted:admitted
+section,urn:uuid:43310d89-d34f-58da-b359-78b7d57701fc,unit/bab-1-zfc/section/zfc-axioms,urn:uuid:82f9b1e6-0371-5e44-b7ea-fe1bd202df7b,2,Ikhtisar aksioma ZFC,admitted:admitted
+unit,urn:uuid:82f9b1e6-0371-5e44-b7ea-fe1bd202df7b,unit/bab-1-zfc,urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49,2,Bab 1: Teori Himpunan; Ikhtisar Aksioma ZFC,admitted:admitted

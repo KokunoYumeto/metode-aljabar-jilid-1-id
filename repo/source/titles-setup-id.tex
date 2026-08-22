@@ -1,0 +1,6 @@
+% Indonesian chapter-label wrapper around the upstream title layout.
+% AJchapterttl is deliberately defined before the upstream file, whose
+% \providecommand therefore retains this localized implementation.
+\newcommand{\AJchapterttl}[1]{%
+	\IfSubStr{ABCDEFGHIJKLMNOPQRSTUVWXYZ}{#1}{Lampiran #1}{Bab #1}}
+\input{titles-setup.tex}
