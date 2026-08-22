@@ -71,5 +71,12 @@
   "publication_receipt": "qa/PUBLICATION_FIGSHARE_V2_20260822.md",
   "public_manifest": "qa/figshare-33314766-v2/30-MANIFEST.json",
   "public_checksums": "qa/figshare-33314766-v2/40-SHA256SUMS.txt",
-  "next_action": "Publish the already admitted Unit 008 boundary and this receipt to the restored GitHub repository with a narrow push and public-byte readback, then resume Unit 009 source-order review and admission without including unreviewed Unit 009 bytes in the checkpoint release."
+  "github_publication": {
+    "repository": "https://github.com/KokunoYumeto/metode-aljabar-jilid-1-id",
+    "branch": "main",
+    "admitted_content_receipt_commit": "bdc8fcfc24593196bc94f0d82a79ecfafd026b00",
+    "anonymous_critical_file_sha256_readback": true,
+    "receipt": "qa/PUBLICATION_GITHUB_RESTORATION_20260822.md"
+  },
+  "next_action": "Resume Unit 009 source-order review and admission at the frozen chapter2.tex lines 39-198 boundary. The existing complete translation candidate remains unreviewed, unbuilt, unencoded, and unadmitted."
 }
