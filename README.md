@@ -18,6 +18,8 @@ Status saat ini: **Unit 1 - Pendahuluan serta seluruh Bab 1 telah diterjemahkan,
 
 [Baca atau unduh PDF Unit 7](artifacts/unit-007-bab-1-latihan.pdf)
 
+Versi preservasi `0.1.0` yang memuat ketujuh reader, sumber yang dapat dibangun, backend modular, bukti ringkas, dan manifest hash tersedia pada [Zenodo DOI 10.5281/zenodo.22059760](https://doi.org/10.5281/zenodo.22059760). Pembaruan berikutnya akan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat.
+
 ## Identitas sumber
 
 - Karya: Wen-Wei Li, *Methods in Algebra, Volume 1*
