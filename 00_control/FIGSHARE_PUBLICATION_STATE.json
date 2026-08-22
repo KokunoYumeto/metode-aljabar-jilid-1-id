@@ -1,23 +1,75 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "updated": "2026-08-22",
-  "state": "published_metadata_only_anonymous_readback_pass",
+  "state": "published_reader_first_v2_anonymous_full_byte_readback_pass",
   "article_id": 33314766,
-  "article_doi": "10.6084/m9.figshare.33314766.v1",
+  "article_doi": "10.6084/m9.figshare.33314766.v2",
   "article_url": "https://figshare.com/articles/book/Metode_Aljabar_Jilid_1_Arsitektur_Dasar_Edisi_Bahasa_Indonesia/33314766",
   "title": "Metode Aljabar, Jilid 1: Arsitektur Dasar — Edisi Bahasa Indonesia",
   "defined_type": "book",
-  "is_metadata_record": true,
-  "license": "CC0-metadata-only",
-  "files": 0,
+  "is_metadata_record": false,
+  "metadata_reason": "Reader-first work files are included in this version.",
+  "status": "partial_public_active",
+  "coverage": "Complete prelude, complete Chapter 1, and Chapter 2 introduction in admitted Units 001-008; Section 2.1 and all later Li content, MIT OCW 18.712, its assessment, and the selected CRing spans are absent.",
+  "independent_nonendorsed": true,
+  "item_license": "CC BY 4.0 for principal text and Indonesian adaptation",
+  "component_exceptions": [
+    "credited Lanzhou.png and credited AJbook.cls fragment: CC BY-SA 3.0",
+    "bundled Noto fonts: SIL OFL 1.1"
+  ],
+  "file_count": 5,
+  "payload_bytes": 65320598,
+  "payload_cap_bytes": 500000000,
+  "project_bytes_before_publish": 204271726,
+  "project_cap_bytes": 20000000000,
+  "primary_file_id": 67760817,
+  "primary_file": "00-metode-aljabar-jilid-1-id-checkpoint-0.2.0-reader.pdf",
+  "primary_file_pages": 83,
+  "primary_file_tagged_pdf": false,
+  "primary_file_is_thumbnail": true,
+  "files": [
+    {
+      "id": 67760817,
+      "name": "00-metode-aljabar-jilid-1-id-checkpoint-0.2.0-reader.pdf",
+      "bytes": 1294641,
+      "sha256": "d2ab88eef5d88e70e856b791aeb2ffcb44e5306f6fc0bbef8adf951bfc8050ac"
+    },
+    {
+      "id": 67760820,
+      "name": "10-metode-aljabar-jilid-1-id-source-backend-0.2.0.zip",
+      "bytes": 64021141,
+      "sha256": "a7e221bf3127207ed50b61ffbe8c1d60b18e9a14f330f913a5486d43a8701624"
+    },
+    {
+      "id": 67760826,
+      "name": "20-LICENSES.md",
+      "bytes": 1545,
+      "sha256": "5e09add2b65bd432824f52c5b581c7349db274ef89066fb189f05fd31ce0af29"
+    },
+    {
+      "id": 67760829,
+      "name": "30-MANIFEST.json",
+      "bytes": 2864,
+      "sha256": "1f56c5a3693351b7b3fe2b0a3a8758cffbf6df2166bfef011b4854a9ade4643c"
+    },
+    {
+      "id": 67760832,
+      "name": "40-SHA256SUMS.txt",
+      "bytes": 407,
+      "sha256": "ecaeb6a33893daf4edff79e5bc82092734cac053fd8cb452a1ad55485466eade"
+    }
+  ],
+  "anonymous_public_api_readback": true,
+  "anonymous_all_file_sha256_readback": true,
   "linked_zenodo_doi": "10.5281/zenodo.22060005",
-  "related_material_relation": "IsMetadataFor",
   "project_id": 280296,
   "project_membership_verified": true,
   "collection_id": 8668413,
-  "collection_version_at_readback": 13,
-  "collection_doi_at_readback": "10.6084/m9.figshare.c.8668413.v13",
+  "collection_version_at_readback": 26,
+  "collection_doi_at_readback": "10.6084/m9.figshare.c.8668413.v26",
   "collection_membership_verified": true,
-  "publication_receipt": "qa/PUBLICATION_FIGSHARE_METADATA_20260822.md",
-  "next_action": "Continue source-order translation at chapter2.tex line 39. Update this metadata record only at a future substantial verified checkpoint; never upload mixed-license work bytes under a false Figshare license."
+  "publication_receipt": "qa/PUBLICATION_FIGSHARE_V2_20260822.md",
+  "public_manifest": "qa/figshare-33314766-v2/30-MANIFEST.json",
+  "public_checksums": "qa/figshare-33314766-v2/40-SHA256SUMS.txt",
+  "next_action": "Publish the already admitted Unit 008 boundary and this receipt to the restored GitHub repository with a narrow push and public-byte readback, then resume Unit 009 source-order review and admission without including unreviewed Unit 009 bytes in the checkpoint release."
 }

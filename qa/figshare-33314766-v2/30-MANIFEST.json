@@ -1,0 +1,87 @@
+{
+  "schema": "metode-aljabar-figshare-checkpoint/v1",
+  "release_date": "2026-08-22",
+  "work": {
+    "title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Edisi Bahasa Indonesia",
+    "source_title": "Methods of Algebra, Volume 1",
+    "source_author": "Wen-Wei Li",
+    "language": "id-ID",
+    "status": "partial_public_active",
+    "coverage": "Pendahuluan lengkap, Bab 1 lengkap, dan pengantar Bab 2 dalam Unit 001-008. Bagian 2.1 dan semua bagian selanjutnya belum disertakan.",
+    "independent_nonendorsed": true
+  },
+  "authority": {
+    "source_repository": "https://github.com/wenweili/AlJabr-1",
+    "source_commit": "c4f7a01f68f5f407906b4b970640cddbbad85f6b",
+    "source_tree": "0f9fd52748165ec89a85ba602ccb949a2ce04694",
+    "official_pdf_pages": 445,
+    "official_pdf_sha256": "dc751a2d5146edc9f9638471ff3fac4107eab8dd0d3331803581a06998663c38",
+    "edition_content_commit": "fa2b24cb9cd966559dd1505201548572cca87095"
+  },
+  "preservation": {
+    "zenodo_version_doi": "10.5281/zenodo.22060005",
+    "zenodo_concept_doi": "10.5281/zenodo.22059759",
+    "figshare_article_id": 33314766,
+    "figshare_project_id": 280296,
+    "figshare_collection_id": 8668413
+  },
+  "rights": [
+    {
+      "component": "principal source text and Indonesian adaptation",
+      "license": "CC BY 4.0"
+    },
+    {
+      "component": "credited Lanzhou.png and credited AJbook.cls fragment",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "component": "bundled Noto fonts",
+      "license": "SIL OFL 1.1"
+    }
+  ],
+  "files": [
+    {
+      "name": "00-metode-aljabar-jilid-1-id-checkpoint-0.2.0-reader.pdf",
+      "role": "primary_reader",
+      "bytes": 1294641,
+      "sha256": "d2ab88eef5d88e70e856b791aeb2ffcb44e5306f6fc0bbef8adf951bfc8050ac",
+      "pages": 83,
+      "language": "id-ID",
+      "tagged_pdf": false
+    },
+    {
+      "name": "10-metode-aljabar-jilid-1-id-source-backend-0.2.0.zip",
+      "role": "compact_resumable_source_backend",
+      "bytes": 64021141,
+      "sha256": "a7e221bf3127207ed50b61ffbe8c1d60b18e9a14f330f913a5486d43a8701624",
+      "entries": 139,
+      "expanded_bytes": 78969969,
+      "excluded": [
+        "raw authority/provenance dumps",
+        "reader duplicates",
+        "QA render trees",
+        "build caches",
+        "temporary files",
+        "credentials"
+      ]
+    },
+    {
+      "name": "20-LICENSES.md",
+      "role": "controlling_component_rights_notice",
+      "bytes": 1545,
+      "sha256": "5e09add2b65bd432824f52c5b581c7349db274ef89066fb189f05fd31ce0af29"
+    }
+  ],
+  "qa": {
+    "reader_reproducible_sha256": true,
+    "reader_pages": 83,
+    "merged_source_pages_pixel_compared": 82,
+    "merged_source_pages_pixel_identical": 82,
+    "named_destinations": 250,
+    "goto_actions": 152,
+    "uri_actions": 38,
+    "missing_named_targets": 0,
+    "widgets": 0,
+    "javascript_actions": 0
+  }
+}

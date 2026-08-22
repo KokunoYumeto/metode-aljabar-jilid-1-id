@@ -1,4 +1,8 @@
-# Figshare metadata publication receipt
+# Figshare metadata publication receipt (historical v1)
+
+> Superseded on 2026-08-22 by the reader-first public v2 receipt at
+> `qa/PUBLICATION_FIGSHARE_V2_20260822.md`. The statements below describe the
+> exact historical v1 state and are not the current publication state.
 
 Date: 2026-08-22  
 State: public metadata-only record; anonymous readback passed  

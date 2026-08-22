@@ -22,7 +22,7 @@ Status saat ini: **Pendahuluan, seluruh Bab 1, serta pengantar Bab 2 telah diter
 
 Versi preservasi `0.2.0` yang memuat kedelapan reader, sumber yang dapat dibangun, backend modular, bukti ringkas, dan manifest hash tersedia pada [Zenodo DOI 10.5281/zenodo.22060005](https://doi.org/10.5281/zenodo.22060005). Seluruh pembaruan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat.
 
-Catatan penemuan metadata saja tersedia pada [Figshare DOI 10.6084/m9.figshare.33314766.v1](https://doi.org/10.6084/m9.figshare.33314766.v1). Catatan itu tidak menyalin berkas karya: CC0 berlaku hanya pada metadata Figshare, sedangkan berkas Zenodo mempertahankan hak per komponennya.
+Checkpoint pembaca yang sama tersedia sebagai item karya publik pada [Figshare DOI 10.6084/m9.figshare.33314766.v2](https://doi.org/10.6084/m9.figshare.33314766.v2). PDF gabungan 83 halaman tampil sebagai berkas pertama, disertai paket sumber/backend ringkas, pemberitahuan hak, manifest, dan checksum. Lisensi item CC BY 4.0 berlaku pada teks utama dan adaptasi Indonesia; `Lanzhou.png` dan fragmen `AJbook.cls` yang dikreditkan tetap CC BY-SA 3.0, sedangkan font Noto tetap OFL 1.1, sebagaimana dirinci dalam `LICENSES.md`.
 
 ## Identitas sumber
 
