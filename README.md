@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan, seluruh Bab 1, serta pengantar Bab 2 telah diterjemahkan, diaudit, dibangun, dan diterima dalam delapan unit pembaca. Unit 8 memperkenalkan teori kategori, mempertahankan seluruh rujukan dan sitasi sumber, serta menata ulang tabel perbandingan agar memenuhi lebar area teks. Bagian 2.1 dan bagian-bagian selanjutnya masih dalam bahasa sumber dan akan diterjemahkan berurutan.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, dan Bagian 2.1 telah diterjemahkan, diaudit, dibangun, dan diterima dalam sembilan unit pembaca. Unit 9 menyajikan kategori dan morfisme, termasuk kategori kecil relatif terhadap semesta, contoh-contoh dasar, morfisme mono/epi, grupoid fundamental, dan kategori lawan. Bagian 2.2 dan bagian-bagian selanjutnya masih dalam bahasa sumber dan akan diterjemahkan berurutan.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh PDF Unit 1](artifacts/unit-001-pendahuluan.pdf)
 
@@ -20,6 +20,8 @@ Status saat ini: **Pendahuluan, seluruh Bab 1, serta pengantar Bab 2 telah diter
 
 [Baca atau unduh PDF Unit 8](artifacts/unit-008-bab-2-pengantar-teori-kategori.pdf)
 
+[Baca atau unduh PDF Unit 9](artifacts/unit-009-bab-2-kategori-dan-morfisme.pdf)
+
 Versi preservasi `0.2.0` yang memuat kedelapan reader, sumber yang dapat dibangun, backend modular, bukti ringkas, dan manifest hash tersedia pada [Zenodo DOI 10.5281/zenodo.22060005](https://doi.org/10.5281/zenodo.22060005). Seluruh pembaruan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat.
 
 Checkpoint pembaca yang sama tersedia sebagai item karya publik pada [Figshare DOI 10.6084/m9.figshare.33314766.v2](https://doi.org/10.6084/m9.figshare.33314766.v2). PDF gabungan 83 halaman tampil sebagai berkas pertama, disertai paket sumber/backend ringkas, pemberitahuan hak, manifest, dan checksum. Lisensi item CC BY 4.0 berlaku pada teks utama dan adaptasi Indonesia; `Lanzhou.png` dan fragmen `AJbook.cls` yang dikreditkan tetap CC BY-SA 3.0, sedangkan font Noto tetap OFL 1.1, sebagaimana dirinci dalam `LICENSES.md`.
@@ -35,6 +37,11 @@ Checkpoint pembaca yang sama tersedia sebagai item karya publik pada [Figshare D
 
 Edisi ini dibuat secara independen dan tidak disahkan oleh penulis atau penerbit sumber.
 
+Catatan provenance: penerjemahan, penataan ulang digital, QA, dan backend edisi
+ini dikerjakan oleh **OpenAI Codex gpt-5.6-sol, Ultra**, atas instruksi pengguna.
+Keterangan ini tidak menggantikan kredit Wen-Wei Li sebagai penulis karya
+sumber maupun kredit dan lisensi setiap komponen yang dipertahankan di bawah.
+
 ## Membangun unit pembaca
 
 Prasyarat: PowerShell 7, XeLaTeX, Biber, MakeIndex, serta paket-paket TeX yang dimuat oleh sumber. Font Noto CJK yang diperlukan sudah disertakan dengan lisensi OFL 1.1.
@@ -48,6 +55,7 @@ pwsh -NoProfile -File scripts/build_unit_005.ps1 -OutputDirectory build/unit-005
 pwsh -NoProfile -File scripts/build_unit_006.ps1 -OutputDirectory build/unit-006-replay
 pwsh -NoProfile -File scripts/build_unit_007.ps1 -OutputDirectory build/unit-007-replay
 pwsh -NoProfile -File scripts/build_unit_008.ps1 -OutputDirectory build/unit-008-replay
+pwsh -NoProfile -File scripts/build_unit_009.ps1 -OutputDirectory build/unit-009-replay
 ```
 
 Skrip menjalankan XeLaTeX tanpa shell escape, indeks dan bibliografi yang dibutuhkan setiap unit, lalu lintasan konvergensi XeLaTeX. Tanggal sumber dan seed gambar sampul dipatok. Dua build bersih untuk setiap unit menghasilkan halaman yang identik piksel demi piksel ketika dirender, meskipun serialisasi kontainer PDF XeTeX belum identik byte di direktori keluaran yang berbeda.
@@ -131,9 +139,20 @@ Artefak Unit 8 yang diterima:
 - tabel empat-baris lima-kolom ditata ulang menjadi `tabularx` selebar teks dan dipasangkan dengan semantik pembacaan linear di backend; kotak petunjuk tetap utuh pada satu halaman
 - label peran bibliografi telah dilokalkan; tidak ada galat TeX, rujukan/sitasi tak terdefinisi, kotak meluber, karakter hilang, halaman kosong, atau residu aksara Han
 
+Artefak Unit 9 yang diterima:
+
+- 13 halaman; tidak ada halaman kosong
+- 143.177 byte
+- SHA-256 `6928daf6df3063ec616dfaef1942c27e545ff9fc10135c02ea95591f3a2eed8f`
+- bahasa PDF `id-ID`
+- 4 entri outline, 49 destinasi bernama, 42 tautan internal, dan 3 URI yang disengaja
+- tujuh label, sepuluh kemunculan rujukan, lima kemunculan sitasi, 31 entri indeks, 268 permukaan matematika, empat diagram `tikzcd`, dan satu gambar `tikzpicture` terpelihara
+- rantai ordinal yang lebar ditata ulang secara tipografis agar terpusat dan terbaca tanpa mengubah matematika; koreksi, catatan sumber, dan klarifikasi diperinci dalam receipt penerimaan
+- tidak ada galat TeX, rujukan/sitasi tak terdefinisi, kotak meluber, karakter hilang, halaman kosong, atau residu aksara Han pada halaman isi
+
 ## Backend modular
 
-`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-008-bab-2-pengantar-teori-kategori.json` adalah catatan kanonik kedelapan unit yang telah diterima. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7 mempertahankan keenam latihan sebagai entitas bagian terurut dan setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear.
+`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-009-bab-2-kategori-dan-morfisme.json` adalah catatan kanonik kesembilan unit yang telah diterima. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7 mempertahankan keenam latihan sebagai entitas bagian terurut dan setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat.
 
 Validasi:
 
@@ -146,6 +165,7 @@ python scripts/validate_backend.py --data backend/data/unit-005-bab-1-kardinal.j
 python scripts/validate_backend.py --data backend/data/unit-006-bab-1-semesta-grothendieck.json
 python scripts/validate_backend.py --data backend/data/unit-007-bab-1-latihan.json
 python scripts/validate_backend.py --data backend/data/unit-008-bab-2-pengantar-teori-kategori.json
+python scripts/validate_backend.py --data backend/data/unit-009-bab-2-kategori-dan-morfisme.json
 ```
 
 Validator memeriksa skema, keunikan dan relasi ID, urutan bagian, hash file dan rentang baris, penutupan sitasi/rujukan/diagram/indeks, bukti build, serta kesesuaian byte proyeksi CSV.
@@ -176,7 +196,8 @@ Teks sumber dan terjemahan ditangani menurut Creative Commons Attribution 4.0 In
   - [x] Latihan Bab 1
 - [ ] Bab 2 — Dasar-dasar teori kategori
   - [x] Pengantar bab dan petunjuk membaca
-  - [ ] Bagian 2.1 dan seterusnya
+  - [x] Bagian 2.1 — Kategori dan Morfisme
+  - [ ] Bagian 2.2 dan seterusnya
 - [ ] Bab 3 — Kategori monoidal
 - [ ] Bab 4 — Teori grup
 - [ ] Bab 5 — Dasar-dasar teori gelanggang

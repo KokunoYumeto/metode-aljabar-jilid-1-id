@@ -1,0 +1,91 @@
+Unit 009 admitted build summary
+Date: 2026-08-22
+Frozen source range: chapter2.tex lines 39-198
+Driver: repo/source/unit-009-bab-2-kategori-dan-morfisme.tex
+Build command: pwsh -NoProfile -File scripts/build_unit_009.ps1 -OutputDirectory build/unit-009-final-r1b
+Admitted artifact: artifacts/unit-009-bab-2-kategori-dan-morfisme.pdf
+PDF pages: 13
+PDF bytes: 143177
+PDF SHA-256: 6928daf6df3063ec616dfaef1942c27e545ff9fc10135c02ea95591f3a2eed8f
+Full build log: qa/UNIT_009_BUILD_FINAL.log
+Build-log bytes: 85072
+Build-log SHA-256: fbab8f8be02ca80b63b7d00c8fa31b89f45fe2fb6ca6eb0b21ebec4994d1ec6d
+
+Clean comparison build: build/unit-009-final-r2-replay/unit-009-bab-2-kategori-dan-morfisme.pdf
+Comparison PDF bytes: 143186
+Comparison PDF SHA-256: 53da461f1841a2e7d2fcfe7d6afb9168d68d0e86ab008fa68f9e8af02fb429d9
+Comparison log bytes: 85120
+Comparison log SHA-256: bbe50e18ee048629d5d9b31ff0e19fac397feaea27f2f8e1488861738e29b79c
+
+TeX errors: 0
+Undefined references/citations: 0
+Overfull hboxes: 0
+Overfull vboxes: 0
+Missing characters: 0
+Duplicate destinations: 0
+Underfull hboxes: 1 (accepted inherited cover-page alignment at cover lines 85-91)
+Underfull vboxes: 0
+
+The nine hyperref messages about an empty target are intentional. The external
+reference witness supplies the printed numbers for def:monoid, def:group,
+sec:Grot-universe, hyp:universe, def:partial-order, sec:order, eg:Ab-cat, and
+sec:enriched-cat while an empty external-document URL prevents false links to
+a PDF that this standalone reader does not ship.
+
+Rendered-content replay: pass. The admitted and clean-comparison XeTeX PDF
+containers are not byte-identical, but Poppler produced thirteen pairwise
+byte-identical 144-dpi page PNGs. Extracted semantic text is also byte-identical.
+MuPDF independently rendered all thirteen admitted pages without errors.
+
+Poppler page SHA-256 values:
+1 223839406403569f3ff0329ff3124a892c1be82237d7462e280324dff2b1a4d9
+2 ed9c0d56949eb0a8435b81a966574c5edf81130e50b5d564edceddc753ee8799
+3 13896d77d86e5083e3d5ce637a829f84e1a33c6a35d3b04692f6a9ddad5a0bd8
+4 e27b8a8e861cfa142048b4c8a232bc22b860f4f8deee72184c80658ee8772436
+5 5d504bd387e5b585eb49738f13f9af2c191bcd0b5e5e8b2fb64d6d3da3e6ae2e
+6 96c70984c7c26c38618df438662f1e0acb3c3789213846597b08226befdc8d24
+7 66a431677b7e8e06d4c1a1323d733dbb6b6ab3105f6b6c8eba34285ec89f0796
+8 9e43a6dd16c24f14816ee44640861c8cf5c7d8c3dd64955d5855984510bbd193
+9 6e0b6526956b66013ebc2fbec358333b5468d7b8557771d29bd72e83fb742982
+10 9ba37b88f3653532a4fd455f43a1097a3f3775d4f06102db51b061b461d89d68
+11 ee02893dc22f2bef6910315e3e7a33f545ca8f6ec7b003b4615f06a818203e7c
+12 ec745be89e5b5bca490036c0920fe2f9fd362ed531903c91d16a04671b81b627
+13 a14512fcf84fc31bc5336508e48fcd9b0af9f07a7bc8567909b56274ac51f55c
+
+MuPDF page SHA-256 values:
+1 ae0d46db38ad9fd84ec6017425a1ac268c870a924ae838bef7e695108488e195
+2 4c93e6170c05224eb0d5839255833e232eb40e85bf1e6b9554e1b315a720475b
+3 cecfd197636f03f87e3648ffce8dbf93a27fca8a193f735b6b5702810fcec547
+4 746376ab43ffb8f67ed29dd0a5c8db0fb6ea1b2d71d044b12834aeeeb1dcc600
+5 79c49bb1034cb700ab1165d9450fe12844c4b843253e89eecf2f65cca5b73bab
+6 4c9d1a6d24d88f8813c82a822f9af30e4ada7095ae335cd15599da8408e90714
+7 b72e5385dce2aa95543c50d9a7eaa65c3359292519c66674036aa801427032a5
+8 7ec4522e31624d5fe6cf360677cfc4d94b5a668ec7d6532303af54b2cd7f6f73
+9 f2432c5c9c7d370bef91fcc48f92847ebb547ae437ca38cfc210848d998ec612
+10 39bbff7648c776c9772288a6212790856c5281c08d2ca8fe3e75b06c5a8abadd
+11 e431aeae6ef9a35a7f7a49680cf23822b1f7f5d2685ceb101f1d6e202061909a
+12 7f463ef90dbae6d08143ad32cb25ac1bfc67410657a001d4b60fda9ef51b50f3
+13 7a835467d25fae599074591713c71c692304c9fa632653e1c42f7c76433bdba3
+
+Visual review: all thirteen pages were inspected in both Poppler and MuPDF.
+The cover and rights notice are complete; the section fills the text block;
+all four commutative-diagram surfaces and the fundamental-groupoid diagram are
+legible; the compact ordinal chain remains centered after its target-only
+small-size reflow; the bibliography and both indexes are readable; and there
+is no clipping, collision, blank page, missing glyph, or unreadable formula.
+
+PDF structure: unencrypted PDF 1.7; catalog language id-ID; thirteen nonblank
+pages; four outline entries; forty-nine named destinations; forty-two internal
+GoTo and three intentional URI annotations; no form, widget, embedded file,
+JavaScript, GoToR, or Launch action; ordinary page-fit OpenAction; zero Han,
+replacement, or NUL characters in the ten cover/content pages. The two Chinese
+bibliography titles on page eleven are intentional source metadata. With
+`pdftotext -layout -enc UTF-8`, the full extracted-text SHA-256 is
+e87267e917ec129a6d98105072ab14543c1f0fcb7a98520554179b938fc73c50.
+
+Fonts: pdffonts reports 28/28 fonts embedded and subset. Twenty-seven expose a
+ToUnicode mapping; the sole exception is the subset CMSY10 mathematics font.
+Indonesian prose and mathematics extract coherently and render correctly in
+both engines. Accessibility limitation: the inherited source pipeline still
+emits an untagged PDF; correct id-ID metadata and text-native mathematics do
+not constitute tagged-PDF conformance.
