@@ -1,0 +1,27 @@
+Unit 013 admission build summary
+Date: 2026-08-23
+Driver: repo/source/unit-013-bab-2-fungtor-representabel-dan-lema-yoneda.tex
+Builder: scripts/build_unit_013.ps1
+Build A: build/unit-013-admission-f
+Build B: build/unit-013-admission-g
+PDF pages: 7
+PDF bytes: 106154
+PDF SHA-256: 4db806c3a0c42449b1333e25109d135176931880a48982a70b776e04be7ffa2a
+Build-log bytes: 86810
+Build-log SHA-256: a407323233d53e8f20d952dbacaea16000ccb96b7c03bf9854695f9110311b91
+Functional replay: 7/7 MuPDF pages and 7/7 Poppler pages pixel-identical at 144 dpi.
+MuPDF concatenated page hash: 17f3334a616a1af3ba7e09da58b28d2cbfa5cbc872b4a79f96a36a8dfac1104f
+Poppler concatenated page hash: 1455e3778176951c5529b554d6b733db39f904bcb6e96ae8b58dd22963e7ab6b
+Final-log blockers: zero undefined references/citations, multiply-defined labels,
+overfull boxes, empty bibliography surfaces, missing glyphs, LaTeX/package
+errors, fatal errors, or emergency stops.
+Expected non-blocking notices: seven empty external-document targets, four
+underfull hboxes, one underfull vbox, package-compatibility notices, and
+makeindex rerun notices; all affected pages were visually checked.
+PDF: id-ID; title/author metadata present; 21 named destinations, 3 outline
+entries, 14 links (11 GoTo, 3 URI); zero Launch, GoToR, or JavaScript actions;
+all fonts embedded; no unresolved placeholder text and no extracted Han residue.
+Digital reflow: both nonempty indexes are retained on one final page; the
+one-entry symbol index no longer consumes a separate nearly blank page.
+Visual QA: all 7 pages inspected in Poppler and MuPDF. No clipped,
+overlapping, missing, blank, or unreadable content was found.

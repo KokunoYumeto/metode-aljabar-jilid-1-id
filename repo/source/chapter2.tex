@@ -675,93 +675,93 @@ Ingat kategori $\mathbf{1}$ yang didefinisikan dalam Contoh \ref{eg:categories};
 	Mudah dipahami bahwa $(\identity_{\mathcal{C}} / \identity_{\mathcal{C}})$ juga disebut kategori panah dari $\mathcal{C}$.
 \end{enumerate}
 
-\section{可表函子}\label{sec:representable-functors}
-以下选定范畴 $\mathcal{C}$. 这里需留意一些集合论的问题: 依约定 \ref{con:U-small}, 宇宙 $\mathcal{U}$ 已固定, $\mathcal{C} $是一个 $\mathcal{U}$-范畴, 而 $\cate{Set}$ 表示 $\mathcal{U}$-集所成的范畴. 定义\index[sym1]{C-wedge@$\mathcal{C}^\wedge$, $\mathcal{C}^\vee$}
+\section{Fungtor Representabel}\label{sec:representable-functors}
+Dalam bagian ini tetapkan kategori $\mathcal{C}$. Perhatikan beberapa persoalan teori himpunan: sesuai Konvensi \ref{con:U-small}, semesta $\mathcal{U}$ telah ditetapkan, $\mathcal{C}$ merupakan kategori-$\mathcal{U}$, sedangkan $\cate{Set}$ menyatakan kategori yang terdiri atas himpunan-$\mathcal{U}$. Definisikan\index[sym1]{C-wedge@$\mathcal{C}^\wedge$, $\mathcal{C}^\vee$}
 \begin{align*}
 	\mathcal{C}^\wedge & := \text{Fct}(\mathcal{C}^\text{op}, \cate{Set}), \\
 	\mathcal{C}^\vee & := \text{Fct}(\mathcal{C}^\text{op}, \cate{Set}^\text{op}) = \text{Fct}(\mathcal{C}, \cate{Set})^\text{op}.
 \end{align*}
-当 $\mathcal{C}$ 是 $\mathcal{U}$-小范畴时, $\mathcal{C}^\wedge$ 和 $\mathcal{C}^\vee$ 都是 $\mathcal{U}$-范畴, 一般情形则否. 基于一些几何学的渊源 (主要是层论), 也把 $\mathcal{C}^\wedge$ 称作 $\mathcal{C}$ 上的\emph{预层}范畴\index{yuceng@预层 (presheaf)}. 命题 \ref{prop:op-functor-cat} 蕴涵
+Jika $\mathcal{C}$ merupakan kategori kecil-$\mathcal{U}$, maka $\mathcal{C}^\wedge$ dan $\mathcal{C}^\vee$ juga merupakan kategori-$\mathcal{U}$; secara umum hal ini tidak berlaku. Karena asal-usul geometrisnya (terutama teori gemal (sheaf theory)), $\mathcal{C}^\wedge$ juga disebut kategori \emph{pragemal} (presheaf) di atas $\mathcal{C}$\index{pragemal@pragemal (presheaf)}. Proposisi \ref{prop:op-functor-cat} menyiratkan
 \begin{gather}\label{eqn:Yoneda-cat-duality}
 	(\mathcal{C}^\vee)^\text{op} = (\mathcal{C}^\text{op})^\wedge .
 \end{gather}
 
-以下讨论涉及 $\Hom_{\mathcal{C}}$ 的函子性, 读者可回忆例 \ref{eg:Hom-functor}. 定义函子
+Pembahasan berikut berkaitan dengan fungtorialitas $\Hom_{\mathcal{C}}$; pembaca dapat mengingat kembali Contoh \ref{eg:Hom-functor}. Definisikan fungtor
 \begin{align*}
 	h_{\mathcal{C}}: \mathcal{C} & \longrightarrow \mathcal{C}^\wedge, \\
 	S & \longmapsto \Hom_{\mathcal{C}}(\cdot, S).
 \end{align*}
-我们有自然的求值函子 $\text{ev}^\wedge: \mathcal{C}^\text{op} \times \mathcal{C}^\wedge \to \cate{Set}$, 它将 $(S, A)$ 映至集合 $A(S)$. 同理定义函子
+Kita memiliki fungtor evaluasi natural $\text{ev}^\wedge: \mathcal{C}^\text{op} \times \mathcal{C}^\wedge \to \cate{Set}$, yang memetakan $(S, A)$ ke himpunan $A(S)$. Dengan cara yang sama, definisikan fungtor
 \[\begin{array}{rlrl}
 	k_{\mathcal{C}}: \mathcal{C} & \longrightarrow \mathcal{C}^\vee, & \text{ev}^\vee: (\mathcal{C}^\vee)^\text{op} \times \mathcal{C} & \longrightarrow \cate{Set} \\
 	S & \longmapsto \Hom_{\mathcal{C}}(S, \cdot) & (B, S) & \longmapsto B(S).
 \end{array}\]
 
-\begin{theorem}[米田信夫]\label{prop:Yoneda-lemma}\index{mitianyinli@米田引理 (Yoneda's Lemma)}
-	对于 $S \in \Obj(\mathcal{C})$ 和 $A \in \Obj(\mathcal{C}^\wedge)$, 映射
+\begin{theorem}[Nobuo Yoneda]\label{prop:Yoneda-lemma}\index{lema Yoneda@Lema Yoneda (Yoneda's Lemma)}
+	Untuk $S \in \Obj(\mathcal{C})$ dan $A \in \Obj(\mathcal{C}^\wedge)$, pemetaan
 	\begin{equation}\label{eqn:Yoneda-map}\begin{aligned}
 		\Hom_{\mathcal{C}^\wedge}(h_{\mathcal{C}}(S), A) & \longrightarrow A(S) \\
 		\left[ \Hom_{\mathcal{C}}(\cdot, S) \xrightarrow{\phi} A(\cdot) \right] & \longmapsto \phi_S(\identity_S)
 	\end{aligned}\end{equation}
-	是双射; 它给出函子的同构 $\Hom_{\mathcal{C}^\wedge}(h_{\mathcal{C}}(\cdot), \cdot) \rightiso \text{ev}^\wedge$. 函子 $h_{\mathcal{C}}$ 是全忠实的.
+	adalah bijeksi; pemetaan ini memberikan isomorfisme natural antar-fungtor $\Hom_{\mathcal{C}^\wedge}(h_{\mathcal{C}}(\cdot), \cdot) \rightiso \text{ev}^\wedge$. Fungtor $h_{\mathcal{C}}$ bersifat penuh dan setia.
 
-	同理, 存在自然的函子同构 $\Hom_{\mathcal{C}^\vee}(\cdot, k_{\mathcal{C}}(\cdot)) \rightiso \text{ev}^\vee$. 函子 $k_{\mathcal{C}}$ 是全忠实的.
+	Dengan cara yang sama, terdapat isomorfisme natural antar-fungtor berikut:\[ \Hom_{\mathcal{C}^\vee}(\cdot, k_{\mathcal{C}}(\cdot)) \rightiso \text{ev}^\vee \] Fungtor $k_{\mathcal{C}}$ bersifat penuh dan setia.
 \end{theorem}
-此结果一般称为米田引理, 函子 $h_{\mathcal{C}}, k_{\mathcal{C}}$ 相应地称为米田嵌入.
+Hasil ini biasanya disebut Lema Yoneda; fungtor $h_{\mathcal{C}}, k_{\mathcal{C}}$ masing-masing disebut pembenaman Yoneda.
 
 \begin{proof}
-	由 \eqref{eqn:Yoneda-cat-duality} 仅需证明第一部分. 映射 \eqref{eqn:Yoneda-map} 对 $S, A$ 的函子性是显见的. 对于 $\mathcal{C}$ 中任一态射 $f: T \to S$, 令 $u_S := \phi_S(\identity_S) \in A(S)$. 交换图表
+	Berdasarkan \eqref{eqn:Yoneda-cat-duality}, cukup dibuktikan bagian pertama. Sifat fungtorial pemetaan \eqref{eqn:Yoneda-map} terhadap $S,A$ sudah jelas. Untuk sembarang morfisme $f: T \to S$ dalam $\mathcal{C}$, tetapkan $u_S := \phi_S(\identity_S) \in A(S)$. Diagram berikut komutatif
 	\[ \begin{tikzcd}
 		\identity_S \arrow[mapsto, d] \arrow[phantom, r, description, "\in"] & \Hom_{\mathcal{C}}(S, S) \arrow[r, "\phi_S"] \arrow[d, "f^*"'] & A(S) \arrow[d, "A(f)"] & \arrow[phantom, l, description, "\ni"] u_S \arrow[mapsto, d] \\
 		f \arrow[phantom, r, description, "\in"] & \Hom_{\mathcal{C}}(T, S) \arrow[r, "\phi_T"'] & A(T) & \arrow[phantom, l, description, "\ni"] \phi_T(f)
 	\end{tikzcd} \]
-	道尽一切. 最后在 \eqref{eqn:Yoneda-map} 中取 $A = h_{\mathcal{C}}(T)$ 即得 $h_{\mathcal{C}}$ 的全忠实性.
+	Ini menyelesaikan argumen. Terakhir, dalam \eqref{eqn:Yoneda-map} ambil $A = h_{\mathcal{C}}(T)$ untuk memperoleh bahwa $h_{\mathcal{C}}$ bersifat penuh dan setia.
 \end{proof}
 
-证明里 $u_S$ 的用法是一种标准技巧, 今后还会反复运用.
-\begin{definition}\label{def:representable-functor}\index{hanzi!可表函子 (representable functor)}
-	称 $A: \mathcal{C}^\text{op} \to \cate{Set}$ 是可表函子, 如果存在 $X \in \Obj(\mathcal{C})$ 及同构 $\phi: h_{\mathcal{C}}(X) \rightiso A$, 并称 $(X, \phi)$ 是其代表元. 类似地, 可以用 $k_{\mathcal{C}}$ 定义函子 $B: \mathcal{C} \to \cate{Set}$ 的可表性和代表元.
+	Penggunaan $u_S$ dalam pembuktian merupakan teknik standar yang akan berulang kali digunakan selanjutnya.
+\begin{definition}\label{def:representable-functor}\index{fungtor representabel@fungtor representabel (representable functor)}
+	Fungtor $A: \mathcal{C}^\text{op} \to \cate{Set}$ disebut fungtor representabel jika terdapat $X \in \Obj(\mathcal{C})$ dan isomorfisme $\phi: h_{\mathcal{C}}(X) \rightiso A$; pasangan $(X, \phi)$ disebut representasi fungtor tersebut. Dengan cara serupa, $k_{\mathcal{C}}$ digunakan untuk mendefinisikan representabilitas dan representasi bagi fungtor $B: \mathcal{C} \to \cate{Set}$.
 \end{definition}
 
 \begin{remark}\label{rem:Yoneda-universal-family}
-	从定理 \ref{prop:Yoneda-lemma} 的证明可知: 给定资料 $(X, \phi: h_{\mathcal{C}}(X) \to A)$ 相当于给定 $(X, u)$, 这里的 $u \in A(X)$ 是 $\identity_X: X \to X$ 在 $\phi_X$ 下的像; 对 $\mathcal{C}$ 中态射 $f: T \to X$, 我们有 $\phi_T(f) = A(f)(u)$.
+	Dari pembuktian Teorema \ref{prop:Yoneda-lemma} terlihat bahwa data $(X, \phi: h_{\mathcal{C}}(X) \to A)$ ekuivalen dengan data $(X, u)$, dengan $u \in A(X)$ merupakan citra $\identity_X: X \to X$ di bawah $\phi_X$; untuk morfisme $f: T \to X$ dalam $\mathcal{C}$ berlaku $\phi_T(f) = A(f)(u)$.
 	
-	有鉴于此, 可表函子 $A$ 的代表元可以用 $(X, u)$ 描述, 其中的 $u$ 一般称为\emph{泛族}; 术语源于几何学中模空间的研究.\index{fanzu@泛族 (universal family)}
+	Oleh karena itu, representasi fungtor representabel $A$ dapat dideskripsikan dengan $(X, u)$, dengan $u$ biasanya disebut \emph{keluarga universal}; istilah ini berasal dari kajian ruang moduli dalam geometri.\index{keluarga universal@keluarga universal (universal family)}
 \end{remark}
 
 \begin{lemma}\label{prop:representable-functor-uniqueness}
-	若函子 $A: \mathcal{C}^\text{op} \to \cate{Set}$ 可表, 则其代表元 $(X, \phi: h_{\mathcal{C}}(X) \rightiso A)$ 在至多差一个唯一同构的意义下是唯一的. 对函子 $B: \mathcal{C} \to \cate{Set}$ 也有类似性质.
+	Jika fungtor $A: \mathcal{C}^\text{op} \to \cate{Set}$ representabel, maka representasinya $(X, \phi: h_{\mathcal{C}}(X) \rightiso A)$ unik hingga isomorfisme unik. Pernyataan serupa berlaku untuk fungtor $B: \mathcal{C} \to \cate{Set}$.
 \end{lemma}
 
-代表元及其同构可以用  \S\ref{sec:cat-universals} 讨论过的逗号范畴 $(h_{\mathcal{C}} / A)$ 解释, 对应于函子 $\mathcal{C} \xrightarrow{h_{\mathcal{C}}} \mathcal{C}^\wedge \xleftarrow{j_A} \mathbf{1}$, 详见下述证明.
+	Representasi tersebut beserta isomorfismenya dapat dijelaskan dengan kategori koma $(h_{\mathcal{C}} / A)$ yang dibahas dalam \S\ref{sec:cat-universals}, sesuai dengan fungtor $\mathcal{C} \xrightarrow{h_{\mathcal{C}}} \mathcal{C}^\wedge \xleftarrow{j_A} \mathbf{1}$; lihat pembuktian berikut.
 \begin{proof}
-	对于任意 $Y \in \Obj(\mathcal{C})$ 与 $\psi: h_{\mathcal{C}}(Y) \to A$, 根据定理 \ref{prop:Yoneda-lemma} 断言的全忠实性, 存在唯一的 $f \in \Hom_{\mathcal{C}}(Y, X)$ 使下图交换.
+	Untuk setiap $Y \in \Obj(\mathcal{C})$ dan $\psi: h_{\mathcal{C}}(Y) \to A$, berdasarkan sifat penuh dan setia yang dinyatakan Teorema \ref{prop:Yoneda-lemma}, terdapat tepat satu $f \in \Hom_{\mathcal{C}}(Y, X)$ sehingga diagram berikut komutatif.
 	\[\begin{tikzcd}[column sep=small, row sep=small]
 		h_{\mathcal{C}}(Y) \arrow[rd, "\psi"'] \arrow[rr, "h_{\mathcal{C}}(f)"] & & h_{\mathcal{C}}(X) \arrow[ld, "\phi", "\simeq"'] \\
 		 & A &
 	\end{tikzcd}\]
-	审视 $(h_{\mathcal{C}} / A)$ 之定义 \ref{def:comma-category} 可知 $(X, \phi)$ 是其终对象. 由命题 \ref{prop:initial-obj-uniqueness} 遂有唯一性.
+	Dengan menelaah definisi \ref{def:comma-category} untuk $(h_{\mathcal{C}} / A)$, terlihat bahwa $(X, \phi)$ merupakan objek terminalnya. Keunikan kemudian mengikuti Proposisi \ref{prop:initial-obj-uniqueness}.
 \end{proof}
 
 \begin{example}
-	回顾例 \ref{eg:free-vectorspace} 的函子 $V: \cate{Set} \to \cate{Vect}(\Bbbk)$. 其泛性质给出了
+	Ingat kembali fungtor $V: \cate{Set} \to \cate{Vect}(\Bbbk)$ dari Contoh \ref{eg:free-vectorspace}. Sifat universalnya memberikan
 	\[ \Hom_{\cate{Set}}(X, U(\cdot)) \rightiso \Hom_{\cate{Vect}(\Bbbk)}(V(X), \cdot). \]
-	因此 $V(X)$ 连同上述同构表示了函子 $\Hom_{\cate{Set}}(X, U(\cdot))$.
+	Karena itu, $V(X)$ bersama isomorfisme di atas merepresentasikan fungtor $\Hom_{\cate{Set}}(X, U(\cdot))$.
 \end{example}
 
 \begin{example}
-	考虑函子 $P: \cate{Set}^\text{op} \to \cate{Set}$, 它将 $\cate{Set}$ 的对象 $S$ 映至其幂集 $P(S)$, 将态射 $f: S \to T$ 映至 $T \supset A \mapsto f^{-1}(A) \subset S$. 置 $\Omega := \{0, 1\}$, $u := \{1\} \in P(\Omega)$. 利用注记 \ref{rem:Yoneda-universal-family}, 我们断言 $(\Omega, u)$ 给出同构 $ \phi: \Hom_{\mathcal{C}}(\cdot, \Omega) \rightiso P$, 从而 $P$ 可表.
+	Pertimbangkan fungtor $P: \cate{Set}^\text{op} \to \cate{Set}$ yang memetakan objek $S$ dari $\cate{Set}$ ke himpunan kuasanya $P(S)$, dan memetakan morfisme $f: S \to T$ ke $T \supset A \mapsto f^{-1}(A) \subset S$. Tetapkan $\Omega := \{0, 1\}$ dan $u := \{1\} \in P(\Omega)$. Dengan menggunakan Catatan \ref{rem:Yoneda-universal-family}, kita nyatakan bahwa $(\Omega, u)$ memberikan isomorfisme $ \phi: \Hom_{\cate{Set}}(\cdot, \Omega) \rightiso P$, sehingga $P$ representabel.
 
-	对任意 $\cate{Set}$ 的对象 $S$, 相应的映射是
+	Untuk setiap objek $S$ di $\cate{Set}$, pemetaan yang bersesuaian adalah
 	\begin{align*}
 		\phi_S: \Hom_{\cate{Set}}(S, \Omega) & \longrightarrow P(S) \\
 		f & \longmapsto f^{-1}(\{1\}).
 	\end{align*}
-	由中学数学可知 $\phi_S$ 是双射, 其逆将 $A \in P(S)$ 映至函数 $\mathbf{1}_A:  S \to \Omega$, 其定义是 $\mathbf{1}_A (s)=1$ 当且仅当 $s \in A$.
+	Menurut matematika sekolah menengah, $\phi_S$ merupakan bijeksi; inversnya memetakan $A \in P(S)$ ke fungsi karakteristik $\mathbf{1}_A:  S \to \Omega$, yang didefinisikan oleh $\mathbf{1}_A (s)=1$ jika dan hanya jika $s \in A$.
 \end{example}
-可表函子在数学中有许多深刻的实例, 例如代数几何学中的模空间 (表几何对象的分类问题), 或拓扑学中的 Eilenberg-MacLane 空间 (表同调函子) 等等.
+Fungtor representabel memiliki banyak contoh mendalam dalam matematika, misalnya ruang moduli dalam geometri aljabar (masalah klasifikasi objek geometris), atau ruang Eilenberg-MacLane dalam topologi (yang merepresentasikan fungtor kohomologi), dan lain-lain.
 
-我们将经常省略符号 $h_{\mathcal{C}}$ 或 $k_{\mathcal{C}}$, 将 $\mathcal{C}$ 直接看作 $\mathcal{C}^\wedge$ 或 $\mathcal{C}^\vee$ 的全子范畴. 在代数几何学等实际应用中, 常有许多构造在``具体''的给定范畴 $\mathcal{C}$ 中颇为棘手, 在 $\mathcal{C}^\wedge$ 或 $\mathcal{C}^\vee$ 中却有直截了当的定义. 所以不妨将米田嵌入类比于分析学中 L.\ Schwartz 的广义函数理论, 惟其抽象, 故堪实用.
+	Kita akan sering menghilangkan simbol $h_{\mathcal{C}}$ atau $k_{\mathcal{C}}$, dan memandang $\mathcal{C}$ langsung sebagai subkategori penuh dari $\mathcal{C}^\wedge$ atau $\mathcal{C}^\vee$. Dalam penerapan seperti geometri aljabar, banyak konstruksi yang sukar didefinisikan di dalam kategori $\mathcal{C}$ yang ``konkret'', tetapi memiliki definisi langsung di dalam $\mathcal{C}^\wedge$ atau $\mathcal{C}^\vee$. Karena itu, pembenaman Yoneda dapat dianalogikan dengan teori fungsi rampat (distribusi) L. Schwartz dalam analisis; justru karena abstrak, teori itu berguna.
 
 \section{伴随函子}\label{sec:adjoint-functor}
 D.\ Kan 在 1958 年首先阐释了伴随对的概念. 伴随性在范畴论及其应用中几乎无所不在, 相关历史注记可参阅 \cite[p.107]{ML98}.

@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1-2.4 telah diterjemahkan, diaudit, dibangun, dan diterima dalam dua belas unit pembaca lokal. Unit 10 menyajikan fungtor dan transformasi natural; Unit 11 melanjutkan dengan kategori fungtor; Unit 12 mencakup sifat universal dan kategori koma. Bagian 2.5 dan bagian-bagian selanjutnya masih dalam bahasa sumber dan akan diterjemahkan berurutan.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1-2.5 telah diterjemahkan, diaudit, dibangun, dan diterima dalam tiga belas unit pembaca lokal. Unit 10 menyajikan fungtor dan transformasi natural; Unit 11 melanjutkan dengan kategori fungtor; Unit 12 mencakup sifat universal dan kategori koma; Unit 13 mencakup fungtor representabel dan Lema Yoneda. Bagian 2.6 dan bagian-bagian selanjutnya masih dalam bahasa sumber dan akan diterjemahkan berurutan.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh checkpoint pembaca 0.3.0 (96 halaman; Unit 1-9)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf)
 
@@ -31,6 +31,8 @@ Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1
 [Baca atau unduh PDF Unit 11](artifacts/unit-011-bab-2-kategori-fungtor.pdf)
 
 [Baca atau unduh PDF Unit 12](artifacts/unit-012-bab-2-sifat-universal-dan-kategori-koma.pdf)
+
+[Baca atau unduh PDF Unit 13](artifacts/unit-013-bab-2-fungtor-representabel-dan-lema-yoneda.pdf)
 
 Versi preservasi `0.3.0` yang memuat checkpoint gabungan 96 halaman, kesembilan reader, sumber yang dapat dibangun, backend modular, bukti ringkas, dan manifest hash tersedia pada [Zenodo DOI 10.5281/zenodo.22062228](https://doi.org/10.5281/zenodo.22062228). Seluruh pembaruan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat. Rilis `0.4.0` yang sama dengan reader Unit 1-12 sudah byte-verified di GitHub pada commit `f47d290117001a16d0d765bb5f83b3c73bc9a8f3`; pembaruan DOI tertahan oleh blocker eksternal yang dicatat dalam [`qa/ZENODO_PUBLICATION_BLOCKED_20260823.md`](qa/ZENODO_PUBLICATION_BLOCKED_20260823.md).
 
@@ -69,6 +71,7 @@ pwsh -NoProfile -File scripts/build_unit_009.ps1 -OutputDirectory build/unit-009
 pwsh -NoProfile -File scripts/build_unit_010.ps1 -OutputDirectory build/unit-010-replay
 pwsh -NoProfile -File scripts/build_unit_011.ps1 -OutputDirectory build/unit-011-replay
 pwsh -NoProfile -File scripts/build_unit_012.ps1 -OutputDirectory build/unit-012-replay
+pwsh -NoProfile -File scripts/build_unit_013.ps1 -OutputDirectory build/unit-013-replay
 ```
 
 Skrip menjalankan XeLaTeX tanpa shell escape, indeks dan bibliografi yang dibutuhkan setiap unit, lalu lintasan konvergensi XeLaTeX. Tanggal sumber dan seed gambar sampul dipatok. Dua build bersih untuk setiap unit menghasilkan halaman yang identik piksel demi piksel ketika dirender, meskipun serialisasi kontainer PDF XeTeX belum identik byte di direktori keluaran yang berbeda.
@@ -169,27 +172,35 @@ Artefak Unit 10 yang diterima secara lokal:
 
 - 15 halaman; 153.352 byte; SHA-256 `a06c4152e6233270cfa138b6c99ae9f307246fe2e1eac6b72a9533c9d74bfce4`
 - target Section 2.2 28.112 byte; SHA-256 `84cd01f4bfb9b2dcf6720991b72d714335e3f977e2bee88d40b2b64733572053`
-- backend 98.251 byte; SHA-256 `0de756dad67fcb779df5b43ff80dce979b8a7fdcecb04693b7f694bb09652ffd`
+- backend 98.251 byte; SHA-256 `d89f4487c7b1610d267068b70f429d9ac0d1f1ddc9136b8370fe8fec447eda4d`
 - 291 permukaan matematika, 13 label, 7 rujukan, 2 rujukan persamaan, 2 sitasi, 15 indeks, dan 19 diagram terpelihara; dua build serta replay visual lulus.
 
 Artefak Unit 11 yang diterima secara lokal:
 
 - 7 halaman; 105.391 byte; SHA-256 `f18ea37d945b08961f14e49581dd13a3a3024307fe3d33a77c7d5bb5631859fe`
 - target kategori fungtor 8.004 byte; SHA-256 `a848cb6d7dfdd7edc1f5b07be14f421ed075a8124723ab9b73a207f86216e105`
-- backend 51.063 byte; SHA-256 `68a41963203e219ad5c84c3bef86d858c389061a61937a3624b038eedac55b12`
+- backend 51.063 byte; SHA-256 `998c47db6bd6692347c16be7d13762395a00b3ca90635dc6d7ee87ef878c1b36`
 - 102 permukaan matematika, 4 label, 5 rujukan, 1 rujukan persamaan, 8 indeks, dan satu diagram terpelihara; dua build serta replay visual lulus. Lima peringatan Hyperref untuk target kosong disengaja untuk menekan tautan eksternal palsu.
 
 Artefak Unit 12 yang diterima secara lokal:
 
 - 10 halaman; 121.388 byte; SHA-256 `1671beea4ab78c848d577f9b8428d5717de2ac55f309f4f075c455409fd878a9`
 - target sifat universal dan kategori koma 11.056 byte; SHA-256 `26a2e9a638fae91a1108c9a263a89b64b71ba5d351cae1bfae72eef6eba0649b`
-- backend 59.781 byte; SHA-256 `51e920171b3d16937ca1b573e19d3e8ea88ff2afb3b51c04d4f0028a8baf371e`
+- backend 59.781 byte; SHA-256 `d3caeab3c47f8323b7acd9883464babad604e6cffa0fa52bcca9b843deb7e63b`
 - 159 permukaan matematika, 7 label, 6 rujukan, 1 sitasi, 6 indeks, dan 8 diagram `tikzcd` terpelihara; dua build serta replay visual 10/10 halaman lulus.
 - tiga target eksternal kosong tetap ditekan secara sengaja oleh witness `unit-012-crossrefs.aux`; tidak ada rujukan/sitasi tak terdefinisi, kotak meluber, halaman kosong, atau residu aksara Han pada span terjemahan.
 
+Artefak Unit 13 yang diterima secara lokal:
+
+- 7 halaman; 106.154 byte; SHA-256 `4db806c3a0c42449b1333e25109d135176931880a48982a70b776e04be7ffa2a`
+- target fungtor representabel dan Lema Yoneda 8.643 byte; SHA-256 `eeb6bbb2aca0ea17277e7afea39492729996cd9d8648deccc94bcebe9111327d`
+- backend 53.887 byte; SHA-256 `c4e484a039d5ea034b3bb1eba1d54364f795061b6fbc950ddf17d03c9f448cc3`
+- 98 permukaan matematika, 7 label, 10 rujukan, 3 rujukan persamaan, 5 indeks, dan 2 diagram `tikzcd` terpelihara setelah dua koreksi sumber yang didokumentasikan.
+- isomorfisme Yoneda yang panjang ditata sebagai display dan kedua indeks digabung pada satu halaman akhir; dua build serta replay visual 7/7 halaman lulus tanpa kotak meluber, rujukan tak terdefinisi, halaman kosong, atau residu aksara Han.
+
 ## Backend modular
 
-`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-012-bab-2-sifat-universal-dan-kategori-koma.json` adalah catatan kanonik dua belas unit yang telah diterima secara lokal. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7 mempertahankan keenam latihan sebagai entitas bagian terurut dan setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat. Unit 10-12 memakai identitas yang sama untuk permukaan matematika, diagram, rujukan eksternal, indeks, sitasi, serta provenance model; Unit 10 dan 11 sudah dipublikasikan pada commit `17dac5e2984604c3f2010a04f6021f36e3eb3586`, sedangkan bukti Unit 12 ada pada `qa/UNIT_012_ADMISSION_20260823.md`.
+`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-013-bab-2-fungtor-representabel-dan-lema-yoneda.json` adalah catatan kanonik tiga belas unit yang telah diterima secara lokal. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7 mempertahankan keenam latihan sebagai entitas bagian terurut dan setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat. Unit 10-13 memakai identitas yang sama untuk permukaan matematika, diagram, rujukan eksternal, indeks, sitasi, serta provenance model; Unit 10 dan 11 sudah dipublikasikan pada commit `17dac5e2984604c3f2010a04f6021f36e3eb3586`, sedangkan bukti Unit 12 dan 13 ada pada receipt penerimaan masing-masing.
 
 Validasi:
 
@@ -206,6 +217,7 @@ python scripts/validate_backend.py --data backend/data/unit-009-bab-2-kategori-d
 python scripts/validate_backend.py --data backend/data/unit-010-bab-2-fungtor-dan-transformasi-natural.json
 python scripts/validate_backend.py --data backend/data/unit-011-bab-2-kategori-fungtor.json
 python scripts/validate_backend.py --data backend/data/unit-012-bab-2-sifat-universal-dan-kategori-koma.json
+python scripts/validate_backend.py --data backend/data/unit-013-bab-2-fungtor-representabel-dan-lema-yoneda.json
 ```
 
 Validator memeriksa skema, keunikan dan relasi ID, urutan bagian, hash file dan rentang baris, penutupan sitasi/rujukan/diagram/indeks, bukti build, serta kesesuaian byte proyeksi CSV.
@@ -240,7 +252,8 @@ Teks sumber dan terjemahan ditangani menurut Creative Commons Attribution 4.0 In
   - [x] Bagian 2.2 — Fungtor dan transformasi natural
   - [x] Bagian 2.3 — Kategori fungtor
   - [x] Bagian 2.4 — Sifat universal dan kategori koma
-  - [ ] Bagian 2.5 dan seterusnya
+  - [x] Bagian 2.5 — Fungtor representabel dan Lema Yoneda
+  - [ ] Bagian 2.6 dan seterusnya
 - [ ] Bab 3 — Kategori monoidal
 - [ ] Bab 4 — Teori grup
 - [ ] Bab 5 — Dasar-dasar teori gelanggang

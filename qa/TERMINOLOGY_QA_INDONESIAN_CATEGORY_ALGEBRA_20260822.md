@@ -53,9 +53,9 @@ The authorized Indonesian PDF fallback was therefore used.
 The 2008 Pusat Bahasa *Glosarium Matematika* by Kerami and Sitanggang was used
 as an adjudication aid. Official record/file URL:
 `https://repositori.kemendikdasmen.go.id/2662/1/glosarium%20matematika%20tahun%202008%20%20%20%20%20281a.pdf`.
-The official host timed out during the bounded check, so a byte-identical public
-comparison copy was inspected rather than claiming a fresh official-host
-download. Comparison PDF: 11,427,806 bytes, SHA-256
+The official host timed out during the bounded check, so a public comparison
+copy was inspected rather than claiming a fresh official-host download or byte
+identity with the inaccessible official response. Comparison PDF: 11,427,806 bytes, SHA-256
 `d1407fd49c0af0f7025f16406b9610430778a4f32f1a77bce2efa2a25f699b2a`.
 Its entries include category -> `kategori`, field -> `medan; lapangan`,
 functor -> `fungtor`, groupoid -> `grupoid`, module -> `modul`, morphism ->
@@ -116,3 +116,54 @@ or `ruang topologi` in the admitted Indonesian spans or their backend records.
 The already-used form `isomorfisme natural` lacked its own controlled glossary
 row, so `natural isomorphism -> isomorfisme natural` was added. No translated
 prose, mathematics, identifiers, or reader bytes required correction.
+
+## Unit 012 to Unit 013 boundary recheck - 2026-08-23
+
+This instruction was received a second time, so a bounded delta check was made
+instead of reopening an unbounded terminology search. The official arXiv API
+again returned HTTP 200 and zero results for both frozen queries:
+
+- `all:"teori kategori" OR all:fungtor OR all:gelanggang`;
+- `all:"Bahasa Indonesia" AND cat:math*`.
+
+There was therefore still no suitable Indonesian same-field arXiv source with
+downloadable TeX to unpack. The two existing fallback PDFs were reopened and
+their actual pages were checked again, both by layout-preserving extraction and
+visual inspection: all four UNDIP pages and all seven UGM pages were readable.
+Their byte counts and hashes remain exactly those recorded above and in
+`authority/terminology-qa-20260822/MANIFEST.json`.
+
+A tighter supplementary same-field witness was also inspected: Bernard
+Immanuel, *Aplikasi Lema Yoneda dalam Pembuktian Teorema Cayley*, Universitas
+Indonesia, 2013/2014, 27 pages. The official UI record is
+`https://lib.ui.ac.id/detail.jsp?id=20368565`; its official digital file remains
+login-restricted. The author's public Academia profile exposes the PDF and its
+full document text at
+`https://www.academia.edu/9691431/Aplikasi_Lema_Yoneda_dalam_Pembuktian_Teorema_Cayley`.
+The inspected text directly uses `Lema Yoneda`, `fungtor`, `morfisma`,
+`transformasi alami`, and `teori gelanggang`. Because a freely retrievable PDF
+byte stream was not available through the bounded route, this supplementary
+witness is recorded by identity and URL but is not claimed as a downloaded or
+redistributable local file.
+
+### Delta adjudication
+
+| Concept | Evidence and decision |
+|---|---|
+| Yoneda lemma | Add and use `Lema Yoneda`; this is directly attested throughout the UI thesis. Preserve the source theorem's attribution heading as `Nobuo Yoneda`, then name the result `Lema Yoneda` in prose. |
+| functor | Keep `fungtor`; all three Indonesian mathematical witnesses support it. |
+| natural transformation | The older UI thesis uses `transformasi alami`, while the newer UNDIP thesis uses `transformasi natural`. Keep the already controlled `transformasi natural` for field precision and corpus consistency; record `alami` only as an observed variant. |
+| morphism | The witnesses use `morfisma`; keep controlled `morfisme`, explicitly admitted by Pusat Bahasa and already propagated consistently. |
+| representable functor | Keep `fungtor representabel`, with the English term preserved in the first index gloss. Use `representasi fungtor` for the pair `(X,phi)`, not the unattested noun `representan`; describe `X` transparently as `objek yang merepresentasikan`. |
+| presheaf / sheaf theory | No inspected academic witness uses this term. Pusat Bahasa gives `coherent sheaf -> gemal koheren`; therefore use `pragemal (presheaf)` and `teori gemal (sheaf theory)` at first occurrence. This keeps the sheaf family coherent and avoids overloading `berkas`, already used for bundles/files. The decision is standards-based and is not misrepresented as broad field attestation. |
+| universal family | Use transparent `keluarga universal`; preserve its moduli-space meaning. |
+| characteristic function | Use `fungsi karakteristik`, the exact Pusat Bahasa entry. |
+| generalized function | Use Pusat Bahasa `fungsi rampat`; render the closing Schwartz comparison as `teori fungsi rampat (distribusi)`, not the semantically vague `teori fungsi umum`. |
+
+The admitted Indonesian material through Unit 012 was searched for the affected
+terms. No correction to Units 001-012 is justified, so no previously admitted
+reader byte changed at this gate. The Unit 013 candidate must apply the choices
+above before canonical integration. It must also preserve the exact model
+provenance already present in the repository README and release manifests:
+`OpenAI Codex gpt-5.6-sol, Ultra`, while keeping Wen-Wei Li and every source or
+human contributor credited separately and without implying endorsement.
