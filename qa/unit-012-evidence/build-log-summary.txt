@@ -1,0 +1,25 @@
+Unit 012 admission build summary
+Date: 2026-08-23
+Driver: repo/source/unit-012-bab-2-sifat-universal-dan-kategori-koma.tex
+Builder: scripts/build_unit_012.ps1
+Build A: build/unit-012-replay
+Build B: build/unit-012-replay-postmeta
+PDF pages: 10
+PDF bytes: 121388
+PDF SHA-256: 1671beea4ab78c848d577f9b8428d5717de2ac55f309f4f075c455409fd878a9
+Build-log bytes: 85731
+Build-log SHA-256: 1a0c18fa6efa5078e35c6bf9c42785888c57a209e0148b928773105f1ec55f7c
+Functional replay: 10/10 MuPDF pages and 10/10 Poppler pages pixel-identical at 144 dpi.
+MuPDF concatenated page hash: 1a236382eba04f700f1d87751a735043ad30ae19488908a53654c6b1e39631e
+Poppler concatenated page hash: f45fabe3bf8c2d4e1b58ab1d0b6aba7d04ac97c701bdb28c01c8e9ec54efb3f1
+Final-log blockers: zero undefined references/citations, multiply-defined labels,
+overfull boxes, LaTeX/package errors, fatal errors, or emergency stops.
+Expected non-blocking notices: three empty external-document targets, two
+underfull layout notices (cover/table and a natural unit boundary), package
+compatibility notices, and makeindex rerun notices; all were visually checked.
+PDF: id-ID; title/author metadata present; 14 links (11 GoTo, 3 URI); zero
+Launch, GoToR, or JavaScript actions; all fonts embedded; no unresolved
+placeholder text. Extracted Han residue is 21 bibliography characters retained
+from the cited Chinese source record; the translated span itself has zero Han.
+Visual QA: all 10 pages inspected in Poppler and MuPDF. No clipped,
+overlapping, missing, blank, or unreadable content was found.

@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1-2.2 telah diterjemahkan, diaudit, dibangun, dan diterima dalam sebelas unit pembaca lokal. Unit 10 menyajikan fungtor, transformasi natural, komposisi horizontal dan vertikal, ekuivalensi kategori, serta dualitas ruang vektor; Unit 11 melanjutkan dengan kategori fungtor. Bagian 2.3 dan bagian-bagian selanjutnya masih dalam bahasa sumber dan akan diterjemahkan berurutan.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1-2.4 telah diterjemahkan, diaudit, dibangun, dan diterima dalam dua belas unit pembaca lokal. Unit 10 menyajikan fungtor dan transformasi natural; Unit 11 melanjutkan dengan kategori fungtor; Unit 12 mencakup sifat universal dan kategori koma. Bagian 2.5 dan bagian-bagian selanjutnya masih dalam bahasa sumber dan akan diterjemahkan berurutan.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh checkpoint pembaca 0.3.0 (96 halaman; Unit 1-9)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf)
 
@@ -27,6 +27,8 @@ Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1
 [Baca atau unduh PDF Unit 10](artifacts/unit-010-bab-2-fungtor-dan-transformasi-natural.pdf)
 
 [Baca atau unduh PDF Unit 11](artifacts/unit-011-bab-2-kategori-fungtor.pdf)
+
+[Baca atau unduh PDF Unit 12](artifacts/unit-012-bab-2-sifat-universal-dan-kategori-koma.pdf)
 
 Versi preservasi `0.3.0` yang memuat checkpoint gabungan 96 halaman, kesembilan reader, sumber yang dapat dibangun, backend modular, bukti ringkas, dan manifest hash tersedia pada [Zenodo DOI 10.5281/zenodo.22062228](https://doi.org/10.5281/zenodo.22062228). Seluruh pembaruan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat.
 
@@ -64,6 +66,7 @@ pwsh -NoProfile -File scripts/build_unit_008.ps1 -OutputDirectory build/unit-008
 pwsh -NoProfile -File scripts/build_unit_009.ps1 -OutputDirectory build/unit-009-replay
 pwsh -NoProfile -File scripts/build_unit_010.ps1 -OutputDirectory build/unit-010-replay
 pwsh -NoProfile -File scripts/build_unit_011.ps1 -OutputDirectory build/unit-011-replay
+pwsh -NoProfile -File scripts/build_unit_012.ps1 -OutputDirectory build/unit-012-replay
 ```
 
 Skrip menjalankan XeLaTeX tanpa shell escape, indeks dan bibliografi yang dibutuhkan setiap unit, lalu lintasan konvergensi XeLaTeX. Tanggal sumber dan seed gambar sampul dipatok. Dua build bersih untuk setiap unit menghasilkan halaman yang identik piksel demi piksel ketika dirender, meskipun serialisasi kontainer PDF XeTeX belum identik byte di direktori keluaran yang berbeda.
@@ -174,9 +177,17 @@ Artefak Unit 11 yang diterima secara lokal:
 - backend 51.063 byte; SHA-256 `68a41963203e219ad5c84c3bef86d858c389061a61937a3624b038eedac55b12`
 - 102 permukaan matematika, 4 label, 5 rujukan, 1 rujukan persamaan, 8 indeks, dan satu diagram terpelihara; dua build serta replay visual lulus. Lima peringatan Hyperref untuk target kosong disengaja untuk menekan tautan eksternal palsu.
 
+Artefak Unit 12 yang diterima secara lokal:
+
+- 10 halaman; 121.388 byte; SHA-256 `1671beea4ab78c848d577f9b8428d5717de2ac55f309f4f075c455409fd878a9`
+- target sifat universal dan kategori koma 11.056 byte; SHA-256 `26a2e9a638fae91a1108c9a263a89b64b71ba5d351cae1bfae72eef6eba0649b`
+- backend 59.781 byte; SHA-256 `51e920171b3d16937ca1b573e19d3e8ea88ff2afb3b51c04d4f0028a8baf371e`
+- 159 permukaan matematika, 7 label, 6 rujukan, 1 sitasi, 6 indeks, dan 8 diagram `tikzcd` terpelihara; dua build serta replay visual 10/10 halaman lulus.
+- tiga target eksternal kosong tetap ditekan secara sengaja oleh witness `unit-012-crossrefs.aux`; tidak ada rujukan/sitasi tak terdefinisi, kotak meluber, halaman kosong, atau residu aksara Han pada span terjemahan.
+
 ## Backend modular
 
-`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-011-bab-2-kategori-fungtor.json` adalah catatan kanonik sebelas unit yang telah diterima secara lokal. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7 mempertahankan keenam latihan sebagai entitas bagian terurut dan setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat. Unit 10 dan 11 memakai identitas yang sama untuk permukaan matematika, diagram, rujukan eksternal, indeks, serta provenance model; keduanya telah dipublikasikan pada commit `17dac5e2984604c3f2010a04f6021f36e3eb3586` dan dibaca kembali secara anonim; bukti lengkapnya ada pada `qa/PUBLICATION_GITHUB_UNITS_010_011_20260823.md`.
+`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-012-bab-2-sifat-universal-dan-kategori-koma.json` adalah catatan kanonik dua belas unit yang telah diterima secara lokal. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7 mempertahankan keenam latihan sebagai entitas bagian terurut dan setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat. Unit 10-12 memakai identitas yang sama untuk permukaan matematika, diagram, rujukan eksternal, indeks, sitasi, serta provenance model; Unit 10 dan 11 sudah dipublikasikan pada commit `17dac5e2984604c3f2010a04f6021f36e3eb3586`, sedangkan bukti Unit 12 ada pada `qa/UNIT_012_ADMISSION_20260823.md`.
 
 Validasi:
 
@@ -190,6 +201,9 @@ python scripts/validate_backend.py --data backend/data/unit-006-bab-1-semesta-gr
 python scripts/validate_backend.py --data backend/data/unit-007-bab-1-latihan.json
 python scripts/validate_backend.py --data backend/data/unit-008-bab-2-pengantar-teori-kategori.json
 python scripts/validate_backend.py --data backend/data/unit-009-bab-2-kategori-dan-morfisme.json
+python scripts/validate_backend.py --data backend/data/unit-010-bab-2-fungtor-dan-transformasi-natural.json
+python scripts/validate_backend.py --data backend/data/unit-011-bab-2-kategori-fungtor.json
+python scripts/validate_backend.py --data backend/data/unit-012-bab-2-sifat-universal-dan-kategori-koma.json
 ```
 
 Validator memeriksa skema, keunikan dan relasi ID, urutan bagian, hash file dan rentang baris, penutupan sitasi/rujukan/diagram/indeks, bukti build, serta kesesuaian byte proyeksi CSV.
@@ -221,7 +235,10 @@ Teks sumber dan terjemahan ditangani menurut Creative Commons Attribution 4.0 In
 - [ ] Bab 2 — Dasar-dasar teori kategori
   - [x] Pengantar bab dan petunjuk membaca
   - [x] Bagian 2.1 — Kategori dan Morfisme
-  - [ ] Bagian 2.2 dan seterusnya
+  - [x] Bagian 2.2 — Fungtor dan transformasi natural
+  - [x] Bagian 2.3 — Kategori fungtor
+  - [x] Bagian 2.4 — Sifat universal dan kategori koma
+  - [ ] Bagian 2.5 dan seterusnya
 - [ ] Bab 3 — Kategori monoidal
 - [ ] Bab 4 — Teori grup
 - [ ] Bab 5 — Dasar-dasar teori gelanggang

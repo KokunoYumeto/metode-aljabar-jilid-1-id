@@ -561,29 +561,29 @@ komutatif untuk setiap $f: X \to Y$.
 \end{proposition}
 Pembuktiannya mudah dan diserahkan sebagai latihan.
 
-\section{泛性质}\label{sec:cat-universals}
-许多数学构造能以泛性质唯一地刻画. 我们使用始, 终对象和逗号范畴的语言予以阐述.
+\section{Sifat Universal}\label{sec:cat-universals}
+Banyak konstruksi matematika dapat dicirikan secara unik oleh sifat universal. Kita menguraikannya dengan bahasa objek awal, objek terminal, dan kategori koma.
 
-\begin{definition}\label{def:universal-objects}\index{duixiang!始对象/终对象/零对象 (initial/terminal/zero object)}
-	范畴 $\mathcal{C}$ 中的对象 $X$ 称为\emph{始对象}, 如果对所有对象 $Y$ 集合 $\Hom_{\mathcal{C}}(X, Y)$ 恰有一个元素. 类似地, 称 $X$ 为\emph{终对象}, 如果对所有对象 $Y$ 集合 $\Hom_{\mathcal{C}}(Y, X)$ 恰有一个元素. 若 $X$ 既是始对象又是终对象, 则称之为\emph{零对象}.
+\begin{definition}\label{def:universal-objects}\index{objek!objek awal/objek terminal/objek nol (initial/terminal/zero object)}
+	Dalam kategori $\mathcal{C}$, objek $X$ disebut \emph{objek awal} jika, untuk setiap objek $Y$, himpunan $\Hom_{\mathcal{C}}(X, Y)$ memiliki tepat satu unsur. Demikian pula, $X$ disebut \emph{objek terminal} jika, untuk setiap objek $Y$, himpunan $\Hom_{\mathcal{C}}(Y, X)$ memiliki tepat satu unsur. Jika $X$ merupakan objek awal sekaligus objek terminal, maka disebut \emph{objek nol}.
 \end{definition}
 
-始, 终对象是相互对偶的概念: $\mathcal{C}$ 的始对象无非是 $\mathcal{C}^\text{op}$ 的终对象, 反之亦然.
+Objek awal dan objek terminal merupakan konsep yang saling dual: objek awal dari $\mathcal{C}$ tidak lain adalah objek terminal dari $\mathcal{C}^\text{op}$, dan sebaliknya.
 
 \begin{proposition}\label{prop:initial-obj-uniqueness}
-	设 $X, X'$ 为 $\mathcal{C}$ 中的始对象, 则存在唯一的同构 $X \rightiso X'$. 同样性质对终对象也成立.
+	Misalkan $X, X'$ merupakan objek awal dalam $\mathcal{C}$. Maka terdapat tepat satu isomorfisme $X \rightiso X'$. Pernyataan serupa berlaku untuk objek terminal.
 \end{proposition}
 \begin{proof}
-	仅需处理始对象情形. 假设 $X, X'$ 都是始对象, 则存在唯一的态射 $f: X \to X'$ 和 $g: X' \to X$. 其合成 $gf: X \to X$ 也是唯一的, 它只能是 $\identity_X$; 同理 $fg = \identity_{X'}$. 因此 $f: X \rightiso X'$ 即所求.
+	Cukup tangani kasus objek awal. Misalkan $X, X'$ keduanya merupakan objek awal. Maka terdapat tepat satu morfisme $f: X \to X'$ dan $g: X' \to X$. Komposisinya $gf: X \to X$ juga tunggal, sehingga harus sama dengan $\identity_X$; dengan cara yang sama, $fg = \identity_{X'}$. Jadi, $f: X \rightiso X'$ adalah isomorfisme yang dicari.
 \end{proof}
 
-\begin{definition}\label{def:zero-morphism}\index{taishe!零态射 (zero morphism)}
-	设 $\mathcal{C}$ 中有零对象, 记作 $0$. 对任意 $X, Y \in \Obj(\mathcal{C})$ 定义\emph{零态射} $0: X \to Y$ 为
+\begin{definition}\label{def:zero-morphism}\index{morfisme!morfisme nol (zero morphism)}
+	Misalkan $\mathcal{C}$ memiliki objek nol, yang kita nyatakan dengan $0$. Untuk sebarang $X, Y \in \Obj(\mathcal{C})$, definisikan \emph{morfisme nol} $0: X \to Y$ sebagai
 	\[ X \to 0 \to Y \]
-	的合成.
+	komposisi kedua morfisme tersebut.
 \end{definition}
 
-两点观察: (1) 零态射从左右合成任何态射仍是零态射. (2) 零态射的定义无关零对象的选取: 若 $0, 0'$ 都是零对象, 则出入 $0, 0'$ 的箭头都是唯一的, 下图自动交换
+Dua pengamatan: (1) Komposisi morfisme nol dari kiri maupun dari kanan dengan sebarang morfisme tetap merupakan morfisme nol. (2) Definisi morfisme nol tidak bergantung pada pilihan objek nol: jika $0, 0'$ keduanya merupakan objek nol, setiap panah yang masuk ke atau keluar dari $0, 0'$ ditentukan secara unik, sehingga diagram di bawah komutatif secara otomatis.
 \[ \begin{tikzcd}[row sep=small]
 	{} & 0 \arrow[rd] \arrow[dd, "\simeq"] & {} \\
 	X \arrow[ru] \arrow[rd] & & Y . \\
@@ -591,88 +591,88 @@ Pembuktiannya mudah dan diserahkan sebagai latihan.
 \end{tikzcd} \]
 
 \begin{example}
-	一般而言, 始对象和终对象未必存在 (例: 考虑离散范畴). 以下是一些典型例子:
+	Secara umum, objek awal dan objek terminal tidak selalu ada (contoh: kategori diskret). Berikut beberapa contoh yang khas:
 	\begin{enumerate}
-		\item 集合范畴 $\cate{Set}$: $\emptyset$ 是始对象, $\{\text{pt}\}$ 是终对象;
-		\item 带基点的集合范畴 $\cate{Set}_\bullet$: $(\{\text{pt}\}, \text{pt})$ 是零对象;
-		\item 群范畴 $\cate{Grp}$: 平凡群 $\{1\}$ 是零对象, 取常值 $1$ 的同态是零态射;
-		\item 域 $\Bbbk$ 上的向量空间范畴 $\cate{Vect}(\Bbbk)$: 零空间是零对象, 零映射是零态射.
+		\item Kategori himpunan $\cate{Set}$: $\emptyset$ merupakan objek awal, sedangkan $\{\text{pt}\}$ merupakan objek terminal;
+		\item Kategori himpunan bertitik $\cate{Set}_\bullet$: $(\{\text{pt}\}, \text{pt})$ merupakan objek nol;
+		\item Kategori grup $\cate{Grp}$: grup trivial $\{1\}$ merupakan objek nol, dan homomorfisme konstan bernilai $1$ merupakan morfisme nol;
+		\item Kategori ruang vektor atas medan $\Bbbk$, yaitu $\cate{Vect}(\Bbbk)$: ruang nol merupakan objek nol, dan pemetaan nol merupakan morfisme nol.
 	\end{enumerate}
 \end{example}
 
-始, 终对象及其唯一性一般被用来表述\emph{泛性质}, 我们先看些例子.\index{fanxingzhi@泛性质 (universal property)}
+Objek awal, objek terminal, dan keunikannya sering digunakan untuk menyatakan \emph{sifat universal}; mari kita lihat beberapa contoh.\index{sifat universal@sifat universal (universal property)}
 \begin{example}\label{eg:free-vectorspace}
-	选定域 $\Bbbk$, 定义函子 $V: \cate{Set} \to \cate{Vect}(\Bbbk)$ 如下: 对于集合 $X$, 命 $V(X) := \bigoplus_{x \in X} \Bbbk x$ 为以 $X$ 为基的 $\Bbbk$-向量空间. 任意映射 $f: X \to Y$ 皆诱导出线性映射 $V(f): V(X) \to V(Y)$, 它由在基上的限制 $f$ 所刻画. 令 $U: \cate{Vect}(\Bbbk) \to \cate{Set}$ 为忘却函子 (例 \ref{eg:functors}), 则 $x \mapsto x \in V(X)$ 给出态射 $\iota: X \to UV(X)$. 尽管有些拗口, 不妨设想 $V(X)$ 是 $X$ 上的``自由向量空间''.
+	Pilih medan $\Bbbk$, lalu definisikan fungtor $V: \cate{Set} \to \cate{Vect}(\Bbbk)$ sebagai berikut: untuk himpunan $X$, tetapkan $V(X) := \bigoplus_{x \in X} \Bbbk x$ sebagai ruang vektor dengan $X$ sebagai basis atas medan $\Bbbk$. Setiap pemetaan $f: X \to Y$ menginduksi pemetaan linear $V(f): V(X) \to V(Y)$ yang ditentukan oleh pembatasan $f$ pada basis. Misalkan $U: \cate{Vect}(\Bbbk) \to \cate{Set}$ merupakan fungtor pelupa (Contoh \ref{eg:functors}); maka $x \mapsto x \in V(X)$ memberikan morfisme $\iota: X \to UV(X)$. Walaupun ungkapannya agak canggung, bayangkan saja $V(X)$ sebagai ``ruang vektor bebas'' atas $X$.
 
-	为阐明 $V(X)$ 的泛性质, 定义范畴 $(X / U)$ 使得其对象形如 $(W, i: X \to U(W))$, 其中 $W \in \Obj \cate{Vect}(\Bbbk)$ 而 $X \xrightarrow{i} U(W)$ 是 $\cate{Set}$ 中的态射, 态射定为使下图交换的线性映射 $h: W_1 \to W_2$:
+	Untuk menjelaskan sifat universal $V(X)$, definisikan kategori $(X / U)$ yang objeknya berbentuk $(W, i: X \to U(W))$, dengan $W \in \Obj \cate{Vect}(\Bbbk)$ dan $X \xrightarrow{i} U(W)$ merupakan morfisme dalam $\cate{Set}$. Morfismenya didefinisikan sebagai pemetaan linear $h: W_1 \to W_2$ yang membuat diagram berikut komutatif:
 	\[ \begin{tikzcd}
 		{} & X \arrow[ld, "i_1"'] \arrow[rd, "i_2"] & \\
 		U(W_1) \arrow[rr, "U(h)"'] & & U(W_2).
   \end{tikzcd} \]
 
-	我们断言 $(V(X), \iota)$ 是 $(X / U)$ 中的始对象. 这说的无非是对任意 $(W, i) \in \Obj(X / U)$, 存在唯一的 $h: V(X) \to W$ 使图表
+	Kita menyatakan bahwa $(V(X), \iota)$ merupakan objek awal dalam $(X / U)$. Ini berarti bahwa untuk setiap $(W, i) \in \Obj(X / U)$, terdapat tepat satu $h: V(X) \to W$ yang membuat diagram
 	\[\begin{tikzcd}
 		{} & X \arrow[ld, "\iota"'] \arrow[rd, "i"] & \\
 		U(V(X)) \arrow[rr, "U(h)"'] & & U(W)
 	\end{tikzcd}\]
-	交换. 由于 $X$ 是 $V(X)$ 的基, 这般 $h$ 是唯一确定了的.
+	komutatif. Karena $X$ merupakan basis dari $V(X)$, pemetaan $h$ tersebut ditentukan secara unik.
 
-	上图涉及 $h$ 的条件称为 $V(X)$ 满足的泛性质. 根据命题 \ref{prop:initial-obj-uniqueness}, 我们说泛性质刻画了 $V(X)$ 连同 $\iota: X \to UV(X)$, 至多差一个唯一的同构. 之后我们还会遇到更精密的``自由对象''的构造, 如 \S\ref{sec:free-group} 的自由群.
+	Syarat mengenai $h$ pada diagram di atas disebut sifat universal yang dipenuhi oleh $V(X)$. Menurut Proposisi \ref{prop:initial-obj-uniqueness}, kita mengatakan bahwa sifat universal mencirikan $V(X)$ bersama $\iota: X \to UV(X)$ hingga satu isomorfisme unik. Kelak kita akan menjumpai konstruksi objek bebas yang lebih canggih, misalnya grup bebas pada \S\ref{sec:free-group}.
 \end{example}
 
 \begin{example}\label{eg:metric-completion}
-	考虑所有度量空间 $(X, d)$ 构成的范畴 $\cate{Metr}$, 其中的态射是保距映射 $f: (X, d_X) \to (Y, d_Y)$, 即: $\forall u,v, \; d_Y(f(u), f(v))=d_X(u,v)$. 完备度量空间构成的全子范畴记作 $\cate{ComMetr}$. 熟知的完备化构造 \cite[\S 8.1]{Xiong} 给出一个函子
+	Pertimbangkan kategori $\cate{Metr}$ yang terdiri atas semua ruang metrik $(X, d)$, dengan morfisme berupa pemetaan pelestari jarak (isometri) $f: (X, d_X) \to (Y, d_Y)$, yaitu $\forall u,v, \; d_Y(f(u), f(v))=d_X(u,v)$. Subkategori penuh yang terdiri atas ruang metrik lengkap dilambangkan dengan $\cate{ComMetr}$. Konstruksi pelengkapan yang dikenal luas \cite[\S 8.1]{Xiong} memberikan suatu fungtor
 	\begin{align*}
 		C: \cate{Metr} & \longrightarrow \cate{ComMetr} \\
 		(X, d) & \longmapsto (\hat{X}, \hat{d}),
 	\end{align*}
-	其中 $\hat{X}$ 是所有 $X$ 中的 Cauchy 列 $\vec{x} = (x_n)_{n \geq 0}$ 的等价类, 而 $\hat{d}(\vec{x}, \vec{y}) := \displaystyle\lim_{n \to \infty} d(x_n, y_n)$. 以下略去度量 $d$. 令 $I: \cate{ComMetr} \to \cate{Metr}$ 为包含函子. 对于给定的度量空间 $X$, 对角嵌入 $x \mapsto \left( x_n := x \right)_{n \geq 1}$ 给出态射 $\iota: X \to I(\hat{X})$. 仿照前个例子定义范畴 $(X / I)$ 使其对象形如 $(Y, i: X \to I(Y))$.
+	dengan $\hat{X}$ merupakan kelas-kelas ekuivalensi semua barisan Cauchy $\vec{x} = (x_n)_{n \geq 0}$ dalam $X$, dan $\hat{d}(\vec{x}, \vec{y}) := \displaystyle\lim_{n \to \infty} d(x_n, y_n)$. Selanjutnya kita hilangkan metrik $d$. Misalkan $I: \cate{ComMetr} \to \cate{Metr}$ merupakan fungtor inklusi. Untuk ruang metrik $X$ yang diberikan, pembenaman diagonal $x \mapsto \left( x_n := x \right)_{n \geq 1}$ memberikan morfisme $\iota: X \to I(\hat{X})$. Seperti pada contoh sebelumnya, definisikan kategori $(X / I)$ yang objeknya berbentuk $(Y, i: X \to I(Y))$.
 
-	完备化 $\hat{X}$ 的泛性质众所周知, 用范畴 $(X / I)$ 重述如下: 对任意 $(Y, i) \in \Obj(X / I)$, 存在唯一的态射 $h: \hat{X} \to Y$ 使得图表
+	Sifat universal pelengkapan $\hat{X}$ sudah dikenal luas; dengan kategori $(X / I)$, sifat itu dapat dirumuskan ulang sebagai berikut: untuk setiap $(Y, i) \in \Obj(X / I)$, terdapat tepat satu morfisme $h: \hat{X} \to Y$ yang membuat diagram
 	\[\begin{tikzcd}[row sep=small]
 		{} & X \arrow[ld, "\iota"'] \arrow[rd, "i"] & \\
 		I(\hat{X}) \arrow[rr, "I(h)"'] & & I(Y)
 	\end{tikzcd}\]
-	交换, 这归结为 $X$ 在 $\hat{X}$ 中的稠密性. 因此完备化 $(\hat{X}, \iota: X \to I(\hat{X}))$ 可以刻画为 $(X / I)$ 的始对象.
+	komutatif; hal ini berakar pada kepadatan $X$ di dalam $\hat{X}$. Oleh karena itu, pelengkapan $(\hat{X}, \iota: X \to I(\hat{X}))$ dapat dicirikan sebagai objek awal dalam $(X / I)$.
 \end{example}
 
-以上例子还可以用伴随函子或可表函子处理, 稍后讨论. 我们先借此机会引入一套广泛的构造.
-\begin{definition}[逗号范畴]\label{def:comma-category} \index{douhaofanchou@逗号范畴 (comma category)} \index[sym1]{$(S/T)$}
-	对于函子 $\mathcal{A} \xrightarrow{S} \mathcal{C} \xleftarrow{T} \mathcal{B}$, 定义逗号范畴 $(S / T)$ 如下:
+Contoh-contoh di atas juga dapat ditangani dengan fungtor adjoin atau fungtor representabel, yang akan dibahas nanti. Untuk sekarang, mari gunakan kesempatan ini untuk memperkenalkan suatu kelas konstruksi yang luas.
+\begin{definition}[Kategori koma]\label{def:comma-category} \index{kategori koma@kategori koma (comma category)} \index[sym1]{$(S/T)$}
+	Untuk fungtor $\mathcal{A} \xrightarrow{S} \mathcal{C} \xleftarrow{T} \mathcal{B}$, definisikan kategori koma $(S / T)$ sebagai berikut:
 	\begin{compactitem}
-		\item 对象: 形如 $(A, B, f)$, 其中 $A \in \Obj(\mathcal{A})$, $B \in \Obj(\mathcal{B})$, $f: SA \to TB$;
-		\item 态射: 从 $(A, B, f)$ 到 $(A', B', f')$ 的态射形如 $(g,h)$, 其中 $g: A \to A'$, $h: B \to B'$ 分别是 $\mathcal{A}$, $\mathcal{B}$ 中的态射, 使得下图交换
+		\item Objek: berbentuk $(A, B, f)$, dengan $A \in \Obj(\mathcal{A})$, $B \in \Obj(\mathcal{B})$, dan $f: SA \to TB$;
+		\item Morfisme: morfisme dari $(A, B, f)$ ke $(A', B', f')$ berbentuk $(g,h)$, dengan $g: A \to A'$ dan $h: B \to B'$ masing-masing merupakan morfisme dalam $\mathcal{A}$ dan $\mathcal{B}$, sedemikian sehingga diagram berikut komutatif
 		\[\begin{tikzcd}
 			SA \arrow[r, "Sg"] \arrow[d, "f"'] & SA' \arrow[d, "f'"] \\
 			TB \arrow[r, "Th"'] & TB' .
 		\end{tikzcd}\]
-		态射的合成是 $(g_1, h_1) \circ (g_2, h_2) = (g_1 \circ g_2, h_1 \circ h_2)$, 而 $(A,B,f)$ 到自身的恒等态射是 $(\identity_A, \identity_B)$.
+		Komposisi morfisme diberikan oleh $(g_1, h_1) \circ (g_2, h_2) = (g_1 \circ g_2, h_1 \circ h_2)$, sedangkan morfisme identitas dari $(A,B,f)$ ke dirinya sendiri adalah $(\identity_A, \identity_B)$.
 	\end{compactitem}
 \end{definition}
-我们有明显的左, 右投影函子 $P: (S / T) \to \mathcal{A}$ 和 $Q: (S / T) \to \mathcal{B}$. 早期文献把 $(S / T)$ 写作 $(S, T)$, 因而得名. 且先看些例子.
+Kita memiliki fungtor proyeksi kiri dan kanan yang jelas, yaitu $P: (S / T) \to \mathcal{A}$ dan $Q: (S / T) \to \mathcal{B}$. Literatur awal menulis $(S / T)$ sebagai $(S, T)$, yang menjelaskan penamaannya. Mari kita lihat beberapa contoh.
 
-请回忆例 \ref{eg:categories} 定义的范畴 $\mathbf{1}$, 它仅含一个态射. 指定 $\mathcal{C}$ 中的一个对象 $X$ 相当于指定一个函子 $j_X: \mathbf{1} \to \mathcal{C}$. \index[sym1]{$j_X$}
+Ingat kategori $\mathbf{1}$ yang didefinisikan dalam Contoh \ref{eg:categories}; kategori ini hanya memiliki satu morfisme. Menetapkan sebuah objek $X$ dalam $\mathcal{C}$ ekuivalen dengan menetapkan sebuah fungtor $j_X: \mathbf{1} \to \mathcal{C}$. \index[sym1]{$j_X$}
 \begin{enumerate}
-	\item 考虑函子 $T: \mathcal{C}' \to \mathcal{C}$ 及 $X \in \Obj(\mathcal{C})$. 对应于 $\mathbf{1} \xrightarrow{j_X} \mathcal{C} \xleftarrow{T} \mathcal{C}'$ 的逗号范畴 $(X / T) := (j_X / T)$ 的对象形如 $(W, X \xrightarrow{i} TW)_{W \in \Obj(\mathcal{C}')}$, 而 $(W_1, i_1), (W_2, i_2)$ 间的态射是使得下图交换的 $h: W_1 \to W_2$:
+	\item Pertimbangkan fungtor $T: \mathcal{C}' \to \mathcal{C}$ dan $X \in \Obj(\mathcal{C})$. Kategori koma $(X / T) := (j_X / T)$ yang bersesuaian dengan $\mathbf{1} \xrightarrow{j_X} \mathcal{C} \xleftarrow{T} \mathcal{C}'$ memiliki objek berbentuk $(W, X \xrightarrow{i} TW)_{W \in \Obj(\mathcal{C}')}$, sedangkan morfisme antara $(W_1, i_1), (W_2, i_2)$ adalah $h: W_1 \to W_2$ yang membuat diagram berikut komutatif:
 		\[ \begin{tikzcd}
 			{} & X \arrow[ld, "i_1"'] \arrow[rd, "i_2"] & \\
 			TW_1 \arrow[rr, "Th"'] & & TW_2 .
 		\end{tikzcd} \]
-		合成态射的定义显然故略去. 这正是例 \ref{eg:free-vectorspace} 和例 \ref{eg:metric-completion} 使用的范畴.
-  \item 反过来考虑 $\mathcal{C}' \xrightarrow{T} \mathcal{C} \xleftarrow{j_X} \mathbf{1}$. 逗号范畴 $(T / X)$ 的对象形如 $(W, TW \xrightarrow{p} X)_{W \in \Obj(\mathcal{C}')}$, 从 $(W_1, p_1)$ 到 $(W_2, p_2)$ 的态射是使得下图交换的 $f: W_1 \to W_2$:
+		Definisi komposisi morfisme jelas sehingga tidak perlu dituliskan. Inilah kategori yang digunakan dalam Contoh \ref{eg:free-vectorspace} dan Contoh \ref{eg:metric-completion}.
+  \item Sebaliknya, pertimbangkan $\mathcal{C}' \xrightarrow{T} \mathcal{C} \xleftarrow{j_X} \mathbf{1}$. Kategori koma $(T / X)$ memiliki objek berbentuk $(W, TW \xrightarrow{p} X)_{W \in \Obj(\mathcal{C}')}$; morfisme dari $(W_1, p_1)$ ke $(W_2, p_2)$ adalah $f: W_1 \to W_2$ yang membuat diagram berikut komutatif:
 		\[ \begin{tikzcd}
 			TW_1 \arrow[rd, "p_1"'] \arrow[rr, "Tf"] & & TW_2 \arrow[ld, "p_2"] \\
 			& X & .
 		\end{tikzcd} \]
-		这类范畴在几何学中不时出现. 取 $T = \identity_{\mathcal{C}}$, 一种看法是把 $p: W \to X$ 想成在 $X$ 上``纤维化''的对象. 不妨取 $\mathcal{C}$ 为某些空间的范畴 (如拓扑空间、复代数簇等等), 映射 $p: W \to X$ 可以设想为一族被 $X$ 参数化的空间: 对每一点 $x \in X$, 相应的空间是 $x$ 上的纤维 $W_x := p^{-1}(x)$. 
-    %通常把 $(\mathcal{C}/X) := (\identity_{\mathcal{C}} / X)$ 叫\emph{切片范畴}, 而 $(X/\mathcal{C}) := (X / \identity_{\mathcal{C}})$ 叫\emph{余切片范畴}.
+		Kategori semacam ini sering muncul dalam geometri. Ambil $T = \identity_{\mathcal{C}}$; salah satu cara memandang $p: W \to X$ adalah sebagai objek ``terfibrasi'' di atas $X$. Ambil $\mathcal{C}$ sebagai kategori beberapa ruang (misalnya ruang topologis, varietas aljabar kompleks, dan sebagainya); pemetaan $p: W \to X$ dapat dibayangkan sebagai keluarga ruang yang diparameterkan oleh $X$: untuk setiap titik $x \in X$, ruang yang bersesuaian adalah serat di atas $x$, yaitu $W_x := p^{-1}(x)$.
+     % Biasanya $(\mathcal{C}/X) := (\identity_{\mathcal{C}} / X)$ disebut \emph{kategori slice}, sedangkan $(X/\mathcal{C}) := (X / \identity_{\mathcal{C}})$ disebut \emph{kategori koslice}.
 
-	\item 逗号范畴 $(\identity_{\mathcal{C}} / \identity_{\mathcal{C}})$ 的对象是 $\mathcal{C}$ 中的所有态射 $f: X \to Y$, 两个对象 $f: X \to Y$, $f': X' \to Y'$ 之间的态射是交换图表
+	\item Objek kategori koma $(\identity_{\mathcal{C}} / \identity_{\mathcal{C}})$ adalah semua morfisme $f: X \to Y$ dalam $\mathcal{C}$. Morfisme antara dua objek $f: X \to Y$ dan $f': X' \to Y'$ adalah diagram komutatif
 	$\begin{tikzcd}
 		X \arrow[r, "f"] \arrow[d] & Y \arrow[d] . \\
 		X' \arrow[r, "f'"'] & Y'
 	\end{tikzcd}$.
-	不难理解, $(\identity_{\mathcal{C}} / \identity_{\mathcal{C}})$ 也叫 $\mathcal{C}$ 的箭头范畴.
+	Mudah dipahami bahwa $(\identity_{\mathcal{C}} / \identity_{\mathcal{C}})$ juga disebut kategori panah dari $\mathcal{C}$.
 \end{enumerate}
 
 \section{可表函子}\label{sec:representable-functors}

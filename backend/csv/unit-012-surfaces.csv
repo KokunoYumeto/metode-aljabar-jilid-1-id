@@ -1,0 +1,17 @@
+entity_type,id,stable_key,section_id,ordinal,source_value,target_value,format,status
+build_surface,urn:uuid:eff59f88-470e-5587-b3a8-e95bd267c492,build-surface/unit-012-pdf,,,pwsh -NoProfile -File scripts/build_unit_012.ps1 -OutputDirectory build/unit-012-replay,artifacts/unit-012-bab-2-sifat-universal-dan-kategori-koma.pdf,pdf,pass
+citation,urn:uuid:aace11f1-121a-5ef3-9b2c-b54ab9ded578,citation/unit-012/xiong/line-624,urn:uuid:f56a8d5d-8b6c-5ed9-b6d6-f1bac04df2b7,,Xiong,Xiong,biblatex-key,preserved
+diagram,urn:uuid:b309ee2c-bbcd-5f0e-8eb5-aafebfe89e23,diagram/unit-012/tikzcd-1,urn:uuid:f56a8d5d-8b6c-5ed9-b6d6-f1bac04df2b7,1,587-591,587-591,tikzcd,audited_preserved
+diagram,urn:uuid:5d664cd9-a562-5b00-ba0a-05674152ee9f,diagram/unit-012/tikzcd-2,urn:uuid:f56a8d5d-8b6c-5ed9-b6d6-f1bac04df2b7,2,608-611,608-611,tikzcd,audited_preserved
+diagram,urn:uuid:200ff0b7-9f9e-512c-882a-56ad83cacd4c,diagram/unit-012/tikzcd-3,urn:uuid:f56a8d5d-8b6c-5ed9-b6d6-f1bac04df2b7,3,614-617,614-617,tikzcd,audited_preserved
+diagram,urn:uuid:1d862172-244a-566b-a407-ccd32dc4db6d,diagram/unit-012/tikzcd-4,urn:uuid:f56a8d5d-8b6c-5ed9-b6d6-f1bac04df2b7,4,632-635,632-635,tikzcd,audited_preserved
+diagram,urn:uuid:001ad305-621b-51e2-819a-d4c8ddb7591c,diagram/unit-012/tikzcd-5,urn:uuid:f56a8d5d-8b6c-5ed9-b6d6-f1bac04df2b7,5,645-648,645-648,tikzcd,audited_preserved
+diagram,urn:uuid:9c3b54a8-cd36-5bad-9548-c532836b0025,diagram/unit-012/tikzcd-6,urn:uuid:f56a8d5d-8b6c-5ed9-b6d6-f1bac04df2b7,6,657-660,657-660,tikzcd,audited_preserved
+diagram,urn:uuid:540ea779-b890-5ed4-8ee4-ad1213233df2,diagram/unit-012/tikzcd-7,urn:uuid:f56a8d5d-8b6c-5ed9-b6d6-f1bac04df2b7,7,663-666,663-666,tikzcd,audited_preserved
+diagram,urn:uuid:c2e8f8b2-e9fc-59d2-83c4-c97d0e2712f2,diagram/unit-012/tikzcd-8,urn:uuid:f56a8d5d-8b6c-5ed9-b6d6-f1bac04df2b7,8,671-674,671-674,tikzcd,audited_preserved
+index_entry,urn:uuid:4ab2f95d-1dfc-5413-8b18-c4284f1e9ff9,index-entry/unit-012/comma-category,urn:uuid:f56a8d5d-8b6c-5ed9-b6d6-f1bac04df2b7,4,douhaofanchou@逗号范畴 (comma category),kategori koma@kategori koma (comma category),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:2dc2457b-b70a-5f17-8dfc-9e1e578b3926,index-entry/unit-012/comma-category-symbol,urn:uuid:f56a8d5d-8b6c-5ed9-b6d6-f1bac04df2b7,5,$(S/T)$,$(S/T)$,latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:7d2ca635-7c1f-550b-bbe7-2b841207829f,index-entry/unit-012/initial-terminal-zero-objects,urn:uuid:f56a8d5d-8b6c-5ed9-b6d6-f1bac04df2b7,1,duixiang!始对象/终对象/零对象 (initial/terminal/zero object),objek!objek awal/objek terminal/objek nol (initial/terminal/zero object),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:b034fb03-3609-5655-aeec-e0c8ed3f2faf,index-entry/unit-012/object-symbol,urn:uuid:f56a8d5d-8b6c-5ed9-b6d6-f1bac04df2b7,6,$j_X$,$j_X$,latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:682a8272-764a-590e-8d22-414896b6d84b,index-entry/unit-012/universal-property,urn:uuid:f56a8d5d-8b6c-5ed9-b6d6-f1bac04df2b7,3,fanxingzhi@泛性质 (universal property),sifat universal@sifat universal (universal property),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:a82f5ccf-b1db-57ec-8e27-b13ef9117bff,index-entry/unit-012/zero-morphism,urn:uuid:f56a8d5d-8b6c-5ed9-b6d6-f1bac04df2b7,2,taishe!零态射 (zero morphism),morfisme!morfisme nol (zero morphism),latex-index-key,source_key_preserved_target_key_localized
