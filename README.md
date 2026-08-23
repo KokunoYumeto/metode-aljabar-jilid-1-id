@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1-2.6 telah diterjemahkan, diaudit, dibangun, dan diterima dalam empat belas unit pembaca. Unit 10 menyajikan fungtor dan transformasi natural; Unit 11 kategori fungtor; Unit 12 sifat universal dan kategori koma; Unit 13 fungtor representabel dan Lema Yoneda; Unit 14 dasar-dasar fungtor adjoin. Unit 1-13 sudah dipublikasikan di GitHub, sedangkan Unit 14 telah diterima secara lokal dan menunggu publikasi GitHub sempit beserta pembacaan balik byte publik. Contoh-contoh pada `chapter2.tex:910-1110` menjadi span terjemahan berikutnya; Bagian 2.7 dimulai pada baris 1111.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1-2.6 telah diterjemahkan, diaudit, dibangun, diterima, dan dipublikasikan dalam empat belas unit pembaca. Unit 10 menyajikan fungtor dan transformasi natural; Unit 11 kategori fungtor; Unit 12 sifat universal dan kategori koma; Unit 13 fungtor representabel dan Lema Yoneda; Unit 14 dasar-dasar fungtor adjoin. Contoh-contoh pada `chapter2.tex:910-1110` menjadi span terjemahan berikutnya; Bagian 2.7 dimulai pada baris 1111.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh checkpoint pembaca 0.3.0 (96 halaman; Unit 1-9)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf)
 
@@ -208,7 +208,7 @@ Artefak Unit 14 yang diterima secara lokal:
 - dua build dan replay visual MuPDF/Poppler 9/9 halaman lulus; seluruh halaman diperiksa. Dua kotak meluber yang sangat kecil tidak memotong margin aman dan telah diperiksa secara visual; tidak ada rujukan/sitasi tak terdefinisi, destinasi ganda, karakter hilang, atau galat TeX fatal.
 - reflow digital memakai spasi baris 1,45 agar diagram dan kesimpulan tetap bersama tanpa membuat halaman isi akhir yang hampir kosong; matematika dan struktur sumber tidak diubah.
 - empat koreksi sumber yang diungkapkan memperbaiki indeks komponen `\varphi_{V,W}`, kategori lawan pada dualitas berdimensi hingga, notasi `Vect_f(k)`, dan indeks komponen counit oleh `Y \in \Obj(C_2)`.
-- Unit 14 belum diklaim publik; GitHub masih terverifikasi sampai Unit 13 pada commit receipt `86a29cfbd84400ddc123f8d01f117618aed8c5de`.
+- Unit 14 dipublikasikan pada commit `9c927ba19b14898a8cd8a3cadef30ee309510c8c`; 30 path eksplisit / 923.499 byte cocok dengan byte dan SHA-256 lokal pada pembacaan balik anonim.
 
 ## Backend modular
 
