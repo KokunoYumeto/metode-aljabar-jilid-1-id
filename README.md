@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1-2.5 telah diterjemahkan, diaudit, dibangun, dan diterima dalam tiga belas unit pembaca lokal. Unit 10 menyajikan fungtor dan transformasi natural; Unit 11 melanjutkan dengan kategori fungtor; Unit 12 mencakup sifat universal dan kategori koma; Unit 13 mencakup fungtor representabel dan Lema Yoneda. Bagian 2.6 dan bagian-bagian selanjutnya masih dalam bahasa sumber dan akan diterjemahkan berurutan.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1-2.5 telah diterjemahkan, diaudit, dibangun, diterima, dan dipublikasikan dalam tiga belas unit pembaca. Unit 10 menyajikan fungtor dan transformasi natural; Unit 11 melanjutkan dengan kategori fungtor; Unit 12 mencakup sifat universal dan kategori koma; Unit 13 mencakup fungtor representabel dan Lema Yoneda. Bagian 2.6 dan bagian-bagian selanjutnya masih dalam bahasa sumber dan akan diterjemahkan berurutan.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh checkpoint pembaca 0.3.0 (96 halaman; Unit 1-9)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf)
 
