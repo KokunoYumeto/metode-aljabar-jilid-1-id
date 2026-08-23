@@ -6,6 +6,8 @@ Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1
 
 [Baca atau unduh checkpoint pembaca 0.3.0 (96 halaman; Unit 1-9)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf)
 
+[Baca atau unduh checkpoint pembaca 0.4.0 (128 halaman; Unit 1-12)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.4.0-reader.pdf)
+
 [Baca atau unduh PDF Unit 1](artifacts/unit-001-pendahuluan.pdf)
 
 [Baca atau unduh PDF Unit 2](artifacts/unit-002-bab-1-zfc.pdf)
@@ -30,9 +32,9 @@ Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1
 
 [Baca atau unduh PDF Unit 12](artifacts/unit-012-bab-2-sifat-universal-dan-kategori-koma.pdf)
 
-Versi preservasi `0.3.0` yang memuat checkpoint gabungan 96 halaman, kesembilan reader, sumber yang dapat dibangun, backend modular, bukti ringkas, dan manifest hash tersedia pada [Zenodo DOI 10.5281/zenodo.22062228](https://doi.org/10.5281/zenodo.22062228). Seluruh pembaruan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat.
+Versi preservasi `0.3.0` yang memuat checkpoint gabungan 96 halaman, kesembilan reader, sumber yang dapat dibangun, backend modular, bukti ringkas, dan manifest hash tersedia pada [Zenodo DOI 10.5281/zenodo.22062228](https://doi.org/10.5281/zenodo.22062228). Seluruh pembaruan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat. Rilis `0.4.0` yang sama dengan reader Unit 1-12 sudah byte-verified di GitHub pada commit `f47d290117001a16d0d765bb5f83b3c73bc9a8f3`; pembaruan DOI tertahan oleh blocker eksternal yang dicatat dalam [`qa/ZENODO_PUBLICATION_BLOCKED_20260823.md`](qa/ZENODO_PUBLICATION_BLOCKED_20260823.md).
 
-Checkpoint pembaca yang sama tersedia sebagai item karya publik pada [Figshare DOI 10.6084/m9.figshare.33314766.v3](https://doi.org/10.6084/m9.figshare.33314766.v3). PDF gabungan 96 halaman tampil sebagai berkas pertama, disertai paket sumber/backend ringkas, pemberitahuan hak, manifest, dan checksum. Lisensi item CC BY 4.0 berlaku pada teks utama dan adaptasi Indonesia; `Lanzhou.png` dan fragmen `AJbook.cls` yang dikreditkan tetap CC BY-SA 3.0, sedangkan font Noto tetap OFL 1.1, sebagaimana dirinci dalam `LICENSES.md`.
+Checkpoint pembaca sebelumnya juga memiliki item karya pada [Figshare DOI 10.6084/m9.figshare.33314766.v3](https://doi.org/10.6084/m9.figshare.33314766.v3). Rute `0.4.0` mempertahankan reader-first PDF, paket sumber/backend ringkas, pemberitahuan hak, manifest, dan checksum, tetapi pembaruan publik saat ini tertahan karena kredensial Figshare lokal mengembalikan `InactiveAccount` dan artikel lama perlu diverifikasi ulang; lihat [`qa/FIGSHARE_PUBLICATION_BLOCKED_20260823.md`](qa/FIGSHARE_PUBLICATION_BLOCKED_20260823.md). Lisensi teks utama/adaptasi adalah CC BY 4.0; `Lanzhou.png` dan fragmen `AJbook.cls` yang dikreditkan tetap CC BY-SA 3.0, sedangkan font Noto tetap OFL 1.1, sebagaimana dirinci dalam `LICENSES.md`.
 
 ## Identitas sumber
 
