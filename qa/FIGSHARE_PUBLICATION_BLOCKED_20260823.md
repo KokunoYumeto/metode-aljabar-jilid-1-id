@@ -14,7 +14,7 @@ metadata mutation, project membership change, or collection insertion was
 attempted. The verified reader-first payload remains local at
 `tmp/release-0.4.0-20260823-zenodo/` and is below the 500,000,000-byte work
 cap. Its exact staged inventory is preserved in
-`qa/RELEASE_0.4.0_LOCAL_PAYLOAD_20260823.json`, 4,290 bytes / SHA-256
+`qa/RELEASE_0.4.0_LOCAL_PAYLOAD_20260823.json`, 3,966 bytes / SHA-256
 `5f173bf2b260b9596b3c4a30b91867113f09dbd664d047221679f2d19c497c61`. No
 incompatible or substitute license was asserted, and no public 0.4.0 Figshare
 claim is made.

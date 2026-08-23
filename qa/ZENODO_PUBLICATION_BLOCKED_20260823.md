@@ -14,7 +14,7 @@ admitted unit readers. Its Figshare-sized common payload is 72,492,306 bytes;
 the source ZIP is 70,504,782 bytes / SHA-256
 `7f5f6f1a8877ad8f14d9293ccc45cdb1a191e8b7782f76b8c8d530e1cd3bf087`.
 The complete staged inventory is preserved in
-`qa/RELEASE_0.4.0_LOCAL_PAYLOAD_20260823.json`, 4,290 bytes / SHA-256
+`qa/RELEASE_0.4.0_LOCAL_PAYLOAD_20260823.json`, 3,966 bytes / SHA-256
 `5f173bf2b260b9596b3c4a30b91867113f09dbd664d047221679f2d19c497c61`.
 
 The inherited 0.3.0 draft files were being replaced in that existing draft.
