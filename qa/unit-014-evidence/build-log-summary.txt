@@ -1,0 +1,29 @@
+Unit 014 admission build summary
+Date: 2026-08-23
+Driver: repo/source/unit-014-bab-2-fungtor-adjoin-dasar.tex
+Builder: scripts/build_unit_014.ps1
+Build C: build/unit-014-admission-c
+Build D: build/unit-014-admission-d
+PDF pages: 9
+Final PDF bytes: 121651
+Final PDF SHA-256: a8acee26ef75f172336d4e729e055ca6c8d222c548748d9c4a58a4ee976cb403
+Final build-log bytes: 85830
+Final build-log SHA-256: 61d3d9236755d0384c2dc0e08acd9fb0c4b0f67c2367dd6967ef6b6016296b07
+Functional replay: 9/9 MuPDF pages and 9/9 Poppler pages pixel-identical at 144 dpi.
+MuPDF concatenated page hash: 9be9f34a4b734ecea13c3eb4c5268b1b008ce8f588dcf2ef2eb10d48ee5c98be
+Poppler concatenated page hash: fe4e9d5920d1421119f1ad48c38972a63bd6050d9fcf1544f51a48d71f3e1fc0
+Final-log blockers: zero undefined references/citations, multiply-defined labels,
+missing glyphs, LaTeX/package errors, fatal errors, or emergency stops.
+Two non-blocking overfull hboxes measure 1.01085 pt and 3.69489 pt; both
+remain inside the safe text area and were visually checked in both renderers.
+Expected non-blocking notices: five suppressed empty external-document targets,
+one underfull hbox, three underfull vboxes, package-compatibility notices, and
+the final makeindex reminder; all affected pages were visually checked.
+PDF: id-ID; title/author metadata present; 23 named destinations, 3 outline
+entries, 16 links (13 GoTo, 3 URI); zero Launch, GoToR, JavaScript, or Widget
+actions; all fonts embedded; no unresolved placeholder text and no extracted
+Han residue.
+Digital reflow: the conclusion after the triangle-identity diagrams remains on
+a useful content page, and the single nonempty term index uses one final page.
+Visual QA: all 9 pages inspected in Poppler and MuPDF. No clipped,
+overlapping, missing, blank, or unreadable content was found.

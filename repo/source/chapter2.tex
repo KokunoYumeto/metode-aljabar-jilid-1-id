@@ -763,131 +763,131 @@ Fungtor representabel memiliki banyak contoh mendalam dalam matematika, misalnya
 
 	Kita akan sering menghilangkan simbol $h_{\mathcal{C}}$ atau $k_{\mathcal{C}}$, dan memandang $\mathcal{C}$ langsung sebagai subkategori penuh dari $\mathcal{C}^\wedge$ atau $\mathcal{C}^\vee$. Dalam penerapan seperti geometri aljabar, banyak konstruksi yang sukar didefinisikan di dalam kategori $\mathcal{C}$ yang ``konkret'', tetapi memiliki definisi langsung di dalam $\mathcal{C}^\wedge$ atau $\mathcal{C}^\vee$. Karena itu, pembenaman Yoneda dapat dianalogikan dengan teori fungsi rampat (distribusi) L. Schwartz dalam analisis; justru karena abstrak, teori itu berguna.
 
-\section{伴随函子}\label{sec:adjoint-functor}
-D.\ Kan 在 1958 年首先阐释了伴随对的概念. 伴随性在范畴论及其应用中几乎无所不在, 相关历史注记可参阅 \cite[p.107]{ML98}.
-\begin{definition}\label{def:adjunction-pair} \index{bansuidui@伴随对 (adjunction pair)}
-	\emph{伴随对}意指下述资料 $(F, G, \varphi)$, 其中
+\section{Fungtor Adjoin}\label{sec:adjoint-functor}
+D.\ Kan pertama kali menjelaskan konsep pasangan adjoin pada 1958. Sifat adjoin muncul hampir di mana-mana dalam teori kategori dan penerapannya; untuk catatan sejarah terkait, lihat \cite[p.107]{ML98}.
+\begin{definition}\label{def:adjunction-pair} \index{pasangan adjoin@pasangan adjoin (adjunction pair)}
+	\emph{Pasangan adjoin} berarti data berikut $(F, G, \varphi)$, dengan
 	\begin{tikzcd}
 		\mathcal{C}_1 \arrow[bend left=20, r, "F"] & \mathcal{C}_2 \arrow[bend left=20, l, "G"]
 	\end{tikzcd}
-	是一对函子, 而 $\varphi$ 是函子的同构
+	merupakan sepasang fungtor, sedangkan $\varphi$ merupakan isomorfisme natural berikut:
 	\[ \varphi: \Hom_{\mathcal{C}_2}(F(\cdot), \cdot) \rightiso \Hom_{\mathcal{C}_1}(\cdot, G(\cdot)). \]
 \end{definition}
-一般称 $G$ 是 $F$ 的右伴随, $F$ 是 $G$ 的左伴随, 或说 $(F, G, \varphi)$ 是伴随对; 资料中的 $\varphi$ 经常省略不记.
+Biasanya $G$ disebut fungtor adjoin kanan bagi $F$, $F$ disebut fungtor adjoin kiri bagi $G$, atau $(F, G, \varphi)$ disebut pasangan adjoin; data $\varphi$ sering dihilangkan dari notasi.
 
 \begin{example}
-	选定域 $\Bbbk$. 在例 \ref{eg:functors} 中, 我们业已定义了对偶函子 $D: \cate{Vect}(\Bbbk)^\text{op} \to \cate{Vect}(\Bbbk)$, $DV := V^\vee$.  存在自然的同构
+	Tetapkan medan $\Bbbk$. Dalam Contoh \ref{eg:functors}, kita telah mendefinisikan fungtor dual $D: \cate{Vect}(\Bbbk)^\text{op} \to \cate{Vect}(\Bbbk)$, $DV := V^\vee$. Terdapat isomorfisme natural
 	\begin{align*}
 		\varphi_{V, W}: \Hom_\Bbbk(V,  W^\vee) & \longrightarrow \Hom_\Bbbk(W, V^\vee) \\
 		f & \longmapsto \left[ w \mapsto [v \mapsto f(v)(w)] \right]
 	\end{align*}
-	其中 $V, W$ 是 $\Bbbk$-向量空间.  实际上, 两边都自然地同构于双线性型 $B: V \times W \to \Bbbk$ 构成的空间: 仅需将 $f \in \Hom_\Bbbk(V,  W^\vee)$ 映到 $B: (v, w) \mapsto f(v)(w)$; 交换 $V, W$ 的角色就得到 $\Hom_\Bbbk(W, V^\vee)$ 情形. 这些同构重写为
-	\[ \varphi_{VW} : \Hom_{\cate{Vect}(\Bbbk)}(V, DW) \rightiso \Hom_{\cate{Vect}(\Bbbk)^\text{op}}(D^\text{op}V, W) \]
-	并且对变元 $V,W$ 满足函子性, 由此得到伴随对 $(D^\text{op}, D, \varphi^{-1})$.
+	dengan $V, W$ ruang vektor atas $\Bbbk$. Sebenarnya, kedua ruas isomorfik secara natural dengan ruang bentuk bilinear $B: V \times W \to \Bbbk$: cukup petakan $f \in \Hom_\Bbbk(V,  W^\vee)$ ke $B: (v, w) \mapsto f(v)(w)$; dengan mempertukarkan peran $V, W$, diperoleh kasus $\Hom_\Bbbk(W, V^\vee)$. Isomorfisme-isomorfisme ini dapat ditulis ulang sebagai
+	\[ \varphi_{V,W} : \Hom_{\cate{Vect}(\Bbbk)}(V, DW) \rightiso \Hom_{\cate{Vect}(\Bbbk)^\text{op}}(D^\text{op}V, W) \]
+	dan bersifat fungtorial dalam variabel $V,W$, sehingga diperoleh pasangan adjoin $(D^\text{op}, D, \varphi^{-1})$.
 \end{example}
 
-注意到 $D$ 限制在 $\cate{Vect}_f(\Bbbk)$ 上给出范畴等价 $\cate{Vect}(\Bbbk)_f^\text{op} \to \cate{Vect}_f(\Bbbk)$, 见例 \ref{eg:vectf-duality}. 其证明关键是考虑态射 $\identity_{\cate{Vect}(\Bbbk)} \to DD^\text{op}$, 它仅当限制在 $\cate{Vect}_f(\Bbbk)$ 上才是同构. 对于一般的伴随对 $(F, G, \varphi)$, 类似的态射仍扮演关键角色.
+Perhatikan bahwa pembatasan $D$ pada $\cate{Vect}_f(\Bbbk)^\text{op}$ memberikan ekuivalensi kategori $\cate{Vect}_f(\Bbbk)^\text{op} \to \cate{Vect}_f(\Bbbk)$; lihat Contoh \ref{eg:vectf-duality}. Kunci pembuktiannya adalah meninjau morfisme $\identity_{\cate{Vect}(\Bbbk)} \to DD^\text{op}$, yang merupakan isomorfisme hanya apabila dibatasi pada $\cate{Vect}_f(\Bbbk)$. Untuk pasangan adjoin umum $(F, G, \varphi)$, morfisme serupa tetap memainkan peranan penting.
 
-\begin{definition}\label{def:adjunction-unit-counit}\index{bansuidui!单位 (unit), 余单位 (co-unit)}
-	设 $(F, G, \varphi)$ 为伴随对, 定义态射
+\begin{definition}\label{def:adjunction-unit-counit}\index{pasangan adjoin!unit (unit), kounit (counit)}
+	Misalkan $(F, G, \varphi)$ pasangan adjoin. Definisikan morfisme
 	\[ \eta = (\eta_X)_{X \in \Obj(\mathcal{C}_1)} : \identity_{\mathcal{C}_1} \longrightarrow GF \]
-	如下
+	sebagai berikut:
 	\begin{align*}
 		\Hom_{\mathcal{C}_2}(FX, FX) & \xrightarrow{\varphi} \Hom_{\mathcal{C}_1}(X, GFX) \\
 		\identity_{FX} & \longmapsto \eta_X.
 	\end{align*}
-	同理, 反转箭头即可定义态射 $\varepsilon = (\varepsilon_X)_X: FG \to \identity_{\mathcal{C}_2}$. 我们称 $\eta$ 是 $(F, G, \varphi)$ 的\emph{单位}, 而 $\varepsilon$ 是\emph{余单位}.
+	Secara serupa, dengan membalik arah isomorfisme di atas, kita definisikan morfisme $\varepsilon = (\varepsilon_Y)_{Y \in \Obj(\mathcal{C}_2)}: FG \to \identity_{\mathcal{C}_2}$. Kita menyebut $\eta$ dan $\varepsilon$ masing-masing sebagai \emph{unit} dan \emph{kounit} dari $(F, G, \varphi)$.
 \end{definition}
 
-须验证 $\eta$ 确为自然变换. 诚然, 对于 $\mathcal{C}_1$ 中的态射 $h: X' \to X$, 由 $\varphi$ 的自然性知
+Perlu diperiksa bahwa $\eta$ memang merupakan transformasi natural. Memang, dalam $\mathcal{C}_1$, untuk morfisme $h: X' \to X$, naturalitas $\varphi$ memberikan
 \[ \begin{tikzcd}
 	\identity_{FX} \arrow[phantom, r, description, "\in"] \arrow[mapsto, d] & \Hom(FX, FX) \arrow[r, "\varphi"] \arrow[d, "(Fh)^*"'] & \Hom(X, GFX) \arrow[d, "h^*"] & \arrow[phantom, l, description, "\ni"] \eta_X \arrow[mapsto, d] \\
 	Fh \arrow[phantom, r, description, "\in"] & \Hom(FX', FX) \arrow[r, "\varphi"] & \Hom(X', GFX) & \arrow[phantom, l, description, "\ni"] \varphi(Fh) \\
 	\identity_{FX'} \arrow[phantom, r, description, "\in"] \arrow[mapsto, u] & \Hom(FX', FX') \arrow[u, "(Fh)_*"] \arrow[r, "\varphi"'] & \Hom(X', GFX') \arrow[u, "(GFh)_*"'] & \arrow[phantom, l, description, "\ni"] \eta_{X'} \arrow[mapsto, u]
 \end{tikzcd} \]
-的上, 下两子图皆交换; 按图索骥知
+dan subdiagram bagian atas maupun bawah bersifat komutatif; dengan menelusuri diagram, diperoleh bahwa
 $\begin{tikzcd}
 	X' \arrow[r, "\eta_{X'}"] \arrow[d, "h"'] \arrow[rd, "\varphi(Fh)" description] & GFX' \arrow[d, "GFh"] \\
 	X \arrow[r, "\eta_X"'] & GFX
 \end{tikzcd}$
-也交换. 同理可证 $\varepsilon$ 是自然变换.
+juga komutatif. Dengan cara serupa dapat dibuktikan bahwa $\varepsilon$ merupakan transformasi natural.
 
-此外, 单位和余单位各自按下式确定了 $\varphi$
+Selain itu, unit dan kounit masing-masing menentukan $\varphi$ melalui rumus berikut:
 \begin{equation}\label{eqn:unit-adjunction}\begin{aligned}
 	\varphi(f) & = Gf \circ \eta_X : X \to GY, \quad \forall f: FX \to Y ; \\
 	\varphi^{-1}(g) & = \varepsilon_Y \circ Fg: FX \to Y , \quad \forall g: X \to GY.
 \end{aligned}\end{equation}
-同样用交换图表论证之: 对于 $\varphi(f)$, 考虑
+Sekali lagi, hal ini dibuktikan dengan diagram komutatif: untuk $\varphi(f)$, perhatikan
 \[ \begin{tikzcd}
 	\identity_{FX} \arrow[phantom, r, description, "\in"] \arrow[mapsto, d] & \Hom(FX, FX) \arrow[r, "\varphi"] \arrow[d, "f_*"'] & \Hom(X, GFX) \arrow[d, "(Gf)_*"] & \arrow[phantom, l, description, "\ni"] \eta_X \arrow[mapsto, d] \\
 	f \arrow[phantom, r, description, "\in"] & \Hom(FX, Y) \arrow[r, "\varphi"'] & \Hom(X, GY) & \arrow[phantom, l, description, "\ni"] \varphi(f) = Gf \circ \eta_X .
 \end{tikzcd} \]
-反转箭头便得到 $\varphi^{-1}(g)$ 的情形.
+Dengan membalik panah diperoleh kasus $\varphi^{-1}(g)$.
 
-以下要用到自然变换 $\eta G$, $G\varepsilon$, $F\eta$ 和 $\varepsilon F$, 相关符号的解释见 \S\ref{sec:functors}.
+Berikut ini akan digunakan transformasi natural $\eta G$, $G\varepsilon$, $F\eta$, dan $\varepsilon F$; penjelasan notasi terkait dapat dilihat dalam \S\ref{sec:functors}.
 
 \begin{lemma}
-	对于伴随对 $(F, G, \varphi)$ 和相应的 $\eta: \identity \to GF$, $\varepsilon: FG \to \identity$, 我们有自然变换之间的等式.
+	Untuk pasangan adjoin $(F, G, \varphi)$ beserta $\eta: \identity \to GF$, $\varepsilon: FG \to \identity$ yang bersesuaian, berlaku kesamaan transformasi natural berikut.
 	\begin{equation}\label{eqn:unit-counit-relation}\begin{aligned}
 		\left[ G \xrightarrow{\eta G} (GF)G = G(FG) \xrightarrow{G \varepsilon} G \right] = \identity_G , \\
 		\left[ F \xrightarrow{F \eta} F(GF) = (FG)F \xrightarrow{\varepsilon F} F \right] = \identity_F.
 	\end{aligned}\end{equation}
 \end{lemma}
 \begin{proof}
-	对任意 $Y \in \Obj(\mathcal{C}_2)$, 据 $\varepsilon_Y: FGY \to Y$ 的定义和 \eqref{eqn:unit-adjunction} 可得
+	Untuk sembarang $Y \in \Obj(\mathcal{C}_2)$, dari definisi $\varepsilon_Y: FGY \to Y$ dan \eqref{eqn:unit-adjunction} diperoleh
 	\[ \identity_{GY} = \varphi(\varepsilon_Y) = G(\varepsilon_Y) \circ \eta_{GY}: \quad GY \to GY. \]
-	此即第一式. 同理, 用 $\identity_{FX} = \varphi^{-1}(\eta_X)$ 配合 \eqref{eqn:unit-adjunction} 可证第二式.
+	Inilah persamaan pertama. Dengan cara serupa, persamaan kedua dibuktikan menggunakan $\identity_{FX} = \varphi^{-1}(\eta_X)$ bersama \eqref{eqn:unit-adjunction}.
 \end{proof}
 
 \begin{proposition}
-	对于给定的函子
+	Untuk fungtor-fungtor yang diberikan
 	\begin{tikzcd}
 		\mathcal{C}_1 \arrow[bend left=20, r, "F"] & \mathcal{C}_2 \arrow[bend left=20, l, "G"]
 	\end{tikzcd},
-	以下的映射互为逆
+	pemetaan berikut saling invers:
 	\begin{align*}
-		\left\{ \varphi : (F, G, \varphi) \; \text{ 是伴随对 }  \right\} & \rightleftharpoons \left\{ (\eta, \varepsilon) : \text{ 满足 \eqref{eqn:unit-counit-relation} } \right\} \\
+		\left\{ \varphi : (F, G, \varphi) \; \text{ membentuk pasangan adjoin }  \right\} & \rightleftharpoons \left\{ (\eta, \varepsilon) : \text{ memenuhi \eqref{eqn:unit-counit-relation} } \right\} \\
 		\varphi & \longmapsto \left( \eta_X := \varphi(\identity_{FX}), \; \varepsilon_Y := \varphi^{-1}(\identity_{GY}) \right), \\
 		\varphi(f) := Gf \circ \eta_X & \longmapsfrom (\eta, \varepsilon).
 	\end{align*}
 \end{proposition}
 
-因此伴随对亦可用资料 $(F, G, \eta, \varepsilon)$ 描述, 这样的好处是不牵涉 $\Hom$ 集.
+Dengan demikian, pasangan adjoin juga dapat dideskripsikan oleh data $(F, G, \eta, \varepsilon)$; keuntungannya ialah deskripsi ini tidak melibatkan himpunan $\Hom$.
 
 \begin{proof}
-	给定 $(\eta, \varepsilon)$ 满足 \eqref{eqn:unit-counit-relation}. 定义 $\varphi(f) = Gf \circ \eta_X$ 和 $\psi(g) = \varepsilon_Y \circ Fg$ 如 \eqref{eqn:unit-adjunction}, 其中 $f: FX \to Y$, $g: X \to GY$. 依据 $\eta, \varepsilon$ 的自然性, $\varphi$ 和 $\psi$ 构成函子间的一对态射 $\Hom(F(\cdot), \cdot) \leftrightharpoons \Hom(\cdot, G(\cdot))$.
+	Misalkan $(\eta, \varepsilon)$ memenuhi \eqref{eqn:unit-counit-relation}. Definisikan $\varphi(f) = Gf \circ \eta_X$ dan $\psi(g) = \varepsilon_Y \circ Fg$ seperti dalam \eqref{eqn:unit-adjunction}, dengan $f: FX \to Y$, $g: X \to GY$. Berdasarkan naturalitas $\eta$ dan $\varepsilon$, $\varphi$ dan $\psi$ membentuk sepasang morfisme antarfungtor $\Hom(F(\cdot), \cdot) \leftrightharpoons \Hom(\cdot, G(\cdot))$.
 
-	我们断言 $\psi \varphi = \identity$: 左式将 $f$ 映至 $\varepsilon_Y \circ FGf \circ F\eta_X$. 由于 $\varepsilon$ 的自然性, 图表
+	Kita menyatakan bahwa $\psi \varphi = \identity$: ruas kiri memetakan $f$ ke $\varepsilon_Y \circ FGf \circ F\eta_X$. Karena naturalitas $\varepsilon$, diagram
 	\[\begin{tikzcd}
 		FX \arrow[r, "{F\eta_X}"] & FGFX \arrow[r, "{FGf}"] \arrow[d, "{\varepsilon_{FX}}"'] & FGY \arrow[d, "{\varepsilon_Y}"] \\
 		& FX \arrow[r, "f"'] & Y
 	\end{tikzcd} \]
-	交换. 因此 $\psi \varphi(f) = f \circ \varepsilon_{FX} \circ F\eta_X$, 根据 \eqref{eqn:unit-counit-relation} 这无非是 $f$. 同理可证 $\varphi \psi =\identity$. 故 $(F, G, \varphi)$ 是伴随对. 由定义立见 $\varphi(\identity_{FX})=\eta_X$, $\psi(\identity_{GY}) = \varepsilon_Y$.
+	komutatif. Karena itu, $\psi \varphi(f) = f \circ \varepsilon_{FX} \circ F\eta_X$, yang menurut \eqref{eqn:unit-counit-relation} tidak lain adalah $f$. Dengan cara serupa dapat dibuktikan bahwa $\varphi \psi =\identity$. Jadi, $(F, G, \varphi)$ merupakan pasangan adjoin. Dari definisi langsung terlihat bahwa $\varphi(\identity_{FX})=\eta_X$, $\psi(\identity_{GY}) = \varepsilon_Y$.
 
-	配合先前的讨论可以看出 $\leftharpoondown$ 和 $\rightharpoonup$ 互逆. 证毕.
+	Bersama pembahasan sebelumnya, hal ini menunjukkan bahwa kedua arah pemetaan, yang ditandai $\leftharpoondown$ dan $\rightharpoonup$, saling invers. Selesai.
 \end{proof}
-资料 $(F, G, \eta, \varepsilon)$ 里的 $\varepsilon$ (或 $\eta$) 是同构当且仅当 $G$ (或 $F$) 是全忠实函子; 习题中将勾勒其证明.
+Dalam data $(F, G, \eta, \varepsilon)$, $\varepsilon$ (atau $\eta$) merupakan isomorfisme jika dan hanya jika $G$ (atau $F$) merupakan fungtor penuh dan setia; pembuktiannya akan diuraikan secara garis besar dalam latihan.
 
 \begin{remark}\label{rem:triangle-identity}
-	关系式 \eqref{eqn:unit-counit-relation} 还能用 2-胞腔 (见 \S\ref{sec:functors}) 的写法概括. 将横合成 $\eta G = \eta  \circ \identity_G: G \to GFG$ 表作
+	Relasi \eqref{eqn:unit-counit-relation} juga dapat dirangkum dalam notasi 2-sel (lihat \S\ref{sec:functors}). Komposisi horizontal $\eta G = \eta  \circ \identity_G: G \to GFG$ disajikan sebagai
 	\[ \begin{tikzcd}
 		\mathcal{C}_2 \arrow[r, "G"] & \mathcal{C}_1 \arrow[r, "F"] \arrow[bend left=60, rr, "\identity", ""' name=I] & \mathcal{C}_2 \arrow[r, "G"] \arrow[Leftarrow, to path= -- (I) \tikztonodes, "\eta"'] & \mathcal{C}_1 ,
 	\end{tikzcd} \]
-	类似地描绘 $G\varepsilon$, $F\eta$, $\varepsilon F$ 等图表. 则 \eqref{eqn:unit-counit-relation} 说的是
+	Secara serupa dapat digambarkan diagram untuk $G\varepsilon$, $F\eta$, $\varepsilon F$, dan seterusnya. Maka \eqref{eqn:unit-counit-relation} menyatakan
 	\[ \left[ \begin{tikzcd}
 		\mathcal{C}_2 \arrow[r, "G"] \arrow[bend right=60, rr, "" name=J, "\identity"'] &
 		\mathcal{C}_1 \arrow[r, "F"] \arrow[bend left=60, rr, "\identity", ""' name=I] \arrow[Rightarrow, to path= --(J) \tikztonodes, "\varepsilon"'] &
 		\mathcal{C}_2 \arrow[r, "G"] \arrow[Leftarrow, to path= -- (I) \tikztonodes, "\eta"'] &
-		\mathcal{C}_1 
+		\mathcal{C}_1
 	\end{tikzcd} \right] = [\identity_G: G \to G] \]
-	以及
+	dan
 	\[ \left[ \begin{tikzcd}
 		\mathcal{C}_1 \arrow[r, "F"] \arrow[bend left=60, rr, "\identity", ""' name=I] &
 		\mathcal{C}_2 \arrow[r, "G"] \arrow[bend right=60, rr, "" name=J, "\identity"'] \arrow[Leftarrow, to path= -- (I) \tikztonodes, "\eta"'] &
 		\mathcal{C}_1 \arrow[r, "F"] \arrow[Rightarrow, to path= --(J) \tikztonodes, "\varepsilon"'] &
 		\mathcal{C}_2
 	\end{tikzcd} \right] = [\identity_F: F \to F], \]
-	其中左图皆表自然变换的纵合成. 进一步, 还可以把图表调整为便于记忆的形式:
+	dengan setiap diagram di ruas kiri menyatakan komposisi vertikal transformasi natural. Selanjutnya, diagram-diagram ini dapat diatur menjadi bentuk yang lebih mudah diingat:
 	\begin{equation*} \begin{tikzcd}
 		{} & \mathcal{C}_1 \arrow[rr, "\identity", ""' name=I] \arrow[rd, "F"] \arrow[Rightarrow, d, "\varepsilon"] & & \mathcal{C}_1 \\
 		\mathcal{C}_2 \arrow[ru, "G"] \arrow[rr, "\identity"', "" name=J] & {} & \mathcal{C}_2 \arrow[ru, "G"'] \arrow[Leftarrow, to path= -- (I) \tikztonodes, "\eta"'] &
@@ -896,7 +896,7 @@ $\begin{tikzcd}
 		\mathcal{C}_1 \arrow[r, "\identity"] & \mathcal{C}_1 \\
 		\mathcal{C}_2 \arrow[r, "\identity"'] \arrow[u, "G"] & \mathcal{C}_2 \arrow[u, "G"']
 	\end{tikzcd} \end{equation*}
-	和
+	dan
 	\begin{equation*} \begin{tikzcd}
 		\mathcal{C}_1 \arrow[rd, "F"'] \arrow[rr, "\identity", ""' name=I] & & \mathcal{C}_1 \arrow[Rightarrow, d, "\varepsilon"] \arrow[rd, "F"'] & & \\
 		& \mathcal{C}_2 \arrow[ru, "G"] \arrow[Leftarrow, to path= --(I) \tikztonodes, "\eta"'] \arrow[rr, "\identity"'] & {} & \mathcal{C}_2
@@ -904,7 +904,7 @@ $\begin{tikzcd}
 		\mathcal{C}_1 \arrow[r, "\identity"] \arrow[d, "F"'] & \mathcal{C}_1 \arrow[d, "F"] \\
 		\mathcal{C}_2 \arrow[r, "\identity"'] & \mathcal{C}_2 .
 	\end{tikzcd} \end{equation*}
-	职是之故, \eqref{eqn:unit-counit-relation} 又叫作三角等式. 我们在 \S\ref{sec:2-cat} 还会遇到这些图表. 
+	Oleh karena itu, \eqref{eqn:unit-counit-relation} disebut pula identitas segitiga. Diagram-diagram ini akan kita jumpai kembali dalam \S\ref{sec:2-cat}.
 \end{remark}
 
 \begin{example}\label{eg:top-adjunction}

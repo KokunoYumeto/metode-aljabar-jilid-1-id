@@ -1,0 +1,65 @@
+{
+  "schema_version": "unit-014-admission-evidence-v1",
+  "date": "2026-08-23",
+  "source_span": {
+    "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+    "line_start": 766,
+    "line_end": 909,
+    "bytes": 10365,
+    "sha256": "930232390be4aed3aea2155ae1779e95eae621bb7b23ea9c6899828b46ce2960"
+  },
+  "target_span": {
+    "path": "repo/source/chapter2.tex",
+    "line_start": 766,
+    "line_end": 909,
+    "bytes": 11655,
+    "sha256": "5526e8eb99dba9dc3e0eebbd1ddd278eb6343fd50a1d18cf0f6715f09f6e1ed2"
+  },
+  "full_target": {
+    "path": "repo/source/chapter2.tex",
+    "bytes": 155822,
+    "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5"
+  },
+  "structure": {
+    "status": "pass",
+    "mathematics_source": 99,
+    "mathematics_target": 100,
+    "indonesian_math_segmentation_applied": true,
+    "mathematics_equivalent_after_four_declared_source_corrections": true,
+    "environments": 30,
+    "labels": 6,
+    "references": 5,
+    "equation_references": 9,
+    "citations": 1,
+    "indexes": 2,
+    "tikzcd_diagrams": 13,
+    "tikzcd_arrows": 82,
+    "han_residue": 0,
+    "next_boundary": "chapter2.tex:910 (examples continuing Section 2.6)"
+  },
+  "artifact": {
+    "path": "artifacts/unit-014-bab-2-fungtor-adjoin-dasar.pdf",
+    "pages": 9,
+    "bytes": 121651,
+    "sha256": "a8acee26ef75f172336d4e729e055ca6c8d222c548748d9c4a58a4ee976cb403",
+    "catalog_language": "id-ID",
+    "named_destinations": 23,
+    "outline_entries": 3,
+    "actions": {"GoTo": 13, "URI": 3, "Launch": 0, "GoToR": 0, "JavaScript": 0, "Widget": 0},
+    "fonts_embedded": true,
+    "blank_pages": 0,
+    "unresolved_tokens": 0,
+    "extracted_han_residue": 0
+  },
+  "replay": {
+    "builds": ["build/unit-014-admission-c", "build/unit-014-admission-d"],
+    "poppler_pixel_identical_pages": "9/9",
+    "poppler_concatenated_sha256": "fe4e9d5920d1421119f1ad48c38972a63bd6050d9fcf1544f51a48d71f3e1fc0",
+    "mupdf_pixel_identical_pages": "9/9",
+    "mupdf_concatenated_sha256": "9be9f34a4b734ecea13c3eb4c5268b1b008ce8f588dcf2ef2eb10d48ee5c98be",
+    "page_inventory": "qa/unit-014-evidence/render-hash-inventory.json",
+    "all_pages_visually_inspected": true
+  },
+  "terminology_qa": "qa/TERMINOLOGY_QA_INDONESIAN_CATEGORY_ALGEBRA_20260822.md",
+  "model": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

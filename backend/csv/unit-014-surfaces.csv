@@ -1,0 +1,18 @@
+entity_type,id,stable_key,section_id,ordinal,source_value,target_value,format,status
+build_surface,urn:uuid:f51ea81b-35e6-5ff7-9a72-5f92e7e1c351,build-surface/unit-014-pdf,,,pwsh -NoProfile -File scripts/build_unit_014.ps1 -OutputDirectory build/unit-014-replay,artifacts/unit-014-bab-2-fungtor-adjoin-dasar.pdf,pdf,pass
+citation,urn:uuid:485294fe-adef-5511-84b0-d281f9269df7,citation/unit-014/ml98,urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4,,ML98,ML98,biblatex-key,preserved
+diagram,urn:uuid:9f5c64d8-d971-5323-a8ba-f21783b1a92d,diagram/unit-014/tikzcd-1,urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4,1,770-772,770-772,tikzcd,audited_preserved
+diagram,urn:uuid:a71f5021-ff3b-5222-ae25-72ecfb24ce09,diagram/unit-014/tikzcd-10,urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4,10,891-894,891-894,tikzcd,audited_preserved
+diagram,urn:uuid:88c907f3-8490-5c93-8a95-15012a77c19a,diagram/unit-014/tikzcd-11,urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4,11,895-898,895-898,tikzcd,audited_preserved
+diagram,urn:uuid:5cc9906b-23cf-5903-a6d7-0d011c742c3f,diagram/unit-014/tikzcd-12,urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4,12,900-903,900-903,tikzcd,audited_preserved
+diagram,urn:uuid:975a8128-e34c-5cad-a04a-194d8ddd7a1e,diagram/unit-014/tikzcd-13,urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4,13,903-906,903-906,tikzcd,audited_preserved
+diagram,urn:uuid:a1fa714f-0c6d-545e-b73d-0a6eed2c0523,diagram/unit-014/tikzcd-2,urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4,2,803-807,803-807,tikzcd,audited_preserved
+diagram,urn:uuid:1eef23f7-6394-5dfc-80c8-59019810656b,diagram/unit-014/tikzcd-3,urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4,3,809-812,809-812,tikzcd,audited_preserved
+diagram,urn:uuid:f64148af-6a3f-5752-969b-909a1c3b1a4c,diagram/unit-014/tikzcd-4,urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4,4,821-824,821-824,tikzcd,audited_preserved
+diagram,urn:uuid:914aa49c-545b-59fd-ae58-bd0eb80dca3a,diagram/unit-014/tikzcd-5,urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4,5,844-846,844-846,tikzcd,audited_preserved
+diagram,urn:uuid:120b716e-baa2-52db-9f67-d81f89311360,diagram/unit-014/tikzcd-6,urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4,6,861-864,861-864,tikzcd,audited_preserved
+diagram,urn:uuid:252155b3-e485-566f-b576-1853057cf4b1,diagram/unit-014/tikzcd-7,urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4,7,873-875,873-875,tikzcd,audited_preserved
+diagram,urn:uuid:b7e671b4-d704-5f3c-9ce3-488be61cb79d,diagram/unit-014/tikzcd-8,urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4,8,877-882,877-882,tikzcd,audited_preserved
+diagram,urn:uuid:db5b8175-e5f9-5388-b135-8b600de329a9,diagram/unit-014/tikzcd-9,urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4,9,884-889,884-889,tikzcd,audited_preserved
+index_entry,urn:uuid:6ea41bfd-2e9a-50bf-b4aa-0caaba575783,index-entry/unit-014/adjunction-pair,urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4,1,bansuidui@伴随对 (adjunction pair),pasangan adjoin@pasangan adjoin (adjunction pair),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:08d87078-5af0-52bc-9f2a-1339af044c99,index-entry/unit-014/adjunction-unit-counit,urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4,2,"bansuidui!单位 (unit), 余单位 (co-unit)","pasangan adjoin!unit (unit), kounit (counit)",latex-index-key,source_key_preserved_target_key_localized

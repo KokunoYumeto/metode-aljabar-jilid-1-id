@@ -3,8 +3,8 @@
   "schema_name": "open-math-corpus-unit",
   "schema_version": "1.1.0",
   "profile": "curriculum-modular-backend-v0",
-  "dataset_id": "urn:uuid:cfb35d18-0e78-5751-ab91-dc7ef79612d3",
-  "dataset_stable_key": "dataset/unit-013/id-id",
+  "dataset_id": "urn:uuid:bb9b19bf-1111-5f0a-9b69-5db86c67c492",
+  "dataset_stable_key": "dataset/unit-014/id-id",
   "id_namespace": {
     "algorithm": "uuid5",
     "namespace_uuid": "urn:uuid:5d74a443-839a-5a09-b2c6-0bc48a097f2b",
@@ -101,23 +101,23 @@
     }
   },
   "unit": {
-    "id": "urn:uuid:c2417b58-7e30-55e1-b747-7b17ee6e4b8e",
-    "stable_key": "unit/bab-2-fungtor-representabel-dan-lema-yoneda",
+    "id": "urn:uuid:7d5a0db6-72a3-5c1e-9cad-19debd55fe1e",
+    "stable_key": "unit/bab-2-fungtor-adjoin-dasar",
     "entity_type": "unit",
     "program_id": "urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78",
     "course_id": "urn:uuid:a5f3ad58-ce3c-5f5f-b581-1f842ae79192",
     "resource_id": "urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397",
     "edition_id": "urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49",
-    "order": 13,
-    "source_local_id": "chapter2.tex:678-765",
+    "order": 14,
+    "source_local_id": "chapter2.tex:766-909",
     "titles": [
       {
         "language": "zh-Hans",
-        "text": "第二章：范畴论基础；可表函子"
+        "text": "第二章：范畴论基础；伴随函子"
       },
       {
         "language": "id-ID",
-        "text": "Bab 2: Dasar-Dasar Teori Kategori; Fungtor Representabel dan Lema Yoneda"
+        "text": "Bab 2: Dasar-Dasar Teori Kategori; Fungtor Adjoin"
       }
     ],
     "source_language": "zh-Hans",
@@ -126,58 +126,48 @@
       "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
       "bytes": 139983,
       "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
-      "line_start": 678,
-      "line_end": 765,
-      "span_sha256": "9b30201ad8df7822e2e6bb20080097bff6ef663c763653f859f6ab4e028b2928",
+      "line_start": 766,
+      "line_end": 909,
+      "span_sha256": "930232390be4aed3aea2155ae1779e95eae621bb7b23ea9c6899828b46ce2960",
       "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
     },
     "target_binding": {
       "path": "repo/source/chapter2.tex",
       "bytes": 155822,
       "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
-      "line_start": 678,
-      "line_end": 765,
-      "span_sha256": "eeb6bbb2aca0ea17277e7afea39492729996cd9d8648deccc94bcebe9111327d",
+      "line_start": 766,
+      "line_end": 909,
+      "span_sha256": "5526e8eb99dba9dc3e0eebbd1ddd278eb6343fd50a1d18cf0f6715f09f6e1ed2",
       "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
     },
     "section_ids": [
-      "urn:uuid:a29455e9-6ce0-52e3-a11f-7407aaf6b38f"
+      "urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4"
     ],
     "concept_ids": [
-      "urn:uuid:557a8176-1d52-5975-a3f3-bb2aa83397c2",
-      "urn:uuid:b1cb7e1b-6f95-5b32-9aa5-2331dde6e469",
-      "urn:uuid:7a53317b-d9d8-5507-8538-43f038abf30d",
-      "urn:uuid:a7bc5f9a-abf9-56c3-be31-c6efdc6a7f85",
-      "urn:uuid:ea86c9f1-afae-566a-a147-15f94e48aba9",
-      "urn:uuid:1a881d64-69a2-5e82-80f5-2c9345391b08",
-      "urn:uuid:394be986-0956-50b5-838e-cef1652dabee",
-      "urn:uuid:d21c41ae-c811-5f24-a771-ccc7eb90e057",
-      "urn:uuid:6999d778-9c2a-5854-9a5a-9f7278503635",
-      "urn:uuid:9681a38d-c8c5-5b09-8401-eb4ef048e1a4",
-      "urn:uuid:0515b7fa-e9bd-5676-a315-61ccd5050eef",
-      "urn:uuid:8018bc1c-5506-5ad2-aaba-40486bb365b6",
-      "urn:uuid:549f5df0-9fbb-5028-b4da-e81f9e13604d",
-      "urn:uuid:2db1d4d4-710f-555a-9939-e6f6fa9d2341",
-      "urn:uuid:8c60ffdb-edbf-509f-86f7-11f8d6baea23",
-      "urn:uuid:27e72559-550b-5fa2-b7e4-2ae17fea04f5",
-      "urn:uuid:2e69f899-08be-53d1-b382-3950fe505b1d",
-      "urn:uuid:da8145c7-a4bf-5bd4-95ac-5dbe570f42f8",
-      "urn:uuid:dcce6a6e-32f0-5b51-b1c4-cb3c3614e296",
-      "urn:uuid:b70412d4-5f89-57c7-b83f-387944b9773e",
-      "urn:uuid:e156ff06-7f3a-5469-9b50-6d930aec3373",
-      "urn:uuid:ec5fb19b-3057-5450-9f33-0904b6265fc7",
-      "urn:uuid:762e66e5-9a7e-5d89-91bb-57d91e1620e8",
-      "urn:uuid:fbab18cf-86bc-5f06-9f9b-3e09c635e21c",
-      "urn:uuid:9be99253-8d25-5d41-8673-a9e570ce49bf",
-      "urn:uuid:0a254708-f489-5dde-b21f-101da4c13fea",
-      "urn:uuid:6de6c393-8e8a-56ab-b43f-27ddacc1e03d",
-      "urn:uuid:5101f105-cb71-57f8-a0aa-2b7a697d666a",
-      "urn:uuid:232bcd17-4cf6-58eb-9685-5a08dbca5f8c",
-      "urn:uuid:f7812188-ff5b-5d9a-bf85-4f4f9d92ffec",
-      "urn:uuid:2e54ccba-ff62-5a1b-8060-5ab8b15491eb",
-      "urn:uuid:60756f97-e663-5ab9-a24a-49278bd4251d",
-      "urn:uuid:96038e8c-3386-5a49-b2f0-e4cd6db906e0",
-      "urn:uuid:f7d7322d-51d9-5564-8c91-1d07a965c231"
+      "urn:uuid:4462f9e6-b549-5895-a879-d0a178f80f10",
+      "urn:uuid:82d6cb33-5d7a-572d-952a-93f03300d1ee",
+      "urn:uuid:24e1a971-bdc5-5789-8bf5-8aeed0ca21d7",
+      "urn:uuid:fa90b64d-c40e-5620-b732-7c31b31a4ec2",
+      "urn:uuid:756248a3-92d0-5b00-9a81-ae3c1d5ed957",
+      "urn:uuid:36c63184-9d8d-5d8b-8924-15c71e9b95fc",
+      "urn:uuid:d83d9adc-4a52-5986-baac-78f1c38b337a",
+      "urn:uuid:b7a019e2-dd00-5fa7-8905-88e0e6f9d130",
+      "urn:uuid:a199d350-f14e-51b6-ae9c-f66ab2a35518",
+      "urn:uuid:8eb742a4-69cd-5a90-b5ea-b1e36b34b001",
+      "urn:uuid:4db95878-bfb1-5afb-9c18-883cfa5950c3",
+      "urn:uuid:e647f0a8-c84a-5e56-a905-92719c96346c",
+      "urn:uuid:98673eda-63bb-51f3-a688-74161ad0ffd8",
+      "urn:uuid:171923d9-cfc6-5608-a8db-9d96fb52e378",
+      "urn:uuid:99d36fd4-8d38-5ba0-9ead-a0b67e66d5fb",
+      "urn:uuid:bd184e7d-a604-5a1c-bdbd-5218cbaa08d3",
+      "urn:uuid:a3521c3e-6d1c-5a04-bc68-1f38ed5991ef",
+      "urn:uuid:921c55a5-99a7-5c90-a17c-c9951dd99ec9",
+      "urn:uuid:6709431f-ee99-5238-8e4b-98138b0e0ed1",
+      "urn:uuid:8c054716-2027-5979-b7cf-87458d02e457",
+      "urn:uuid:8585cdef-4c22-50cb-ab0f-801f463d9b98",
+      "urn:uuid:86bf1ac6-0890-5edf-8541-4f7f9b992419",
+      "urn:uuid:583bbf4c-5d47-5ace-b8af-84caba61c0b8",
+      "urn:uuid:b77704d0-ea2a-50fb-858c-b079fdc68d5e"
     ],
     "prerequisite_ids": [
       "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
@@ -199,32 +189,43 @@
       "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
       "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430"
     ],
-    "citation_ids": [],
+    "citation_ids": [
+      "urn:uuid:485294fe-adef-5511-84b0-d281f9269df7"
+    ],
     "diagram_ids": [
-      "urn:uuid:331cfe50-87e7-51e7-9443-4ea158a7dcdf",
-      "urn:uuid:6db601db-7f3c-58cb-a0b3-756138fa64e4"
+      "urn:uuid:9f5c64d8-d971-5323-a8ba-f21783b1a92d",
+      "urn:uuid:a1fa714f-0c6d-545e-b73d-0a6eed2c0523",
+      "urn:uuid:1eef23f7-6394-5dfc-80c8-59019810656b",
+      "urn:uuid:f64148af-6a3f-5752-969b-909a1c3b1a4c",
+      "urn:uuid:914aa49c-545b-59fd-ae58-bd0eb80dca3a",
+      "urn:uuid:120b716e-baa2-52db-9f67-d81f89311360",
+      "urn:uuid:252155b3-e485-566f-b576-1853057cf4b1",
+      "urn:uuid:b7e671b4-d704-5f3c-9ce3-488be61cb79d",
+      "urn:uuid:db5b8175-e5f9-5388-b135-8b600de329a9",
+      "urn:uuid:a71f5021-ff3b-5222-ae25-72ecfb24ce09",
+      "urn:uuid:88c907f3-8490-5c93-8a95-15012a77c19a",
+      "urn:uuid:5cc9906b-23cf-5903-a6d7-0d011c742c3f",
+      "urn:uuid:975a8128-e34c-5cad-a04a-194d8ddd7a1e"
     ],
     "index_entry_ids": [
-      "urn:uuid:266cd658-83f0-574c-81e0-a24024cfa442",
-      "urn:uuid:8964456a-83f9-5903-b973-eb2da5184e05",
-      "urn:uuid:0ccf5ca9-4d84-57b8-bafe-f6e9c9df0337",
-      "urn:uuid:7d766072-b731-525d-af1a-dd455a2ca833",
-      "urn:uuid:3ea0e5a2-e437-5d02-bdb2-191e1bf38f80"
+      "urn:uuid:6ea41bfd-2e9a-50bf-b4aa-0caaba575783",
+      "urn:uuid:08d87078-5af0-52bc-9f2a-1339af044c99"
     ],
     "build_surface_ids": [
-      "urn:uuid:cacb61bb-0160-5158-963e-c685c0eb77ae"
+      "urn:uuid:f51ea81b-35e6-5ff7-9a72-5f92e7e1c351"
     ],
     "qa_event_ids": [
-      "urn:uuid:0c7412da-72c0-5498-888c-f16d8ee8522f"
+      "urn:uuid:1452ab0a-357e-5b46-8a08-1ab31580f5d5"
     ],
     "outcome_keys": [
-      "outcome/define-presheaf-categories",
-      "outcome/apply-the-yoneda-lemma",
-      "outcome/recognize-yoneda-embeddings",
-      "outcome/characterize-representable-functors",
-      "outcome/prove-uniqueness-of-functor-representations",
-      "outcome/use-universal-families",
-      "outcome/identify-power-set-representability"
+      "outcome/define-adjunctions",
+      "outcome/identify-left-and-right-adjoints",
+      "outcome/construct-units-and-counits",
+      "outcome/verify-naturality",
+      "outcome/apply-triangle-identities",
+      "outcome/read-two-cell-pasting-diagrams",
+      "outcome/distinguish-horizontal-and-vertical-composition",
+      "outcome/characterize-full-faithfulness-from-unit-counit"
     ],
     "surface_counts": {
       "sections": 1,
@@ -232,84 +233,74 @@
       "hints": 0,
       "answers": 0,
       "solutions": 0,
-      "citations": 0,
-      "diagrams": 2,
-      "index_entries": 5
+      "citations": 1,
+      "diagrams": 13,
+      "index_entries": 2
     },
     "translation_state": "visually_checked",
     "admission_state": "admitted"
   },
   "sections": [
     {
-      "id": "urn:uuid:a29455e9-6ce0-52e3-a11f-7407aaf6b38f",
-      "stable_key": "unit/bab-2-fungtor-representabel-dan-lema-yoneda/section/fungtor-representabel-dan-lema-yoneda",
+      "id": "urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4",
+      "stable_key": "unit/bab-2-fungtor-adjoin-dasar/section/fungtor-adjoin-dasar",
       "entity_type": "section",
-      "parent_id": "urn:uuid:c2417b58-7e30-55e1-b747-7b17ee6e4b8e",
+      "parent_id": "urn:uuid:7d5a0db6-72a3-5c1e-9cad-19debd55fe1e",
       "order": 1,
-      "source_local_id": "chapter2.tex:678-765",
+      "source_local_id": "chapter2.tex:766-909",
       "titles": [
         {
           "language": "zh-Hans",
-          "text": "2.5 可表函子"
+          "text": "2.6 伴随函子"
         },
         {
           "language": "id-ID",
-          "text": "2.5 Fungtor Representabel"
+          "text": "2.6 Fungtor Adjoin"
         }
       ],
       "source_binding": {
         "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
         "bytes": 139983,
         "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
-        "line_start": 678,
-        "line_end": 765,
-        "span_sha256": "9b30201ad8df7822e2e6bb20080097bff6ef663c763653f859f6ab4e028b2928",
+        "line_start": 766,
+        "line_end": 909,
+        "span_sha256": "930232390be4aed3aea2155ae1779e95eae621bb7b23ea9c6899828b46ce2960",
         "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
       },
       "target_binding": {
         "path": "repo/source/chapter2.tex",
         "bytes": 155822,
         "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
-        "line_start": 678,
-        "line_end": 765,
-        "span_sha256": "eeb6bbb2aca0ea17277e7afea39492729996cd9d8648deccc94bcebe9111327d",
+        "line_start": 766,
+        "line_end": 909,
+        "span_sha256": "5526e8eb99dba9dc3e0eebbd1ddd278eb6343fd50a1d18cf0f6715f09f6e1ed2",
         "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
       },
       "concept_ids": [
-        "urn:uuid:557a8176-1d52-5975-a3f3-bb2aa83397c2",
-        "urn:uuid:b1cb7e1b-6f95-5b32-9aa5-2331dde6e469",
-        "urn:uuid:7a53317b-d9d8-5507-8538-43f038abf30d",
-        "urn:uuid:a7bc5f9a-abf9-56c3-be31-c6efdc6a7f85",
-        "urn:uuid:ea86c9f1-afae-566a-a147-15f94e48aba9",
-        "urn:uuid:1a881d64-69a2-5e82-80f5-2c9345391b08",
-        "urn:uuid:394be986-0956-50b5-838e-cef1652dabee",
-        "urn:uuid:d21c41ae-c811-5f24-a771-ccc7eb90e057",
-        "urn:uuid:6999d778-9c2a-5854-9a5a-9f7278503635",
-        "urn:uuid:9681a38d-c8c5-5b09-8401-eb4ef048e1a4",
-        "urn:uuid:0515b7fa-e9bd-5676-a315-61ccd5050eef",
-        "urn:uuid:8018bc1c-5506-5ad2-aaba-40486bb365b6",
-        "urn:uuid:549f5df0-9fbb-5028-b4da-e81f9e13604d",
-        "urn:uuid:2db1d4d4-710f-555a-9939-e6f6fa9d2341",
-        "urn:uuid:8c60ffdb-edbf-509f-86f7-11f8d6baea23",
-        "urn:uuid:27e72559-550b-5fa2-b7e4-2ae17fea04f5",
-        "urn:uuid:2e69f899-08be-53d1-b382-3950fe505b1d",
-        "urn:uuid:da8145c7-a4bf-5bd4-95ac-5dbe570f42f8",
-        "urn:uuid:dcce6a6e-32f0-5b51-b1c4-cb3c3614e296",
-        "urn:uuid:b70412d4-5f89-57c7-b83f-387944b9773e",
-        "urn:uuid:e156ff06-7f3a-5469-9b50-6d930aec3373",
-        "urn:uuid:ec5fb19b-3057-5450-9f33-0904b6265fc7",
-        "urn:uuid:762e66e5-9a7e-5d89-91bb-57d91e1620e8",
-        "urn:uuid:fbab18cf-86bc-5f06-9f9b-3e09c635e21c",
-        "urn:uuid:9be99253-8d25-5d41-8673-a9e570ce49bf",
-        "urn:uuid:0a254708-f489-5dde-b21f-101da4c13fea",
-        "urn:uuid:6de6c393-8e8a-56ab-b43f-27ddacc1e03d",
-        "urn:uuid:5101f105-cb71-57f8-a0aa-2b7a697d666a",
-        "urn:uuid:232bcd17-4cf6-58eb-9685-5a08dbca5f8c",
-        "urn:uuid:f7812188-ff5b-5d9a-bf85-4f4f9d92ffec",
-        "urn:uuid:2e54ccba-ff62-5a1b-8060-5ab8b15491eb",
-        "urn:uuid:60756f97-e663-5ab9-a24a-49278bd4251d",
-        "urn:uuid:96038e8c-3386-5a49-b2f0-e4cd6db906e0",
-        "urn:uuid:f7d7322d-51d9-5564-8c91-1d07a965c231"
+        "urn:uuid:4462f9e6-b549-5895-a879-d0a178f80f10",
+        "urn:uuid:82d6cb33-5d7a-572d-952a-93f03300d1ee",
+        "urn:uuid:24e1a971-bdc5-5789-8bf5-8aeed0ca21d7",
+        "urn:uuid:fa90b64d-c40e-5620-b732-7c31b31a4ec2",
+        "urn:uuid:756248a3-92d0-5b00-9a81-ae3c1d5ed957",
+        "urn:uuid:36c63184-9d8d-5d8b-8924-15c71e9b95fc",
+        "urn:uuid:d83d9adc-4a52-5986-baac-78f1c38b337a",
+        "urn:uuid:b7a019e2-dd00-5fa7-8905-88e0e6f9d130",
+        "urn:uuid:a199d350-f14e-51b6-ae9c-f66ab2a35518",
+        "urn:uuid:8eb742a4-69cd-5a90-b5ea-b1e36b34b001",
+        "urn:uuid:4db95878-bfb1-5afb-9c18-883cfa5950c3",
+        "urn:uuid:e647f0a8-c84a-5e56-a905-92719c96346c",
+        "urn:uuid:98673eda-63bb-51f3-a688-74161ad0ffd8",
+        "urn:uuid:171923d9-cfc6-5608-a8db-9d96fb52e378",
+        "urn:uuid:99d36fd4-8d38-5ba0-9ead-a0b67e66d5fb",
+        "urn:uuid:bd184e7d-a604-5a1c-bdbd-5218cbaa08d3",
+        "urn:uuid:a3521c3e-6d1c-5a04-bc68-1f38ed5991ef",
+        "urn:uuid:921c55a5-99a7-5c90-a17c-c9951dd99ec9",
+        "urn:uuid:6709431f-ee99-5238-8e4b-98138b0e0ed1",
+        "urn:uuid:8c054716-2027-5979-b7cf-87458d02e457",
+        "urn:uuid:8585cdef-4c22-50cb-ab0f-801f463d9b98",
+        "urn:uuid:86bf1ac6-0890-5edf-8541-4f7f9b992419",
+        "urn:uuid:583bbf4c-5d47-5ace-b8af-84caba61c0b8",
+        "urn:uuid:b77704d0-ea2a-50fb-858c-b079fdc68d5e"
       ],
       "prerequisite_ids": [
         "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
@@ -335,512 +326,362 @@
   ],
   "concepts": [
     {
-      "id": "urn:uuid:557a8176-1d52-5975-a3f3-bb2aa83397c2",
-      "stable_key": "concept/functor-category",
+      "id": "urn:uuid:4462f9e6-b549-5895-a879-d0a178f80f10",
+      "stable_key": "concept/adjunction",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "函子范畴"
+          "text": "伴随对"
         },
         {
           "language": "id-ID",
-          "text": "kategori fungtor"
+          "text": "pasangan adjoin"
         }
       ]
     },
     {
-      "id": "urn:uuid:b1cb7e1b-6f95-5b32-9aa5-2331dde6e469",
-      "stable_key": "concept/presheaf",
+      "id": "urn:uuid:82d6cb33-5d7a-572d-952a-93f03300d1ee",
+      "stable_key": "concept/left-adjoint-functor",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "预层"
+          "text": "左伴随函子"
         },
         {
           "language": "id-ID",
-          "text": "pragemal"
+          "text": "fungtor adjoin kiri"
         }
       ]
     },
     {
-      "id": "urn:uuid:7a53317b-d9d8-5507-8538-43f038abf30d",
-      "stable_key": "concept/hom-functor",
+      "id": "urn:uuid:24e1a971-bdc5-5789-8bf5-8aeed0ca21d7",
+      "stable_key": "concept/right-adjoint-functor",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "Hom 函子"
+          "text": "右伴随函子"
         },
         {
           "language": "id-ID",
-          "text": "fungtor Hom"
+          "text": "fungtor adjoin kanan"
         }
       ]
     },
     {
-      "id": "urn:uuid:a7bc5f9a-abf9-56c3-be31-c6efdc6a7f85",
-      "stable_key": "concept/evaluation-functor",
+      "id": "urn:uuid:fa90b64d-c40e-5620-b732-7c31b31a4ec2",
+      "stable_key": "concept/unit-of-adjunction",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "求值函子"
+          "text": "单位"
         },
         {
           "language": "id-ID",
-          "text": "fungtor evaluasi"
+          "text": "unit"
         }
       ]
     },
     {
-      "id": "urn:uuid:ea86c9f1-afae-566a-a147-15f94e48aba9",
-      "stable_key": "concept/yoneda-lemma",
+      "id": "urn:uuid:756248a3-92d0-5b00-9a81-ae3c1d5ed957",
+      "stable_key": "concept/counit-of-adjunction",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "米田引理"
+          "text": "余单位"
         },
         {
           "language": "id-ID",
-          "text": "Lema Yoneda"
+          "text": "kounit"
         }
       ]
     },
     {
-      "id": "urn:uuid:1a881d64-69a2-5e82-80f5-2c9345391b08",
-      "stable_key": "concept/yoneda-embedding",
+      "id": "urn:uuid:36c63184-9d8d-5d8b-8924-15c71e9b95fc",
+      "stable_key": "concept/natural-transformation",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "米田嵌入"
+          "text": "自然变换"
         },
         {
           "language": "id-ID",
-          "text": "pembenaman Yoneda"
+          "text": "transformasi natural"
         }
       ]
     },
     {
-      "id": "urn:uuid:394be986-0956-50b5-838e-cef1652dabee",
-      "stable_key": "concept/full-functor",
+      "id": "urn:uuid:d83d9adc-4a52-5986-baac-78f1c38b337a",
+      "stable_key": "concept/naturality",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "满函子"
+          "text": "自然性"
         },
         {
           "language": "id-ID",
-          "text": "fungtor penuh"
+          "text": "naturalitas"
         }
       ]
     },
     {
-      "id": "urn:uuid:d21c41ae-c811-5f24-a771-ccc7eb90e057",
-      "stable_key": "concept/faithful-functor",
+      "id": "urn:uuid:b7a019e2-dd00-5fa7-8905-88e0e6f9d130",
+      "stable_key": "concept/triangle-identities",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "忠实函子"
+          "text": "三角等式"
         },
         {
           "language": "id-ID",
-          "text": "fungtor setia"
+          "text": "identitas segitiga"
         }
       ]
     },
     {
-      "id": "urn:uuid:6999d778-9c2a-5854-9a5a-9f7278503635",
-      "stable_key": "concept/representable-functor",
+      "id": "urn:uuid:a199d350-f14e-51b6-ae9c-f66ab2a35518",
+      "stable_key": "concept/two-cell",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "可表函子"
+          "text": "2-胞腔"
         },
         {
           "language": "id-ID",
-          "text": "fungtor representabel"
+          "text": "2-sel"
         }
       ]
     },
     {
-      "id": "urn:uuid:9681a38d-c8c5-5b09-8401-eb4ef048e1a4",
-      "stable_key": "concept/functor-representation",
+      "id": "urn:uuid:8eb742a4-69cd-5a90-b5ea-b1e36b34b001",
+      "stable_key": "concept/horizontal-composition",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "代表元"
+          "text": "横合成"
         },
         {
           "language": "id-ID",
-          "text": "representasi fungtor"
+          "text": "komposisi horizontal"
         }
       ]
     },
     {
-      "id": "urn:uuid:0515b7fa-e9bd-5676-a315-61ccd5050eef",
-      "stable_key": "concept/universal-family",
+      "id": "urn:uuid:4db95878-bfb1-5afb-9c18-883cfa5950c3",
+      "stable_key": "concept/vertical-composition",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "泛族"
+          "text": "纵合成"
         },
         {
           "language": "id-ID",
-          "text": "keluarga universal"
+          "text": "komposisi vertikal"
         }
       ]
     },
     {
-      "id": "urn:uuid:8018bc1c-5506-5ad2-aaba-40486bb365b6",
-      "stable_key": "concept/comma-category",
+      "id": "urn:uuid:e647f0a8-c84a-5e56-a905-92719c96346c",
+      "stable_key": "concept/fully-faithful-functor",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "逗号范畴"
+          "text": "全忠实函子"
         },
         {
           "language": "id-ID",
-          "text": "kategori koma"
+          "text": "fungtor penuh dan setia"
         }
       ]
     },
     {
-      "id": "urn:uuid:549f5df0-9fbb-5028-b4da-e81f9e13604d",
-      "stable_key": "concept/terminal-object",
+      "id": "urn:uuid:98673eda-63bb-51f3-a688-74161ad0ffd8",
+      "stable_key": "concept/dual-functor",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "终对象"
+          "text": "对偶函子"
         },
         {
           "language": "id-ID",
-          "text": "objek terminal"
+          "text": "fungtor dual"
         }
       ]
     },
     {
-      "id": "urn:uuid:2db1d4d4-710f-555a-9939-e6f6fa9d2341",
-      "stable_key": "concept/free-vector-space",
+      "id": "urn:uuid:171923d9-cfc6-5608-a8db-9d96fb52e378",
+      "stable_key": "concept/natural-isomorphism",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "自由向量空间"
+          "text": "自然同构"
         },
         {
           "language": "id-ID",
-          "text": "ruang vektor bebas"
+          "text": "isomorfisme natural"
         }
       ]
     },
     {
-      "id": "urn:uuid:8c60ffdb-edbf-509f-86f7-11f8d6baea23",
-      "stable_key": "concept/power-set",
+      "id": "urn:uuid:99d36fd4-8d38-5ba0-9ead-a0b67e66d5fb",
+      "stable_key": "surface/unit-014/label/sec-adjoint-functor",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "幂集"
+          "text": "标签 sec:adjoint-functor"
         },
         {
           "language": "id-ID",
-          "text": "himpunan kuasa"
+          "text": "label sec:adjoint-functor"
         }
       ]
     },
     {
-      "id": "urn:uuid:27e72559-550b-5fa2-b7e4-2ae17fea04f5",
-      "stable_key": "concept/characteristic-function",
+      "id": "urn:uuid:bd184e7d-a604-5a1c-bdbd-5218cbaa08d3",
+      "stable_key": "surface/unit-014/label/def-adjunction-pair",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "示性函数"
+          "text": "标签 def:adjunction-pair"
         },
         {
           "language": "id-ID",
-          "text": "fungsi karakteristik"
+          "text": "label def:adjunction-pair"
         }
       ]
     },
     {
-      "id": "urn:uuid:2e69f899-08be-53d1-b382-3950fe505b1d",
-      "stable_key": "concept/moduli-space",
+      "id": "urn:uuid:a3521c3e-6d1c-5a04-bc68-1f38ed5991ef",
+      "stable_key": "surface/unit-014/label/def-adjunction-unit-counit",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "模空间"
+          "text": "标签 def:adjunction-unit-counit"
         },
         {
           "language": "id-ID",
-          "text": "ruang moduli"
+          "text": "label def:adjunction-unit-counit"
         }
       ]
     },
     {
-      "id": "urn:uuid:da8145c7-a4bf-5bd4-95ac-5dbe570f42f8",
-      "stable_key": "concept/eilenberg-maclane-space",
+      "id": "urn:uuid:921c55a5-99a7-5c90-a17c-c9951dd99ec9",
+      "stable_key": "surface/unit-014/label/eqn-unit-adjunction",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "Eilenberg-MacLane 空间"
+          "text": "标签 eqn:unit-adjunction"
         },
         {
           "language": "id-ID",
-          "text": "ruang Eilenberg-MacLane"
+          "text": "label eqn:unit-adjunction"
         }
       ]
     },
     {
-      "id": "urn:uuid:dcce6a6e-32f0-5b51-b1c4-cb3c3614e296",
-      "stable_key": "concept/cohomology-functor",
+      "id": "urn:uuid:6709431f-ee99-5238-8e4b-98138b0e0ed1",
+      "stable_key": "surface/unit-014/label/eqn-unit-counit-relation",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "上同调函子"
+          "text": "标签 eqn:unit-counit-relation"
         },
         {
           "language": "id-ID",
-          "text": "fungtor kohomologi"
+          "text": "label eqn:unit-counit-relation"
         }
       ]
     },
     {
-      "id": "urn:uuid:b70412d4-5f89-57c7-b83f-387944b9773e",
-      "stable_key": "concept/generalized-function",
+      "id": "urn:uuid:8c054716-2027-5979-b7cf-87458d02e457",
+      "stable_key": "surface/unit-014/label/rem-triangle-identity",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "广义函数"
+          "text": "标签 rem:triangle-identity"
         },
         {
           "language": "id-ID",
-          "text": "fungsi rampat"
+          "text": "label rem:triangle-identity"
         }
       ]
     },
     {
-      "id": "urn:uuid:e156ff06-7f3a-5469-9b50-6d930aec3373",
-      "stable_key": "surface/unit-013/label/sec-representable-functors",
+      "id": "urn:uuid:8585cdef-4c22-50cb-ab0f-801f463d9b98",
+      "stable_key": "surface/unit-014/reference/eg-functors",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "标签 sec:representable-functors"
+          "text": "外部引用 eg:functors"
         },
         {
           "language": "id-ID",
-          "text": "label sec:representable-functors"
+          "text": "rujukan eksternal eg:functors"
         }
       ]
     },
     {
-      "id": "urn:uuid:ec5fb19b-3057-5450-9f33-0904b6265fc7",
-      "stable_key": "surface/unit-013/label/eqn-yoneda-cat-duality",
+      "id": "urn:uuid:86bf1ac6-0890-5edf-8541-4f7f9b992419",
+      "stable_key": "surface/unit-014/reference/eg-vectf-duality",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "标签 eqn:Yoneda-cat-duality"
+          "text": "外部引用 eg:vectf-duality"
         },
         {
           "language": "id-ID",
-          "text": "label eqn:Yoneda-cat-duality"
+          "text": "rujukan eksternal eg:vectf-duality"
         }
       ]
     },
     {
-      "id": "urn:uuid:762e66e5-9a7e-5d89-91bb-57d91e1620e8",
-      "stable_key": "surface/unit-013/label/prop-yoneda-lemma",
+      "id": "urn:uuid:583bbf4c-5d47-5ace-b8af-84caba61c0b8",
+      "stable_key": "surface/unit-014/reference/sec-functors",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "标签 prop:Yoneda-lemma"
+          "text": "外部引用 sec:functors"
         },
         {
           "language": "id-ID",
-          "text": "label prop:Yoneda-lemma"
+          "text": "rujukan eksternal sec:functors"
         }
       ]
     },
     {
-      "id": "urn:uuid:fbab18cf-86bc-5f06-9f9b-3e09c635e21c",
-      "stable_key": "surface/unit-013/label/eqn-yoneda-map",
+      "id": "urn:uuid:b77704d0-ea2a-50fb-858c-b079fdc68d5e",
+      "stable_key": "surface/unit-014/reference/sec-2-cat",
       "entity_type": "concept",
       "labels": [
         {
           "language": "zh-Hans",
-          "text": "标签 eqn:Yoneda-map"
+          "text": "外部引用 sec:2-cat"
         },
         {
           "language": "id-ID",
-          "text": "label eqn:Yoneda-map"
-        }
-      ]
-    },
-    {
-      "id": "urn:uuid:9be99253-8d25-5d41-8673-a9e570ce49bf",
-      "stable_key": "surface/unit-013/label/def-representable-functor",
-      "entity_type": "concept",
-      "labels": [
-        {
-          "language": "zh-Hans",
-          "text": "标签 def:representable-functor"
-        },
-        {
-          "language": "id-ID",
-          "text": "label def:representable-functor"
-        }
-      ]
-    },
-    {
-      "id": "urn:uuid:0a254708-f489-5dde-b21f-101da4c13fea",
-      "stable_key": "surface/unit-013/label/rem-yoneda-universal-family",
-      "entity_type": "concept",
-      "labels": [
-        {
-          "language": "zh-Hans",
-          "text": "标签 rem:Yoneda-universal-family"
-        },
-        {
-          "language": "id-ID",
-          "text": "label rem:Yoneda-universal-family"
-        }
-      ]
-    },
-    {
-      "id": "urn:uuid:6de6c393-8e8a-56ab-b43f-27ddacc1e03d",
-      "stable_key": "surface/unit-013/label/prop-representable-functor-uniqueness",
-      "entity_type": "concept",
-      "labels": [
-        {
-          "language": "zh-Hans",
-          "text": "标签 prop:representable-functor-uniqueness"
-        },
-        {
-          "language": "id-ID",
-          "text": "label prop:representable-functor-uniqueness"
-        }
-      ]
-    },
-    {
-      "id": "urn:uuid:5101f105-cb71-57f8-a0aa-2b7a697d666a",
-      "stable_key": "surface/unit-013/reference/con-u-small",
-      "entity_type": "concept",
-      "labels": [
-        {
-          "language": "zh-Hans",
-          "text": "外部引用 con:U-small"
-        },
-        {
-          "language": "id-ID",
-          "text": "rujukan eksternal con:U-small"
-        }
-      ]
-    },
-    {
-      "id": "urn:uuid:232bcd17-4cf6-58eb-9685-5a08dbca5f8c",
-      "stable_key": "surface/unit-013/reference/eg-hom-functor",
-      "entity_type": "concept",
-      "labels": [
-        {
-          "language": "zh-Hans",
-          "text": "外部引用 eg:Hom-functor"
-        },
-        {
-          "language": "id-ID",
-          "text": "rujukan eksternal eg:Hom-functor"
-        }
-      ]
-    },
-    {
-      "id": "urn:uuid:f7812188-ff5b-5d9a-bf85-4f4f9d92ffec",
-      "stable_key": "surface/unit-013/reference/prop-op-functor-cat",
-      "entity_type": "concept",
-      "labels": [
-        {
-          "language": "zh-Hans",
-          "text": "外部引用 prop:op-functor-cat"
-        },
-        {
-          "language": "id-ID",
-          "text": "rujukan eksternal prop:op-functor-cat"
-        }
-      ]
-    },
-    {
-      "id": "urn:uuid:2e54ccba-ff62-5a1b-8060-5ab8b15491eb",
-      "stable_key": "surface/unit-013/reference/sec-cat-universals",
-      "entity_type": "concept",
-      "labels": [
-        {
-          "language": "zh-Hans",
-          "text": "外部引用 sec:cat-universals"
-        },
-        {
-          "language": "id-ID",
-          "text": "rujukan eksternal sec:cat-universals"
-        }
-      ]
-    },
-    {
-      "id": "urn:uuid:60756f97-e663-5ab9-a24a-49278bd4251d",
-      "stable_key": "surface/unit-013/reference/prop-initial-obj-uniqueness",
-      "entity_type": "concept",
-      "labels": [
-        {
-          "language": "zh-Hans",
-          "text": "外部引用 prop:initial-obj-uniqueness"
-        },
-        {
-          "language": "id-ID",
-          "text": "rujukan eksternal prop:initial-obj-uniqueness"
-        }
-      ]
-    },
-    {
-      "id": "urn:uuid:96038e8c-3386-5a49-b2f0-e4cd6db906e0",
-      "stable_key": "surface/unit-013/reference/eg-free-vectorspace",
-      "entity_type": "concept",
-      "labels": [
-        {
-          "language": "zh-Hans",
-          "text": "外部引用 eg:free-vectorspace"
-        },
-        {
-          "language": "id-ID",
-          "text": "rujukan eksternal eg:free-vectorspace"
-        }
-      ]
-    },
-    {
-      "id": "urn:uuid:f7d7322d-51d9-5564-8c91-1d07a965c231",
-      "stable_key": "surface/unit-013/reference/def-comma-category",
-      "entity_type": "concept",
-      "labels": [
-        {
-          "language": "zh-Hans",
-          "text": "外部引用 def:comma-category"
-        },
-        {
-          "language": "id-ID",
-          "text": "rujukan eksternal def:comma-category"
+          "text": "rujukan eksternal sec:2-cat"
         }
       ]
     }
@@ -1220,13 +1061,25 @@
       ]
     }
   ],
-  "citations": [],
+  "citations": [
+    {
+      "id": "urn:uuid:485294fe-adef-5511-84b0-d281f9269df7",
+      "stable_key": "citation/unit-014/ml98",
+      "entity_type": "citation",
+      "bib_key": "ML98",
+      "bibliography_path": "repo/source/Al-jabr.bib",
+      "bibliography_sha256": "4979570eb4e3a9edcddd2f975790e56c98dcb3201e03e0a1fbdd64ba60c8263e",
+      "source_line": 767,
+      "target_line": 767,
+      "section_id": "urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4"
+    }
+  ],
   "diagrams": [
     {
-      "id": "urn:uuid:331cfe50-87e7-51e7-9443-4ea158a7dcdf",
-      "stable_key": "diagram/unit-013/tikzcd-1",
+      "id": "urn:uuid:9f5c64d8-d971-5323-a8ba-f21783b1a92d",
+      "stable_key": "diagram/unit-014/tikzcd-1",
       "entity_type": "diagram",
-      "section_id": "urn:uuid:a29455e9-6ce0-52e3-a11f-7407aaf6b38f",
+      "section_id": "urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4",
       "ordinal_in_unit": 1,
       "source_format": "tikzcd",
       "source_occurrence_index": 1,
@@ -1234,28 +1087,28 @@
         "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
         "bytes": 139983,
         "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
-        "line_start": 714,
-        "line_end": 717,
-        "span_sha256": "d9b193332ec695c28f2af35ef01b17207a4eeb96876811e99369fbbec38db5e2",
+        "line_start": 770,
+        "line_end": 772,
+        "span_sha256": "a85a4c4b13ad9b3199fe6367f73757d7c48f20092d45b0681b9fade000c4cd3a",
         "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
       },
       "target_binding": {
         "path": "repo/source/chapter2.tex",
         "bytes": 155822,
         "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
-        "line_start": 714,
-        "line_end": 717,
-        "span_sha256": "d9b193332ec695c28f2af35ef01b17207a4eeb96876811e99369fbbec38db5e2",
+        "line_start": 770,
+        "line_end": 772,
+        "span_sha256": "a85a4c4b13ad9b3199fe6367f73757d7c48f20092d45b0681b9fade000c4cd3a",
         "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
       },
       "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
       "state": "audited_preserved"
     },
     {
-      "id": "urn:uuid:6db601db-7f3c-58cb-a0b3-756138fa64e4",
-      "stable_key": "diagram/unit-013/tikzcd-2",
+      "id": "urn:uuid:a1fa714f-0c6d-545e-b73d-0a6eed2c0523",
+      "stable_key": "diagram/unit-014/tikzcd-2",
       "entity_type": "diagram",
-      "section_id": "urn:uuid:a29455e9-6ce0-52e3-a11f-7407aaf6b38f",
+      "section_id": "urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4",
       "ordinal_in_unit": 2,
       "source_format": "tikzcd",
       "source_occurrence_index": 2,
@@ -1263,18 +1116,337 @@
         "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
         "bytes": 139983,
         "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
-        "line_start": 739,
-        "line_end": 742,
-        "span_sha256": "d038cd5dc9b35a1e44ae8d0ae5dc82643f4f471366c7976ae9c7528fc6be331a",
+        "line_start": 803,
+        "line_end": 807,
+        "span_sha256": "6828f906a4fadc4f1ecee79d32a397f79ff7a11763741a7832db4e83843da8bb",
         "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
       },
       "target_binding": {
         "path": "repo/source/chapter2.tex",
         "bytes": 155822,
         "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
-        "line_start": 739,
-        "line_end": 742,
-        "span_sha256": "d038cd5dc9b35a1e44ae8d0ae5dc82643f4f471366c7976ae9c7528fc6be331a",
+        "line_start": 803,
+        "line_end": 807,
+        "span_sha256": "6828f906a4fadc4f1ecee79d32a397f79ff7a11763741a7832db4e83843da8bb",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:1eef23f7-6394-5dfc-80c8-59019810656b",
+      "stable_key": "diagram/unit-014/tikzcd-3",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4",
+      "ordinal_in_unit": 3,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 3,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 809,
+        "line_end": 812,
+        "span_sha256": "3a8d6bae4db31c470a5401ccc49acba1f0412a0c1fc7ff5e7d2d81e98a8c5231",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 155822,
+        "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
+        "line_start": 809,
+        "line_end": 812,
+        "span_sha256": "3a8d6bae4db31c470a5401ccc49acba1f0412a0c1fc7ff5e7d2d81e98a8c5231",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:f64148af-6a3f-5752-969b-909a1c3b1a4c",
+      "stable_key": "diagram/unit-014/tikzcd-4",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4",
+      "ordinal_in_unit": 4,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 4,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 821,
+        "line_end": 824,
+        "span_sha256": "20ca3a2533d665f8bca62f43d5e45c1bc7b31e6b7fdd8b7c3cf5ed2bbcc1e5c5",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 155822,
+        "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
+        "line_start": 821,
+        "line_end": 824,
+        "span_sha256": "20ca3a2533d665f8bca62f43d5e45c1bc7b31e6b7fdd8b7c3cf5ed2bbcc1e5c5",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:914aa49c-545b-59fd-ae58-bd0eb80dca3a",
+      "stable_key": "diagram/unit-014/tikzcd-5",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4",
+      "ordinal_in_unit": 5,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 5,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 844,
+        "line_end": 846,
+        "span_sha256": "390f426c4e6302946e4a2a13791a5ddb00ae4eaf7654650b806b8055b40f56c9",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 155822,
+        "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
+        "line_start": 844,
+        "line_end": 846,
+        "span_sha256": "390f426c4e6302946e4a2a13791a5ddb00ae4eaf7654650b806b8055b40f56c9",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:120b716e-baa2-52db-9f67-d81f89311360",
+      "stable_key": "diagram/unit-014/tikzcd-6",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4",
+      "ordinal_in_unit": 6,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 6,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 861,
+        "line_end": 864,
+        "span_sha256": "2365798e0d348cfd40070a7a22ffff139a63a47e398ff58769153543139d84c5",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 155822,
+        "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
+        "line_start": 861,
+        "line_end": 864,
+        "span_sha256": "2365798e0d348cfd40070a7a22ffff139a63a47e398ff58769153543139d84c5",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:252155b3-e485-566f-b576-1853057cf4b1",
+      "stable_key": "diagram/unit-014/tikzcd-7",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4",
+      "ordinal_in_unit": 7,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 7,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 873,
+        "line_end": 875,
+        "span_sha256": "90214f405a84270adb6c65c6778098fc0bc220d9d03a1b322e4c9615b18ecf7f",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 155822,
+        "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
+        "line_start": 873,
+        "line_end": 875,
+        "span_sha256": "90214f405a84270adb6c65c6778098fc0bc220d9d03a1b322e4c9615b18ecf7f",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:b7e671b4-d704-5f3c-9ce3-488be61cb79d",
+      "stable_key": "diagram/unit-014/tikzcd-8",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4",
+      "ordinal_in_unit": 8,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 8,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 877,
+        "line_end": 882,
+        "span_sha256": "1eaa9975826538506abcbeab2dcb4ea4e30d69c2502e17341bf3a8ad02a6b3c8",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 155822,
+        "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
+        "line_start": 877,
+        "line_end": 882,
+        "span_sha256": "ce8f8154dd6c02a05bb2c1266130b9d7a4bca36aa0c7189892c59383f5de3919",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:db5b8175-e5f9-5388-b135-8b600de329a9",
+      "stable_key": "diagram/unit-014/tikzcd-9",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4",
+      "ordinal_in_unit": 9,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 9,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 884,
+        "line_end": 889,
+        "span_sha256": "05e98f0ba867212639058e7c0a45bb64cbc2c91bc43a0fd6033cb1a1e8950f5c",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 155822,
+        "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
+        "line_start": 884,
+        "line_end": 889,
+        "span_sha256": "05e98f0ba867212639058e7c0a45bb64cbc2c91bc43a0fd6033cb1a1e8950f5c",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:a71f5021-ff3b-5222-ae25-72ecfb24ce09",
+      "stable_key": "diagram/unit-014/tikzcd-10",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4",
+      "ordinal_in_unit": 10,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 10,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 891,
+        "line_end": 894,
+        "span_sha256": "c62374c974898738d6543ef39bed0b78c245ac4858b05aa596f30a0c66b62d0f",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 155822,
+        "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
+        "line_start": 891,
+        "line_end": 894,
+        "span_sha256": "c62374c974898738d6543ef39bed0b78c245ac4858b05aa596f30a0c66b62d0f",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:88c907f3-8490-5c93-8a95-15012a77c19a",
+      "stable_key": "diagram/unit-014/tikzcd-11",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4",
+      "ordinal_in_unit": 11,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 11,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 895,
+        "line_end": 898,
+        "span_sha256": "50eaf70b227fe0337e18d149329a4ced8b2f753709523968be04609c14c242c6",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 155822,
+        "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
+        "line_start": 895,
+        "line_end": 898,
+        "span_sha256": "50eaf70b227fe0337e18d149329a4ced8b2f753709523968be04609c14c242c6",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:5cc9906b-23cf-5903-a6d7-0d011c742c3f",
+      "stable_key": "diagram/unit-014/tikzcd-12",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4",
+      "ordinal_in_unit": 12,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 12,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 900,
+        "line_end": 903,
+        "span_sha256": "e989045674130e473b65faf172f2620868dfe66a0b256c4503f30b648f250714",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 155822,
+        "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
+        "line_start": 900,
+        "line_end": 903,
+        "span_sha256": "e989045674130e473b65faf172f2620868dfe66a0b256c4503f30b648f250714",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:975a8128-e34c-5cad-a04a-194d8ddd7a1e",
+      "stable_key": "diagram/unit-014/tikzcd-13",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4",
+      "ordinal_in_unit": 13,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 13,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 903,
+        "line_end": 906,
+        "span_sha256": "d9fe337945153c8f9830be6de989f4bef01830da491108c11763555f51f6ac12",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 155822,
+        "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
+        "line_start": 903,
+        "line_end": 906,
+        "span_sha256": "d9fe337945153c8f9830be6de989f4bef01830da491108c11763555f51f6ac12",
         "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
       },
       "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
@@ -1283,141 +1455,57 @@
   ],
   "index_entries": [
     {
-      "id": "urn:uuid:266cd658-83f0-574c-81e0-a24024cfa442",
-      "stable_key": "index-entry/unit-013/category-wedge-vee-symbol",
+      "id": "urn:uuid:6ea41bfd-2e9a-50bf-b4aa-0caaba575783",
+      "stable_key": "index-entry/unit-014/adjunction-pair",
       "entity_type": "index_entry",
-      "section_id": "urn:uuid:a29455e9-6ce0-52e3-a11f-7407aaf6b38f",
+      "section_id": "urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4",
       "ordinal_in_unit": 1,
-      "source_key": "C-wedge@$\\mathcal{C}^\\wedge$, $\\mathcal{C}^\\vee$",
-      "target_key": "C-wedge@$\\mathcal{C}^\\wedge$, $\\mathcal{C}^\\vee$",
+      "source_key": "bansuidui@伴随对 (adjunction pair)",
+      "target_key": "pasangan adjoin@pasangan adjoin (adjunction pair)",
       "source_binding": {
         "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
         "bytes": 139983,
         "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
-        "line_start": 679,
-        "line_end": 679,
-        "span_sha256": "139a242d160e5a304d684a168f92e560cdbef6bd0ca5b2bb3c6a236243dac75f",
+        "line_start": 768,
+        "line_end": 768,
+        "span_sha256": "db58294ea39ab6aac7e2672e0f4cff7f9fb23ec0c85bb35ead4d5392d9b1cc55",
         "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
       },
       "target_binding": {
         "path": "repo/source/chapter2.tex",
         "bytes": 155822,
         "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
-        "line_start": 679,
-        "line_end": 679,
-        "span_sha256": "6140015b5779e30dba3710978d56f817951d829b0f5c0bc93cad546e9546144e",
+        "line_start": 768,
+        "line_end": 768,
+        "span_sha256": "7ce18a1dd6f8d300ce4cf5fedf0b74c52177e1e698441347985de49612cffc88",
         "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
       },
       "provenance_state": "source_key_preserved_target_key_localized"
     },
     {
-      "id": "urn:uuid:8964456a-83f9-5903-b973-eb2da5184e05",
-      "stable_key": "index-entry/unit-013/presheaf",
+      "id": "urn:uuid:08d87078-5af0-52bc-9f2a-1339af044c99",
+      "stable_key": "index-entry/unit-014/adjunction-unit-counit",
       "entity_type": "index_entry",
-      "section_id": "urn:uuid:a29455e9-6ce0-52e3-a11f-7407aaf6b38f",
+      "section_id": "urn:uuid:0b4d9293-033a-5c33-a050-b2e56f3286d4",
       "ordinal_in_unit": 2,
-      "source_key": "yuceng@预层 (presheaf)",
-      "target_key": "pragemal@pragemal (presheaf)",
+      "source_key": "bansuidui!单位 (unit), 余单位 (co-unit)",
+      "target_key": "pasangan adjoin!unit (unit), kounit (counit)",
       "source_binding": {
         "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
         "bytes": 139983,
         "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
-        "line_start": 684,
-        "line_end": 684,
-        "span_sha256": "d4b6bf221ef20a59b7ddf6328eace51a5b0940ca5ab80db19492affea5db72d5",
+        "line_start": 791,
+        "line_end": 791,
+        "span_sha256": "3f66082b2c8d0842f70f1b91d06c975680eafcae848002d19e6fdda2c15ffb3c",
         "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
       },
       "target_binding": {
         "path": "repo/source/chapter2.tex",
         "bytes": 155822,
         "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
-        "line_start": 684,
-        "line_end": 684,
-        "span_sha256": "c8d5a4ff1d53be6e129fb10ac30779409d950311f272a8e610a1b92c876f50bc",
-        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
-      },
-      "provenance_state": "source_key_preserved_target_key_localized"
-    },
-    {
-      "id": "urn:uuid:0ccf5ca9-4d84-57b8-bafe-f6e9c9df0337",
-      "stable_key": "index-entry/unit-013/yoneda-lemma",
-      "entity_type": "index_entry",
-      "section_id": "urn:uuid:a29455e9-6ce0-52e3-a11f-7407aaf6b38f",
-      "ordinal_in_unit": 3,
-      "source_key": "mitianyinli@米田引理 (Yoneda's Lemma)",
-      "target_key": "lema Yoneda@Lema Yoneda (Yoneda's Lemma)",
-      "source_binding": {
-        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
-        "bytes": 139983,
-        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
-        "line_start": 700,
-        "line_end": 700,
-        "span_sha256": "326d1b6088aa50956ef745167b8acfa15e8789b9320568738d277d4c92800c36",
-        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
-      },
-      "target_binding": {
-        "path": "repo/source/chapter2.tex",
-        "bytes": 155822,
-        "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
-        "line_start": 700,
-        "line_end": 700,
-        "span_sha256": "c4901ab142a5b77a15ab35516c048d7fac471c32b82d080062d21ada8358713f",
-        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
-      },
-      "provenance_state": "source_key_preserved_target_key_localized"
-    },
-    {
-      "id": "urn:uuid:7d766072-b731-525d-af1a-dd455a2ca833",
-      "stable_key": "index-entry/unit-013/representable-functor",
-      "entity_type": "index_entry",
-      "section_id": "urn:uuid:a29455e9-6ce0-52e3-a11f-7407aaf6b38f",
-      "ordinal_in_unit": 4,
-      "source_key": "hanzi!可表函子 (representable functor)",
-      "target_key": "fungtor representabel@fungtor representabel (representable functor)",
-      "source_binding": {
-        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
-        "bytes": 139983,
-        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
-        "line_start": 722,
-        "line_end": 722,
-        "span_sha256": "69486e41bd40ea8b771d8d6daeea39a9b122f76cf12cd4738b2efb86ae2f1f35",
-        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
-      },
-      "target_binding": {
-        "path": "repo/source/chapter2.tex",
-        "bytes": 155822,
-        "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
-        "line_start": 722,
-        "line_end": 722,
-        "span_sha256": "e0b8e9af210fa293d47643ea926a3b23d043faaa50f0c01f2a218569b7e8b3da",
-        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
-      },
-      "provenance_state": "source_key_preserved_target_key_localized"
-    },
-    {
-      "id": "urn:uuid:3ea0e5a2-e437-5d02-bdb2-191e1bf38f80",
-      "stable_key": "index-entry/unit-013/universal-family",
-      "entity_type": "index_entry",
-      "section_id": "urn:uuid:a29455e9-6ce0-52e3-a11f-7407aaf6b38f",
-      "ordinal_in_unit": 5,
-      "source_key": "fanzu@泛族 (universal family)",
-      "target_key": "keluarga universal@keluarga universal (universal family)",
-      "source_binding": {
-        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
-        "bytes": 139983,
-        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
-        "line_start": 729,
-        "line_end": 729,
-        "span_sha256": "7eb920bbddcd99d9fb4c8ccac4046a1fbc5a7146f0f2a18039fa086d2608aebe",
-        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
-      },
-      "target_binding": {
-        "path": "repo/source/chapter2.tex",
-        "bytes": 155822,
-        "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
-        "line_start": 729,
-        "line_end": 729,
-        "span_sha256": "536ead7441de44c5506d985707e324aa96d3460965d90039833bfb3341a9389b",
+        "line_start": 791,
+        "line_end": 791,
+        "span_sha256": "1f6fc361301f4e9a51b086db34033eb8a45adbb908544e554ec65261e4db71c6",
         "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
       },
       "provenance_state": "source_key_preserved_target_key_localized"
@@ -1425,41 +1513,41 @@
   ],
   "build_surfaces": [
     {
-      "id": "urn:uuid:cacb61bb-0160-5158-963e-c685c0eb77ae",
-      "stable_key": "build-surface/unit-013-pdf",
+      "id": "urn:uuid:f51ea81b-35e6-5ff7-9a72-5f92e7e1c351",
+      "stable_key": "build-surface/unit-014-pdf",
       "entity_type": "build_surface",
-      "unit_id": "urn:uuid:c2417b58-7e30-55e1-b747-7b17ee6e4b8e",
+      "unit_id": "urn:uuid:7d5a0db6-72a3-5c1e-9cad-19debd55fe1e",
       "kind": "pdf",
       "working_directory": ".",
-      "command": "pwsh -NoProfile -File scripts/build_unit_013.ps1 -OutputDirectory build/unit-013-replay",
-      "artifact_path": "artifacts/unit-013-bab-2-fungtor-representabel-dan-lema-yoneda.pdf",
+      "command": "pwsh -NoProfile -File scripts/build_unit_014.ps1 -OutputDirectory build/unit-014-replay",
+      "artifact_path": "artifacts/unit-014-bab-2-fungtor-adjoin-dasar.pdf",
       "artifact_binding": {
-        "path": "artifacts/unit-013-bab-2-fungtor-representabel-dan-lema-yoneda.pdf",
-        "bytes": 106154,
-        "sha256": "4db806c3a0c42449b1333e25109d135176931880a48982a70b776e04be7ffa2a"
+        "path": "artifacts/unit-014-bab-2-fungtor-adjoin-dasar.pdf",
+        "bytes": 121651,
+        "sha256": "a8acee26ef75f172336d4e729e055ca6c8d222c548748d9c4a58a4ee976cb403"
       },
       "log_binding": {
-        "path": "qa/UNIT_013_BUILD_FINAL.log",
-        "bytes": 86810,
-        "sha256": "a407323233d53e8f20d952dbacaea16000ccb96b7c03bf9854695f9110311b91"
+        "path": "qa/UNIT_014_BUILD_FINAL.log",
+        "bytes": 85830,
+        "sha256": "61d3d9236755d0384c2dc0e08acd9fb0c4b0f67c2367dd6967ef6b6016296b07"
       },
       "build_script": {
-        "path": "scripts/build_unit_013.ps1",
-        "bytes": 2868,
-        "sha256": "bd63e642d84afab7864e812abdaf0b9d73426df08ad9656ff1208c26ddb1773a"
+        "path": "scripts/build_unit_014.ps1",
+        "bytes": 2802,
+        "sha256": "5d7fc1199c9fa14434ab7325e42b5de937f777378f26a49a165921a99f35a336"
       },
-      "page_count": 7,
+      "page_count": 9,
       "status": "pass",
       "driver": {
-        "path": "repo/source/unit-013-bab-2-fungtor-representabel-dan-lema-yoneda.tex",
-        "bytes": 4750,
-        "sha256": "4dda89ef46f13dece3f18ba09dd33b4a91bb2f4fc35319e1b76f148fcd032957"
+        "path": "repo/source/unit-014-bab-2-fungtor-adjoin-dasar.tex",
+        "bytes": 4628,
+        "sha256": "118e6d33974487318fd40d1fa7e9c63179aa08e5e6afd4e2901935dec56ac523"
       },
       "input_bindings": [
         {
-          "path": "repo/source/coverpage-id-unit-013.tex",
-          "bytes": 4356,
-          "sha256": "c4cd09a37a3c6701920277c4186fc7a967514da020c42fb1cfbeff528aa42a74"
+          "path": "repo/source/coverpage-id-unit-014.tex",
+          "bytes": 4345,
+          "sha256": "0a5ce2f9784e9ab51b2ee2d2e43c5d491292f15d1cd15cc0264fa87f802bdc12"
         },
         {
           "path": "repo/source/font-setup-id.tex",
@@ -1507,9 +1595,9 @@
           "sha256": "633aae44a5d5b8915debc82f56a8e05c1b62b567b1aefeabc18617b81d8a04a9"
         },
         {
-          "path": "repo/source/unit-013-crossrefs.aux",
-          "bytes": 446,
-          "sha256": "cf1a3873618aec38d83e9f536376a26630f15dd46ebd054643158abb6f166e5f"
+          "path": "repo/source/unit-014-crossrefs.aux",
+          "bytes": 288,
+          "sha256": "5d5172830233cc86627db6ce2a5bc8514a2506c64a5a5cc2cb9877dd1448c004"
         },
         {
           "path": "repo/fonts/NotoSansCJKsc-Black.otf",
@@ -1536,10 +1624,10 @@
         "XeLaTeX",
         "PowerShell 7",
         "biber",
-        "makeindex (default and sym1 indexes)",
+        "makeindex (default index)",
         "Fandol fonts from TeX distribution",
         "TeX Gyre Heros",
-        "packages loaded by the Unit 013 driver and AJbook.cls"
+        "packages loaded by the Unit 014 driver and AJbook.cls"
       ],
       "rights_component_ids": [
         "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
@@ -1550,21 +1638,21 @@
   ],
   "qa_events": [
     {
-      "id": "urn:uuid:0c7412da-72c0-5498-888c-f16d8ee8522f",
-      "stable_key": "qa/unit-013/admission-gate",
+      "id": "urn:uuid:1452ab0a-357e-5b46-8a08-1ab31580f5d5",
+      "stable_key": "qa/unit-014/admission-gate",
       "entity_type": "qa_event",
-      "unit_id": "urn:uuid:c2417b58-7e30-55e1-b747-7b17ee6e4b8e",
+      "unit_id": "urn:uuid:7d5a0db6-72a3-5c1e-9cad-19debd55fe1e",
       "check_type": "admission_gate",
       "result": "pass",
-      "scope": "Complete source-order translation and semantic review of chapter2.tex lines 678-765; 98 normalized mathematics surfaces equivalent after two disclosed source corrections, 17 balanced environments, seven labels, ten ordinary references, three equation references, zero citations, five index entries, two TikZ-CD diagrams, no exercises/hints/answers/solutions, frozen external references, separate component rights, four-pass functional replay, PDF checks, and all-page visual QA. Production provenance records OpenAI Codex gpt-5.6-sol, Ultra separately from source authorship and human credit.",
-      "witness": "qa/UNIT_013_ADMISSION_20260823.md",
+      "scope": "Complete source-order translation and semantic review of chapter2.tex lines 766-909; 99 source and 100 reader-facing target normalized mathematics surfaces equivalent after one explicitly anchored Indonesian segmentation and four disclosed source corrections (O013-LI-U014-COR-001, O013-LI-U014-COR-002, O013-LI-U014-COR-003, O013-LI-U014-COR-004); 30 balanced environments, six labels, five ordinary references, nine equation references, one ML98 citation, two default index entries, thirteen TikZ-CD diagrams, no exercises/hints/answers/solutions, resolved external references, separate component rights, functional replay, PDF checks, and all-page visual QA. Production provenance records OpenAI Codex gpt-5.6-sol, Ultra separately from source authorship and human credit.",
+      "witness": "qa/UNIT_014_ADMISSION_20260823.md",
       "translation_audit_state": "pass",
       "build_state": "pass",
       "visual_state": "pass",
       "witness_binding": {
-        "path": "qa/UNIT_013_ADMISSION_20260823.md",
-        "bytes": 3801,
-        "sha256": "5a99471d2b181870ba48e5b453a11d6ed154d7bad810ad6210d43b59aedf5ed6"
+        "path": "qa/UNIT_014_ADMISSION_20260823.md",
+        "bytes": 4593,
+        "sha256": "5c92de35d93e2b4b5a8cb783761ff83768d37020211d03ac3ab29b75413f9d80"
       }
     }
   ]
