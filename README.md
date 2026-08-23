@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, dan Bagian 2.1 telah diterjemahkan, diaudit, dibangun, dan diterima dalam sembilan unit pembaca. Unit 9 menyajikan kategori dan morfisme, termasuk kategori kecil relatif terhadap semesta, contoh-contoh dasar, morfisme mono/epi, grupoid fundamental, dan kategori lawan. Bagian 2.2 dan bagian-bagian selanjutnya masih dalam bahasa sumber dan akan diterjemahkan berurutan.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1-2.2 telah diterjemahkan, diaudit, dibangun, dan diterima dalam sebelas unit pembaca lokal. Unit 10 menyajikan fungtor, transformasi natural, komposisi horizontal dan vertikal, ekuivalensi kategori, serta dualitas ruang vektor; Unit 11 melanjutkan dengan kategori fungtor. Bagian 2.3 dan bagian-bagian selanjutnya masih dalam bahasa sumber dan akan diterjemahkan berurutan.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh checkpoint pembaca 0.3.0 (96 halaman; Unit 1-9)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf)
 
@@ -23,6 +23,10 @@ Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, dan Bagian 2.1 t
 [Baca atau unduh PDF Unit 8](artifacts/unit-008-bab-2-pengantar-teori-kategori.pdf)
 
 [Baca atau unduh PDF Unit 9](artifacts/unit-009-bab-2-kategori-dan-morfisme.pdf)
+
+[Baca atau unduh PDF Unit 10](artifacts/unit-010-bab-2-fungtor-dan-transformasi-natural.pdf)
+
+[Baca atau unduh PDF Unit 11](artifacts/unit-011-bab-2-kategori-fungtor.pdf)
 
 Versi preservasi `0.3.0` yang memuat checkpoint gabungan 96 halaman, kesembilan reader, sumber yang dapat dibangun, backend modular, bukti ringkas, dan manifest hash tersedia pada [Zenodo DOI 10.5281/zenodo.22062228](https://doi.org/10.5281/zenodo.22062228). Seluruh pembaruan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat.
 
@@ -58,6 +62,8 @@ pwsh -NoProfile -File scripts/build_unit_006.ps1 -OutputDirectory build/unit-006
 pwsh -NoProfile -File scripts/build_unit_007.ps1 -OutputDirectory build/unit-007-replay
 pwsh -NoProfile -File scripts/build_unit_008.ps1 -OutputDirectory build/unit-008-replay
 pwsh -NoProfile -File scripts/build_unit_009.ps1 -OutputDirectory build/unit-009-replay
+pwsh -NoProfile -File scripts/build_unit_010.ps1 -OutputDirectory build/unit-010-replay
+pwsh -NoProfile -File scripts/build_unit_011.ps1 -OutputDirectory build/unit-011-replay
 ```
 
 Skrip menjalankan XeLaTeX tanpa shell escape, indeks dan bibliografi yang dibutuhkan setiap unit, lalu lintasan konvergensi XeLaTeX. Tanggal sumber dan seed gambar sampul dipatok. Dua build bersih untuk setiap unit menghasilkan halaman yang identik piksel demi piksel ketika dirender, meskipun serialisasi kontainer PDF XeTeX belum identik byte di direktori keluaran yang berbeda.
@@ -154,9 +160,23 @@ Artefak Unit 9 yang diterima:
 - QA terminologi primer membakukan `fungtor`; matematika, identitas, topologi, dan paginasi tetap sama
 - tidak ada galat TeX, rujukan/sitasi tak terdefinisi, kotak meluber, karakter hilang, halaman kosong, atau residu aksara Han pada halaman isi
 
+Artefak Unit 10 yang diterima secara lokal:
+
+- 15 halaman; 153.352 byte; SHA-256 `a06c4152e6233270cfa138b6c99ae9f307246fe2e1eac6b72a9533c9d74bfce4`
+- target Section 2.2 28.112 byte; SHA-256 `84cd01f4bfb9b2dcf6720991b72d714335e3f977e2bee88d40b2b64733572053`
+- backend 98.251 byte; SHA-256 `0de756dad67fcb779df5b43ff80dce979b8a7fdcecb04693b7f694bb09652ffd`
+- 291 permukaan matematika, 13 label, 7 rujukan, 2 rujukan persamaan, 2 sitasi, 15 indeks, dan 19 diagram terpelihara; dua build serta replay visual lulus.
+
+Artefak Unit 11 yang diterima secara lokal:
+
+- 7 halaman; 105.391 byte; SHA-256 `f18ea37d945b08961f14e49581dd13a3a3024307fe3d33a77c7d5bb5631859fe`
+- target kategori fungtor 8.004 byte; SHA-256 `a848cb6d7dfdd7edc1f5b07be14f421ed075a8124723ab9b73a207f86216e105`
+- backend 51.063 byte; SHA-256 `68a41963203e219ad5c84c3bef86d858c389061a61937a3624b038eedac55b12`
+- 102 permukaan matematika, 4 label, 5 rujukan, 1 rujukan persamaan, 8 indeks, dan satu diagram terpelihara; dua build serta replay visual lulus. Lima peringatan Hyperref untuk target kosong disengaja untuk menekan tautan eksternal palsu.
+
 ## Backend modular
 
-`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-009-bab-2-kategori-dan-morfisme.json` adalah catatan kanonik kesembilan unit yang telah diterima. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7 mempertahankan keenam latihan sebagai entitas bagian terurut dan setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat.
+`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-011-bab-2-kategori-fungtor.json` adalah catatan kanonik sebelas unit yang telah diterima secara lokal. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7 mempertahankan keenam latihan sebagai entitas bagian terurut dan setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat. Unit 10 dan 11 memakai identitas yang sama untuk permukaan matematika, diagram, rujukan eksternal, indeks, serta provenance model; keduanya masih menunggu satu push GitHub terverifikasi.
 
 Validasi:
 

@@ -1,0 +1,18 @@
+Unit 011 admission build summary
+Date: 2026-08-23
+Driver: repo/source/unit-011-bab-2-kategori-fungtor.tex
+Builder: scripts/build_unit_011.ps1
+Build C: build/unit-011-admission-c
+Build D: build/unit-011-admission-d
+PDF pages: 7
+PDF bytes: 105391
+PDF SHA-256: f18ea37d945b08961f14e49581dd13a5a3024307fe3d33a77c7d5bb5631859fe
+Build-log bytes: 85824
+Build-log SHA-256: 873f96fdb5ac604e23ed5f1ab6955ba2d4deca869bd433c1bc6b9d11907ef78a
+Functional replay: 7/7 MuPDF pages and 7/7 Poppler pages pixel-identical at 144 dpi.
+Final-log blockers: zero undefined references/citations, multiply-defined labels,
+overfull boxes, LaTeX/package errors, fatal errors, or emergency stops.
+PDF: id-ID; 22 named destinations; 11 links; zero Launch, GoToR, or JavaScript
+actions; all fonts embedded; no unresolved placeholder text.
+Visual QA: all 7 pages inspected in Poppler and MuPDF contact sheets. No clipped,
+overlapping, missing, blank, or unreadable content was found.

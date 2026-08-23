@@ -1,0 +1,59 @@
+entity_type,id,stable_key,parent_id,order,label_id,status
+build_surface,urn:uuid:14cafb40-4de5-5ff8-8433-0622ef65455b,build-surface/unit-011-pdf,urn:uuid:cc46255b-97e9-5300-9dbd-96b8846a6c03,,unit-011-pdf,pass
+concept,urn:uuid:05a0f6bf-c420-54b7-b452-9fa84e0ec849,concept/automorphism-group,,,grup automorfisme,admitted:admitted
+concept,urn:uuid:33b4a861-415e-59bf-9738-4d470ec938c9,concept/bifunctor,,,fungtor biner,admitted:admitted
+concept,urn:uuid:7252a5ce-9fb8-567c-995e-1e8dfad59fb5,concept/category-center,,,pusat kategori,admitted:admitted
+concept,urn:uuid:a105c348-700a-5a7e-81bd-41f198cc4e98,concept/center-invariant,,,invarian pusat,admitted:admitted
+concept,urn:uuid:3e4a430a-3543-531d-9ca8-7c6df8242488,concept/coproduct-category,,,kategori koproduk,admitted:admitted
+concept,urn:uuid:9e1435f6-9e34-5ee0-ba80-34bb39061b5d,concept/endomorphism-monoid,,,monoid endomorfisme,admitted:admitted
+concept,urn:uuid:557a8176-1d52-5975-a3f3-bb2aa83397c2,concept/functor-category,,,kategori fungtor,admitted:admitted
+concept,urn:uuid:f40b2d9b-4a77-5843-9322-8bf3c3ad2d81,concept/hom-bifunctor,,,fungtor Hom,admitted:admitted
+concept,urn:uuid:74de3d9a-abc6-5f5a-8b0c-8975486a589c,concept/multivariable-functor,,,fungtor banyak peubah,admitted:admitted
+concept,urn:uuid:36c63184-9d8d-5d8b-8924-15c71e9b95fc,concept/natural-transformation,,,transformasi natural,admitted:admitted
+concept,urn:uuid:8f5082be-8291-5cdc-8878-2c0b166a91db,concept/opposite-functor-category,,,kategori fungtor lawan,admitted:admitted
+concept,urn:uuid:855377e5-c412-5330-9b86-8bd6837c12cb,concept/product-category,,,kategori produk,admitted:admitted
+concept,urn:uuid:347879c2-b7cb-5c04-ab87-0892d01685be,concept/pullback,,,tarik balik,admitted:admitted
+concept,urn:uuid:81e3f039-e36f-5d6d-836e-ace28bb1542a,concept/pushforward,,,dorong maju,admitted:admitted
+concept,urn:uuid:f46ed9a6-e512-5826-bdfa-ff2d336ebe58,surface/unit-011/label/def-cat-center,,,label def:cat-center,admitted:admitted
+concept,urn:uuid:ec31530d-b770-58e1-abfd-309860013f3e,surface/unit-011/label/eg-hom-functor,,,label eg:Hom-functor,admitted:admitted
+concept,urn:uuid:704476a7-3b38-5338-9626-8558f9fa3f41,surface/unit-011/label/prop-op-functor-cat,,,label prop:op-functor-cat,admitted:admitted
+concept,urn:uuid:00451e4d-abcd-5fb3-9726-f80aeddec234,surface/unit-011/label/sec-functor-category,,,label sec:functor-category,admitted:admitted
+concept,urn:uuid:99875d78-1184-5999-9171-90ff725cb6ed,surface/unit-011/reference/con-naturaltrans-morphism,,,rujukan eksternal con:naturaltrans-morphism,admitted:admitted
+concept,urn:uuid:17df9801-e15b-5407-ab9f-8ae01f450e37,surface/unit-011/reference/con-u-small,,,rujukan eksternal con:U-small,admitted:admitted
+concept,urn:uuid:857fc0b9-13d5-50a9-9775-24403845a14a,surface/unit-011/reference/eg-categories,,,rujukan eksternal eg:categories,admitted:admitted
+concept,urn:uuid:ac1425c0-ec1b-5ba7-a6c1-2c812c53ccf7,surface/unit-011/reference/eqn-naturaltrans-def,,,rujukan eksternal eqn:naturaltrans-def,admitted:admitted
+concept,urn:uuid:50afc7b6-8bc1-57ed-9098-c8e469b56643,surface/unit-011/reference/prop-naturaltrans-associativity,,,rujukan eksternal prop:naturaltrans-associativity,admitted:admitted
+concept,urn:uuid:6b788eae-892d-549d-8b58-ade8bc7c925f,surface/unit-011/reference/rem-op-functor,,,rujukan eksternal rem:op-functor,admitted:admitted
+course,urn:uuid:a5f3ad58-ce3c-5f5f-b581-1f842ae79192,course/o013,urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78,,Graduate Algebra,admitted:admitted
+diagram,urn:uuid:72584a92-6bec-5e1d-8da1-3ebcf5fd8602,diagram/unit-011/center-naturality-square,urn:uuid:96ef017f-df20-5611-a520-c95acecfb20d,1,center-naturality-square,admitted:admitted
+edition,urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49,edition/wenweili/aljabr-1/c4f7a01f68f5f407906b4b970640cddbbad85f6b,urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397,,c4f7a01f68f5f407906b4b970640cddbbad85f6b,admitted:admitted
+index_entry,urn:uuid:2547fd8a-5f0e-5ac5-8d57-30d61557e237,index-entry/unit-011/category-center,urn:uuid:96ef017f-df20-5611-a520-c95acecfb20d,7,category-center,admitted:admitted
+index_entry,urn:uuid:990a4648-a271-5272-8461-ef76b6cfce59,index-entry/unit-011/center,urn:uuid:96ef017f-df20-5611-a520-c95acecfb20d,8,center,admitted:admitted
+index_entry,urn:uuid:5edffd46-0a55-5cbf-8d99-22be1f9bb7fb,index-entry/unit-011/functor-category,urn:uuid:96ef017f-df20-5611-a520-c95acecfb20d,5,functor-category,admitted:admitted
+index_entry,urn:uuid:82d8d8d2-84be-5084-8e1c-b2f1af79a7a6,index-entry/unit-011/functor-category-symbol,urn:uuid:96ef017f-df20-5611-a520-c95acecfb20d,6,functor-category-symbol,admitted:admitted
+index_entry,urn:uuid:0e0fd8fa-f59b-5d91-98eb-f90fa4c4b9b8,index-entry/unit-011/hom-symbol,urn:uuid:96ef017f-df20-5611-a520-c95acecfb20d,4,hom-symbol,admitted:admitted
+index_entry,urn:uuid:0570ca14-105c-5b86-9d29-9be5cb15c99b,index-entry/unit-011/product-coproduct,urn:uuid:96ef017f-df20-5611-a520-c95acecfb20d,1,product-coproduct,admitted:admitted
+index_entry,urn:uuid:15cd7250-6e5a-5d37-aaed-6d9f52ce8c18,index-entry/unit-011/pullback,urn:uuid:96ef017f-df20-5611-a520-c95acecfb20d,2,pullback,admitted:admitted
+index_entry,urn:uuid:db8fc4ac-7e14-57bb-b470-b1fa632ae7e5,index-entry/unit-011/pushforward,urn:uuid:96ef017f-df20-5611-a520-c95acecfb20d,3,pushforward,admitted:admitted
+prerequisite,urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7,prerequisite/basic-mathematical-literacy,,,kematangan matematika dasar,admitted:admitted
+prerequisite,urn:uuid:dd69ccfd-7399-53a2-83fe-84127b1baf1d,prerequisite/categories-and-morphisms,,,kategori dan morfisme,admitted:admitted
+prerequisite,urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f,prerequisite/cauchy-sequences-and-completeness,,,barisan Cauchy dan kelengkapan,admitted:admitted
+prerequisite,urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee,prerequisite/elementary-number-theory,,,teori bilangan elementer,admitted:admitted
+prerequisite,urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4,prerequisite/elementary-set-theory,,,teori himpunan elementer,admitted:admitted
+prerequisite,urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec,prerequisite/linear-transformations,,,transformasi linear,admitted:admitted
+prerequisite,urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7,prerequisite/mathematical-logic,,,bahasa logika dan penalaran,admitted:admitted
+prerequisite,urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288,prerequisite/matrices,,,matriks,admitted:admitted
+prerequisite,urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8,prerequisite/permutations-and-symmetric-groups,,,permutasi dan grup simetris,admitted:admitted
+prerequisite,urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96,prerequisite/point-set-topology,,,topologi himpunan titik elementer,admitted:admitted
+prerequisite,urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14,prerequisite/polynomials,,,polinom,admitted:admitted
+prerequisite,urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f,prerequisite/real-analysis-basics,,,dasar-dasar analisis real,admitted:admitted
+prerequisite,urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396,prerequisite/vector-spaces,,,ruang vektor,admitted:admitted
+program,urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78,program/open-mathematics-curriculum/2026,,,Open Mathematics Curriculum,admitted:admitted
+qa_event,urn:uuid:4c4861fe-6e89-5adc-a20e-2815074fff2f,qa/unit-011/admission-gate,urn:uuid:cc46255b-97e9-5300-9dbd-96b8846a6c03,,admission-gate,pass
+resource,urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397,resource/wenweili/aljabr-1,,,"Metode Aljabar, Jilid 1: Arsitektur Dasar",admitted:admitted
+rights,urn:uuid:10faf5cd-990f-5850-87b4-26922b062485,rights/ajbook-fragment-cc-by-sa-3.0,,,AJbook.cls DeclareSourcemap fragment,applies
+rights,urn:uuid:e18339ae-66cd-5304-b544-b220dd41380d,rights/lanzhou-cc-by-sa-3.0,,,Lanzhou.png,retained_not_used_by_unit
+rights,urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430,rights/noto-fonts-ofl-1.1,,,Noto Sans CJK SC and Noto Serif CJK SC fonts,applies
+rights,urn:uuid:0baf6c47-021d-5310-9475-81519e710250,rights/principal-cc-by-4.0,,,"Principal text, source, PDF, and Indonesian translation",applies
+section,urn:uuid:96ef017f-df20-5611-a520-c95acecfb20d,unit/bab-2-kategori-fungtor/section/kategori-fungtor,urn:uuid:cc46255b-97e9-5300-9dbd-96b8846a6c03,1,2.3 Kategori Fungtor,admitted:admitted
+unit,urn:uuid:cc46255b-97e9-5300-9dbd-96b8846a6c03,unit/bab-2-kategori-fungtor,urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49,11,Bab 2: Dasar-Dasar Teori Kategori; Kategori Fungtor,admitted:admitted

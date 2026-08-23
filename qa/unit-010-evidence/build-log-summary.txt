@@ -1,0 +1,16 @@
+Unit 010 admission build summary
+Date: 2026-08-23
+Driver: repo/source/unit-010-bab-2-fungtor-dan-transformasi-natural.tex
+Builder: scripts/build_unit_010.ps1
+Build A: build/unit-010-admission-a
+Build B: build/unit-010-admission-b
+Final pages: 15
+Build A PDF: 153352 bytes; SHA-256 a06c4152e6233270cfa138b6c99ae9f307246fe2e1eac6b72a9533c9d74bfce4
+Build B PDF: 153358 bytes; SHA-256 4f729f02f7fe0e0067bc50168dc52634495c0fd3727e5e67695379130e344d19
+Functional replay: 15/15 MuPDF pages pixel-identical at 144 dpi.
+Final-log blockers: zero undefined references/citations, multiply-defined labels,
+LaTeX/package errors, fatal errors, emergency stops, or overfull boxes.
+PDF: id-ID; 54 named destinations; 27 links; zero Launch, GoToR, or JavaScript
+actions; all fonts embedded; no unresolved placeholder text.
+Visual QA: all 15 pages inspected in Poppler and MuPDF contact sheets. No clipped,
+overlapping, missing, blank, or unreadable content was found.

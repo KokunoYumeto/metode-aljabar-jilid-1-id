@@ -196,122 +196,122 @@ Akhirnya, kita perkenalkan sebuah konsep yang sederhana dan berguna: kategori la
 \end{definition}
 Mudah diperiksa bahwa $\mathcal{C}^\text{op}$ memenuhi definisi kategori dan bahwa $(\mathcal{C}^\text{op})^{\text{op}} = \mathcal{C}$. Singkatnya, konstruksi $\mathcal{C}^\text{op}$ membalikkan semua panah; setelah pembalikan, aksioma teori kategori tetap berlaku. Simetri dalam teori kategori ini disebut pula prinsip dualitas. Sebagai contoh, monomorfisme dalam $\mathcal{C}^\text{op}$ tidak lain adalah epimorfisme dalam $\mathcal{C}$. Dalam menangani banyak sifat kategoris, penggunaan simetri ini dengan tepat dapat sangat menyederhanakan pekerjaan.
 
-\section{函子与自然变换}\label{sec:functors}
-\begin{definition}[函子]\label{def:functor}\index{hanzi@函子 (functor)}
-	设 $\mathcal{C}', \mathcal{C}$ 为范畴. 一个函子 $F: \mathcal{C}' \to \mathcal{C}$ 意谓以下资料:
+\section{Fungtor dan Transformasi Natural}\label{sec:functors}
+\begin{definition}[Fungtor]\label{def:functor}\index{fungtor@fungtor (functor)}
+	Misalkan $\mathcal{C}', \mathcal{C}$ merupakan kategori. Sebuah fungtor $F: \mathcal{C}' \to \mathcal{C}$ terdiri atas data berikut:
 	\begin{enumerate}[(i)]
-		\item 对象间的映射 $F: \Obj(\mathcal{C}') \to \Obj(\mathcal{C})$.
-		\item 态射间的映射 $F: \Mor(\mathcal{C}') \to \Mor(\mathcal{C})$, 使得
+		\item Peta antarobjek $F: \Obj(\mathcal{C}') \to \Obj(\mathcal{C})$.
+		\item Peta antarmorfisme $F: \Mor(\mathcal{C}') \to \Mor(\mathcal{C})$, sedemikian sehingga
 			\begin{compactitem}
-				\item $F$ 与来源和目标映射相交换 (即 $sF=Fs$, $tF=Ft$), 等价的说法是对每个 $X, Y \in \Obj(\mathcal{C}')$ 皆有映射 $F: \Hom_{\mathcal{C}'}(X, Y) \to \Hom_{\mathcal{C}}(FX, FY)$;
+				\item $F$ berkomutasi dengan peta sumber dan target (yakni $sF=Fs$, $tF=Ft$); secara ekuivalen, untuk setiap $X, Y \in \Obj(\mathcal{C}')$ terdapat peta $F: \Hom_{\mathcal{C}'}(X, Y) \to \Hom_{\mathcal{C}}(FX, FY)$;
 				\item $F(g \circ f) = F(g) \circ F(f)$, $F(\identity_X) = \identity_{FX}$.
 			\end{compactitem}
 	\end{enumerate}
-	对于 $F: \mathcal{C}_1 \to \mathcal{C}_2$, $G: \mathcal{C}_2 \to \mathcal{C}_3$, 合成函子 $G \circ F: \mathcal{C}_1 \to \mathcal{C}_3$ 的定义是显然的: 取合成映射
+	Untuk $F: \mathcal{C}_1 \to \mathcal{C}_2$, $G: \mathcal{C}_2 \to \mathcal{C}_3$, fungtor komposit $G \circ F: \mathcal{C}_1 \to \mathcal{C}_3$ didefinisikan secara langsung dengan mengambil peta-peta komposit
 	\begin{gather*}
 		\Obj(\mathcal{C}_1) \xrightarrow{F} \Obj(\mathcal{C}_2) \xrightarrow{G} \Obj(\mathcal{C}_3), \\
 		\Mor(\mathcal{C}_1) \xrightarrow{F} \Mor(\mathcal{C}_2) \xrightarrow{G} \Mor(\mathcal{C}_3).
 	\end{gather*}
 \end{definition}
-旧文献常将上述函子称为 $\mathcal{C}'$ 到 $\mathcal{C}$ 的共变函子, 而称形如 $F: (\mathcal{C}')^\text{op} \to \mathcal{C}$ 的函子为反变函子.
+Dalam literatur lama, fungtor di atas sering disebut fungtor kovarian dari $\mathcal{C}'$ ke $\mathcal{C}$, sedangkan fungtor berbentuk $F: (\mathcal{C}')^\text{op} \to \mathcal{C}$ disebut fungtor kontravarian.
 
 \begin{remark}\label{rem:op-functor}
-	从 $\mathcal{C}'$ 到 $\mathcal{C}$ 和从 $(\mathcal{C}')^\text{op}$ 到 $\mathcal{C}^\text{op}$ 的函子是一回事. 为资区分, 对于函子 $F: \mathcal{C}' \to \mathcal{C}$, 反范畴间的相应函子记为 $F^\text{op}: (\mathcal{C}')^\text{op} \to \mathcal{C}^\text{op}$.
+	Memberikan fungtor dari $\mathcal{C}'$ ke $\mathcal{C}$ sama saja dengan memberikan fungtor dari $(\mathcal{C}')^\text{op}$ ke $\mathcal{C}^\text{op}$. Untuk membedakannya, bagi fungtor $F: \mathcal{C}' \to \mathcal{C}$, fungtor yang bersesuaian di antara kategori lawan dinotasikan dengan $F^\text{op}: (\mathcal{C}')^\text{op} \to \mathcal{C}^\text{op}$.
 \end{remark}
 
-\begin{definition}\index{hanzi!全 (full)}\index{hanzi!本质满 (essentially surjective)}\index{hanzi!忠实 (faithful)}
-	对于函子 $F:  \mathcal{C}' \to \mathcal{C}$,
+\begin{definition}\index{fungtor!penuh (full)}\index{fungtor!surjektif secara esensial (essentially surjective)}\index{fungtor!setia (faithful)}
+	Untuk fungtor $F:  \mathcal{C}' \to \mathcal{C}$,
 	\begin{enumerate}
-		\item 称 $F$ 是本质满的, 若 $\mathcal{C}$ 中任一对象都同构于某个 $FX$;
-		\item 称 $F$ 是忠实的, 若对所有 $X, Y \in \Obj(\mathcal{C}')$ 映射 $\Hom_{\mathcal{C}'}(X, Y) \to \Hom_{\mathcal{C}}(FX, FY) $ 都是单射;
-		\item 称 $F$ 是全的, 如果上述映射对所有 $X, Y \in \Obj(\mathcal{C}')$ 都是满射.
+		\item $F$ disebut surjektif secara esensial jika setiap objek dalam $\mathcal{C}$ isomorfik dengan suatu $FX$;
+		\item $F$ disebut setia jika, untuk semua $X, Y \in \Obj(\mathcal{C}')$, peta $\Hom_{\mathcal{C}'}(X, Y) \to \Hom_{\mathcal{C}}(FX, FY) $ bersifat injektif;
+		\item $F$ disebut penuh jika peta di atas bersifat surjektif untuk semua $X, Y \in \Obj(\mathcal{C}')$.
 	\end{enumerate}
 \end{definition}
 
 \begin{example}\label{eg:functors}
-	数学中用到的函子说之不尽, 略举数端如下.
+	Fungtor yang digunakan dalam matematika amat banyak; berikut beberapa contoh singkat.
 	\begin{enumerate}
-		\item 子范畴 $\mathcal{C}' \subset \mathcal{C}$ 显然给出一个包含函子 $\iota: \mathcal{C}' \hookrightarrow \mathcal{C}$; 包含函子总是忠实的, 它是全函子当且仅当 $\mathcal{C}'$ 是全子范畴. 取 $\mathcal{C}' = \mathcal{C}$ 就得到恒等函子 $\identity_{\mathcal{C}}: \mathcal{C} \to \mathcal{C}$.
-		\item 考虑群范畴 $\cate{Grp}$. 对于任一个群 $G$, 总是可以忘掉 $G$ 的群结构而视之为集合, 群同态当然也可以视为集合间的映射, 此程序给出\emph{忘却函子} $\cate{Grp} \to \cate{Set}$. 准此要领可对其他结构定义忘却函子, 例如 $\cate{Top} \to \cate{Set}$ (忘掉空间的拓扑结构), $\cate{Vect}(\Bbbk) \to \cate{Ab}$ (忘掉 $\Bbbk$-向量空间 $V$ 的纯量乘法, 只看它的加法群 $(V, +)$, 这里 $\Bbbk$ 是任意域) 等等, 不一一列举. 这类函子显然忠实而非全.\index{wangquehanzi@忘却函子 (forgetful functor)}
-		\item 考虑域 $\Bbbk$ 上的向量空间范畴 $\cate{Vect}(\Bbbk)$. 对于任意 $\Bbbk$-向量空间 $V$, 定义其对偶空间 \index[sym1]{$V^\vee$}
-			\[ V^\vee := \Hom_\Bbbk(V, \Bbbk) = \{ \Bbbk-\text{线性映射}\; V \to \Bbbk \}. \]
-			任一线性映射 $f: V_1 \to V_2$ 诱导对偶空间的反向映射
+		\item Subkategori $\mathcal{C}' \subset \mathcal{C}$ jelas memberikan fungtor inklusi $\iota: \mathcal{C}' \hookrightarrow \mathcal{C}$; fungtor inklusi selalu setia, dan ia penuh jika dan hanya jika $\mathcal{C}'$ merupakan subkategori penuh. Dengan mengambil $\mathcal{C}' = \mathcal{C}$, diperoleh fungtor identitas $\identity_{\mathcal{C}}: \mathcal{C} \to \mathcal{C}$.
+		\item Perhatikan kategori grup $\cate{Grp}$. Untuk sebarang grup $G$, kita dapat melupakan struktur grup pada $G$ dan memandangnya sebagai himpunan; homomorfisme grup tentu dapat pula dipandang sebagai peta antarsimpunan. Prosedur ini memberikan \emph{fungtor pelupa} $\cate{Grp} \to \cate{Set}$. Fungtor pelupa untuk struktur lain didefinisikan dengan cara serupa, misalnya $\cate{Top} \to \cate{Set}$ (melupakan struktur topologis ruang), $\cate{Vect}(\Bbbk) \to \cate{Ab}$ (melupakan perkalian skalar pada ruang vektor-$\Bbbk$ $V$ dan hanya memandang grup aditifnya $(V, +)$, dengan $\Bbbk$ sebarang medan), dan sebagainya. Fungtor-fungtor seperti ini jelas setia, tetapi tidak penuh.\index{fungtor pelupa@fungtor pelupa (forgetful functor)}
+		\item Perhatikan medan $\Bbbk$ beserta kategori ruang vektor di atasnya $\cate{Vect}(\Bbbk)$. Untuk sebarang ruang vektor-$\Bbbk$ $V$, definisikan ruang dualnya \index[sym1]{$V^\vee$}
+			\[ V^\vee := \Hom_\Bbbk(V, \Bbbk) = \{ \Bbbk-\text{peta linear}\; V \to \Bbbk \}. \]
+			Setiap peta linear $f: V_1 \to V_2$ menginduksi peta berarah sebaliknya pada ruang dual
 			\begin{align*}
 				f^\vee: V_2^\vee & \longrightarrow V_1^\vee, \\
 				[\lambda: V_2 \to \Bbbk] & \longmapsto \lambda \circ f.
 			\end{align*}
-			易见 $D: V \mapsto V^\vee$, $f \mapsto f^\vee$ 定义了函子 $D: \cate{Vect}(\Bbbk)^\text{op} \to \cate{Vect}(\Bbbk)$, 可以验证 $D$ 是忠实的. 根据注记 \ref{rem:op-functor}, 我们有合成函子 $D D^\text{op}: \cate{Vect}(\Bbbk) \to \cate{Vect}(\Bbbk)$.
+			Mudah dilihat bahwa $D: V \mapsto V^\vee$, $f \mapsto f^\vee$ mendefinisikan fungtor $D: \cate{Vect}(\Bbbk)^\text{op} \to \cate{Vect}(\Bbbk)$, dan dapat diperiksa bahwa $D$ setia. Menurut Catatan \ref{rem:op-functor}, kita memiliki fungtor komposit $D D^\text{op}: \cate{Vect}(\Bbbk) \to \cate{Vect}(\Bbbk)$.
 			
-			将 $D$ 限制于有限维向量空间, 便得到函子 $D: \cate{Vect}_f(\Bbbk)^\text{op} \to \cate{Vect}_f(\Bbbk)$ 和 $D D^\text{op}: \cate{Vect}_f(\Bbbk) \to \cate{Vect}_f(\Bbbk)$. 分别称为对偶和双对偶函子.
-		\item 对于任意群 $G$, 定义导出子群 $G_\text{der}$ 为子集 $\{xyx^{-1} y^{-1} : x,y \in G \}$ 生成的正规子群. 商群 $G/G_\text{der}$ 是交换群, 称作 $G$ 的 Abel 化 (参看引理 \ref{prop:abelianization}). 对于任意群同态 $\varphi: G \to H$, 从定义可看出 $\varphi(G_\text{der}) \subset H_\text{der}$, 因此 $\varphi$ 诱导出交换群的同态 $\bar{\varphi}: G/G_\text{der} \to H/H_\text{der}$. 容易验证 $G \mapsto G/G_\text{der}$, $\varphi \mapsto \bar{\varphi}$ 定义了 Abel 化函子 $\cate{Grp} \to \cate{Ab}$. Abel 化函子不是忠实函子.
-		\item 对任意带点拓扑空间 $(X,x)$ 指定基本群 $\pi_1(X, x)$, 这就给出了函子 $\cate{Top}_\bullet \to \cate{Grp}$. 代数拓扑学中还有许多例子, 例如空间的同调群 $X \mapsto H_n(X; \Z)$ 便给出了一族函子 $H_n: \cate{Top} \to \cate{Ab}$, 其中 $n \in \Z_{\geq 0}$, 而上同调群给出函子 $H^n: \cate{Top}^\text{op} \to \cate{Ab}$.
+			Dengan membatasi $D$ pada ruang vektor berdimensi hingga, diperoleh fungtor $D: \cate{Vect}_f(\Bbbk)^\text{op} \to \cate{Vect}_f(\Bbbk)$ dan $D D^\text{op}: \cate{Vect}_f(\Bbbk) \to \cate{Vect}_f(\Bbbk)$. Keduanya disebut, berturut-turut, fungtor dual dan fungtor dual ganda.
+		\item Untuk sebarang grup $G$, definisikan subgrup turunan $G_\text{der}$ sebagai subgrup normal yang dibangkitkan oleh himpunan $\{xyx^{-1} y^{-1} : x,y \in G \}$. Grup hasil bagi $G/G_\text{der}$ merupakan grup abelian dan disebut abelianisasi dari $G$ (lihat Lema \ref{prop:abelianization}). Untuk sebarang homomorfisme grup $\varphi: G \to H$, dari definisi terlihat bahwa $\varphi(G_\text{der}) \subset H_\text{der}$; karena itu, $\varphi$ menginduksi homomorfisme grup abelian $\bar{\varphi}: G/G_\text{der} \to H/H_\text{der}$. Mudah diperiksa bahwa $G \mapsto G/G_\text{der}$, $\varphi \mapsto \bar{\varphi}$ mendefinisikan fungtor abelianisasi $\cate{Grp} \to \cate{Ab}$. Fungtor abelianisasi tidak setia.
+		\item Kepada setiap ruang topologis bertitik dasar $(X,x)$, kaitkan grup fundamental $\pi_1(X, x)$; ini memberikan fungtor $\cate{Top}_\bullet \to \cate{Grp}$. Masih banyak contoh lain dalam topologi aljabar; misalnya, grup homologi suatu ruang $X \mapsto H_n(X; \Z)$ memberikan keluarga fungtor $H_n: \cate{Top} \to \cate{Ab}$, dengan $n \in \Z_{\geq 0}$, sedangkan grup kohomologi memberikan fungtor $H^n: \cate{Top}^\text{op} \to \cate{Ab}$.
 	\end{enumerate}
 \end{example}
 
-\begin{definition}[自然变换, 或函子间的态射]\index{ziranbianhuan@自然变换 (natural transformation)}
-	函子 $F, G: \mathcal{C}' \to \mathcal{C}$ 之间的自然变换 $\theta$ 是一族态射
+\begin{definition}[Transformasi natural, atau morfisme antarfungtor]\index{transformasi natural@transformasi natural (natural transformation)}
+	Di antara fungtor $F, G: \mathcal{C}' \to \mathcal{C}$, suatu transformasi natural $\theta$ adalah keluarga morfisme
 	\[ \theta_X \in \Hom_{\mathcal{C}}(FX, GX), \quad X \in \Obj(\mathcal{C}'), \]
-	使得下图对所有 $\mathcal{C}'$ 中的态射 $f: X \to Y$ 交换
+	sedemikian sehingga, dalam $\mathcal{C}'$, diagram berikut komutatif untuk setiap morfisme $f: X \to Y$
 	\begin{equation}\label{eqn:naturaltrans-def}\begin{tikzcd}
 		FX \arrow[r, "\theta_X"] \ar[d, "Ff"'] & GX \arrow[d, "Gf"] \\
 		FY \arrow[r, "\theta_Y"'] & GY .
 	\end{tikzcd}\end{equation}
-	上述自然变换写作 $\theta: F \to G$, 或图解为
+	Transformasi natural di atas ditulis sebagai $\theta: F \to G$, atau digambarkan dengan diagram
 	\[ \begin{tikzcd}
 		\mathcal{C}' \arrow[bend left=50, r, "F", ""' name=U] \arrow[bend right=50, r, "G"', "" name=D] & \arrow[Rightarrow, to path=(U) -- (D) \tikztonodes, "\theta"] \mathcal{C}.
 	\end{tikzcd} \]
 \end{definition}
-上述带有双箭头 $\Rightarrow$ 的图表有时也被称为 $2$-胞腔, 参看 \S\ref{sec:2-cat}. 一种兴许更有益的看法是设想 $\theta$ 为从 $F$ 到 $G$ 的一个同伦.
+Diagram dengan panah ganda $\Rightarrow$ di atas kadang-kadang disebut pula sel-$2$; lihat \S\ref{sec:2-cat}. Sudut pandang yang barangkali lebih bermanfaat ialah membayangkan $\theta$ sebagai suatu homotopi dari $F$ ke $G$.
 
-\begin{convention}\label{con:naturaltrans-morphism}\index{ziran@自然}\index{dianfan@典范}
-	我们也将自然变换 $\theta: F \to G$ 称为从函子 $F$ 到 $G$ 的态射. 实用中经常会省略严格的范畴论框架, 只说态射 $\theta_X: FX \to GX$ 对于变元 $X$ 是\emph{自然}的, \emph{典范}的, 或称满足\emph{函子性}. 实践中经常把自然同构直接写成等号 $=$.
+\begin{convention}\label{con:naturaltrans-morphism}\index{natural@natural}\index{kanonik@kanonik}
+	Kita juga menyebut transformasi natural $\theta: F \to G$ sebagai morfisme dari fungtor $F$ ke $G$. Dalam penerapan, kerangka teori kategori yang ketat sering dihilangkan, dan cukup dikatakan bahwa morfisme $\theta_X: FX \to GX$ bersifat \emph{natural}, \emph{kanonik}, atau memenuhi \emph{fungtorialitas} terhadap peubah $X$. Dalam praktik, isomorfisme natural sering langsung ditulis sebagai tanda sama dengan $=$.
 \end{convention}
 
-接着介绍自然变换的几种操作, 包括纵, 横两种合成.\index{ziranbianhuan!合成}
+Selanjutnya kita perkenalkan beberapa operasi pada transformasi natural, termasuk komposisi vertikal dan horizontal.\index{transformasi natural!komposisi}
 \begin{itemize}
-	\item 考虑 $\mathcal{C}'$ 到 $\mathcal{C}$ 的三个函子间的态射 $\theta: F \to  G$,  $\psi: G \to H$. 纵合成 $\psi \circ \theta$ 的定义是 $\{ \psi_X \circ \theta_X : X \in \Obj(\mathcal{C}') \}$, 图解:
+	\item Perhatikan tiga fungtor dari $\mathcal{C}'$ ke $\mathcal{C}$ beserta morfisme antarfungtor $\theta: F \to  G$,  $\psi: G \to H$. Komposisi vertikal $\psi \circ \theta$ didefinisikan sebagai $\{ \psi_X \circ \theta_X : X \in \Obj(\mathcal{C}') \}$, dan digambarkan sebagai berikut:
 	\[\begin{tikzcd}
 		\mathcal{C}'
 			\arrow[bend left=70, rr, "F", ""' name=U]
 			\arrow[rr, "G" name=MM, ""' name=M]
 			\arrow[bend right=70, rr, "" name=D, "H"'] & &
 		\arrow[Rightarrow, to path=(U) -- (MM) \tikztonodes, "\theta"] \arrow[Rightarrow, to path=(M) -- (D) \tikztonodes, "\psi"] \mathcal{C} 
-	\end{tikzcd} \quad \text{合成为} \quad \begin{tikzcd}
+	\end{tikzcd} \quad \text{dikomposisikan menjadi} \quad \begin{tikzcd}
 		\mathcal{C}'
 		\arrow[bend left=50, rr, "F", ""' name=U]
 		\arrow[bend right=50, rr, "" name=D, "H"']
 		& & \arrow[Rightarrow, to path=(U) -- (D) \tikztonodes, "\psi \circ \theta"] \mathcal{C} .
 	\end{tikzcd}\]
-	\item 考虑函子
+	\item Perhatikan fungtor-fungtor
 	$\begin{tikzcd}
 		\mathcal{C}'' \arrow[bend left=30, r, "F_1"] \arrow[bend right=30, r, "F_2"] & \mathcal{C}' \arrow[bend left=30, r, "G_1"] \arrow[bend right=30, r, "G_2"] & \mathcal{C}
 	\end{tikzcd}$
-	及态射 $\theta: F_1 \to F_2$, $\psi: G_1 \to G_2$. 今将定义横合成 $\psi \circ \theta: G_1 \circ F_1 \to G_2 \circ F_2$. 首先注意到对所有 $X \in \Obj(\mathcal{C}'')$, 根据 $\psi$ 的自然性, 图表
+	dan morfisme $\theta: F_1 \to F_2$, $\psi: G_1 \to G_2$. Kita akan mendefinisikan komposisi horizontal $\psi \circ \theta: G_1 \circ F_1 \to G_2 \circ F_2$. Pertama, perhatikan bahwa bagi semua $X \in \Obj(\mathcal{C}'')$, dari naturalitas $\psi$, diagram
 	\begin{equation}\label{eqn:horizontal-comp}\begin{tikzcd}
 		G_1 F_1(X) \arrow[r, "{\psi_{F_1 X}}"] \arrow[d, "{G_1(\theta_X)}"'] & G_2 F_1(X) \arrow[d, "{G_2(\theta_X)}"] \\
 		G_1 F_2(X) \arrow[r, "{\psi_{F_2 X}}"'] & G_2 F_2(X)
 	\end{tikzcd}\end{equation}
-	交换. 对角合成 $\searrow$ 记作 $(\psi \circ \theta)_X : G_1 F_1 (X) \to G_2 F_2 (X)$, 此即所求的横合成, 我们马上会证明它的自然性, 读者也可以借机熟悉交换图表的运用. 图解:
+	komutatif. Komposisi sepanjang diagonal $\searrow$ dinotasikan dengan $(\psi \circ \theta)_X : G_1 F_1 (X) \to G_2 F_2 (X)$; inilah komposisi horizontal yang dikehendaki. Kita akan segera membuktikan naturalitasnya, dan pembaca dapat memanfaatkan kesempatan ini untuk membiasakan diri menggunakan diagram komutatif. Diagramnya ialah:
 	\[ \begin{tikzcd}
 		\mathcal{C}'' \arrow[bend left=50, r, "F_1", ""' name=LU] \arrow[bend right=50, r, "" name=LD, "F_2"'] &
 		\mathcal{C}' \arrow[bend left=50, r, "G_1", ""' name=RU] \arrow[bend right=50, r, "" name=RD, "G_2"'] &
 		\arrow[Rightarrow, to path=(LU) -- (LD) \tikztonodes, "\theta"] \arrow[Rightarrow, to path=(RU) -- (RD) \tikztonodes, "\psi"] \mathcal{C}
-	\end{tikzcd} \quad \text{合成为} \quad \begin{tikzcd}
+	\end{tikzcd} \quad \text{dikomposisikan menjadi} \quad \begin{tikzcd}
 		\mathcal{C}''
 		\arrow[bend left=50, rr, "G_1 F_1", ""' name=U]
 		\arrow[bend right=50, rr, "" name=D, "G_2 F_2"']
 		& & \arrow[Rightarrow, to path=(U) -- (D) \tikztonodes, "\psi \circ \theta"] \mathcal{C} .
 	\end{tikzcd} \]
-	\item 横合成有下述特例. 请端详
+	\item Komposisi horizontal mempunyai kasus khusus berikut. Perhatikan
 	\[\begin{tikzcd}
 		\mathcal{C}_1 \arrow[r, "H"] & \mathcal{C}_2 \arrow[bend left=50, r, "F", ""' name=U] \arrow[bend right=50, r, "" name=D, "G"'] & \mathcal{C}_3 \arrow[Rightarrow, to path=(U)--(D) \tikztonodes, "\theta"] \arrow[r, "K"] & \mathcal{C}_4 .
     \end{tikzcd} \]
-	先看左边三项: 我们将以 $\theta H: FH \to GH$ 简记横合成 $\theta \circ \identity_{H}$; 具体地说, $(\theta H)_X = \theta_{HX} : FH(X) \to GH(X)$; 类似地处理右三项: 记 $K\theta: KF \to KG$ 为横合成 $\identity_K \circ \theta$, 我们有 $(K\theta)_X = K(\theta_X): KF(X) \to KG(X)$.
+	Pertama perhatikan tiga unsur di sebelah kiri: notasi $\theta H: FH \to GH$ kita gunakan sebagai singkatan bagi komposisi horizontal $\theta \circ \identity_{H}$; secara konkret, $(\theta H)_X = \theta_{HX} : FH(X) \to GH(X)$. Tiga unsur di sebelah kanan diperlakukan serupa: tuliskan $K\theta: KF \to KG$ untuk komposisi horizontal $\identity_K \circ \theta$, sehingga $(K\theta)_X = K(\theta_X): KF(X) \to KG(X)$.
 \end{itemize}
-注意到我们用同一个符号 $\circ$ 表示纵横合成, 如有混淆之虞将另作说明.
+Perhatikan bahwa kita menggunakan lambang yang sama $\circ$ untuk komposisi vertikal maupun horizontal; bila ada kemungkinan rancu, akan diberikan penjelasan tersendiri.
 
 \begin{lemma}\label{prop:naturaltrans-associativity}
-	以上定义的纵, 横合成 $\{ (\psi \circ \theta)_X \}_X$ 都是函子间的态射, 而且各自满足严格结合律 $(\phi \circ \psi) \circ \theta = \phi \circ (\psi \circ \theta)$. 纵横合成之间满足下述关系: 对于图表
+	Komposisi vertikal dan horizontal $\{ (\psi \circ \theta)_X \}_X$ yang didefinisikan di atas sama-sama merupakan morfisme antarfungtor, dan masing-masing memenuhi hukum asosiatif ketat $(\phi \circ \psi) \circ \theta = \phi \circ (\psi \circ \theta)$. Di antara komposisi vertikal dan horizontal berlaku hubungan berikut: untuk diagram
 	\[\begin{tikzcd}
 		\mathcal{C}_1
 		\arrow[bend left=70, rr, ""' name=U]
@@ -323,18 +323,18 @@ Mudah diperiksa bahwa $\mathcal{C}^\text{op}$ memenuhi definisi kategori dan bah
 		\arrow[bend right=70, rr, "" name=E] & &
 		\arrow[Rightarrow, to path=(V) -- (NN) \tikztonodes, "\theta'"] \arrow[Rightarrow, to path=  (N) -- (E) \tikztonodes, "\psi'"] \mathcal{C}_3 ,
 	\end{tikzcd} \]
-	以下的互换律成立
-	\[ \left( \psi' \underset{\text{纵}}{\circ} \theta'\right) \underset{\text{横}}{\circ} \left( \psi \underset{\text{纵}}{\circ} \theta\right) = \left( \psi' \underset{\text{横}}{\circ} \psi \right) \underset{\text{纵}}{\circ} \left( \theta' \underset{\text{横}}{\circ} \theta\right).  \]
+	berlaku hukum pertukaran berikut
+	\[ \left( \psi' \underset{\text{vertikal}}{\circ} \theta'\right) \underset{\text{horizontal}}{\circ} \left( \psi \underset{\text{vertikal}}{\circ} \theta\right) = \left( \psi' \underset{\text{horizontal}}{\circ} \psi \right) \underset{\text{vertikal}}{\circ} \left( \theta' \underset{\text{horizontal}}{\circ} \theta\right).  \]
 \end{lemma}
 \begin{proof}
-	关于纵合成的断言是简单的, 以下证明横合成是函子间的态射. 我们沿用之前的符号. 对于 $\mathcal{C}''$ 中的态射 $f: X \to Y$, 考虑源于 \eqref{eqn:horizontal-comp} 的图表
+	Pernyataan mengenai komposisi vertikal mudah; berikut kita buktikan bahwa komposisi horizontal merupakan morfisme antarfungtor. Kita gunakan notasi sebelumnya. Dalam $\mathcal{C}''$, untuk morfisme $f: X \to Y$, perhatikan diagram yang berasal dari \eqref{eqn:horizontal-comp}
 	\[\begin{tikzcd}
 		G_1 F_1 (X) \arrow[r, "G_1 \theta_X"] \arrow[d, "G_1 F_1 f"'] & G_1 F_2 (X) \arrow[r, "{\psi_{F_2 X}}"] \arrow[d, "G_1 F_2 f"] & G_2 F_2 (X) \arrow[d, "G_2 F_2 f"] \\
 		G_1 F_1 (Y) \arrow[r, "{G_1 \theta_Y}"'] & G_1 F_2 (Y) \arrow[r, "{\psi_{F_2 Y}}"'] & G_2 F_2 (Y) .
 	\end{tikzcd} \]
-	按定义, 水平方向箭头合成后上下分别是 $(\psi \circ \theta)_X$ 和 $(\psi \circ \theta)_Y$. 因为 $\theta$ 是自然变换而 $G_1$ 是函子, 左方块交换; 由于 $\psi$ 是自然变换, 右方块交换. 将箭头分段作合成, 可知整个大方块交换, 此即 $ \psi \circ \theta$ 所需性质.
+	Menurut definisi, komposisi panah horizontal di baris atas dan bawah masing-masing adalah $(\psi \circ \theta)_X$ dan $(\psi \circ \theta)_Y$. Karena $\theta$ merupakan transformasi natural dan $G_1$ sebuah fungtor, persegi kiri komutatif; karena $\psi$ merupakan transformasi natural, persegi kanan pun komutatif. Dengan mengomposisikan panah-panah per bagian, diperoleh bahwa seluruh persegi besar komutatif; inilah sifat yang diperlukan bagi $ \psi \circ \theta$.
 
-	现证明横合成的结合律: 考虑函子间的态射
+	Sekarang kita buktikan asosiativitas komposisi horizontal. Perhatikan morfisme-morfisme antarfungtor
 	\[\begin{tikzcd}
 		\mathcal{C}''' \arrow[bend left=50, r, "F_1", ""' name=LU] \arrow[bend right=50, r, "" name=LD, "F_2"'] &
 		\mathcal{C}'' \arrow[bend left=50, r, "G_1", ""' name=MU] \arrow[bend right=50, r, "" name=MD, "G_2"'] &
@@ -344,142 +344,142 @@ Mudah diperiksa bahwa $\mathcal{C}^\text{op}$ memenuhi definisi kategori dan bah
 		\arrow[Rightarrow, to path=(RU) -- (RD) \tikztonodes, "\phi"]
 		\mathcal{C} .
 	\end{tikzcd} \]
-	对任意 $X \in \Obj(\mathcal{C}''')$, 考虑图表
+	Untuk sebarang $X \in \Obj(\mathcal{C}''')$, perhatikan diagram
 	\[\begin{tikzcd}[row sep=small]
 		& & H_1 G_2 F_2(X) \arrow[rd] & \\
 		H_1 G_1 F_1(X) \arrow[r] & H_1 G_2 F_1(X) \arrow[ru] \arrow[rd] & & H_2 G_2 F_2(X) . \\
 		& & H_2 G_2 F_1(X) \arrow[ru] &
 	\end{tikzcd}\]
-	施 $\phi$ 的自然性于 $G_2 F_1(X) \to G_2 F_2(X)$ 可知菱形部分交换. 按
+	Dengan menerapkan naturalitas $\phi$ pada $G_2 F_1(X) \to G_2 F_2(X)$, bagian berbentuk belah ketupat diketahui komutatif. Komposisi sepanjang lintasan
 	\begin{tikzpicture}[scale=0.5, baseline=(X)]
 		\draw[->] (0,0) -- (1,0) -- (2, 0.5) -- (3, 0);
 		\coordinate (X) at (0,0);
 	\end{tikzpicture}
-	合成给出 $(\phi \circ (\psi \circ \theta))_X$. 按
+	menghasilkan $(\phi \circ (\psi \circ \theta))_X$. Sementara itu, komposisi sepanjang lintasan
 	\begin{tikzpicture}[scale=0.5, baseline=(X)]
 		\draw[->] (0,0) -- (1,0) -- (2, -0.5) -- (3, 0);
 		\coordinate (X) at (0, -0.2);
 	\end{tikzpicture}
-	合成则给出 $((\phi \circ \psi) \circ \theta)_X$; 这里仍须用上交换图表 \eqref{eqn:horizontal-comp}. 结合律证毕.
+	menghasilkan $((\phi \circ \psi) \circ \theta)_X$; di sini kita masih perlu menggunakan diagram komutatif \eqref{eqn:horizontal-comp}. Asosiativitas pun terbukti.
 
-	最后一个等式可以同样按图索骥, 细节交给感兴趣的读者.
+	Persamaan terakhir dapat diperoleh secara serupa dengan menelusuri diagram; rinciannya diserahkan kepada pembaca yang berminat.
 \end{proof}
 
-任意函子 $F$ 到自身有恒等态射 $\identity_F : F \to F$. 给定函子间的态射 $\theta: F_1 \to F_2$, 若态射 $\psi: F_2 \to F_1$ 满足 $\psi \circ \theta = \identity_{F_1}$, $\theta \circ \psi = \identity_{F_2}$, 则称 $\psi$ 是 $\theta$ 的逆. 可逆的态射称为函子间的同构, 写作 $\theta: F_1 \rightiso F_2$. 由定义直接看出 $\theta$ 的逆若存在则是唯一的, 记作 $\theta^{-1}$, 它无非是在范畴中``逐点地''取逆: $(\theta^{-1})_X := (\theta_X)^{-1}: F_2 X \rightiso F_1 X$. 同理可见态射 $\theta$ 可逆当且仅当每个 $\theta_X$ 都可逆. 易见同构的纵横合成仍是同构. 函子间同构 $\theta: F_1 \rightiso F_2$ 的等价说法是称 $\theta_X: F_1 X \rightiso F_2 X$ 对变元 $X$ 是\emph{自然同构}或\emph{典范同构}.
+Setiap fungtor $F$ mempunyai morfisme identitas ke dirinya sendiri, $\identity_F : F \to F$. Diberikan morfisme antarfungtor $\theta: F_1 \to F_2$, jika morfisme $\psi: F_2 \to F_1$ memenuhi $\psi \circ \theta = \identity_{F_1}$, $\theta \circ \psi = \identity_{F_2}$, maka $\psi$ disebut invers dari $\theta$. Morfisme invertibel disebut isomorfisme antarfungtor dan ditulis $\theta: F_1 \rightiso F_2$. Langsung dari definisi terlihat bahwa invers $\theta$, jika ada, bersifat tunggal dan dinotasikan dengan $\theta^{-1}$; invers ini tidak lain diperoleh dengan mengambil invers ``titik demi titik'' dalam kategori: $(\theta^{-1})_X := (\theta_X)^{-1}: F_2 X \rightiso F_1 X$. Demikian pula, morfisme $\theta$ invertibel jika dan hanya jika setiap $\theta_X$ invertibel. Mudah dilihat bahwa komposisi vertikal maupun horizontal dari isomorfisme tetap merupakan isomorfisme. Pernyataan ekuivalen bagi isomorfisme antarfungtor $\theta: F_1 \rightiso F_2$ ialah bahwa $\theta_X: F_1 X \rightiso F_2 X$ merupakan \emph{isomorfisme natural} atau \emph{isomorfisme kanonik} terhadap peubah $X$.
 
-\begin{definition}[等价]\label{def:cat-equivalence}\index{fanchoudengjia@范畴等价 (equivalence)}\index{hanzi!拟逆 (quasi-inverse)}
-	如果一对函子
+\begin{definition}[Ekuivalensi]\label{def:cat-equivalence}\index{ekuivalensi kategori@ekuivalensi kategori (equivalence)}\index{fungtor!kuasi-invers (quasi-inverse)}
+	Jika sepasang fungtor
 	\begin{tikzcd}
 		\mathcal{C}_1 \arrow[bend left=20, r, "F"] & \mathcal{C}_2 \arrow[bend left=20, l, "G"]
 	\end{tikzcd}
-	满足以下性质: 存在函子之间的同构 $\theta: FG \rightiso \identity_{\mathcal{C}_2}$, $\psi: GF \rightiso \identity_{\mathcal{C}_1}$, 则称 $G$ 是 $F$ 的\emph{拟逆函子}, 并称 $F$ 是范畴 $\mathcal{C}_1$ 到 $\mathcal{C}_2$ 的\emph{等价}.
+	memenuhi sifat berikut: terdapat isomorfisme antarfungtor $\theta: FG \rightiso \identity_{\mathcal{C}_2}$, $\psi: GF \rightiso \identity_{\mathcal{C}_1}$, maka $G$ disebut, bagi $F$, \emph{fungtor kuasi-invers}, dan $F$ disebut ekuivalensi dari kategori $\mathcal{C}_1$ ke $\mathcal{C}_2$, atau singkatnya suatu \emph{ekuivalensi}.
 
-	如果进一步有 $FG = \identity_{\mathcal{C}_2}$, $GF = \identity_{\mathcal{C}_1}$, 则称 $F$ 是范畴间的\emph{同构}, 而 $G$ 是 $F$ 的\emph{逆}.
+	Jika lebih lanjut $FG = \identity_{\mathcal{C}_2}$, $GF = \identity_{\mathcal{C}_1}$, maka $F$ disebut \emph{isomorfisme} antarkategori, sedangkan $G$ disebut \emph{invers} dari $F$.
 \end{definition}
-容易证明等价的合成仍是等价, 细节留作习题.
+Mudah dibuktikan bahwa komposisi ekuivalensi tetap merupakan ekuivalensi; rinciannya dijadikan latihan.
 
 \begin{example}
-	令 $\cate{CHaus}$ 为紧 Hausdorff 拓扑空间范畴, $C^*\dcate{CommAlg}$ 为含幺元的交换 $C^*$-代数所成范畴 (态射为保幺元的 $\ast$-同态). 交换版本的 Gelfand--Naimark 定理断言函子
+	Misalkan $\cate{CHaus}$ adalah kategori ruang topologis kompak Hausdorff, dan $C^*\dcate{CommAlg}$ kategori aljabar-$C^*$ komutatif berunsur satuan (dengan morfisme berupa homomorfisme-$\ast$ yang mempertahankan unsur satuan). Versi komutatif teorema Gelfand--Naimark menyatakan bahwa fungtor-fungtor
 	\[ \begin{tikzcd}[row sep=tiny]
 		\cate{CHaus}^{\text{op}} \arrow[yshift=0.7ex]{r} & C^*\dcate{CommAlg} \arrow[yshift=-0.7ex]{l} \\
-		X \arrow[mapsto]{r} & C(X): \text{连续复值函数空间} \\
-		\mathfrak{M}_A: \text{ 极大理想空间} & A \arrow[mapsto]{l}
+		X \arrow[mapsto]{r} & C(X): \text{ruang fungsi kontinu bernilai kompleks} \\
+		\mathfrak{M}_A: \text{ ruang ideal maksimal} & A \arrow[mapsto]{l}
 	\end{tikzcd} \]
-	互为拟逆:  Gelfand 变换 $a \mapsto \hat{a}$ 给出自然同构 $A \rightiso C(\mathfrak{M}_A)$, 可参看 \cite[定理 5.4.8]{Zh2}; 反向的自然同构 $X \rightiso \mathfrak{M}_{C(X)}$ 相对容易, 参看 \cite[定理 5.3.2]{Zh2}.
+	saling kuasi-invers: transformasi Gelfand $a \mapsto \hat{a}$ memberikan isomorfisme natural $A \rightiso C(\mathfrak{M}_A)$; lihat \cite[Teorema 5.4.8]{Zh2}. Isomorfisme natural pada arah sebaliknya, $X \rightiso \mathfrak{M}_{C(X)}$, relatif lebih mudah; lihat \cite[Teorema 5.3.2]{Zh2}.
 \end{example}
 
 \begin{proposition}
-	若 $G, G'$ 是函子 $F: \mathcal{C}_1 \to \mathcal{C}_2$ 的拟逆, 则存在函子的同构 $G \simeq G'$.
+	Jika $G, G'$ merupakan kuasi-invers dari fungtor $F: \mathcal{C}_1 \to \mathcal{C}_2$, maka terdapat isomorfisme antarfungtor $G \simeq G'$.
 \end{proposition}
 \begin{proof}
-	自然变换的横合成给出 $G \xleftarrow[\sim]{\psi' \circ \identity_G} (G'F)G = G'(FG) \xrightarrow[\sim]{\identity_{G'} \circ \theta} G'$.
+	Komposisi horizontal transformasi natural memberikan $G \xleftarrow[\sim]{\psi' \circ \identity_G} (G'F)G = G'(FG) \xrightarrow[\sim]{\identity_{G'} \circ \theta} G'$.
 \end{proof}
 
 \begin{remark}\label{rem:strict-or-not}
-	我们业已对对象间的态射和函子间的态射 (自然变换) 定义了逆的概念, 其逆若存在则唯一, 依此定义何谓对象间或函子间的同构. 对于函子亦可定义逆的概念, 逆函子若存在则唯一; 相较之下, 拟逆函子之间则可以差一个同构. 实践表明范畴的同构概念不甚实用, 等价的概念则处处出现. 这体现了范畴论的一条经验准则: 在函子层次, 同构 (如之前的 $\theta: FG \rightiso \identity$) 几乎总是比严格相等 (如之前的 $FG = \identity$) 来得管用. 然而同构也不是任意的, 所需的条件一般称为融贯性: 以等价为例, 读者兴许已经在先前论证中感到拟逆的概念有些松散, 定理 \ref{prop:adjoint-equivalence} 将给出称为\emph{伴随等价}的一种细化. \index{bansuidengjia@伴随等价 (adjoint equivalence)}
+	Kita telah mendefinisikan konsep invers bagi morfisme antarobjek dan morfisme antarfungtor (transformasi natural); invers tersebut, jika ada, bersifat tunggal, dan dari sinilah isomorfisme antarobjek atau antarfungtor didefinisikan. Konsep invers dapat pula didefinisikan bagi fungtor, dan fungtor invers, jika ada, bersifat tunggal. Sebaliknya, dua fungtor kuasi-invers dapat berbeda hingga suatu isomorfisme. Praktik menunjukkan bahwa konsep isomorfisme kategori kurang berguna, sedangkan konsep ekuivalensi muncul di mana-mana. Hal ini mencerminkan suatu kaidah praktis dalam teori kategori: pada tingkat fungtor, isomorfisme (seperti $\theta: FG \rightiso \identity$ di atas) hampir selalu lebih berguna daripada kesamaan ketat (seperti $FG = \identity$ di atas). Namun, isomorfisme itu pun tidak boleh sebarang; syarat yang diperlukan biasanya disebut koherensi. Dalam kasus ekuivalensi, pembaca mungkin telah merasakan dalam argumen sebelumnya bahwa konsep kuasi-invers agak longgar; Teorema \ref{prop:adjoint-equivalence} akan memberikan suatu penyempurnaan yang disebut \emph{ekuivalensi adjoin}. \index{ekuivalensi adjoin@ekuivalensi adjoin (adjoint equivalence)}
 \end{remark}
 
-称一个全子范畴 $\mathcal{C}' \subset \mathcal{C}$ 是 $\mathcal{C}$ 的一副\emph{骨架}, 如果对 $\mathcal{C}$ 的每个对象 $X$ 都存在同构 $X \rightiso Y \in \Obj(\mathcal{C}')$, 而且此 $Y \in \Obj(\mathcal{C}')$ 是唯一的. 自为骨架的范畴称为\emph{骨架范畴}.\index{fanchou!骨架 (skeleton)}
+Subkategori penuh $\mathcal{C}' \subset \mathcal{C}$ disebut, bagi $\mathcal{C}$, suatu \emph{kerangka} jika setiap objek dalam $\mathcal{C}$, katakan $X$, memiliki isomorfisme $X \rightiso Y \in \Obj(\mathcal{C}')$, dan $Y \in \Obj(\mathcal{C}')$ tersebut tunggal. Kategori yang merupakan kerangka bagi dirinya sendiri disebut \emph{kategori skeletal}.\index{kategori!kerangka (skeleton)}
 
 \begin{lemma}\label{prop:skeletal-cat-isom}
-	任意范畴 $\mathcal{C}$ 总有一副骨架 $\mathcal{C}'$, 而且包含函子 $\iota: \mathcal{C}' \hookrightarrow \mathcal{C}$ 是等价. 骨架范畴间的全忠实, 本质满函子都是同构.
+	Setiap kategori $\mathcal{C}$ memiliki suatu kerangka $\mathcal{C}'$, dan fungtor inklusi $\iota: \mathcal{C}' \hookrightarrow \mathcal{C}$ merupakan ekuivalensi. Setiap fungtor penuh, setia, dan surjektif secara esensial di antara kategori skeletal merupakan isomorfisme.
 \end{lemma}
 \begin{proof}
-	先证第一部分. 以选择公理在 $\Obj(\mathcal{C})$ 的每个同构类中选定代表元, 由这些代表元构成的全子范畴记作 $\mathcal{C}'$. 同理, 对每个 $X \in \Obj(\mathcal{C})$ 可以选定同构 $\theta_X: X \rightiso \kappa(X) $, 其中 $\kappa(X) \in \Obj(\mathcal{C}')$; 不妨假设对于 $X \in \Obj(\mathcal{C}')$ 有 $\theta_X = \identity_X$. 存在唯一一种方法将 $\kappa: \Obj(\mathcal{C}) \to \Obj(\mathcal{C}')$ 延拓为函子并使得 $\theta: \identity_{\mathcal{C}} \rightiso \iota \kappa$: 置
+	Kita buktikan dahulu bagian pertama. Dengan aksioma pilihan, pilih satu wakil dari setiap kelas isomorfisme dalam $\Obj(\mathcal{C})$, lalu nyatakan subkategori penuh yang dibentuk oleh wakil-wakil tersebut sebagai $\mathcal{C}'$. Demikian pula, untuk setiap $X \in \Obj(\mathcal{C})$, kita dapat memilih isomorfisme $\theta_X: X \rightiso \kappa(X) $, dengan $\kappa(X) \in \Obj(\mathcal{C}')$; tanpa mengurangi keumuman, andaikan bagi $X \in \Obj(\mathcal{C}')$ berlaku $\theta_X = \identity_X$. Ada tepat satu cara memperluas $\kappa: \Obj(\mathcal{C}) \to \Obj(\mathcal{C}')$ menjadi fungtor sedemikian sehingga $\theta: \identity_{\mathcal{C}} \rightiso \iota \kappa$: tetapkan
 	\[ \kappa(f) := \theta_Y \circ f \circ \theta_X^{-1} \in \Hom_{\mathcal{C}'}(\kappa(X), \kappa(Y)), \quad f \in \Hom_{\mathcal{C}}(X, Y). \]
-	另一方面, 我们有函子的等式 $\kappa\iota = \identity_{\mathcal{C}'}$. 因此 $\kappa$ 是 $\iota$ 的拟逆函子.
+	Di sisi lain, kita memiliki kesamaan fungtor $\kappa\iota = \identity_{\mathcal{C}'}$. Jadi, $\kappa$ merupakan fungtor kuasi-invers dari $\iota$.
 	
-	对于第二部分, 设 $F: \mathcal{C}_1 \to \mathcal{C}_2$ 是骨架范畴间的全忠实, 本质满函子. 对任意 $\mathcal{C}_2$ 中对象 $Z$, 存在 $X$ 使得 $Z \simeq FX$, 因此 $Z = FX$. 这样的 $X$ 是唯一的, 因为全忠实性和 $FX \simeq FX'$ 蕴涵 $X \simeq X'$. 于是 $F$ 在对象集上是双射, 由此可定义其逆函子 $G$.
+	Untuk bagian kedua, misalkan $F: \mathcal{C}_1 \to \mathcal{C}_2$ adalah fungtor penuh, setia, dan surjektif secara esensial di antara kategori skeletal. Untuk sebarang objek dalam $\mathcal{C}_2$, katakan $Z$, terdapat $X$ sedemikian sehingga $Z \simeq FX$, dan karena itu $Z = FX$. Objek $X$ seperti ini tunggal, sebab sifat penuh dan setia bersama $FX \simeq FX'$ mengakibatkan $X \simeq X'$. Dengan demikian, $F$ bijektif pada himpunan objek, sehingga fungtor inversnya $G$ dapat didefinisikan.
 \end{proof}
 
-\begin{theorem}\label{prop:functor-equiv-criterion}\index{fanchoudengjia}
-	对于函子 $F: \mathcal{C}_1 \to \mathcal{C}_2$, 以下叙述等价.
+\begin{theorem}\label{prop:functor-equiv-criterion}\index{ekuivalensi kategori@ekuivalensi kategori (equivalence)}
+	Untuk fungtor $F: \mathcal{C}_1 \to \mathcal{C}_2$, pernyataan-pernyataan berikut ekuivalen.
 	\begin{compactenum}
-		\item $F$ 是范畴等价,
-		\item $F$ 是全忠实, 本质满函子.
+		\item $F$ merupakan ekuivalensi kategori,
+		\item $F$ merupakan fungtor penuh, setia, dan surjektif secara esensial.
 	\end{compactenum}
 \end{theorem}
 \begin{proof}
-	假设 $F$ 是范畴等价, 取拟逆函子 $G: \mathcal{C}_2 \to \mathcal{C}_1$ 和 $GF \xrightarrow[\sim]{\psi} \identity_{\mathcal{C}_1}$, $FG \xrightarrow[\sim]{\phi} \identity_{\mathcal{C}_2}$. 对 $\mathcal{C}_2$ 中任何对象 $Z$ 都有 $\phi_Z: F(GZ) \rightiso Z$ 故 $F$ 本质满, 同理 $G$ 本质满. 观察到
+	Andaikan $F$ merupakan ekuivalensi kategori. Ambil fungtor kuasi-invers $G: \mathcal{C}_2 \to \mathcal{C}_1$ beserta $GF \xrightarrow[\sim]{\psi} \identity_{\mathcal{C}_1}$, $FG \xrightarrow[\sim]{\phi} \identity_{\mathcal{C}_2}$. Untuk setiap objek dalam $\mathcal{C}_2$, katakan $Z$, terdapat $\phi_Z: F(GZ) \rightiso Z$, sehingga $F$ surjektif secara esensial; dengan cara yang sama, $G$ juga surjektif secara esensial. Perhatikan bahwa
 	\[\begin{tikzcd}[row sep=tiny, column sep=small]
 		\Hom(X,Y) \arrow[r, "F"] & \Hom(FX, FY) \arrow[r, "G"] & \Hom(GF(X), GF(Y)) \arrow[r, "\sim"] & \Hom(X, Y) \\
 		f \arrow[mapsto, r] & Ff \arrow[mapsto, r] & GF(f) \arrow[mapsto, r] & \psi_Y GF(f) \psi_X^{-1}
 	\end{tikzcd}\]
-	合成为恒等映射, 故图中第一个箭头 $F$ 左可逆, 第二个箭头 $G$ 右可逆. 调换 $F, G$ 的角色可知当 $X, Y \in \Obj(\mathcal{C}_1)$ 属于 $G$ 的像时, $\Hom(X, Y) \xrightarrow{F} \Hom(FX, FY)$ 右可逆. 然而 $\mathcal{C}_1$ 中每个对象都同构于 $G$ 的某个像, 综之 $F$ 是全忠实函子.
+	komposisinya merupakan peta identitas; jadi, panah pertama $F$ pada diagram mempunyai invers kiri, sedangkan panah kedua $G$ mempunyai invers kanan. Dengan menukar peran $F, G$, terlihat bahwa apabila $X, Y \in \Obj(\mathcal{C}_1)$ termasuk dalam citra $G$, peta $\Hom(X, Y) \xrightarrow{F} \Hom(FX, FY)$ mempunyai invers kanan. Akan tetapi, setiap objek dalam $\mathcal{C}_1$ isomorfik dengan suatu objek dalam citra $G$; karena itu, $F$ merupakan fungtor penuh dan setia.
 
-	现证反向断言. 以引理 \ref{prop:skeletal-cat-isom} 取骨架 $\iota_i: \mathcal{C}'_i \rightarrow \mathcal{C}_i$ 及其拟逆函子 $\kappa_i$ (此处 $i=1,2$). 函子 $F' := \kappa_2 \circ F \circ \iota_1: \mathcal{C}'_1 \to \mathcal{C}'_2$ 仍是全忠实本质满函子, 因而知 $F'$ 是范畴的同构. 设 $G := \iota_1 \circ F'^{-1} \circ \kappa_2$, 则
+	Sekarang kita buktikan arah sebaliknya. Dengan Lema \ref{prop:skeletal-cat-isom}, ambil kerangka $\iota_i: \mathcal{C}'_i \rightarrow \mathcal{C}_i$ beserta fungtor kuasi-inversnya $\kappa_i$ (di sini $i=1,2$). Fungtor $F' := \kappa_2 \circ F \circ \iota_1: \mathcal{C}'_1 \to \mathcal{C}'_2$ tetap penuh, setia, dan surjektif secara esensial; jadi, $F'$ merupakan isomorfisme kategori. Tetapkan $G := \iota_1 \circ F'^{-1} \circ \kappa_2$; maka
 	\begin{gather*}
 		GF = \iota_1  F'^{-1} \kappa_2 F \simeq \iota_1  F'^{-1} \underbracket{\kappa_2 F \iota_1}_{= F'} \kappa_1 = \iota_1 \kappa_1 \simeq \identity_{\mathcal{C}_1}, \\
 		FG = F \iota_1  F'^{-1} \kappa_2 \simeq \iota_2 \underbracket{\kappa_2 F \iota_1}_{= F'}  F'^{-1} \kappa_2 = \iota_2 \kappa_2 \simeq \identity_{\mathcal{C}_2}.
 	\end{gather*}
-	这里用到了自然变换的横合成.
+	Di sini kita telah menggunakan komposisi horizontal transformasi natural.
 \end{proof}
 
 \begin{example}\label{eg:vectf-duality}
-	继续考虑某域 $\Bbbk$ 上的向量空间范畴 $\cate{Vect}(\Bbbk)$ 及其子范畴 $\cate{Vect}_f(\Bbbk)$. 在例 \ref{eg:functors} 中已定义了双对偶函子 $D D^\text{op}: \cate{Vect}(\Bbbk) \to \cate{Vect}(\Bbbk)$. 对于任意向量空间 $V$ 皆有求值映射
+	Masih dengan medan $\Bbbk$, perhatikan kembali kategori ruang vektor di atasnya $\cate{Vect}(\Bbbk)$ beserta subkategorinya $\cate{Vect}_f(\Bbbk)$. Dalam Contoh \ref{eg:functors}, telah didefinisikan fungtor dual ganda $D D^\text{op}: \cate{Vect}(\Bbbk) \to \cate{Vect}(\Bbbk)$. Untuk setiap ruang vektor $V$, terdapat peta evaluasi
 	\begin{align*}
 		\text{ev}: V & \longrightarrow DD^\text{op} V = (V^\vee)^\vee \\
 		v & \longmapsto [\lambda \mapsto \lambda(v)].
 	\end{align*}
-	对于任意线性映射 $f: V \to W$, 从 $f^\vee$ 的定义不难检查以下图表
+	Untuk sebarang peta linear $f: V \to W$, dari definisi $f^\vee$ tidak sulit diperiksa bahwa diagram berikut
 	\[\begin{tikzcd}
 		V \arrow[r, "\text{ev}"] \ar[d, "f"'] & DD^\text{op} V \arrow[d, "{DD^\text{op} f}"] \\
 		W \ar[r, "\text{ev}"'] & DD^\text{op} W
 	\end{tikzcd} \]
-	是交换的, 于是有 $\text{ev}: \identity \to D D^\text{op}$. 容易看出 $\text{ev}: V \to D D^\text{op} V$ 总是单射, 事实上可以证明 $\text{ev}$ 是双射当且仅当 $V$ 有限维. 一切限制到全子范畴 $\cate{Vect}_f(\Bbbk)$ 上, 遂有同构
+	komutatif, sehingga diperoleh $\text{ev}: \identity \to D D^\text{op}$. Mudah dilihat bahwa $\text{ev}: V \to D D^\text{op} V$ selalu injektif; bahkan dapat dibuktikan bahwa $\text{ev}$ bijektif jika dan hanya jika $V$ berdimensi hingga. Setelah semuanya dibatasi pada subkategori penuh $\cate{Vect}_f(\Bbbk)$, diperoleh isomorfisme
 	\[ \text{ev}: \identity_{\cate{Vect}_f(\Bbbk)} \rightiso D D^\text{op}. \]
-	同一式子在相反范畴中诠释, 便是
+	Jika rumus yang sama ditafsirkan dalam kategori lawan, diperoleh
 	\[ \identity_{\cate{Vect}_f(\Bbbk)^\text{op}} \rightiso D^\text{op} D. \]
-	故函子 $D: \cate{Vect}_f(\Bbbk)^\text{op} \to \cate{Vect}_f(\Bbbk)$ 是范畴间的等价, 而 $D^\text{op}: \cate{Vect}_f(\Bbbk) \to \cate{Vect}_f(\Bbbk)^\text{op}$ 则是它的拟逆.
+	Jadi, fungtor $D: \cate{Vect}_f(\Bbbk)^\text{op} \to \cate{Vect}_f(\Bbbk)$ merupakan ekuivalensi antarkategori, sedangkan $D^\text{op}: \cate{Vect}_f(\Bbbk) \to \cate{Vect}_f(\Bbbk)^\text{op}$ merupakan kuasi-inversnya.
 \end{example}
 
 \begin{example}
-	选定域 $\Bbbk$, 定义范畴 $\cate{Mat}$ 如下: 其对象是 $\Z_{\geq 0}$, 对任意对象 $n, m \in \Z_{\geq 0}$, 定义 $\Hom(n, m) := M_{m \times n}(\Bbbk)$ 为域 $\Bbbk$ 上的全体 $m \times n$ 矩阵 $A = (a_{ij})_{\substack{1 \leq i \leq m \\ 1 \leq j \leq n}}$ 所成集合. 约定 $M_{0 \times n}(\Bbbk) = M_{m \times 0}(\Bbbk) := \{0\}$. 态射的合成定义为寻常的矩阵乘法
+	Pilih sebuah medan $\Bbbk$, dan definisikan kategori $\cate{Mat}$ sebagai berikut: objek-objeknya adalah $\Z_{\geq 0}$; untuk sebarang objek $n, m \in \Z_{\geq 0}$, definisikan $\Hom(n, m) := M_{m \times n}(\Bbbk)$ sebagai himpunan semua matriks di atas medan $\Bbbk$ yang berukuran $m \times n$, yaitu $A = (a_{ij})_{\substack{1 \leq i \leq m \\ 1 \leq j \leq n}}$. Dengan konvensi $M_{0 \times n}(\Bbbk) = M_{m \times 0}(\Bbbk) := \{0\}$, komposisi morfisme didefinisikan sebagai perkalian matriks biasa
 	\begin{align*}
 		\Hom(n, m) \times \Hom(m, k) & \longrightarrow \Hom(n, k) \\
 		(A, B) & \longmapsto BA .
 	\end{align*}
 
-	定义函子 $F: \cate{Mat} \to \cate{Vect}_f(\Bbbk)$ 如下: 置 $F(n) = \Bbbk^{\oplus n} := M_{n \times 1}(\Bbbk)$, 而对 $A \in \Hom(n, m)$, 线性映射 $FA: \Bbbk^{\oplus n} \to \Bbbk^{\oplus m}$ 是矩阵乘法 $v \mapsto Av$. 我们断言 $F$ 是范畴等价.
+	Definisikan fungtor $F: \cate{Mat} \to \cate{Vect}_f(\Bbbk)$ sebagai berikut: tetapkan $F(n) = \Bbbk^{\oplus n} := M_{n \times 1}(\Bbbk)$; untuk $A \in \Hom(n, m)$, peta linear $FA: \Bbbk^{\oplus n} \to \Bbbk^{\oplus m}$ adalah perkalian matriks $v \mapsto Av$. Kita menyatakan bahwa $F$ merupakan ekuivalensi kategori.
 
-	这一切只是虚张声势的线性代数. 首先留意到 $F: \Hom(n, m) \to \Hom_\Bbbk(\Bbbk^{\oplus n}, \Bbbk^{\oplus m})$ 是双射, 这无非是线性映射的矩阵表达. 再者, 从 $V \simeq \Bbbk^{\oplus \dim V}$ ($V$ 是 $\Bbbk$-向量空间) 可知 $F$ 是全忠实本质满的, 由定理 \ref{prop:functor-equiv-criterion} 可知它是范畴等价.
+	Semua ini hanyalah aljabar linear yang tampak lebih megah daripada sebenarnya. Pertama, perhatikan bahwa $F: \Hom(n, m) \to \Hom_\Bbbk(\Bbbk^{\oplus n}, \Bbbk^{\oplus m})$ merupakan bijeksi; ini tidak lain adalah representasi matriks suatu peta linear. Selanjutnya, dari $V \simeq \Bbbk^{\oplus \dim V}$ (dengan $V$ ruang vektor-$\Bbbk$) diketahui bahwa $F$ penuh, setia, dan surjektif secara esensial; menurut Teorema \ref{prop:functor-equiv-criterion}, fungtor tersebut merupakan ekuivalensi kategori.
 \end{example}
 
-\section{函子范畴}\label{sec:functor-category}
-首先对范畴定义积和余积(又称无交并)的概念, 这对陈述一些范畴性质格外有用.
+\section{Kategori Fungtor}\label{sec:functor-category}
+Pertama-tama kita definisikan konsep produk dan koproduk (juga disebut gabungan saling lepas) kategori; konsep-konsep ini sangat berguna untuk menyatakan sejumlah sifat kategori.
 
-回顾约定 \ref{con:U-small}: 除非另作说明, 以下所论的范畴都是 $\mathcal{U}$-范畴, 这里 $\mathcal{U}$ 是选定的宇宙. 属于 $\mathcal{U}$ 的集合称为 $\mathcal{U}$-集.
+Ingat kembali Konvensi \ref{con:U-small}: kecuali dinyatakan lain, kategori yang dibahas berikut ini semuanya merupakan kategori-$\mathcal{U}$, dengan $\mathcal{U}$ semesta yang telah dipilih. Himpunan yang termasuk dalam $\mathcal{U}$ disebut himpunan-$\mathcal{U}$.
 
-\begin{definition}\index{fanchou!积, 余积}
-	设 $I$ 为 $\mathcal{U}$-集, 而 $\{\mathcal{C}_i : i \in I \}$ 是一族范畴.
+\begin{definition}\index{kategori!produk, koproduk}
+	Misalkan $I$ merupakan himpunan-$\mathcal{U}$ dan $\{\mathcal{C}_i : i \in I \}$ suatu keluarga kategori.
 	\begin{itemize}
-		\item 积范畴 $\prod_{i \in I} \mathcal{C}_i$ 定义如下:
+		\item Kategori produk $\prod_{i \in I} \mathcal{C}_i$ didefinisikan sebagai berikut:
 			\begin{align*}
 				\Obj\left( \prod_{i \in I} \mathcal{C}_i \right) & := \prod_{i \in I} \Obj(\mathcal{C}_i), \\
 				\Hom_{\prod_{i \in I} \mathcal{C}_i}( (X_i)_i, (Y_i)_i ) & := \prod_{i \in I} \Hom_{\mathcal{C}_i}(X_i, Y_i),
 			\end{align*}
-			其中我们以 $(X_i)_i$ 表示 $\prod_{i \in I} \Obj(\mathcal{C}_i)$ 的元素. 态射的合成是逐个分量定义的.
-		\item 余积(又称无交并)范畴 $\coprod_{i \in I} \mathcal{C}_i$ 定义如下:
+			dengan $(X_i)_i$ menyatakan suatu unsur dari $\prod_{i \in I} \Obj(\mathcal{C}_i)$. Komposisi morfisme didefinisikan per komponen.
+		\item Kategori koproduk (juga disebut gabungan saling lepas) $\coprod_{i \in I} \mathcal{C}_i$ didefinisikan sebagai berikut:
 			\begin{align*}
 				\Obj\left( \coprod_{i \in I} \mathcal{C}_i \right) & := \coprod_{i \in I} \Obj(\mathcal{C}_i), \\
 				\Hom_{\coprod_{i \in I} \mathcal{C}_i}(X_j, X'_k) & :=
@@ -488,78 +488,78 @@ Mudah diperiksa bahwa $\mathcal{C}^\text{op}$ memenuhi definisi kategori dan bah
 					\emptyset, & j \neq k;
 				\end{cases}
 			\end{align*}
-			其中对每个 $j \in I$, $X_j, X'_j \in \Obj(\mathcal{C}_j)$. 态射的合成是在各个 $\mathcal{C}_i$ 中个别定义的.
+			di sini, untuk setiap $j \in I$, berlaku $X_j, X'_j \in \Obj(\mathcal{C}_j)$. Komposisi morfisme didefinisikan secara terpisah di dalam setiap $\mathcal{C}_i$.
 	\end{itemize}
 \end{definition}
-由于 $I$ 已假设是 $\mathcal{U}$-集, 我们造出的范畴仍然是 $\mathcal{U}$-范畴; 如果每个 $\mathcal{C}_i$ 都是 $\mathcal{U}$-小范畴, 则它们的积和余积亦然.
+Karena $I$ diasumsikan sebagai himpunan-$\mathcal{U}$, kategori yang dikonstruksi di atas tetap merupakan kategori-$\mathcal{U}$; jika setiap $\mathcal{C}_i$ merupakan kategori kecil-$\mathcal{U}$, maka produk dan koproduknya pun demikian.
 
-我们有一族投影函子 $\pr_j: \prod_{i \in I} \mathcal{C}_i \to \mathcal{C}_j$, 它将 $(X_i)_i$ 映至 $X_j$, 在态射层面也是类似地投影到 $j$ 分量. 同理定义一族包含函子 $\iota_j: \mathcal{C}_j \to \coprod_{i \in I} \mathcal{C}_i$, 将 $\mathcal{C}_j$ 以自明的方式嵌入为全子范畴.
+Kita memiliki keluarga fungtor proyeksi $\pr_j: \prod_{i \in I} \mathcal{C}_i \to \mathcal{C}_j$, yang memetakan $(X_i)_i$ ke $X_j$ dan, pada tingkat morfisme, secara serupa memproyeksikan ke komponen ke-$j$. Demikian pula, didefinisikan keluarga fungtor inklusi $\iota_j: \mathcal{C}_j \to \coprod_{i \in I} \mathcal{C}_i$, yang menyisipkan $\mathcal{C}_j$ dengan cara yang jelas sebagai subkategori penuh.
 
-特别地, 取 $I$ 为有限集便能定义 $\mathcal{C}_1 \times \cdots \times \mathcal{C}_n$ 和 $\mathcal{C}_1 \sqcup \cdots \sqcup \mathcal{C}_n$.
+Khususnya, dengan mengambil $I$ sebagai himpunan hingga, kita dapat mendefinisikan $\mathcal{C}_1 \times \cdots \times \mathcal{C}_n$ dan $\mathcal{C}_1 \sqcup \cdots \sqcup \mathcal{C}_n$.
 
 \begin{definition}
-	形如 $F: \mathcal{C}_1 \times \mathcal{C}_2 \to \mathcal{C}$ 的函子称为二元函子. 多元函子 $\mathcal{C}_1 \times \cdots \times \mathcal{C}_n \to \mathcal{C}$ 的定义类似.
+	Fungtor berbentuk $F: \mathcal{C}_1 \times \mathcal{C}_2 \to \mathcal{C}$ disebut fungtor biner. Fungtor banyak peubah $\mathcal{C}_1 \times \cdots \times \mathcal{C}_n \to \mathcal{C}$ didefinisikan secara serupa.
 \end{definition}
 
-\begin{example}[$\Hom$ 函子]\label{eg:Hom-functor} \index[sym1]{HomC}
-	给定范畴 $\mathcal{C}$, 则 $(X,Y) \mapsto \Hom_{\mathcal{C}}(X, Y)$ 定义了二元函子
+\begin{example}[Fungtor $\Hom$]\label{eg:Hom-functor} \index[sym1]{HomC}
+	Untuk kategori $\mathcal{C}$, pemetaan $(X,Y)\mapsto\Hom_{\mathcal{C}}(X,Y)$ mendefinisikan fungtor biner
 	\[ \Hom_{\mathcal{C}}: \mathcal{C}^\text{op} \times \mathcal{C}  \to \cate{Set}. \]
-	诚然, $\mathcal{C}$ 中的任一对态射 $f: X' \to X$, $g: Y \to Y'$ 诱导出
+	Memang, setiap pasangan morfisme $f: X' \to X$, $g: Y \to Y'$ dalam $\mathcal{C}$ menginduksi
 	\begin{align*}
 		\Hom_{\mathcal{C}}(X, Y) & \longrightarrow \Hom_{\mathcal{C}}(X', Y') \\
 		\phi & \longmapsto g \phi f .
 	\end{align*}
-	有时也说这是态射 $\phi$ 对 $f$ 作\emph{拉回}, 对 $g$ 作\emph{推出}. 拉回与推出习惯用符号 $f^* \phi = \phi f$ 和 $g_* \phi = g\phi$ 表示.\index{lahui@拉回 (pullback)}\index{tuichu@推出 (pushout)}\index[sym1]{$f_*, f^*$}
-	易见 $(f_1 f_2)^* = f_2^* f_1^*$ 和 $(f_1 f_2)_* = (f_1)_* (f_2)_*$.
+	Kadang-kadang hal ini juga dikatakan sebagai \emph{tarik balik} morfisme $\phi$ sepanjang $f$ dan \emph{dorong maju} sepanjang $g$. Tarik balik dan dorong maju lazim dinotasikan dengan $f^* \phi = \phi f$ dan $g_* \phi = g\phi$.\index{tarik balik@tarik balik (pullback)}\index{dorong maju@dorong maju (pushforward)}\index[sym1]{$f_*, f^*$}
+	Mudah dilihat bahwa $(f_1 f_2)^* = f_2^* f_1^*$ dan $(f_1 f_2)_* = (f_1)_* (f_2)_*$.
 \end{example}
 
-\begin{definition}[函子范畴]\index{hanzifanchou@函子范畴 (functor category)}\index[sym1]{Fct@$\text{Fct}$}
-	设 $\mathcal{C}_1, \mathcal{C}_2$ 为 $\mathcal{U}$-范畴, 定义函子范畴 $\text{Fct}(\mathcal{C}_1, \mathcal{C}_2)$: 其对象是 $\mathcal{C}_1$ 到 $\mathcal{C}_2$ 的函子, 任两个对象 $F, G$间的态射是自然变换 $\theta: F \to G$; 态射 $\theta: F \to G$ 与 $\psi: G \to H$ 的合成是自然变换的纵合成 $\psi \circ \theta: F \to H$.
+\begin{definition}[Kategori fungtor]\index{kategori fungtor@kategori fungtor (functor category)}\index[sym1]{Fct@$\text{Fct}$}
+	Misalkan $\mathcal{C}_1, \mathcal{C}_2$ merupakan kategori-$\mathcal{U}$. Definisikan kategori fungtor $\text{Fct}(\mathcal{C}_1, \mathcal{C}_2)$ sebagai berikut: objeknya adalah fungtor dari $\mathcal{C}_1$ ke $\mathcal{C}_2$, dan morfisme di antara sebarang dua objek $F, G$ adalah transformasi natural $\theta: F \to G$; komposisi morfisme $\theta: F \to G$ dan $\psi: G \to H$ adalah komposisi vertikal transformasi natural $\psi \circ \theta: F \to H$.
 \end{definition}
-此构造解释了约定 \ref{con:naturaltrans-morphism}.
+Konstruksi ini menjelaskan Konvensi \ref{con:naturaltrans-morphism}.
 
 \begin{remark}
-	此定义需要一些解释. 首先注意到 $\text{Fct}(\mathcal{C}_1, \mathcal{C}_2)$ 的对象和态射都构成集合. 对于态射还有更精确的结果: 若 $\mathcal{C}_1$ 是 $\mathcal{U}$-小范畴, 则 $\text{Fct}(\mathcal{C}_1, \mathcal{C}_2)$ 是 $\mathcal{U}$-范畴, 这是因为对任两个 $F, G: \mathcal{C}_1 \to \mathcal{C}_2$, 其间的自然变换是集合
+	Definisi ini memerlukan sedikit penjelasan. Pertama, perhatikan bahwa objek dan morfisme $\text{Fct}(\mathcal{C}_1, \mathcal{C}_2)$ masing-masing membentuk himpunan. Untuk morfisme terdapat hasil yang lebih tepat: jika $\mathcal{C}_1$ merupakan kategori kecil-$\mathcal{U}$, maka $\text{Fct}(\mathcal{C}_1, \mathcal{C}_2)$ merupakan kategori-$\mathcal{U}$, sebab bagi sebarang dua fungtor $F, G: \mathcal{C}_1 \to \mathcal{C}_2$, transformasi natural di antaranya membentuk subhimpunan dari himpunan
 	\[ \prod_{X \in \Obj(\mathcal{C}_1)} \Hom_{\mathcal{C}_2} (FX, GX) \]
-	的子集. 若 $\mathcal{C}_1$ 是 $\mathcal{U}$-小范畴, 则上式为 $\mathcal{U}$-小集.
+	Jika $\mathcal{C}_1$ merupakan kategori kecil-$\mathcal{U}$, maka himpunan di atas merupakan himpunan kecil-$\mathcal{U}$.
 
-	此外还要用到自然变换纵合成的结合律, 见引理 \ref{prop:naturaltrans-associativity}.
+	Selain itu, diperlukan pula asosiativitas komposisi vertikal transformasi natural; lihat Lema \ref{prop:naturaltrans-associativity}.
 \end{remark}
 
-对函子 $F, G : \mathcal{C}_1 \to \mathcal{C}_2$, 在反范畴中相应地有 $F^\text{op}, G^\text{op}: \mathcal{C}_1^\text{op} \to \mathcal{C}_2^\text{op}$ (见注记 \ref{rem:op-functor}), 易见自然变换 $\varphi: F \to G$ 在反范畴中被倒转为 $\varphi^\text{op}: G^\text{op} \to F^\text{op}$, 而且 $(\varphi^{\text{op}})^{\text{op}} = \varphi$.  摘要如下.
+Bagi fungtor $F, G : \mathcal{C}_1 \to \mathcal{C}_2$, pada kategori lawan terdapat fungtor yang bersesuaian $F^\text{op}, G^\text{op}: \mathcal{C}_1^\text{op} \to \mathcal{C}_2^\text{op}$ (lihat Catatan \ref{rem:op-functor}). Mudah dilihat bahwa transformasi natural $\varphi: F \to G$ dibalik pada kategori lawan menjadi $\varphi^\text{op}: G^\text{op} \to F^\text{op}$, dan bahwa $(\varphi^{\text{op}})^{\text{op}} = \varphi$. Hal ini dirangkum sebagai berikut.
 
 \begin{proposition}\label{prop:op-functor-cat}
-	存在自然同构 $\text{Fct}(\mathcal{C}_1, \mathcal{C}_2)^\text{op} \rightiso \text{Fct}(\mathcal{C}_1^{\text{op}}, \mathcal{C}_2^{\text{op}})$, 它将 $\varphi$ 映至 $\varphi^\text{op}$. 
+	Terdapat isomorfisme natural $\text{Fct}(\mathcal{C}_1, \mathcal{C}_2)^\text{op} \rightiso \text{Fct}(\mathcal{C}_1^{\text{op}}, \mathcal{C}_2^{\text{op}})$ yang memetakan $\varphi$ ke $\varphi^\text{op}$.
 \end{proposition}
 
-今后用到的多数是 $\mathcal{C}_1$ 为小范畴的情形. 有时也把 $\text{Fct}(\mathcal{C}_1, \mathcal{C}_2)$ 写作 $\mathcal{C}_2^{\mathcal{C}_1}$.
+Dalam kebanyakan penggunaan selanjutnya, $\mathcal{C}_1$ merupakan kategori kecil. Kadang-kadang $\text{Fct}(\mathcal{C}_1, \mathcal{C}_2)$ juga ditulis sebagai $\mathcal{C}_2^{\mathcal{C}_1}$.
 \begin{example}
-	考虑集合 $I \in \mathcal{U}$, 取 $\mathcal{I} := \cate{Disc}(I)$ 为相应的离散范畴 (例 \ref{eg:categories}), 则对任意 $\mathcal{C}$ 皆有范畴同构 $\mathcal{C}^{\mathcal{I}} \simeq \prod_{i \in I} \mathcal{C}$.
+	Perhatikan himpunan $I \in \mathcal{U}$ dan ambil $\mathcal{I} := \cate{Disc}(I)$ sebagai kategori diskret yang bersesuaian (Contoh \ref{eg:categories}). Maka, untuk setiap $\mathcal{C}$, terdapat isomorfisme kategori $\mathcal{C}^{\mathcal{I}} \simeq \prod_{i \in I} \mathcal{C}$.
 \end{example}
 
-既定义了函子范畴, 其中自然可以讨论一个函子 $F: \mathcal{C}_1 \to \mathcal{C}_2$ 的自同态幺半群 $\End(F)$ 与自同构群 $\Aut(F)$. 它们作为集合未必属于 $\mathcal{U}$.
-\begin{definition}\label{def:cat-center}\index{zhongxin@中心 (center)}
-	一个范畴 $\mathcal{C}$ 的\emph{中心}定义为 $Z(\mathcal{C}) := \End(\identity_{\mathcal{C}})$.
+Setelah kategori fungtor didefinisikan, di dalamnya kita tentu dapat membahas monoid endomorfisme $\End(F)$ dan grup automorfisme $\Aut(F)$ dari suatu fungtor $F: \mathcal{C}_1 \to \mathcal{C}_2$. Sebagai himpunan, keduanya belum tentu termasuk dalam $\mathcal{U}$.
+\begin{definition}\label{def:cat-center}\index{pusat kategori@pusat kategori (center)}
+	\emph{Pusat} suatu kategori $\mathcal{C}$ didefinisikan sebagai $Z(\mathcal{C}) := \End(\identity_{\mathcal{C}})$.
 \end{definition}
 
-中心是范畴的一种极有用的不变量. 由 \eqref{eqn:naturaltrans-def} 可知 $Z(\mathcal{C})$ 的元素无非是一族自同态 $\psi_X: X \to X$, 使得图表
+Pusat merupakan suatu invarian kategori yang sangat berguna. Menurut \eqref{eqn:naturaltrans-def}, unsur $Z(\mathcal{C})$ tidak lain adalah keluarga endomorfisme $\psi_X: X \to X$ sedemikian sehingga diagram
 \begin{tikzcd}
 	X \arrow[r, "{\psi_X}"] \arrow[d, "f"'] & X \arrow[d, "f"] \\
 	Y \arrow[r, "{\psi_Y}"'] & Y
 \end{tikzcd}
-对每个 $f: X \to Y$ 都交换.
+komutatif untuk setiap $f: X \to Y$.
 
 \begin{proposition}
-	中心 $Z(\mathcal{C})$ 对二元运算 $\circ$ 总是交换的.
+	Pusat $Z(\mathcal{C})$ selalu komutatif terhadap operasi biner $\circ$.
 \end{proposition}
 \begin{proof}
-	对给定的 $\theta, \psi \in \End(\identity_{\mathcal{C}})$, 上图中取自同态 $\theta$, 对象 $X=Y$ 和态射$f = \psi_X$ 便得到 $\theta_X \psi_X = \psi_X \theta_X$.
+	Diberikan $\theta, \psi \in \End(\identity_{\mathcal{C}})$, ambil endomorfisme $\theta$, objek $X=Y$, dan morfisme $f = \psi_X$ pada diagram di atas; diperoleh $\theta_X \psi_X = \psi_X \theta_X$.
 \end{proof}
 
 \begin{proposition}
-	范畴等价 $F: \mathcal{C}_1 \to \mathcal{C}_2$ 诱导中心的同构 $Z(\mathcal{C}_1) \simeq Z(\mathcal{C}_2)$.
+	Ekuivalensi kategori $F: \mathcal{C}_1 \to \mathcal{C}_2$ menginduksi isomorfisme pusat $Z(\mathcal{C}_1) \simeq Z(\mathcal{C}_2)$.
 \end{proposition}
-证明是容易的, 留作练习.
+Pembuktiannya mudah dan diserahkan sebagai latihan.
 
 \section{泛性质}\label{sec:cat-universals}
 许多数学构造能以泛性质唯一地刻画. 我们使用始, 终对象和逗号范畴的语言予以阐述.
