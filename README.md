@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1-2.8 telah diterjemahkan dan diterima dalam tujuh belas unit pembaca; Unit 1-16 telah dipublikasikan dan dibaca balik secara anonim, sedangkan Unit 17 sedang melewati batas publikasi. Unit 13 menyajikan fungtor representabel dan Lema Yoneda; Unit 14-15 mencakup fungtor adjoin; Unit 16 menyajikan limit; dan Unit 17 menyajikan kelengkapan. Latihan Bab 2 pada `chapter2.tex:1603-1645` menjadi span terjemahan berikutnya.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1-2.8 telah diterjemahkan, diterima, dipublikasikan, dan dibaca balik secara anonim dalam tujuh belas unit pembaca. Unit 13 menyajikan fungtor representabel dan Lema Yoneda; Unit 14-15 mencakup fungtor adjoin; Unit 16 menyajikan limit; dan Unit 17 menyajikan kelengkapan. Latihan Bab 2 pada `chapter2.tex:1603-1645` menjadi span terjemahan berikutnya.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh checkpoint pembaca 0.3.0 (96 halaman; Unit 1-9)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf)
 
@@ -239,7 +239,7 @@ Artefak Unit 16 yang diterima dan dipublikasikan:
 - terminology QA tetap memakai fallback PDF Indonesia yang terdokumentasi setelah pencarian arXiv terbatas tidak menemukan sumber TeX Indonesia yang sesuai; provenance produksi tetap `OpenAI Codex gpt-5.6-sol, Ultra`, terpisah dari kepengarangan Wen-Wei Li dan kredit manusia.
 - Unit 16 dipublikasikan pada commit `a241c6ed66b003decad57b1aeb9e3e266dcd392e`; seluruh 60 path / 5.840.643 byte cocok dengan blob komit pada pembacaan balik anonim. Inventaris per-path ada di [`qa/PUBLICATION_GITHUB_UNIT_016_CONTENT_READBACK.json`](qa/PUBLICATION_GITHUB_UNIT_016_CONTENT_READBACK.json), dan receipt publikasi ada di [`qa/PUBLICATION_GITHUB_UNIT_016_20260824.md`](qa/PUBLICATION_GITHUB_UNIT_016_20260824.md).
 
-Artefak Unit 17 yang diterima secara lokal:
+Artefak Unit 17 yang diterima dan dipublikasikan:
 
 - 9 halaman; 112.236 byte; SHA-256 `bfcec32b3ba20f8c170a3389a1b651613f1fa437945662ca32dd62fcf0edba5e`
 - target lengkap Bagian 2.8 pada `chapter2.tex:1406-1602` adalah 18.633 byte; SHA-256 `e27dba97355122446714b8e58f71f80edbb1d74e6160f99ba0b8160e7c3ec30b`; file target lengkap 165.139 byte; SHA-256 `be7c571d574e7c8608f535f59627c47118cdb7f00a44aaf1e7d85eb11ea60e35`
@@ -248,7 +248,7 @@ Artefak Unit 17 yang diterima secara lokal:
 - reflow digital memakai spasi baris 1,25 dan menempatkan indeks istilah pada halaman isi terakhir, sehingga tidak tersisa halaman kesepuluh yang hampir kosong; matematika, struktur, dan semua entri indeks tetap utuh.
 - enam koreksi yang diungkapkan memperbaiki label kaki komparasi, istilah jumlah langsung pada koproduk grup abelian, indeks kategori `I`, dua domain Hom, dua panah proyeksi yang tidak terbukti surjektif, dan aplikasi fungtor yang hilang.
 - terminology QA tetap memakai fallback PDF Indonesia yang terdokumentasi setelah pencarian arXiv terbatas tidak menemukan sumber TeX Indonesia yang sesuai; provenance produksi tetap `OpenAI Codex gpt-5.6-sol, Ultra`, terpisah dari kepengarangan Wen-Wei Li dan kredit manusia.
-- receipt penerimaan lokal dan bukti build/backend lengkap ada di [`qa/UNIT_017_ADMISSION_20260824.md`](qa/UNIT_017_ADMISSION_20260824.md); publikasi GitHub dan pembacaan balik anonim adalah langkah berikutnya.
+- Unit 17 dipublikasikan pada commit `6e3b8e01cb16d5786e687e7c019460b26807ba42`; seluruh 47 path / 4.056.491 byte cocok dengan blob komit pada pembacaan balik anonim. Inventaris per-path ada di [`qa/PUBLICATION_GITHUB_UNIT_017_CONTENT_READBACK.json`](qa/PUBLICATION_GITHUB_UNIT_017_CONTENT_READBACK.json), dan receipt publikasi ada di [`qa/PUBLICATION_GITHUB_UNIT_017_20260824.md`](qa/PUBLICATION_GITHUB_UNIT_017_20260824.md).
 
 ## Backend modular
 
