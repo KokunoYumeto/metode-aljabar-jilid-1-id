@@ -273,7 +273,7 @@ Artefak Unit 18 yang diterima dan dipublikasikan:
 Artefak Unit 19 yang diterima:
 
 - 12 halaman; 125.710 byte; SHA-256 `af7a4561db5e8ab1798d4475c589beb42f9fb84795bd167c0ffc17241866783a`
-- target pembukaan Bab 3 dan Bagian 3.1 pada `chapter3.tex:1-227` adalah 25.868 byte; SHA-256 `6b42291293a06d15b64034a26ed25aeac3cb41465bf9533e069bc9ac65d9b8ac`; file target lengkap 79.694 byte; SHA-256 `bfe5d4745f9a3ac1062b79ee429356a17f3d5bff9be02ef0093eab6978f98e60`
+- target pembukaan Bab 3 dan Bagian 3.1 pada `chapter3.tex:1-226` adalah 25.868 byte; SHA-256 `6b42291293a06d15b64034a26ed25aeac3cb41465bf9533e069bc9ac65d9b8ac`; rentang otoritasnya tetap `chapter3.tex:1-227`; file target lengkap 79.694 byte; SHA-256 `bfe5d4745f9a3ac1062b79ee429356a17f3d5bff9be02ef0093eab6978f98e60`
 - backend 295.265 byte; SHA-256 `888ec61fc4b1229ffab4f480d12a8ced60e4f5d32734dca3d314903917b8a215`; 437 entitas stabil mencakup 369 konsep, 16 label, 28 rujukan, 4 kemunculan sitasi, 184 rumus, 18 diagram, 75 panah, 11 entri indeks, 15 istilah yang diterima, dan 1 koreksi sumber; enam proyeksi CSV direproduksi serta divalidasi secara deterministik.
 - dua build bersih mempunyai serialisasi kontainer berbeda tetapi ekstraksi teksnya identik; replay 12/12 halaman Poppler dan 12/12 halaman MuPDF identik, dan pemeriksaan independen atas 96 render lulus tanpa pemotongan, benturan, glif hilang, rumus/diagram rusak, halaman kosong, atau tautan tidak aman.
 - sampul menyatakan cakupan parsial secara eksplisit tanpa blok terisi/tak terisi yang ambigu; bibliografi singkat, indeks istilah, dan indeks simbol digabung pada satu halaman akhir yang terbaca alih-alih menghasilkan halaman belakang yang jarang.
