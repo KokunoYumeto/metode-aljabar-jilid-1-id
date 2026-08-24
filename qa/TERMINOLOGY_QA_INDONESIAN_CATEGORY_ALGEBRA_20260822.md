@@ -192,3 +192,39 @@ previously admitted reader required a prose correction at this delta gate.
 The exact repository-level production provenance remains `OpenAI Codex
 gpt-5.6-sol, Ultra`, recorded separately from Wen-Wei Li's authorship and all
 source and human-contributor credits.
+
+## Unit 016 boundary recheck - 2026-08-24
+
+Before integrating Section 2.7, the bounded terminology result was checked
+again against the retained primary bytes rather than expanded into another
+search loop. No suitable Indonesian-language arXiv source in the same field
+with downloadable TeX had been found by the frozen official API queries. The
+honest fallback therefore remains the four-page UNDIP category-theory chapter
+and the seven-page UGM algebra article recorded above and in
+`authority/terminology-qa-20260822/MANIFEST.json`. Their exact PDFs remain,
+respectively, 163,251 bytes / SHA-256
+`611b78c88407037489f22814bf054e00ff0f283c702a06082a3a583e9ab35fcb`
+and 382,376 bytes / SHA-256
+`4099c3d8aff59e723470f69b4d152b037261bc26d54ef74f1365377f05c25834`.
+All eleven pages had already been inspected directly. They continue to support
+the controlled field-language family `fungtor`, `transformasi natural`,
+`kategori`, and `gelanggang`; they are not represented as direct attestations
+for every specialized limit-theory term below.
+
+Unit 016 adds controlled rows for `fungtor diagonal`, `limit induktif`, `limit
+proyektif`, the documented variants `limit langsung`, `limit invers`, and
+`kolimit`, `kerucut`, `kokerucut`, `ekualiser`, `koekualiser`, `kategori
+terarah ke atas (filtered category)`, `limit berhingga`, `topologi hasil bagi`,
+`topologi subruang`, `kendala asosiativitas`, and `kendala komutativitas`.
+These choices were adjudicated from mathematical meaning, the terminology
+table in the frozen source, Indonesian derivational consistency, and the
+already admitted category-theory vocabulary. The English parenthetical is
+retained at the first occurrence of `filtered category` to prevent confusion
+with a filtration. `Kendala` is used rather than `hukum` because the source
+asserts canonical isomorphisms, not literal equalities.
+
+The integrated target was checked for the affected vocabulary. It consistently
+uses `transformasi natural` and the controlled forms above. No previously
+admitted reader required a terminology correction at this gate. Production
+provenance remains exactly `OpenAI Codex gpt-5.6-sol, Ultra`, separately from
+Wen-Wei Li's authorship and all source and human-contributor credits.

@@ -1,0 +1,39 @@
+entity_type,id,stable_key,section_id,ordinal,source_value,target_value,format,status
+build_surface,urn:uuid:81839dcb-cd5b-5903-910f-199d035f27f1,build-surface/unit-016-pdf,,,pwsh -NoProfile -File scripts/build_unit_016.ps1 -OutputDirectory build/unit-016-replay,artifacts/unit-016-bab-2-limit.pdf,pdf,pass
+citation,urn:uuid:2766bffc-2509-576e-8b5b-702182b2b2d7,citation/unit-016/xiong,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,,Xiong,Xiong,biblatex-key,preserved
+diagram,urn:uuid:8dc483a6-a30b-53a7-9a42-060b784ac651,diagram/unit-016/tikzcd-01,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,1,1151-1154,1151-1154,tikzcd,audited_preserved
+diagram,urn:uuid:7560c20d-deb6-57d2-8bb8-61d9e6cd10db,diagram/unit-016/tikzcd-02,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,2,1156-1159,1156-1159,tikzcd,audited_preserved
+diagram,urn:uuid:8c64d6d6-b688-5c02-9b20-caa8302e2d17,diagram/unit-016/tikzcd-03,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,3,1163-1166,1163-1166,tikzcd,audited_preserved
+diagram,urn:uuid:0a69eea5-43f4-59eb-a7d7-6cccaf2f2ac1,diagram/unit-016/tikzcd-04,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,4,1168-1171,1168-1171,tikzcd,audited_preserved
+diagram,urn:uuid:83f81f32-bda4-599a-adaf-e5bfd30c0822,diagram/unit-016/tikzcd-05,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,5,1178-1182,1178-1182,tikzcd,audited_preserved
+diagram,urn:uuid:b2f6881e-4f5e-5552-a772-174b9ad5ef20,diagram/unit-016/tikzcd-06,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,6,1182-1186,1182-1186,tikzcd,audited_preserved
+diagram,urn:uuid:3ebac50c-e9cf-5241-8f08-81fad4f1c8af,diagram/unit-016/tikzcd-07,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,7,1199-1202,1199-1202,tikzcd,audited_preserved
+diagram,urn:uuid:f048defb-02bc-5922-a6c7-a7308765ffbf,diagram/unit-016/tikzcd-08,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,8,1207-1210,1207-1210,tikzcd,audited_preserved
+diagram,urn:uuid:4554a61f-7d56-5fd9-be9e-c035e52b8550,diagram/unit-016/tikzcd-09,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,9,1249-1253,1249-1253,tikzcd,audited_preserved
+diagram,urn:uuid:faf7a262-5dd9-5195-be2a-13f961d61274,diagram/unit-016/tikzcd-10,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,10,1253-1257,1253-1257,tikzcd,audited_preserved
+diagram,urn:uuid:14f5e884-3fe7-5c0a-bd03-502c58dec147,diagram/unit-016/tikzcd-11,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,11,1284-1287,1284-1287,tikzcd,audited_preserved
+diagram,urn:uuid:f2d1c69d-f046-5923-aac3-798312182f77,diagram/unit-016/tikzcd-12,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,12,1289-1292,1289-1292,tikzcd,audited_preserved
+diagram,urn:uuid:7d600a66-5cc8-5449-af90-27f7ff7cf07c,diagram/unit-016/tikzcd-13,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,13,1293-1296,1293-1296,tikzcd,audited_preserved
+diagram,urn:uuid:cfb362fb-1c17-56ff-8d86-d13fd65cd979,diagram/unit-016/tikzcd-14,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,14,1317-1320,1317-1320,tikzcd,audited_preserved
+diagram,urn:uuid:9c3ae376-fef1-5aae-9999-16e2294e33af,diagram/unit-016/tikzcd-15,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,15,1324-1327,1324-1327,tikzcd,audited_preserved
+diagram,urn:uuid:27337f6b-7dfd-5d72-82ca-f0bd6f5e39fa,diagram/unit-016/tikzcd-16,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,16,1339-1342,1339-1342,tikzcd,audited_preserved
+diagram,urn:uuid:dc88cbd4-f75d-550c-a10f-54b566927a0e,diagram/unit-016/tikzcd-17,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,17,1349-1352,1349-1352,tikzcd,audited_preserved
+diagram,urn:uuid:2892ef74-b66d-5939-9fb6-9040caf97cd7,diagram/unit-016/tikzcd-18,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,18,1358-1360,1358-1360,tikzcd,audited_preserved
+diagram,urn:uuid:d906571a-0462-5181-8779-efa8239b2417,diagram/unit-016/tikzcd-19,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,19,1362-1364,1362-1364,tikzcd,audited_preserved
+diagram,urn:uuid:acb770fc-8ecc-5526-b2ab-b4de46fcca64,diagram/unit-016/tikzcd-20,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,20,1366-1369,1366-1369,tikzcd,audited_preserved
+diagram,urn:uuid:def3d3e2-682c-575a-b1e8-94cff50a83f5,diagram/unit-016/tikzcd-21,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,21,1371-1374,1371-1374,tikzcd,audited_preserved
+diagram,urn:uuid:8fa6593f-2a0a-50b6-96f1-0a35a9861dfc,diagram/unit-016/tikzcd-22,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,22,1383-1386,1383-1386,tikzcd,audited_preserved
+diagram,urn:uuid:c3b327ab-fbfd-54ae-9af1-7ac8b3d39c89,diagram/unit-016/tikzcd-23,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,23,1392-1395,1392-1395,tikzcd,audited_preserved
+index_entry,urn:uuid:7620c7d7-6f43-5bb9-b192-d5e43e3e4bd6,index-entry/unit-016/associativity-constraint,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,12,jieheyueshu@结合约束 (associativity constraint),jieheyueshu@kendala asosiativitas (associativity constraint),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:561a8e25-8170-5641-85b9-1d276bcc9929,index-entry/unit-016/coequalizer,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,8,yudenghuazi@余等化子 (coequalizer),yudenghuazi@koekualiser (coequalizer),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:1bc9f8a9-d9f0-5e54-b5af-65d6dc7223dc,index-entry/unit-016/cokernel-symbol,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,11,Coker@$\Coker$,Coker@$\Coker$,latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:de7cf6ce-e90c-52a6-a5c2-2f3a95508671,index-entry/unit-016/commutativity-constraint,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,13,jiaohuanyueshu@交换约束 (commutativity constraint),jiaohuanyueshu@kendala komutativitas (commutativity constraint),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:62999591-d192-5793-bc1f-6460bbcdfda6,index-entry/unit-016/coproduct,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,6,yuji@余积 (coproduct),yuji@koproduk (coproduct),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:ef90b154-17ce-5f71-859d-96b853e52aed,index-entry/unit-016/equalizer,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,9,denghuazi@等化子 (equalizer),denghuazi@ekualiser (equalizer),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:9a073e59-4c21-50f0-8548-170367208fe2,index-entry/unit-016/filtered-category,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,5,luguofanchou@滤过范畴 (filtered category),luguofanchou@kategori terarah ke atas (filtered category),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:709f2083-306a-52db-9282-565dec5e3c4e,index-entry/unit-016/inductive-limit,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,1,guinajixian@归纳极限 (inductive limit),guinajixian@limit induktif (inductive limit),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:c1d82ae5-255d-53b8-b252-1b11cf0eab60,index-entry/unit-016/inductive-limit-symbol,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,3,limind@$\varinjlim$,limind@$\varinjlim$,latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:eb2d5b46-9ff4-5547-a501-20c0176e9236,index-entry/unit-016/kernel-symbol,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,10,Ker@$\Ker$,Ker@$\Ker$,latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:e72ce470-651b-5c8d-bce5-53b3cf37d58a,index-entry/unit-016/product,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,7,ji@积 (product),ji@produk (product),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:d8b16537-7058-5b08-b4cb-627b3282d54a,index-entry/unit-016/projective-limit,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,2,toushejixian@投射极限 (projective limit),toushejixian@limit proyektif (projective limit),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:0ccde902-c20b-5e71-8736-eaaf506bb49a,index-entry/unit-016/projective-limit-symbol,urn:uuid:eb305c5b-3c9d-53db-b0f0-f27c41976da0,4,limproj@$\varprojlim$,limproj@$\varprojlim$,latex-index-key,source_key_preserved_target_key_localized

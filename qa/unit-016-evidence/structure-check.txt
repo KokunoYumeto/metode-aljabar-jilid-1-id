@@ -1,0 +1,8 @@
+PASS Unit 016 structural checker
+source lines=295 bytes=24790 sha256=48abd6c33ecdc32591a05ecfbdc7381637027963a61cb3015016909a8faacf82
+target lines=295 bytes=28854 sha256=fe5e54d56824e8f1a76f93e1732220813c654ab16eb2d7c8daa8dcdde17f5c81
+boundary line=1406 value=verified-Chinese-completeness-section
+commands=1382/1384 inserted=\in,\in emph_relocations=1134,1135 inline_math=287/287 bracket_displays=12/12
+begin=66/66 end=66/66 labels=17 refs=21 eqrefs=7 cite=1 indexes=13 items=9
+tikzcd=23 arrows=98 han=0 braces=438/438:440/440 diagrams=exact
+corrections=O013-LI-U016-COR-001,002,003 official_errata=preserved

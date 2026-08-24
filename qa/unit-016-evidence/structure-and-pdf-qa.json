@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0.0",
+  "unit_id": "O013-LI-U016",
+  "status": "PASS",
+  "authority": {
+    "commit": "c4f7a01f68f5f407906b4b970640cddbbad85f6b",
+    "tree": "0f9fd52748165ec89a85ba602ccb949a2ce04694",
+    "source_file": "chapter2.tex",
+    "source_lines": "1111-1405",
+    "source_span_bytes": 24790,
+    "source_span_sha256": "48abd6c33ecdc32591a05ecfbdc7381637027963a61cb3015016909a8faacf82"
+  },
+  "target": {
+    "target_span_bytes": 28854,
+    "target_span_sha256": "fe5e54d56824e8f1a76f93e1732220813c654ab16eb2d7c8daa8dcdde17f5c81",
+    "correction_ids": [
+      "O013-LI-U016-COR-001",
+      "O013-LI-U016-COR-002",
+      "O013-LI-U016-COR-003"
+    ],
+    "han_residue": 0
+  },
+  "artifact": {
+    "path": "artifacts/unit-016-bab-2-limit.pdf",
+    "bytes": 159462,
+    "sha256": "6d6838019efca962d7282c7be3df136f32abed3a8f111f2e4e5996bbeb4d789b"
+  },
+  "build_log": {
+    "path": "qa/UNIT_016_BUILD_FINAL.log",
+    "bytes": 85426,
+    "sha256": "b24d68481c1429e700767be361ee64b9b61b50389fc8100065195111c42e9b08"
+  },
+  "structure_checker": {
+    "path": "scripts/check_unit_016_structure.py",
+    "bytes": 23287,
+    "sha256": "0b5534fa3f7b427ec416a9ab45d236ec20135215f43bcffc89effb3b0ef824b7"
+  },
+  "structure_check_output": {
+    "path": "qa/unit-016-evidence/structure-check.txt",
+    "bytes": 610,
+    "sha256": "7d57b16c60b72eec7753a2ca6527918a4bc95323fe1c75b0b5413b17c0fde6a6"
+  },
+  "render_inventory": {
+    "path": "qa/unit-016-evidence/render-hash-inventory.json",
+    "bytes": 9169,
+    "sha256": "ae93aef280756a2e31cb456a1687810c35ee20efa14a7d02d3039d34628860d2"
+  },
+  "pdf": {
+    "pages": 16,
+    "page_size_points": [
+      498.9,
+      708.66
+    ],
+    "language": "id-ID",
+    "encrypted": false,
+    "metadata": {
+      "/Creator": "LaTeX with hyperref",
+      "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 16: Limit",
+      "/Subject": "Terjemahan Bahasa Indonesia independen",
+      "/Author": "Wen-Wei Li",
+      "/Keywords": "aljabar, teori kategori, limit, kolimit, produk, koproduk, id-ID",
+      "/Producer": "MiKTeX-dvipdfmx (20260404)",
+      "/CreationDate": "D:20260824000000Z"
+    },
+    "page_text_character_counts": [
+      214,
+      792,
+      1232,
+      1244,
+      1645,
+      1887,
+      1781,
+      1683,
+      1700,
+      1840,
+      1686,
+      1899,
+      372,
+      77,
+      47,
+      340
+    ],
+    "page_annotation_counts": [
+      0,
+      3,
+      0,
+      0,
+      1,
+      0,
+      6,
+      3,
+      1,
+      4,
+      2,
+      1,
+      1,
+      1,
+      4,
+      9
+    ],
+    "embedded_subset_font_count": 25,
+    "outline_entries": [
+      "2.7 Limit",
+      "Daftar Pustaka",
+      "Indeks Simbol",
+      "Indeks Istilah"
+    ]
+  },
+  "log_counts": {
+    "overfull_boxes": 0,
+    "underfull_hboxes": 2,
+    "underfull_vboxes": 3,
+    "empty_external_link_targets": 10,
+    "undefined_control_sequences": 0,
+    "undefined_references": 0,
+    "undefined_citations": 0,
+    "missing_characters": 0,
+    "fatal_errors": 0,
+    "emergency_stops": 0,
+    "imakeidx_post_index_reminders": 2
+  },
+  "deterministic_replay": {
+    "container_byte_identity": false,
+    "container_note": "Builds B and C differ in PDF container identity, including trailer ID; extracted text and every same-renderer page raster are byte-identical.",
+    "pdf_b": {
+      "path": "build/unit-016-final-b/unit-016-bab-2-limit.pdf",
+      "bytes": 159461,
+      "sha256": "c8b4a4b88c8740e56e25a2f3946ef695d9af6505401b6cd1da1461ebed65be9a"
+    },
+    "pdf_c": {
+      "path": "build/unit-016-final-c/unit-016-bab-2-limit.pdf",
+      "bytes": 159462,
+      "sha256": "6d6838019efca962d7282c7be3df136f32abed3a8f111f2e4e5996bbeb4d789b"
+    },
+    "pdftotext_layout_sha256_b": "c7586018f2b5ebc9cef75adc3b559539eb48cb2a228934129f11618dfb853615",
+    "pdftotext_layout_sha256_c": "c7586018f2b5ebc9cef75adc3b559539eb48cb2a228934129f11618dfb853615",
+    "poppler_page_mismatches": 0,
+    "mupdf_page_mismatches": 0
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "renderers_inspected": [
+      "Poppler",
+      "MuPDF"
+    ],
+    "findings": [
+      "All mathematical content and diagrams are centered within the live text area, legible, and unclipped.",
+      "No blank page, overlap, cropped label, broken arrow, missing glyph, or anomalous blue/purple answer field is present.",
+      "Pages 13-16 are intentionally sparse because the section ends and the bibliography and two generated indexes begin on conventional separate back-matter pages."
+    ]
+  },
+  "rights": "CC BY 4.0",
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

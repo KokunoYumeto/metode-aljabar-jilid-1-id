@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "checked": "2026-08-22",
+  "scope": "Bounded Indonesian category-theory and algebra terminology QA",
+  "arxiv": {
+    "authority": "https://export.arxiv.org/api/query",
+    "queries": [
+      {
+        "search_query": "all:fungtor OR all:\"teori kategori\" OR all:gelanggang",
+        "http_status": 200,
+        "open_search_total_results": 0
+      },
+      {
+        "search_query": "all:\"Bahasa Indonesia\" AND cat:math*",
+        "http_status": 200,
+        "open_search_total_results": 0
+      }
+    ],
+    "decision": "No suitable Indonesian-language same-field arXiv source with downloadable TeX was found in the bounded primary-source search; use the authorized PDF fallback."
+  },
+  "fallback_witnesses": [
+    {
+      "identity": "Luluk Atul Khasanah, Kategori Produk dan Produk Dua Obyek dalam Suatu Kategori, Chapter I, 2025",
+      "official_record": "https://eprints2.undip.ac.id/id/eprint/40977/",
+      "official_file": "https://eprints2.undip.ac.id/40977/6/12.%20BAB%20I%20-%20PENDAHULUAN.pdf",
+      "local_path": "authority/terminology-qa-20260822/undip-kategori-produk-bab-1.pdf",
+      "pages": 4,
+      "bytes": 163251,
+      "sha256": "611b78c88407037489f22814bf054e00ff0f283c702a06082a3a583e9ab35fcb",
+      "layout_text_bytes": 7059,
+      "layout_text_sha256": "50f061191b7309c0a3a35785e06b62be1603e24a0a12c72f8ce8caf5caa3d1ee"
+    },
+    {
+      "identity": "Ema Carnia, Sri Wahyuni, Irawati, Setiadji, and Zhao Dongsheng, Fungtorialitas pada Aljabar Insidensi Berhingga, BIMIPA 18(2), 129-135",
+      "official_record": "https://jurnal.ugm.ac.id/bimipa/article/view/33497",
+      "official_file": "https://jurnal.ugm.ac.id/bimipa/article/download/33497/20161",
+      "local_path": "authority/terminology-qa-20260822/ugm-fungtorialitas-aljabar-insidensi.pdf",
+      "pages": 7,
+      "bytes": 382376,
+      "sha256": "4099c3d8aff59e723470f69b4d152b037261bc26d54ef74f1365377f05c25834",
+      "layout_text_bytes": 24169,
+      "layout_text_sha256": "a963cb78d61e847f670a58185ad3b1508edd3e7566b27eca927426b35d906810"
+    }
+  ],
+  "adjudication_witness": {
+    "identity": "Yus Badudu Kerami and Aam Aminullah Sitanggang, Glosarium Matematika, Pusat Bahasa, 2008",
+    "official_file": "https://repositori.kemendikdasmen.go.id/2662/1/glosarium%20matematika%20tahun%202008%20%20%20%20%20281a.pdf",
+    "access_note": "The official host timed out during the bounded check. A public comparison copy was inspected; no byte-identity claim is made for the inaccessible official response.",
+    "local_pdf": "authority/terminology-qa-20260822/pusat-bahasa-glosarium-matematika-2008.pdf",
+    "pages": 281,
+    "pdf_bytes": 11427806,
+    "pdf_sha256": "d1407fd49c0af0f7025f16406b9610430778a4f32f1a77bce2efa2a25f699b2a",
+    "local_text": "authority/terminology-qa-20260822/pusat-bahasa-glosarium-matematika-2008.txt",
+    "text_bytes": 596063,
+    "text_sha256": "2cfb7dd5aca6489cac6ecd8b08426a022c9938611d79d129ed212d1a38445de4"
+  },
+  "adjudication": {
+    "changed": [
+      "funktor -> fungtor",
+      "transformasi alami -> transformasi natural"
+    ],
+    "added_controlled_mapping": "natural isomorphism -> isomorfisme natural",
+    "retained": [
+      "field -> medan",
+      "ring -> gelanggang",
+      "object -> objek",
+      "morphism -> morfisme",
+      "topological space -> ruang topologis",
+      "groupoid -> grupoid"
+    ]
+  },
+  "unit_012_to_013_recheck": {
+    "checked": "2026-08-23",
+    "arxiv": {
+      "queries": [
+        {
+          "search_query": "all:\"teori kategori\" OR all:fungtor OR all:gelanggang",
+          "http_status": 200,
+          "open_search_total_results": 0
+        },
+        {
+          "search_query": "all:\"Bahasa Indonesia\" AND cat:math*",
+          "http_status": 200,
+          "open_search_total_results": 0
+        }
+      ],
+      "decision": "No suitable Indonesian-language same-field arXiv source with downloadable TeX was found; the existing PDF fallback remains necessary."
+    },
+    "fallback_reinspection": {
+      "undip_pages_visually_inspected": 4,
+      "ugm_pages_visually_inspected": 7,
+      "hashes_unchanged": true
+    },
+    "supplementary_witness": {
+      "identity": "Bernard Immanuel, Aplikasi Lema Yoneda dalam Pembuktian Teorema Cayley, Universitas Indonesia, 2013/2014, 27 pages",
+      "official_record": "https://lib.ui.ac.id/detail.jsp?id=20368565",
+      "public_author_profile_document": "https://www.academia.edu/9691431/Aplikasi_Lema_Yoneda_dalam_Pembuktian_Teorema_Cayley",
+      "local_file": null,
+      "access_note": "The official UI digital file is login-restricted. The public author-profile document text was inspected; no local PDF bytes are claimed.",
+      "observed_terms": [
+        "Lema Yoneda",
+        "fungtor",
+        "morfisma",
+        "transformasi alami",
+        "teori gelanggang"
+      ]
+    },
+    "decisions": [
+      "Yoneda lemma -> Lema Yoneda",
+      "presheaf -> pragemal (presheaf)",
+      "sheaf theory -> teori gemal (sheaf theory)",
+      "representation of a functor -> representasi fungtor",
+      "universal family -> keluarga universal",
+      "characteristic function -> fungsi karakteristik",
+      "generalized function -> fungsi rampat"
+    ],
+    "already_admitted_reader_changes": 0,
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
+  "unit_016_recheck": {
+    "checked": "2026-08-24",
+    "arxiv_result": "The frozen bounded official queries found no suitable Indonesian-language same-field source with downloadable TeX; no unbounded repeat search was opened.",
+    "fallback_reinspection": {
+      "undip_pages_previously_visually_inspected": 4,
+      "ugm_pages_previously_visually_inspected": 7,
+      "hashes_unchanged": true
+    },
+    "added_controlled_terms": [
+      "diagonal functor -> fungtor diagonal",
+      "inductive limit -> limit induktif",
+      "projective limit -> limit proyektif",
+      "direct limit -> limit langsung",
+      "inverse limit -> limit invers",
+      "colimit -> kolimit",
+      "cone -> kerucut",
+      "cocone -> kokerucut",
+      "equalizer -> ekualiser",
+      "coequalizer -> koekualiser",
+      "filtered category -> kategori terarah ke atas (filtered category)",
+      "finite limit -> limit berhingga",
+      "quotient topology -> topologi hasil bagi",
+      "subspace topology -> topologi subruang",
+      "associativity constraint -> kendala asosiativitas",
+      "commutativity constraint -> kendala komutativitas"
+    ],
+    "already_admitted_reader_changes": 0,
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
+  "redistribution": "The downloaded fallback PDFs are local authority witnesses only and are excluded from the public repository and release packages."
+}

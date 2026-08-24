@@ -1108,11 +1108,11 @@ Terakhir, kita bandingkan ekuivalensi kategori (Definisi \ref{def:cat-equivalenc
 
 Dalam teori kategori masih terdapat banyak teknik visualisasi serupa. Pembaca dapat merujuk kepada survei yang ditulis P.\ Selinger dalam \cite[Chapter 4]{Co11}. Teknik serupa akan kita jumpai lagi dalam \S\ref{sec:braiding}.
 	
-\section{极限}\label{sec:limits}
-我们先给出极限的一般定义, 然后逐步剖析.
+\section{Limit}\label{sec:limits}
+Pertama-tama kita berikan definisi umum limit, lalu menguraikannya secara bertahap.
 
 \begin{definition}\label{def:diagonal-functor}
-	令 $I, \mathcal{C}$ 为范畴. 定义对角函子 $\Delta: \mathcal{C} \to \mathcal{C}^I := \text{Fct}(I, \mathcal{C})$ 如下: 它将任一 $X \in \Obj(\mathcal{C})$ 映至常值函子
+	Misalkan $I, \mathcal{C}$ kategori. Definisikan fungtor diagonal $\Delta: \mathcal{C} \to \mathcal{C}^I := \text{Fct}(I, \mathcal{C})$ sebagai berikut: fungtor ini memetakan setiap $X \in \Obj(\mathcal{C})$ ke fungtor konstan
 	\begin{gather*}
 		\Delta(X): I \longrightarrow \mathcal{C}\;
 		\left\{ \begin{array}{ll}
@@ -1120,51 +1120,51 @@ Dalam teori kategori masih terdapat banyak teknik visualisasi serupa. Pembaca da
 			\forall [i \to j] \in \Mor(I), & [i \to j] \longmapsto [\identity_X: X \to X].
 		\end{array}\right.
 	\end{gather*}
-	给定态射 $f: X \to Y$, 范畴 $\mathcal{C}^I$ 中 $\Delta(f): \Delta(X) \to \Delta(Y)$ 的定义是显然的: 它对每个 $i \in \Obj(I)$ 指定 $f: X \to Y$.
+	Untuk morfisme $f: X \to Y$ yang diberikan, dalam kategori $\mathcal{C}^I$ definisi $\Delta(f): \Delta(X) \to \Delta(Y)$ sudah jelas: pada setiap $i \in \Obj(I)$, komponennya adalah $f: X \to Y$.
 \end{definition}
 
-以 $I^{\text{op}}$ 代 $I$, 同样可定义对角函子 $\Delta: \mathcal{C} \to \mathcal{C}^{I^{\text{op}}} := \text{Fct}(I^{\text{op}}, \mathcal{C})$. 回忆定义 \ref{def:comma-category} 及其后的讨论: 对于函子 $I \xrightarrow{\alpha} \mathcal{C} \xleftarrow{\beta} I^\text{op}$, 可以构造两种逗号范畴
+Dengan memakai $I^{\text{op}}$ sebagai pengganti $I$, dapat pula didefinisikan fungtor diagonal $\Delta: \mathcal{C} \to \mathcal{C}^{I^{\text{op}}} := \text{Fct}(I^{\text{op}}, \mathcal{C})$. Ingat Definisi \ref{def:comma-category} dan pembahasan sesudahnya: untuk fungtor $I \xrightarrow{\alpha} \mathcal{C} \xleftarrow{\beta} I^\text{op}$, dapat dibentuk dua kategori koma
 \begin{align*}
 	\left[ \mathbf{1} \xrightarrow{j_\alpha} \mathcal{C}^I \xleftarrow{\Delta} \mathcal{C} \right] & \leadsto \quad (j_\alpha/\Delta) =: (\alpha / \Delta), \\
 	\left[ \mathcal{C} \xrightarrow{\Delta} \mathcal{C}^{I^\text{op}} \xleftarrow{j_\beta} \mathbf{1} \right] & \leadsto \quad (\Delta/j_\beta) =: (\Delta/\beta).
 \end{align*}
-\begin{definition}[极限]\label{def:limit}\index{guinajixian@归纳极限 (inductive limit)}\index{toushejixian@投射极限 (projective limit)}\index[sym1]{limind@$\varinjlim$}\index[sym1]{limproj@$\varprojlim$}
-	令 $I, \mathcal{C}$ 为范畴. 考虑函子 $\alpha: I \to \mathcal{C}$ 和 $\beta: I^\text{op} \to \mathcal{C}$.
+\begin{definition}[Limit]\label{def:limit}\index{guinajixian@limit induktif (inductive limit)}\index{toushejixian@limit proyektif (projective limit)}\index[sym1]{limind@$\varinjlim$}\index[sym1]{limproj@$\varprojlim$}
+	Misalkan $I, \mathcal{C}$ kategori. Pertimbangkan fungtor $\alpha: I \to \mathcal{C}$ dan $\beta: I^\text{op} \to \mathcal{C}$.
 	\begin{compactenum}
-		\item 逗号范畴 $(\alpha / \Delta)$ 中若存在始对象则记作 $\varinjlim \alpha$, 称为 $\alpha$ 的\emph{归纳极限};
-		\item 逗号范畴 $(\Delta / \beta)$ 中若存在终对象则记作 $\varprojlim \beta$, 称为 $\beta$ 的\emph{投射极限}.
+		\item Jika kategori koma $(\alpha / \Delta)$ mempunyai objek awal, objek itu dinotasikan dengan $\varinjlim \alpha$ dan disebut \emph{limit induktif} dari $\alpha$;
+		\item Jika kategori koma $(\Delta / \beta)$ mempunyai objek terminal, objek itu dinotasikan dengan $\varprojlim \beta$ dan disebut \emph{limit proyektif} dari $\beta$.
 	\end{compactenum}
-	我们也说它们是以 $I$ 为指标的极限.
+	Keduanya juga disebut limit berindeks $I$.
 \end{definition}
-关于极限的术语尚未统一, 以下是几种常见版本.
+Terminologi tentang limit belum seragam; berikut beberapa versi yang lazim.
 \begin{center}\begin{tabular}{c|c}
 	$\varinjlim$ & $\varprojlim$ \\
-	归纳极限 & 投射极限 \\
-	正向极限 & 逆向极限 \\
-	余极限 ($\text{colim}$) & 极限 ($\text{lim}$)
+	Limit induktif & Limit proyektif \\
+	Limit langsung & Limit invers \\
+	Kolimit ($\text{colim}$) & Limit ($\text{lim}$)
 \end{tabular}\end{center}
 
-命题 \ref{prop:initial-obj-uniqueness} 确保各极限若存在则唯一. 更明确地说, 逗号范畴给出下述基于 $\mathcal{C}$ 中交换图表的描述
+Proposisi \ref{prop:initial-obj-uniqueness} menjamin bahwa setiap limit, jika ada, bersifat unik. Lebih tepatnya, kategori koma memberikan deskripsi berikut berdasarkan diagram komutatif dalam $\mathcal{C}$
 \begin{equation*}\begin{gathered}
 	(\alpha/\Delta): \left\{ \begin{array}{ll}
-		\text{对象}: & \left( L, (\alpha(i) \xrightarrow{f_i} L)_{i \in \Obj(I)} \right), \quad \forall\; [i \xrightarrow{\phi} j], \;
+		\text{objek}: & \left( L, (\alpha(i) \xrightarrow{f_i} L)_{i \in \Obj(I)} \right), \quad \forall\; [i \xrightarrow{\phi} j], \;
 			\begin{tikzcd}[column sep=tiny, row sep=tiny]
 				\alpha(i) \arrow[rd] \arrow[rr, "{\alpha(\phi)}"] & & \alpha(j) \arrow[ld] \\
 				{} & L &
 			\end{tikzcd} \\
-		\text{态射}: & \left[ \varphi: (L, (f_i)_i) \to (L', (f'_i)_i) \right] =  \forall i, \;
+		\text{morfisme}: & \left[ \varphi: (L, (f_i)_i) \to (L', (f'_i)_i) \right] =  \forall i, \;
 			\begin{tikzcd}[column sep=tiny, row sep=small]
 				\alpha(i) \arrow[r, "f_i"] \arrow[rd, "f'_i"'] & L \arrow[d, "\varphi"] \\
 				{} & L'
 			\end{tikzcd}
 	\end{array}\right. \\
 	(\Delta/\beta): \left\{ \begin{array}{ll}
-		\text{对象}: & \left( L, (L \xrightarrow{g_i} \beta(i))_{i \in \Obj(I)} \right), \quad \forall\; [i \xrightarrow{\phi} j], \;
+		\text{objek}: & \left( L, (L \xrightarrow{g_i} \beta(i))_{i \in \Obj(I)} \right), \quad \forall\; [i \xrightarrow{\phi} j], \;
 			\begin{tikzcd}[column sep=tiny, row sep=tiny]
 				\beta(i) & & \beta(j) \arrow[ll, "\beta(\phi)"'] \\
 				{} & L \arrow[lu] \arrow[ru] &
 			\end{tikzcd} \\
-		\text{态射}: & \left[ \varphi: (L, (g_i)_i) \to (L', (g'_i)_i) \right] =  \forall i, \;
+		\text{morfisme}: & \left[ \varphi: (L, (g_i)_i) \to (L', (g'_i)_i) \right] =  \forall i, \;
 			\begin{tikzcd}[column sep=tiny, row sep=small]
 				\beta(i) & L \arrow[d, "\varphi"] \arrow[l, "g_i"'] \\
 				{} & L' \arrow[lu, "g'_i"]
@@ -1172,9 +1172,9 @@ Dalam teori kategori masih terdapat banyak teknik visualisasi serupa. Pembaca da
 	\end{array}\right.
 \end{gathered}\end{equation*}
 
-一些文献将 $(\alpha/\Delta)$ 和 $(\Delta/\beta)$ 的对象分别称作锥和余锥, 这是直观的.
+Dalam beberapa pustaka, objek dari $(\alpha/\Delta)$ dan $(\Delta/\beta)$ masing-masing disebut kerucut dan kokerucut; sebutan ini bersifat intuitif.
 
-依此, $\alpha$ 的归纳极限可以重新理解为资料 $(\varinjlim \alpha, \alpha(i) \xrightarrow{\iota_i} \varinjlim \alpha)$, 而 $\beta$ 的投射极限为资料 $(\varprojlim \beta, p_i: \varprojlim \beta \xrightarrow{p_i} \beta(i))$, 各自的泛性质图解为
+Dengan demikian, limit induktif dari $\alpha$ dapat dipahami kembali sebagai data $(\varinjlim \alpha, \alpha(i) \xrightarrow{\iota_i} \varinjlim \alpha)$, sedangkan limit proyektif dari $\beta$ sebagai data $(\varprojlim \beta, \varprojlim \beta \xrightarrow{p_i} \beta(i))$; sifat universal masing-masing digambarkan oleh
 \begin{equation}\label{eqn:lim-diagrams}\begin{tikzcd}
 	\alpha(i) \arrow[rd, "{\iota_i}"] \arrow[rdd] \arrow[rr, "{\alpha(\phi)}"] & & \alpha(j) \arrow[ld, "{\iota_j}"'] \arrow[ldd] \\
 	& \varinjlim \alpha \arrow[dashed, d, "\exists !"] &  \\
@@ -1184,68 +1184,68 @@ Dalam teori kategori masih terdapat banyak teknik visualisasi serupa. Pembaca da
 	& \varprojlim \beta \arrow[lu, "p_i"'] \arrow[ru, "p_j"] & \\
 	& L \arrow[luu] \arrow[ruu] \arrow[dashed, u, "{\exists !}"'] &
 \end{tikzcd}\end{equation}
-图表的读法是: 对每个 $(\alpha / \Delta)$ 或 $(\Delta/\beta)$ 的对象 $(L, \ldots)$, 图中存在唯一的态射 $\dashrightarrow$ 使得全图对任意 $\phi \in \Mor(I)$ 皆交换.
+Diagram tersebut dibaca sebagai berikut: untuk setiap objek dari $(\alpha / \Delta)$ atau $(\Delta/\beta)$ yang berbentuk $(L, \ldots)$, terdapat morfisme tunggal $\dashrightarrow$ sehingga seluruh diagram komutatif untuk setiap $\phi \in \Mor(I)$.
 
 \begin{remark}\label{rem:lim-duality}
-	注意到 \eqref{eqn:lim-diagrams} 中两图箭头反向. 其实 $\varinjlim$ 和 $\varprojlim$ 是对偶的概念: 设 $\alpha: I \to \mathcal{C}$, 对反范畴有相应的 $\alpha^\text{op}: I^\text{op} \to \mathcal{C}^\text{op}$ (注记 \ref{rem:op-functor}). 对 $I^\text{op}$ 和 $\mathcal{C}^\text{op}$ 仍有相应的对角函子 $\Delta^{\text{op}}$. 从而导出
+	Perhatikan bahwa arah panah pada kedua diagram dalam \eqref{eqn:lim-diagrams} saling berlawanan. Sesungguhnya, $\varinjlim$ dan $\varprojlim$ adalah konsep dual: misalkan $\alpha: I \to \mathcal{C}$; pada kategori lawan terdapat $\alpha^\text{op}: I^\text{op} \to \mathcal{C}^\text{op}$ yang bersesuaian (Catatan \ref{rem:op-functor}). Untuk $I^\text{op}$ dan $\mathcal{C}^\text{op}$ terdapat pula fungtor diagonal $\Delta^{\text{op}}$ yang bersesuaian. Dengan demikian diperoleh
 	\begin{align*}
 		(\alpha / \Delta)^\text{op} & = (\Delta^\text{op} / \alpha^\text{op}), \\
-		\varprojlim (\alpha^{\text{op}}) & = \varinjlim \alpha, \quad \text{假设任一侧的极限存在}.
+		\varprojlim (\alpha^{\text{op}}) & = \varinjlim \alpha, \quad \text{jika limit pada salah satu ruas ada}.
 	\end{align*}
 \end{remark}
 
 \begin{lemma}\label{prop:lim-functoriality}
-	设 $\psi: \alpha \to \alpha'$ 是函子范畴 $\mathcal{C}^I$ 中的态射, 假定相应的 $\varinjlim$ 皆存在, 则存在唯一的态射 $\varinjlim \psi$ 使得
+	Misalkan $\psi: \alpha \to \alpha'$ suatu morfisme dalam kategori fungtor $\mathcal{C}^I$. Andaikan semua $\varinjlim$ yang bersesuaian ada. Maka terdapat morfisme tunggal $\varinjlim \psi$ sedemikian sehingga
 	\begin{tikzcd}[row sep=small, column sep=small]
 		\alpha(i) \arrow[r] \arrow[d, "\psi(i)"'] & \varinjlim \alpha \arrow[d, "\varinjlim\psi"] \\
 		\alpha'(i) \arrow[r] & \varinjlim \alpha'
 	\end{tikzcd}
-	对每个 $i$ 皆交换. 若 $\alpha \xrightarrow{\psi_1} \alpha' \xrightarrow{\psi_2} \alpha''$, 则 $\varinjlim (\psi_2 \psi_1) = \varinjlim \psi_2 \varinjlim \psi_1$. 对 $\varprojlim$ 也有类似的结果: $\psi: \beta \to \beta'$ 自然地诱导出 $\varprojlim \beta \to \varprojlim \beta'$ 等等.
+	komutatif untuk setiap $i$. Jika $\alpha \xrightarrow{\psi_1} \alpha' \xrightarrow{\psi_2} \alpha''$, maka $\varinjlim (\psi_2 \psi_1) = \varinjlim \psi_2 \varinjlim \psi_1$. Hasil serupa juga berlaku untuk $\varprojlim$: secara natural, $\psi: \beta \to \beta'$ menginduksi $\varprojlim \beta \to \varprojlim \beta'$, dan seterusnya.
 \end{lemma}
 \begin{proof}
-	在 $\varinjlim \alpha$ 的泛性质中考虑 $L := \varinjlim \alpha' \leftarrow \alpha'(i) \xleftarrow{\psi(i)} \alpha(i)$ 即可. 性质 $\varinjlim (\psi_2 \psi_1) = \varinjlim \psi_2 \varinjlim \psi_1$ 源自
+	Dalam sifat universal $\varinjlim \alpha$, cukup ambil $L := \varinjlim \alpha' \leftarrow \alpha'(i) \xleftarrow{\psi(i)} \alpha(i)$. Sifat $\varinjlim (\psi_2 \psi_1) = \varinjlim \psi_2 \varinjlim \psi_1$ mengikuti dari
 	\[\begin{tikzcd}[row sep=small, column sep=small]
 		\alpha(i) \arrow[r] \arrow[d] & \alpha'(i) \arrow[r] \arrow[d] & \alpha''(i) \arrow[d] \\
 		\varinjlim \alpha \arrow[r] & \varinjlim \alpha' \arrow[r] & \varinjlim \alpha''
 	\end{tikzcd} \qquad i \in \Obj(I) \]
-	全图的交换性.
+	komutativitas seluruh diagram.
 \end{proof}
 
-以下遵循约定 \ref{con:U-small}, 区分范畴与小范畴. 我们仅考虑 $I$ 是小范畴情形的极限. 这主要是为了陈述方便, 而且按假设 \ref{hyp:universe} 总能扩大所选的宇宙 $\mathcal{U}$ 使得所论的范畴都是小范畴. 但也请读者先留个心眼, 因为在一些场合下集合的大小确实会造成实质差异, 例如下面要提到的命题 \ref{prop:preorder-complete}.
+Selanjutnya kita mengikuti Konvensi \ref{con:U-small} dan membedakan kategori dari kategori kecil. Kita hanya mempertimbangkan limit dengan $I$ kategori kecil. Hal ini terutama demi kemudahan perumusan; lagi pula, menurut Hipotesis \ref{hyp:universe}, semesta $\mathcal{U}$ yang dipilih selalu dapat diperbesar agar semua kategori yang dibahas menjadi kategori kecil. Namun, pembaca tetap perlu waspada karena dalam beberapa situasi ukuran himpunan benar-benar dapat menimbulkan perbedaan substantif, seperti dalam Proposisi \ref{prop:preorder-complete} yang akan disebutkan di bawah.
 
 \begin{example}\label{eg:set-limits}
-	取 $\mathcal{C} := \cate{Set}$ 并设 $I$ 是小范畴. 我们先构造 $\varprojlim \beta$. 定义
+	Ambil $\mathcal{C} := \cate{Set}$ dan misalkan $I$ kategori kecil. Pertama-tama kita konstruksikan $\varprojlim \beta$. Definisikan
 	\begin{align*}
 		\varprojlim \beta & := \left\{ (x_i)_{i \in \Obj(I)} \in \prod_i \beta(i) : \forall \sigma \in \Hom_I(i,j), \; \beta(\sigma)(x_j) = x_i \right\} \\
-		& = \Ker\left[ \prod_i \beta(i) \rightrightarrows \prod_\sigma \beta(s(\sigma)) \right] \quad \text{(等化子)},
+		& = \Ker\left[ \prod_i \beta(i) \rightrightarrows \prod_\sigma \beta(s(\sigma)) \right] \quad \text{(ekualiser)},
 	\end{align*}
-	$\Ker[\cdots]$ 的双箭头分别以映射 $(x_i)_i \mapsto x_{s(\sigma)}$ 和 $(x_i)_i \mapsto \beta(\sigma)\left(x_{t(\sigma)}\right)$ 为其``$\sigma$-坐标'', 其中 $\sigma$ 取遍 $I$ 中态射. 上式是 $\cate{Set}$ 的一个对象, 它带有一族投影映射 $p_j: \varprojlim \beta \to \beta(j)$, $p_j((x_i)_i) = x_j$, 其中 $j$ 取遍 $\Obj(I)$. 不难验证 $(\varprojlim \beta, (p_j)_j)$ 是 $\beta$ 的投射极限.
+	Kedua panah dalam $\Ker[\cdots]$ masing-masing memiliki pemetaan $(x_i)_i \mapsto x_{s(\sigma)}$ dan $(x_i)_i \mapsto \beta(\sigma)\left(x_{t(\sigma)}\right)$ sebagai ``koordinat-$\sigma$''-nya, dengan $\sigma$ merentang semua morfisme dalam $I$. Ekspresi di atas merupakan sebuah objek dalam $\cate{Set}$ dan dilengkapi keluarga pemetaan proyeksi $p_j: \varprojlim \beta \to \beta(j)$, $p_j((x_i)_i) = x_j$, dengan $j$ merentang $\Obj(I)$. Tidak sulit memeriksa bahwa $(\varprojlim \beta, (p_j)_j)$ adalah limit proyektif dari $\beta$.
 
-	接着考虑 $\alpha: I \to \cate{Set}$. 定义
+	Selanjutnya, pertimbangkan $\alpha: I \to \cate{Set}$. Definisikan
 	\[ \varinjlim \alpha := \left( \bigsqcup_{i \in \Obj(I)} \alpha(i) \right) \Big/ \sim \]
-	其中 $\bigsqcup_i \alpha(i)$ 代表无交并, $\sim$ 是下述关系生成的等价关系
+	dengan $\bigsqcup_i \alpha(i)$ menyatakan gabungan saling lepas, sedangkan $\sim$ adalah relasi ekuivalensi yang dibangkitkan oleh relasi berikut
 	\[ x \sim \alpha(\sigma)(x), \quad \sigma: i \to j, \quad x \in \alpha(i). \]
-	由商集的性质得到一族映射 $\iota_j: \alpha(j) \to \varinjlim \alpha$, 其中 $j$ 取遍 $\Obj(I)$; 它映 $x \in \alpha(j)$ 至含 $x$ 的等价类. 不难验证 $(\varinjlim \alpha, (\iota_j)_j)$ 是 $\alpha$ 的归纳极限.
+	Dari sifat himpunan hasil bagi diperoleh keluarga pemetaan $\iota_j: \alpha(j) \to \varinjlim \alpha$, dengan $j$ merentang $\Obj(I)$; pemetaan ini membawa $x \in \alpha(j)$ ke kelas ekuivalensi yang memuat $x$. Tidak sulit memeriksa bahwa $(\varinjlim \alpha, (\iota_j)_j)$ adalah limit induktif dari $\alpha$.
 \end{example}
-上述构造有一个明显缺陷: 它仅说明如何``生成''等价关系 $\sim$, 却没有直接的描述. 弥补这点需要对 $I$ 施加进一步的条件, 我们顺势引入滤过范畴的概念.
+Konstruksi di atas memiliki satu kekurangan yang jelas: konstruksi itu hanya menjelaskan cara ``membangkitkan'' relasi ekuivalensi $\sim$, tetapi tidak memberikan deskripsi langsung. Untuk mengatasinya, diperlukan syarat tambahan pada $I$; pada saat yang sama kita perkenalkan konsep kategori terarah ke atas.
 
-\begin{definition}\label{def:filtrant-cat}\index{luguofanchou@滤过范畴 (filtered category)}
-	非空范畴 $I$ 若满足以下条件, 则称为\emph{滤过}的:
+\begin{definition}\label{def:filtrant-cat}\index{luguofanchou@kategori terarah ke atas (filtered category)}
+	Kategori tak kosong $I$ disebut \emph{terarah ke atas (filtered)} jika memenuhi syarat-syarat berikut:
 	\begin{compactitem}
-		\item 对任意 $i, j \in \Obj(I)$ 存在 $k \in \Obj(I)$ 及态射 $i \to k$, $j \to k$;
-		\item 对任意箭头 $f,g: i \to j$, 存在 $k \in \Obj(I)$ 和 $h: j \to k$, 使得 $hf = hg$.
+		\item Untuk setiap $i, j \in \Obj(I)$, terdapat $k \in \Obj(I)$ dan morfisme $i \to k$, $j \to k$;
+		\item Untuk setiap panah $f,g: i \to j$, terdapat $k \in \Obj(I)$ dan $h: j \to k$ sedemikian sehingga $hf = hg$.
 	\end{compactitem}
 \end{definition}
-对于来自非空偏序集 $(I, \leq)$ 的范畴, 第二个条件是多余的, 此时我们回到 \S\ref{sec:group-limit} 定义之滤过偏序概念. 例如偏序集 $(\Z_{\geq 1}, \leq)$ 便是滤过偏序集.
+Untuk kategori yang berasal dari poset tak kosong $(I, \leq)$, syarat kedua bersifat mubazir; dalam hal ini kita kembali pada konsep poset terarah ke atas (filtered poset) yang didefinisikan dalam \S\ref{sec:group-limit}. Sebagai contoh, poset $(\Z_{\geq 1}, \leq)$ adalah poset terarah ke atas.
 
-现在回到例 \ref{eg:set-limits} 的函子 $\alpha: I \to \cate{Set}$ 并假设 $I$ 滤过. 在无交并 $\bigsqcup_{i \in \Obj(I)} \alpha(i)$ 上定义关系 $\sim$ 如下: 对任意 $i, j \in \Obj(I)$ 及 $x_i \in \alpha(i)$, $x_j \in \alpha(j)$, 若
-\begin{equation}\label{eqn:filtrant-equiv} \text{存在} \begin{cases}
+Sekarang kembali ke Contoh \ref{eg:set-limits}, yakni fungtor $\alpha: I \to \cate{Set}$, dan andaikan $I$ terarah ke atas. Pada gabungan saling lepas $\bigsqcup_{i \in \Obj(I)} \alpha(i)$, definisikan relasi $\sim$ sebagai berikut: untuk setiap $i, j \in \Obj(I)$ serta $x_i \in \alpha(i)$, $x_j \in \alpha(j)$, jika
+\begin{equation}\label{eqn:filtrant-equiv} \text{terdapat} \begin{cases}
 	f: i \to k, \\
 	g: j \to k
 	\end{cases}
-	\text{使得} \quad \alpha(f)(x_i) = \alpha(g)(x_j) \in \alpha(k)
+	\text{sedemikian sehingga} \quad \alpha(f)(x_i) = \alpha(g)(x_j) \in \alpha(k)
 \end{equation}
-则定 $x_i \sim x_j$, 显然例 \ref{eg:set-limits} 中的等价关系也必须满足这个性质, 若我们能说明 $\sim$ 已然是等价关系, 则这里的 $\sim$ 就是例 \ref{eg:set-limits} 中的 $\sim$. 反身性和对称性实属显然, 现验证传递性如下: 设 $(x_i \sim x_j) \wedge (x_j \sim x_k)$, 存在图表
+maka tetapkan $x_i \sim x_j$. Jelas bahwa relasi ekuivalensi dalam Contoh \ref{eg:set-limits} juga harus memenuhi sifat ini. Jika dapat ditunjukkan bahwa $\sim$ sudah merupakan relasi ekuivalensi, maka $\sim$ di sini tepat sama dengan relasi dalam Contoh \ref{eg:set-limits} yang juga dinotasikan $\sim$. Refleksivitas dan simetrinya jelas; kini kita periksa transitivitasnya. Andaikan $(x_i \sim x_j) \wedge (x_j \sim x_k)$; terdapat diagram
 \[ \begin{tikzcd}[scale=0.75]
 	i \arrow[rd] & & j \arrow[ld] \arrow[rd] & & k \arrow[ld] \\
 	& h \arrow[dashed, rd] & & h' \arrow[dashed, ld] & \\
@@ -1255,154 +1255,154 @@ Dalam teori kategori masih terdapat banyak teknik visualisasi serupa. Pembaca da
 	& x_h \arrow[dashed, rd] & & x_{h'} \arrow[dashed, mapsto, ld] & \\
 	& & ? & & 
 \end{tikzcd} \]
-其中的虚线箭头和 $g$ 由定义 \ref{def:filtrant-cat} 的第一条补全. 然而 $x_h$ 和 $x_{h'}$ 在虚箭头下的像未必相同, 为此我们利用定义第二条找到 $I$ 中态射 $g \to g'$, 使得合成态射 $j \to h \to g \to g'$ 同 $j \to h' \to g \to g'$ 相等; 在图表中以 $g'$ 代 $g$ 便可确保 $x_i \sim x_k$. 故 $\sim$ 为等价关系. 由 $\sim$ 的定义亦可导出 \eqref{eqn:lim-diagrams} 的左图交换. 综之,
+Panah putus-putus dan $g$ di dalamnya dilengkapi dengan syarat pertama Definisi \ref{def:filtrant-cat}. Akan tetapi, citra $x_h$ dan $x_{h'}$ di bawah panah putus-putus belum tentu sama. Karena itu, dengan syarat kedua definisi tersebut, kita cari dalam $I$ suatu morfisme $g \to g'$ sehingga morfisme komposit $j \to h \to g \to g'$ sama dengan $j \to h' \to g \to g'$. Dengan memakai $g'$ sebagai pengganti $g$ dalam diagram, dapat dipastikan bahwa $x_i \sim x_k$. Jadi, $\sim$ merupakan relasi ekuivalensi. Dari definisi $\sim$ juga diperoleh komutativitas diagram kiri dalam \eqref{eqn:lim-diagrams}. Ringkasnya,
 \[ \varinjlim \alpha := \bigsqcup_{i \in \Obj(I)} \alpha(i) \big/ \sim \]
-尔后我们还会在不同范畴中反复考虑滤过的 $\varinjlim$.
+Kelak kita akan berulang kali mempertimbangkan $\varinjlim$ berindeks kategori terarah ke atas dalam berbagai kategori.
 
 \begin{example}\label{eg:top-limits}
-	同样方法可构造范畴 $\mathcal{C} := \cate{Top}$ 中的极限. 对于小范畴 $I$, 极限 $(\varinjlim \alpha, \iota_j)$ 和 $(\varprojlim \beta, p_j)$ 的构造与 $\cate{Set}$ 完全相同, 只消赋予这些集合商拓扑或子空间拓扑 \cite[\S 3.1, \S 3.4]{Xiong}.
+	Dengan cara yang sama dapat dikonstruksikan limit dalam kategori $\mathcal{C} := \cate{Top}$. Untuk kategori kecil $I$, konstruksi limit $(\varinjlim \alpha, \iota_j)$ dan $(\varprojlim \beta, p_j)$ persis sama dengan konstruksi dalam $\cate{Set}$; kita hanya perlu melengkapi himpunan-himpunan tersebut dengan topologi hasil bagi atau topologi subruang \cite[\S 3.1, \S 3.4]{Xiong}.
 \end{example}
 
-给定范畴 $\mathcal{C}$. 尽管所论的极限在 $\mathcal{C}$ 中未必存在, 一旦将 $\mathcal{C}$ 嵌入函子范畴 $\mathcal{C}^\wedge$ 或 $\mathcal{C}^\vee$ (参考 \S\ref{sec:representable-functors}), 则能确保所有(小)极限的存在性.
+Misalkan kategori $\mathcal{C}$ diberikan. Meskipun limit yang dibahas belum tentu ada dalam $\mathcal{C}$, setelah $\mathcal{C}$ dibenamkan ke kategori fungtor $\mathcal{C}^\wedge$ atau $\mathcal{C}^\vee$ (lihat \S\ref{sec:representable-functors}), keberadaan semua limit (kecil) dapat dijamin.
 
 \begin{proposition}\label{prop:lim-Yoneda}
-	设 $I$ 为小范畴, 函子 $\alpha: I \to \mathcal{C}^\wedge$ 的极限由如下定义的对象 $\Yinjlim \alpha \in \Obj(\mathcal{C}^\wedge)$
+	Misalkan $I$ kategori kecil. Limit fungtor $\alpha: I \to \mathcal{C}^\wedge$ diberikan oleh objek $\Yinjlim \alpha \in \Obj(\mathcal{C}^\wedge)$ yang didefinisikan sebagai berikut:
 	\begin{gather*}
 		\Yinjlim \alpha: S \longmapsto \varinjlim \left( \alpha(S) \right), \\
 		[T \xrightarrow{f} S] \leadsto \varinjlim \alpha(S) \xrightarrow{\varinjlim \alpha(f)} \varinjlim \alpha(T),
 	\end{gather*}
-	连同自然态射族 $\alpha(j)(\cdot) \to \varinjlim \alpha(\cdot)$ 给出, 其中 $j \in \Obj(I)$ 而 $\varinjlim \alpha(f)$ 的构造见引理 \ref{prop:lim-functoriality}; 这里不带引号的 $\varinjlim$ 是 $\cate{Set}$ 中的极限. 类似地, 函子 $\beta: I^\text{op} \to \mathcal{C}^\wedge$ 的极限由
+	beserta keluarga transformasi natural $\alpha(j)(\cdot) \to \varinjlim \alpha(\cdot)$, dengan $j \in \Obj(I)$ dan konstruksi $\varinjlim \alpha(f)$ diberikan dalam Lema \ref{prop:lim-functoriality}; di sini $\varinjlim$ tanpa hiasan tambahan adalah limit dalam $\cate{Set}$. Demikian pula, limit fungtor $\beta: I^\text{op} \to \mathcal{C}^\wedge$ diberikan oleh
 	\[ \Yprojlim \beta: S \longmapsto \varprojlim \left( \beta(S) \right) \]
-	等资料给出. 类似性质对取值在 $\mathcal{C}^\vee$ 的情形同样成立, 我们在符号上将这些极限不予区分地记作
+	dan data-data serupa. Sifat serupa juga berlaku bagi kasus dengan nilai dalam $\mathcal{C}^\vee$; secara notasi, semua limit ini kita tulis tanpa membedakannya sebagai
 	\begin{align*}
-		\Yinjlim \alpha: S & \longmapsto \varinjlim \left( \alpha(S) \right), \quad \alpha: I \to \mathcal{C}^\wedge \;\text{或}\; \mathcal{C}^\vee, \\
-		\Yprojlim \beta: S & \longmapsto \varprojlim \left( \beta(S) \right), \quad \beta: I^\text{op} \to \mathcal{C}^\wedge \;\text{或}\; \mathcal{C}^\vee.
+		\Yinjlim \alpha: S & \longmapsto \varinjlim \left( \alpha(S) \right), \quad \alpha: I \to \mathcal{C}^\wedge \;\text{atau}\; \mathcal{C}^\vee, \\
+		\Yprojlim \beta: S & \longmapsto \varprojlim \left( \beta(S) \right), \quad \beta: I^\text{op} \to \mathcal{C}^\wedge \;\text{atau}\; \mathcal{C}^\vee.
 	\end{align*}
 \end{proposition}
 \begin{proof}
-	诀窍是对函子逐点地 (或逐对象地) 取极限以化约到 $\cate{Set}$ 情形, 仅以 $\alpha: I \to \mathcal{C}^\wedge$ 和 $\Yinjlim \alpha$ 的情形阐释. 考虑相应的图表 \eqref{eqn:lim-diagrams} 并给定 $L \in \mathcal{C}^\wedge$ 和一族态射 $\alpha(i) \to L$. 对于每个 $S \in \Obj(\mathcal{C})$, 根据 $\cate{Set}$ 中 $\varinjlim$ 的构造可知存在唯一的 $\varphi(S)$ 使得图表
+	Caranya ialah mengambil limit fungtor secara titik demi titik (atau objek demi objek), sehingga kasusnya tereduksi ke $\cate{Set}$. Kita hanya uraikan kasus $\alpha: I \to \mathcal{C}^\wedge$ dan $\Yinjlim \alpha$. Pertimbangkan diagram \eqref{eqn:lim-diagrams} yang bersesuaian, serta berikan $L \in \mathcal{C}^\wedge$ dan keluarga morfisme $\alpha(i) \to L$. Untuk setiap $S \in \Obj(\mathcal{C})$, konstruksi dalam $\cate{Set}$ bagi $\varinjlim$ menunjukkan bahwa terdapat $\varphi(S)$ tunggal sehingga diagram
 	\begin{tikzcd}[column sep=tiny, row sep=tiny]
 		\alpha(i)(S) \arrow[rr] \arrow[rd] & & \varinjlim \alpha(S) \arrow[ld, "\varphi(S)"] \\
 		& L(S) &
 	\end{tikzcd}
-	对所有 $i$ 交换. 关键在于证明这些 $\varphi(\cdot)$ 能在 $\mathcal{C}^\wedge$ 中拼为 $\Yinjlim \alpha \xrightarrow{\varphi} L$. 考虑 $\mathcal{C}$ 中任意态射 $f: T \to S$, 以下将 $L(S)$ 视同常值函子 $\Delta(L(S)): I \to \cate{Set}$, 易见其 $\varinjlim$ 是 $L(S)$ 自身 (请验证); 对 $L(T)$ 亦同. 于是由引理 \ref{prop:lim-functoriality} 导出: 对每个 $i \in \Obj(I)$
+	komutatif untuk semua $i$. Kuncinya ialah membuktikan bahwa semua $\varphi(\cdot)$ ini dapat, dalam $\mathcal{C}^\wedge$, dirangkai menjadi $\Yinjlim \alpha \xrightarrow{\varphi} L$. Pertimbangkan dalam $\mathcal{C}$ sebarang morfisme $f: T \to S$. Selanjutnya, pandang $L(S)$ sebagai fungtor konstan $\Delta(L(S)): I \to \cate{Set}$; mudah dilihat bahwa $\varinjlim$-nya adalah $L(S)$ sendiri (silakan periksa). Demikian pula untuk $L(T)$. Maka, dari Lema \ref{prop:lim-functoriality} diperoleh: untuk setiap $i \in \Obj(I)$,
 	\[ \begin{tikzcd}
 		\alpha(i)(S) \arrow[r, "\alpha(i)(f)"] \arrow[d] & \alpha(i)(T) \arrow[d] \\
 		L(S) \arrow[r, "L(f)"'] & L(T)
-	\end{tikzcd} \;\text{交换, 故} \;
+	\end{tikzcd} \;\text{komutatif, sehingga} \;
 	\begin{tikzcd}
 		\varinjlim \alpha(S) \arrow[r, "{\varinjlim \alpha(f)}", yshift=0.5em] \arrow[d, "\varphi(S)"'] & \varinjlim \alpha(T) \arrow[d, "\varphi(T)"] \\
 		L(S) \arrow[r, "L(f)"'] & L(T)
-	\end{tikzcd} \;\text{交换}, \]
-	而右图就是 $\varphi(\cdot)$ 所需的函子性.
+	\end{tikzcd} \;\text{komutatif}, \]
+	dan diagram kanan tepat menyatakan fungtorialitas yang diperlukan oleh $\varphi(\cdot)$.
 \end{proof}
-如此一来, 极限的存在性就归结为函子的可表性, 见 \S\ref{sec:representable-functors}.
+Dengan demikian, keberadaan limit tereduksi pada representabilitas fungtor; lihat \S\ref{sec:representable-functors}.
 
 \begin{proposition}\label{prop:lim-as-fct}
-	设 $I$ 为小范畴. 以下我们利用函子 $k_{\mathcal{C}}$ 和 $h_{\mathcal{C}}$, 分别将 $\mathcal{C}$ 看作 $\mathcal{C}^\vee$ 和 $\mathcal{C}^\wedge$ 的子范畴.
+	Misalkan $I$ kategori kecil. Berikut ini kita menggunakan fungtor $k_{\mathcal{C}}$ dan $h_{\mathcal{C}}$ untuk memandang $\mathcal{C}$ masing-masing sebagai subkategori dari $\mathcal{C}^\vee$ dan $\mathcal{C}^\wedge$.
 	\begin{enumerate}
-		\item 函子 $\alpha: I \to \mathcal{C}$ 的归纳极限存在当且仅当 $\Yinjlim \alpha \in \mathcal{C}^\vee$ 可表; 给定 $\alpha$ 的极限相当于给定对象 $\varinjlim \alpha \in \Obj(\mathcal{C})$ 连同一个同构 $k_{\mathcal{C}}(\varinjlim \alpha) \rightiso \Yinjlim \alpha$.
-		\item 函子 $\beta: I^\text{op} \to \mathcal{C}$ 的投射极限存在当且仅当 $\Yprojlim \beta \in \mathcal{C}^\wedge$ 可表; 给定 $\beta$ 的极限相当于给定对象 $\varprojlim \beta \in \Obj(\mathcal{C})$ 连同一个同构 $h_{\mathcal{C}}(\varprojlim \beta) \rightiso \Yprojlim \beta$.
+		\item Limit induktif fungtor $\alpha: I \to \mathcal{C}$ ada jika dan hanya jika $\Yinjlim \alpha \in \mathcal{C}^\vee$ representabel; memberikan limit dari $\alpha$ ekuivalen dengan memberikan objek $\varinjlim \alpha \in \Obj(\mathcal{C})$ beserta isomorfisme $k_{\mathcal{C}}(\varinjlim \alpha) \rightiso \Yinjlim \alpha$.
+		\item Limit proyektif fungtor $\beta: I^\text{op} \to \mathcal{C}$ ada jika dan hanya jika $\Yprojlim \beta \in \mathcal{C}^\wedge$ representabel; memberikan limit dari $\beta$ ekuivalen dengan memberikan objek $\varprojlim \beta \in \Obj(\mathcal{C})$ beserta isomorfisme $h_{\mathcal{C}}(\varprojlim \beta) \rightiso \Yprojlim \beta$.
 	\end{enumerate}
 \end{proposition}
-极限的性质遂可简洁地刻画为
+Sifat limit dengan demikian dapat dicirikan secara ringkas sebagai
 \begin{align*}
 	\Hom_{\mathcal{C}}(\varinjlim \alpha, \cdot) & \rightiso \varprojlim_i \Hom_{\mathcal{C}}(\alpha(i), \cdot) = \Yinjlim \alpha, \\
 	\Hom_{\mathcal{C}}(\cdot, \varprojlim \beta) & \rightiso \varprojlim_i \Hom_{\mathcal{C}}(\cdot, \beta(i)) = \Yprojlim \beta.
 \end{align*}
-注意到这里的 $\mathcal{C}^\vee$ 与 $\mathcal{C}^\wedge$ 不能互换: 在 $\Hom_{\mathcal{C}}$ 外头的极限必须是 $\varprojlim$!
+Perhatikan bahwa $\mathcal{C}^\vee$ dan $\mathcal{C}^\wedge$ di sini tidak dapat dipertukarkan: limit di luar $\Hom_{\mathcal{C}}$ haruslah $\varprojlim$!
 
 \begin{proof}
-	先考虑归纳极限的情形. 将 \eqref{eqn:lim-diagrams} 中的泛性质改写为: 给定 $\alpha$ 的极限相当于给定对象 $\varinjlim \alpha \in \Obj(\mathcal{C})$, 连同一族态射 $\iota_i: \alpha(i) \to \varinjlim \alpha$, 使得函子间的态射
+	Pertama, tinjau kasus limit induktif. Sifat universal dalam \eqref{eqn:lim-diagrams} dapat ditulis ulang sebagai berikut: memberikan limit dari $\alpha$ ekuivalen dengan memberikan objek $\varinjlim \alpha \in \Obj(\mathcal{C})$ beserta keluarga morfisme $\iota_i: \alpha(i) \to \varinjlim \alpha$, sedemikian sehingga morfisme antarfungtor
 	\begin{equation*}\begin{tikzcd}[row sep=small]
 		k_{\mathcal{C}}(\varinjlim \alpha) \arrow[equal, r] & \Hom_{\mathcal{C}}(\varinjlim \alpha , \cdot) \arrow[r, "\xi"] & \varprojlim_i \Hom_{\mathcal{C}}(\alpha(i), \cdot) & \Yinjlim \alpha \arrow[equal, l] \\
 		& f \arrow[phantom, u, sloped, "\in" description] \arrow[mapsto, r] & (\iota_i^* f = f \circ \iota_i)_{i \in \Obj(I)} \arrow[phantom, u, sloped, "\in" description] &
 	\end{tikzcd}\end{equation*}
-	为同构. 反过来说, 任何同构 $\xi: k_{\mathcal{C}}(\varinjlim \alpha) \rightiso \Yinjlim \alpha$ 都可由一族 $\iota_i: \alpha(i) \to \varinjlim \alpha$ 如是导出: 这是定理 \ref{prop:Yoneda-lemma} 的应用, 或者更直截了当地将上图的变元取为 $\varinjlim \alpha$, 则 $f = \identity$ 的像就是所求的 $(\iota_i)_i$.
+	merupakan isomorfisme. Sebaliknya, setiap isomorfisme $\xi: k_{\mathcal{C}}(\varinjlim \alpha) \rightiso \Yinjlim \alpha$ dapat diinduksi dengan cara tersebut oleh suatu keluarga $\iota_i: \alpha(i) \to \varinjlim \alpha$: ini merupakan penerapan Teorema \ref{prop:Yoneda-lemma}. Secara lebih langsung, ambil peubah pada diagram di atas sebagai $\varinjlim \alpha$; citra dari $f = \identity$ tepat merupakan $(\iota_i)_i$ yang dicari.
 
-	投射极限的处理方法完全类似, 此时考察的同构是
+	Kasus limit proyektif ditangani dengan cara yang sepenuhnya serupa; kali ini isomorfisme yang ditinjau ialah
 	\begin{equation*}\begin{tikzcd}[row sep=small]
 		\Hom_{\mathcal{C}}(\cdot, \varprojlim \beta) \arrow[r] & \varprojlim_i \Hom_{\mathcal{C}}(\cdot, \beta(i)) = \Yprojlim \beta \\
 		f \arrow[phantom, u, sloped, "\in" description] \arrow[mapsto, r] & (p_{i *} f = p_i \circ f)_{i \in \Obj(I)} \arrow[phantom, u, sloped, "\in" description]
 	\end{tikzcd}\end{equation*}
-	明所欲证.
+	Pernyataan pun terbukti.
 \end{proof}
 
-命题 \ref{prop:lim-as-fct} 可将极限的许多性质化约到集合情形, 实质地简化论证. 我们且看一个例子.
+Proposisi \ref{prop:lim-as-fct} mereduksi banyak sifat limit ke kasus himpunan, sehingga pembuktiannya sangat disederhanakan. Mari kita lihat sebuah contoh.
 \begin{lemma}\label{prop:lim-Fubini}
-	设 $I, J$ 为小范畴, 假设 $\mathcal{C}$ 中具有以 $I$, $J$ 为指标的 $\varinjlim$. 考虑函子 $\alpha: I \times J \to \mathcal{C}$, 存在典范同构
+	Misalkan $I, J$ kategori kecil dan andaikan $\mathcal{C}$ memiliki limit induktif berindeks $I$ dan $J$, yang dinotasikan dengan $\varinjlim$. Pertimbangkan fungtor $\alpha: I \times J \to \mathcal{C}$. Terdapat isomorfisme kanonik
 	\[ \varinjlim_j \left( \varinjlim\alpha(\cdot, j) \right) \simeq \varinjlim \alpha \simeq \varinjlim_i \left( \varinjlim\alpha(i, \cdot) \right) \]
-	其中左项极限先对 $I$ 再对 $J$ 取, 右项反之. 投射极限 $\varprojlim \beta$ 的情形类似.
+	dengan limit pada ruas kiri diambil terlebih dahulu terhadap $I$, lalu terhadap $J$, sedangkan pada ruas kanan urutannya dibalik. Kasus limit proyektif $\varprojlim \beta$ serupa.
 \end{lemma}
 \begin{proof}
-	证 $\varinjlim$ 情形即足. 给定 $I$ 中的态射 $i \to i'$, 引理 \ref{prop:lim-functoriality} 对每个 $j$ 给出自然的交换图表
+	Cukup buktikan kasus $\varinjlim$. Untuk suatu morfisme dalam $I$ yang diberikan, yakni $i \to i'$, Lema \ref{prop:lim-functoriality} memberikan diagram komutatif natural berikut untuk setiap $j$:
 	\[ \begin{tikzcd}
 		\varinjlim \alpha(i, \cdot) \arrow[r] & \varinjlim \alpha(i', \cdot) \\
 		\alpha(i, j) \arrow[r] \arrow[u] & \alpha(i', j) \arrow[u]
 	\end{tikzcd} \]
-	因此断言中左项的极限有意义, 右项亦同. 命题 \ref{prop:lim-as-fct} 将断言化约到范畴 $\mathcal{C} = \cate{Set}$ 中的 $\varprojlim$ 情形, 后者从例 \ref{eg:set-limits} 的构造看乃是自明的.
+	Karena itu, limit pada ruas kanan dalam pernyataan tersebut terdefinisi; demikian pula ruas kiri. Proposisi \ref{prop:lim-as-fct} mereduksi pernyataan itu ke kategori $\mathcal{C} = \cate{Set}$, tepatnya kasus $\varprojlim$, yang langsung jelas dari konstruksi pada Contoh \ref{eg:set-limits}.
 \end{proof}
 
-如果范畴 $I$ 的对象和态射集皆为有限集, 相应的极限称为有限极限, 此时常用图表来描述 $I$ 的构造. 极限可以分成两步来构造: 积 (或余积) 与等化子 (或余等化子); 以下讨论中都假设所论极限存在.
-\begin{asparaenum}\index{yuji@余积 (coproduct)}\index{ji@积 (product)}
-	\item 取 $I$ 为离散范畴, 不妨把 $I$ 等同于 $\Obj(I)$. 此时 $\varinjlim \alpha(i)$ 称作对象 $X_i := \alpha(i)$ 的\emph{余积}, 写作 $\coprod_{i \in I} X_i$; 相应地, $\prod_{i \in I} Y_i := \varprojlim \beta(i)$ 称作对象 $Y_i := \beta(i)$ 的\emph{积}. 泛性质 \eqref{eqn:lim-diagrams} 化作
+Jika himpunan objek dan himpunan morfisme kategori $I$ keduanya berhingga, limit yang bersesuaian disebut limit berhingga; dalam hal ini, diagram lazim digunakan untuk mendeskripsikan konstruksi $I$. Limit dapat dikonstruksikan dalam dua tahap: produk (atau koproduk) dan ekualiser (atau koekualiser). Dalam pembahasan berikut, semua limit yang dibicarakan diandaikan ada.
+\begin{asparaenum}\index{yuji@koproduk (coproduct)}\index{ji@produk (product)}
+	\item Ambil $I$ sebagai kategori diskret; kita dapat mengidentifikasi $I$ dengan $\Obj(I)$. Dalam hal ini, $\varinjlim_{i \in I} \alpha(i)$ untuk objek-objek $X_i := \alpha(i)$ disebut \emph{koproduk} dan ditulis $\coprod_{i \in I} X_i$; sejalan dengan itu, $\prod_{i \in I} Y_i := \varprojlim_{i \in I} \beta(i)$ untuk objek-objek $Y_i := \beta(i)$ disebut \emph{produk}. Sifat universal \eqref{eqn:lim-diagrams} menjadi
 		\[\begin{tikzcd}[row sep=small, column sep=small]
 			\Hom_{\mathcal{C}} \left( \displaystyle\coprod_{i \in I} X_i, \cdot \right) \arrow[r, "\sim"] & \displaystyle\prod_{i \in I} \Hom_{\mathcal{C}}(X_i, \cdot) & \Hom_{\mathcal{C}} \left( \cdot, \displaystyle\prod_{i \in I} Y_i \right)  \arrow[r, "\sim"] & \displaystyle\prod_{i \in I} \Hom_{\mathcal{C}}(\cdot, Y_i) \\
 			\phi \arrow[mapsto, r] & (\phi \iota_i)_{i \in I} & \phi \arrow[mapsto, r] & (p_i \phi)_{i \in I}
 		\end{tikzcd}\]
-		此处用到态射 $\iota_j: X_j \to \coprod_i X_i$ 和 $p_j: \prod_i Y_i \to Y_j$, 后者称为到 $Y_j$ 的投影.
+		Di sini digunakan morfisme $\iota_j: X_j \to \coprod_i X_i$ dan $p_j: \prod_i Y_i \to Y_j$; yang terakhir disebut proyeksi ke $Y_j$.
 
-		有限个对象的余积或积习惯写作 $X_1 \sqcup \cdots \sqcup X_n$ 或 $Y_1 \times \cdots \times Y_n$. 这些符号兼容于 $\cate{Set}$ 与 $\cate{Top}$ 情形下的惯例 (积空间, 无交并).
-	\item 取空范畴 $I = \mathbf{0}$, 此时 \eqref{eqn:lim-diagrams} 表明 $\varinjlim$ 是始对象而 $\varprojlim$ 是终对象. 它们也可以分别被理解为空余积和空积.
-	\item 取 $I$ 为图表
+		Koproduk atau produk dari sejumlah berhingga objek lazim ditulis $X_1 \sqcup \cdots \sqcup X_n$ atau $Y_1 \times \cdots \times Y_n$. Notasi ini sesuai dengan kelaziman dalam kasus $\cate{Set}$ dan $\cate{Top}$ (ruang produk, gabungan saling lepas).
+	\item Ambil kategori kosong $I = \mathbf{0}$. Dalam hal ini, \eqref{eqn:lim-diagrams} menunjukkan bahwa $\varinjlim$ adalah objek awal, sedangkan $\varprojlim$ adalah objek terminal. Keduanya juga dapat dipahami masing-masing sebagai koproduk kosong dan produk kosong.
+	\item Ambil $I$ sebagai kategori yang diberikan oleh diagram
 		\begin{tikzcd}
 			\bullet \arrow[r, yshift=0.5ex] \arrow[r, yshift=-0.5ex] & \bullet
 		\end{tikzcd}
-		给出的范畴 (两个对象, 两个非 $\identity$ 的态射), 显然 $I^\text{op} \simeq I$. 函子 $\alpha: I \to \mathcal{C}$ 或 $\beta: I^\text{op} \to \mathcal{C}$ 可以理解为 $\mathcal{C}$ 中两个平行箭头
+		(dua objek, dua morfisme bukan $\identity$); jelas bahwa $I^\text{op} \simeq I$. Fungtor $\alpha: I \to \mathcal{C}$ atau $\beta: I^\text{op} \to \mathcal{C}$ dapat dipahami sebagai dua panah sejajar dalam $\mathcal{C}$,
 		\begin{tikzcd}
 			X \arrow[yshift=0.5ex, r, "f"] \arrow[yshift=-0.5ex, r, "g"'] & Y ;
 		\end{tikzcd}
-		相应的极限记为 $\Coker(f,g) := \varinjlim \alpha$ (称为\emph{余等化子}), $\Ker(f,g) := \varprojlim \beta$ (称为\emph{等化子} 或差核). 等化子 $\Ker(f,g)$ 的泛性质表作 \index{yudenghuazi@余等化子 (coequalizer)}\index{denghuazi@等化子 (equalizer)}\index[sym1]{Ker@$\Ker$}\index[sym1]{Coker@$\Coker$}
+		Limit yang bersesuaian dinotasikan dengan $\Coker(f,g) := \varinjlim \alpha$ (disebut \emph{koekualiser}) dan $\Ker(f,g) := \varprojlim \beta$ (disebut \emph{ekualiser} atau kernel selisih). Sifat universal ekualiser $\Ker(f,g)$ dinyatakan oleh \index{yudenghuazi@koekualiser (coequalizer)}\index{denghuazi@ekualiser (equalizer)}\index[sym1]{Ker@$\Ker$}\index[sym1]{Coker@$\Coker$}
 		\begin{equation}\label{eqn:equalizer}\begin{tikzcd}
 			{} & L \arrow[dashed, ld, "\exists !"'] \arrow[d, "\phi"] \arrow[rd] & \\
 			\Ker(f,g) \arrow[r] & X \arrow[yshift=0.5ex, r, "f"] \arrow[yshift=-0.5ex, r, "g"'] & Y
 		\end{tikzcd}\end{equation}
-		意谓: 两合成态射 $\Ker(f,g) \to X \xrightarrow{f} Y$ 和 $\Ker(f,g) \to X \xrightarrow{g} Y$ 相等, 而且对任意 $\phi: L \to X$, 若 $f\phi = g\phi$ 则存在唯一的态射 $L \dasharrow \Ker(f,g)$ 使左三角交换. 同理, 余等化子的泛性质表作
+		Artinya, kedua morfisme komposit $\Ker(f,g) \to X \xrightarrow{f} Y$ dan $\Ker(f,g) \to X \xrightarrow{g} Y$ adalah sama. Selain itu, untuk setiap $\phi: L \to X$, jika $f\phi = g\phi$, maka terdapat morfisme tunggal $L \dasharrow \Ker(f,g)$ yang membuat segitiga kiri komutatif. Demikian pula, sifat universal koekualiser dinyatakan oleh
 		\begin{equation}\label{eqn:coequalizer}\begin{tikzcd}
 			{} & L & \\
 			X \arrow[yshift=0.5ex, r, "f"] \arrow[yshift=-0.5ex, r, "g"'] \arrow[ru] & Y \arrow[r] \arrow[u, "\psi"] & \Coker(f,g) \arrow[dashed, lu, "\exists !"'],
 		\end{tikzcd}\end{equation}
-		意谓: $X \xrightarrow{f} Y \to \Coker(f,g)$ 等于 $X \xrightarrow{g} Y \to \Coker(f,g)$, 而且对任意 $\psi: Y \to L$, 若 $\psi f = \psi g$ 则存在唯一的 $\Coker(f,g) \dasharrow L$ 使右三角交换.
+		Artinya, $X \xrightarrow{f} Y \to \Coker(f,g)$ sama dengan $X \xrightarrow{g} Y \to \Coker(f,g)$. Selain itu, untuk setiap $\psi: Y \to L$, jika $\psi f = \psi g$, maka terdapat morfisme tunggal $\Coker(f,g) \dasharrow L$ yang membuat segitiga kanan komutatif.
 
-		当 $\mathcal{C} = \cate{Set}$ 时, $f, g: X \rightrightarrows Y$ 的等化子是子集 $\{x: f(x)=g(x)\} \hookrightarrow X$, 余等化子是商集 $Y \twoheadrightarrow Y/\sim$, 其中 $\sim$ 是由 $f(x) \sim g(x)$ 生成的等价关系; $\mathcal{C} = \cate{Top}$ 的情况类似.
+		Jika $\mathcal{C} = \cate{Set}$, ekualiser dari $f, g: X \rightrightarrows Y$ adalah himpunan bagian $\{x: f(x)=g(x)\} \hookrightarrow X$, sedangkan koekualisernya adalah himpunan hasil bagi $Y \twoheadrightarrow Y/\sim$, dengan $\sim$ relasi ekuivalensi yang dibangkitkan oleh $f(x) \sim g(x)$; kasus $\mathcal{C} = \cate{Top}$ serupa.
 \end{asparaenum}
-研究一般极限的性质前, 先对以上特例搜集一些简单的性质.
+Sebelum menelaah sifat limit umum, terlebih dahulu kita kumpulkan beberapa sifat sederhana dari kasus-kasus khusus di atas.
 
-\begin{lemma}[积和余积的结合约束]\label{prop:product-associativity}\index{jieheyueshu@结合约束 (associativity constraint)}
-	设有小集合的无交并分解 $I = \bigsqcup_{j \in J}  I_j$. 若范畴 $\mathcal{C}$ 具有以 $J$ 和每个 $I_j$ 为指标的积, 则以 $I$ 为指标的积也存在. 而且有唯一的同构 $a$ 及交换图表如下
+\begin{lemma}[Kendala asosiativitas produk dan koproduk]\label{prop:product-associativity}\index{jieheyueshu@kendala asosiativitas (associativity constraint)}
+	Misalkan suatu himpunan kecil mempunyai dekomposisi gabungan saling lepas $I = \bigsqcup_{j \in J}  I_j$. Jika kategori $\mathcal{C}$ mempunyai produk berindeks $J$ dan juga produk berindeks setiap $I_j$, maka produk berindeks $I$ juga ada. Selain itu, terdapat isomorfisme tunggal $a$ beserta diagram komutatif berikut:
 	\[\begin{tikzcd}[row sep=small]
 		 \prod_{i \in I} X_i \arrow[rr, "a", "\sim"'] \arrow[rd, "p_k"'] & & \prod_{j \in J} \left( \prod_{i \in I_j} X_i \right) \arrow[ld, "p_k p_j"] \\
 		 & X_k & 
 	\end{tikzcd} \qquad j \in J, \; k \in I_j. \]
-	同样断言对余积和态射 $\iota_k: X_k \to \coprod_{i \in I} X_i$ 等也成立.
+	Pernyataan yang sama juga berlaku bagi koproduk dan morfisme $\iota_k: X_k \to \coprod_{i \in I} X_i$, dan seterusnya.
 \end{lemma}
-以上结果称为``结合约束''而非结合律, 因为它体现为一个唯一的同构而非等号. 以下结果表明积和余积也具有某种``交换约束''. 其证明皆可仿照引理 \ref{prop:lim-Fubini} 的论证, 化归为熟知的集合情形.
-\begin{lemma}[积和余积的交换约束]\label{prop:product-commutativity}\index{jiaohuanyueshu@交换约束 (commutativity constraint)}
-	设 $\sigma: I \to I$ 为小集合的双射. 设范畴 $\mathcal{C}$ 具有以 $I$ 为指标的积, $\{X_i\}_{i \in I}$ 为一族对象, 则有唯一的同构 $c$ 及交换图表如下
+Hasil di atas disebut ``kendala asosiativitas'', bukan hukum asosiatif, karena diwujudkan oleh isomorfisme tunggal, bukan oleh kesamaan. Hasil berikut menunjukkan bahwa produk dan koproduk juga memiliki semacam ``kendala komutativitas''. Pembuktiannya dapat meniru argumen dalam Lema \ref{prop:lim-Fubini} dan mereduksinya ke kasus himpunan yang sudah dikenal.
+\begin{lemma}[Kendala komutativitas produk dan koproduk]\label{prop:product-commutativity}\index{jiaohuanyueshu@kendala komutativitas (commutativity constraint)}
+	Misalkan $\sigma: I \to I$ suatu bijeksi pada himpunan kecil. Andaikan kategori $\mathcal{C}$ mempunyai produk berindeks $I$, dan $\{X_i\}_{i \in I}$ suatu keluarga objek. Maka terdapat isomorfisme tunggal $c$ beserta diagram komutatif berikut:
 	\[\begin{tikzcd}[row sep=small]
 		\prod_{i \in I} X_i \arrow[rr, "c", "\sim"'] \arrow[rd, "p_j"'] & & \prod_{i \in I} X_{\sigma(i)} \arrow[ld, "p_{\sigma^{-1}(j)}"] \\
 		& X_j &
 	\end{tikzcd} \qquad j \in I. \]
-	同样断言对余积和态射 $\iota_j: X_j \to \coprod_{i \in I} X_i$ 等也成立.
+	Pernyataan yang sama juga berlaku bagi koproduk dan morfisme $\iota_j: X_j \to \coprod_{i \in I} X_i$, dan seterusnya.
 \end{lemma}
 
 \begin{lemma}
-	设 $f,g: X \to Y$. 若 $\Ker(f,g)$ 存在则 $\Ker(f,g) \to X$ 是单态射. 若 $\Coker(f,g)$ 存在则 $Y \to \Coker(f,g)$ 是满态射.
+	Misalkan $f,g: X \to Y$. Jika $\Ker(f,g)$ ada, maka $\Ker(f,g) \to X$ adalah monomorfisme. Jika $\Coker(f,g)$ ada, maka $Y \to \Coker(f,g)$ adalah epimorfisme.
 \end{lemma}
 \begin{proof}
-	若态射 $\mu, \nu: L \rightrightarrows \Ker(f,g)$ 与 $\Ker(f,g) \to X$ 的合成是同一个态射 $\phi: L \to X$, 那么 $f\phi = g\phi$, 则在交换图表 \eqref{eqn:equalizer} 中可将 $\dasharrow$ 取为 $\mu$ 或 $\nu$, 从唯一性得知 $\mu=\nu$. 故 $\Ker(f,g) \to X$ 是单的. 倒转箭头可证 $\Coker(f,g)$ 的情形.
+	Andaikan morfisme $\mu, \nu: L \rightrightarrows \Ker(f,g)$ sedemikian sehingga komposit keduanya dengan morfisme $\Ker(f,g) \to X$ sama, yaitu morfisme $\phi: L \to X$. Maka $f\phi = g\phi$, sehingga dalam diagram komutatif \eqref{eqn:equalizer}, $\dasharrow$ dapat diambil sebagai $\mu$ maupun $\nu$. Dari keunikan diperoleh $\mu=\nu$. Jadi, $\Ker(f,g) \to X$ adalah monomorfisme. Kasus $\Coker(f,g)$ terbukti dengan membalik semua panah.
 \end{proof}
-
+	
 \section{完备性}
 极限能够统摄数学实践中许多重要的构造, 如拓扑学中的积空间, 商空间等. 在为数学问题制定范畴时, 我们自然也希望其中具有充分多的极限. 这就引向了以下概念.
 
