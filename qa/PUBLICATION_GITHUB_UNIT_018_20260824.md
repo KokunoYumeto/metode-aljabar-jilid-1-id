@@ -68,3 +68,9 @@ CC BY-SA 3.0, and bundled fonts retain OFL 1.1. `Lanzhou.png` is not used by
 the Unit 018 reader. The derivative is independent and non-endorsed.
 Production provenance is recorded separately as
 `OpenAI Codex gpt-5.6-sol, Ultra`.
+
+## Receipt-boundary closure
+
+The sanitized receipt, README, immutable inventory, and verifier were pushed
+at receipt commit `0da7f46721ed3cd9601c1ce09d8b38a700ab3064`.
+Anonymous immutable-commit readback matched all four files / 53,079 bytes.

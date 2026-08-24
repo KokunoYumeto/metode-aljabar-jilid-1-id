@@ -250,7 +250,7 @@ def main() -> None:
 
     published = request(authenticated, "POST", draft["links"]["publish"]).json()
     record_id = published["id"]
-    public_url = published.get("links", {}).get("record", f"https://zenodo.org/records/{record_id}")
+    public_url = f"https://zenodo.org/records/{record_id}"
 
     anonymous = requests.Session()
     anonymous.trust_env = False

@@ -46,9 +46,9 @@ Status saat ini: **Pendahuluan, seluruh Bab 1, serta seluruh Bab 2 termasuk lati
 
 [Baca atau unduh PDF Unit 18](artifacts/unit-018-bab-2-latihan.pdf)
 
-Versi preservasi `0.3.0` yang memuat checkpoint gabungan 96 halaman, kesembilan reader, sumber yang dapat dibangun, backend modular, bukti ringkas, dan manifest hash tersedia pada [Zenodo DOI 10.5281/zenodo.22062228](https://doi.org/10.5281/zenodo.22062228). Seluruh pembaruan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat. Checkpoint `0.5.0` di atas menggabungkan kedelapan belas reader menjadi 183 halaman: pendahuluan serta Bab 1 dan Bab 2 lengkap. Build kedua identik byte; seluruh 182 halaman sumber tidak berubah secara visual setelah penggabungan, dan QA navigasi, font, tautan, serta 183 halaman lulus. Checkpoint ini dipublikasikan pada commit `1c3479a8fdf8c23c2f72789db2bbc969a4b9b639`; seluruh tujuh path / 3.026.587 byte cocok pada pembacaan balik anonim. Receipt ada di [`qa/PUBLICATION_GITHUB_CHECKPOINT_0.5.0_20260824.md`](qa/PUBLICATION_GITHUB_CHECKPOINT_0.5.0_20260824.md).
+Versi preservasi saat ini, `0.5.0`, tersedia pada [Zenodo DOI 10.5281/zenodo.22071178](https://doi.org/10.5281/zenodo.22071178). Seluruh pembaruan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat. Rekaman ini memuat checkpoint gabungan 183 halaman, paket sumber/backend ringkas, pemberitahuan hak, manifest, dan checksum: lima berkas / 68.091.032 byte yang seluruhnya cocok pada pembacaan balik anonim. Checkpoint menggabungkan kedelapan belas reader menjadi pendahuluan serta Bab 1 dan Bab 2 lengkap. Build kedua identik byte; seluruh 182 halaman unit tidak berubah secara visual setelah penggabungan, dan QA navigasi, font, tautan, serta 183 halaman lulus. Checkpoint GitHub dipublikasikan pada commit `1c3479a8fdf8c23c2f72789db2bbc969a4b9b639`; seluruh tujuh path / 3.026.587 byte cocok pada pembacaan balik anonim. Receipt tersedia di [`qa/PUBLICATION_GITHUB_CHECKPOINT_0.5.0_20260824.md`](qa/PUBLICATION_GITHUB_CHECKPOINT_0.5.0_20260824.md) dan [`qa/PUBLICATION_ZENODO_0.5.0_20260824.md`](qa/PUBLICATION_ZENODO_0.5.0_20260824.md).
 
-Checkpoint pembaca sebelumnya juga memiliki item karya pada [Figshare DOI 10.6084/m9.figshare.33314766.v3](https://doi.org/10.6084/m9.figshare.33314766.v3). Rute `0.4.0` mempertahankan reader-first PDF, paket sumber/backend ringkas, pemberitahuan hak, manifest, dan checksum, tetapi pembaruan publik saat ini tertahan karena kredensial Figshare lokal mengembalikan `InactiveAccount` dan artikel lama perlu diverifikasi ulang; lihat [`qa/FIGSHARE_PUBLICATION_BLOCKED_20260823.md`](qa/FIGSHARE_PUBLICATION_BLOCKED_20260823.md). Lisensi teks utama/adaptasi adalah CC BY 4.0; `Lanzhou.png` dan fragmen `AJbook.cls` yang dikreditkan tetap CC BY-SA 3.0, sedangkan font Noto tetap OFL 1.1, sebagaimana dirinci dalam `LICENSES.md`.
+Item karya Figshare yang sama tetap dipertahankan sebagai satu garis versi, bukan diduplikasi. Pemilih lisensi Figshare tidak menyediakan pilihan yang dapat mewakili gabungan hak komponen edisi ini; karena itu versi berikutnya harus berupa rekaman metadata CC0 yang menautkan checkpoint Zenodo, bukan salinan berkas dengan lisensi yang diratakan secara keliru. Lisensi teks utama/adaptasi adalah CC BY 4.0; `Lanzhou.png` dan fragmen `AJbook.cls` yang dikreditkan tetap CC BY-SA 3.0, sedangkan font Noto tetap OFL 1.1, sebagaimana dirinci dalam `LICENSES.md`.
 
 ## Identitas sumber
 
@@ -185,21 +185,21 @@ Artefak Unit 9 yang diterima:
 - QA terminologi primer membakukan `fungtor`; matematika, identitas, topologi, dan paginasi tetap sama
 - tidak ada galat TeX, rujukan/sitasi tak terdefinisi, kotak meluber, karakter hilang, halaman kosong, atau residu aksara Han pada halaman isi
 
-Artefak Unit 10 yang diterima secara lokal:
+Artefak Unit 10 yang diterima dan dipublikasikan:
 
 - 15 halaman; 153.352 byte; SHA-256 `a06c4152e6233270cfa138b6c99ae9f307246fe2e1eac6b72a9533c9d74bfce4`
 - target Section 2.2 28.112 byte; SHA-256 `84cd01f4bfb9b2dcf6720991b72d714335e3f977e2bee88d40b2b64733572053`
 - backend 98.251 byte; SHA-256 `d89f4487c7b1610d267068b70f429d9ac0d1f1ddc9136b8370fe8fec447eda4d`
 - 291 permukaan matematika, 13 label, 7 rujukan, 2 rujukan persamaan, 2 sitasi, 15 indeks, dan 19 diagram terpelihara; dua build serta replay visual lulus.
 
-Artefak Unit 11 yang diterima secara lokal:
+Artefak Unit 11 yang diterima dan dipublikasikan:
 
 - 7 halaman; 105.391 byte; SHA-256 `f18ea37d945b08961f14e49581dd13a3a3024307fe3d33a77c7d5bb5631859fe`
 - target kategori fungtor 8.004 byte; SHA-256 `a848cb6d7dfdd7edc1f5b07be14f421ed075a8124723ab9b73a207f86216e105`
 - backend 51.063 byte; SHA-256 `998c47db6bd6692347c16be7d13762395a00b3ca90635dc6d7ee87ef878c1b36`
 - 102 permukaan matematika, 4 label, 5 rujukan, 1 rujukan persamaan, 8 indeks, dan satu diagram terpelihara; dua build serta replay visual lulus. Lima peringatan Hyperref untuk target kosong disengaja untuk menekan tautan eksternal palsu.
 
-Artefak Unit 12 yang diterima secara lokal:
+Artefak Unit 12 yang diterima dan dipublikasikan:
 
 - 10 halaman; 121.388 byte; SHA-256 `1671beea4ab78c848d577f9b8428d5717de2ac55f309f4f075c455409fd878a9`
 - target sifat universal dan kategori koma 11.056 byte; SHA-256 `26a2e9a638fae91a1108c9a263a89b64b71ba5d351cae1bfae72eef6eba0649b`
@@ -207,7 +207,7 @@ Artefak Unit 12 yang diterima secara lokal:
 - 159 permukaan matematika, 7 label, 6 rujukan, 1 sitasi, 6 indeks, dan 8 diagram `tikzcd` terpelihara; dua build serta replay visual 10/10 halaman lulus.
 - tiga target eksternal kosong tetap ditekan secara sengaja oleh witness `unit-012-crossrefs.aux`; tidak ada rujukan/sitasi tak terdefinisi, kotak meluber, halaman kosong, atau residu aksara Han pada span terjemahan.
 
-Artefak Unit 13 yang diterima secara lokal:
+Artefak Unit 13 yang diterima dan dipublikasikan:
 
 - 7 halaman; 106.162 byte; SHA-256 `03ced2b80bf14814d01bc73cf378bfab820ec40ad0571eaa33cf514d79d760cf`
 - target fungtor representabel dan Lema Yoneda 8.643 byte; SHA-256 `eeb6bbb2aca0ea17277e7afea39492729996cd9d8648deccc94bcebe9111327d`
@@ -215,7 +215,7 @@ Artefak Unit 13 yang diterima secara lokal:
 - 98 permukaan matematika, 7 label, 10 rujukan, 3 rujukan persamaan, 5 indeks, dan 2 diagram `tikzcd` terpelihara setelah dua koreksi sumber yang didokumentasikan.
 - isomorfisme Yoneda yang panjang ditata sebagai display dan kedua indeks digabung pada satu halaman akhir; dua build serta replay visual 7/7 halaman lulus tanpa kotak meluber, rujukan tak terdefinisi, halaman kosong, atau residu aksara Han.
 
-Artefak Unit 14 yang diterima secara lokal:
+Artefak Unit 14 yang diterima dan dipublikasikan:
 
 - 9 halaman; 121.761 byte; SHA-256 `1241ca5ff345ff5315d5e3f4e6fcb1f37af2b0e948f458306c4b790035779d04`
 - target dasar-dasar fungtor adjoin pada `chapter2.tex:766-909` adalah 11.655 byte; SHA-256 `5526e8eb99dba9dc3e0eebbd1ddd278eb6343fd50a1d18cf0f6715f09f6e1ed2`; file target lengkap 155.822 byte; SHA-256 `bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5`
@@ -259,7 +259,7 @@ Artefak Unit 18 yang diterima dan dipublikasikan:
 
 - 4 halaman; 83.578 byte; SHA-256 `4fc2997e6eafc8f2e74d8a03e3351cb49d99a95ae96ff254a211fbf505f6e00c`
 - target lengkap Latihan Bab 2 pada `chapter2.tex:1603-1645` adalah 6.523 byte; SHA-256 `d69667baae061a5d06a57dcc25033b6a971986ea704c72a0f53d687707837b55`; file target lengkap 166.465 byte; SHA-256 `3ef0e0dd3a8a30f4e44d7f87d94a4a4343ac7097a1862180c8becaf3631cda16`
-- backend 136.912 byte; SHA-256 `c761b3b1fbdceb0930d9e6d19fc23885c1b21a019db4d48cbf35bb57cedea794`; 172 entitas stabil mencakup 13 bagian latihan, 5 subbagian, 1 petunjuk, 83 permukaan rumus, 3 rujukan, 1 diagram, dan 2 koreksi sumber; enam proyeksi CSV direproduksi dan divalidasi secara deterministik.
+- backend 136.931 byte; SHA-256 `66dd0fe0c8a723b5a7745b8ccea8cb7657598cf027c3d2f50fb26df86a8811c9`; 172 entitas stabil mencakup 13 bagian latihan, 5 subbagian, 1 petunjuk, 83 permukaan rumus, 3 rujukan, 1 diagram, dan 2 koreksi sumber; enam proyeksi CSV direproduksi dan divalidasi secara deterministik. QA terminologi Indonesia kedua memperhalus label backend `nonunital ring` tanpa mengubah satu pun halaman reader; sumber, keputusan, dan propagasinya dicatat dalam [`qa/TERMINOLOGY_QA_INDONESIAN_GRADUATE_ALGEBRA_20260824.md`](qa/TERMINOLOGY_QA_INDONESIAN_GRADUATE_ALGEBRA_20260824.md).
 - ketiga belas latihan, lima subbagian, satu petunjuk, 80 permukaan matematika sebaris, dua display kurung siku, satu display `align*`, satu diagram `tikzcd` dengan sepuluh panah, dan tiga rujukan dipertahankan; dua koreksi sumber yang diungkapkan menghapus predikat medan yang terduplikasi dan mengikat nama fungtor pelupa `U` yang semula bebas.
 - dua build bersih menghasilkan ekstraksi teks serta replay 4/4 halaman Poppler dan 4/4 halaman MuPDF yang identik; seluruh halaman diperiksa tanpa pemotongan, benturan, karakter hilang, rumus/diagram rusak, halaman kosong, rujukan tak terdefinisi, atau kotak meluber.
 - sampul digital memakai hierarki judul terpusat dan panel cakupan tekstual yang secara eksplisit menyatakan 13 latihan serta petunjuk pada Latihan 8; tidak ada lagi blok terisi/tak terisi yang ambigu.
@@ -269,7 +269,7 @@ Artefak Unit 18 yang diterima dan dipublikasikan:
 
 ## Backend modular
 
-`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-018-bab-2-latihan.json` adalah catatan kanonik delapan belas unit yang telah diterima secara lokal. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7 dan Unit 18 mempertahankan latihan sebagai entitas bagian terurut serta setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat. Unit 10-18 memakai identitas yang sama untuk permukaan matematika, diagram, rujukan eksternal, indeks, sitasi, koreksi sumber, serta provenance model; receipt penerimaan masing-masing mengikat bukti lokal dan publiknya.
+`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-018-bab-2-latihan.json` adalah catatan kanonik delapan belas unit yang telah diterima dan dipublikasikan. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7 dan Unit 18 mempertahankan latihan sebagai entitas bagian terurut serta setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat. Unit 10-18 memakai identitas yang sama untuk permukaan matematika, diagram, rujukan eksternal, indeks, sitasi, koreksi sumber, serta provenance model; receipt penerimaan masing-masing mengikat bukti lokal dan publiknya.
 
 Validasi:
 

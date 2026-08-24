@@ -42,7 +42,7 @@ STRUCTURE_QA = "qa/unit-018-evidence/structure-and-pdf-qa.json"
 REVIEW = "qa/UNIT_018_TRANSLATION_SOURCE_REVIEW_20260824.md"
 MATH_REVIEW = "qa/UNIT_018_MATH_STRUCTURE_AUDIT_20260824.md"
 TERMINOLOGY = "00_control/TERMINOLOGY.id-ID.csv"
-TERMINOLOGY_QA = "qa/TERMINOLOGY_QA_INDONESIAN_CATEGORY_ALGEBRA_20260822.md"
+TERMINOLOGY_QA = "qa/TERMINOLOGY_QA_INDONESIAN_GRADUATE_ALGEBRA_20260824.md"
 FINAL_LOG = "qa/UNIT_018_BUILD_FINAL.log"
 ARTIFACT = "artifacts/unit-018-bab-2-latihan.pdf"
 MODEL = "OpenAI Codex gpt-5.6-sol, Ultra"
@@ -525,7 +525,7 @@ def gate() -> tuple[int, tuple[int, str]]:
         ("pointed set", "himpunan bertitik dasar"),
         ("pointed topological space", "ruang topologis bertitik dasar"),
         ("unital ring", "gelanggang dengan unsur satuan"),
-        ("nonunital ring", "gelanggang tanpa syarat unsur satuan"),
+        ("nonunital ring", "gelanggang yang tidak disyaratkan memiliki unsur satuan"),
         ("finitely generated abelian group", "grup abelian yang dibangkitkan secara berhingga"),
     ):
         if f'"{source_term}","{target_term}","admitted"' not in glossary:
@@ -557,7 +557,7 @@ def main() -> None:
         ("concept/adjunction-unit", "伴随的单位", "unit adjoin", (8, 9)),
         ("concept/adjunction-counit", "伴随的余单位", "kounit adjoin", (6, 8, 9)),
         ("concept/unital-ring", "含幺环", "gelanggang dengan unsur satuan", (7,)),
-        ("concept/nonunital-ring", "非含幺环", "gelanggang tanpa syarat unsur satuan", (7,)),
+        ("concept/nonunital-ring", "非含幺环", "gelanggang yang tidak disyaratkan memiliki unsur satuan", (7,)),
         ("concept/fully-faithful-functor", "全忠实函子", "fungtor penuh dan setia", (8,)),
         ("concept/yoneda-lemma", "米田引理", "Lema Yoneda", (8,)),
         ("concept/complete-category", "完备范畴", "kategori lengkap", (9, 12)),

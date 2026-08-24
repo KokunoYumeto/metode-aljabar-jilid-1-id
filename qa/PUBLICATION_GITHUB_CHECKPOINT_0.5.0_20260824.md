@@ -64,3 +64,9 @@ text and translation are CC BY 4.0; the credited `AJbook.cls` fragment and
 `Lanzhou.png` retain CC BY-SA 3.0; bundled fonts retain OFL 1.1. This is an
 independent, non-endorsed derivative. Production provenance is separate and
 records `OpenAI Codex gpt-5.6-sol, Ultra`.
+
+## Receipt-boundary closure
+
+The sanitized receipt, README, content-readback inventory, and verifier were
+pushed at receipt commit `88864275d729185a89cbff116258771332cd95e2`.
+Anonymous immutable-commit readback matched all four files / 40,490 bytes.
