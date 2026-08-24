@@ -279,6 +279,7 @@ Artefak Unit 19 yang diterima:
 - sampul menyatakan cakupan parsial secara eksplisit tanpa blok terisi/tak terisi yang ambigu; bibliografi singkat, indeks istilah, dan indeks simbol digabung pada satu halaman akhir yang terbaca alih-alih menghasilkan halaman belakang yang jarang.
 - koreksi `O013-LI-U019-COR-001` mengganti literal `1` yang salah pada satu simpul diagram koherensi Kelly dengan simbol objek satuan monoidal yang telah didefinisikan; seluruh topologi diagram lainnya tetap utuh.
 - receipt penerimaan lokal ada di [`qa/UNIT_019_ADMISSION_20260824.md`](qa/UNIT_019_ADMISSION_20260824.md); bukti visual independen ada di [`qa/UNIT_019_VISUAL_QA_20260824.md`](qa/UNIT_019_VISUAL_QA_20260824.md).
+- Unit 19 dipublikasikan pada commit `149adacf2928e8a5497c72d4a069e1b626915ee4`; seluruh 53 path / 5.265.626 byte cocok dengan blob komit pada pembacaan balik anonim. Inventaris per-path ada di [`qa/PUBLICATION_GITHUB_UNIT_019_CONTENT_READBACK.json`](qa/PUBLICATION_GITHUB_UNIT_019_CONTENT_READBACK.json), dan receipt publikasi ada di [`qa/PUBLICATION_GITHUB_UNIT_019_20260824.md`](qa/PUBLICATION_GITHUB_UNIT_019_20260824.md).
 
 ## Backend modular
 
