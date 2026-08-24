@@ -16,10 +16,10 @@ review, two clean builds, PDF checks, terminology QA, and all-page visual QA.
 - Full current target: 155,822 bytes; SHA-256
   `bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5`.
 - Reader: `artifacts/unit-014-bab-2-fungtor-adjoin-dasar.pdf`, 9 pages,
-  121,651 bytes; SHA-256
-  `a8acee26ef75f172336d4e729e055ca6c8d222c548748d9c4a58a4ee976cb403`.
-- Final log: `qa/UNIT_014_BUILD_FINAL.log`, 85,830 bytes; SHA-256
-  `61d3d9236755d0384c2dc0e08acd9fb0c4b0f67c2367dd6967ef6b6016296b07`.
+  121,761 bytes; SHA-256
+  `1241ca5ff345ff5315d5e3f4e6fcb1f37af2b0e948f458306c4b790035779d04`.
+- Final log: `qa/UNIT_014_BUILD_FINAL.log`, 85,851 bytes; SHA-256
+  `7045b0b1ede153a2dcaea05e03139028f95621b5b44b9ba0bdea2c1cc0fb97cb`.
 
 ## Content, terminology, and corrections
 
@@ -53,10 +53,17 @@ claim stronger attestation than the documented terminology evidence provides.
 
 ## Build and reader QA
 
-Two clean builds (`build/unit-014-admission-c` and
-`build/unit-014-admission-d`) produced 9 pages. All 9 MuPDF pages and all 9
+Two clean correction builds (`build/unit-014-equation-fix-e` and
+`build/unit-014-equation-fix-f`) produced 9 pages. All 9 MuPDF pages and all 9
 Poppler pages are pixel-identical within each renderer at 144 dpi. Per-page and
 concatenated render hashes are recorded under `qa/unit-014-evidence/`.
+
+The standalone driver now sets the Chapter 2 equation counter to four before
+this source span. Consequently `eqn:unit-adjunction` prints as (2.5) and
+`eqn:unit-counit-relation` as (2.6), matching the identifiers in the complete
+source book. The first public Unit 014 checkpoint incorrectly restarted these
+labels at (2.1) and (2.2); that packaging defect did not alter the translated
+mathematics and is superseded by this corrected reader.
 
 The final log has zero blockers: no undefined reference or citation,
 multiply-defined label, missing glyph, TeX/package error, fatal error, or

@@ -1,7 +1,8 @@
 # Unit 013 admission - Fungtor Representabel dan Lema Yoneda
 
 Status: admitted locally after independent source comparison, protected-topology
-review, two clean builds, PDF checks, terminology QA, and all-page visual QA.
+review, corrected Chapter 2 equation continuity, two clean builds, PDF checks,
+terminology QA, and all-page visual QA.
 
 ## Frozen content
 
@@ -12,15 +13,19 @@ review, two clean builds, PDF checks, terminology QA, and all-page visual QA.
   `9b30201ad8df7822e2e6bb20080097bff6ef663c763653f859f6ab4e028b2928`.
 - Indonesian span: 8,643 bytes; SHA-256
   `eeb6bbb2aca0ea17277e7afea39492729996cd9d8648deccc94bcebe9111327d`.
-- Full current target: 154,532 bytes; SHA-256
-  `81d89e8d4f94f4aea8358e4997175abdf69ec9b537eff9c788b0beafa26b5e2e`.
+- Full target at the original Unit 013 admission boundary: 154,532 bytes;
+  SHA-256 `81d89e8d4f94f4aea8358e4997175abdf69ec9b537eff9c788b0beafa26b5e2e`.
+  Later source-order units may extend that shared file; Unit 013 is bound to its
+  frozen span above.
+- Standalone driver: 4,776 bytes; SHA-256
+  `f3a7b9e2351288eaf273930572d564cb8d0011e44441cd22246e8f385985cdf2`.
 - Reader: `artifacts/unit-013-bab-2-fungtor-representabel-dan-lema-yoneda.pdf`,
-  7 pages, 106,154 bytes; SHA-256
-  `4db806c3a0c42449b1333e25109d135176931880a48982a70b776e04be7ffa2a`.
-- Final log: `qa/UNIT_013_BUILD_FINAL.log`, 86,810 bytes; SHA-256
-  `a407323233d53e8f20d952dbacaea16000ccb96b7c03bf9854695f9110311b91`.
+  7 pages, 106,162 bytes; SHA-256
+  `03ced2b80bf14814d01bc73cf378bfab820ec40ad0571eaa33cf514d79d760cf`.
+- Final log: `qa/UNIT_013_BUILD_FINAL.log`, 86,834 bytes; SHA-256
+  `605c9d68009fcfa0d9b746864ebad7e1618943932cd6d8cd1140e84fbd657039`.
 
-## Content, terminology, and corrections
+## Content, terminology, and source corrections
 
 The span preserves 98 normalized mathematics surfaces after the two disclosed
 source corrections; all 17 environment tokens; seven labels; ten ordinary
@@ -44,22 +49,38 @@ gemal (sheaf theory)` are explicitly standards-based choices, not falsely
 claimed as broad field attestation. No admitted Unit 001-012 reader required a
 new correction.
 
+## Standalone equation continuity
+
+The complete Chapter 2 source has two numbered equations before this unit:
+`eqn:naturaltrans-def` at line 255 is (2.1), and `eqn:horizontal-comp` at line
+290 is (2.2). The standalone driver now sets `equation` to 2 immediately before
+loading `chapter2.tex:678-765`. Its final AUX therefore records
+`eqn:Yoneda-cat-duality` as (2.3), page 1, anchor `equation.2.3`, and
+`eqn:Yoneda-map` as (2.4), page 1, anchor `equation.2.4`. This repairs only the
+standalone inherited counter state; it changes no translated prose, formula,
+diagram, source correction, terminology decision, label, or reference target.
+
 ## Build and reader QA
 
-Two clean builds (`build/unit-013-admission-f` and
-`build/unit-013-admission-g`) produced 7 pages. All 7 MuPDF pages and all 7
-Poppler pages are pixel-identical within each renderer at 144 dpi. The final
-log has no undefined reference or citation, multiply-defined label, overfull
-box, empty bibliography, missing glyph, fatal TeX error, or emergency stop.
-The seven suppressed empty external-document links are intentional: the frozen
-cross-reference witness supplies numbers without inventing external URLs.
+Two clean builds (`build/unit-013-equation-fix-a` and
+`build/unit-013-equation-fix-b`) produced 7 pages. All 7 MuPDF pages and all 7
+Poppler pages are pixel-identical between the builds at 144 dpi. Relative to
+the prior reader, pages 1, 2, 5, 6, and 7 remain pixel-identical in both
+renderers; only page 3 (the two equation numbers) and page 4 (their three
+references) changed.
 
-All pages were visually inspected. The long Yoneda isomorphism was reflowed as
-a display, removing the original 18 pt overflow. Both nonempty indexes remain,
-but the one-entry symbol index now shares the final page instead of consuming a
-separate nearly blank page. The PDF declares `id-ID`, has 21 named destinations,
-three outline entries, 11 GoTo and three URI actions, and no Launch, GoToR, or
-JavaScript action.
+The final log has no undefined reference or citation, multiply-defined label,
+overfull box, empty bibliography, missing glyph, fatal TeX error, or emergency
+stop. The seven suppressed empty external-document links are intentional: the
+frozen cross-reference witness supplies numbers without inventing external
+URLs.
+
+All seven pages were visually inspected in both Poppler and MuPDF. The corrected
+(2.3) and (2.4) numbers and all their references are legible, and there is no
+clipping, overlap, missing content, blank page, or unreadable surface. Both
+nonempty indexes remain on one final page. The PDF declares `id-ID`, has 21
+named destinations, three outline entries, 11 GoTo and three URI actions, and
+no Launch, GoToR, JavaScript, or other action. All fonts are embedded.
 
 ## Rights and provenance
 

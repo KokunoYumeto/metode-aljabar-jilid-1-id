@@ -1,0 +1,50 @@
+{
+  "schema_version": "unit-005-equation-repair-evidence-v1",
+  "date": "2026-08-23",
+  "correction_id": "O013-LI-U005-READER-COR-001",
+  "source_span": {
+    "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex",
+    "line_start": 289,
+    "line_end": 434,
+    "bytes": 11170,
+    "sha256": "fa1fec18021ed96b4fcbcbbf4e887741c566862fa2b7d407059b2c4b89bff518"
+  },
+  "target_span": {
+    "path": "repo/source/chapter1.tex",
+    "line_start": 289,
+    "line_end": 434,
+    "bytes": 13786,
+    "sha256": "57a5051ca741afdeb2d1e9c88413908442844b7eadff5a464fa79e453dc683af"
+  },
+  "equation_map": {
+    "eqn:infinity-axiom": "1.1",
+    "eqn:cardinal-infinite-sum": "1.2",
+    "eqn:cardinal-infinite-prod": "1.3",
+    "build_a_aux_sha256": "ee43180f1b3c9bda07d81d8beefd44d4bbadf804d6f54715ec1c1220758d6e22",
+    "build_b_aux_sha256": "ee43180f1b3c9bda07d81d8beefd44d4bbadf804d6f54715ec1c1220758d6e22"
+  },
+  "artifact": {
+    "path": "artifacts/unit-005-bab-1-kardinal.pdf",
+    "pages": 12,
+    "bytes": 128554,
+    "sha256": "205359b6c3b406a4f6595908381147e2bb3dba6aab8fdc9057436b11bec252de",
+    "catalog_language": "id-ID",
+    "named_destinations": 42,
+    "outline_entries": 6,
+    "actions": {"GoTo": 17, "URI": 3, "Launch": 0, "GoToR": 0, "JavaScript": 0},
+    "fonts_embedded": true,
+    "blank_pages": 0,
+    "unresolved_tokens": 0,
+    "extracted_han_residue": 0,
+    "tagged": false
+  },
+  "replay": {
+    "builds": ["build/unit-005-equation-fix-a", "build/unit-005-equation-fix-b"],
+    "poppler_pixel_identical_pages": "12/12",
+    "poppler_concatenated_sha256": "2c2e8981e885a53d6ceae78451e8d949150e5c65ee5406dff1b5f05c82f241a0",
+    "mupdf_pixel_identical_pages": "12/12",
+    "mupdf_concatenated_sha256": "93743c1b9ef867ea1948abe8a0385bb2aad8d7b98194064cd60fd3e8836b1bd6",
+    "all_pages_visually_inspected_in_both_renderers": true
+  },
+  "model": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

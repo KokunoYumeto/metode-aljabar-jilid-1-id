@@ -16,7 +16,7 @@
     "status": "admitted",
     "admission_state": "admitted",
     "translation_state": "visually_checked",
-    "qa_state": "translation_backend_build_visual_pass"
+    "qa_state": "translation_backend_build_visual_equation_continuity_pass"
   },
   "program": {
     "id": "urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78",
@@ -133,8 +133,8 @@
     },
     "target_binding": {
       "path": "repo/source/chapter2.tex",
-      "bytes": 155822,
-      "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
+      "bytes": 158231,
+      "sha256": "13e77928ed6a702a7ba23763cd8a7570915f2d8dcce4f1995d65ee53caaea02e",
       "line_start": 678,
       "line_end": 765,
       "span_sha256": "eeb6bbb2aca0ea17277e7afea39492729996cd9d8648deccc94bcebe9111327d",
@@ -215,7 +215,8 @@
       "urn:uuid:cacb61bb-0160-5158-963e-c685c0eb77ae"
     ],
     "qa_event_ids": [
-      "urn:uuid:0c7412da-72c0-5498-888c-f16d8ee8522f"
+      "urn:uuid:0c7412da-72c0-5498-888c-f16d8ee8522f",
+      "urn:uuid:2cf9847b-7718-54e7-8f21-778d1a4785f7"
     ],
     "outcome_keys": [
       "outcome/define-presheaf-categories",
@@ -268,8 +269,8 @@
       },
       "target_binding": {
         "path": "repo/source/chapter2.tex",
-        "bytes": 155822,
-        "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
+        "bytes": 158231,
+        "sha256": "13e77928ed6a702a7ba23763cd8a7570915f2d8dcce4f1995d65ee53caaea02e",
         "line_start": 678,
         "line_end": 765,
         "span_sha256": "eeb6bbb2aca0ea17277e7afea39492729996cd9d8648deccc94bcebe9111327d",
@@ -1241,8 +1242,8 @@
       },
       "target_binding": {
         "path": "repo/source/chapter2.tex",
-        "bytes": 155822,
-        "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
+        "bytes": 158231,
+        "sha256": "13e77928ed6a702a7ba23763cd8a7570915f2d8dcce4f1995d65ee53caaea02e",
         "line_start": 714,
         "line_end": 717,
         "span_sha256": "d9b193332ec695c28f2af35ef01b17207a4eeb96876811e99369fbbec38db5e2",
@@ -1270,8 +1271,8 @@
       },
       "target_binding": {
         "path": "repo/source/chapter2.tex",
-        "bytes": 155822,
-        "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
+        "bytes": 158231,
+        "sha256": "13e77928ed6a702a7ba23763cd8a7570915f2d8dcce4f1995d65ee53caaea02e",
         "line_start": 739,
         "line_end": 742,
         "span_sha256": "d038cd5dc9b35a1e44ae8d0ae5dc82643f4f471366c7976ae9c7528fc6be331a",
@@ -1301,8 +1302,8 @@
       },
       "target_binding": {
         "path": "repo/source/chapter2.tex",
-        "bytes": 155822,
-        "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
+        "bytes": 158231,
+        "sha256": "13e77928ed6a702a7ba23763cd8a7570915f2d8dcce4f1995d65ee53caaea02e",
         "line_start": 679,
         "line_end": 679,
         "span_sha256": "6140015b5779e30dba3710978d56f817951d829b0f5c0bc93cad546e9546144e",
@@ -1329,8 +1330,8 @@
       },
       "target_binding": {
         "path": "repo/source/chapter2.tex",
-        "bytes": 155822,
-        "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
+        "bytes": 158231,
+        "sha256": "13e77928ed6a702a7ba23763cd8a7570915f2d8dcce4f1995d65ee53caaea02e",
         "line_start": 684,
         "line_end": 684,
         "span_sha256": "c8d5a4ff1d53be6e129fb10ac30779409d950311f272a8e610a1b92c876f50bc",
@@ -1357,8 +1358,8 @@
       },
       "target_binding": {
         "path": "repo/source/chapter2.tex",
-        "bytes": 155822,
-        "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
+        "bytes": 158231,
+        "sha256": "13e77928ed6a702a7ba23763cd8a7570915f2d8dcce4f1995d65ee53caaea02e",
         "line_start": 700,
         "line_end": 700,
         "span_sha256": "c4901ab142a5b77a15ab35516c048d7fac471c32b82d080062d21ada8358713f",
@@ -1385,8 +1386,8 @@
       },
       "target_binding": {
         "path": "repo/source/chapter2.tex",
-        "bytes": 155822,
-        "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
+        "bytes": 158231,
+        "sha256": "13e77928ed6a702a7ba23763cd8a7570915f2d8dcce4f1995d65ee53caaea02e",
         "line_start": 722,
         "line_end": 722,
         "span_sha256": "e0b8e9af210fa293d47643ea926a3b23d043faaa50f0c01f2a218569b7e8b3da",
@@ -1413,8 +1414,8 @@
       },
       "target_binding": {
         "path": "repo/source/chapter2.tex",
-        "bytes": 155822,
-        "sha256": "bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5",
+        "bytes": 158231,
+        "sha256": "13e77928ed6a702a7ba23763cd8a7570915f2d8dcce4f1995d65ee53caaea02e",
         "line_start": 729,
         "line_end": 729,
         "span_sha256": "536ead7441de44c5506d985707e324aa96d3460965d90039833bfb3341a9389b",
@@ -1435,13 +1436,13 @@
       "artifact_path": "artifacts/unit-013-bab-2-fungtor-representabel-dan-lema-yoneda.pdf",
       "artifact_binding": {
         "path": "artifacts/unit-013-bab-2-fungtor-representabel-dan-lema-yoneda.pdf",
-        "bytes": 106154,
-        "sha256": "4db806c3a0c42449b1333e25109d135176931880a48982a70b776e04be7ffa2a"
+        "bytes": 106162,
+        "sha256": "03ced2b80bf14814d01bc73cf378bfab820ec40ad0571eaa33cf514d79d760cf"
       },
       "log_binding": {
         "path": "qa/UNIT_013_BUILD_FINAL.log",
-        "bytes": 86810,
-        "sha256": "a407323233d53e8f20d952dbacaea16000ccb96b7c03bf9854695f9110311b91"
+        "bytes": 86834,
+        "sha256": "605c9d68009fcfa0d9b746864ebad7e1618943932cd6d8cd1140e84fbd657039"
       },
       "build_script": {
         "path": "scripts/build_unit_013.ps1",
@@ -1452,8 +1453,8 @@
       "status": "pass",
       "driver": {
         "path": "repo/source/unit-013-bab-2-fungtor-representabel-dan-lema-yoneda.tex",
-        "bytes": 4750,
-        "sha256": "4dda89ef46f13dece3f18ba09dd33b4a91bb2f4fc35319e1b76f148fcd032957"
+        "bytes": 4776,
+        "sha256": "f3a7b9e2351288eaf273930572d564cb8d0011e44441cd22246e8f385985cdf2"
       },
       "input_bindings": [
         {
@@ -1556,15 +1557,33 @@
       "unit_id": "urn:uuid:c2417b58-7e30-55e1-b747-7b17ee6e4b8e",
       "check_type": "admission_gate",
       "result": "pass",
-      "scope": "Complete source-order translation and semantic review of chapter2.tex lines 678-765; 98 normalized mathematics surfaces equivalent after two disclosed source corrections, 17 balanced environments, seven labels, ten ordinary references, three equation references, zero citations, five index entries, two TikZ-CD diagrams, no exercises/hints/answers/solutions, frozen external references, separate component rights, four-pass functional replay, PDF checks, and all-page visual QA. Production provenance records OpenAI Codex gpt-5.6-sol, Ultra separately from source authorship and human credit.",
+      "scope": "Complete source-order translation and semantic review of chapter2.tex lines 678-765; 98 normalized mathematics surfaces equivalent after two disclosed source corrections, 17 balanced environments, seven labels, ten ordinary references, three equation references, zero citations, five index entries, two TikZ-CD diagrams, no exercises/hints/answers/solutions, frozen external references, separate component rights, corrected Chapter 2 equation continuity, four-pass functional replay, PDF checks, and all-page visual QA. Production provenance records OpenAI Codex gpt-5.6-sol, Ultra separately from source authorship and human credit.",
       "witness": "qa/UNIT_013_ADMISSION_20260823.md",
       "translation_audit_state": "pass",
       "build_state": "pass",
       "visual_state": "pass",
       "witness_binding": {
         "path": "qa/UNIT_013_ADMISSION_20260823.md",
-        "bytes": 3801,
-        "sha256": "5a99471d2b181870ba48e5b453a11d6ed154d7bad810ad6210d43b59aedf5ed6"
+        "bytes": 4966,
+        "sha256": "ca74ed10e33596e9de3f74c1c197247dd1aa01dddd030eafe4604f0f7a7fb507"
+      }
+    },
+    {
+      "id": "urn:uuid:2cf9847b-7718-54e7-8f21-778d1a4785f7",
+      "stable_key": "qa/unit-013/equation-number-continuity",
+      "entity_type": "qa_event",
+      "unit_id": "urn:uuid:c2417b58-7e30-55e1-b747-7b17ee6e4b8e",
+      "check_type": "backend_integrity",
+      "result": "pass",
+      "scope": "Equation-number continuity: the complete Chapter 2 source has equations (2.1) and (2.2) before Unit 013. The standalone driver seeds equation=2 immediately before chapter2.tex lines 678-765, and the verified final AUX binds eqn:Yoneda-cat-duality to 2.3/equation.2.3 and eqn:Yoneda-map to 2.4/equation.2.4. Two clean builds replay identically in Poppler and MuPDF and all seven pages pass visual inspection. Translation content was unchanged and its prior audit remains valid.",
+      "witness": "qa/UNIT_013_EQUATION_NUMBER_CORRECTION_20260823.md",
+      "translation_audit_state": "pass",
+      "build_state": "pass",
+      "visual_state": "pass",
+      "witness_binding": {
+        "path": "qa/UNIT_013_EQUATION_NUMBER_CORRECTION_20260823.md",
+        "bytes": 3547,
+        "sha256": "d57a0a20abbf36124489357dd55784f0a169f423a17ad28a30b701d057ee2b22"
       }
     }
   ]

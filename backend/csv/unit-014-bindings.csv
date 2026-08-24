@@ -9,7 +9,7 @@ urn:uuid:0baf6c47-021d-5310-9475-81519e710250,rights-component,,repo/source/ccby
 urn:uuid:10faf5cd-990f-5850-87b4-26922b062485,rights-component,,repo/source/AJbook.cls,,,13780,f35dbe8942a880dfe70c072bcfe0491d8cc83f562c28a481b949ca4cc84f0b04,,
 urn:uuid:120b716e-baa2-52db-9f67-d81f89311360,source,zh-Hans,authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex,861,864,139983,56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840,2365798e0d348cfd40070a7a22ffff139a63a47e398ff58769153543139d84c5,sha256-utf8-lines-lf-v1
 urn:uuid:120b716e-baa2-52db-9f67-d81f89311360,target,id-ID,repo/source/chapter2.tex,861,864,155822,bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5,2365798e0d348cfd40070a7a22ffff139a63a47e398ff58769153543139d84c5,sha256-utf8-lines-lf-v1
-urn:uuid:1452ab0a-357e-5b46-8a08-1ab31580f5d5,qa-witness,,qa/UNIT_014_ADMISSION_20260823.md,,,4593,5c92de35d93e2b4b5a8cb783761ff83768d37020211d03ac3ab29b75413f9d80,,
+urn:uuid:1452ab0a-357e-5b46-8a08-1ab31580f5d5,qa-witness,,qa/UNIT_014_ADMISSION_20260823.md,,,5051,366922d9abc716e635152235b68177a3c281da893680a1ce61d7c0970737c8fb,,
 urn:uuid:1eef23f7-6394-5dfc-80c8-59019810656b,source,zh-Hans,authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex,809,812,139983,56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840,3a8d6bae4db31c470a5401ccc49acba1f0412a0c1fc7ff5e7d2d81e98a8c5231,sha256-utf8-lines-lf-v1
 urn:uuid:1eef23f7-6394-5dfc-80c8-59019810656b,target,id-ID,repo/source/chapter2.tex,809,812,155822,bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5,3a8d6bae4db31c470a5401ccc49acba1f0412a0c1fc7ff5e7d2d81e98a8c5231,sha256-utf8-lines-lf-v1
 urn:uuid:252155b3-e485-566f-b576-1853057cf4b1,source,zh-Hans,authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex,873,875,139983,56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840,90214f405a84270adb6c65c6778098fc0bc220d9d03a1b322e4c9615b18ecf7f,sha256-utf8-lines-lf-v1
@@ -45,7 +45,7 @@ urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49,archive,,authority/archives/AlJabr
 urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49,official_pdf,,authority/pdfs/Al-jabr-1.pdf,,,3647113,dc751a2d5146edc9f9638471ff3fac4107eab8dd0d3331803581a06998663c38,,
 urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49,source_manifest,,00_control/SOURCE_MANIFEST.csv,,,3383,40125010171d4fa37c3312c454c3c2767325bcb27c4229c255a25b297265eb99,,
 urn:uuid:e18339ae-66cd-5304-b544-b220dd41380d,rights-component,,repo/source/Lanzhou.png,,,276766,6000d7740aab58f1959c07af2c057680e2518dcc75b225f3180ed4b996fe9455,,
-urn:uuid:f51ea81b-35e6-5ff7-9a72-5f92e7e1c351,build-artifact,,artifacts/unit-014-bab-2-fungtor-adjoin-dasar.pdf,,,121651,a8acee26ef75f172336d4e729e055ca6c8d222c548748d9c4a58a4ee976cb403,,
+urn:uuid:f51ea81b-35e6-5ff7-9a72-5f92e7e1c351,build-artifact,,artifacts/unit-014-bab-2-fungtor-adjoin-dasar.pdf,,,121761,1241ca5ff345ff5315d5e3f4e6fcb1f37af2b0e948f458306c4b790035779d04,,
 urn:uuid:f51ea81b-35e6-5ff7-9a72-5f92e7e1c351,build-input,,repo/fonts/NotoSansCJKsc-Black.otf,,,17797908,2267c4a0312d267dff8c0d1609948f7d949a3da8be3e126f5e2690cb9cc883b4,,
 urn:uuid:f51ea81b-35e6-5ff7-9a72-5f92e7e1c351,build-input,,repo/fonts/NotoSansCJKsc-Medium.otf,,,16523632,ca094f6b0001fb048ca39ddd797a0cdb0179e1e55c6561e111c49c3e6a61d7b7,,
 urn:uuid:f51ea81b-35e6-5ff7-9a72-5f92e7e1c351,build-input,,repo/fonts/NotoSansCJKsc-Regular.otf,,,16437364,2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b,,
@@ -61,8 +61,8 @@ urn:uuid:f51ea81b-35e6-5ff7-9a72-5f92e7e1c351,build-input,,repo/source/mycommand
 urn:uuid:f51ea81b-35e6-5ff7-9a72-5f92e7e1c351,build-input,,repo/source/titles-setup-id.tex,,,329,db020adff03242f1f2fe8bcb6ec74b6072d9db6bd44971caadde3ce231a51f1b,,
 urn:uuid:f51ea81b-35e6-5ff7-9a72-5f92e7e1c351,build-input,,repo/source/titles-setup.tex,,,6274,f5a81e5ec9f0f2023b93d9b713f0bdc18171a1505863f44a15d65c8757eeadf7,,
 urn:uuid:f51ea81b-35e6-5ff7-9a72-5f92e7e1c351,build-input,,repo/source/unit-014-crossrefs.aux,,,288,5d5172830233cc86627db6ce2a5bc8514a2506c64a5a5cc2cb9877dd1448c004,,
-urn:uuid:f51ea81b-35e6-5ff7-9a72-5f92e7e1c351,build-log,,qa/UNIT_014_BUILD_FINAL.log,,,85830,61d3d9236755d0384c2dc0e08acd9fb0c4b0f67c2367dd6967ef6b6016296b07,,
+urn:uuid:f51ea81b-35e6-5ff7-9a72-5f92e7e1c351,build-log,,qa/UNIT_014_BUILD_FINAL.log,,,85851,7045b0b1ede153a2dcaea05e03139028f95621b5b44b9ba0bdea2c1cc0fb97cb,,
 urn:uuid:f51ea81b-35e6-5ff7-9a72-5f92e7e1c351,build-script,,scripts/build_unit_014.ps1,,,2802,5d7fc1199c9fa14434ab7325e42b5de937f777378f26a49a165921a99f35a336,,
-urn:uuid:f51ea81b-35e6-5ff7-9a72-5f92e7e1c351,driver,,repo/source/unit-014-bab-2-fungtor-adjoin-dasar.tex,,,4628,118e6d33974487318fd40d1fa7e9c63179aa08e5e6afd4e2901935dec56ac523,,
+urn:uuid:f51ea81b-35e6-5ff7-9a72-5f92e7e1c351,driver,,repo/source/unit-014-bab-2-fungtor-adjoin-dasar.tex,,,4800,563dbf1ef41bd9abe7cfc8ccf3a6237b3312c2d2280b656a64ab4f8b3b4d9bff,,
 urn:uuid:f64148af-6a3f-5752-969b-909a1c3b1a4c,source,zh-Hans,authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex,821,824,139983,56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840,20ca3a2533d665f8bca62f43d5e45c1bc7b31e6b7fdd8b7c3cf5ed2bbcc1e5c5,sha256-utf8-lines-lf-v1
 urn:uuid:f64148af-6a3f-5752-969b-909a1c3b1a4c,target,id-ID,repo/source/chapter2.tex,821,824,155822,bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5,20ca3a2533d665f8bca62f43d5e45c1bc7b31e6b7fdd8b7c3cf5ed2bbcc1e5c5,sha256-utf8-lines-lf-v1

@@ -26,15 +26,20 @@ BUILD_SCRIPT = "scripts/build_unit_013.ps1"
 STRUCTURE_GATE = "scripts/check_unit_013_structure.py"
 SUMMARY = "qa/unit-013-evidence/build-log-summary.txt"
 ADMISSION = "qa/UNIT_013_ADMISSION_20260823.md"
+CORRECTION_RECEIPT = "qa/UNIT_013_EQUATION_NUMBER_CORRECTION_20260823.md"
 FINAL_LOG = "qa/UNIT_013_BUILD_FINAL.log"
+FINAL_AUX = "qa/unit-013-evidence/final-label-map.aux"
 ARTIFACT = "artifacts/unit-013-bab-2-fungtor-representabel-dan-lema-yoneda.pdf"
 MODEL = "OpenAI Codex gpt-5.6-sol, Ultra"
 START, END = 678, 765
 SOURCE_FULL = (139983, "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840")
 SOURCE_SPAN = (7413, "9b30201ad8df7822e2e6bb20080097bff6ef663c763653f859f6ab4e028b2928")
 TARGET_SPAN = (8643, "eeb6bbb2aca0ea17277e7afea39492729996cd9d8648deccc94bcebe9111327d")
-ARTIFACT_ID = (106154, "4db806c3a0c42449b1333e25109d135176931880a48982a70b776e04be7ffa2a")
-FINAL_LOG_ID = (86810, "a407323233d53e8f20d952dbacaea16000ccb96b7c03bf9854695f9110311b91")
+DRIVER_ID = (4776, "f3a7b9e2351288eaf273930572d564cb8d0011e44441cd22246e8f385985cdf2")
+ARTIFACT_ID = (106162, "03ced2b80bf14814d01bc73cf378bfab820ec40ad0571eaa33cf514d79d760cf")
+FINAL_LOG_ID = (86834, "605c9d68009fcfa0d9b746864ebad7e1618943932cd6d8cd1140e84fbd657039")
+FINAL_AUX_ID = (2078, "1c95b7121342b9d73fa1915a3efe8eab0c4dc19d3a65f5d48903e3fbad301f4f")
+CORRECTION_RECEIPT_ID = (3547, "d57a0a20abbf36124489357dd55784f0a169f423a17ad28a30b701d057ee2b22")
 PAGE_COUNT = 7
 LABELS = (
     "sec:representable-functors", "eqn:Yoneda-cat-duality", "prop:Yoneda-lemma",
@@ -55,6 +60,10 @@ INDEX_SLUGS = (
     "representable-functor", "universal-family",
 )
 EXPECTED_CITATIONS = ()
+EQUATION_MAP = (
+    ("eqn:Yoneda-cat-duality", "2.3", "1", "equation.2.3"),
+    ("eqn:Yoneda-map", "2.4", "1", "equation.2.4"),
+)
 
 
 def diagram_blocks(text: str) -> tuple[tuple[str, int, str], ...]:
@@ -112,12 +121,22 @@ def gate() -> None:
             "record the final PDF/log byte identities and page count after visual QA, "
             "then fill ARTIFACT_ID, FINAL_LOG_ID, and PAGE_COUNT."
         )
+    require_identity(DRIVER, DRIVER_ID)
     require_identity(FINAL_LOG, FINAL_LOG_ID)
+    require_identity(FINAL_AUX, FINAL_AUX_ID)
     require_identity(ARTIFACT, ARTIFACT_ID)
+    require_identity(CORRECTION_RECEIPT, CORRECTION_RECEIPT_ID)
     if (len(span(SOURCE)), digest(span(SOURCE))) != SOURCE_SPAN:
         raise SystemExit("Unit 013 backend refused: source span drift")
     if (len(span(TARGET)), digest(span(TARGET))) != TARGET_SPAN:
         raise SystemExit("Unit 013 backend refused: target span drift")
+    driver = (ROOT / DRIVER).read_text(encoding="utf-8")
+    equation_counter_gate = re.compile(
+        r"\\setcounter\{equation\}\{2\}\s*"
+        r"\\InputSourceLineRange\{chapter2\.tex\}\{678\}\{765\}"
+    )
+    if len(equation_counter_gate.findall(driver)) != 1:
+        raise SystemExit("Unit 013 backend refused: standalone equation-counter gate failed")
     check = subprocess.run(
         [sys.executable, str(ROOT / STRUCTURE_GATE)], cwd=ROOT,
         capture_output=True, text=True, encoding="utf-8", check=False,
@@ -160,20 +179,38 @@ def gate() -> None:
     }
     if any(aux_lines.get(key) != line for key, line in wanted.items()):
         raise SystemExit("Unit 013 backend refused: external-reference drift")
+    final_aux_lines = {
+        match.group(1): line.strip()
+        for line in (ROOT / FINAL_AUX).read_text(encoding="utf-8").splitlines()
+        if (match := re.match(r"\\newlabel\{([^}]+)\}", line))
+    }
+    wanted_equations = {
+        key: (
+            r"\newlabel{" + key + "}{{" + number + "}{" + page
+            + "}{Fungtor Representabel}{" + anchor + "}{}}"
+        )
+        for key, number, page, anchor in EQUATION_MAP
+    }
+    if any(final_aux_lines.get(key) != line for key, line in wanted_equations.items()):
+        raise SystemExit("Unit 013 backend refused: equation-label map drift")
     summary = (ROOT / SUMMARY).read_text(encoding="utf-8")
     receipt = (ROOT / ADMISSION).read_text(encoding="utf-8")
+    correction_receipt = (ROOT / CORRECTION_RECEIPT).read_text(encoding="utf-8")
     final_log = (ROOT / FINAL_LOG).read_text(encoding="utf-8", errors="replace")
     log_pages = re.findall(r"Output written on .*?\((\d+) pages?\)\.", final_log, re.DOTALL)
     if not log_pages or int(log_pages[-1]) != PAGE_COUNT:
         raise SystemExit("Unit 013 backend refused: final build-log page count drift")
     if pdfinfo_page_count() != PAGE_COUNT:
         raise SystemExit("Unit 013 backend refused: live PDF page count drift")
-    for needle in (f"PDF pages: {PAGE_COUNT}", f"Functional replay: {PAGE_COUNT}/{PAGE_COUNT}", "Final-log blockers: zero", f"Visual QA: all {PAGE_COUNT} pages inspected"):
+    for needle in (f"PDF pages: {PAGE_COUNT}", f"Functional replay: {PAGE_COUNT}/{PAGE_COUNT}", "Final-log blockers: zero", f"Visual QA: all {PAGE_COUNT} pages inspected", "eqn:Yoneda-cat-duality = (2.3)", "eqn:Yoneda-map = (2.4)"):
         if needle not in summary:
             raise SystemExit(f"Unit 013 backend refused: summary lacks {needle!r}")
-    for needle in ("Status: admitted locally", "chapter2.tex:678-765", f"{PAGE_COUNT} pages", TARGET_SPAN[1], ARTIFACT_ID[1], FINAL_LOG_ID[1], MODEL, "Wen-Wei Li", "CC BY 4.0", "CC BY-SA 3.0", "OFL 1.1", "non-endorsed derivative"):
+    for needle in ("Status: admitted locally", "chapter2.tex:678-765", f"{PAGE_COUNT} pages", TARGET_SPAN[1], ARTIFACT_ID[1], FINAL_LOG_ID[1], "equation.2.3", "equation.2.4", MODEL, "Wen-Wei Li", "CC BY 4.0", "CC BY-SA 3.0", "OFL 1.1", "non-endorsed derivative"):
         if needle not in receipt:
             raise SystemExit(f"Unit 013 backend refused: admission lacks {needle!r}")
+    for needle in (DRIVER_ID[1], ARTIFACT_ID[1], FINAL_LOG_ID[1], FINAL_AUX_ID[1], "eqn:Yoneda-cat-duality -> 2.3", "eqn:Yoneda-map -> 2.4", MODEL, "Wen-Wei Li", "CC BY 4.0", "CC BY-SA 3.0", "OFL", "non-endorsed derivative"):
+        if needle not in correction_receipt:
+            raise SystemExit(f"Unit 013 backend refused: correction receipt lacks {needle!r}")
 
 
 def main() -> None:
@@ -260,12 +297,14 @@ def main() -> None:
     inputs = [COVER, "repo/source/font-setup-id.tex", "repo/source/AJbook.cls", "repo/source/titles-setup-id.tex", "repo/source/locale-ui-id.tex", "repo/source/titles-setup.tex", "repo/source/mycommand.sty", "repo/source/myarrows.sty", "repo/source/Al-jabr.bib", "repo/source/ccby.png", CROSSREF, "repo/fonts/NotoSansCJKsc-Black.otf", "repo/fonts/NotoSansCJKsc-Medium.otf", "repo/fonts/NotoSansCJKsc-Regular.otf", "repo/fonts/NotoSerifCJKsc-Bold.otf"]
     build = {"id": uid(build_key), "stable_key": build_key, "entity_type": "build_surface", "unit_id": unit_id, "kind": "pdf", "working_directory": ".", "command": "pwsh -NoProfile -File scripts/build_unit_013.ps1 -OutputDirectory build/unit-013-replay", "artifact_path": ARTIFACT, "artifact_binding": bind(ARTIFACT), "log_binding": bind(FINAL_LOG), "build_script": bind(BUILD_SCRIPT), "page_count": PAGE_COUNT, "status": "pass", "driver": bind(DRIVER), "input_bindings": [bind(x) for x in inputs], "external_dependencies": ["XeLaTeX", "PowerShell 7", "biber", "makeindex (default and sym1 indexes)", "Fandol fonts from TeX distribution", "TeX Gyre Heros", "packages loaded by the Unit 013 driver and AJbook.cls"], "rights_component_ids": unit_rights}
     qa_key = "qa/unit-013/admission-gate"
-    qa = {"id": uid(qa_key), "stable_key": qa_key, "entity_type": "qa_event", "unit_id": unit_id, "check_type": "admission_gate", "result": "pass", "scope": "Complete source-order translation and semantic review of chapter2.tex lines 678-765; 98 normalized mathematics surfaces equivalent after two disclosed source corrections, 17 balanced environments, seven labels, ten ordinary references, three equation references, zero citations, five index entries, two TikZ-CD diagrams, no exercises/hints/answers/solutions, frozen external references, separate component rights, four-pass functional replay, PDF checks, and all-page visual QA. Production provenance records " + MODEL + " separately from source authorship and human credit.", "witness": ADMISSION, "translation_audit_state": "pass", "build_state": "pass", "visual_state": "pass", "witness_binding": bind(ADMISSION)}
+    qa = {"id": uid(qa_key), "stable_key": qa_key, "entity_type": "qa_event", "unit_id": unit_id, "check_type": "admission_gate", "result": "pass", "scope": "Complete source-order translation and semantic review of chapter2.tex lines 678-765; 98 normalized mathematics surfaces equivalent after two disclosed source corrections, 17 balanced environments, seven labels, ten ordinary references, three equation references, zero citations, five index entries, two TikZ-CD diagrams, no exercises/hints/answers/solutions, frozen external references, separate component rights, corrected Chapter 2 equation continuity, four-pass functional replay, PDF checks, and all-page visual QA. Production provenance records " + MODEL + " separately from source authorship and human credit.", "witness": ADMISSION, "translation_audit_state": "pass", "build_state": "pass", "visual_state": "pass", "witness_binding": bind(ADMISSION)}
+    equation_qa_key = "qa/unit-013/equation-number-continuity"
+    equation_qa = {"id": uid(equation_qa_key), "stable_key": equation_qa_key, "entity_type": "qa_event", "unit_id": unit_id, "check_type": "backend_integrity", "result": "pass", "scope": "Equation-number continuity: the complete Chapter 2 source has equations (2.1) and (2.2) before Unit 013. The standalone driver seeds equation=2 immediately before chapter2.tex lines 678-765, and the verified final AUX binds eqn:Yoneda-cat-duality to 2.3/equation.2.3 and eqn:Yoneda-map to 2.4/equation.2.4. Two clean builds replay identically in Poppler and MuPDF and all seven pages pass visual inspection. Translation content was unchanged and its prior audit remains valid.", "witness": CORRECTION_RECEIPT, "translation_audit_state": "pass", "build_state": "pass", "visual_state": "pass", "witness_binding": bind(CORRECTION_RECEIPT)}
     dataset_key = "dataset/unit-013/id-id"
     data["dataset_stable_key"] = dataset_key; data["dataset_id"] = uid(dataset_key)
-    data["workflow"] = {"responsible_task": "01a02163-e2bf-7a93-950a-b9ab84d7e8b9", "updated": "2026-08-23", "status": "admitted", "admission_state": "admitted", "translation_state": "visually_checked", "qa_state": "translation_backend_build_visual_pass"}
-    unit = {"id": unit_id, "stable_key": unit_key, "entity_type": "unit", "program_id": data["program"]["id"], "course_id": data["course"]["id"], "resource_id": data["resource"]["id"], "edition_id": data["edition"]["id"], "order": 13, "source_local_id": "chapter2.tex:678-765", "titles": [{"language": "zh-Hans", "text": "第二章：范畴论基础；可表函子"}, {"language": "id-ID", "text": "Bab 2: Dasar-Dasar Teori Kategori; Fungtor Representabel dan Lema Yoneda"}], "source_language": "zh-Hans", "target_language": "id-ID", "source_binding": bind(SOURCE, START, END), "target_binding": bind(TARGET, START, END), "section_ids": [section_id], "concept_ids": concept_ids, "prerequisite_ids": prerequisite_ids, "rights_component_ids": unit_rights, "citation_ids": [x["id"] for x in citations], "diagram_ids": [x["id"] for x in diagrams], "index_entry_ids": [x["id"] for x in index_entries], "build_surface_ids": [build["id"]], "qa_event_ids": [qa["id"]], "outcome_keys": ["outcome/define-presheaf-categories", "outcome/apply-the-yoneda-lemma", "outcome/recognize-yoneda-embeddings", "outcome/characterize-representable-functors", "outcome/prove-uniqueness-of-functor-representations", "outcome/use-universal-families", "outcome/identify-power-set-representability"], "surface_counts": {"sections": 1, "exercises": 0, "hints": 0, "answers": 0, "solutions": 0, "citations": 0, "diagrams": len(diagrams), "index_entries": len(index_entries)}, "translation_state": "visually_checked", "admission_state": "admitted"}
-    data["unit"] = unit; data["sections"] = [section]; data["concepts"] = concepts; data["citations"] = citations; data["diagrams"] = diagrams; data["index_entries"] = index_entries; data["build_surfaces"] = [build]; data["qa_events"] = [qa]
+    data["workflow"] = {"responsible_task": "01a02163-e2bf-7a93-950a-b9ab84d7e8b9", "updated": "2026-08-23", "status": "admitted", "admission_state": "admitted", "translation_state": "visually_checked", "qa_state": "translation_backend_build_visual_equation_continuity_pass"}
+    unit = {"id": unit_id, "stable_key": unit_key, "entity_type": "unit", "program_id": data["program"]["id"], "course_id": data["course"]["id"], "resource_id": data["resource"]["id"], "edition_id": data["edition"]["id"], "order": 13, "source_local_id": "chapter2.tex:678-765", "titles": [{"language": "zh-Hans", "text": "第二章：范畴论基础；可表函子"}, {"language": "id-ID", "text": "Bab 2: Dasar-Dasar Teori Kategori; Fungtor Representabel dan Lema Yoneda"}], "source_language": "zh-Hans", "target_language": "id-ID", "source_binding": bind(SOURCE, START, END), "target_binding": bind(TARGET, START, END), "section_ids": [section_id], "concept_ids": concept_ids, "prerequisite_ids": prerequisite_ids, "rights_component_ids": unit_rights, "citation_ids": [x["id"] for x in citations], "diagram_ids": [x["id"] for x in diagrams], "index_entry_ids": [x["id"] for x in index_entries], "build_surface_ids": [build["id"]], "qa_event_ids": [qa["id"], equation_qa["id"]], "outcome_keys": ["outcome/define-presheaf-categories", "outcome/apply-the-yoneda-lemma", "outcome/recognize-yoneda-embeddings", "outcome/characterize-representable-functors", "outcome/prove-uniqueness-of-functor-representations", "outcome/use-universal-families", "outcome/identify-power-set-representability"], "surface_counts": {"sections": 1, "exercises": 0, "hints": 0, "answers": 0, "solutions": 0, "citations": 0, "diagrams": len(diagrams), "index_entries": len(index_entries)}, "translation_state": "visually_checked", "admission_state": "admitted"}
+    data["unit"] = unit; data["sections"] = [section]; data["concepts"] = concepts; data["citations"] = citations; data["diagrams"] = diagrams; data["index_entries"] = index_entries; data["build_surfaces"] = [build]; data["qa_events"] = [qa, equation_qa]
     OUTPUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     subprocess.run([sys.executable, str(ROOT / "scripts/validate_backend.py"), "--lane-root", str(ROOT), "--data", str(OUTPUT), "--schema", str(ROOT / "backend/schema/open-math-corpus-unit.schema.v1.json"), "--csv-dir", str(ROOT / "backend/csv"), "--write-csv"], cwd=ROOT, check=True)
     print(json.dumps({"path": str(OUTPUT.relative_to(ROOT)).replace("\\", "/"), "bytes": OUTPUT.stat().st_size, "sha256": digest(OUTPUT.read_bytes()), "entities": 1 + 1 + 1 + 1 + 1 + len(data["sections"]) + len(concepts) + len(data["prerequisites"]) + len(data["rights"]) + len(data["citations"]) + len(diagrams) + len(index_entries) + len(data["build_surfaces"]) + len(data["qa_events"]), "concepts": len(concepts), "diagrams": len(diagrams), "index_entries": len(index_entries)}, ensure_ascii=False))

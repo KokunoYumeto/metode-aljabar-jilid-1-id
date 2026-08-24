@@ -40,8 +40,8 @@
   "artifact": {
     "path": "artifacts/unit-014-bab-2-fungtor-adjoin-dasar.pdf",
     "pages": 9,
-    "bytes": 121651,
-    "sha256": "a8acee26ef75f172336d4e729e055ca6c8d222c548748d9c4a58a4ee976cb403",
+    "bytes": 121761,
+    "sha256": "1241ca5ff345ff5315d5e3f4e6fcb1f37af2b0e948f458306c4b790035779d04",
     "catalog_language": "id-ID",
     "named_destinations": 23,
     "outline_entries": 3,
@@ -52,13 +52,18 @@
     "extracted_han_residue": 0
   },
   "replay": {
-    "builds": ["build/unit-014-admission-c", "build/unit-014-admission-d"],
+    "builds": ["build/unit-014-equation-fix-e", "build/unit-014-equation-fix-f"],
     "poppler_pixel_identical_pages": "9/9",
-    "poppler_concatenated_sha256": "fe4e9d5920d1421119f1ad48c38972a63bd6050d9fcf1544f51a48d71f3e1fc0",
+    "poppler_concatenated_sha256": "61b7f544a1f3291bd913e95c4d292b9886145db0aaa8bcd819aeef666129f52f",
     "mupdf_pixel_identical_pages": "9/9",
-    "mupdf_concatenated_sha256": "9be9f34a4b734ecea13c3eb4c5268b1b008ce8f588dcf2ef2eb10d48ee5c98be",
+    "mupdf_concatenated_sha256": "dc616a5bb3b03bfa8adc0471ac4b4c8fe5d2d3be5b8cd49c7b674528f9f7ed9f",
     "page_inventory": "qa/unit-014-evidence/render-hash-inventory.json",
     "all_pages_visually_inspected": true
+  },
+  "equation_numbering": {
+    "eqn:unit-adjunction": "2.5",
+    "eqn:unit-counit-relation": "2.6",
+    "status": "matches source-order Chapter 2 identifiers after setting the standalone equation counter to 4"
   },
   "terminology_qa": "qa/TERMINOLOGY_QA_INDONESIAN_CATEGORY_ALGEBRA_20260822.md",
   "model": "OpenAI Codex gpt-5.6-sol, Ultra"

@@ -1,5 +1,5 @@
 {
-  "schema_version": "unit-013-admission-evidence-v1",
+  "schema_version": "unit-013-admission-evidence-v2",
   "date": "2026-08-23",
   "source_span": {
     "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
@@ -30,28 +30,50 @@
     "han_residue": 0,
     "next_boundary": "chapter2.tex:766 (adjoint functors)"
   },
+  "equation_number_continuity": {
+    "status": "pass",
+    "preceding_source_equations": [
+      {"line": 255, "label": "eqn:naturaltrans-def", "number": "2.1"},
+      {"line": 290, "label": "eqn:horizontal-comp", "number": "2.2"}
+    ],
+    "driver_counter_state": "setcounter{equation}{2} immediately before InputSourceLineRange",
+    "final_aux_path": "qa/unit-013-evidence/final-label-map.aux",
+    "final_aux_bytes": 2078,
+    "final_aux_sha256": "1c95b7121342b9d73fa1915a3efe8eab0c4dc19d3a65f5d48903e3fbad301f4f",
+    "unit_equations": [
+      {"label": "eqn:Yoneda-cat-duality", "number": "2.3", "page": "1", "anchor": "equation.2.3"},
+      {"label": "eqn:Yoneda-map", "number": "2.4", "page": "1", "anchor": "equation.2.4"}
+    ]
+  },
   "artifact": {
     "path": "artifacts/unit-013-bab-2-fungtor-representabel-dan-lema-yoneda.pdf",
     "pages": 7,
-    "bytes": 106154,
-    "sha256": "4db806c3a0c42449b1333e25109d135176931880a48982a70b776e04be7ffa2a",
+    "bytes": 106162,
+    "sha256": "03ced2b80bf14814d01bc73cf378bfab820ec40ad0571eaa33cf514d79d760cf",
     "catalog_language": "id-ID",
     "named_destinations": 21,
     "outline_entries": 3,
-    "actions": {"GoTo": 11, "URI": 3, "Launch": 0, "GoToR": 0, "JavaScript": 0},
+    "actions": {"GoTo": 11, "URI": 3, "Launch": 0, "GoToR": 0, "JavaScript": 0, "Other": 0},
     "fonts_embedded": true,
     "blank_pages": 0,
     "unresolved_tokens": 0,
     "extracted_han_residue": 0
   },
   "replay": {
-    "builds": ["build/unit-013-admission-f", "build/unit-013-admission-g"],
+    "builds": ["build/unit-013-equation-fix-a", "build/unit-013-equation-fix-b"],
     "poppler_pixel_identical_pages": "7/7",
-    "poppler_concatenated_sha256": "1455e3778176951c5529b554d6b733db39f904bcb6e96ae8b58dd22963e7ab6b",
+    "poppler_concatenated_sha256": "f950194f9bc7305c9040e0d7952b215545ee9ba2e2fb3493dd9ffcbcc1a063fd",
     "mupdf_pixel_identical_pages": "7/7",
-    "mupdf_concatenated_sha256": "17f3334a616a1af3ba7e09da58b28d2cbfa5cbc872b4a79f96a36a8dfac1104f",
-    "all_pages_visually_inspected": true
+    "mupdf_concatenated_sha256": "ac6f13e1379f69d94449ecb81474e52c67fe8b6f95ee840f46fccf2d4a8a5032",
+    "all_pages_visually_inspected_in_both_renderers": true,
+    "old_to_new_unchanged_pages": [1, 2, 5, 6, 7],
+    "old_to_new_expected_changed_pages": [3, 4]
   },
+  "contact_sheets": [
+    {"path": "qa/unit-013-evidence/contact-01.png", "sha256": "3c67a35e682b76d26a928a7d3e6efa669ffff8b8a54689641e97fd408996ab66"},
+    {"path": "qa/unit-013-evidence/contact-02.png", "sha256": "0fb3703c447d70117d3f678e09b7b5b028f2320b51e03bf55f6970e351bd540c"}
+  ],
   "terminology_qa": "qa/TERMINOLOGY_QA_INDONESIAN_CATEGORY_ALGEBRA_20260822.md",
+  "correction_receipt": "qa/UNIT_013_EQUATION_NUMBER_CORRECTION_20260823.md",
   "model": "OpenAI Codex gpt-5.6-sol, Ultra"
 }

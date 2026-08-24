@@ -6,6 +6,8 @@ from __future__ import annotations
 import copy
 import hashlib
 import json
+import re
+import subprocess
 import uuid
 from pathlib import Path
 
@@ -15,6 +17,28 @@ TEMPLATE = ROOT / "backend" / "data" / "unit-004-bab-1-rekursi-transfinit-dan-pe
 OUTPUT = ROOT / "backend" / "data" / "unit-005-bab-1-kardinal.json"
 SOURCE = "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter1.tex"
 TARGET = "repo/source/chapter1.tex"
+DRIVER = "repo/source/unit-005-bab-1-kardinal.tex"
+SUMMARY = "qa/unit-005-evidence/build-log-summary.txt"
+EQUATION_MAP = "qa/unit-005-evidence/equation-number-map.txt"
+ADMISSION = "qa/UNIT_005_ADMISSION_20260822.md"
+CORRECTION_RECEIPT = "qa/UNIT_005_EQUATION_NUMBER_REPAIR_20260823.md"
+FINAL_LOG = "qa/UNIT_005_BUILD_FINAL.log"
+ARTIFACT = "artifacts/unit-005-bab-1-kardinal.pdf"
+MODEL = "OpenAI Codex gpt-5.6-sol, Ultra"
+ARTIFACT_ID = (
+    128554,
+    "205359b6c3b406a4f6595908381147e2bb3dba6aab8fdc9057436b11bec252de",
+)
+FINAL_LOG_ID = (
+    87110,
+    "2de97988ca56557b50822f4fbaef60784fbc21b7c3b32d184eab87236c058748",
+)
+PAGE_COUNT = 12
+EQUATION_LABEL_SEQUENCE = (
+    "eqn:infinity-axiom",
+    "eqn:cardinal-infinite-sum",
+    "eqn:cardinal-infinite-prod",
+)
 
 
 def sha256(payload: bytes) -> str:
@@ -42,7 +66,123 @@ def binding(relative: str, line_start: int | None = None, line_end: int | None =
     return result
 
 
+def identity(relative: str) -> tuple[int, str]:
+    payload = (ROOT / relative).read_bytes()
+    return len(payload), sha256(payload)
+
+
+def require_identity(relative: str, expected: tuple[int, str]) -> None:
+    if not (ROOT / relative).is_file() or identity(relative) != expected:
+        raise SystemExit(f"Unit 005 backend refused: identity drift for {relative}")
+
+
+def equation_labels_through(relative: str, line_end: int) -> tuple[str, ...]:
+    lines = (ROOT / relative).read_text(encoding="utf-8").splitlines()
+    return tuple(
+        re.findall(r"\\label\{(eqn:[^}]+)\}", "\n".join(lines[:line_end]))
+    )
+
+
+def pdfinfo_page_count() -> int:
+    completed = subprocess.run(
+        ["pdfinfo", str(ROOT / ARTIFACT)],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        check=False,
+    )
+    if completed.returncode:
+        raise SystemExit(
+            "Unit 005 backend refused: pdfinfo could not inspect the live artifact\n"
+            + completed.stderr
+        )
+    match = re.search(r"^Pages:\s*(\d+)\s*$", completed.stdout, re.MULTILINE)
+    if match is None:
+        raise SystemExit("Unit 005 backend refused: pdfinfo returned no page count")
+    return int(match.group(1))
+
+
+def gate() -> None:
+    require_identity(ARTIFACT, ARTIFACT_ID)
+    require_identity(FINAL_LOG, FINAL_LOG_ID)
+
+    for relative in (SOURCE, TARGET):
+        if equation_labels_through(relative, 434) != EQUATION_LABEL_SEQUENCE:
+            raise SystemExit(
+                f"Unit 005 backend refused: Chapter 1 equation-label order drift in {relative}"
+            )
+
+    driver = (ROOT / DRIVER).read_text(encoding="utf-8")
+    counter_map = re.compile(
+        r"\\setcounter\{section\}\{3\}\s*"
+        r"\\setcounter\{equation\}\{1\}\s*"
+        r"\\InputSourceLineRange\{chapter1\.tex\}\{289\}\{434\}"
+    )
+    if counter_map.search(driver) is None:
+        raise SystemExit(
+            "Unit 005 backend refused: standalone Chapter 1 equation offset drift"
+        )
+
+    final_log = (ROOT / FINAL_LOG).read_text(encoding="utf-8", errors="replace")
+    log_pages = re.findall(
+        r"Output written on .*?\(([\d\s]+) pages?\)\.", final_log, re.DOTALL
+    )
+    if not log_pages or int(re.sub(r"\s+", "", log_pages[-1])) != PAGE_COUNT:
+        raise SystemExit("Unit 005 backend refused: final build-log page count drift")
+    if pdfinfo_page_count() != PAGE_COUNT:
+        raise SystemExit("Unit 005 backend refused: live PDF page count drift")
+
+    extracted = subprocess.run(
+        ["pdftotext", "-layout", str(ROOT / ARTIFACT), "-"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        check=False,
+    )
+    if extracted.returncode or "(1.2)" not in extracted.stdout or "(1.3)" not in extracted.stdout:
+        raise SystemExit("Unit 005 backend refused: rendered equation-number map drift")
+
+    summary = (ROOT / SUMMARY).read_text(encoding="utf-8")
+    equation_map = (ROOT / EQUATION_MAP).read_text(encoding="utf-8")
+    admission = (ROOT / ADMISSION).read_text(encoding="utf-8")
+    repair = (ROOT / CORRECTION_RECEIPT).read_text(encoding="utf-8")
+    for needle in (
+        f"PDF pages: {PAGE_COUNT}",
+        f"Functional replay: {PAGE_COUNT}/{PAGE_COUNT} Poppler pages and {PAGE_COUNT}/{PAGE_COUNT} MuPDF pages pixel-identical",
+        "Final-log blockers: zero",
+        f"Visual QA: all {PAGE_COUNT} pages inspected in Poppler and MuPDF",
+        "eqn:cardinal-infinite-sum` is (1.2)",
+        "eqn:cardinal-infinite-prod` is (1.3)",
+    ):
+        if needle not in summary:
+            raise SystemExit(f"Unit 005 backend refused: summary lacks {needle!r}")
+    for needle in (
+        r"\newlabel{eqn:cardinal-infinite-sum}{{1.2}{2}",
+        r"\newlabel{eqn:cardinal-infinite-prod}{{1.3}{2}",
+        "eqn:infinity-axiom = (1.1)",
+    ):
+        if needle not in equation_map:
+            raise SystemExit(f"Unit 005 backend refused: equation map lacks {needle!r}")
+    for needle in (
+        "O013-LI-U005-READER-COR-001",
+        "Status: admitted",
+        ARTIFACT_ID[1],
+        FINAL_LOG_ID[1],
+        MODEL,
+        "`eqn:cardinal-infinite-sum` prints as (1.2)",
+        "`eqn:cardinal-infinite-prod` prints as (1.3)",
+    ):
+        if needle not in admission or needle not in repair:
+            raise SystemExit(
+                f"Unit 005 backend refused: admission/repair evidence lacks {needle!r}"
+            )
+
+
 def main() -> None:
+    gate()
     data = copy.deepcopy(json.loads(TEMPLATE.read_text(encoding="utf-8")))
     namespace = uuid.UUID(data["id_namespace"]["namespace_uuid"].removeprefix("urn:uuid:"))
 
@@ -292,13 +432,13 @@ def main() -> None:
         "kind": "pdf",
         "working_directory": ".",
         "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build_unit_005.ps1 -OutputDirectory build/unit-005-replay",
-        "artifact_path": "artifacts/unit-005-bab-1-kardinal.pdf",
-        "artifact_binding": binding("artifacts/unit-005-bab-1-kardinal.pdf"),
-        "log_binding": binding("qa/unit-005-evidence/build-log-summary.txt"),
+        "artifact_path": ARTIFACT,
+        "artifact_binding": binding(ARTIFACT),
+        "log_binding": binding(SUMMARY),
         "build_script": binding("scripts/build_unit_005.ps1"),
-        "page_count": 12,
+        "page_count": PAGE_COUNT,
         "status": "pass",
-        "driver": binding("repo/source/unit-005-bab-1-kardinal.tex"),
+        "driver": binding(DRIVER),
         "input_bindings": [
             binding("repo/source/coverpage-id-unit-005.tex"),
             binding("repo/source/font-setup-id.tex"),
@@ -336,12 +476,12 @@ def main() -> None:
         "unit_id": unit_id,
         "check_type": "admission_gate",
         "result": "pass",
-        "scope": "Complete source-order translation and independent audit for chapter1.tex lines 289-434; documented correction O013-LI-U005-COR-001 repairing the reversed Gödel/Cohen attribution at line 379; documented clarification O013-LI-U005-CLR-001 making the composed injection explicit at line 304; schema and stable-ID integrity; live inclusive line-span hashes; one unique citation; ten preserved labels; six protected reference occurrences over five unique keys, comprising four internal occurrences over three keys and two frozen external references; five brace-aware index entries (four default and one sym1); two source-preserved TikZ pictures; zero exercises, hints, answers, or solutions; localized Indonesian reader interface; 12-page standalone digital reflow; two clean builds; structural PDF checks; and all-page MuPDF and Poppler visual inspection.",
-        "witness": "qa/UNIT_005_ADMISSION_20260822.md",
+        "scope": "Complete source-order translation and independent audit for chapter1.tex lines 289-434; documented correction O013-LI-U005-COR-001 repairing the reversed Gödel/Cohen attribution at line 379; documented clarification O013-LI-U005-CLR-001 making the composed injection explicit at line 304; documented reader correction O013-LI-U005-READER-COR-001 restoring source-order equation numbers (1.2) and (1.3); schema and stable-ID integrity; live inclusive line-span hashes; one unique citation; ten preserved labels; six protected reference occurrences over five unique keys, comprising four internal occurrences over three keys and two frozen external references; five brace-aware index entries (four default and one sym1); two source-preserved TikZ pictures; zero exercises, hints, answers, or solutions; localized Indonesian reader interface; 12-page standalone digital reflow; two clean builds; structural PDF checks; and all-page MuPDF and Poppler visual inspection. Production provenance records " + MODEL + " separately from source authorship and human credit.",
+        "witness": ADMISSION,
         "translation_audit_state": "pass",
         "build_state": "pass",
         "visual_state": "pass",
-        "witness_binding": binding("qa/UNIT_005_ADMISSION_20260822.md"),
+        "witness_binding": binding(ADMISSION),
     }
 
     dataset_key = "dataset/unit-005/id-id"
@@ -349,7 +489,7 @@ def main() -> None:
     data["dataset_id"] = identifier(dataset_key)
     data["workflow"] = {
         "responsible_task": "01a02163-e2bf-7a93-950a-b9ab84d7e8b9",
-        "updated": "2026-08-22",
+        "updated": "2026-08-23",
         "status": "admitted",
         "admission_state": "admitted",
         "translation_state": "visually_checked",

@@ -1,23 +1,28 @@
-Unit 005 admitted build summary
-Date: 2026-08-22
+Unit 005 admitted build summary - corrected standalone equation sequence
+Initial admission: 2026-08-22
+Equation-number repair: 2026-08-23
 Toolchain: MiKTeX 26.5 XeLaTeX; Biber 2.21; MakeIndex for the default and sym1 indexes; four XeLaTeX passes total
 Shell escape: disabled
 SOURCE_DATE_EPOCH: 1787356800
 Digital reflow: target-only cleardoublepage-to-clearpage mapping; no print-only blank verso pages
 Interface localization: Indonesian theorem, proof, example, lemma, bibliography, back-reference, and index labels
+Production model: OpenAI Codex gpt-5.6-sol, Ultra
 Frozen source range: chapter1.tex lines 289-434
 Frozen source span bytes: 11170
 Frozen source span SHA-256: fa1fec18021ed96b4fcbcbbf4e887741c566862fa2b7d407059b2c4b89bff518
 Target span bytes: 13786
 Target span SHA-256: 57a5051ca741afdeb2d1e9c88413908442844b7eadff5a464fa79e453dc683af
 Protected topology: 163 normalized inline math fragments, 27 balanced environments, 10 labels, 6 reference occurrences, 1 citation, 5 index entries, 7 item tokens, 2 TikZ pictures; source and target match
-Editorial correction: O013-LI-U005-COR-001 repairs the reversed Gödel/Cohen attribution at source line 379
+Editorial correction: O013-LI-U005-COR-001 repairs the reversed Goedel/Cohen attribution at source line 379
 Editorial clarification: O013-LI-U005-CLR-001 makes the implicit composed injection explicit at source line 304
+Reader correction: O013-LI-U005-READER-COR-001 initializes the omitted Chapter 1 equation offset before the standalone source span
+Source-order equation map: `eqn:infinity-axiom` is (1.1); `eqn:cardinal-infinite-sum` is (1.2); `eqn:cardinal-infinite-prod` is (1.3)
 PDF pages: 12
-PDF bytes: 128556
-PDF SHA-256: 232d41f4e7f03123818ae14272958c8269242ebcbec68b832aaaf7ba295ebf3e
-Raw final log bytes: 87065
-Raw final log SHA-256: 9292dfda9928a49fd397f0e44fa7e57a2d8a7cce40f6038bd61f8b8608b04f63
+PDF bytes: 128554
+PDF SHA-256: 205359b6c3b406a4f6595908381147e2bb3dba6aab8fdc9057436b11bec252de
+Raw final log bytes: 87110
+Raw final log SHA-256: 2de97988ca56557b50822f4fbaef60784fbc21b7c3b32d184eab87236c058748
+Final-log blockers: zero
 TeX errors: 0
 Undefined control sequences: 0
 Undefined citations: 0
@@ -29,12 +34,14 @@ Underfull hbox notices: 1, cover attribution table, visually acceptable
 Underfull vbox notices: 1, natural section-ending whitespace, visually acceptable
 Suppressed empty-target link notices: 2, intentional standalone cross-unit reference behavior; visible reference numbers are correct
 PDF structure: id-ID; 12 nonblank pages; 6 outline entries; 42 named destinations; 17 GoTo and 3 URI actions; no GoToR, Launch, JavaScript, form, or encryption
-Text checks: zero literal ??; zero replacement characters; zero Han residue; zero NUL; standard Lema heading; Indonesian bibliography back-reference
+Text checks: zero literal ??; zero replacement characters; zero Han residue; zero NUL; standard Lema heading; Indonesian bibliography back-reference; printed equation numbers (1.2) and (1.3) present
 Replay PDF bytes: 128553
-Replay PDF SHA-256: 1e6770a30e0872a581235e5fd8a1a9f98cbdb90d15ec3488018eb018b7920342
-Raw replay log bytes: 87074
-Raw replay log SHA-256: d90073eba3ce06685a466a6a9c3faf9c932ad9c423973726d6775336ee66243f
-Replay result: 12 of 12 MuPDF pages pixel-identical to the admitted PDF at 144 dpi
-Visual review: all 12 MuPDF and all 12 Poppler pages inspected; no clipping, collision, missing glyph, unreadable text, unintended blank page, or broken formula
+Replay PDF SHA-256: 2f3f23f16b4f3f39edaad41509730afbcc7ca28f6b16e97e6281e864291fb34c
+Raw replay log bytes: 87110
+Raw replay log SHA-256: 8718bbb92ed41833cd308892ae149b9432e55942f859339be7096f534fb80e1e
+Functional replay: 12/12 Poppler pages and 12/12 MuPDF pages pixel-identical
+Poppler ordered-page concatenated SHA-256: 2c2e8981e885a53d6ceae78451e8d949150e5c65ee5406dff1b5f05c82f241a0
+MuPDF ordered-page concatenated SHA-256: 93743c1b9ef867ea1948abe8a0385bb2aad8d7b98194064cd60fd3e8836b1bd6
+Visual QA: all 12 pages inspected in Poppler and MuPDF; no clipping, collision, missing glyph, unreadable text, unintended blank page, or broken formula
 Accessibility limitation: the PDF remains untagged and has no structure tree; this is an inherited open lane-level limitation, not a hidden pass claim
-Raw build logs and page renders remain local; this portable summary omits machine-specific absolute paths.
+Raw build directories and page renders remain local; this portable summary omits machine-specific absolute paths.

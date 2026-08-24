@@ -1523,13 +1523,13 @@
       "artifact_path": "artifacts/unit-014-bab-2-fungtor-adjoin-dasar.pdf",
       "artifact_binding": {
         "path": "artifacts/unit-014-bab-2-fungtor-adjoin-dasar.pdf",
-        "bytes": 121651,
-        "sha256": "a8acee26ef75f172336d4e729e055ca6c8d222c548748d9c4a58a4ee976cb403"
+        "bytes": 121761,
+        "sha256": "1241ca5ff345ff5315d5e3f4e6fcb1f37af2b0e948f458306c4b790035779d04"
       },
       "log_binding": {
         "path": "qa/UNIT_014_BUILD_FINAL.log",
-        "bytes": 85830,
-        "sha256": "61d3d9236755d0384c2dc0e08acd9fb0c4b0f67c2367dd6967ef6b6016296b07"
+        "bytes": 85851,
+        "sha256": "7045b0b1ede153a2dcaea05e03139028f95621b5b44b9ba0bdea2c1cc0fb97cb"
       },
       "build_script": {
         "path": "scripts/build_unit_014.ps1",
@@ -1540,8 +1540,8 @@
       "status": "pass",
       "driver": {
         "path": "repo/source/unit-014-bab-2-fungtor-adjoin-dasar.tex",
-        "bytes": 4628,
-        "sha256": "118e6d33974487318fd40d1fa7e9c63179aa08e5e6afd4e2901935dec56ac523"
+        "bytes": 4800,
+        "sha256": "563dbf1ef41bd9abe7cfc8ccf3a6237b3312c2d2280b656a64ab4f8b3b4d9bff"
       },
       "input_bindings": [
         {
@@ -1644,15 +1644,15 @@
       "unit_id": "urn:uuid:7d5a0db6-72a3-5c1e-9cad-19debd55fe1e",
       "check_type": "admission_gate",
       "result": "pass",
-      "scope": "Complete source-order translation and semantic review of chapter2.tex lines 766-909; 99 source and 100 reader-facing target normalized mathematics surfaces equivalent after one explicitly anchored Indonesian segmentation and four disclosed source corrections (O013-LI-U014-COR-001, O013-LI-U014-COR-002, O013-LI-U014-COR-003, O013-LI-U014-COR-004); 30 balanced environments, six labels, five ordinary references, nine equation references, one ML98 citation, two default index entries, thirteen TikZ-CD diagrams, no exercises/hints/answers/solutions, resolved external references, separate component rights, functional replay, PDF checks, and all-page visual QA. Production provenance records OpenAI Codex gpt-5.6-sol, Ultra separately from source authorship and human credit.",
+      "scope": "Complete source-order translation and semantic review of chapter2.tex lines 766-909; 99 source and 100 reader-facing target normalized mathematics surfaces equivalent after one explicitly anchored Indonesian segmentation and four disclosed source corrections (O013-LI-U014-COR-001, O013-LI-U014-COR-002, O013-LI-U014-COR-003, O013-LI-U014-COR-004); 30 balanced environments, six labels, five ordinary references, nine equation references, one ML98 citation, two default index entries, thirteen TikZ-CD diagrams, no exercises/hints/answers/solutions, resolved external references, separate component rights, functional replay, PDF checks, all-page visual QA, and source-order equation identifiers (2.5) and (2.6). Production provenance records OpenAI Codex gpt-5.6-sol, Ultra separately from source authorship and human credit.",
       "witness": "qa/UNIT_014_ADMISSION_20260823.md",
       "translation_audit_state": "pass",
       "build_state": "pass",
       "visual_state": "pass",
       "witness_binding": {
         "path": "qa/UNIT_014_ADMISSION_20260823.md",
-        "bytes": 4593,
-        "sha256": "5c92de35d93e2b4b5a8cb783761ff83768d37020211d03ac3ab29b75413f9d80"
+        "bytes": 5051,
+        "sha256": "366922d9abc716e635152235b68177a3c281da893680a1ce61d7c0970737c8fb"
       }
     }
   ]

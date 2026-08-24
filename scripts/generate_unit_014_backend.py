@@ -50,12 +50,12 @@ TARGET_SPAN = (
 )
 
 ARTIFACT_ID: tuple[int, str] | None = (
-    121651,
-    "a8acee26ef75f172336d4e729e055ca6c8d222c548748d9c4a58a4ee976cb403",
+    121761,
+    "1241ca5ff345ff5315d5e3f4e6fcb1f37af2b0e948f458306c4b790035779d04",
 )
 FINAL_LOG_ID: tuple[int, str] | None = (
-    85830,
-    "61d3d9236755d0384c2dc0e08acd9fb0c4b0f67c2367dd6967ef6b6016296b07",
+    85851,
+    "7045b0b1ede153a2dcaea05e03139028f95621b5b44b9ba0bdea2c1cc0fb97cb",
 )
 PAGE_COUNT: int | None = 9
 
@@ -278,6 +278,12 @@ def gate() -> None:
             "Unit 014 backend refused: external-reference number/page map drift"
         )
 
+    driver_text = (ROOT / DRIVER).read_text(encoding="utf-8")
+    if r"\setcounter{equation}{4}" not in driver_text:
+        raise SystemExit(
+            "Unit 014 backend refused: standalone Chapter 2 equation offset drift"
+        )
+
     summary = (ROOT / SUMMARY).read_text(encoding="utf-8")
     receipt = (ROOT / ADMISSION).read_text(encoding="utf-8")
     final_log = (ROOT / FINAL_LOG).read_text(encoding="utf-8", errors="replace")
@@ -291,6 +297,8 @@ def gate() -> None:
         f"Functional replay: {PAGE_COUNT}/{PAGE_COUNT}",
         "Final-log blockers: zero",
         f"Visual QA: all {PAGE_COUNT} pages inspected",
+        "eqn:unit-adjunction` is (2.5)",
+        "eqn:unit-counit-relation` is (2.6)",
     ):
         if needle not in summary:
             raise SystemExit(f"Unit 014 backend refused: summary lacks {needle!r}")
@@ -307,6 +315,8 @@ def gate() -> None:
         "CC BY-SA 3.0",
         "OFL 1.1",
         "non-endorsed derivative",
+        "`eqn:unit-adjunction` prints as (2.5)",
+        "`eqn:unit-counit-relation` as (2.6)",
         *(correction_id for correction_id, _line, _issue in CORRECTIONS),
     )
     for needle in receipt_needles:
@@ -540,7 +550,8 @@ def main() -> None:
             "five ordinary references, nine equation references, one ML98 citation, two "
             "default index entries, thirteen TikZ-CD diagrams, no exercises/hints/answers/"
             "solutions, resolved external references, separate component rights, functional "
-            "replay, PDF checks, and all-page visual QA. Production provenance records "
+            "replay, PDF checks, all-page visual QA, and source-order equation identifiers "
+            "(2.5) and (2.6). Production provenance records "
             + MODEL
             + " separately from source authorship and human credit."
         ),
