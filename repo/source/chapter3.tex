@@ -719,23 +719,23 @@ Kategori modul $A\dcate{Mod}$ yang telah disebutkan sebelumnya adalah contoh kha
 	Kasus dua objek tidak lain adalah Teorema \ref{prop:biproduct-criterion} tentang biproduk; kasus umum direduksi ke kasus dua objek melalui kendala asosiativitas pada Lema \ref{prop:product-associativity}.
 \end{proof}
 
-\section{\texorpdfstring{$2$}{2}-范畴一瞥}\label{sec:2-cat}
-我们已经习惯将范畴的对象表示为点, 而将态射表示为其间的箭头; 这种图示中维度最高的构造是一维的箭头, 所以不妨称范畴为 $1$-范畴. 忘掉箭头的范畴无非是集合, 剩下的仅有零维的对象, 所以集合可以设想为 $0$-范畴. 于是引出一个自然的问题: 如何定义高阶范畴? 本节仅探讨 $2$ 阶的情形, 换言之, 我们要在点与箭头之外添上某些 $2$ 维构造, 称为 $2$-胞腔.
+\section{Sekilas tentang \texorpdfstring{$2$}{2}-Kategori}\label{sec:2-cat}
+Kita telah terbiasa menggambarkan objek suatu kategori sebagai titik dan morfismenya sebagai panah di antara titik-titik tersebut; konstruksi berdimensi tertinggi dalam gambaran ini adalah panah satu dimensi, sehingga kategori wajar disebut $1$-kategori. Kategori yang diperoleh dengan melupakan panah tidak lain adalah himpunan: yang tersisa hanya objek berdimensi nol, sehingga himpunan dapat dipandang sebagai $0$-kategori. Ini menimbulkan pertanyaan yang wajar: bagaimana kategori tingkat lebih tinggi didefinisikan? Bagian ini hanya membahas tingkat $2$; dengan kata lain, selain titik dan panah kita akan menambahkan konstruksi berdimensi $2$ tertentu, yang disebut $2$-sel.
 
-$2$-范畴并非无端的空想, 譬如例 \ref{eg:Cat} 考虑的 $\cate{Cat}$ 就是一个标准例子; 另一个自然的例子是考虑拓扑空间 (点), 其间的连续映射 (箭头), 与映射之间的同伦 ($2$-胞腔). 尽管想法简单, 如何萃取合适的定义却是一大问题. 以下定义的版本又称严格 $2$-范畴.
+$2$-Kategori bukan khayalan tanpa dasar. Sebagai contoh, $\cate{Cat}$ dalam Contoh \ref{eg:Cat} merupakan contoh baku; contoh alami lainnya diperoleh dengan meninjau ruang topologis (titik), peta kontinu di antaranya (panah), dan homotopi antarpeta ($2$-sel). Meskipun gagasannya sederhana, menyarikan definisi yang tepat merupakan persoalan besar. Versi definisi berikut juga disebut $2$-kategori ketat.
 
-\begin{definition}\index{$2$-范畴}
-	一个 (严格) $2$-范畴 $\mathcal{C}$ 意指以下资料
+\begin{definition}\index{$2$-kategori}
+	Suatu $2$-kategori (ketat) $\mathcal{C}$ terdiri atas data berikut:
 	\begin{itemize}
-		\item 对象, 或称 $0$-态射构成的集合 $\Obj(\mathcal{C}) = \Mor_0(\mathcal{C})$;
-		\item $1$-态射构成的集合 $\Mor_1(\mathcal{C}) = \bigsqcup_{X, Y \in \Mor_0(\mathcal{C})} \Hom(X, Y)$;
-		\item $2$-态射构成的集合 $\Mor_2(\mathcal{C}) = \bigsqcup_{a, b \in \Mor_1(\mathcal{C})} \Hom(a, b)$.
+		\item himpunan objek, yang juga disebut $0$-morfisme, $\Obj(\mathcal{C}) = \Mor_0(\mathcal{C})$;
+		\item himpunan $1$-morfisme, $\Mor_1(\mathcal{C}) = \bigsqcup_{X, Y \in \Mor_0(\mathcal{C})} \Hom(X, Y)$;
+		\item himpunan $2$-morfisme, $\Mor_2(\mathcal{C}) = \bigsqcup_{a, b \in \Mor_1(\mathcal{C})} \Hom(a, b)$.
 	\end{itemize}
-	习惯将 $1$-态射写成 $f: X \to Y$, 而 $2$-态射写成 $\theta: a \Rightarrow b$ 的形式. $\mathcal{C}$ 中有以下几种运算.
+	Biasanya $1$-morfisme ditulis dalam bentuk $f: X \to Y$, sedangkan $2$-morfisme ditulis dalam bentuk $\theta: a \Rightarrow b$. Di dalam $\mathcal{C}$ terdapat operasi-operasi berikut.
 	\begin{enumerate}[(i)]
-		\item 我们要求 $\mathcal{C}$ 的对象连同 $1$-态射构成一个 ($1$-)范畴.
-		% $1$-态射的合成 $\Hom(Y, Z) \times \Hom(X, Y) \to \Hom(X, Z)$, 其中 $X, Y, Z$ 是对象; 这里要求合成运算满足结合律, 并且对每个对象 $X$ 存在幺元 $\identity_X$. 换言之, 我们要求 $\mathcal{C}$ 的对象和 $1$-态射构成一个范畴.
-		\item $2$-态射有纵, 横两种合成. 先看纵合成: 令 $X, Y$ 为对象, $f, g, h: X \to Y$ 为 $1$-态射, $\theta: f \Rightarrow g$, $\psi: g \Rightarrow h$ 为 $2$-态射, 则有纵合成 $\psi \circ \theta: f \Rightarrow h$, 图示为
+		\item Kita mensyaratkan bahwa objek-objek $\mathcal{C}$ beserta $1$-morfismenya membentuk suatu kategori ($1$-kategori).
+		% Komposisi $1$-morfisme $\Hom(Y, Z) \times \Hom(X, Y) \to \Hom(X, Z)$, dengan $X, Y, Z$ objek; di sini komposisi disyaratkan memenuhi hukum asosiatif, dan untuk setiap objek $X$ terdapat unsur identitas $\identity_X$. Dengan kata lain, objek $\mathcal{C}$ beserta $1$-morfismenya disyaratkan membentuk suatu kategori.
+		\item $2$-Morfisme mempunyai dua macam komposisi, yaitu vertikal dan horizontal. Pertama-tama tinjau komposisi vertikal: misalkan $X, Y$ objek, $f, g, h: X \to Y$ merupakan $1$-morfisme, serta $\theta: f \Rightarrow g$ dan $\psi: g \Rightarrow h$ merupakan $2$-morfisme. Maka terdapat komposisi vertikal $\psi \circ \theta: f \Rightarrow h$, yang digambarkan sebagai
 			\[ \begin{tikzcd}
 				X
 				\arrow[bend left=60, rr, "f", ""' name=U]
@@ -743,49 +743,49 @@ $2$-范畴并非无端的空想, 譬如例 \ref{eg:Cat} 考虑的 $\cate{Cat}$ �
 				\arrow[bend right=60, rr, "" name=D, "h"'] & &
 				\arrow[Rightarrow, to path=(U) -- (MM) \tikztonodes, "\theta"] \arrow[Rightarrow, to path=  (M) -- (D) \tikztonodes, "\psi"]  Y
 			\end{tikzcd}
-			\quad \text{合成为} \quad
+			\quad \text{dikomposisikan menjadi} \quad
 			\begin{tikzcd}
 				X
 				\arrow[bend left=50, rr, "f", ""' name=U]
 				\arrow[bend right=50, rr, "" name=D, "h"']
 				& & \arrow[Rightarrow, to path=(U) -- (D) \tikztonodes, "\psi \circ \theta"] Y .
 			\end{tikzcd} \]
-		\item 接着看横合成. 令 $X, Y ,Z$ 为对象, \begin{tikzcd} X \arrow[r, bend left=20, "f"] \arrow[r, bend right=20, "g"'] & Y \end{tikzcd}, \begin{tikzcd} Y \arrow[r, bend left=20, "f'"] \arrow[r, bend right=20, "g'"'] & Z \end{tikzcd} 为两对 $1$-态射, 而 $\theta: f \Rightarrow g$ 和 $\psi: f' \Rightarrow g'$ 为 $2$-态射, 则有横合成 $\psi \circ \theta: f'f \Rightarrow g'g$, 图示为
+		\item Selanjutnya tinjau komposisi horizontal. Misalkan $X, Y ,Z$ objek, \begin{tikzcd} X \arrow[r, bend left=20, "f"] \arrow[r, bend right=20, "g"'] & Y \end{tikzcd}, \begin{tikzcd} Y \arrow[r, bend left=20, "f'"] \arrow[r, bend right=20, "g'"'] & Z \end{tikzcd} merupakan dua pasang $1$-morfisme, sedangkan $\theta: f \Rightarrow g$ dan $\psi: f' \Rightarrow g'$ merupakan $2$-morfisme. Maka terdapat komposisi horizontal $\psi \circ \theta: f'f \Rightarrow g'g$, yang digambarkan sebagai
 			\[ \begin{tikzcd}
 				X \arrow[bend left=50, r, "f", ""' name=LU] \arrow[bend right=50, r, "" name=LD, "g"'] &
 				Y \arrow[bend left=50, r, "f'", ""' name=RU] \arrow[bend right=50, r, "" name=RD, "{g'}"'] &
 				\arrow[Rightarrow, to path=(LU) -- (LD) \tikztonodes, "\theta"] \arrow[Rightarrow, to path=(RU) -- (RD) \tikztonodes, "\psi"] Z
 			\end{tikzcd}
-			\quad \text{合成为} \quad
+			\quad \text{dikomposisikan menjadi} \quad
 			\begin{tikzcd}
 				X
 				\arrow[bend left=40]{rr}{f'f}[name=U, below]{}
 				\arrow[bend right=40]{rr}[name=D]{}[below]{g'g}
 				& & \arrow[Rightarrow, to path=(U) -- (D) \tikztonodes]{}{\psi \circ \theta} Z .
 			\end{tikzcd} \]
-	\item 形如
+	\item Diagram berbentuk
 		\begin{tikzcd}
 			X
 			\arrow[bend left=30]{rr}{f}[name=U, below]{}
 			\arrow[bend right=30]{rr}[name=D]{}[below]{g}
 			& & \arrow[Rightarrow, to path=(U) -- (D) \tikztonodes]{}{\theta} Y
 		\end{tikzcd}
-		的图表称作 $2$-胞腔. 我们要求横合成满足严格的结合律 $\phi \circ (\psi \circ \theta) = (\phi \circ \psi) \circ \theta$, 并且对每个对象 $X$ 都有横幺元 (或者该叫横幺胞腔) $\identity_{X, 2}: \identity_X \Rightarrow \identity_X$, 使得 $\theta \circ \identity_{X, 2} = \theta$, $\identity_{X, 2} \circ \psi = \psi$, 只要上述横合成有意义.
-	\item 同样地, 要求 $2$-胞腔的纵合成满足严格结合律, 并且对每个 $1$-态射 $f$ 都有纵幺元 $\identity_f: f \Rightarrow f$.
-	\item 纵幺元的横合成仍为纵幺元:
+		disebut $2$-sel. Kita mensyaratkan agar komposisi horizontal memenuhi hukum asosiatif secara ketat, $\phi \circ (\psi \circ \theta) = (\phi \circ \psi) \circ \theta$, dan agar untuk setiap objek $X$ terdapat identitas horizontal (atau sebaiknya disebut sel identitas horizontal) $\identity_{X, 2}: \identity_X \Rightarrow \identity_X$, sedemikian sehingga $\theta \circ \identity_{X, 2} = \theta$ dan $\identity_{X, 2} \circ \psi = \psi$ setiap kali komposisi horizontal tersebut terdefinisi.
+	\item Demikian pula, komposisi vertikal $2$-sel disyaratkan memenuhi hukum asosiatif secara ketat, dan untuk setiap $1$-morfisme $f$ terdapat identitas vertikal $\identity_f: f \Rightarrow f$.
+	\item Komposisi horizontal dari identitas-identitas vertikal tetap merupakan identitas vertikal:
 		\[ \begin{tikzcd}
 		X \arrow[bend left=50, r, "f", ""' name=LU] \arrow[bend right=50, r, "" name=LD, "f"'] &
 		Y \arrow[bend left=50, r, "{f'}", ""' name=RU] \arrow[bend right=50, r, "" name=RD, "{f'}"'] &
 		\arrow[Rightarrow, to path=(LU) -- (LD) \tikztonodes, "{\identity_f}"] \arrow[Rightarrow, to path=(RU) -- (RD) \tikztonodes, "{\identity_{f'}}"]  Z
 	\end{tikzcd}
-	\quad \text{横合成为} \quad
+	\quad \text{komposisi horizontalnya adalah} \quad
 	\begin{tikzcd}
 		X
 		\arrow[bend left=40, rr, "{f'f}", ""' name=U]
 		\arrow[bend right=40, rr, "{f'f}"', "" name=D]
 		& & \arrow[Rightarrow, to path=(U) -- (D) \tikztonodes, "{\identity_{f'f}}"] Z .
 	\end{tikzcd} \]
-	\item 纵横合成之间满足互换律: 对于图表
+	\item Komposisi vertikal dan horizontal memenuhi hukum pertukaran: untuk diagram
 		\[ \begin{tikzcd}
 			X
 			\arrow[bend left=60, rr, ""' name=U]
@@ -797,62 +797,62 @@ $2$-范畴并非无端的空想, 譬如例 \ref{eg:Cat} 考虑的 $\cate{Cat}$ �
 			\arrow[bend right=60, rr, "" name=E] & &
 			\arrow[Rightarrow, to path=(V) -- (NN) \tikztonodes, "\theta'"] \arrow[Rightarrow, to path=  (N) -- (E) \tikztonodes, "\psi'"] Z
 		\end{tikzcd} \]
-		我们有
-		\[ \left( \psi' \underset{\text{纵}}{\circ} \theta'\right) \underset{\text{横}}{\circ} \left( \psi \underset{\text{纵}}{\circ} \theta\right) = \left( \psi' \underset{\text{横}}{\circ} \psi \right) \underset{\text{纵}}{\circ} \left( \theta' \underset{\text{横}}{\circ} \theta\right).  \]
+		berlaku
+		\[ \left( \psi' \underset{\text{vertikal}}{\circ} \theta'\right) \underset{\text{horizontal}}{\circ} \left( \psi \underset{\text{vertikal}}{\circ} \theta\right) = \left( \psi' \underset{\text{horizontal}}{\circ} \psi \right) \underset{\text{vertikal}}{\circ} \left( \theta' \underset{\text{horizontal}}{\circ} \theta\right).  \]
 	\end{enumerate}
 \end{definition}
 
 \begin{remark}
-	这里的定义显然违背了注记 \ref{rem:strict-or-not} 的精神, 因为我们要求态射合成满足严格的结合律与幺元性质. 对于 $2$-范畴, 有些定义较为宽松, 同时也远为复杂的版本, 例如所谓的双范畴; 幸运的是双范畴也满足融贯定理, 也就是说任意双范畴皆等价于某个 $2$-范畴 (请对照幺半范畴的定义及其融贯定理 \ref{prop:ML-coherence}). 这般的融贯现象对超过 $2$ 阶的范畴不再成立. 篇幅所限, 就此打住.
+	Definisi di atas jelas bertentangan dengan semangat Catatan \ref{rem:strict-or-not}, sebab komposisi morfisme kita syaratkan memenuhi hukum asosiatif dan sifat identitas secara ketat. Untuk $2$-kategori terdapat versi definisi yang lebih longgar sekaligus jauh lebih rumit, misalnya bikategori; untungnya, bikategori juga memenuhi teorema koherensi, yakni setiap bikategori ekuivalen dengan suatu $2$-kategori (bandingkan dengan definisi kategori monoidal dan teorema koherensinya \ref{prop:ML-coherence}). Fenomena koherensi semacam ini tidak lagi berlaku bagi kategori bertingkat lebih dari $2$. Karena keterbatasan ruang, pembahasan kita cukupkan sampai di sini.
 \end{remark}
 
 \begin{example}\label{eg:Cat}\index[sym1]{Cat@$\cate{Cat}$}
-	$2$-范畴的典型例子是 $\cate{Cat}$, 不妨先粗略地设想为``范畴的范畴'', 这般朴素的想象很快会撞上集合论的困难. 在此我们必须选定一个 Grothendieck 宇宙 $\mathcal{U}$, 依约定 \ref{con:U-small} 区分范畴与小范畴. 现在可以定义 $2$-范畴 $\cate{Cat}$ 如下.
+	Contoh khas $2$-kategori ialah $\cate{Cat}$, yang untuk sementara dapat dibayangkan secara kasar sebagai ``kategori dari kategori-kategori''; bayangan naif semacam itu segera menghadapi kesulitan teori himpunan. Di sini kita harus memilih suatu semesta Grothendieck $\mathcal{U}$ dan, sesuai Konvensi \ref{con:U-small}, membedakan kategori dari kategori kecil. Sekarang $2$-kategori $\cate{Cat}$ dapat didefinisikan sebagai berikut.
 	\begin{compactitem}
-		\item 对象或 $0$-态射: 所有小范畴构成的集合,
-		\item $1$-态射: $\Hom(\mathcal{C}_1, \mathcal{C}_2)$ 定义为从 $\mathcal{C}_1$ 到 $\mathcal{C}_2$ 的函子所成集合.
-		\item $2$-态射: $\Hom(\alpha, \beta)$ 定义为自然变换 $\theta: \alpha \to \beta$ 所成的集合.
-		\item $1$-态射的合成定为函子合成; $2$-态射的纵, 横两种合成各自定为自然变换的纵, 横合成.
+		\item Objek atau $0$-morfisme: himpunan semua kategori kecil.
+		\item $1$-Morfisme: $\Hom(\mathcal{C}_1, \mathcal{C}_2)$ didefinisikan sebagai himpunan fungtor dari $\mathcal{C}_1$ ke $\mathcal{C}_2$.
+		\item $2$-Morfisme: $\Hom(\alpha, \beta)$ didefinisikan sebagai himpunan transformasi natural $\theta: \alpha \to \beta$.
+		\item Komposisi $1$-morfisme didefinisikan sebagai komposisi fungtor; komposisi vertikal dan horizontal $2$-morfisme masing-masing didefinisikan sebagai komposisi vertikal dan horizontal transformasi natural.
 	\end{compactitem}
-	纵横幺元的定义是显然的, 不必多说. 引理 \ref{prop:naturaltrans-associativity} 确保 $\cate{Cat}$ 满足 $2$-范畴的公理.
+	Definisi identitas vertikal dan horizontal sudah jelas sehingga tidak perlu diuraikan lagi. Lema \ref{prop:naturaltrans-associativity} memastikan bahwa $\cate{Cat}$ memenuhi aksioma-aksioma $2$-kategori.
 \end{example}
 
-若忘掉 $\cate{Cat}$ 的 $2$-态射, 只看其普通的范畴结构, 则 $\cate{Cat}$ 带有自然的幺半结构: 其中的运算 $\otimes$ 取为范畴的积 $\times$, 而幺元 $\munit$ 是仅有一个态射的范畴 (回忆例 \ref{eg:categories}). 注意到 $\times$ 可以理解为范畴 $\cate{Cat}$ 中的积, 而 $\munit$ 是 $\cate{Cat}$ 的终对象, 因此这里的构造是例 \ref{eg:monoidal-cat} 的一个特殊情形.
+Jika pada $\cate{Cat}$ kita melupakan $2$-morfismenya dan hanya meninjau struktur kategori biasa yang dimilikinya, maka $\cate{Cat}$ mempunyai struktur monoidal alami: operasi $\otimes$ diambil sebagai produk kategori $\times$, sedangkan objek satuannya $\munit$ adalah kategori yang hanya mempunyai satu morfisme (ingat Contoh \ref{eg:categories}). Perhatikan bahwa $\times$ dapat dipahami sebagai produk dalam kategori $\cate{Cat}$, sedangkan $\munit$ merupakan objek terminal $\cate{Cat}$; karena itu, konstruksi ini adalah kasus khusus dari Contoh \ref{eg:monoidal-cat}.
 
 \begin{remark}
-	现在可以用充实范畴的想法理解 $2$-范畴. 设 $\mathcal{C}$ 为 $2$-范畴. 对其任意对象 $X, Y$, 定义纵范畴 $\mathcal{V}(X, Y)$ 使得其对象为 $1$-态射 $f: X \to Y$ 而其态射为 $2$-态射 $\theta: f \Rightarrow g$, 态射的合成由 $2$-态射的纵合成给出. 纵结合律和纵幺元 $\identity_f: f \Rightarrow f$ 的性质确保 $\mathcal{V}(X, Y)$ 确实是范畴. 以下假设每个 $\mathcal{V}(X, Y)$ 皆是小范畴. 对于 $\cate{Cat}$, 相应的纵范畴 $\mathcal{V}(\mathcal{C}_1, \mathcal{C}_2)$ 无非是 \S\ref{sec:functor-category} 所定义的函子范畴 $\text{Fct}(\mathcal{C}_1, \mathcal{C}_2)$.
+	Sekarang $2$-kategori dapat dipahami melalui gagasan kategori diperkaya. Misalkan $\mathcal{C}$ suatu $2$-kategori. Untuk setiap objek $X, Y$, definisikan kategori vertikal $\mathcal{V}(X, Y)$ yang objeknya merupakan $1$-morfisme $f: X \to Y$ dan morfismenya merupakan $2$-morfisme $\theta: f \Rightarrow g$; komposisi morfisme diberikan oleh komposisi vertikal $2$-morfisme. Hukum asosiatif vertikal serta sifat identitas vertikal $\identity_f: f \Rightarrow f$ memastikan bahwa $\mathcal{V}(X, Y)$ memang suatu kategori. Selanjutnya kita andaikan bahwa setiap $\mathcal{V}(X, Y)$ merupakan kategori kecil. Untuk $\cate{Cat}$, kategori vertikal $\mathcal{V}(\mathcal{C}_1, \mathcal{C}_2)$ yang bersesuaian tidak lain adalah kategori fungtor $\text{Fct}(\mathcal{C}_1, \mathcal{C}_2)$ yang didefinisikan pada \S\ref{sec:functor-category}.
 
-	重述 $2$-范畴 $\mathcal{C}$ 的结构如下:
+	Struktur $2$-kategori $\mathcal{C}$ dapat dirumuskan kembali sebagai berikut:
 	\begin{compactitem}
-		\item 对象集 $\Obj(\mathcal{C})$;
-		\item 对任意 $X, Y \in \Obj(\mathcal{C})$, 指定一个范畴 $\mathcal{V}(X, Y)$;
-		\item 对任意 $X, Y, Z \in \Obj(\mathcal{C})$, 指定二元函子
+		\item himpunan objek $\Obj(\mathcal{C})$;
+		\item untuk setiap $X, Y \in \Obj(\mathcal{C})$, diberikan suatu kategori $\mathcal{V}(X, Y)$;
+		\item untuk setiap $X, Y, Z \in \Obj(\mathcal{C})$, diberikan fungtor biner
 			\[ \circ: \mathcal{V}(Y, Z) \times \mathcal{V}(X, Y) \to \mathcal{V}(X, Z); \]
-		\item 对任意 $X \in \Obj(\mathcal{C})$, 指定函子
+		\item untuk setiap $X \in \Obj(\mathcal{C})$, diberikan fungtor
 			\[ U_X: \munit \to \mathcal{V}(X, X); \]
-		\item 我们要求函子 $\circ$ 满足严格的结合律, 而 $U_X$ 对 $\circ$ 满足幺元的性质.
+		\item kita mensyaratkan agar fungtor $\circ$ memenuhi hukum asosiatif secara ketat dan agar $U_X$ mempunyai sifat unsur identitas terhadap $\circ$.
 	\end{compactitem}
-	实际上, 函子 $\circ: \mathcal{V}(Y, Z) \times \mathcal{V}(X, Y) \to \mathcal{V}(X, Z)$ 在其对象层面蕴藏了 $1$-态射的合成运算, 在其态射层面蕴藏了 $2$-态射的横合成运算, 可以验证它同时还蕴涵横幺元的性质与 $2$-范畴定义中的互换律. 选取函子 $U_X: \munit \to \mathcal{V}(X, X)$ 相当于在 $\Hom(X, X)$ 中标出一个对象, 这正是 $\identity_X$.
+	Sesungguhnya, pada tataran objeknya, fungtor $\circ: \mathcal{V}(Y, Z) \times \mathcal{V}(X, Y) \to \mathcal{V}(X, Z)$ memuat operasi komposisi $1$-morfisme; pada tataran morfismenya, fungtor tersebut memuat operasi komposisi horizontal $2$-morfisme. Dapat diperiksa bahwa fungtor itu sekaligus memuat sifat identitas horizontal dan hukum pertukaran dalam definisi $2$-kategori. Memilih fungtor $U_X: \munit \to \mathcal{V}(X, X)$ setara dengan menandai suatu objek dalam $\Hom(X, X)$, dan objek itu tidak lain adalah $\identity_X$.
 
-	综之, $2$-范畴无非是由 $\cate{Cat}$-充实的范畴: 对于任意对象 $X, Y \in \Obj(\mathcal{C})$, 我们把 $\Hom$-集 $\Hom(X, Y)$ 充实为纵范畴 $\iHom(X, Y) := \mathcal{V}(X, Y)$, 后者是幺半范畴 $\cate{Cat}$ 的对象, 如此一来就接上了充实范畴的定义 \ref{def:enriched-cat}.
+	Ringkasnya, $2$-kategori tidak lain adalah kategori yang diperkaya atas $\cate{Cat}$: untuk setiap objek $X, Y \in \Obj(\mathcal{C})$, himpunan-$\Hom$ $\Hom(X, Y)$ kita perkaya menjadi kategori vertikal $\iHom(X, Y) := \mathcal{V}(X, Y)$, yang merupakan objek kategori monoidal $\cate{Cat}$. Dengan demikian, kita sampai pada Definisi \ref{def:enriched-cat} tentang kategori diperkaya.
 \end{remark}
 
 \begin{definition}
-	$2$-范畴之间的 $2$-函子与 $2$-自然变换按照 $\cate{Cat}$-充实范畴的方法定义 (参看定义 \ref{def:enriched-functor}, \ref{def:enriched-naturaltrans}).
+	$2$-Fungtor dan $2$-transformasi natural di antara $2$-kategori didefinisikan menurut konstruksi kategori yang diperkaya atas $\cate{Cat}$ (lihat Definisi \ref{def:enriched-functor}, \ref{def:enriched-naturaltrans}).
 \end{definition}
-读者不妨试着写开这些定义. 例如 $2$-函子的定义是将 $i$-态射映到 $i$-态射 (此处 $i=0,1,2$), 并保持这些态射的来源/目标, 合成与幺元等诸般性质.
+Pembaca dipersilakan mencoba menguraikan definisi-definisi tersebut. Sebagai contoh, definisi $2$-fungtor memetakan $i$-morfisme ke $i$-morfisme (di sini $i=0,1,2$) dan mempertahankan sumber/target, komposisi, identitas, serta sifat-sifat lain dari morfisme tersebut.
 
 \begin{convention}
-	我们对 $2$-范畴沿用处理自然变换 (即 $2$-范畴 $\cate{Cat}$) 时引入的一些图表, 例如 \S\ref{sec:functors} 中形如
+	Untuk $2$-kategori, kita tetap menggunakan beberapa diagram yang diperkenalkan ketika membahas transformasi natural (yakni $2$-kategori $\cate{Cat}$), misalnya diagram dalam \S\ref{sec:functors} yang berbentuk
 	\[ \begin{tikzcd}
 		X \arrow[r, "h"] & Y \arrow[bend left=50, r, "f", ""' name=U] \arrow[bend right=50, r, "" name=D, "g"'] & Z \arrow[Rightarrow, to path=(U)--(D) \tikztonodes, "\theta"] \arrow[r, "k"] & W
 	\end{tikzcd} \]
-	的横合成, 其确切含义是将 $1$-态射 $h, k$ 各自``拉开''成 $2$-胞腔 $\identity_h, \identity_k$, 再进行横合成. 同理, 注记 \ref{rem:triangle-identity} 中引入的图表
+	yang komposisi horizontalnya bermakna bahwa masing-masing $1$-morfisme $h, k$ ``dilebarkan'' menjadi $2$-sel $\identity_h, \identity_k$, lalu komposisi horizontal dilakukan. Demikian pula, diagram yang diperkenalkan dalam Catatan \ref{rem:triangle-identity},
 	\[\begin{tikzcd}
 		{} & X \arrow[rr, "\identity", ""' name=I] \arrow[rd, "f"] \arrow[Rightarrow, d, "\varepsilon"] & & X \\
 		Y \arrow[ru, "g"] \arrow[rr, "" name=J, "\identity"'] & {} & Y \arrow[ru, "g"'] \arrow[Leftarrow, to path= -- (I) \tikztonodes, "\eta"] &
 	\end{tikzcd} \]
-	代表 $2$-范畴中的合成
+	menyatakan komposisi berikut dalam $2$-kategori:
 	\[ \begin{tikzcd}
 		Y \arrow[r, "g"] \arrow[bend right=60, rr, "" name=J, "\identity"'] &
 		X \arrow[r, "f"] \arrow[bend left=60, rr, "\identity", ""' name=I] \arrow[Rightarrow, to path= --(J) \tikztonodes, "\varepsilon"] &
@@ -861,14 +861,14 @@ $2$-范畴并非无端的空想, 譬如例 \ref{eg:Cat} 考虑的 $\cate{Cat}$ �
 	\end{tikzcd} \]
 \end{convention}
 
-\begin{remark}\index{bansuidui}
-	在 \S\ref{sec:adjoint-functor} 探讨的伴随对 $(F, G, \eta, \varepsilon)$ 可以用 $2$-范畴的语言改写. 设
+\begin{remark}\index{bansuidui@pasangan adjoin}
+	Pasangan adjoin $(F, G, \eta, \varepsilon)$ yang dibahas dalam \S\ref{sec:adjoint-functor} dapat dirumuskan kembali dengan bahasa $2$-kategori. Misalkan
 	\[\begin{tikzcd}
 		X \arrow[yshift=0.5ex, r, "f"] & Y \arrow[yshift=-0.5ex, l, "g"]
 	\end{tikzcd}\]
-	为 $2$-范畴 $\mathcal{C}$ 中的一对 $1$-态射, 而 $\eta: \identity_X \Rightarrow gf$ 和 $\varepsilon: fg \Rightarrow \identity_Y$ 是 $2$-态射. 若它们满足注记 \ref{rem:triangle-identity} 中的三角等式, 则称 $(f, g, \eta, \varepsilon)$ 是伴随对. 取 $\mathcal{C} = \cate{Cat}$ 就回到伴随对的经典定义. 伴随函子的许多性质可以推广到 $2$-范畴情形, 例如伴随等价定理 \ref{prop:adjoint-equivalence} 的证明就完全可以照搬.
+	di dalam suatu $2$-kategori $\mathcal{C}$ merupakan sepasang $1$-morfisme, sedangkan $\eta: \identity_X \Rightarrow gf$ dan $\varepsilon: fg \Rightarrow \identity_Y$ merupakan $2$-morfisme. Jika keduanya memenuhi identitas segitiga dalam Catatan \ref{rem:triangle-identity}, maka $(f, g, \eta, \varepsilon)$ disebut pasangan adjoin. Dengan mengambil $\mathcal{C} = \cate{Cat}$, kita memperoleh kembali definisi klasik pasangan adjoin. Banyak sifat fungtor adjoin dapat diperluas ke kasus $2$-kategori; misalnya, pembuktian Teorema Ekuivalensi Adjoin \ref{prop:adjoint-equivalence} dapat digunakan tanpa perubahan.
 \end{remark}
-
+	
 \begin{Exercises}
 	\item 对于一般幺半范畴中的对象 $X_1, \ldots, X_{n+1}$, 有种种方式能构作循序的 $n$-重 $\otimes$ 运算, 取决于安插括号的方法, 如 $\cdots \otimes (X_i \otimes X_{i+1}) \cdots$ 等等. 证明括号的放法恰有 $\frac{1}{n+1} \binom{2n}{n}$ 种. \begin{hint} 此即组合学中的 Catalan 数. \end{hint}
 	\item 证明对任意幺半范畴, $\End(\munit)$ 对态射的合成交换. \begin{hint} 应用引理 \ref{prop:Kelly} 和 $(f \otimes \identity)(\identity \otimes g) = f \otimes g = (\identity \otimes g) (f \otimes \identity)$.\end{hint}

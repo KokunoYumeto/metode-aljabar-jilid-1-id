@@ -1,0 +1,19 @@
+entity_type,id,stable_key,section_id,ordinal,source_value,target_value,format,status
+build_surface,urn:uuid:c1882cba-a333-5f23-9959-24fef327c49e,build-surface/unit-023-pdf,,,pwsh -NoProfile -File scripts/build_unit_023.ps1 -OutputDirectory build/unit-023-replay,artifacts/unit-023-bab-3-sekilas-tentang-2-kategori.pdf,pdf,pass
+diagram,urn:uuid:fe09be6f-2cbe-53a2-aa70-30a33ea8e56f,diagram/unit-023/tikzcd-01,urn:uuid:4234ea9a-f75b-56a8-b5dc-b20acad0b8af,1,740-746,739-745,tikzcd,audited_preserved
+diagram,urn:uuid:f1ea69bd-9d72-5a2e-9abd-90f0a04b9b28,diagram/unit-023/tikzcd-02,urn:uuid:4234ea9a-f75b-56a8-b5dc-b20acad0b8af,2,748-753,747-752,tikzcd,audited_preserved
+diagram,urn:uuid:50e275ff-567f-5686-85ba-bb99773f7df2,diagram/unit-023/tikzcd-03,urn:uuid:4234ea9a-f75b-56a8-b5dc-b20acad0b8af,3,754-754,753-753,tikzcd,audited_preserved
+diagram,urn:uuid:6c3b2663-46ff-5df0-88dd-c43b9d130360,diagram/unit-023/tikzcd-04,urn:uuid:4234ea9a-f75b-56a8-b5dc-b20acad0b8af,4,754-754,753-753,tikzcd,audited_preserved
+diagram,urn:uuid:2d716d4a-7c09-591d-8955-a5b33e266618,diagram/unit-023/tikzcd-05,urn:uuid:4234ea9a-f75b-56a8-b5dc-b20acad0b8af,5,755-759,754-758,tikzcd,audited_preserved
+diagram,urn:uuid:eaace5b5-c624-50f6-a43c-157872a43671,diagram/unit-023/tikzcd-06,urn:uuid:4234ea9a-f75b-56a8-b5dc-b20acad0b8af,6,761-766,760-765,tikzcd,audited_preserved
+diagram,urn:uuid:5618c563-1e7b-56b0-8d1c-6a3e81224ba7,diagram/unit-023/tikzcd-07,urn:uuid:4234ea9a-f75b-56a8-b5dc-b20acad0b8af,7,768-773,767-772,tikzcd,audited_preserved
+diagram,urn:uuid:812904db-4ed9-5320-9b4e-601c2f46a0b6,diagram/unit-023/tikzcd-08,urn:uuid:4234ea9a-f75b-56a8-b5dc-b20acad0b8af,8,777-781,776-780,tikzcd,audited_preserved
+diagram,urn:uuid:eba99f25-a3a1-5b77-9696-4e9fde4b4b82,diagram/unit-023/tikzcd-09,urn:uuid:4234ea9a-f75b-56a8-b5dc-b20acad0b8af,9,783-788,782-787,tikzcd,audited_preserved
+diagram,urn:uuid:ac67d835-f47a-561e-b9f4-b2d2d96d1126,diagram/unit-023/tikzcd-10,urn:uuid:4234ea9a-f75b-56a8-b5dc-b20acad0b8af,10,790-800,789-799,tikzcd,audited_preserved
+diagram,urn:uuid:e026c671-55af-574e-8d4f-01fda33c03f4,diagram/unit-023/tikzcd-11,urn:uuid:4234ea9a-f75b-56a8-b5dc-b20acad0b8af,11,848-850,847-849,tikzcd,audited_preserved
+diagram,urn:uuid:e476afcf-27f9-5dbe-b073-62c28ee33761,diagram/unit-023/tikzcd-12,urn:uuid:4234ea9a-f75b-56a8-b5dc-b20acad0b8af,12,852-855,851-854,tikzcd,audited_preserved
+diagram,urn:uuid:3bf1da59-c579-5ca7-9f9c-bf0bd1e5e585,diagram/unit-023/tikzcd-13,urn:uuid:4234ea9a-f75b-56a8-b5dc-b20acad0b8af,13,857-862,856-861,tikzcd,audited_preserved
+diagram,urn:uuid:6f13b69b-d8d8-5ae5-a4cb-831620670c60,diagram/unit-023/tikzcd-14,urn:uuid:4234ea9a-f75b-56a8-b5dc-b20acad0b8af,14,867-869,866-868,tikzcd,audited_preserved
+index_entry,urn:uuid:68db2709-3c65-5b45-9509-58d6d8143d5f,index-entry/unit-023/2-category,urn:uuid:4234ea9a-f75b-56a8-b5dc-b20acad0b8af,1,$2$-范畴,$2$-kategori,latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:9a4f2b40-12a0-5009-b6b8-2db59c6a7262,index-entry/unit-023/adjunction,urn:uuid:4234ea9a-f75b-56a8-b5dc-b20acad0b8af,3,bansuidui,bansuidui@pasangan adjoin,latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:7122340a-79a9-58fa-ab08-f07b8e633477,index-entry/unit-023/cat-symbol,urn:uuid:4234ea9a-f75b-56a8-b5dc-b20acad0b8af,2,Cat@$\cate{Cat}$,Cat@$\cate{Cat}$,latex-index-key,source_key_preserved_target_key_localized

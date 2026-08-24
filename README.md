@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan, seluruh Bab 1, seluruh Bab 2 termasuk latihannya, serta pembukaan Bab 3 sampai Bagian 3.4 telah diterjemahkan dan diterima dalam dua puluh dua unit pembaca. Bagian 3.5 menjadi span sumber berikutnya.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan, seluruh Bab 1, seluruh Bab 2 termasuk latihannya, serta pembukaan Bab 3 sampai Bagian 3.5 telah diterjemahkan dan diterima dalam dua puluh tiga unit pembaca. Latihan Bab 3 menjadi span sumber berikutnya.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh checkpoint pembaca 0.3.0 (96 halaman; Unit 1-9)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf)
 
@@ -53,6 +53,8 @@ Status saat ini: **Pendahuluan, seluruh Bab 1, seluruh Bab 2 termasuk latihannya
 [Baca atau unduh PDF Unit 21](artifacts/unit-021-bab-3-struktur-kepang.pdf)
 
 [Baca atau unduh PDF Unit 22](artifacts/unit-022-bab-3-kategori-diperkaya-dan-aditif.pdf)
+
+[Baca atau unduh PDF Unit 23](artifacts/unit-023-bab-3-sekilas-tentang-2-kategori.pdf)
 
 Versi preservasi saat ini, `0.5.0`, tersedia pada [Zenodo DOI 10.5281/zenodo.22071178](https://doi.org/10.5281/zenodo.22071178). Seluruh pembaruan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat. Rekaman ini memuat checkpoint gabungan 183 halaman, paket sumber/backend ringkas, pemberitahuan hak, manifest, dan checksum: lima berkas / 68.091.032 byte yang seluruhnya cocok pada pembacaan balik anonim. Checkpoint menggabungkan kedelapan belas reader menjadi pendahuluan serta Bab 1 dan Bab 2 lengkap. Build kedua identik byte; seluruh 182 halaman unit tidak berubah secara visual setelah penggabungan, dan QA navigasi, font, tautan, serta 183 halaman lulus. Checkpoint GitHub dipublikasikan pada commit `1c3479a8fdf8c23c2f72789db2bbc969a4b9b639`; seluruh tujuh path / 3.026.587 byte cocok pada pembacaan balik anonim. Receipt tersedia di [`qa/PUBLICATION_GITHUB_CHECKPOINT_0.5.0_20260824.md`](qa/PUBLICATION_GITHUB_CHECKPOINT_0.5.0_20260824.md) dan [`qa/PUBLICATION_ZENODO_0.5.0_20260824.md`](qa/PUBLICATION_ZENODO_0.5.0_20260824.md).
 
@@ -327,9 +329,20 @@ Artefak Unit 22 yang diterima:
 - receipt penerimaan lokal ada di [`qa/UNIT_022_ADMISSION_20260824.md`](qa/UNIT_022_ADMISSION_20260824.md), 8.128 byte; SHA-256 `4776cc1c2b0daa6a9deda519fd234b8f43676a7bfd217c37463ab8aabac44278`; bukti visual ada di [`qa/UNIT_022_VISUAL_QA_20260824.md`](qa/UNIT_022_VISUAL_QA_20260824.md).
 - Unit 22 dipublikasikan pada commit `46f2730ba4d0e8f197c52fefaf097b7a104df9a5`; seluruh 49 path / 4.226.195 byte cocok dengan blob komit pada pembacaan balik anonim. Inventaris per-path ada di [`qa/PUBLICATION_GITHUB_UNIT_022_CONTENT_READBACK.json`](qa/PUBLICATION_GITHUB_UNIT_022_CONTENT_READBACK.json), dan receipt publikasi ada di [`qa/PUBLICATION_GITHUB_UNIT_022_20260824.md`](qa/PUBLICATION_GITHUB_UNIT_022_20260824.md).
 
+Artefak Unit 23 yang diterima:
+
+- 7 halaman; 98.735 byte; SHA-256 `5fb682094a829d8abd878aaf3f5e36cda7763323d1a8417d4e36595a7959add4`
+- rentang otoritas Bagian 3.5 adalah `chapter3.tex:723-872`; rentang targetnya `chapter3.tex:722-871`, 14.894 byte, SHA-256 `c15e079bc551b30ad7cc6daf72bee58a90108dc7fa5f101f768275e99d1dad05`; file target lengkap 88.491 byte, SHA-256 `8ade04d16a5b71d4d1ffdf3bcee6736bb199c631a8851336d692e7ebdced5e7f`
+- backend 263.346 byte; SHA-256 `627bd414c5db75842f02d84ed87063c8bec2f3c3e60166f7a4227b2aa5937f8c`; 398 entitas stabil mencakup 343 konsep, 25 lingkungan terstruktur, 2 label, 16 rujukan, 19 butir, 167 permukaan rumus, 14 diagram dengan 64 panah, 3 entri indeks, 20 istilah yang diterima, 1 normalisasi editorial, dan 18 prasyarat. Enam proyeksi CSV direproduksi dan divalidasi secara deterministik; 80 kemunculan binding pada 35 path diaudit terhadap byte hidup.
+- normalisasi `O013-LI-U023-ED-001` mempertahankan kunci urut romanisasi sumber sambil menambahkan tampilan indeks Indonesia `pasangan adjoin`; prosa dan matematika tidak diubah.
+- dua build bersih, replay, dan artefak menghasilkan 56 render dan 8 contact sheet; semua perbandingan dalam renderer yang sama identik piksel. PDF mempunyai 4 outline, 26 destinasi bernama, 7 aksi tautan sah, 24 font tertanam/subset, dan tidak mempunyai aksi tidak aman, kotak meluber, atau halaman kosong.
+- tata letak daring menghapus transisi `backmatter` berorientasi cetak yang sebelumnya menghasilkan halaman indeks kedelapan yang hampir kosong. Kedua indeks kini mengisi ruang alami di bawah catatan terakhir pada halaman ketujuh tanpa memotong atau mengubah isi.
+- QA terminologi mengikat tujuh belas istilah kategori tingkat lebih tinggi baru dan tiga istilah kategori yang sudah diterima. Pencarian arXiv resmi terbatas tidak menemukan sumber TeX Indonesia yang sesuai; istilah gabungan diputuskan secara transparan dari makna dan konsistensi korpus tanpa mengklaim atestasi langsung yang tidak ada.
+- receipt penerimaan lokal ada di [`qa/UNIT_023_ADMISSION_20260824.md`](qa/UNIT_023_ADMISSION_20260824.md), 7.334 byte; SHA-256 `f67e850dfbf83a8ea2352f49d4fccd1417564e09db62dd848c210eebb2c53044`; bukti visual ada di [`qa/UNIT_023_VISUAL_QA_20260824.md`](qa/UNIT_023_VISUAL_QA_20260824.md).
+
 ## Backend modular
 
-`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-022-bab-3-kategori-diperkaya-dan-aditif.json` adalah catatan kanonik dua puluh dua unit yang telah diterima. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7 dan Unit 18 mempertahankan latihan sebagai entitas bagian terurut serta setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat. Unit 10-22 memakai identitas yang sama untuk permukaan matematika, diagram, rujukan eksternal, indeks, sitasi, koreksi sumber, serta provenance model; receipt penerimaan masing-masing mengikat bukti lokal dan, setelah publikasi, bukti publiknya.
+`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-023-bab-3-sekilas-tentang-2-kategori.json` adalah catatan kanonik dua puluh tiga unit yang telah diterima. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7 dan Unit 18 mempertahankan latihan sebagai entitas bagian terurut serta setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat. Unit 10-23 memakai identitas yang sama untuk permukaan matematika, diagram, rujukan eksternal, indeks, sitasi, koreksi atau normalisasi sumber, serta provenance model; receipt penerimaan masing-masing mengikat bukti lokal dan, setelah publikasi, bukti publiknya.
 
 Validasi:
 
@@ -356,6 +369,7 @@ python scripts/validate_backend.py --data backend/data/unit-019-bab-3-definisi-d
 python scripts/validate_backend.py --data backend/data/unit-020-bab-3-keketatan-dan-teorema-koherensi.json
 python scripts/validate_backend.py --data backend/data/unit-021-bab-3-struktur-kepang.json
 python scripts/validate_backend.py --data backend/data/unit-022-bab-3-kategori-diperkaya-dan-aditif.json
+python scripts/validate_backend.py --data backend/data/unit-023-bab-3-sekilas-tentang-2-kategori.json
 ```
 
 Validator memeriksa skema, keunikan dan relasi ID, urutan bagian, hash file dan rentang baris, penutupan sitasi/rujukan/diagram/indeks, bukti build, serta kesesuaian byte proyeksi CSV.
@@ -401,6 +415,7 @@ Teks sumber dan terjemahan ditangani menurut Creative Commons Attribution 4.0 In
   - [x] Bagian 3.2 — Keketatan dan Teorema Koherensi `chapter3.tex:228-306`
   - [x] Bagian 3.3 — Struktur Kepang `chapter3.tex:307-512`
   - [x] Bagian 3.4 — Kategori Diperkaya `chapter3.tex:513-722`
+  - [x] Bagian 3.5 — Sekilas tentang 2-Kategori `chapter3.tex:723-872`
 - [ ] Bab 4 — Teori grup
 - [ ] Bab 5 — Dasar-dasar teori gelanggang
 - [ ] Bab 6 — Teori modul

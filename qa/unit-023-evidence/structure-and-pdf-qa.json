@@ -1,0 +1,1238 @@
+{
+  "schema_version": "1.0.0",
+  "unit_id": "O013-LI-U023",
+  "status": "PASS",
+  "scope": "Complete Section 3.5, Sekilas tentang 2-Kategori; Chapter 3 exercises and later material are excluded.",
+  "canonical_target": {
+    "path": "repo/source/chapter3.tex",
+    "bytes": 88491,
+    "sha256": "8ade04d16a5b71d4d1ffdf3bcee6736bb199c631a8851336d692e7ebdced5e7f",
+    "line_records": 910,
+    "span_lines": "722-871",
+    "span_line_records": 150,
+    "span_bytes": 14894,
+    "span_sha256": "c15e079bc551b30ad7cc6daf72bee58a90108dc7fa5f101f768275e99d1dad05",
+    "span_equals_isolated_candidate": true,
+    "next_target_line": 872,
+    "next_line_sha256": "0f80848f05d5d2ea79e191700984eea0aec0f85dfcf13ac2ad2c23cb282ae699"
+  },
+  "candidate": {
+    "path": "build/unit-023-candidate/chapter3-2-categories-id.tex",
+    "bytes": 14894,
+    "sha256": "c15e079bc551b30ad7cc6daf72bee58a90108dc7fa5f101f768275e99d1dad05"
+  },
+  "driver": {
+    "path": "repo/source/unit-023-bab-3-sekilas-tentang-2-kategori.tex",
+    "bytes": 5408,
+    "sha256": "e3cd83f5ad24b69e676f8ac833d7796db15c7e28f890f71e0a46156a4d37a630"
+  },
+  "cover": {
+    "path": "repo/source/coverpage-id-unit-023.tex",
+    "bytes": 3620,
+    "sha256": "3eb4c6fcdb5ad34d1aa2148f88b71dba87efca04bd275b2a57ede1a87530bd04"
+  },
+  "crossrefs": {
+    "path": "repo/source/unit-023-crossrefs.aux",
+    "bytes": 846,
+    "sha256": "8074e688c018c89695c9fda35ffb18c4c585d1404c9fd652f5dfea22aabcc405"
+  },
+  "build_script": {
+    "path": "scripts/build_unit_023.ps1",
+    "bytes": 4689,
+    "sha256": "c390aedcc2cc9207094ac6d4b1e8175f3384815ed95e2f75a5cccd1ed7f7b37f"
+  },
+  "structure_checker": {
+    "path": "scripts/check_unit_023_structure.py",
+    "bytes": 6280,
+    "sha256": "b7e9df6eb08298f0376cc4f897115fa8af37bca572c98f3fa8d7393ce5013b73"
+  },
+  "source_review": {
+    "path": "qa/UNIT_023_TRANSLATION_SOURCE_REVIEW_20260824.md",
+    "bytes": 9303,
+    "sha256": "970adde88fdbdebd292bd0a3bcadd3dafd51c3d507edd50e90e2e7832fdc1b10"
+  },
+  "terminology_audit": {
+    "path": "qa/UNIT_023_TERMINOLOGY_AUDIT_20260824.md",
+    "bytes": 7901,
+    "sha256": "792d5fe6b28161c17f74f15294944bcaef5f6df0d50ee4edfd300f09da731fa8"
+  },
+  "math_structure_audit": {
+    "path": "qa/UNIT_023_MATH_STRUCTURE_AUDIT_20260824.md",
+    "bytes": 7114,
+    "sha256": "d356e204a81d32c84bba1cb6eda45a5fac036bf98c95b97ac6747f8135ba977f"
+  },
+  "evidence_generator": {
+    "path": "scripts/generate_unit_023_evidence.py",
+    "bytes": 31038,
+    "sha256": "1c18e16b9e004b2b4e4c1d93843aba10fe976280c19053b0a3c67238d7fb0783"
+  },
+  "artifact": {
+    "path": "artifacts/unit-023-bab-3-sekilas-tentang-2-kategori.pdf",
+    "bytes": 98735,
+    "sha256": "5fb682094a829d8abd878aaf3f5e36cda7763323d1a8417d4e36595a7959add4"
+  },
+  "clean_builds": {
+    "a": {
+      "path": "build/unit-023-reader-final-a/unit-023-bab-3-sekilas-tentang-2-kategori.pdf",
+      "bytes": 98732,
+      "sha256": "f3f587cd584538612fc8aea440f44aaa2c6933b707688e011d097c7ace5eb5a0"
+    },
+    "b": {
+      "path": "build/unit-023-reader-final-b/unit-023-bab-3-sekilas-tentang-2-kategori.pdf",
+      "bytes": 98735,
+      "sha256": "5fb682094a829d8abd878aaf3f5e36cda7763323d1a8417d4e36595a7959add4"
+    },
+    "replay": {
+      "path": "build/unit-023-reader-final-replay/unit-023-bab-3-sekilas-tentang-2-kategori.pdf",
+      "bytes": 98741,
+      "sha256": "c7676a48134f18222cfa56c82d733db6ce9c06631faf39c222bfb3514cc486eb"
+    }
+  },
+  "build_log": {
+    "path": "qa/UNIT_023_BUILD_FINAL.log",
+    "bytes": 83880,
+    "sha256": "1eba3cdbaa85de85e728daac9745f4dd6f7776e9d2315f15348ad23cd0b6c2ef"
+  },
+  "build_log_sanitization": {
+    "method": "edition-root, user-home, and local user-name replacement",
+    "edition_root_tokens": 0,
+    "user_home_tokens": 256,
+    "user_name_tokens": 0,
+    "line_count": 2249
+  },
+  "render_inventory": {
+    "path": "qa/unit-023-evidence/render-hash-inventory.json",
+    "bytes": 9634,
+    "sha256": "c53937157e0a66d6f607956d7969b778c64e23a8f1b0bfc69334f1750c277cf7"
+  },
+  "contact_sheet_directory": "build/unit-023-reader-final-visual/contact-sheets",
+  "structure": {
+    "labels": [
+      "sec:2-cat",
+      "eg:Cat"
+    ],
+    "references": [
+      "eg:Cat",
+      "rem:strict-or-not",
+      "prop:ML-coherence",
+      "con:U-small",
+      "prop:naturaltrans-associativity",
+      "eg:categories",
+      "eg:monoidal-cat",
+      "sec:functor-category",
+      "def:enriched-cat",
+      "def:enriched-functor",
+      "def:enriched-naturaltrans",
+      "sec:functors",
+      "rem:triangle-identity",
+      "sec:adjoint-functor",
+      "rem:triangle-identity",
+      "prop:adjoint-equivalence"
+    ],
+    "external_references": [
+      "con:U-small",
+      "def:enriched-cat",
+      "def:enriched-functor",
+      "def:enriched-naturaltrans",
+      "eg:categories",
+      "eg:monoidal-cat",
+      "prop:ML-coherence",
+      "prop:adjoint-equivalence",
+      "prop:naturaltrans-associativity",
+      "rem:strict-or-not",
+      "rem:triangle-identity",
+      "sec:adjoint-functor",
+      "sec:functor-category",
+      "sec:functors"
+    ],
+    "external_crossref_numbers": {
+      "con:U-small": "2.1.4",
+      "eg:categories": "2.1.5",
+      "sec:functors": "2.2",
+      "prop:naturaltrans-associativity": "2.2.7",
+      "rem:strict-or-not": "2.2.11",
+      "sec:functor-category": "2.3",
+      "sec:adjoint-functor": "2.6",
+      "rem:triangle-identity": "2.6.6",
+      "prop:adjoint-equivalence": "2.6.12",
+      "eg:monoidal-cat": "3.1.3",
+      "prop:ML-coherence": "3.2.2",
+      "def:enriched-cat": "3.4.1",
+      "def:enriched-functor": "3.4.2",
+      "def:enriched-naturaltrans": "3.4.4"
+    },
+    "citations": [],
+    "index_entries": 3,
+    "ordinary_index_entries": 2,
+    "symbol_index_entries": 1,
+    "environment_counts": {
+      "tikzcd": 14,
+      "remark": 3,
+      "definition": 2,
+      "compactitem": 2,
+      "itemize": 1,
+      "enumerate": 1,
+      "example": 1,
+      "convention": 1
+    },
+    "tikzpicture": 0,
+    "tikzcd": 14,
+    "declared_editorials": [
+      "O013-LI-U023-ED-001"
+    ]
+  },
+  "pdf": {
+    "pages": 7,
+    "pdf_header": "%PDF-1.7",
+    "encrypted": false,
+    "language": "id-ID",
+    "tagged": false,
+    "page_sizes_pt": [
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ]
+    ],
+    "page_text_character_counts": [
+      405,
+      933,
+      1990,
+      1278,
+      2888,
+      1945,
+      847
+    ],
+    "metadata": {
+      "/Creator": "LaTeX with hyperref",
+      "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 23: Kategori Monoidal - Sekilas tentang 2-Kategori",
+      "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 3.5 lengkap",
+      "/Author": "Wen-Wei Li",
+      "/Keywords": "aljabar, teori kategori, 2-kategori, 2-sel, bikategori, kategori diperkaya, pasangan adjoin, id-ID",
+      "/Producer": "MiKTeX-dvipdfmx (20260404)",
+      "/CreationDate": "D:20260824000000Z"
+    },
+    "outline": [
+      "Bab 3: Kategori Monoidal",
+      "3.5 Sekilas tentang 2-Kategori",
+      "Indeks Istilah",
+      "Indeks Simbol"
+    ],
+    "named_destination_count": 26,
+    "annotation_actions": {
+      "/GoTo": 4,
+      "/URI": 3
+    },
+    "uri_targets": [
+      "https://creativecommons.org/licenses/by/4.0/",
+      "https://creativecommons.org/licenses/by/4.0/",
+      "https://www.wwli.asia"
+    ],
+    "acroform_present": false,
+    "javascript_name_tree": false,
+    "embedded_files": false,
+    "catalog_additional_actions": false,
+    "open_action_safe": true,
+    "unsafe_actions": [],
+    "fonts": [
+      {
+        "basefont": "/EQRQQA+CMR10",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/FAHZQS+LMRoman17-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/FZRJIG+CMMI10",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/GIZUTW+TeXGyreHeros-Bold",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/KHHVOO+CMR8",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/KYEDPK+LMRoman12-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/LPRTGD+CMMI7",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/NETBUN+LMMono9-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/NPKVMF+LMRomanDemi10-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/NTVFQL+TeXGyreHeros-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/NUHNZV+CMSY7",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/NZBDQO+LMRoman7-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/OWAFBS+CMSY5",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/RIJEJV+LMRoman9-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/TBLPVN+LMRoman8-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/TKPWUZ+CMR5",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/TZJOLB+LMRoman10-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/VMPQFQ+EUSM10",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/VWTDNN+CMR12",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/WQPCGV+CMMI5",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/XLKGRR+CMEX10",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/YHWOMV+CMSY10",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/ZJAUKI+LMMono12-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/ZZOHKL+CMR7",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      }
+    ],
+    "font_count": 24,
+    "embedded_font_count": 24,
+    "subset_font_count": 24,
+    "all_fonts_embedded": true,
+    "pypdf_text_sha256": "7c8957abb6a36873a835e9a639506d1eb12d83d21c7f2832881d4346ac52922f",
+    "fitz_text_sha256": "d19da7cbc8a364a81ddca3096c2d698b8d4344d8eef30cee5fae0ad0f29f4b0e",
+    "pdfplumber_layout_text_sha256": "88efc238732c895e7e9c5bbe39c79568ebeddac7c5f9eb8683188212d057b988",
+    "poppler_layout_text_sha256": "6b79a134e9d37e30552412eacf5de69fa71a577244211797bc25e58fb2556d9b",
+    "pypdf_nul_count": 0,
+    "fitz_nul_count": 0,
+    "pdfplumber_nul_count": 0,
+    "poppler_nul_byte_count": 0,
+    "replacement_character_counts": {
+      "pypdf": 0,
+      "fitz": 0,
+      "pdfplumber": 0
+    },
+    "fitz_out_of_bounds_text_blocks": [],
+    "pdfplumber_out_of_bounds_characters": [],
+    "unresolved_token_count": 0,
+    "han_character_count": 0
+  },
+  "clean_build_pdf_records": {
+    "a": {
+      "pages": 7,
+      "pdf_header": "%PDF-1.7",
+      "encrypted": false,
+      "language": "id-ID",
+      "tagged": false,
+      "page_sizes_pt": [
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ]
+      ],
+      "page_text_character_counts": [
+        405,
+        933,
+        1990,
+        1278,
+        2888,
+        1945,
+        847
+      ],
+      "metadata": {
+        "/Creator": "LaTeX with hyperref",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 23: Kategori Monoidal - Sekilas tentang 2-Kategori",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 3.5 lengkap",
+        "/Author": "Wen-Wei Li",
+        "/Keywords": "aljabar, teori kategori, 2-kategori, 2-sel, bikategori, kategori diperkaya, pasangan adjoin, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/CreationDate": "D:20260824000000Z"
+      },
+      "outline": [
+        "Bab 3: Kategori Monoidal",
+        "3.5 Sekilas tentang 2-Kategori",
+        "Indeks Istilah",
+        "Indeks Simbol"
+      ],
+      "named_destination_count": 26,
+      "annotation_actions": {
+        "/GoTo": 4,
+        "/URI": 3
+      },
+      "uri_targets": [
+        "https://creativecommons.org/licenses/by/4.0/",
+        "https://creativecommons.org/licenses/by/4.0/",
+        "https://www.wwli.asia"
+      ],
+      "acroform_present": false,
+      "javascript_name_tree": false,
+      "embedded_files": false,
+      "catalog_additional_actions": false,
+      "open_action_safe": true,
+      "unsafe_actions": [],
+      "fonts": [
+        {
+          "basefont": "/ACBHPB+CMR7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/BUONWS+CMMI7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/DFGMFT+LMMono12-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/FXAYGA+LMMono9-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/GEDYWE+EUSM10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/GXTHHW+CMR5",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/JOVXWT+TeXGyreHeros-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/LPRVBM+LMRoman9-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/LVTWHT+CMSY5",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/NCJTOE+LMRoman10-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/NNBNDS+CMMI10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/ORMRYP+CMEX10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/PBJLBJ+CMSY10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/QFCKNZ+LMRoman17-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/RCDLRC+CMR12",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/RNCALB+LMRomanDemi10-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/ULQTVO+LMRoman7-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/UUTFCS+TeXGyreHeros-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/VDSKTT+CMR10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/VSHTTI+CMMI5",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/WYCAWX+LMRoman12-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/WYDUAN+CMR8",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/XLGNDS+CMSY7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/ZVAPKR+LMRoman8-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        }
+      ],
+      "font_count": 24,
+      "embedded_font_count": 24,
+      "subset_font_count": 24,
+      "all_fonts_embedded": true,
+      "pypdf_text_sha256": "7c8957abb6a36873a835e9a639506d1eb12d83d21c7f2832881d4346ac52922f",
+      "fitz_text_sha256": "d19da7cbc8a364a81ddca3096c2d698b8d4344d8eef30cee5fae0ad0f29f4b0e",
+      "pdfplumber_layout_text_sha256": "88efc238732c895e7e9c5bbe39c79568ebeddac7c5f9eb8683188212d057b988",
+      "poppler_layout_text_sha256": "6b79a134e9d37e30552412eacf5de69fa71a577244211797bc25e58fb2556d9b",
+      "pypdf_nul_count": 0,
+      "fitz_nul_count": 0,
+      "pdfplumber_nul_count": 0,
+      "poppler_nul_byte_count": 0,
+      "replacement_character_counts": {
+        "pypdf": 0,
+        "fitz": 0,
+        "pdfplumber": 0
+      },
+      "fitz_out_of_bounds_text_blocks": [],
+      "pdfplumber_out_of_bounds_characters": [],
+      "unresolved_token_count": 0,
+      "han_character_count": 0
+    },
+    "b": {
+      "pages": 7,
+      "pdf_header": "%PDF-1.7",
+      "encrypted": false,
+      "language": "id-ID",
+      "tagged": false,
+      "page_sizes_pt": [
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ]
+      ],
+      "page_text_character_counts": [
+        405,
+        933,
+        1990,
+        1278,
+        2888,
+        1945,
+        847
+      ],
+      "metadata": {
+        "/Creator": "LaTeX with hyperref",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 23: Kategori Monoidal - Sekilas tentang 2-Kategori",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 3.5 lengkap",
+        "/Author": "Wen-Wei Li",
+        "/Keywords": "aljabar, teori kategori, 2-kategori, 2-sel, bikategori, kategori diperkaya, pasangan adjoin, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/CreationDate": "D:20260824000000Z"
+      },
+      "outline": [
+        "Bab 3: Kategori Monoidal",
+        "3.5 Sekilas tentang 2-Kategori",
+        "Indeks Istilah",
+        "Indeks Simbol"
+      ],
+      "named_destination_count": 26,
+      "annotation_actions": {
+        "/GoTo": 4,
+        "/URI": 3
+      },
+      "uri_targets": [
+        "https://creativecommons.org/licenses/by/4.0/",
+        "https://creativecommons.org/licenses/by/4.0/",
+        "https://www.wwli.asia"
+      ],
+      "acroform_present": false,
+      "javascript_name_tree": false,
+      "embedded_files": false,
+      "catalog_additional_actions": false,
+      "open_action_safe": true,
+      "unsafe_actions": [],
+      "fonts": [
+        {
+          "basefont": "/EQRQQA+CMR10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/FAHZQS+LMRoman17-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/FZRJIG+CMMI10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/GIZUTW+TeXGyreHeros-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/KHHVOO+CMR8",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/KYEDPK+LMRoman12-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/LPRTGD+CMMI7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/NETBUN+LMMono9-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/NPKVMF+LMRomanDemi10-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/NTVFQL+TeXGyreHeros-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/NUHNZV+CMSY7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/NZBDQO+LMRoman7-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/OWAFBS+CMSY5",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/RIJEJV+LMRoman9-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/TBLPVN+LMRoman8-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/TKPWUZ+CMR5",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/TZJOLB+LMRoman10-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/VMPQFQ+EUSM10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/VWTDNN+CMR12",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/WQPCGV+CMMI5",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/XLKGRR+CMEX10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/YHWOMV+CMSY10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/ZJAUKI+LMMono12-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/ZZOHKL+CMR7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        }
+      ],
+      "font_count": 24,
+      "embedded_font_count": 24,
+      "subset_font_count": 24,
+      "all_fonts_embedded": true,
+      "pypdf_text_sha256": "7c8957abb6a36873a835e9a639506d1eb12d83d21c7f2832881d4346ac52922f",
+      "fitz_text_sha256": "d19da7cbc8a364a81ddca3096c2d698b8d4344d8eef30cee5fae0ad0f29f4b0e",
+      "pdfplumber_layout_text_sha256": "88efc238732c895e7e9c5bbe39c79568ebeddac7c5f9eb8683188212d057b988",
+      "poppler_layout_text_sha256": "6b79a134e9d37e30552412eacf5de69fa71a577244211797bc25e58fb2556d9b",
+      "pypdf_nul_count": 0,
+      "fitz_nul_count": 0,
+      "pdfplumber_nul_count": 0,
+      "poppler_nul_byte_count": 0,
+      "replacement_character_counts": {
+        "pypdf": 0,
+        "fitz": 0,
+        "pdfplumber": 0
+      },
+      "fitz_out_of_bounds_text_blocks": [],
+      "pdfplumber_out_of_bounds_characters": [],
+      "unresolved_token_count": 0,
+      "han_character_count": 0
+    },
+    "replay": {
+      "pages": 7,
+      "pdf_header": "%PDF-1.7",
+      "encrypted": false,
+      "language": "id-ID",
+      "tagged": false,
+      "page_sizes_pt": [
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ]
+      ],
+      "page_text_character_counts": [
+        405,
+        933,
+        1990,
+        1278,
+        2888,
+        1945,
+        847
+      ],
+      "metadata": {
+        "/Creator": "LaTeX with hyperref",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 23: Kategori Monoidal - Sekilas tentang 2-Kategori",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 3.5 lengkap",
+        "/Author": "Wen-Wei Li",
+        "/Keywords": "aljabar, teori kategori, 2-kategori, 2-sel, bikategori, kategori diperkaya, pasangan adjoin, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/CreationDate": "D:20260824000000Z"
+      },
+      "outline": [
+        "Bab 3: Kategori Monoidal",
+        "3.5 Sekilas tentang 2-Kategori",
+        "Indeks Istilah",
+        "Indeks Simbol"
+      ],
+      "named_destination_count": 26,
+      "annotation_actions": {
+        "/GoTo": 4,
+        "/URI": 3
+      },
+      "uri_targets": [
+        "https://creativecommons.org/licenses/by/4.0/",
+        "https://creativecommons.org/licenses/by/4.0/",
+        "https://www.wwli.asia"
+      ],
+      "acroform_present": false,
+      "javascript_name_tree": false,
+      "embedded_files": false,
+      "catalog_additional_actions": false,
+      "open_action_safe": true,
+      "unsafe_actions": [],
+      "fonts": [
+        {
+          "basefont": "/ADPWRV+CMR10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/CTZJET+CMEX10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/DNGGKG+LMMono12-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/DSSADJ+CMMI10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/IMNQJE+LMRoman12-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/JIMQWB+CMR8",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/JWVGYS+LMRoman10-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/JZZNUJ+CMR7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/LMDTKZ+CMMI5",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/MZHKDF+CMR5",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/NKLXZQ+CMMI7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/NPSUCA+CMR12",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/PEHYJC+EUSM10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/RHEWLF+LMMono9-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/SSQPST+CMSY7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/STRNFI+LMRomanDemi10-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/TEUHZB+LMRoman9-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/TGPEVT+LMRoman7-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/TVGSGY+CMSY10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/VHGOAU+TeXGyreHeros-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/WOCEKA+CMSY5",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/XIVPQI+LMRoman17-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/YMXATB+LMRoman8-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/YUCNEH+TeXGyreHeros-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        }
+      ],
+      "font_count": 24,
+      "embedded_font_count": 24,
+      "subset_font_count": 24,
+      "all_fonts_embedded": true,
+      "pypdf_text_sha256": "7c8957abb6a36873a835e9a639506d1eb12d83d21c7f2832881d4346ac52922f",
+      "fitz_text_sha256": "d19da7cbc8a364a81ddca3096c2d698b8d4344d8eef30cee5fae0ad0f29f4b0e",
+      "pdfplumber_layout_text_sha256": "88efc238732c895e7e9c5bbe39c79568ebeddac7c5f9eb8683188212d057b988",
+      "poppler_layout_text_sha256": "6b79a134e9d37e30552412eacf5de69fa71a577244211797bc25e58fb2556d9b",
+      "pypdf_nul_count": 0,
+      "fitz_nul_count": 0,
+      "pdfplumber_nul_count": 0,
+      "poppler_nul_byte_count": 0,
+      "replacement_character_counts": {
+        "pypdf": 0,
+        "fitz": 0,
+        "pdfplumber": 0
+      },
+      "fitz_out_of_bounds_text_blocks": [],
+      "pdfplumber_out_of_bounds_characters": [],
+      "unresolved_token_count": 0,
+      "han_character_count": 0
+    }
+  },
+  "deterministic_replay": {
+    "container_byte_identity": false,
+    "semantic_and_render_identity": true,
+    "pypdf_text_sha256": {
+      "final_a": "7c8957abb6a36873a835e9a639506d1eb12d83d21c7f2832881d4346ac52922f",
+      "final_b": "7c8957abb6a36873a835e9a639506d1eb12d83d21c7f2832881d4346ac52922f",
+      "replay": "7c8957abb6a36873a835e9a639506d1eb12d83d21c7f2832881d4346ac52922f",
+      "artifact": "7c8957abb6a36873a835e9a639506d1eb12d83d21c7f2832881d4346ac52922f"
+    },
+    "render_count": 56,
+    "contact_sheet_count": 8,
+    "same_renderer_page_mismatches": {
+      "poppler": 0,
+      "mupdf": 0
+    }
+  },
+  "log_counts": {
+    "overfull_boxes": 0,
+    "underfull_hboxes": 5,
+    "underfull_vboxes": 1,
+    "empty_external_link_targets": 15,
+    "undefined_control_sequences": 0,
+    "undefined_references": 0,
+    "undefined_citations": 0,
+    "missing_characters": 0,
+    "fatal_errors": 0,
+    "emergency_stops": 0
+  },
+  "checks": {
+    "canonical_target_full_identity": true,
+    "canonical_span_equals_candidate": true,
+    "boundary_next_section": true,
+    "candidate_checker": true,
+    "artifact_equals_final_b": true,
+    "page_count": true,
+    "semantic_replay": true,
+    "render_replay": true,
+    "pdf_safety": true,
+    "navigation": true,
+    "accessibility_baseline": true,
+    "fonts": true,
+    "text_tokens": true,
+    "log": true,
+    "page_edges": true,
+    "structure": true
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "renderers_inspected": [
+      "Poppler",
+      "MuPDF (mutool and PyMuPDF)"
+    ],
+    "finding": "Every page was inspected in both renderer families; no clipping, overlap, tofu, broken arrows, edge contact, sparse orphan page, or off-center composition was found.",
+    "seven_page_adjudication": "Removing only the unnecessary print-oriented back-matter transition placed both short indexes in the open lower portion of physical page 7 and eliminated the sparse index-only page 8."
+  },
+  "reflow_adjudication": "The class-level back-matter transition shipped content page 5 before two tiny indexes, creating an orphan physical page 8. Omitting that unnecessary state transition lets both indexes use the lower portion of physical page 7, without changing Section 3.5 content or index entries.",
+  "rights": {
+    "principal_text_and_translation": "CC BY 4.0",
+    "AJbook_class_fragment": "CC BY-SA 3.0",
+    "bundled_noto_fonts": "SIL OFL 1.1",
+    "Lanzhou_png_in_wider_closure": "CC BY-SA 3.0; not used by this reader"
+  },
+  "language": "id-ID",
+  "source_author": "Wen-Wei Li",
+  "translation_status": "independent and non-endorsed",
+  "build_date": "2026-08-24",
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

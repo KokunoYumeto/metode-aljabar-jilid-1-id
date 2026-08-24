@@ -1,0 +1,164 @@
+{
+  "status": "PASS",
+  "unit": "unit-023-bab-3-sekilas-tentang-2-kategori",
+  "authority": "chapter3.tex:723-872",
+  "target": "chapter3.tex:722-871",
+  "data": "backend/data/unit-023-bab-3-sekilas-tentang-2-kategori.json",
+  "schema": "backend/schema/open-math-corpus-unit.schema.v1.json",
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "artifact": {
+    "path": "artifacts/unit-023-bab-3-sekilas-tentang-2-kategori.pdf",
+    "pages": 7,
+    "bytes": 98735,
+    "sha256": "5fb682094a829d8abd878aaf3f5e36cda7763323d1a8417d4e36595a7959add4"
+  },
+  "counts": {
+    "concepts": 343,
+    "environments": 25,
+    "labels": 2,
+    "ordinary_references": 16,
+    "equation_references": 0,
+    "citation_occurrences": 0,
+    "native_bibliography_records": 0,
+    "items": 19,
+    "inline_formulae": 156,
+    "bracket_display_formulae": 11,
+    "environment_display_formulae": 0,
+    "tikzcd": 14,
+    "tikzpicture": 0,
+    "arrows": 64,
+    "nodes": 0,
+    "coordinates": 0,
+    "draws": 0,
+    "paths": 0,
+    "edges": 0,
+    "braids": 0,
+    "hlines": 0,
+    "index_entries": 3,
+    "terminology_rows": 20,
+    "editorial_normalizations": 1,
+    "csv_projections": 6
+  },
+  "checks": {
+    "deterministic_regeneration_one": "PASS",
+    "deterministic_regeneration_two": "PASS",
+    "shared_schema_and_uuidv5": "PASS",
+    "source_candidate_target_line_boundary": "PASS",
+    "protected_surface_topology": "PASS",
+    "editorial_normalization_provenance": "PASS",
+    "component_rights": "PASS",
+    "build_and_visual_bindings": "PASS",
+    "terminology_binding": "PASS",
+    "all_full_file_and_line_span_bindings": "PASS",
+    "validation_mutated_outputs": false
+  },
+  "binding_audit": {
+    "occurrences": 80,
+    "full_file_occurrences": 42,
+    "line_span_occurrences": 38,
+    "unique_paths": 35,
+    "paths": [
+      "00_control/SOURCE_MANIFEST.csv",
+      "00_control/TERMINOLOGY.id-ID.csv",
+      "artifacts/unit-023-bab-3-sekilas-tentang-2-kategori.pdf",
+      "authority/archives/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b.zip",
+      "authority/pdfs/Al-jabr-1.pdf",
+      "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter3.tex",
+      "qa/UNIT_023_BUILD_FINAL.log",
+      "qa/UNIT_023_MATH_STRUCTURE_AUDIT_20260824.md",
+      "qa/UNIT_023_TERMINOLOGY_AUDIT_20260824.md",
+      "qa/UNIT_023_TRANSLATION_SOURCE_REVIEW_20260824.md",
+      "qa/UNIT_023_VISUAL_QA_20260824.md",
+      "qa/unit-023-evidence/render-hash-inventory.json",
+      "qa/unit-023-evidence/structure-and-pdf-qa.json",
+      "repo/fonts/NotoSansCJKsc-Black.otf",
+      "repo/fonts/NotoSansCJKsc-Medium.otf",
+      "repo/fonts/NotoSansCJKsc-Regular.otf",
+      "repo/fonts/NotoSerifCJKsc-Bold.otf",
+      "repo/fonts/OFL-1.1-Noto-CJK.txt",
+      "repo/source/AJbook.cls",
+      "repo/source/Al-jabr.bib",
+      "repo/source/LICENSE",
+      "repo/source/Lanzhou.png",
+      "repo/source/ccby.png",
+      "repo/source/chapter3.tex",
+      "repo/source/coverpage-id-unit-023.tex",
+      "repo/source/font-setup-id.tex",
+      "repo/source/locale-ui-id.tex",
+      "repo/source/myarrows.sty",
+      "repo/source/mycommand.sty",
+      "repo/source/titles-setup-id.tex",
+      "repo/source/titles-setup.tex",
+      "repo/source/unit-023-bab-3-sekilas-tentang-2-kategori.tex",
+      "repo/source/unit-023-crossrefs.aux",
+      "scripts/build_unit_023.ps1",
+      "scripts/check_unit_023_structure.py"
+    ]
+  },
+  "identities": {
+    "backend/data/unit-023-bab-3-sekilas-tentang-2-kategori.json": {
+      "bytes": 263346,
+      "sha256": "627bd414c5db75842f02d84ed87063c8bec2f3c3e60166f7a4227b2aa5937f8c"
+    },
+    "backend/csv/unit-023-bindings.csv": {
+      "bytes": 17945,
+      "sha256": "32ff0476cba96568337dfce5d93aa6c00af9ba3e20e1c7c25d01ccfa45da24cc"
+    },
+    "backend/csv/unit-023-entities.csv": {
+      "bytes": 72821,
+      "sha256": "48980a9118837239720ffddae0c70da40b46b806020172a2b062644639fee242"
+    },
+    "backend/csv/unit-023-qa.csv": {
+      "bytes": 4390,
+      "sha256": "0f3664948e1c019f847519d0dbc54887b4818453384d86b761827d4707c408ee"
+    },
+    "backend/csv/unit-023-relations.csv": {
+      "bytes": 200165,
+      "sha256": "52ae7f581e7c56b9572694afe3233db8c8fd41bf46e73e3ef533148ef46a30b0"
+    },
+    "backend/csv/unit-023-rights.csv": {
+      "bytes": 1287,
+      "sha256": "4836630530f87a11a64fe233c59970e2ff7942695a8dbf404f7a0583a275197e"
+    },
+    "backend/csv/unit-023-surfaces.csv": {
+      "bytes": 3394,
+      "sha256": "8710d4fd376843f0b5e5f728b8d38da54d41c3c282d2bbdf5cfd0bceaf455dc1"
+    }
+  },
+  "bound_inputs": {
+    "00_control/TERMINOLOGY.id-ID.csv": {
+      "bytes": 45230,
+      "sha256": "9e2d946520a1c9f8984abd1b78935c2fe052e5bfdf79e9c9091d41a29b7cd68a"
+    },
+    "qa/unit-023-evidence/structure-and-pdf-qa.json": {
+      "bytes": 34048,
+      "sha256": "4558664d48c7188dfdfac8ea9f02ec7dae7434b2d0377f027c870c92cb541c23"
+    },
+    "qa/UNIT_023_VISUAL_QA_20260824.md": {
+      "bytes": 6108,
+      "sha256": "4e8d267e796cb4440ad7e59d05b1cc16703dad7a5bd5ba9ae55ac9d1df04166d"
+    },
+    "qa/UNIT_023_MATH_STRUCTURE_AUDIT_20260824.md": {
+      "bytes": 7114,
+      "sha256": "d356e204a81d32c84bba1cb6eda45a5fac036bf98c95b97ac6747f8135ba977f"
+    },
+    "qa/UNIT_023_TRANSLATION_SOURCE_REVIEW_20260824.md": {
+      "bytes": 9303,
+      "sha256": "970adde88fdbdebd292bd0a3bcadd3dafd51c3d507edd50e90e2e7832fdc1b10"
+    },
+    "qa/UNIT_023_TERMINOLOGY_AUDIT_20260824.md": {
+      "bytes": 7901,
+      "sha256": "792d5fe6b28161c17f74f15294944bcaef5f6df0d50ee4edfd300f09da731fa8"
+    }
+  },
+  "tools": {
+    "scripts/generate_unit_023_backend.py": {
+      "bytes": 63070,
+      "sha256": "2248bfaa8308dedb2b239a67ef15a57c5d4e70ddbf7bd45b3fb1326f5238a524"
+    },
+    "scripts/validate_unit_023_backend.py": {
+      "bytes": 19294,
+      "sha256": "3554a3c67e875aa6245d240bebb1dc9c26f7172edc92d81c41c80542c8dcb135"
+    }
+  }
+}
