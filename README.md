@@ -325,6 +325,7 @@ Artefak Unit 22 yang diterima:
 - sampul terpusat menyatakan cakupan parsial secara eksplisit. Seluruh diagram kategori diperkaya, fungtor, transformasi natural, dan biproduk terbaca; daftar pustaka dan kedua indeks mengalir ke ruang alami pada halaman kesembilan tanpa menghasilkan halaman belakang yang jarang.
 - QA terminologi Indonesia memeriksa sumber primer Indonesia yang benar-benar tersedia setelah pencarian arXiv terbatas tidak menemukan sumber TeX Indonesia yang sesuai; keputusan istilah kategori diperkaya dan batas buktinya ada di [`qa/UNIT_022_TERMINOLOGY_AUDIT_20260824.md`](qa/UNIT_022_TERMINOLOGY_AUDIT_20260824.md).
 - receipt penerimaan lokal ada di [`qa/UNIT_022_ADMISSION_20260824.md`](qa/UNIT_022_ADMISSION_20260824.md), 8.128 byte; SHA-256 `4776cc1c2b0daa6a9deda519fd234b8f43676a7bfd217c37463ab8aabac44278`; bukti visual ada di [`qa/UNIT_022_VISUAL_QA_20260824.md`](qa/UNIT_022_VISUAL_QA_20260824.md).
+- Unit 22 dipublikasikan pada commit `46f2730ba4d0e8f197c52fefaf097b7a104df9a5`; seluruh 49 path / 4.226.195 byte cocok dengan blob komit pada pembacaan balik anonim. Inventaris per-path ada di [`qa/PUBLICATION_GITHUB_UNIT_022_CONTENT_READBACK.json`](qa/PUBLICATION_GITHUB_UNIT_022_CONTENT_READBACK.json), dan receipt publikasi ada di [`qa/PUBLICATION_GITHUB_UNIT_022_20260824.md`](qa/PUBLICATION_GITHUB_UNIT_022_20260824.md).
 
 ## Backend modular
 
