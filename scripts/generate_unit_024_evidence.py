@@ -28,15 +28,15 @@ CANDIDATE_CHECKER = ROOT / "scripts/check_unit_024_candidate.py"
 SOURCE_REVIEW = ROOT / "qa/UNIT_024_TRANSLATION_SOURCE_REVIEW_20260824.md"
 TERMINOLOGY_AUDIT = ROOT / "qa/UNIT_024_TERMINOLOGY_AUDIT_20260824.md"
 MATH_AUDIT = ROOT / "qa/UNIT_024_MATH_STRUCTURE_AUDIT_20260825.md"
-BUILD_A_DIR = ROOT / "build/unit-024-reader-final-a"
-BUILD_B_DIR = ROOT / "build/unit-024-reader-final-b"
+BUILD_A_DIR = ROOT / "build/unit-024-reader-linkfix-final-a"
+BUILD_B_DIR = ROOT / "build/unit-024-reader-linkfix-final-b"
 BUILD_A = BUILD_A_DIR / f"{JOB}.pdf"
 BUILD_B = BUILD_B_DIR / f"{JOB}.pdf"
-BUILD_REPLAY = ROOT / f"build/unit-024-reader-final-replay/{JOB}.pdf"
+BUILD_REPLAY = ROOT / f"build/unit-024-reader-linkfix-final-replay/{JOB}.pdf"
 SOURCE_LOG = BUILD_B_DIR / f"{JOB}.log"
 ARTIFACT = ROOT / f"artifacts/{JOB}.pdf"
 FINAL_LOG = ROOT / "qa/UNIT_024_BUILD_FINAL.log"
-VISUAL_ROOT = ROOT / "build/unit-024-reader-final-visual"
+VISUAL_ROOT = ROOT / "build/unit-024-reader-linkfix-final-visual"
 EVIDENCE_DIR = ROOT / "qa/unit-024-evidence"
 POPPLER_WITNESS = EVIDENCE_DIR / "poppler-final-b"
 MUPDF_WITNESS = EVIDENCE_DIR / "mupdf-final-b"
@@ -200,6 +200,7 @@ def pdf_record(path: Path) -> dict[str, Any]:
     annotation_actions: Counter[str] = Counter()
     unsafe_actions: list[dict[str, Any]] = []
     uri_targets: list[str] = []
+    go_to_targets: list[str] = []
     page_sizes: list[list[float]] = []
     for page_number, page in enumerate(reader.pages, 1):
         page_sizes.append([float(page.mediabox.width), float(page.mediabox.height)])
@@ -219,7 +220,11 @@ def pdf_record(path: Path) -> dict[str, Any]:
                     uri_targets.append(uri)
                     if not re.match(r"^https?://", uri):
                         unsafe_actions.append({"page": page_number, "action": action_type, "target": uri})
-                elif action_type != "/GoTo":
+                elif action_type == "/GoTo":
+                    destination = action.get("/D")
+                    if isinstance(destination, str):
+                        go_to_targets.append(str(destination))
+                else:
                     unsafe_actions.append({"page": page_number, "action": action_type})
 
     names = dereference(root.get("/Names", {})) if root.get("/Names") else {}
@@ -271,6 +276,14 @@ def pdf_record(path: Path) -> dict[str, Any]:
     plumber_text = "\n\f\n".join(plumber_texts)
     metadata = {str(key): str(value) for key, value in (reader.metadata or {}).items()}
     font_list = sorted(fonts.values(), key=lambda record: (record["basefont"], record["subtype"]))
+    named_destinations = reader.named_destinations
+    named_destination_pages = {
+        str(name): reader.get_destination_page_number(destination) + 1
+        for name, destination in named_destinations.items()
+    }
+    broken_named_go_to_targets = sorted(
+        set(go_to_targets) - set(named_destination_pages)
+    )
     return {
         "pages": len(reader.pages),
         "pdf_header": reader.pdf_header,
@@ -283,7 +296,10 @@ def pdf_record(path: Path) -> dict[str, Any]:
         "page_text_character_counts": [len(text) for text in pypdf_texts],
         "metadata": metadata,
         "outline": outline_titles(reader.outline),
-        "named_destination_count": len(reader.named_destinations),
+        "named_destination_count": len(named_destinations),
+        "named_destination_pages_1_based": dict(sorted(named_destination_pages.items())),
+        "go_to_targets": sorted(go_to_targets),
+        "broken_named_go_to_targets": broken_named_go_to_targets,
         "annotation_actions": dict(sorted(annotation_actions.items())),
         "uri_targets": sorted(uri_targets),
         "acroform_present": "/AcroForm" in root,
@@ -589,7 +605,10 @@ def main() -> None:
         and artifact_pdf["open_action_safe"]
         and not artifact_pdf["unsafe_actions"],
         "navigation": artifact_pdf["outline"] == expected_outline
-        and artifact_pdf["named_destination_count"] == 5
+        and artifact_pdf["named_destination_count"] == 6
+        and artifact_pdf["named_destination_pages_1_based"].get("page.1") == 3
+        and artifact_pdf["go_to_targets"] == ["page.1"]
+        and not artifact_pdf["broken_named_go_to_targets"]
         and artifact_pdf["annotation_actions"] == {"/GoTo": 1, "/URI": 3},
         "accessibility_baseline": artifact_pdf["language"] == "id-ID"
         and all(count > 0 for count in artifact_pdf["page_text_character_counts"])
@@ -690,7 +709,7 @@ def main() -> None:
             "line_count": len(sanitized_log.splitlines()),
         },
         "render_inventory": identity(RENDER_INVENTORY),
-        "contact_sheet_directory": "build/unit-024-reader-final-visual/contact-sheets",
+        "contact_sheet_directory": "build/unit-024-reader-linkfix-final-visual/contact-sheets",
         "structure": expected_structure,
         "external_crossref_numbers": EXTERNAL_CROSSREF_NUMBERS,
         "pdf": artifact_pdf,
@@ -758,7 +777,7 @@ def main() -> None:
         f"canonical lines=872-910 records=39 bytes={len(span)} sha256={sha256(span)} candidate_byte_identical=yes post_span_suffix_bytes={len(suffix)} chapter_complete=yes\n"
         "driver loads only the canonical target span; candidate dependency=no\n"
         "clean builds have different PDF-container bytes but identical extracted content and page-identical Poppler and MuPDF rasters\n"
-        f"PDF outlines={len(artifact_pdf['outline'])} destinations={artifact_pdf['named_destination_count']} actions={json.dumps(artifact_pdf['annotation_actions'], sort_keys=True)} fonts={artifact_pdf['font_count']} language={artifact_pdf['language']} tagged={'yes' if artifact_pdf['tagged'] else 'no'}\n"
+        f"PDF outlines={len(artifact_pdf['outline'])} destinations={artifact_pdf['named_destination_count']} actions={json.dumps(artifact_pdf['annotation_actions'], sort_keys=True)} broken_named_links={len(artifact_pdf['broken_named_go_to_targets'])} fonts={artifact_pdf['font_count']} language={artifact_pdf['language']} tagged={'yes' if artifact_pdf['tagged'] else 'no'}\n"
         f"log counts={json.dumps(log_counts, sort_keys=True)}\n"
         "Every page was inspected in Poppler and MuPDF. The former sparse index-only page 5 was eliminated; the centered 142 mm measure and inline single-entry index fill the four-page reader cleanly, with zero overfull boxes, empty-target links, clipping, overlap, edge ink, tofu, or broken diagrams.\n"
         "provenance model=OpenAI Codex gpt-5.6-sol, Ultra\n"

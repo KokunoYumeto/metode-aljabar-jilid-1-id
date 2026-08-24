@@ -23,8 +23,8 @@
   },
   "driver": {
     "path": "repo/source/unit-024-bab-3-latihan-kategori-monoidal.tex",
-    "bytes": 5067,
-    "sha256": "9823e3a5a3f6850d257abd32259583a579920ef062cc84f51b2e515c57772891"
+    "bytes": 5312,
+    "sha256": "936fd9b09fb0220b9730627b10f032447b01c06b6d98ae15af4826ce5b03f0e8"
   },
   "cover": {
     "path": "repo/source/coverpage-id-unit-024.tex",
@@ -68,49 +68,49 @@
   },
   "evidence_generator": {
     "path": "scripts/generate_unit_024_evidence.py",
-    "bytes": 33593,
-    "sha256": "a36ae18165e6c00b87aea0c5c9c19e0f0b4921a1ebef89c4f1094250febe884b"
+    "bytes": 34641,
+    "sha256": "a8b17be886eab4355f2f5d9760257b88916e0862734e718b0e1a54bba7c37d5d"
   },
   "artifact": {
     "path": "artifacts/unit-024-bab-3-latihan-kategori-monoidal.pdf",
-    "bytes": 86254,
-    "sha256": "eb4ee13fffe6a54a50357a0043aa82e0958b2f30feb92c440b6ea10a5efdc6b4"
+    "bytes": 86255,
+    "sha256": "1b61a1e2b856f2ef5d9dbc800c6e593aeb776fd85e2480a53b26286639292e71"
   },
   "clean_builds": {
     "a": {
-      "path": "build/unit-024-reader-final-a/unit-024-bab-3-latihan-kategori-monoidal.pdf",
-      "bytes": 86257,
-      "sha256": "2ee3fec97585907ee7e6d1dcaecb3c4244c784ae3ddd30e24831e048b55e4122"
+      "path": "build/unit-024-reader-linkfix-final-a/unit-024-bab-3-latihan-kategori-monoidal.pdf",
+      "bytes": 86261,
+      "sha256": "9042d40384d331d0ac8243d3a7374f7bd4d59373ee1d933084205553c0edc5c2"
     },
     "b": {
-      "path": "build/unit-024-reader-final-b/unit-024-bab-3-latihan-kategori-monoidal.pdf",
-      "bytes": 86254,
-      "sha256": "eb4ee13fffe6a54a50357a0043aa82e0958b2f30feb92c440b6ea10a5efdc6b4"
+      "path": "build/unit-024-reader-linkfix-final-b/unit-024-bab-3-latihan-kategori-monoidal.pdf",
+      "bytes": 86255,
+      "sha256": "1b61a1e2b856f2ef5d9dbc800c6e593aeb776fd85e2480a53b26286639292e71"
     },
     "replay": {
-      "path": "build/unit-024-reader-final-replay/unit-024-bab-3-latihan-kategori-monoidal.pdf",
-      "bytes": 86245,
-      "sha256": "4b6d64a2ee72cd87954eb66704040216169a0e6c5dc92c392f0429e5abc85593"
+      "path": "build/unit-024-reader-linkfix-final-replay/unit-024-bab-3-latihan-kategori-monoidal.pdf",
+      "bytes": 86259,
+      "sha256": "3a2b4214a230d0a953544cd0e8f462ee3406156d88388338b835d171359a6d86"
     }
   },
   "build_log": {
     "path": "qa/UNIT_024_BUILD_FINAL.log",
-    "bytes": 78542,
-    "sha256": "62b3dac51522a1bd33ec6bd62a25f6dbef06ccbfa349982bb51b18eabc9c22fe"
+    "bytes": 78595,
+    "sha256": "5e3e8e493c07ed5590e7bccf730880d25497ce91a06e3c854324a0031233911f"
   },
   "build_log_sanitization": {
     "method": "edition-root, user-home, and local user-name replacement",
     "edition_root_tokens": 0,
     "user_home_tokens": 253,
     "user_name_tokens": 0,
-    "line_count": 2108
+    "line_count": 2112
   },
   "render_inventory": {
     "path": "qa/unit-024-evidence/render-hash-inventory.json",
-    "bytes": 7110,
-    "sha256": "d60e5a81bdd248b659d6440b6d442a8e4f6ca6a15dc0632e9dd45d9139f0c892"
+    "bytes": 7134,
+    "sha256": "159d349baff97e40ec63300032d23e8fe91c9b0a7ff56f18fa4cf3a4a0ef2050"
   },
-  "contact_sheet_directory": "build/unit-024-reader-final-visual/contact-sheets",
+  "contact_sheet_directory": "build/unit-024-reader-linkfix-final-visual/contact-sheets",
   "structure": {
     "exercises": 8,
     "nested_items": 3,
@@ -189,7 +189,19 @@
       "Latihan",
       "Indeks Istilah"
     ],
-    "named_destination_count": 5,
+    "named_destination_count": 6,
+    "named_destination_pages_1_based": {
+      "Doc-Start": 1,
+      "page.1": 3,
+      "page.2": 4,
+      "section*.1": 4,
+      "unit024-chapter-three.0": 3,
+      "unit024-term-index.0": 4
+    },
+    "go_to_targets": [
+      "page.1"
+    ],
+    "broken_named_go_to_targets": [],
     "annotation_actions": {
       "/GoTo": 1,
       "/URI": 3
@@ -207,133 +219,133 @@
     "unsafe_actions": [],
     "fonts": [
       {
-        "basefont": "/AUIKML+CMSY6",
+        "basefont": "/AERTHV+LMMono9-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/FDGQQU+LMMono12-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/FGCUYC+CMMI6",
         "subtype": "/Type1",
         "embedded": true,
         "subset": true
       },
       {
-        "basefont": "/BZMZJQ+LMRoman12-Regular",
+        "basefont": "/FXFCLP+LMRoman8-Regular",
         "subtype": "/Type0",
         "embedded": true,
         "subset": true
       },
       {
-        "basefont": "/CJAIXL+CMEX9",
+        "basefont": "/GKAXBK+CMEX9",
         "subtype": "/Type1",
         "embedded": true,
         "subset": true
       },
       {
-        "basefont": "/GNNQPO+LMRomanDemi10-Regular",
+        "basefont": "/HGFRRJ+TeXGyreHeros-Regular",
         "subtype": "/Type0",
         "embedded": true,
         "subset": true
       },
       {
-        "basefont": "/HGIKSG+LMMono12-Regular",
+        "basefont": "/HQJEVG+LMRoman12-Regular",
         "subtype": "/Type0",
         "embedded": true,
         "subset": true
       },
       {
-        "basefont": "/HSZPDU+CMR9",
+        "basefont": "/HTLVDQ+CMR6",
         "subtype": "/Type1",
         "embedded": true,
         "subset": true
       },
       {
-        "basefont": "/IFDMYX+LMRoman9-Regular",
-        "subtype": "/Type0",
-        "embedded": true,
-        "subset": true
-      },
-      {
-        "basefont": "/JHHJIP+CMMI5",
+        "basefont": "/JGEHYN+CMSY9",
         "subtype": "/Type1",
         "embedded": true,
         "subset": true
       },
       {
-        "basefont": "/KPLHEV+TeXGyreHeros-Regular",
-        "subtype": "/Type0",
-        "embedded": true,
-        "subset": true
-      },
-      {
-        "basefont": "/LBJCZS+TeXGyreHeros-Bold",
-        "subtype": "/Type0",
-        "embedded": true,
-        "subset": true
-      },
-      {
-        "basefont": "/LBMMBU+LMRoman9-Bold",
-        "subtype": "/Type0",
-        "embedded": true,
-        "subset": true
-      },
-      {
-        "basefont": "/LJZOTJ+MSBM10",
+        "basefont": "/KPJHGV+CMMI9",
         "subtype": "/Type1",
         "embedded": true,
         "subset": true
       },
       {
-        "basefont": "/LVTUTA+LMMono9-Regular",
+        "basefont": "/LPRESL+LMRoman17-Regular",
         "subtype": "/Type0",
         "embedded": true,
         "subset": true
       },
       {
-        "basefont": "/NLIRFB+LMRoman6-Regular",
+        "basefont": "/MQMQXL+TeXGyreHeros-Bold",
         "subtype": "/Type0",
         "embedded": true,
         "subset": true
       },
       {
-        "basefont": "/OSUYDX+CMMI6",
+        "basefont": "/NQFRPL+LMRoman9-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/OGXLFF+MSBM10",
         "subtype": "/Type1",
         "embedded": true,
         "subset": true
       },
       {
-        "basefont": "/OZAQFO+LMRoman10-Regular",
-        "subtype": "/Type0",
-        "embedded": true,
-        "subset": true
-      },
-      {
-        "basefont": "/SQVWGQ+CMR6",
+        "basefont": "/PGKIHR+CMSY5",
         "subtype": "/Type1",
         "embedded": true,
         "subset": true
       },
       {
-        "basefont": "/UJHKQC+CMSY5",
+        "basefont": "/SJAJAZ+CMR9",
         "subtype": "/Type1",
         "embedded": true,
         "subset": true
       },
       {
-        "basefont": "/ULZBGP+LMRoman17-Regular",
+        "basefont": "/UAGOOY+LMRoman6-Regular",
         "subtype": "/Type0",
         "embedded": true,
         "subset": true
       },
       {
-        "basefont": "/VANCEE+LMRoman8-Regular",
+        "basefont": "/UBHACU+LMRomanDemi10-Regular",
         "subtype": "/Type0",
         "embedded": true,
         "subset": true
       },
       {
-        "basefont": "/VETKAL+CMSY9",
+        "basefont": "/YMNFNS+CMSY6",
         "subtype": "/Type1",
         "embedded": true,
         "subset": true
       },
       {
-        "basefont": "/ZATXCN+CMMI9",
+        "basefont": "/YQECCL+LMRoman10-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/ZOOAOM+LMRoman9-Bold",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/ZWSQTG+CMMI5",
         "subtype": "/Type1",
         "embedded": true,
         "subset": true
@@ -406,7 +418,19 @@
         "Latihan",
         "Indeks Istilah"
       ],
-      "named_destination_count": 5,
+      "named_destination_count": 6,
+      "named_destination_pages_1_based": {
+        "Doc-Start": 1,
+        "page.1": 3,
+        "page.2": 4,
+        "section*.1": 4,
+        "unit024-chapter-three.0": 3,
+        "unit024-term-index.0": 4
+      },
+      "go_to_targets": [
+        "page.1"
+      ],
+      "broken_named_go_to_targets": [],
       "annotation_actions": {
         "/GoTo": 1,
         "/URI": 3
@@ -424,134 +448,134 @@
       "unsafe_actions": [],
       "fonts": [
         {
-          "basefont": "/ABWBEM+LMRoman6-Regular",
+          "basefont": "/BRFXIV+TeXGyreHeros-Bold",
           "subtype": "/Type0",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/BTJKIK+CMSY5",
+          "basefont": "/BYUGJS+LMRoman8-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/CJPCJC+LMRoman6-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/CUCJOG+LMRoman9-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/DJGLQG+LMMono9-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/DWWBQF+CMR6",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/BXLLVQ+CMR6",
+          "basefont": "/EWWKKT+CMSY5",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/DJFRKD+LMRomanDemi10-Regular",
-          "subtype": "/Type0",
-          "embedded": true,
-          "subset": true
-        },
-        {
-          "basefont": "/EZQDQD+LMRoman10-Regular",
-          "subtype": "/Type0",
-          "embedded": true,
-          "subset": true
-        },
-        {
-          "basefont": "/HWMOED+LMMono12-Regular",
-          "subtype": "/Type0",
-          "embedded": true,
-          "subset": true
-        },
-        {
-          "basefont": "/IJFZAA+CMMI5",
+          "basefont": "/GSDLWO+MSBM10",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/JVBXFQ+TeXGyreHeros-Regular",
-          "subtype": "/Type0",
-          "embedded": true,
-          "subset": true
-        },
-        {
-          "basefont": "/JXFQIN+CMSY6",
+          "basefont": "/IECQUS+CMR9",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/KDYABV+LMRoman12-Regular",
-          "subtype": "/Type0",
-          "embedded": true,
-          "subset": true
-        },
-        {
-          "basefont": "/KUUPXV+LMMono9-Regular",
-          "subtype": "/Type0",
-          "embedded": true,
-          "subset": true
-        },
-        {
-          "basefont": "/LAARIH+CMSY9",
+          "basefont": "/KPPSUL+CMEX9",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/NNBONF+LMRoman17-Regular",
+          "basefont": "/LNRDBO+LMRoman10-Regular",
           "subtype": "/Type0",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/PJHYAB+CMEX9",
+          "basefont": "/NGXEEO+CMSY6",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/POYLBR+LMRoman9-Bold",
+          "basefont": "/ONQMXQ+LMRoman17-Regular",
           "subtype": "/Type0",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/PRIAND+LMRoman8-Regular",
+          "basefont": "/QEBAGH+CMMI9",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/RAIJAP+LMRomanDemi10-Regular",
           "subtype": "/Type0",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/SUYZFU+CMMI6",
-          "subtype": "/Type1",
-          "embedded": true,
-          "subset": true
-        },
-        {
-          "basefont": "/TIFLJM+CMR9",
-          "subtype": "/Type1",
-          "embedded": true,
-          "subset": true
-        },
-        {
-          "basefont": "/TTMIOZ+CMMI9",
-          "subtype": "/Type1",
-          "embedded": true,
-          "subset": true
-        },
-        {
-          "basefont": "/UWYFLR+LMRoman9-Regular",
+          "basefont": "/RCKRHU+LMMono12-Regular",
           "subtype": "/Type0",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/WHWYTL+TeXGyreHeros-Bold",
+          "basefont": "/TWRIAQ+LMRoman9-Bold",
           "subtype": "/Type0",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/WQKQYJ+MSBM10",
+          "basefont": "/TXRIJT+TeXGyreHeros-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/UAGEGI+CMSY9",
           "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/XIOBKB+CMMI6",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/XURBHR+CMMI5",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/ZPHFCM+LMRoman12-Regular",
+          "subtype": "/Type0",
           "embedded": true,
           "subset": true
         }
@@ -622,7 +646,19 @@
         "Latihan",
         "Indeks Istilah"
       ],
-      "named_destination_count": 5,
+      "named_destination_count": 6,
+      "named_destination_pages_1_based": {
+        "Doc-Start": 1,
+        "page.1": 3,
+        "page.2": 4,
+        "section*.1": 4,
+        "unit024-chapter-three.0": 3,
+        "unit024-term-index.0": 4
+      },
+      "go_to_targets": [
+        "page.1"
+      ],
+      "broken_named_go_to_targets": [],
       "annotation_actions": {
         "/GoTo": 1,
         "/URI": 3
@@ -640,133 +676,133 @@
       "unsafe_actions": [],
       "fonts": [
         {
-          "basefont": "/AUIKML+CMSY6",
+          "basefont": "/AERTHV+LMMono9-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/FDGQQU+LMMono12-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/FGCUYC+CMMI6",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/BZMZJQ+LMRoman12-Regular",
+          "basefont": "/FXFCLP+LMRoman8-Regular",
           "subtype": "/Type0",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/CJAIXL+CMEX9",
+          "basefont": "/GKAXBK+CMEX9",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/GNNQPO+LMRomanDemi10-Regular",
+          "basefont": "/HGFRRJ+TeXGyreHeros-Regular",
           "subtype": "/Type0",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/HGIKSG+LMMono12-Regular",
+          "basefont": "/HQJEVG+LMRoman12-Regular",
           "subtype": "/Type0",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/HSZPDU+CMR9",
+          "basefont": "/HTLVDQ+CMR6",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/IFDMYX+LMRoman9-Regular",
-          "subtype": "/Type0",
-          "embedded": true,
-          "subset": true
-        },
-        {
-          "basefont": "/JHHJIP+CMMI5",
+          "basefont": "/JGEHYN+CMSY9",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/KPLHEV+TeXGyreHeros-Regular",
-          "subtype": "/Type0",
-          "embedded": true,
-          "subset": true
-        },
-        {
-          "basefont": "/LBJCZS+TeXGyreHeros-Bold",
-          "subtype": "/Type0",
-          "embedded": true,
-          "subset": true
-        },
-        {
-          "basefont": "/LBMMBU+LMRoman9-Bold",
-          "subtype": "/Type0",
-          "embedded": true,
-          "subset": true
-        },
-        {
-          "basefont": "/LJZOTJ+MSBM10",
+          "basefont": "/KPJHGV+CMMI9",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/LVTUTA+LMMono9-Regular",
+          "basefont": "/LPRESL+LMRoman17-Regular",
           "subtype": "/Type0",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/NLIRFB+LMRoman6-Regular",
+          "basefont": "/MQMQXL+TeXGyreHeros-Bold",
           "subtype": "/Type0",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/OSUYDX+CMMI6",
+          "basefont": "/NQFRPL+LMRoman9-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/OGXLFF+MSBM10",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/OZAQFO+LMRoman10-Regular",
-          "subtype": "/Type0",
-          "embedded": true,
-          "subset": true
-        },
-        {
-          "basefont": "/SQVWGQ+CMR6",
+          "basefont": "/PGKIHR+CMSY5",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/UJHKQC+CMSY5",
+          "basefont": "/SJAJAZ+CMR9",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/ULZBGP+LMRoman17-Regular",
+          "basefont": "/UAGOOY+LMRoman6-Regular",
           "subtype": "/Type0",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/VANCEE+LMRoman8-Regular",
+          "basefont": "/UBHACU+LMRomanDemi10-Regular",
           "subtype": "/Type0",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/VETKAL+CMSY9",
+          "basefont": "/YMNFNS+CMSY6",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/ZATXCN+CMMI9",
+          "basefont": "/YQECCL+LMRoman10-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/ZOOAOM+LMRoman9-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/ZWSQTG+CMMI5",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
@@ -838,7 +874,19 @@
         "Latihan",
         "Indeks Istilah"
       ],
-      "named_destination_count": 5,
+      "named_destination_count": 6,
+      "named_destination_pages_1_based": {
+        "Doc-Start": 1,
+        "page.1": 3,
+        "page.2": 4,
+        "section*.1": 4,
+        "unit024-chapter-three.0": 3,
+        "unit024-term-index.0": 4
+      },
+      "go_to_targets": [
+        "page.1"
+      ],
+      "broken_named_go_to_targets": [],
       "annotation_actions": {
         "/GoTo": 1,
         "/URI": 3
@@ -856,134 +904,134 @@
       "unsafe_actions": [],
       "fonts": [
         {
-          "basefont": "/AUISTI+MSBM10",
+          "basefont": "/DBLHWA+LMRoman9-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/DZLFLX+CMMI9",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/BETDAJ+CMSY6",
+          "basefont": "/EFAZOI+CMSY6",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/BFFEBJ+TeXGyreHeros-Bold",
+          "basefont": "/ENFNTW+LMMono12-Regular",
           "subtype": "/Type0",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/BRAXYD+LMRoman9-Regular",
+          "basefont": "/GQADRO+LMRoman10-Regular",
           "subtype": "/Type0",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/CDTDJU+LMRoman12-Regular",
+          "basefont": "/HBGAMY+LMRoman6-Regular",
           "subtype": "/Type0",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/CMNNGH+CMR9",
+          "basefont": "/IUHOAV+CMEX9",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/CZBJCW+CMR6",
+          "basefont": "/JHYUBH+LMMono9-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/JOMWCC+CMR9",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/DDJWAI+CMMI9",
+          "basefont": "/LHQOYX+LMRoman12-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/LQVENW+CMMI5",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/GLVQVC+CMSY5",
+          "basefont": "/LXQMBU+MSBM10",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/HJESYJ+CMMI5",
+          "basefont": "/NDOVHX+TeXGyreHeros-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/NJOODF+LMRoman8-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/NOMAXF+CMMI6",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/IUZWBD+TeXGyreHeros-Regular",
-          "subtype": "/Type0",
-          "embedded": true,
-          "subset": true
-        },
-        {
-          "basefont": "/JFGLIZ+LMRoman6-Regular",
-          "subtype": "/Type0",
-          "embedded": true,
-          "subset": true
-        },
-        {
-          "basefont": "/JXSMPT+LMRoman17-Regular",
-          "subtype": "/Type0",
-          "embedded": true,
-          "subset": true
-        },
-        {
-          "basefont": "/LYSHCY+CMSY9",
+          "basefont": "/NWSREF+CMSY9",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/MRJPVO+LMRoman10-Regular",
-          "subtype": "/Type0",
-          "embedded": true,
-          "subset": true
-        },
-        {
-          "basefont": "/NNTVMB+LMRomanDemi10-Regular",
-          "subtype": "/Type0",
-          "embedded": true,
-          "subset": true
-        },
-        {
-          "basefont": "/QEBCUM+CMEX9",
+          "basefont": "/ONCGAU+CMSY5",
           "subtype": "/Type1",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/QKAVVT+LMRoman8-Regular",
+          "basefont": "/PDAPNM+LMRoman17-Regular",
           "subtype": "/Type0",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/SDBMBQ+LMMono12-Regular",
+          "basefont": "/RBBZET+LMRomanDemi10-Regular",
           "subtype": "/Type0",
           "embedded": true,
           "subset": true
         },
         {
-          "basefont": "/VRBQUQ+LMMono9-Regular",
-          "subtype": "/Type0",
-          "embedded": true,
-          "subset": true
-        },
-        {
-          "basefont": "/XACKNL+LMRoman9-Bold",
-          "subtype": "/Type0",
-          "embedded": true,
-          "subset": true
-        },
-        {
-          "basefont": "/YFWKPY+CMMI6",
+          "basefont": "/TKOAHH+CMR6",
           "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/UIHNUL+LMRoman9-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/WJSLRF+TeXGyreHeros-Regular",
+          "subtype": "/Type0",
           "embedded": true,
           "subset": true
         }
@@ -1020,100 +1068,100 @@
       "normalized_font_family_identity": true,
       "font_subset_prefixes": {
         "final_a": [
-          "ABWBEM",
-          "BTJKIK",
-          "BXLLVQ",
-          "DJFRKD",
-          "EZQDQD",
-          "HWMOED",
-          "IJFZAA",
-          "JVBXFQ",
-          "JXFQIN",
-          "KDYABV",
-          "KUUPXV",
-          "LAARIH",
-          "NNBONF",
-          "PJHYAB",
-          "POYLBR",
-          "PRIAND",
-          "SUYZFU",
-          "TIFLJM",
-          "TTMIOZ",
-          "UWYFLR",
-          "WHWYTL",
-          "WQKQYJ"
+          "BRFXIV",
+          "BYUGJS",
+          "CJPCJC",
+          "CUCJOG",
+          "DJGLQG",
+          "DWWBQF",
+          "EWWKKT",
+          "GSDLWO",
+          "IECQUS",
+          "KPPSUL",
+          "LNRDBO",
+          "NGXEEO",
+          "ONQMXQ",
+          "QEBAGH",
+          "RAIJAP",
+          "RCKRHU",
+          "TWRIAQ",
+          "TXRIJT",
+          "UAGEGI",
+          "XIOBKB",
+          "XURBHR",
+          "ZPHFCM"
         ],
         "final_b": [
-          "AUIKML",
-          "BZMZJQ",
-          "CJAIXL",
-          "GNNQPO",
-          "HGIKSG",
-          "HSZPDU",
-          "IFDMYX",
-          "JHHJIP",
-          "KPLHEV",
-          "LBJCZS",
-          "LBMMBU",
-          "LJZOTJ",
-          "LVTUTA",
-          "NLIRFB",
-          "OSUYDX",
-          "OZAQFO",
-          "SQVWGQ",
-          "UJHKQC",
-          "ULZBGP",
-          "VANCEE",
-          "VETKAL",
-          "ZATXCN"
+          "AERTHV",
+          "FDGQQU",
+          "FGCUYC",
+          "FXFCLP",
+          "GKAXBK",
+          "HGFRRJ",
+          "HQJEVG",
+          "HTLVDQ",
+          "JGEHYN",
+          "KPJHGV",
+          "LPRESL",
+          "MQMQXL",
+          "NQFRPL",
+          "OGXLFF",
+          "PGKIHR",
+          "SJAJAZ",
+          "UAGOOY",
+          "UBHACU",
+          "YMNFNS",
+          "YQECCL",
+          "ZOOAOM",
+          "ZWSQTG"
         ],
         "replay": [
-          "AUISTI",
-          "BETDAJ",
-          "BFFEBJ",
-          "BRAXYD",
-          "CDTDJU",
-          "CMNNGH",
-          "CZBJCW",
-          "DDJWAI",
-          "GLVQVC",
-          "HJESYJ",
-          "IUZWBD",
-          "JFGLIZ",
-          "JXSMPT",
-          "LYSHCY",
-          "MRJPVO",
-          "NNTVMB",
-          "QEBCUM",
-          "QKAVVT",
-          "SDBMBQ",
-          "VRBQUQ",
-          "XACKNL",
-          "YFWKPY"
+          "DBLHWA",
+          "DZLFLX",
+          "EFAZOI",
+          "ENFNTW",
+          "GQADRO",
+          "HBGAMY",
+          "IUHOAV",
+          "JHYUBH",
+          "JOMWCC",
+          "LHQOYX",
+          "LQVENW",
+          "LXQMBU",
+          "NDOVHX",
+          "NJOODF",
+          "NOMAXF",
+          "NWSREF",
+          "ONCGAU",
+          "PDAPNM",
+          "RBBZET",
+          "TKOAHH",
+          "UIHNUL",
+          "WJSLRF"
         ],
         "artifact": [
-          "AUIKML",
-          "BZMZJQ",
-          "CJAIXL",
-          "GNNQPO",
-          "HGIKSG",
-          "HSZPDU",
-          "IFDMYX",
-          "JHHJIP",
-          "KPLHEV",
-          "LBJCZS",
-          "LBMMBU",
-          "LJZOTJ",
-          "LVTUTA",
-          "NLIRFB",
-          "OSUYDX",
-          "OZAQFO",
-          "SQVWGQ",
-          "UJHKQC",
-          "ULZBGP",
-          "VANCEE",
-          "VETKAL",
-          "ZATXCN"
+          "AERTHV",
+          "FDGQQU",
+          "FGCUYC",
+          "FXFCLP",
+          "GKAXBK",
+          "HGFRRJ",
+          "HQJEVG",
+          "HTLVDQ",
+          "JGEHYN",
+          "KPJHGV",
+          "LPRESL",
+          "MQMQXL",
+          "NQFRPL",
+          "OGXLFF",
+          "PGKIHR",
+          "SJAJAZ",
+          "UAGOOY",
+          "UBHACU",
+          "YMNFNS",
+          "YQECCL",
+          "ZOOAOM",
+          "ZWSQTG"
         ]
       },
       "selected_container": "final_b"

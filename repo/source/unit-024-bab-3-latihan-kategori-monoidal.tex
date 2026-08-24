@@ -117,6 +117,10 @@
 	\setlength{\headwidth}{\textwidth}
 	\setcounter{chapter}{3}
 	\pdfbookmark[0]{Bab 3: Kategori Monoidal}{unit024-chapter-three}
+	% imakeidx/hyperref records the exercise term against logical page 1, but
+	% the bespoke two-page front matter suppresses hyperref's automatic page.1
+	% destination.  Supply that exact local target on the exercise page.
+	\hypertarget{page.1}{}
 	\begingroup
 	\setlength{\emergencystretch}{3em}
 	\setstretch{1.16}

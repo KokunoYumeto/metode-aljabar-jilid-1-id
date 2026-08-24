@@ -50,23 +50,23 @@ misidentifying English text as Chinese or Indonesian.
 ## Final reader and reproducible evidence
 
 - Reader driver:
-  `repo/source/unit-024-bab-3-latihan-kategori-monoidal.tex`, 5,067 bytes,
+  `repo/source/unit-024-bab-3-latihan-kategori-monoidal.tex`, 5,312 bytes,
   SHA-256
-  `9823e3a5a3f6850d257abd32259583a579920ef062cc84f51b2e515c57772891`.
+  `936fd9b09fb0220b9730627b10f032447b01c06b6d98ae15af4826ce5b03f0e8`.
 - Reader: `artifacts/unit-024-bab-3-latihan-kategori-monoidal.pdf`, four pages,
-  86,254 bytes, SHA-256
-  `eb4ee13fffe6a54a50357a0043aa82e0958b2f30feb92c440b6ea10a5efdc6b4`.
-- Final build log: `qa/UNIT_024_BUILD_FINAL.log`, 78,542 bytes, SHA-256
-  `62b3dac51522a1bd33ec6bd62a25f6dbef06ccbfa349982bb51b18eabc9c22fe`.
+  86,255 bytes, SHA-256
+  `1b61a1e2b856f2ef5d9dbc800c6e593aeb776fd85e2480a53b26286639292e71`.
+- Final build log: `qa/UNIT_024_BUILD_FINAL.log`, 78,595 bytes, SHA-256
+  `5e3e8e493c07ed5590e7bccf730880d25497ce91a06e3c854324a0031233911f`.
 - Structured build/PDF evidence:
-  `qa/unit-024-evidence/structure-and-pdf-qa.json`, 33,299 bytes, SHA-256
-  `12cf8ec6af6b51fee727e6554ae3f6a182b562f5349a726a6b81389885443c72`.
-- Render inventory: `qa/unit-024-evidence/render-hash-inventory.json`, 7,110
+  `qa/unit-024-evidence/structure-and-pdf-qa.json`, 34,531 bytes, SHA-256
+  `d479638e9b1b4b9982354c157fb22ba0c92177cb7d5c823476ef03254fccc28a`.
+- Render inventory: `qa/unit-024-evidence/render-hash-inventory.json`, 7,134
   bytes, SHA-256
-  `d60e5a81bdd248b659d6440b6d442a8e4f6ca6a15dc0632e9dd45d9139f0c892`.
-- All-page visual receipt: `qa/UNIT_024_VISUAL_QA_20260825.md`, 4,536 bytes,
+  `159d349baff97e40ec63300032d23e8fe91c9b0a7ff56f18fa4cf3a4a0ef2050`.
+- All-page visual receipt: `qa/UNIT_024_VISUAL_QA_20260825.md`, 4,757 bytes,
   SHA-256
-  `2cb3fc9f74f52a35cabd0b6e0fb786b4d2b5c51528e5f68369b475b8b84a7dde`.
+  `d935c599fe190bf12b4aec7aa866f5cdaf49e3f6ef63932f8a39c9e135d5a7e1`.
 
 Every physical page was inspected in Poppler and MuPDF. The inventory covers
 32 page renders and eight contact sheets. Same-renderer pixel mismatches are
@@ -76,11 +76,18 @@ adjudicating randomized embedded-font subset prefixes. The admitted reflow has
 zero overfull boxes, zero empty-target link warnings, no clipping, and no lost
 exercise, hint, formula, diagram, reference, or index entry.
 
+A bounded checkpoint preflight exposed one previously undetected navigation
+defect: the `YBE, 1` index annotation targeted absent destination `page.1`.
+The driver now supplies that local destination on physical page 3. All three
+clean builds and the frozen artifact have six named destinations; their sole
+internal `GoTo` resolves to physical page 3, and the broken-target inventory
+is empty. The repair changes no decoded page pixel.
+
 ## Modular backend
 
 Canonical JSON: `backend/data/unit-024-bab-3-latihan.json`, 137,184 bytes,
 SHA-256
-`c07bd1335e1a2aac2e7b008ff61a66c67303709823081c7c5fb0f8b3566b5d39`.
+`5053a0c5398b256390f3f8abcdf31d423eb24460bc4f670539895ee5bd9e88b5`.
 It contains 187 total entities: five root records, eight exercise sections,
 139 concept-compatible entities, 18 available prerequisite records, four
 rights records, two diagram records, one index record, one build surface, and
@@ -99,7 +106,7 @@ The six deterministic CSV projections are:
 
 | File | Bytes | SHA-256 |
 |---|---:|---|
-| `backend/csv/unit-024-bindings.csv` | 13,858 | `7e71cc79e1b9a2923ca10c1d89c9af48e2eaf0b943ea54d05527e6bfe57146dc` |
+| `backend/csv/unit-024-bindings.csv` | 13,858 | `7c142b009997d2f2d0bcaa5180a576e7c21f525659ebecea96e5e3ed4e3d85d0` |
 | `backend/csv/unit-024-entities.csv` | 34,263 | `b8423f867f06f25995c8eb62806de204264134979bcb0dc37a2f0f29807199e4` |
 | `backend/csv/unit-024-qa.csv` | 3,681 | `e3938aae03acc4227285ec9f62661d171e9f99f14d62eae25cda9fbdf09cf119` |
 | `backend/csv/unit-024-relations.csv` | 83,609 | `24b60df767c21f0efb83933465441d1f9144a09dbe6fce488023d167ce03290d` |
@@ -114,7 +121,7 @@ matches the live records.
 
 Backend validation evidence:
 `qa/unit-024-evidence/backend-validation.json`, 6,143 bytes, SHA-256
-`545ddd7bec7730135e388d2da9e7328ef060e34e220472f021faaebdaecb70a4`.
+`aee9e9bf1dcf296a6cf1d9201e429ea74cb157391ced32acbb52a325240ff19f`.
 
 Backend generator: `scripts/generate_unit_024_backend.py`, 47,968 bytes,
 SHA-256

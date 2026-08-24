@@ -1,10 +1,10 @@
 PASS Unit 024 reader/PDF/visual gate
-artifact bytes=86254 sha256=eb4ee13fffe6a54a50357a0043aa82e0958b2f30feb92c440b6ea10a5efdc6b4 pages=4
+artifact bytes=86255 sha256=1b61a1e2b856f2ef5d9dbc800c6e593aeb776fd85e2480a53b26286639292e71 pages=4
 canonical target bytes=89608 sha256=443b71b515aef66c6ba8e259e65083604d227370c1ee7ca3ed49bdb5996f45fb records=910
 canonical lines=872-910 records=39 bytes=6071 sha256=576c39746534853cd5127298cf0c2ba7f6afb239e4d7b83f368b7a9969c5f43a candidate_byte_identical=yes post_span_suffix_bytes=0 chapter_complete=yes
 driver loads only the canonical target span; candidate dependency=no
 clean builds have different PDF-container bytes but identical extracted content and page-identical Poppler and MuPDF rasters
-PDF outlines=3 destinations=5 actions={"/GoTo": 1, "/URI": 3} fonts=22 language=id-ID tagged=no
+PDF outlines=3 destinations=6 actions={"/GoTo": 1, "/URI": 3} broken_named_links=0 fonts=22 language=id-ID tagged=no
 log counts={"emergency_stops": 0, "empty_external_link_targets": 0, "fatal_errors": 0, "missing_characters": 0, "overfull_boxes": 0, "undefined_citations": 0, "undefined_control_sequences": 0, "undefined_references": 0, "underfull_hboxes": 3, "underfull_vboxes": 0}
 Every page was inspected in Poppler and MuPDF. The former sparse index-only page 5 was eliminated; the centered 142 mm measure and inline single-entry index fill the four-page reader cleanly, with zero overfull boxes, empty-target links, clipping, overlap, edge ink, tofu, or broken diagrams.
 provenance model=OpenAI Codex gpt-5.6-sol, Ultra
