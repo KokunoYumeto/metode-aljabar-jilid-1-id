@@ -159,15 +159,23 @@ def main() -> None:
     if reserved != "10.5281/zenodo.22071178":
         raise RuntimeError(f"Unexpected reserved DOI: {reserved}")
 
-    for _round in range(3):
-        inherited = draft.get("files", [])
-        if not inherited:
-            break
-        for old in inherited:
-            delete_file(authenticated, old["links"]["self"])
-        draft = request(authenticated, "GET", base, accepted={200}).json()
-    if draft.get("files"):
-        raise RuntimeError("Inherited draft inventory remains after bounded deletion")
+    current_sizes = {
+        item["filename"]: item["filesize"] for item in draft.get("files", [])
+    }
+    payload_already_present = (
+        set(current_sizes) == set(expected_names)
+        and all(current_sizes[name] == expected[name][0] for name in expected_names)
+    )
+    if not payload_already_present:
+        for _round in range(3):
+            inherited = draft.get("files", [])
+            if not inherited:
+                break
+            for old in inherited:
+                delete_file(authenticated, old["links"]["self"])
+            draft = request(authenticated, "GET", base, accepted={200}).json()
+        if draft.get("files"):
+            raise RuntimeError("Inherited draft inventory remains after bounded deletion")
 
     metadata = {
         "title": TITLE,
@@ -219,22 +227,23 @@ def main() -> None:
     request(authenticated, "PUT", base, json={"metadata": metadata})
 
     draft = request(authenticated, "GET", base, accepted={200}).json()
-    bucket = draft["links"]["bucket"]
-    for path in files:
-        with path.open("rb") as handle:
-            request(
-                authenticated,
-                "PUT",
-                f"{bucket}/{path.name}",
-                data=handle,
-                headers={"Content-Type": "application/octet-stream"},
-            )
+    if not payload_already_present:
+        bucket = draft["links"]["bucket"]
+        for path in files:
+            with path.open("rb") as handle:
+                request(
+                    authenticated,
+                    "PUT",
+                    f"{bucket}/{path.name}",
+                    data=handle,
+                    headers={"Content-Type": "application/octet-stream"},
+                )
 
     draft = request(authenticated, "GET", base, accepted={200}).json()
     draft_files = draft.get("files", [])
     draft_names = [item["filename"] for item in draft_files]
-    if draft_names != expected_names:
-        raise RuntimeError(f"Unexpected draft file order/inventory: {draft_names}")
+    if set(draft_names) != set(expected_names) or len(draft_names) != len(expected_names):
+        raise RuntimeError(f"Unexpected draft inventory: {draft_names}")
     for item in draft_files:
         if item["filesize"] != expected[item["filename"]][0]:
             raise RuntimeError(f"Draft size mismatch for {item['filename']}")
@@ -260,8 +269,8 @@ def main() -> None:
 
     public_files = public.get("files", [])
     public_names = [item["key"] for item in public_files]
-    if public_names != expected_names:
-        raise RuntimeError(f"Published inventory/order differs: {public_names}")
+    if set(public_names) != set(expected_names) or len(public_names) != len(expected_names):
+        raise RuntimeError(f"Published inventory differs: {public_names}")
     public_metadata = public.get("metadata", {})
     if public_metadata.get("title") != TITLE or public_metadata.get("version") != VERSION:
         raise RuntimeError("Published title/version metadata differs")
