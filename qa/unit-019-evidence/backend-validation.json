@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "unit": "unit-019-bab-3-definisi-dasar",
+  "authority": "chapter3.tex:1-227",
+  "target": "chapter3.tex:1-226",
+  "data": "backend/data/unit-019-bab-3-definisi-dasar.json",
+  "schema": "backend/schema/open-math-corpus-unit.schema.v1.json",
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "artifact": {
+    "path": "artifacts/unit-019-bab-3-definisi-dasar.pdf",
+    "pages": 12,
+    "bytes": 125710,
+    "sha256": "af7a4561db5e8ab1798d4475c589beb42f9fb84795bd167c0ffc17241866783a"
+  },
+  "counts": {
+    "concepts": 369,
+    "labels": 16,
+    "references": 28,
+    "citation_occurrences": 4,
+    "native_bibliography_records": 2,
+    "items": 13,
+    "inline_formulae": 167,
+    "display_formulae": 17,
+    "tikzcd": 15,
+    "tikzpicture": 3,
+    "arrows": 75,
+    "nodes": 11,
+    "paths": 1,
+    "index_entries": 11,
+    "terminology_rows": 15,
+    "corrections": 1,
+    "csv_projections": 6
+  },
+  "checks": {
+    "deterministic_regeneration": "PASS",
+    "shared_schema_and_uuidv5": "PASS",
+    "source_target_line_boundary": "PASS",
+    "protected_surface_topology": "PASS",
+    "component_rights": "PASS",
+    "build_and_visual_bindings": "PASS",
+    "terminology_binding": "PASS",
+    "validation_mutated_outputs": false
+  },
+  "identities": {
+    "backend/data/unit-019-bab-3-definisi-dasar.json": {
+      "bytes": 295265,
+      "sha256": "888ec61fc4b1229ffab4f480d12a8ced60e4f5d32734dca3d314903917b8a215"
+    },
+    "backend/csv/unit-019-bindings.csv": {
+      "bytes": 24287,
+      "sha256": "6f9821169016d371dfb12e58faee3848eb95b7572cbe990ab91b04c79c28a7c5"
+    },
+    "backend/csv/unit-019-entities.csv": {
+      "bytes": 80106,
+      "sha256": "ebcf26dd2867566496bc04467b909dafb79639ba657aa09f39de3eedba50218f"
+    },
+    "backend/csv/unit-019-qa.csv": {
+      "bytes": 3431,
+      "sha256": "49021e9a2e543261b34c176e8549f8b31801b16242f1a6f51a783e267e2b84a4"
+    },
+    "backend/csv/unit-019-relations.csv": {
+      "bytes": 212895,
+      "sha256": "ac4d2c87d4b06da25bd511d11316b393162413e0ed4c2e34b28d337ff0a289e6"
+    },
+    "backend/csv/unit-019-rights.csv": {
+      "bytes": 1287,
+      "sha256": "4836630530f87a11a64fe233c59970e2ff7942695a8dbf404f7a0583a275197e"
+    },
+    "backend/csv/unit-019-surfaces.csv": {
+      "bytes": 6923,
+      "sha256": "971a71240d2765a3fd07018249e9b4b4f3f19b2fe62eab4e10f397063157b7a3"
+    }
+  },
+  "bound_inputs": {
+    "00_control/TERMINOLOGY.id-ID.csv": {
+      "bytes": 36770,
+      "sha256": "1aaf02e1146b6a47b29090ac58cb0c8436a5b97708d23969b8253f07a99a98a3"
+    },
+    "qa/unit-019-evidence/structure-and-pdf-qa.json": {
+      "bytes": 6607,
+      "sha256": "0311ab0fa8f6f12e1ff2952328be7f993bf10224fbbce792c4b235126a2ae624"
+    },
+    "qa/UNIT_019_VISUAL_QA_20260824.md": {
+      "bytes": 4068,
+      "sha256": "dfd641abfa074bfc1f8928412622ee4aa83bdcb86b1afd23f19d910a04e2c55e"
+    }
+  },
+  "tools": {
+    "scripts/generate_unit_019_backend.py": {
+      "bytes": 55166,
+      "sha256": "6434b4f956c0753c05f248d745559a352fa97ec479467b8969bb71203a9b685a"
+    },
+    "scripts/validate_unit_019_backend.py": {
+      "bytes": 13690,
+      "sha256": "1362eb3aa956bd6c72d5f495edac5b6b9d2c8726c7c32ff2d030db8c8feae2ca"
+    }
+  }
+}

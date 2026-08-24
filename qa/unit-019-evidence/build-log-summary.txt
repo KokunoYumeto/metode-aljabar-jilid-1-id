@@ -1,0 +1,8 @@
+PASS Unit 019 final build and replay
+artifact bytes=125710 sha256=af7a4561db5e8ab1798d4475c589beb42f9fb84795bd167c0ffc17241866783a pages=12
+authority lines=1-227 sha256=4aecde3d61fb173087ae3e7ab64cc84f7bd4f3fbc0dcbfa8a2c3d6bab1201a8a
+target lines=1-226 sha256=6b42291293a06d15b64034a26ed25aeac3cb41465bf9533e069bc9ac65d9b8ac Han=0
+same-renderer replay: Poppler all pages identical; MuPDF all pages identical
+PDF: outlines=5 destinations=52 GoTo=35 URI=3 tagged=no language=id-ID
+log counts: {"emergency_stops": 0, "empty_external_link_targets": 12, "fatal_errors": 0, "missing_characters": 0, "overfull_boxes": 0, "undefined_citations": 0, "undefined_control_sequences": 0, "undefined_references": 0, "underfull_hboxes": 7, "underfull_vboxes": 4}
+provenance model: OpenAI Codex gpt-5.6-sol, Ultra

@@ -1,41 +1,41 @@
-% LaTeX source for book ``代数学方法'' in Chinese
-% Copyright 2018  李文威 (Wen-Wei Li).
-% Permission is granted to copy, distribute and/or modify this
-% document under the terms of the Creative Commons
-% Attribution 4.0 International (CC BY 4.0)
+% Sumber LaTeX untuk buku ``Metode Aljabar'' dalam bahasa Tionghoa
+% Hak cipta 2018 Wen-Wei Li.
+% Izin diberikan untuk menyalin, mendistribusikan, dan/atau mengubah
+% dokumen ini berdasarkan ketentuan Creative Commons
+% Atribusi 4.0 Internasional (CC BY 4.0)
 % http://creativecommons.org/licenses/by/4.0/
 
-% To be included
-\chapter{幺半范畴}\label{sec:monoidal-cat}
-幺半范畴原名``带乘法的范畴'', 它是带有类似于乘法的运算 $\otimes$ 和幺对象 $\munit$ 的范畴结构, 并且在精确到自然同构的意义下具有结合性与幺元性质等约束. 幺半范畴在数学物理和几何等领域中有出色应用. 除此之外, 它既是表述其它范畴论构造的方便语言, 更是进一步熟悉范畴论技巧的极佳机会, 这是本书决定尽早引入幺半范畴概念的原因. 尽管其定义对初学者可能稍显复杂, 却有两个极具体的例子:
+% Untuk disertakan
+\chapter{Kategori Monoidal}\label{sec:monoidal-cat}
+Kategori monoidal semula disebut ``kategori dengan perkalian''. Kategori ini dilengkapi struktur berupa operasi $\otimes$ yang menyerupai perkalian dan objek satuan $\munit$, beserta kendala-kendala seperti sifat asosiatif dan sifat unsur satuan hingga isomorfisme natural. Kategori monoidal mempunyai penerapan penting dalam fisika matematika, geometri, dan bidang lainnya. Selain itu, konsep ini merupakan bahasa yang nyaman untuk menyatakan konstruksi-konstruksi lain dalam teori kategori sekaligus kesempatan yang sangat baik untuk semakin menguasai teknik-teknik teori kategori. Karena itulah buku ini memperkenalkan kategori monoidal sejak awal. Meskipun definisinya mungkin tampak agak rumit bagi pemula, terdapat dua contoh yang sangat konkret:
 \begin{enumerate}
-	\item 向量空间的张量积 $\otimes$, 或者更广泛地说, 交换环上的模的张量积, 这在 \S\ref{sec:module-tensor-prod} 将有仔细的辨析;
-	\item 拓扑学中的直观实例, 将在 \S\ref{sec:braiding} 探讨的辫范畴 $\cate{Braid}$ 就是一个例子.
+	\item hasil kali tensor $\otimes$ ruang vektor, atau secara lebih umum hasil kali tensor modul atas gelanggang komutatif, yang akan dibahas dengan cermat dalam \S\ref{sec:module-tensor-prod};
+	\item contoh intuitif dari topologi, yakni kategori kepang $\cate{Braid}$ yang akan dikaji dalam \S\ref{sec:braiding}.
 \end{enumerate}
 
-充实范畴是数学工作者日用而不知的概念, 我们将在 \S\ref{sec:enriched-cat} 道个明白, 随后在 \S\ref{sec:2-cat} 解释 $2$-范畴的基本想法. 两者都基于幺半范畴的语言.
+Kategori diperkaya merupakan konsep yang tanpa disadari digunakan sehari-hari oleh para matematikawan; kita akan menjelaskannya dalam \S\ref{sec:enriched-cat}, lalu menguraikan gagasan dasar $2$-kategori dalam \S\ref{sec:2-cat}. Keduanya didasarkan pada bahasa kategori monoidal.
 
-关于幺半范畴的进一步理论与应用, 可参阅 \cite{EGNO15}.
+Untuk teori dan penerapan kategori monoidal lebih lanjut, lihat \cite{EGNO15}.
 
 \begin{wenxintishi}
-	幺半范畴的原型是模的张量积 $\otimes$. 对此我们只会在 \S\ref{sec:enriched-cat} 用到最简单的 $\Z$-模情形, 亦即交换群的张量积. 倘若读者对交换环上的模及其张量积具备基本知识, 或者至少了解向量空间的情形, 将有助于理解本章的许多例子; 如果读者还不熟悉相关的代数或几何背景, 可考虑暂时略过. 本章后半部的 $\cate{Ab}$-范畴, 加性范畴和双积之后将派上用场, 不必动用幺半范畴就可以理解这些概念.
+	Prototipe kategori monoidal ialah hasil kali tensor modul $\otimes$. Dalam bab ini kita hanya akan memakai kasus paling sederhana dari modul-$\Z$, yakni hasil kali tensor grup abelian, pada \S\ref{sec:enriched-cat}. Pengetahuan dasar tentang modul atas gelanggang komutatif dan hasil kali tensornya, atau setidaknya tentang kasus ruang vektor, akan membantu memahami banyak contoh dalam bab ini. Pembaca yang belum mengenal latar belakang aljabar atau geometri terkait dapat mempertimbangkan untuk melewati bab ini sementara waktu. Kategori-$\cate{Ab}$, kategori aditif, dan biproduk pada paruh kedua bab kelak akan berguna; konsep-konsep tersebut dapat dipahami tanpa menggunakan kategori monoidal.
 
-	由于这部分的定义和证明稍长, 初次接触时宜先以体会概略想法与实例为初步目标; 另一种办法则是待后续章节如 \S\ref{sec:modules} 碰上时再回头研读. 无须强记相关概念.
+	Karena definisi dan pembuktian dalam bagian ini agak panjang, pada pembacaan pertama sebaiknya pembaca terlebih dahulu menangkap gagasan umum dan contoh-contohnya. Pilihan lain ialah kembali mempelajarinya ketika konsep tersebut muncul dalam bab-bab selanjutnya, misalnya \S\ref{sec:modules}. Konsep-konsep terkait tidak perlu dihafalkan secara paksa.
 
-	部分文献中改用所谓张量范畴或 $\otimes$-范畴的概念, 一些定义也有细微出入, 读者宜多留意. \index{zhangliangfanchou@张量范畴 (tensor category)}
+	Sebagian pustaka memakai konsep yang disebut kategori tensor atau kategori-$\otimes$, dengan beberapa perbedaan kecil dalam definisinya; pembaca perlu memperhatikan hal ini. \index{zhangliangfanchou@kategori tensor (tensor category)}
 \end{wenxintishi}
 
-\section{基本定义}\label{sec:monoidal-cat-def}
-本节不涉及集合论问题, 以下定义取自 \cite[\S 2.1]{EGNO15}.
+\section{Definisi Dasar}\label{sec:monoidal-cat-def}
+Bagian ini tidak melibatkan persoalan teori himpunan. Definisi berikut diambil dari \cite[\S 2.1]{EGNO15}.
 
-\begin{definition}\label{def:monoidal-cat} \index{yaobanfanchou@幺半范畴 (monoidal category)}\index[sym1]{1otimes@$\otimes$}
-	\emph{幺半范畴}意指一组资料 $(\mathcal{V}, \otimes, a, \munit, \iota)$, 其中
+\begin{definition}\label{def:monoidal-cat} \index{yaobanfanchou@kategori monoidal (monoidal category)}\index[sym1]{1otimes@$\otimes$}
+	Suatu \emph{kategori monoidal} adalah data $(\mathcal{V}, \otimes, a, \munit, \iota)$ yang terdiri atas
 	\begin{enumerate}[(i)]
-		\item $\mathcal{V}$ 是一个范畴;
-		\item $\otimes: \mathcal{V} \times \mathcal{V} \to \mathcal{V}$ 是二元函子, 其在对象和态射集上定义的映射分别记为 $(X,Y) \mapsto X \otimes Y$ 和 $(f,g) \mapsto f \otimes g$;
-		\item $a$ 是函子范畴 $\text{Fct}(\mathcal{V} \times \mathcal{V} \times \mathcal{V}, \mathcal{V})$ 中的同构
+		\item suatu kategori $\mathcal{V}$;
+		\item fungtor biner $\otimes: \mathcal{V} \times \mathcal{V} \to \mathcal{V}$, dengan pemetaan pada objek dan morfisme masing-masing dinotasikan oleh $(X,Y) \mapsto X \otimes Y$ dan $(f,g) \mapsto f \otimes g$;
+		\item isomorfisme $a$ dalam kategori fungtor $\text{Fct}(\mathcal{V} \times \mathcal{V} \times \mathcal{V}, \mathcal{V})$,
 			\[ a: ((\cdot \otimes \cdot) \otimes \cdot) \rightiso (\cdot \otimes (\cdot \otimes \cdot)), \]
-			使得对所有对象 $X,Y,Z,W$, 下图交换.
+			sedemikian sehingga, untuk semua objek $X,Y,Z,W$, diagram berikut komutatif.
 			\begin{center}\begin{tikzpicture}[commutative diagrams/every diagram]
 				\node (P0) at (90:2.3cm) {$((X \otimes Y) \otimes Z) \otimes W$};
 				\node (P1) at (90+72:2cm) {$(X \otimes (Y \otimes Z)) \otimes W$} ;
@@ -50,41 +50,41 @@
 				(P4) edge node {$a(X, Y, Z \otimes W)$} (P3)
 				(P0) edge node {$a(X \otimes Y, Z, W)$} (P4);
 			\end{tikzpicture}\end{center}
-		\item 对象 $\munit \in \Obj(\mathcal{V})$ 称为幺元, 相应的函子 $\munit \otimes -$ 和 $- \otimes \munit$ 须给出范畴 $\mathcal{V}$ 到自身的等价;\index{duixiang!幺对象 (unit object)}
-		\item $\iota: \munit \otimes \munit \rightiso \munit$.
+		\item objek $\munit \in \Obj(\mathcal{V})$, yang disebut objek satuan, sedemikian sehingga fungtor-fungtor $\munit \otimes -$ dan $- \otimes \munit$ memberikan ekuivalensi dari kategori $\mathcal{V}$ ke dirinya sendiri;\index{objek!objek satuan (unit object)}
+		\item isomorfisme $\iota: \munit \otimes \munit \rightiso \munit$.
 	\end{enumerate}
 \end{definition}
 
-这里的 $a$ 又称\emph{结合约束}\index{jieheyueshu}. 我们习惯将 $\otimes$ 想成某种二元运算, 现实中 $\otimes$ 鲜少具备严格结合律 $(X \otimes Y) \otimes Z = X \otimes (Y \otimes Z)$, 因此退而求其次, 将结合律的等式改成一族给定的``约束'' $a(X, Y, Z): (X \otimes Y) \otimes Z \rightiso X \otimes (Y \otimes Z)$, 使得 $a$ 对各变元皆自然. 由于结合约束可以反复套用, $a$ 还应具备 (iii) 的相容条件. 此交换图表称为 MacLane 的五角形公理\index{MacLane 五角形公理}, 画法是以 $X,Y,Z,W$ 循序相乘的所有可能方式作为图的顶点; 能应用一次结合约束 $a$ 相连的以边连接. 同理, 幺元 $\munit$ 满足的并非严格等式 $\munit \otimes \munit = \munit$, 而是自然同构 $\iota$.
+Isomorfisme $a$ di atas juga disebut \emph{kendala asosiativitas}\index{jieheyueshu@kendala asosiativitas}. Kita lazim membayangkan $\otimes$ sebagai semacam operasi biner, tetapi dalam praktik $\otimes$ jarang memenuhi hukum asosiatif ketat $(X \otimes Y) \otimes Z = X \otimes (Y \otimes Z)$. Karena itu, kita mengganti kesamaan dalam hukum asosiatif dengan keluarga ``kendala'' yang ditetapkan, yaitu $a(X, Y, Z): (X \otimes Y) \otimes Z \rightiso X \otimes (Y \otimes Z)$, sedangkan $a$ natural dalam setiap peubah. Karena kendala asosiativitas dapat diterapkan berulang kali, $a$ juga harus memenuhi syarat kompatibilitas dalam (iii). Diagram komutatif tersebut disebut aksioma segilima Mac Lane\index{MacLane@aksioma segilima Mac Lane (pentagon axiom)}. Titik-titik diagramnya adalah semua cara yang mungkin untuk mengalikan $X,Y,Z,W$ secara berurutan, sedangkan dua titik dihubungkan oleh sisi jika di antara keduanya dapat diterapkan satu kendala asosiativitas $a$. Serupa dengan itu, objek satuan $\munit$ tidak memenuhi kesamaan ketat $\munit \otimes \munit = \munit$, melainkan isomorfisme natural $\iota$.
 
-这也再次见证了范畴论中严格等同与同构概念的差别, 见注记 \ref{rem:strict-or-not}.
+Hal ini sekali lagi memperlihatkan perbedaan antara kesamaan ketat dan isomorfisme dalam teori kategori; lihat Catatan \ref{rem:strict-or-not}.
 
 \begin{definition}\label{def:monoidal-constraints}
-	给定幺半范畴 $(\mathcal{V}, \otimes, a, \munit, \iota)$ 和对象 $X$, 由于 $\munit \otimes -$ 和 $- \otimes \munit$ 给出范畴等价 $\mathcal{V} \to \mathcal{V}$, 我们可以
+	Misalkan $(\mathcal{V}, \otimes, a, \munit, \iota)$ kategori monoidal dan $X$ suatu objek. Karena $\munit \otimes -$ dan $- \otimes \munit$ memberikan ekuivalensi kategori $\mathcal{V} \to \mathcal{V}$, kita dapat
 	\begin{compactitem}
-		\item 唯一地定义 $ \lambda_X: \munit \otimes X \rightiso X$ 使得
+		\item mendefinisikan secara tunggal $ \lambda_X: \munit \otimes X \rightiso X$ sedemikian sehingga
 			\[ \identity_{\munit} \otimes \lambda_X = \left[ \munit \otimes (\munit \otimes X) \xrightarrow{ a(\munit, \munit, X)^{-1} } (\munit \otimes \munit) \otimes X \xrightarrow{\iota \otimes \identity_X} \munit \otimes X \right] ; \]
-		\item 同理可唯一地定义 $\rho_X: X \otimes \munit \rightiso X$ 使得
+		\item mendefinisikan secara tunggal, dengan cara serupa, $\rho_X: X \otimes \munit \rightiso X$ sedemikian sehingga
 			\[ \rho_X \otimes \identity_{\munit} = (\identity_X \otimes \iota) \circ a(X, \munit, \munit). \]
 	\end{compactitem}
-	它们构成函子间的同态 $\lambda: \munit \otimes \bullet \rightiso \bullet$ 和 $\rho: \bullet \otimes \munit \rightiso \bullet$.
+	Keduanya membentuk isomorfisme antarfungtor $\lambda: \munit \otimes \bullet \rightiso \bullet$ dan $\rho: \bullet \otimes \munit \rightiso \bullet$.
 \end{definition}
-这些态射 $\lambda, \rho$ 也称作幺约束, 它们与 $a$ 的角色相近. 我们稍后会证明 $\lambda_\munit = \iota = \rho_\munit$.
+Morfisme-morfisme $\lambda, \rho$ ini juga disebut kendala satuan; peran keduanya serupa dengan $a$. Kelak kita akan membuktikan $\lambda_\munit = \iota = \rho_\munit$.
 
-若无混淆之虞, 我们经常将一个幺半范畴用 $\mathcal{V}$ 表示, 略去其它构件. 如果子范畴 $\mathcal{V}' \subset \mathcal{V}$ 包含对象 $\munit$, 并且 $X,Y \in \Obj(\mathcal{V}')$ 蕴涵 $X \otimes Y \in \Obj(\mathcal{V}')$, 则称 $\mathcal{V}'$ 是 $\mathcal{V}$ 的\emph{幺半子范畴}. \index{yaobanfanchou!幺半子范畴 (monoidal subcategory)}
+Jika tidak menimbulkan kerancuan, kita sering menotasikan kategori monoidal hanya dengan $\mathcal{V}$ dan menghilangkan komponen-komponen lainnya. Jika subkategori $\mathcal{V}' \subset \mathcal{V}$ memuat objek $\munit$ dan $X,Y \in \Obj(\mathcal{V}')$ mengakibatkan $X \otimes Y \in \Obj(\mathcal{V}')$, maka $\mathcal{V}'$ disebut \emph{subkategori monoidal} dari $\mathcal{V}$. \index{yaobanfanchou@kategori monoidal (monoidal category)!subkategori monoidal (monoidal subcategory)}
 
 \begin{example}\label{eg:monoidal-cat}
-	以下都是幺半范畴.
+	Berikut ini semuanya merupakan kategori monoidal.
 	\begin{enumerate}
-		\item 若范畴 $\mathcal{C}$ 具有有限积, 取 $\otimes := \times$ 和引理 \ref{prop:product-associativity} 给出的同构 $a(X,Y,Z): (X \times Y) \times Z \rightiso X \times (Y \times Z)$ 即得幺半范畴; 幺元由终对象 (空积) 给出.
-		\item 若范畴 $\mathcal{C}$ 具有有限余积, 取 $\otimes := \sqcup$, 同理可得幺半范畴; 幺元由始对象 (空余积) 给出.
-		\item 设 $\mathcal{C}$ 为范畴. 自函子范畴 $\text{Fct}(\mathcal{C}, \mathcal{C})$ 对于函子合成 $\otimes := \circ$ 成为幺半范畴; 注意到对于 $\text{Fct}(\mathcal{C}, \mathcal{C})$ 的态射 $\theta: F \to G$, $\psi: F' \to G'$, 诱导的态射是横合成 $\psi\theta: F'F \to G'G$; 幺元即恒等函子 $\identity_{\mathcal{C}}$.
-		\item 假定读者对模论有基本了解. 令 $A$ 为交换环, 考虑 $A$-模范畴 $A\dcate{Mod}$, 它对于张量积 $\otimes := \dotimes{A}$ 有自然的幺半范畴结构; 幺元是 $A$ 自身. 详见推论 \ref{prop:module-monoidal-cat}.
+		\item Jika kategori $\mathcal{C}$ mempunyai produk berhingga, ambil $\otimes := \times$ dan isomorfisme $a(X,Y,Z): (X \times Y) \times Z \rightiso X \times (Y \times Z)$ yang diberikan oleh Lema \ref{prop:product-associativity}; objek satuannya diberikan oleh objek terminal (produk kosong).
+		\item Jika kategori $\mathcal{C}$ mempunyai koproduk berhingga, ambil $\otimes := \sqcup$; dengan cara serupa diperoleh kategori monoidal, dengan objek satuan diberikan oleh objek awal (koproduk kosong).
+		\item Misalkan $\mathcal{C}$ kategori. Kategori endofungtor $\text{Fct}(\mathcal{C}, \mathcal{C})$ menjadi kategori monoidal terhadap komposisi fungtor $\otimes := \circ$. Perhatikan bahwa untuk morfisme $\theta: F \to G$ dan $\psi: F' \to G'$ dalam $\text{Fct}(\mathcal{C}, \mathcal{C})$, morfisme yang diinduksi ialah komposisi horizontal $\psi\theta: F'F \to G'G$; objek satuannya adalah fungtor identitas $\identity_{\mathcal{C}}$.
+		\item Andaikan pembaca mempunyai pengetahuan dasar tentang teori modul. Misalkan $A$ gelanggang komutatif dan pertimbangkan kategori modul-$A$, $A\dcate{Mod}$. Terhadap hasil kali tensor $\otimes := \dotimes{A}$, kategori ini mempunyai struktur kategori monoidal yang natural; objek satuannya adalah $A$ sendiri. Lihat Korolari \ref{prop:module-monoidal-cat} untuk perinciannya.
 	\end{enumerate}
 \end{example}
 
-\begin{example}[配边范畴]\label{eg:cob-cat}
-	对于 $n \in \Z_{\geq 1}$, 定义配边范畴 $n\dcate{Cob}$ 如下. 以下流形皆指实微分流形. 范畴 $n\dcate{Cob}$ 的对象是 $n-1$ 维紧闭定向流形, 包括空集 $\emptyset$. 将对象 $X$ 的定向倒转后得到的对象记作 $X^*$. 两对象 $X, Y$ 间的态射集由\emph{配边}的等价类给出, 即一个 $n$ 维带边定向流形 $W$ 配上同构 $\partial W \rightiso X \sqcup Y^*$.  对于 $n=2$ 的情形, 配边可以用俗称裤子的图表表示, 由左而右绘制, 如
+\begin{example}[Kategori kobordisme]\label{eg:cob-cat}
+	Untuk $n \in \Z_{\geq 1}$, definisikan kategori kobordisme $n\dcate{Cob}$ sebagai berikut. Semua manifold di bawah ini adalah manifold diferensial real. Objek kategori $n\dcate{Cob}$ ialah manifold kompak terorientasi tanpa batas berdimensi $n-1$, termasuk himpunan kosong $\emptyset$. Objek yang diperoleh dengan membalik orientasi $X$ dinotasikan oleh $X^*$. Himpunan morfisme antara dua objek $X, Y$ diberikan oleh kelas-kelas ekuivalensi \emph{kobordisme}, yaitu manifold terorientasi berdimensi $n$ dengan batas, $W$, yang dilengkapi isomorfisme $\partial W \rightiso X \sqcup Y^*$. Untuk $n=2$, kobordisme dapat digambarkan dengan diagram yang lazim disebut celana, digambar dari kiri ke kanan, seperti berikut:
 
 	\begin{center}\begin{tikzpicture}[every tqft/.style={draw, boundary lower style={draw,dashed}}, tqft/flow=east]
 		\node[tqft/pair of pants, draw] (a) {};
@@ -92,32 +92,32 @@
 		\node[tqft boundary circle, draw] at (a.outgoing boundary 2) {};
 	\end{tikzpicture} \end{center}
 
-	给出了从带正定向的单位圆 $\mathbb{S}^1$ 到 $\mathbb{S}^1 \sqcup \mathbb{S}^1$ 的态射; 图中的``裤子''就是态射定义中的定向流形 $W$. 由此可知态射的合成无非是缝合裤管, 如
+	Diagram ini memberikan morfisme dari lingkaran satuan $\mathbb{S}^1$ berorientasi positif ke $\mathbb{S}^1 \sqcup \mathbb{S}^1$; ``celana'' dalam diagram tersebut adalah manifold terorientasi $W$ pada definisi morfisme. Dengan demikian, komposisi morfisme tidak lain adalah menjahit kaki-kaki celana, seperti berikut:
 	\begin{center}\begin{tikzpicture}[every tqft/.style={draw, boundary lower style={draw,dashed}}, tqft/flow=east]
 		\node[tqft/pair of pants, draw] (a) {};
 		\node[tqft/reverse pair of pants, draw, anchor=incoming boundary 1] (b) at (a.outgoing boundary 1) {};
 		\node[tqft boundary circle,  draw] at (b.outgoing boundary 1) {};  % 3D effects
 	\end{tikzpicture}\end{center}
-	给出了 $\mathbb{S}^1$ 的自同态. 显然缝合时要求保持定向, 即要求两裤管的内, 外两面不相错; 此外还要保证接口平滑, 然而后者无关宏旨.
+	Diagram ini memberikan endomorfisme $\mathbb{S}^1$. Jelas bahwa penjahitan harus mempertahankan orientasi, yakni sisi dalam dan luar kedua kaki celana tidak boleh tertukar; selain itu, sambungan harus dibuat mulus, meskipun hal terakhir ini tidak memengaruhi gagasan utamanya.
 
-	恒等态射 $\identity_X$ 由柱体 $W := X \times [0,1]$ 给出. 无交并 $(X, Y) \mapsto X \sqcup Y$ 赋予 $n\dcate{Cob}$ 幺半范畴结构, 其幺元是 $\emptyset$. 篇幅所限, 这里不多验证细节. 围绕范畴 $n\dcate{Cob}$ 及其变体的研究是拓扑学和拓扑量子场论的重点之一.
+	Morfisme identitas $\identity_X$ diberikan oleh silinder $W := X \times [0,1]$. Gabungan saling lepas $(X, Y) \mapsto X \sqcup Y$ membekali $n\dcate{Cob}$ dengan struktur kategori monoidal, dan objek satuannya adalah $\emptyset$. Karena keterbatasan ruang, kita tidak akan memeriksa perinciannya lebih lanjut. Kajian tentang kategori $n\dcate{Cob}$ dan varian-variannya merupakan salah satu pokok penting dalam topologi dan teori medan kuantum topologis.
 \end{example}
 
-乍看之下, 定义 \ref{def:monoidal-cat} 和 \ref{def:monoidal-constraints} 并未穷尽幺元 $\munit$ 应有的性质. 然而其余皆可用五角形公理和函子性质演绎, 为此需要一些准备工作. 定义 \ref{def:monoidal-cat} 的合理性将在 \S\ref{sec:coherence} 得到完满的说明.
+Sepintas, Definisi \ref{def:monoidal-cat} dan \ref{def:monoidal-constraints} tampaknya belum mencakup semua sifat yang seharusnya dimiliki objek satuan $\munit$. Namun, sifat-sifat lainnya dapat diturunkan dari aksioma segilima dan sifat fungtorial; untuk itu kita memerlukan beberapa persiapan. Kewajaran Definisi \ref{def:monoidal-cat} akan dijelaskan secara tuntas dalam \S\ref{sec:coherence}.
 
 \begin{lemma}[G.\ M.\ Kelly]\label{prop:Kelly}
-	对于幺半范畴 $(\mathcal{V}, \otimes, a, \munit, \lambda, \rho)$ 的任意对象 $X$, 以下等式成立
+	Untuk setiap objek $X$ dalam kategori monoidal $(\mathcal{V}, \otimes, a, \munit, \lambda, \rho)$, berlaku kesamaan-kesamaan berikut:
 	\begin{align}
 		\label{eqn:unit-coherence-2a} \lambda_{\munit \otimes X} = \identity \otimes \lambda_X: &  \munit \otimes (\munit \otimes X) \to \munit \otimes X, \\
 		\label{eqn:unit-coherence-2b} \rho_{X \otimes \munit} = \rho_X \otimes \identity: & (X \otimes \munit) \otimes \munit \to X \otimes \munit, \\
 		\label{eqn:unit-coherence-2c} \lambda_{\munit} = \rho_{\munit} = \iota: & \munit \otimes \munit \rightiso \munit.
 	\end{align}
-	而对任意对象 $X, Y$, 下列各图交换:
+	Selain itu, untuk setiap objek $X, Y$, diagram-diagram berikut komutatif:
 	\begin{equation}\label{eqn:monoidal-cat-unit}\begin{tikzcd}[column sep=tiny]
 		(X \otimes \munit) \otimes Y \arrow[rr, "{a(X, \munit, Y)}"] \arrow[rd, "{\rho_X \otimes \identity}"'] & & X \otimes (\munit \otimes Y) \arrow[ld, "{\identity \otimes \lambda_Y}"] \\
 		& X \otimes Y &
 	\end{tikzcd} \end{equation}
-	(以上又称幺半范畴的三角形公理)
+	(diagram di atas juga disebut aksioma segitiga kategori monoidal)
 	\begin{equation}\label{eqn:unit-coherence-1} \begin{tikzcd}[column sep=0.2ex]
 		(X \otimes Y) \otimes \munit \arrow[rr] \arrow[rd, "{\rho_{X \otimes Y}}"'] & & X \otimes (Y \otimes \munit) \arrow[ld, "{\identity_X \otimes \rho_Y}"] \\
 		& X \otimes Y &
@@ -126,67 +126,67 @@
 		(\munit \otimes X) \otimes Y \arrow[rr] \arrow[rd, "{\lambda_X \otimes \identity_Y}"'] & & \munit \otimes (X \otimes Y) \arrow[ld, "{\lambda_{X \otimes Y}}"] \\
 		& X \otimes Y &
 	\end{tikzcd} \end{equation}
-	以及
+	serta
 	\begin{equation}\label{eqn:unit-coherence-3} \begin{tikzcd}[column sep=tiny]
 		(\munit \otimes X) \otimes \munit \arrow[d, "{\rho_{\munit \otimes X}}"'] \arrow[rr] & & \munit \otimes (X \otimes \munit) \arrow[d, "{\lambda_{X \otimes \munit}}"] \\
 		\munit \otimes X \arrow[r, "{\lambda_X}"'] & X & X \otimes \munit \arrow[l, "{\rho_X}"] \\
 	\end{tikzcd}. \end{equation}
 \end{lemma}
 \begin{proof}
-	首先证明 \eqref{eqn:unit-coherence-2a}. 根据 $\lambda$ 的自然性知
+	Pertama-tama kita buktikan \eqref{eqn:unit-coherence-2a}. Naturalitas $\lambda$ menunjukkan bahwa diagram
 	\[ \begin{tikzcd}
 		\munit \otimes (\munit \otimes X) \arrow[r, "{\lambda_{\munit \otimes X}}"] \arrow[d, "{\identity \otimes \lambda_X}"'] & \munit \otimes X \arrow[d, "{\lambda_X}"] \\
 		\munit \otimes X \arrow[r, "{\lambda_X}"'] & X
 	\end{tikzcd} \]
-	交换, 而 $\lambda_X$ 为同构故 $\lambda_{\munit \otimes X} = \identity \otimes \lambda_X$. 考量到对称性可得 \eqref{eqn:unit-coherence-2b}.
+	komutatif. Karena $\lambda_X$ merupakan isomorfisme, diperoleh $\lambda_{\munit \otimes X} = \identity \otimes \lambda_X$. Dengan mempertimbangkan simetri, diperoleh \eqref{eqn:unit-coherence-2b}.
 
-	细观图表
+	Sekarang perhatikan diagram
 	\begin{equation}\label{eqn:coherence-aux0} \begin{tikzcd}[column sep=small, row sep=2.25em]
 		((X \otimes \munit) \otimes \munit) \otimes Y \arrow[dd] \arrow[rr] \arrow[rd, "{(\rho_X \otimes \identity_\munit) \otimes \identity_Y}" description] & & (X \otimes \munit) \otimes (\munit \otimes Y) \arrow[r] \arrow[d, "{\rho_X \otimes \identity_{\munit \otimes Y}}" description] & X \otimes (\munit \otimes (\munit \otimes Y)) \arrow[ld, "{\identity_X \otimes \lambda_{\munit \otimes Y}}" description] \\
 		& (X \otimes \munit) \otimes Y \arrow[r] & X \otimes (\munit \otimes Y) & \\
 		(X \otimes (\munit \otimes \munit)) \otimes Y \arrow[rrr] \arrow[ru, "{(\identity_X \otimes \iota) \otimes \identity_Y}" description] & & & X \otimes ((\munit \otimes \munit) \otimes Y) \arrow[uu] \arrow[lu, "{\identity_X \otimes (\iota \otimes \identity_Y)}" description]
-  \end{tikzcd} \end{equation}
-	其中所有箭头都可逆, 纵横箭头皆来自结合约束 $a$. 五角形公理断言矩形外框交换, 而两个梯形子图 (一大一小) 的交换性归结于结合约束 $a$ 的自然性. 其余三个三角子图中只要任两者交换, 剩下者自动交换. 今断言右上三角图交换. 诚然, 由 \eqref{eqn:unit-coherence-2a} 有 $\identity \otimes \lambda_Y = \lambda_{\munit \otimes Y}: \munit \otimes (\munit \otimes Y) \rightiso \munit \otimes Y$, 因而$\lambda_Y$ 之定义导致最右三角在施行 $X \otimes -$ 前便已交换; 同理可证左三角交换. 由于任意 $\mathcal{V}$ 中对象皆同构于某个 $\munit \otimes Y$, 这就证明了 \eqref{eqn:monoidal-cat-unit}. 而在 \eqref{eqn:monoidal-cat-unit} 中取 $X=Y=\munit$ 并比对 $\rho_\munit, \lambda_\munit$ 的构造, 则得到 $\identity \otimes \lambda_{\munit} = \identity \otimes \iota$ 和 $\rho_{\munit} \otimes \identity = \iota \otimes \identity$, 于是回头证出 \eqref{eqn:unit-coherence-2c}.
+	  \end{tikzcd} \end{equation}
+	Semua panah dalam diagram ini invertibel, sedangkan panah horizontal dan vertikal berasal dari kendala asosiativitas $a$. Aksioma segilima menyatakan bahwa batas luar persegi panjang tersebut komutatif, sedangkan komutativitas dua subdiagram trapesium (satu besar dan satu kecil) tereduksi pada naturalitas kendala asosiativitas $a$. Dari tiga subdiagram segitiga yang tersisa, jika sebarang dua di antaranya komutatif, yang ketiga pun otomatis komutatif. Sekarang kita nyatakan bahwa segitiga kanan atas komutatif. Memang, \eqref{eqn:unit-coherence-2a} memberikan $\identity \otimes \lambda_Y = \lambda_{\munit \otimes Y}: \munit \otimes (\munit \otimes Y) \rightiso \munit \otimes Y$; karena itu, definisi $\lambda_Y$ memastikan bahwa segitiga paling kanan sudah komutatif sebelum menerapkan $X \otimes -$. Dengan cara serupa, segitiga kiri juga komutatif. Karena setiap objek dalam $\mathcal{V}$ isomorfik dengan suatu $\munit \otimes Y$, hal ini membuktikan \eqref{eqn:monoidal-cat-unit}. Dengan mengambil $X=Y=\munit$ dalam \eqref{eqn:monoidal-cat-unit} dan membandingkan konstruksi $\rho_\munit, \lambda_\munit$, diperoleh $\identity \otimes \lambda_{\munit} = \identity \otimes \iota$ dan $\rho_{\munit} \otimes \identity = \iota \otimes \identity$. Dari sini diperoleh kembali \eqref{eqn:unit-coherence-2c}.
 
-	准此要领, 对于任意对象 $X, Y, Z$ 可考虑图表
+	Dengan prinsip yang sama, untuk sebarang objek $X, Y, Z$ dapat dipertimbangkan diagram
 	\begin{equation*}\begin{tikzcd}[column sep=small, row sep=2.25em]
 		((Z \otimes \munit) \otimes X) \otimes Y \arrow[dd] \arrow[rr] \arrow[rd, "{(\rho_Z \otimes \identity_X) \otimes \identity_Y}" description] & & (Z \otimes \munit) \otimes (X \otimes Y) \arrow[r] \arrow[d, "{\rho_Z \otimes \identity_{X \otimes Y}}" description] & Z \otimes (\munit \otimes (X \otimes Y)) \arrow[ld, "{\identity_Z \otimes \lambda_{X \otimes Y}}" description] \\
 		& (Z \otimes X) \otimes Y \arrow[r] & Z \otimes (X \otimes Y) & \\
-		(Z \otimes (\munit \otimes X)) \otimes Y \arrow[rrr] \arrow[ru, "{(\identity_Z \otimes \lambda_X) \otimes \identity_Y}" description] & & & Z \otimes ((1 \otimes X) \otimes Y) \arrow[uu] \arrow[lu, "{\identity_Z \otimes (\lambda_X \otimes \identity_Y)}" description]
+		(Z \otimes (\munit \otimes X)) \otimes Y \arrow[rrr] \arrow[ru, "{(\identity_Z \otimes \lambda_X) \otimes \identity_Y}" description] & & & Z \otimes ((\munit \otimes X) \otimes Y) \arrow[uu] \arrow[lu, "{\identity_Z \otimes (\lambda_X \otimes \identity_Y)}" description]
 	\end{tikzcd}\end{equation*}
-	我们断言最右三角交换. 论证同上: 仅须从 \eqref{eqn:monoidal-cat-unit} 导出左侧及右上两个三角交换. 取 $Z = \munit$ 可知图表
+	Kita nyatakan bahwa segitiga paling kanan komutatif. Argumennya sama seperti di atas: cukup turunkan komutativitas segitiga kiri dan kanan atas dari \eqref{eqn:monoidal-cat-unit}. Dengan mengambil $Z = \munit$, diketahui bahwa diagram
 	\[ \begin{tikzcd}[column sep=tiny, row sep=small]
 		(\munit \otimes X) \otimes Y \arrow[rr] \arrow[rd, "{\lambda_X \otimes \identity_Y}"'] & & \munit \otimes (X \otimes Y) \arrow[ld, "{\lambda_{X \otimes Y}}"] \\
 		& X \otimes Y &
 	\end{tikzcd} \]
-	在施行 $\munit \otimes -$ 之后交换, 故原图交换. 由此得到 \eqref{eqn:unit-coherence-1} 的第二个交换图; 基于对称性知 \eqref{eqn:unit-coherence-1} 的第一个图也交换.
+	menjadi komutatif setelah menerapkan $\munit \otimes -$, sehingga diagram semula komutatif. Dengan demikian diperoleh diagram komutatif kedua dalam \eqref{eqn:unit-coherence-1}; berdasarkan simetri, diagram pertama dalam \eqref{eqn:unit-coherence-1} juga komutatif.
 
-	现证明图表 \eqref{eqn:unit-coherence-3} 交换: 将之拆解为
+	Sekarang kita buktikan bahwa diagram \eqref{eqn:unit-coherence-3} komutatif dengan menguraikannya menjadi
 	\[ \begin{tikzcd}
 		{} & \munit \otimes (X \otimes \munit) \arrow[rd, "{\lambda_{X \otimes \munit}}"] & \\
 		(\munit \otimes X) \otimes \munit \arrow[rr, "{\lambda_X \otimes \identity}"] \arrow[d, "{\rho_{\munit \otimes X}}"'] \arrow[ru] & & X \otimes \munit \arrow[d, "{\rho_X}"] \\
 		\munit \otimes X \arrow[rr, "{\lambda_X}"'] & & X
 	\end{tikzcd}\]
-	由 $\rho$ 的自然性可知矩形部分交换, 另一方面业已证明三角部分亦交换, 故全图交换.
+	Naturalitas $\rho$ menunjukkan bahwa bagian persegi panjang komutatif; di sisi lain, bagian segitiga juga telah dibuktikan komutatif. Karena itu, seluruh diagram komutatif.
 \end{proof}
 
 \begin{remark}
-	一些文献 (如 \cite{ML98}) 对幺半范畴的定义较为复杂: 幺元 $\munit$ 带有的同构 $\lambda, \rho$ 和三角形公理 \eqref{eqn:monoidal-cat-unit} 都是定义的一员.
+	Sebagian pustaka (misalnya \cite{ML98}) memakai definisi kategori monoidal yang lebih rumit: isomorfisme $\lambda, \rho$ yang menyertai objek satuan $\munit$ dan aksioma segitiga \eqref{eqn:monoidal-cat-unit} semuanya menjadi bagian dari definisi.
 \end{remark}
 
-\begin{definition}\label{def:monoidal-functor}\index{yaobanhanzi@幺半函子 (monoidal functor)}
-	设 $\mathcal{V}_1$ 和 $\mathcal{V}_2$ 为幺半范畴. 一个从 $\mathcal{V}_1$ 到 $\mathcal{V}_2$ 的\emph{幺半函子}意谓资料 $(F, \xi_F)$, 其中 $F: \mathcal{V}_1 \to \mathcal{V}_2$ 是函子而
+\begin{definition}\label{def:monoidal-functor}\index{yaobanhanzi@fungtor monoidal (monoidal functor)}
+	Misalkan $\mathcal{V}_1$ dan $\mathcal{V}_2$ kategori monoidal. Suatu \emph{fungtor monoidal} dari $\mathcal{V}_1$ ke $\mathcal{V}_2$ adalah data $(F, \xi_F)$, dengan $F: \mathcal{V}_1 \to \mathcal{V}_2$ suatu fungtor dan
 	\[ \xi_F:  F(\cdot) \otimes F(\cdot) \rightiso F(\cdot \otimes \cdot) \]
-	是二元函子之间的同构, 使得 $\exists \varphi_F: F(\munit_1) \simeq \munit_2$, 并且下图对所有对象 $X,Y,Z$ 交换.
+	merupakan isomorfisme antara fungtor-fungtor biner, sedemikian sehingga $\exists \varphi_F: F(\munit_1) \simeq \munit_2$ dan diagram berikut komutatif untuk semua objek $X,Y,Z$.
 	\[ \begin{tikzcd}[column sep=10em]
 		F((X \otimes Y) \otimes Z) \arrow[r, "{F a(X,Y,Z)}"] & F(X \otimes (Y \otimes Z)) \\
 		F(X \otimes Y) \otimes F(Z) \arrow[u, "{\xi_F(X \otimes Y, Z)}"] & F(X) \otimes F(Y \otimes Z) \arrow[u, "{\xi_F(X, Y \otimes Z)}"'] \\
 		(F(X) \otimes F(Y)) \otimes F(Z) \arrow[r, "{a(F(X), F(Y), F(Z))}"'] \arrow[u, "{\xi_F(X, Y) \otimes \identity}"] & F(X) \otimes (F(Y) \otimes F(Z)) \arrow[u, "{\identity \otimes \xi_F(Y, Z)}"']
 	\end{tikzcd} \]
 \end{definition}
-依惯例, 我们也经常略去幺半函子中的附加资料 $\xi_F$.
+Menurut konvensi, kita juga sering menghilangkan data tambahan $\xi_F$ dari notasi fungtor monoidal.
 
-注意到对于幺半函子 $F$, 同构 $\varphi_F: \munit_2 \rightiso F(\munit_1)$ 有一种标准的取法: 以下图表
+Perhatikan bahwa untuk fungtor monoidal $F$, terdapat pilihan baku bagi isomorfisme $\varphi_F: \munit_2 \rightiso F(\munit_1)$, yaitu melalui diagram-diagram berikut:
 \begin{equation} \begin{tikzcd}
 	\munit_2 \otimes F(\munit_1) \arrow[r, "{\lambda_2}"] \arrow[d, "{\varphi_F \otimes \identity}"'] & F(\munit_1) \arrow[d, "{F(\iota_1)^{-1}}"] \\
 	F(\munit_1) \otimes F(\munit_1) \arrow[r, "{\xi_F}"'] & F(\munit_1 \otimes \munit_1)
@@ -195,7 +195,7 @@
 	F(\munit_1) \otimes \munit_2  \arrow[r, "{\rho_2}"] \arrow[d, "{\identity \otimes \varphi_F}"'] & F(\munit_1) \arrow[d, "{F(\iota_1)^{-1}}"] \\
 	F(\munit_1) \otimes F(\munit_1) \arrow[r, "{\xi_F}"'] & F(\munit_1 \otimes \munit_1)
 \end{tikzcd} \end{equation}
-的交换性是等价的, 确定同一个 $\varphi_F$ (见 \cite[Proposition 2.4.3]{EGNO15}). 推而广之, 对任意 $X$ 皆有交换图表
+Komutativitas kedua diagram tersebut ekuivalen dan menentukan $\varphi_F$ yang sama (lihat \cite[Proposition 2.4.3]{EGNO15}). Lebih umum lagi, untuk setiap $X$ terdapat diagram komutatif
 \begin{equation}\label{eqn:monoidal-functor-units} \begin{tikzcd}
 	\munit_2 \otimes F(X) \arrow[r, "{\lambda_2}"] \arrow[d, "{\varphi_F \otimes \identity}"'] & F(X) \arrow[d, "{F(\lambda_X)^{-1}}"] \\
 	F(\munit_1) \otimes F(X) \arrow[r, "{\xi_F}"'] & F(\munit_1 \otimes X)
@@ -204,27 +204,26 @@
 	F(X) \otimes \munit_2 \arrow[r, "{\rho_2}"] \arrow[d, "{\identity \otimes \varphi_F}"'] & F(X) \arrow[d, "{F(\rho_X)^{-1}}"] \\
 	F(X) \otimes F(\munit_1) \arrow[r, "{\xi_F}"'] & F(X \otimes \munit_1)
 \end{tikzcd} \end{equation}
-由于用途有限, 我们不详细证明等价性. 提示: 从第一个图表出发定义 $\varphi_F$, 将全图同取 $F(X) \otimes \bullet$ 并运用结合约束, 幺元和 $\xi_F$ 的性质, 最后适当地从右边消去 $F(\munit_1)$ 即得第四个交换图表; 其余论证留给读者.
+Karena kegunaannya terbatas, kita tidak membuktikan ekuivalensi ini secara terperinci. Petunjuk: mulai dari diagram pertama untuk mendefinisikan $\varphi_F$, lalu terapkan $F(X) \otimes \bullet$ pada seluruh diagram dan gunakan sifat kendala asosiativitas, objek satuan, dan $\xi_F$; akhirnya batalkan $F(\munit_1)$ di sebelah kanan secara tepat untuk memperoleh diagram komutatif keempat. Argumen lainnya diserahkan kepada pembaca.
 
 \begin{remark}
-	许多文献中, 如上定义的幺半函子被称作\emph{强幺半函子}, 而 \eqref{eqn:monoidal-functor-units} 的交换性与 $\varphi_F: \munit_2 \rightiso F(\munit_1)$ 皆是定义一部分. 在此框架下若不要求 $\xi_F: F(\cdot) \otimes F(\cdot) \to F(\cdot \otimes \cdot)$ 和 $\varphi_F: \munit_2 \to F(\munit_1)$ 是同构, 得到的资料 $(F, \xi_F, \varphi_F)$ 称为\emph{右松幺半函子}; 把资料中的箭头倒转成 $\eta_F: F(\cdot \otimes \cdot) \to F(\cdot) \otimes F(\cdot)$ 和 $\psi_F: F(\munit_1) \to \munit_2$ 并相应地修改 \eqref{eqn:monoidal-functor-units}, 则得到\emph{左松幺半函子}. 读者不必强记, 必要时我们会明确区分. \index{yaobanhanzi!左松/右松 (left-lax/right-lax)}
+	Dalam banyak pustaka, fungtor monoidal yang didefinisikan di atas disebut \emph{fungtor monoidal kuat}; komutativitas \eqref{eqn:monoidal-functor-units} dan isomorfisme $\varphi_F: \munit_2 \rightiso F(\munit_1)$ menjadi bagian dari definisi. Dalam kerangka ini, jika $\xi_F: F(\cdot) \otimes F(\cdot) \to F(\cdot \otimes \cdot)$ dan $\varphi_F: \munit_2 \to F(\munit_1)$ tidak disyaratkan merupakan isomorfisme, data $(F, \xi_F, \varphi_F)$ disebut \emph{fungtor monoidal longgar-kanan}; dengan membalik panah-panah dalam data tersebut menjadi $\eta_F: F(\cdot \otimes \cdot) \to F(\cdot) \otimes F(\cdot)$ dan $\psi_F: F(\munit_1) \to \munit_2$, serta menyesuaikan \eqref{eqn:monoidal-functor-units}, diperoleh \emph{fungtor monoidal longgar-kiri}. Pembaca tidak perlu menghafalkannya; bila diperlukan, kita akan membedakannya secara eksplisit. \index{yaobanhanzi@fungtor monoidal!longgar-kiri/longgar-kanan (left-lax/right-lax)}
 \end{remark}
 
 \begin{example}
-	假设范畴 $\mathcal{C}_1$, $\mathcal{C}_2$ 有有限积, 故可视作幺半范畴 ($\otimes := \times$, $\munit := \text{终对象}$). 任意函子 $F: \mathcal{C}_1 \to \mathcal{C}_2$ 都带有自然的态射 $\eta_F: F(\cdot \otimes \cdot) \to F(\cdot) \otimes F(\cdot)$, 这使得 $F$ 具有自然的左松幺半函子结构 (见定义 \ref{def:preservation-limit}); $F$ 是幺半函子当且仅当 $F$ 保有限积.
+	Andaikan kategori $\mathcal{C}_1$, $\mathcal{C}_2$ mempunyai produk berhingga, sehingga dapat dipandang sebagai kategori monoidal ($\otimes := \times$, $\munit := \text{objek terminal}$). Setiap fungtor $F: \mathcal{C}_1 \to \mathcal{C}_2$ dilengkapi morfisme natural $\eta_F: F(\cdot \otimes \cdot) \to F(\cdot) \otimes F(\cdot)$, yang memberikan struktur fungtor monoidal longgar-kiri secara natural pada $F$ (lihat Definisi \ref{def:preservation-limit}); $F$ merupakan fungtor monoidal jika dan hanya jika $F$ mempertahankan produk berhingga.
 \end{example}
 
-\begin{definition}\index{ziranbianhuan!幺半情形}
-	设 $F, G: \mathcal{V}_1 \to \mathcal{V}_2$ 为幺半函子, 其间的自然变换(或曰态射), 且记作 $\theta$, 是使得 $\theta_{\munit_1}$ 为同构, 而且使下图对所有 $X, Y$ 都交换的自然变换
+\begin{definition}\index{ziranbianhuan@transformasi natural!kasus monoidal}
+	Misalkan $F, G: \mathcal{V}_1 \to \mathcal{V}_2$ fungtor monoidal. Suatu transformasi natural (atau morfisme) di antaranya, yang dinotasikan dengan $\theta$, adalah transformasi natural sedemikian sehingga $\theta_{\munit_1}$ merupakan isomorfisme dan diagram berikut komutatif untuk semua $X, Y$:
 	\[ \begin{tikzcd}[column sep=huge]
 		F(X) \otimes F(Y) \arrow[r, "{\xi_F(X, Y)}"] \arrow[d, "{\theta_X \otimes \theta_Y}"'] & F(X \otimes Y) \arrow[d, "{\theta_{X \otimes Y}}"] \\
 		G(X) \otimes G(Y) \arrow[r, "{\xi_G(X, Y)}"'] & G(X \otimes Y) .
 	\end{tikzcd} \]
-	作为练习, 可以证明对标准的 $\varphi_F$ 和 $\varphi_G$ 必然有 $\varphi_G = \theta_{\mathbf{1}_1} \varphi_F$.
+	Sebagai latihan, buktikan bahwa bagi $\varphi_F$ dan $\varphi_G$ baku selalu berlaku $\varphi_G = \theta_{\mathbf{1}_1} \varphi_F$.
 \end{definition}
 
-幺半函子和自然变换之间有自明的合成运算, 借此可以定义幺半范畴的同构与等价性, 参看定义 \ref{def:cat-equivalence}. 为资区分, 有时也将幺半范畴间的等价称作幺半等价.\index{fanchoudengjia!幺半情形}
-
+Fungtor monoidal dan transformasi natural mempunyai operasi komposisi yang jelas. Dengan operasi ini dapat didefinisikan isomorfisme dan ekuivalensi kategori monoidal; lihat Definisi \ref{def:cat-equivalence}. Untuk membedakannya, ekuivalensi antara kategori monoidal kadang-kadang disebut pula ekuivalensi monoidal.\index{fanchoudengjia@ekuivalensi kategori!kasus monoidal}
 \section{严格性与融贯定理}\label{sec:coherence}
 由于幺半范畴的结合律与幺元都是在差一个同构的意义下定义的, 我们费了很大力气证明它们满足一些直观的性质, 这体现为种种交换图表. 然而至少有两个问题悬而未决:
 \begin{compactenum}[(i)]

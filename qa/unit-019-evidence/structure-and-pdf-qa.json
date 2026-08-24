@@ -1,0 +1,249 @@
+{
+  "schema_version": "1.0.0",
+  "unit_id": "O013-LI-U019",
+  "status": "PASS",
+  "authority": {
+    "commit": "c4f7a01f68f5f407906b4b970640cddbbad85f6b",
+    "tree": "0f9fd52748165ec89a85ba602ccb949a2ce04694",
+    "source_file": "chapter3.tex",
+    "source_lines": "1-227",
+    "source_span_bytes": 21745,
+    "source_span_sha256": "4aecde3d61fb173087ae3e7ab64cc84f7bd4f3fbc0dcbfa8a2c3d6bab1201a8a"
+  },
+  "target": {
+    "target_file": "repo/source/chapter3.tex",
+    "target_lines": "1-226",
+    "target_file_bytes": 79694,
+    "target_file_sha256": "bfe5d4745f9a3ac1062b79ee429356a17f3d5bff9be02ef0093eab6978f98e60",
+    "target_span_bytes": 25868,
+    "target_span_sha256": "6b42291293a06d15b64034a26ed25aeac3cb41465bf9533e069bc9ac65d9b8ac",
+    "correction_ids": [
+      "O013-LI-U019-COR-001"
+    ],
+    "han_residue": 0
+  },
+  "structure": {
+    "authority_file": {
+      "bytes": 75571,
+      "sha256": "7198f2c477890b333237156aba30b79db587e23dde7a878ed99f527e98a558d0"
+    },
+    "authority_span": {
+      "bytes": 21745,
+      "sha256": "4aecde3d61fb173087ae3e7ab64cc84f7bd4f3fbc0dcbfa8a2c3d6bab1201a8a"
+    },
+    "target_file_at_admission": {
+      "bytes": 79694,
+      "sha256": "bfe5d4745f9a3ac1062b79ee429356a17f3d5bff9be02ef0093eab6978f98e60"
+    },
+    "target_span": {
+      "bytes": 25868,
+      "sha256": "6b42291293a06d15b64034a26ed25aeac3cb41465bf9533e069bc9ac65d9b8ac"
+    },
+    "target_lines": "1-226",
+    "next_target_line": 227,
+    "han_residue": 0,
+    "external_reference_count": 11
+  },
+  "artifact": {
+    "bytes": 125710,
+    "sha256": "af7a4561db5e8ab1798d4475c589beb42f9fb84795bd167c0ffc17241866783a",
+    "path": "artifacts/unit-019-bab-3-definisi-dasar.pdf"
+  },
+  "build_log": {
+    "bytes": 85982,
+    "sha256": "b7df3a77892563e590bdc5158197a06b3677b2d2fb0e88e2658a71d599358634",
+    "path": "qa/UNIT_019_BUILD_FINAL.log"
+  },
+  "build_log_sanitization": {
+    "method": "complete home-prefix replacement with ${USER_HOME}",
+    "replacement_count": 260,
+    "diagnostics_deleted": 0,
+    "line_count": 2327
+  },
+  "final_aux": {
+    "bytes": 3507,
+    "sha256": "d9eb2e1fcdb5bda8e2d060591c7c29974e4919c7e0f40286294d53f608e0752a",
+    "path": "build/unit-019-final-d/unit-019-bab-3-definisi-dasar.aux"
+  },
+  "evidence_generator": {
+    "bytes": 21072,
+    "sha256": "1d9e459f2acb5e587e9cb8517cde6c3ec237a5f66f579a28abc7035f46cc3ee8",
+    "path": "scripts/generate_unit_019_evidence.py"
+  },
+  "render_inventory": {
+    "bytes": 9335,
+    "sha256": "c9b58e6d86a30140d508f90233f1e802cffb9dd29fb319ec1bd7e87d3570f43d",
+    "path": "qa/unit-019-evidence/render-hash-inventory.json"
+  },
+  "pdf": {
+    "pages": 12,
+    "language": "id-ID",
+    "encrypted": false,
+    "tagged": false,
+    "metadata": {
+      "/Creator": "LaTeX with hyperref",
+      "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 19: Kategori Monoidal - Definisi Dasar",
+      "/Subject": "Terjemahan Bahasa Indonesia independen; cakupan parsial Bab 3",
+      "/Author": "Wen-Wei Li",
+      "/Keywords": "aljabar, teori kategori, kategori monoidal, fungtor monoidal, koherensi, id-ID",
+      "/Producer": "MiKTeX-dvipdfmx (20260404)",
+      "/CreationDate": "D:20260824000000Z"
+    },
+    "outlines": [
+      "3 Kategori Monoidal",
+      "3.1 Definisi Dasar",
+      "Daftar Pustaka",
+      "Indeks Istilah",
+      "Indeks Simbol"
+    ],
+    "named_destination_count": 52,
+    "page_text_character_counts": [
+      317,
+      819,
+      1646,
+      1438,
+      1895,
+      2192,
+      1657,
+      1458,
+      1596,
+      1821,
+      1571,
+      919
+    ],
+    "page_annotation_counts": [
+      0,
+      3,
+      1,
+      1,
+      0,
+      0,
+      3,
+      3,
+      9,
+      2,
+      1,
+      15
+    ],
+    "annotation_subtypes": {
+      "/Link": 38
+    },
+    "annotation_actions": {
+      "/URI": 3,
+      "/GoTo": 35
+    },
+    "page_sizes_points": [
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ]
+    ]
+  },
+  "topology": {
+    "outlines": 5,
+    "named_destinations": 52,
+    "goto_actions": 35,
+    "uri_actions": 3
+  },
+  "deterministic_replay": {
+    "semantic_and_render_identity": true,
+    "container_byte_identity": false,
+    "container_size_delta_b_minus_a": 12,
+    "container_differing_aligned_byte_count": 74615,
+    "container_note": "Raw XeLaTeX PDF containers differ despite fixed metadata; extracted text and every Poppler/MuPDF page render are identical. No byte-identical container claim is made.",
+    "build_a_sha256": "c4904fb64633a24476225f461bf2e09bcb1d92a0a13fc5d836ad1e6dfad5b1ac",
+    "build_b_sha256": "af7a4561db5e8ab1798d4475c589beb42f9fb84795bd167c0ffc17241866783a",
+    "extracted_text_sha256_a": "a835887e63a0f578a80d092fad2291d397dec52e1ef5efabbd60d76b6cb6d8a5",
+    "extracted_text_sha256_b": "a835887e63a0f578a80d092fad2291d397dec52e1ef5efabbd60d76b6cb6d8a5",
+    "same_renderer_page_mismatches": {
+      "poppler": 0,
+      "mupdf": 0
+    }
+  },
+  "embedded_subset_font_count": 25,
+  "log_counts": {
+    "overfull_boxes": 0,
+    "underfull_hboxes": 7,
+    "underfull_vboxes": 4,
+    "empty_external_link_targets": 12,
+    "undefined_control_sequences": 0,
+    "undefined_references": 0,
+    "undefined_citations": 0,
+    "missing_characters": 0,
+    "fatal_errors": 0,
+    "emergency_stops": 0
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "renderers_inspected": [
+      "Poppler",
+      "MuPDF"
+    ],
+    "finding": "The centered cover states the partial boundary in prose without ambiguous progress blocks; all content pages use the available reading width, and the short bibliography, term index, and symbol index share one concluding page rather than occupying sparse back-matter pages."
+  },
+  "rights": {
+    "principal_text_and_translation": "CC BY 4.0",
+    "AJbook_class_fragment": "CC BY-SA 3.0",
+    "bundled_noto_fonts": "SIL OFL 1.1",
+    "Lanzhou_png_in_wider_closure": "CC BY-SA 3.0; not used by this reader"
+  },
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

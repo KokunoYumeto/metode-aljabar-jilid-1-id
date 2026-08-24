@@ -1,0 +1,254 @@
+{
+  "schema_version": "1.0.0",
+  "unit_id": "O013-LI-U019",
+  "page_count": 12,
+  "render_resolution_dpi": 150,
+  "build_a": {
+    "bytes": 125698,
+    "sha256": "c4904fb64633a24476225f461bf2e09bcb1d92a0a13fc5d836ad1e6dfad5b1ac",
+    "path": "build/unit-019-final-c/unit-019-bab-3-definisi-dasar.pdf"
+  },
+  "build_b": {
+    "bytes": 125710,
+    "sha256": "af7a4561db5e8ab1798d4475c589beb42f9fb84795bd167c0ffc17241866783a",
+    "path": "build/unit-019-final-d/unit-019-bab-3-definisi-dasar.pdf"
+  },
+  "deterministic_replay": {
+    "semantic_and_render_identity": true,
+    "container_byte_identity": false,
+    "container_size_delta_b_minus_a": 12,
+    "container_differing_aligned_byte_count": 74615,
+    "container_note": "Raw XeLaTeX PDF containers differ despite fixed metadata; extracted text and every Poppler/MuPDF page render are identical. No byte-identical container claim is made.",
+    "build_a_sha256": "c4904fb64633a24476225f461bf2e09bcb1d92a0a13fc5d836ad1e6dfad5b1ac",
+    "build_b_sha256": "af7a4561db5e8ab1798d4475c589beb42f9fb84795bd167c0ffc17241866783a",
+    "extracted_text_sha256_a": "a835887e63a0f578a80d092fad2291d397dec52e1ef5efabbd60d76b6cb6d8a5",
+    "extracted_text_sha256_b": "a835887e63a0f578a80d092fad2291d397dec52e1ef5efabbd60d76b6cb6d8a5",
+    "same_renderer_page_mismatches": {
+      "poppler": 0,
+      "mupdf": 0
+    }
+  },
+  "renderers": {
+    "poppler": [
+      {
+        "page": 1,
+        "path": "qa/unit-019-evidence/poppler-final-b/page-01.png",
+        "bytes": 74303,
+        "sha256": "be838281fcba83d68f304fe29f6b5c746a3213326089b08adc09dd8b4c3f3551",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 2,
+        "path": "qa/unit-019-evidence/poppler-final-b/page-02.png",
+        "bytes": 135513,
+        "sha256": "32b2a2b835ba6f1fc9265a3bd0115493a7b326532fc0720341662d76211794d2",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 3,
+        "path": "qa/unit-019-evidence/poppler-final-b/page-03.png",
+        "bytes": 194181,
+        "sha256": "332dd974c086f073905d4acf19e0fc22b8eab0804fd10b3965fe61b6b49128b3",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 4,
+        "path": "qa/unit-019-evidence/poppler-final-b/page-04.png",
+        "bytes": 174548,
+        "sha256": "065f07c4d247ba5f83acc846b5e96ef2a195093e7bb8ce81b0f9c38bec0927b1",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 5,
+        "path": "qa/unit-019-evidence/poppler-final-b/page-05.png",
+        "bytes": 226789,
+        "sha256": "0a6ddd362a9c350d4080783e936effc5e431338ec7eac0ab1fad04ec70f32b3f",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 6,
+        "path": "qa/unit-019-evidence/poppler-final-b/page-06.png",
+        "bytes": 267085,
+        "sha256": "30e40f495be76c026c21fc8371b3eec2b9e0e530edaed63f801424c39d1b7c0e",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 7,
+        "path": "qa/unit-019-evidence/poppler-final-b/page-07.png",
+        "bytes": 203043,
+        "sha256": "4547e4e364e4bca09fa19e22bc7ba796c37b88217e0aa02ae5f999048e42720b",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 8,
+        "path": "qa/unit-019-evidence/poppler-final-b/page-08.png",
+        "bytes": 181004,
+        "sha256": "3e9ccfc70e752f3497773f27bf1cf4067203405a110ec08c9105b126d0a78d80",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 9,
+        "path": "qa/unit-019-evidence/poppler-final-b/page-09.png",
+        "bytes": 201682,
+        "sha256": "218b266cc55daa543889f30e8cc9bc43db436d1572012407a53d6ed3226ff73b",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 10,
+        "path": "qa/unit-019-evidence/poppler-final-b/page-10.png",
+        "bytes": 214741,
+        "sha256": "caea0afdff38ccd102b057d043eb4c84eb7fe0f9b213c621e50690d949260d55",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 11,
+        "path": "qa/unit-019-evidence/poppler-final-b/page-11.png",
+        "bytes": 189512,
+        "sha256": "4054bf98a2b92e93b53f53806b06fd3e3e5897ddc8911c211c8b07a290bcfc27",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 12,
+        "path": "qa/unit-019-evidence/poppler-final-b/page-12.png",
+        "bytes": 138715,
+        "sha256": "19ec244c4194750e45448e6bfe680747a3df0876183f159d66fcbf08c1a3b6b1",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      }
+    ],
+    "mupdf": [
+      {
+        "page": 1,
+        "path": "qa/unit-019-evidence/mupdf-final-b/page-01.png",
+        "bytes": 66422,
+        "sha256": "c45d42d6f931bf691efedfb058e49b1f674ee114ccbae47cd37efa8dd620bb11",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 2,
+        "path": "qa/unit-019-evidence/mupdf-final-b/page-02.png",
+        "bytes": 111851,
+        "sha256": "260616f9efbfb3402c3544a23d69faf10c39253b25d537f50b4706bbae2376df",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 3,
+        "path": "qa/unit-019-evidence/mupdf-final-b/page-03.png",
+        "bytes": 170037,
+        "sha256": "53ff1bf4988d1d9753997adfdc2fa8cf667b136a9ba9042efb30b56696d439c9",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 4,
+        "path": "qa/unit-019-evidence/mupdf-final-b/page-04.png",
+        "bytes": 152059,
+        "sha256": "bb9ee70ec5402ed204094115a1959172ce907d28de08316be9530dc051ad2df6",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 5,
+        "path": "qa/unit-019-evidence/mupdf-final-b/page-05.png",
+        "bytes": 195296,
+        "sha256": "06457f2f8cb04e6f397fb1a13ca9a20466a0136a32082771bd2aebef153b6189",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 6,
+        "path": "qa/unit-019-evidence/mupdf-final-b/page-06.png",
+        "bytes": 229117,
+        "sha256": "3a8c178dadd5b7bbd97f336159b3e7c3e146e759fd8b07ff17d87c137c9e8cbd",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 7,
+        "path": "qa/unit-019-evidence/mupdf-final-b/page-07.png",
+        "bytes": 175947,
+        "sha256": "29d071e162b632518d2865e3bb37ecc1002373bcd51e4b5ae22459099c328b24",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 8,
+        "path": "qa/unit-019-evidence/mupdf-final-b/page-08.png",
+        "bytes": 158518,
+        "sha256": "87de3cb9b4742684ce9f31af6b386df41779135005ef75ee5b1c5fe3aed208dd",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 9,
+        "path": "qa/unit-019-evidence/mupdf-final-b/page-09.png",
+        "bytes": 175629,
+        "sha256": "ed40fd01a75482ea9bd4a6476e38b3a5c2941219dd41e755346c106caa15a4c9",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 10,
+        "path": "qa/unit-019-evidence/mupdf-final-b/page-10.png",
+        "bytes": 187947,
+        "sha256": "efa6384c2a8e4ea7fe0905d2658977dc1fbd488742ffddde817f4850485172d6",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 11,
+        "path": "qa/unit-019-evidence/mupdf-final-b/page-11.png",
+        "bytes": 161263,
+        "sha256": "303bd10102a128e4103aabf528e2bb28c4db624515866c33b28b87f225c230a9",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 12,
+        "path": "qa/unit-019-evidence/mupdf-final-b/page-12.png",
+        "bytes": 117219,
+        "sha256": "2dce8ce2638addfdf52624efe04f416da49659c160d5370a034dce2bc1f190db",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      }
+    ]
+  },
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra"
+}
