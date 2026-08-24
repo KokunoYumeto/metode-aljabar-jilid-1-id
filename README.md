@@ -339,6 +339,7 @@ Artefak Unit 23 yang diterima:
 - tata letak daring menghapus transisi `backmatter` berorientasi cetak yang sebelumnya menghasilkan halaman indeks kedelapan yang hampir kosong. Kedua indeks kini mengisi ruang alami di bawah catatan terakhir pada halaman ketujuh tanpa memotong atau mengubah isi.
 - QA terminologi mengikat tujuh belas istilah kategori tingkat lebih tinggi baru dan tiga istilah kategori yang sudah diterima. Pencarian arXiv resmi terbatas tidak menemukan sumber TeX Indonesia yang sesuai; istilah gabungan diputuskan secara transparan dari makna dan konsistensi korpus tanpa mengklaim atestasi langsung yang tidak ada.
 - receipt penerimaan lokal ada di [`qa/UNIT_023_ADMISSION_20260824.md`](qa/UNIT_023_ADMISSION_20260824.md), 7.334 byte; SHA-256 `f67e850dfbf83a8ea2352f49d4fccd1417564e09db62dd848c210eebb2c53044`; bukti visual ada di [`qa/UNIT_023_VISUAL_QA_20260824.md`](qa/UNIT_023_VISUAL_QA_20260824.md).
+- Unit 23 dipublikasikan pada commit `a7c599d1a55c10933c9689f8a4bbe075dea1948a`; seluruh 44 path / 3.495.439 byte cocok dengan blob komit pada pembacaan balik anonim. Inventaris per-path ada di [`qa/PUBLICATION_GITHUB_UNIT_023_CONTENT_READBACK.json`](qa/PUBLICATION_GITHUB_UNIT_023_CONTENT_READBACK.json), dan receipt publikasi ada di [`qa/PUBLICATION_GITHUB_UNIT_023_20260824.md`](qa/PUBLICATION_GITHUB_UNIT_023_20260824.md).
 
 ## Backend modular
 
