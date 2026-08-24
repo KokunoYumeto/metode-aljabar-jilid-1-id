@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1-2.6 telah diterjemahkan dan diterima dalam lima belas unit pembaca. Unit 13 menyajikan fungtor representabel dan Lema Yoneda; Unit 14 dasar-dasar fungtor adjoin; Unit 15 contoh, keunikan, dan ekuivalensi adjoin. Bagian 2.7 pada `chapter2.tex:1111-1405` menjadi span terjemahan berikutnya; Bagian 2.8 dimulai pada baris 1406.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1-2.6 telah diterjemahkan, diterima, dan dipublikasikan dalam lima belas unit pembaca. Unit 13 menyajikan fungtor representabel dan Lema Yoneda; Unit 14 dasar-dasar fungtor adjoin; Unit 15 contoh, keunikan, dan ekuivalensi adjoin. Bagian 2.7 pada `chapter2.tex:1111-1405` menjadi span terjemahan berikutnya; Bagian 2.8 dimulai pada baris 1406.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh checkpoint pembaca 0.3.0 (96 halaman; Unit 1-9)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf)
 
@@ -213,7 +213,7 @@ Artefak Unit 14 yang diterima secara lokal:
 - empat koreksi sumber yang diungkapkan memperbaiki indeks komponen `\varphi_{V,W}`, kategori lawan pada dualitas berdimensi hingga, notasi `Vect_f(k)`, dan indeks komponen counit oleh `Y \in \Obj(C_2)`.
 - Unit 14 dipublikasikan pada commit `9c927ba19b14898a8cd8a3cadef30ee309510c8c`; 30 path eksplisit / 923.499 byte cocok dengan byte dan SHA-256 lokal pada pembacaan balik anonim.
 
-Artefak Unit 15 yang diterima secara lokal:
+Artefak Unit 15 yang diterima dan dipublikasikan:
 
 - 10 halaman; 120.466 byte; SHA-256 `6f2a9be12465300ac7af2ea086b643b6891b1f9e23af66241a40086ac476c8ef`
 - target contoh, keunikan, dan ekuivalensi adjoin pada `chapter2.tex:910-1110` adalah 19.355 byte; SHA-256 `df3c65bfea7f7272a31809b96b5ae18fdf966afe22e9ab38a0d8f9d35680520f`; file target lengkap 158.252 byte; SHA-256 `a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c`
@@ -221,6 +221,7 @@ Artefak Unit 15 yang diterima secara lokal:
 - 232 permukaan matematika, 35 lingkungan, 9 label, 8 rujukan, 12 rujukan persamaan, 1 sitasi, 3 indeks, 4 diagram `tikzcd`, dan 16 gambar `tikzpicture` terpelihara setelah dua koreksi sumber yang didokumentasikan.
 - dua build bersih menghasilkan replay visual yang identik pada 10/10 halaman di MuPDF dan Poppler; seluruh halaman diperiksa tanpa pemotongan, benturan, karakter hilang, rumus atau diagram rusak, rujukan tak terdefinisi, maupun kotak meluber.
 - reflow digital memakai spasi baris 1,30 agar halaman isi terakhir tidak hampir kosong tanpa menghapus atau mengubah matematika dan struktur sumber.
+- Unit 15 dipublikasikan pada commit `a66d2bd8d569f8a6f26533e18285ef8f2cd58b5a`; 23 path eksplisit / 670.473 byte cocok dengan byte dan SHA-256 lokal pada pembacaan balik anonim. Bukti publikasi ada di [`qa/PUBLICATION_GITHUB_UNIT_015_20260824.md`](qa/PUBLICATION_GITHUB_UNIT_015_20260824.md).
 
 ## Backend modular
 
