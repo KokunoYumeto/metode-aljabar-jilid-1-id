@@ -1,0 +1,173 @@
+entity_type,id,stable_key,parent_id,order,label_id,status
+build_surface,urn:uuid:84bb64df-a925-52f2-92c9-6474aa0a6baf,build-surface/unit-018-pdf,urn:uuid:e78e538a-908b-52f4-86d1-facfaee64259,,unit-018-pdf,pass
+concept,urn:uuid:4462f9e6-b549-5895-a879-d0a178f80f10,concept/adjunction,,,pasangan adjoin,admitted:admitted
+concept,urn:uuid:4b148dec-0286-50a3-9c34-4b4e81ab2ac9,concept/adjunction-counit,,,kounit adjoin,admitted:admitted
+concept,urn:uuid:81ae54f3-18f0-5578-9227-bd146b39a7af,concept/adjunction-unit,,,unit adjoin,admitted:admitted
+concept,urn:uuid:97422dd0-3c7a-525c-867b-4c56427741f7,concept/category-equivalence,,,ekuivalensi kategori,admitted:admitted
+concept,urn:uuid:c11fe58e-9fe0-5f80-9227-92b31e05517a,concept/category-join,,,gabungan kategori,admitted:admitted
+concept,urn:uuid:42e74f75-f945-5408-bf7d-9b7b99c14cff,concept/category-skeleton,,,kerangka kategori,admitted:admitted
+concept,urn:uuid:960d5c73-a7b4-5a53-acf4-85cc2ac86023,concept/cocomplete-category,,,kategori kolengkap,admitted:admitted
+concept,urn:uuid:3c088c45-7dc1-5e84-9259-3e646534abd2,concept/complete-category,,,kategori lengkap,admitted:admitted
+concept,urn:uuid:e62391b3-cdfd-5b44-a7d0-e25a213dcbfe,concept/coproduct,,,koproduk,admitted:admitted
+concept,urn:uuid:571ba114-216f-55a3-8e8a-5d9130fcef21,concept/diagonal-functor,,,fungtor diagonal,admitted:admitted
+concept,urn:uuid:b777041f-d030-5eee-bcfe-0ab97f524821,concept/finite-dimensional-vector-space,,,ruang vektor berdimensi hingga,admitted:admitted
+concept,urn:uuid:bea3eada-15f9-5d5a-896a-b55a06d762e8,concept/finite-ordinal-category,,,kategori ordinal berhingga,admitted:admitted
+concept,urn:uuid:59bc434f-aeae-5690-8d6d-e769204ac44f,concept/finitely-generated-abelian-group,,,grup abelian yang dibangkitkan secara berhingga,admitted:admitted
+concept,urn:uuid:be8fdd79-2e4f-5a45-b766-4b88e50e387a,concept/forgetful-functor,,,fungtor pelupa,admitted:admitted
+concept,urn:uuid:c5959783-bd14-5057-82b5-75ccd56699de,concept/full-subcategory,,,subkategori penuh,admitted:admitted
+concept,urn:uuid:e647f0a8-c84a-5e56-a905-92719c96346c,concept/fully-faithful-functor,,,fungtor penuh dan setia,admitted:admitted
+concept,urn:uuid:557a8176-1d52-5975-a3f3-bb2aa83397c2,concept/functor-category,,,kategori fungtor,admitted:admitted
+concept,urn:uuid:89acb040-b11f-593e-b1c8-67c63da94923,concept/grothendieck-universe,,,semesta Grothendieck,admitted:admitted
+concept,urn:uuid:8eb742a4-69cd-5a90-b5ea-b1e36b34b001,concept/horizontal-composition,,,komposisi horizontal,admitted:admitted
+concept,urn:uuid:767c52c4-5caa-5bd5-8c51-014b4e47eebc,concept/inductive-limit,,,limit induktif,admitted:admitted
+concept,urn:uuid:775ba7e4-3cbe-5f92-ab3b-a75e61207b0f,concept/isomorphism,,,isomorfisme,admitted:admitted
+concept,urn:uuid:14c421be-8a5f-5546-8e00-0f6617cad759,concept/left-adjoint,,,adjoin kiri,admitted:admitted
+concept,urn:uuid:0c4309ac-f73c-549e-b6fd-379ec6b3425c,concept/nonunital-ring,,,gelanggang tanpa syarat unsur satuan,admitted:admitted
+concept,urn:uuid:4f771f32-60c7-5b18-9fdc-3e2c438b04a8,concept/pointed-set,,,himpunan bertitik dasar,admitted:admitted
+concept,urn:uuid:e0b97019-427e-53e4-8382-8472027d7b21,concept/pointed-topological-space,,,ruang topologis bertitik dasar,admitted:admitted
+concept,urn:uuid:cd552f29-06ce-5025-92b9-ae3543b57991,concept/product,,,produk,admitted:admitted
+concept,urn:uuid:ceef170a-3594-5f79-babf-fe10ddf591b7,concept/projective-limit,,,limit proyektif,admitted:admitted
+concept,urn:uuid:44c027d4-8b68-5172-be0b-7d283f772aa7,concept/quasi-inverse-functor,,,fungtor kuasi-invers,admitted:admitted
+concept,urn:uuid:ab03ea64-77a8-587d-8a77-fa7400462ae5,concept/quotient-category,,,kategori hasil bagi,admitted:admitted
+concept,urn:uuid:6bfa5e04-af80-5f91-9653-655a51b9f9b8,concept/right-adjoint,,,adjoin kanan,admitted:admitted
+concept,urn:uuid:e23b2fcb-b9ab-5cdd-89ab-ff8c2b16dbb9,concept/unital-ring,,,gelanggang dengan unsur satuan,admitted:admitted
+concept,urn:uuid:70b0bb37-ecec-50a8-86b6-f623c380c7d2,concept/universal-property,,,sifat universal,admitted:admitted
+concept,urn:uuid:ea86c9f1-afae-566a-a147-15f94e48aba9,concept/yoneda-lemma,,,Lema Yoneda,admitted:admitted
+concept,urn:uuid:79c0adae-e80d-53d8-8ffd-e56c141b0e6e,correction/o013-li-u018-cor-001,,,koreksi sumber terdeklarasi O013-LI-U018-COR-001; ledger O013-ADV-0049; baris 1640: The authority redundantly says to let the field k be a field; the target removes only the duplicated predicate.,admitted:admitted
+concept,urn:uuid:febef1ec-8f2c-5c40-9482-1001ba2519f0,correction/o013-li-u018-cor-002,,,koreksi sumber terdeklarasi O013-LI-U018-COR-002; ledger O013-ADV-0050; baris 1644: The authority uses U without binding the displayed forgetful functor to that name; the target explicitly binds U.,admitted:admitted
+concept,urn:uuid:2cba0b68-2c5f-5e23-b606-1862dfb16479,surface/unit-018/formula/display-bracket/001,,,rumus pajang 001; baris target 1633-1636; SHA-256 b8c1f91b4089e3da58711871e92976788939f3b5eea3d4947e0189c90061b722,admitted:admitted
+concept,urn:uuid:03abc498-f711-5e3d-b05f-0c1861b92271,surface/unit-018/formula/display-bracket/002,,,rumus pajang 002; baris target 1642-1642; SHA-256 c0ee072d0d9ee09409138320e8869a7f9125f8a99a09f19e7cb14c3607115cf4,admitted:admitted
+concept,urn:uuid:1c376d77-7fe8-5099-a89c-0424091013de,surface/unit-018/formula/display-environment/001,,,rumus align* 001; baris target 1606-1614; SHA-256 d5169a943618c9c7b8cc8318239a3e149f2b4e9fc32d0b352ff7a0fb6d691f22,admitted:admitted
+concept,urn:uuid:8fec8232-a1d7-5f52-8547-237a7cd262c7,surface/unit-018/formula/inline/001,,,rumus sebaris 001; baris target 1604; SHA-256 13f13029309d795248459117b3c6dea28455a7c401c994dc69a5f5c39c7a7ba6,admitted:admitted
+concept,urn:uuid:54eada30-d4e5-5aa4-8e2d-ceb32d51fbb9,surface/unit-018/formula/inline/002,,,rumus sebaris 002; baris target 1604; SHA-256 5788e4bd1e78a0756aa2eee5de380011fbcf0693a2953cd7fa55715dcaa5ebc1,admitted:admitted
+concept,urn:uuid:1f8e1ff2-f556-59f5-b269-1df6e70b3156,surface/unit-018/formula/inline/003,,,rumus sebaris 003; baris target 1604; SHA-256 c39b8afe527d5493f16780ad9ad5089712c77f9d1c7e080215b57f543ec21159,admitted:admitted
+concept,urn:uuid:4769daf6-c1bb-55b2-8e2b-a41488c55060,surface/unit-018/formula/inline/004,,,rumus sebaris 004; baris target 1604; SHA-256 919ec76f4e0c6955f1598bb37cb207163f64499ae6210a8f2ca365d4b975f036,admitted:admitted
+concept,urn:uuid:6d44a762-001c-50b7-99f6-8d8d089cae58,surface/unit-018/formula/inline/005,,,rumus sebaris 005; baris target 1605; SHA-256 efe0d10c223645b68a87c27824664da155b70e50452487914a04987aa3806856,admitted:admitted
+concept,urn:uuid:b29b884b-b4e4-57a2-ba9d-b54231177207,surface/unit-018/formula/inline/006,,,rumus sebaris 006; baris target 1605; SHA-256 0c5ed6548a36a09dce0f66e6ad5c4d4f33c42991ba9ca12c701af9af1df911a3,admitted:admitted
+concept,urn:uuid:cc623f3f-cc83-5a74-ba69-d7a1d48f1b7e,surface/unit-018/formula/inline/007,,,rumus sebaris 007; baris target 1605; SHA-256 a4e1b1b482053a76d80e7503e85f4255b76c0415a3a1af7194e87e61e03549ab,admitted:admitted
+concept,urn:uuid:2665caeb-ebc5-5541-8571-74f2572c8d1c,surface/unit-018/formula/inline/008,,,rumus sebaris 008; baris target 1615; SHA-256 a4e1b1b482053a76d80e7503e85f4255b76c0415a3a1af7194e87e61e03549ab,admitted:admitted
+concept,urn:uuid:a7d07fa7-298e-554d-949d-b22216f88059,surface/unit-018/formula/inline/009,,,rumus sebaris 009; baris target 1615; SHA-256 a4e1b1b482053a76d80e7503e85f4255b76c0415a3a1af7194e87e61e03549ab,admitted:admitted
+concept,urn:uuid:2172fac6-a308-57ec-adb4-032a5cd38bca,surface/unit-018/formula/inline/010,,,rumus sebaris 010; baris target 1615; SHA-256 efe0d10c223645b68a87c27824664da155b70e50452487914a04987aa3806856,admitted:admitted
+concept,urn:uuid:b27c8102-bd04-51e2-b261-20d8ce44c090,surface/unit-018/formula/inline/011,,,rumus sebaris 011; baris target 1615; SHA-256 0c5ed6548a36a09dce0f66e6ad5c4d4f33c42991ba9ca12c701af9af1df911a3,admitted:admitted
+concept,urn:uuid:2e1ad4f5-e4a8-5a31-af3b-151ed451a364,surface/unit-018/formula/inline/012,,,rumus sebaris 012; baris target 1615; SHA-256 2d4fa5ce39e24608b93c4ff7d38608c053c624bb02a8918507142af79bee55eb,admitted:admitted
+concept,urn:uuid:a7712eb8-4cbc-553a-8b12-0ababeaeac3b,surface/unit-018/formula/inline/013,,,rumus sebaris 013; baris target 1615; SHA-256 fbcc543255351b2c05e89293117da0849edc0a895ada3b0d36b678635b9c214b,admitted:admitted
+concept,urn:uuid:3a08deee-aebb-5c87-9127-ec208b71977a,surface/unit-018/formula/inline/014,,,rumus sebaris 014; baris target 1616; SHA-256 52889bcff25f03be4e820245a9229181dbf4545b5d032ffef36aa1a1a0712b69,admitted:admitted
+concept,urn:uuid:315e5cee-b1a9-5c18-a6a1-25ba860f4623,surface/unit-018/formula/inline/015,,,rumus sebaris 015; baris target 1616; SHA-256 5f0e010cd7e54d0abe457a6e5808ba42a667f3ea7a33ebba3babc008e53b18d6,admitted:admitted
+concept,urn:uuid:349fbd40-93f1-5bff-afd2-78a4ee4c079a,surface/unit-018/formula/inline/016,,,rumus sebaris 016; baris target 1617; SHA-256 efe0d10c223645b68a87c27824664da155b70e50452487914a04987aa3806856,admitted:admitted
+concept,urn:uuid:734013d9-7786-5c0e-b74f-2134b4559aa0,surface/unit-018/formula/inline/017,,,rumus sebaris 017; baris target 1617; SHA-256 8301012dd9726b3fffbe2edb4fd71887dd2e8183d43e17862093c0fb6543dca0,admitted:admitted
+concept,urn:uuid:09295b83-ccc8-525b-bc92-62a1d00754ad,surface/unit-018/formula/inline/018,,,rumus sebaris 018; baris target 1617; SHA-256 053fb01d489205032e02356be3b7d8d985005412b38b1a1ccdfa7774805ee37a,admitted:admitted
+concept,urn:uuid:07566d7d-2c9e-567b-bb95-45e40982cbf5,surface/unit-018/formula/inline/019,,,rumus sebaris 019; baris target 1617; SHA-256 fbdcb41ac2fae933db574b4861eccf2e56e26a02ec39cf1953bec944ead8eaf6,admitted:admitted
+concept,urn:uuid:53421abc-28b0-5cc7-9278-4baa0287aa53,surface/unit-018/formula/inline/020,,,rumus sebaris 020; baris target 1617; SHA-256 d85eb9a2dfb3c7b951a778be2e2188203400906fa067f55be38f2d4135fbd7ca,admitted:admitted
+concept,urn:uuid:e0f89e12-4bf9-5535-af6a-8301bf4bb1d9,surface/unit-018/formula/inline/021,,,rumus sebaris 021; baris target 1617; SHA-256 99649e4c896d8027db62c7e960d7a6d06d1d631832a980a8a25981f1a24ebc05,admitted:admitted
+concept,urn:uuid:8c89f369-dc3b-52f0-8376-6d7acd17f67c,surface/unit-018/formula/inline/022,,,rumus sebaris 022; baris target 1619; SHA-256 efe0d10c223645b68a87c27824664da155b70e50452487914a04987aa3806856,admitted:admitted
+concept,urn:uuid:cd436745-b4f4-5d02-b456-4b7b36584f17,surface/unit-018/formula/inline/023,,,rumus sebaris 023; baris target 1619; SHA-256 252f10c83610ebca1a059c0bae8255eba2f95be4d1d7bcfa89d7248a82d9f111,admitted:admitted
+concept,urn:uuid:9f8173d2-ac7b-57ae-b591-3650dbf1859b,surface/unit-018/formula/inline/024,,,rumus sebaris 024; baris target 1619; SHA-256 cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29,admitted:admitted
+concept,urn:uuid:d61108fc-7660-5368-bb36-3a0f3f65e112,surface/unit-018/formula/inline/025,,,rumus sebaris 025; baris target 1619; SHA-256 24c85f8c16d8abdc0a30d55657d2775bc73acbdd0b2c16d0d74276aa1867396b,admitted:admitted
+concept,urn:uuid:fa16d7f1-ee68-5409-a953-5c9c69ea73fa,surface/unit-018/formula/inline/026,,,rumus sebaris 026; baris target 1620; SHA-256 4ae81572f06e1b88fd5ced7a1a000945432e83e1551e6f721ee9c00b8cc33260,admitted:admitted
+concept,urn:uuid:b9e9fbb3-025a-5f26-8ff3-c7e2e6e9c253,surface/unit-018/formula/inline/027,,,rumus sebaris 027; baris target 1621; SHA-256 00eaa5b0e40b101f77a18f935b1d52235c748ad8b7f82d3adbe0456f2916e47f,admitted:admitted
+concept,urn:uuid:ff745eb4-c3e6-527b-9d3d-c7c5106fa15f,surface/unit-018/formula/inline/028,,,rumus sebaris 028; baris target 1621; SHA-256 d6f94e9c292c1f53a9af2f263db64b0a978533d2edb73bc656164ca7bc3a8fbc,admitted:admitted
+concept,urn:uuid:a1f711ce-22fb-537c-aba1-b5aba2cb7aac,surface/unit-018/formula/inline/029,,,rumus sebaris 029; baris target 1621; SHA-256 24a535db0327faf9a3e81e8c7ddc74829b9eb13f5cfedb958973488afdd22045,admitted:admitted
+concept,urn:uuid:2dd71cea-2597-5e0e-9e60-dc7a8cb8e309,surface/unit-018/formula/inline/030,,,rumus sebaris 030; baris target 1621; SHA-256 c22fa2ad1a35e8838c6e5218e345e2cc847733f0d0a5dabe6953da13bd9b0668,admitted:admitted
+concept,urn:uuid:2fb68c6d-6e41-5c3f-85f0-1527248d31ad,surface/unit-018/formula/inline/031,,,rumus sebaris 031; baris target 1623; SHA-256 99649e4c896d8027db62c7e960d7a6d06d1d631832a980a8a25981f1a24ebc05,admitted:admitted
+concept,urn:uuid:0f49a820-7ac6-5c9d-a610-f7dfbdfd87b0,surface/unit-018/formula/inline/032,,,rumus sebaris 032; baris target 1624; SHA-256 e47ef1b83bbfdc8e56df8bbde47f9d1e27198199374577dbad3a40f06c70eba2,admitted:admitted
+concept,urn:uuid:8f08c269-5dd0-5722-bf98-8becd9e3b124,surface/unit-018/formula/inline/033,,,rumus sebaris 033; baris target 1624; SHA-256 2b6e89b17f07713871c9203cabf8fae5016151f0061fb745e7fd2fd60ed932cc,admitted:admitted
+concept,urn:uuid:4c545124-8881-55e0-9bad-0377f52ca653,surface/unit-018/formula/inline/034,,,rumus sebaris 034; baris target 1624; SHA-256 e74091ea499d112f436ab7f5c9160a7eaf145d534568bb1eb4d2ed6552221f9e,admitted:admitted
+concept,urn:uuid:e3267836-d9c2-518c-b49e-279abb55630c,surface/unit-018/formula/inline/035,,,rumus sebaris 035; baris target 1624; SHA-256 f67ab10ad4e4c53121b6a5fe4da9c10ddee905b978d3788d2723d7bfacbe28a9,admitted:admitted
+concept,urn:uuid:ec49d59f-6341-50c7-aa11-5d5d59d17153,surface/unit-018/formula/inline/036,,,rumus sebaris 036; baris target 1624; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:e8d789a4-241c-5e8e-84b4-d8a2b4c9e65f,surface/unit-018/formula/inline/037,,,rumus sebaris 037; baris target 1626; SHA-256 4133c9ef5d314af64b96b1015e5e14125b982c59fb49377a525701b4a40ef063,admitted:admitted
+concept,urn:uuid:ce71a75a-e881-5796-b400-3c5ef70ae1ea,surface/unit-018/formula/inline/038,,,rumus sebaris 038; baris target 1626; SHA-256 0ffcebede8540587d0b431221cde958c3092bda72da32181a5d906f454edc641,admitted:admitted
+concept,urn:uuid:600a2f0a-bb22-5cd2-81f4-b1902fb78887,surface/unit-018/formula/inline/039,,,rumus sebaris 039; baris target 1626; SHA-256 5f8e692bf97507268af1024988310c072cee7bdad3f47c692c9aa41dcc0f13e5,admitted:admitted
+concept,urn:uuid:edb3936d-32f6-5168-89fe-43e6d20f845c,surface/unit-018/formula/inline/040,,,rumus sebaris 040; baris target 1627; SHA-256 0e4a41cb30a1026d227547e7c6fa414283aab2a424e381e164e9d02ecbd4118a,admitted:admitted
+concept,urn:uuid:70c6dd10-69b9-579d-99c3-0336b290bc3f,surface/unit-018/formula/inline/041,,,rumus sebaris 041; baris target 1629; SHA-256 5089658a97497ceddf410f6ddf678c52f0b029589f533a73877aa5a5f70c6a5e,admitted:admitted
+concept,urn:uuid:f8211f85-5628-56bb-983f-aaa6ba154588,surface/unit-018/formula/inline/042,,,rumus sebaris 042; baris target 1629; SHA-256 f67ab10ad4e4c53121b6a5fe4da9c10ddee905b978d3788d2723d7bfacbe28a9,admitted:admitted
+concept,urn:uuid:b154dc8d-b19c-58b6-8805-1903a7140861,surface/unit-018/formula/inline/043,,,rumus sebaris 043; baris target 1630; SHA-256 dfb7c7e4dde88241aceba5e161c7f6ceb98ce92e6afe6577ba86a8b29e7d15f9,admitted:admitted
+concept,urn:uuid:8a5b6e72-9d9a-5c33-9338-7ef9cdd16d49,surface/unit-018/formula/inline/044,,,rumus sebaris 044; baris target 1630; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:e0866350-dee6-57d9-b225-2ae437eda9d8,surface/unit-018/formula/inline/045,,,rumus sebaris 045; baris target 1632; SHA-256 d7e3420d2ad8f2d06bdc52f499166fff09b05b26e85a744eb065c547e6bd97c3,admitted:admitted
+concept,urn:uuid:951cbebf-5da5-51bb-b82d-2393f45d7d51,surface/unit-018/formula/inline/046,,,rumus sebaris 046; baris target 1632; SHA-256 2e97d70e83fcc1d08748e7d6c2257c0a9c25a68d36d2b520990470e3a5b2fcce,admitted:admitted
+concept,urn:uuid:30bc9d4f-df61-5509-8f23-9201c597d963,surface/unit-018/formula/inline/047,,,rumus sebaris 047; baris target 1632; SHA-256 102245e7be40d89969d4752cd80fa0d2ed4e59ff76775ab5d81504fe388da78a,admitted:admitted
+concept,urn:uuid:7e861e14-7ea7-58a0-8650-c1c1ec0bb7bb,surface/unit-018/formula/inline/048,,,rumus sebaris 048; baris target 1632; SHA-256 433961cc2d48fc0294b1dec3f62574308835850cfdc166f519be1b1d3860586f,admitted:admitted
+concept,urn:uuid:42544ebd-453c-512a-8abd-dd8dbddeb26e,surface/unit-018/formula/inline/049,,,rumus sebaris 049; baris target 1632; SHA-256 6ddc73b42ef987dd4c784da34413087d8671e478076ed862759916808966d57c,admitted:admitted
+concept,urn:uuid:9cc99db4-0edb-56ac-b40d-fe88d67538ea,surface/unit-018/formula/inline/050,,,rumus sebaris 050; baris target 1632; SHA-256 959f488598ceedf44cf203da9022bbd83509805891a8286cb0fbfcbe8a41f932,admitted:admitted
+concept,urn:uuid:e3cbf2d7-c242-5e09-b4c4-b9725601cf82,surface/unit-018/formula/inline/051,,,rumus sebaris 051; baris target 1637; SHA-256 4358b6bd15899f00273fc86ebee6132b30e6f4e67ae0b37f2eb9689e5c73c059,admitted:admitted
+concept,urn:uuid:567fa165-83a8-583a-8776-7f08507f0983,surface/unit-018/formula/inline/052,,,rumus sebaris 052; baris target 1637; SHA-256 d8ee6aa0854ff9939a8892496c788d14e8ff0b5aca3f763f45eb617b9d92add2,admitted:admitted
+concept,urn:uuid:9dc5fb39-85a5-5e1e-b03c-157c5c199476,surface/unit-018/formula/inline/053,,,rumus sebaris 053; baris target 1637; SHA-256 eb13bd67a3da3d17e2ca5c6d2182bd7a953d331b47f35c73130c8ee3ca1e371e,admitted:admitted
+concept,urn:uuid:8d893ca0-38d0-5e6a-9060-32761bb21a30,surface/unit-018/formula/inline/054,,,rumus sebaris 054; baris target 1637; SHA-256 4b68ab3847feda7d6c62c1fbcbeebfa35eab7351ed5e78f4ddadea5df64b8015,admitted:admitted
+concept,urn:uuid:bfb52771-3a4d-53cb-9f95-a3c33215cc8d,surface/unit-018/formula/inline/055,,,rumus sebaris 055; baris target 1637; SHA-256 102245e7be40d89969d4752cd80fa0d2ed4e59ff76775ab5d81504fe388da78a,admitted:admitted
+concept,urn:uuid:fde8e2f9-e5b8-530b-a110-20fc829de730,surface/unit-018/formula/inline/056,,,rumus sebaris 056; baris target 1637; SHA-256 959f488598ceedf44cf203da9022bbd83509805891a8286cb0fbfcbe8a41f932,admitted:admitted
+concept,urn:uuid:89631901-016a-5b83-b0db-81c40b169c8f,surface/unit-018/formula/inline/057,,,rumus sebaris 057; baris target 1637; SHA-256 59488ef3369336c2b2d6262e31f597e78cbdb796973c4c892a2de33a13d0cabc,admitted:admitted
+concept,urn:uuid:b21014f8-8f25-55ae-8ae2-b0889e7be30b,surface/unit-018/formula/inline/058,,,rumus sebaris 058; baris target 1637; SHA-256 f67ab10ad4e4c53121b6a5fe4da9c10ddee905b978d3788d2723d7bfacbe28a9,admitted:admitted
+concept,urn:uuid:5bfbed41-aeb1-5ac5-bf5b-7e5e8e826990,surface/unit-018/formula/inline/059,,,rumus sebaris 059; baris target 1639; SHA-256 efe0d10c223645b68a87c27824664da155b70e50452487914a04987aa3806856,admitted:admitted
+concept,urn:uuid:99b1dcd4-81d8-5da5-975b-42a8618bbbd0,surface/unit-018/formula/inline/060,,,rumus sebaris 060; baris target 1639; SHA-256 a83dd0ccbffe39d071cc317ddf6e97f5c6b1c87af91919271f9fa140b0508c6c,admitted:admitted
+concept,urn:uuid:7d90e6e3-c631-515f-892c-9aa24f3c3277,surface/unit-018/formula/inline/061,,,rumus sebaris 061; baris target 1639; SHA-256 e3854a70d552b31fd72e1b050bf4afa88930527b3870cf81934fbf31ada57665,admitted:admitted
+concept,urn:uuid:dcc985da-f596-5980-903a-bf8c34fb5808,surface/unit-018/formula/inline/062,,,rumus sebaris 062; baris target 1639; SHA-256 efe0d10c223645b68a87c27824664da155b70e50452487914a04987aa3806856,admitted:admitted
+concept,urn:uuid:6deab863-757a-55b4-a4cf-f6976f235137,surface/unit-018/formula/inline/063,,,rumus sebaris 063; baris target 1639; SHA-256 27aee75937940a51aee9e6c0a9319ee62a48079f53c57c0d955d4331b9074ebf,admitted:admitted
+concept,urn:uuid:58aa5b05-a1c0-5ef2-b9b0-f0b6cba2cda9,surface/unit-018/formula/inline/064,,,rumus sebaris 064; baris target 1639; SHA-256 6c5fe5f64f631d7a2a15cfd28bfef34dccb9f7caf521de3a408c8610bb447fa9,admitted:admitted
+concept,urn:uuid:db13af15-073b-5f1b-a001-2c88dd5a7d38,surface/unit-018/formula/inline/065,,,rumus sebaris 065; baris target 1640; SHA-256 aeca02d426ba07b2fda315031464ffb02a6e889b08f59d784f8f8a487a92622b,admitted:admitted
+concept,urn:uuid:3a35ff6d-7d60-51ee-a9d7-8ed43c1fcd55,surface/unit-018/formula/inline/066,,,rumus sebaris 066; baris target 1640; SHA-256 aeca02d426ba07b2fda315031464ffb02a6e889b08f59d784f8f8a487a92622b,admitted:admitted
+concept,urn:uuid:92b106bd-308e-5eae-b8bf-0aa652497f88,surface/unit-018/formula/inline/067,,,rumus sebaris 067; baris target 1640; SHA-256 44bcdb3dcbbe9c2756a96df0fd280ceedee08438a0ae4a4833d20e978818455a,admitted:admitted
+concept,urn:uuid:66633422-3dec-52a5-8df7-d9d34c47db1b,surface/unit-018/formula/inline/068,,,rumus sebaris 068; baris target 1640; SHA-256 27aee75937940a51aee9e6c0a9319ee62a48079f53c57c0d955d4331b9074ebf,admitted:admitted
+concept,urn:uuid:1882f23a-cb83-5b50-93ba-bf93bc757cbb,surface/unit-018/formula/inline/069,,,rumus sebaris 069; baris target 1640; SHA-256 e63e2963442847b369e59a6e0569b47fd6883fe1ecff1a0f64cf2fdf6d44539b,admitted:admitted
+concept,urn:uuid:8e2ea2fb-07ee-5bad-bc3e-efeae3ef43e0,surface/unit-018/formula/inline/070,,,rumus sebaris 070; baris target 1640; SHA-256 27aee75937940a51aee9e6c0a9319ee62a48079f53c57c0d955d4331b9074ebf,admitted:admitted
+concept,urn:uuid:c8173cf8-b9a2-5d69-88d8-14a67bdc8702,surface/unit-018/formula/inline/071,,,rumus sebaris 071; baris target 1641; SHA-256 efe0d10c223645b68a87c27824664da155b70e50452487914a04987aa3806856,admitted:admitted
+concept,urn:uuid:89122ab9-4cb7-59e3-b4b9-b3fe3ef053c2,surface/unit-018/formula/inline/072,,,rumus sebaris 072; baris target 1641; SHA-256 0c5ed6548a36a09dce0f66e6ad5c4d4f33c42991ba9ca12c701af9af1df911a3,admitted:admitted
+concept,urn:uuid:9dac93c0-cf34-5082-8c8d-e980716406a6,surface/unit-018/formula/inline/073,,,rumus sebaris 073; baris target 1641; SHA-256 8b8bdeff5bed8639f029bf47a0b2809e9c39c55b20137e829e7f3daf6b495141,admitted:admitted
+concept,urn:uuid:218cb182-2bb5-523c-a71a-7e32e600aef3,surface/unit-018/formula/inline/074,,,rumus sebaris 074; baris target 1641; SHA-256 88b97fdaf35652c87f03923d55657ff84f0b00e9e51992c12144bb220ed108aa,admitted:admitted
+concept,urn:uuid:1a335c80-862f-54dd-a971-d9583d004199,surface/unit-018/formula/inline/075,,,rumus sebaris 075; baris target 1641; SHA-256 6da43b944e494e885e69af021f93c6d9331c78aa228084711429160a5bbd15b5,admitted:admitted
+concept,urn:uuid:537316c9-be8e-5010-af04-d73eb1bb2e48,surface/unit-018/formula/inline/076,,,rumus sebaris 076; baris target 1643; SHA-256 98b16f48f74b453fde0c54ced7406969a9f56602357d39146e00b595cfcc1d6e,admitted:admitted
+concept,urn:uuid:1360e359-cac4-54c1-af59-84bba73a1cf7,surface/unit-018/formula/inline/077,,,rumus sebaris 077; baris target 1643; SHA-256 a842627fa358d80dc751edc4f72d274f1a396c0639e539f9517c768e90caa5b8,admitted:admitted
+concept,urn:uuid:b4faa81a-90f5-5b0a-97ae-4c354966f83d,surface/unit-018/formula/inline/078,,,rumus sebaris 078; baris target 1644; SHA-256 b7ca83d43adc7c3979a7e51f866d1df9a4e781490f073ad2103a3d27b6d8ea87,admitted:admitted
+concept,urn:uuid:ddf5dd27-f8fc-5159-b5b2-36b785add172,surface/unit-018/formula/inline/079,,,rumus sebaris 079; baris target 1644; SHA-256 a25513c7e0f6eaa80a3337ee18081b9e2ed09e00af8531c8f7bb2542764027e7,admitted:admitted
+concept,urn:uuid:d29c4406-0fa4-5c28-947b-c8590f5e41e8,surface/unit-018/formula/inline/080,,,rumus sebaris 080; baris target 1644; SHA-256 a25513c7e0f6eaa80a3337ee18081b9e2ed09e00af8531c8f7bb2542764027e7,admitted:admitted
+concept,urn:uuid:351ee41d-dbd1-5fec-be1a-5cdb07767ed5,surface/unit-018/reference/ordinary/001,,,rujukan biasa 001: eg:forgetful-adjunction; baris target 1625,admitted:admitted
+concept,urn:uuid:daa15864-f3c5-5484-aa62-57c947880972,surface/unit-018/reference/ordinary/002,,,rujukan biasa 002: prop:Yoneda-lemma; baris target 1637,admitted:admitted
+concept,urn:uuid:8c51dd33-4e12-5ef8-b02e-b298fa627cc3,surface/unit-018/reference/ordinary/003,,,rujukan biasa 003: def:diagonal-functor; baris target 1639,admitted:admitted
+concept,urn:uuid:336f3e5e-f485-5b71-bfdc-dd828726be11,unit/bab-2-latihan/exercise/04/subpart/i,,,Latihan 4(i),admitted:admitted
+concept,urn:uuid:685e2f29-b2b5-588c-b775-656a9c72ce3a,unit/bab-2-latihan/exercise/04/subpart/ii,,,Latihan 4(ii),admitted:admitted
+concept,urn:uuid:ca63f731-8c20-5fd9-b0d6-893454b3e95d,unit/bab-2-latihan/exercise/04/subpart/iii,,,Latihan 4(iii),admitted:admitted
+concept,urn:uuid:9eaeac83-4a14-5d4a-8cee-3fd0c8663ca7,unit/bab-2-latihan/exercise/08/hint/01,,,Petunjuk Latihan 8,admitted:admitted
+concept,urn:uuid:c6fb76a8-7411-544a-8695-c4093541e0cc,unit/bab-2-latihan/exercise/08/subpart/i,,,Latihan 8(i),admitted:admitted
+concept,urn:uuid:f0e5dda7-8580-55c7-9433-25c8dcef9e05,unit/bab-2-latihan/exercise/08/subpart/ii,,,Latihan 8(ii),admitted:admitted
+course,urn:uuid:a5f3ad58-ce3c-5f5f-b581-1f842ae79192,course/o013,urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78,,Graduate Algebra,admitted:admitted
+diagram,urn:uuid:6750c78a-d23b-5c2f-b66d-d98552a98e13,diagram/unit-018/tikzcd-01,urn:uuid:751cd409-d0fb-55e4-a887-bb80a09875f8,1,tikzcd-01,admitted:admitted
+edition,urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49,edition/wenweili/aljabr-1/c4f7a01f68f5f407906b4b970640cddbbad85f6b,urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397,,c4f7a01f68f5f407906b4b970640cddbbad85f6b,admitted:admitted
+prerequisite,urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7,prerequisite/basic-mathematical-literacy,,,kematangan matematika dasar,admitted:admitted
+prerequisite,urn:uuid:dd69ccfd-7399-53a2-83fe-84127b1baf1d,prerequisite/categories-and-morphisms,,,kategori dan morfisme,admitted:admitted
+prerequisite,urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f,prerequisite/cauchy-sequences-and-completeness,,,barisan Cauchy dan kelengkapan,admitted:admitted
+prerequisite,urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee,prerequisite/elementary-number-theory,,,teori bilangan elementer,admitted:admitted
+prerequisite,urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4,prerequisite/elementary-set-theory,,,teori himpunan elementer,admitted:admitted
+prerequisite,urn:uuid:e3c2ed29-b6a0-5f8d-9613-6f2b41d962c8,prerequisite/functor-categories,,,kategori fungtor,admitted:admitted
+prerequisite,urn:uuid:3e864ace-90f6-56b3-8ce5-2e0690dbc9f8,prerequisite/functors-and-natural-transformations,,,fungtor dan transformasi natural,admitted:admitted
+prerequisite,urn:uuid:c0b1a30a-634a-5e76-98d3-49bde5a5821c,prerequisite/limits-and-colimits,,,limit dan kolimit,admitted:admitted
+prerequisite,urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec,prerequisite/linear-transformations,,,transformasi linear,admitted:admitted
+prerequisite,urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7,prerequisite/mathematical-logic,,,bahasa logika dan penalaran,admitted:admitted
+prerequisite,urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288,prerequisite/matrices,,,matriks,admitted:admitted
+prerequisite,urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8,prerequisite/permutations-and-symmetric-groups,,,permutasi dan grup simetris,admitted:admitted
+prerequisite,urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96,prerequisite/point-set-topology,,,topologi himpunan titik elementer,admitted:admitted
+prerequisite,urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14,prerequisite/polynomials,,,polinom,admitted:admitted
+prerequisite,urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f,prerequisite/real-analysis-basics,,,dasar-dasar analisis real,admitted:admitted
+prerequisite,urn:uuid:9fac54c6-e671-58b9-b840-4799739adb1e,prerequisite/representable-functors-and-yoneda,,,fungtor representabel dan Lema Yoneda,admitted:admitted
+prerequisite,urn:uuid:8cab24d2-0f78-5bf9-96f8-5b2f2b07168d,prerequisite/universal-properties-and-comma-categories,,,sifat universal dan kategori koma,admitted:admitted
+prerequisite,urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396,prerequisite/vector-spaces,,,ruang vektor,admitted:admitted
+program,urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78,program/open-mathematics-curriculum/2026,,,Open Mathematics Curriculum,admitted:admitted
+qa_event,urn:uuid:2e322b23-6215-5ffd-bd57-40858a81d218,qa/unit-018/admission-gate,urn:uuid:e78e538a-908b-52f4-86d1-facfaee64259,,admission-gate,pass
+qa_event,urn:uuid:4e2f3700-1499-523e-96d4-5acfae148f3b,qa/unit-018/source-and-math-review,urn:uuid:e78e538a-908b-52f4-86d1-facfaee64259,,source-and-math-review,pass
+qa_event,urn:uuid:9732d2cb-ec91-5e5b-a989-bd8f02baddb0,qa/unit-018/terminology-control,urn:uuid:e78e538a-908b-52f4-86d1-facfaee64259,,terminology-control,pass
+resource,urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397,resource/wenweili/aljabr-1,,,"Metode Aljabar, Jilid 1: Arsitektur Dasar",admitted:admitted
+rights,urn:uuid:10faf5cd-990f-5850-87b4-26922b062485,rights/ajbook-fragment-cc-by-sa-3.0,,,AJbook.cls DeclareSourcemap fragment,applies
+rights,urn:uuid:e18339ae-66cd-5304-b544-b220dd41380d,rights/lanzhou-cc-by-sa-3.0,,,Lanzhou.png,retained_not_used_by_unit
+rights,urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430,rights/noto-fonts-ofl-1.1,,,Noto Sans CJK SC and Noto Serif CJK SC fonts,applies
+rights,urn:uuid:0baf6c47-021d-5310-9475-81519e710250,rights/principal-cc-by-4.0,,,"Principal text, source, PDF, and Indonesian translation",applies
+section,urn:uuid:07762809-12cc-58e8-bf31-bfc31cde3c5e,unit/bab-2-latihan/exercise/01,urn:uuid:e78e538a-908b-52f4-86d1-facfaee64259,1,Latihan 1: Kriteria Isomorfisme melalui Komposisi,admitted:admitted
+section,urn:uuid:80001041-3ab0-5892-b6ed-6c6fe34af886,unit/bab-2-latihan/exercise/02,urn:uuid:e78e538a-908b-52f4-86d1-facfaee64259,2,Latihan 2: Gabungan Kategori,admitted:admitted
+section,urn:uuid:98782487-f3e4-5276-98b5-df6e5f557b4a,unit/bab-2-latihan/exercise/03,urn:uuid:e78e538a-908b-52f4-86d1-facfaee64259,3,Latihan 3: Kategori Himpunan Terurut Total Berhingga,admitted:admitted
+section,urn:uuid:90ccf975-2e9e-539b-a555-e24091154bad,unit/bab-2-latihan/exercise/04,urn:uuid:e78e538a-908b-52f4-86d1-facfaee64259,4,Latihan 4: Sifat Universal Kategori Hasil Bagi,admitted:admitted
+section,urn:uuid:b2f5601e-1839-5631-a268-b1e75c447cab,unit/bab-2-latihan/exercise/05,urn:uuid:e78e538a-908b-52f4-86d1-facfaee64259,5,Latihan 5: Komposisi Ekuivalensi Kategori,admitted:admitted
+section,urn:uuid:4252343f-2935-5468-81bd-302a5dce2c57,unit/bab-2-latihan/exercise/06,urn:uuid:e78e538a-908b-52f4-86d1-facfaee64259,6,Latihan 6: Kounit Pasangan Adjoin,admitted:admitted
+section,urn:uuid:f5207622-3174-57e0-96ae-5f6fbfff543e,unit/bab-2-latihan/exercise/07,urn:uuid:e78e538a-908b-52f4-86d1-facfaee64259,7,Latihan 7: Gelanggang dengan dan tanpa Syarat Unsur Satuan,admitted:admitted
+section,urn:uuid:751cd409-d0fb-55e4-a887-bb80a09875f8,unit/bab-2-latihan/exercise/08,urn:uuid:e78e538a-908b-52f4-86d1-facfaee64259,8,Latihan 8: Kriteria Adjoin untuk Fungtor Penuh dan Setia,admitted:admitted
+section,urn:uuid:e3ec8073-076d-59a0-b72b-822fff7e4638,unit/bab-2-latihan/exercise/09,urn:uuid:e78e538a-908b-52f4-86d1-facfaee64259,9,Latihan 9: Fungtor Diagonal dan Limit,admitted:admitted
+section,urn:uuid:f74363c6-9497-5ff0-82e3-a6b6ac0854b7,unit/bab-2-latihan/exercise/10,urn:uuid:e78e538a-908b-52f4-86d1-facfaee64259,10,Latihan 10: Limit Induktif Objek yang Dibangkitkan Berhingga,admitted:admitted
+section,urn:uuid:c88bcc06-9046-534f-8ec9-3eaf2c6d1296,unit/bab-2-latihan/exercise/11,urn:uuid:e78e538a-908b-52f4-86d1-facfaee64259,11,Latihan 11: Subkategori Penuh dan Kategori Fungtor,admitted:admitted
+section,urn:uuid:963d889d-8810-5f60-b44a-4d4b9027c194,unit/bab-2-latihan/exercise/12,urn:uuid:e78e538a-908b-52f4-86d1-facfaee64259,12,Latihan 12: Kelengkapan Kategori Bertitik Dasar,admitted:admitted
+section,urn:uuid:839833a3-3248-52f0-89a1-4c7c185e379d,unit/bab-2-latihan/exercise/13,urn:uuid:e78e538a-908b-52f4-86d1-facfaee64259,13,Latihan 13: Fungtor Pelupa Himpunan Bertitik Dasar,admitted:admitted
+unit,urn:uuid:e78e538a-908b-52f4-86d1-facfaee64259,unit/bab-2-latihan,urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49,18,Bab 2: Latihan,admitted:admitted

@@ -260,3 +260,34 @@ No earlier admitted reader contains a conflicting Unit 017 form, so no prior
 artifact requires correction. Exact production provenance remains `OpenAI
 Codex gpt-5.6-sol, Ultra`, separately from Wen-Wei Li's authorship and every
 source or human-contributor credit.
+
+## Unit 018 boundary recheck - 2026-08-24
+
+The complete Chapter 2 exercise block was checked against the same bounded
+terminology evidence rather than triggering a new search. The official arXiv
+queries remain a zero-result boundary for suitable Indonesian same-field TeX;
+the retained four-page UNDIP and seven-page UGM PDFs remain the honest
+fallback. They support the general field register but are not claimed to
+contain every exercise-specific construction below.
+
+Eight controlled rows were added for concepts that were already translated
+transparently in the exercise candidate but did not yet have dedicated backend
+entries: `gabungan kategori` for the explicitly defined star construction,
+`kategori hasil bagi`, `subkategori penuh`, `himpunan bertitik dasar`, `ruang
+topologis bertitik dasar`, `gelanggang dengan unsur satuan`, `gelanggang tanpa
+syarat unsur satuan`, and `grup abelian yang dibangkitkan secara berhingga`.
+The star construction retains its displayed object/Hom definition, so
+`gabungan` cannot be mistaken for an ordinary union or categorical coproduct.
+The two ring rows preserve the source's distinction between `Ring` and `Rng`.
+
+All other Unit 018 forms already have controlled rows, including `semesta
+Grothendieck`, `peta pelestari urutan`, `ordinal berhingga`, `kerangka`,
+`fungtor kuasi-invers`, `kounit`, `fungtor penuh dan setia`, `komposisi
+horizontal`, `limit induktif`, and `limit proyektif`. The integrated target was
+checked against these forms. No earlier admitted reader requires a correction.
+
+The revised glossary is 33,189 bytes, SHA-256
+`e0e774f6454112fa9dc0cbfd9abae824faa0e5b39bef66151d472873ef977e21`.
+Exact production provenance remains `OpenAI Codex gpt-5.6-sol, Ultra`,
+separately from Wen-Wei Li's authorship and every source or human-contributor
+credit.

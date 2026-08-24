@@ -1,0 +1,3 @@
+entity_type,id,stable_key,section_id,ordinal,source_value,target_value,format,status
+build_surface,urn:uuid:84bb64df-a925-52f2-92c9-6474aa0a6baf,build-surface/unit-018-pdf,,,pwsh -NoProfile -File scripts/build_unit_018.ps1 -OutputDirectory build/unit-018-replay,artifacts/unit-018-bab-2-latihan.pdf,pdf,pass
+diagram,urn:uuid:6750c78a-d23b-5c2f-b66d-d98552a98e13,diagram/unit-018/tikzcd-01,urn:uuid:751cd409-d0fb-55e4-a887-bb80a09875f8,1,1633-1636,1633-1636,tikzcd,audited_preserved

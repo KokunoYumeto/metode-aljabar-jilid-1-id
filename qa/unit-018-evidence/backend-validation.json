@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "unit": "unit-018-bab-2-latihan",
+  "source": "chapter2.tex:1603-1645",
+  "data": "backend/data/unit-018-bab-2-latihan.json",
+  "schema": "backend/schema/open-math-corpus-unit.schema.v1.json",
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "rights": {
+    "principal_text_and_translation": "CC BY 4.0",
+    "AJbook_class_fragment": "CC BY-SA 3.0",
+    "bundled_noto_fonts": "SIL OFL 1.1",
+    "Lanzhou_png_in_wider_closure": "CC BY-SA 3.0; not used by this reader"
+  },
+  "checks": {
+    "deterministic_second_generation": "PASS",
+    "json_schema": "PASS",
+    "uuidv5": "PASS",
+    "live_bindings": "PASS",
+    "exercise_subpart_hint_topology": "PASS",
+    "reference_formula_diagram_topology": "PASS",
+    "correction_topology": "PASS",
+    "component_rights": "PASS",
+    "terminology_binding": "PASS",
+    "six_csv_projections": "PASS",
+    "validation_mutated_outputs": false
+  },
+  "counts": {
+    "entities": 172,
+    "concepts": 127,
+    "exercise_sections": 13,
+    "nested_items": 5,
+    "hints": 1,
+    "formula_entities": 83,
+    "ordinary_references": 3,
+    "citations": 0,
+    "diagrams": 1,
+    "index_entries": 0,
+    "corrections": 2,
+    "answers": 0,
+    "solutions": 0,
+    "csv_projections": 6
+  },
+  "identities": {
+    "backend/data/unit-018-bab-2-latihan.json": {
+      "bytes": 136912,
+      "sha256": "c761b3b1fbdceb0930d9e6d19fc23885c1b21a019db4d48cbf35bb57cedea794"
+    },
+    "backend/csv/unit-018-bindings.csv": {
+      "bytes": 14549,
+      "sha256": "e463509cfeed286af367155a31e30ab34589bf11e3e0a9de831af2662c5e91af"
+    },
+    "backend/csv/unit-018-entities.csv": {
+      "bytes": 31546,
+      "sha256": "e95bba10c1e639a96c4c25ea75a939ab1fceb5d8f4f0bca8d5917e16f256c251"
+    },
+    "backend/csv/unit-018-qa.csv": {
+      "bytes": 2001,
+      "sha256": "19e62ccfe5dac6d03c65f59b9050a76a15d4bf0e9ab5ae2e2a34a168b0a67893"
+    },
+    "backend/csv/unit-018-relations.csv": {
+      "bytes": 103647,
+      "sha256": "411ef794b36ad87ed5a42fa41420dae0766e148e472c7a2ef9f1979f8a514993"
+    },
+    "backend/csv/unit-018-rights.csv": {
+      "bytes": 1287,
+      "sha256": "4836630530f87a11a64fe233c59970e2ff7942695a8dbf404f7a0583a275197e"
+    },
+    "backend/csv/unit-018-surfaces.csv": {
+      "bytes": 482,
+      "sha256": "a25fcc3b922f7240fce820f0648563197a484d7706829aacd89d0237f99b05ce"
+    }
+  },
+  "bound_inputs": {
+    "00_control/TERMINOLOGY.id-ID.csv": {
+      "bytes": 35880,
+      "sha256": "8d1ee2c145a76b000f57264fa5e80abb3a9781ffd21b57f0b98d91b52c2c0bc9"
+    },
+    "qa/unit-018-evidence/structure-and-pdf-qa.json": {
+      "bytes": 3988,
+      "sha256": "9831012cae24bfa33f59add2de7b884b4e8c835c0162818cb1cea8978e7b29fe"
+    }
+  },
+  "tools": {
+    "scripts/generate_unit_018_backend.py": {
+      "bytes": 43257,
+      "sha256": "6d801b4ea2d2f1f0fa8c487dce8680b248148f9d61c450b2fc481d8a7a280f70"
+    },
+    "scripts/validate_unit_018_backend.py": {
+      "bytes": 12862,
+      "sha256": "5ce92c9886e23c40954e6fc3c6bf1a145d2926b8023a4e8ef7ac9ba389c66885"
+    }
+  }
+}

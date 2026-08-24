@@ -1,0 +1,110 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8
+
+% Unit pembaca Bahasa Indonesia untuk Methods of Algebra, Volume 1.
+% Teks sumber: Copyright 2018 Wen-Wei Li, CC BY 4.0.
+% Terjemahan ini dilisensikan menurut CC BY 4.0.
+% Provenans produksi: OpenAI Codex gpt-5.6-sol, Ultra.
+
+\documentclass[
+	colors = true,
+	coverpage = coverpage-id-unit-018.tex,
+	fontsetup = font-setup-id.tex,
+	titlesetup = titles-setup-id.tex,
+	CJKthechapter = false
+]{AJbook}
+
+\input{locale-ui-id.tex}
+
+% Keep retained source-language bibliography metadata portable.
+\setCJKmainfont[
+	Path=../fonts/,
+	BoldFont=NotoSansCJKsc-Medium.otf,
+	ItalicFont=NotoSansCJKsc-Regular.otf
+]{NotoSansCJKsc-Regular.otf}
+
+\newcommand{\BuildDateID}{24 Agustus 2026}
+\newcommand{\BuildDateShortID}{2026-08-24}
+\AtBeginDocument{\renewcommand{\chaptermark}[1]{\markboth{Bab \thechapter\quad #1}{}}}
+\AtBeginDocument{\let\cleardoublepage\clearpage}
+
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\SetSymbolFont{stmry}{bold}{U}{stmry}{m}{n}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{tikz-cd}
+\usetikzlibrary{positioning, patterns, calc, matrix, shapes.arrows, shapes.symbols}
+\usepackage{braids}
+\usepackage{tqft}
+\usepackage{ytableau}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{myarrows}
+\usepackage{mycommand}
+
+\usepackage{xr}
+\usepackage[unicode, bookmarksnumbered]{hyperref}
+\externaldocument{unit-018-crossrefs}[]
+\hypersetup{
+	pdfauthor = {Wen-Wei Li},
+	pdftitle = {Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 18: Latihan Bab 2},
+	pdfsubject = {Terjemahan Bahasa Indonesia independen},
+	pdfkeywords = {aljabar, teori kategori, latihan, petunjuk, adjoin, limit, id-ID},
+	pdflang = {id-ID},
+	CJKbookmarks = true}
+
+% Load an inclusive UTF-8 source-line span without copying a mutable source
+% fragment into the repository. The strings are retokenized under normal TeX
+% category codes so mathematics, references, environments, and the hint retain
+% their source semantics.
+\ExplSyntaxOn
+\ior_new:N \l__unit_eighteen_source_ior
+\tl_new:N \l__unit_eighteen_source_tl
+\int_new:N \l__unit_eighteen_line_int
+\cs_new_protected:Npn \unit_eighteen_input_range:nnn #1#2#3
+  {
+    \tl_clear:N \l__unit_eighteen_source_tl
+    \int_zero:N \l__unit_eighteen_line_int
+    \ior_open:Nn \l__unit_eighteen_source_ior {#1}
+    \ior_str_map_inline:Nn \l__unit_eighteen_source_ior
+      {
+        \int_incr:N \l__unit_eighteen_line_int
+        \int_compare:nNnT {\l__unit_eighteen_line_int} > {#2 - 1}
+          {
+            \int_compare:nNnT {\l__unit_eighteen_line_int} < {#3 + 1}
+              {
+                \tl_put_right:Nn \l__unit_eighteen_source_tl {##1}
+                \tl_put_right:Nx \l__unit_eighteen_source_tl
+                  {\char_generate:nn {10} {12}}
+              }
+          }
+      }
+    \ior_close:N \l__unit_eighteen_source_ior
+    \exp_args:NV \scantokens \l__unit_eighteen_source_tl
+  }
+\NewDocumentCommand{\InputSourceLineRange}{mmm}
+  {\unit_eighteen_input_range:nnn {#1} {#2} {#3}}
+\ExplSyntaxOff
+
+\begin{document}
+	\hypersetup{pageanchor=false}
+	\pagestyle{empty}
+	\input{coverpage-id-unit-018.tex}
+	\pagestyle{fancy}
+	\pagenumbering{roman}
+	\setcounter{page}{1}
+
+	\mainmatter
+	\hypersetup{pageanchor=true}
+	\setcounter{chapter}{2}
+	\markboth{Bab 2\quad Dasar-Dasar Teori Kategori}{}
+	\begingroup
+	\setlength{\emergencystretch}{3em}
+	\setstretch{1.2}
+	\InputSourceLineRange{chapter2.tex}{1603}{1645}
+	\endgroup
+
+	% Unit ini tidak memiliki entri indeks atau daftar pustaka. Mengakhirinya
+	% tepat setelah Latihan 13 mencegah halaman belakang yang renggang.
+\end{document}

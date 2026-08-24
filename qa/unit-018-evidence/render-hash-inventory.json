@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0",
+  "unit_id": "O013-LI-U018",
+  "page_count": 4,
+  "render_resolution_dpi": 150,
+  "build_a": {
+    "path": "build/unit-018-build-d/unit-018-bab-2-latihan.pdf",
+    "bytes": 83564,
+    "sha256": "f36ecf4ba755bf44c61c6d9070b11a50f4c5e2763d82f8e4aa7bd88a98444486"
+  },
+  "build_b": {
+    "path": "build/unit-018-build-e/unit-018-bab-2-latihan.pdf",
+    "bytes": 83578,
+    "sha256": "4fc2997e6eafc8f2e74d8a03e3351cb49d99a95ae96ff254a211fbf505f6e00c"
+  },
+  "container_byte_identity": false,
+  "extracted_text_sha256_a": "abc664dc1a3a85a2c26caa91a4da38155f55f9bac558e7dbacb84d204f92b3ac",
+  "extracted_text_sha256_b": "abc664dc1a3a85a2c26caa91a4da38155f55f9bac558e7dbacb84d204f92b3ac",
+  "same_renderer_page_mismatches": {
+    "poppler": 0,
+    "mupdf": 0
+  },
+  "renderers": {
+    "poppler": [
+      {
+        "page": 1,
+        "path": "qa/unit-018-evidence/poppler-final-b/page-01.png",
+        "bytes": 56855,
+        "sha256": "b3d1e8e19b9d177b18be18376be5bd23e109fbc82f41016780be7c2d5d353b87",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 2,
+        "path": "qa/unit-018-evidence/poppler-final-b/page-02.png",
+        "bytes": 135513,
+        "sha256": "32b2a2b835ba6f1fc9265a3bd0115493a7b326532fc0720341662d76211794d2",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 3,
+        "path": "qa/unit-018-evidence/poppler-final-b/page-03.png",
+        "bytes": 270022,
+        "sha256": "89f2484bae570c923904cbc12c5301a06fd07a0427a0bb6ab7e87f91cce70d80",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 4,
+        "path": "qa/unit-018-evidence/poppler-final-b/page-04.png",
+        "bytes": 227373,
+        "sha256": "2edf1e4b15411951ffa1be2b011a7b04210df57bc5b9efe601e5ff740fde323c",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      }
+    ],
+    "mupdf": [
+      {
+        "page": 1,
+        "path": "qa/unit-018-evidence/mupdf-final-b/page-01.png",
+        "bytes": 53608,
+        "sha256": "205c593d476df5408339b1c2a9b57a07fb3761b3302c5dd18223dce9102d4258",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 2,
+        "path": "qa/unit-018-evidence/mupdf-final-b/page-02.png",
+        "bytes": 111851,
+        "sha256": "260616f9efbfb3402c3544a23d69faf10c39253b25d537f50b4706bbae2376df",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 3,
+        "path": "qa/unit-018-evidence/mupdf-final-b/page-03.png",
+        "bytes": 223913,
+        "sha256": "fa35afa26843c66a0033a06a85db801986716726796bb77b80908c0c7b2a8e8b",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      },
+      {
+        "page": 4,
+        "path": "qa/unit-018-evidence/mupdf-final-b/page-04.png",
+        "bytes": 192780,
+        "sha256": "578c8ab1251c6da05c6c7147e0bcc53acfc1968173dc79d8203fa271ed25ac30",
+        "matches_clean_build_a": true,
+        "matches_clean_build_b": true,
+        "visually_inspected": true
+      }
+    ]
+  },
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

@@ -1601,45 +1601,45 @@ Salah satu teknik ampuh untuk memeriksa bahwa suatu fungtor mempertahankan limit
 Ingat kembali Contoh \ref{eg:preservation-limit}. Dapat dikatakan bahwa fungtor $\cate{Top} \to \cate{Set}$ mempertahankan limit kecil karena mempunyai fungtor adjoin kiri sekaligus kanan (Contoh \ref{eg:top-adjunction}). Sementara itu, menurut Contoh \ref{eg:forgetful-adjunction} dan Lema \ref{prop:abelianization}, fungtor pelupa $U: \cate{Ab} \to \cate{Grp}$ mempunyai fungtor adjoin kiri $G \mapsto G/G_\text{der}$, sehingga mempertahankan $\varprojlim$ kecil; dari fakta bahwa $U$ tidak mempertahankan koproduk, dapat pula disimpulkan bahwa fungtor tersebut tidak mempunyai fungtor adjoin kanan.
 
 \begin{Exercises}
-	\item 设 $A \xrightarrow{f} B \xrightarrow{g} C \xrightarrow{h} D$ 是任意范畴中的态射. 证明若 $A \xrightarrow{gf} C$ 和 $B \xrightarrow{hg} D$ 皆为同构. 则 $f,g,h$ 全是同构.
-	\item 对范畴 $\mathcal{C}$, $\mathcal{C}'$ 定义其\emph{并} $\mathcal{C} \star \mathcal{C}'$ 如下:
+	\item Misalkan $A \xrightarrow{f} B \xrightarrow{g} C \xrightarrow{h} D$ morfisme-morfisme dalam sebarang kategori. Buktikan bahwa jika $A \xrightarrow{gf} C$ dan $B \xrightarrow{hg} D$ keduanya merupakan isomorfisme, maka $f,g,h$ semuanya merupakan isomorfisme.
+	\item Untuk kategori $\mathcal{C}$ dan $\mathcal{C}'$, definisikan \emph{gabungan} $\mathcal{C} \star \mathcal{C}'$ sebagai berikut:
 		\begin{align*}
 			\Obj(\mathcal{C} \star \mathcal{C}') & := \Obj(\mathcal{C}) \sqcup \Obj(\mathcal{C}'), \\
 			\Hom_{\mathcal{C} \star \mathcal{C}'}(X, Y) & := \begin{cases}
 				\Hom_{\mathcal{C}}(X, Y), & X, Y \in \Obj(\mathcal{C}) \\
 				\Hom_{\mathcal{C}'}(X, Y), & X, Y \in \Obj(\mathcal{C}'), \\
-				\text{独点集}\; \{\ast\}, & X \in \Obj(\mathcal{C}), \; Y \in \Obj(\mathcal{C}'), \\
+				\text{himpunan tunggal}\; \{\ast\}, & X \in \Obj(\mathcal{C}), \; Y \in \Obj(\mathcal{C}'), \\
 				\emptyset, & X \in \Obj(\mathcal{C}'), \; Y \in \Obj(\mathcal{C}).
 			\end{cases}
 		\end{align*}
-		为 $\mathcal{C} \star \mathcal{C}'$ 中的态射合理地定义合成和单位元, 并验证 $\mathcal{C} \star \mathcal{C}'$ 确实构成范畴; 它包含 $\mathcal{C}$ 和 $\mathcal{C}'$ 作为全子范畴. 对于有限序数范畴, 证明 $\mathbf{n} \star \mathbf{m}$ 同构于 $\mathbf{n+m}$.
-	\item 选定 Grothendieck 宇宙, 证明其中全体有限全序集及其间的保序映射构成一个范畴 $\cate{Ord}_f$. 证明有限序数 $\mathbf{0}, \mathbf{1}, \ldots$ 构成此范畴的骨架.
-	\item 设 $\mathcal{C}$ 为范畴, 并对每个 $X, Y \in \Obj(\mathcal{C})$ 在 $\Hom_{\mathcal{C}}(X,Y)$ 上给定二元关系 $\mathcal{R}$. 构造相应的\emph{商范畴} $\mathcal{C}/\mathcal{R}$ 连同函子 $Q: \mathcal{C} \to \mathcal{C}/\mathcal{R}$ 使得
+		Definisikan komposisi dan morfisme identitas dalam $\mathcal{C} \star \mathcal{C}'$ secara wajar, lalu periksa bahwa $\mathcal{C} \star \mathcal{C}'$ memang membentuk kategori; kategori ini memuat $\mathcal{C}$ dan $\mathcal{C}'$ sebagai subkategori penuh. Untuk kategori ordinal berhingga, buktikan bahwa $\mathbf{n} \star \mathbf{m}$ isomorfik dengan $\mathbf{n+m}$.
+	\item Pilih suatu semesta Grothendieck, lalu buktikan bahwa semua himpunan terurut total berhingga di dalamnya beserta peta-peta pelestari urutan di antaranya membentuk kategori $\cate{Ord}_f$. Buktikan bahwa ordinal-ordinal berhingga $\mathbf{0}, \mathbf{1}, \ldots$ membentuk kerangka kategori ini.
+	\item Misalkan $\mathcal{C}$ kategori dan, untuk setiap $X, Y \in \Obj(\mathcal{C})$, diberikan relasi biner $\mathcal{R}$ pada $\Hom_{\mathcal{C}}(X,Y)$. Konstruksikan \emph{kategori hasil bagi} $\mathcal{C}/\mathcal{R}$ yang bersesuaian, beserta fungtor $Q: \mathcal{C} \to \mathcal{C}/\mathcal{R}$ sedemikian sehingga
 		\begin{compactitem}
-			\item 对任意 $\mathcal{C}$ 中态射 $f$, $g$ 有 $f \mathcal{R} g \implies Q(f)=Q(g)$,
-			\item 函子 $Q$ 在对象集上是双射,
-			\item 对任何函子 $S: \mathcal{C} \to \mathcal{C}'$ 满足 $f \mathcal{R} g \implies S(f)=S(g)$ 者, 存在唯一的函子 $\bar{S}: \mathcal{C}/\mathcal{R} \to \mathcal{C}'$ 使得 $S = \bar{S} Q$.
+			\item untuk setiap morfisme $f$, $g$ dalam $\mathcal{C}$, berlaku $f \mathcal{R} g \implies Q(f)=Q(g)$,
+			\item fungtor $Q$ bijektif pada himpunan objek,
+			\item untuk setiap fungtor $S: \mathcal{C} \to \mathcal{C}'$ yang memenuhi $f \mathcal{R} g \implies S(f)=S(g)$, terdapat fungtor tunggal $\bar{S}: \mathcal{C}/\mathcal{R} \to \mathcal{C}'$ sedemikian sehingga $S = \bar{S} Q$.
 		\end{compactitem}
-		说明 $Q: \mathcal{C} \to \mathcal{C}/\mathcal{R}$ 的唯一性.
-	\item 设 $F: \mathcal{C}_1 \to \mathcal{C}_2$ 和 $G: \mathcal{C}_2 \to \mathcal{C}_3$ 为范畴等价 (即: 具有逆拟函子), 证明 $GF: \mathcal{C}_1 \to \mathcal{C}_3$ 也是等价, 其拟逆可以取为 $F$ 和 $G$ 的拟逆之合成.
-	\item 详述例 \ref{eg:forgetful-adjunction} 中各个伴随对的余单位.
-	\item 记 $\cate{Ring}$ 为以环为对象, 环同态为态射的范畴, 注意到这里的环皆含乘法幺元, 同态按定义须保幺元. 如果不假设环含幺, 所得范畴记为 $\cate{Rng}$ (这可能是本书中唯一一次考虑这类环). 证明显然的函子 $\cate{Ring} \to \cate{Rng}$ 具有左伴随.
-	\item 设 $(F, G, \varphi)$ 是伴随对, 则
+		Jelaskan keunikan $Q: \mathcal{C} \to \mathcal{C}/\mathcal{R}$.
+	\item Misalkan $F: \mathcal{C}_1 \to \mathcal{C}_2$ dan $G: \mathcal{C}_2 \to \mathcal{C}_3$ ekuivalensi kategori (yakni, mempunyai fungtor kuasi-invers). Buktikan bahwa $GF: \mathcal{C}_1 \to \mathcal{C}_3$ juga merupakan ekuivalensi; fungtor kuasi-inversnya dapat diambil sebagai komposisi, dalam urutan yang sesuai, dari fungtor kuasi-invers bagi $F$ dan fungtor kuasi-invers bagi $G$.
+	\item Uraikan secara terperinci kounit setiap pasangan adjoin dalam Contoh \ref{eg:forgetful-adjunction}.
+	\item Misalkan $\cate{Ring}$ kategori yang objeknya gelanggang dan morfismenya homomorfisme gelanggang; perhatikan bahwa semua gelanggang di sini mempunyai unsur satuan perkalian dan, secara definisi, homomorfismenya harus mempertahankan unsur satuan. Jika gelanggang tidak disyaratkan mempunyai unsur satuan, kategori yang diperoleh dinotasikan dengan $\cate{Rng}$ (mungkin inilah satu-satunya tempat dalam buku ini yang mempertimbangkan gelanggang semacam itu). Buktikan bahwa fungtor yang jelas $\cate{Ring} \to \cate{Rng}$ mempunyai fungtor adjoin kiri.
+	\item Misalkan $(F, G, \varphi)$ pasangan adjoin. Maka
 		\begin{inparaenum}[(i)]
-			\item $\eta: \identity_{\mathcal{C}_1} \to GF$ 为同构当且仅当 $F$ 是全忠实函子;
-			\item $\varepsilon: FG \to \identity_{\mathcal{C}_2}$ 为同构当且仅当 $G$ 是全忠实函子.
+			\item $\eta: \identity_{\mathcal{C}_1} \to GF$ merupakan isomorfisme jika dan hanya jika $F$ adalah fungtor penuh dan setia;
+			\item $\varepsilon: FG \to \identity_{\mathcal{C}_2}$ merupakan isomorfisme jika dan hanya jika $G$ adalah fungtor penuh dan setia.
 		\end{inparaenum}
-		\hint{ 基于对偶性 (以 $\mathcal{C}_i^\text{op}$ 代 $\mathcal{C}_i$), 仅需证 (i). 先证明对所有 $\mathcal{C}_1$ 中的态射 $f: X \to Y$ 都有 $\varphi(Ff) = \eta_Y f: X \to GFY$: 这是缘于 $\varphi$ 的自然性导致图表
+		\hint{ Berdasarkan dualitas (dengan mengganti $\mathcal{C}_i$ oleh $\mathcal{C}_i^\text{op}$), cukup dibuktikan (i). Pertama, buktikan bahwa untuk setiap morfisme $f: X \to Y$ dalam $\mathcal{C}_1$ berlaku $\varphi(Ff) = \eta_Y f: X \to GFY$: hal ini mengikuti dari naturalitas $\varphi$, yang membuat diagram
 		\[ \begin{tikzcd}
 			\identity_{FY} \arrow[phantom, r, description, "\in"] \arrow[mapsto, d] & \Hom(FY, FY) \arrow[r, "\varphi"] \arrow[d, "(Ff)^*"'] & \Hom(Y, GFY) \arrow[d, "f^*"] & \arrow[phantom, l, description, "\ni"] \eta_Y \arrow[mapsto, d] \\
 			Ff \arrow[phantom, r, description, "\in"] & \Hom(FX, FY) \arrow[r, "\varphi"'] & \Hom(X, GFY) & \arrow[phantom, l, description, "\ni"] \varphi(Ff) = \eta_Y f .
 		\end{tikzcd} \]
-		交换. 米田引理 (定理 \ref{prop:Yoneda-lemma}) 表明 $\eta_Y: Y \rightiso GFY$ 当且仅当 $f \mapsto \eta_Y f$ 给出双射 $\Hom(X, Y) \rightiso \Hom(X, GFY)$, 其中 $X$ 取遍 $\mathcal{C}_1$ 的对象; 既然 $\varphi$ 是同构, 这又相当于 $f \mapsto Ff$ 是双射, 亦即 $F$ 是全忠实的. }
+		komutatif. Lema Yoneda (Teorema \ref{prop:Yoneda-lemma}) menunjukkan bahwa $\eta_Y: Y \rightiso GFY$ jika dan hanya jika $f \mapsto \eta_Y f$ memberikan bijeksi $\Hom(X, Y) \rightiso \Hom(X, GFY)$, dengan $X$ merentang objek-objek $\mathcal{C}_1$; karena $\varphi$ merupakan isomorfisme, hal ini ekuivalen dengan pernyataan bahwa $f \mapsto Ff$ merupakan bijeksi, yakni bahwa $F$ penuh dan setia. }
 
-	\item 假设 $\mathcal{C}$ 既是完备也是余完备的. 对于小范畴 $I$, 证明对角函子 $\Delta: \mathcal{C} \to \mathcal{C}^I$ (定义 \ref{def:diagonal-functor}) 有左, 右伴随函子, 阐释它们与 $\mathcal{C}$ 中的 $\varinjlim$ 与 $\varprojlim$ 的关系, 相应的单位和余单位作何解释?
-	\item 设域 $\Bbbk$ 为域, 证明在 $\Bbbk$-向量空间范畴 $\cate{Vect}(\Bbbk)$ 里, 每个对象都同构于一些有限维子空间的 $\varinjlim$. 将此想法移植到交换群范畴 $\cate{Ab}$ (考虑有限生成交换群的 $\varinjlim$).
-	\item 设 $\mathcal{C}$ 是 $\mathcal{C}'$ 的全子范畴, 包含函子记为 $J: \mathcal{C} \to \mathcal{C}'$. 说明对任意两个函子 $F, G: \mathcal{C}_0 \rightrightarrows \mathcal{C}$, 与 $J$ 的横合成诱导双射
+	\item Andaikan $\mathcal{C}$ lengkap sekaligus kolengkap. Untuk kategori kecil $I$, buktikan bahwa fungtor diagonal $\Delta: \mathcal{C} \to \mathcal{C}^I$ (Definisi \ref{def:diagonal-functor}) mempunyai fungtor adjoin kiri dan kanan. Jelaskan hubungan kedua fungtor adjoin itu dengan $\varinjlim$ dan $\varprojlim$ dalam $\mathcal{C}$, serta penafsiran unit dan kounit yang bersesuaian.
+	\item Misalkan $\Bbbk$ medan. Buktikan bahwa dalam kategori ruang vektor-$\Bbbk$, $\cate{Vect}(\Bbbk)$, setiap objek isomorfik dengan $\varinjlim$ dari subruang-subruang berdimensi hingga. Terapkan gagasan ini pada kategori grup abelian $\cate{Ab}$ (pertimbangkan $\varinjlim$ dari grup-grup abelian yang dibangkitkan secara berhingga).
+	\item Misalkan $\mathcal{C}$ subkategori penuh dari $\mathcal{C}'$, dengan fungtor inklusi dinotasikan oleh $J: \mathcal{C} \to \mathcal{C}'$. Tunjukkan bahwa, untuk setiap dua fungtor $F, G: \mathcal{C}_0 \rightrightarrows \mathcal{C}$, komposisi horizontal dengan $J$ menginduksi bijeksi
 		\[ \Hom_{\text{Fct}(\mathcal{C}_0, \mathcal{C}')}(JF, JG) = \Hom_{\text{Fct}(\mathcal{C}_0, \mathcal{C})}(F, G). \]
-	\item 在带基点的集合范畴 $\cate{Set}_\bullet$ 中描述积和余积, 证明它是完备且余完备的. 推广到 $\cate{Top}_\bullet$ 的情形.
-	\item 考虑忘却函子 $\cate{Set}_\bullet \to \cate{Set}$, 找出 $U$ 的左伴随, 并证明 $U$ 无右伴随.
+	\item Deskripsikan produk dan koproduk dalam kategori himpunan bertitik dasar $\cate{Set}_\bullet$, lalu buktikan bahwa kategori tersebut lengkap sekaligus kolengkap. Perluas hasil ini ke kasus $\cate{Top}_\bullet$.
+	\item Pertimbangkan fungtor pelupa $U: \cate{Set}_\bullet \to \cate{Set}$. Tentukan fungtor adjoin kiri dari $U$, dan buktikan bahwa $U$ tidak mempunyai fungtor adjoin kanan.
 \end{Exercises}

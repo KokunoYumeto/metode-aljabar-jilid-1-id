@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1-2.8 telah diterjemahkan, diterima, dipublikasikan, dan dibaca balik secara anonim dalam tujuh belas unit pembaca. Unit 13 menyajikan fungtor representabel dan Lema Yoneda; Unit 14-15 mencakup fungtor adjoin; Unit 16 menyajikan limit; dan Unit 17 menyajikan kelengkapan. Latihan Bab 2 pada `chapter2.tex:1603-1645` menjadi span terjemahan berikutnya.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, Bagian 2.1-2.8, serta Latihan Bab 2 telah diterjemahkan dan diterima dalam delapan belas unit pembaca. Unit 1-17 telah dipublikasikan dan dibaca balik secara anonim; Unit 18 adalah batas penerimaan saat ini untuk publikasi sempit berikutnya. Pengantar Bab 3 dan Bagian 3.1 menjadi span terjemahan berikutnya.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh checkpoint pembaca 0.3.0 (96 halaman; Unit 1-9)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf)
 
@@ -41,6 +41,8 @@ Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1
 [Baca atau unduh PDF Unit 16](artifacts/unit-016-bab-2-limit.pdf)
 
 [Baca atau unduh PDF Unit 17](artifacts/unit-017-bab-2-kelengkapan.pdf)
+
+[Baca atau unduh PDF Unit 18](artifacts/unit-018-bab-2-latihan.pdf)
 
 Versi preservasi `0.3.0` yang memuat checkpoint gabungan 96 halaman, kesembilan reader, sumber yang dapat dibangun, backend modular, bukti ringkas, dan manifest hash tersedia pada [Zenodo DOI 10.5281/zenodo.22062228](https://doi.org/10.5281/zenodo.22062228). Seluruh pembaruan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat. Rilis `0.4.0` yang sama dengan reader Unit 1-12 sudah byte-verified di GitHub pada commit `f47d290117001a16d0d765bb5f83b3c73bc9a8f3`; pembaruan DOI tertahan oleh blocker eksternal yang dicatat dalam [`qa/ZENODO_PUBLICATION_BLOCKED_20260823.md`](qa/ZENODO_PUBLICATION_BLOCKED_20260823.md).
 
@@ -84,6 +86,7 @@ pwsh -NoProfile -File scripts/build_unit_014.ps1 -OutputDirectory build/unit-014
 pwsh -NoProfile -File scripts/build_unit_015.ps1 -OutputDirectory build/unit-015-replay
 pwsh -NoProfile -File scripts/build_unit_016.ps1 -OutputDirectory build/unit-016-replay
 pwsh -NoProfile -File scripts/build_unit_017.ps1 -OutputDirectory build/unit-017-replay
+pwsh -NoProfile -File scripts/build_unit_018.ps1 -OutputDirectory build/unit-018-replay
 ```
 
 Skrip menjalankan XeLaTeX tanpa shell escape, indeks dan bibliografi yang dibutuhkan setiap unit, lalu lintasan konvergensi XeLaTeX. Tanggal sumber dan seed gambar sampul dipatok. Dua build bersih untuk setiap unit menghasilkan halaman yang identik piksel demi piksel ketika dirender, meskipun serialisasi kontainer PDF XeTeX belum identik byte di direktori keluaran yang berbeda.
@@ -250,9 +253,20 @@ Artefak Unit 17 yang diterima dan dipublikasikan:
 - terminology QA tetap memakai fallback PDF Indonesia yang terdokumentasi setelah pencarian arXiv terbatas tidak menemukan sumber TeX Indonesia yang sesuai; provenance produksi tetap `OpenAI Codex gpt-5.6-sol, Ultra`, terpisah dari kepengarangan Wen-Wei Li dan kredit manusia.
 - Unit 17 dipublikasikan pada commit `6e3b8e01cb16d5786e687e7c019460b26807ba42`; seluruh 47 path / 4.056.491 byte cocok dengan blob komit pada pembacaan balik anonim. Inventaris per-path ada di [`qa/PUBLICATION_GITHUB_UNIT_017_CONTENT_READBACK.json`](qa/PUBLICATION_GITHUB_UNIT_017_CONTENT_READBACK.json), dan receipt publikasi ada di [`qa/PUBLICATION_GITHUB_UNIT_017_20260824.md`](qa/PUBLICATION_GITHUB_UNIT_017_20260824.md).
 
+Artefak Unit 18 yang diterima secara lokal:
+
+- 4 halaman; 83.578 byte; SHA-256 `4fc2997e6eafc8f2e74d8a03e3351cb49d99a95ae96ff254a211fbf505f6e00c`
+- target lengkap Latihan Bab 2 pada `chapter2.tex:1603-1645` adalah 6.523 byte; SHA-256 `d69667baae061a5d06a57dcc25033b6a971986ea704c72a0f53d687707837b55`; file target lengkap 166.465 byte; SHA-256 `3ef0e0dd3a8a30f4e44d7f87d94a4a4343ac7097a1862180c8becaf3631cda16`
+- backend 136.912 byte; SHA-256 `c761b3b1fbdceb0930d9e6d19fc23885c1b21a019db4d48cbf35bb57cedea794`; 172 entitas stabil mencakup 13 bagian latihan, 5 subbagian, 1 petunjuk, 83 permukaan rumus, 3 rujukan, 1 diagram, dan 2 koreksi sumber; enam proyeksi CSV direproduksi dan divalidasi secara deterministik.
+- ketiga belas latihan, lima subbagian, satu petunjuk, 80 permukaan matematika sebaris, dua display kurung siku, satu display `align*`, satu diagram `tikzcd` dengan sepuluh panah, dan tiga rujukan dipertahankan; dua koreksi sumber yang diungkapkan menghapus predikat medan yang terduplikasi dan mengikat nama fungtor pelupa `U` yang semula bebas.
+- dua build bersih menghasilkan ekstraksi teks serta replay 4/4 halaman Poppler dan 4/4 halaman MuPDF yang identik; seluruh halaman diperiksa tanpa pemotongan, benturan, karakter hilang, rumus/diagram rusak, halaman kosong, rujukan tak terdefinisi, atau kotak meluber.
+- sampul digital memakai hierarki judul terpusat dan panel cakupan tekstual yang secara eksplisit menyatakan 13 latihan serta petunjuk pada Latihan 8; tidak ada lagi blok terisi/tak terisi yang ambigu.
+- terminology QA tetap memakai fallback PDF Indonesia yang terdokumentasi setelah pencarian arXiv terbatas tidak menemukan sumber TeX Indonesia yang sesuai; provenance produksi tetap `OpenAI Codex gpt-5.6-sol, Ultra`, terpisah dari kepengarangan Wen-Wei Li dan kredit manusia.
+- receipt penerimaan lokal ada di [`qa/UNIT_018_ADMISSION_20260824.md`](qa/UNIT_018_ADMISSION_20260824.md), 8.500 byte; SHA-256 `3a24f1eaf435f2ad0d683a75a251fdd0ec4d0225dd727e5f1c0c0d1f4110b6bf`.
+
 ## Backend modular
 
-`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-017-bab-2-kelengkapan.json` adalah catatan kanonik tujuh belas unit yang telah diterima secara lokal. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7 mempertahankan keenam latihan sebagai entitas bagian terurut dan setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat. Unit 10-17 memakai identitas yang sama untuk permukaan matematika, diagram, rujukan eksternal, indeks, sitasi, koreksi sumber, serta provenance model; receipt penerimaan masing-masing mengikat bukti lokal dan publiknya.
+`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-018-bab-2-latihan.json` adalah catatan kanonik delapan belas unit yang telah diterima secara lokal. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7 dan Unit 18 mempertahankan latihan sebagai entitas bagian terurut serta setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat. Unit 10-18 memakai identitas yang sama untuk permukaan matematika, diagram, rujukan eksternal, indeks, sitasi, koreksi sumber, serta provenance model; receipt penerimaan masing-masing mengikat bukti lokal dan publiknya.
 
 Validasi:
 
@@ -274,6 +288,7 @@ python scripts/validate_backend.py --data backend/data/unit-014-bab-2-fungtor-ad
 python scripts/validate_backend.py --data backend/data/unit-015-bab-2-contoh-keunikan-dan-ekuivalensi-adjoin.json
 python scripts/validate_backend.py --data backend/data/unit-016-bab-2-limit.json
 python scripts/validate_backend.py --data backend/data/unit-017-bab-2-kelengkapan.json
+python scripts/validate_backend.py --data backend/data/unit-018-bab-2-latihan.json
 ```
 
 Validator memeriksa skema, keunikan dan relasi ID, urutan bagian, hash file dan rentang baris, penutupan sitasi/rujukan/diagram/indeks, bukti build, serta kesesuaian byte proyeksi CSV.
@@ -302,7 +317,7 @@ Teks sumber dan terjemahan ditangani menurut Creative Commons Attribution 4.0 In
   - [x] Bagian 1.4 — Bilangan Kardinal
   - [x] Bagian 1.5 - Semesta Grothendieck
   - [x] Latihan Bab 1
-- [ ] Bab 2 — Dasar-dasar teori kategori
+- [x] Bab 2 — Dasar-dasar teori kategori
   - [x] Pengantar bab dan petunjuk membaca
   - [x] Bagian 2.1 — Kategori dan Morfisme
   - [x] Bagian 2.2 — Fungtor dan transformasi natural
@@ -312,8 +327,8 @@ Teks sumber dan terjemahan ditangani menurut Creative Commons Attribution 4.0 In
   - [x] Bagian 2.6 — Dasar-dasar fungtor adjoin
   - [x] Contoh, keunikan, dan ekuivalensi adjoin `chapter2.tex:910-1110`
   - [x] Bagian 2.7 — Limit `chapter2.tex:1111-1405`
-  - [ ] Bagian 2.8 — Kelengkapan `chapter2.tex:1406-1602`
-  - [ ] Latihan Bab 2 `chapter2.tex:1603-1645`
+  - [x] Bagian 2.8 — Kelengkapan `chapter2.tex:1406-1602`
+  - [x] Latihan Bab 2 `chapter2.tex:1603-1645`
 - [ ] Bab 3 — Kategori monoidal
 - [ ] Bab 4 — Teori grup
 - [ ] Bab 5 — Dasar-dasar teori gelanggang

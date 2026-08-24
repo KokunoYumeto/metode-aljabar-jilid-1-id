@@ -1,0 +1,10 @@
+PASS Unit 018 final build and replay
+artifact bytes=83578 sha256=4fc2997e6eafc8f2e74d8a03e3351cb49d99a95ae96ff254a211fbf505f6e00c pages=4
+build A bytes=83564 sha256=f36ecf4ba755bf44c61c6d9070b11a50f4c5e2763d82f8e4aa7bd88a98444486
+build B bytes=83578 sha256=4fc2997e6eafc8f2e74d8a03e3351cb49d99a95ae96ff254a211fbf505f6e00c
+same-renderer replay: Poppler all pages identical; MuPDF all pages identical
+extracted-text replay sha256=abc664dc1a3a85a2c26caa91a4da38155f55f9bac558e7dbacb84d204f92b3ac
+PDF: outlines=1 destinations=18 GoTo=0 URI=3 tagged=no language=id-ID
+log counts: {"emergency_stops": 0, "empty_external_link_targets": 3, "fatal_errors": 0, "missing_characters": 0, "overfull_boxes": 0, "undefined_citations": 0, "undefined_control_sequences": 0, "undefined_references": 0, "underfull_hboxes": 3, "underfull_vboxes": 0}
+visual QA: all pages inspected in Poppler and MuPDF; no sparse trailing back matter
+provenance model: OpenAI Codex gpt-5.6-sol, Ultra

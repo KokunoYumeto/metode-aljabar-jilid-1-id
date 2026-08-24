@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0.0",
+  "unit_id": "O013-LI-U018",
+  "status": "PASS",
+  "authority": {
+    "commit": "c4f7a01f68f5f407906b4b970640cddbbad85f6b",
+    "tree": "0f9fd52748165ec89a85ba602ccb949a2ce04694",
+    "source_file": "chapter2.tex",
+    "source_lines": "1603-1645",
+    "source_span_bytes": 5197,
+    "source_span_sha256": "24417872734a2dc72c1d52d0df30246a427c5bbb714faf5238679e19c8dd7cce"
+  },
+  "target": {
+    "target_span_bytes": 6523,
+    "target_span_sha256": "d69667baae061a5d06a57dcc25033b6a971986ea704c72a0f53d687707837b55",
+    "han_residue": 0
+  },
+  "artifact": {
+    "path": "artifacts/unit-018-bab-2-latihan.pdf",
+    "bytes": 83578,
+    "sha256": "4fc2997e6eafc8f2e74d8a03e3351cb49d99a95ae96ff254a211fbf505f6e00c"
+  },
+  "build_log": {
+    "path": "qa/UNIT_018_BUILD_FINAL.log",
+    "bytes": 77518,
+    "sha256": "5a4cbdacbed40af2576f6a7c85fe365eaa26a02f9298635e63f62b8823bc8398"
+  },
+  "build_log_sanitization": {
+    "method": "complete home-prefix replacement with ${USER_HOME}",
+    "replacement_count": 250,
+    "diagnostics_deleted": 0,
+    "line_count": 2058
+  },
+  "structure_checker": {
+    "path": "scripts/check_unit_018_structure.py",
+    "bytes": 15157,
+    "sha256": "9b8a165adbd31532c7a7f6458d7e5c0a86f224e699188bce403d55ad7e8d76c2"
+  },
+  "structure_check_output": {
+    "path": "qa/unit-018-evidence/structure-check.txt",
+    "bytes": 544,
+    "sha256": "aefecad6b1678d7e8915df05be83c3f79c06da1d89366166de8c78f8e49faef0"
+  },
+  "evidence_generator": {
+    "path": "scripts/generate_unit_018_evidence.py",
+    "bytes": 15960,
+    "sha256": "af6598f0c911dfab12a8c997b2ba43a479a2183ca457a05547a4c2c111bc083e"
+  },
+  "render_inventory": {
+    "path": "qa/unit-018-evidence/render-hash-inventory.json",
+    "bytes": 3525,
+    "sha256": "a44639f9fffe6a0a17f7e8621386fa1f2825338e7b9d4aa09540739ae78a0b84"
+  },
+  "pdf": {
+    "pages": 4,
+    "language": "id-ID",
+    "encrypted": false,
+    "tagged": false,
+    "metadata": {
+      "/Creator": "LaTeX with hyperref",
+      "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 18: Latihan Bab 2",
+      "/Subject": "Terjemahan Bahasa Indonesia independen",
+      "/Author": "Wen-Wei Li",
+      "/Keywords": "aljabar, teori kategori, latihan, petunjuk, adjoin, limit, id-ID",
+      "/Producer": "MiKTeX-dvipdfmx (20260404)",
+      "/CreationDate": "D:20260824000000Z"
+    },
+    "outlines": [
+      "Latihan"
+    ],
+    "named_destination_count": 18,
+    "page_text_character_counts": [
+      233,
+      819,
+      2352,
+      2085
+    ],
+    "page_annotation_counts": [
+      0,
+      3,
+      0,
+      0
+    ],
+    "annotation_subtypes": {
+      "/Link": 3
+    },
+    "annotation_actions": {
+      "/URI": 3
+    },
+    "page_sizes_points": [
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ]
+    ]
+  },
+  "embedded_subset_font_count": 23,
+  "log_counts": {
+    "overfull_boxes": 0,
+    "underfull_hboxes": 3,
+    "underfull_vboxes": 0,
+    "empty_external_link_targets": 3,
+    "undefined_control_sequences": 0,
+    "undefined_references": 0,
+    "undefined_citations": 0,
+    "missing_characters": 0,
+    "fatal_errors": 0,
+    "emergency_stops": 0
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "renderers_inspected": [
+      "Poppler",
+      "MuPDF"
+    ],
+    "finding": "The centered cover uses an explicit coverage panel without ambiguous filled/unfilled blocks; all exercise pages use the available text width, and the reader ends with Exercise 13 without sparse generated back matter."
+  },
+  "rights": {
+    "principal_text_and_translation": "CC BY 4.0",
+    "AJbook_class_fragment": "CC BY-SA 3.0",
+    "bundled_noto_fonts": "SIL OFL 1.1",
+    "Lanzhou_png_in_wider_closure": "CC BY-SA 3.0; not used by this reader"
+  },
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

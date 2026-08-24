@@ -177,5 +177,59 @@
     "already_admitted_reader_changes": 0,
     "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
   },
+  "unit_018_recheck": {
+    "checked": "2026-08-24",
+    "arxiv_result": "The frozen bounded official queries found no suitable Indonesian-language same-field source with downloadable TeX; the retained PDF fallback remains the honest evidence boundary.",
+    "fallback_reinspection": {
+      "undip_pages_previously_visually_inspected": 4,
+      "ugm_pages_previously_visually_inspected": 7,
+      "hashes_unchanged": true
+    },
+    "added_controlled_terms": [
+      "category union (star construction) -> gabungan kategori",
+      "quotient category -> kategori hasil bagi",
+      "full subcategory -> subkategori penuh",
+      "pointed set -> himpunan bertitik dasar",
+      "pointed topological space -> ruang topologis bertitik dasar",
+      "unital ring -> gelanggang dengan unsur satuan",
+      "nonunital ring -> gelanggang tanpa syarat unsur satuan",
+      "finitely generated abelian group -> grup abelian yang dibangkitkan secara berhingga"
+    ],
+    "glossary_bytes": 33189,
+    "glossary_sha256": "e0e774f6454112fa9dc0cbfd9abae824faa0e5b39bef66151d472873ef977e21",
+    "already_admitted_reader_changes": 0,
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
+  "unit_019_candidate_recheck": {
+    "checked": "2026-08-24",
+    "state": "isolated_candidate_only; terminology rows are candidate and do not imply Unit 019 admission",
+    "arxiv_result": "The frozen bounded official queries found no suitable Indonesian-language same-field source with downloadable TeX; the retained PDF fallback remains the honest evidence boundary.",
+    "fallback_reinspection": {
+      "undip_pages_previously_visually_inspected": 4,
+      "ugm_pages_previously_visually_inspected": 7,
+      "hashes_unchanged": true
+    },
+    "candidate_controlled_terms": [
+      "unit object -> objek satuan",
+      "unit constraint -> kendala satuan",
+      "pentagon axiom -> aksioma segilima Mac Lane",
+      "triangle axiom (monoidal category) -> aksioma segitiga kategori monoidal",
+      "monoidal subcategory -> subkategori monoidal",
+      "braid category -> kategori kepang",
+      "enriched category -> kategori diperkaya",
+      "additive category -> kategori aditif",
+      "biproduct -> biproduk",
+      "monoidal functor -> fungtor monoidal",
+      "strong monoidal functor -> fungtor monoidal kuat",
+      "right-lax monoidal functor -> fungtor monoidal longgar-kanan",
+      "left-lax monoidal functor -> fungtor monoidal longgar-kiri",
+      "monoidal equivalence -> ekuivalensi monoidal",
+      "tensor category -> kategori tensor"
+    ],
+    "glossary_bytes": 35880,
+    "glossary_sha256": "8d1ee2c145a76b000f57264fa5e80abb3a9781ffd21b57f0b98d91b52c2c0bc9",
+    "already_admitted_reader_changes": 0,
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
   "redistribution": "The downloaded fallback PDFs are local authority witnesses only and are excluded from the public repository and release packages."
 }
