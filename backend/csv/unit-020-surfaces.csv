@@ -1,0 +1,9 @@
+entity_type,id,stable_key,section_id,ordinal,source_value,target_value,format,status
+build_surface,urn:uuid:808e40e7-63a4-5862-9424-5cb8d9a2b4b1,build-surface/unit-020-pdf,,,pwsh -NoProfile -File scripts/build_unit_020.ps1 -OutputDirectory build/unit-020-replay,artifacts/unit-020-bab-3-keketatan-dan-teorema-koherensi.pdf,pdf,pass
+citation,urn:uuid:d0cfae15-3a5b-5e46-ac73-938d178c4df6,citation/unit-020/egno15,urn:uuid:16e5f696-a39e-5aa5-a501-ab7b26593353,,EGNO15,EGNO15,biblatex-key,preserved
+citation,urn:uuid:9cae448f-0912-5675-a177-35f5efb1a694,citation/unit-020/js93,urn:uuid:16e5f696-a39e-5aa5-a501-ab7b26593353,,JS93,JS93,biblatex-key,preserved
+citation,urn:uuid:c6720336-e27c-51b0-9d4d-35c6370d29f0,citation/unit-020/ml98,urn:uuid:16e5f696-a39e-5aa5-a501-ab7b26593353,,ML98,ML98,biblatex-key,preserved
+diagram,urn:uuid:8172e017-d402-5932-99fd-1083e74b979f,diagram/unit-020/tikzcd-01,urn:uuid:16e5f696-a39e-5aa5-a501-ab7b26593353,2,272-275,271-274,tikzcd,audited_preserved
+diagram,urn:uuid:2bfda0a7-b42c-5694-b660-6916e277ba35,diagram/unit-020/tikzpicture-01,urn:uuid:16e5f696-a39e-5aa5-a501-ab7b26593353,1,257-270,256-269,tikzpicture,audited_preserved
+index_entry,urn:uuid:74f51334-2945-539b-b073-1042f5fdf09c,index-entry/unit-020/mac-lane-coherence-theorem,urn:uuid:16e5f696-a39e-5aa5-a501-ab7b26593353,2,MacLane 融贯定理 (MacLane's Coherence Theorem),MacLane@Teorema koherensi Mac Lane (Mac Lane's Coherence Theorem),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:9090888e-dc6a-53e7-9957-5662606064f4,index-entry/unit-020/strict-monoidal-category,urn:uuid:16e5f696-a39e-5aa5-a501-ab7b26593353,1,yaobanfanchou!严格幺半范畴 (strict monoidal category),yaobanfanchou@kategori monoidal (monoidal category)!kategori monoidal ketat (strict monoidal category),latex-index-key,source_key_preserved_target_key_localized

@@ -224,35 +224,35 @@ Karena kegunaannya terbatas, kita tidak membuktikan ekuivalensi ini secara terpe
 \end{definition}
 
 Fungtor monoidal dan transformasi natural mempunyai operasi komposisi yang jelas. Dengan operasi ini dapat didefinisikan isomorfisme dan ekuivalensi kategori monoidal; lihat Definisi \ref{def:cat-equivalence}. Untuk membedakannya, ekuivalensi antara kategori monoidal kadang-kadang disebut pula ekuivalensi monoidal.\index{fanchoudengjia@ekuivalensi kategori!kasus monoidal}
-\section{严格性与融贯定理}\label{sec:coherence}
-由于幺半范畴的结合律与幺元都是在差一个同构的意义下定义的, 我们费了很大力气证明它们满足一些直观的性质, 这体现为种种交换图表. 然而至少有两个问题悬而未决:
+\section{Keketatan dan Teorema Koherensi}\label{sec:coherence}
+Karena hukum asosiatif dan unsur satuan dalam kategori monoidal hanya ditentukan hingga isomorfisme, diperlukan usaha cukup besar untuk membuktikan berbagai sifat intuitifnya, yang dinyatakan melalui beragam diagram komutatif. Namun, setidaknya masih ada dua pertanyaan:
 \begin{compactenum}[(i)]
-	\item 实践中能否化约到具有严格结合律及幺元的情形?
-	\item 定义 \ref{def:monoidal-cat} 是否穷尽了我们对幺半范畴的期待? 更具体地说, 从二元函子 $\otimes$ 和结合约束 $a$, 幺约束 $\lambda, \rho$ 出发, 能制造千变万化的图表, 它们既是``自然''的, 理应交换. 试问能从 MacLane 的五角形公理和 $\iota: \munit \otimes \munit \rightiso \munit$ 的性质推出这一切吗?
+	\item Dapatkah kita dalam praktik mereduksi pembahasan pada kasus dengan hukum asosiatif dan unsur satuan yang berlaku secara ketat?
+	\item Apakah Definisi \ref{def:monoidal-cat} sudah mencakup seluruh sifat yang kita harapkan dari kategori monoidal? Lebih konkretnya, dari fungtor biner $\otimes$, kendala asosiativitas $a$, serta kendala satuan $\lambda, \rho$, dapat dibentuk sangat banyak diagram yang semuanya bersifat ``natural'' dan semestinya komutatif. Dapatkah seluruh sifat tersebut diturunkan dari aksioma segilima Mac Lane dan sifat $\iota: \munit \otimes \munit \rightiso \munit$?
 \end{compactenum}
-两个问题密切相关. 对于问题 (i), 我们先引入\emph{严格幺半范畴}的概念.
+Kedua pertanyaan ini berkaitan erat. Untuk pertanyaan (i), mula-mula kita perkenalkan konsep \emph{kategori monoidal ketat}.
 
-\begin{definition}\label{def:strict-monoidal-cat}\index{yaobanfanchou!严格幺半范畴 (strict monoidal category)}
-	幺半范畴 $\mathcal{V}$ 被称为严格的, 如果
+\begin{definition}\label{def:strict-monoidal-cat}\index{yaobanfanchou@kategori monoidal (monoidal category)!kategori monoidal ketat (strict monoidal category)}
+	Kategori monoidal $\mathcal{V}$ disebut ketat jika
 	\begin{compactitem}
-		\item 结合约束 $a$ 是等号, 即 $(X \otimes Y) \otimes Z = X \otimes (Y \otimes Z)$;
-		\item 幺约束 $\lambda, \rho$ 是等号, 即 $X \otimes \munit = \munit \otimes X = X$.
+		\item kendala asosiativitas $a$ berupa kesamaan, yakni $(X \otimes Y) \otimes Z = X \otimes (Y \otimes Z)$;
+		\item kendala satuan $\lambda, \rho$ berupa kesamaan, yakni $X \otimes \munit = \munit \otimes X = X$.
 	\end{compactitem}
-	这里 $X,Y,Z$ 表 $\mathcal{V}$ 中任意对象.
+	Di sini $X,Y,Z$ menyatakan sebarang objek dalam $\mathcal{V}$.
 \end{definition}
-在严格幺半范畴中可以将任意个对象的 $\otimes$-积写成 $X_1 \otimes X_2 \otimes X_3 \cdots$ 的形式而不致歧义; 此时问题 (ii) 也有了肯定的回答, 因为从结合约束和幺约束造出的图表只有一种箭头, 就是等号.
+Dalam kategori monoidal ketat, hasil kali $\otimes$ sebarang banyak objek dapat ditulis sebagai $X_1 \otimes X_2 \otimes X_3 \cdots$ tanpa menimbulkan ambiguitas. Dalam keadaan ini, pertanyaan (ii) juga mendapat jawaban afirmatif karena setiap diagram yang dibangun dari kendala asosiativitas dan kendala satuan hanya mempunyai satu jenis panah, yaitu kesamaan.
 
-严格幺半范畴的理论显然大大地简化了. 所有 \S\ref{sec:monoidal-cat-def} 中的论证在严格情形下都成了同义反复. 例 \ref{eg:monoidal-cat} 中的范畴 $\text{Fct}(\mathcal{C}, \mathcal{C})$ 是严格幺半范畴的典型例子. 除此之外, 代数学中常见的幺半范畴多非严格. 这又反过来说明问题 (ii) 的复杂性. MacLane 的以下结果 \cite[VII.2]{ML98} 给出了肯定的回答.
+Teori kategori monoidal ketat jelas jauh lebih sederhana. Semua argumen dalam \S\ref{sec:monoidal-cat-def} menjadi tautologi dalam kasus ketat. Kategori $\text{Fct}(\mathcal{C}, \mathcal{C})$ pada Contoh \ref{eg:monoidal-cat} merupakan contoh khas kategori monoidal ketat. Di luar itu, kategori monoidal yang lazim dalam aljabar umumnya tidak ketat. Hal ini kembali memperlihatkan kerumitan pertanyaan (ii). Hasil Mac Lane berikut \cite[VII.2]{ML98} memberikan jawaban afirmatif.
 
-\begin{theorem}[S.\ MacLane]\label{prop:ML-coherence}\index{MacLane 融贯定理 (MacLane's Coherence Theorem)}
-	任意幺半范畴 $\mathcal{V}$ 都幺半等价于一个严格幺半范畴.
+\begin{theorem}[S.\ Mac Lane]\label{prop:ML-coherence}\index{MacLane@Teorema koherensi Mac Lane (Mac Lane's Coherence Theorem)}
+	Setiap kategori monoidal $\mathcal{V}$ ekuivalen secara monoidal dengan suatu kategori monoidal ketat.
 \end{theorem}
 
-定理 \ref{prop:ML-coherence} 又称融贯定理. 在更广的意义下, 融贯性意谓范畴中的某类图表交换. 这类结果在范畴论中比较稀有. 以下论证取自 \cite[pp.26--27]{JS93} 和 \cite[\S 2.8]{EGNO15}, 此处仅略陈梗概. 设 $\mathcal{V}$ 为幺半范畴. 定义新的幺半范畴 $\mathbf{e}(\mathcal{V})$ 如下:
+Teorema \ref{prop:ML-coherence} juga disebut teorema koherensi. Dalam arti yang lebih luas, koherensi berarti bahwa suatu kelas diagram dalam kategori bersifat komutatif. Hasil semacam ini relatif jarang dalam teori kategori. Argumen berikut diambil dari \cite[pp.26--27]{JS93} dan \cite[\S 2.8]{EGNO15}; di sini kita hanya memberikan garis besarnya. Misalkan $\mathcal{V}$ kategori monoidal. Definisikan kategori monoidal baru $\mathbf{e}(\mathcal{V})$ sebagai berikut:
 \begin{compactitem}
-	\item 对象: 形如 $(F, \rho)$, 其中 $F: \mathcal{V} \to \mathcal{V}$ 是函子, 而
+	\item Objek: berbentuk $(F, \rho)$, dengan $F: \mathcal{V} \to \mathcal{V}$ suatu fungtor dan
 		\[ \rho = \left( \rho(X, Y): FX \otimes Y \rightiso F(X \otimes Y) \right)_{X, Y \in \Obj(\mathcal{V})} \]
-		是函子间的态射, 使得下图恒交换.
+		merupakan morfisme antarfungtor sedemikian sehingga diagram berikut selalu komutatif.
 		\begin{center}\begin{tikzpicture}[commutative diagrams/every diagram, yscale=0.8]
 			\node (P0) at (90:2.3cm) {$(FX \otimes Y) \otimes Z$};
 			\node (P1) at (90+72:2cm) {$F(X \otimes Y) \otimes Z$} ;
@@ -267,41 +267,41 @@ Fungtor monoidal dan transformasi natural mempunyai operasi komposisi yang jelas
 			(P4) edge node {$\rho(X, Y \otimes Z)$} (P3)
 			(P0) edge node {$a(FX, Y, Z)$} (P4);
 		\end{tikzpicture}\end{center}
-	\item 态射: 从 $(F_1, \rho_1)$ 到 $ (F_2, \rho_2)$ 的态射是与 $\rho$ 相容的自然变换 $\theta: F_1 \to F_2$, 即: 图表
+	\item Morfisme: morfisme dari $(F_1, \rho_1)$ ke $(F_2, \rho_2)$ adalah transformasi natural $\theta: F_1 \to F_2$ yang kompatibel dengan $\rho$, yakni diagram
 		\[ \begin{tikzcd}
 			F_1(X) \otimes Y \arrow[r, "{\rho_1}"] \arrow[d, "{\theta_X \otimes \identity_Y}"'] & F_1(X \otimes Y) \arrow[d, "{\theta_{X \otimes Y}}"] \\
 			F_2(X) \otimes Y \arrow[r, "{\rho_2}"'] & F_2(X \otimes Y)
 		\end{tikzcd} \]
-		对所有 $X, Y$ 皆交换; 态射的合成定义为自然变换的纵合成.
-	\item 幺元: 取 $\munit$ 为恒等函子 $\identity: \mathcal{V} \to \mathcal{V}$, 相应地 $\rho(X, Y) := \identity_{X \otimes Y}$.
-	\item 定义 $(F_1, \rho_1) \otimes (F_2, \rho_2)$ 为函子 $F_1 F_2: \mathcal{V} \to \mathcal{V}$ 连同一族同构 $\rho_3(X,Y)$, 定为合成
+		komutatif untuk semua $X, Y$; komposisi morfisme didefinisikan sebagai komposisi vertikal transformasi natural.
+	\item Objek satuan: ambil $\munit$ sebagai fungtor identitas $\identity: \mathcal{V} \to \mathcal{V}$, dengan $\rho(X, Y) := \identity_{X \otimes Y}$.
+	\item Definisikan $(F_1, \rho_1) \otimes (F_2, \rho_2)$ sebagai fungtor $F_1 F_2: \mathcal{V} \to \mathcal{V}$ bersama keluarga isomorfisme $\rho_3(X,Y)$ yang diberikan oleh komposisi
 		\[ (F_1 F_2 X) \otimes Y \xrightarrow{\rho_1(F_2 X, Y)} F_1 (F_2 X \otimes Y) \xrightarrow{F_1 \rho_2(X, Y)} F_1 F_2 (X \otimes Y) \]
-		其中 $X, Y \in \Obj(\mathcal{V})$.
+		dengan $X, Y \in \Obj(\mathcal{V})$.
 \end{compactitem}
 
 \begin{lemma}
-	$\mathbf{e}(\mathcal{V})$ 是严格幺半范畴.
+	$\mathbf{e}(\mathcal{V})$ merupakan kategori monoidal ketat.
 \end{lemma}
 \begin{proof}
-	直接验证.
+	Verifikasi langsung.
 \end{proof}
 
-粗略地说, $\mathbf{e}(\mathcal{V})$ 的定义相当于说 $F$ 须与 $\otimes$ 定出的右乘``交换'', 资料 $\rho$ 的功能在``见证''此交换性; 再由幺元的性质可以看出 $F$ 被 $F(\munit)$ 与 $\rho$ 完全地刻画. 将这事说透彻了即得下述结果.
+Secara kasar, definisi $\mathbf{e}(\mathcal{V})$ menyatakan bahwa $F$ harus ``berkomutasi'' dengan perkalian kanan yang ditentukan oleh $\otimes$, sedangkan data $\rho$ berfungsi sebagai ``saksi'' bagi komutasi tersebut. Sifat objek satuan kemudian memperlihatkan bahwa $F$ sepenuhnya ditentukan oleh $F(\munit)$ dan $\rho$. Pernyataan tepatnya adalah hasil berikut.
 \begin{lemma}
-	定义函子 $L: \mathcal{V} \to \mathbf{e}(\mathcal{V})$ 使得对每个对象 $X$ 有
+	Definisikan fungtor $L: \mathcal{V} \to \mathbf{e}(\mathcal{V})$ sehingga untuk setiap objek $X$ berlaku
 	\[ LX = X \otimes -: \mathcal{V} \to \mathcal{V} \]
-	而相应的 $\rho(Y, Z)$ 取为结合约束 $a(X, Y, Z)$. 在态射层面定义 $Lf = f \otimes -$. 则 $L$ 是全忠实本质满函子, 并具有自然的幺半函子结构.
+	dengan $\rho(Y, Z)$ yang bersesuaian diberikan oleh kendala asosiativitas $a(X, Y, Z)$. Pada tingkat morfisme, definisikan $Lf = f \otimes -$. Maka $L$ merupakan fungtor penuh, setia, dan surjektif secara esensial, serta mempunyai struktur fungtor monoidal yang natural.
 \end{lemma}
-\begin{proof}[勾勒]
-	函子 $L$ 良定缘于 $\mathcal{V}$ 的五角形公理, 其幺半函子构造由显然的同构 $L\munit \rightiso \munit$ 和结合约束给出的同构族 $\xi_L(X_1, X_2): LX_1 \otimes LX_2 \rightiso L(X_1 \otimes X_2)$ 确定.  接着验证
+\begin{proof}[Garis besar]
+	Fungtor $L$ terdefinisi dengan baik berkat aksioma segilima pada $\mathcal{V}$. Struktur fungtor monoidalnya ditentukan oleh isomorfisme yang jelas $L\munit \rightiso \munit$ dan keluarga isomorfisme $\xi_L(X_1, X_2): LX_1 \otimes LX_2 \rightiso L(X_1 \otimes X_2)$ yang diberikan oleh kendala asosiativitas. Selanjutnya, periksa bahwa
 	\begin{compactitem}
-		\item $L$ 本质满: 事实上 $(F, m) \simeq L(F(\munit))$,
-		\item $L$ 全忠实: 逆映射 $\Hom_{\mathbf{e}(\mathcal{V})}(LX, LY) \to \Hom_{\mathcal{V}}(X, Y)$ 将 $\theta: LX \to LY$ 映至
+		\item $L$ surjektif secara esensial: sesungguhnya $(F, \rho) \simeq L(F(\munit))$,
+		\item $L$ penuh dan setia: pemetaan invers $\Hom_{\mathbf{e}(\mathcal{V})}(LX, LY) \to \Hom_{\mathcal{V}}(X, Y)$ memetakan $\theta: LX \to LY$ ke
 			\[ X \rightiso X \otimes \munit = LX(\munit) \xrightarrow{\theta_\munit} LY(\munit) = Y \otimes \munit \rightiso Y. \]
 	\end{compactitem}
-	请有兴致的读者补全细节或阅读文献.
+	Pembaca yang berminat dipersilakan melengkapi perinciannya atau membaca rujukan yang diberikan.
 \end{proof}
-结合前两个引理即得定理 \ref{prop:ML-coherence}.
+Kedua lema sebelumnya bersama-sama membuktikan Teorema \ref{prop:ML-coherence}.
 
 \section{辫结构}\label{sec:braiding}
 幺半范畴里的运算 $\otimes$ 一般不要求交换性. 但在许多例子中, 交换现象不仅存在而且至关紧要. 辫结构的目的便在阐明 $\otimes $ 运算的交换性. 一如幺元和结合律的情形, 这里需要的是一族同构而非严格的等号; 此族同构也称为\emph{交换约束}. 我们将在例 \ref{eg:braid} 解释辫结构命名的来由. 其原始文献之一是 \cite{JS93}.

@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "unit": "unit-020-bab-3-keketatan-dan-teorema-koherensi",
+  "authority": "chapter3.tex:228-306",
+  "target": "chapter3.tex:227-305",
+  "data": "backend/data/unit-020-bab-3-keketatan-dan-teorema-koherensi.json",
+  "schema": "backend/schema/open-math-corpus-unit.schema.v1.json",
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "artifact": {
+    "path": "artifacts/unit-020-bab-3-keketatan-dan-teorema-koherensi.pdf",
+    "pages": 5,
+    "bytes": 93053,
+    "sha256": "8d8a7c8f537681525d97952a7f163f95a5063275047989c26f0387f50172e1ed"
+  },
+  "counts": {
+    "concepts": 128,
+    "labels": 3,
+    "references": 5,
+    "citation_occurrences": 3,
+    "native_bibliography_records": 3,
+    "items": 10,
+    "inline_formulae": 64,
+    "display_formulae": 5,
+    "tikzcd": 1,
+    "tikzpicture": 1,
+    "arrows": 4,
+    "nodes": 5,
+    "paths": 1,
+    "edges": 5,
+    "index_entries": 2,
+    "terminology_rows": 4,
+    "corrections": 1,
+    "csv_projections": 6
+  },
+  "checks": {
+    "deterministic_regeneration": "PASS",
+    "shared_schema_and_uuidv5": "PASS",
+    "source_target_line_boundary": "PASS",
+    "protected_surface_topology": "PASS",
+    "component_rights": "PASS",
+    "build_and_visual_bindings": "PASS",
+    "terminology_binding": "PASS",
+    "validation_mutated_outputs": false
+  },
+  "identities": {
+    "backend/data/unit-020-bab-3-keketatan-dan-teorema-koherensi.json": {
+      "bytes": 120409,
+      "sha256": "d965d9ade3ea06a230ce5e3501585da50ddad29c9a1b902dfefcebf88773e226"
+    },
+    "backend/csv/unit-020-bindings.csv": {
+      "bytes": 10500,
+      "sha256": "fef7591dfdb86e8ca35e71109a9d4f75decc9d07aae9c7302157bbeaaefbb7f7"
+    },
+    "backend/csv/unit-020-entities.csv": {
+      "bytes": 31079,
+      "sha256": "550207d48a8172c7b7283ff2a5b01fbada11794aa2670145c02c524cd8503b07"
+    },
+    "backend/csv/unit-020-qa.csv": {
+      "bytes": 4099,
+      "sha256": "eff6e8c34237366d89840bf6a738044c35061f85a378c23e23f5db41d10bfbc4"
+    },
+    "backend/csv/unit-020-relations.csv": {
+      "bytes": 81517,
+      "sha256": "306f1301cc3c8fda9a2d326ee2195dbbb035974d4fc08df769163ed195666ce4"
+    },
+    "backend/csv/unit-020-rights.csv": {
+      "bytes": 1287,
+      "sha256": "4836630530f87a11a64fe233c59970e2ff7942695a8dbf404f7a0583a275197e"
+    },
+    "backend/csv/unit-020-surfaces.csv": {
+      "bytes": 1864,
+      "sha256": "dc8682fc9fdeed36e8cf0cae899691015bf375204005e45dd3ff51f744b8e109"
+    }
+  },
+  "bound_inputs": {
+    "00_control/TERMINOLOGY.id-ID.csv": {
+      "bytes": 37771,
+      "sha256": "3afc80895bec2d3710cbbd26de8451063ce53445c081b276670a0b3568f0c983"
+    },
+    "qa/unit-020-evidence/structure-and-pdf-qa.json": {
+      "bytes": 9044,
+      "sha256": "26c1a5c433f519afd10b0bc1b378d81b8d6bb1791c91fc3816f151015adaa9b1"
+    },
+    "qa/UNIT_020_VISUAL_QA_20260824.md": {
+      "bytes": 4085,
+      "sha256": "ecab989428e0b5815db6241662198e88e028f42784d289e9ce92f36112b012e4"
+    },
+    "qa/UNIT_020_SOURCE_CORRECTION_20260824.md": {
+      "bytes": 3406,
+      "sha256": "1fd9438599ba395f4125e2b3b981ec13c142b3225377c29a0ace03cccbb7a62c"
+    },
+    "qa/UNIT_020_TERMINOLOGY_AUDIT_20260824.md": {
+      "bytes": 4117,
+      "sha256": "99514b0bb83a81364dabb257a74c44fb6c2164c46a327a292c6cc03e59dea5fc"
+    }
+  },
+  "tools": {
+    "scripts/generate_unit_020_backend.py": {
+      "bytes": 53610,
+      "sha256": "40baa950cb9ed9fb575b472f8486dce2f8d420f25df36c20a5a1933fb2d51309"
+    },
+    "scripts/validate_unit_020_backend.py": {
+      "bytes": 15763,
+      "sha256": "16e0dd364f99088370ddb8a74950d43c59d69397aae787bd3e961ce6983c98bf"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+PASS Unit 020 canonical structure checker
+source full_lines=911 bytes=75571 sha256=7198f2c477890b333237156aba30b79db587e23dde7a878ed99f527e98a558d0
+source span=228-306 bytes=6071 sha256=86f02abb667e1f03a99e89f34982527fbb715eb55496f9c76c576e041076d737
+target full_lines=910 bytes=80889 sha256=64d334af911539cbe844a250ab41c3e6d537e2c827919c21d41547e1f5782d7a
+target prefix=1-226 bytes=25868 sha256=6b42291293a06d15b64034a26ed25aeac3cb41465bf9533e069bc9ac65d9b8ac
+target span=227-305 bytes=7266 sha256=25f8aa41663253a28ac27c3cf635470ac2e20e69d48b168d98cb025a3a792270
+target suffix=306-910 bytes=47755 sha256=2efcd829501d06686667549395cb4680ebeccce48ecb981f9b144890fcf4a1f2
+integration=candidate-byte-identical remainder=authority-307-911-byte-identical
+boundary=target-227-start included-blank=305 target-306-braiding-excluded
+environments=13-pairs labels=3 refs=5 eqrefs=0 cites=3 items=10 indexes=2
+inline_math=64 bracket_displays=5 braces=95/95 han=0
+tikzpicture=1 tikzcd=1 nodes=5 paths=1 edges=5 arrows=4
+correction=O013-LI-U020-COR-001-source-299-target-298-(F,m)-to-(F,rho)
+provenance=OpenAI Codex gpt-5.6-sol, Ultra

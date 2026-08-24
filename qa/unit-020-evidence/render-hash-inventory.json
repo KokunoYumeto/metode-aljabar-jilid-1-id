@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0.0",
+  "unit_id": "O013-LI-U020",
+  "page_count": 5,
+  "render_resolution_dpi": 144,
+  "build_e": {
+    "path": "build/unit-020-final-e/unit-020-bab-3-keketatan-dan-teorema-koherensi.pdf",
+    "bytes": 93054,
+    "sha256": "e3f7f2b1ae8da6dea90f10a62cd1b9b0d272b2b4f0b386bb7eafc765a40e8057"
+  },
+  "build_f": {
+    "path": "build/unit-020-final-f/unit-020-bab-3-keketatan-dan-teorema-koherensi.pdf",
+    "bytes": 93053,
+    "sha256": "8d8a7c8f537681525d97952a7f163f95a5063275047989c26f0387f50172e1ed"
+  },
+  "visual_manifest": {
+    "path": "build/unit-020-visual-qa/qa-manifest.json",
+    "bytes": 94395,
+    "sha256": "47591ec00e8452c2f40a99ea631e7ff3d12e48bf7a6caaa993cc35807d7a6956"
+  },
+  "render_count": 40,
+  "contact_sheet_count": 8,
+  "comparisons": {
+    "replay/poppler/final-c": {
+      "left_pages": 5,
+      "right_pages": 5,
+      "page_count_match": true,
+      "raw_pixel_mismatch_pages": [],
+      "png_byte_mismatch_pages": [],
+      "dimension_mismatch_pages": [],
+      "raw_pixel_identical": true,
+      "png_byte_identical": true
+    },
+    "replay/poppler/final-d": {
+      "left_pages": 5,
+      "right_pages": 5,
+      "page_count_match": true,
+      "raw_pixel_mismatch_pages": [],
+      "png_byte_mismatch_pages": [],
+      "dimension_mismatch_pages": [],
+      "raw_pixel_identical": true,
+      "png_byte_identical": true
+    },
+    "builds/poppler": {
+      "left_pages": 5,
+      "right_pages": 5,
+      "page_count_match": true,
+      "raw_pixel_mismatch_pages": [],
+      "png_byte_mismatch_pages": [],
+      "dimension_mismatch_pages": [],
+      "raw_pixel_identical": true,
+      "png_byte_identical": true
+    },
+    "replay/mupdf/final-c": {
+      "left_pages": 5,
+      "right_pages": 5,
+      "page_count_match": true,
+      "raw_pixel_mismatch_pages": [],
+      "png_byte_mismatch_pages": [],
+      "dimension_mismatch_pages": [],
+      "raw_pixel_identical": true,
+      "png_byte_identical": true
+    },
+    "replay/mupdf/final-d": {
+      "left_pages": 5,
+      "right_pages": 5,
+      "page_count_match": true,
+      "raw_pixel_mismatch_pages": [],
+      "png_byte_mismatch_pages": [],
+      "dimension_mismatch_pages": [],
+      "raw_pixel_identical": true,
+      "png_byte_identical": true
+    },
+    "builds/mupdf": {
+      "left_pages": 5,
+      "right_pages": 5,
+      "page_count_match": true,
+      "raw_pixel_mismatch_pages": [],
+      "png_byte_mismatch_pages": [],
+      "dimension_mismatch_pages": [],
+      "raw_pixel_identical": true,
+      "png_byte_identical": true
+    }
+  },
+  "renderers": {
+    "poppler": [
+      {
+        "page": 1,
+        "path": "qa/unit-020-evidence/poppler-final-f/page-01.png",
+        "bytes": 79234,
+        "sha256": "82901e8a417498d4131ffbee75765c614ab0b9c54ef11d98efb9c691bbf4bbe0",
+        "raw_rgb_sha256": "43fc1cb778fb808a823410bbde8a0a5c08032a75ebd8372fa886d125ec3a6897",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 2,
+        "path": "qa/unit-020-evidence/poppler-final-f/page-02.png",
+        "bytes": 129029,
+        "sha256": "fff18f466b3b079151e27b09839e495b64c88eeb7322f1e67d0ccac648e9453d",
+        "raw_rgb_sha256": "12ac80b00d29687be27db6c04ae77e3da9e2306ccf655ef7a1cbd85532dafc7d",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 3,
+        "path": "qa/unit-020-evidence/poppler-final-f/page-03.png",
+        "bytes": 272017,
+        "sha256": "c934df6af9f4297e31b7ae396b5fdf8f658223a03a4864f92d96f99ce1395f17",
+        "raw_rgb_sha256": "b6abc52623dede59b94497ae08005c60f598c1c3035cf128f729690b9d7cb710",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 4,
+        "path": "qa/unit-020-evidence/poppler-final-f/page-04.png",
+        "bytes": 167970,
+        "sha256": "57892c904ce61555e518fc840c938f5e5828993edadbc95c59f1bb03377eb92b",
+        "raw_rgb_sha256": "ec8c9f4b485ab524713b480a6c50868332e16081ecdc397f02ac3e55d952419a",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 5,
+        "path": "qa/unit-020-evidence/poppler-final-f/page-05.png",
+        "bytes": 219981,
+        "sha256": "4403d8b98110556c173a974d38ceb9d1c09bc8a872aac82691abd851ba69bc6d",
+        "raw_rgb_sha256": "e18d0afd0ffa7887df7b70e55fadc5535c9150a2f18f3ac6ca00f837c6782805",
+        "outer_3px_ink": 0
+      }
+    ],
+    "mupdf": [
+      {
+        "page": 1,
+        "path": "qa/unit-020-evidence/mupdf-final-f/page-01.png",
+        "bytes": 71709,
+        "sha256": "c5d0f7317f2cfe0d2aee5c440b22a0194e646659227dfcb2e76d6ecdc4df996d",
+        "raw_rgb_sha256": "5fe3c7623d2239f69bcd28b50a5ea1a31af556d78687d5539678d000d2599fc1",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 2,
+        "path": "qa/unit-020-evidence/mupdf-final-f/page-02.png",
+        "bytes": 105017,
+        "sha256": "11958cfa96b1e8bed9965d5709623b8831f2454eb1cfd85fd3ac1dd7f683ebea",
+        "raw_rgb_sha256": "211f473751128148ac6fc391bd2230c630bed61b79aad4dc15e080ac6b2a8e2a",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 3,
+        "path": "qa/unit-020-evidence/mupdf-final-f/page-03.png",
+        "bytes": 224659,
+        "sha256": "e7b406ef9bee8ac6e01f533bfedfda27e9bd7d9601021ab9c27c3fda7eb18afc",
+        "raw_rgb_sha256": "3ec3e9d0287b7225f04d45b6de46640d3d6d2737797609a554664ff41cd3b67d",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 4,
+        "path": "qa/unit-020-evidence/mupdf-final-f/page-04.png",
+        "bytes": 142407,
+        "sha256": "81016040ae76d41dae2c79e9ae45d8ebdbc9454246340ecfd7a66da2ba40ec83",
+        "raw_rgb_sha256": "bb6089d0cc41a2675e79ce5592bc89db67b4e045aa7bcd2e4939425fa573c4d6",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 5,
+        "path": "qa/unit-020-evidence/mupdf-final-f/page-05.png",
+        "bytes": 182014,
+        "sha256": "1f44761e7b6395180e61e8e6edcfbbaa4b50488fa96d0fb219d3a4916a58bb2b",
+        "raw_rgb_sha256": "c082e9854f0890d7c4603880925d58620041843af1103d713093c53f9524b022",
+        "outer_3px_ink": 0
+      }
+    ]
+  },
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

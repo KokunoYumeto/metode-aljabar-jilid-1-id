@@ -1,0 +1,358 @@
+{
+  "schema_version": "1.0.0",
+  "unit_id": "O013-LI-U020",
+  "status": "PASS",
+  "target": {
+    "path": "repo/source/chapter3.tex",
+    "lines": "227-305",
+    "line_records": 79,
+    "bytes": 7266,
+    "sha256": "25f8aa41663253a28ac27c3cf635470ac2e20e69d48b168d98cb025a3a792270",
+    "next_target_line": 306,
+    "next_line_sha256": "0f3481f923513a19091dc664cd63849cbceb4b3097c192d9ea5b1780c4f750e8",
+    "correction_ids": [
+      "O013-LI-U020-COR-001"
+    ]
+  },
+  "artifact": {
+    "path": "artifacts/unit-020-bab-3-keketatan-dan-teorema-koherensi.pdf",
+    "bytes": 93053,
+    "sha256": "8d8a7c8f537681525d97952a7f163f95a5063275047989c26f0387f50172e1ed"
+  },
+  "clean_builds": {
+    "final_e": {
+      "path": "build/unit-020-final-e/unit-020-bab-3-keketatan-dan-teorema-koherensi.pdf",
+      "bytes": 93054,
+      "sha256": "e3f7f2b1ae8da6dea90f10a62cd1b9b0d272b2b4f0b386bb7eafc765a40e8057"
+    },
+    "final_f": {
+      "path": "build/unit-020-final-f/unit-020-bab-3-keketatan-dan-teorema-koherensi.pdf",
+      "bytes": 93053,
+      "sha256": "8d8a7c8f537681525d97952a7f163f95a5063275047989c26f0387f50172e1ed"
+    }
+  },
+  "driver": {
+    "path": "repo/source/unit-020-bab-3-keketatan-dan-teorema-koherensi.tex",
+    "bytes": 5456,
+    "sha256": "fab3ada9eeef282f062bf83b88535f8cceb22c65d447cb7b3b7537c5f0e08366"
+  },
+  "cover": {
+    "path": "repo/source/coverpage-id-unit-020.tex",
+    "bytes": 3496,
+    "sha256": "5d4e9f7dc24961599296305eb3d9705cf2e23778a3e6e89d73267ec823c36484"
+  },
+  "crossrefs": {
+    "path": "repo/source/unit-020-crossrefs.aux",
+    "bytes": 332,
+    "sha256": "b710b290c0a2e664d1a9c74a943fcd7ab002359cdfa24abf841ee31b78f8549e"
+  },
+  "build_script": {
+    "path": "scripts/build_unit_020.ps1",
+    "bytes": 2902,
+    "sha256": "de8b05862a8c659f6e9fffb00bda0e06829ec9a187098b92175c692d4c440a9a"
+  },
+  "build_log": {
+    "path": "qa/UNIT_020_BUILD_FINAL.log",
+    "bytes": 83675,
+    "sha256": "80363df3e3bf9186d2265305f1a4d908da645b446a0504b7d186247de8df7617"
+  },
+  "build_log_sanitization": {
+    "method": "complete home-prefix replacement with ${USER_HOME}",
+    "replacement_count": 259,
+    "line_count": 2232
+  },
+  "visual_manifest": {
+    "path": "build/unit-020-visual-qa/qa-manifest.json",
+    "bytes": 94395,
+    "sha256": "47591ec00e8452c2f40a99ea631e7ff3d12e48bf7a6caaa993cc35807d7a6956"
+  },
+  "render_inventory": {
+    "path": "qa/unit-020-evidence/render-hash-inventory.json",
+    "bytes": 6032,
+    "sha256": "9572773acf8e72a5fe4d98fab82ecea2d0ad9b5e07200e9534045f911b9683ca"
+  },
+  "evidence_generator": {
+    "path": "scripts/generate_unit_020_evidence.py",
+    "bytes": 18649,
+    "sha256": "be516fd5dcded21550452700d083c069b436b155af491de6f59df50b16acf763"
+  },
+  "structure": {
+    "labels": [
+      "sec:coherence",
+      "def:strict-monoidal-cat",
+      "prop:ML-coherence"
+    ],
+    "references": [
+      "def:monoidal-cat",
+      "sec:monoidal-cat-def",
+      "eg:monoidal-cat",
+      "prop:ML-coherence",
+      "prop:ML-coherence"
+    ],
+    "citations": [
+      "ML98",
+      "JS93",
+      "EGNO15"
+    ],
+    "index_entries": 2,
+    "tikzpicture": 1,
+    "tikzcd": 1
+  },
+  "pdf": {
+    "pages": 5,
+    "language": "id-ID",
+    "encrypted": false,
+    "tagged": false,
+    "metadata": {
+      "/Creator": "LaTeX with hyperref",
+      "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 20: Kategori Monoidal - Keketatan dan Teorema Koherensi",
+      "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 3.2 lengkap",
+      "/Author": "Wen-Wei Li",
+      "/Keywords": "aljabar, teori kategori, kategori monoidal ketat, teorema koherensi Mac Lane, id-ID",
+      "/Producer": "MiKTeX-dvipdfmx (20260404)",
+      "/CreationDate": "D:20260824000000Z"
+    },
+    "outline": [
+      {
+        "level": 0,
+        "title": "Bab 3: Kategori Monoidal",
+        "page_index": 2
+      },
+      {
+        "level": 1,
+        "title": "3.2 Keketatan dan Teorema Koherensi",
+        "page_index": 2
+      },
+      {
+        "level": 0,
+        "title": "Daftar Pustaka",
+        "page_index": 4
+      },
+      {
+        "level": 0,
+        "title": "Indeks Istilah",
+        "page_index": 4
+      }
+    ],
+    "named_destinations": [
+      {
+        "name": "Doc-Start",
+        "page_index": 0
+      },
+      {
+        "name": "Item.1",
+        "page_index": 2
+      },
+      {
+        "name": "Item.2",
+        "page_index": 2
+      },
+      {
+        "name": "cite.0@EGNO15",
+        "page_index": 4
+      },
+      {
+        "name": "cite.0@JS93",
+        "page_index": 4
+      },
+      {
+        "name": "cite.0@ML98",
+        "page_index": 4
+      },
+      {
+        "name": "page.1",
+        "page_index": 2
+      },
+      {
+        "name": "page.2",
+        "page_index": 3
+      },
+      {
+        "name": "page.3",
+        "page_index": 4
+      },
+      {
+        "name": "proof.1",
+        "page_index": 3
+      },
+      {
+        "name": "proof.2",
+        "page_index": 4
+      },
+      {
+        "name": "section*.1",
+        "page_index": 4
+      },
+      {
+        "name": "section*.2",
+        "page_index": 4
+      },
+      {
+        "name": "section.3.2",
+        "page_index": 2
+      },
+      {
+        "name": "theorem.3.2.1",
+        "page_index": 2
+      },
+      {
+        "name": "theorem.3.2.2",
+        "page_index": 2
+      },
+      {
+        "name": "theorem.3.2.3",
+        "page_index": 3
+      },
+      {
+        "name": "theorem.3.2.4",
+        "page_index": 4
+      },
+      {
+        "name": "unit020-bibliography.0",
+        "page_index": 4
+      },
+      {
+        "name": "unit020-chapter.0",
+        "page_index": 2
+      },
+      {
+        "name": "unit020-term-index.0",
+        "page_index": 4
+      }
+    ],
+    "annotation_subtypes": {
+      "/Link": 14
+    },
+    "annotation_actions": {
+      "/URI": 4,
+      "/GoTo": 10
+    },
+    "unsafe_actions": [],
+    "page_text_character_counts": [
+      387,
+      819,
+      2506,
+      1329,
+      1821
+    ],
+    "page_annotation_counts": [
+      0,
+      3,
+      4,
+      0,
+      7
+    ],
+    "page_sizes_points": [
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ]
+    ],
+    "content_stream_set_sha256": "8963a75d1994cdca6551b39af26788542d96bd14360bd826802b4226885877ae",
+    "pypdf_text_sha256": "799b60200e582386434a55482b79142df3fd0ddb74506e94bd59252b6c4f3715",
+    "layout_text_bytes": 9365,
+    "layout_text_sha256": "d6ca72827bf0754f1ddb7c085ec3d25e00d23cf4ffee9b158b925799448b26e7",
+    "font_count": 24,
+    "all_fonts_embedded_and_subset": true,
+    "acroform_present": false,
+    "javascript_name_tree": false,
+    "embedded_files": false,
+    "catalog_additional_actions": false,
+    "unresolved_token_count": 0,
+    "strict_reader_warnings": [],
+    "external_tools": {
+      "pdfinfo": {
+        "returncode": 0,
+        "stderr": ""
+      },
+      "pdffonts": {
+        "returncode": 0,
+        "stderr": ""
+      },
+      "pdfimages": {
+        "returncode": 0,
+        "stderr": ""
+      },
+      "mutool_info": {
+        "returncode": 0,
+        "stderr": ""
+      }
+    }
+  },
+  "deterministic_replay": {
+    "container_byte_identity": false,
+    "semantic_and_render_identity": true,
+    "layout_text_sha256_e": "d6ca72827bf0754f1ddb7c085ec3d25e00d23cf4ffee9b158b925799448b26e7",
+    "layout_text_sha256_f": "d6ca72827bf0754f1ddb7c085ec3d25e00d23cf4ffee9b158b925799448b26e7",
+    "render_count": 40,
+    "contact_sheet_count": 8,
+    "same_renderer_page_mismatches": {
+      "poppler": 0,
+      "mupdf": 0
+    }
+  },
+  "log_counts": {
+    "overfull_boxes": 0,
+    "underfull_hboxes": 5,
+    "underfull_vboxes": 1,
+    "empty_external_link_targets": 3,
+    "undefined_control_sequences": 0,
+    "undefined_references": 0,
+    "undefined_citations": 0,
+    "missing_characters": 0,
+    "fatal_errors": 0,
+    "emergency_stops": 0
+  },
+  "checks": {
+    "target_boundary": true,
+    "artifact_equals_final_f": true,
+    "five_pages": true,
+    "semantic_replay": true,
+    "render_replay": true,
+    "pdf_safety": true,
+    "accessibility_baseline": true,
+    "fonts": true,
+    "text_tokens": true,
+    "log": true,
+    "page_edges": true,
+    "structure": true
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "renderers_inspected": [
+      "Poppler",
+      "MuPDF"
+    ],
+    "finding": "Centered scope-explicit cover; canonical Section 3.2 numbering; intact pentagon and naturality diagrams; bibliography and two-entry term index reflowed onto the concluding content page without a sparse generated page."
+  },
+  "rights": {
+    "principal_text_and_translation": "CC BY 4.0",
+    "AJbook_class_fragment": "CC BY-SA 3.0",
+    "bundled_noto_fonts": "SIL OFL 1.1",
+    "Lanzhou_png_in_wider_closure": "CC BY-SA 3.0; not used by this reader"
+  },
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra"
+}
