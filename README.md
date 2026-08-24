@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, Bagian 2.1-2.8, serta Latihan Bab 2 telah diterjemahkan dan diterima dalam delapan belas unit pembaca. Unit 1-17 telah dipublikasikan dan dibaca balik secara anonim; Unit 18 adalah batas penerimaan saat ini untuk publikasi sempit berikutnya. Pengantar Bab 3 dan Bagian 3.1 menjadi span terjemahan berikutnya.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan, seluruh Bab 1, serta seluruh Bab 2 termasuk latihannya telah diterjemahkan, diterima, dipublikasikan, dan dibaca balik secara anonim dalam delapan belas unit pembaca. Pengantar Bab 3 dan Bagian 3.1 menjadi span terjemahan berikutnya.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh checkpoint pembaca 0.3.0 (96 halaman; Unit 1-9)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf)
 
@@ -253,7 +253,7 @@ Artefak Unit 17 yang diterima dan dipublikasikan:
 - terminology QA tetap memakai fallback PDF Indonesia yang terdokumentasi setelah pencarian arXiv terbatas tidak menemukan sumber TeX Indonesia yang sesuai; provenance produksi tetap `OpenAI Codex gpt-5.6-sol, Ultra`, terpisah dari kepengarangan Wen-Wei Li dan kredit manusia.
 - Unit 17 dipublikasikan pada commit `6e3b8e01cb16d5786e687e7c019460b26807ba42`; seluruh 47 path / 4.056.491 byte cocok dengan blob komit pada pembacaan balik anonim. Inventaris per-path ada di [`qa/PUBLICATION_GITHUB_UNIT_017_CONTENT_READBACK.json`](qa/PUBLICATION_GITHUB_UNIT_017_CONTENT_READBACK.json), dan receipt publikasi ada di [`qa/PUBLICATION_GITHUB_UNIT_017_20260824.md`](qa/PUBLICATION_GITHUB_UNIT_017_20260824.md).
 
-Artefak Unit 18 yang diterima secara lokal:
+Artefak Unit 18 yang diterima dan dipublikasikan:
 
 - 4 halaman; 83.578 byte; SHA-256 `4fc2997e6eafc8f2e74d8a03e3351cb49d99a95ae96ff254a211fbf505f6e00c`
 - target lengkap Latihan Bab 2 pada `chapter2.tex:1603-1645` adalah 6.523 byte; SHA-256 `d69667baae061a5d06a57dcc25033b6a971986ea704c72a0f53d687707837b55`; file target lengkap 166.465 byte; SHA-256 `3ef0e0dd3a8a30f4e44d7f87d94a4a4343ac7097a1862180c8becaf3631cda16`
@@ -263,6 +263,7 @@ Artefak Unit 18 yang diterima secara lokal:
 - sampul digital memakai hierarki judul terpusat dan panel cakupan tekstual yang secara eksplisit menyatakan 13 latihan serta petunjuk pada Latihan 8; tidak ada lagi blok terisi/tak terisi yang ambigu.
 - terminology QA tetap memakai fallback PDF Indonesia yang terdokumentasi setelah pencarian arXiv terbatas tidak menemukan sumber TeX Indonesia yang sesuai; provenance produksi tetap `OpenAI Codex gpt-5.6-sol, Ultra`, terpisah dari kepengarangan Wen-Wei Li dan kredit manusia.
 - receipt penerimaan lokal ada di [`qa/UNIT_018_ADMISSION_20260824.md`](qa/UNIT_018_ADMISSION_20260824.md), 8.500 byte; SHA-256 `3a24f1eaf435f2ad0d683a75a251fdd0ec4d0225dd727e5f1c0c0d1f4110b6bf`.
+- Unit 18 dipublikasikan pada commit `861718bf4fc0bf9fe5e02480866987fde9714de4`; seluruh 38 path / 2.118.660 byte cocok dengan blob komit pada pembacaan balik anonim. Inventaris per-path ada di [`qa/PUBLICATION_GITHUB_UNIT_018_CONTENT_READBACK.json`](qa/PUBLICATION_GITHUB_UNIT_018_CONTENT_READBACK.json), dan receipt publikasi ada di [`qa/PUBLICATION_GITHUB_UNIT_018_20260824.md`](qa/PUBLICATION_GITHUB_UNIT_018_20260824.md).
 
 ## Backend modular
 
