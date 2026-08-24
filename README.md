@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1-2.7 telah diterjemahkan dan diterima dalam enam belas unit pembaca; Unit 1-15 sudah dipublikasikan dan Unit 16 sedang melewati transaksi publikasi byte-verified. Unit 13 menyajikan fungtor representabel dan Lema Yoneda; Unit 14-15 mencakup fungtor adjoin; Unit 16 menyajikan limit. Bagian 2.8 pada `chapter2.tex:1406-1602` menjadi span terjemahan berikutnya, diikuti latihan Bab 2 pada baris 1603-1645.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1-2.7 telah diterjemahkan, diterima, dipublikasikan, dan dibaca balik secara anonim dalam enam belas unit pembaca. Unit 13 menyajikan fungtor representabel dan Lema Yoneda; Unit 14-15 mencakup fungtor adjoin; Unit 16 menyajikan limit. Bagian 2.8 pada `chapter2.tex:1406-1602` menjadi span terjemahan berikutnya, diikuti latihan Bab 2 pada baris 1603-1645.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh checkpoint pembaca 0.3.0 (96 halaman; Unit 1-9)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf)
 
@@ -234,7 +234,7 @@ Artefak Unit 16 yang diterima secara lokal:
 - dua build bersih menghasilkan replay identik pada 16/16 halaman di Poppler dan 16/16 halaman di MuPDF serta ekstraksi teks yang identik; seluruh halaman diperiksa tanpa pemotongan, benturan, karakter hilang, rumus/diagram rusak, rujukan tak terdefinisi, atau kotak meluber.
 - tiga koreksi yang diungkapkan menghapus prefiks `p_i` yang terduplikasi, memperbaiki urutan kiri/kanan dalam uraian limit berulang, dan mengikat indeks bebas `i` pada definisi produk/koproduk.
 - terminology QA tetap memakai fallback PDF Indonesia yang terdokumentasi setelah pencarian arXiv terbatas tidak menemukan sumber TeX Indonesia yang sesuai; provenance produksi tetap `OpenAI Codex gpt-5.6-sol, Ultra`, terpisah dari kepengarangan Wen-Wei Li dan kredit manusia.
-- receipt penerimaan lengkap: [`qa/UNIT_016_ADMISSION_20260824.md`](qa/UNIT_016_ADMISSION_20260824.md). Transaksi GitHub dan pembacaan balik anonim dilakukan pada batas ini sebelum penerjemahan Bagian 2.8 dilanjutkan.
+- Unit 16 dipublikasikan pada commit `a241c6ed66b003decad57b1aeb9e3e266dcd392e`; seluruh 60 path / 5.840.643 byte cocok dengan blob komit pada pembacaan balik anonim. Inventaris per-path ada di [`qa/PUBLICATION_GITHUB_UNIT_016_CONTENT_READBACK.json`](qa/PUBLICATION_GITHUB_UNIT_016_CONTENT_READBACK.json), dan receipt publikasi ada di [`qa/PUBLICATION_GITHUB_UNIT_016_20260824.md`](qa/PUBLICATION_GITHUB_UNIT_016_20260824.md).
 
 ## Backend modular
 
