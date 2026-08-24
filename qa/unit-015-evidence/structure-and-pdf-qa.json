@@ -1,0 +1,154 @@
+{
+  "schema_version": "unit-015-admission-evidence-v1",
+  "date": "2026-08-24",
+  "source_span": {
+    "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+    "line_start": 910,
+    "line_end": 1110,
+    "line_count": 201,
+    "source_printed_pages": "54-58",
+    "official_pdf_physical_pages": "60-64",
+    "bytes": 16925,
+    "sha256": "49c812f4cdb1929cf11e1bc3e5d916d21e82051d17a686f826c1b171a1f33062"
+  },
+  "target_span": {
+    "path": "repo/source/chapter2.tex",
+    "line_start": 910,
+    "line_end": 1110,
+    "line_count": 201,
+    "bytes": 19355,
+    "sha256": "df3c65bfea7f7272a31809b96b5ae18fdf966afe22e9ab38a0d8f9d35680520f"
+  },
+  "full_target": {
+    "path": "repo/source/chapter2.tex",
+    "bytes": 158252,
+    "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c"
+  },
+  "structure": {
+    "status": "pass",
+    "checker_path": "scripts/check_unit_015_structure.py",
+    "checker_bytes": 15739,
+    "checker_sha256": "aac9b5b614976524369e57054044384a7e0ac4d10a72548de9f18d905c898f78",
+    "mathematics_source": 232,
+    "mathematics_target": 232,
+    "mathematics_multiset_equivalent_after_declared_corrections": true,
+    "environment_sequence_exact": true,
+    "environments": 35,
+    "labels": 9,
+    "references": 8,
+    "equation_references": 12,
+    "citation_signatures_exact": true,
+    "indexes": 3,
+    "index_topology_exact": true,
+    "tikzcd_diagrams": 4,
+    "tikz_pictures": 16,
+    "tikz_nodes": 75,
+    "tikz_coordinates": 32,
+    "tikz_draws": 4,
+    "tikzcd_arrows": 13,
+    "items": 4,
+    "han_residue": 0,
+    "next_boundary": "chapter2.tex:1111 (Section 2.7, limits)"
+  },
+  "declared_source_corrections": [
+    {
+      "id": "O013-LI-U015-COR-001",
+      "source_line": 962,
+      "issue": "The prime is attached after the comma in the second adjunction tuple.",
+      "applied": true
+    },
+    {
+      "id": "O013-LI-U015-COR-002",
+      "source_line": 997,
+      "issue": "The baseline midpoint refers to A1 from a preceding picture instead of local node A2.",
+      "applied": true
+    }
+  ],
+  "artifact": {
+    "path": "artifacts/unit-015-bab-2-contoh-keunikan-dan-ekuivalensi-adjoin.pdf",
+    "pages": 10,
+    "bytes": 120466,
+    "sha256": "6f2a9be12465300ac7af2ea086b643b6891b1f9e23af66241a40086ac476c8ef",
+    "catalog_language": "id-ID",
+    "title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 15: Contoh, Keunikan, dan Ekuivalensi Adjoin",
+    "author": "Wen-Wei Li",
+    "tagged_pdf": false,
+    "named_destinations": 30,
+    "outline_entries": 2,
+    "annotations": 23,
+    "actions": {"GoTo": 18, "URI": 5, "Launch": 0, "GoToR": 0, "JavaScript": 0, "Widget": 0, "Other": 0},
+    "fonts_embedded": true,
+    "font_count": 23,
+    "blank_pages": 0,
+    "unresolved_tokens": 0,
+    "replacement_characters": 0,
+    "nul_characters": 0,
+    "extracted_han_residue": 0
+  },
+  "replay": {
+    "builds": ["build/unit-015-final-c2", "build/unit-015-final-d2"],
+    "build_pdf_byte_identical": false,
+    "functional_replay_status": "pass",
+    "poppler_pixel_identical_pages": "10/10",
+    "poppler_concatenated_sha256": "d8e61d078972b33491ac2a8ca96c16c0c833f3ca23638147411a23b52b587984",
+    "mupdf_pixel_identical_pages": "10/10",
+    "mupdf_concatenated_sha256": "62d28362e03230afee15e0a30d2a5fcf5bf7a561e1cf2c860d4e06b11da86e8a",
+    "layout_text_identical": true,
+    "layout_text_bytes": 16531,
+    "layout_text_sha256": "e8756d14d02e17cb605da0b5bdcf3806ea817490d9624679a55aeeb2836b8787",
+    "page_inventory": "qa/unit-015-evidence/render-hash-inventory.json",
+    "all_pages_visually_inspected_in_both_renderers": true
+  },
+  "equation_numbering": {
+    "eqn:adj-zigzag-1": "2.7",
+    "eqn:adj-zigzag-2": "2.8",
+    "eqn:adj-equiv-two-expression": "2.9",
+    "status": "matches source-order Chapter 2 identifiers after setting the standalone equation counter to 6"
+  },
+  "digital_reflow": {
+    "line_spacing": "1.30",
+    "initial_page_count": 11,
+    "final_page_count": 10,
+    "status": "the proof conclusion and closing reference remain on a useful content page; no content or identifier changed"
+  },
+  "terminology_qa": {
+    "record": "qa/TERMINOLOGY_QA_INDONESIAN_CATEGORY_ALGEBRA_20260822.md",
+    "arxiv_result": "no suitable Indonesian same-field arXiv source with downloadable TeX found in the bounded official search",
+    "fallback_sources": [
+      {
+        "identity": "Luluk Atul Khasanah, Kategori Produk dan Produk Dua Obyek dalam Suatu Kategori, Chapter I (UNDIP, 2025)",
+        "path": "authority/terminology-qa-20260822/undip-kategori-produk-bab-1.pdf",
+        "pages": 4,
+        "bytes": 163251,
+        "sha256": "611b78c88407037489f22814bf054e00ff0f283c702a06082a3a583e9ab35fcb"
+      },
+      {
+        "identity": "Ema Carnia et al., Fungtorialitas pada Aljabar Insidensi Berhingga (BIMIPA 18(2), 2008)",
+        "path": "authority/terminology-qa-20260822/ugm-fungtorialitas-aljabar-insidensi.pdf",
+        "pages": 7,
+        "bytes": 382376,
+        "sha256": "4099c3d8aff59e723470f69b4d152b037261bc26d54ef74f1365377f05c25834"
+      }
+    ],
+    "unit_015_glossary_rows": {
+      "discrete topology": "topologi diskret",
+      "indiscrete topology": "topologi takdiskret",
+      "free group": "grup bebas",
+      "free module": "modul bebas",
+      "polynomial ring": "gelanggang polinomial",
+      "abelianization": "abelianisasi",
+      "compactification": "pengompakan",
+      "string diagram": "diagram untai (string diagram)"
+    },
+    "status": "pass; no earlier admitted reader required correction at this delta gate"
+  },
+  "rights": {
+    "principal_text_and_translation": "CC BY 4.0",
+    "ajbook_credited_fragment": "CC BY-SA 3.0",
+    "lanzhou_asset_in_repository_closure": "CC BY-SA 3.0; not used by this Unit 015 reader",
+    "bundled_fonts": "OFL 1.1",
+    "non_endorsement": true
+  },
+  "model": "OpenAI Codex gpt-5.6-sol, Ultra"
+}
+

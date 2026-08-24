@@ -1,0 +1,53 @@
+Unit 015 admission build summary
+Date: 2026-08-24
+Driver: repo/source/unit-015-bab-2-contoh-keunikan-dan-ekuivalensi-adjoin.tex
+Driver bytes: 4848
+Driver SHA-256: 0b7510d5e5438d720a56e201fbd43c68a715fbfc3fd1f28e548ad0d20f82efcf
+Builder: scripts/build_unit_015.ps1
+Builder bytes: 2820
+Builder SHA-256: f12b8c3ecef88d283df77e7a3ccbe119b057d7f12fb1f4c1a0bf8ac1ed57b3f9
+Build C2: build/unit-015-final-c2
+Build D2: build/unit-015-final-d2
+PDF pages: 10
+Final PDF bytes: 120466
+Final PDF SHA-256: 6f2a9be12465300ac7af2ea086b643b6891b1f9e23af66241a40086ac476c8ef
+Final build-log bytes: 84703
+Final build-log SHA-256: 6d7fa510890ee32c19b65b2b51046b771f8e93570f6d6f1a9f17f0745fcc5874
+Functional replay: 10/10 MuPDF pages and 10/10 Poppler pages are
+pixel-identical within each renderer at 144 dpi. Build C2 and D2 PDF container
+bytes differ, so this is functional reproducibility rather than byte identity.
+MuPDF concatenated page hash: 62d28362e03230afee15e0a30d2a5fcf5bf7a561e1cf2c860d4e06b11da86e8a
+Poppler concatenated page hash: d8e61d078972b33491ac2a8ca96c16c0c833f3ca23638147411a23b52b587984
+Layout-preserving extracted text is byte-identical between C2 and D2: 16531
+bytes; SHA-256 e8756d14d02e17cb605da0b5bdcf3806ea817490d9624679a55aeeb2836b8787.
+Identifier check: `eqn:adj-zigzag-1` is (2.7),
+`eqn:adj-zigzag-2` is (2.8), and
+`eqn:adj-equiv-two-expression` is (2.9), matching their Chapter 2 source
+order after the standalone equation counter is set to six.
+Source/target structure gate: pass. The 201-line span preserves all 232
+mathematical surfaces, 35 environment starts, 9 labels, 8 ordinary
+references, 12 equation references, the citation signature, 3 index entries,
+4 TikZ-CD diagrams, 16 TikZ pictures, 75 nodes, 32 coordinates, 4 draw
+commands, 13 TikZ-CD arrows, and 4 item commands. Han residue is zero.
+Final-log blockers: zero undefined references/citations, multiply-defined
+labels, missing glyphs, overfull hboxes, LaTeX/package errors, fatal errors,
+or emergency stops.
+Expected non-blocking notices: one cover alignment underfull hbox, one
+underfull vbox, seven suppressed empty external-document targets, package
+compatibility notices, and the final makeindex reminder. Every affected page
+was visually checked in both renderers.
+Digital reflow: the initial 1.45-spaced A/B builds occupied 11 pages and left
+the proof conclusion stranded on an orphan content page. The final restrained
+1.30 setting yields 10 pages, keeps the complete proof and closing reference
+together, and changes no content or identifier.
+PDF: id-ID; title/author metadata present; 30 named destinations, 2 outline
+entries, 23 link annotations (18 GoTo and 5 URI); zero Launch, GoToR,
+JavaScript, Widget, or other actions; all 23 fonts embedded; no blank text
+page, unresolved placeholder text, replacement character, NUL, English
+`Lemma`, or extracted Han residue. The PDF is untagged, an inherited
+accessibility limitation rather than a passed tagged-PDF claim.
+Visual QA: all 10 pages were personally inspected at original rendered
+resolution in Poppler and MuPDF. No clipping, overlap, missing content,
+unintended blank page, malformed diagram/formula, missing glyph, or unreadable
+surface was found.
+

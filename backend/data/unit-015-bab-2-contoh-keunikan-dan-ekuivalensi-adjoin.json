@@ -1,0 +1,2138 @@
+{
+  "$schema": "../schema/open-math-corpus-unit.schema.v1.json",
+  "schema_name": "open-math-corpus-unit",
+  "schema_version": "1.1.0",
+  "profile": "curriculum-modular-backend-v0",
+  "dataset_id": "urn:uuid:c61af2be-a8c1-55ce-a456-87b4a8cd07ea",
+  "dataset_stable_key": "dataset/unit-015/id-id",
+  "id_namespace": {
+    "algorithm": "uuid5",
+    "namespace_uuid": "urn:uuid:5d74a443-839a-5a09-b2c6-0bc48a097f2b",
+    "name_root": "https://github.com/wenweili/AlJabr-1#o013-backend-v1"
+  },
+  "workflow": {
+    "responsible_task": "01a02163-e2bf-7a93-950a-b9ab84d7e8b9",
+    "updated": "2026-08-24",
+    "status": "admitted",
+    "admission_state": "admitted",
+    "translation_state": "visually_checked",
+    "qa_state": "translation_backend_build_visual_pass"
+  },
+  "program": {
+    "id": "urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78",
+    "stable_key": "program/open-mathematics-curriculum/2026",
+    "entity_type": "program",
+    "label": "Open Mathematics Curriculum",
+    "version": "2026"
+  },
+  "course": {
+    "id": "urn:uuid:a5f3ad58-ce3c-5f5f-b581-1f842ae79192",
+    "stable_key": "course/o013",
+    "entity_type": "course",
+    "program_id": "urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78",
+    "role_code": "O013",
+    "course_code": "D70",
+    "label": "Graduate Algebra",
+    "prerequisite_ids": [
+      "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
+      "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7",
+      "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+      "urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288",
+      "urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396",
+      "urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14",
+      "urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec",
+      "urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8",
+      "urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee",
+      "urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f",
+      "urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96",
+      "urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f"
+    ]
+  },
+  "resource": {
+    "id": "urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397",
+    "stable_key": "resource/wenweili/aljabr-1",
+    "entity_type": "resource",
+    "canonical_uri": "https://github.com/wenweili/AlJabr-1",
+    "author": "Wen-Wei Li",
+    "titles": [
+      {
+        "language": "zh-Hans",
+        "text": "代数学方法，卷一：基础架构"
+      },
+      {
+        "language": "en",
+        "text": "Methods in Algebra, Volume 1: Basic Architecture"
+      },
+      {
+        "language": "id-ID",
+        "text": "Metode Aljabar, Jilid 1: Arsitektur Dasar"
+      }
+    ],
+    "original_language": "zh-Hans",
+    "rights_component_ids": [
+      "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "urn:uuid:e18339ae-66cd-5304-b544-b220dd41380d",
+      "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+      "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430"
+    ]
+  },
+  "edition": {
+    "id": "urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49",
+    "stable_key": "edition/wenweili/aljabr-1/c4f7a01f68f5f407906b4b970640cddbbad85f6b",
+    "entity_type": "edition",
+    "resource_id": "urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397",
+    "branch": "master",
+    "commit": "c4f7a01f68f5f407906b4b970640cddbbad85f6b",
+    "tree": "0f9fd52748165ec89a85ba602ccb949a2ce04694",
+    "archive": {
+      "path": "authority/archives/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b.zip",
+      "bytes": 6050739,
+      "sha256": "6c8c416baa8f5ffc8810bbad6470c780413bd7917af739e07340e4b07e7eaff6"
+    },
+    "official_pdf": {
+      "path": "authority/pdfs/Al-jabr-1.pdf",
+      "bytes": 3647113,
+      "sha256": "dc751a2d5146edc9f9638471ff3fac4107eab8dd0d3331803581a06998663c38"
+    },
+    "source_manifest": {
+      "path": "00_control/SOURCE_MANIFEST.csv",
+      "bytes": 3383,
+      "sha256": "40125010171d4fa37c3312c454c3c2767325bcb27c4229c255a25b297265eb99"
+    }
+  },
+  "unit": {
+    "id": "urn:uuid:2f878f23-89a0-5955-a109-9448eb81aa95",
+    "stable_key": "unit/bab-2-contoh-keunikan-dan-ekuivalensi-adjoin",
+    "entity_type": "unit",
+    "program_id": "urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78",
+    "course_id": "urn:uuid:a5f3ad58-ce3c-5f5f-b581-1f842ae79192",
+    "resource_id": "urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397",
+    "edition_id": "urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49",
+    "order": 15,
+    "source_local_id": "chapter2.tex:910-1110",
+    "titles": [
+      {
+        "language": "zh-Hans",
+        "text": "第二章：范畴论基础；伴随例、唯一性与伴随等价"
+      },
+      {
+        "language": "id-ID",
+        "text": "Bab 2: Dasar-Dasar Teori Kategori; Contoh, Keunikan, dan Ekuivalensi Adjoin"
+      }
+    ],
+    "source_language": "zh-Hans",
+    "target_language": "id-ID",
+    "source_binding": {
+      "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+      "bytes": 139983,
+      "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+      "line_start": 910,
+      "line_end": 1110,
+      "span_sha256": "49c812f4cdb1929cf11e1bc3e5d916d21e82051d17a686f826c1b171a1f33062",
+      "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+    },
+    "target_binding": {
+      "path": "repo/source/chapter2.tex",
+      "bytes": 158252,
+      "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+      "line_start": 910,
+      "line_end": 1110,
+      "span_sha256": "df3c65bfea7f7272a31809b96b5ae18fdf966afe22e9ab38a0d8f9d35680520f",
+      "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+    },
+    "section_ids": [
+      "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d"
+    ],
+    "concept_ids": [
+      "urn:uuid:c05cedf4-a110-5e43-9e25-86b8b7a29759",
+      "urn:uuid:09087965-caa8-5674-8a34-0d9cf67c6977",
+      "urn:uuid:9696f963-02fc-523f-91aa-e42421a281cd",
+      "urn:uuid:3fe8b035-e135-504d-9631-8ef8664bb76d",
+      "urn:uuid:c60e18c4-f627-5691-87e4-bc0c180763fe",
+      "urn:uuid:66d77c35-01a6-52f7-95e7-f49ed5058ca3",
+      "urn:uuid:b659c344-5989-5b20-b8a1-1d0759fc3f7d",
+      "urn:uuid:a44e71f9-5dab-5087-b19c-c1f598318afc",
+      "urn:uuid:13cf7666-0df3-597f-b920-ded2f5a73577",
+      "urn:uuid:2aa393d6-50db-5929-bf5a-0ee4601c2345",
+      "urn:uuid:a59d4891-6837-5bef-8920-021e966538a5",
+      "urn:uuid:96de89e3-7c87-5952-bf27-bec07f2e1e3e",
+      "urn:uuid:d2814933-5819-5995-bb8f-5df7cd90a332",
+      "urn:uuid:9e4fc028-9e95-59ed-8557-e086dc5bda7e",
+      "urn:uuid:97422dd0-3c7a-525c-867b-4c56427741f7",
+      "urn:uuid:380e7306-df0e-55d4-adb2-1a2fd92c19e6",
+      "urn:uuid:cc2e40d6-fa90-5420-9837-0edb1f06931d",
+      "urn:uuid:fa90b64d-c40e-5620-b732-7c31b31a4ec2",
+      "urn:uuid:756248a3-92d0-5b00-9a81-ae3c1d5ed957",
+      "urn:uuid:c7f70275-6854-5618-9821-903a290f4bf8",
+      "urn:uuid:f79723cf-f2d5-5477-b03a-babf1aa62bfb",
+      "urn:uuid:d1b7e5f6-a785-5ac9-a96c-9eb572543a60",
+      "urn:uuid:2659f04a-608c-5e25-b29d-b38d622b71a7",
+      "urn:uuid:f4ff5669-73c5-53af-b46b-3093afc7110f",
+      "urn:uuid:76fc4b67-6809-5263-a574-f808e5bf2862",
+      "urn:uuid:8604ff92-9d14-5f99-931d-4b2ea478226f",
+      "urn:uuid:5ad6bb57-9018-5eb1-be90-4e3b0cc4e91d",
+      "urn:uuid:35775f13-2817-51b7-869c-51d7f1349c97",
+      "urn:uuid:a0405f5c-4e31-5020-b6a2-f7082a87e449",
+      "urn:uuid:24a9c100-7051-5edd-9f09-437015d57124",
+      "urn:uuid:1e8d42c5-5203-5b7e-9082-b95e2afcd1af",
+      "urn:uuid:018acd2b-e04d-5571-853c-b9c38d69e305",
+      "urn:uuid:1d159f97-4dee-575c-86a5-3632b781c80c",
+      "urn:uuid:e081147d-6fae-50d8-a495-0633dfa43816",
+      "urn:uuid:dd06a9d2-c278-5e45-a35f-79056597418d",
+      "urn:uuid:a2bef958-3f52-5aee-a2a5-d465828ad1a4",
+      "urn:uuid:8b109a26-3b5f-582b-a851-58c28479a2e6"
+    ],
+    "prerequisite_ids": [
+      "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
+      "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7",
+      "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+      "urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288",
+      "urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396",
+      "urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14",
+      "urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec",
+      "urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8",
+      "urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee",
+      "urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f",
+      "urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96",
+      "urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f",
+      "urn:uuid:dd69ccfd-7399-53a2-83fe-84127b1baf1d"
+    ],
+    "rights_component_ids": [
+      "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+      "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430"
+    ],
+    "citation_ids": [
+      "urn:uuid:a870fb62-7a66-5894-8e5b-defe4b2a1f86"
+    ],
+    "diagram_ids": [
+      "urn:uuid:9efcfcd5-40d4-577f-9d8d-b4e2ab6592a7",
+      "urn:uuid:a8ba4609-20fb-542c-9e94-f4999039aa8b",
+      "urn:uuid:ddd79ad4-f022-59d9-84e4-efc05c61dac7",
+      "urn:uuid:1a8c81f9-ab31-5214-a2d4-ed1f5473dcd9",
+      "urn:uuid:96f9b040-4b7f-5e69-b697-119e5f1d6997",
+      "urn:uuid:b4f2c712-67c6-52c3-b16e-3527ce90b705",
+      "urn:uuid:4f03b66d-d906-56f9-8949-592e777ae3c4",
+      "urn:uuid:1564d7c6-ab07-5d60-b017-2915adea8dea",
+      "urn:uuid:9f0b94cd-905d-5512-bb2e-fbe9722dfad4",
+      "urn:uuid:e4e58c72-1760-599f-944c-c4dc9c1642d8",
+      "urn:uuid:585d3b17-ec9b-5a9c-a2aa-608f745860a2",
+      "urn:uuid:476fa265-d040-5682-a897-d7503843c516",
+      "urn:uuid:a5026d48-ad96-586f-8765-68f9fbdb6f69",
+      "urn:uuid:cb5e624e-e95b-5e53-a2f6-edd0853294af",
+      "urn:uuid:891cf5a9-527a-53d5-95d9-1cd841273208",
+      "urn:uuid:822a3b44-7d25-556c-a210-e5622c5dd402",
+      "urn:uuid:bead0954-e08e-5c41-a0e7-bcd8ec227c58",
+      "urn:uuid:8945007d-e54f-55eb-b834-bfa2c64c1fa0",
+      "urn:uuid:b93c8af7-b6a3-52fd-987d-5d9a2b923d37",
+      "urn:uuid:d3a60806-6fbc-5a21-8444-05158a330c74"
+    ],
+    "index_entry_ids": [
+      "urn:uuid:5b01013f-31e5-549e-a89d-14bf38f48110",
+      "urn:uuid:b32ccde2-ae43-56f0-ab45-c87faeddb17f",
+      "urn:uuid:a1bc5d9a-505a-578c-b694-80d20706da9a"
+    ],
+    "build_surface_ids": [
+      "urn:uuid:ee0bcee9-ad03-5795-b1b0-1f4dc39b177c"
+    ],
+    "qa_event_ids": [
+      "urn:uuid:4534323d-6ec1-5f39-b3fa-a28b823a2eb1",
+      "urn:uuid:2e78d48c-5b64-53ad-b139-e7f335fa9661"
+    ],
+    "outcome_keys": [
+      "outcome/recognize-free-forgetful-adjunctions",
+      "outcome/construct-topological-adjunctions",
+      "outcome/apply-pointwise-adjunctions",
+      "outcome/prove-uniqueness-of-adjoints",
+      "outcome/compose-adjunctions",
+      "outcome/characterize-adjoint-equivalences",
+      "outcome/read-string-diagram-proofs",
+      "outcome/track-unit-counit-zigzags"
+    ],
+    "surface_counts": {
+      "sections": 1,
+      "exercises": 0,
+      "hints": 0,
+      "answers": 0,
+      "solutions": 0,
+      "citations": 1,
+      "diagrams": 20,
+      "index_entries": 3
+    },
+    "translation_state": "visually_checked",
+    "admission_state": "admitted"
+  },
+  "sections": [
+    {
+      "id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "stable_key": "unit/bab-2-contoh-keunikan-dan-ekuivalensi-adjoin/section/contoh-keunikan-dan-ekuivalensi-adjoin",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:2f878f23-89a0-5955-a109-9448eb81aa95",
+      "order": 1,
+      "source_local_id": "chapter2.tex:910-1110",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "2.6 伴随函子（续）"
+        },
+        {
+          "language": "id-ID",
+          "text": "2.6 Fungtor Adjoin (lanjutan)"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 910,
+        "line_end": 1110,
+        "span_sha256": "49c812f4cdb1929cf11e1bc3e5d916d21e82051d17a686f826c1b171a1f33062",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 910,
+        "line_end": 1110,
+        "span_sha256": "df3c65bfea7f7272a31809b96b5ae18fdf966afe22e9ab38a0d8f9d35680520f",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:c05cedf4-a110-5e43-9e25-86b8b7a29759",
+        "urn:uuid:09087965-caa8-5674-8a34-0d9cf67c6977",
+        "urn:uuid:9696f963-02fc-523f-91aa-e42421a281cd",
+        "urn:uuid:3fe8b035-e135-504d-9631-8ef8664bb76d",
+        "urn:uuid:c60e18c4-f627-5691-87e4-bc0c180763fe",
+        "urn:uuid:66d77c35-01a6-52f7-95e7-f49ed5058ca3",
+        "urn:uuid:b659c344-5989-5b20-b8a1-1d0759fc3f7d",
+        "urn:uuid:a44e71f9-5dab-5087-b19c-c1f598318afc",
+        "urn:uuid:13cf7666-0df3-597f-b920-ded2f5a73577",
+        "urn:uuid:2aa393d6-50db-5929-bf5a-0ee4601c2345",
+        "urn:uuid:a59d4891-6837-5bef-8920-021e966538a5",
+        "urn:uuid:96de89e3-7c87-5952-bf27-bec07f2e1e3e",
+        "urn:uuid:d2814933-5819-5995-bb8f-5df7cd90a332",
+        "urn:uuid:9e4fc028-9e95-59ed-8557-e086dc5bda7e",
+        "urn:uuid:97422dd0-3c7a-525c-867b-4c56427741f7",
+        "urn:uuid:380e7306-df0e-55d4-adb2-1a2fd92c19e6",
+        "urn:uuid:cc2e40d6-fa90-5420-9837-0edb1f06931d",
+        "urn:uuid:fa90b64d-c40e-5620-b732-7c31b31a4ec2",
+        "urn:uuid:756248a3-92d0-5b00-9a81-ae3c1d5ed957",
+        "urn:uuid:c7f70275-6854-5618-9821-903a290f4bf8",
+        "urn:uuid:f79723cf-f2d5-5477-b03a-babf1aa62bfb",
+        "urn:uuid:d1b7e5f6-a785-5ac9-a96c-9eb572543a60",
+        "urn:uuid:2659f04a-608c-5e25-b29d-b38d622b71a7",
+        "urn:uuid:f4ff5669-73c5-53af-b46b-3093afc7110f",
+        "urn:uuid:76fc4b67-6809-5263-a574-f808e5bf2862",
+        "urn:uuid:8604ff92-9d14-5f99-931d-4b2ea478226f",
+        "urn:uuid:5ad6bb57-9018-5eb1-be90-4e3b0cc4e91d",
+        "urn:uuid:35775f13-2817-51b7-869c-51d7f1349c97",
+        "urn:uuid:a0405f5c-4e31-5020-b6a2-f7082a87e449",
+        "urn:uuid:24a9c100-7051-5edd-9f09-437015d57124",
+        "urn:uuid:1e8d42c5-5203-5b7e-9082-b95e2afcd1af",
+        "urn:uuid:018acd2b-e04d-5571-853c-b9c38d69e305",
+        "urn:uuid:1d159f97-4dee-575c-86a5-3632b781c80c",
+        "urn:uuid:e081147d-6fae-50d8-a495-0633dfa43816",
+        "urn:uuid:dd06a9d2-c278-5e45-a35f-79056597418d",
+        "urn:uuid:a2bef958-3f52-5aee-a2a5-d465828ad1a4",
+        "urn:uuid:8b109a26-3b5f-582b-a851-58c28479a2e6"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
+        "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7",
+        "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+        "urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288",
+        "urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396",
+        "urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14",
+        "urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec",
+        "urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8",
+        "urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee",
+        "urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f",
+        "urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96",
+        "urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f",
+        "urn:uuid:dd69ccfd-7399-53a2-83fe-84127b1baf1d"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "urn:uuid:c05cedf4-a110-5e43-9e25-86b8b7a29759",
+      "stable_key": "concept/adjunction-example",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "伴随例"
+        },
+        {
+          "language": "id-ID",
+          "text": "contoh pasangan adjoin"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:09087965-caa8-5674-8a34-0d9cf67c6977",
+      "stable_key": "concept/free-forgetful-adjunction",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "自由与遗忘伴随"
+        },
+        {
+          "language": "id-ID",
+          "text": "adjoin bebas--pelupa"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:9696f963-02fc-523f-91aa-e42421a281cd",
+      "stable_key": "concept/discrete-topology",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "离散拓扑"
+        },
+        {
+          "language": "id-ID",
+          "text": "topologi diskret"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:3fe8b035-e135-504d-9631-8ef8664bb76d",
+      "stable_key": "concept/indiscrete-topology",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "平凡拓扑"
+        },
+        {
+          "language": "id-ID",
+          "text": "topologi takdiskret"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:c60e18c4-f627-5691-87e4-bc0c180763fe",
+      "stable_key": "concept/free-group",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "自由群"
+        },
+        {
+          "language": "id-ID",
+          "text": "grup bebas"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:66d77c35-01a6-52f7-95e7-f49ed5058ca3",
+      "stable_key": "concept/free-module",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "自由模"
+        },
+        {
+          "language": "id-ID",
+          "text": "modul bebas"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:b659c344-5989-5b20-b8a1-1d0759fc3f7d",
+      "stable_key": "concept/polynomial-ring",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "多项式环"
+        },
+        {
+          "language": "id-ID",
+          "text": "gelanggang polinomial"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:a44e71f9-5dab-5087-b19c-c1f598318afc",
+      "stable_key": "concept/abelianization",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "交换化"
+        },
+        {
+          "language": "id-ID",
+          "text": "abelianisasi"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:13cf7666-0df3-597f-b920-ded2f5a73577",
+      "stable_key": "concept/compactification",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "紧化"
+        },
+        {
+          "language": "id-ID",
+          "text": "pengompakan"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:2aa393d6-50db-5929-bf5a-0ee4601c2345",
+      "stable_key": "concept/stone-cech-compactification",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "Stone--Čech 紧化"
+        },
+        {
+          "language": "id-ID",
+          "text": "pengompakan Stone--Čech"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:a59d4891-6837-5bef-8920-021e966538a5",
+      "stable_key": "concept/pointwise-adjunction",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "逐对象伴随"
+        },
+        {
+          "language": "id-ID",
+          "text": "adjoin secara objek demi objek"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:96de89e3-7c87-5952-bf27-bec07f2e1e3e",
+      "stable_key": "concept/adjunction-uniqueness",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "伴随的唯一性"
+        },
+        {
+          "language": "id-ID",
+          "text": "keunikan adjoin"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:d2814933-5819-5995-bb8f-5df7cd90a332",
+      "stable_key": "concept/adjunction-composition",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "伴随对的合成"
+        },
+        {
+          "language": "id-ID",
+          "text": "komposisi pasangan adjoin"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:9e4fc028-9e95-59ed-8557-e086dc5bda7e",
+      "stable_key": "concept/adjoint-equivalence",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "伴随等价"
+        },
+        {
+          "language": "id-ID",
+          "text": "ekuivalensi adjoin"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:97422dd0-3c7a-525c-867b-4c56427741f7",
+      "stable_key": "concept/category-equivalence",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "范畴等价"
+        },
+        {
+          "language": "id-ID",
+          "text": "ekuivalensi kategori"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:380e7306-df0e-55d4-adb2-1a2fd92c19e6",
+      "stable_key": "concept/quasi-inverse",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "拟逆"
+        },
+        {
+          "language": "id-ID",
+          "text": "kuasi-invers"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:cc2e40d6-fa90-5420-9837-0edb1f06931d",
+      "stable_key": "concept/string-diagram",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "弦图"
+        },
+        {
+          "language": "id-ID",
+          "text": "diagram untai (string diagram)"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:fa90b64d-c40e-5620-b732-7c31b31a4ec2",
+      "stable_key": "concept/unit-of-adjunction",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "单位"
+        },
+        {
+          "language": "id-ID",
+          "text": "unit"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:756248a3-92d0-5b00-9a81-ae3c1d5ed957",
+      "stable_key": "concept/counit-of-adjunction",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "余单位"
+        },
+        {
+          "language": "id-ID",
+          "text": "kounit"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:c7f70275-6854-5618-9821-903a290f4bf8",
+      "stable_key": "surface/unit-015/label/eg-top-adjunction",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "标签 eg:top-adjunction"
+        },
+        {
+          "language": "id-ID",
+          "text": "label eg:top-adjunction"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:f79723cf-f2d5-5477-b03a-babf1aa62bfb",
+      "stable_key": "surface/unit-015/label/eg-forgetful-adjunction",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "标签 eg:forgetful-adjunction"
+        },
+        {
+          "language": "id-ID",
+          "text": "label eg:forgetful-adjunction"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:d1b7e5f6-a785-5ac9-a96c-9eb572543a60",
+      "stable_key": "surface/unit-015/label/prop-adjunction-pointwise",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "标签 prop:adjunction-pointwise"
+        },
+        {
+          "language": "id-ID",
+          "text": "label prop:adjunction-pointwise"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:2659f04a-608c-5e25-b29d-b38d622b71a7",
+      "stable_key": "surface/unit-015/label/prop-adjunction-uniqueness",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "标签 prop:adjunction-uniqueness"
+        },
+        {
+          "language": "id-ID",
+          "text": "label prop:adjunction-uniqueness"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:f4ff5669-73c5-53af-b46b-3093afc7110f",
+      "stable_key": "surface/unit-015/label/prop-adjunction-composition",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "标签 prop:adjunction-composition"
+        },
+        {
+          "language": "id-ID",
+          "text": "label prop:adjunction-composition"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:76fc4b67-6809-5263-a574-f808e5bf2862",
+      "stable_key": "surface/unit-015/label/prop-adjoint-equivalence",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "标签 prop:adjoint-equivalence"
+        },
+        {
+          "language": "id-ID",
+          "text": "label prop:adjoint-equivalence"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:8604ff92-9d14-5f99-931d-4b2ea478226f",
+      "stable_key": "surface/unit-015/label/eqn-adj-zigzag-1",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "标签 eqn:adj-zigzag-1"
+        },
+        {
+          "language": "id-ID",
+          "text": "label eqn:adj-zigzag-1"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:5ad6bb57-9018-5eb1-be90-4e3b0cc4e91d",
+      "stable_key": "surface/unit-015/label/eqn-adj-zigzag-2",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "标签 eqn:adj-zigzag-2"
+        },
+        {
+          "language": "id-ID",
+          "text": "label eqn:adj-zigzag-2"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:35775f13-2817-51b7-869c-51d7f1349c97",
+      "stable_key": "surface/unit-015/label/eqn-adj-equiv-two-expression",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "标签 eqn:adj-equiv-two-expression"
+        },
+        {
+          "language": "id-ID",
+          "text": "label eqn:adj-equiv-two-expression"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:a0405f5c-4e31-5020-b6a2-f7082a87e449",
+      "stable_key": "surface/unit-015/reference/def-free-group",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "外部引用 def:free-group"
+        },
+        {
+          "language": "id-ID",
+          "text": "rujukan eksternal def:free-group"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:24a9c100-7051-5edd-9f09-437015d57124",
+      "stable_key": "surface/unit-015/reference/prop-adjunction-uniqueness",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "外部引用 prop:adjunction-uniqueness"
+        },
+        {
+          "language": "id-ID",
+          "text": "rujukan eksternal prop:adjunction-uniqueness"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:1e8d42c5-5203-5b7e-9082-b95e2afcd1af",
+      "stable_key": "surface/unit-015/reference/eg-metric-completion",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "外部引用 eg:metric-completion"
+        },
+        {
+          "language": "id-ID",
+          "text": "rujukan eksternal eg:metric-completion"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:018acd2b-e04d-5571-853c-b9c38d69e305",
+      "stable_key": "surface/unit-015/reference/prop-representable-functor-uniqueness",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "外部引用 prop:representable-functor-uniqueness"
+        },
+        {
+          "language": "id-ID",
+          "text": "rujukan eksternal prop:representable-functor-uniqueness"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:1d159f97-4dee-575c-86a5-3632b781c80c",
+      "stable_key": "surface/unit-015/reference/prop-adjunction-pointwise",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "外部引用 prop:adjunction-pointwise"
+        },
+        {
+          "language": "id-ID",
+          "text": "rujukan eksternal prop:adjunction-pointwise"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:e081147d-6fae-50d8-a495-0633dfa43816",
+      "stable_key": "surface/unit-015/reference/def-cat-equivalence",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "外部引用 def:cat-equivalence"
+        },
+        {
+          "language": "id-ID",
+          "text": "rujukan eksternal def:cat-equivalence"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:dd06a9d2-c278-5e45-a35f-79056597418d",
+      "stable_key": "surface/unit-015/reference/prop-naturaltrans-associativity",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "外部引用 prop:naturaltrans-associativity"
+        },
+        {
+          "language": "id-ID",
+          "text": "rujukan eksternal prop:naturaltrans-associativity"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:a2bef958-3f52-5aee-a2a5-d465828ad1a4",
+      "stable_key": "surface/unit-015/reference/sec-braiding",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "外部引用 sec:braiding"
+        },
+        {
+          "language": "id-ID",
+          "text": "rujukan eksternal sec:braiding"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:8b109a26-3b5f-582b-a851-58c28479a2e6",
+      "stable_key": "surface/unit-015/reference/eqn-unit-counit-relation",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "外部引用 eqn:unit-counit-relation"
+        },
+        {
+          "language": "id-ID",
+          "text": "rujukan eksternal eqn:unit-counit-relation"
+        }
+      ]
+    }
+  ],
+  "prerequisites": [
+    {
+      "id": "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
+      "stable_key": "prerequisite/basic-mathematical-literacy",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "基本素养"
+        },
+        {
+          "language": "id-ID",
+          "text": "kematangan matematika dasar"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 54,
+        "line_end": 54
+      }
+    },
+    {
+      "id": "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7",
+      "stable_key": "prerequisite/mathematical-logic",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "逻辑用语与论证"
+        },
+        {
+          "language": "id-ID",
+          "text": "bahasa logika dan penalaran"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 54,
+        "line_end": 54
+      }
+    },
+    {
+      "id": "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+      "stable_key": "prerequisite/elementary-set-theory",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "集合常识"
+        },
+        {
+          "language": "id-ID",
+          "text": "teori himpunan elementer"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 54,
+        "line_end": 54
+      }
+    },
+    {
+      "id": "urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288",
+      "stable_key": "prerequisite/matrices",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "矩阵"
+        },
+        {
+          "language": "id-ID",
+          "text": "matriks"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396",
+      "stable_key": "prerequisite/vector-spaces",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "向量空间"
+        },
+        {
+          "language": "id-ID",
+          "text": "ruang vektor"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14",
+      "stable_key": "prerequisite/polynomials",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "多项式"
+        },
+        {
+          "language": "id-ID",
+          "text": "polinom"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec",
+      "stable_key": "prerequisite/linear-transformations",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "线性变换"
+        },
+        {
+          "language": "id-ID",
+          "text": "transformasi linear"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8",
+      "stable_key": "prerequisite/permutations-and-symmetric-groups",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "置换与对称群"
+        },
+        {
+          "language": "id-ID",
+          "text": "permutasi dan grup simetris"
+        }
+      ],
+      "requiredness": "recommended",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee",
+      "stable_key": "prerequisite/elementary-number-theory",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "初等数论"
+        },
+        {
+          "language": "id-ID",
+          "text": "teori bilangan elementer"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 56,
+        "line_end": 56
+      }
+    },
+    {
+      "id": "urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f",
+      "stable_key": "prerequisite/real-analysis-basics",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "实数与分析常识"
+        },
+        {
+          "language": "id-ID",
+          "text": "dasar-dasar analisis real"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 57,
+        "line_end": 57
+      }
+    },
+    {
+      "id": "urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96",
+      "stable_key": "prerequisite/point-set-topology",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "点集拓扑学初步"
+        },
+        {
+          "language": "id-ID",
+          "text": "topologi himpunan titik elementer"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 57,
+        "line_end": 57
+      }
+    },
+    {
+      "id": "urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f",
+      "stable_key": "prerequisite/cauchy-sequences-and-completeness",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "Cauchy 列与完备性"
+        },
+        {
+          "language": "id-ID",
+          "text": "barisan Cauchy dan kelengkapan"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 57,
+        "line_end": 57
+      }
+    },
+    {
+      "id": "urn:uuid:dd69ccfd-7399-53a2-83fe-84127b1baf1d",
+      "stable_key": "prerequisite/categories-and-morphisms",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "范畴与态射"
+        },
+        {
+          "language": "id-ID",
+          "text": "kategori dan morfisme"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "line_start": 39,
+        "line_end": 198
+      }
+    }
+  ],
+  "rights": [
+    {
+      "id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "stable_key": "rights/principal-cc-by-4.0",
+      "entity_type": "rights",
+      "component": "Principal text, source, PDF, and Indonesian translation",
+      "holder_or_source": "Wen-Wei Li; Indonesian translation contributors for translation expression",
+      "license": "CC BY 4.0",
+      "required_treatment": "Attribute author and source, identify the Indonesian translation and changes, link the license, and imply no endorsement.",
+      "applies_to_unit": true,
+      "bindings": [
+        {
+          "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+          "bytes": 139983,
+          "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840"
+        },
+        {
+          "path": "repo/source/LICENSE",
+          "bytes": 19045,
+          "sha256": "48a83a6e39f7b2f166763b30776132c9a99aa816f17cb06f87ad5b8542a7b71f"
+        },
+        {
+          "path": "repo/source/ccby.png",
+          "bytes": 12588,
+          "sha256": "633aae44a5d5b8915debc82f56a8e05c1b62b567b1aefeabc18617b81d8a04a9"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:e18339ae-66cd-5304-b544-b220dd41380d",
+      "stable_key": "rights/lanzhou-cc-by-sa-3.0",
+      "entity_type": "rights",
+      "component": "Lanzhou.png",
+      "holder_or_source": "Chk2011; derived from Wikimedia Administrative_Division_Lanzhou.svg",
+      "license": "CC BY-SA 3.0",
+      "required_treatment": "Keep separate attribution and source/license link, identify rasterization or other changes, and preserve share-alike treatment.",
+      "applies_to_unit": false,
+      "bindings": [
+        {
+          "path": "repo/source/Lanzhou.png",
+          "bytes": 276766,
+          "sha256": "6000d7740aab58f1959c07af2c057680e2518dcc75b225f3180ed4b996fe9455"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+      "stable_key": "rights/ajbook-fragment-cc-by-sa-3.0",
+      "entity_type": "rights",
+      "component": "AJbook.cls DeclareSourcemap fragment",
+      "holder_or_source": "Guido; revision edited by dpprdan; TeX.StackExchange answer 119136",
+      "license": "CC BY-SA 3.0",
+      "required_treatment": "Keep separate attribution and source/license link, or replace with independently written equivalent code.",
+      "applies_to_unit": true,
+      "bindings": [
+        {
+          "path": "repo/source/AJbook.cls",
+          "bytes": 13780,
+          "sha256": "f35dbe8942a880dfe70c072bcfe0491d8cc83f562c28a481b949ca4cc84f0b04"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430",
+      "stable_key": "rights/noto-fonts-ofl-1.1",
+      "entity_type": "rights",
+      "component": "Noto Sans CJK SC and Noto Serif CJK SC fonts",
+      "holder_or_source": "Google and Adobe Noto contributors",
+      "license": "OFL 1.1",
+      "required_treatment": "Retain the OFL text and font notices; do not relicense fonts as book content.",
+      "applies_to_unit": true,
+      "bindings": [
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Black.otf",
+          "bytes": 17797908,
+          "sha256": "2267c4a0312d267dff8c0d1609948f7d949a3da8be3e126f5e2690cb9cc883b4"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Medium.otf",
+          "bytes": 16523632,
+          "sha256": "ca094f6b0001fb048ca39ddd797a0cdb0179e1e55c6561e111c49c3e6a61d7b7"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Regular.otf",
+          "bytes": 16437364,
+          "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+        },
+        {
+          "path": "repo/fonts/NotoSerifCJKsc-Bold.otf",
+          "bytes": 25521460,
+          "sha256": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73"
+        },
+        {
+          "path": "repo/fonts/OFL-1.1-Noto-CJK.txt",
+          "bytes": 4301,
+          "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+        }
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "id": "urn:uuid:a870fb62-7a66-5894-8e5b-defe4b2a1f86",
+      "stable_key": "citation/unit-015/co11",
+      "entity_type": "citation",
+      "bib_key": "Co11",
+      "bibliography_path": "repo/source/Al-jabr.bib",
+      "bibliography_sha256": "4979570eb4e3a9edcddd2f975790e56c98dcb3201e03e0a1fbdd64ba60c8263e",
+      "source_line": 1109,
+      "target_line": 1109,
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d"
+    }
+  ],
+  "diagrams": [
+    {
+      "id": "urn:uuid:9efcfcd5-40d4-577f-9d8d-b4e2ab6592a7",
+      "stable_key": "diagram/unit-015/tikzcd-1",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 1,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 1,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 936,
+        "line_end": 939,
+        "span_sha256": "eb8f8259ef2ce30d5ecfed05f50557fe1b6e3cb3e926dd0f552955e96f46305b",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 936,
+        "line_end": 939,
+        "span_sha256": "eb8f8259ef2ce30d5ecfed05f50557fe1b6e3cb3e926dd0f552955e96f46305b",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:a8ba4609-20fb-542c-9e94-f4999039aa8b",
+      "stable_key": "diagram/unit-015/tikzcd-2",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 2,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 2,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 945,
+        "line_end": 948,
+        "span_sha256": "0cc7ad0f6a53b0b5076ba5495f57da135e7b05fdae0c494571dd6e7f94994d2c",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 945,
+        "line_end": 948,
+        "span_sha256": "0cc7ad0f6a53b0b5076ba5495f57da135e7b05fdae0c494571dd6e7f94994d2c",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:ddd79ad4-f022-59d9-84e4-efc05c61dac7",
+      "stable_key": "diagram/unit-015/tikzcd-3",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 3,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 3,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 959,
+        "line_end": 961,
+        "span_sha256": "fe375fa82e830a189bb8b8c8b73886902937a2a58e3adc3276e91a4b5056077b",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 959,
+        "line_end": 961,
+        "span_sha256": "fe375fa82e830a189bb8b8c8b73886902937a2a58e3adc3276e91a4b5056077b",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:1a8c81f9-ab31-5214-a2d4-ed1f5473dcd9",
+      "stable_key": "diagram/unit-015/tikzcd-4",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 4,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 4,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 974,
+        "line_end": 976,
+        "span_sha256": "d5da00be6c7b3fb14ff7ccae51696a3c98a378ace16309de797282a248db5d5e",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 974,
+        "line_end": 976,
+        "span_sha256": "8c31d552379d0a061670d8555c02c76d8c95aead7566dec5b07d3d43a388e9bf",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:96f9b040-4b7f-5e69-b697-119e5f1d6997",
+      "stable_key": "diagram/unit-015/tikzpicture-1",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 5,
+      "source_format": "tikzpicture",
+      "source_occurrence_index": 1,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 988,
+        "line_end": 994,
+        "span_sha256": "cde213d21a4f2720541b7d69a49c02021e811e4a9e3fe10ad0d0334eb2518f59",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 988,
+        "line_end": 994,
+        "span_sha256": "cde213d21a4f2720541b7d69a49c02021e811e4a9e3fe10ad0d0334eb2518f59",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:b4f2c712-67c6-52c3-b16e-3527ce90b705",
+      "stable_key": "diagram/unit-015/tikzpicture-2",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 6,
+      "source_format": "tikzpicture",
+      "source_occurrence_index": 2,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 994,
+        "line_end": 998,
+        "span_sha256": "87cc16d6549f0f9b8a691cf69c8a367e38e5b1fe51400abbc70e3dafd8c53e81",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 994,
+        "line_end": 998,
+        "span_sha256": "40ad984d4814917437dc44e73bb8f6d5cec89fc1b8182fb399d69d4ed885b213",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:4f03b66d-d906-56f9-8949-592e777ae3c4",
+      "stable_key": "diagram/unit-015/tikzpicture-3",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 7,
+      "source_format": "tikzpicture",
+      "source_occurrence_index": 3,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 998,
+        "line_end": 1003,
+        "span_sha256": "6eace30be3455e63c425862e281bececdbf6aac901b4570e151779fbd366a942",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 998,
+        "line_end": 1003,
+        "span_sha256": "bfd55bb125d81aa03936e434d135383edf2606275c3c094a667daaf0a1b7f3e7",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:1564d7c6-ab07-5d60-b017-2915adea8dea",
+      "stable_key": "diagram/unit-015/tikzpicture-4",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 8,
+      "source_format": "tikzpicture",
+      "source_occurrence_index": 4,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 1003,
+        "line_end": 1007,
+        "span_sha256": "c0161ec6031580a0e6ac655dff1665ef6b3d681d08e7f93480944f0a239e4c2c",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 1003,
+        "line_end": 1007,
+        "span_sha256": "c0161ec6031580a0e6ac655dff1665ef6b3d681d08e7f93480944f0a239e4c2c",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:9f0b94cd-905d-5512-bb2e-fbe9722dfad4",
+      "stable_key": "diagram/unit-015/tikzpicture-5",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 9,
+      "source_format": "tikzpicture",
+      "source_occurrence_index": 5,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 1009,
+        "line_end": 1014,
+        "span_sha256": "dec94fe26c89855b8bd34ed2dddbe53a42430c3c21c225c1480993272c820aea",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 1009,
+        "line_end": 1014,
+        "span_sha256": "dec94fe26c89855b8bd34ed2dddbe53a42430c3c21c225c1480993272c820aea",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:e4e58c72-1760-599f-944c-c4dc9c1642d8",
+      "stable_key": "diagram/unit-015/tikzpicture-6",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 10,
+      "source_format": "tikzpicture",
+      "source_occurrence_index": 6,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 1016,
+        "line_end": 1028,
+        "span_sha256": "26b1f3d4324aeb8e2c94071b3701811aa5073e8aca773c8716c72b8eb0730061",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 1016,
+        "line_end": 1028,
+        "span_sha256": "26b1f3d4324aeb8e2c94071b3701811aa5073e8aca773c8716c72b8eb0730061",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:585d3b17-ec9b-5a9c-a2aa-608f745860a2",
+      "stable_key": "diagram/unit-015/tikzpicture-7",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 11,
+      "source_format": "tikzpicture",
+      "source_occurrence_index": 7,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 1028,
+        "line_end": 1040,
+        "span_sha256": "1725631dcc53ae62b68287afee445a5b4bd19859e55b6167d3defced974f9c2b",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 1028,
+        "line_end": 1040,
+        "span_sha256": "e0047a04719da296683046482f8fd562be6ea92c1a732ae7be739477a755e74f",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:476fa265-d040-5682-a897-d7503843c516",
+      "stable_key": "diagram/unit-015/tikzpicture-8",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 12,
+      "source_format": "tikzpicture",
+      "source_occurrence_index": 8,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 1042,
+        "line_end": 1048,
+        "span_sha256": "abfe32dd83e2c60b0fc20a40d82ab528d46bb8abe6cf7f7a24b0d2ef9f32b414",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 1042,
+        "line_end": 1048,
+        "span_sha256": "abfe32dd83e2c60b0fc20a40d82ab528d46bb8abe6cf7f7a24b0d2ef9f32b414",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:a5026d48-ad96-586f-8765-68f9fbdb6f69",
+      "stable_key": "diagram/unit-015/tikzpicture-9",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 13,
+      "source_format": "tikzpicture",
+      "source_occurrence_index": 9,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 1048,
+        "line_end": 1054,
+        "span_sha256": "8c9130783a59e0329fd1ffe9ec114762fad7f66fa4db7a85379bb19417219d95",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 1048,
+        "line_end": 1054,
+        "span_sha256": "8c9130783a59e0329fd1ffe9ec114762fad7f66fa4db7a85379bb19417219d95",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:cb5e624e-e95b-5e53-a2f6-edd0853294af",
+      "stable_key": "diagram/unit-015/tikzpicture-10",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 14,
+      "source_format": "tikzpicture",
+      "source_occurrence_index": 10,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 1056,
+        "line_end": 1062,
+        "span_sha256": "a9b677a242f45f4d0ec8f360fceaba638469b85ec262928b6396e04d7c84575f",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 1056,
+        "line_end": 1062,
+        "span_sha256": "a9b677a242f45f4d0ec8f360fceaba638469b85ec262928b6396e04d7c84575f",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:891cf5a9-527a-53d5-95d9-1cd841273208",
+      "stable_key": "diagram/unit-015/tikzpicture-11",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 15,
+      "source_format": "tikzpicture",
+      "source_occurrence_index": 11,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 1062,
+        "line_end": 1068,
+        "span_sha256": "bb3cac7a7d2fbcb10157365ea0a23c7c7bb0e70d78e07b0b827844f780c64650",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 1062,
+        "line_end": 1068,
+        "span_sha256": "bb3cac7a7d2fbcb10157365ea0a23c7c7bb0e70d78e07b0b827844f780c64650",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:822a3b44-7d25-556c-a210-e5622c5dd402",
+      "stable_key": "diagram/unit-015/tikzpicture-12",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 16,
+      "source_format": "tikzpicture",
+      "source_occurrence_index": 12,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 1072,
+        "line_end": 1079,
+        "span_sha256": "d51ce4a9b0d10a077187f7d4bb73f1f120242aff3fc96dd1f4aa7b6fc9194383",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 1072,
+        "line_end": 1079,
+        "span_sha256": "d51ce4a9b0d10a077187f7d4bb73f1f120242aff3fc96dd1f4aa7b6fc9194383",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:bead0954-e08e-5c41-a0e7-bcd8ec227c58",
+      "stable_key": "diagram/unit-015/tikzpicture-13",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 17,
+      "source_format": "tikzpicture",
+      "source_occurrence_index": 13,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 1080,
+        "line_end": 1086,
+        "span_sha256": "5f071e71e96fc46daedcbff2c2167d5cbdb2aa8160542f4cbe25cda846f71963",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 1080,
+        "line_end": 1086,
+        "span_sha256": "5f071e71e96fc46daedcbff2c2167d5cbdb2aa8160542f4cbe25cda846f71963",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:8945007d-e54f-55eb-b834-bfa2c64c1fa0",
+      "stable_key": "diagram/unit-015/tikzpicture-14",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 18,
+      "source_format": "tikzpicture",
+      "source_occurrence_index": 14,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 1088,
+        "line_end": 1094,
+        "span_sha256": "db04771d72fde92c41a69db69a04f13e395280ef9c6137c0f2dade6a016136c2",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 1088,
+        "line_end": 1094,
+        "span_sha256": "db04771d72fde92c41a69db69a04f13e395280ef9c6137c0f2dade6a016136c2",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:b93c8af7-b6a3-52fd-987d-5d9a2b923d37",
+      "stable_key": "diagram/unit-015/tikzpicture-15",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 19,
+      "source_format": "tikzpicture",
+      "source_occurrence_index": 15,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 1094,
+        "line_end": 1097,
+        "span_sha256": "f4b690a661fbcf7e11ae19324a214546175e55668574442fb012b383da163207",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 1094,
+        "line_end": 1097,
+        "span_sha256": "f4b690a661fbcf7e11ae19324a214546175e55668574442fb012b383da163207",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:d3a60806-6fbc-5a21-8444-05158a330c74",
+      "stable_key": "diagram/unit-015/tikzpicture-16",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 20,
+      "source_format": "tikzpicture",
+      "source_occurrence_index": 16,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 1101,
+        "line_end": 1105,
+        "span_sha256": "da768a70345496ee15239b63b0f7c2fb9c2464ca10e263a9a67bf1e2430b822d",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 1101,
+        "line_end": 1105,
+        "span_sha256": "da768a70345496ee15239b63b0f7c2fb9c2464ca10e263a9a67bf1e2430b822d",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    }
+  ],
+  "index_entries": [
+    {
+      "id": "urn:uuid:5b01013f-31e5-549e-a89d-14bf38f48110",
+      "stable_key": "index-entry/unit-015/adjunction-composition",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 1,
+      "source_key": "bansuidui!合成",
+      "target_key": "pasangan adjoin!komposisi",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 955,
+        "line_end": 955,
+        "span_sha256": "59b92bddf460adf849cff8da469b6069191aacf2a838230a3b2c63dd9f5266c4",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 955,
+        "line_end": 955,
+        "span_sha256": "84723af75a09107a17ad662ca47c7aec35282bccb92b7f6aa73e0127d11a2518",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:b32ccde2-ae43-56f0-ab45-c87faeddb17f",
+      "stable_key": "index-entry/unit-015/category-equivalence",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 2,
+      "source_key": "fanchoudengjia",
+      "target_key": "ekuivalensi kategori",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 972,
+        "line_end": 972,
+        "span_sha256": "4950a16bed8aa24e608cae5ca3b1ef2e286f18e1994fd475e85e60ccf59e84cb",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 972,
+        "line_end": 972,
+        "span_sha256": "20af837375ad1ed5d953fec1666bcc1deb704d2ba9705c63b8b9afb2b089f8fe",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:a1bc5d9a-505a-578c-b694-80d20706da9a",
+      "stable_key": "index-entry/unit-015/adjoint-equivalence",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d",
+      "ordinal_in_unit": 3,
+      "source_key": "bansuidengjia",
+      "target_key": "ekuivalensi adjoin",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "line_start": 972,
+        "line_end": 972,
+        "span_sha256": "4950a16bed8aa24e608cae5ca3b1ef2e286f18e1994fd475e85e60ccf59e84cb",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter2.tex",
+        "bytes": 158252,
+        "sha256": "a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c",
+        "line_start": 972,
+        "line_end": 972,
+        "span_sha256": "20af837375ad1ed5d953fec1666bcc1deb704d2ba9705c63b8b9afb2b089f8fe",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    }
+  ],
+  "build_surfaces": [
+    {
+      "id": "urn:uuid:ee0bcee9-ad03-5795-b1b0-1f4dc39b177c",
+      "stable_key": "build-surface/unit-015-pdf",
+      "entity_type": "build_surface",
+      "unit_id": "urn:uuid:2f878f23-89a0-5955-a109-9448eb81aa95",
+      "kind": "pdf",
+      "working_directory": ".",
+      "command": "pwsh -NoProfile -File scripts/build_unit_015.ps1 -OutputDirectory build/unit-015-replay",
+      "artifact_path": "artifacts/unit-015-bab-2-contoh-keunikan-dan-ekuivalensi-adjoin.pdf",
+      "artifact_binding": {
+        "path": "artifacts/unit-015-bab-2-contoh-keunikan-dan-ekuivalensi-adjoin.pdf",
+        "bytes": 120466,
+        "sha256": "6f2a9be12465300ac7af2ea086b643b6891b1f9e23af66241a40086ac476c8ef"
+      },
+      "log_binding": {
+        "path": "qa/UNIT_015_BUILD_FINAL.log",
+        "bytes": 84703,
+        "sha256": "6d7fa510890ee32c19b65b2b51046b771f8e93570f6d6f1a9f17f0745fcc5874"
+      },
+      "build_script": {
+        "path": "scripts/build_unit_015.ps1",
+        "bytes": 2820,
+        "sha256": "f12b8c3ecef88d283df77e7a3ccbe119b057d7f12fb1f4c1a0bf8ac1ed57b3f9"
+      },
+      "page_count": 10,
+      "status": "pass",
+      "driver": {
+        "path": "repo/source/unit-015-bab-2-contoh-keunikan-dan-ekuivalensi-adjoin.tex",
+        "bytes": 4848,
+        "sha256": "0b7510d5e5438d720a56e201fbd43c68a715fbfc3fd1f28e548ad0d20f82efcf"
+      },
+      "input_bindings": [
+        {
+          "path": "repo/source/coverpage-id-unit-015.tex",
+          "bytes": 4360,
+          "sha256": "cc912fc132ae3c4761f02ce7946d462c0a29ad96d07e1be1033a8a1a5a12c346"
+        },
+        {
+          "path": "repo/source/font-setup-id.tex",
+          "bytes": 2563,
+          "sha256": "19c03e7fc4abaf7c433a85cf8adf32dbe5259d3de5106c8d1dd712af37dcd280"
+        },
+        {
+          "path": "repo/source/AJbook.cls",
+          "bytes": 13780,
+          "sha256": "f35dbe8942a880dfe70c072bcfe0491d8cc83f562c28a481b949ca4cc84f0b04"
+        },
+        {
+          "path": "repo/source/titles-setup-id.tex",
+          "bytes": 329,
+          "sha256": "db020adff03242f1f2fe8bcb6ec74b6072d9db6bd44971caadde3ce231a51f1b"
+        },
+        {
+          "path": "repo/source/locale-ui-id.tex",
+          "bytes": 2972,
+          "sha256": "9d6c6aa162d11ce8f491703f640a808cdcf61280b300f22032d4caaa0035f3b9"
+        },
+        {
+          "path": "repo/source/titles-setup.tex",
+          "bytes": 6274,
+          "sha256": "f5a81e5ec9f0f2023b93d9b713f0bdc18171a1505863f44a15d65c8757eeadf7"
+        },
+        {
+          "path": "repo/source/mycommand.sty",
+          "bytes": 5925,
+          "sha256": "4d8cdc54597197b8d207cec69fc9af93f9b02c49628e77ab1e9a6d046275d9bc"
+        },
+        {
+          "path": "repo/source/myarrows.sty",
+          "bytes": 3650,
+          "sha256": "59ff5dc0d470674894c5369f6ee79442b71ce08fc02433be7c58387f9a684dd4"
+        },
+        {
+          "path": "repo/source/Al-jabr.bib",
+          "bytes": 29580,
+          "sha256": "4979570eb4e3a9edcddd2f975790e56c98dcb3201e03e0a1fbdd64ba60c8263e"
+        },
+        {
+          "path": "repo/source/ccby.png",
+          "bytes": 12588,
+          "sha256": "633aae44a5d5b8915debc82f56a8e05c1b62b567b1aefeabc18617b81d8a04a9"
+        },
+        {
+          "path": "repo/source/unit-015-crossrefs.aux",
+          "bytes": 558,
+          "sha256": "d6d0e2809659f4f271d47654344d731bd1d4cde0eab0823dd009f3a1f46d38ed"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Black.otf",
+          "bytes": 17797908,
+          "sha256": "2267c4a0312d267dff8c0d1609948f7d949a3da8be3e126f5e2690cb9cc883b4"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Medium.otf",
+          "bytes": 16523632,
+          "sha256": "ca094f6b0001fb048ca39ddd797a0cdb0179e1e55c6561e111c49c3e6a61d7b7"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Regular.otf",
+          "bytes": 16437364,
+          "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+        },
+        {
+          "path": "repo/fonts/NotoSerifCJKsc-Bold.otf",
+          "bytes": 25521460,
+          "sha256": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73"
+        }
+      ],
+      "external_dependencies": [
+        "XeLaTeX",
+        "PowerShell 7",
+        "biber",
+        "makeindex (default index)",
+        "Fandol fonts from TeX distribution",
+        "TeX Gyre Heros",
+        "packages loaded by the Unit 015 driver and AJbook.cls"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+        "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+        "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430"
+      ]
+    }
+  ],
+  "qa_events": [
+    {
+      "id": "urn:uuid:4534323d-6ec1-5f39-b3fa-a28b823a2eb1",
+      "stable_key": "qa/unit-015/admission-gate",
+      "entity_type": "qa_event",
+      "unit_id": "urn:uuid:2f878f23-89a0-5955-a109-9448eb81aa95",
+      "check_type": "admission_gate",
+      "result": "pass",
+      "scope": "Complete source-order translation and semantic review of chapter2.tex lines 910-1110 (source pages 54-58; physical official-PDF pages 60-64); 232 source and 232 target mathematics surfaces equivalent after two disclosed source corrections (O013-LI-U015-COR-001, O013-LI-U015-COR-002); 35 balanced environments, nine labels, eight ordinary references, twelve equation references, one Co11 citation, three default index entries, twenty diagrams (four TikZ-CD and sixteen TikZ), no exercises, hints, answers, or solutions; exact equation continuity (2.7)-(2.9); 1.30 digital reflow; resolved frozen external references; separate CC BY 4.0 principal-text, CC BY-SA 3.0 class-fragment, and OFL 1.1 font rights; clean functional replay, PDF checks, and all-page visual QA. Translation provenance is OpenAI Codex gpt-5.6-sol, Ultra, recorded separately from Wen-Wei Li's authorship and other human credit.",
+      "witness": "qa/UNIT_015_ADMISSION_20260824.md",
+      "translation_audit_state": "pass",
+      "build_state": "pass",
+      "visual_state": "pass",
+      "witness_binding": {
+        "path": "qa/UNIT_015_ADMISSION_20260824.md",
+        "bytes": 6821,
+        "sha256": "cc81bc9121c5967873b96f38be2d95f7b1cd5954eef1a84b585c9e0c74e9811c"
+      }
+    },
+    {
+      "id": "urn:uuid:2e78d48c-5b64-53ad-b139-e7f335fa9661",
+      "stable_key": "qa/unit-015/structured-public-evidence",
+      "entity_type": "qa_event",
+      "unit_id": "urn:uuid:2f878f23-89a0-5955-a109-9448eb81aa95",
+      "check_type": "backend_integrity",
+      "result": "pass",
+      "scope": "Published structured QA binds the admitted target and reader identities, topology status, 1.30 digital reflow, exact model provenance, and source-order Chapter 2 equation identifiers eqn:adj-zigzag-1=(2.7), eqn:adj-zigzag-2=(2.8), and eqn:adj-equiv-two-expression=(2.9).",
+      "witness": "qa/unit-015-evidence/structure-and-pdf-qa.json",
+      "translation_audit_state": "pass",
+      "build_state": "pass",
+      "visual_state": "pass",
+      "witness_binding": {
+        "path": "qa/unit-015-evidence/structure-and-pdf-qa.json",
+        "bytes": 5910,
+        "sha256": "c1363c5e19161269fb6667781505f06238d3c3bed06c9445d2883fb391f61aca"
+      }
+    }
+  ]
+}

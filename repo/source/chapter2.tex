@@ -908,83 +908,83 @@ Dalam data $(F, G, \eta, \varepsilon)$, $\varepsilon$ (atau $\eta$) merupakan is
 \end{remark}
 
 \begin{example}\label{eg:top-adjunction}
-	忘却函子 $\cate{Top} \to \cate{Set}$ 兼有左右伴随函子:  左伴随函子 $L: \cate{Set} \to \cate{Top}$ 赋予一个集合离散拓扑 (所有子集皆开), 而右伴随函子 $R: \cate{Set} \to \cate{Top}$ 赋予一个集合 $S$ 平凡拓扑 (仅 $\emptyset$, $S$ 开).
+	Fungtor pelupa $\cate{Top} \to \cate{Set}$ memiliki fungtor adjoin kiri maupun kanan: fungtor adjoin kiri $L: \cate{Set} \to \cate{Top}$ membekali suatu himpunan dengan topologi diskret (semua subhimpunan terbuka), sedangkan fungtor adjoin kanan $R: \cate{Set} \to \cate{Top}$ membekali suatu himpunan $S$ dengan topologi takdiskret (trivial; hanya $\emptyset$ dan $S$ yang terbuka).
 \end{example}
 
 \begin{example}\label{eg:forgetful-adjunction}
-	数学中还有许多构造是忘却函子或包含函子的左伴随. 以下举少量例子.
+	Dalam matematika masih banyak konstruksi lain yang merupakan fungtor adjoin kiri dari fungtor pelupa atau fungtor inklusi. Berikut beberapa contohnya.
 	\begin{enumerate}
-		\item 忘却函子 $\cate{Grp} \to \cate{Set}$ 的左伴随是自由群函子: $F: X \mapsto \mathbf{F}(X)$ (定义 \ref{def:free-group}), 其单位是集合 $X$ 到其自由群的嵌入 $X \hookrightarrow \mathbf{F}(X)$. 以后我们还会考察自由模和多项式环等类似的自由构造, 无论对哪一种结构, 准则不外乎
+		\item Fungtor adjoin kiri dari fungtor pelupa $\cate{Grp} \to \cate{Set}$ adalah fungtor grup bebas $F: X \mapsto \mathbf{F}(X)$ (Definisi \ref{def:free-group}); unitnya ialah pembenaman himpunan $X$ ke dalam grup bebasnya, $X \hookrightarrow \mathbf{F}(X)$. Kelak kita juga akan meninjau konstruksi bebas serupa, seperti modul bebas dan gelanggang polinomial. Untuk struktur apa pun, asasnya tidak lain ialah
 		\begin{center}
-			``自由是遗忘的左伴随''.
+			``Konstruksi bebas adalah fungtor adjoin kiri bagi pelupaan.''
 		\end{center}
-		命题 \ref{prop:adjunction-uniqueness} 将阐明伴随函子的唯一性, 故上句应当视作自由构造的一般刻画.
-		\item 包含函子 $\cate{Ab} \to \cate{Grp}$ 的左伴随是 Abel 化函子 $G \mapsto G/G_\text{der}$, 其单位是商同态 $G \to G/G_\text{der}$.
-		\item 沿用例 \ref{eg:metric-completion} 的记号. 包含函子 $\cate{ComMetr} \to \cate{Metr}$ 的左伴随是完备化 $(X, d) \mapsto (\hat{X}, \hat{d})$, 其单位是标准(对角)的等距嵌入 $X \hookrightarrow \hat{X}$.
-		\item 令 $\cate{CHaus}$ 为紧 Hausdorff 拓扑空间构成的范畴, 包含函子 $\cate{CHaus} \to \cate{Top}$ 的左伴随是 Stone--Čech 紧化 $X \mapsto \beta X$, 其单位是紧化带有的连续映射 $X \to \beta X$.
+		Proposisi \ref{prop:adjunction-uniqueness} akan menjelaskan keunikan fungtor adjoin; karena itu, kalimat di atas harus dipandang sebagai karakterisasi umum konstruksi bebas.
+		\item Fungtor adjoin kiri dari fungtor inklusi $\cate{Ab} \to \cate{Grp}$ adalah fungtor abelianisasi $G \mapsto G/G_\text{der}$; unitnya ialah homomorfisme hasil bagi $G \to G/G_\text{der}$.
+		\item Dengan notasi pada Contoh \ref{eg:metric-completion}, fungtor adjoin kiri dari fungtor inklusi $\cate{ComMetr} \to \cate{Metr}$ adalah pelengkapan $(X, d) \mapsto (\hat{X}, \hat{d})$; unitnya ialah pembenaman isometrik kanonik (diagonal) $X \hookrightarrow \hat{X}$.
+		\item Misalkan $\cate{CHaus}$ adalah kategori ruang topologis Hausdorff kompak. Fungtor adjoin kiri dari fungtor inklusi $\cate{CHaus} \to \cate{Top}$ adalah pengompakan Stone--Čech $X \mapsto \beta X$; unitnya ialah peta kontinu kanonik $X \to \beta X$ dari pengompakan tersebut.
 	\end{enumerate}
 \end{example}
 
-以下结果表明伴随函子对变元 $Y \in \Obj(\mathcal{C}_2)$ 其实是一种``逐点''的构造. 置
+Hasil berikut menunjukkan bahwa fungtor adjoin sebenarnya merupakan konstruksi ``titik demi titik'' dalam peubah $Y \in \Obj(\mathcal{C}_2)$. Tetapkan
 \[ A_Y := \Hom_{\mathcal{C}_2}(F(\cdot), Y) \in \mathcal{C}_1^\wedge. \]
 
 \begin{proposition}\label{prop:adjunction-pointwise}
-	函子 $F: \mathcal{C}_1 \to \mathcal{C}_2$ 有右伴随的充分必要条件是 $A_Y$ 对每个 $Y$ 皆可表; 类似地, $G: \mathcal{C}_2 \to \mathcal{C}_1$ 有左伴随的充分必要条件是 $\Hom_{\mathcal{C}_1}(X, G(\cdot))$ 对每个 $X$ 皆可表.
+	Fungtor $F: \mathcal{C}_1 \to \mathcal{C}_2$ mempunyai fungtor adjoin kanan jika dan hanya jika $A_Y$ representabel untuk setiap $Y$; serupa dengan itu, $G: \mathcal{C}_2 \to \mathcal{C}_1$ mempunyai fungtor adjoin kiri jika dan hanya jika $\Hom_{\mathcal{C}_1}(X, G(\cdot))$ representabel untuk setiap $X$.
 \end{proposition}
 \begin{proof}
-	证明 $F$ 的情形即可. 必要性是显然的. 反之, 假设对每个 $Y$ 存在对象 $GY$ 和同构 $\psi_Y: h_{\mathcal{C}_1}(GY) \rightiso A_Y := \Hom(F(\cdot), Y)$. 请留意 $h_{\mathcal{C}_1}(GY) = \Hom_{\mathcal{C}_1}(\cdot, GY)$. 引理 \ref{prop:representable-functor-uniqueness} 断言 $(GY, \psi_Y)$ 的唯一性: 它是逗号范畴 $(h_{\mathcal{C}_1} / A_Y)$ 的终对象. 对每个 $Y$ 选定 $(GY, \psi_Y)$. 任意态射 $h: Y \to Y'$ 诱导 $h_*: A_Y \to A_{Y'}$, 因而存在唯一的 $Gh: GY \to GY'$ 使得下图交换
+	Cukup buktikan kasus $F$. Arah perlu sudah jelas. Sebaliknya, andaikan untuk setiap $Y$ terdapat objek $GY$ dan isomorfisme $\psi_Y: h_{\mathcal{C}_1}(GY) \rightiso A_Y := \Hom(F(\cdot), Y)$. Perhatikan bahwa $h_{\mathcal{C}_1}(GY) = \Hom_{\mathcal{C}_1}(\cdot, GY)$. Lema \ref{prop:representable-functor-uniqueness} menyatakan keunikan $(GY, \psi_Y)$: pasangan ini merupakan objek terminal dalam kategori koma $(h_{\mathcal{C}_1} / A_Y)$. Untuk setiap $Y$, pilihlah $(GY, \psi_Y)$. Setiap morfisme $h: Y \to Y'$ menginduksi $h_*: A_Y \to A_{Y'}$; oleh karena itu, terdapat tepat satu $Gh: GY \to GY'$ yang membuat diagram berikut komutatif:
 	\[ \begin{tikzcd}
 		h_{\mathcal{C}_1}(GY) \arrow[d, "{h_{\mathcal{C}_1}(Gh)}"'] \arrow[r, "\psi_Y", "\sim"'] & A_Y \arrow[d, "h_*"] \\
 		h_{\mathcal{C}_1}(GY') \arrow[r, "{\psi_{Y'}}"', "\sim"] & A_{Y'} .
 	\end{tikzcd} \]
-	由此易知 $(GY, \psi_Y)_Y$ 给出 $G: \mathcal{C}_2 \to \mathcal{C}_1$ 和 $\varphi = \psi^{-1}: \Hom(F(\cdot), \cdot) \rightiso \Hom(\cdot, G(\cdot))$.
+	Dari sini mudah dilihat bahwa $(GY, \psi_Y)_Y$ memberikan $G: \mathcal{C}_2 \to \mathcal{C}_1$ dan $\varphi = \psi^{-1}: \Hom(F(\cdot), \cdot) \rightiso \Hom(\cdot, G(\cdot))$.
 \end{proof}
 
 \begin{proposition}\label{prop:adjunction-uniqueness}
-	函子 $F: \mathcal{C}_1 \to \mathcal{C}_2$ 若有右伴随, 则在下述意义下唯一: 若 $(F, G, \varphi)$ 和 $(F, G', \varphi')$ 是伴随对, 则存在唯一的同构 $\psi: G \rightiso G'$ 使得对每个 $Y \in \Obj(\mathcal{C}_2)$ 下图交换
+	Jika fungtor $F: \mathcal{C}_1 \to \mathcal{C}_2$ mempunyai fungtor adjoin kanan, maka fungtor tersebut unik dalam arti berikut: jika $(F, G, \varphi)$ dan $(F, G', \varphi')$ merupakan pasangan adjoin, maka terdapat tepat satu isomorfisme $\psi: G \rightiso G'$ sedemikian sehingga, untuk setiap $Y \in \Obj(\mathcal{C}_2)$, diagram berikut komutatif:
 	\[ \begin{tikzcd}[column sep=small]
 		h_{\mathcal{C}_1}(GY) \arrow[rr, "{h_{\mathcal{C}_1}(\psi_Y)}"] \arrow[rd, "\varphi_Y"'] & & h_{\mathcal{C}_1}(G'Y) \arrow[ld, "{{\varphi}'_Y}"] \\
 		& A_Y &
 	\end{tikzcd} \]
-	左伴随也满足类似的唯一性.
+	Fungtor adjoin kiri juga memenuhi keunikan yang serupa.
 \end{proposition}
 \begin{proof}
-	类似命题 \ref{prop:adjunction-pointwise} 的证明, 我们利用 $(GY, \varphi_Y)$, $(G'Y, {\varphi}'_Y)$ 在 $(h_{\mathcal{C}_1} / A_Y)$ 中同为终对象的性质, 对每个 $Y$ 制造同构 $\psi_Y: GY \rightiso G'Y$, 并用终对象的泛性证明 $(\psi_Y)_Y$ 成一自然变换.
+	Seperti dalam pembuktian Proposisi \ref{prop:adjunction-pointwise}, kita menggunakan fakta bahwa $(GY, \varphi_Y)$ dan $(G'Y, {\varphi}'_Y)$ sama-sama merupakan objek terminal dalam $(h_{\mathcal{C}_1} / A_Y)$. Untuk setiap $Y$, kita membentuk isomorfisme $\psi_Y: GY \rightiso G'Y$, lalu menggunakan sifat universal objek terminal untuk membuktikan bahwa $(\psi_Y)_Y$ merupakan suatu transformasi natural.
 \end{proof}
 
-伴随对还可以作合成, 以下我们略去其中的 $\varphi$, 其定义在证明中是明显的.\index{bansuidui!合成}
+Pasangan adjoin juga dapat dikomposisikan. Di bawah ini kita menghilangkan $\varphi$ dari notasi; definisinya tampak jelas dalam pembuktian.\index{pasangan adjoin!komposisi}
 
 \begin{proposition}\label{prop:adjunction-composition}
-	考虑函子
+	Tinjau fungtor-fungtor
 	\begin{tikzcd}
 		\mathcal{C}_1 \arrow[r, bend left=15, "F"] & \mathcal{C}_2 \arrow[l, bend left=15, "G"] \arrow[r, bend left=15, "F'"] & \mathcal{C}_3 \arrow[l, bend left=15, "G'"]
 	\end{tikzcd}
-	若 $(F, G, \eta, \varepsilon)$, $(F', G,' \eta', \varepsilon')$ 是伴随对, 则 $(F'F, \; GG', \; G \eta' F \circ \eta, \; \varepsilon' \circ F' \varepsilon G')$ 亦然. 其中 $\circ$ 代表纵合成.
+	Jika $(F, G, \eta, \varepsilon)$ dan $(F', G', \eta', \varepsilon')$ merupakan pasangan adjoin, maka $(F'F, \; GG', \; G \eta' F \circ \eta, \; \varepsilon' \circ F' \varepsilon G')$ juga merupakan pasangan adjoin. Di sini $\circ$ menyatakan komposisi vertikal.
 \end{proposition}
 \begin{proof}
-	考虑以下同构
+	Tinjau komposisi isomorfisme-isomorfisme berikut:
 	\[ \Hom_{\mathcal{C}_3}(F'F(\cdot), \cdot) \rightiso \Hom_{\mathcal{C}_2}(F(\cdot), G'(\cdot)) \rightiso \Hom_{\mathcal{C}_1}(\cdot, GG'(\cdot)) \]
-	的合成. 单位和余单位的计算留予读者.
+	Perhitungan unit dan kounit diserahkan kepada pembaca.
 \end{proof}
 
-最后, 我们比较范畴等价 (定义 \ref{def:cat-equivalence}) 与伴随对 $(F, G, \eta, \varepsilon)$ 的定义. 拟逆函子带有的同构 $\eta: \identity_{\mathcal{C}_1} \rightiso GF$ 和 $\varepsilon: FG \rightiso \identity_{\mathcal{C}_2}$ 形似伴随对的单位和余单位, 问题是它们未必适合于三角等式 \eqref{eqn:unit-counit-relation}, 须作适当调整. 本书不调用以下定理, 但证明是有趣的.
+Terakhir, kita bandingkan ekuivalensi kategori (Definisi \ref{def:cat-equivalence}) dengan definisi pasangan adjoin $(F, G, \eta, \varepsilon)$. Isomorfisme $\eta: \identity_{\mathcal{C}_1} \rightiso GF$ dan $\varepsilon: FG \rightiso \identity_{\mathcal{C}_2}$ yang melekat pada fungtor-fungtor kuasi-invers menyerupai unit dan kounit pasangan adjoin. Masalahnya, keduanya belum tentu memenuhi identitas segitiga \eqref{eqn:unit-counit-relation}, sehingga perlu disesuaikan dengan tepat. Buku ini tidak menggunakan teorema berikut, tetapi pembuktiannya menarik.
 
-\begin{theorem}[伴随等价] \label{prop:adjoint-equivalence}\index{fanchoudengjia}\index{bansuidengjia}
-	考虑互为拟逆的函子
+\begin{theorem}[Ekuivalensi adjoin] \label{prop:adjoint-equivalence}\index{ekuivalensi kategori}\index{ekuivalensi adjoin}
+	Tinjau fungtor-fungtor kuasi-invers satu sama lain
 	$\begin{tikzcd}
 		\mathcal{C}_1 \arrow[r, bend left, "F"] & \mathcal{C}_2 \arrow[l, bend left, "G"]
-	\end{tikzcd}$, 并给定同构 $\eta: \identity \rightiso GF$ 和 $\varepsilon: FG \rightiso \identity$, 那么存在唯一的 $\varepsilon': FG \rightiso \identity$ 使得 $(F, G, \eta, \varepsilon')$, $(G, F, \varepsilon'^{-1}, \eta^{-1})$ 皆成伴随对.
+	\end{tikzcd}$, dan andaikan diberikan isomorfisme $\eta: \identity \rightiso GF$ dan $\varepsilon: FG \rightiso \identity$. Maka terdapat tepat satu $\varepsilon': FG \rightiso \identity$ sedemikian sehingga $(F, G, \eta, \varepsilon')$ dan $(G, F, \varepsilon'^{-1}, \eta^{-1})$ keduanya merupakan pasangan adjoin.
 \end{theorem}
 \begin{proof}
-	首务是定义 $\varepsilon'$ 并验证 $(F, G, \eta, \varepsilon')$ 所需满足的三角等式
+	Pertama-tama kita harus mendefinisikan $\varepsilon'$ dan memverifikasi identitas segitiga yang diperlukan agar $(F, G, \eta, \varepsilon')$ menjadi pasangan adjoin:
 	\begin{align}
 		\label{eqn:adj-zigzag-1} (\varepsilon' F)(F\eta) & = \identity_F, \\
 		\label{eqn:adj-zigzag-2} (G\varepsilon')(\eta G) & = \identity_G.
 	\end{align}
-	既然 $\varepsilon', \eta$ 为同构, 对上式所有态射取逆也就导出 $(G, F, \varepsilon'^{-1}, \eta^{-1})$ 的情形. 兹定义同构 $FG \rightiso \identity$
-	\[ \varepsilon' := \varepsilon \cdot (F\eta^{-1}G) \cdot (FG\varepsilon^{-1}) \qquad \text{(纵合成)}. \]
+	Karena $\varepsilon', \eta$ keduanya merupakan isomorfisme, mengambil invers semua morfisme dalam persamaan di atas juga menghasilkan kasus $(G, F, \varepsilon'^{-1}, \eta^{-1})$. Sekarang definisikan isomorfisme $FG \rightiso \identity$ dengan
+	\[ \varepsilon' := \varepsilon \cdot (F\eta^{-1}G) \cdot (FG\varepsilon^{-1}) \qquad \text{(komposisi vertikal)}. \]
 
-	我们用称为线图的可视化技巧来研究函子与其间的态射, 符号中将省略范畴. 图中以函子为节点, 以函子间的态射为边, 自上而下. 若函子 $A, B$ 的合成有意义, 合成函子 $AB = A \circ B$ 以节点的水平并置表示. 纵, 横两种合成分别有如下图解.
+	Kita akan menggunakan teknik visualisasi yang disebut diagram untai (string diagram) untuk mempelajari fungtor dan morfisme di antaranya; simbol kategori akan dihilangkan. Dalam diagram ini, fungtor digambarkan sebagai simpul dan morfisme antarfungtor sebagai sisi yang berarah dari atas ke bawah. Jika komposisi fungtor $A, B$ terdefinisi, fungtor komposit $AB = A \circ B$ digambarkan dengan menempatkan kedua simpul secara horizontal. Komposisi vertikal dan horizontal masing-masing digambarkan sebagai berikut.
 	\[\begin{tikzpicture}[baseline=(X), bend angle=70, auto, fct/.style={circle, draw=gray!40, fill=gray!10}]
 		\node[fct] (A0) {$A_0$};
 		\node[fct] (A1) [above=of A0] {$A_1$} edge[->] node {$\alpha_0$} (A0);
@@ -994,8 +994,8 @@ Dalam data $(F, G, \eta, \varepsilon)$, $\varepsilon$ (atau $\eta$) merupakan is
 	\end{tikzpicture} = \begin{tikzpicture}[baseline=(X), bend angle=70, auto, fct/.style={circle, draw=gray!40, fill=gray!10}]
 		\node[fct] (A0) {$A_0$};
 		\node[fct] (A2) [above=of A0] {$A_2$} edge[->] node {$\alpha_0 \cdot \alpha_1$} (A0);
-		\coordinate (X) at ($(A0)!.5!(A1)$);
-	\end{tikzpicture} \quad \text{和} \quad \begin{tikzpicture}[baseline=(X), bend angle=70, auto, fct/.style={circle, draw=gray!40, fill=gray!10}]
+		\coordinate (X) at ($(A0)!.5!(A2)$);
+	\end{tikzpicture} \quad \text{dan} \quad \begin{tikzpicture}[baseline=(X), bend angle=70, auto, fct/.style={circle, draw=gray!40, fill=gray!10}]
 		\node[fct] (A) {$A$}; \node[fct] (A') [above=of A] {$A'$} edge[->] node {$\alpha$} (A);
 		\node[fct] (B) [right=of A] {$B$}; \node[fct] (B') [above=of B] {$B'$} edge[->] node {$\beta$} (B);
 		\coordinate (X) at ($(A)!.5!(A')$);
@@ -1005,14 +1005,14 @@ Dalam data $(F, G, \eta, \varepsilon)$, $\varepsilon$ (atau $\eta$) merupakan is
 		\node[fct] (D) [above=of C] {$A'B'$} edge[->] node {$\alpha\beta$} (C);
 		\coordinate (X) at ($(C)!.5!(D)$);
 	\end{tikzpicture} \]
-	引理 \ref{prop:naturaltrans-associativity} 相当于说图表合成时可以先纵后横, 或先横后纵. 我们按惯例不标注恒等函子. 于是 $\eta, \varepsilon$ 及其逆图解如下.
+	Lema \ref{prop:naturaltrans-associativity} setara dengan mengatakan bahwa ketika diagram dikomposisikan, kita boleh mendahulukan komposisi vertikal lalu horizontal, atau mendahulukan komposisi horizontal lalu vertikal. Sesuai konvensi, fungtor identitas tidak diberi label. Dengan demikian, $\eta, \varepsilon$ beserta invers masing-masing digambarkan sebagai berikut.
 	\begin{center}\begin{tikzpicture}[bend angle=70, auto, fct/.style={circle, draw=gray!40, fill=gray!10}]
 		\node[fct] (G1) {$G$}; \node[fct] (F1) [right=of G1] {$F$} edge[bend right] node[swap] {$\eta$} (G1);
 		\node[fct] (G2) [above right=of F1] {$G$}; \node[fct] (F2) [right=of G2] {$F$} edge[bend left] node {$\eta^{-1}$} (G2);
 		\node[fct] (F3) [right=of F2] {$F$}; \node[fct] (G3) [right=of F3] {$G$} edge[bend left] node {$\varepsilon$} (F3);
 		\node[fct] (F4) [below right=of G3] {$F$}; \node[fct] (G4) [right=of F4] {$G$} edge[bend right] node[swap] {$\varepsilon^{-1}$} (F4);
 	\end{tikzpicture}\end{center}
-	对于函子的恒等自同构, 相应的边不予命名. 兹断言 $\varepsilon': FG \to \identity$ 有两种表法如下:
+	Untuk automorfisme identitas suatu fungtor, sisi yang bersesuaian tidak diberi nama. Sekarang kita nyatakan bahwa $\varepsilon': FG \to \identity$ memiliki dua representasi berikut:
 	\begin{equation}\label{eqn:adj-equiv-two-expression} \begin{tikzpicture}[baseline=(X), scale=0.8, bend angle=45, auto, fct/.style={circle, draw=gray!40, fill=gray!10}, scale=1.5]
 		\node[fct] (X0) at (0,1) {$F$};
 		\node[fct] (X1) at (1,1) {$G$};
@@ -1028,7 +1028,7 @@ Dalam data $(F, G, \eta, \varepsilon)$, $\varepsilon$ (atau $\eta$) merupakan is
 	\end{tikzpicture} \quad = \quad \begin{tikzpicture}[baseline=(X), scale=0.8, bend angle=45, auto, fct/.style={circle, draw=gray!40, fill=gray!10}, scale=1.5]
 		\node[fct] (X0) at (2,1) {$F$};
 		\node[fct] (X1) at (3,1) {$G$};
-	
+
 		\node[fct] (Y0) at (0,0) {$F$};
 		\node[fct] (Y1) at (1,0) {$G$} edge[bend right] node[swap] {$\varepsilon^{-1}$} (Y0);
 		\node[fct] (Y2) at (2,0) {$F$} edge[bend left] node {$\eta^{-1}$} (Y1) edge (X0);
@@ -1038,7 +1038,7 @@ Dalam data $(F, G, \eta, \varepsilon)$, $\varepsilon$ (atau $\eta$) merupakan is
 		\node[fct] (Z1) at (3,-1) {$G$} edge (Y3) edge[bend left] node {$\varepsilon$} (Z0);
 		\coordinate (X) at (0, -0.5);
 	\end{tikzpicture} \end{equation}
-	左边诚然是 $\varepsilon \cdot (F\eta^{-1}G) \cdot (FG\varepsilon^{-1})$ 的图解, 因为 $FG\varepsilon^{-1}$ 无非是 $\varepsilon^{-1}$ 左横合成 $\identity_F$, $\identity_G$, 依此类推. 为了过渡到右图, 将 $FG \varepsilon^{-1}: FG \to FGFG$ 表作:
+	Diagram kiri memang merupakan penggambaran dari $\varepsilon \cdot (F\eta^{-1}G) \cdot (FG\varepsilon^{-1})$, sebab $FG\varepsilon^{-1}$ tidak lain ialah $\varepsilon^{-1}$ yang dikomposisikan secara horizontal di sebelah kiri oleh $\identity_F$ dan $\identity_G$, dan demikian seterusnya. Untuk beralih ke diagram kanan, gambarkan $FG \varepsilon^{-1}: FG \to FGFG$ sebagai berikut:
 	\[ \begin{tikzpicture}[baseline=(X), bend angle=70, auto, fct/.style={circle, draw=gray!40, fill=gray!10}]
 		\node[fct] (X0) {$F$}; \node[fct] (X1) [right=of X0] {$G$};
 		\node[fct] (Y0) [below=of X0] {$F$} edge (X0); \node[fct] (Y1) [below=of X1] {$G$} edge (X1);
@@ -1052,7 +1052,7 @@ Dalam data $(F, G, \eta, \varepsilon)$, $\varepsilon$ (atau $\eta$) merupakan is
 		\node[fct] (Y3) [right=of Y2] {$G$} edge[bend right] node {$\varepsilon^{-1}$} (Y2);
 		\coordinate (X) at ($(X0)!.5!(Y0)$);
 	\end{tikzpicture} \]
-	因为与恒等函子的横合成不起作用, 上层的 $\varepsilon$ 放在左侧或右侧是一样的, 右图遂化作
+	Karena komposisi horizontal dengan fungtor identitas tidak menimbulkan perubahan, $\varepsilon$ pada lapisan atas dapat ditempatkan di sebelah kiri ataupun kanan. Dengan demikian, diagram kanan menyederhana menjadi
 	\[ \begin{tikzpicture}[baseline=(X), bend angle=70, auto, fct/.style={circle, draw=gray!40, fill=gray!10}]
 		\node[fct] (X0) {$F$}; \node[fct] (X1) [right=of X0] {$G$} edge[bend left] node[swap] {$\varepsilon$} (X0);
 		\node[fct] (Y0) [below=of X0] {$F$}; \node[fct] (Y1) [below=of X1] {$G$} edge[bend right] node {$\varepsilon^{-1}$} (Y0);
@@ -1066,9 +1066,9 @@ Dalam data $(F, G, \eta, \varepsilon)$, $\varepsilon$ (atau $\eta$) merupakan is
 		\node[fct] (Y2) [left=of Y3] {$F$} edge[bend left] node {$\varepsilon^{-1}$} (Y3);
 		\coordinate (X) at ($(X0)!.5!(Y0)$);
 	\end{tikzpicture} \]
-	等式右边的底部再装配 $\varepsilon \cdot (F\eta^{-1}G)$, 便是 \eqref{eqn:adj-equiv-two-expression}.
+	Dengan menambahkan $\varepsilon \cdot (F\eta^{-1}G)$ di bawah ruas kanan, kita memperoleh \eqref{eqn:adj-equiv-two-expression}.
 
-	现在来证明 \eqref{eqn:adj-zigzag-2}. 将 \eqref{eqn:adj-equiv-two-expression} 的左图代入 $\varepsilon'$, 省略函子标记以表 $(G\varepsilon')(\eta G)$ 为
+	Sekarang kita buktikan \eqref{eqn:adj-zigzag-2}. Substitusikan diagram kiri dalam \eqref{eqn:adj-equiv-two-expression} untuk $\varepsilon'$; dengan menghilangkan label fungtor, $(G\varepsilon')(\eta G)$ dapat digambarkan sebagai
 	\[ \begin{tikzpicture}[baseline=(X), bend angle=70, auto, fct/.style={circle, draw=gray!40, fill=gray!10}]
 		\coordinate (A) at (0,0); \coordinate (B) at (0,2); \coordinate (C) at (1,2); \coordinate (D) at (1,1); \coordinate (E) at (4,1); \coordinate (F) at (4,2); \coordinate (G) at (3,2); \coordinate (H) at (2,2); \coordinate (I) at (2,3);
 	
@@ -1084,7 +1084,7 @@ Dalam data $(F, G, \eta, \varepsilon)$, $\varepsilon$ (atau $\eta$) merupakan is
 		\node[fct] at (A) {$G$}; \node[fct] at (H) {$G$};
 		\coordinate (X) at (0, 1.5);
 	\end{tikzpicture}\]
-	从左图化到右图的方法是先将图按垂直方向拉开 (即在中间插入 $\identity_F$, $\identity_G$ 等), 然后将 $\eta^{-1}$ 向左挪动, 道理和 \eqref{eqn:adj-equiv-two-expression} 的论证类似. 现在可以用 $\eta \eta^{-1} = \identity_{GF}$ 和 $\varepsilon^{-1}\varepsilon = \identity$ 来将右图化作
+	Untuk mengubah diagram kiri menjadi diagram kanan, mula-mula rentangkan diagram itu secara vertikal (yakni, sisipkan $\identity_F$, $\identity_G$, dan seterusnya di tengah), kemudian geser $\eta^{-1}$ ke kiri; alasannya serupa dengan argumen bagi \eqref{eqn:adj-equiv-two-expression}. Sekarang, dengan menggunakan $\eta \eta^{-1} = \identity_{GF}$ dan $\varepsilon^{-1}\varepsilon = \identity$, diagram kanan dapat disederhanakan menjadi
 	\[\begin{tikzpicture}[baseline=(X), bend angle=70, auto, fct/.style={circle, draw=gray!40, fill=gray!10}]
 		\node[fct] (A) {$G$}; \node[fct] (B) [above=of A] {$G$} edge (A);
 		\node[fct] (C) [right=of A] {$F$}; \node[fct] (D) [above=of C] {$F$} edge (C);
@@ -1095,19 +1095,19 @@ Dalam data $(F, G, \eta, \varepsilon)$, $\varepsilon$ (atau $\eta$) merupakan is
 		\node[fct] (A) {$G$}; \node[fct] (B) [above=of A] {$G$} edge (A);
 		\coordinate (X) at ($(A)!.5!(B)$);
 	\end{tikzpicture}\]
-	这就证出了 \eqref{eqn:adj-zigzag-2}. 至于 \eqref{eqn:adj-zigzag-1} 的情形几乎是以上论证的镜像, 唯一差别是改用  \eqref{eqn:adj-equiv-two-expression} 的右图代入 $\varepsilon'$.
+	Ini membuktikan \eqref{eqn:adj-zigzag-2}. Kasus \eqref{eqn:adj-zigzag-1} hampir merupakan bayangan cermin dari argumen di atas; satu-satunya perbedaan ialah kita menggunakan diagram kanan dalam \eqref{eqn:adj-equiv-two-expression} untuk menggantikan $\varepsilon'$.
 	
-	最后证唯一性. 假设 $\varepsilon'': FG \to \identity$ 也满足 \eqref{eqn:adj-zigzag-1} 和 \eqref{eqn:adj-zigzag-2}. 注意到 $\varepsilon''\cdot (\varepsilon' FG) = \varepsilon' \cdot (FG \varepsilon'')$; 这是因为两者对应同一个图表 $FGFG \to \identity$:
+		Terakhir, kita buktikan keunikannya. Andaikan $\varepsilon'': FG \to \identity$ juga memenuhi \eqref{eqn:adj-zigzag-1} dan \eqref{eqn:adj-zigzag-2}. Perhatikan bahwa $\varepsilon''\cdot (\varepsilon' FG) = \varepsilon' \cdot (FG \varepsilon'')$; hal ini karena keduanya bersesuaian dengan diagram yang sama, $FGFG \to \identity$:
 	\[\begin{tikzpicture}[baseline=(X), bend angle=45, auto, fct/.style={circle, draw=gray!40, fill=gray!10}]
 		\node[fct] (F) {$F$}; \node[fct] (G) [right=of F] {$G$} edge[bend left] node[swap] {$\varepsilon'$} (F);
 		\node[fct] (F1) [right=of G] {$F$}; \node[fct] (G1) [right=of F1] {$G$} edge[bend left] node[swap] {$\varepsilon''$} (F1);
 		\coordinate (X) at (F);
 	\end{tikzpicture}.\]
-	此外易见 $(\varepsilon'F \cdot F\eta)G = \varepsilon' FG \cdot F\eta G$ 和 $F(G\varepsilon'' \cdot \eta G) = FG\varepsilon'' \cdot F\eta G$; 应用 \eqref{eqn:adj-zigzag-1} 和 \eqref{eqn:adj-zigzag-2} 可知这两者都等于 $\identity_{FG}$; 综之 $\varepsilon'' = \varepsilon'' \cdot (\varepsilon' FG) (F\eta G) = \varepsilon' (FG\varepsilon'')(F\eta G) = \varepsilon'$. 唯一性得证.
+	Selain itu, mudah dilihat bahwa $(\varepsilon'F \cdot F\eta)G = \varepsilon' FG \cdot F\eta G$ dan $F(G\varepsilon'' \cdot \eta G) = FG\varepsilon'' \cdot F\eta G$. Dengan menerapkan \eqref{eqn:adj-zigzag-1} dan \eqref{eqn:adj-zigzag-2}, keduanya sama dengan $\identity_{FG}$. Oleh karena itu, $\varepsilon'' = \varepsilon'' \cdot (\varepsilon' FG) (F\eta G) = \varepsilon' (FG\varepsilon'')(F\eta G) = \varepsilon'$. Keunikan pun terbukti.
 \end{proof}
 
-范畴论中还有许多类似的可视化技巧, 读者不妨参阅 P.\ Selinger 在 \cite[Chapter 4]{Co11} 撰写的综述. 在 \S\ref{sec:braiding} 还会碰上类似的手法.
-
+Dalam teori kategori masih terdapat banyak teknik visualisasi serupa. Pembaca dapat merujuk kepada survei yang ditulis P.\ Selinger dalam \cite[Chapter 4]{Co11}. Teknik serupa akan kita jumpai lagi dalam \S\ref{sec:braiding}.
+	
 \section{极限}\label{sec:limits}
 我们先给出极限的一般定义, 然后逐步剖析.
 

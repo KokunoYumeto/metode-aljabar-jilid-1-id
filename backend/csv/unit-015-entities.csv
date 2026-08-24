@@ -1,0 +1,88 @@
+entity_type,id,stable_key,parent_id,order,label_id,status
+build_surface,urn:uuid:ee0bcee9-ad03-5795-b1b0-1f4dc39b177c,build-surface/unit-015-pdf,urn:uuid:2f878f23-89a0-5955-a109-9448eb81aa95,,unit-015-pdf,pass
+citation,urn:uuid:a870fb62-7a66-5894-8e5b-defe4b2a1f86,citation/unit-015/co11,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,,Co11,admitted:admitted
+concept,urn:uuid:a44e71f9-5dab-5087-b19c-c1f598318afc,concept/abelianization,,,abelianisasi,admitted:admitted
+concept,urn:uuid:9e4fc028-9e95-59ed-8557-e086dc5bda7e,concept/adjoint-equivalence,,,ekuivalensi adjoin,admitted:admitted
+concept,urn:uuid:d2814933-5819-5995-bb8f-5df7cd90a332,concept/adjunction-composition,,,komposisi pasangan adjoin,admitted:admitted
+concept,urn:uuid:c05cedf4-a110-5e43-9e25-86b8b7a29759,concept/adjunction-example,,,contoh pasangan adjoin,admitted:admitted
+concept,urn:uuid:96de89e3-7c87-5952-bf27-bec07f2e1e3e,concept/adjunction-uniqueness,,,keunikan adjoin,admitted:admitted
+concept,urn:uuid:97422dd0-3c7a-525c-867b-4c56427741f7,concept/category-equivalence,,,ekuivalensi kategori,admitted:admitted
+concept,urn:uuid:13cf7666-0df3-597f-b920-ded2f5a73577,concept/compactification,,,pengompakan,admitted:admitted
+concept,urn:uuid:756248a3-92d0-5b00-9a81-ae3c1d5ed957,concept/counit-of-adjunction,,,kounit,admitted:admitted
+concept,urn:uuid:9696f963-02fc-523f-91aa-e42421a281cd,concept/discrete-topology,,,topologi diskret,admitted:admitted
+concept,urn:uuid:09087965-caa8-5674-8a34-0d9cf67c6977,concept/free-forgetful-adjunction,,,adjoin bebas--pelupa,admitted:admitted
+concept,urn:uuid:c60e18c4-f627-5691-87e4-bc0c180763fe,concept/free-group,,,grup bebas,admitted:admitted
+concept,urn:uuid:66d77c35-01a6-52f7-95e7-f49ed5058ca3,concept/free-module,,,modul bebas,admitted:admitted
+concept,urn:uuid:3fe8b035-e135-504d-9631-8ef8664bb76d,concept/indiscrete-topology,,,topologi takdiskret,admitted:admitted
+concept,urn:uuid:a59d4891-6837-5bef-8920-021e966538a5,concept/pointwise-adjunction,,,adjoin secara objek demi objek,admitted:admitted
+concept,urn:uuid:b659c344-5989-5b20-b8a1-1d0759fc3f7d,concept/polynomial-ring,,,gelanggang polinomial,admitted:admitted
+concept,urn:uuid:380e7306-df0e-55d4-adb2-1a2fd92c19e6,concept/quasi-inverse,,,kuasi-invers,admitted:admitted
+concept,urn:uuid:2aa393d6-50db-5929-bf5a-0ee4601c2345,concept/stone-cech-compactification,,,pengompakan Stone--Čech,admitted:admitted
+concept,urn:uuid:cc2e40d6-fa90-5420-9837-0edb1f06931d,concept/string-diagram,,,diagram untai (string diagram),admitted:admitted
+concept,urn:uuid:fa90b64d-c40e-5620-b732-7c31b31a4ec2,concept/unit-of-adjunction,,,unit,admitted:admitted
+concept,urn:uuid:f79723cf-f2d5-5477-b03a-babf1aa62bfb,surface/unit-015/label/eg-forgetful-adjunction,,,label eg:forgetful-adjunction,admitted:admitted
+concept,urn:uuid:c7f70275-6854-5618-9821-903a290f4bf8,surface/unit-015/label/eg-top-adjunction,,,label eg:top-adjunction,admitted:admitted
+concept,urn:uuid:35775f13-2817-51b7-869c-51d7f1349c97,surface/unit-015/label/eqn-adj-equiv-two-expression,,,label eqn:adj-equiv-two-expression,admitted:admitted
+concept,urn:uuid:8604ff92-9d14-5f99-931d-4b2ea478226f,surface/unit-015/label/eqn-adj-zigzag-1,,,label eqn:adj-zigzag-1,admitted:admitted
+concept,urn:uuid:5ad6bb57-9018-5eb1-be90-4e3b0cc4e91d,surface/unit-015/label/eqn-adj-zigzag-2,,,label eqn:adj-zigzag-2,admitted:admitted
+concept,urn:uuid:76fc4b67-6809-5263-a574-f808e5bf2862,surface/unit-015/label/prop-adjoint-equivalence,,,label prop:adjoint-equivalence,admitted:admitted
+concept,urn:uuid:f4ff5669-73c5-53af-b46b-3093afc7110f,surface/unit-015/label/prop-adjunction-composition,,,label prop:adjunction-composition,admitted:admitted
+concept,urn:uuid:d1b7e5f6-a785-5ac9-a96c-9eb572543a60,surface/unit-015/label/prop-adjunction-pointwise,,,label prop:adjunction-pointwise,admitted:admitted
+concept,urn:uuid:2659f04a-608c-5e25-b29d-b38d622b71a7,surface/unit-015/label/prop-adjunction-uniqueness,,,label prop:adjunction-uniqueness,admitted:admitted
+concept,urn:uuid:e081147d-6fae-50d8-a495-0633dfa43816,surface/unit-015/reference/def-cat-equivalence,,,rujukan eksternal def:cat-equivalence,admitted:admitted
+concept,urn:uuid:a0405f5c-4e31-5020-b6a2-f7082a87e449,surface/unit-015/reference/def-free-group,,,rujukan eksternal def:free-group,admitted:admitted
+concept,urn:uuid:1e8d42c5-5203-5b7e-9082-b95e2afcd1af,surface/unit-015/reference/eg-metric-completion,,,rujukan eksternal eg:metric-completion,admitted:admitted
+concept,urn:uuid:8b109a26-3b5f-582b-a851-58c28479a2e6,surface/unit-015/reference/eqn-unit-counit-relation,,,rujukan eksternal eqn:unit-counit-relation,admitted:admitted
+concept,urn:uuid:1d159f97-4dee-575c-86a5-3632b781c80c,surface/unit-015/reference/prop-adjunction-pointwise,,,rujukan eksternal prop:adjunction-pointwise,admitted:admitted
+concept,urn:uuid:24a9c100-7051-5edd-9f09-437015d57124,surface/unit-015/reference/prop-adjunction-uniqueness,,,rujukan eksternal prop:adjunction-uniqueness,admitted:admitted
+concept,urn:uuid:dd06a9d2-c278-5e45-a35f-79056597418d,surface/unit-015/reference/prop-naturaltrans-associativity,,,rujukan eksternal prop:naturaltrans-associativity,admitted:admitted
+concept,urn:uuid:018acd2b-e04d-5571-853c-b9c38d69e305,surface/unit-015/reference/prop-representable-functor-uniqueness,,,rujukan eksternal prop:representable-functor-uniqueness,admitted:admitted
+concept,urn:uuid:a2bef958-3f52-5aee-a2a5-d465828ad1a4,surface/unit-015/reference/sec-braiding,,,rujukan eksternal sec:braiding,admitted:admitted
+course,urn:uuid:a5f3ad58-ce3c-5f5f-b581-1f842ae79192,course/o013,urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78,,Graduate Algebra,admitted:admitted
+diagram,urn:uuid:9efcfcd5-40d4-577f-9d8d-b4e2ab6592a7,diagram/unit-015/tikzcd-1,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,1,tikzcd-1,admitted:admitted
+diagram,urn:uuid:a8ba4609-20fb-542c-9e94-f4999039aa8b,diagram/unit-015/tikzcd-2,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,2,tikzcd-2,admitted:admitted
+diagram,urn:uuid:ddd79ad4-f022-59d9-84e4-efc05c61dac7,diagram/unit-015/tikzcd-3,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,3,tikzcd-3,admitted:admitted
+diagram,urn:uuid:1a8c81f9-ab31-5214-a2d4-ed1f5473dcd9,diagram/unit-015/tikzcd-4,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,4,tikzcd-4,admitted:admitted
+diagram,urn:uuid:96f9b040-4b7f-5e69-b697-119e5f1d6997,diagram/unit-015/tikzpicture-1,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,5,tikzpicture-1,admitted:admitted
+diagram,urn:uuid:cb5e624e-e95b-5e53-a2f6-edd0853294af,diagram/unit-015/tikzpicture-10,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,14,tikzpicture-10,admitted:admitted
+diagram,urn:uuid:891cf5a9-527a-53d5-95d9-1cd841273208,diagram/unit-015/tikzpicture-11,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,15,tikzpicture-11,admitted:admitted
+diagram,urn:uuid:822a3b44-7d25-556c-a210-e5622c5dd402,diagram/unit-015/tikzpicture-12,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,16,tikzpicture-12,admitted:admitted
+diagram,urn:uuid:bead0954-e08e-5c41-a0e7-bcd8ec227c58,diagram/unit-015/tikzpicture-13,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,17,tikzpicture-13,admitted:admitted
+diagram,urn:uuid:8945007d-e54f-55eb-b834-bfa2c64c1fa0,diagram/unit-015/tikzpicture-14,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,18,tikzpicture-14,admitted:admitted
+diagram,urn:uuid:b93c8af7-b6a3-52fd-987d-5d9a2b923d37,diagram/unit-015/tikzpicture-15,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,19,tikzpicture-15,admitted:admitted
+diagram,urn:uuid:d3a60806-6fbc-5a21-8444-05158a330c74,diagram/unit-015/tikzpicture-16,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,20,tikzpicture-16,admitted:admitted
+diagram,urn:uuid:b4f2c712-67c6-52c3-b16e-3527ce90b705,diagram/unit-015/tikzpicture-2,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,6,tikzpicture-2,admitted:admitted
+diagram,urn:uuid:4f03b66d-d906-56f9-8949-592e777ae3c4,diagram/unit-015/tikzpicture-3,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,7,tikzpicture-3,admitted:admitted
+diagram,urn:uuid:1564d7c6-ab07-5d60-b017-2915adea8dea,diagram/unit-015/tikzpicture-4,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,8,tikzpicture-4,admitted:admitted
+diagram,urn:uuid:9f0b94cd-905d-5512-bb2e-fbe9722dfad4,diagram/unit-015/tikzpicture-5,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,9,tikzpicture-5,admitted:admitted
+diagram,urn:uuid:e4e58c72-1760-599f-944c-c4dc9c1642d8,diagram/unit-015/tikzpicture-6,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,10,tikzpicture-6,admitted:admitted
+diagram,urn:uuid:585d3b17-ec9b-5a9c-a2aa-608f745860a2,diagram/unit-015/tikzpicture-7,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,11,tikzpicture-7,admitted:admitted
+diagram,urn:uuid:476fa265-d040-5682-a897-d7503843c516,diagram/unit-015/tikzpicture-8,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,12,tikzpicture-8,admitted:admitted
+diagram,urn:uuid:a5026d48-ad96-586f-8765-68f9fbdb6f69,diagram/unit-015/tikzpicture-9,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,13,tikzpicture-9,admitted:admitted
+edition,urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49,edition/wenweili/aljabr-1/c4f7a01f68f5f407906b4b970640cddbbad85f6b,urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397,,c4f7a01f68f5f407906b4b970640cddbbad85f6b,admitted:admitted
+index_entry,urn:uuid:a1bc5d9a-505a-578c-b694-80d20706da9a,index-entry/unit-015/adjoint-equivalence,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,3,adjoint-equivalence,admitted:admitted
+index_entry,urn:uuid:5b01013f-31e5-549e-a89d-14bf38f48110,index-entry/unit-015/adjunction-composition,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,1,adjunction-composition,admitted:admitted
+index_entry,urn:uuid:b32ccde2-ae43-56f0-ab45-c87faeddb17f,index-entry/unit-015/category-equivalence,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,2,category-equivalence,admitted:admitted
+prerequisite,urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7,prerequisite/basic-mathematical-literacy,,,kematangan matematika dasar,admitted:admitted
+prerequisite,urn:uuid:dd69ccfd-7399-53a2-83fe-84127b1baf1d,prerequisite/categories-and-morphisms,,,kategori dan morfisme,admitted:admitted
+prerequisite,urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f,prerequisite/cauchy-sequences-and-completeness,,,barisan Cauchy dan kelengkapan,admitted:admitted
+prerequisite,urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee,prerequisite/elementary-number-theory,,,teori bilangan elementer,admitted:admitted
+prerequisite,urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4,prerequisite/elementary-set-theory,,,teori himpunan elementer,admitted:admitted
+prerequisite,urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec,prerequisite/linear-transformations,,,transformasi linear,admitted:admitted
+prerequisite,urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7,prerequisite/mathematical-logic,,,bahasa logika dan penalaran,admitted:admitted
+prerequisite,urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288,prerequisite/matrices,,,matriks,admitted:admitted
+prerequisite,urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8,prerequisite/permutations-and-symmetric-groups,,,permutasi dan grup simetris,admitted:admitted
+prerequisite,urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96,prerequisite/point-set-topology,,,topologi himpunan titik elementer,admitted:admitted
+prerequisite,urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14,prerequisite/polynomials,,,polinom,admitted:admitted
+prerequisite,urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f,prerequisite/real-analysis-basics,,,dasar-dasar analisis real,admitted:admitted
+prerequisite,urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396,prerequisite/vector-spaces,,,ruang vektor,admitted:admitted
+program,urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78,program/open-mathematics-curriculum/2026,,,Open Mathematics Curriculum,admitted:admitted
+qa_event,urn:uuid:4534323d-6ec1-5f39-b3fa-a28b823a2eb1,qa/unit-015/admission-gate,urn:uuid:2f878f23-89a0-5955-a109-9448eb81aa95,,admission-gate,pass
+qa_event,urn:uuid:2e78d48c-5b64-53ad-b139-e7f335fa9661,qa/unit-015/structured-public-evidence,urn:uuid:2f878f23-89a0-5955-a109-9448eb81aa95,,structured-public-evidence,pass
+resource,urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397,resource/wenweili/aljabr-1,,,"Metode Aljabar, Jilid 1: Arsitektur Dasar",admitted:admitted
+rights,urn:uuid:10faf5cd-990f-5850-87b4-26922b062485,rights/ajbook-fragment-cc-by-sa-3.0,,,AJbook.cls DeclareSourcemap fragment,applies
+rights,urn:uuid:e18339ae-66cd-5304-b544-b220dd41380d,rights/lanzhou-cc-by-sa-3.0,,,Lanzhou.png,retained_not_used_by_unit
+rights,urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430,rights/noto-fonts-ofl-1.1,,,Noto Sans CJK SC and Noto Serif CJK SC fonts,applies
+rights,urn:uuid:0baf6c47-021d-5310-9475-81519e710250,rights/principal-cc-by-4.0,,,"Principal text, source, PDF, and Indonesian translation",applies
+section,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,unit/bab-2-contoh-keunikan-dan-ekuivalensi-adjoin/section/contoh-keunikan-dan-ekuivalensi-adjoin,urn:uuid:2f878f23-89a0-5955-a109-9448eb81aa95,1,2.6 Fungtor Adjoin (lanjutan),admitted:admitted
+unit,urn:uuid:2f878f23-89a0-5955-a109-9448eb81aa95,unit/bab-2-contoh-keunikan-dan-ekuivalensi-adjoin,urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49,15,"Bab 2: Dasar-Dasar Teori Kategori; Contoh, Keunikan, dan Ekuivalensi Adjoin",admitted:admitted

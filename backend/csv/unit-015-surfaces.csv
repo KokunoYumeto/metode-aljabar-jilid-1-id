@@ -1,0 +1,26 @@
+entity_type,id,stable_key,section_id,ordinal,source_value,target_value,format,status
+build_surface,urn:uuid:ee0bcee9-ad03-5795-b1b0-1f4dc39b177c,build-surface/unit-015-pdf,,,pwsh -NoProfile -File scripts/build_unit_015.ps1 -OutputDirectory build/unit-015-replay,artifacts/unit-015-bab-2-contoh-keunikan-dan-ekuivalensi-adjoin.pdf,pdf,pass
+citation,urn:uuid:a870fb62-7a66-5894-8e5b-defe4b2a1f86,citation/unit-015/co11,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,,Co11,Co11,biblatex-key,preserved
+diagram,urn:uuid:9efcfcd5-40d4-577f-9d8d-b4e2ab6592a7,diagram/unit-015/tikzcd-1,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,1,936-939,936-939,tikzcd,audited_preserved
+diagram,urn:uuid:a8ba4609-20fb-542c-9e94-f4999039aa8b,diagram/unit-015/tikzcd-2,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,2,945-948,945-948,tikzcd,audited_preserved
+diagram,urn:uuid:ddd79ad4-f022-59d9-84e4-efc05c61dac7,diagram/unit-015/tikzcd-3,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,3,959-961,959-961,tikzcd,audited_preserved
+diagram,urn:uuid:1a8c81f9-ab31-5214-a2d4-ed1f5473dcd9,diagram/unit-015/tikzcd-4,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,4,974-976,974-976,tikzcd,audited_preserved
+diagram,urn:uuid:96f9b040-4b7f-5e69-b697-119e5f1d6997,diagram/unit-015/tikzpicture-1,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,5,988-994,988-994,tikzpicture,audited_preserved
+diagram,urn:uuid:cb5e624e-e95b-5e53-a2f6-edd0853294af,diagram/unit-015/tikzpicture-10,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,14,1056-1062,1056-1062,tikzpicture,audited_preserved
+diagram,urn:uuid:891cf5a9-527a-53d5-95d9-1cd841273208,diagram/unit-015/tikzpicture-11,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,15,1062-1068,1062-1068,tikzpicture,audited_preserved
+diagram,urn:uuid:822a3b44-7d25-556c-a210-e5622c5dd402,diagram/unit-015/tikzpicture-12,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,16,1072-1079,1072-1079,tikzpicture,audited_preserved
+diagram,urn:uuid:bead0954-e08e-5c41-a0e7-bcd8ec227c58,diagram/unit-015/tikzpicture-13,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,17,1080-1086,1080-1086,tikzpicture,audited_preserved
+diagram,urn:uuid:8945007d-e54f-55eb-b834-bfa2c64c1fa0,diagram/unit-015/tikzpicture-14,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,18,1088-1094,1088-1094,tikzpicture,audited_preserved
+diagram,urn:uuid:b93c8af7-b6a3-52fd-987d-5d9a2b923d37,diagram/unit-015/tikzpicture-15,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,19,1094-1097,1094-1097,tikzpicture,audited_preserved
+diagram,urn:uuid:d3a60806-6fbc-5a21-8444-05158a330c74,diagram/unit-015/tikzpicture-16,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,20,1101-1105,1101-1105,tikzpicture,audited_preserved
+diagram,urn:uuid:b4f2c712-67c6-52c3-b16e-3527ce90b705,diagram/unit-015/tikzpicture-2,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,6,994-998,994-998,tikzpicture,audited_preserved
+diagram,urn:uuid:4f03b66d-d906-56f9-8949-592e777ae3c4,diagram/unit-015/tikzpicture-3,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,7,998-1003,998-1003,tikzpicture,audited_preserved
+diagram,urn:uuid:1564d7c6-ab07-5d60-b017-2915adea8dea,diagram/unit-015/tikzpicture-4,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,8,1003-1007,1003-1007,tikzpicture,audited_preserved
+diagram,urn:uuid:9f0b94cd-905d-5512-bb2e-fbe9722dfad4,diagram/unit-015/tikzpicture-5,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,9,1009-1014,1009-1014,tikzpicture,audited_preserved
+diagram,urn:uuid:e4e58c72-1760-599f-944c-c4dc9c1642d8,diagram/unit-015/tikzpicture-6,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,10,1016-1028,1016-1028,tikzpicture,audited_preserved
+diagram,urn:uuid:585d3b17-ec9b-5a9c-a2aa-608f745860a2,diagram/unit-015/tikzpicture-7,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,11,1028-1040,1028-1040,tikzpicture,audited_preserved
+diagram,urn:uuid:476fa265-d040-5682-a897-d7503843c516,diagram/unit-015/tikzpicture-8,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,12,1042-1048,1042-1048,tikzpicture,audited_preserved
+diagram,urn:uuid:a5026d48-ad96-586f-8765-68f9fbdb6f69,diagram/unit-015/tikzpicture-9,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,13,1048-1054,1048-1054,tikzpicture,audited_preserved
+index_entry,urn:uuid:a1bc5d9a-505a-578c-b694-80d20706da9a,index-entry/unit-015/adjoint-equivalence,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,3,bansuidengjia,ekuivalensi adjoin,latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:5b01013f-31e5-549e-a89d-14bf38f48110,index-entry/unit-015/adjunction-composition,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,1,bansuidui!合成,pasangan adjoin!komposisi,latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:b32ccde2-ae43-56f0-ab45-c87faeddb17f,index-entry/unit-015/category-equivalence,urn:uuid:89ee214f-9e9b-5ffa-9c76-72b699273c8d,2,fanchoudengjia,ekuivalensi kategori,latex-index-key,source_key_preserved_target_key_localized

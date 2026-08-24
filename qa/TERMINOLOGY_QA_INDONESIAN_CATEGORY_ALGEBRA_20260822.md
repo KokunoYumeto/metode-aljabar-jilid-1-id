@@ -167,3 +167,28 @@ above before canonical integration. It must also preserve the exact model
 provenance already present in the repository README and release manifests:
 `OpenAI Codex gpt-5.6-sol, Ultra`, while keeping Wen-Wei Li and every source or
 human contributor credited separately and without implying endorsement.
+
+## Unit 015 boundary recheck - 2026-08-24
+
+Before admitting Unit 015, the durable arXiv result and the two downloaded
+fallback witnesses were checked from their live bytes rather than inferred from
+the prior prose record. The UNDIP PDF remains 163,251 bytes with SHA-256
+`611b78c88407037489f22814bf054e00ff0f283c702a06082a3a583e9ab35fcb`;
+the UGM PDF remains 382,376 bytes with SHA-256
+`4099c3d8aff59e723470f69b4d152b037261bc26d54ef74f1365377f05c25834`.
+All four UNDIP pages and all seven UGM pages were rendered and inspected again.
+They remain legible and continue to support the controlled category/algebra
+choices `fungtor`, `transformasi natural`, `kategori`, and `gelanggang`.
+
+Unit 015 introduces eight concepts not yet represented by their own controlled
+rows: `topologi diskret`, `topologi takdiskret`, `grup bebas`, `modul bebas`,
+`gelanggang polinomial`, `abelianisasi`, `pengompakan`, and `diagram untai
+(string diagram)`. These rows were added to the glossary. The two fallback
+documents do not directly attest all eight forms, so the record makes no such
+claim: the choices follow their mathematical meanings, the already controlled
+Indonesian word families, and consistency with the translated corpus. No
+previously admitted reader required a prose correction at this delta gate.
+
+The exact repository-level production provenance remains `OpenAI Codex
+gpt-5.6-sol, Ultra`, recorded separately from Wen-Wei Li's authorship and all
+source and human-contributor credits.

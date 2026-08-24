@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1-2.6 telah diterjemahkan, diaudit, dibangun, diterima, dan dipublikasikan dalam empat belas unit pembaca. Unit 10 menyajikan fungtor dan transformasi natural; Unit 11 kategori fungtor; Unit 12 sifat universal dan kategori koma; Unit 13 fungtor representabel dan Lema Yoneda; Unit 14 dasar-dasar fungtor adjoin. Contoh-contoh pada `chapter2.tex:910-1110` menjadi span terjemahan berikutnya; Bagian 2.7 dimulai pada baris 1111.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1-2.6 telah diterjemahkan dan diterima dalam lima belas unit pembaca. Unit 13 menyajikan fungtor representabel dan Lema Yoneda; Unit 14 dasar-dasar fungtor adjoin; Unit 15 contoh, keunikan, dan ekuivalensi adjoin. Bagian 2.7 pada `chapter2.tex:1111-1405` menjadi span terjemahan berikutnya; Bagian 2.8 dimulai pada baris 1406.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh checkpoint pembaca 0.3.0 (96 halaman; Unit 1-9)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf)
 
@@ -35,6 +35,8 @@ Status saat ini: **Pendahuluan, seluruh Bab 1, pengantar Bab 2, serta Bagian 2.1
 [Baca atau unduh PDF Unit 13](artifacts/unit-013-bab-2-fungtor-representabel-dan-lema-yoneda.pdf)
 
 [Baca atau unduh PDF Unit 14](artifacts/unit-014-bab-2-fungtor-adjoin-dasar.pdf)
+
+[Baca atau unduh PDF Unit 15](artifacts/unit-015-bab-2-contoh-keunikan-dan-ekuivalensi-adjoin.pdf)
 
 Versi preservasi `0.3.0` yang memuat checkpoint gabungan 96 halaman, kesembilan reader, sumber yang dapat dibangun, backend modular, bukti ringkas, dan manifest hash tersedia pada [Zenodo DOI 10.5281/zenodo.22062228](https://doi.org/10.5281/zenodo.22062228). Seluruh pembaruan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat. Rilis `0.4.0` yang sama dengan reader Unit 1-12 sudah byte-verified di GitHub pada commit `f47d290117001a16d0d765bb5f83b3c73bc9a8f3`; pembaruan DOI tertahan oleh blocker eksternal yang dicatat dalam [`qa/ZENODO_PUBLICATION_BLOCKED_20260823.md`](qa/ZENODO_PUBLICATION_BLOCKED_20260823.md).
 
@@ -75,6 +77,7 @@ pwsh -NoProfile -File scripts/build_unit_011.ps1 -OutputDirectory build/unit-011
 pwsh -NoProfile -File scripts/build_unit_012.ps1 -OutputDirectory build/unit-012-replay
 pwsh -NoProfile -File scripts/build_unit_013.ps1 -OutputDirectory build/unit-013-replay
 pwsh -NoProfile -File scripts/build_unit_014.ps1 -OutputDirectory build/unit-014-replay
+pwsh -NoProfile -File scripts/build_unit_015.ps1 -OutputDirectory build/unit-015-replay
 ```
 
 Skrip menjalankan XeLaTeX tanpa shell escape, indeks dan bibliografi yang dibutuhkan setiap unit, lalu lintasan konvergensi XeLaTeX. Tanggal sumber dan seed gambar sampul dipatok. Dua build bersih untuk setiap unit menghasilkan halaman yang identik piksel demi piksel ketika dirender, meskipun serialisasi kontainer PDF XeTeX belum identik byte di direktori keluaran yang berbeda.
@@ -120,8 +123,8 @@ Artefak Unit 4 yang diterima:
 Artefak Unit 5 yang diterima:
 
 - 12 halaman; tidak ada halaman kosong
-- 128.556 byte
-- SHA-256 `232d41f4e7f03123818ae14272958c8269242ebcbec68b832aaaf7ba295ebf3e`
+- 128.554 byte
+- SHA-256 `205359b6c3b406a4f6595908381147e2bb3dba6aab8fdc9057436b11bec252de`
 - bahasa PDF `id-ID`
 - 6 entri outline, 42 destinasi bernama, 17 tautan internal, 3 URI yang disengaja, dua diagram, indeks istilah, dan indeks simbol
 - 163 fragmen matematika sebaris terpelihara; koreksi sejarah hipotesis kontinuum dan klarifikasi komposisi injeksi didokumentasikan secara eksplisit
@@ -195,24 +198,33 @@ Artefak Unit 12 yang diterima secara lokal:
 
 Artefak Unit 13 yang diterima secara lokal:
 
-- 7 halaman; 106.154 byte; SHA-256 `4db806c3a0c42449b1333e25109d135176931880a48982a70b776e04be7ffa2a`
+- 7 halaman; 106.162 byte; SHA-256 `03ced2b80bf14814d01bc73cf378bfab820ec40ad0571eaa33cf514d79d760cf`
 - target fungtor representabel dan Lema Yoneda 8.643 byte; SHA-256 `eeb6bbb2aca0ea17277e7afea39492729996cd9d8648deccc94bcebe9111327d`
-- backend 53.887 byte; SHA-256 `c4e484a039d5ea034b3bb1eba1d54364f795061b6fbc950ddf17d03c9f448cc3`
+- backend 55.182 byte; SHA-256 `877b6c41f1e927a2ded88f5efcad1eb1b8055e74573859de8a3ad50347e039c2`
 - 98 permukaan matematika, 7 label, 10 rujukan, 3 rujukan persamaan, 5 indeks, dan 2 diagram `tikzcd` terpelihara setelah dua koreksi sumber yang didokumentasikan.
 - isomorfisme Yoneda yang panjang ditata sebagai display dan kedua indeks digabung pada satu halaman akhir; dua build serta replay visual 7/7 halaman lulus tanpa kotak meluber, rujukan tak terdefinisi, halaman kosong, atau residu aksara Han.
 
 Artefak Unit 14 yang diterima secara lokal:
 
-- 9 halaman; 121.651 byte; SHA-256 `a8acee26ef75f172336d4e729e055ca6c8d222c548748d9c4a58a4ee976cb403`
+- 9 halaman; 121.761 byte; SHA-256 `1241ca5ff345ff5315d5e3f4e6fcb1f37af2b0e948f458306c4b790035779d04`
 - target dasar-dasar fungtor adjoin pada `chapter2.tex:766-909` adalah 11.655 byte; SHA-256 `5526e8eb99dba9dc3e0eebbd1ddd278eb6343fd50a1d18cf0f6715f09f6e1ed2`; file target lengkap 155.822 byte; SHA-256 `bcf19c8d261947fa619c0257351c29217f401bc1c9453ad91286ff96c1bd69a5`
 - dua build dan replay visual MuPDF/Poppler 9/9 halaman lulus; seluruh halaman diperiksa. Dua kotak meluber yang sangat kecil tidak memotong margin aman dan telah diperiksa secara visual; tidak ada rujukan/sitasi tak terdefinisi, destinasi ganda, karakter hilang, atau galat TeX fatal.
 - reflow digital memakai spasi baris 1,45 agar diagram dan kesimpulan tetap bersama tanpa membuat halaman isi akhir yang hampir kosong; matematika dan struktur sumber tidak diubah.
 - empat koreksi sumber yang diungkapkan memperbaiki indeks komponen `\varphi_{V,W}`, kategori lawan pada dualitas berdimensi hingga, notasi `Vect_f(k)`, dan indeks komponen counit oleh `Y \in \Obj(C_2)`.
 - Unit 14 dipublikasikan pada commit `9c927ba19b14898a8cd8a3cadef30ee309510c8c`; 30 path eksplisit / 923.499 byte cocok dengan byte dan SHA-256 lokal pada pembacaan balik anonim.
 
+Artefak Unit 15 yang diterima secara lokal:
+
+- 10 halaman; 120.466 byte; SHA-256 `6f2a9be12465300ac7af2ea086b643b6891b1f9e23af66241a40086ac476c8ef`
+- target contoh, keunikan, dan ekuivalensi adjoin pada `chapter2.tex:910-1110` adalah 19.355 byte; SHA-256 `df3c65bfea7f7272a31809b96b5ae18fdf966afe22e9ab38a0d8f9d35680520f`; file target lengkap 158.252 byte; SHA-256 `a106ec94b9c2b4a276371e6527b0c7c86dfd84538dde0be8e31848d59d2caf8c`
+- backend 78.807 byte; SHA-256 `a8630f4f3b6b4b697bd63d47341da719de539429ebcbec567c1c1af7697a1e20`; enam proyeksi CSV dihasilkan dan divalidasi secara deterministik dari bukti QA yang ikut dipublikasikan, tanpa bergantung pada cache build lokal.
+- 232 permukaan matematika, 35 lingkungan, 9 label, 8 rujukan, 12 rujukan persamaan, 1 sitasi, 3 indeks, 4 diagram `tikzcd`, dan 16 gambar `tikzpicture` terpelihara setelah dua koreksi sumber yang didokumentasikan.
+- dua build bersih menghasilkan replay visual yang identik pada 10/10 halaman di MuPDF dan Poppler; seluruh halaman diperiksa tanpa pemotongan, benturan, karakter hilang, rumus atau diagram rusak, rujukan tak terdefinisi, maupun kotak meluber.
+- reflow digital memakai spasi baris 1,30 agar halaman isi terakhir tidak hampir kosong tanpa menghapus atau mengubah matematika dan struktur sumber.
+
 ## Backend modular
 
-`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-014-bab-2-fungtor-adjoin-dasar.json` adalah catatan kanonik empat belas unit yang telah diterima secara lokal. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7 mempertahankan keenam latihan sebagai entitas bagian terurut dan setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat. Unit 10-14 memakai identitas yang sama untuk permukaan matematika, diagram, rujukan eksternal, indeks, sitasi, serta provenance model; Unit 10 dan 11 sudah dipublikasikan pada commit `17dac5e2984604c3f2010a04f6021f36e3eb3586`, sedangkan bukti Unit 12-14 ada pada receipt penerimaan masing-masing.
+`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-015-bab-2-contoh-keunikan-dan-ekuivalensi-adjoin.json` adalah catatan kanonik lima belas unit yang telah diterima secara lokal. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7 mempertahankan keenam latihan sebagai entitas bagian terurut dan setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat. Unit 10-15 memakai identitas yang sama untuk permukaan matematika, diagram, rujukan eksternal, indeks, sitasi, serta provenance model; receipt penerimaan masing-masing mengikat bukti lokal dan publiknya.
 
 Validasi:
 
@@ -231,6 +243,7 @@ python scripts/validate_backend.py --data backend/data/unit-011-bab-2-kategori-f
 python scripts/validate_backend.py --data backend/data/unit-012-bab-2-sifat-universal-dan-kategori-koma.json
 python scripts/validate_backend.py --data backend/data/unit-013-bab-2-fungtor-representabel-dan-lema-yoneda.json
 python scripts/validate_backend.py --data backend/data/unit-014-bab-2-fungtor-adjoin-dasar.json
+python scripts/validate_backend.py --data backend/data/unit-015-bab-2-contoh-keunikan-dan-ekuivalensi-adjoin.json
 ```
 
 Validator memeriksa skema, keunikan dan relasi ID, urutan bagian, hash file dan rentang baris, penutupan sitasi/rujukan/diagram/indeks, bukti build, serta kesesuaian byte proyeksi CSV.
@@ -267,8 +280,9 @@ Teks sumber dan terjemahan ditangani menurut Creative Commons Attribution 4.0 In
   - [x] Bagian 2.4 — Sifat universal dan kategori koma
   - [x] Bagian 2.5 — Fungtor representabel dan Lema Yoneda
   - [x] Bagian 2.6 — Dasar-dasar fungtor adjoin
-  - [ ] Contoh-contoh `chapter2.tex:910-1110`
-  - [ ] Bagian 2.7 dan seterusnya
+  - [x] Contoh, keunikan, dan ekuivalensi adjoin `chapter2.tex:910-1110`
+  - [ ] Bagian 2.7 `chapter2.tex:1111-1405`
+  - [ ] Bagian 2.8 dan seterusnya
 - [ ] Bab 3 — Kategori monoidal
 - [ ] Bab 4 — Teori grup
 - [ ] Bab 5 — Dasar-dasar teori gelanggang
