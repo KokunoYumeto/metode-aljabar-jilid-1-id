@@ -1,0 +1,165 @@
+{
+  "status": "PASS",
+  "unit": "unit-022-bab-3-kategori-diperkaya-dan-aditif",
+  "authority": "chapter3.tex:513-722",
+  "target": "chapter3.tex:512-721",
+  "data": "backend/data/unit-022-bab-3-kategori-diperkaya-dan-aditif.json",
+  "schema": "backend/schema/open-math-corpus-unit.schema.v1.json",
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "artifact": {
+    "path": "artifacts/unit-022-bab-3-kategori-diperkaya-dan-aditif.pdf",
+    "pages": 9,
+    "bytes": 117933,
+    "sha256": "a9144221d3a4d8d01e186d5f7a81714b0ec240590f23dd9ea1dbf06b5252a323"
+  },
+  "counts": {
+    "concepts": 405,
+    "environments": 41,
+    "labels": 11,
+    "ordinary_references": 15,
+    "equation_references": 0,
+    "citation_occurrences": 2,
+    "native_bibliography_records": 2,
+    "items": 17,
+    "inline_formulae": 204,
+    "bracket_display_formulae": 11,
+    "environment_display_formulae": 4,
+    "tikzcd": 6,
+    "tikzpicture": 3,
+    "arrows": 21,
+    "nodes": 14,
+    "coordinates": 0,
+    "draws": 11,
+    "paths": 0,
+    "edges": 13,
+    "braids": 0,
+    "hlines": 0,
+    "index_entries": 10,
+    "terminology_rows": 11,
+    "corrections": 2,
+    "csv_projections": 6
+  },
+  "checks": {
+    "deterministic_regeneration_one": "PASS",
+    "deterministic_regeneration_two": "PASS",
+    "shared_schema_and_uuidv5": "PASS",
+    "source_candidate_target_line_boundary": "PASS",
+    "protected_surface_topology": "PASS",
+    "correction_provenance": "PASS",
+    "component_rights": "PASS",
+    "build_and_visual_bindings": "PASS",
+    "terminology_binding": "PASS",
+    "all_full_file_and_line_span_bindings": "PASS",
+    "validation_mutated_outputs": false
+  },
+  "binding_audit": {
+    "occurrences": 84,
+    "full_file_occurrences": 42,
+    "line_span_occurrences": 42,
+    "unique_paths": 36,
+    "paths": [
+      "00_control/SOURCE_MANIFEST.csv",
+      "00_control/TERMINOLOGY.id-ID.csv",
+      "artifacts/unit-022-bab-3-kategori-diperkaya-dan-aditif.pdf",
+      "authority/archives/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b.zip",
+      "authority/pdfs/Al-jabr-1.pdf",
+      "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter3.tex",
+      "qa/UNIT_022_BUILD_FINAL.log",
+      "qa/UNIT_022_MATH_STRUCTURE_AUDIT_20260824.md",
+      "qa/UNIT_022_SOURCE_CORRECTIONS_20260824.md",
+      "qa/UNIT_022_TERMINOLOGY_AUDIT_20260824.md",
+      "qa/UNIT_022_TRANSLATION_SOURCE_REVIEW_20260824.md",
+      "qa/UNIT_022_VISUAL_QA_20260824.md",
+      "qa/unit-022-evidence/render-hash-inventory.json",
+      "qa/unit-022-evidence/structure-and-pdf-qa.json",
+      "repo/fonts/NotoSansCJKsc-Black.otf",
+      "repo/fonts/NotoSansCJKsc-Medium.otf",
+      "repo/fonts/NotoSansCJKsc-Regular.otf",
+      "repo/fonts/NotoSerifCJKsc-Bold.otf",
+      "repo/fonts/OFL-1.1-Noto-CJK.txt",
+      "repo/source/AJbook.cls",
+      "repo/source/Al-jabr.bib",
+      "repo/source/LICENSE",
+      "repo/source/Lanzhou.png",
+      "repo/source/ccby.png",
+      "repo/source/chapter3.tex",
+      "repo/source/coverpage-id-unit-022.tex",
+      "repo/source/font-setup-id.tex",
+      "repo/source/locale-ui-id.tex",
+      "repo/source/myarrows.sty",
+      "repo/source/mycommand.sty",
+      "repo/source/titles-setup-id.tex",
+      "repo/source/titles-setup.tex",
+      "repo/source/unit-022-bab-3-kategori-diperkaya-dan-aditif.tex",
+      "repo/source/unit-022-crossrefs.aux",
+      "scripts/build_unit_022.ps1",
+      "scripts/check_unit_022_structure.py"
+    ]
+  },
+  "identities": {
+    "backend/data/unit-022-bab-3-kategori-diperkaya-dan-aditif.json": {
+      "bytes": 307946,
+      "sha256": "cf6b8e923bf5e6001166ada95aaf014a106dd9beb32b2788a97adb652ce32550"
+    },
+    "backend/csv/unit-022-bindings.csv": {
+      "bytes": 19068,
+      "sha256": "348e9524bd3408ec821317e981af6d7ff1b9754d3cea469dcb239d14612876ca"
+    },
+    "backend/csv/unit-022-entities.csv": {
+      "bytes": 87049,
+      "sha256": "2cceb2147872b30abd3e2e2222dcc2a185c9a8133de9b9e5ed98dbb6b2b3c625"
+    },
+    "backend/csv/unit-022-qa.csv": {
+      "bytes": 4236,
+      "sha256": "d8d58d26b4752b4afebf378d62bd40786914f720101d0aec8ba4a377ad72913b"
+    },
+    "backend/csv/unit-022-relations.csv": {
+      "bytes": 238099,
+      "sha256": "c86eab94476fba3072d1262a8061bd17b3a82b7f0735d5c97415fd0f9056ee10"
+    },
+    "backend/csv/unit-022-rights.csv": {
+      "bytes": 1287,
+      "sha256": "4836630530f87a11a64fe233c59970e2ff7942695a8dbf404f7a0583a275197e"
+    },
+    "backend/csv/unit-022-surfaces.csv": {
+      "bytes": 4984,
+      "sha256": "29466479ec998cb279b9f15357f0900fd49903feb4e7e5d045a8717a492d6500"
+    }
+  },
+  "bound_inputs": {
+    "00_control/TERMINOLOGY.id-ID.csv": {
+      "bytes": 41824,
+      "sha256": "bbe7c8906aa94a96766bb1aacbf1425527593d514fbe83649eea96095ff0d882"
+    },
+    "qa/unit-022-evidence/structure-and-pdf-qa.json": {
+      "bytes": 17953,
+      "sha256": "b461ee52823e8e919006750d0b69ba3b100b0f71d0551b21762945369c2f0bfd"
+    },
+    "qa/UNIT_022_VISUAL_QA_20260824.md": {
+      "bytes": 6946,
+      "sha256": "d0d6484c5df9d61961bc7ce630b00d483175061192b97e3ebc122a851cc3388d"
+    },
+    "qa/UNIT_022_MATH_STRUCTURE_AUDIT_20260824.md": {
+      "bytes": 7050,
+      "sha256": "28b72b44a016d953a5e984383919249510ed7a11d36bb861192ffdb4bea9aa1a"
+    },
+    "qa/UNIT_022_SOURCE_CORRECTIONS_20260824.md": {
+      "bytes": 5197,
+      "sha256": "960ad14d54b9cc5e1d85dbcab6fd6447a6a692fd489164e747e056e2684fe52e"
+    },
+    "qa/UNIT_022_TERMINOLOGY_AUDIT_20260824.md": {
+      "bytes": 7325,
+      "sha256": "f277588412dbf1dfe22237f0fe70f86ccd02e20bab04cb33a6314cb2ca9fcb76"
+    }
+  },
+  "tools": {
+    "scripts/generate_unit_022_backend.py": {
+      "bytes": 64571,
+      "sha256": "426578ae2441b04ddc67fb6ca9ab041768970bb29f27c0d1ec05f0cf70cb499b"
+    },
+    "scripts/validate_unit_022_backend.py": {
+      "bytes": 19899,
+      "sha256": "95ca9bf3f4fcff6966bae3ac64af2ceb0812ad3b755ce807e76858f1745f6e1e"
+    }
+  }
+}

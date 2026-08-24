@@ -1,0 +1,679 @@
+{
+  "schema_version": "1.0.0",
+  "unit_id": "O013-LI-U022",
+  "status": "PASS",
+  "scope_note": "Canonical target integration and the installed local reader are observed and hash-bound; publication actions remain outside this evidence lane.",
+  "canonical_target": {
+    "path": "repo/source/chapter3.tex",
+    "bytes": 86033,
+    "sha256": "b395e1014becb462dae95eda5fde37da9b4edd0b477df8f0b5cefef43edbefa2",
+    "line_records": 910,
+    "span_lines": "512-721",
+    "span_line_records": 210,
+    "span_bytes": 17541,
+    "span_sha256": "e1fa8da94c0c2431660f690aa9b2193e3c966e2d71b9d5a029da12a76bc0e255",
+    "span_equals_isolated_candidate": true,
+    "next_target_line": 722,
+    "next_line_sha256": "26cf19a66c488255e23a0fa8774aca285f48b9049a6111bf2c6fe8d746bdced7"
+  },
+  "candidate": {
+    "path": "build/unit-022-candidate/chapter3-enriched-categories-id.tex",
+    "bytes": 17541,
+    "sha256": "e1fa8da94c0c2431660f690aa9b2193e3c966e2d71b9d5a029da12a76bc0e255"
+  },
+  "artifact": {
+    "path": "artifacts/unit-022-bab-3-kategori-diperkaya-dan-aditif.pdf",
+    "bytes": 117933,
+    "sha256": "a9144221d3a4d8d01e186d5f7a81714b0ec240590f23dd9ea1dbf06b5252a323"
+  },
+  "clean_builds": {
+    "final_e": {
+      "path": "build/unit-022-final-e/unit-022-bab-3-kategori-diperkaya-dan-aditif.pdf",
+      "bytes": 117921,
+      "sha256": "97492ad2ca5ce180add809d5a88b6263d7e7ebfc3a51cbb71b3e51e558f03494"
+    },
+    "final_f": {
+      "path": "build/unit-022-final-f/unit-022-bab-3-kategori-diperkaya-dan-aditif.pdf",
+      "bytes": 117933,
+      "sha256": "a9144221d3a4d8d01e186d5f7a81714b0ec240590f23dd9ea1dbf06b5252a323"
+    },
+    "replay": {
+      "path": "build/unit-022-replay-admitted/unit-022-bab-3-kategori-diperkaya-dan-aditif.pdf",
+      "bytes": 117922,
+      "sha256": "4f4b190ad3bf12e38cc4fc65db76f4e8a99d33bbe41d841bb9dc5c67e4542b14"
+    }
+  },
+  "driver": {
+    "path": "repo/source/unit-022-bab-3-kategori-diperkaya-dan-aditif.tex",
+    "bytes": 5786,
+    "sha256": "86a6d37846d21d06932f90dd09b202afdb2d6e29aa9e9b0453f0eb66a532c97d",
+    "canonical_input": "chapter3.tex",
+    "canonical_span_lines": "512-721",
+    "canonical_direct_binding": true,
+    "candidate_dependency": false
+  },
+  "cover": {
+    "path": "repo/source/coverpage-id-unit-022.tex",
+    "bytes": 3620,
+    "sha256": "1f19df06c7d317b4804caafbfc7a5c7dd7a535f8e8be3f110bccb7899d107ac4"
+  },
+  "crossrefs": {
+    "path": "repo/source/unit-022-crossrefs.aux",
+    "bytes": 613,
+    "sha256": "53b87b5f35aa1a0ae2988e9a4d6ca154391e9a51fbb299f4040db1befbe53625"
+  },
+  "build_script": {
+    "path": "scripts/build_unit_022.ps1",
+    "bytes": 4803,
+    "sha256": "33c46a2c59b0e02e4745863cc9a7e7425a0947bb5b669dda8652cf9898956aad"
+  },
+  "build_log": {
+    "path": "qa/UNIT_022_BUILD_FINAL.log",
+    "bytes": 85480,
+    "sha256": "ddec6e07c0e42bf938346e3490252a0e6f3acba7a3a0bcdd1e9974b995cd66e3"
+  },
+  "build_log_sanitization": {
+    "method": "complete home-prefix replacement with ${USER_HOME}",
+    "replacement_count": 257,
+    "line_count": 2289
+  },
+  "candidate_checker": {
+    "path": "scripts/check_unit_022_candidate.py",
+    "bytes": 23938,
+    "sha256": "2fc366f8af4439ca0667b0111d836348d0742c3e9cec8dd2dbaf08a7edb81613"
+  },
+  "candidate_checker_stdout_sha256": "e32dea1331c350358b0eaf69c5fffc1c22b1b736e6be6217695c878b3aa2cc13",
+  "source_review": {
+    "path": "qa/UNIT_022_TRANSLATION_SOURCE_REVIEW_20260824.md",
+    "bytes": 9175,
+    "sha256": "36d7650aa142da19d998dc8f1b6d39f24a94e2a19e51e988cbd2187691f56e9f"
+  },
+  "terminology_audit": {
+    "path": "qa/UNIT_022_TERMINOLOGY_AUDIT_20260824.md",
+    "bytes": 7325,
+    "sha256": "f277588412dbf1dfe22237f0fe70f86ccd02e20bab04cb33a6314cb2ca9fcb76"
+  },
+  "source_corrections": {
+    "path": "qa/UNIT_022_SOURCE_CORRECTIONS_20260824.md",
+    "bytes": 5197,
+    "sha256": "960ad14d54b9cc5e1d85dbcab6fd6447a6a692fd489164e747e056e2684fe52e"
+  },
+  "visual_probe": {
+    "path": "build/unit-022-visual-qa/qa_probe.py",
+    "bytes": 19979,
+    "sha256": "019f8cd8b41f9c4654c8d5d9a9d4163a017066405b0c62354e112d413d40f4d7"
+  },
+  "visual_manifest": {
+    "path": "build/unit-022-visual-qa/qa-manifest.json",
+    "bytes": 62244,
+    "sha256": "9e0dbdf6808cbdadcda2c9cea1e9c5f440d73316eb60e3ee8e2a125e29308412"
+  },
+  "render_inventory": {
+    "path": "qa/unit-022-evidence/render-hash-inventory.json",
+    "bytes": 10132,
+    "sha256": "0511d0f65e2e9e5d0cff76ea7285acfde7f9a31bf1cd9407913b38a410bb47ac"
+  },
+  "evidence_generator": {
+    "path": "scripts/generate_unit_022_evidence.py",
+    "bytes": 26705,
+    "sha256": "c96804cd29dc26eae5f1d287ec8e2e6dd01a4724703ffc6994432f6d68ae249d"
+  },
+  "structure": {
+    "labels": [
+      "sec:enriched-cat",
+      "def:enriched-cat",
+      "def:enriched-functor",
+      "rem:enriched-to-ordinary",
+      "def:enriched-naturaltrans",
+      "eg:Ab-cat",
+      "def:biproduct",
+      "prop:biproduct-criterion",
+      "def:additive-cat",
+      "prop:biproduct-preservation",
+      "prop:additive-prod-coprod"
+    ],
+    "references": [
+      "eg:categories",
+      "def:category",
+      "eg:monoidal-cat",
+      "con:U-small",
+      "eg:categories",
+      "eg:categories",
+      "rem:enriched-to-ordinary",
+      "sec:limits",
+      "prop:product-associativity",
+      "def:universal-objects",
+      "def:zero-morphism",
+      "def:enriched-functor",
+      "prop:Mod-cat-additive",
+      "prop:biproduct-criterion",
+      "prop:product-associativity"
+    ],
+    "external_references": [
+      "con:U-small",
+      "def:category",
+      "def:universal-objects",
+      "def:zero-morphism",
+      "eg:categories",
+      "eg:monoidal-cat",
+      "prop:Mod-cat-additive",
+      "prop:product-associativity",
+      "sec:limits"
+    ],
+    "external_crossref_numbers": {
+      "def:category": "2.1.1",
+      "con:U-small": "2.1.4",
+      "eg:categories": "2.1.5",
+      "def:universal-objects": "2.4.1",
+      "def:zero-morphism": "2.4.3",
+      "sec:limits": "2.7",
+      "prop:product-associativity": "2.7.11",
+      "eg:monoidal-cat": "3.1.3",
+      "prop:Mod-cat-additive": "6.2.4"
+    },
+    "citations": [
+      {
+        "locator": "",
+        "key": "Ke05"
+      },
+      {
+        "locator": "Chapter 5",
+        "key": "May99"
+      }
+    ],
+    "index_entries": 10,
+    "ordinary_index_entries": 9,
+    "symbol_index_entries": 1,
+    "environment_counts": {
+      "compactitem": 2,
+      "center": 2,
+      "tikzpicture": 3,
+      "definition": 5,
+      "enumerate": 1,
+      "tikzcd": 6,
+      "remark": 2,
+      "example": 3,
+      "align*": 3,
+      "gather*": 1,
+      "cases": 3,
+      "theorem": 1,
+      "compactenum": 2,
+      "proof": 4,
+      "lemma": 1,
+      "proposition": 2
+    },
+    "tikzpicture": 3,
+    "tikzcd": 6,
+    "declared_corrections": [
+      "O013-LI-U022-COR-001",
+      "O013-LI-U022-COR-002"
+    ]
+  },
+  "pdf": {
+    "pages": 9,
+    "pdf_header": "%PDF-1.7",
+    "language": "id-ID",
+    "encrypted": false,
+    "tagged": false,
+    "metadata": {
+      "/Creator": "LaTeX with hyperref",
+      "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 22: Kategori Monoidal - Kategori Diperkaya dan Aditif",
+      "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 3.4 lengkap",
+      "/Author": "Wen-Wei Li",
+      "/Keywords": "aljabar, teori kategori, kategori diperkaya, kategori praaditif, biproduk, kategori aditif, id-ID",
+      "/Producer": "MiKTeX-dvipdfmx (20260404)",
+      "/CreationDate": "D:20260824000000Z"
+    },
+    "page_labels": [
+      "1",
+      "2",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "outline": [
+      {
+        "level": 0,
+        "title": "Bab 3: Kategori Monoidal",
+        "page_index": 2
+      },
+      {
+        "level": 1,
+        "title": "3.4 Kategori Diperkaya",
+        "page_index": 2
+      },
+      {
+        "level": 0,
+        "title": "Daftar Pustaka",
+        "page_index": 8
+      },
+      {
+        "level": 0,
+        "title": "Indeks Istilah",
+        "page_index": 8
+      },
+      {
+        "level": 0,
+        "title": "Indeks Simbol",
+        "page_index": 8
+      }
+    ],
+    "named_destinations": [
+      {
+        "name": "Doc-Start",
+        "page_index": 0
+      },
+      {
+        "name": "Item.1",
+        "page_index": 2
+      },
+      {
+        "name": "Item.10",
+        "page_index": 7
+      },
+      {
+        "name": "Item.11",
+        "page_index": 7
+      },
+      {
+        "name": "Item.2",
+        "page_index": 2
+      },
+      {
+        "name": "Item.3",
+        "page_index": 2
+      },
+      {
+        "name": "Item.4",
+        "page_index": 2
+      },
+      {
+        "name": "Item.5",
+        "page_index": 6
+      },
+      {
+        "name": "Item.6",
+        "page_index": 6
+      },
+      {
+        "name": "Item.7",
+        "page_index": 6
+      },
+      {
+        "name": "Item.8",
+        "page_index": 7
+      },
+      {
+        "name": "Item.9",
+        "page_index": 7
+      },
+      {
+        "name": "cite.0@Ke05",
+        "page_index": 8
+      },
+      {
+        "name": "cite.0@May99",
+        "page_index": 8
+      },
+      {
+        "name": "page.1",
+        "page_index": 2
+      },
+      {
+        "name": "page.2",
+        "page_index": 3
+      },
+      {
+        "name": "page.3",
+        "page_index": 4
+      },
+      {
+        "name": "page.4",
+        "page_index": 5
+      },
+      {
+        "name": "page.5",
+        "page_index": 6
+      },
+      {
+        "name": "page.6",
+        "page_index": 7
+      },
+      {
+        "name": "page.7",
+        "page_index": 8
+      },
+      {
+        "name": "proof.1",
+        "page_index": 6
+      },
+      {
+        "name": "proof.2",
+        "page_index": 7
+      },
+      {
+        "name": "proof.3",
+        "page_index": 7
+      },
+      {
+        "name": "proof.4",
+        "page_index": 8
+      },
+      {
+        "name": "section*.1",
+        "page_index": 8
+      },
+      {
+        "name": "section*.2",
+        "page_index": 8
+      },
+      {
+        "name": "section*.3",
+        "page_index": 8
+      },
+      {
+        "name": "section.3.4",
+        "page_index": 2
+      },
+      {
+        "name": "theorem.3.4.1",
+        "page_index": 2
+      },
+      {
+        "name": "theorem.3.4.10",
+        "page_index": 7
+      },
+      {
+        "name": "theorem.3.4.11",
+        "page_index": 7
+      },
+      {
+        "name": "theorem.3.4.12",
+        "page_index": 7
+      },
+      {
+        "name": "theorem.3.4.13",
+        "page_index": 7
+      },
+      {
+        "name": "theorem.3.4.14",
+        "page_index": 8
+      },
+      {
+        "name": "theorem.3.4.2",
+        "page_index": 3
+      },
+      {
+        "name": "theorem.3.4.3",
+        "page_index": 3
+      },
+      {
+        "name": "theorem.3.4.4",
+        "page_index": 4
+      },
+      {
+        "name": "theorem.3.4.5",
+        "page_index": 4
+      },
+      {
+        "name": "theorem.3.4.6",
+        "page_index": 4
+      },
+      {
+        "name": "theorem.3.4.7",
+        "page_index": 4
+      },
+      {
+        "name": "theorem.3.4.8",
+        "page_index": 5
+      },
+      {
+        "name": "theorem.3.4.9",
+        "page_index": 6
+      },
+      {
+        "name": "unit022-bibliography.0",
+        "page_index": 8
+      },
+      {
+        "name": "unit022-chapter-three.0",
+        "page_index": 2
+      },
+      {
+        "name": "unit022-symbol-index.0",
+        "page_index": 8
+      },
+      {
+        "name": "unit022-term-index.0",
+        "page_index": 8
+      }
+    ],
+    "annotation_subtypes": {
+      "/Link": 20
+    },
+    "annotation_actions": {
+      "/URI": 3,
+      "/GoTo": 17
+    },
+    "unsafe_actions": [],
+    "page_text_character_counts": [
+      415,
+      920,
+      1676,
+      1227,
+      1894,
+      2300,
+      1506,
+      1855,
+      1096
+    ],
+    "page_annotation_counts": [
+      0,
+      3,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1,
+      13
+    ],
+    "page_sizes_points": [
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ]
+    ],
+    "content_stream_set_sha256": "8ab4954eca391007728da923384d5b8c3b18e4d21afd393731f572b73a2529fb",
+    "pypdf_text_sha256": "250fbed3644fea08d7f2f378cda82b91ab64b8a9015ce7822f8717e822e4972e",
+    "pypdf_nul_character_count": 1,
+    "fitz_text_sha256": "ce729750539f76e6be7c2ba3cd8a09100d655224208e9c30a4efa66871f3f070",
+    "fitz_nul_character_count": 0,
+    "pdfplumber_layout_text_sha256": "26a242b10ac65879d374640fa8e845cf58ab7346f68f3c0aef8199b96c1299d0",
+    "pdfplumber_nul_character_count": 0,
+    "poppler_layout_text_bytes": 17923,
+    "poppler_layout_text_sha256": "caaf727a15d251e171e207661e26d1082c861c398f27c2aeb3b3ead1eb3b3ec5",
+    "poppler_layout_nul_byte_count": 0,
+    "font_count": 28,
+    "all_fonts_embedded": true,
+    "all_fonts_embedded_and_subset": true,
+    "acroform_present": false,
+    "javascript_name_tree": false,
+    "embedded_files": false,
+    "catalog_additional_actions": false,
+    "open_action_present": true,
+    "open_action_type": "ArrayObject",
+    "unresolved_token_count": 0,
+    "fitz_out_of_bounds_text_blocks": [],
+    "pdfplumber_out_of_bounds_characters": [],
+    "strict_reader_warnings": [],
+    "external_tools": {
+      "pdfinfo": {
+        "returncode": 0,
+        "stdout_sha256": "e2a443e8e8d215340d9f741cae66e363b9edede278ac7f9c4d80c08b93b5d96c",
+        "stderr": ""
+      },
+      "pdffonts": {
+        "returncode": 0,
+        "stdout_sha256": "cc7690599ad29b60bfed835bb8864009b887c8402b5cdd1b1c37cdbe5aa5dd25",
+        "stderr": ""
+      },
+      "pdfimages": {
+        "returncode": 0,
+        "stdout_sha256": "34564014f054ee8b3a848afce1c8d179aa2b7da81d2bd84b9e1a38232fc7e3f7",
+        "stderr": ""
+      },
+      "mutool_info": {
+        "returncode": 0,
+        "stdout_sha256": "f770292962cfdb57a7134cacd6a2942a9a32626fdd624e71a696f2b8aec2088a",
+        "stderr": ""
+      }
+    }
+  },
+  "deterministic_replay": {
+    "container_byte_identity": false,
+    "semantic_and_render_identity": true,
+    "pypdf_text_sha256": {
+      "final_e": "250fbed3644fea08d7f2f378cda82b91ab64b8a9015ce7822f8717e822e4972e",
+      "final_f": "250fbed3644fea08d7f2f378cda82b91ab64b8a9015ce7822f8717e822e4972e",
+      "replay": "250fbed3644fea08d7f2f378cda82b91ab64b8a9015ce7822f8717e822e4972e"
+    },
+    "render_count": 72,
+    "contact_sheet_count": 8,
+    "public_replay_comparisons": {
+      "builds/poppler": {
+        "page_count_equal": true,
+        "raw_pixel_identical": true,
+        "png_byte_identical": true,
+        "mismatching_raw_pages": [],
+        "mismatching_png_pages": []
+      },
+      "replay/poppler": {
+        "page_count_equal": true,
+        "raw_pixel_identical": true,
+        "png_byte_identical": true,
+        "mismatching_raw_pages": [],
+        "mismatching_png_pages": []
+      },
+      "builds/mupdf": {
+        "page_count_equal": true,
+        "raw_pixel_identical": true,
+        "png_byte_identical": true,
+        "mismatching_raw_pages": [],
+        "mismatching_png_pages": []
+      },
+      "replay/mupdf": {
+        "page_count_equal": true,
+        "raw_pixel_identical": true,
+        "png_byte_identical": true,
+        "mismatching_raw_pages": [],
+        "mismatching_png_pages": []
+      }
+    },
+    "same_renderer_page_mismatches": {
+      "poppler": 0,
+      "mupdf": 0
+    }
+  },
+  "log_counts": {
+    "overfull_boxes": 0,
+    "underfull_hboxes": 8,
+    "underfull_vboxes": 2,
+    "empty_external_link_targets": 12,
+    "undefined_control_sequences": 0,
+    "undefined_references": 0,
+    "undefined_citations": 0,
+    "missing_characters": 0,
+    "fatal_errors": 0,
+    "emergency_stops": 0
+  },
+  "checks": {
+    "canonical_target_full_identity": true,
+    "canonical_span_equals_candidate": true,
+    "boundary_next_section": true,
+    "candidate_checker": true,
+    "artifact_equals_final_b": true,
+    "page_count": true,
+    "semantic_replay": true,
+    "render_replay": true,
+    "pdf_safety": true,
+    "navigation": true,
+    "accessibility_baseline": true,
+    "fonts": true,
+    "text_tokens": true,
+    "log": true,
+    "page_edges": true,
+    "structure": true
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "renderers_inspected": [
+      "Poppler",
+      "MuPDF (mutool and PyMuPDF)"
+    ],
+    "finding": "Centered prose cover with explicit partial scope and no progress blocks; readable full-width Section 3.4; intact enriched-category composition/unit diagrams, enriched naturality square, biproduct arrows and matrix formulas; bibliography and both indexes combined legibly on concluding page 9.",
+    "nine_page_adjudication": "A forced back-matter page break originally created a sparse page 10. Suppressing only that break uses the open lower portion of page 9 for the two-entry bibliography and both indexes, with zero overfull boxes."
+  },
+  "extraction_note": {
+    "pypdf_nul_character_count": 1,
+    "interpretation": "PyPDF-only ToUnicode mapping limitation for one visibly rendered tensor-product glyph on PDF page 3; zero NUL/replacement/control characters in Poppler, PyMuPDF, and pdfplumber extraction."
+  },
+  "rights": {
+    "principal_text_and_translation": "CC BY 4.0",
+    "AJbook_class_fragment": "CC BY-SA 3.0",
+    "bundled_noto_fonts": "SIL OFL 1.1",
+    "Lanzhou_png_in_wider_closure": "CC BY-SA 3.0; not used by this reader"
+  },
+  "language": "id-ID",
+  "source_author": "Wen-Wei Li",
+  "translation_status": "independent and non-endorsed",
+  "build_date": "2026-08-24",
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra"
+}
