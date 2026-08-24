@@ -228,3 +228,35 @@ uses `transformasi natural` and the controlled forms above. No previously
 admitted reader required a terminology correction at this gate. Production
 provenance remains exactly `OpenAI Codex gpt-5.6-sol, Ultra`, separately from
 Wen-Wei Li's authorship and all source and human-contributor credits.
+
+## Unit 017 boundary recheck - 2026-08-24
+
+Section 2.8 does not trigger another open-ended source search. The bounded
+official arXiv queries still provide no suitable Indonesian same-field TeX,
+and the retained primary fallback remains the same four-page UNDIP
+category-theory chapter and seven-page UGM algebra article. Their exact byte
+identities are unchanged from the manifest. Those witnesses support the core
+field register (`kategori`, `fungtor`, `objek`, and the product/coproduct
+context), while the specialized completeness and pullback vocabulary below is
+adjudicated from mathematical meaning, the 2008 Pusat Bahasa glossary, and
+consistency with Units 001-016. No claim of direct attestation is made where
+the witnesses do not use a term.
+
+Sixteen controlled rows were added: `kelengkapan`, `kategori lengkap`,
+`kategori kolengkap`, `produk kecil`, `koproduk kecil`, `produk serat`, the
+synonymous source term `fibered product`, `tarik balik (pullback)`, `koproduk
+serat`, `dorong keluar (pushout)`, `diagram Kartesius`, `mempertahankan
+limit`, `produk langsung`, `jumlah langsung`, `produk bebas`, and `kernel
+selisih`. English `pullback` and `pushout` remain in the defining index entries
+for international discoverability. The reader prose uses the concise
+Indonesian terms. `Jumlah langsung` follows the Pusat Bahasa form and is also
+mathematically required in the corrected description of coproducts in
+`\cate{Ab}`; `produk langsung` retains the corpus's controlled modern product
+family rather than reintroducing the glossary's older `darab` variant.
+
+The revised glossary is 31,697 bytes, SHA-256
+`4cdef514de666a002681f593cb5578322dc19c3e9101da20f2caabc415d4cd08`.
+No earlier admitted reader contains a conflicting Unit 017 form, so no prior
+artifact requires correction. Exact production provenance remains `OpenAI
+Codex gpt-5.6-sol, Ultra`, separately from Wen-Wei Li's authorship and every
+source or human-contributor credit.

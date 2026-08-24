@@ -1403,75 +1403,75 @@ Hasil di atas disebut ``kendala asosiativitas'', bukan hukum asosiatif, karena d
 	Andaikan morfisme $\mu, \nu: L \rightrightarrows \Ker(f,g)$ sedemikian sehingga komposit keduanya dengan morfisme $\Ker(f,g) \to X$ sama, yaitu morfisme $\phi: L \to X$. Maka $f\phi = g\phi$, sehingga dalam diagram komutatif \eqref{eqn:equalizer}, $\dasharrow$ dapat diambil sebagai $\mu$ maupun $\nu$. Dari keunikan diperoleh $\mu=\nu$. Jadi, $\Ker(f,g) \to X$ adalah monomorfisme. Kasus $\Coker(f,g)$ terbukti dengan membalik semua panah.
 \end{proof}
 	
-\section{完备性}
-极限能够统摄数学实践中许多重要的构造, 如拓扑学中的积空间, 商空间等. 在为数学问题制定范畴时, 我们自然也希望其中具有充分多的极限. 这就引向了以下概念.
+\section{Kelengkapan}
+Limit mencakup banyak konstruksi penting dalam praktik matematika, seperti ruang produk dan ruang hasil bagi dalam topologi. Ketika merumuskan suatu kategori untuk menangani persoalan matematika, wajar bila kita juga menghendaki cukup banyak limit di dalamnya. Hal ini membawa kita pada konsep berikut.
 
-\begin{definition}\label{def:completeness}\index{fanchou!完备 (complete)}\index{fanchou!余完备 (co-complete)}
-	对于范畴 $\mathcal{C}$, 若对有所有小范畴 $I$, 所有以 $I$ 为指标的 $\varprojlim$ 都存在, 则称之为\emph{完备}的; 若所有以 $I$ 为指标的 $\varinjlim$ 都存在, 则称之为\emph{余完备}的.
+\begin{definition}\label{def:completeness}\index{kategori!lengkap (complete)}\index{kategori!kolengkap (co-complete)}
+	Untuk kategori $\mathcal{C}$, jika untuk setiap kategori kecil $I$ semua $\varprojlim$ berindeks $I$ ada, maka kategori itu disebut \emph{lengkap}; jika untuk setiap kategori kecil $I$ semua $\varinjlim$ ada, maka kategori itu disebut \emph{kolengkap}.
 \end{definition}
-举例明之, $\cate{Set}$ 既是完备也是余完备的, 见例 \ref{eg:set-limits}. 定义中如不要求 $\mathcal{C}$ 比 $I$ 来得``大'', 应用范围将大大地受限. 请看以下结果.
+Sebagai contoh, $\cate{Set}$ lengkap sekaligus kolengkap; lihat Contoh \ref{eg:set-limits}. Jika dalam definisi tersebut tidak disyaratkan bahwa $\mathcal{C}$ ``lebih besar'' daripada $I$, jangkauan penerapannya akan sangat terbatas. Perhatikan hasil berikut.
 \begin{proposition}[P.\ Freyd]\label{prop:preorder-complete}
-	小范畴 $\mathcal{C}$ 完备当且仅当 $\mathcal{C}$ 来自一个预序集 $(P, \leq)$ (例 \ref{eg:categories}), 其中每个子集都有下确界.
+	Kategori kecil $\mathcal{C}$ lengkap jika dan hanya jika $\mathcal{C}$ berasal dari suatu himpunan praterurut $(P, \leq)$ (Contoh \ref{eg:categories}) yang setiap subhimpunannya mempunyai infimum.
 \end{proposition}
 \begin{proof}
-	假设 $\mathcal{C}$ 完备. 假若存在相异的态射 $f, g: X \to Y$, 对于小集合 $I$ 可构造 $\prod_{i \in I} Y$, 故 $\Hom_{\mathcal{C}}(X, \prod_{i \in I} Y) \supset \{f, g\}^I$. 取 $|I| = |\Mor(\mathcal{C})|$ 并运用定理 \ref{prop:Cantor} 便导出矛盾. 因此 $\mathcal{C}$ 是预序集. 另一方面, 从 \eqref{eqn:lim-diagrams} 不难看出一个预序集 $(P, \leq)$ 中的 $\varprojlim \beta$ 无非是子集 $\{\beta(i) : i \in \Obj(I) \}$ 的下确界; 注意到下确界在同构意义下是唯一的. 证毕.
+	Andaikan $\mathcal{C}$ lengkap. Jika terdapat morfisme berbeda $f, g: X \to Y$, maka untuk setiap himpunan kecil $I$ dapat dibentuk $\prod_{i \in I} Y$, sehingga $\Hom_{\mathcal{C}}(X, \prod_{i \in I} Y) \supset \{f, g\}^I$. Dengan mengambil $|I| = |\Mor(\mathcal{C})|$ dan menerapkan Teorema \ref{prop:Cantor}, diperoleh kontradiksi. Jadi, $\mathcal{C}$ merupakan kategori praterurut. Sebaliknya, dari \eqref{eqn:lim-diagrams} mudah dilihat bahwa $\varprojlim \beta$ dalam himpunan praterurut $(P, \leq)$ tidak lain adalah infimum subhimpunan $\{\beta(i) : i \in \Obj(I) \}$; perhatikan bahwa infimum unik hingga isomorfisme. Pernyataan pun terbukti.
 \end{proof}
 
 \begin{theorem}\label{prop:limit-buildingblocks}
-	设 $I$ 为小范畴, $\mathcal{C}$ 为范畴.
+	Misalkan $I$ kategori kecil dan $\mathcal{C}$ kategori.
 	\begin{compactenum}
-		\item 若对所有子集 $J \subset \Mor(I)$ 和 $\mathcal{C}$ 中的对象族 $(X_j)_{j \in J}$ 都存在 $\prod_{j \in J} X_j$, 而且对所有 $f, g: X \to Y$ 都存在 $\Ker(f,g)$, 则 $\mathcal{C}$ 有所有以 $I$ 为指标的 $\varprojlim$.
-		\item 若对所有子集 $J \subset \Mor(I)$ 和 $(X_j)_{j \in J}$ 都存在 $\coprod_{j \in J} X_j$, 而且对所有 $f, g: X \to Y$ 都存在 $\Coker(f,g)$, 则 $\mathcal{C}$ 有所有以 $I$ 为指标的 $\varinjlim$.
+		\item Jika $\prod_{j \in J} X_j$ ada untuk setiap subhimpunan $J \subset \Mor(I)$ dan setiap keluarga objek $(X_j)_{j \in J}$ dalam $\mathcal{C}$, serta $\Ker(f,g)$ ada untuk setiap $f, g: X \to Y$, maka $\mathcal{C}$ mempunyai semua $\varprojlim$ berindeks $I$.
+		\item Jika $\coprod_{j \in J} X_j$ ada untuk setiap subhimpunan $J \subset \Mor(I)$ dan setiap $(X_j)_{j \in J}$, serta $\Coker(f,g)$ ada untuk setiap $f, g: X \to Y$, maka $\mathcal{C}$ mempunyai semua $\varinjlim$ berindeks $I$.
 	\end{compactenum}
 \end{theorem}
 \begin{proof}
-	两断言显然对偶, 以 $\mathcal{C}^\text{op}$ 代 $\mathcal{C}$ 可互相过渡. 故以下仅考虑 $\varprojlim$ 情形.
+	Kedua pernyataan tersebut jelas dual dan dapat saling diperoleh dengan mengganti $\mathcal{C}$ oleh $\mathcal{C}^\text{op}$. Karena itu, berikut ini kita hanya meninjau kasus $\varprojlim$.
 
-	考虑函子 $\beta: I^\text{op} \to \mathcal{C}$. 对于 $I$ 中的态射 $\sigma: i \to j$, 请回忆早先定义的来源 $s(\sigma)=i$ 与目标 $t(\sigma)=j$. 构造积 $\prod_{i \in \Obj(I)} \beta(i)$ 与 $\prod_{\sigma \in \Mor(I)} \beta(s(\sigma))$. 对每个 $\sigma \in \Mor(I)$ 定义一对态射
+	Pertimbangkan fungtor $\beta: I^\text{op} \to \mathcal{C}$. Untuk morfisme $\sigma: i \to j$ dalam $I$, ingat kembali sumber $s(\sigma)=i$ dan target $t(\sigma)=j$ yang didefinisikan sebelumnya. Bentuk produk $\prod_{i \in \Obj(I)} \beta(i)$ dan $\prod_{\sigma \in \Mor(I)} \beta(s(\sigma))$. Untuk setiap $\sigma \in \Mor(I)$, definisikan sepasang morfisme
 	\[\begin{tikzcd}[row sep=tiny]
 		\prod_{i \in \Obj(I)} \beta(i) \arrow[bend left=15, rr, "{p_{s(\sigma)}}"] \arrow[bend right=15, rd, "{p_{t(\sigma)}}"'] & & \beta(s(\sigma)) \\
 		& \beta(t(\sigma)) \arrow[ru, bend right=15, "{\beta(\sigma)}"'] &
 	\end{tikzcd}\]
-	故从积的泛性质导出相应的态射
+	Maka, dari sifat universal produk diperoleh morfisme-morfisme yang bersesuaian
 	\begin{tikzcd}
 		\displaystyle\prod_{i \in \Obj(I)} \beta(i) \arrow[yshift=0.5ex, r, "f"] \arrow[yshift=-0.5ex, r, "g"'] & \displaystyle\prod_{\sigma \in \Mor(I)} \beta(s(\sigma))
 	\end{tikzcd}.
-	今断言下述资料构成了所欲的 $\varprojlim\beta$:
+	Sekarang kita nyatakan bahwa data berikut membentuk $\varprojlim\beta$ yang dikehendaki:
 	\begin{equation}\label{eqn:lim-as-ker}
 		\Ker(f,g), \quad \left(q_j: \Ker(f,g) \to \prod_{i \in \Obj(I)} \beta(i) \xrightarrow{p_j} \beta(j) \right)_{j \in \Obj(I)}.
 	\end{equation}
 
-	根据例 \ref{eg:set-limits} 中的极限构造和命题 \ref{prop:lim-Yoneda} 在 $\mathcal{C}^\wedge$ 中操作, 知函子 $\Yprojlim \beta$ 等于
+	Dengan memakai konstruksi limit pada Contoh \ref{eg:set-limits} dan Proposisi \ref{prop:lim-Yoneda}, kita bekerja dalam $\mathcal{C}^\wedge$ dan memperoleh bahwa fungtor $\Yprojlim \beta$ sama dengan
 	\begin{align*}
 		\varprojlim_i \Hom_{\mathcal{C}}(\cdot, \beta(i)) & = \Ker\left[ \prod_i \Hom_{\mathcal{C}}(\cdot, \beta(i)) \rightrightarrows \prod_\sigma \Hom_{\mathcal{C}}(\cdot, \beta(s(\sigma)))  \right] \\
 		& = \Hom_{\mathcal{C}}\left( \cdot, \Ker(f,g) \right).
 	\end{align*}
-	这就说明函子 $\Yprojlim \beta$ 可表, 细观 $q_j$ 可知在上式左侧取投影 $\varprojlim_i \Hom(\cdot, \beta(i)) \to \Hom(\cdot, \beta(j))$ 相当于在右侧取 $q_{j *}: \Hom(\cdot, \Ker(f,g)) \to \Hom(\cdot, \beta(j))$. 应用命题 \ref{prop:lim-as-fct} 便得到断言 \eqref{eqn:lim-as-ker}.
+	Ini menunjukkan bahwa fungtor $\Yprojlim \beta$ representabel. Dengan mencermati $q_j$, terlihat bahwa mengambil proyeksi $\varprojlim_i \Hom(\cdot, \beta(i)) \to \Hom(\cdot, \beta(j))$ pada ruas kiri persamaan di atas bersesuaian dengan mengambil $q_{j *}: \Hom(\cdot, \Ker(f,g)) \to \Hom(\cdot, \beta(j))$ pada ruas kanan. Penerapan Proposisi \ref{prop:lim-as-fct} menghasilkan pernyataan \eqref{eqn:lim-as-ker}.
 \end{proof}
 
-简洁起见, 今后把以小集合 $I$ (视为离散范畴) 为指标的积称为小积, 类似地定义小余积. 以下结果是定理 \ref{prop:limit-buildingblocks} 的直接推论.
+Demi keringkasan, selanjutnya produk berindeks himpunan kecil $I$ (dipandang sebagai kategori diskret) disebut produk kecil; koproduk kecil didefinisikan serupa. Hasil berikut merupakan akibat langsung Teorema \ref{prop:limit-buildingblocks}.
 \begin{corollary}\label{prop:completeness-criterion}
-	范畴 $\mathcal{C}$ 完备当且仅当它有所有等化子和小积, 余完备当且仅当它有所有余等化子和小余积.
+	Kategori $\mathcal{C}$ lengkap jika dan hanya jika kategori itu mempunyai semua ekualiser dan produk kecil; kategori itu kolengkap jika dan hanya jika mempunyai semua koekualiser dan koproduk kecil.
 
-	范畴 $\mathcal{C}$ 具有所有的有限 $\varprojlim$ 当且仅当它有终对象, 所有 $\Ker(f,g)$ 和所有 $X \times Y$; 它具有所有的有限 $\varinjlim$ 当且仅当它有始对象, 所有 $\Coker(f,g)$ 和所有 $X \sqcup Y$.
+	Kategori $\mathcal{C}$ mempunyai semua $\varprojlim$ berhingga jika dan hanya jika mempunyai objek terminal, semua $\Ker(f,g)$, dan semua $X \times Y$; kategori itu mempunyai semua $\varinjlim$ berhingga jika dan hanya jika mempunyai objek awal, semua $\Coker(f,g)$, dan semua $X \sqcup Y$.
 \end{corollary}
 
-谨介绍两种最常见的极限构造: 纤维积及其对偶版本纤维余积. 以下假设所论极限存在.
+Sekarang kita perkenalkan dua konstruksi limit yang paling lazim: produk serat dan versi dualnya, koproduk serat. Berikut ini diandaikan bahwa limit-limit yang dibahas ada.
 \begin{definition}
-	设 $I$ 为图表 $\bullet \leftarrow \bullet \rightarrow \bullet$ 给出的范畴 (略去恒等态射).
+	Misalkan $I$ kategori yang diberikan oleh diagram $\bullet \leftarrow \bullet \rightarrow \bullet$ (dengan morfisme identitas diabaikan).
 	\begin{enumerate}
-		\item 函子 $\beta: I^\text{op} \to \mathcal{C}$ 对应到 $\mathcal{C}$ 中箭头 $X \rightarrow Z \leftarrow Y$. 置 $X \dtimes{Z} Y := \varprojlim \beta$, 称为 $X \to Z$ 和 $Y \to Z$ 的\emph{纤维积}或\emph{拉回}.\index{lahui}\index{xianweiji@纤维积 (fibered product)}
-		\item 函子 $\alpha: I \to \mathcal{C}$ 对应到 $\mathcal{C}$ 中箭头 $X \leftarrow Z \rightarrow Y$. 置 $X \dsqcup{Z} Y := \varinjlim \alpha$, 称为 $X \leftarrow Z$ 和 $Y \leftarrow Z$ 的\emph{纤维余积}或\emph{推出}.\index{tuichu}\index{xianweiyuji@纤维余积 (fibered coproduct)}
+		\item Fungtor $\beta: I^\text{op} \to \mathcal{C}$ bersesuaian dengan panah $X \rightarrow Z \leftarrow Y$ dalam $\mathcal{C}$. Tetapkan $X \dtimes{Z} Y := \varprojlim \beta$ dan sebut objek ini \emph{produk serat} atau \emph{tarik balik} dari $X \to Z$ dan $Y \to Z$.\index{lahui@tarik balik (pullback)}\index{xianweiji@produk serat (fibered product)}
+		\item Fungtor $\alpha: I \to \mathcal{C}$ bersesuaian dengan panah $X \leftarrow Z \rightarrow Y$ dalam $\mathcal{C}$. Tetapkan $X \dsqcup{Z} Y := \varinjlim \alpha$ dan sebut objek ini \emph{koproduk serat} atau \emph{dorong keluar} dari $X \leftarrow Z$ dan $Y \leftarrow Z$.\index{tuichu@dorong keluar (pushout)}\index{xianweiyuji@koproduk serat (fibered coproduct)}
 	\end{enumerate}
 \end{definition}
-循 \eqref{eqn:lim-diagrams} 的惯例, 拉回和推出的泛性质图解为
+Mengikuti konvensi dalam \eqref{eqn:lim-diagrams}, sifat universal tarik balik dan dorong keluar digambarkan oleh
 \begin{equation}
 	\begin{tikzcd}[column sep=tiny]
 		{} & L \arrow[bend left=30, rdd] \arrow[bend right=30, ldd] \arrow[dashed, d, "{\exists !}"] & \\
 		& X \dtimes{Z} Y \arrow[rd] \arrow[ld] \\
 		X \arrow[rd] & & Y \arrow[ld] \\
 	& Z &
-	\end{tikzcd} \quad \text{和} \quad
+	\end{tikzcd} \quad \text{dan} \quad
 	\begin{tikzcd}[column sep=tiny]
 		{} & L & \\
 		& X \dsqcup{Z} Y \arrow[dashed, u, "{\exists !}"] \\
@@ -1480,8 +1480,8 @@ Hasil di atas disebut ``kendala asosiativitas'', bukan hukum asosiatif, karena d
 	\end{tikzcd}
 \end{equation}
 
-\begin{convention}\index{lahui}\index{tuichu}
-	拉回和推出的交换图表经常出现, 一般以符号 $\Box$ 和 $\boxplus$ 标记, 如:
+\begin{convention}\index{lahui@tarik balik (pullback)}\index{tuichu@dorong keluar (pushout)}
+	Diagram komutatif tarik balik dan dorong keluar sering muncul dan lazim ditandai masing-masing dengan simbol $\Box$ dan $\boxplus$, seperti berikut:
 	\begin{equation}\begin{tikzcd}
 		X \dtimes{Z} Y \arrow[r] \arrow[d] & X \arrow[d] \arrow[ld, phantom, "\Box" description] \\
 		Y \arrow[r] & Z
@@ -1491,114 +1491,114 @@ Hasil di atas disebut ``kendala asosiativitas'', bukan hukum asosiatif, karena d
 		X \dsqcup{Z} Y & X \arrow[l] \arrow[ld, phantom, "\boxplus" description] \\
 		Y \arrow[u] & Z \arrow[u] \arrow[l] .
 	\end{tikzcd}\end{equation}
-	拉回图表也经常被称为 \emph{Cartesius 图表}; Renatus Cartesius 是 René Descartes 的拉丁文名字.
+	Diagram tarik balik juga sering disebut \emph{diagram Kartesius}; Renatus Cartesius adalah nama Latin René Descartes.
 \end{convention}
 
 \begin{example}\label{eg:complete-cocomplete}
-	以下几个范畴都是完备且余完备的.
+	Kategori-kategori berikut semuanya lengkap sekaligus kolengkap.
 	\begin{itemize}
-		\item $\cate{Set}$: 参见例 \ref{eg:set-limits}.
-		\item $\cate{Top}$: 参见例 \ref{eg:top-limits}.
-		\item $\cate{Grp}$: 我们假设基本的群论知识并用推论 \ref{prop:completeness-criterion} 证明之. 令 $I$ 为小集合.
+		\item $\cate{Set}$: lihat Contoh \ref{eg:set-limits}.
+		\item $\cate{Top}$: lihat Contoh \ref{eg:top-limits}.
+		\item $\cate{Grp}$: kita andaikan pengetahuan dasar tentang teori grup dan membuktikan pernyataan ini dengan Korolari \ref{prop:completeness-criterion}. Misalkan $I$ himpunan kecil.
 		\begin{compactitem}
-			\item 一族群 $(G_i)_{i \in I}$ 的积是群的直积 $\prod_{i \in I} G_i$ (定义 \ref{def:monoid-times}), 连同其投影同态 $p_j: \prod_i G_i \to G_j$ ($j \in I$);
-			\item 一族群 $(G_i)_{i \in I}$ 的余积是群的自由积 $\circledast_{i \in I} G_i$ (定义 \ref{def:free-product}), 连同包含同态 $\iota_j: G_j \to {\circledast}_{i \in I} G_i$;
-			\item 对于群同态 $f,g: G \to H$, 定义 $\Ker(f,g) := \{x \in G: f(x)=g(x) \} \hookrightarrow G$ 与 $H \twoheadrightarrow \Coker(f,g) :=H/N$, 其中 $N$ 是由子集
+			\item Produk suatu keluarga grup $(G_i)_{i \in I}$ adalah produk langsung grup $\prod_{i \in I} G_i$ (Definisi \ref{def:monoid-times}), bersama homomorfisme proyeksinya $p_j: \prod_i G_i \to G_j$ ($j \in I$);
+			\item Koproduk suatu keluarga grup $(G_i)_{i \in I}$ adalah produk bebas grup $\circledast_{i \in I} G_i$ (Definisi \ref{def:free-product}), bersama homomorfisme inklusinya $\iota_j: G_j \to {\circledast}_{i \in I} G_i$;
+			\item Untuk homomorfisme grup $f,g: G \to H$, definisikan $\Ker(f,g) := \{x \in G: f(x)=g(x) \} \hookrightarrow G$ dan $H \twoheadrightarrow \Coker(f,g) :=H/N$, dengan $N$ adalah subgrup normal yang dibangkitkan oleh subhimpunan
 				\[ \{f(x)g(y) : x,y \in G, \; xy=1\} \]
-				生成的正规子群.
+				tersebut.
 		\end{compactitem}
-	\item 范畴 $\cate{Ab}$: 依旧用推论 \ref{prop:completeness-criterion} 证之.
+	\item Kategori $\cate{Ab}$: sekali lagi kita gunakan Korolari \ref{prop:completeness-criterion}.
 		\begin{compactitem}
-			\item 积的定义与 $\cate{Grp}$ 情形相同, 即直积;
-			\item 一族交换群 $(G_i)_{i \in I}$ 的余积是交换群的直和 $\bigoplus_{i \in I} G_i$ (命题 \ref{prop:monoid-direct-sum}), 连同包含态射 $\iota_j: G_j \to \bigoplus_{i \in I} G_i$;
-			\item 对于交换群同态 $f,g: G \to H$, 定义 $\Ker(f,g) := \Ker(f-g) \hookrightarrow G$ 与 $H \twoheadrightarrow \Coker(f,g) :=H/(f-g)(G)$. 这解释了``差核''一词的来历.
+			\item Produk didefinisikan seperti dalam kasus $\cate{Grp}$, yakni produk langsung;
+			\item Koproduk suatu keluarga grup abelian $(G_i)_{i \in I}$ adalah jumlah langsung grup abelian $\bigoplus_{i \in I} G_i$ (Proposisi \ref{prop:monoid-direct-sum}), bersama morfisme inklusinya $\iota_j: G_j \to \bigoplus_{i \in I} G_i$;
+			\item Untuk homomorfisme grup abelian $f,g: G \to H$, definisikan $\Ker(f,g) := \Ker(f-g) \hookrightarrow G$ dan $H \twoheadrightarrow \Coker(f,g) :=H/(f-g)(G)$. Ini menjelaskan asal-usul istilah ``kernel selisih''.
 		\end{compactitem}
 	\end{itemize}
-	以上范畴都不是小范畴, 所以这不违反命题 \ref{prop:preorder-complete}.
+	Kategori-kategori di atas bukan kategori kecil, sehingga tidak bertentangan dengan Proposisi \ref{prop:preorder-complete}.
 \end{example}
 
-我们转向极限与函子的关系. 令 $F: \mathcal{C}_1 \to \mathcal{C}_2$ 为函子, 并令 $I$ 为小范畴. 根据命题 \ref{prop:lim-as-fct}, 以 $I$ 为指标的极限其存在性归结于函子 $\Yinjlim \alpha \in \Obj(\mathcal{C}_i^\vee)$ 或 $\Yprojlim \beta \in \Obj(\mathcal{C}_i^\wedge)$ 的可表性, 这里 $I \xrightarrow{\alpha} \mathcal{C}_i \xleftarrow{\beta} I^\text{op}$ ($i=1,2$). 今将研究 $\mathcal{C}_1$ 中的极限在 $F$ 下的像.
+Sekarang kita beralih ke hubungan antara limit dan fungtor. Misalkan $F: \mathcal{C}_1 \to \mathcal{C}_2$ fungtor dan $I$ kategori kecil. Menurut Proposisi \ref{prop:lim-as-fct}, keberadaan limit berindeks $I$ dapat direduksi menjadi masalah representabilitas fungtor $\Yinjlim \alpha \in \Obj(\mathcal{C}_i^\vee)$ atau $\Yprojlim \beta \in \Obj(\mathcal{C}_i^\wedge)$, dengan $I \xrightarrow{\alpha} \mathcal{C}_i \xleftarrow{\beta} I^\text{op}$ ($i=1,2$). Sekarang kita akan mengkaji citra di bawah $F$ dari limit-limit dalam $\mathcal{C}_1$.
 
-先考虑 $\alpha: I \to \mathcal{C}_1$. 假设 $\varinjlim \alpha$ 在 $\mathcal{C}_1$ 中存在; 以下将省略符号 $k_{\mathcal{C}_2}$. 命题 \ref{prop:lim-Yoneda} 蕴涵 $\Yinjlim F\alpha$ 在 $\mathcal{C}_2^\vee$ 中是 $F\alpha$ 的 $\varinjlim$; 按照泛性质 \eqref{eqn:lim-diagrams} 得出由
+Pertama-tama tinjau $\alpha: I \to \mathcal{C}_1$. Andaikan $\varinjlim \alpha$ ada dalam $\mathcal{C}_1$; selanjutnya notasi $k_{\mathcal{C}_2}$ akan dihilangkan. Proposisi \ref{prop:lim-Yoneda} menyiratkan bahwa $\Yinjlim F\alpha$ dalam $\mathcal{C}_2^\vee$ adalah $\varinjlim$ dari $F\alpha$; menurut sifat universal \eqref{eqn:lim-diagrams}, diperoleh data berikut:
 \[
 	[i \xrightarrow{\phi} j] \in \Mor(I) \implies \begin{tikzcd}[column sep=small]
-	F\alpha(i) \arrow[rd] \arrow[rdd, "F(\alpha(j) \to \varinjlim \alpha)"'] \arrow[rr, "F\alpha(\phi)"] & & F\alpha(j) \arrow[ld] \arrow[ldd, "F(\alpha(j) \to \varinjlim \alpha)"] \\
+	F\alpha(i) \arrow[rd] \arrow[rdd, "F(\alpha(i) \to \varinjlim \alpha)"'] \arrow[rr, "F\alpha(\phi)"] & & F\alpha(j) \arrow[ld] \arrow[ldd, "F(\alpha(j) \to \varinjlim \alpha)"] \\
 	& \Yinjlim F\alpha \arrow[d, "\exists !" description] & \\
 	& F\varinjlim\alpha &
 \end{tikzcd} \]
-刻画的态射 $\Yinjlim F\alpha \to F\varinjlim \alpha$. 同理, 设 $\varprojlim \beta$ 在 $\mathcal{C}_1$ 中存在, 将上图箭头倒转可得 $\mathcal{C}_2^\wedge$ 中的态射 $F\varprojlim \beta \to \Yprojlim F\beta$.
+Data tersebut mencirikan morfisme $\Yinjlim F\alpha \to F\varinjlim \alpha$. Serupa dengan itu, andaikan $\varprojlim \beta$ ada dalam $\mathcal{C}_1$; dengan membalik panah-panah pada diagram di atas diperoleh morfisme $F\varprojlim \beta \to \Yprojlim F\beta$ dalam $\mathcal{C}_2^\wedge$.
 
-%定义 $\mathcal{C}_2^\vee$ 中的态射 $\Yinjlim (F\alpha) \to FL$ 如下: 应用定理 \ref{prop:Yoneda-lemma} 和命题 \ref{prop:lim-Yoneda} 得到
+%Definisikan morfisme $\Yinjlim (F\alpha) \to FL$ dalam $\mathcal{C}_2^\vee$ sebagai berikut: dengan menerapkan Teorema \ref{prop:Yoneda-lemma} dan Proposisi \ref{prop:lim-Yoneda}, diperoleh
 %\begin{align*}
 %	\Hom_{\mathcal{C}_2^\vee}\left( \Yinjlim (F\alpha), FL \right) & = \left( \Yinjlim F\alpha \right)(FL) \\
 %	& = \varprojlim_i \Hom_{\mathcal{C}_2}\left( F\alpha(i), FL \right).
 %\end{align*}
-%我们欲挑出 $\varprojlim_i \Hom \left( F\alpha(i), FL \right)$ 的一个典范元素, 即一族相容 (见例 \ref{eg:set-limits} 中 $\varprojlim$ 的构造) 的态射 $F\alpha(i) \to FL$; 选择很明显, 取 $\iota_i: \alpha(i) \to \varinjlim \alpha =: L$ 在 $F$ 下的像即是.
+%Kita hendak memilih suatu elemen kanonik dari $\varprojlim_i \Hom \left( F\alpha(i), FL \right)$, yakni suatu keluarga morfisme $F\alpha(i) \to FL$ yang kompatibel (lihat konstruksi $\varprojlim$ pada Contoh \ref{eg:set-limits}); pilihannya jelas, yaitu citra di bawah $F$ dari $\iota_i: \alpha(i) \to \varinjlim \alpha =: L$.
 %
-%同理, 考虑 $\beta: I^\text{op} \to \mathcal{C}_1$ 并假设 $L := \varprojlim \beta$ 在 $\mathcal{C}_1$ 中存在. 则可以定义 $\mathcal{C}_2^\wedge$ 中的态射 $FL \to \Yprojlim (F\beta)$:论证相同, 取 $p_i: \varprojlim \beta \to \beta(i)$ 在 $F$ 下的象即是.
+%Serupa dengan itu, pertimbangkan $\beta: I^\text{op} \to \mathcal{C}_1$ dan andaikan $L := \varprojlim \beta$ ada dalam $\mathcal{C}_1$. Maka dapat didefinisikan morfisme $FL \to \Yprojlim (F\beta)$ dalam $\mathcal{C}_2^\wedge$: argumennya sama, yakni ambil citra di bawah $F$ dari $p_i: \varprojlim \beta \to \beta(i)$.
 
 \begin{definition}\label{def:preservation-limit}
-	设 $F$ 和 $\alpha, \beta$ 如上, 并假设 $\alpha, \beta$ 的极限都存在.
+	Misalkan $F$ serta $\alpha, \beta$ seperti di atas, dan andaikan limit-limit dari $\alpha, \beta$ ada.
 	\begin{compactitem}
-		\item 称 $F$ 保 $\varinjlim \alpha$, 如果 $\Yinjlim (F\alpha) \rightiso F (\varinjlim \alpha)$;
-		\item 称 $F$ 保 $\varprojlim \beta$, 如果 $F(\varprojlim \beta) \rightiso \Yprojlim (F\beta)$.
+		\item Fungtor $F$ dikatakan mempertahankan $\varinjlim \alpha$ jika $\Yinjlim (F\alpha) \rightiso F (\varinjlim \alpha)$;
+		\item Fungtor $F$ dikatakan mempertahankan $\varprojlim \beta$ jika $F(\varprojlim \beta) \rightiso \Yprojlim (F\beta)$.
 	\end{compactitem}
 \end{definition}
-由命题 \ref{prop:lim-as-fct} 可知对于保 $\varinjlim \alpha$ (相应地, $\varprojlim \beta$) 的函子 $F$, 极限 $\varinjlim (F\alpha)$ (相应地, $\varprojlim \beta$) 在 $\mathcal{C}_2$ 中存在.
+Menurut Proposisi \ref{prop:lim-as-fct}, bagi fungtor $F$ yang mempertahankan $\varinjlim \alpha$ (berturut-turut, $\varprojlim \beta$), limit $\varinjlim (F\alpha)$ (berturut-turut, $\varprojlim (F\beta)$) ada dalam $\mathcal{C}_2$.
 
 \begin{remark}\label{rem:preservation-limit}
-	根据定理 \ref{prop:limit-buildingblocks}, 特别是 \eqref{eqn:lim-as-ker}, 要验证 $F$ 是否保以所有 $I$ 为指标的 $\varprojlim$, 仅需检验它是否保积和等化子即可. 同样地, 对于以 $I$ 为指标的 $\varinjlim$ 仅需在余积和余等化子上检验.
+	Menurut Teorema \ref{prop:limit-buildingblocks}, khususnya \eqref{eqn:lim-as-ker}, untuk memeriksa apakah $F$ mempertahankan semua $\varprojlim$ berindeks $I$, cukup diperiksa apakah fungtor tersebut mempertahankan produk dan ekualiser. Serupa dengan itu, untuk $\varinjlim$ berindeks $I$, cukup diperiksa koproduk dan koekualiser.
 \end{remark}
 
 \begin{example}\label{eg:preservation-limit}
-	忘却函子 $\cate{Top} \to \cate{Set}$ 保所有小极限: 参看例 \ref{eg:top-limits}. 相对地, $\cate{Ab} \to \cate{Grp}$ 保小 $\varprojlim$ 但不保小 $\varinjlim$: 举例明之, $\cate{Ab}$ 中的余积是交换群的直积, 而在 $\cate{Grp}$ 中是自由积, 两者判若云泥.
+	Fungtor pelupa $\cate{Top} \to \cate{Set}$ mempertahankan semua limit kecil; lihat Contoh \ref{eg:top-limits}. Sebaliknya, $\cate{Ab} \to \cate{Grp}$ mempertahankan $\varprojlim$ kecil, tetapi tidak mempertahankan $\varinjlim$ kecil. Sebagai contoh, koproduk dalam $\cate{Ab}$ adalah jumlah langsung grup abelian, sedangkan dalam $\cate{Grp}$ adalah produk bebas; keduanya sama sekali berbeda.
 \end{example}
 
 \begin{proposition}\label{prop:Hom-exact}
-	设 $I$ 为小范畴, $X \in \Obj(\mathcal{C})$.
+	Misalkan $I$ kategori kecil dan $X \in \Obj(\mathcal{C})$.
 	\begin{itemize}
-		\item 函子 $\Hom_{\mathcal{C}}(X, \cdot): \mathcal{C} \to \cate{Set}$ 保以 $I$ 为指标的 $\varprojlim$ (假设存在);
-		\item 函子 $\Hom_{\mathcal{C}}(\cdot, X): \mathcal{C}^\text{op} \to \cate{Set}$	保以 $I$ 为指标的 $\varprojlim$ (假设存在).
+		\item Fungtor $\Hom_{\mathcal{C}}(X, \cdot): \mathcal{C} \to \cate{Set}$ mempertahankan $\varprojlim$ berindeks $I$ (jika ada);
+		\item Fungtor $\Hom_{\mathcal{C}}(\cdot, X): \mathcal{C}^\text{op} \to \cate{Set}$	mempertahankan $\varprojlim$ berindeks $I$ (jika ada).
 	\end{itemize}
 \end{proposition}
 \begin{proof}
-	这是命题 \ref{prop:lim-Yoneda}, \ref{prop:lim-as-fct} 的改写; 须留意到 $\mathcal{C}^\text{op}$ 中的 $\varprojlim$ 无非是 $\mathcal{C}$ 中的 $\varinjlim$.
+	Pernyataan ini merupakan perumusan ulang Proposisi \ref{prop:lim-Yoneda}, \ref{prop:lim-as-fct}; perlu diperhatikan bahwa $\varprojlim$ dalam $\mathcal{C}^\text{op}$ tidak lain adalah $\varinjlim$ dalam $\mathcal{C}$.
 \end{proof}
 
-验证函子保极限的一种有力技术是 \S\ref{sec:adjoint-functor} 介绍的伴随函子.
-\begin{theorem}\label{prop:adjuncion-limit}\index{bansuidui}
-	考虑伴随对 $(F, G, \varphi)$, 其中 $\begin{tikzcd} \mathcal{C}_1 \arrow[yshift=0.5ex, r, "F"] & \mathcal{C}_2 \arrow[yshift=-0.5ex, l, "G"] \end{tikzcd}$. 则
+Salah satu teknik ampuh untuk memeriksa bahwa suatu fungtor mempertahankan limit ialah menggunakan fungtor adjoin, yang diperkenalkan dalam \S\ref{sec:adjoint-functor}.
+\begin{theorem}\label{prop:adjuncion-limit}\index{bansuidui@pasangan adjoin}
+	Pertimbangkan pasangan adjoin $(F, G, \varphi)$, dengan $\begin{tikzcd} \mathcal{C}_1 \arrow[yshift=0.5ex, r, "F"] & \mathcal{C}_2 \arrow[yshift=-0.5ex, l, "G"] \end{tikzcd}$. Maka
 	$\left\{\begin{array}{ll}
-		F \;\text{保}\; \varinjlim \\
-		G \;\text{保}\; \varprojlim
-	\end{array}\right.$; 这里假设所论的极限存在, 并且是小极限.
+		F \;\text{mempertahankan}\; \varinjlim \\
+		G \;\text{mempertahankan}\; \varprojlim
+	\end{array}\right.$; di sini limit-limit yang dibahas diandaikan ada dan merupakan limit kecil.
 \end{theorem}
 \begin{proof}
-	根据注记 \ref{rem:lim-duality} 的对偶性, 证第二条即足. 考虑函子 $\beta: I^\text{op} \to \mathcal{C}_2$ 并假设 $\varprojlim \beta$ 存在. 根据命题 \ref{prop:lim-Yoneda}, \ref{prop:lim-as-fct} 及伴随同构 $\varphi$ 的函子性, 有 $\mathcal{C}_1^\wedge$ 中的同构
+	Menurut dualitas dalam Catatan \ref{rem:lim-duality}, cukup dibuktikan pernyataan kedua. Pertimbangkan fungtor $\beta: I^\text{op} \to \mathcal{C}_2$ dan andaikan $\varprojlim \beta$ ada. Menurut Proposisi \ref{prop:lim-Yoneda}, \ref{prop:lim-as-fct}, dan fungtorialitas isomorfisme adjoin $\varphi$, terdapat isomorfisme berikut dalam $\mathcal{C}_1^\wedge$:
 	\begin{align*}
 		\Hom_{\mathcal{C}_1} \left( \cdot, G(\varprojlim \beta) \right) & \rightiso \Hom_{\mathcal{C}_2} \left( F(\cdot), \varprojlim \beta \right) \\
 		& = \varprojlim_i \Hom_{\mathcal{C}_2}(F(\cdot), \beta(i)) \\
 		& \rightiso \varprojlim_i \Hom_{\mathcal{C}_1}(\cdot, G\beta(i)) = \Yprojlim G\beta.
 	\end{align*}
-	这是否完成了证明呢? 严格说还差一步, 因为尚须验证此同构符合定义 \ref{def:preservation-limit} 的构造. 虽说这类验证几无悬念, 基于教学考量, 以下仍证明如仪.
+	Apakah ini telah menyelesaikan pembuktian? Secara tegas, masih ada satu langkah: perlu diperiksa bahwa isomorfisme ini sesuai dengan konstruksi dalam Definisi \ref{def:preservation-limit}. Walaupun pemeriksaan semacam ini hampir tidak menyisakan keraguan, demi pertimbangan pedagogis kita tetap membuktikannya secara terperinci.
 
-	对任意 $j \in \Obj(i)$ 记投影态射为 $p_j: \varprojlim \beta \to \beta(j)$. 有交换图表如下
+	Untuk setiap $j \in \Obj(I)$, notasikan morfisme proyeksi dengan $p_j: \varprojlim \beta \to \beta(j)$. Terdapat diagram komutatif berikut:
 	\[\begin{tikzcd}[row sep=small, column sep=small]
 		\Hom_{\mathcal{C}_1} \left( \cdot, G(\varprojlim \beta) \right) \arrow[d] \arrow[r, "(Gp_j)_*"] & \Hom_{\mathcal{C}_1}(\cdot, G\beta(j)) \arrow[d, "\varphi"] \\
-		\Hom_{\mathcal{C}_2} \left( F(\cdot), \varprojlim \beta \right) \arrow[equal, d] \arrow[r, "p_{j *}"] & \Hom_{\mathcal{C}_1}(F(\cdot), \beta(j)) \arrow[equal, d] \\
-		\varprojlim_i \Hom_{\mathcal{C}_2}(F(\cdot), \beta(i)) \arrow[d] \arrow[twoheadrightarrow, r] & \Hom_{\mathcal{C}_1}(F(\cdot), \beta(j)) \arrow[d, "\varphi^{-1}"] \\
-		\varprojlim_i \Hom_{\mathcal{C}_1}(\cdot, G\beta(i)) \arrow[twoheadrightarrow, r] & \Hom_{\mathcal{C}_1}(\cdot, G\beta(j))
+		\Hom_{\mathcal{C}_2} \left( F(\cdot), \varprojlim \beta \right) \arrow[equal, d] \arrow[r, "p_{j *}"] & \Hom_{\mathcal{C}_2}(F(\cdot), \beta(j)) \arrow[equal, d] \\
+		\varprojlim_i \Hom_{\mathcal{C}_2}(F(\cdot), \beta(i)) \arrow[d] \arrow[r] & \Hom_{\mathcal{C}_2}(F(\cdot), \beta(j)) \arrow[d, "\varphi^{-1}"] \\
+		\varprojlim_i \Hom_{\mathcal{C}_1}(\cdot, G\beta(i)) \arrow[r] & \Hom_{\mathcal{C}_1}(\cdot, G\beta(j))
 	\end{tikzcd}\]
-	其中
+	Di sini
 	\begin{inparaenum}[(a)]
-		\item 第一和第三个方块因 $\varphi$ 的函子性而交换,
-		\item 右列合成是 $\identity$,
-		\item 左列的合成是前一步得到的同构.
+		\item persegi pertama dan ketiga komutatif karena fungtorialitas $\varphi$,
+		\item komposit pada kolom kanan adalah $\identity$,
+		\item komposit pada kolom kiri adalah isomorfisme yang diperoleh pada langkah sebelumnya.
 	\end{inparaenum}
-	这就表明同构 $G\varprojlim\beta \rightiso \Yprojlim G\beta$ 和定义 \ref{def:preservation-limit} 中的 $G\varprojlim\beta \to \Yprojlim G\beta$ 由同一族交换图表所刻画, 至此证毕.
+	Dengan demikian, isomorfisme $G\varprojlim\beta \rightiso \Yprojlim G\beta$ dan morfisme $G\varprojlim\beta \to \Yprojlim G\beta$ dalam Definisi \ref{def:preservation-limit} dicirikan oleh keluarga diagram komutatif yang sama. Pernyataan pun terbukti.
 \end{proof}
 
-回顾例 \ref{eg:preservation-limit}. 可以说函子 $\cate{Top} \to \cate{Set}$ 之所以保小极限, 是因为它兼有左, 右伴随 (例 \ref{eg:top-adjunction}). 而根据例 \ref{eg:forgetful-adjunction} 和引理 \ref{prop:abelianization}, 忘却函子 $U: \cate{Ab} \to \cate{Grp}$ 有左伴随 $G \mapsto G/G_\text{der}$, 故保小 $\varprojlim$; 从它不保余积又能反推 $U$ 无右伴随.
+Ingat kembali Contoh \ref{eg:preservation-limit}. Dapat dikatakan bahwa fungtor $\cate{Top} \to \cate{Set}$ mempertahankan limit kecil karena mempunyai fungtor adjoin kiri sekaligus kanan (Contoh \ref{eg:top-adjunction}). Sementara itu, menurut Contoh \ref{eg:forgetful-adjunction} dan Lema \ref{prop:abelianization}, fungtor pelupa $U: \cate{Ab} \to \cate{Grp}$ mempunyai fungtor adjoin kiri $G \mapsto G/G_\text{der}$, sehingga mempertahankan $\varprojlim$ kecil; dari fakta bahwa $U$ tidak mempertahankan koproduk, dapat pula disimpulkan bahwa fungtor tersebut tidak mempunyai fungtor adjoin kanan.
 
 \begin{Exercises}
 	\item 设 $A \xrightarrow{f} B \xrightarrow{g} C \xrightarrow{h} D$ 是任意范畴中的态射. 证明若 $A \xrightarrow{gf} C$ 和 $B \xrightarrow{hg} D$ 皆为同构. 则 $f,g,h$ 全是同构.

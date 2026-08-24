@@ -1,0 +1,85 @@
+% Copyright 2022 Wen-Wei Li.
+% Permission is granted to copy, distribute and/or modify this
+% document under the terms of the Creative Commons
+% Attribution 4.0 International (CC BY 4.0)
+% http://creativecommons.org/licenses/by/4.0/
+
+% Sampul Unit 17 edisi Bahasa Indonesia, diturunkan dari sampul sumber.
+
+\setCJKfamilyfont{coverfont}[Path=../fonts/]{NotoSerifCJKsc-Bold.otf}
+\setCJKfamilyfont{cover-author-font}[Path=../fonts/]{NotoSansCJKsc-Regular.otf}
+\colorlet{octa}{cyan!50!gray}
+
+\begin{titlepage}
+\pgfmathsetseed{20260824}
+\begin{tikzpicture}[remember picture, overlay, pencildraw/.style={
+		color=octa, thick,
+		decorate,
+		decoration={random steps, segment length=1pt, amplitude=0.7pt}
+	}]
+
+	\node[anchor=center] (title) at ([xshift=19em, yshift=-10em] current page.north west)
+		{ \fontsize{45}{45}\CJKfamily{coverfont}Metode Aljabar};
+
+	\node[anchor=center] (volume) at ([yshift=-7em] title.center) {\fontsize{27}{30}\CJKfamily{coverfont}Jilid 1: Arsitektur Dasar};
+
+	\node[anchor=west] (author) at ([yshift=-5em, xshift=4pt] volume.south west) {\fontsize{18}{18}\CJKfamily{cover-author-font}Wen-Wei Li};
+	\node[anchor=west] at ([xshift=2.4em] author.east) {\fontsize{10.5}{13}\CJKfamily{cover-author-font}Unit 17: Kelengkapan};
+
+	\draw[line width=2pt, color=black!70!gray] ([xshift=-2.5em, yshift=1em] author.north west) -- ++(25em,0);
+	\shade[top color=gray, bottom color=black] ([xshift=-4em, yshift=1em] title.north west) rectangle ++(-1em,-20em);
+
+	\coordinate (pic) at ([xshift=-24em, yshift=22em] current page.south east);
+	\begin{scope}[shift=(pic), scale=1.25, opacity=0.65]
+		\node (P) at (0,2.5) {$X \dtimes{Z} Y$};
+		\node (X) at (4.2,2.5) {$X$};
+		\node (Y) at (0,0) {$Y$};
+		\node (Z) at (4.2,0) {$Z$};
+		\draw[pencildraw,->] (P) -- (X);
+		\draw[pencildraw,->] (P) -- (Y);
+		\draw[pencildraw,->] (X) -- (Z);
+		\draw[pencildraw,->] (Y) -- (Z);
+		\node at (3.5,1.85) {$\Box$};
+	\end{scope}
+
+	\begin{scope}[shift={([xshift=2em,yshift=-10em]pic)}, scale=1.25, opacity=0.65]
+		\node (Z2) at (0,2.5) {$Z$};
+		\node (X2) at (4.2,2.5) {$X$};
+		\node (Y2) at (0,0) {$Y$};
+		\node (Q) at (4.2,0) {$X \dsqcup{Z} Y$};
+		\draw[pencildraw,->] (Z2) -- (X2);
+		\draw[pencildraw,->] (Z2) -- (Y2);
+		\draw[pencildraw,->] (X2) -- (Q);
+		\draw[pencildraw,->] (Y2) -- (Q);
+		\node at (0.7,0.7) {$\boxplus$};
+	\end{scope}
+
+	\node[opacity=0.7] at ([xshift=5em,yshift=-24em]pic) {\small\sffamily \BuildDateShortID};
+\end{tikzpicture}
+
+\clearpage
+\begin{center}
+	\Large{\sffamily\bfseries\thmheiti Edisi daring \\ revisi Februari 2023} \\ \vspace{2em}
+	\Large{\sffamily\bfseries\thmheiti Tanggal kompilasi: \BuildDateID} \\ \vspace{1em}
+	Buku sumber diterbitkan oleh Higher Education Press \\
+	(edisi pertama Januari 2019; versi daring direvisi Februari 2023) \\
+	\texttt{ISBN: 978-7-04-050725-6}
+\end{center}
+\vfill
+
+\begin{flushleft} \small
+	Wen-Wei Li \\
+	Laman penulis: \href{https://www.wwli.asia}{www.wwli.asia} \\
+	(termasuk daftar ralat dan informasi edisi sumber)
+\end{flushleft}
+\vspace{1.5em}
+\begin{tabular*}{\textwidth}{ccc}
+	\includegraphics{ccby.png}
+	& \begin{minipage}[b]{0.6\textwidth}
+		\small\sffamily
+		Edisi Bahasa Indonesia ini merupakan terjemahan independen dari karya Wen-Wei Li. Teks sumber dan terjemahan dilisensikan menurut Creative Commons Atribusi 4.0 Internasional (CC BY 4.0): \url{https://creativecommons.org/licenses/by/4.0/}. Perubahan pada unit ini mencakup penerjemahan, koreksi yang dinyatakan, dan penyesuaian tipografi. Edisi ini tidak disahkan oleh penulis sumber. Provenans produksi: OpenAI Codex gpt-5.6-sol, Ultra; catatan ini terpisah dari kepengarangan sumber dan kredit kontributor manusia.
+	\end{minipage}
+\end{tabular*}
+
+\cleardoublepage
+\end{titlepage}

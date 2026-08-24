@@ -146,5 +146,36 @@
     "already_admitted_reader_changes": 0,
     "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
   },
+  "unit_017_recheck": {
+    "checked": "2026-08-24",
+    "arxiv_result": "The frozen bounded official queries found no suitable Indonesian-language same-field source with downloadable TeX; the retained PDF fallback remains the honest evidence boundary.",
+    "fallback_reinspection": {
+      "undip_pages_previously_visually_inspected": 4,
+      "ugm_pages_previously_visually_inspected": 7,
+      "hashes_unchanged": true
+    },
+    "added_controlled_terms": [
+      "completeness -> kelengkapan",
+      "complete category -> kategori lengkap",
+      "cocomplete category -> kategori kolengkap",
+      "small product -> produk kecil",
+      "small coproduct -> koproduk kecil",
+      "fiber product -> produk serat",
+      "fibered product -> produk serat",
+      "pullback -> tarik balik (pullback)",
+      "fibered coproduct -> koproduk serat",
+      "pushout -> dorong keluar (pushout)",
+      "Cartesian diagram -> diagram Kartesius",
+      "preserve a limit -> mempertahankan limit",
+      "direct product -> produk langsung",
+      "direct sum -> jumlah langsung",
+      "free product -> produk bebas",
+      "difference kernel -> kernel selisih"
+    ],
+    "glossary_bytes": 31697,
+    "glossary_sha256": "4cdef514de666a002681f593cb5578322dc19c3e9101da20f2caabc415d4cd08",
+    "already_admitted_reader_changes": 0,
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
   "redistribution": "The downloaded fallback PDFs are local authority witnesses only and are excluded from the public repository and release packages."
 }

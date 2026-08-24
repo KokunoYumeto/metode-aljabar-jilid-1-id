@@ -1,0 +1,198 @@
+{
+  "schema_version": "1.0.0",
+  "unit_id": "O013-LI-U017",
+  "render_resolution_dpi": 150,
+  "page_count": 9,
+  "deterministic_replay": {
+    "container_byte_identity": false,
+    "container_note": "Clean builds F and G differ only in PDF container identity; extracted text and every same-renderer page raster are byte-identical.",
+    "pdf_f": {
+      "path": "build/unit-017-build-f/unit-017-bab-2-kelengkapan.pdf",
+      "bytes": 112241,
+      "sha256": "83ea6217a19f0576a7410287e85aef2a2b2a8beb76c3ac1f3b50dd1edeecc5e6"
+    },
+    "pdf_g": {
+      "path": "build/unit-017-build-g/unit-017-bab-2-kelengkapan.pdf",
+      "bytes": 112236,
+      "sha256": "bfcec32b3ba20f8c170a3389a1b651613f1fa437945662ca32dd62fcf0edba5e"
+    },
+    "pdftotext_layout_sha256_f": "11333ab6db1c982579b217a57c4fe500a45df08f280ebeff1c499a2d6ec299d7",
+    "pdftotext_layout_sha256_g": "11333ab6db1c982579b217a57c4fe500a45df08f280ebeff1c499a2d6ec299d7",
+    "poppler_page_mismatches_f_g": 0,
+    "mupdf_page_mismatches_f_g": 0
+  },
+  "inspection_chain": {
+    "build_g": "All nine build-G pages were directly inspected in both Poppler and MuPDF.",
+    "build_f": "Every build-F raster is byte-identical to its build-G counterpart in the same renderer.",
+    "all_pages_inspected": true
+  },
+  "renderers": {
+    "poppler": [
+      {
+        "page": 1,
+        "path": "qa/unit-017-evidence/poppler-final-g/page-01.png",
+        "bytes": 41789,
+        "sha256": "7908fe783c76ddafcd08bff11ef09f79467ead6a95ed52303aa18e991cd2abfa",
+        "matches_clean_build_f": true,
+        "matches_clean_build_g": true,
+        "visual_inspection_basis": "build G page inspected directly in this renderer"
+      },
+      {
+        "page": 2,
+        "path": "qa/unit-017-evidence/poppler-final-g/page-02.png",
+        "bytes": 135513,
+        "sha256": "32b2a2b835ba6f1fc9265a3bd0115493a7b326532fc0720341662d76211794d2",
+        "matches_clean_build_f": true,
+        "matches_clean_build_g": true,
+        "visual_inspection_basis": "build G page inspected directly in this renderer"
+      },
+      {
+        "page": 3,
+        "path": "qa/unit-017-evidence/poppler-final-g/page-03.png",
+        "bytes": 266323,
+        "sha256": "bcac962828396069d4886c89fe6f275499c0d7169cf937c82ad093c79086e8ee",
+        "matches_clean_build_f": true,
+        "matches_clean_build_g": true,
+        "visual_inspection_basis": "build G page inspected directly in this renderer"
+      },
+      {
+        "page": 4,
+        "path": "qa/unit-017-evidence/poppler-final-g/page-04.png",
+        "bytes": 210869,
+        "sha256": "14f1644c7b7914c62588e380c0f4fc0cc4bdebaec1a397eccbccd5d10c4801f3",
+        "matches_clean_build_f": true,
+        "matches_clean_build_g": true,
+        "visual_inspection_basis": "build G page inspected directly in this renderer"
+      },
+      {
+        "page": 5,
+        "path": "qa/unit-017-evidence/poppler-final-g/page-05.png",
+        "bytes": 171736,
+        "sha256": "946312a76544e19c2ce4f036a11a01553609d92096c6b51693a44bc9b2dac57e",
+        "matches_clean_build_f": true,
+        "matches_clean_build_g": true,
+        "visual_inspection_basis": "build G page inspected directly in this renderer"
+      },
+      {
+        "page": 6,
+        "path": "qa/unit-017-evidence/poppler-final-g/page-06.png",
+        "bytes": 225769,
+        "sha256": "c68193b5aafcf5a307396076c4692a2aa2b89211a5cf0d46017acf989ede3902",
+        "matches_clean_build_f": true,
+        "matches_clean_build_g": true,
+        "visual_inspection_basis": "build G page inspected directly in this renderer"
+      },
+      {
+        "page": 7,
+        "path": "qa/unit-017-evidence/poppler-final-g/page-07.png",
+        "bytes": 236697,
+        "sha256": "fc315cb308f3a9e74dde89a4332218833561a2e3e8a5bc603b9c2a25cac87d13",
+        "matches_clean_build_f": true,
+        "matches_clean_build_g": true,
+        "visual_inspection_basis": "build G page inspected directly in this renderer"
+      },
+      {
+        "page": 8,
+        "path": "qa/unit-017-evidence/poppler-final-g/page-08.png",
+        "bytes": 219354,
+        "sha256": "e45a235fe39c3197e5ae9a9ef20ba7c8b9cd5bc9d74ab6d98dcd66d303cfa42b",
+        "matches_clean_build_f": true,
+        "matches_clean_build_g": true,
+        "visual_inspection_basis": "build G page inspected directly in this renderer"
+      },
+      {
+        "page": 9,
+        "path": "qa/unit-017-evidence/poppler-final-g/page-09.png",
+        "bytes": 78841,
+        "sha256": "c23893cd5dd67246bb650e41ebf62a46de346ca2b458be235ddb7853ccd04b66",
+        "matches_clean_build_f": true,
+        "matches_clean_build_g": true,
+        "visual_inspection_basis": "build G page inspected directly in this renderer"
+      }
+    ],
+    "mupdf": [
+      {
+        "page": 1,
+        "path": "qa/unit-017-evidence/mupdf-final-g/page-01.png",
+        "bytes": 39456,
+        "sha256": "d2b66c33665c5d43e60fe38b24cb2964c1203a02d4358a3ac64c0206750902f1",
+        "matches_clean_build_f": true,
+        "matches_clean_build_g": true,
+        "visual_inspection_basis": "build G page inspected directly in this renderer"
+      },
+      {
+        "page": 2,
+        "path": "qa/unit-017-evidence/mupdf-final-g/page-02.png",
+        "bytes": 111851,
+        "sha256": "260616f9efbfb3402c3544a23d69faf10c39253b25d537f50b4706bbae2376df",
+        "matches_clean_build_f": true,
+        "matches_clean_build_g": true,
+        "visual_inspection_basis": "build G page inspected directly in this renderer"
+      },
+      {
+        "page": 3,
+        "path": "qa/unit-017-evidence/mupdf-final-g/page-03.png",
+        "bytes": 225102,
+        "sha256": "71128015c358290aabbbde8ada90539ac26fd7ac01f4136edcb61cc06dd8e9f8",
+        "matches_clean_build_f": true,
+        "matches_clean_build_g": true,
+        "visual_inspection_basis": "build G page inspected directly in this renderer"
+      },
+      {
+        "page": 4,
+        "path": "qa/unit-017-evidence/mupdf-final-g/page-04.png",
+        "bytes": 182297,
+        "sha256": "8670143bae958e21c9d6fb71502e1f545b40d26910036d7ddb5d070b3b3b0e2c",
+        "matches_clean_build_f": true,
+        "matches_clean_build_g": true,
+        "visual_inspection_basis": "build G page inspected directly in this renderer"
+      },
+      {
+        "page": 5,
+        "path": "qa/unit-017-evidence/mupdf-final-g/page-05.png",
+        "bytes": 150057,
+        "sha256": "5927a1bd260d97ae140cfe012b1475dc4e2390a79c4af60c8b4513b969e19a8c",
+        "matches_clean_build_f": true,
+        "matches_clean_build_g": true,
+        "visual_inspection_basis": "build G page inspected directly in this renderer"
+      },
+      {
+        "page": 6,
+        "path": "qa/unit-017-evidence/mupdf-final-g/page-06.png",
+        "bytes": 191065,
+        "sha256": "f56703a7af6d7318c9645f35af6ee0f94070c83cfca58521a2583846bd1fdd2f",
+        "matches_clean_build_f": true,
+        "matches_clean_build_g": true,
+        "visual_inspection_basis": "build G page inspected directly in this renderer"
+      },
+      {
+        "page": 7,
+        "path": "qa/unit-017-evidence/mupdf-final-g/page-07.png",
+        "bytes": 201970,
+        "sha256": "dbac29810566f5153e26355d7e30bfa74a52703a1020b454ea7431622e74faac",
+        "matches_clean_build_f": true,
+        "matches_clean_build_g": true,
+        "visual_inspection_basis": "build G page inspected directly in this renderer"
+      },
+      {
+        "page": 8,
+        "path": "qa/unit-017-evidence/mupdf-final-g/page-08.png",
+        "bytes": 188464,
+        "sha256": "3f1ed100d54e357fdbb887e595096eb6d8624e1792075b35881ae2bc98b994f3",
+        "matches_clean_build_f": true,
+        "matches_clean_build_g": true,
+        "visual_inspection_basis": "build G page inspected directly in this renderer"
+      },
+      {
+        "page": 9,
+        "path": "qa/unit-017-evidence/mupdf-final-g/page-09.png",
+        "bytes": 69717,
+        "sha256": "5bcc70cdacc3f755179c7591eeccfce3f26a2c870c6cacf3aa14d7c951b4cf67",
+        "matches_clean_build_f": true,
+        "matches_clean_build_g": true,
+        "visual_inspection_basis": "build G page inspected directly in this renderer"
+      }
+    ]
+  },
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

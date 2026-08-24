@@ -1,0 +1,20 @@
+entity_type,id,stable_key,section_id,ordinal,source_value,target_value,format,status
+build_surface,urn:uuid:066ee342-15e5-515b-b3f7-f552783eaf37,build-surface/unit-017-pdf,,,pwsh -NoProfile -File scripts/build_unit_017.ps1 -OutputDirectory build/unit-017-replay,artifacts/unit-017-bab-2-kelengkapan.pdf,pdf,pass
+diagram,urn:uuid:cdd54b66-ff09-53ae-b804-9271a75ac205,diagram/unit-017/tikzcd-01,urn:uuid:17909d8c-7652-53fe-9f16-1f54e14ed703,1,1431-1434,1431-1434,tikzcd,audited_preserved
+diagram,urn:uuid:3709c6bf-5df6-5c6f-ac4f-74fd53601464,diagram/unit-017/tikzcd-02,urn:uuid:17909d8c-7652-53fe-9f16-1f54e14ed703,2,1436-1438,1436-1438,tikzcd,audited_preserved
+diagram,urn:uuid:899fc4a8-bc79-5cd8-bf03-78c462c57ec7,diagram/unit-017/tikzcd-03,urn:uuid:17909d8c-7652-53fe-9f16-1f54e14ed703,3,1469-1474,1469-1474,tikzcd,audited_preserved
+diagram,urn:uuid:da3ef434-16da-5aec-8ff4-319e20013490,diagram/unit-017/tikzcd-04,urn:uuid:17909d8c-7652-53fe-9f16-1f54e14ed703,4,1475-1480,1475-1480,tikzcd,audited_preserved
+diagram,urn:uuid:4bf1dee6-2b84-519f-8bed-15bb81bac743,diagram/unit-017/tikzcd-05,urn:uuid:17909d8c-7652-53fe-9f16-1f54e14ed703,5,1485-1488,1485-1488,tikzcd,audited_preserved
+diagram,urn:uuid:a8d30fc0-1592-5512-be73-dfbcc796d145,diagram/unit-017/tikzcd-06,urn:uuid:17909d8c-7652-53fe-9f16-1f54e14ed703,6,1490-1493,1490-1493,tikzcd,audited_preserved
+diagram,urn:uuid:e84ddc36-8802-5651-ba0c-78a321e252b9,diagram/unit-017/tikzcd-07,urn:uuid:17909d8c-7652-53fe-9f16-1f54e14ed703,7,1524-1528,1524-1528,tikzcd,audited_preserved
+diagram,urn:uuid:b572ba4d-af58-5c83-b96b-052a4f1665cc,diagram/unit-017/tikzcd-08,urn:uuid:17909d8c-7652-53fe-9f16-1f54e14ed703,8,1570-1570,1570-1570,tikzcd,audited_preserved
+diagram,urn:uuid:0256f961-cd7a-5259-a5d9-95dc5138955a,diagram/unit-017/tikzcd-09,urn:uuid:17909d8c-7652-53fe-9f16-1f54e14ed703,9,1586-1591,1586-1591,tikzcd,audited_preserved
+index_entry,urn:uuid:0b221e3f-f9fd-54eb-bae8-9aca8c11c8c0,index-entry/unit-017/adjunction,urn:uuid:17909d8c-7652-53fe-9f16-1f54e14ed703,9,bansuidui,bansuidui@pasangan adjoin,latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:ac47014f-aa38-5986-a103-0cb60eea2a66,index-entry/unit-017/cocomplete-category,urn:uuid:17909d8c-7652-53fe-9f16-1f54e14ed703,2,fanchou!余完备 (co-complete),kategori!kolengkap (co-complete),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:68a02bd1-e401-596b-8d6f-ca8f1d85c2e9,index-entry/unit-017/complete-category,urn:uuid:17909d8c-7652-53fe-9f16-1f54e14ed703,1,fanchou!完备 (complete),kategori!lengkap (complete),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:260f6d99-f291-5e64-b275-2ee40d19b335,index-entry/unit-017/fiber-coproduct,urn:uuid:17909d8c-7652-53fe-9f16-1f54e14ed703,6,xianweiyuji@纤维余积 (fibered coproduct),xianweiyuji@koproduk serat (fibered coproduct),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:51618761-d416-5d4e-afda-2c94b0b4a8a9,index-entry/unit-017/fiber-product,urn:uuid:17909d8c-7652-53fe-9f16-1f54e14ed703,4,xianweiji@纤维积 (fibered product),xianweiji@produk serat (fibered product),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:61de7f3e-32dd-528d-af2e-c42c8014e6c4,index-entry/unit-017/pullback,urn:uuid:17909d8c-7652-53fe-9f16-1f54e14ed703,3,lahui,lahui@tarik balik (pullback),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:21f380d5-7189-5dd5-bcbf-9afabe27a9e4,index-entry/unit-017/pullback-repeat,urn:uuid:17909d8c-7652-53fe-9f16-1f54e14ed703,7,lahui,lahui@tarik balik (pullback),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:8d92c42c-3075-5ce8-ac13-31863240f1a7,index-entry/unit-017/pushout,urn:uuid:17909d8c-7652-53fe-9f16-1f54e14ed703,5,tuichu,tuichu@dorong keluar (pushout),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:08b5cfcc-10e5-5e90-8240-8e5d292238fe,index-entry/unit-017/pushout-repeat,urn:uuid:17909d8c-7652-53fe-9f16-1f54e14ed703,8,tuichu,tuichu@dorong keluar (pushout),latex-index-key,source_key_preserved_target_key_localized

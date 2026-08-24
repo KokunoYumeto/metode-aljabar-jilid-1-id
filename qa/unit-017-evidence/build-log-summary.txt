@@ -1,0 +1,12 @@
+PASS Unit 017 final build and replay
+artifact bytes=112236 sha256=bfcec32b3ba20f8c170a3389a1b651613f1fa437945662ca32dd62fcf0edba5e pages=9
+final log bytes=86651 sha256=106cbc3802e4144912cafcedd78ae79b30b3d3e6fee40645e28ce31c7cfa3b72
+build F bytes=112241 sha256=83ea6217a19f0576a7410287e85aef2a2b2a8beb76c3ac1f3b50dd1edeecc5e6
+build G bytes=112236 sha256=bfcec32b3ba20f8c170a3389a1b651613f1fa437945662ca32dd62fcf0edba5e
+same-renderer raster replay F/G: Poppler 9/9 identical; MuPDF 9/9 identical
+visual QA: all 9 build-G pages inspected directly in Poppler and MuPDF
+pdftotext -layout replay F/G: identical sha256=11333ab6db1c982579b217a57c4fe500a45df08f280ebeff1c499a2d6ec299d7
+PDF: outlines=2 named_destinations=36 GoTo=17 URI=3 fonts_embedded=all tagged=no language=id-ID blank_pages=0
+log counts: {"emergency_stops": 0, "empty_external_link_targets": 27, "fatal_errors": 0, "imakeidx_post_index_reminders": 1, "missing_characters": 0, "overfull_boxes": 0, "undefined_citations": 0, "undefined_control_sequences": 0, "undefined_reference_warnings": 0, "undefined_references_summary": 0, "underfull_hboxes": 3, "underfull_vboxes": 1}
+visual QA: all 9 pages covered in Poppler and MuPDF; PASS
+provenance model: OpenAI Codex gpt-5.6-sol, Ultra

@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "unit": "unit-017-bab-2-kelengkapan",
+  "source": "chapter2.tex:1406-1602",
+  "data": "backend/data/unit-017-bab-2-kelengkapan.json",
+  "schema": "backend/schema/open-math-corpus-unit.schema.v1.json",
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "rights": "CC BY 4.0",
+  "checks": {
+    "deterministic_second_generation": "PASS",
+    "json_schema": "PASS",
+    "uuidv5": "PASS",
+    "live_bindings": "PASS",
+    "references_and_counts": "PASS",
+    "six_csv_projections": "PASS",
+    "validation_mutated_outputs": false
+  },
+  "counts": {
+    "concepts": 304,
+    "formula_entities": 209,
+    "labels": 11,
+    "ordinary_references": 35,
+    "equation_references": 5,
+    "citations": 0,
+    "diagrams": 9,
+    "index_entries": 9,
+    "corrections": 6,
+    "csv_projections": 6
+  },
+  "identities": {
+    "backend/data/unit-017-bab-2-kelengkapan.json": {
+      "bytes": 245910,
+      "sha256": "06571ea0d8a1a76f93e54dbe78fb3fc24f2692ba104b0b96d94e2da690fd47d4"
+    },
+    "backend/csv/unit-017-bindings.csv": {
+      "bytes": 17225,
+      "sha256": "5fe01e7e75a400f124089fcbb01b8b49497d7cab3a68e161139b0f4284da63b4"
+    },
+    "backend/csv/unit-017-entities.csv": {
+      "bytes": 68736,
+      "sha256": "11f10bcdc90bc155a977a3e684fdacc497ac26bdf6ea4f015d9c2b4b29e0dc14"
+    },
+    "backend/csv/unit-017-qa.csv": {
+      "bytes": 1755,
+      "sha256": "fe4818c3664cf7f0abd453468d191399322e6bb90b937979d05722af48db59f5"
+    },
+    "backend/csv/unit-017-relations.csv": {
+      "bytes": 169082,
+      "sha256": "0216ad5e8e2f8871e5734f6a2c40e702e1b9f66318ea485fd0eab8f4a9c2c229"
+    },
+    "backend/csv/unit-017-rights.csv": {
+      "bytes": 1287,
+      "sha256": "4836630530f87a11a64fe233c59970e2ff7942695a8dbf404f7a0583a275197e"
+    },
+    "backend/csv/unit-017-surfaces.csv": {
+      "bytes": 4142,
+      "sha256": "000c8062ea172724e07a8e3b40e050c245320cc2198428e2ecbfe63b41787668"
+    }
+  },
+  "tools": {
+    "scripts/generate_unit_017_backend.py": {
+      "bytes": 48913,
+      "sha256": "8b5d00de13e2d83ff34774831e6e2a1e55b670de0797097aaf05a983d6262e56"
+    },
+    "scripts/validate_unit_017_backend.py": {
+      "bytes": 6509,
+      "sha256": "bf6b5d7350bddad80f53925676f260808e579c2bbf2ba8f78b965f49bac89f5e"
+    }
+  }
+}
