@@ -310,6 +310,7 @@ Artefak Unit 21 yang diterima:
 - sampul terpusat menyatakan cakupan parsial dengan prosa eksplisit tanpa blok kemajuan ambigu. Percobaan memaksa back matter ke halaman kedelapan menghasilkan kotak vertikal overfull 21,58 pt dan tetap meluber; tata letak sembilan halaman dipertahankan agar daftar pustaka serta indeks tetap terbaca.
 - audit terminologi mempertahankan bentuk transparan `kepang` sambil merekam `grup Braid` sebagai alternatif yang benar-benar terattestasi dan mempertahankan label Inggris di indeks. Batas bukti ada di [`qa/UNIT_021_TERMINOLOGY_AUDIT_20260824.md`](qa/UNIT_021_TERMINOLOGY_AUDIT_20260824.md).
 - receipt penerimaan lokal ada di [`qa/UNIT_021_ADMISSION_20260824.md`](qa/UNIT_021_ADMISSION_20260824.md), 8.744 byte; SHA-256 `2a753d7989b2c6721c76540de826f1fffe39b16d9377c6e9cfd9bea95c9c5012`; bukti visual ada di [`qa/UNIT_021_VISUAL_QA_20260824.md`](qa/UNIT_021_VISUAL_QA_20260824.md).
+- Unit 21 dipublikasikan pada commit `5312b0cdd25ba2025fc966bdfa3f30e35d41b368`; seluruh 52 path / 3.872.584 byte cocok dengan blob komit pada pembacaan balik anonim. Inventaris per-path ada di [`qa/PUBLICATION_GITHUB_UNIT_021_CONTENT_READBACK.json`](qa/PUBLICATION_GITHUB_UNIT_021_CONTENT_READBACK.json), dan receipt publikasi ada di [`qa/PUBLICATION_GITHUB_UNIT_021_20260824.md`](qa/PUBLICATION_GITHUB_UNIT_021_20260824.md).
 
 ## Backend modular
 
