@@ -294,6 +294,7 @@ Artefak Unit 20 yang diterima:
 - sampul terpusat menyatakan cakupan parsial secara eksplisit tanpa blok kemajuan ambigu. Penomoran kanonik `3.2`, kedua diagram, dan seluruh matematika terbaca; kesimpulan, daftar pustaka, serta indeks istilah digabung pada halaman akhir tanpa halaman indeks yatim atau jarang.
 - audit terminologi mengungkapkan alternatif resmi `coherence -> kekoherenan` tetapi mempertahankan `koherensi` demi konsistensi dengan korpus kategori yang sudah diterima; keputusan dan batas buktinya ada di [`qa/UNIT_020_TERMINOLOGY_AUDIT_20260824.md`](qa/UNIT_020_TERMINOLOGY_AUDIT_20260824.md).
 - receipt penerimaan lokal ada di [`qa/UNIT_020_ADMISSION_20260824.md`](qa/UNIT_020_ADMISSION_20260824.md), 7.858 byte; SHA-256 `a246ae9756d998a7da57361955c3e740254fbbf484453cb725a45b7acbde45fe`; bukti visual independen ada di [`qa/UNIT_020_VISUAL_QA_20260824.md`](qa/UNIT_020_VISUAL_QA_20260824.md).
+- Unit 20 dipublikasikan pada commit `84df4314c6291a60856b671009f433cdf52b4cf1`; seluruh 41 path / 2.350.549 byte cocok dengan blob komit pada pembacaan balik anonim. Inventaris per-path ada di [`qa/PUBLICATION_GITHUB_UNIT_020_CONTENT_READBACK.json`](qa/PUBLICATION_GITHUB_UNIT_020_CONTENT_READBACK.json), dan receipt publikasi ada di [`qa/PUBLICATION_GITHUB_UNIT_020_20260824.md`](qa/PUBLICATION_GITHUB_UNIT_020_20260824.md).
 
 ## Backend modular
 

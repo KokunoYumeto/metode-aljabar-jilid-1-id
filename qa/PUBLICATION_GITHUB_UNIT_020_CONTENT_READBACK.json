@@ -1,0 +1,343 @@
+{
+  "schema_version": "1.0.0",
+  "checked_utc": "2026-08-24T08:27:57+00:00",
+  "repository": "https://github.com/KokunoYumeto/metode-aljabar-jilid-1-id",
+  "branch": "main",
+  "commit": "84df4314c6291a60856b671009f433cdf52b4cf1",
+  "parent": "43225b2a2c37db92af6f09fbb643a79cbbcf75b9",
+  "anonymous": true,
+  "authorization_header_used": false,
+  "path_count": 41,
+  "total_bytes": 2350549,
+  "all_match": true,
+  "records": [
+    {
+      "path": "00_control/TERMINOLOGY.id-ID.csv",
+      "bytes": 37771,
+      "sha256": "3afc80895bec2d3710cbbd26de8451063ce53445c081b276670a0b3568f0c983",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/00_control/TERMINOLOGY.id-ID.csv",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "README.md",
+      "bytes": 35189,
+      "sha256": "68f49536a017e1da32d60e0fef6ab61ff2153a727cc73738740d78452399b538",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/README.md",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "artifacts/unit-020-bab-3-keketatan-dan-teorema-koherensi.pdf",
+      "bytes": 93053,
+      "sha256": "8d8a7c8f537681525d97952a7f163f95a5063275047989c26f0387f50172e1ed",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/artifacts/unit-020-bab-3-keketatan-dan-teorema-koherensi.pdf",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "backend/csv/unit-020-bindings.csv",
+      "bytes": 10500,
+      "sha256": "fef7591dfdb86e8ca35e71109a9d4f75decc9d07aae9c7302157bbeaaefbb7f7",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/backend/csv/unit-020-bindings.csv",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "backend/csv/unit-020-entities.csv",
+      "bytes": 31079,
+      "sha256": "550207d48a8172c7b7283ff2a5b01fbada11794aa2670145c02c524cd8503b07",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/backend/csv/unit-020-entities.csv",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "backend/csv/unit-020-qa.csv",
+      "bytes": 4099,
+      "sha256": "eff6e8c34237366d89840bf6a738044c35061f85a378c23e23f5db41d10bfbc4",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/backend/csv/unit-020-qa.csv",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "backend/csv/unit-020-relations.csv",
+      "bytes": 81517,
+      "sha256": "306f1301cc3c8fda9a2d326ee2195dbbb035974d4fc08df769163ed195666ce4",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/backend/csv/unit-020-relations.csv",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "backend/csv/unit-020-rights.csv",
+      "bytes": 1287,
+      "sha256": "4836630530f87a11a64fe233c59970e2ff7942695a8dbf404f7a0583a275197e",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/backend/csv/unit-020-rights.csv",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "backend/csv/unit-020-surfaces.csv",
+      "bytes": 1864,
+      "sha256": "dc8682fc9fdeed36e8cf0cae899691015bf375204005e45dd3ff51f744b8e109",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/backend/csv/unit-020-surfaces.csv",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "backend/data/unit-020-bab-3-keketatan-dan-teorema-koherensi.json",
+      "bytes": 120409,
+      "sha256": "d965d9ade3ea06a230ce5e3501585da50ddad29c9a1b902dfefcebf88773e226",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/backend/data/unit-020-bab-3-keketatan-dan-teorema-koherensi.json",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/UNIT_020_ADMISSION_20260824.md",
+      "bytes": 7858,
+      "sha256": "a246ae9756d998a7da57361955c3e740254fbbf484453cb725a45b7acbde45fe",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/qa/UNIT_020_ADMISSION_20260824.md",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/UNIT_020_BUILD_FINAL.log",
+      "bytes": 83675,
+      "sha256": "80363df3e3bf9186d2265305f1a4d908da645b446a0504b7d186247de8df7617",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/qa/UNIT_020_BUILD_FINAL.log",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/UNIT_020_MATH_STRUCTURE_AUDIT_20260824.md",
+      "bytes": 6653,
+      "sha256": "fec00992eed71e9b62d65a2b5a28e9e5ba2d83b00e7e4753109d171bc8dfdad3",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/qa/UNIT_020_MATH_STRUCTURE_AUDIT_20260824.md",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/UNIT_020_SOURCE_CORRECTION_20260824.md",
+      "bytes": 3406,
+      "sha256": "1fd9438599ba395f4125e2b3b981ec13c142b3225377c29a0ace03cccbb7a62c",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/qa/UNIT_020_SOURCE_CORRECTION_20260824.md",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/UNIT_020_TERMINOLOGY_AUDIT_20260824.md",
+      "bytes": 4117,
+      "sha256": "99514b0bb83a81364dabb257a74c44fb6c2164c46a327a292c6cc03e59dea5fc",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/qa/UNIT_020_TERMINOLOGY_AUDIT_20260824.md",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/UNIT_020_TRANSLATION_SOURCE_REVIEW_20260824.md",
+      "bytes": 7282,
+      "sha256": "e3edf18ac72fc56ca13102f6bb1d469f6c7cc80e3898eb75727b0f96d6ef912c",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/qa/UNIT_020_TRANSLATION_SOURCE_REVIEW_20260824.md",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/UNIT_020_VISUAL_QA_20260824.md",
+      "bytes": 4085,
+      "sha256": "ecab989428e0b5815db6241662198e88e028f42784d289e9ce92f36112b012e4",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/qa/UNIT_020_VISUAL_QA_20260824.md",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/unit-020-evidence/backend-validation.json",
+      "bytes": 3613,
+      "sha256": "38d94810c0612d10f1d2eb04140dabe29d294e5311ff11b7e5767baefc777567",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/qa/unit-020-evidence/backend-validation.json",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/unit-020-evidence/build-log-summary.txt",
+      "bytes": 713,
+      "sha256": "a961e5e72319ddb891618978675f3fcf968a7bb14c1aa75f83e87d20136713e2",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/qa/unit-020-evidence/build-log-summary.txt",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/unit-020-evidence/mupdf-final-f/page-01.png",
+      "bytes": 71709,
+      "sha256": "c5d0f7317f2cfe0d2aee5c440b22a0194e646659227dfcb2e76d6ecdc4df996d",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/qa/unit-020-evidence/mupdf-final-f/page-01.png",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/unit-020-evidence/mupdf-final-f/page-02.png",
+      "bytes": 105017,
+      "sha256": "11958cfa96b1e8bed9965d5709623b8831f2454eb1cfd85fd3ac1dd7f683ebea",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/qa/unit-020-evidence/mupdf-final-f/page-02.png",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/unit-020-evidence/mupdf-final-f/page-03.png",
+      "bytes": 224659,
+      "sha256": "e7b406ef9bee8ac6e01f533bfedfda27e9bd7d9601021ab9c27c3fda7eb18afc",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/qa/unit-020-evidence/mupdf-final-f/page-03.png",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/unit-020-evidence/mupdf-final-f/page-04.png",
+      "bytes": 142407,
+      "sha256": "81016040ae76d41dae2c79e9ae45d8ebdbc9454246340ecfd7a66da2ba40ec83",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/qa/unit-020-evidence/mupdf-final-f/page-04.png",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/unit-020-evidence/mupdf-final-f/page-05.png",
+      "bytes": 182014,
+      "sha256": "1f44761e7b6395180e61e8e6edcfbbaa4b50488fa96d0fb219d3a4916a58bb2b",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/qa/unit-020-evidence/mupdf-final-f/page-05.png",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/unit-020-evidence/poppler-final-f/page-01.png",
+      "bytes": 79234,
+      "sha256": "82901e8a417498d4131ffbee75765c614ab0b9c54ef11d98efb9c691bbf4bbe0",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/qa/unit-020-evidence/poppler-final-f/page-01.png",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/unit-020-evidence/poppler-final-f/page-02.png",
+      "bytes": 129029,
+      "sha256": "fff18f466b3b079151e27b09839e495b64c88eeb7322f1e67d0ccac648e9453d",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/qa/unit-020-evidence/poppler-final-f/page-02.png",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/unit-020-evidence/poppler-final-f/page-03.png",
+      "bytes": 272017,
+      "sha256": "c934df6af9f4297e31b7ae396b5fdf8f658223a03a4864f92d96f99ce1395f17",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/qa/unit-020-evidence/poppler-final-f/page-03.png",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/unit-020-evidence/poppler-final-f/page-04.png",
+      "bytes": 167970,
+      "sha256": "57892c904ce61555e518fc840c938f5e5828993edadbc95c59f1bb03377eb92b",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/qa/unit-020-evidence/poppler-final-f/page-04.png",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/unit-020-evidence/poppler-final-f/page-05.png",
+      "bytes": 219981,
+      "sha256": "4403d8b98110556c173a974d38ceb9d1c09bc8a872aac82691abd851ba69bc6d",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/qa/unit-020-evidence/poppler-final-f/page-05.png",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/unit-020-evidence/render-hash-inventory.json",
+      "bytes": 6032,
+      "sha256": "9572773acf8e72a5fe4d98fab82ecea2d0ad9b5e07200e9534045f911b9683ca",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/qa/unit-020-evidence/render-hash-inventory.json",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/unit-020-evidence/structure-and-pdf-qa.json",
+      "bytes": 9044,
+      "sha256": "26c1a5c433f519afd10b0bc1b378d81b8d6bb1791c91fc3816f151015adaa9b1",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/qa/unit-020-evidence/structure-and-pdf-qa.json",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/unit-020-evidence/structure-check.txt",
+      "bytes": 1121,
+      "sha256": "9efff11587d7f25bd6b740f6e26985c4713c46171e1e4fa93b657c733942ca2c",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/qa/unit-020-evidence/structure-check.txt",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "repo/source/chapter3.tex",
+      "bytes": 80889,
+      "sha256": "64d334af911539cbe844a250ab41c3e6d537e2c827919c21d41547e1f5782d7a",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/repo/source/chapter3.tex",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "repo/source/coverpage-id-unit-020.tex",
+      "bytes": 3496,
+      "sha256": "5d4e9f7dc24961599296305eb3d9705cf2e23778a3e6e89d73267ec823c36484",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/repo/source/coverpage-id-unit-020.tex",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "repo/source/unit-020-bab-3-keketatan-dan-teorema-koherensi.tex",
+      "bytes": 5456,
+      "sha256": "fab3ada9eeef282f062bf83b88535f8cceb22c65d447cb7b3b7537c5f0e08366",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/repo/source/unit-020-bab-3-keketatan-dan-teorema-koherensi.tex",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "repo/source/unit-020-crossrefs.aux",
+      "bytes": 332,
+      "sha256": "b710b290c0a2e664d1a9c74a943fcd7ab002359cdfa24abf841ee31b78f8549e",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/repo/source/unit-020-crossrefs.aux",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "scripts/build_unit_020.ps1",
+      "bytes": 2902,
+      "sha256": "de8b05862a8c659f6e9fffb00bda0e06829ec9a187098b92175c692d4c440a9a",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/scripts/build_unit_020.ps1",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "scripts/check_unit_020_structure.py",
+      "bytes": 21048,
+      "sha256": "a4bdd19b4104d799cbb28a235898b8883aafecfbdb0bb5cca1e83d7e4f7b96b8",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/scripts/check_unit_020_structure.py",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "scripts/generate_unit_020_backend.py",
+      "bytes": 53610,
+      "sha256": "40baa950cb9ed9fb575b472f8486dce2f8d420f25df36c20a5a1933fb2d51309",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/scripts/generate_unit_020_backend.py",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "scripts/generate_unit_020_evidence.py",
+      "bytes": 18649,
+      "sha256": "be516fd5dcded21550452700d083c069b436b155af491de6f59df50b16acf763",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/scripts/generate_unit_020_evidence.py",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "scripts/validate_unit_020_backend.py",
+      "bytes": 15763,
+      "sha256": "16e0dd364f99088370ddb8a74950d43c59d69397aae787bd3e961ce6983c98bf",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/84df4314c6291a60856b671009f433cdf52b4cf1/scripts/validate_unit_020_backend.py",
+      "matches_committed_blob": true
+    }
+  ]
+}
