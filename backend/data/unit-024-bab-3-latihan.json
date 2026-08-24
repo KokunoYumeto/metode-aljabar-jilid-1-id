@@ -1,0 +1,3820 @@
+{
+  "$schema": "../schema/open-math-corpus-unit.schema.v1.json",
+  "schema_name": "open-math-corpus-unit",
+  "schema_version": "1.1.0",
+  "profile": "curriculum-modular-backend-v0",
+  "dataset_id": "urn:uuid:f0a61a4d-2577-5c7c-9160-f81e86d32cdd",
+  "dataset_stable_key": "dataset/unit-024/id-id",
+  "id_namespace": {
+    "algorithm": "uuid5",
+    "namespace_uuid": "urn:uuid:5d74a443-839a-5a09-b2c6-0bc48a097f2b",
+    "name_root": "https://github.com/wenweili/AlJabr-1#o013-backend-v1"
+  },
+  "workflow": {
+    "responsible_task": "01a02163-e2bf-7a93-950a-b9ab84d7e8b9",
+    "updated": "2026-08-25",
+    "status": "admitted",
+    "admission_state": "admitted",
+    "translation_state": "visually_checked",
+    "qa_state": "translation_math_backend_build_visual_pass"
+  },
+  "program": {
+    "id": "urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78",
+    "stable_key": "program/open-mathematics-curriculum/2026",
+    "entity_type": "program",
+    "label": "Open Mathematics Curriculum",
+    "version": "2026"
+  },
+  "course": {
+    "id": "urn:uuid:a5f3ad58-ce3c-5f5f-b581-1f842ae79192",
+    "stable_key": "course/o013",
+    "entity_type": "course",
+    "program_id": "urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78",
+    "role_code": "O013",
+    "course_code": "D70",
+    "label": "Graduate Algebra",
+    "prerequisite_ids": [
+      "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
+      "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7",
+      "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+      "urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288",
+      "urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396",
+      "urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14",
+      "urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec",
+      "urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8",
+      "urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee",
+      "urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f",
+      "urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96",
+      "urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f"
+    ]
+  },
+  "resource": {
+    "id": "urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397",
+    "stable_key": "resource/wenweili/aljabr-1",
+    "entity_type": "resource",
+    "canonical_uri": "https://github.com/wenweili/AlJabr-1",
+    "author": "Wen-Wei Li",
+    "titles": [
+      {
+        "language": "zh-Hans",
+        "text": "代数学方法，卷一：基础架构"
+      },
+      {
+        "language": "en",
+        "text": "Methods in Algebra, Volume 1: Basic Architecture"
+      },
+      {
+        "language": "id-ID",
+        "text": "Metode Aljabar, Jilid 1: Arsitektur Dasar"
+      }
+    ],
+    "original_language": "zh-Hans",
+    "rights_component_ids": [
+      "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "urn:uuid:e18339ae-66cd-5304-b544-b220dd41380d",
+      "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+      "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430"
+    ]
+  },
+  "edition": {
+    "id": "urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49",
+    "stable_key": "edition/wenweili/aljabr-1/c4f7a01f68f5f407906b4b970640cddbbad85f6b",
+    "entity_type": "edition",
+    "resource_id": "urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397",
+    "branch": "master",
+    "commit": "c4f7a01f68f5f407906b4b970640cddbbad85f6b",
+    "tree": "0f9fd52748165ec89a85ba602ccb949a2ce04694",
+    "archive": {
+      "path": "authority/archives/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b.zip",
+      "bytes": 6050739,
+      "sha256": "6c8c416baa8f5ffc8810bbad6470c780413bd7917af739e07340e4b07e7eaff6"
+    },
+    "official_pdf": {
+      "path": "authority/pdfs/Al-jabr-1.pdf",
+      "bytes": 3647113,
+      "sha256": "dc751a2d5146edc9f9638471ff3fac4107eab8dd0d3331803581a06998663c38"
+    },
+    "source_manifest": {
+      "path": "00_control/SOURCE_MANIFEST.csv",
+      "bytes": 3383,
+      "sha256": "40125010171d4fa37c3312c454c3c2767325bcb27c4229c255a25b297265eb99"
+    }
+  },
+  "unit": {
+    "id": "urn:uuid:095c931c-7fec-5049-bdf4-914d242c45cf",
+    "stable_key": "unit/bab-3-latihan",
+    "entity_type": "unit",
+    "program_id": "urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78",
+    "course_id": "urn:uuid:a5f3ad58-ce3c-5f5f-b581-1f842ae79192",
+    "resource_id": "urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397",
+    "edition_id": "urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49",
+    "order": 24,
+    "source_local_id": "chapter3.tex:873-911",
+    "titles": [
+      {
+        "language": "zh-Hans",
+        "text": "第三章：习题"
+      },
+      {
+        "language": "id-ID",
+        "text": "Bab 3: Latihan"
+      }
+    ],
+    "source_language": "zh-Hans",
+    "target_language": "id-ID",
+    "source_binding": {
+      "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter3.tex",
+      "bytes": 75571,
+      "sha256": "7198f2c477890b333237156aba30b79db587e23dde7a878ed99f527e98a558d0",
+      "line_start": 873,
+      "line_end": 911,
+      "span_sha256": "2c8841f289261d68cde3e40141b2da7ce4ca6a76074fc5cb9163a508dfed5857",
+      "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+    },
+    "target_binding": {
+      "path": "repo/source/chapter3.tex",
+      "bytes": 89608,
+      "sha256": "443b71b515aef66c6ba8e259e65083604d227370c1ee7ca3ed49bdb5996f45fb",
+      "line_start": 872,
+      "line_end": 910,
+      "span_sha256": "576c39746534853cd5127298cf0c2ba7f6afb239e4d7b83f368b7a9969c5f43a",
+      "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+    },
+    "section_ids": [
+      "urn:uuid:1a1f85ce-ff71-56db-83b4-fdf4f0cdbeb3",
+      "urn:uuid:32bf22a7-2367-508b-b3f8-47ae352c98e3",
+      "urn:uuid:b0f597e6-3a55-5d3e-9976-8ce77e0c341c",
+      "urn:uuid:77ff8ca6-1af7-5e5d-b73e-dc504756ac2c",
+      "urn:uuid:f11e14c5-0665-5db0-87ff-a78b718f0e63",
+      "urn:uuid:6ffc3c9c-77a0-5f47-973c-b8b16b80372c",
+      "urn:uuid:c577acbd-d373-5678-9779-2e8f504899a6",
+      "urn:uuid:17b81194-b165-5533-bdf3-dc711a792b2f"
+    ],
+    "concept_ids": [
+      "urn:uuid:15a03f0a-1c08-5c51-8d98-0ed555326f6b",
+      "urn:uuid:74125f3a-bff8-5159-8898-ad2729f59bc7",
+      "urn:uuid:facd7b3a-58be-581a-9a87-7a95f812541d",
+      "urn:uuid:ea19efff-764f-526c-b169-3da0860dbf8d",
+      "urn:uuid:a98092a6-9248-5233-81bb-dd7855fc8a53",
+      "urn:uuid:38a1e0d5-c6ed-59d7-a961-bfdf822b1cef",
+      "urn:uuid:900d940c-1806-52cf-b983-aa86f6c8d5ee",
+      "urn:uuid:c78f28f8-b65e-5514-91ce-93df73e6d11f",
+      "urn:uuid:ff6cccd3-55cc-537d-a67c-6bf9375149f4",
+      "urn:uuid:93da1959-754b-5b4a-b8b1-a74bddab39f4",
+      "urn:uuid:4f3bb988-9ac7-58ce-b2c6-c6c492fc28b8",
+      "urn:uuid:8018bc1c-5506-5ad2-aaba-40486bb365b6",
+      "urn:uuid:3d8e5d86-eb74-5aa3-ac87-411c156da016",
+      "urn:uuid:d422ea68-a005-5c7a-9ad0-c631e6806824",
+      "urn:uuid:6cadf66a-19c9-592b-bce7-003bce6bf21c",
+      "urn:uuid:2c18f3ec-c601-5f97-95c8-f87e9d281ae6",
+      "urn:uuid:e6f123e9-a308-527d-bb7e-b28e223c83c3",
+      "urn:uuid:db22183c-ce5d-5b73-9435-522a5e381ab9",
+      "urn:uuid:11c48f5d-f024-5af6-a8ed-c2bd6ce02001",
+      "urn:uuid:595eef01-4e3d-52ff-af1f-b017388b553b",
+      "urn:uuid:de347ef8-0c65-5753-b3af-6e8afcb6e654",
+      "urn:uuid:57e0c917-2f6a-56ba-943b-3aa4fcb46a50",
+      "urn:uuid:b2fd41fb-a75d-5dbc-b57d-8d98c64bbca4",
+      "urn:uuid:c36f487e-570b-5dc0-846b-d5e6b0db6b79",
+      "urn:uuid:75efd37a-0142-59ea-8e34-bc82c74b5a1d",
+      "urn:uuid:f4039877-d8b9-53e5-81a5-a9f42794e211",
+      "urn:uuid:a6e9b4ed-69a7-5d30-97b2-83fb336c8d29",
+      "urn:uuid:e7b94839-bd1a-5cdd-8687-a3b652321765",
+      "urn:uuid:b0de661b-fc50-5a3e-bc47-47e028ad2c95",
+      "urn:uuid:791f52a9-6c9e-5d4f-9d8d-579c99d985a3",
+      "urn:uuid:b92b3b39-8fb5-552d-be02-6dc73b3b5df9",
+      "urn:uuid:27880574-4feb-5fe6-aab7-4529d4f15304",
+      "urn:uuid:d413419a-6e48-588c-8589-ea419f830a94",
+      "urn:uuid:9789503e-eb3f-5ca0-9a0d-2a7ae280b3ce",
+      "urn:uuid:9f1ee243-2db8-552f-b248-272838c64ffb",
+      "urn:uuid:a4b08bb4-d432-56e5-a2f8-8f1cd728e89a",
+      "urn:uuid:3445fd87-3431-537d-bb50-b100ae670cdc",
+      "urn:uuid:1e3ce724-1867-5eb0-b719-bc717a77ce08",
+      "urn:uuid:8dde1824-7b48-54c1-af4f-d41fe544a19a",
+      "urn:uuid:78e18ef0-e51f-5a9c-b49a-4560467c064e",
+      "urn:uuid:f8b22db9-0031-5df4-bc01-2b8edd4bc919",
+      "urn:uuid:0d07b226-4a13-570c-af3f-7891a0b76333",
+      "urn:uuid:16d313c9-6522-54c0-b72f-5e93c87688d8",
+      "urn:uuid:164f35ec-da1b-5594-ad24-3744a4f9306e",
+      "urn:uuid:d5005a73-5da7-51ce-974e-450706153ccc",
+      "urn:uuid:c7445ff2-5d0e-52a1-a239-96c53d650be1",
+      "urn:uuid:507c24e8-f24b-5858-b2cd-29d0df9b73f7",
+      "urn:uuid:552e75d5-d8ef-5b5c-94ed-d61da9ed26d0",
+      "urn:uuid:552725c5-214f-519a-9555-7a67e961b9fc",
+      "urn:uuid:8eeeffb7-3dbf-5f77-b373-65a0bc8945c6",
+      "urn:uuid:d1679cf7-6a4d-59da-a086-feda8cab6f4a",
+      "urn:uuid:08d183fa-634f-5369-9155-1679ebc68642",
+      "urn:uuid:b5ab29ad-7481-509a-b321-6596e5156cc8",
+      "urn:uuid:57bb7600-4f06-5ffc-81d9-f6796536f9d3",
+      "urn:uuid:b5600c3e-e1f5-52fc-a79a-f9eb9552033a",
+      "urn:uuid:4138d1c2-26b8-5e4b-b94b-f045758d8959",
+      "urn:uuid:edd38cc9-1115-5fe8-b83e-64f76a35db32",
+      "urn:uuid:07ed33e3-e3f4-5793-a549-b549fc79c8ef",
+      "urn:uuid:669cc8d0-3e23-57f1-b788-e8deeb8dd240",
+      "urn:uuid:a8eb193b-32ad-5af1-bb42-9f8cc7acf228",
+      "urn:uuid:8797269f-f9e2-5c3d-b219-1b0cc5ed858c",
+      "urn:uuid:9d91e40b-281c-5155-93c4-6a8dbb75ec0a",
+      "urn:uuid:d5e10d03-d979-5810-a581-df0412e6a7d9",
+      "urn:uuid:94278870-92a3-5741-89dd-b11f4b0471ad",
+      "urn:uuid:ffe591a1-6070-5dc4-abcb-677cafcceb52",
+      "urn:uuid:b0736050-0e45-53f9-9818-66af471fb794",
+      "urn:uuid:eb411296-8630-5f33-9317-f908eee209fc",
+      "urn:uuid:11d5b9f8-5f88-5223-b6b4-66c3ac21a67e",
+      "urn:uuid:dc779813-2a75-57eb-b077-8916ccbca116",
+      "urn:uuid:2181f686-da72-5632-89c5-666e07f49f80",
+      "urn:uuid:d8432eaa-4a6a-5e33-b228-6e5e842264d3",
+      "urn:uuid:c316782b-2469-5058-9bf3-44a50737f0ca",
+      "urn:uuid:9bddbadf-0789-5f8c-93cc-7b70b50637d0",
+      "urn:uuid:290db1ef-957b-5cdf-8be3-efa23e3d2105",
+      "urn:uuid:d5f761e8-a3ef-5884-850b-d96c0d2b2a64",
+      "urn:uuid:2c0b2cf1-d18e-570f-93b6-36bafa7eddf4",
+      "urn:uuid:0df31c2e-fe17-5dcc-9954-cec8e6292037",
+      "urn:uuid:e0394475-9f0f-55dc-a876-0da0bf05229c",
+      "urn:uuid:8f22da16-32e4-5b1f-bdaf-d94085359856",
+      "urn:uuid:6de36510-1048-5d82-b2a7-30c62c185cfe",
+      "urn:uuid:77627187-fc1e-5951-8df8-00aa0f7062db",
+      "urn:uuid:b1f57a86-b371-537b-93e7-932fd6970c46",
+      "urn:uuid:3637d4e8-6f09-53cb-abbe-335f051e3e9e",
+      "urn:uuid:850b8ca4-c507-55d2-bf08-d23d910bb183",
+      "urn:uuid:e78fac0c-eb38-57bd-8473-0418c87e7155",
+      "urn:uuid:397123a4-dc01-5f70-b82d-3766d70a08d1",
+      "urn:uuid:5987ce6d-66f4-583d-8256-2592c5b0fb9a",
+      "urn:uuid:9afd39c7-0670-5ddf-8985-8a75b76cdb63",
+      "urn:uuid:1c3b57ea-33ca-57a6-9a4b-ec6f0d33b5b1",
+      "urn:uuid:93958667-a7bc-5847-b9d1-654a56370d83",
+      "urn:uuid:f500935c-5afd-5140-a456-5f457299866e",
+      "urn:uuid:40804b5a-d561-5032-b065-00fba9d64674",
+      "urn:uuid:a9bc3633-b779-5d2b-a5a2-d7022af725f4",
+      "urn:uuid:dc3629d9-4877-5033-970b-095f0f2efa96",
+      "urn:uuid:1ccbebc7-a121-54b1-9d1a-e21a9aeff710",
+      "urn:uuid:ecf86d43-9a82-5dec-92e3-fc8a0e971041",
+      "urn:uuid:ce7920e0-c81d-5202-8427-33561e1d73ba",
+      "urn:uuid:ae59cdee-d86d-5326-8b73-936515a8c90f",
+      "urn:uuid:0b842503-bc5b-53e3-9502-2d92b0ab3b77",
+      "urn:uuid:422fe0d9-453c-54ad-b728-cae1b608f981",
+      "urn:uuid:15ec486e-82d9-5413-9238-42df8396a28d",
+      "urn:uuid:60d29b2c-637b-54fa-b82a-b1c226d1237c",
+      "urn:uuid:e893f9ba-ff7d-5dc8-844c-7c5180eca58a",
+      "urn:uuid:9f00756e-92c8-5a01-855b-b0fd2294d068",
+      "urn:uuid:d9ba3c68-68cb-5b42-8c4b-a925366351d9",
+      "urn:uuid:2099270a-8469-5177-89a2-0b6865d55ff7",
+      "urn:uuid:142296e1-1cb3-520d-993d-ac6b5b570af1",
+      "urn:uuid:63507e23-01df-5f70-b6ce-914ef34de882",
+      "urn:uuid:837b1010-5e37-518e-942a-7fbdcf84983f",
+      "urn:uuid:166d93c3-de3f-576f-8b12-23c7bf4290e9",
+      "urn:uuid:eb63e007-ffe8-5ccf-83d8-7615450cd12e",
+      "urn:uuid:e29910af-251f-5fd0-865a-7f6383746a27",
+      "urn:uuid:c714c7e9-fd17-5e5e-9bf8-94f293c3107f",
+      "urn:uuid:efb158d6-6674-5baf-8119-564d7d8f943a",
+      "urn:uuid:ce6bd2b2-8216-51ef-b5c4-6e41087d88d9",
+      "urn:uuid:1adccd07-e914-5b7d-9195-9358645edae1",
+      "urn:uuid:af0e16ec-1705-5f1a-abdc-f4ca7dca95f0",
+      "urn:uuid:a304d04e-9263-5784-ac0c-ef1e0a1c66e8",
+      "urn:uuid:428cec1a-1081-59c9-a421-1b3c837f8f0a",
+      "urn:uuid:633a749d-8fbb-5e88-8a4a-ae569b7c7509",
+      "urn:uuid:fb77d9c0-9238-5790-8062-74d1dbada036",
+      "urn:uuid:cff7beee-a80e-5078-8200-119a848e7238",
+      "urn:uuid:c4dfa99e-dc61-5649-a467-5c5276e3e8d6",
+      "urn:uuid:776a76fd-fc07-5f79-b30e-a804cbc5f7f3",
+      "urn:uuid:108f5525-9efc-510f-90f4-1c08d4f46f5d",
+      "urn:uuid:d5e9266f-18e9-5444-9e4d-db334da7d463",
+      "urn:uuid:70cd1480-6a89-59db-ad62-03032c4854e3",
+      "urn:uuid:46d7f578-14b1-503f-b0db-5ff0b04979ab",
+      "urn:uuid:ed76c8a5-dd3c-5031-af5c-1578db4b0dd4",
+      "urn:uuid:79dbf29a-c0ac-515c-980a-312659109811",
+      "urn:uuid:f21d9ba0-4e50-5b93-afb1-c5517b3e0f98",
+      "urn:uuid:d164909f-12f5-56d1-94e7-9f8e7b5b9dd5",
+      "urn:uuid:5a824bda-5ed9-5395-979d-55ce442c89e6",
+      "urn:uuid:49708be3-580e-5049-8d89-816e0a20380e",
+      "urn:uuid:e82bfdbe-7bbc-53b5-82ac-3b757fa700ef",
+      "urn:uuid:19dde98e-fdb1-5651-9be6-1370d60d13da",
+      "urn:uuid:dc88c8bc-aa1e-57f4-96bd-4486d316adc6",
+      "urn:uuid:af231df6-8fd1-519c-badb-a09074549e62",
+      "urn:uuid:011220c6-64eb-5501-90c8-1990badc48d4"
+    ],
+    "prerequisite_ids": [
+      "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+      "urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396",
+      "urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec",
+      "urn:uuid:dd69ccfd-7399-53a2-83fe-84127b1baf1d",
+      "urn:uuid:3e864ace-90f6-56b3-8ce5-2e0690dbc9f8",
+      "urn:uuid:e3c2ed29-b6a0-5f8d-9613-6f2b41d962c8",
+      "urn:uuid:8cab24d2-0f78-5bf9-96f8-5b2f2b07168d"
+    ],
+    "rights_component_ids": [
+      "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+      "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430"
+    ],
+    "citation_ids": [],
+    "diagram_ids": [
+      "urn:uuid:a71d19b6-bb10-512b-b139-788d88e73fb3",
+      "urn:uuid:9d0ee6ee-c8e9-54ad-a6e2-a11209a3d2b6"
+    ],
+    "index_entry_ids": [
+      "urn:uuid:b257d6f1-a6e8-59dd-9299-40ad6e159d7f"
+    ],
+    "build_surface_ids": [
+      "urn:uuid:0bd10403-be08-5bcd-aec8-f2f7b44e1d04"
+    ],
+    "qa_event_ids": [
+      "urn:uuid:5f5c0834-15f9-522e-9148-bd1947d35924",
+      "urn:uuid:d79786b9-daff-5eff-9322-3ca361b4510a",
+      "urn:uuid:e49a6bee-9198-505a-a8d7-6031cd40ae56",
+      "urn:uuid:0d89e2f4-7241-5f9e-a9d7-24627919f3d6",
+      "urn:uuid:d934417a-be4f-5f2b-b181-82365df69162",
+      "urn:uuid:e8d821a4-389c-5d80-897a-f27830b5f50f",
+      "urn:uuid:daf3d104-f82f-550c-998c-400c7b6a8ce1",
+      "urn:uuid:8a449cee-0960-5495-85b8-89647a4dfa17",
+      "urn:uuid:44d0323c-5963-5dee-bd0c-b880712ed9ca"
+    ],
+    "outcome_keys": [
+      "outcome/count-parenthesizations-by-catalan-numbers",
+      "outcome/prove-unit-endomorphism-commutativity",
+      "outcome/build-and-test-the-ordinal-sum-monoidal-structure",
+      "outcome/derive-and-verify-yang-baxter-solutions",
+      "outcome/construct-the-drinfeld-center-and-its-braiding",
+      "outcome/verify-ab-enrichment",
+      "outcome/construct-a-comma-category-natural-transformation-as-two-cell"
+    ],
+    "surface_counts": {
+      "sections": 8,
+      "exercises": 8,
+      "hints": 2,
+      "answers": 0,
+      "solutions": 0,
+      "citations": 0,
+      "diagrams": 2,
+      "index_entries": 1
+    },
+    "translation_state": "visually_checked",
+    "admission_state": "admitted"
+  },
+  "sections": [
+    {
+      "id": "urn:uuid:1a1f85ce-ff71-56db-83b4-fdf4f0cdbeb3",
+      "stable_key": "unit/bab-3-latihan/exercise/01",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:095c931c-7fec-5049-bdf4-914d242c45cf",
+      "order": 1,
+      "source_local_id": "chapter3.tex:874-874",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 1：Catalan 括号计数"
+        },
+        {
+          "language": "id-ID",
+          "text": "Latihan 1: Pencacahan Tanda Kurung Catalan"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter3.tex",
+        "bytes": 75571,
+        "sha256": "7198f2c477890b333237156aba30b79db587e23dde7a878ed99f527e98a558d0",
+        "line_start": 874,
+        "line_end": 874,
+        "span_sha256": "8f65fd328358aa80ea63b36e5d2a222ba4d9bacc71f12ab3ef815c511847dd13",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter3.tex",
+        "bytes": 89608,
+        "sha256": "443b71b515aef66c6ba8e259e65083604d227370c1ee7ca3ed49bdb5996f45fb",
+        "line_start": 873,
+        "line_end": 873,
+        "span_sha256": "2827c0915de2b41c412522256c8ca66d83bb81227dd854b71d39dcca77c16e9b",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:15a03f0a-1c08-5c51-8d98-0ed555326f6b",
+        "urn:uuid:a4b08bb4-d432-56e5-a2f8-8f1cd728e89a",
+        "urn:uuid:6cadf66a-19c9-592b-bce7-003bce6bf21c",
+        "urn:uuid:75efd37a-0142-59ea-8e34-bc82c74b5a1d",
+        "urn:uuid:507c24e8-f24b-5858-b2cd-29d0df9b73f7",
+        "urn:uuid:552725c5-214f-519a-9555-7a67e961b9fc",
+        "urn:uuid:8eeeffb7-3dbf-5f77-b373-65a0bc8945c6",
+        "urn:uuid:d1679cf7-6a4d-59da-a086-feda8cab6f4a",
+        "urn:uuid:08d183fa-634f-5369-9155-1679ebc68642",
+        "urn:uuid:b5ab29ad-7481-509a-b321-6596e5156cc8",
+        "urn:uuid:d164909f-12f5-56d1-94e7-9f8e7b5b9dd5"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+        "urn:uuid:dd69ccfd-7399-53a2-83fe-84127b1baf1d"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:32bf22a7-2367-508b-b3f8-47ae352c98e3",
+      "stable_key": "unit/bab-3-latihan/exercise/02",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:095c931c-7fec-5049-bdf4-914d242c45cf",
+      "order": 2,
+      "source_local_id": "chapter3.tex:875-875",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 2：幺元自同态的交换性"
+        },
+        {
+          "language": "id-ID",
+          "text": "Latihan 2: Komutativitas Endomorfisme Objek Satuan"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter3.tex",
+        "bytes": 75571,
+        "sha256": "7198f2c477890b333237156aba30b79db587e23dde7a878ed99f527e98a558d0",
+        "line_start": 875,
+        "line_end": 875,
+        "span_sha256": "5f1057bd5d0a13970d6adad0af20c2a29fed4a60ab166fb3c1d4d338641e95b7",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter3.tex",
+        "bytes": 89608,
+        "sha256": "443b71b515aef66c6ba8e259e65083604d227370c1ee7ca3ed49bdb5996f45fb",
+        "line_start": 874,
+        "line_end": 874,
+        "span_sha256": "479c527467a8f84818bd33fe8ac0dc26b1c7c1344ccab999c5952bc4a578eeea",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:74125f3a-bff8-5159-8898-ad2729f59bc7",
+        "urn:uuid:3445fd87-3431-537d-bb50-b100ae670cdc",
+        "urn:uuid:2c18f3ec-c601-5f97-95c8-f87e9d281ae6",
+        "urn:uuid:de347ef8-0c65-5753-b3af-6e8afcb6e654",
+        "urn:uuid:f4039877-d8b9-53e5-81a5-a9f42794e211",
+        "urn:uuid:552e75d5-d8ef-5b5c-94ed-d61da9ed26d0",
+        "urn:uuid:57bb7600-4f06-5ffc-81d9-f6796536f9d3",
+        "urn:uuid:b5600c3e-e1f5-52fc-a79a-f9eb9552033a"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:dd69ccfd-7399-53a2-83fe-84127b1baf1d"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:b0f597e6-3a55-5d3e-9976-8ce77e0c341c",
+      "stable_key": "unit/bab-3-latihan/exercise/03",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:095c931c-7fec-5049-bdf4-914d242c45cf",
+      "order": 3,
+      "source_local_id": "chapter3.tex:876-876",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 3：有限全序集的序数和"
+        },
+        {
+          "language": "id-ID",
+          "text": "Latihan 3: Jumlah Ordinal Himpunan Terurut Total Berhingga"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter3.tex",
+        "bytes": 75571,
+        "sha256": "7198f2c477890b333237156aba30b79db587e23dde7a878ed99f527e98a558d0",
+        "line_start": 876,
+        "line_end": 876,
+        "span_sha256": "a55829a520a59f1fd9fed73a84e3659ee742aff32b955010c8533f791593c268",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter3.tex",
+        "bytes": 89608,
+        "sha256": "443b71b515aef66c6ba8e259e65083604d227370c1ee7ca3ed49bdb5996f45fb",
+        "line_start": 875,
+        "line_end": 875,
+        "span_sha256": "a000bc290fda35eddda3a899ec04367cda4c250ba2c7e410af92e9f96a10002d",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:facd7b3a-58be-581a-9a87-7a95f812541d",
+        "urn:uuid:1e3ce724-1867-5eb0-b719-bc717a77ce08",
+        "urn:uuid:a6e9b4ed-69a7-5d30-97b2-83fb336c8d29",
+        "urn:uuid:4138d1c2-26b8-5e4b-b94b-f045758d8959",
+        "urn:uuid:edd38cc9-1115-5fe8-b83e-64f76a35db32",
+        "urn:uuid:07ed33e3-e3f4-5793-a549-b549fc79c8ef",
+        "urn:uuid:669cc8d0-3e23-57f1-b788-e8deeb8dd240",
+        "urn:uuid:a8eb193b-32ad-5af1-bb42-9f8cc7acf228",
+        "urn:uuid:8797269f-f9e2-5c3d-b219-1b0cc5ed858c",
+        "urn:uuid:9d91e40b-281c-5155-93c4-6a8dbb75ec0a",
+        "urn:uuid:d5e10d03-d979-5810-a581-df0412e6a7d9",
+        "urn:uuid:94278870-92a3-5741-89dd-b11f4b0471ad",
+        "urn:uuid:ffe591a1-6070-5dc4-abcb-677cafcceb52",
+        "urn:uuid:b0736050-0e45-53f9-9818-66af471fb794"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+        "urn:uuid:dd69ccfd-7399-53a2-83fe-84127b1baf1d"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:77ff8ca6-1af7-5e5d-b73e-dc504756ac2c",
+      "stable_key": "unit/bab-3-latihan/exercise/04",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:095c931c-7fec-5049-bdf4-914d242c45cf",
+      "order": 4,
+      "source_local_id": "chapter3.tex:877-877",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 4：序数和同构的自然性"
+        },
+        {
+          "language": "id-ID",
+          "text": "Latihan 4: Naturalitas Isomorfisme Jumlah Ordinal"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter3.tex",
+        "bytes": 75571,
+        "sha256": "7198f2c477890b333237156aba30b79db587e23dde7a878ed99f527e98a558d0",
+        "line_start": 877,
+        "line_end": 877,
+        "span_sha256": "c93c5f855811a4de5b3b5dbb05cd586c960c8b2b5eb1c8ba78b4b6e244908442",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter3.tex",
+        "bytes": 89608,
+        "sha256": "443b71b515aef66c6ba8e259e65083604d227370c1ee7ca3ed49bdb5996f45fb",
+        "line_start": 876,
+        "line_end": 876,
+        "span_sha256": "2fdc8aa68742d82fa975512c098cc628ced69d112dc970305ddd500cad89b7c2",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:ea19efff-764f-526c-b169-3da0860dbf8d",
+        "urn:uuid:a98092a6-9248-5233-81bb-dd7855fc8a53",
+        "urn:uuid:8dde1824-7b48-54c1-af4f-d41fe544a19a",
+        "urn:uuid:011220c6-64eb-5501-90c8-1990badc48d4",
+        "urn:uuid:e7b94839-bd1a-5cdd-8687-a3b652321765",
+        "urn:uuid:eb411296-8630-5f33-9317-f908eee209fc",
+        "urn:uuid:11d5b9f8-5f88-5223-b6b4-66c3ac21a67e"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+        "urn:uuid:dd69ccfd-7399-53a2-83fe-84127b1baf1d",
+        "urn:uuid:3e864ace-90f6-56b3-8ce5-2e0690dbc9f8",
+        "urn:uuid:e3c2ed29-b6a0-5f8d-9613-6f2b41d962c8"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:f11e14c5-0665-5db0-87ff-a78b718f0e63",
+      "stable_key": "unit/bab-3-latihan/exercise/05",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:095c931c-7fec-5049-bdf4-914d242c45cf",
+      "order": 5,
+      "source_local_id": "chapter3.tex:878-890",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 5：Yang--Baxter 方程"
+        },
+        {
+          "language": "id-ID",
+          "text": "Latihan 5: Persamaan Yang--Baxter"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter3.tex",
+        "bytes": 75571,
+        "sha256": "7198f2c477890b333237156aba30b79db587e23dde7a878ed99f527e98a558d0",
+        "line_start": 878,
+        "line_end": 890,
+        "span_sha256": "e192f598e89c2f1a64e8f8baea3b4756163e481e39cfdb0bd9a24d5c573994d2",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter3.tex",
+        "bytes": 89608,
+        "sha256": "443b71b515aef66c6ba8e259e65083604d227370c1ee7ca3ed49bdb5996f45fb",
+        "line_start": 877,
+        "line_end": 889,
+        "span_sha256": "282c5a2d51e3c034d238f7a80535d4a230f47e025ef314985acd90caffa30a6f",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:38a1e0d5-c6ed-59d7-a961-bfdf822b1cef",
+        "urn:uuid:900d940c-1806-52cf-b983-aa86f6c8d5ee",
+        "urn:uuid:c78f28f8-b65e-5514-91ce-93df73e6d11f",
+        "urn:uuid:78e18ef0-e51f-5a9c-b49a-4560467c064e",
+        "urn:uuid:e6f123e9-a308-527d-bb7e-b28e223c83c3",
+        "urn:uuid:57e0c917-2f6a-56ba-943b-3aa4fcb46a50",
+        "urn:uuid:b0de661b-fc50-5a3e-bc47-47e028ad2c95",
+        "urn:uuid:dc779813-2a75-57eb-b077-8916ccbca116",
+        "urn:uuid:2181f686-da72-5632-89c5-666e07f49f80",
+        "urn:uuid:d8432eaa-4a6a-5e33-b228-6e5e842264d3",
+        "urn:uuid:c316782b-2469-5058-9bf3-44a50737f0ca",
+        "urn:uuid:9bddbadf-0789-5f8c-93cc-7b70b50637d0",
+        "urn:uuid:290db1ef-957b-5cdf-8be3-efa23e3d2105",
+        "urn:uuid:d5f761e8-a3ef-5884-850b-d96c0d2b2a64",
+        "urn:uuid:2c0b2cf1-d18e-570f-93b6-36bafa7eddf4",
+        "urn:uuid:0df31c2e-fe17-5dcc-9954-cec8e6292037",
+        "urn:uuid:e0394475-9f0f-55dc-a876-0da0bf05229c",
+        "urn:uuid:8f22da16-32e4-5b1f-bdaf-d94085359856",
+        "urn:uuid:6de36510-1048-5d82-b2a7-30c62c185cfe",
+        "urn:uuid:77627187-fc1e-5951-8df8-00aa0f7062db",
+        "urn:uuid:b1f57a86-b371-537b-93e7-932fd6970c46",
+        "urn:uuid:3637d4e8-6f09-53cb-abbe-335f051e3e9e",
+        "urn:uuid:850b8ca4-c507-55d2-bf08-d23d910bb183",
+        "urn:uuid:e78fac0c-eb38-57bd-8473-0418c87e7155",
+        "urn:uuid:397123a4-dc01-5f70-b82d-3766d70a08d1",
+        "urn:uuid:5987ce6d-66f4-583d-8256-2592c5b0fb9a",
+        "urn:uuid:9afd39c7-0670-5ddf-8985-8a75b76cdb63",
+        "urn:uuid:1c3b57ea-33ca-57a6-9a4b-ec6f0d33b5b1",
+        "urn:uuid:a304d04e-9263-5784-ac0c-ef1e0a1c66e8",
+        "urn:uuid:428cec1a-1081-59c9-a421-1b3c837f8f0a",
+        "urn:uuid:633a749d-8fbb-5e88-8a4a-ae569b7c7509",
+        "urn:uuid:5a824bda-5ed9-5395-979d-55ce442c89e6"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396",
+        "urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec",
+        "urn:uuid:dd69ccfd-7399-53a2-83fe-84127b1baf1d"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:6ffc3c9c-77a0-5f47-973c-b8b16b80372c",
+      "stable_key": "unit/bab-3-latihan/exercise/06",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:095c931c-7fec-5049-bdf4-914d242c45cf",
+      "order": 6,
+      "source_local_id": "chapter3.tex:892-903",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 6：Drinfeld 中心"
+        },
+        {
+          "language": "id-ID",
+          "text": "Latihan 6: Pusat Drinfeld"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter3.tex",
+        "bytes": 75571,
+        "sha256": "7198f2c477890b333237156aba30b79db587e23dde7a878ed99f527e98a558d0",
+        "line_start": 892,
+        "line_end": 903,
+        "span_sha256": "1586403d71766e7276212c62c5a6e02a812c536e515f4b859a6704b076d15660",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter3.tex",
+        "bytes": 89608,
+        "sha256": "443b71b515aef66c6ba8e259e65083604d227370c1ee7ca3ed49bdb5996f45fb",
+        "line_start": 891,
+        "line_end": 902,
+        "span_sha256": "e41dc4ba066373961ca87e82aa2f4b2ab13e4418cf76f993ef295e08fe586521",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:ff6cccd3-55cc-537d-a67c-6bf9375149f4",
+        "urn:uuid:93da1959-754b-5b4a-b8b1-a74bddab39f4",
+        "urn:uuid:f8b22db9-0031-5df4-bc01-2b8edd4bc919",
+        "urn:uuid:db22183c-ce5d-5b73-9435-522a5e381ab9",
+        "urn:uuid:11c48f5d-f024-5af6-a8ed-c2bd6ce02001",
+        "urn:uuid:791f52a9-6c9e-5d4f-9d8d-579c99d985a3",
+        "urn:uuid:b92b3b39-8fb5-552d-be02-6dc73b3b5df9",
+        "urn:uuid:27880574-4feb-5fe6-aab7-4529d4f15304",
+        "urn:uuid:d413419a-6e48-588c-8589-ea419f830a94",
+        "urn:uuid:164f35ec-da1b-5594-ad24-3744a4f9306e",
+        "urn:uuid:d5005a73-5da7-51ce-974e-450706153ccc",
+        "urn:uuid:c7445ff2-5d0e-52a1-a239-96c53d650be1",
+        "urn:uuid:93958667-a7bc-5847-b9d1-654a56370d83",
+        "urn:uuid:f500935c-5afd-5140-a456-5f457299866e",
+        "urn:uuid:40804b5a-d561-5032-b065-00fba9d64674",
+        "urn:uuid:a9bc3633-b779-5d2b-a5a2-d7022af725f4",
+        "urn:uuid:dc3629d9-4877-5033-970b-095f0f2efa96",
+        "urn:uuid:1ccbebc7-a121-54b1-9d1a-e21a9aeff710",
+        "urn:uuid:ecf86d43-9a82-5dec-92e3-fc8a0e971041",
+        "urn:uuid:ce7920e0-c81d-5202-8427-33561e1d73ba",
+        "urn:uuid:ae59cdee-d86d-5326-8b73-936515a8c90f",
+        "urn:uuid:0b842503-bc5b-53e3-9502-2d92b0ab3b77",
+        "urn:uuid:422fe0d9-453c-54ad-b728-cae1b608f981",
+        "urn:uuid:15ec486e-82d9-5413-9238-42df8396a28d",
+        "urn:uuid:60d29b2c-637b-54fa-b82a-b1c226d1237c",
+        "urn:uuid:e893f9ba-ff7d-5dc8-844c-7c5180eca58a",
+        "urn:uuid:9f00756e-92c8-5a01-855b-b0fd2294d068",
+        "urn:uuid:d9ba3c68-68cb-5b42-8c4b-a925366351d9",
+        "urn:uuid:2099270a-8469-5177-89a2-0b6865d55ff7",
+        "urn:uuid:fb77d9c0-9238-5790-8062-74d1dbada036",
+        "urn:uuid:cff7beee-a80e-5078-8200-119a848e7238",
+        "urn:uuid:776a76fd-fc07-5f79-b30e-a804cbc5f7f3",
+        "urn:uuid:108f5525-9efc-510f-90f4-1c08d4f46f5d",
+        "urn:uuid:d5e9266f-18e9-5444-9e4d-db334da7d463",
+        "urn:uuid:49708be3-580e-5049-8d89-816e0a20380e",
+        "urn:uuid:e82bfdbe-7bbc-53b5-82ac-3b757fa700ef",
+        "urn:uuid:19dde98e-fdb1-5651-9be6-1370d60d13da",
+        "urn:uuid:dc88c8bc-aa1e-57f4-96bd-4486d316adc6"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:dd69ccfd-7399-53a2-83fe-84127b1baf1d",
+        "urn:uuid:3e864ace-90f6-56b3-8ce5-2e0690dbc9f8",
+        "urn:uuid:e3c2ed29-b6a0-5f8d-9613-6f2b41d962c8"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:c577acbd-d373-5678-9779-2e8f504899a6",
+      "stable_key": "unit/bab-3-latihan/exercise/07",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:095c931c-7fec-5049-bdf4-914d242c45cf",
+      "order": 7,
+      "source_local_id": "chapter3.tex:904-904",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 7：Ab-充实范畴"
+        },
+        {
+          "language": "id-ID",
+          "text": "Latihan 7: Kategori yang Diperkaya atas Ab"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter3.tex",
+        "bytes": 75571,
+        "sha256": "7198f2c477890b333237156aba30b79db587e23dde7a878ed99f527e98a558d0",
+        "line_start": 904,
+        "line_end": 904,
+        "span_sha256": "ab533f8910d640c6eb9f1238087a30d8aa55e3ebf8411591e2446b4ab69f066e",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter3.tex",
+        "bytes": 89608,
+        "sha256": "443b71b515aef66c6ba8e259e65083604d227370c1ee7ca3ed49bdb5996f45fb",
+        "line_start": 903,
+        "line_end": 903,
+        "span_sha256": "c7a412a9e58ba2448f1234fe9d78f7d352f5eb4f9249fe4f0a4c301c3e7b4442",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:4f3bb988-9ac7-58ce-b2c6-c6c492fc28b8",
+        "urn:uuid:0d07b226-4a13-570c-af3f-7891a0b76333",
+        "urn:uuid:b2fd41fb-a75d-5dbc-b57d-8d98c64bbca4",
+        "urn:uuid:9789503e-eb3f-5ca0-9a0d-2a7ae280b3ce",
+        "urn:uuid:142296e1-1cb3-520d-993d-ac6b5b570af1"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+        "urn:uuid:dd69ccfd-7399-53a2-83fe-84127b1baf1d"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:17b81194-b165-5533-bdf3-dc711a792b2f",
+      "stable_key": "unit/bab-3-latihan/exercise/08",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:095c931c-7fec-5049-bdf4-914d242c45cf",
+      "order": 8,
+      "source_local_id": "chapter3.tex:905-910",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "练习 8：逗号范畴与 2-胞腔"
+        },
+        {
+          "language": "id-ID",
+          "text": "Latihan 8: Kategori Koma dan 2-Sel"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter3.tex",
+        "bytes": 75571,
+        "sha256": "7198f2c477890b333237156aba30b79db587e23dde7a878ed99f527e98a558d0",
+        "line_start": 905,
+        "line_end": 910,
+        "span_sha256": "dca0455499c8800f0fbac7923694acf5f2f1605edc0e807cf211ce4e8b38804f",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter3.tex",
+        "bytes": 89608,
+        "sha256": "443b71b515aef66c6ba8e259e65083604d227370c1ee7ca3ed49bdb5996f45fb",
+        "line_start": 904,
+        "line_end": 909,
+        "span_sha256": "977ebef722140093959002223d63270989d5695bf24afbb955f0d63028ad1a62",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:8018bc1c-5506-5ad2-aaba-40486bb365b6",
+        "urn:uuid:3d8e5d86-eb74-5aa3-ac87-411c156da016",
+        "urn:uuid:16d313c9-6522-54c0-b72f-5e93c87688d8",
+        "urn:uuid:595eef01-4e3d-52ff-af1f-b017388b553b",
+        "urn:uuid:c36f487e-570b-5dc0-846b-d5e6b0db6b79",
+        "urn:uuid:9f1ee243-2db8-552f-b248-272838c64ffb",
+        "urn:uuid:63507e23-01df-5f70-b6ce-914ef34de882",
+        "urn:uuid:837b1010-5e37-518e-942a-7fbdcf84983f",
+        "urn:uuid:166d93c3-de3f-576f-8b12-23c7bf4290e9",
+        "urn:uuid:eb63e007-ffe8-5ccf-83d8-7615450cd12e",
+        "urn:uuid:e29910af-251f-5fd0-865a-7f6383746a27",
+        "urn:uuid:c714c7e9-fd17-5e5e-9bf8-94f293c3107f",
+        "urn:uuid:efb158d6-6674-5baf-8119-564d7d8f943a",
+        "urn:uuid:ce6bd2b2-8216-51ef-b5c4-6e41087d88d9",
+        "urn:uuid:1adccd07-e914-5b7d-9195-9358645edae1",
+        "urn:uuid:af0e16ec-1705-5f1a-abdc-f4ca7dca95f0",
+        "urn:uuid:c4dfa99e-dc61-5649-a467-5c5276e3e8d6",
+        "urn:uuid:70cd1480-6a89-59db-ad62-03032c4854e3",
+        "urn:uuid:46d7f578-14b1-503f-b0db-5ff0b04979ab",
+        "urn:uuid:ed76c8a5-dd3c-5031-af5c-1578db4b0dd4",
+        "urn:uuid:79dbf29a-c0ac-515c-980a-312659109811",
+        "urn:uuid:f21d9ba0-4e50-5b93-afb1-c5517b3e0f98",
+        "urn:uuid:af231df6-8fd1-519c-badb-a09074549e62"
+      ],
+      "prerequisite_ids": [
+        "urn:uuid:dd69ccfd-7399-53a2-83fe-84127b1baf1d",
+        "urn:uuid:3e864ace-90f6-56b3-8ce5-2e0690dbc9f8",
+        "urn:uuid:e3c2ed29-b6a0-5f8d-9613-6f2b41d962c8",
+        "urn:uuid:8cab24d2-0f78-5bf9-96f8-5b2f2b07168d"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "urn:uuid:15a03f0a-1c08-5c51-8d98-0ed555326f6b",
+      "stable_key": "concept/catalan-parenthesization-count",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "Catalan 括号计数"
+        },
+        {
+          "language": "id-ID",
+          "text": "pencacahan tanda kurung Catalan"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:74125f3a-bff8-5159-8898-ad2729f59bc7",
+      "stable_key": "concept/unit-endomorphism-commutativity",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "幺元自同态的交换性"
+        },
+        {
+          "language": "id-ID",
+          "text": "komutativitas endomorfisme objek satuan"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:facd7b3a-58be-581a-9a87-7a95f812541d",
+      "stable_key": "concept/ordinal-sum-monoidal-structure",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "序数和幺半结构"
+        },
+        {
+          "language": "id-ID",
+          "text": "struktur monoidal jumlah ordinal"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:ea19efff-764f-526c-b169-3da0860dbf8d",
+      "stable_key": "concept/objectwise-order-isomorphism",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "逐对象序同构"
+        },
+        {
+          "language": "id-ID",
+          "text": "isomorfisme urutan objek demi objek"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:a98092a6-9248-5233-81bb-dd7855fc8a53",
+      "stable_key": "concept/naturality-counterexample",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "自然性反例"
+        },
+        {
+          "language": "id-ID",
+          "text": "contoh tandingan naturalitas"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:38a1e0d5-c6ed-59d7-a961-bfdf822b1cef",
+      "stable_key": "concept/yang-baxter-equation",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "Yang--Baxter 方程"
+        },
+        {
+          "language": "id-ID",
+          "text": "persamaan Yang--Baxter"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:900d940c-1806-52cf-b983-aa86f6c8d5ee",
+      "stable_key": "concept/yang-baxter-coefficient-equation",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "Yang--Baxter 系数方程"
+        },
+        {
+          "language": "id-ID",
+          "text": "persamaan koefisien Yang--Baxter"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:c78f28f8-b65e-5514-91ce-93df73e6d11f",
+      "stable_key": "concept/hecke-type-yang-baxter-solution",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "Hecke 型解"
+        },
+        {
+          "language": "id-ID",
+          "text": "solusi Yang--Baxter bertipe Hecke"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:ff6cccd3-55cc-537d-a67c-6bf9375149f4",
+      "stable_key": "concept/drinfeld-center",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "Drinfeld 中心"
+        },
+        {
+          "language": "id-ID",
+          "text": "pusat Drinfeld"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:93da1959-754b-5b4a-b8b1-a74bddab39f4",
+      "stable_key": "concept/half-braiding",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "半辫结构"
+        },
+        {
+          "language": "id-ID",
+          "text": "struktur setengah kepang"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:4f3bb988-9ac7-58ce-b2c6-c6c492fc28b8",
+      "stable_key": "concept/ab-enrichment",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "Ab-充实"
+        },
+        {
+          "language": "id-ID",
+          "text": "pengayaan atas Ab"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:8018bc1c-5506-5ad2-aaba-40486bb365b6",
+      "stable_key": "concept/comma-category",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "逗号范畴"
+        },
+        {
+          "language": "id-ID",
+          "text": "kategori koma"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:3d8e5d86-eb74-5aa3-ac87-411c156da016",
+      "stable_key": "concept/natural-transformation-as-two-cell",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "作为 2-胞腔的自然变换"
+        },
+        {
+          "language": "id-ID",
+          "text": "transformasi natural sebagai 2-sel"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:d422ea68-a005-5c7a-9ad0-c631e6806824",
+      "stable_key": "surface/unit-024/environment/001-exercises-01",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "环境 001: Exercises 第 1 次; 源行 873-911"
+        },
+        {
+          "language": "id-ID",
+          "text": "lingkungan 001: Exercises kemunculan 1; baris target 872-910"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:6cadf66a-19c9-592b-bce7-003bce6bf21c",
+      "stable_key": "surface/unit-024/environment/002-hint-01",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "环境 002: hint 第 1 次; 源行 874-874"
+        },
+        {
+          "language": "id-ID",
+          "text": "lingkungan 002: hint kemunculan 1; baris target 873-873"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:2c18f3ec-c601-5f97-95c8-f87e9d281ae6",
+      "stable_key": "surface/unit-024/environment/003-hint-02",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "环境 003: hint 第 2 次; 源行 875-875"
+        },
+        {
+          "language": "id-ID",
+          "text": "lingkungan 003: hint kemunculan 2; baris target 874-874"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:e6f123e9-a308-527d-bb7e-b28e223c83c3",
+      "stable_key": "surface/unit-024/environment/004-cases-01",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "环境 004: cases 第 1 次; 源行 885-889"
+        },
+        {
+          "language": "id-ID",
+          "text": "lingkungan 004: cases kemunculan 1; baris target 884-888"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:db22183c-ce5d-5b73-9435-522a5e381ab9",
+      "stable_key": "surface/unit-024/environment/005-itemize-01",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "环境 005: itemize 第 1 次; 源行 893-902"
+        },
+        {
+          "language": "id-ID",
+          "text": "lingkungan 005: itemize kemunculan 1; baris target 892-901"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:11c48f5d-f024-5af6-a8ed-c2bd6ce02001",
+      "stable_key": "surface/unit-024/environment/006-tikzcd-01",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "环境 006: tikzcd 第 1 次; 源行 895-898"
+        },
+        {
+          "language": "id-ID",
+          "text": "lingkungan 006: tikzcd kemunculan 1; baris target 894-897"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:595eef01-4e3d-52ff-af1f-b017388b553b",
+      "stable_key": "surface/unit-024/environment/007-tikzcd-02",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "环境 007: tikzcd 第 2 次; 源行 906-909"
+        },
+        {
+          "language": "id-ID",
+          "text": "lingkungan 007: tikzcd kemunculan 2; baris target 905-908"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:de347ef8-0c65-5753-b3af-6e8afcb6e654",
+      "stable_key": "surface/unit-024/reference/ordinary/001",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "引用 001: prop:Kelly; 源行 875"
+        },
+        {
+          "language": "id-ID",
+          "text": "rujukan ordinary 001: prop:Kelly; baris target 874"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:57e0c917-2f6a-56ba-943b-3aa4fcb46a50",
+      "stable_key": "surface/unit-024/reference/ordinary/002",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "引用 002: prop:YBE-cat-strict; 源行 882"
+        },
+        {
+          "language": "id-ID",
+          "text": "rujukan ordinary 002: prop:YBE-cat-strict; baris target 881"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:b2fd41fb-a75d-5dbc-b57d-8d98c64bbca4",
+      "stable_key": "surface/unit-024/reference/ordinary/003",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "引用 003: eg:Ab-cat; 源行 904"
+        },
+        {
+          "language": "id-ID",
+          "text": "rujukan ordinary 003: eg:Ab-cat; baris target 903"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:c36f487e-570b-5dc0-846b-d5e6b0db6b79",
+      "stable_key": "surface/unit-024/reference/ordinary/004",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "引用 004: def:comma-category; 源行 905"
+        },
+        {
+          "language": "id-ID",
+          "text": "rujukan ordinary 004: def:comma-category; baris target 904"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:75efd37a-0142-59ea-8e34-bc82c74b5a1d",
+      "stable_key": "surface/unit-024/item/001",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "列表项 001; 源行 874"
+        },
+        {
+          "language": "id-ID",
+          "text": "butir daftar 001; baris target 873"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:f4039877-d8b9-53e5-81a5-a9f42794e211",
+      "stable_key": "surface/unit-024/item/002",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "列表项 002; 源行 875"
+        },
+        {
+          "language": "id-ID",
+          "text": "butir daftar 002; baris target 874"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:a6e9b4ed-69a7-5d30-97b2-83fb336c8d29",
+      "stable_key": "surface/unit-024/item/003",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "列表项 003; 源行 876"
+        },
+        {
+          "language": "id-ID",
+          "text": "butir daftar 003; baris target 875"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:e7b94839-bd1a-5cdd-8687-a3b652321765",
+      "stable_key": "surface/unit-024/item/004",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "列表项 004; 源行 877"
+        },
+        {
+          "language": "id-ID",
+          "text": "butir daftar 004; baris target 876"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:b0de661b-fc50-5a3e-bc47-47e028ad2c95",
+      "stable_key": "surface/unit-024/item/005",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "列表项 005; 源行 878"
+        },
+        {
+          "language": "id-ID",
+          "text": "butir daftar 005; baris target 877"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:791f52a9-6c9e-5d4f-9d8d-579c99d985a3",
+      "stable_key": "surface/unit-024/item/006",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "列表项 006; 源行 892"
+        },
+        {
+          "language": "id-ID",
+          "text": "butir daftar 006; baris target 891"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:b92b3b39-8fb5-552d-be02-6dc73b3b5df9",
+      "stable_key": "surface/unit-024/item/007",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "列表项 007; 源行 894"
+        },
+        {
+          "language": "id-ID",
+          "text": "butir daftar 007; baris target 893"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:27880574-4feb-5fe6-aab7-4529d4f15304",
+      "stable_key": "surface/unit-024/item/008",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "列表项 008; 源行 899"
+        },
+        {
+          "language": "id-ID",
+          "text": "butir daftar 008; baris target 898"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:d413419a-6e48-588c-8589-ea419f830a94",
+      "stable_key": "surface/unit-024/item/009",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "列表项 009; 源行 901"
+        },
+        {
+          "language": "id-ID",
+          "text": "butir daftar 009; baris target 900"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:9789503e-eb3f-5ca0-9a0d-2a7ae280b3ce",
+      "stable_key": "surface/unit-024/item/010",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "列表项 010; 源行 904"
+        },
+        {
+          "language": "id-ID",
+          "text": "butir daftar 010; baris target 903"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:9f1ee243-2db8-552f-b248-272838c64ffb",
+      "stable_key": "surface/unit-024/item/011",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "列表项 011; 源行 905"
+        },
+        {
+          "language": "id-ID",
+          "text": "butir daftar 011; baris target 904"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:a4b08bb4-d432-56e5-a2f8-8f1cd728e89a",
+      "stable_key": "surface/unit-024/exercise/001",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "顶层习题 1; 源行 874"
+        },
+        {
+          "language": "id-ID",
+          "text": "latihan tingkat atas 1; baris target 873"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:3445fd87-3431-537d-bb50-b100ae670cdc",
+      "stable_key": "surface/unit-024/exercise/002",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "顶层习题 2; 源行 875"
+        },
+        {
+          "language": "id-ID",
+          "text": "latihan tingkat atas 2; baris target 874"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:1e3ce724-1867-5eb0-b719-bc717a77ce08",
+      "stable_key": "surface/unit-024/exercise/003",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "顶层习题 3; 源行 876"
+        },
+        {
+          "language": "id-ID",
+          "text": "latihan tingkat atas 3; baris target 875"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:8dde1824-7b48-54c1-af4f-d41fe544a19a",
+      "stable_key": "surface/unit-024/exercise/004",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "顶层习题 4; 源行 877"
+        },
+        {
+          "language": "id-ID",
+          "text": "latihan tingkat atas 4; baris target 876"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:78e18ef0-e51f-5a9c-b49a-4560467c064e",
+      "stable_key": "surface/unit-024/exercise/005",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "顶层习题 5; 源行 878"
+        },
+        {
+          "language": "id-ID",
+          "text": "latihan tingkat atas 5; baris target 877"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:f8b22db9-0031-5df4-bc01-2b8edd4bc919",
+      "stable_key": "surface/unit-024/exercise/006",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "顶层习题 6; 源行 892"
+        },
+        {
+          "language": "id-ID",
+          "text": "latihan tingkat atas 6; baris target 891"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:0d07b226-4a13-570c-af3f-7891a0b76333",
+      "stable_key": "surface/unit-024/exercise/007",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "顶层习题 7; 源行 904"
+        },
+        {
+          "language": "id-ID",
+          "text": "latihan tingkat atas 7; baris target 903"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:16d313c9-6522-54c0-b72f-5e93c87688d8",
+      "stable_key": "surface/unit-024/exercise/008",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "顶层习题 8; 源行 905"
+        },
+        {
+          "language": "id-ID",
+          "text": "latihan tingkat atas 8; baris target 904"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:164f35ec-da1b-5594-ad24-3744a4f9306e",
+      "stable_key": "surface/unit-024/nested-item/001",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "嵌套项目 1; 源行 894"
+        },
+        {
+          "language": "id-ID",
+          "text": "butir bersarang 1; baris target 893"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:d5005a73-5da7-51ce-974e-450706153ccc",
+      "stable_key": "surface/unit-024/nested-item/002",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "嵌套项目 2; 源行 899"
+        },
+        {
+          "language": "id-ID",
+          "text": "butir bersarang 2; baris target 898"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:c7445ff2-5d0e-52a1-a239-96c53d650be1",
+      "stable_key": "surface/unit-024/nested-item/003",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "嵌套项目 3; 源行 901"
+        },
+        {
+          "language": "id-ID",
+          "text": "butir bersarang 3; baris target 900"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:507c24e8-f24b-5858-b2cd-29d0df9b73f7",
+      "stable_key": "surface/unit-024/hint/001",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "提示 1; 源行 874"
+        },
+        {
+          "language": "id-ID",
+          "text": "petunjuk 1; baris target 873"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:552e75d5-d8ef-5b5c-94ed-d61da9ed26d0",
+      "stable_key": "surface/unit-024/hint/002",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "提示 2; 源行 875"
+        },
+        {
+          "language": "id-ID",
+          "text": "petunjuk 2; baris target 874"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:552725c5-214f-519a-9555-7a67e961b9fc",
+      "stable_key": "surface/unit-024/formula/inline/001",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 001; 源行 874; SHA-256 cbd7a35e3555bac028f0e5ae453763719a845598a3310909e20afaa015b2bf6b"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 001; baris target 873; SHA-256 cbd7a35e3555bac028f0e5ae453763719a845598a3310909e20afaa015b2bf6b"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:8eeeffb7-3dbf-5f77-b373-65a0bc8945c6",
+      "stable_key": "surface/unit-024/formula/inline/002",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 002; 源行 874; SHA-256 1b16b1df538ba12dc3f97edbb85caa7050d46c148134290feba80f8236c83db9"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 002; baris target 873; SHA-256 1b16b1df538ba12dc3f97edbb85caa7050d46c148134290feba80f8236c83db9"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:d1679cf7-6a4d-59da-a086-feda8cab6f4a",
+      "stable_key": "surface/unit-024/formula/inline/003",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 003; 源行 874; SHA-256 a56a245d784821652ecb838c666defba5f52a698c743780f46ba44a8b4a31a54"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 003; baris target 873; SHA-256 a56a245d784821652ecb838c666defba5f52a698c743780f46ba44a8b4a31a54"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:08d183fa-634f-5369-9155-1679ebc68642",
+      "stable_key": "surface/unit-024/formula/inline/004",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 004; 源行 874; SHA-256 6bac0e82f28393f170e93e4b4cb340b05a8256b2b373a3529648afb427c11f25"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 004; baris target 873; SHA-256 6bac0e82f28393f170e93e4b4cb340b05a8256b2b373a3529648afb427c11f25"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:b5ab29ad-7481-509a-b321-6596e5156cc8",
+      "stable_key": "surface/unit-024/formula/inline/005",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 005; 源行 874; SHA-256 4f3688ce5e8a702b31d650d837a4de155039c4b13739e3323efbeba3bc32a81c"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 005; baris target 873; SHA-256 4f3688ce5e8a702b31d650d837a4de155039c4b13739e3323efbeba3bc32a81c"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:57bb7600-4f06-5ffc-81d9-f6796536f9d3",
+      "stable_key": "surface/unit-024/formula/inline/006",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 006; 源行 875; SHA-256 6aeac3365f280f076159bd2308a87ae14dcf706dc341552a8c6420984feccf9c"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 006; baris target 874; SHA-256 6aeac3365f280f076159bd2308a87ae14dcf706dc341552a8c6420984feccf9c"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:b5600c3e-e1f5-52fc-a79a-f9eb9552033a",
+      "stable_key": "surface/unit-024/formula/inline/007",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 007; 源行 875; SHA-256 c494dc7d9a4c68e46db8d55bcfd7587b159236cca0f331459ab268e1e5e0069f"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 007; baris target 874; SHA-256 c494dc7d9a4c68e46db8d55bcfd7587b159236cca0f331459ab268e1e5e0069f"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:4138d1c2-26b8-5e4b-b94b-f045758d8959",
+      "stable_key": "surface/unit-024/formula/inline/008",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 008; 源行 876; SHA-256 961cbbd31bd3afda0be3ae948ddd95d53d59a776bd14a6f876e18f688e74bf81"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 008; baris target 875; SHA-256 961cbbd31bd3afda0be3ae948ddd95d53d59a776bd14a6f876e18f688e74bf81"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:edd38cc9-1115-5fe8-b83e-64f76a35db32",
+      "stable_key": "surface/unit-024/formula/inline/009",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 009; 源行 876; SHA-256 9c3245dfb4ac54c1623a60e7b8d1fc07cb02eae1229435230c7dab5e71083a26"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 009; baris target 875; SHA-256 9c3245dfb4ac54c1623a60e7b8d1fc07cb02eae1229435230c7dab5e71083a26"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:07ed33e3-e3f4-5793-a549-b549fc79c8ef",
+      "stable_key": "surface/unit-024/formula/inline/010",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 010; 源行 876; SHA-256 55d1823545b5b4c3cbc42b784c5e84605ffbe8e59d1dee9782cd87741eef9dc3"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 010; baris target 875; SHA-256 55d1823545b5b4c3cbc42b784c5e84605ffbe8e59d1dee9782cd87741eef9dc3"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:669cc8d0-3e23-57f1-b788-e8deeb8dd240",
+      "stable_key": "surface/unit-024/formula/inline/011",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 011; 源行 876; SHA-256 583e0297250e96909e9dd4957bcc8805783cbdfbfa49f475a5e8bec0a75284c1"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 011; baris target 875; SHA-256 583e0297250e96909e9dd4957bcc8805783cbdfbfa49f475a5e8bec0a75284c1"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:a8eb193b-32ad-5af1-bb42-9f8cc7acf228",
+      "stable_key": "surface/unit-024/formula/inline/012",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 012; 源行 876; SHA-256 9c3245dfb4ac54c1623a60e7b8d1fc07cb02eae1229435230c7dab5e71083a26"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 012; baris target 875; SHA-256 9c3245dfb4ac54c1623a60e7b8d1fc07cb02eae1229435230c7dab5e71083a26"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:8797269f-f9e2-5c3d-b219-1b0cc5ed858c",
+      "stable_key": "surface/unit-024/formula/inline/013",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 013; 源行 876; SHA-256 55d1823545b5b4c3cbc42b784c5e84605ffbe8e59d1dee9782cd87741eef9dc3"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 013; baris target 875; SHA-256 55d1823545b5b4c3cbc42b784c5e84605ffbe8e59d1dee9782cd87741eef9dc3"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:9d91e40b-281c-5155-93c4-6a8dbb75ec0a",
+      "stable_key": "surface/unit-024/formula/inline/014",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 014; 源行 876; SHA-256 583e0297250e96909e9dd4957bcc8805783cbdfbfa49f475a5e8bec0a75284c1"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 014; baris target 875; SHA-256 583e0297250e96909e9dd4957bcc8805783cbdfbfa49f475a5e8bec0a75284c1"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:d5e10d03-d979-5810-a581-df0412e6a7d9",
+      "stable_key": "surface/unit-024/formula/inline/015",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 015; 源行 876; SHA-256 9c3245dfb4ac54c1623a60e7b8d1fc07cb02eae1229435230c7dab5e71083a26"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 015; baris target 875; SHA-256 9c3245dfb4ac54c1623a60e7b8d1fc07cb02eae1229435230c7dab5e71083a26"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:94278870-92a3-5741-89dd-b11f4b0471ad",
+      "stable_key": "surface/unit-024/formula/inline/016",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 016; 源行 876; SHA-256 55d1823545b5b4c3cbc42b784c5e84605ffbe8e59d1dee9782cd87741eef9dc3"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 016; baris target 875; SHA-256 55d1823545b5b4c3cbc42b784c5e84605ffbe8e59d1dee9782cd87741eef9dc3"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:ffe591a1-6070-5dc4-abcb-677cafcceb52",
+      "stable_key": "surface/unit-024/formula/inline/017",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 017; 源行 876; SHA-256 7fe36e042c4ebce05a523f88dd0aa67bef0174d4327d885d6c5f94084292f8cf"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 017; baris target 875; SHA-256 7fe36e042c4ebce05a523f88dd0aa67bef0174d4327d885d6c5f94084292f8cf"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:b0736050-0e45-53f9-9818-66af471fb794",
+      "stable_key": "surface/unit-024/formula/inline/018",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 018; 源行 876; SHA-256 961cbbd31bd3afda0be3ae948ddd95d53d59a776bd14a6f876e18f688e74bf81"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 018; baris target 875; SHA-256 961cbbd31bd3afda0be3ae948ddd95d53d59a776bd14a6f876e18f688e74bf81"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:eb411296-8630-5f33-9317-f908eee209fc",
+      "stable_key": "surface/unit-024/formula/inline/019",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 019; 源行 877; SHA-256 3e734bf0da06d96aa79160f0985cfaecb10e59db075949cc33dfe257c462e636"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 019; baris target 876; SHA-256 3e734bf0da06d96aa79160f0985cfaecb10e59db075949cc33dfe257c462e636"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:11d5b9f8-5f88-5223-b6b4-66c3ac21a67e",
+      "stable_key": "surface/unit-024/formula/inline/020",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 020; 源行 877; SHA-256 f9cbf55be6e720b53bd35dd683185df87fbbf5fb6ec250765b5bdcca833152f0"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 020; baris target 876; SHA-256 f9cbf55be6e720b53bd35dd683185df87fbbf5fb6ec250765b5bdcca833152f0"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:dc779813-2a75-57eb-b077-8916ccbca116",
+      "stable_key": "surface/unit-024/formula/inline/021",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 021; 源行 878; SHA-256 de5a6f78116eca62d7fc5ce159d23ae6b889b365a1739ad2cf36f925a140d0cc"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 021; baris target 877; SHA-256 de5a6f78116eca62d7fc5ce159d23ae6b889b365a1739ad2cf36f925a140d0cc"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:2181f686-da72-5632-89c5-666e07f49f80",
+      "stable_key": "surface/unit-024/formula/inline/022",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 022; 源行 878; SHA-256 aeca02d426ba07b2fda315031464ffb02a6e889b08f59d784f8f8a487a92622b"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 022; baris target 877; SHA-256 aeca02d426ba07b2fda315031464ffb02a6e889b08f59d784f8f8a487a92622b"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:d8432eaa-4a6a-5e33-b228-6e5e842264d3",
+      "stable_key": "surface/unit-024/formula/inline/023",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 023; 源行 878; SHA-256 8c2574892063f995fdf756bce07f46c1a5193e54cd52837ed91e32008ccf41ac"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 023; baris target 877; SHA-256 8c2574892063f995fdf756bce07f46c1a5193e54cd52837ed91e32008ccf41ac"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:c316782b-2469-5058-9bf3-44a50737f0ca",
+      "stable_key": "surface/unit-024/formula/inline/024",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 024; 源行 878; SHA-256 0210e580060e4ffe2185d74e944106cf369433dbf09e54e0e8820c04a5bceae1"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 024; baris target 877; SHA-256 0210e580060e4ffe2185d74e944106cf369433dbf09e54e0e8820c04a5bceae1"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:9bddbadf-0789-5f8c-93cc-7b70b50637d0",
+      "stable_key": "surface/unit-024/formula/inline/025",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 025; 源行 880; SHA-256 839dda82c9394b79c7d2d43a40f500cf70b129f83a1eaa81e5c01a3e035cf23b"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 025; baris target 879; SHA-256 839dda82c9394b79c7d2d43a40f500cf70b129f83a1eaa81e5c01a3e035cf23b"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:290db1ef-957b-5cdf-8be3-efa23e3d2105",
+      "stable_key": "surface/unit-024/formula/inline/026",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 026; 源行 880; SHA-256 a09a2b5752287568f971cbc9c57be62d8d4301ab58eb3bf332d05893e55d7e68"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 026; baris target 879; SHA-256 a09a2b5752287568f971cbc9c57be62d8d4301ab58eb3bf332d05893e55d7e68"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:d5f761e8-a3ef-5884-850b-d96c0d2b2a64",
+      "stable_key": "surface/unit-024/formula/inline/027",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 027; 源行 880; SHA-256 de5a6f78116eca62d7fc5ce159d23ae6b889b365a1739ad2cf36f925a140d0cc"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 027; baris target 879; SHA-256 de5a6f78116eca62d7fc5ce159d23ae6b889b365a1739ad2cf36f925a140d0cc"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:2c0b2cf1-d18e-570f-93b6-36bafa7eddf4",
+      "stable_key": "surface/unit-024/formula/inline/028",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 028; 源行 880; SHA-256 8c2574892063f995fdf756bce07f46c1a5193e54cd52837ed91e32008ccf41ac"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 028; baris target 879; SHA-256 8c2574892063f995fdf756bce07f46c1a5193e54cd52837ed91e32008ccf41ac"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:0df31c2e-fe17-5dcc-9954-cec8e6292037",
+      "stable_key": "surface/unit-024/formula/inline/029",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 029; 源行 880; SHA-256 beef0176b132693f97bc3e3d949dafde22c385e2daa91a9355755a766843458e"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 029; baris target 879; SHA-256 beef0176b132693f97bc3e3d949dafde22c385e2daa91a9355755a766843458e"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:e0394475-9f0f-55dc-a876-0da0bf05229c",
+      "stable_key": "surface/unit-024/formula/inline/030",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 030; 源行 882; SHA-256 8b045ea9784134812ec1680c8fe8d3ca0f39d88e1fa0779d86482079396c74bd"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 030; baris target 881; SHA-256 8b045ea9784134812ec1680c8fe8d3ca0f39d88e1fa0779d86482079396c74bd"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:8f22da16-32e4-5b1f-bdaf-d94085359856",
+      "stable_key": "surface/unit-024/formula/inline/031",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 031; 源行 882; SHA-256 8cf82c4fa27b9db5fc2671dde792398e167db3f105a052692cc81f193e1eff3b"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 031; baris target 881; SHA-256 8cf82c4fa27b9db5fc2671dde792398e167db3f105a052692cc81f193e1eff3b"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:6de36510-1048-5d82-b2a7-30c62c185cfe",
+      "stable_key": "surface/unit-024/formula/inline/032",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 032; 源行 882; SHA-256 2e7d2c03a9507ae265ecf5b5356885a53393a2029d241394997265a1a25aefc6"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 032; baris target 881; SHA-256 2e7d2c03a9507ae265ecf5b5356885a53393a2029d241394997265a1a25aefc6"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:77627187-fc1e-5951-8df8-00aa0f7062db",
+      "stable_key": "surface/unit-024/formula/inline/033",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 033; 源行 882; SHA-256 6f4ed22f13e65850a61bd2b428dbf479df475cddf53c141ecb033d9ec0c88a34"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 033; baris target 881; SHA-256 6f4ed22f13e65850a61bd2b428dbf479df475cddf53c141ecb033d9ec0c88a34"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:b1f57a86-b371-537b-93e7-932fd6970c46",
+      "stable_key": "surface/unit-024/formula/inline/034",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 034; 源行 882; SHA-256 af0e858e604370f178af0368dcabe45d2d9cdad3303fae821b98f8bbdf036223"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 034; baris target 881; SHA-256 af0e858e604370f178af0368dcabe45d2d9cdad3303fae821b98f8bbdf036223"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:3637d4e8-6f09-53cb-abbe-335f051e3e9e",
+      "stable_key": "surface/unit-024/formula/inline/035",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 035; 源行 884; SHA-256 25e4cb924b941e5bf8988671b6535bb38fca121e74f6f7dbb76efed3fe667579"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 035; baris target 883; SHA-256 25e4cb924b941e5bf8988671b6535bb38fca121e74f6f7dbb76efed3fe667579"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:850b8ca4-c507-55d2-bf08-d23d910bb183",
+      "stable_key": "surface/unit-024/formula/inline/036",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 036; 源行 884; SHA-256 aeca02d426ba07b2fda315031464ffb02a6e889b08f59d784f8f8a487a92622b"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 036; baris target 883; SHA-256 aeca02d426ba07b2fda315031464ffb02a6e889b08f59d784f8f8a487a92622b"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:e78fac0c-eb38-57bd-8473-0418c87e7155",
+      "stable_key": "surface/unit-024/formula/inline/037",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 037; 源行 884; SHA-256 796c282aa121e9701e3e743bc30896e9e346a574cb58561fb03c42b7217d10e7"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 037; baris target 883; SHA-256 796c282aa121e9701e3e743bc30896e9e346a574cb58561fb03c42b7217d10e7"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:397123a4-dc01-5f70-b82d-3766d70a08d1",
+      "stable_key": "surface/unit-024/formula/inline/038",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 038; 源行 890; SHA-256 4f7b2e2bad8532b1044703e7592793b4670c0c2e183c1ba5c4dd064368a12591"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 038; baris target 889; SHA-256 4f7b2e2bad8532b1044703e7592793b4670c0c2e183c1ba5c4dd064368a12591"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:5987ce6d-66f4-583d-8256-2592c5b0fb9a",
+      "stable_key": "surface/unit-024/formula/inline/039",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 039; 源行 890; SHA-256 02f5e6e36c0369d5dbc9195fb0cf6d5eb415a620d0b80b8bc080039186e26925"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 039; baris target 889; SHA-256 02f5e6e36c0369d5dbc9195fb0cf6d5eb415a620d0b80b8bc080039186e26925"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:9afd39c7-0670-5ddf-8985-8a75b76cdb63",
+      "stable_key": "surface/unit-024/formula/inline/040",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 040; 源行 890; SHA-256 44bcdb3dcbbe9c2756a96df0fd280ceedee08438a0ae4a4833d20e978818455a"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 040; baris target 889; SHA-256 44bcdb3dcbbe9c2756a96df0fd280ceedee08438a0ae4a4833d20e978818455a"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:1c3b57ea-33ca-57a6-9a4b-ec6f0d33b5b1",
+      "stable_key": "surface/unit-024/formula/inline/041",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 041; 源行 890; SHA-256 2032a70564f71b48da17fe0991e974ab6a6e216ee5fc416d70688b100d9d472c"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 041; baris target 889; SHA-256 2032a70564f71b48da17fe0991e974ab6a6e216ee5fc416d70688b100d9d472c"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:93958667-a7bc-5847-b9d1-654a56370d83",
+      "stable_key": "surface/unit-024/formula/inline/042",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 042; 源行 892; SHA-256 c6d382077fa777170faa19e7df2c077c96ef1c332f45aacc74c6784e2a352a8e"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 042; baris target 891; SHA-256 c6d382077fa777170faa19e7df2c077c96ef1c332f45aacc74c6784e2a352a8e"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:f500935c-5afd-5140-a456-5f457299866e",
+      "stable_key": "surface/unit-024/formula/inline/043",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 043; 源行 892; SHA-256 de932ef08980fb587925afe615a083a4ec69e0b23c44c758f1ff50f18380f299"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 043; baris target 891; SHA-256 de932ef08980fb587925afe615a083a4ec69e0b23c44c758f1ff50f18380f299"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:40804b5a-d561-5032-b065-00fba9d64674",
+      "stable_key": "surface/unit-024/formula/inline/044",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 044; 源行 894; SHA-256 ebbfeaa5af36559c7d501f18699ae0fccfc24a3d6e3be69c50a9f053c5733d4e"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 044; baris target 893; SHA-256 ebbfeaa5af36559c7d501f18699ae0fccfc24a3d6e3be69c50a9f053c5733d4e"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:a9bc3633-b779-5d2b-a5a2-d7022af725f4",
+      "stable_key": "surface/unit-024/formula/inline/045",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 045; 源行 894; SHA-256 4b68ab3847feda7d6c62c1fbcbeebfa35eab7351ed5e78f4ddadea5df64b8015"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 045; baris target 893; SHA-256 4b68ab3847feda7d6c62c1fbcbeebfa35eab7351ed5e78f4ddadea5df64b8015"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:dc3629d9-4877-5033-970b-095f0f2efa96",
+      "stable_key": "surface/unit-024/formula/inline/046",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 046; 源行 894; SHA-256 8b045ea9784134812ec1680c8fe8d3ca0f39d88e1fa0779d86482079396c74bd"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 046; baris target 893; SHA-256 8b045ea9784134812ec1680c8fe8d3ca0f39d88e1fa0779d86482079396c74bd"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:1ccbebc7-a121-54b1-9d1a-e21a9aeff710",
+      "stable_key": "surface/unit-024/formula/inline/047",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 047; 源行 894; SHA-256 3c9d13881890cb2421367b6534c77a64d69e486cd7ccebfe977e98e2eaec1bca"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 047; baris target 893; SHA-256 3c9d13881890cb2421367b6534c77a64d69e486cd7ccebfe977e98e2eaec1bca"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:ecf86d43-9a82-5dec-92e3-fc8a0e971041",
+      "stable_key": "surface/unit-024/formula/inline/048",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 048; 源行 894; SHA-256 45da06ce4ce467e435f46687290035dfeeb110b6283b5928d253be8719718707"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 048; baris target 893; SHA-256 45da06ce4ce467e435f46687290035dfeeb110b6283b5928d253be8719718707"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:ce7920e0-c81d-5202-8427-33561e1d73ba",
+      "stable_key": "surface/unit-024/formula/inline/049",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 049; 源行 899; SHA-256 ebbfeaa5af36559c7d501f18699ae0fccfc24a3d6e3be69c50a9f053c5733d4e"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 049; baris target 898; SHA-256 ebbfeaa5af36559c7d501f18699ae0fccfc24a3d6e3be69c50a9f053c5733d4e"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:ae59cdee-d86d-5326-8b73-936515a8c90f",
+      "stable_key": "surface/unit-024/formula/inline/050",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 050; 源行 899; SHA-256 a34e350e80aec7e096bddbaf0bc50349e972a7eec2ed92f4dac8d1091a45a3b5"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 050; baris target 898; SHA-256 a34e350e80aec7e096bddbaf0bc50349e972a7eec2ed92f4dac8d1091a45a3b5"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:0b842503-bc5b-53e3-9502-2d92b0ab3b77",
+      "stable_key": "surface/unit-024/formula/inline/051",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 051; 源行 899; SHA-256 699cabb2e3f13fc328673bde5bdc845b5dafcebab640739f689cd0067b723ce1"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 051; baris target 898; SHA-256 699cabb2e3f13fc328673bde5bdc845b5dafcebab640739f689cd0067b723ce1"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:422fe0d9-453c-54ad-b728-cae1b608f981",
+      "stable_key": "surface/unit-024/formula/inline/052",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 052; 源行 901; SHA-256 ebf6281b9174a5b771ca9ad7a080005182bb9e0b58224e8978f124db99f40c7d"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 052; baris target 900; SHA-256 ebf6281b9174a5b771ca9ad7a080005182bb9e0b58224e8978f124db99f40c7d"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:15ec486e-82d9-5413-9238-42df8396a28d",
+      "stable_key": "surface/unit-024/formula/inline/053",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 053; 源行 901; SHA-256 c07d7c81de03b880f0cf933167e3d7b60148a7c81c6657a92ec73a0dff40f10d"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 053; baris target 900; SHA-256 c07d7c81de03b880f0cf933167e3d7b60148a7c81c6657a92ec73a0dff40f10d"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:60d29b2c-637b-54fa-b82a-b1c226d1237c",
+      "stable_key": "surface/unit-024/formula/inline/054",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 054; 源行 901; SHA-256 de932ef08980fb587925afe615a083a4ec69e0b23c44c758f1ff50f18380f299"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 054; baris target 900; SHA-256 de932ef08980fb587925afe615a083a4ec69e0b23c44c758f1ff50f18380f299"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:e893f9ba-ff7d-5dc8-844c-7c5180eca58a",
+      "stable_key": "surface/unit-024/formula/inline/055",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 055; 源行 901; SHA-256 e0e77facee2b21387f6dc823be26c4f2e4ba1b1a80f1dc2e4f52156f0ccbe090"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 055; baris target 900; SHA-256 e0e77facee2b21387f6dc823be26c4f2e4ba1b1a80f1dc2e4f52156f0ccbe090"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:9f00756e-92c8-5a01-855b-b0fd2294d068",
+      "stable_key": "surface/unit-024/formula/inline/056",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 056; 源行 903; SHA-256 de932ef08980fb587925afe615a083a4ec69e0b23c44c758f1ff50f18380f299"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 056; baris target 902; SHA-256 de932ef08980fb587925afe615a083a4ec69e0b23c44c758f1ff50f18380f299"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:d9ba3c68-68cb-5b42-8c4b-a925366351d9",
+      "stable_key": "surface/unit-024/formula/inline/057",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 057; 源行 903; SHA-256 de932ef08980fb587925afe615a083a4ec69e0b23c44c758f1ff50f18380f299"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 057; baris target 902; SHA-256 de932ef08980fb587925afe615a083a4ec69e0b23c44c758f1ff50f18380f299"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:2099270a-8469-5177-89a2-0b6865d55ff7",
+      "stable_key": "surface/unit-024/formula/inline/058",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 058; 源行 903; SHA-256 8b045ea9784134812ec1680c8fe8d3ca0f39d88e1fa0779d86482079396c74bd"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 058; baris target 902; SHA-256 8b045ea9784134812ec1680c8fe8d3ca0f39d88e1fa0779d86482079396c74bd"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:142296e1-1cb3-520d-993d-ac6b5b570af1",
+      "stable_key": "surface/unit-024/formula/inline/059",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 059; 源行 904; SHA-256 e63e2963442847b369e59a6e0569b47fd6883fe1ecff1a0f64cf2fdf6d44539b"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 059; baris target 903; SHA-256 e63e2963442847b369e59a6e0569b47fd6883fe1ecff1a0f64cf2fdf6d44539b"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:63507e23-01df-5f70-b6ce-914ef34de882",
+      "stable_key": "surface/unit-024/formula/inline/060",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 060; 源行 905; SHA-256 90fbad18ace7499fd1885499a0212dc6806aaf566e779040d64ded4bef295c39"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 060; baris target 904; SHA-256 90fbad18ace7499fd1885499a0212dc6806aaf566e779040d64ded4bef295c39"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:837b1010-5e37-518e-942a-7fbdcf84983f",
+      "stable_key": "surface/unit-024/formula/inline/061",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 061; 源行 905; SHA-256 1db871db693bf613b1dc19ba967e22d91969882b9a113bbbf25ce36ffc304e08"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 061; baris target 904; SHA-256 1db871db693bf613b1dc19ba967e22d91969882b9a113bbbf25ce36ffc304e08"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:166d93c3-de3f-576f-8b12-23c7bf4290e9",
+      "stable_key": "surface/unit-024/formula/inline/062",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 062; 源行 905; SHA-256 927a7c6a689902cf2cb30867d30963f544020049e312030b839936143ef225ea"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 062; baris target 904; SHA-256 927a7c6a689902cf2cb30867d30963f544020049e312030b839936143ef225ea"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:eb63e007-ffe8-5ccf-83d8-7615450cd12e",
+      "stable_key": "surface/unit-024/formula/inline/063",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 063; 源行 905; SHA-256 abc3d3544d205e9e054c805f2e89d8d27131456146645a877b8c9d4bbe6ffc5b"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 063; baris target 904; SHA-256 abc3d3544d205e9e054c805f2e89d8d27131456146645a877b8c9d4bbe6ffc5b"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:e29910af-251f-5fd0-865a-7f6383746a27",
+      "stable_key": "surface/unit-024/formula/inline/064",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 064; 源行 905; SHA-256 39bf3aff484ecabd116a9a629af463e24aa61d79f28131b060f2ac4cf2a820a5"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 064; baris target 904; SHA-256 39bf3aff484ecabd116a9a629af463e24aa61d79f28131b060f2ac4cf2a820a5"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:c714c7e9-fd17-5e5e-9bf8-94f293c3107f",
+      "stable_key": "surface/unit-024/formula/inline/065",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 065; 源行 905; SHA-256 6c1927520cd9667f7f5e78e52c5abd4ddab2447146861e570631e3d11495cd51"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 065; baris target 904; SHA-256 6c1927520cd9667f7f5e78e52c5abd4ddab2447146861e570631e3d11495cd51"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:efb158d6-6674-5baf-8119-564d7d8f943a",
+      "stable_key": "surface/unit-024/formula/inline/066",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 066; 源行 905; SHA-256 4893e9df8b5496ebe7a0f1c2cc92a39fb6df03085030e3b97cfcc4d45136db5a"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 066; baris target 904; SHA-256 4893e9df8b5496ebe7a0f1c2cc92a39fb6df03085030e3b97cfcc4d45136db5a"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:ce6bd2b2-8216-51ef-b5c4-6e41087d88d9",
+      "stable_key": "surface/unit-024/formula/inline/067",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 067; 源行 910; SHA-256 d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 067; baris target 909; SHA-256 d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:1adccd07-e914-5b7d-9195-9358645edae1",
+      "stable_key": "surface/unit-024/formula/inline/068",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 068; 源行 910; SHA-256 ae48c73a20081b02d52e8885480e805dac53eb4fdf87c2a12ca916bbcef22df7"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 068; baris target 909; SHA-256 ae48c73a20081b02d52e8885480e805dac53eb4fdf87c2a12ca916bbcef22df7"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:af0e16ec-1705-5f1a-abdc-f4ca7dca95f0",
+      "stable_key": "surface/unit-024/formula/inline/069",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "行内公式 069; 源行 910; SHA-256 d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus sebaris 069; baris target 909; SHA-256 d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:a304d04e-9263-5784-ac0c-ef1e0a1c66e8",
+      "stable_key": "surface/unit-024/formula/display-bracket/001",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "陈列公式 001; 源行 879-879; SHA-256 af0bd0e192cd48c784047976174ba8a397fcff2285a709987ffed7ba50264972"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus pajang 001; baris target 878-878; SHA-256 af0bd0e192cd48c784047976174ba8a397fcff2285a709987ffed7ba50264972"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:428cec1a-1081-59c9-a421-1b3c837f8f0a",
+      "stable_key": "surface/unit-024/formula/display-bracket/002",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "陈列公式 002; 源行 881-881; SHA-256 1ddc5d5733d6ac0c49755bccc51ef837cfad85396f4dea93c125668562258b19"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus pajang 002; baris target 880-880; SHA-256 1ddc5d5733d6ac0c49755bccc51ef837cfad85396f4dea93c125668562258b19"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:633a749d-8fbb-5e88-8a4a-ae569b7c7509",
+      "stable_key": "surface/unit-024/formula/display-bracket/003",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "陈列公式 003; 源行 885-889; SHA-256 d25e67c2dac32208d58f2e15a54fabb123d7d66f90a0e344b7e57adbc602f034"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus pajang 003; baris target 884-888; SHA-256 d25e67c2dac32208d58f2e15a54fabb123d7d66f90a0e344b7e57adbc602f034"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:fb77d9c0-9238-5790-8062-74d1dbada036",
+      "stable_key": "surface/unit-024/formula/display-bracket/004",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "陈列公式 004; 源行 895-898; SHA-256 d24a172cc11d5053aabfa276eba5b19a039c945c72358271daf1d690f0b2ae5e"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus pajang 004; baris target 894-897; SHA-256 d24a172cc11d5053aabfa276eba5b19a039c945c72358271daf1d690f0b2ae5e"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:cff7beee-a80e-5078-8200-119a848e7238",
+      "stable_key": "surface/unit-024/formula/display-bracket/005",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "陈列公式 005; 源行 900-900; SHA-256 8ac491a49e7c3ccb0985330d417572b09dcae5632070611c430de1d671d6b408"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus pajang 005; baris target 899-899; SHA-256 8ac491a49e7c3ccb0985330d417572b09dcae5632070611c430de1d671d6b408"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:c4dfa99e-dc61-5649-a467-5c5276e3e8d6",
+      "stable_key": "surface/unit-024/formula/display-bracket/006",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "陈列公式 006; 源行 906-909; SHA-256 6ff1ff822e3ae4db199e9ea8e1b2925470f733331b2fb6a909029c374bcb5d6a"
+        },
+        {
+          "language": "id-ID",
+          "text": "rumus pajang 006; baris target 905-908; SHA-256 6ff1ff822e3ae4db199e9ea8e1b2925470f733331b2fb6a909029c374bcb5d6a"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:776a76fd-fc07-5f79-b30e-a804cbc5f7f3",
+      "stable_key": "surface/unit-024/diagram-arrow/001",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "图表箭头 001; 源行 896"
+        },
+        {
+          "language": "id-ID",
+          "text": "panah diagram 001; baris target 895"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:108f5525-9efc-510f-90f4-1c08d4f46f5d",
+      "stable_key": "surface/unit-024/diagram-arrow/002",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "图表箭头 002; 源行 896"
+        },
+        {
+          "language": "id-ID",
+          "text": "panah diagram 002; baris target 895"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:d5e9266f-18e9-5444-9e4d-db334da7d463",
+      "stable_key": "surface/unit-024/diagram-arrow/003",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "图表箭头 003; 源行 897"
+        },
+        {
+          "language": "id-ID",
+          "text": "panah diagram 003; baris target 896"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:70cd1480-6a89-59db-ad62-03032c4854e3",
+      "stable_key": "surface/unit-024/diagram-arrow/004",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "图表箭头 004; 源行 907"
+        },
+        {
+          "language": "id-ID",
+          "text": "panah diagram 004; baris target 906"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:46d7f578-14b1-503f-b0db-5ff0b04979ab",
+      "stable_key": "surface/unit-024/diagram-arrow/005",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "图表箭头 005; 源行 907"
+        },
+        {
+          "language": "id-ID",
+          "text": "panah diagram 005; baris target 906"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:ed76c8a5-dd3c-5031-af5c-1578db4b0dd4",
+      "stable_key": "surface/unit-024/diagram-arrow/006",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "图表箭头 006; 源行 907"
+        },
+        {
+          "language": "id-ID",
+          "text": "panah diagram 006; baris target 906"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:79dbf29a-c0ac-515c-980a-312659109811",
+      "stable_key": "surface/unit-024/diagram-arrow/007",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "图表箭头 007; 源行 907"
+        },
+        {
+          "language": "id-ID",
+          "text": "panah diagram 007; baris target 906"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:f21d9ba0-4e50-5b93-afb1-c5517b3e0f98",
+      "stable_key": "surface/unit-024/diagram-arrow/008",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "图表箭头 008; 源行 908"
+        },
+        {
+          "language": "id-ID",
+          "text": "panah diagram 008; baris target 907"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:d164909f-12f5-56d1-94e7-9f8e7b5b9dd5",
+      "stable_key": "surface/unit-024/terminology-row/001",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "terminology row 001: Catalan number"
+        },
+        {
+          "language": "id-ID",
+          "text": "baris terminologi 001: Catalan number -> bilangan Catalan; status admitted; scope combinatorics"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:5a824bda-5ed9-5395-979d-55ce442c89e6",
+      "stable_key": "surface/unit-024/terminology-row/002",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "terminology row 002: quantum integrable system"
+        },
+        {
+          "language": "id-ID",
+          "text": "baris terminologi 002: quantum integrable system -> sistem integrabel kuantum; status admitted; scope mathematical physics"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:49708be3-580e-5049-8d89-816e0a20380e",
+      "stable_key": "surface/unit-024/terminology-row/003",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "terminology row 003: Drinfeld center"
+        },
+        {
+          "language": "id-ID",
+          "text": "baris terminologi 003: Drinfeld center -> pusat Drinfeld; status admitted; scope braided category theory"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:e82bfdbe-7bbc-53b5-82ac-3b757fa700ef",
+      "stable_key": "surface/unit-024/terminology-row/004",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "terminology row 004: categorification"
+        },
+        {
+          "language": "id-ID",
+          "text": "baris terminologi 004: categorification -> kategorifikasi; status admitted; scope category theory"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:19dde98e-fdb1-5651-9be6-1370d60d13da",
+      "stable_key": "surface/unit-024/terminology-row/005",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "terminology row 005: monoid center"
+        },
+        {
+          "language": "id-ID",
+          "text": "baris terminologi 005: monoid center -> pusat monoid; status admitted; scope algebra and category theory"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:dc88c8bc-aa1e-57f4-96bd-4486d316adc6",
+      "stable_key": "surface/unit-024/terminology-row/006",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "terminology row 006: functor isomorphism"
+        },
+        {
+          "language": "id-ID",
+          "text": "baris terminologi 006: functor isomorphism -> isomorfisme natural antarfungtor; status admitted; scope category theory"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:af231df6-8fd1-519c-badb-a09074549e62",
+      "stable_key": "surface/unit-024/terminology-row/007",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "terminology row 007: morphism between functors"
+        },
+        {
+          "language": "id-ID",
+          "text": "baris terminologi 007: morphism between functors -> transformasi natural; status admitted; scope category theory"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:011220c6-64eb-5501-90c8-1990badc48d4",
+      "stable_key": "correction/o013-li-u024-cor-001",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "declared source correction O013-LI-U024-COR-001; source line 877; target line 876; The authority's unique objectwise ordinal-sum isomorphisms are not natural for arbitrary order-preserving maps; the target replaces the false symmetry proof demand with an explicit naturality test and counterexample task. Evidence: qa/UNIT_024_TRANSLATION_SOURCE_REVIEW_20260824.md."
+        },
+        {
+          "language": "id-ID",
+          "text": "koreksi sumber terdeklarasi O013-LI-U024-COR-001; baris sumber 877; baris target 876; isomorfisme jumlah ordinal tunggal pada setiap pasangan objek tidak natural terhadap semua pemetaan yang mempertahankan urutan; target mengganti tuntutan pembuktian simetri yang keliru dengan uji naturalitas dan tugas contoh tandingan eksplisit. Bukti: qa/UNIT_024_TRANSLATION_SOURCE_REVIEW_20260824.md."
+        }
+      ]
+    }
+  ],
+  "prerequisites": [
+    {
+      "id": "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
+      "stable_key": "prerequisite/basic-mathematical-literacy",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "基本素养"
+        },
+        {
+          "language": "id-ID",
+          "text": "kematangan matematika dasar"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 54,
+        "line_end": 54
+      }
+    },
+    {
+      "id": "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7",
+      "stable_key": "prerequisite/mathematical-logic",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "逻辑用语与论证"
+        },
+        {
+          "language": "id-ID",
+          "text": "bahasa logika dan penalaran"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 54,
+        "line_end": 54
+      }
+    },
+    {
+      "id": "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+      "stable_key": "prerequisite/elementary-set-theory",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "集合常识"
+        },
+        {
+          "language": "id-ID",
+          "text": "teori himpunan elementer"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 54,
+        "line_end": 54
+      }
+    },
+    {
+      "id": "urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288",
+      "stable_key": "prerequisite/matrices",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "矩阵"
+        },
+        {
+          "language": "id-ID",
+          "text": "matriks"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396",
+      "stable_key": "prerequisite/vector-spaces",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "向量空间"
+        },
+        {
+          "language": "id-ID",
+          "text": "ruang vektor"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14",
+      "stable_key": "prerequisite/polynomials",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "多项式"
+        },
+        {
+          "language": "id-ID",
+          "text": "polinom"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec",
+      "stable_key": "prerequisite/linear-transformations",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "线性变换"
+        },
+        {
+          "language": "id-ID",
+          "text": "transformasi linear"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8",
+      "stable_key": "prerequisite/permutations-and-symmetric-groups",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "置换与对称群"
+        },
+        {
+          "language": "id-ID",
+          "text": "permutasi dan grup simetris"
+        }
+      ],
+      "requiredness": "recommended",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee",
+      "stable_key": "prerequisite/elementary-number-theory",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "初等数论"
+        },
+        {
+          "language": "id-ID",
+          "text": "teori bilangan elementer"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 56,
+        "line_end": 56
+      }
+    },
+    {
+      "id": "urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f",
+      "stable_key": "prerequisite/real-analysis-basics",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "实数与分析常识"
+        },
+        {
+          "language": "id-ID",
+          "text": "dasar-dasar analisis real"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 57,
+        "line_end": 57
+      }
+    },
+    {
+      "id": "urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96",
+      "stable_key": "prerequisite/point-set-topology",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "点集拓扑学初步"
+        },
+        {
+          "language": "id-ID",
+          "text": "topologi himpunan titik elementer"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 57,
+        "line_end": 57
+      }
+    },
+    {
+      "id": "urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f",
+      "stable_key": "prerequisite/cauchy-sequences-and-completeness",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "Cauchy 列与完备性"
+        },
+        {
+          "language": "id-ID",
+          "text": "barisan Cauchy dan kelengkapan"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 57,
+        "line_end": 57
+      }
+    },
+    {
+      "id": "urn:uuid:dd69ccfd-7399-53a2-83fe-84127b1baf1d",
+      "stable_key": "prerequisite/categories-and-morphisms",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "范畴与态射"
+        },
+        {
+          "language": "id-ID",
+          "text": "kategori dan morfisme"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "line_start": 39,
+        "line_end": 198
+      }
+    },
+    {
+      "id": "urn:uuid:3e864ace-90f6-56b3-8ce5-2e0690dbc9f8",
+      "stable_key": "prerequisite/functors-and-natural-transformations",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "函子与自然变换"
+        },
+        {
+          "language": "id-ID",
+          "text": "fungtor dan transformasi natural"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "line_start": 199,
+        "line_end": 467
+      }
+    },
+    {
+      "id": "urn:uuid:e3c2ed29-b6a0-5f8d-9613-6f2b41d962c8",
+      "stable_key": "prerequisite/functor-categories",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "函子范畴"
+        },
+        {
+          "language": "id-ID",
+          "text": "kategori fungtor"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "line_start": 468,
+        "line_end": 563
+      }
+    },
+    {
+      "id": "urn:uuid:8cab24d2-0f78-5bf9-96f8-5b2f2b07168d",
+      "stable_key": "prerequisite/universal-properties-and-comma-categories",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "泛性质与逗号范畴"
+        },
+        {
+          "language": "id-ID",
+          "text": "sifat universal dan kategori koma"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "line_start": 564,
+        "line_end": 677
+      }
+    },
+    {
+      "id": "urn:uuid:9fac54c6-e671-58b9-b840-4799739adb1e",
+      "stable_key": "prerequisite/representable-functors-and-yoneda",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "可表函子与 Yoneda 引理"
+        },
+        {
+          "language": "id-ID",
+          "text": "fungtor representabel dan Lema Yoneda"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "line_start": 678,
+        "line_end": 765
+      }
+    },
+    {
+      "id": "urn:uuid:c0b1a30a-634a-5e76-98d3-49bde5a5821c",
+      "stable_key": "prerequisite/limits-and-colimits",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "极限与余极限"
+        },
+        {
+          "language": "id-ID",
+          "text": "limit dan kolimit"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "line_start": 1111,
+        "line_end": 1405
+      }
+    }
+  ],
+  "rights": [
+    {
+      "id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "stable_key": "rights/principal-cc-by-4.0",
+      "entity_type": "rights",
+      "component": "Principal text, source, PDF, and Indonesian translation",
+      "holder_or_source": "Wen-Wei Li; Indonesian translation contributors for translation expression",
+      "license": "CC BY 4.0",
+      "required_treatment": "Attribute author and source, identify the Indonesian translation and changes, link the license, and imply no endorsement.",
+      "applies_to_unit": true,
+      "bindings": [
+        {
+          "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter3.tex",
+          "bytes": 75571,
+          "sha256": "7198f2c477890b333237156aba30b79db587e23dde7a878ed99f527e98a558d0"
+        },
+        {
+          "path": "repo/source/LICENSE",
+          "bytes": 19045,
+          "sha256": "48a83a6e39f7b2f166763b30776132c9a99aa816f17cb06f87ad5b8542a7b71f"
+        },
+        {
+          "path": "repo/source/ccby.png",
+          "bytes": 12588,
+          "sha256": "633aae44a5d5b8915debc82f56a8e05c1b62b567b1aefeabc18617b81d8a04a9"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:e18339ae-66cd-5304-b544-b220dd41380d",
+      "stable_key": "rights/lanzhou-cc-by-sa-3.0",
+      "entity_type": "rights",
+      "component": "Lanzhou.png",
+      "holder_or_source": "Chk2011; derived from Wikimedia Administrative_Division_Lanzhou.svg",
+      "license": "CC BY-SA 3.0",
+      "required_treatment": "Keep separate attribution and source/license link, identify rasterization or other changes, and preserve share-alike treatment.",
+      "applies_to_unit": false,
+      "bindings": [
+        {
+          "path": "repo/source/Lanzhou.png",
+          "bytes": 276766,
+          "sha256": "6000d7740aab58f1959c07af2c057680e2518dcc75b225f3180ed4b996fe9455"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+      "stable_key": "rights/ajbook-fragment-cc-by-sa-3.0",
+      "entity_type": "rights",
+      "component": "AJbook.cls DeclareSourcemap fragment",
+      "holder_or_source": "Guido; revision edited by dpprdan; TeX.StackExchange answer 119136",
+      "license": "CC BY-SA 3.0",
+      "required_treatment": "Keep separate attribution and source/license link, or replace with independently written equivalent code.",
+      "applies_to_unit": true,
+      "bindings": [
+        {
+          "path": "repo/source/AJbook.cls",
+          "bytes": 13780,
+          "sha256": "f35dbe8942a880dfe70c072bcfe0491d8cc83f562c28a481b949ca4cc84f0b04"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430",
+      "stable_key": "rights/noto-fonts-ofl-1.1",
+      "entity_type": "rights",
+      "component": "Noto Sans CJK SC and Noto Serif CJK SC fonts",
+      "holder_or_source": "Google and Adobe Noto contributors",
+      "license": "OFL 1.1",
+      "required_treatment": "Retain the OFL text and font notices; do not relicense fonts as book content.",
+      "applies_to_unit": true,
+      "bindings": [
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Black.otf",
+          "bytes": 17797908,
+          "sha256": "2267c4a0312d267dff8c0d1609948f7d949a3da8be3e126f5e2690cb9cc883b4"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Medium.otf",
+          "bytes": 16523632,
+          "sha256": "ca094f6b0001fb048ca39ddd797a0cdb0179e1e55c6561e111c49c3e6a61d7b7"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Regular.otf",
+          "bytes": 16437364,
+          "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+        },
+        {
+          "path": "repo/fonts/NotoSerifCJKsc-Bold.otf",
+          "bytes": 25521460,
+          "sha256": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73"
+        },
+        {
+          "path": "repo/fonts/OFL-1.1-Noto-CJK.txt",
+          "bytes": 4301,
+          "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+        }
+      ]
+    }
+  ],
+  "citations": [],
+  "diagrams": [
+    {
+      "id": "urn:uuid:a71d19b6-bb10-512b-b139-788d88e73fb3",
+      "stable_key": "diagram/unit-024/tikzcd-01",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:6ffc3c9c-77a0-5f47-973c-b8b16b80372c",
+      "ordinal_in_unit": 1,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 1,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter3.tex",
+        "bytes": 75571,
+        "sha256": "7198f2c477890b333237156aba30b79db587e23dde7a878ed99f527e98a558d0",
+        "line_start": 895,
+        "line_end": 898,
+        "span_sha256": "0bb686fe8c0b77e2b36ca88a5eb4517998201bf89d6bcee94e9546d6328fd0d1",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter3.tex",
+        "bytes": 89608,
+        "sha256": "443b71b515aef66c6ba8e259e65083604d227370c1ee7ca3ed49bdb5996f45fb",
+        "line_start": 894,
+        "line_end": 897,
+        "span_sha256": "0bb686fe8c0b77e2b36ca88a5eb4517998201bf89d6bcee94e9546d6328fd0d1",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:9d0ee6ee-c8e9-54ad-a6e2-a11209a3d2b6",
+      "stable_key": "diagram/unit-024/tikzcd-02",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:17b81194-b165-5533-bdf3-dc711a792b2f",
+      "ordinal_in_unit": 2,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 2,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter3.tex",
+        "bytes": 75571,
+        "sha256": "7198f2c477890b333237156aba30b79db587e23dde7a878ed99f527e98a558d0",
+        "line_start": 906,
+        "line_end": 909,
+        "span_sha256": "923545e456a6fc73bb177af5c5e948a2e5e6fe5e16d143429d3798051a4738ca",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter3.tex",
+        "bytes": 89608,
+        "sha256": "443b71b515aef66c6ba8e259e65083604d227370c1ee7ca3ed49bdb5996f45fb",
+        "line_start": 905,
+        "line_end": 908,
+        "span_sha256": "923545e456a6fc73bb177af5c5e948a2e5e6fe5e16d143429d3798051a4738ca",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    }
+  ],
+  "index_entries": [
+    {
+      "id": "urn:uuid:b257d6f1-a6e8-59dd-9299-40ad6e159d7f",
+      "stable_key": "index-entry/unit-024/ybe",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:f11e14c5-0665-5db0-87ff-a78b718f0e63",
+      "ordinal_in_unit": 1,
+      "source_key": "YBE",
+      "target_key": "YBE",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter3.tex",
+        "bytes": 75571,
+        "sha256": "7198f2c477890b333237156aba30b79db587e23dde7a878ed99f527e98a558d0",
+        "line_start": 890,
+        "line_end": 890,
+        "span_sha256": "d147055e3448a0a4bee7187801a75f559c77b50d60aa12b1e942f319f1ed5049",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter3.tex",
+        "bytes": 89608,
+        "sha256": "443b71b515aef66c6ba8e259e65083604d227370c1ee7ca3ed49bdb5996f45fb",
+        "line_start": 889,
+        "line_end": 889,
+        "span_sha256": "dbd0fe85ba6c50d9e5d8c80ca9e3fbd1bda2100a98e89d0a18d7be8b11beb3e9",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    }
+  ],
+  "build_surfaces": [
+    {
+      "id": "urn:uuid:0bd10403-be08-5bcd-aec8-f2f7b44e1d04",
+      "stable_key": "build-surface/unit-024-pdf",
+      "entity_type": "build_surface",
+      "unit_id": "urn:uuid:095c931c-7fec-5049-bdf4-914d242c45cf",
+      "kind": "pdf",
+      "working_directory": ".",
+      "command": "pwsh -NoProfile -File scripts/build_unit_024.ps1 -OutputDirectory build/unit-024-replay",
+      "artifact_path": "artifacts/unit-024-bab-3-latihan-kategori-monoidal.pdf",
+      "artifact_binding": {
+        "path": "artifacts/unit-024-bab-3-latihan-kategori-monoidal.pdf",
+        "bytes": 86254,
+        "sha256": "eb4ee13fffe6a54a50357a0043aa82e0958b2f30feb92c440b6ea10a5efdc6b4"
+      },
+      "log_binding": {
+        "path": "qa/UNIT_024_BUILD_FINAL.log",
+        "bytes": 78542,
+        "sha256": "62b3dac51522a1bd33ec6bd62a25f6dbef06ccbfa349982bb51b18eabc9c22fe"
+      },
+      "build_script": {
+        "path": "scripts/build_unit_024.ps1",
+        "bytes": 4891,
+        "sha256": "13efa89a3b6519f96879048ed15e2f9ad8a85313cfb930064457a47e6e32a0b3"
+      },
+      "page_count": 4,
+      "status": "pass",
+      "driver": {
+        "path": "repo/source/unit-024-bab-3-latihan-kategori-monoidal.tex",
+        "bytes": 5067,
+        "sha256": "9823e3a5a3f6850d257abd32259583a579920ef062cc84f51b2e515c57772891"
+      },
+      "input_bindings": [
+        {
+          "path": "repo/source/coverpage-id-unit-024.tex",
+          "bytes": 3734,
+          "sha256": "1cb87dc92d184f0edaea2c67a752695a3a8d1d190ba919223d33270a3b3a8db9"
+        },
+        {
+          "path": "repo/source/chapter3.tex",
+          "bytes": 89608,
+          "sha256": "443b71b515aef66c6ba8e259e65083604d227370c1ee7ca3ed49bdb5996f45fb"
+        },
+        {
+          "path": "repo/source/font-setup-id.tex",
+          "bytes": 2563,
+          "sha256": "19c03e7fc4abaf7c433a85cf8adf32dbe5259d3de5106c8d1dd712af37dcd280"
+        },
+        {
+          "path": "repo/source/AJbook.cls",
+          "bytes": 13780,
+          "sha256": "f35dbe8942a880dfe70c072bcfe0491d8cc83f562c28a481b949ca4cc84f0b04"
+        },
+        {
+          "path": "repo/source/titles-setup-id.tex",
+          "bytes": 329,
+          "sha256": "db020adff03242f1f2fe8bcb6ec74b6072d9db6bd44971caadde3ce231a51f1b"
+        },
+        {
+          "path": "repo/source/locale-ui-id.tex",
+          "bytes": 2972,
+          "sha256": "9d6c6aa162d11ce8f491703f640a808cdcf61280b300f22032d4caaa0035f3b9"
+        },
+        {
+          "path": "repo/source/titles-setup.tex",
+          "bytes": 6274,
+          "sha256": "f5a81e5ec9f0f2023b93d9b713f0bdc18171a1505863f44a15d65c8757eeadf7"
+        },
+        {
+          "path": "repo/source/mycommand.sty",
+          "bytes": 5925,
+          "sha256": "4d8cdc54597197b8d207cec69fc9af93f9b02c49628e77ab1e9a6d046275d9bc"
+        },
+        {
+          "path": "repo/source/myarrows.sty",
+          "bytes": 3650,
+          "sha256": "59ff5dc0d470674894c5369f6ee79442b71ce08fc02433be7c58387f9a684dd4"
+        },
+        {
+          "path": "repo/source/ccby.png",
+          "bytes": 12588,
+          "sha256": "633aae44a5d5b8915debc82f56a8e05c1b62b567b1aefeabc18617b81d8a04a9"
+        },
+        {
+          "path": "repo/source/unit-024-crossrefs.aux",
+          "bytes": 474,
+          "sha256": "daf5774efaa8b650881803ec8ae9d4eb28b88a9616d42c09b8c92179ba43abf0"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Black.otf",
+          "bytes": 17797908,
+          "sha256": "2267c4a0312d267dff8c0d1609948f7d949a3da8be3e126f5e2690cb9cc883b4"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Medium.otf",
+          "bytes": 16523632,
+          "sha256": "ca094f6b0001fb048ca39ddd797a0cdb0179e1e55c6561e111c49c3e6a61d7b7"
+        },
+        {
+          "path": "repo/fonts/NotoSansCJKsc-Regular.otf",
+          "bytes": 16437364,
+          "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+        },
+        {
+          "path": "repo/fonts/NotoSerifCJKsc-Bold.otf",
+          "bytes": 25521460,
+          "sha256": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73"
+        }
+      ],
+      "external_dependencies": [
+        "XeLaTeX",
+        "PowerShell 7",
+        "makeindex (default index)",
+        "Fandol fonts from TeX distribution",
+        "TeX Gyre Heros",
+        "TikZ and tikz-cd",
+        "packages loaded by the Unit 024 driver and AJbook.cls"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+        "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+        "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430"
+      ]
+    }
+  ],
+  "qa_events": [
+    {
+      "id": "urn:uuid:5f5c0834-15f9-522e-9148-bd1947d35924",
+      "stable_key": "qa/unit-024/admission-gate",
+      "entity_type": "qa_event",
+      "unit_id": "urn:uuid:095c931c-7fec-5049-bdf4-914d242c45cf",
+      "check_type": "admission_gate",
+      "result": "pass",
+      "scope": "Complete source-order Chapter 3 exercise-tail admission: eight exercises, three nested items, two hints, four ordinary references, one index entry, 69 inline and six bracket-display formulas, two tikzcd diagrams and eight arrows, seven admitted terminology rows, and correction O013-LI-U024-COR-001. No labels, equation references, citations, answers, or solutions are invented. Component rights remain separate. Production provenance is OpenAI Codex gpt-5.6-sol, Ultra, separate from Wen-Wei Li's authorship and human credits.",
+      "witness": "qa/unit-024-evidence/structure-and-pdf-qa.json",
+      "translation_audit_state": "pass",
+      "build_state": "pass",
+      "visual_state": "pass",
+      "witness_binding": {
+        "path": "qa/unit-024-evidence/structure-and-pdf-qa.json",
+        "bytes": 33299,
+        "sha256": "12cf8ec6af6b51fee727e6554ae3f6a182b562f5349a726a6b81389885443c72"
+      }
+    },
+    {
+      "id": "urn:uuid:d79786b9-daff-5eff-9322-3ca361b4510a",
+      "stable_key": "qa/unit-024/source-review",
+      "entity_type": "qa_event",
+      "unit_id": "urn:uuid:095c931c-7fec-5049-bdf4-914d242c45cf",
+      "check_type": "backend_integrity",
+      "result": "pass",
+      "scope": "Independent continuous source and mathematical review of the complete Chapter 3 exercise tail, including every exercise, nested item, hint, formula, reference, index, diagram, and the disclosed correction.",
+      "witness": "qa/UNIT_024_TRANSLATION_SOURCE_REVIEW_20260824.md",
+      "translation_audit_state": "pass",
+      "build_state": "pass",
+      "visual_state": "pass",
+      "witness_binding": {
+        "path": "qa/UNIT_024_TRANSLATION_SOURCE_REVIEW_20260824.md",
+        "bytes": 8765,
+        "sha256": "901a502b939ab51adc59324a521d6e98d5c71c01d3732d3af05e6dc072fea430"
+      }
+    },
+    {
+      "id": "urn:uuid:e49a6bee-9198-505a-a8d7-6031cd40ae56",
+      "stable_key": "qa/unit-024/math-structure-review",
+      "entity_type": "qa_event",
+      "unit_id": "urn:uuid:095c931c-7fec-5049-bdf4-914d242c45cf",
+      "check_type": "backend_integrity",
+      "result": "pass",
+      "scope": "Canonical mathematical-structure audit binding all exercises, nested items, hints, references, formulas, index and diagram topology, the integrated Chapter 3 EOF, and the disclosed correction.",
+      "witness": "qa/UNIT_024_MATH_STRUCTURE_AUDIT_20260825.md",
+      "translation_audit_state": "pass",
+      "build_state": "pass",
+      "visual_state": "pass",
+      "witness_binding": {
+        "path": "qa/UNIT_024_MATH_STRUCTURE_AUDIT_20260825.md",
+        "bytes": 3850,
+        "sha256": "c1ad911cc6597998582a99183d657a4524161b34c93027f8bdbc324e947e4efc"
+      }
+    },
+    {
+      "id": "urn:uuid:0d89e2f4-7241-5f9e-a9d7-24627919f3d6",
+      "stable_key": "qa/unit-024/source-correction",
+      "entity_type": "qa_event",
+      "unit_id": "urn:uuid:095c931c-7fec-5049-bdf4-914d242c45cf",
+      "check_type": "backend_integrity",
+      "result": "pass",
+      "scope": "Deterministic provenance for O013-LI-U024-COR-001: the false ordinal-sum symmetry demand is replaced by a naturality decision and counterexample task without changing the true objectwise-isomorphism statement.",
+      "witness": "qa/UNIT_024_TRANSLATION_SOURCE_REVIEW_20260824.md",
+      "translation_audit_state": "pass",
+      "build_state": "pass",
+      "visual_state": "pass",
+      "witness_binding": {
+        "path": "qa/UNIT_024_TRANSLATION_SOURCE_REVIEW_20260824.md",
+        "bytes": 8765,
+        "sha256": "901a502b939ab51adc59324a521d6e98d5c71c01d3732d3af05e6dc072fea430"
+      }
+    },
+    {
+      "id": "urn:uuid:d934417a-be4f-5f2b-b181-82365df69162",
+      "stable_key": "qa/unit-024/structure-check",
+      "entity_type": "qa_event",
+      "unit_id": "urn:uuid:095c931c-7fec-5049-bdf4-914d242c45cf",
+      "check_type": "backend_integrity",
+      "result": "pass",
+      "scope": "Fail-closed candidate and canonical integration checks bind the authority EOF, exact integrated target, exercise/hint/item/formula/reference/index/diagram topology, correction, and zero Han residue.",
+      "witness": "scripts/check_unit_024_structure.py",
+      "translation_audit_state": "pass",
+      "build_state": "pass",
+      "visual_state": "pass",
+      "witness_binding": {
+        "path": "scripts/check_unit_024_structure.py",
+        "bytes": 5111,
+        "sha256": "4ff95709815806faf623a19841645870267a45094a1a5847fc9ef3adf8bd4868"
+      }
+    },
+    {
+      "id": "urn:uuid:e8d821a4-389c-5d80-897a-f27830b5f50f",
+      "stable_key": "qa/unit-024/render-replay",
+      "entity_type": "qa_event",
+      "unit_id": "urn:uuid:095c931c-7fec-5049-bdf4-914d242c45cf",
+      "check_type": "backend_integrity",
+      "result": "pass",
+      "scope": "Deterministic semantic and same-renderer Poppler/MuPDF replay with complete page inventories.",
+      "witness": "qa/unit-024-evidence/render-hash-inventory.json",
+      "translation_audit_state": "pass",
+      "build_state": "pass",
+      "visual_state": "pass",
+      "witness_binding": {
+        "path": "qa/unit-024-evidence/render-hash-inventory.json",
+        "bytes": 7110,
+        "sha256": "d60e5a81bdd248b659d6440b6d442a8e4f6ca6a15dc0632e9dd45d9139f0c892"
+      }
+    },
+    {
+      "id": "urn:uuid:daf3d104-f82f-550c-998c-400c7b6a8ce1",
+      "stable_key": "qa/unit-024/all-page-visual-review",
+      "entity_type": "qa_event",
+      "unit_id": "urn:uuid:095c931c-7fec-5049-bdf4-914d242c45cf",
+      "check_type": "backend_integrity",
+      "result": "pass",
+      "scope": "Independent all-page visual review of the final reader in Poppler and MuPDF after final reflow.",
+      "witness": "qa/UNIT_024_VISUAL_QA_20260825.md",
+      "translation_audit_state": "pass",
+      "build_state": "pass",
+      "visual_state": "pass",
+      "witness_binding": {
+        "path": "qa/UNIT_024_VISUAL_QA_20260825.md",
+        "bytes": 4536,
+        "sha256": "2cb3fc9f74f52a35cabd0b6e0fb786b4d2b5c51528e5f68369b475b8b84a7dde"
+      }
+    },
+    {
+      "id": "urn:uuid:8a449cee-0960-5495-85b8-89647a4dfa17",
+      "stable_key": "qa/unit-024/terminology-control",
+      "entity_type": "qa_event",
+      "unit_id": "urn:uuid:095c931c-7fec-5049-bdf4-914d242c45cf",
+      "check_type": "backend_integrity",
+      "result": "pass",
+      "scope": "Live id-ID glossary binding for exactly seven admitted Unit 024 terminology rows.",
+      "witness": "00_control/TERMINOLOGY.id-ID.csv",
+      "translation_audit_state": "pass",
+      "build_state": "pass",
+      "visual_state": "pass",
+      "witness_binding": {
+        "path": "00_control/TERMINOLOGY.id-ID.csv",
+        "bytes": 46585,
+        "sha256": "4fa4c6d2720dd7ab9c4ebe570a1124794bc8282af1b4491201fb61b7b973ce1b"
+      }
+    },
+    {
+      "id": "urn:uuid:44d0323c-5963-5dee-bd0c-b880712ed9ca",
+      "stable_key": "qa/unit-024/terminology-evidence",
+      "entity_type": "qa_event",
+      "unit_id": "urn:uuid:095c931c-7fec-5049-bdf4-914d242c45cf",
+      "check_type": "backend_integrity",
+      "result": "pass",
+      "scope": "Bound Unit 024 terminology promotion audit, including schema, uniqueness, semantic-alias, candidate-occurrence, and exact hash evidence.",
+      "witness": "qa/UNIT_024_TERMINOLOGY_AUDIT_20260824.md",
+      "translation_audit_state": "pass",
+      "build_state": "pass",
+      "visual_state": "pass",
+      "witness_binding": {
+        "path": "qa/UNIT_024_TERMINOLOGY_AUDIT_20260824.md",
+        "bytes": 4700,
+        "sha256": "bbf87b09d7941b8a9d5e7457725eba6f013e0a07d340082ce59a8345401ef27f"
+      }
+    }
+  ]
+}

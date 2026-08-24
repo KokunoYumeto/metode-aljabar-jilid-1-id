@@ -870,41 +870,41 @@ Pembaca dipersilakan mencoba menguraikan definisi-definisi tersebut. Sebagai con
 \end{remark}
 	
 \begin{Exercises}
-	\item 对于一般幺半范畴中的对象 $X_1, \ldots, X_{n+1}$, 有种种方式能构作循序的 $n$-重 $\otimes$ 运算, 取决于安插括号的方法, 如 $\cdots \otimes (X_i \otimes X_{i+1}) \cdots$ 等等. 证明括号的放法恰有 $\frac{1}{n+1} \binom{2n}{n}$ 种. \begin{hint} 此即组合学中的 Catalan 数. \end{hint}
-	\item 证明对任意幺半范畴, $\End(\munit)$ 对态射的合成交换. \begin{hint} 应用引理 \ref{prop:Kelly} 和 $(f \otimes \identity)(\identity \otimes g) = f \otimes g = (\identity \otimes g) (f \otimes \identity)$.\end{hint}
-	\item 考虑全体有限全序集和保序映射所成范畴 $\cate{On}_f$. 对于有限全序集 $\sigma$, $\tau$, 在 $\sigma \sqcup \tau$ 上定义唯一的全序使得 $\sigma$ 和 $\tau$ 到 $\sigma \sqcup \tau$ 的嵌入是保序的, 而且 $\sigma$ 中的元素总小于 $\tau$ 中元素. 证明 $\sqcup$ 赋予 $\cate{On}_f$ 自然的幺半范畴结构, 其幺元是空集.
-	\item 承上, 说明存在唯一的同构 $c(\sigma, \tau): \sigma \sqcup \tau \rightiso \tau \sqcup \sigma$, 证明 $(\cate{On}_f, \sqcup, c)$ 构成对称幺半范畴.
-	\item 本题假定读者熟悉向量空间的张量积. 令 $V$ 为域 $\Bbbk$ 上的向量空间, $R$ 为 $V \otimes V$ 的线性自同构, 相应的杨--Baxter 方程定义作
+	\item Untuk objek-objek $X_1, \ldots, X_{n+1}$ dalam suatu kategori monoidal umum, penerapan $n$ kali operasi $\otimes$ secara berurutan dapat dilakukan dengan berbagai cara, bergantung pada penempatan tanda kurung, seperti $\cdots \otimes (X_i \otimes X_{i+1}) \cdots$ dan seterusnya. Buktikan bahwa terdapat tepat $\frac{1}{n+1} \binom{2n}{n}$ cara untuk menempatkan tanda kurung. \begin{hint} Ini adalah bilangan Catalan dalam kombinatorika. \end{hint}
+	\item Buktikan bahwa, untuk setiap kategori monoidal, $\End(\munit)$ komutatif terhadap komposisi morfisme. \begin{hint} Gunakan Lema \ref{prop:Kelly} dan $(f \otimes \identity)(\identity \otimes g) = f \otimes g = (\identity \otimes g) (f \otimes \identity)$.\end{hint}
+	\item Tinjau kategori $\cate{On}_f$ yang terdiri atas semua himpunan terurut total berhingga beserta peta-peta pelestari urutan. Untuk himpunan terurut total berhingga $\sigma$, $\tau$, definisikan pada $\sigma \sqcup \tau$ satu-satunya urutan total sedemikian sehingga penyisipan $\sigma$ dan $\tau$ ke dalam $\sigma \sqcup \tau$ melestarikan urutan, dan setiap elemen $\sigma$ lebih kecil daripada setiap elemen $\tau$. Buktikan bahwa $\sqcup$ memberikan struktur kategori monoidal alami pada $\cate{On}_f$, dengan himpunan kosong sebagai objek satuannya.
+	\item Melanjutkan soal sebelumnya, tunjukkan bahwa terdapat isomorfisme unik $c(\sigma, \tau): \sigma \sqcup \tau \rightiso \tau \sqcup \sigma$. Apakah keluarga isomorfisme ini membuat $(\cate{On}_f, \sqcup, c)$ menjadi kategori monoidal simetris? Jika tidak, berikan contoh tandingan terhadap naturalitasnya.
+	\item Soal ini mengandaikan bahwa pembaca mengenal hasil kali tensor ruang vektor. Misalkan $V$ ruang vektor atas medan $\Bbbk$, dan $R$ automorfisme linear pada $V \otimes V$. Persamaan Yang--Baxter yang bersesuaian didefinisikan sebagai
 		\[ (R \otimes \identity_V) \, (\identity_V \otimes R) \, (R \otimes \identity_V) = (\identity_V \otimes R) \, (R \otimes \identity_V) \, (\identity_V \otimes R) , \]
-		其中每一项都是 $V \otimes V \otimes V$ 的线性自同构. 设 $\{e_i\}_{i \in I}$ 是 $V$ 的基, 将 $R$ 按 $R(e_i \otimes e_j) = \sum_{k,l} R^{k,l}_{i,j} e_k \otimes e_l$ 展开, 那么上述方程化作
+		dengan setiap suku merupakan automorfisme linear pada $V \otimes V \otimes V$. Misalkan $\{e_i\}_{i \in I}$ basis $V$, dan kembangkan $R$ menurut $R(e_i \otimes e_j) = \sum_{k,l} R^{k,l}_{i,j} e_k \otimes e_l$. Maka persamaan di atas menjadi
 		\[ \forall i,j,k,l,m,n, \quad \sum_{p,q,y} R^{p,q}_{i,j} R^{y,n}_{q,k} R^{l,m}_{p,y} = \sum_{y,q,r} R^{q,r}_{j,k} R^{l,y}_{i,q} R^{m,n}_{y,r}.  \]
-		显然此方程不易求解. 如果 $\mathcal{V}$ 是 $(\cate{Vect}(\Bbbk), \otimes, \ldots)$ 的一个幺半子范畴, 且具有辫结构 $c$, 那么对任意 $V \in \Obj(\mathcal{V})$, 从 $R := c(V,V)$ 可得出杨--Baxter 方程的解. 这些方程和一些量子可积系统密切相关. 这也解释了命题 \ref{prop:YBE-cat-strict} 的背景. 请验证上述论断.
+		Jelas bahwa persamaan ini tidak mudah diselesaikan. Jika $\mathcal{V}$ merupakan subkategori monoidal dari $(\cate{Vect}(\Bbbk), \otimes, \ldots)$ dan memiliki struktur kepang $c$, maka untuk setiap $V \in \Obj(\mathcal{V})$, pemilihan $R := c(V,V)$ memberikan solusi persamaan Yang--Baxter. Persamaan-persamaan ini berkaitan erat dengan beberapa sistem integrabel kuantum. Hal ini juga menjelaskan latar belakang Proposisi \ref{prop:YBE-cat-strict}. Verifikasilah pernyataan tersebut.
 		
-		现在引进参数 $q \in \Bbbk^\times$. 对于有限维 $\Bbbk$-向量空间 $V = \bigoplus_{i=1}^h \Bbbk e_i$, 证明
+		Sekarang masukkan parameter $q \in \Bbbk^\times$. Untuk ruang vektor-$\Bbbk$ berdimensi hingga $V = \bigoplus_{i=1}^h \Bbbk e_i$, buktikan bahwa
 		\[ R(e_i \otimes e_j) = \begin{cases}
 			e_j \otimes e_i, & i < j, \\
 			q e_i \otimes e_j, & i = j, \\
 			e_j \otimes e_i + (q - q^{-1}) e_i \otimes e_j, & i > j
 		\end{cases} \]
-		给出杨--Baxter 方程的解, 并且满足 $\left( R - q \cdot \identity_{V \otimes V} \right) \left( R + q^{-1} \cdot \identity_{V \otimes V} \right) = 0$. 当 $q=1$ 时它退化为 $\cate{Vect}(\Bbbk)$ 上标准的辫结构 $v \otimes w \mapsto w \otimes v$. \index{YBE}
+		memberikan solusi persamaan Yang--Baxter dan memenuhi $\left( R - q \cdot \identity_{V \otimes V} \right) \left( R + q^{-1} \cdot \identity_{V \otimes V} \right) = 0$. Ketika $q=1$, solusi ini mereduksi, pada $\cate{Vect}(\Bbbk)$, menjadi struktur kepang baku $v \otimes w \mapsto w \otimes v$. \index{YBE}
 
-	\item 设 $(\mathcal{V}, \otimes, \ldots)$ 为幺半范畴. 为简便起见, 以下设其为严格幺半范畴, 省略结合约束等态射和括号. 定义幺半范畴 $Z(\mathcal{V})$ 使得:
+	\item Misalkan $(\mathcal{V}, \otimes, \ldots)$ suatu kategori monoidal. Agar sederhana, selanjutnya andaikan bahwa kategori ini merupakan kategori monoidal ketat, sehingga morfisme kendala asosiativitas dan tanda kurung dapat dihilangkan. Definisikan kategori monoidal $Z(\mathcal{V})$ sebagai berikut:
 		\begin{itemize}
-			\item 其对象为 $(X, \Phi)$, 其中 $X$ 是 $\mathcal{V}$ 的对象而 $\Phi: (X \otimes -) \rightiso (- \otimes X)$ 是函子的同构, 我们进一步要求对所有对象 $Y,Z$, 下图交换.
+			\item Objeknya adalah $(X, \Phi)$, dengan $X$ objek $\mathcal{V}$ dan $\Phi: (X \otimes -) \rightiso (- \otimes X)$ suatu isomorfisme natural antarfungtor. Kita juga mensyaratkan agar diagram berikut komutatif untuk setiap objek $Y,Z$.
 				\[\begin{tikzcd}[column sep=small]
 					X \otimes Y \otimes Z \arrow[rr, "\Phi_{Y \otimes Z}"] \arrow[rd, "{\Phi_Y \otimes \identity_Z}"'] & & Y \otimes Z \otimes X \\
 					&  Y \otimes X \otimes Z \arrow[ru, "{\identity_Y \otimes \Phi_Z}"'] &
 				\end{tikzcd}\]
-			\item 从 $(X, \Phi)$ 到 $(Y, \Psi)$ 的态射取为所有满足下式的 $f \in \Hom_{\mathcal{V}}(X,Y)$
+			\item Morfisme dari $(X, \Phi)$ ke $(Y, \Psi)$ adalah semua $f \in \Hom_{\mathcal{V}}(X,Y)$ yang memenuhi
 				\[ \forall Z \in \Obj(\mathcal{V}),\quad (\identity_Z \otimes f) \Phi_Z = \Psi_Z (f \otimes \identity_Z) \; \in \Hom_{\mathcal{V}}(X \otimes Z, Z \otimes Y); \]
-			\item 取 $(X, \Phi) \otimes (Y, \Psi)$ 为 $(X \otimes Y,\; (\Phi \otimes \identity)(\identity \otimes \Psi))$. 定义 $Z(\mathcal{V})$ 之幺元为 $\left(\munit, (\identity_X)_{X \in \Obj(\mathcal{V})}\right)$.
+			\item Definisikan $(X, \Phi) \otimes (Y, \Psi)$ sebagai $(X \otimes Y,\; (\Phi \otimes \identity)(\identity \otimes \Psi))$. Definisikan objek satuan dari $Z(\mathcal{V})$ sebagai $\left(\munit, (\identity_X)_{X \in \Obj(\mathcal{V})}\right)$.
 		\end{itemize}
-		验证这确实给出幺半范畴. 此外 $Z(\mathcal{V})$ 具有自然的辫结构, 试阐明之. 范畴 $Z(\mathcal{V})$ 称为 $\mathcal{V}$ 的 Drinfeld 中心, 这是幺半群中心的一种范畴化.
-	\item 验证例 \ref{eg:Ab-cat} 中 $\cate{Ab}$-范畴的刻画确实符合充实范畴的一般理论.
-	\item 对给定的函子 $\mathcal{A} \xrightarrow{S} \mathcal{C} \xleftarrow{T} \mathcal{B}$, 按定义 \ref{def:comma-category} 构造范畴 $(S/T)$ (回忆其对象形如 $(A,B,f)$) 及投影函子 $P,Q$. 定义态射 $\alpha: SP \to TQ$ 为 $SP(A,B,f) = \left[ SA \xrightarrow{f} TB \right] = TQ(A,B,f)$. 证明 $\alpha$ 确实是函子间的态射, 而且
+		Verifikasilah bahwa data ini benar-benar memberikan suatu kategori monoidal. Selain itu, $Z(\mathcal{V})$ mempunyai struktur kepang alami; uraikanlah struktur tersebut. Kategori $Z(\mathcal{V})$ disebut pusat Drinfeld dari $\mathcal{V}$, yakni suatu kategorifikasi pusat monoid.
+	\item Verifikasilah bahwa karakterisasi kategori-$\cate{Ab}$ dalam Contoh \ref{eg:Ab-cat} memang sesuai dengan teori umum kategori diperkaya.
+	\item Untuk fungtor-fungtor yang diberikan $\mathcal{A} \xrightarrow{S} \mathcal{C} \xleftarrow{T} \mathcal{B}$, konstruksikan menurut Definisi \ref{def:comma-category} kategori $(S/T)$ (ingat bahwa objeknya berbentuk $(A,B,f)$) beserta fungtor proyeksi $P,Q$. Definisikan transformasi natural $\alpha: SP \to TQ$ melalui $SP(A,B,f) = \left[ SA \xrightarrow{f} TB \right] = TQ(A,B,f)$. Buktikan bahwa $\alpha$ memang merupakan transformasi natural, dan bahwa
 		\[\begin{tikzcd}
 			(S/T) \arrow[r, "P"] \arrow[d, "Q"'] & \mathcal{A} \arrow[d, "S"] \arrow[Rightarrow, ld, "\alpha" description] \\
 			\mathcal{B} \arrow[r, "T"'] & \mathcal{C}
 		\end{tikzcd}\]
-		是 $2$-范畴 $\cate{Cat}$ 中的 $2$-胞腔.
+		dalam $2$-kategori $\cate{Cat}$ merupakan suatu $2$-sel.
 \end{Exercises}

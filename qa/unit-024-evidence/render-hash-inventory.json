@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.0.0",
+  "unit_id": "O013-LI-U024",
+  "status": "PASS",
+  "page_count": 4,
+  "render_resolution_dpi": 144,
+  "render_dimensions_px": [
+    998,
+    1418
+  ],
+  "clean_builds": {
+    "a": {
+      "path": "build/unit-024-reader-final-a/unit-024-bab-3-latihan-kategori-monoidal.pdf",
+      "bytes": 86257,
+      "sha256": "2ee3fec97585907ee7e6d1dcaecb3c4244c784ae3ddd30e24831e048b55e4122"
+    },
+    "b": {
+      "path": "build/unit-024-reader-final-b/unit-024-bab-3-latihan-kategori-monoidal.pdf",
+      "bytes": 86254,
+      "sha256": "eb4ee13fffe6a54a50357a0043aa82e0958b2f30feb92c440b6ea10a5efdc6b4"
+    },
+    "replay": {
+      "path": "build/unit-024-reader-final-replay/unit-024-bab-3-latihan-kategori-monoidal.pdf",
+      "bytes": 86245,
+      "sha256": "4b6d64a2ee72cd87954eb66704040216169a0e6c5dc92c392f0429e5abc85593"
+    },
+    "artifact": {
+      "path": "artifacts/unit-024-bab-3-latihan-kategori-monoidal.pdf",
+      "bytes": 86254,
+      "sha256": "eb4ee13fffe6a54a50357a0043aa82e0958b2f30feb92c440b6ea10a5efdc6b4"
+    }
+  },
+  "render_count": 32,
+  "contact_sheet_count": 8,
+  "comparisons": {
+    "builds/poppler": {
+      "page_count_equal": true,
+      "png_byte_identical": true,
+      "raw_pixel_identical": true,
+      "mismatching_png_pages": [],
+      "mismatching_raw_pages": []
+    },
+    "builds/mupdf": {
+      "page_count_equal": true,
+      "png_byte_identical": true,
+      "raw_pixel_identical": true,
+      "mismatching_png_pages": [],
+      "mismatching_raw_pages": []
+    },
+    "replay/poppler/final-a": {
+      "page_count_equal": true,
+      "png_byte_identical": true,
+      "raw_pixel_identical": true,
+      "mismatching_png_pages": [],
+      "mismatching_raw_pages": []
+    },
+    "replay/mupdf/final-a": {
+      "page_count_equal": true,
+      "png_byte_identical": true,
+      "raw_pixel_identical": true,
+      "mismatching_png_pages": [],
+      "mismatching_raw_pages": []
+    },
+    "replay/poppler/final-b": {
+      "page_count_equal": true,
+      "png_byte_identical": true,
+      "raw_pixel_identical": true,
+      "mismatching_png_pages": [],
+      "mismatching_raw_pages": []
+    },
+    "replay/mupdf/final-b": {
+      "page_count_equal": true,
+      "png_byte_identical": true,
+      "raw_pixel_identical": true,
+      "mismatching_png_pages": [],
+      "mismatching_raw_pages": []
+    }
+  },
+  "renderer_aggregate_hashes": {
+    "poppler": {
+      "png_set_sha256": "f60464deeb09de9e9ba5fde9587c53516264b35f590b80bd52a65a712a03cf82",
+      "raw_rgb_set_sha256": "43ead758e7952cdfdd138e43e175963b4a834ae37f954145dd0fe9ee09fcd85b"
+    },
+    "mupdf": {
+      "png_set_sha256": "ea9c62f6da5f09ed638091739724529f3af19b2b903db3ad30fbae588acd46fa",
+      "raw_rgb_set_sha256": "ffb249317404ca98a7c4f1472cb00bb63bcbe9e803e6a25fad5a16994f1c8020"
+    }
+  },
+  "renderers": {
+    "poppler": [
+      {
+        "page": 1,
+        "path": "qa/unit-024-evidence/poppler-final-b/page-01.png",
+        "bytes": 81217,
+        "sha256": "41fc2bf50fe7f40fafa4ad58ec67c94935f5a142c6292cb974f0086c67eaec33",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "5d0bf5cd58d36c2ba95149f4583a44046efb3da3bbf1ea38d42169e2f250f1e1",
+        "outer_3px_ink": 0,
+        "ink_pixels": 48641
+      },
+      {
+        "page": 2,
+        "path": "qa/unit-024-evidence/poppler-final-b/page-02.png",
+        "bytes": 153521,
+        "sha256": "3032775b0a10e5f8cceac0504821144abb0d94ee377ed962e86397f011cbac2d",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "bab5734fc9d0091d35c7dec9bb4bb7bec1ad5fb377407a8bafcd3134bd239f3c",
+        "outer_3px_ink": 0,
+        "ink_pixels": 73408
+      },
+      {
+        "page": 3,
+        "path": "qa/unit-024-evidence/poppler-final-b/page-03.png",
+        "bytes": 258250,
+        "sha256": "de579a25eb7b75cca13e5e2d5d2f6fa226bddb6186cbd4711330ad610098f338",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "29712b5955ac4ba05132b08bc52fad20b700f10b11624cce444b6a027c5fad72",
+        "outer_3px_ink": 0,
+        "ink_pixels": 102280
+      },
+      {
+        "page": 4,
+        "path": "qa/unit-024-evidence/poppler-final-b/page-04.png",
+        "bytes": 175735,
+        "sha256": "ccdd95c2277d034e8d41ea07a5eb8806ee00c0bdca8d61f69bb049f02b3407f3",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "e42383e419fe10bf2b54b76eec5325b5eeba22650c0b3481ca1c45052434b7aa",
+        "outer_3px_ink": 0,
+        "ink_pixels": 63516
+      }
+    ],
+    "mupdf": [
+      {
+        "page": 1,
+        "path": "qa/unit-024-evidence/mupdf-final-b/page-01.png",
+        "bytes": 73080,
+        "sha256": "1c7c7707ca4f4f6191c75c7c218e3673634d5d99cc8aed5ef98a697006c945ee",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "f9c4aa5d7a3c39ea312f451230057d2286ed7195848615e901b316b5eca8b96f",
+        "outer_3px_ink": 0,
+        "ink_pixels": 48641
+      },
+      {
+        "page": 2,
+        "path": "qa/unit-024-evidence/mupdf-final-b/page-02.png",
+        "bytes": 124389,
+        "sha256": "6a982786a73692652a81ba35ffb668bfd493a51eea2a07376c28c20c1798af58",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "ec511c76734c6059b0116a1149ebb5ae819c1a28e27bcec815c034f9e355de2c",
+        "outer_3px_ink": 0,
+        "ink_pixels": 73474
+      },
+      {
+        "page": 3,
+        "path": "qa/unit-024-evidence/mupdf-final-b/page-03.png",
+        "bytes": 213760,
+        "sha256": "65daa9950a37ba97ed50cf9b5c77385e80a440e9c2f674aef0b5e07450828ee0",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "b24cc1c32587d075aca930193fd4962d85d443f7b702c0068953a1e9ff29b01f",
+        "outer_3px_ink": 0,
+        "ink_pixels": 102218
+      },
+      {
+        "page": 4,
+        "path": "qa/unit-024-evidence/mupdf-final-b/page-04.png",
+        "bytes": 145642,
+        "sha256": "b94afe82ca83dff80494c89751e450685005a6b142f3f7b060162215edbc7b92",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "ccd25207069d9ebec64d0bbbde7464bee60a1e45d7e6d594fdbe8a8fc8db6a06",
+        "outer_3px_ink": 0,
+        "ink_pixels": 63739
+      }
+    ]
+  },
+  "manual_inspection": {
+    "status": "PASS",
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "renderers_inspected": [
+      "Poppler",
+      "MuPDF (mutool and PyMuPDF)"
+    ],
+    "finding": "Every page was inspected in both renderer families; all eight exercises, two hints, two diagrams, and the index are present, with no clipping, overlap, tofu, broken arrows, edge contact, sparse orphan page, or off-center composition.",
+    "four_page_reflow_adjudication": "A centered 142 mm content measure resolves the long tensor identity without reduced type or overflow; the one-entry index shares the open lower portion of physical page 4 instead of creating a sparse page 5."
+  },
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

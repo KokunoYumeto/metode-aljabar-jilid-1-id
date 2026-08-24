@@ -1,0 +1,5 @@
+entity_type,id,stable_key,section_id,ordinal,source_value,target_value,format,status
+build_surface,urn:uuid:0bd10403-be08-5bcd-aec8-f2f7b44e1d04,build-surface/unit-024-pdf,,,pwsh -NoProfile -File scripts/build_unit_024.ps1 -OutputDirectory build/unit-024-replay,artifacts/unit-024-bab-3-latihan-kategori-monoidal.pdf,pdf,pass
+diagram,urn:uuid:a71d19b6-bb10-512b-b139-788d88e73fb3,diagram/unit-024/tikzcd-01,urn:uuid:6ffc3c9c-77a0-5f47-973c-b8b16b80372c,1,895-898,894-897,tikzcd,audited_preserved
+diagram,urn:uuid:9d0ee6ee-c8e9-54ad-a6e2-a11209a3d2b6,diagram/unit-024/tikzcd-02,urn:uuid:17b81194-b165-5533-bdf3-dc711a792b2f,2,906-909,905-908,tikzcd,audited_preserved
+index_entry,urn:uuid:b257d6f1-a6e8-59dd-9299-40ad6e159d7f,index-entry/unit-024/ybe,urn:uuid:f11e14c5-0665-5db0-87ff-a78b718f0e63,1,YBE,YBE,latex-index-key,source_key_preserved_target_key_localized
