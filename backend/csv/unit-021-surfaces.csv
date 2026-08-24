@@ -1,0 +1,34 @@
+entity_type,id,stable_key,section_id,ordinal,source_value,target_value,format,status
+build_surface,urn:uuid:96892295-6b13-5470-95e4-8d4caa6839c0,build-surface/unit-021-pdf,,,pwsh -NoProfile -File scripts/build_unit_021.ps1 -OutputDirectory build/unit-021-replay,artifacts/unit-021-bab-3-struktur-kepang.pdf,pdf,pass
+citation,urn:uuid:86ac5634-f0b0-5a43-a109-b5c5f9e2354c,citation/unit-021/js93,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,,JS93,JS93,biblatex-key,preserved
+diagram,urn:uuid:63f46d94-e0e0-5f28-8928-650418ecd837,diagram/unit-021/tikzcd-01,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,1,314-318,313-317,tikzcd,audited_preserved
+diagram,urn:uuid:b2cb0215-0f72-50a7-880c-ad1f0e7a7c57,diagram/unit-021/tikzcd-02,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,2,319-323,318-322,tikzcd,audited_preserved
+diagram,urn:uuid:4b388e01-a28c-5bad-8ea2-96c1226eb348,diagram/unit-021/tikzcd-03,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,3,325-328,324-327,tikzcd,audited_preserved
+diagram,urn:uuid:a4f5fa6b-793f-5498-b3d0-cab7b8234714,diagram/unit-021/tikzcd-04,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,4,328-331,327-330,tikzcd,audited_preserved
+diagram,urn:uuid:fd9d6e6e-ed95-5add-9900-b9394f306a2d,diagram/unit-021/tikzcd-05,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,5,346-349,345-348,tikzcd,audited_preserved
+diagram,urn:uuid:eb759465-32de-548f-a83c-dd317229da4f,diagram/unit-021/tikzcd-06,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,20,485-488,484-487,tikzcd,audited_preserved
+diagram,urn:uuid:f1c0ecb1-f406-596c-80f7-6ab1a8e29ad6,diagram/unit-021/tikzpicture-01,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,6,367-387,366-386,tikzpicture,audited_preserved
+diagram,urn:uuid:fd4a26da-142d-583e-b361-19a08449978b,diagram/unit-021/tikzpicture-02,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,7,409-417,408-416,tikzpicture,audited_preserved
+diagram,urn:uuid:314b013e-0818-529d-9a89-5d19fe5628c1,diagram/unit-021/tikzpicture-03,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,8,417-422,416-421,tikzpicture,audited_preserved
+diagram,urn:uuid:df683b4e-9730-5950-9326-e9c0df92f332,diagram/unit-021/tikzpicture-04,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,9,427-433,426-432,tikzpicture,audited_preserved
+diagram,urn:uuid:5a938367-d119-5732-b8e4-8e25862f1bc5,diagram/unit-021/tikzpicture-05,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,10,439-445,438-444,tikzpicture,audited_preserved
+diagram,urn:uuid:de70c1d0-5da1-550a-b8c0-019db55ea131,diagram/unit-021/tikzpicture-06,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,11,449-449,448-448,tikzpicture,audited_preserved
+diagram,urn:uuid:03eb9f51-445f-57ec-a5d7-b3e0675b0436,diagram/unit-021/tikzpicture-07,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,12,451-451,450-450,tikzpicture,audited_preserved
+diagram,urn:uuid:d4e5a4e0-69da-519a-8b4f-ad097c6ad874,diagram/unit-021/tikzpicture-08,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,13,453-459,452-458,tikzpicture,audited_preserved
+diagram,urn:uuid:077b50f5-7662-57cc-b23a-ec18be814d72,diagram/unit-021/tikzpicture-09,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,14,460-460,459-459,tikzpicture,audited_preserved
+diagram,urn:uuid:28bc217e-c0c5-5e38-9b97-176f3198da6a,diagram/unit-021/tikzpicture-10,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,15,460-460,459-459,tikzpicture,audited_preserved
+diagram,urn:uuid:3a59c012-ae30-509e-8131-88afce3fafda,diagram/unit-021/tikzpicture-11,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,16,461-465,460-464,tikzpicture,audited_preserved
+diagram,urn:uuid:fc5d0cd8-7aa4-5217-9f5e-40eee9ea8d52,diagram/unit-021/tikzpicture-12,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,17,467-471,466-470,tikzpicture,audited_preserved
+diagram,urn:uuid:c98175a9-025f-521c-87f5-7e6d5664cba2,diagram/unit-021/tikzpicture-13,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,18,475-477,474-476,tikzpicture,audited_preserved
+diagram,urn:uuid:ca15f691-5ad3-5159-9bbf-a275e99049b6,diagram/unit-021/tikzpicture-14,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,19,479-481,478-480,tikzpicture,audited_preserved
+diagram,urn:uuid:9cc57235-c373-52c5-9016-24f2642fa4eb,diagram/unit-021/tikzpicture-15,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,21,489-500,488-499,tikzpicture,audited_preserved
+diagram,urn:uuid:08b432c0-956e-5749-8a0f-2332be47b470,diagram/unit-021/tikzpicture-16,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,22,502-504,501-503,tikzpicture,audited_preserved
+diagram,urn:uuid:bf314aa4-d8f7-5b4f-9c31-4768546a59b9,diagram/unit-021/tikzpicture-17,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,23,505-507,504-506,tikzpicture,audited_preserved
+index_entry,urn:uuid:7e4fc744-0a78-5f89-b28a-e64cb4d9b32a,index-entry/unit-021/braid-category-symbol,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,6,Braid@$\cate{Braid}$,Braid@$\cate{Braid}$,latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:492abae7-5de4-5fea-a6b4-d229a85a94a2,index-entry/unit-021/braid-group,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,7,bianqun@辫群 (braid group),bianqun@grup kepang (braid group),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:e9f4aa7e-9acb-568d-ba1b-c5bb87bbb6f9,index-entry/unit-021/braid-group-symbol,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,8,B_n@$\mathcal{B}_n$,B_n@$\mathcal{B}_n$,latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:2499f819-66f3-5352-ba77-fec44691165b,index-entry/unit-021/braided-monoidal-functor,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,3,yaobanhanzi!辫 (braided),yaobanhanzi@fungtor monoidal (monoidal functor)!berkepang (braided),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:a756fec8-b1b6-5259-a004-31e087e8c185,index-entry/unit-021/braiding,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,1,bianjiegou@辫结构 (braiding),bianjiegou@struktur kepang (braiding),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:b897f8ae-830b-5a09-9245-04e208a6cb60,index-entry/unit-021/hexagon-axiom,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,2,liujiaoxinggongli@六角形公理,liujiaoxinggongli@aksioma segienam (hexagon axiom),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:761f4afb-af11-5a8c-9ffa-cc9ed2f02f6a,index-entry/unit-021/symmetric-monoidal-category,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,4,yaobanfanchou!对称幺半范畴 (symmetric monoidal category),yaobanfanchou@kategori monoidal (monoidal category)!kategori monoidal simetris (symmetric monoidal category),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:8b1b87a4-ad8d-50ad-856a-c7d0ee8a4105,index-entry/unit-021/yang-baxter-equation,urn:uuid:d61d193e-237c-510c-9846-502957c48b12,5,YBE@杨--Baxter 方程,YBE@persamaan Yang--Baxter (Yang--Baxter equation),latex-index-key,source_key_preserved_target_key_localized

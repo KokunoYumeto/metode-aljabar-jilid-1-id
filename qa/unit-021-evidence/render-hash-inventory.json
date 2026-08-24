@@ -1,0 +1,241 @@
+{
+  "schema_version": "1.0.0",
+  "unit_id": "O013-LI-U021",
+  "status": "PASS",
+  "page_count": 9,
+  "render_resolution_dpi": 144,
+  "build_a": {
+    "path": "build/unit-021-final-a/unit-021-bab-3-struktur-kepang.pdf",
+    "bytes": 115400,
+    "sha256": "3307ea4ff631081e1e7e70ae9e7c4453bba8be0a2c861283e4ba96bd7ab042b0"
+  },
+  "build_b": {
+    "path": "build/unit-021-final-b/unit-021-bab-3-struktur-kepang.pdf",
+    "bytes": 115395,
+    "sha256": "ff12bd0dbff7ba40d16050aef9f51b2b676dcfbeaa2e5808407373936fc37371"
+  },
+  "visual_manifest": {
+    "path": "build/unit-021-visual-qa/qa-manifest.json",
+    "bytes": 59332,
+    "sha256": "2d1eded94b59f2047d547956199e67605bcb76d19ca745f9f832ad7a03a79810"
+  },
+  "render_count": 72,
+  "contact_sheet_count": 8,
+  "comparisons": {
+    "replay/poppler/final-a": {
+      "left": "poppler/final-a/run-1",
+      "right": "poppler/final-a/run-2",
+      "page_count_equal": true,
+      "raw_pixel_identical": true,
+      "png_byte_identical": true,
+      "mismatching_raw_pages": [],
+      "mismatching_png_pages": []
+    },
+    "replay/poppler/final-b": {
+      "left": "poppler/final-b/run-1",
+      "right": "poppler/final-b/run-2",
+      "page_count_equal": true,
+      "raw_pixel_identical": true,
+      "png_byte_identical": true,
+      "mismatching_raw_pages": [],
+      "mismatching_png_pages": []
+    },
+    "builds/poppler": {
+      "left": "poppler/final-a/run-1",
+      "right": "poppler/final-b/run-1",
+      "page_count_equal": true,
+      "raw_pixel_identical": true,
+      "png_byte_identical": true,
+      "mismatching_raw_pages": [],
+      "mismatching_png_pages": []
+    },
+    "replay/mupdf/final-a": {
+      "left": "mupdf/final-a/run-1",
+      "right": "mupdf/final-a/run-2",
+      "page_count_equal": true,
+      "raw_pixel_identical": true,
+      "png_byte_identical": true,
+      "mismatching_raw_pages": [],
+      "mismatching_png_pages": []
+    },
+    "replay/mupdf/final-b": {
+      "left": "mupdf/final-b/run-1",
+      "right": "mupdf/final-b/run-2",
+      "page_count_equal": true,
+      "raw_pixel_identical": true,
+      "png_byte_identical": true,
+      "mismatching_raw_pages": [],
+      "mismatching_png_pages": []
+    },
+    "builds/mupdf": {
+      "left": "mupdf/final-a/run-1",
+      "right": "mupdf/final-b/run-1",
+      "page_count_equal": true,
+      "raw_pixel_identical": true,
+      "png_byte_identical": true,
+      "mismatching_raw_pages": [],
+      "mismatching_png_pages": []
+    }
+  },
+  "renderer_aggregate_hashes": {
+    "poppler": {
+      "raw_rgb": "fa54d88b634d0d10c59eb651a14ae474ab95018d504588e795b767bdff91f35a",
+      "png_set": "5f3ad58070005698e6c68592ea73d504b7802f245f5f99b1b1ab2b1f1868e0a8"
+    },
+    "mupdf": {
+      "raw_rgb": "4b97fccf4e388aaeab79bf905a418f2a0aa81469fbb80063e31c013941fcddaf",
+      "png_set": "fc91e67ec845d71da60880d3dc57426fdadb71a0f42d5457e4c2dc848b740032"
+    }
+  },
+  "renderers": {
+    "poppler": [
+      {
+        "page": 1,
+        "path": "qa/unit-021-evidence/poppler-final-b/page-01.png",
+        "bytes": 81486,
+        "sha256": "1a955dd227a23508bd3511bda8197f6d8c0edcc849a0b92591a2ddbda49ba3de",
+        "raw_rgb_sha256": "88fd513e48b066b72ce1ba32fbbbc1cf72cb96ab9555137ea59d95440be752ee",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 2,
+        "path": "qa/unit-021-evidence/poppler-final-b/page-02.png",
+        "bytes": 129029,
+        "sha256": "fff18f466b3b079151e27b09839e495b64c88eeb7322f1e67d0ccac648e9453d",
+        "raw_rgb_sha256": "12ac80b00d29687be27db6c04ae77e3da9e2306ccf655ef7a1cbd85532dafc7d",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 3,
+        "path": "qa/unit-021-evidence/poppler-final-b/page-03.png",
+        "bytes": 161385,
+        "sha256": "f0620a8f94ff032f9808f653a44cd55aeab722dfd8e43098174876bc5ec022b9",
+        "raw_rgb_sha256": "5793d34d08c8ddce057f3e9b6a0d01fd5c0c5cd8a31b8b5b4360360ec29c8938",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 4,
+        "path": "qa/unit-021-evidence/poppler-final-b/page-04.png",
+        "bytes": 177848,
+        "sha256": "20b7fb4b4da9b150aeec3ecb9544da8b492c8736b842a6d90a68a42f968969c9",
+        "raw_rgb_sha256": "bed59ffc982962808c5d8a71f1dab032a7c4ff8a6bed064b2898b6cbe8053e0d",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 5,
+        "path": "qa/unit-021-evidence/poppler-final-b/page-05.png",
+        "bytes": 202514,
+        "sha256": "bad3443043c2e22aee6ceecc64313afa95a80cdcfd57f04e44d37633d6cd45cc",
+        "raw_rgb_sha256": "fbff4af9e1adb7dc9f70e9d260c5f60f70a584f71b1ecf49919cf5d4be63f2e3",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 6,
+        "path": "qa/unit-021-evidence/poppler-final-b/page-06.png",
+        "bytes": 225382,
+        "sha256": "b6dc9da5748dbcf63ed7bf5341279c95d810169edc55883aada2544c173c3c59",
+        "raw_rgb_sha256": "bbe9aae93e7500da8c77fa0443fb4f8be96ca2187fa88d1ef3c13d0d0598e43b",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 7,
+        "path": "qa/unit-021-evidence/poppler-final-b/page-07.png",
+        "bytes": 203364,
+        "sha256": "ddb50846b45ae196697adeb6fb8f045e4bc69b86eed8d9f778bfe93f867c0530",
+        "raw_rgb_sha256": "3be013490ec79ace3ec1a78162ab2759e6169d6cf738098786dd12ad80dc4535",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 8,
+        "path": "qa/unit-021-evidence/poppler-final-b/page-08.png",
+        "bytes": 144709,
+        "sha256": "c5f74bf654a79f05fd2e78dda208b170ae2659efdfb5e00ce23496d2b8445184",
+        "raw_rgb_sha256": "f869ab293127dc2ddc65d6899307c1b3e098cb730c85483eeb7fb93069e9fb47",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 9,
+        "path": "qa/unit-021-evidence/poppler-final-b/page-09.png",
+        "bytes": 83655,
+        "sha256": "3dff15d553acd7679193f01d3dde7718956469f1001d86932b4dbee5279eecb0",
+        "raw_rgb_sha256": "871e4301eaede43422e04ecc0626e0687e065dba022ec1d40d4e8fa03bc45456",
+        "outer_3px_ink": 0
+      }
+    ],
+    "mupdf": [
+      {
+        "page": 1,
+        "path": "qa/unit-021-evidence/mupdf-final-b/page-01.png",
+        "bytes": 74074,
+        "sha256": "f00b9467f063116c71f4c0fd496d1a185e123d8e6d52672e4b28a766d35ae352",
+        "raw_rgb_sha256": "b9d6fe31a5f3828f17be6c7875b2642ab82b7ef1e033e35d8ceb9f094349c35c",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 2,
+        "path": "qa/unit-021-evidence/mupdf-final-b/page-02.png",
+        "bytes": 105017,
+        "sha256": "11958cfa96b1e8bed9965d5709623b8831f2454eb1cfd85fd3ac1dd7f683ebea",
+        "raw_rgb_sha256": "211f473751128148ac6fc391bd2230c630bed61b79aad4dc15e080ac6b2a8e2a",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 3,
+        "path": "qa/unit-021-evidence/mupdf-final-b/page-03.png",
+        "bytes": 136311,
+        "sha256": "e260ce4099f5b217df3ba06ea84246b91c5ba1d8550cab87ed148ba52f2694a0",
+        "raw_rgb_sha256": "65647783787564dc9338f8b5660adf0a4026904323867842a18223a92b7e74c4",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 4,
+        "path": "qa/unit-021-evidence/mupdf-final-b/page-04.png",
+        "bytes": 148402,
+        "sha256": "44b7b97968803a0d58fa906b95aba766cee49581dbb642c786f8426a7095c1c9",
+        "raw_rgb_sha256": "2801a9afe353fd51e31a1962a12cb3c1c632f1a89f8d72266f5b64fe517f58d0",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 5,
+        "path": "qa/unit-021-evidence/mupdf-final-b/page-05.png",
+        "bytes": 172367,
+        "sha256": "f794e3c0404d161d82fedcbe10115af0930329e5350b96eb8fa0313075891154",
+        "raw_rgb_sha256": "d84c25dc0720d3b23dcc1b2670cc1b667dcc02b2fdb93055a68bf856c7805c0a",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 6,
+        "path": "qa/unit-021-evidence/mupdf-final-b/page-06.png",
+        "bytes": 191491,
+        "sha256": "4371faff34a5764805f4a7c0f87213903b1b7e5939546f830deae2da63ee2ee8",
+        "raw_rgb_sha256": "61d5c7547b2e02ddfcb3bb87f7626482b09dfdb98fe7c6a43cb03038275ad614",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 7,
+        "path": "qa/unit-021-evidence/mupdf-final-b/page-07.png",
+        "bytes": 173074,
+        "sha256": "6cd5351f487346550bdb3b44d67768b677b74fd8e98801027c4955325f5af4d4",
+        "raw_rgb_sha256": "7846c2c11bb251db839fdf6cd0da20c8abbb97268b224bc0e8df47e21fc41aad",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 8,
+        "path": "qa/unit-021-evidence/mupdf-final-b/page-08.png",
+        "bytes": 123513,
+        "sha256": "92f13349ae3e9de457c6fc2fbfc6a9e1a8540189253edd4d66c6bd6c3f5046b1",
+        "raw_rgb_sha256": "027903b807c5ccc42d7586cf42500c0d76c85f36a21822d9983ff2a2d8f9ff29",
+        "outer_3px_ink": 0
+      },
+      {
+        "page": 9,
+        "path": "qa/unit-021-evidence/mupdf-final-b/page-09.png",
+        "bytes": 73001,
+        "sha256": "21b29a9213c049b23185f65308c0e13ccf71155c21561e03ddcd2b4d2aadf144",
+        "raw_rgb_sha256": "a31f77ab3401059bcdc320401612870c879e86035393e53dd0b169a006f9df80",
+        "outer_3px_ink": 0
+      }
+    ]
+  },
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

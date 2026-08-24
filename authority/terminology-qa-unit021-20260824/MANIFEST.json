@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "retrieved": "2026-08-24",
+  "purpose": "Bounded Indonesian terminology evidence for O013 Unit 021; retained as a comparison witness, not as translation authority.",
+  "source": {
+    "title": "Konstruksi Brace Dua Sisi Dengan Menggunakan Ring Jacobson",
+    "authors": [
+      "Puguh Wahyu Prasetyo",
+      "Catur Yustika Melati"
+    ],
+    "journal": "Limits: Journal of Mathematics and Its Applications",
+    "year": 2020,
+    "article_url": "https://iptek.its.ac.id/index.php/limits/article/view/6650",
+    "pdf_url": "https://iptek.its.ac.id/index.php/limits/article/download/6650/5232",
+    "doi": "10.12962/limits.v17i2.6650",
+    "host": "Institut Teknologi Sepuluh Nopember",
+    "journal_site_license_notice": "CC BY-SA 4.0",
+    "scope_note": "The PDF directly attests the Indonesian form persamaan Yang-Baxter and repeatedly uses the loan phrase grup Braid. It does not discuss braided monoidal categories or adjudicate struktur kepang versus other possible translations."
+  },
+  "files": [
+    {
+      "path": "prasetyo-melati-2020-konstruksi-brace-dua-sisi.pdf",
+      "bytes": 450506,
+      "sha256": "25d998baa08dcaefa62aa9a06d91f0cf3fa45f5dd0f617d1d9a3b2114cf5cac4",
+      "pages": 15,
+      "redistribution": "comparison witness retained locally; publication payload inclusion is not required"
+    },
+    {
+      "path": "prasetyo-melati-2020-konstruksi-brace-dua-sisi.txt",
+      "bytes": 39469,
+      "sha256": "f9ab5aa509fc4236dc0399f03341a0e2e53ae73ee11ae780f79f175276b4e6cf",
+      "derived_from": "prasetyo-melati-2020-konstruksi-brace-dua-sisi.pdf",
+      "tool": "pdftotext -layout -enc UTF-8"
+    }
+  ],
+  "decision_boundary": {
+    "directly_attested": [
+      "persamaan Yang-Baxter",
+      "grup Braid"
+    ],
+    "edition_decision": "Admit persamaan Yang--Baxter directly. Retain the transparent corpus form grup kepang and the already admitted kategori kepang, while preserving English braid group/braiding in index entries for discoverability; do not claim that grup kepang is directly attested by this witness.",
+    "not_adjudicated": [
+      "struktur kepang",
+      "kategori monoidal berkepang",
+      "fungtor monoidal berkepang",
+      "aksioma segienam"
+    ]
+  },
+  "production_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

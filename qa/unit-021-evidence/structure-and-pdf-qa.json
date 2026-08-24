@@ -1,0 +1,528 @@
+{
+  "schema_version": "1.0.0",
+  "unit_id": "O013-LI-U021",
+  "status": "PASS",
+  "scope_note": "Canonical target integration is observed and hash-bound; admission/publication actions remain outside this visual lane.",
+  "canonical_target": {
+    "path": "repo/source/chapter3.tex",
+    "bytes": 83581,
+    "sha256": "ce310d940819f0fc51ee6459f73a8380b602edee42ef666720e225451adee9f9",
+    "span_lines": "306-511",
+    "span_line_records": 206,
+    "span_bytes": 17968,
+    "span_sha256": "57f5bc8a211b6a9b76a096742fbfc94989c890f11d5140ad449d0e76e2c67085",
+    "span_equals_isolated_candidate": true,
+    "next_target_line": 512,
+    "next_line_sha256": "c4fb914defd51476a7a9721c86e92cedeef7c29344722a029cf2dc46825ac541"
+  },
+  "candidate": {
+    "path": "build/unit-021-candidate/chapter3-braiding-id.tex",
+    "bytes": 17968,
+    "sha256": "57f5bc8a211b6a9b76a096742fbfc94989c890f11d5140ad449d0e76e2c67085"
+  },
+  "artifact": {
+    "path": "artifacts/unit-021-bab-3-struktur-kepang.pdf",
+    "bytes": 115395,
+    "sha256": "ff12bd0dbff7ba40d16050aef9f51b2b676dcfbeaa2e5808407373936fc37371"
+  },
+  "clean_builds": {
+    "final_a": {
+      "path": "build/unit-021-final-a/unit-021-bab-3-struktur-kepang.pdf",
+      "bytes": 115400,
+      "sha256": "3307ea4ff631081e1e7e70ae9e7c4453bba8be0a2c861283e4ba96bd7ab042b0"
+    },
+    "final_b": {
+      "path": "build/unit-021-final-b/unit-021-bab-3-struktur-kepang.pdf",
+      "bytes": 115395,
+      "sha256": "ff12bd0dbff7ba40d16050aef9f51b2b676dcfbeaa2e5808407373936fc37371"
+    }
+  },
+  "driver": {
+    "path": "repo/source/unit-021-bab-3-struktur-kepang.tex",
+    "bytes": 6293,
+    "sha256": "87b385c60bda370c246344f1e3013e31ee86a64ad595677746ff82a224bdd5d9"
+  },
+  "cover": {
+    "path": "repo/source/coverpage-id-unit-021.tex",
+    "bytes": 3482,
+    "sha256": "b04cbf04808bef4e3dc528e61b26f15126c366b7daadb1c0de7cc41032d4517f"
+  },
+  "crossrefs": {
+    "path": "repo/source/unit-021-crossrefs.aux",
+    "bytes": 561,
+    "sha256": "dd0ea3d3d5ffbb01843cc0e195c3a60b1015d01f59eac1f4516f3a5ca30559a4"
+  },
+  "build_script": {
+    "path": "scripts/build_unit_021.ps1",
+    "bytes": 4775,
+    "sha256": "4a731d840469647b9070133d8667b2e1c2bfe81b53a13d595939996b386c4639"
+  },
+  "build_log": {
+    "path": "qa/UNIT_021_BUILD_FINAL.log",
+    "bytes": 85345,
+    "sha256": "5495764755137cd39cac890bba5f0779b9f96c378330c8e46f7ea3c02bc11f08"
+  },
+  "build_log_sanitization": {
+    "method": "complete home-prefix replacement with ${USER_HOME}",
+    "replacement_count": 261,
+    "line_count": 2292
+  },
+  "candidate_checker": {
+    "path": "scripts/check_unit_021_candidate.py",
+    "bytes": 23377,
+    "sha256": "6448b0fa51ac8741bab5b29c7ed339f318c073388e79ba2705bd34b8413a9af6"
+  },
+  "candidate_checker_stdout_sha256": "dbe7c04912a596189998deabdf14213c51a7e2a75a267c4d4cc40d88e523c7f9",
+  "source_review": {
+    "path": "qa/UNIT_021_TRANSLATION_SOURCE_REVIEW_20260824.md",
+    "bytes": 9460,
+    "sha256": "b22feafa193ed118bbe7c559a97e05817f720575bda8cfe190b8827c5f47fe4e"
+  },
+  "terminology_audit": {
+    "path": "qa/UNIT_021_TERMINOLOGY_AUDIT_20260824.md",
+    "bytes": 4653,
+    "sha256": "baaf37af9e72cb487636b07369403432d6a02e8bd6b2960fda1ca7d9537c2ef2"
+  },
+  "visual_probe": {
+    "path": "build/unit-021-visual-qa/qa_probe.py",
+    "bytes": 19951,
+    "sha256": "afa0e85793dab355a368cb25e676a73066c7ad4bb917f3c5de3b8da9cf599b07"
+  },
+  "visual_manifest": {
+    "path": "build/unit-021-visual-qa/qa-manifest.json",
+    "bytes": 59332,
+    "sha256": "2d1eded94b59f2047d547956199e67605bcb76d19ca745f9f832ad7a03a79810"
+  },
+  "render_inventory": {
+    "path": "qa/unit-021-evidence/render-hash-inventory.json",
+    "bytes": 9043,
+    "sha256": "8531a5ee7c15bf935970ccafc6f1b2c1593a3bf5ec4bd50b723b16185eebe39f"
+  },
+  "evidence_generator": {
+    "path": "scripts/generate_unit_021_evidence.py",
+    "bytes": 18056,
+    "sha256": "7364fce81f787ab4ec5bfed05dfd54eca96f9b8f84514029a687949a8a4e2597"
+  },
+  "structure": {
+    "labels": [
+      "sec:braiding",
+      "def:braiding",
+      "eqn:hexagon-axiom-1",
+      "eqn:hexagon-axiom-2",
+      "rem:hexagon-axiom-strict",
+      "def:symm-monoidal-cat",
+      "prop:YBE-cat-strict",
+      "rem:YBE-cat-strict",
+      "eg:braid"
+    ],
+    "references": [
+      "eg:braid",
+      "eqn:hexagon-axiom-1",
+      "eqn:hexagon-axiom-2",
+      "def:strict-monoidal-cat",
+      "eg:monoidal-cat",
+      "prop:product-commutativity",
+      "sec:module-tensor-prod",
+      "eg:fundamental-groupoid",
+      "sec:symmetric-group",
+      "eqn:braid-presentation",
+      "rem:hexagon-axiom-strict",
+      "rem:YBE-cat-strict",
+      "def:braiding"
+    ],
+    "citations": [
+      {
+        "locator": "",
+        "key": "JS93"
+      },
+      {
+        "locator": "Corollary 2.6",
+        "key": "JS93"
+      }
+    ],
+    "index_entries": 8,
+    "ordinary_index_entries": 6,
+    "symbol_index_entries": 2,
+    "environment_counts": {
+      "definition": 3,
+      "equation": 3,
+      "tikzcd": 6,
+      "remark": 2,
+      "align*": 2,
+      "example": 2,
+      "proposition": 1,
+      "center": 4,
+      "tikzpicture": 17,
+      "proof": 1,
+      "multline*": 1,
+      "array": 1
+    },
+    "tikzpicture": 17,
+    "tikzcd": 6,
+    "declared_corrections": [
+      "O013-LI-U021-COR-001",
+      "O013-LI-U021-COR-002",
+      "O013-LI-U021-ED-001"
+    ]
+  },
+  "pdf": {
+    "pages": 9,
+    "pdf_header": "%PDF-1.7",
+    "language": "id-ID",
+    "encrypted": false,
+    "tagged": false,
+    "metadata": {
+      "/Creator": "LaTeX with hyperref",
+      "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 21: Kategori Monoidal - Struktur Kepang",
+      "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 3.3 lengkap",
+      "/Author": "Wen-Wei Li",
+      "/Keywords": "aljabar, teori kategori, kategori monoidal berkepang, persamaan Yang-Baxter, grup kepang, id-ID",
+      "/Producer": "MiKTeX-dvipdfmx (20260404)",
+      "/CreationDate": "D:20260824000000Z"
+    },
+    "page_labels": [
+      "1",
+      "2",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "outline": [
+      {
+        "level": 0,
+        "title": "Bab 3: Kategori Monoidal",
+        "page_index": 2
+      },
+      {
+        "level": 1,
+        "title": "3.3 Struktur Kepang",
+        "page_index": 2
+      },
+      {
+        "level": 0,
+        "title": "Daftar Pustaka",
+        "page_index": 8
+      },
+      {
+        "level": 0,
+        "title": "Indeks Istilah",
+        "page_index": 8
+      },
+      {
+        "level": 0,
+        "title": "Indeks Simbol",
+        "page_index": 8
+      }
+    ],
+    "named_destinations": [
+      {
+        "name": "Doc-Start",
+        "page_index": 0
+      },
+      {
+        "name": "cite.0@JS93",
+        "page_index": 8
+      },
+      {
+        "name": "equation.3.1",
+        "page_index": 2
+      },
+      {
+        "name": "equation.3.2",
+        "page_index": 2
+      },
+      {
+        "name": "equation.3.3",
+        "page_index": 2
+      },
+      {
+        "name": "page.1",
+        "page_index": 2
+      },
+      {
+        "name": "page.2",
+        "page_index": 3
+      },
+      {
+        "name": "page.3",
+        "page_index": 4
+      },
+      {
+        "name": "page.4",
+        "page_index": 5
+      },
+      {
+        "name": "page.5",
+        "page_index": 6
+      },
+      {
+        "name": "page.6",
+        "page_index": 7
+      },
+      {
+        "name": "page.7",
+        "page_index": 8
+      },
+      {
+        "name": "proof.1",
+        "page_index": 4
+      },
+      {
+        "name": "section*.1",
+        "page_index": 8
+      },
+      {
+        "name": "section*.2",
+        "page_index": 8
+      },
+      {
+        "name": "section*.3",
+        "page_index": 8
+      },
+      {
+        "name": "section.3.3",
+        "page_index": 2
+      },
+      {
+        "name": "theorem.3.3.1",
+        "page_index": 2
+      },
+      {
+        "name": "theorem.3.3.2",
+        "page_index": 3
+      },
+      {
+        "name": "theorem.3.3.3",
+        "page_index": 3
+      },
+      {
+        "name": "theorem.3.3.4",
+        "page_index": 3
+      },
+      {
+        "name": "theorem.3.3.5",
+        "page_index": 3
+      },
+      {
+        "name": "theorem.3.3.6",
+        "page_index": 3
+      },
+      {
+        "name": "theorem.3.3.7",
+        "page_index": 4
+      },
+      {
+        "name": "theorem.3.3.8",
+        "page_index": 4
+      },
+      {
+        "name": "unit021-bibliography.0",
+        "page_index": 8
+      },
+      {
+        "name": "unit021-chapter-three.0",
+        "page_index": 2
+      },
+      {
+        "name": "unit021-symbol-index.0",
+        "page_index": 8
+      },
+      {
+        "name": "unit021-term-index.0",
+        "page_index": 8
+      }
+    ],
+    "annotation_subtypes": {
+      "/Link": 22
+    },
+    "annotation_actions": {
+      "/URI": 4,
+      "/GoTo": 18
+    },
+    "unsafe_actions": [],
+    "page_text_character_counts": [
+      395,
+      819,
+      1236,
+      1448,
+      1702,
+      2043,
+      1707,
+      1154,
+      562
+    ],
+    "page_annotation_counts": [
+      0,
+      3,
+      2,
+      2,
+      0,
+      0,
+      2,
+      2,
+      11
+    ],
+    "page_sizes_points": [
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ]
+    ],
+    "content_stream_set_sha256": "48619f4a626ce5bea48158fba79a353986e5957e5f929936fbf3fa7cf3f4cabc",
+    "pypdf_text_sha256": "4d647c93cc800490aef058637cbdfdfc51731055634799211ca2c2082c01fd0f",
+    "pypdf_nul_character_count": 2,
+    "fitz_text_sha256": "696ed692cb11ec952eb3aca310d0746288bdcf77984d7d13459b047c9d6df982",
+    "fitz_nul_character_count": 0,
+    "pdfplumber_layout_text_sha256": "35d5acff454e9e6c2505fc0eb4f8e9fa55719aeae433e4e4d4bcedaf49972e86",
+    "pdfplumber_nul_character_count": 0,
+    "poppler_layout_text_bytes": 16094,
+    "poppler_layout_text_sha256": "9b68de54937294634bd925adcfaed5cc976ca10ce75774a4b1bede9ac986e161",
+    "poppler_layout_nul_byte_count": 0,
+    "font_count": 30,
+    "all_fonts_embedded": true,
+    "all_fonts_embedded_and_subset": true,
+    "acroform_present": false,
+    "javascript_name_tree": false,
+    "embedded_files": false,
+    "catalog_additional_actions": false,
+    "open_action_present": true,
+    "open_action_type": "ArrayObject",
+    "unresolved_token_count": 0,
+    "fitz_out_of_bounds_text_blocks": [],
+    "pdfplumber_out_of_bounds_characters": [],
+    "strict_reader_warnings": [],
+    "external_tools": {
+      "pdfinfo": {
+        "returncode": 0,
+        "stdout_sha256": "0d92956f0fa29c09169999ec4dad8ed31c5e9f33f22eff91810ec2d71d11acc2",
+        "stderr": ""
+      },
+      "pdffonts": {
+        "returncode": 0,
+        "stdout_sha256": "fc75fa73253aaeba215be1f66f306185e77b54b5c604e0d5b614acce5225ba78",
+        "stderr": ""
+      },
+      "pdfimages": {
+        "returncode": 0,
+        "stdout_sha256": "34564014f054ee8b3a848afce1c8d179aa2b7da81d2bd84b9e1a38232fc7e3f7",
+        "stderr": ""
+      },
+      "mutool_info": {
+        "returncode": 0,
+        "stdout_sha256": "993a8c066580ca33adf83b6d74ff022a5a9fc3781df80e61f976c4a9a3049476",
+        "stderr": ""
+      }
+    }
+  },
+  "deterministic_replay": {
+    "container_byte_identity": false,
+    "semantic_and_render_identity": true,
+    "render_count": 72,
+    "contact_sheet_count": 8,
+    "same_renderer_page_mismatches": {
+      "poppler": 0,
+      "mupdf": 0
+    }
+  },
+  "log_counts": {
+    "overfull_boxes": 0,
+    "underfull_hboxes": 4,
+    "underfull_vboxes": 3,
+    "empty_external_link_targets": 7,
+    "undefined_control_sequences": 0,
+    "undefined_references": 0,
+    "undefined_citations": 0,
+    "missing_characters": 0,
+    "fatal_errors": 0,
+    "emergency_stops": 0
+  },
+  "checks": {
+    "canonical_target_full_identity": true,
+    "canonical_span_equals_candidate": true,
+    "boundary_next_section": true,
+    "candidate_checker": true,
+    "artifact_equals_final_b": true,
+    "nine_pages": true,
+    "semantic_replay": true,
+    "render_replay": true,
+    "pdf_safety": true,
+    "navigation": true,
+    "accessibility_baseline": true,
+    "fonts": true,
+    "text_tokens": true,
+    "log": true,
+    "page_edges": true,
+    "structure": true
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "renderers_inspected": [
+      "Poppler",
+      "PyMuPDF"
+    ],
+    "finding": "Centered scope-explicit cover; readable full-width Section 3.3; intact hexagons, Yang--Baxter cycle, braid diagrams, and naturality square; bibliography and both short indexes combined legibly on concluding page 9.",
+    "nine_page_adjudication": "Retained because an attempted eight-page same-page merge produced a 21.58pt overfull vbox; the restored nine-page layout has zero overfull boxes."
+  },
+  "extraction_note": {
+    "pypdf_nul_character_count": 2,
+    "interpretation": "PyPDF-only ToUnicode mapping limitation for two rendered long-arrow glyphs; zero NUL/replacement/control characters in Poppler, PyMuPDF, and pdfplumber extraction."
+  },
+  "rights": {
+    "principal_text_and_translation": "CC BY 4.0",
+    "AJbook_class_fragment": "CC BY-SA 3.0",
+    "bundled_noto_fonts": "SIL OFL 1.1",
+    "Lanzhou_png_in_wider_closure": "CC BY-SA 3.0; not used by this reader"
+  },
+  "language": "id-ID",
+  "source_author": "Wen-Wei Li",
+  "translation_status": "independent and non-endorsed",
+  "build_date": "2026-08-24",
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

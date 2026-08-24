@@ -1,0 +1,10 @@
+PASS Unit 021 final build and visual replay
+artifact bytes=115395 sha256=ff12bd0dbff7ba40d16050aef9f51b2b676dcfbeaa2e5808407373936fc37371 pages=9
+canonical target bytes=83581 sha256=ce310d940819f0fc51ee6459f73a8380b602edee42ef666720e225451adee9f9
+canonical lines=306-511 records=206 bytes=17968 sha256=57f5bc8a211b6a9b76a096742fbfc94989c890f11d5140ad449d0e76e2c67085 candidate_byte_identical=yes
+same-renderer replay and cross-build: Poppler all pages identical; PyMuPDF all pages identical
+PDF: outlines=5 destinations=29 GoTo=18 URI=4 fonts=30 language=id-ID tagged=no
+log counts: {"emergency_stops": 0, "empty_external_link_targets": 7, "fatal_errors": 0, "missing_characters": 0, "overfull_boxes": 0, "undefined_citations": 0, "undefined_control_sequences": 0, "undefined_references": 0, "underfull_hboxes": 4, "underfull_vboxes": 3}
+Nine pages retained: attempted same-page back-matter merge produced a 21.58pt overfull vbox; the clean layout combines bibliography and both indexes on page 9.
+PyPDF maps two visible long-arrow glyphs to NUL; Poppler, PyMuPDF, and pdfplumber extract them without NUL/replacement/control characters.
+provenance model: OpenAI Codex gpt-5.6-sol, Ultra

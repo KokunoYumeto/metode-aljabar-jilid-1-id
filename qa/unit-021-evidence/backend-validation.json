@@ -1,0 +1,119 @@
+{
+  "status": "PASS",
+  "unit": "unit-021-bab-3-struktur-kepang",
+  "authority": "chapter3.tex:307-512",
+  "target": "chapter3.tex:306-511",
+  "data": "backend/data/unit-021-bab-3-struktur-kepang.json",
+  "schema": "backend/schema/open-math-corpus-unit.schema.v1.json",
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "artifact": {
+    "path": "artifacts/unit-021-bab-3-struktur-kepang.pdf",
+    "pages": 9,
+    "bytes": 115395,
+    "sha256": "ff12bd0dbff7ba40d16050aef9f51b2b676dcfbeaa2e5808407373936fc37371"
+  },
+  "counts": {
+    "concepts": 334,
+    "labels": 9,
+    "ordinary_references": 10,
+    "equation_references": 3,
+    "citation_occurrences": 2,
+    "native_bibliography_records": 1,
+    "items": 0,
+    "inline_formulae": 144,
+    "bracket_display_formulae": 6,
+    "environment_display_formulae": 6,
+    "tikzcd": 6,
+    "tikzpicture": 17,
+    "arrows": 26,
+    "nodes": 30,
+    "coordinates": 2,
+    "draws": 32,
+    "paths": 0,
+    "edges": 15,
+    "braids": 10,
+    "hlines": 3,
+    "index_entries": 8,
+    "terminology_rows": 9,
+    "corrections": 3,
+    "csv_projections": 6
+  },
+  "checks": {
+    "deterministic_regeneration_one": "PASS",
+    "deterministic_regeneration_two": "PASS",
+    "shared_schema_and_uuidv5": "PASS",
+    "source_candidate_target_line_boundary": "PASS",
+    "protected_surface_topology": "PASS",
+    "correction_provenance": "PASS",
+    "component_rights": "PASS",
+    "build_and_visual_bindings": "PASS",
+    "terminology_binding": "PASS",
+    "validation_mutated_outputs": false
+  },
+  "identities": {
+    "backend/data/unit-021-bab-3-struktur-kepang.json": {
+      "bytes": 275815,
+      "sha256": "9e6ee43fcca4856a0ade17aecddf3273f441414797b0af80a7934135ff17453c"
+    },
+    "backend/csv/unit-021-bindings.csv": {
+      "bytes": 25772,
+      "sha256": "4d4ded991c63e4ab2cddcfa2135c378324e0109f1a0d3d53897a5beab7859537"
+    },
+    "backend/csv/unit-021-entities.csv": {
+      "bytes": 73000,
+      "sha256": "85e52ee1c93db3f489d07ceb13e3edc09f30ed4e1a6ded5d2c9aa0841694c588"
+    },
+    "backend/csv/unit-021-qa.csv": {
+      "bytes": 4212,
+      "sha256": "c370346e07dcf6e62e8d9aefe23d4d63c889e506e8aaeb2efabea1f42153327e"
+    },
+    "backend/csv/unit-021-relations.csv": {
+      "bytes": 189214,
+      "sha256": "f5d8f5f591cf6b02cbb80a51b6f2cbb77bbf5d45bf84cb25cf564c1509aa0a45"
+    },
+    "backend/csv/unit-021-rights.csv": {
+      "bytes": 1287,
+      "sha256": "4836630530f87a11a64fe233c59970e2ff7942695a8dbf404f7a0583a275197e"
+    },
+    "backend/csv/unit-021-surfaces.csv": {
+      "bytes": 6838,
+      "sha256": "9652a8511751fae1546acc00e79c239c6549aabc1d77a3a9e16e87ab0dbdaea4"
+    }
+  },
+  "bound_inputs": {
+    "00_control/TERMINOLOGY.id-ID.csv": {
+      "bytes": 39866,
+      "sha256": "45e7b1500533e4fa8a8a257efe2982261704bd00a27f056030112141e5ed0efe"
+    },
+    "qa/unit-021-evidence/structure-and-pdf-qa.json": {
+      "bytes": 13834,
+      "sha256": "110959bf80801379ec2d1cee26aaa969fd4b288cd752adc8fa9d891f1e3e697e"
+    },
+    "qa/UNIT_021_VISUAL_QA_20260824.md": {
+      "bytes": 6813,
+      "sha256": "b87cc24343d7a3d748a1b7af8bb1cf7ca8e5a0fda48fc589addf23bfc64021d4"
+    },
+    "qa/UNIT_021_MATH_STRUCTURE_AUDIT_20260824.md": {
+      "bytes": 7530,
+      "sha256": "099d3d9e31111b79b8b1fac0490176a18bb2b773a7493e7b731e1241f71279d0"
+    },
+    "qa/UNIT_021_SOURCE_CORRECTIONS_20260824.md": {
+      "bytes": 3492,
+      "sha256": "53cdb481310e76a2b2025b9086b884f7c6a7b1071606ce1c545cf24ac559db55"
+    },
+    "qa/UNIT_021_TERMINOLOGY_AUDIT_20260824.md": {
+      "bytes": 4653,
+      "sha256": "baaf37af9e72cb487636b07369403432d6a02e8bd6b2960fda1ca7d9537c2ef2"
+    }
+  },
+  "tools": {
+    "scripts/generate_unit_021_backend.py": {
+      "bytes": 60702,
+      "sha256": "285b8a2fb9685835c2b1068ad8fb4e3a643fc3363e2848695d14149209359fd5"
+    },
+    "scripts/validate_unit_021_backend.py": {
+      "bytes": 16965,
+      "sha256": "0af87bfc1aedc56251521bffe1785a45a889db5cbbf1d36db29f369bd7cd8f97"
+    }
+  }
+}
