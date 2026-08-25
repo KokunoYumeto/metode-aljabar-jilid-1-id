@@ -1,0 +1,2292 @@
+{
+  "actionable_defects": [],
+  "cross_pdf_semantic_identity": true,
+  "documents": {
+    "artifact": {
+      "actions": {
+        "all_uris_https": true,
+        "annotation_additional_actions": 0,
+        "broken_destinations": [],
+        "catalog_additional_action": false,
+        "counts": {
+          "/GoTo": 9,
+          "/URI": 5
+        },
+        "gotos": [
+          "theorem.4.5.2",
+          "theorem.4.5.2",
+          "cite.0@Lang02",
+          "theorem.4.5.8",
+          "theorem.4.5.2",
+          "theorem.4.5.2",
+          "page.3",
+          "page.1",
+          "page.2"
+        ],
+        "links": [
+          {
+            "action": "/URI",
+            "ordinal_on_page": 1,
+            "page": 2,
+            "rect": [
+              115.616,
+              272.425,
+              174.552,
+              285.157
+            ],
+            "target": "https://www.wwli.asia"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 2,
+            "page": 2,
+            "rect": [
+              275.999,
+              182.725,
+              388.975,
+              194.687
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 3,
+            "page": 2,
+            "rect": [
+              164.469,
+              169.027,
+              258.616,
+              180.988
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 3,
+            "rect": [
+              427.456,
+              332.777,
+              447.939,
+              346.894
+            ],
+            "target": "theorem.4.5.2"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 4,
+            "rect": [
+              143.92,
+              343.551,
+              164.403,
+              357.668
+            ],
+            "target": "theorem.4.5.2"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 5,
+            "rect": [
+              401.368,
+              458.122,
+              406.35,
+              472.239
+            ],
+            "target": "cite.0@Lang02"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 2,
+            "page": 5,
+            "rect": [
+              98.022,
+              375.994,
+              118.505,
+              390.111
+            ],
+            "target": "theorem.4.5.8"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 6,
+            "rect": [
+              48.189,
+              464.26,
+              68.672,
+              478.377
+            ],
+            "target": "theorem.4.5.2"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 2,
+            "page": 6,
+            "rect": [
+              184.378,
+              324.124,
+              204.861,
+              338.241
+            ],
+            "target": "theorem.4.5.2"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 3,
+            "page": 6,
+            "rect": [
+              373.489,
+              71.121,
+              450.211,
+              84.391
+            ],
+            "target": "https://doi.org/10.1007/978-1-4613-0041-0"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 4,
+            "page": 6,
+            "rect": [
+              68.672,
+              56.177,
+              127.203,
+              69.447
+            ],
+            "target": "https://doi.org/10.1007/978-1-4613-0041-0"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 5,
+            "page": 6,
+            "rect": [
+              216.368,
+              56.436,
+              221.349,
+              70.553
+            ],
+            "target": "page.3"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 6,
+            "page": 6,
+            "rect": [
+              159.487,
+              30.057,
+              164.096,
+              42.789
+            ],
+            "target": "page.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 7,
+            "page": 6,
+            "rect": [
+              247.59,
+              30.057,
+              252.199,
+              42.789
+            ],
+            "target": "page.2"
+          }
+        ],
+        "out_of_bounds_rectangles": [],
+        "page_additional_actions": 0,
+        "unsafe": [],
+        "uris": [
+          "https://www.wwli.asia",
+          "https://creativecommons.org/licenses/by/4.0/",
+          "https://creativecommons.org/licenses/by/4.0/",
+          "https://doi.org/10.1007/978-1-4613-0041-0",
+          "https://doi.org/10.1007/978-1-4613-0041-0"
+        ]
+      },
+      "catalog_keys": [
+        "/Lang",
+        "/Names",
+        "/OpenAction",
+        "/Outlines",
+        "/PageLabels",
+        "/PageMode",
+        "/Pages",
+        "/Type"
+      ],
+      "checks": {
+        "action_counts": true,
+        "fonts_embedded": true,
+        "known_math_font_nul_census": true,
+        "language_id_ID": true,
+        "link_closure": true,
+        "metadata_exact": true,
+        "no_active_payloads": true,
+        "outline_exact": true,
+        "rectangles_in_bounds": true,
+        "safe_actions": true,
+        "six_pages": true,
+        "text_blocks_in_bounds": true,
+        "text_has_no_replacement_characters": true,
+        "thirty_six_destinations": true,
+        "untagged_disclosed": true
+      },
+      "encrypted": false,
+      "fonts": {
+        "pdffonts_all_embedded": true,
+        "pdffonts_rows": 25,
+        "pdffonts_stderr": "",
+        "pypdf_all_embedded": true,
+        "pypdf_unique": 25,
+        "records": [
+          {
+            "basefont": "/BFVAXQ+CMEX10",
+            "embedded": true,
+            "normalized": "/CMEX10",
+            "object": "46 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "basefont": "/DQMZFO+CMMI10",
+            "embedded": true,
+            "normalized": "/CMMI10",
+            "object": "17 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/XIOZSB+CMMI5",
+            "embedded": true,
+            "normalized": "/CMMI5",
+            "object": "64 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/XRFQBP+CMMI7",
+            "embedded": true,
+            "normalized": "/CMMI7",
+            "object": "42 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/CIPLKL+CMMI9",
+            "embedded": true,
+            "normalized": "/CMMI9",
+            "object": "18 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/HZQDDF+CMR10",
+            "embedded": true,
+            "normalized": "/CMR10",
+            "object": "41 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/EWJPSV+CMR5",
+            "embedded": true,
+            "normalized": "/CMR5",
+            "object": "65 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/MTCHTO+CMR7",
+            "embedded": true,
+            "normalized": "/CMR7",
+            "object": "45 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/OGGEGY+CMSY10",
+            "embedded": true,
+            "normalized": "/CMSY10",
+            "object": "40 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "basefont": "/JMLMSF+CMSY7",
+            "embedded": true,
+            "normalized": "/CMSY7",
+            "object": "44 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/QDHCQT+LMMono10-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono10-Regular-Identity-H",
+            "object": "70 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/UPJMBS+LMMono12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono12-Regular-Identity-H",
+            "object": "22 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/AWGGFR+LMMono9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono9-Regular-Identity-H",
+            "object": "29 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/UNEIZB+LMRoman10-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Bold-Identity-H",
+            "object": "66 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/DWXTTP+LMRoman10-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Regular-Identity-H",
+            "object": "38 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/PTMATX+LMRoman12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman12-Regular-Identity-H",
+            "object": "11 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/DRMPEQ+LMRoman17-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman17-Regular-Identity-H",
+            "object": "9 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/XKCFXK+LMRoman8-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman8-Regular-Identity-H",
+            "object": "36 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/GMBMPS+LMRoman9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman9-Regular-Identity-H",
+            "object": "24 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/XMUXJB+LMRomanCaps10-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRomanCaps10-Regular-Identity-H",
+            "object": "68 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/CWOKNQ+MSAM10",
+            "embedded": true,
+            "normalized": "/MSAM10",
+            "object": "48 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/VRWSPU+MSBM10",
+            "embedded": true,
+            "normalized": "/MSBM10",
+            "object": "43 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/RRBJZL+MSBM7",
+            "embedded": true,
+            "normalized": "/MSBM7",
+            "object": "52 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/IOMHTU+TeXGyreHeros-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Bold-Identity-H",
+            "object": "13 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/GDJMWR+TeXGyreHeros-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Regular-Identity-H",
+            "object": "15 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          }
+        ]
+      },
+      "geometry": {
+        "fitz_text_blocks_out_of_bounds": []
+      },
+      "identity": {
+        "bytes": 99689,
+        "path": "artifacts/unit-029-bab-4-teorema-sylow-id.pdf",
+        "sha256": "64fde52948525fc5b159f76fbed6571c150e4184a87e47e715164aec135e5012"
+      },
+      "language": "id-ID",
+      "metadata": {
+        "/Author": "Wen-Wei Li",
+        "/CreationDate": "D:20260825000000Z",
+        "/Creator": "LaTeX with hyperref",
+        "/Keywords": "aljabar, teori grup, p-grup, Teorema Cauchy, Teorema Sylow, subgrup Sylow, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.5 lengkap",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 29: Teorema Sylow"
+      },
+      "name_tree_keys": [
+        "/Dests"
+      ],
+      "named_destinations": {
+        "Doc-Start": 1,
+        "Item.1": 5,
+        "Item.2": 5,
+        "cite.0@Lang02": 6,
+        "page.1": 3,
+        "page.2": 4,
+        "page.3": 5,
+        "page.4": 6,
+        "proof.1": 3,
+        "proof.10": 6,
+        "proof.2": 3,
+        "proof.3": 3,
+        "proof.4": 4,
+        "proof.5": 5,
+        "proof.6": 5,
+        "proof.7": 5,
+        "proof.8": 6,
+        "proof.9": 6,
+        "section*.1": 6,
+        "section*.2": 6,
+        "section.4.5": 3,
+        "theorem.4.5.1": 3,
+        "theorem.4.5.10": 5,
+        "theorem.4.5.11": 5,
+        "theorem.4.5.12": 6,
+        "theorem.4.5.13": 6,
+        "theorem.4.5.2": 3,
+        "theorem.4.5.3": 3,
+        "theorem.4.5.4": 3,
+        "theorem.4.5.5": 4,
+        "theorem.4.5.6": 4,
+        "theorem.4.5.7": 4,
+        "theorem.4.5.8": 4,
+        "theorem.4.5.9": 5,
+        "unit029-bibliography.0": 6,
+        "unit029-term-index.0": 6
+      },
+      "open_action": {
+        "fit": "/Fit",
+        "kind": "direct_page_destination",
+        "page": 1
+      },
+      "outline": [
+        {
+          "depth": 0,
+          "page": 3,
+          "title": "4.5 Teorema Sylow"
+        },
+        {
+          "depth": 0,
+          "page": 6,
+          "title": "Daftar Pustaka"
+        },
+        {
+          "depth": 0,
+          "page": 6,
+          "title": "Indeks Istilah"
+        }
+      ],
+      "page_geometry": [
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 1,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 2,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 3,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 4,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 5,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 6,
+          "rotate": 0
+        }
+      ],
+      "pages": 6,
+      "payloads": {
+        "embedded_files": false,
+        "forms": false,
+        "javascript": false
+      },
+      "pdf_header": "%PDF-1.7",
+      "pdfinfo": {
+        "Author": "Wen-Wei Li",
+        "CreationDate": "Tue Aug 25 02:00:00 2026 W. Europe Daylight Time",
+        "Creator": "LaTeX with hyperref",
+        "Custom Metadata": "no",
+        "Encrypted": "no",
+        "File size": "99689 bytes",
+        "Form": "none",
+        "JavaScript": "no",
+        "Keywords": "aljabar, teori grup, p-grup, Teorema Cauchy, Teorema Sylow, subgrup Sylow, id-ID",
+        "Metadata Stream": "no",
+        "Optimized": "no",
+        "PDF version": "1.7",
+        "Page rot": "0",
+        "Page size": "498.9 x 708.66 pts",
+        "Pages": "6",
+        "Producer": "MiKTeX-dvipdfmx (20260404)",
+        "Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.5 lengkap",
+        "Suspects": "no",
+        "Tagged": "no",
+        "Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 29: Teorema Sylow",
+        "UserProperties": "no"
+      },
+      "tagged": false,
+      "text": {
+        "mupdf_sha256": "82c6b6c4fa56520a4477ddb53bf657edd82607b1125e72e7770e8100ba768229",
+        "nul_characters": {
+          "mupdf": 1,
+          "pdftotext_layout": 0,
+          "pypdf": 4
+        },
+        "pdftotext_layout_sha256": "aefbe11c352f931b84099ee2db265a072683b76e1adcdf29aa443aa9fbb27c12",
+        "pypdf_page_sha256": [
+          "fbec5af87de387c114acfb1e93dec1fbca93381f74d5fbac20db50a9d67aee31",
+          "7bf5699ac4838ffcb603d9dfe77afb3275cc10e92410cbd0a416cbd6a1c1bd8a",
+          "b13b63140fabe888fe0277b404cd8137bff27d2b2cc40ea52f35270c3504e0d2",
+          "830e12b7d880304766e6e02cb787e30fcf2c7cd6bc7fefcd9a7e7b178bd39aae",
+          "0f9b1e1a0598dc5cfbf3293b2cca2206ffa05c0ccb3174c80b3dee4e7c0ee2ce",
+          "c6cc7b59ff9d05d5c9726ce325956ffb71c23b4b90a09bf868d9b584914b24cf"
+        ],
+        "pypdf_sha256": "2e014a96bca1ab31da77f50014de5f9f63eca9adfe8fad8cd3489952d4fcb680",
+        "replacement_characters": 0
+      },
+      "tool_diagnostics": {
+        "pdfinfo_stderr": "",
+        "pdftotext_stderr": ""
+      }
+    },
+    "build-i": {
+      "actions": {
+        "all_uris_https": true,
+        "annotation_additional_actions": 0,
+        "broken_destinations": [],
+        "catalog_additional_action": false,
+        "counts": {
+          "/GoTo": 9,
+          "/URI": 5
+        },
+        "gotos": [
+          "theorem.4.5.2",
+          "theorem.4.5.2",
+          "cite.0@Lang02",
+          "theorem.4.5.8",
+          "theorem.4.5.2",
+          "theorem.4.5.2",
+          "page.3",
+          "page.1",
+          "page.2"
+        ],
+        "links": [
+          {
+            "action": "/URI",
+            "ordinal_on_page": 1,
+            "page": 2,
+            "rect": [
+              115.616,
+              272.425,
+              174.552,
+              285.157
+            ],
+            "target": "https://www.wwli.asia"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 2,
+            "page": 2,
+            "rect": [
+              275.999,
+              182.725,
+              388.975,
+              194.687
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 3,
+            "page": 2,
+            "rect": [
+              164.469,
+              169.027,
+              258.616,
+              180.988
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 3,
+            "rect": [
+              427.456,
+              332.777,
+              447.939,
+              346.894
+            ],
+            "target": "theorem.4.5.2"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 4,
+            "rect": [
+              143.92,
+              343.551,
+              164.403,
+              357.668
+            ],
+            "target": "theorem.4.5.2"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 5,
+            "rect": [
+              401.368,
+              458.122,
+              406.35,
+              472.239
+            ],
+            "target": "cite.0@Lang02"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 2,
+            "page": 5,
+            "rect": [
+              98.022,
+              375.994,
+              118.505,
+              390.111
+            ],
+            "target": "theorem.4.5.8"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 6,
+            "rect": [
+              48.189,
+              464.26,
+              68.672,
+              478.377
+            ],
+            "target": "theorem.4.5.2"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 2,
+            "page": 6,
+            "rect": [
+              184.378,
+              324.124,
+              204.861,
+              338.241
+            ],
+            "target": "theorem.4.5.2"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 3,
+            "page": 6,
+            "rect": [
+              373.489,
+              71.121,
+              450.211,
+              84.391
+            ],
+            "target": "https://doi.org/10.1007/978-1-4613-0041-0"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 4,
+            "page": 6,
+            "rect": [
+              68.672,
+              56.177,
+              127.203,
+              69.447
+            ],
+            "target": "https://doi.org/10.1007/978-1-4613-0041-0"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 5,
+            "page": 6,
+            "rect": [
+              216.368,
+              56.436,
+              221.349,
+              70.553
+            ],
+            "target": "page.3"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 6,
+            "page": 6,
+            "rect": [
+              159.487,
+              30.057,
+              164.096,
+              42.789
+            ],
+            "target": "page.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 7,
+            "page": 6,
+            "rect": [
+              247.59,
+              30.057,
+              252.199,
+              42.789
+            ],
+            "target": "page.2"
+          }
+        ],
+        "out_of_bounds_rectangles": [],
+        "page_additional_actions": 0,
+        "unsafe": [],
+        "uris": [
+          "https://www.wwli.asia",
+          "https://creativecommons.org/licenses/by/4.0/",
+          "https://creativecommons.org/licenses/by/4.0/",
+          "https://doi.org/10.1007/978-1-4613-0041-0",
+          "https://doi.org/10.1007/978-1-4613-0041-0"
+        ]
+      },
+      "catalog_keys": [
+        "/Lang",
+        "/Names",
+        "/OpenAction",
+        "/Outlines",
+        "/PageLabels",
+        "/PageMode",
+        "/Pages",
+        "/Type"
+      ],
+      "checks": {
+        "action_counts": true,
+        "fonts_embedded": true,
+        "known_math_font_nul_census": true,
+        "language_id_ID": true,
+        "link_closure": true,
+        "metadata_exact": true,
+        "no_active_payloads": true,
+        "outline_exact": true,
+        "rectangles_in_bounds": true,
+        "safe_actions": true,
+        "six_pages": true,
+        "text_blocks_in_bounds": true,
+        "text_has_no_replacement_characters": true,
+        "thirty_six_destinations": true,
+        "untagged_disclosed": true
+      },
+      "encrypted": false,
+      "fonts": {
+        "pdffonts_all_embedded": true,
+        "pdffonts_rows": 25,
+        "pdffonts_stderr": "",
+        "pypdf_all_embedded": true,
+        "pypdf_unique": 25,
+        "records": [
+          {
+            "basefont": "/MDQPON+CMEX10",
+            "embedded": true,
+            "normalized": "/CMEX10",
+            "object": "46 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "basefont": "/DJNOUV+CMMI10",
+            "embedded": true,
+            "normalized": "/CMMI10",
+            "object": "17 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/ZGUGMR+CMMI5",
+            "embedded": true,
+            "normalized": "/CMMI5",
+            "object": "64 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/VSQMPQ+CMMI7",
+            "embedded": true,
+            "normalized": "/CMMI7",
+            "object": "42 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/PLZKAC+CMMI9",
+            "embedded": true,
+            "normalized": "/CMMI9",
+            "object": "18 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/ECQWTJ+CMR10",
+            "embedded": true,
+            "normalized": "/CMR10",
+            "object": "41 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/NNDXWD+CMR5",
+            "embedded": true,
+            "normalized": "/CMR5",
+            "object": "65 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/VGDXBV+CMR7",
+            "embedded": true,
+            "normalized": "/CMR7",
+            "object": "45 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/NCCSOP+CMSY10",
+            "embedded": true,
+            "normalized": "/CMSY10",
+            "object": "40 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "basefont": "/ETZPIC+CMSY7",
+            "embedded": true,
+            "normalized": "/CMSY7",
+            "object": "44 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/WFCGDU+LMMono10-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono10-Regular-Identity-H",
+            "object": "70 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/UHPZMU+LMMono12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono12-Regular-Identity-H",
+            "object": "22 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/JLSJHK+LMMono9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono9-Regular-Identity-H",
+            "object": "29 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/CNAIIQ+LMRoman10-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Bold-Identity-H",
+            "object": "66 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/QQSJOT+LMRoman10-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Regular-Identity-H",
+            "object": "38 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/BMNYEM+LMRoman12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman12-Regular-Identity-H",
+            "object": "11 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/FPAYYP+LMRoman17-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman17-Regular-Identity-H",
+            "object": "9 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/FOXWJZ+LMRoman8-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman8-Regular-Identity-H",
+            "object": "36 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/PGUDGS+LMRoman9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman9-Regular-Identity-H",
+            "object": "24 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/FGHWSD+LMRomanCaps10-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRomanCaps10-Regular-Identity-H",
+            "object": "68 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/MSEKWW+MSAM10",
+            "embedded": true,
+            "normalized": "/MSAM10",
+            "object": "48 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/EIFPMF+MSBM10",
+            "embedded": true,
+            "normalized": "/MSBM10",
+            "object": "43 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/TOLMKX+MSBM7",
+            "embedded": true,
+            "normalized": "/MSBM7",
+            "object": "52 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/SQGDNG+TeXGyreHeros-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Bold-Identity-H",
+            "object": "13 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/ZMDHFY+TeXGyreHeros-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Regular-Identity-H",
+            "object": "15 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          }
+        ]
+      },
+      "geometry": {
+        "fitz_text_blocks_out_of_bounds": []
+      },
+      "identity": {
+        "bytes": 99695,
+        "path": "build/unit-029-clean-i/unit-029-bab-4-teorema-sylow.pdf",
+        "sha256": "5f9ae471aa1e20598d48bd5705ae0f89ed911304f5f89da30136d975240aafe1"
+      },
+      "language": "id-ID",
+      "metadata": {
+        "/Author": "Wen-Wei Li",
+        "/CreationDate": "D:20260825000000Z",
+        "/Creator": "LaTeX with hyperref",
+        "/Keywords": "aljabar, teori grup, p-grup, Teorema Cauchy, Teorema Sylow, subgrup Sylow, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.5 lengkap",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 29: Teorema Sylow"
+      },
+      "name_tree_keys": [
+        "/Dests"
+      ],
+      "named_destinations": {
+        "Doc-Start": 1,
+        "Item.1": 5,
+        "Item.2": 5,
+        "cite.0@Lang02": 6,
+        "page.1": 3,
+        "page.2": 4,
+        "page.3": 5,
+        "page.4": 6,
+        "proof.1": 3,
+        "proof.10": 6,
+        "proof.2": 3,
+        "proof.3": 3,
+        "proof.4": 4,
+        "proof.5": 5,
+        "proof.6": 5,
+        "proof.7": 5,
+        "proof.8": 6,
+        "proof.9": 6,
+        "section*.1": 6,
+        "section*.2": 6,
+        "section.4.5": 3,
+        "theorem.4.5.1": 3,
+        "theorem.4.5.10": 5,
+        "theorem.4.5.11": 5,
+        "theorem.4.5.12": 6,
+        "theorem.4.5.13": 6,
+        "theorem.4.5.2": 3,
+        "theorem.4.5.3": 3,
+        "theorem.4.5.4": 3,
+        "theorem.4.5.5": 4,
+        "theorem.4.5.6": 4,
+        "theorem.4.5.7": 4,
+        "theorem.4.5.8": 4,
+        "theorem.4.5.9": 5,
+        "unit029-bibliography.0": 6,
+        "unit029-term-index.0": 6
+      },
+      "open_action": {
+        "fit": "/Fit",
+        "kind": "direct_page_destination",
+        "page": 1
+      },
+      "outline": [
+        {
+          "depth": 0,
+          "page": 3,
+          "title": "4.5 Teorema Sylow"
+        },
+        {
+          "depth": 0,
+          "page": 6,
+          "title": "Daftar Pustaka"
+        },
+        {
+          "depth": 0,
+          "page": 6,
+          "title": "Indeks Istilah"
+        }
+      ],
+      "page_geometry": [
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 1,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 2,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 3,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 4,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 5,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 6,
+          "rotate": 0
+        }
+      ],
+      "pages": 6,
+      "payloads": {
+        "embedded_files": false,
+        "forms": false,
+        "javascript": false
+      },
+      "pdf_header": "%PDF-1.7",
+      "pdfinfo": {
+        "Author": "Wen-Wei Li",
+        "CreationDate": "Tue Aug 25 02:00:00 2026 W. Europe Daylight Time",
+        "Creator": "LaTeX with hyperref",
+        "Custom Metadata": "no",
+        "Encrypted": "no",
+        "File size": "99695 bytes",
+        "Form": "none",
+        "JavaScript": "no",
+        "Keywords": "aljabar, teori grup, p-grup, Teorema Cauchy, Teorema Sylow, subgrup Sylow, id-ID",
+        "Metadata Stream": "no",
+        "Optimized": "no",
+        "PDF version": "1.7",
+        "Page rot": "0",
+        "Page size": "498.9 x 708.66 pts",
+        "Pages": "6",
+        "Producer": "MiKTeX-dvipdfmx (20260404)",
+        "Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.5 lengkap",
+        "Suspects": "no",
+        "Tagged": "no",
+        "Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 29: Teorema Sylow",
+        "UserProperties": "no"
+      },
+      "tagged": false,
+      "text": {
+        "mupdf_sha256": "82c6b6c4fa56520a4477ddb53bf657edd82607b1125e72e7770e8100ba768229",
+        "nul_characters": {
+          "mupdf": 1,
+          "pdftotext_layout": 0,
+          "pypdf": 4
+        },
+        "pdftotext_layout_sha256": "aefbe11c352f931b84099ee2db265a072683b76e1adcdf29aa443aa9fbb27c12",
+        "pypdf_page_sha256": [
+          "fbec5af87de387c114acfb1e93dec1fbca93381f74d5fbac20db50a9d67aee31",
+          "7bf5699ac4838ffcb603d9dfe77afb3275cc10e92410cbd0a416cbd6a1c1bd8a",
+          "b13b63140fabe888fe0277b404cd8137bff27d2b2cc40ea52f35270c3504e0d2",
+          "830e12b7d880304766e6e02cb787e30fcf2c7cd6bc7fefcd9a7e7b178bd39aae",
+          "0f9b1e1a0598dc5cfbf3293b2cca2206ffa05c0ccb3174c80b3dee4e7c0ee2ce",
+          "c6cc7b59ff9d05d5c9726ce325956ffb71c23b4b90a09bf868d9b584914b24cf"
+        ],
+        "pypdf_sha256": "2e014a96bca1ab31da77f50014de5f9f63eca9adfe8fad8cd3489952d4fcb680",
+        "replacement_characters": 0
+      },
+      "tool_diagnostics": {
+        "pdfinfo_stderr": "",
+        "pdftotext_stderr": ""
+      }
+    },
+    "build-j": {
+      "actions": {
+        "all_uris_https": true,
+        "annotation_additional_actions": 0,
+        "broken_destinations": [],
+        "catalog_additional_action": false,
+        "counts": {
+          "/GoTo": 9,
+          "/URI": 5
+        },
+        "gotos": [
+          "theorem.4.5.2",
+          "theorem.4.5.2",
+          "cite.0@Lang02",
+          "theorem.4.5.8",
+          "theorem.4.5.2",
+          "theorem.4.5.2",
+          "page.3",
+          "page.1",
+          "page.2"
+        ],
+        "links": [
+          {
+            "action": "/URI",
+            "ordinal_on_page": 1,
+            "page": 2,
+            "rect": [
+              115.616,
+              272.425,
+              174.552,
+              285.157
+            ],
+            "target": "https://www.wwli.asia"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 2,
+            "page": 2,
+            "rect": [
+              275.999,
+              182.725,
+              388.975,
+              194.687
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 3,
+            "page": 2,
+            "rect": [
+              164.469,
+              169.027,
+              258.616,
+              180.988
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 3,
+            "rect": [
+              427.456,
+              332.777,
+              447.939,
+              346.894
+            ],
+            "target": "theorem.4.5.2"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 4,
+            "rect": [
+              143.92,
+              343.551,
+              164.403,
+              357.668
+            ],
+            "target": "theorem.4.5.2"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 5,
+            "rect": [
+              401.368,
+              458.122,
+              406.35,
+              472.239
+            ],
+            "target": "cite.0@Lang02"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 2,
+            "page": 5,
+            "rect": [
+              98.022,
+              375.994,
+              118.505,
+              390.111
+            ],
+            "target": "theorem.4.5.8"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 6,
+            "rect": [
+              48.189,
+              464.26,
+              68.672,
+              478.377
+            ],
+            "target": "theorem.4.5.2"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 2,
+            "page": 6,
+            "rect": [
+              184.378,
+              324.124,
+              204.861,
+              338.241
+            ],
+            "target": "theorem.4.5.2"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 3,
+            "page": 6,
+            "rect": [
+              373.489,
+              71.121,
+              450.211,
+              84.391
+            ],
+            "target": "https://doi.org/10.1007/978-1-4613-0041-0"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 4,
+            "page": 6,
+            "rect": [
+              68.672,
+              56.177,
+              127.203,
+              69.447
+            ],
+            "target": "https://doi.org/10.1007/978-1-4613-0041-0"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 5,
+            "page": 6,
+            "rect": [
+              216.368,
+              56.436,
+              221.349,
+              70.553
+            ],
+            "target": "page.3"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 6,
+            "page": 6,
+            "rect": [
+              159.487,
+              30.057,
+              164.096,
+              42.789
+            ],
+            "target": "page.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 7,
+            "page": 6,
+            "rect": [
+              247.59,
+              30.057,
+              252.199,
+              42.789
+            ],
+            "target": "page.2"
+          }
+        ],
+        "out_of_bounds_rectangles": [],
+        "page_additional_actions": 0,
+        "unsafe": [],
+        "uris": [
+          "https://www.wwli.asia",
+          "https://creativecommons.org/licenses/by/4.0/",
+          "https://creativecommons.org/licenses/by/4.0/",
+          "https://doi.org/10.1007/978-1-4613-0041-0",
+          "https://doi.org/10.1007/978-1-4613-0041-0"
+        ]
+      },
+      "catalog_keys": [
+        "/Lang",
+        "/Names",
+        "/OpenAction",
+        "/Outlines",
+        "/PageLabels",
+        "/PageMode",
+        "/Pages",
+        "/Type"
+      ],
+      "checks": {
+        "action_counts": true,
+        "fonts_embedded": true,
+        "known_math_font_nul_census": true,
+        "language_id_ID": true,
+        "link_closure": true,
+        "metadata_exact": true,
+        "no_active_payloads": true,
+        "outline_exact": true,
+        "rectangles_in_bounds": true,
+        "safe_actions": true,
+        "six_pages": true,
+        "text_blocks_in_bounds": true,
+        "text_has_no_replacement_characters": true,
+        "thirty_six_destinations": true,
+        "untagged_disclosed": true
+      },
+      "encrypted": false,
+      "fonts": {
+        "pdffonts_all_embedded": true,
+        "pdffonts_rows": 25,
+        "pdffonts_stderr": "",
+        "pypdf_all_embedded": true,
+        "pypdf_unique": 25,
+        "records": [
+          {
+            "basefont": "/BFVAXQ+CMEX10",
+            "embedded": true,
+            "normalized": "/CMEX10",
+            "object": "46 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "basefont": "/DQMZFO+CMMI10",
+            "embedded": true,
+            "normalized": "/CMMI10",
+            "object": "17 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/XIOZSB+CMMI5",
+            "embedded": true,
+            "normalized": "/CMMI5",
+            "object": "64 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/XRFQBP+CMMI7",
+            "embedded": true,
+            "normalized": "/CMMI7",
+            "object": "42 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/CIPLKL+CMMI9",
+            "embedded": true,
+            "normalized": "/CMMI9",
+            "object": "18 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/HZQDDF+CMR10",
+            "embedded": true,
+            "normalized": "/CMR10",
+            "object": "41 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/EWJPSV+CMR5",
+            "embedded": true,
+            "normalized": "/CMR5",
+            "object": "65 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/MTCHTO+CMR7",
+            "embedded": true,
+            "normalized": "/CMR7",
+            "object": "45 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/OGGEGY+CMSY10",
+            "embedded": true,
+            "normalized": "/CMSY10",
+            "object": "40 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "basefont": "/JMLMSF+CMSY7",
+            "embedded": true,
+            "normalized": "/CMSY7",
+            "object": "44 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/QDHCQT+LMMono10-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono10-Regular-Identity-H",
+            "object": "70 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/UPJMBS+LMMono12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono12-Regular-Identity-H",
+            "object": "22 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/AWGGFR+LMMono9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono9-Regular-Identity-H",
+            "object": "29 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/UNEIZB+LMRoman10-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Bold-Identity-H",
+            "object": "66 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/DWXTTP+LMRoman10-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Regular-Identity-H",
+            "object": "38 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/PTMATX+LMRoman12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman12-Regular-Identity-H",
+            "object": "11 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/DRMPEQ+LMRoman17-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman17-Regular-Identity-H",
+            "object": "9 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/XKCFXK+LMRoman8-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman8-Regular-Identity-H",
+            "object": "36 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/GMBMPS+LMRoman9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman9-Regular-Identity-H",
+            "object": "24 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/XMUXJB+LMRomanCaps10-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRomanCaps10-Regular-Identity-H",
+            "object": "68 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/CWOKNQ+MSAM10",
+            "embedded": true,
+            "normalized": "/MSAM10",
+            "object": "48 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/VRWSPU+MSBM10",
+            "embedded": true,
+            "normalized": "/MSBM10",
+            "object": "43 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/RRBJZL+MSBM7",
+            "embedded": true,
+            "normalized": "/MSBM7",
+            "object": "52 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/IOMHTU+TeXGyreHeros-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Bold-Identity-H",
+            "object": "13 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/GDJMWR+TeXGyreHeros-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Regular-Identity-H",
+            "object": "15 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          }
+        ]
+      },
+      "geometry": {
+        "fitz_text_blocks_out_of_bounds": []
+      },
+      "identity": {
+        "bytes": 99689,
+        "path": "build/unit-029-clean-j/unit-029-bab-4-teorema-sylow.pdf",
+        "sha256": "64fde52948525fc5b159f76fbed6571c150e4184a87e47e715164aec135e5012"
+      },
+      "language": "id-ID",
+      "metadata": {
+        "/Author": "Wen-Wei Li",
+        "/CreationDate": "D:20260825000000Z",
+        "/Creator": "LaTeX with hyperref",
+        "/Keywords": "aljabar, teori grup, p-grup, Teorema Cauchy, Teorema Sylow, subgrup Sylow, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.5 lengkap",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 29: Teorema Sylow"
+      },
+      "name_tree_keys": [
+        "/Dests"
+      ],
+      "named_destinations": {
+        "Doc-Start": 1,
+        "Item.1": 5,
+        "Item.2": 5,
+        "cite.0@Lang02": 6,
+        "page.1": 3,
+        "page.2": 4,
+        "page.3": 5,
+        "page.4": 6,
+        "proof.1": 3,
+        "proof.10": 6,
+        "proof.2": 3,
+        "proof.3": 3,
+        "proof.4": 4,
+        "proof.5": 5,
+        "proof.6": 5,
+        "proof.7": 5,
+        "proof.8": 6,
+        "proof.9": 6,
+        "section*.1": 6,
+        "section*.2": 6,
+        "section.4.5": 3,
+        "theorem.4.5.1": 3,
+        "theorem.4.5.10": 5,
+        "theorem.4.5.11": 5,
+        "theorem.4.5.12": 6,
+        "theorem.4.5.13": 6,
+        "theorem.4.5.2": 3,
+        "theorem.4.5.3": 3,
+        "theorem.4.5.4": 3,
+        "theorem.4.5.5": 4,
+        "theorem.4.5.6": 4,
+        "theorem.4.5.7": 4,
+        "theorem.4.5.8": 4,
+        "theorem.4.5.9": 5,
+        "unit029-bibliography.0": 6,
+        "unit029-term-index.0": 6
+      },
+      "open_action": {
+        "fit": "/Fit",
+        "kind": "direct_page_destination",
+        "page": 1
+      },
+      "outline": [
+        {
+          "depth": 0,
+          "page": 3,
+          "title": "4.5 Teorema Sylow"
+        },
+        {
+          "depth": 0,
+          "page": 6,
+          "title": "Daftar Pustaka"
+        },
+        {
+          "depth": 0,
+          "page": 6,
+          "title": "Indeks Istilah"
+        }
+      ],
+      "page_geometry": [
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 1,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 2,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 3,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 4,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 5,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 6,
+          "rotate": 0
+        }
+      ],
+      "pages": 6,
+      "payloads": {
+        "embedded_files": false,
+        "forms": false,
+        "javascript": false
+      },
+      "pdf_header": "%PDF-1.7",
+      "pdfinfo": {
+        "Author": "Wen-Wei Li",
+        "CreationDate": "Tue Aug 25 02:00:00 2026 W. Europe Daylight Time",
+        "Creator": "LaTeX with hyperref",
+        "Custom Metadata": "no",
+        "Encrypted": "no",
+        "File size": "99689 bytes",
+        "Form": "none",
+        "JavaScript": "no",
+        "Keywords": "aljabar, teori grup, p-grup, Teorema Cauchy, Teorema Sylow, subgrup Sylow, id-ID",
+        "Metadata Stream": "no",
+        "Optimized": "no",
+        "PDF version": "1.7",
+        "Page rot": "0",
+        "Page size": "498.9 x 708.66 pts",
+        "Pages": "6",
+        "Producer": "MiKTeX-dvipdfmx (20260404)",
+        "Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.5 lengkap",
+        "Suspects": "no",
+        "Tagged": "no",
+        "Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 29: Teorema Sylow",
+        "UserProperties": "no"
+      },
+      "tagged": false,
+      "text": {
+        "mupdf_sha256": "82c6b6c4fa56520a4477ddb53bf657edd82607b1125e72e7770e8100ba768229",
+        "nul_characters": {
+          "mupdf": 1,
+          "pdftotext_layout": 0,
+          "pypdf": 4
+        },
+        "pdftotext_layout_sha256": "aefbe11c352f931b84099ee2db265a072683b76e1adcdf29aa443aa9fbb27c12",
+        "pypdf_page_sha256": [
+          "fbec5af87de387c114acfb1e93dec1fbca93381f74d5fbac20db50a9d67aee31",
+          "7bf5699ac4838ffcb603d9dfe77afb3275cc10e92410cbd0a416cbd6a1c1bd8a",
+          "b13b63140fabe888fe0277b404cd8137bff27d2b2cc40ea52f35270c3504e0d2",
+          "830e12b7d880304766e6e02cb787e30fcf2c7cd6bc7fefcd9a7e7b178bd39aae",
+          "0f9b1e1a0598dc5cfbf3293b2cca2206ffa05c0ccb3174c80b3dee4e7c0ee2ce",
+          "c6cc7b59ff9d05d5c9726ce325956ffb71c23b4b90a09bf868d9b584914b24cf"
+        ],
+        "pypdf_sha256": "2e014a96bca1ab31da77f50014de5f9f63eca9adfe8fad8cd3489952d4fcb680",
+        "replacement_characters": 0
+      },
+      "tool_diagnostics": {
+        "pdfinfo_stderr": "",
+        "pdftotext_stderr": ""
+      }
+    }
+  },
+  "final_build_log": {
+    "braids_warnings": 1,
+    "evidence_sanitized": true,
+    "fatal_diagnostics": {
+      "emergency_stop": 0,
+      "empty_link_target": 0,
+      "fatal_error": 0,
+      "latex_error": 0,
+      "missing_character": 0,
+      "overfull": 0,
+      "undefined_citations": 0,
+      "undefined_control_sequence": 0,
+      "undefined_references": 0
+    },
+    "fontspec_CJK_advisories": 6,
+    "identity": {
+      "bytes": 77013,
+      "path": "qa/UNIT_029_BUILD_FINAL.log",
+      "sha256": "606a707d5aad534f58af25333f3fbffe964ab7c7f1a260b3ffe9c1f1bce8364e"
+    },
+    "latex_release_warnings": 3,
+    "page_marker": 6,
+    "profile_name_occurrences": 0,
+    "raw_log_has_profile_path": false,
+    "sanitization": {
+      "line_records_preserved": 2276,
+      "miktex_placeholder_occurrences": 252,
+      "profile_name_occurrences": 0,
+      "relative_build_prefix_occurrences": 8,
+      "windows_user_path_occurrences": 0
+    },
+    "sanitized_log_reproduced_from_build_j": true,
+    "underfull_hbox_badness": [
+      10000
+    ],
+    "underfull_vbox_badness": [
+      1515
+    ],
+    "windows_user_path_occurrences": 0,
+    "xecjk_warnings": 1
+  },
+  "status": "PASS_WITH_WARNINGS"
+}

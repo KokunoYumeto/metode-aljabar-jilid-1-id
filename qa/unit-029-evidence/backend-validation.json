@@ -1,0 +1,153 @@
+{
+  "status": "PASS",
+  "unit": "unit-029-bab-4-teorema-sylow",
+  "authority": "chapter4.tex:666-795 (blank line 795 omitted from mapping)",
+  "target": "chapter4.tex:665-793",
+  "data": "backend/data/unit-029-bab-4-teorema-sylow.json",
+  "schema": "backend/schema/open-math-corpus-unit.schema.v1.json",
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "provenance_actor": "Codex acting on the user's instruction",
+  "artifact": {
+    "path": "artifacts/unit-029-bab-4-teorema-sylow-id.pdf",
+    "pages": 6,
+    "bytes": 99689,
+    "sha256": "64fde52948525fc5b159f76fbed6571c150e4184a87e47e715164aec135e5012"
+  },
+  "counts": {
+    "sections": 1,
+    "concepts": 280,
+    "textual_environment_markers": 50,
+    "textual_environment_pairs": 25,
+    "active_environment_pairs": 25,
+    "labels": 6,
+    "ordinary_references": 16,
+    "equation_references": 0,
+    "citations": 1,
+    "list_items": 2,
+    "protected_math_zones": 211,
+    "diagrams": 0,
+    "tikzcd_diagrams": 0,
+    "polygon_drawings": 0,
+    "diagram_arrows": 0,
+    "polygon_drawing_commands": 0,
+    "index_entries": 2,
+    "terminology_rows": 5,
+    "source_corrections": 0,
+    "protected_text_localizations": 1,
+    "qa_events": 17,
+    "visual_qa_witnesses": 4,
+    "exercises": 0,
+    "hints": 0,
+    "answers": 0,
+    "solutions": 0,
+    "csv_projections": 6,
+    "uuidv5_entities_audited": 332
+  },
+  "checks": {
+    "deterministic_regeneration_one": "PASS",
+    "deterministic_regeneration_two": "PASS",
+    "shared_schema_and_uuidv5": "PASS",
+    "exact_csv_projection": "PASS",
+    "no_stale_unit_026_ids_or_data": "PASS",
+    "exact_authority_candidate_target_boundary": "PASS",
+    "complete_tex_surface_topology": "PASS",
+    "native_citation_and_index_provenance": "PASS",
+    "zero_source_corrections": "PASS",
+    "one_protected_text_localization": "PASS",
+    "no_invented_exercise_or_solution_surfaces": "PASS",
+    "component_rights_non_endorsement_and_closure_exceptions": "PASS",
+    "build_pdf_and_visual_preflight_bindings": "PASS",
+    "canonical_structure_pdf_and_render_bindings": "PASS",
+    "independent_preflight_preserved_separately": "PASS",
+    "terminology_binding": "PASS",
+    "all_full_file_and_line_span_bindings": "PASS",
+    "validation_mutated_outputs": false
+  },
+  "binding_audit": {
+    "occurrences": 61,
+    "full_file_occurrences": 53,
+    "line_span_occurrences": 8,
+    "unique_paths": 39,
+    "paths": [
+      "00_control/SOURCE_MANIFEST.csv",
+      "00_control/TERMINOLOGY.id-ID.csv",
+      "artifacts/unit-029-bab-4-teorema-sylow-id.pdf",
+      "authority/archives/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b.zip",
+      "authority/pdfs/Al-jabr-1.pdf",
+      "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter4.tex",
+      "build/unit-029-candidate/chapter4-sylow-theorems-id.tex",
+      "build/unit-029-staging/terminology-delta.csv",
+      "qa/UNIT_029_BUILD_FINAL.log",
+      "qa/UNIT_029_PREPROMOTION_AUDIT_20260825.md",
+      "qa/UNIT_029_TERMINOLOGY_AUDIT_20260825.md",
+      "qa/UNIT_029_TRANSLATION_REVIEW_20260824.md",
+      "qa/UNIT_029_VISUAL_PREFLIGHT_20260825.md",
+      "qa/UNIT_029_VISUAL_QA_20260825.md",
+      "qa/unit-029-evidence/render-hash-inventory.json",
+      "qa/unit-029-evidence/structure-and-pdf-qa.json",
+      "repo/fonts/NotoSansCJKsc-Black.otf",
+      "repo/fonts/NotoSansCJKsc-Medium.otf",
+      "repo/fonts/NotoSansCJKsc-Regular.otf",
+      "repo/fonts/NotoSerifCJKsc-Bold.otf",
+      "repo/fonts/OFL-1.1-Noto-CJK.txt",
+      "repo/source/AJbook.cls",
+      "repo/source/Al-jabr.bib",
+      "repo/source/LICENSE",
+      "repo/source/Lanzhou.png",
+      "repo/source/ccby.png",
+      "repo/source/chapter4.tex",
+      "repo/source/coverpage-id-unit-029.tex",
+      "repo/source/font-setup-id.tex",
+      "repo/source/locale-ui-id.tex",
+      "repo/source/myarrows.sty",
+      "repo/source/mycommand.sty",
+      "repo/source/titles-setup-id.tex",
+      "repo/source/titles-setup.tex",
+      "repo/source/unit-029-bab-4-teorema-sylow.tex",
+      "repo/source/unit-029-crossrefs.aux",
+      "scripts/build_unit_029.ps1",
+      "scripts/check_unit_029_candidate.py",
+      "scripts/check_unit_029_structure.py"
+    ]
+  },
+  "identities": {
+    "backend/data/unit-029-bab-4-teorema-sylow.json": {
+      "bytes": 243849,
+      "sha256": "918e1f3cbf30ec950bb83dc6427f63190dde41c766cbc38d5d349728ee92cced"
+    },
+    "backend/csv/unit-029-bindings.csv": {
+      "bytes": 11392,
+      "sha256": "6b15e1dbad92acadf337972cf3834e0070ef466c35ee1c34233170e488871c79"
+    },
+    "backend/csv/unit-029-entities.csv": {
+      "bytes": 73832,
+      "sha256": "b8febf85975d8df7637d78d4999220b385949937f12f59ed037380d0749ea538"
+    },
+    "backend/csv/unit-029-qa.csv": {
+      "bytes": 6631,
+      "sha256": "07db3580987635b0f4be0ecf240ec51a2bca19ec262f6addc95cb4df28ce2466"
+    },
+    "backend/csv/unit-029-relations.csv": {
+      "bytes": 168333,
+      "sha256": "c71816b03512b4194f42a380676777a968d429134b8ed7cae8709d207c94e6a4"
+    },
+    "backend/csv/unit-029-rights.csv": {
+      "bytes": 1287,
+      "sha256": "4836630530f87a11a64fe233c59970e2ff7942695a8dbf404f7a0583a275197e"
+    },
+    "backend/csv/unit-029-surfaces.csv": {
+      "bytes": 924,
+      "sha256": "93dc825f748f7af6e8c16842098ff346fe8b05de95fd05adfeb7d2702e3774ea"
+    }
+  },
+  "tools": {
+    "scripts/generate_unit_029_backend.py": {
+      "bytes": 52112,
+      "sha256": "75d069a729cdbc2eb20b25e9854fafaea1817d8066ee8c9419c38bd54bb720df"
+    },
+    "scripts/validate_unit_029_backend.py": {
+      "bytes": 25500,
+      "sha256": "27c703fa43d9df248513ca0bf795425a8e78e1456a8cab74a47dd3c7cd5e6ac8"
+    }
+  }
+}

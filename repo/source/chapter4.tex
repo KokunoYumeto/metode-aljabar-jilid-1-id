@@ -662,136 +662,135 @@ Definisi asli torsor agak tidak langsung. Namun, terdapat karakterisasi ringkas 
 \begin{proof}
 	Menurut definisi, $\Phi^{-1}(x,y) = \{g \in G: gx=y\} \times \{x\}$. Karena itu, pemetaan $\Phi$ injektif jika dan hanya jika $X$ bebas, dan surjektif jika dan hanya jika $X$ transitif.
 \end{proof}
-\section{Sylow 定理}\label{sec:Sylow}
-首先引入 $p$-群的概念.
+\section{Teorema Sylow}\label{sec:Sylow}
+Pertama-tama, kita perkenalkan konsep $p$-grup.
 
-\begin{definition}\label{def:p-group}\index{$p$-群}
-	设 $p$ 为素数. 满足 $|G|=p^m$, $m \in \Z_{\geq 0}$ 的群 $G$ 称为 $p$-群.
+\begin{definition}\label{def:p-group}\index{$p$-grup}
+	Misalkan $p$ bilangan prima. Apabila $|G|=p^m$ dengan $m \in \Z_{\geq 0}$, grup $G$ disebut $p$-grup.
 \end{definition}
-应用命题 \ref{prop:Lagrange}, 易见 $p$-群的子群和商群仍是 $p$-群.
+Dengan menerapkan Proposisi \ref{prop:Lagrange}, mudah dilihat bahwa subgrup dan grup hasil bagi dari suatu $p$-grup tetap merupakan $p$-grup.
 
 \begin{proposition}\label{prop:counting-localization}
-	设 $G$ 为非平凡 $p$-群, 则任意有限 $G$-集 $X$ 皆满足
+	Misalkan $G$ suatu $p$-grup taktrivial. Maka setiap himpunan-$G$ berhingga $X$ memenuhi
 	\[ |X| \equiv \left\lvert X^G \right\rvert \mod p. \]
 \end{proposition}
 \begin{proof}
-	对任意 $x \in X$, 命题 \ref{prop:Lagrange} 蕴涵 $(G: \Stab_G(x))$ 是 $p$ 的幂. 故有
+	Untuk setiap $x \in X$, Proposisi \ref{prop:Lagrange} menyiratkan bahwa $(G: \Stab_G(x))$ merupakan suatu pangkat dari $p$. Karena itu,
 	\[ [ x \notin X^G] \iff [ \Stab_G(x) \neq G ] \iff (G: \Stab_G(x)) \equiv 0 \bmod p . \]
-	套入引理 \ref{prop:orbit-decomp} 即得所求.
+	Dengan memasukkannya ke dalam Lema \ref{prop:orbit-decomp}, diperoleh hasil yang dikehendaki.
 \end{proof}
 
 \begin{corollary}\label{prop:p-group-center}
-	设 $G$ 为非平凡的 $p$-群, 则 $Z_G \neq \{1\}$.
+	Misalkan $G$ suatu $p$-grup taktrivial. Maka $Z_G \neq \{1\}$.
 \end{corollary}
 \begin{proof}
-	考虑 $G$ 的共轭作用 (例 \ref{eg:conj-action}). 由命题 \ref{prop:counting-localization} 得到
+	Tinjau aksi konjugasi $G$ pada dirinya sendiri (Contoh \ref{eg:conj-action}). Dari Proposisi \ref{prop:counting-localization}, diperoleh
 	\[ 0 \equiv |G| \equiv |Z_G| \mod p , \]
-	故 $|Z_G| > 1$.
+	sehingga $|Z_G| > 1$.
 \end{proof}
 
-此式可用以递归地研究 $p$-群的结构, 兹举一例.
+Kongruensi ini dapat digunakan untuk mengkaji struktur $p$-grup secara rekursif; berikut salah satu contohnya.
 \begin{corollary}
-	设 $G$ 为 $p$-群而 $H \subsetneq G$ 为真子群, 则 $H \subsetneq N_G(H)$. 特别地, $(G:H)=p$ 蕴涵 $H \lhd G$.
+	Misalkan $G$ suatu $p$-grup dan $H \subsetneq G$ suatu subgrup sejati. Maka $H \subsetneq N_G(H)$. Khususnya, $(G:H)=p$ menyiratkan $H \lhd G$.
 \end{corollary}
 \begin{proof}
-	已知 $Z_G$ 非平凡, 显然 $Z_G \subset N_G(H)$. 若 $Z_G \not\subset H$, 则 $H \subsetneq Z_G H \subset N_G(H)$. 因此不妨假设 $Z_G \subset H$. 现在对 $|G|$ 递归论证: 定义 $\bar{G} := G/Z_G$, $\bar{H} := H/Z_G$, 可假设
+	Kita telah mengetahui bahwa $Z_G$ taktrivial, dan jelas $Z_G \subset N_G(H)$. Jika $Z_G \not\subset H$, maka $H \subsetneq Z_G H \subset N_G(H)$. Karena itu, kita boleh mengandaikan $Z_G \subset H$. Sekarang kita berargumen secara rekursif terhadap $|G|$: definisikan $\bar{G} := G/Z_G$ dan $\bar{H} := H/Z_G$; kita boleh mengandaikan bahwa
 	\[ \bar{H} \subsetneq N_{\bar{G}}(\bar{H}). \]
-	容易看出 $N_G(H)/Z_G = N_{\bar{G}}(\bar{H})$. 应用命题 \ref{prop:2nd-homomorphism} 即得 $H \subsetneq N_G(H)$.
+	Mudah dilihat bahwa $N_G(H)/Z_G = N_{\bar{G}}(\bar{H})$. Dengan menerapkan Proposisi \ref{prop:2nd-homomorphism}, diperoleh $H \subsetneq N_G(H)$.
 \end{proof}
 
-另一个直接而重要的推论如下. 先回忆我们在 \S\ref{sec:group-and-monoid} 定义的元素 $x \in G$ 的阶 $\text{ord}(x)$.
-\begin{corollary}[Cauchy 定理]\label{prop:group-Cauchy}
-	设 $G$ 为有限群, 素数 $p$ 整除 $|G|$, 则存在 $x \in G$ 使得 $\ord(x)=p$.
+Akibat langsung lain yang penting adalah sebagai berikut. Ingat kembali bahwa dalam \S\ref{sec:group-and-monoid} kita mendefinisikan orde unsur $x \in G$ sebagai $\text{ord}(x)$.
+\begin{corollary}[Teorema Cauchy]\label{prop:group-Cauchy}
+	Misalkan $G$ suatu grup berhingga dan $p$ suatu bilangan prima yang membagi $|G|$. Maka terdapat $x \in G$ sedemikian sehingga $\ord(x)=p$.
 \end{corollary}
 \begin{proof}
-	定义集合
+	Definisikan himpunan
 	\[ X_p := \{(g_i)_{1 \leq i \leq p} \in G^p : g_1 \cdots g_p = 1 \}. \]
-	不妨将下标 $1 \leq i \leq p$ 看成 $\Z/p\Z$ 里的元素. 如此一来循环群 $\Z/p\Z$ 就作用在 $X_p$ 上: 陪集 $m + p\Z$ 的作用是平移下标
+	Kita boleh memandang indeks $1 \leq i \leq p$ sebagai unsur-unsur dalam $\Z/p\Z$. Dengan demikian, grup siklik $\Z/p\Z$ beraksi pada $X_p$: koset $m + p\Z$ beraksi dengan menggeser indeks,
 	\[ (g_i)_{i \in \Z/p\Z} \longmapsto (g_{i+m})_{i \in \Z/p\Z}. \]
-	须证明此作用不逸出 $X_p$, 仅须检查 $m=1$ 的情形: 对等式 $g_1 \cdots g_p = 1$ 左乘以 $g_1^{-1}$, 右乘以 $g_1$ 即是. 由此导出 $(X_p)^{\Z/p\Z} = \{(x, \ldots, x) : x^p = 1 \}$. 注意到 $x^p=1$ 且 $x \neq 1$ 等价于 $\ord(x)=p$ (参看例 \ref{eg:cyclic-group}).
+	Untuk membuktikan bahwa aksi ini tidak membawa unsur keluar dari $X_p$, cukup diperiksa kasus $m=1$: kalikan persamaan $g_1 \cdots g_p = 1$ dari kiri dengan $g_1^{-1}$ dan dari kanan dengan $g_1$. Dari sini diperoleh $(X_p)^{\Z/p\Z} = \{(x, \ldots, x) : x^p = 1 \}$. Perhatikan bahwa $x^p=1$ dan $x \neq 1$ ekuivalen dengan $\ord(x)=p$ (lihat Contoh \ref{eg:cyclic-group}).
 
-	由于 $g_p = (g_1 \cdots g_{p-1})^{-1}$, 投影映射 $X_p \to G^{p-1}$, $(g_i)_{1 \leq i \leq p} \mapsto (g_i)_{1 \leq i < p}$ 是双射, 故
+	Karena $g_p = (g_1 \cdots g_{p-1})^{-1}$, pemetaan proyeksi $X_p \to G^{p-1}$, $(g_i)_{1 \leq i \leq p} \mapsto (g_i)_{1 \leq i < p}$ merupakan bijeksi. Karena itu,
 	\[ |X_p| = |G|^{p-1} \equiv 0 \mod p. \]
-	另一方面, 命题 \ref{prop:counting-localization} 给出
+	Di sisi lain, Proposisi \ref{prop:counting-localization} memberikan
 	\[ |X_p| \equiv \left\lvert(X_p)^{\Z/p\Z}\right\rvert = 1 + \left\lvert \{x \in G : \ord(x)=p \} \right\rvert \mod p , \]
-	故 $\{x \in G : \ord(x)=p \}$ 非空.
+	sehingga $\{x \in G : \ord(x)=p \}$ tidak kosong.
 \end{proof}
 
 \begin{convention}
-	设 $p$ 为素数, $n \in \Z_{\geq 1}$, 若 $p^a \mid n$ 而且 $p^{a+1} \nmid n$, 则写作 $p^a \| n$.
+	Misalkan $p$ bilangan prima dan $n \in \Z_{\geq 1}$. Jika $p^a \mid n$ dan $p^{a+1} \nmid n$, kita menulis $p^a \| n$.
 \end{convention}
 
-\begin{definition}\index{Sylow $p$-子群}
-	设 $G$ 为 $n$ 阶有限群, $p$ 为素数. 设 $p^m \| n$, 满足 $|H| = p^m$ 的子群 $H$ 称为 $G$ 的 Sylow $p$-子群.
+\begin{definition}\index{subgrup Sylow $p$}
+	Misalkan $G$ suatu grup berhingga berorde $n$ dan $p$ suatu bilangan prima. Andaikan $p^m \| n$. Jika suatu subgrup memenuhi $|H|=p^m$, subgrup tersebut, yang dinotasikan $H$, disebut subgrup Sylow dari $G$ untuk prima $p$.
 \end{definition}
-这意谓 $p$-子群 $H$ 在 Lagrange 定理的约束下达到最大可能阶数. 此定义显然仅在 $p \mid n$ 时才有实质意涵.
+Artinya, $p$-subgrup $H$ mempunyai orde terbesar yang mungkin menurut kendala Teorema Lagrange. Definisi ini jelas hanya memiliki isi substantif apabila $p \mid n$.
 
 \begin{lemma}\label{prop:Wielandt-lemma}
-	设 $p$ 为素数. 对任意非负整数 $b \leq a$, $a \neq 0$ 和 $m$, 二项式系数满足同余式
+	Misalkan $p$ bilangan prima. Untuk setiap bilangan bulat taknegatif $b \leq a$ dengan $a \neq 0$, dan setiap bilangan bulat taknegatif $m$, koefisien binomial memenuhi kongruensi
 	\[ \binom{p^m a}{p^m b} \equiv \binom{a}{b} \mod p. \]
 \end{lemma}
 \begin{proof}
-	考虑以符号 $T$ 为变元的整系数多项式. 由于 $0 < c < p \implies p \mid \binom{p}{c}$, 故
+	Tinjau polinomial berkoefisien bulat dengan peubah simbolis $T$. Karena $0 < c < p \implies p \mid \binom{p}{c}$, maka
 	\[ (T+1)^{pa} = \left( T^p + p(\cdots) + 1 \right)^a \equiv (T^p + 1)^a \mod p. \]
-	即: 两边逐系数模 $p$ 同余. 两侧以二项式定理展开, 比较 $T^{pb}$ 的系数即得 $m=1$ 的情形. 迭代 $m$ 次遂得一般情形.
+	Dengan kata lain, koefisien-koefisien yang bersesuaian pada kedua ruas kongruen modulo $p$. Kembangkan kedua ruas menggunakan teorema binomial, lalu bandingkan koefisien $T^{pb}$ untuk memperoleh kasus $m=1$. Dengan mengiterasikannya sebanyak $m$ kali, diperoleh kasus umum.
 \end{proof}
 
-\begin{theorem}[Sylow 第一定理]
-	对任意素数 $p$, 任意有限群 $G$ 含有 Sylow $p$-子群.
+\begin{theorem}[Teorema Sylow Pertama]
+	Untuk setiap bilangan prima $p$, setiap grup berhingga $G$ mempunyai subgrup Sylow $p$.
 \end{theorem}
-下面论证供鉴赏之用, 另有它证如 \cite[Theorem 6.2]{Lang02}.
+Argumen berikut patut disimak; pembuktian lain dapat dilihat, misalnya, dalam \cite[Theorem 6.2]{Lang02}.
 \begin{proof}[H.\ Wielandt]
-	置 $n := |G|$, 不妨假设 $p^m \| n$, $m \geq 1$. 定义
-	\[ Y := \left\{ \text{ 子集 } \; E \subset G : |E|=p^m \right\}. \]
-	由引理 \ref{prop:Wielandt-lemma} 知
+	Tetapkan $n := |G|$. Kita boleh mengandaikan bahwa $p^m \| n$, dengan $m \geq 1$. Definisikan
+	\[ Y := \left\{ \text{ subhimpunan } \; E \subset G : |E|=p^m \right\}. \]
+	Dari Lema \ref{prop:Wielandt-lemma}, kita memperoleh
 	\[ |Y| = \binom{n}{p^m} \equiv \binom{p^{-m} n}{1} = p^{-m} n \not\equiv 0 \mod p . \]
 
-	群 $G$ 以左平移 $(g, E) \mapsto gE$ 作用于 $Y$. 由引理 \ref{prop:orbit-decomp} 和以上同余式知存在 $E \in Y$ 使得 $p \nmid (G: \Stab_G(E))$, 我们断言 $H := \Stab_G(E)$ 是 Sylow $p$-子群. 首先注意到 $p \nmid \frac{|G|}{|H|}$ 故 $p^m$ 整除 $|H|$. 任取 $g \in E$, 由稳定化子的性质知 $Hg  \subset E$; 配合 $|H|=|Hg|$ 遂得到 $|H| \leq  |E| = p^m$, 故 $|H|=p^m$. 明所欲证.
+	Grup $G$ melalui translasi kiri $(g, E) \mapsto gE$ beraksi pada $Y$. Dari Lema \ref{prop:orbit-decomp} dan kongruensi di atas, terdapat $E \in Y$ sedemikian sehingga $p \nmid (G: \Stab_G(E))$. Kita menyatakan bahwa $H := \Stab_G(E)$ merupakan subgrup Sylow $p$. Pertama-tama, perhatikan bahwa $p \nmid \frac{|G|}{|H|}$, sehingga $p^m$ membagi $|H|$. Ambil sebarang $g \in E$. Dari sifat stabilisator, diperoleh $Hg \subset E$; bersama dengan $|H|=|Hg|$, hal ini menghasilkan $|H| \leq |E| = p^m$, sehingga $|H|=p^m$. Inilah yang hendak dibuktikan.
 \end{proof}
 
 \begin{lemma}
-	设 $p$ 为素数, 而$P$ 是 $G$ 的 Sylow $p$-子群. 若 $G$ 的 $p$-子群 $H$ 满足 $H \subset N_G(P)$, 则 $H \subset P$.
+	Misalkan $p$ bilangan prima dan $P$ suatu subgrup Sylow dari $G$ untuk $p$. Jika dari $G$ dipilih suatu $p$-subgrup $H$ yang memenuhi $H \subset N_G(P)$, maka $H \subset P$.
 \end{lemma}
 \begin{proof}
-	对群 $HP$ 应用命题 \ref{prop:3rd-homomorphism} 可得群同构 $HP/P \simeq H/H \cap P$, 故 $HP$ 仍是 $p$-群. 又因为 $P \subset HP \subset G$ 而 $P$ 是 Sylow $p$-子群, 必有 $HP=P$, 而这又等价于 $H \subset P$.
+	Dengan menerapkan Proposisi \ref{prop:3rd-homomorphism} pada grup $HP$, diperoleh isomorfisme grup $HP/P \simeq H/H \cap P$; karena itu, $HP$ tetap merupakan $p$-grup. Karena $P \subset HP \subset G$ dan $P$ merupakan subgrup Sylow $p$, haruslah $HP=P$, yang ekuivalen dengan $H \subset P$.
 \end{proof}
 
-\begin{theorem}[Sylow 第二定理]
-	令 $G$ 为有限群, $p$ 为素数. 则
+\begin{theorem}[Teorema Sylow Kedua]
+	Misalkan $G$ suatu grup berhingga dan $p$ suatu bilangan prima. Maka:
 	\begin{compactenum}[(i)]
-		\item 任意 $p$-子群 $H \subset G$ 皆包含于某个 Sylow $p$-子群;
-		\item $G$ 的任两个 Sylow $p$-子群 $P, P'$ 皆共轭;
+		\item setiap $p$-subgrup $H \subset G$ termuat dalam suatu subgrup Sylow $p$;
+		\item sebarang dua subgrup Sylow dari $G$ untuk $p$, yakni $P, P'$, saling konjugat;
 	\end{compactenum}
-	特别地, $G$ 中存在正规的 Sylow $p$-子群 当且仅当 $G$ 有唯一的 Sylow $p$-子群.
+	Khususnya, dalam $G$ terdapat subgrup Sylow $p$ yang normal jika dan hanya jika $G$ mempunyai tepat satu subgrup Sylow $p$.
 \end{theorem}
 \begin{proof}
-	选定 Sylow $p$-子群 $P \subset G$, 并考虑它在 $G$ 的共轭作用下的轨道
+	Pilih suatu subgrup Sylow $p$, yaitu $P \subset G$, lalu tinjau orbitnya di bawah aksi konjugasi $G$,
 	\[ X := \left\{ gPg^{-1} : g \in G \right\} \]
-	任意 $Q \in X$ 都是 $G$ 的 Sylow $p$-子群, 而且其稳定化子群是 $N_G(Q)$. 我们有 $G$-集的同构
+	Setiap $Q \in X$ merupakan subgrup Sylow dari $G$ untuk $p$, dan subgrup stabilisatornya ialah $N_G(Q)$. Kita mempunyai isomorfisme himpunan-$G$
 	\begin{align*}
 		G/N_G(P) & \stackrel{\sim}{\longrightarrow} X \\
 		g N_G(P) & \longmapsto gPg^{-1}.
 	\end{align*}
 
-	由于 $P \subset N_G(P)$, 我们有 $|X| \not\equiv 0 \mod p$. 现假设 $H \subset G$ 为 $p$-子群, 那么 $H$ 也共轭作用于 $X$ 上. 应用命题 \ref{prop:counting-localization} 得 $X^H$ 非空. 取 $Q \in X^H$, 从定义知 $H \subset N_G(Q)$, 上述引理遂保证 $H \subset Q$, 这就证明了第一个断言. 若进一步要求 $H$ 为  Sylow $p$-子群, 则必有 $H = Q$. 由于 $X$ 中元素相互共轭, 第二个断言随之得证.
+	Karena $P \subset N_G(P)$, kita mempunyai $|X| \not\equiv 0 \mod p$. Sekarang, andaikan $H \subset G$ suatu $p$-subgrup. Maka $H$ juga beraksi melalui konjugasi pada $X$. Dengan menerapkan Proposisi \ref{prop:counting-localization}, diperoleh bahwa $X^H$ tidak kosong. Ambil $Q \in X^H$. Dari definisi, $H \subset N_G(Q)$, sehingga lema di atas menjamin $H \subset Q$; ini membuktikan pernyataan pertama. Jika selanjutnya $H$ disyaratkan sebagai subgrup Sylow $p$, haruslah $H = Q$. Karena unsur-unsur $X$ saling konjugat, pernyataan kedua pun terbukti.
 \end{proof}
 
-\begin{theorem}[Sylow 第三定理]
-	承上, $G$ 中 Sylow $p$-子群的个数 $\equiv 1 \mod p$.
+\begin{theorem}[Teorema Sylow Ketiga]
+	Dengan notasi di atas, dalam $G$ banyaknya subgrup Sylow $p$ memenuhi kongruensi $\equiv 1 \mod p$.
 \end{theorem}
 \begin{proof}
-	沿用上个证明的框架, 选定 Sylow $p$-子群 $P$ 并取 $H = P$, 以上业已证明了 $X^P$ 中的元素必为包含 $P$ 的 $p$-子群, 故 $X^P = \{P\}$. 套回命题 \ref{prop:counting-localization} 遂得 $|X| \equiv \left\lvert X^P \right\rvert = 1 \mod p$.
+	Gunakan kerangka pembuktian sebelumnya: pilih suatu subgrup Sylow $p$, yaitu $P$, dan ambil $H = P$. Di atas telah dibuktikan bahwa unsur-unsur $X^P$ harus merupakan subgrup yang memuat $P$ dan sekaligus merupakan $p$-subgrup; karena itu, $X^P = \{P\}$. Dengan menerapkan kembali Proposisi \ref{prop:counting-localization}, diperoleh $|X| \equiv \left\lvert X^P \right\rvert = 1 \mod p$.
 \end{proof}
 
 \begin{proposition}
-	 对每个素数 $p$, 有限群 $G$ 的每个 Sylow $p$-子群皆正规的充分必要条件是 $G = \prod_{p \mid\; |G|} H_p$, 其中 $H_p$ 是 $p$-子群.
+	Untuk setiap bilangan prima $p$, semua subgrup Sylow dalam grup berhingga $G$ untuk $p$ normal jika dan hanya jika $G = \prod_{p \mid\; |G|} H_p$, dengan setiap $H_p$ suatu $p$-subgrup.
 \end{proposition}
 \begin{proof}
-	设 $p_1 < \cdots < p_r$ 为素数. 若 $G$ 同构于直积 $\prod_{i=1}^r H_{p_i}$, 其中 $|H_{p_i}| = p_i^{a_i}$ ($a_i \in \Z_{\geq 1}$), 那么 $H_{p_i}$ 自然地嵌入为 $G$ 的正规 Sylow $p_i$-子群, 而 $|G| = \prod_{i=1}^r p_i^{a_i}$.
-	
-	反过来设 $|G| = p_1^{a_1} \cdots p_r^{a_r}$, 而且对每个 $1 \leq i \leq r$ 皆有正规 Sylow $p_i$-子群 $H_{p_i}$. 它们的阶数两两互素, 运用命题 \ref{prop:Lagrange} 可以在 $G$ 中验证 $H_{p_i} \cap \prod_{j \neq i} H_{p_j} = \{1\}$. 于是引理 \ref{prop:internal-direct} 的条件成立, 得到同构 $\prod_{i=1}^r H_{p_i} \rightiso H_{p_1} \cdots H_{p_r} \subset G$. 比较阶数可知 $H_{p_1} \cdots H_{p_r} = G$.
-\end{proof}
+	Misalkan $p_1 < \cdots < p_r$ bilangan-bilangan prima. Jika $G$ isomorfik dengan produk langsung $\prod_{i=1}^r H_{p_i}$, dengan $|H_{p_i}| = p_i^{a_i}$ ($a_i \in \Z_{\geq 1}$), maka $H_{p_i}$ tertanam secara alami sebagai subgrup Sylow yang normal dalam $G$ untuk $p_i$, sedangkan $|G| = \prod_{i=1}^r p_i^{a_i}$.
 
+	Sebaliknya, andaikan $|G| = p_1^{a_1} \cdots p_r^{a_r}$ dan bahwa, untuk setiap $1 \leq i \leq r$, terdapat subgrup Sylow $p_i$ yang normal, yakni $H_{p_i}$. Orde subgrup-subgrup ini saling koprima. Dengan menggunakan Proposisi \ref{prop:Lagrange}, dapat diverifikasi dalam $G$ bahwa $H_{p_i} \cap \prod_{j \neq i} H_{p_j} = \{1\}$. Dengan demikian, syarat-syarat Lema \ref{prop:internal-direct} terpenuhi, dan kita memperoleh isomorfisme $\prod_{i=1}^r H_{p_i} \rightiso H_{p_1} \cdots H_{p_r} \subset G$. Dengan membandingkan orde, diperoleh $H_{p_1} \cdots H_{p_r} = G$.
+\end{proof}
 \section{群的合成列}\label{sec:composition-series-grp}
 将一个群设法拆解为较小的构件是群论的常见手法, 合成列是其中一例.
 

@@ -407,3 +407,8 @@ source_term,target_term,status,scope,note
 "conjugation action","aksi konjugasi","admitted","group theory","Use for the action g,x maps to gxg^{-1}; keep distinct from the adjoint homomorphism that supplies it."
 "conjugacy class","kelas konjugasi","admitted","group theory","Use for an orbit under the conjugation action."
 "bitorsor","bitorsor","admitted","group actions and geometry","Retain the international term for a set with commuting torsor actions on the two sides."
+"p-group","p-grup","admitted","group theory","Use for a finite group whose order is a power of the stated prime p; typeset the prime mathematically as $p$-grup."
+"p-subgroup","p-subgrup","admitted","group theory","Use for a subgroup that is itself a p-group; keep distinct from a Sylow p-subgroup, which has the largest order allowed by the p-part of the ambient group order."
+"Sylow p-subgroup","subgrup Sylow p","admitted","group theory","Use the bound TeX form subgrup Sylow $p$; preserve whether existence, containment, conjugacy, uniqueness, normality, or counting is asserted."
+"binomial coefficient","koefisien binomial","admitted","algebra and combinatorics","Use for the coefficients denoted by binomial braces; preserve every divisibility and congruence qualifier."
+"coprime","saling koprima","admitted","number theory and algebra","Use for a pair or family of integers whose relevant greatest common divisor is one; retain the reciprocal form saling for pairwise coprimality."
