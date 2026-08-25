@@ -1,0 +1,15 @@
+entity_type,id,stable_key,section_id,ordinal,source_value,target_value,format,status
+build_surface,urn:uuid:b4d19b72-447b-5914-a1e9-8aab293308f2,build-surface/unit-027-pdf,,,pwsh -NoProfile -File scripts/build_unit_027.ps1 -OutputDirectory build/unit-027-replay,artifacts/unit-027-bab-4-produk-langsung-semilangsung-dan-ekstensi-grup-id.pdf,pdf,pass
+diagram,urn:uuid:d94adade-ec53-5b5a-b34c-97046a3eff2f,diagram/unit-027/tikzcd-01,urn:uuid:d026f544-ce73-5345-8389-f0acd616a4b0,1,385-388,386-389,tikzcd,audited_preserved
+diagram,urn:uuid:72ea2145-badc-56b5-97a1-47aadb4f492c,diagram/unit-027/tikzcd-02,urn:uuid:d026f544-ce73-5345-8389-f0acd616a4b0,5,497-500,498-501,tikzcd,audited_preserved
+diagram,urn:uuid:6b5bd936-dd5b-5ca6-baa5-e551e8e762cf,diagram/unit-027/tikzcd-03,urn:uuid:d026f544-ce73-5345-8389-f0acd616a4b0,6,506-508,507-509,tikzcd,audited_preserved
+diagram,urn:uuid:14428091-8be8-5363-b132-f13387cdd23f,diagram/unit-027/tikzcd-04,urn:uuid:d026f544-ce73-5345-8389-f0acd616a4b0,7,511-514,512-515,tikzcd,audited_preserved
+diagram,urn:uuid:436c4484-8bb8-5c60-b73d-18142525475b,diagram/unit-027/tikzpicture-01,urn:uuid:d026f544-ce73-5345-8389-f0acd616a4b0,2,443-449,444-450,tikzpicture,audited_preserved
+diagram,urn:uuid:5ddeacd6-dda6-536c-943f-0dcda01d0a5e,diagram/unit-027/tikzpicture-02,urn:uuid:d026f544-ce73-5345-8389-f0acd616a4b0,3,449-455,450-456,tikzpicture,audited_preserved
+diagram,urn:uuid:185eb161-20ca-538c-a06e-cccb92d9c088,diagram/unit-027/tikzpicture-03,urn:uuid:d026f544-ce73-5345-8389-f0acd616a4b0,4,455-461,456-462,tikzpicture,audited_preserved
+index_entry,urn:uuid:85a31136-57fa-5a55-bb97-ac0b3c1eaf56,index-entry/unit-027/main/001,urn:uuid:d026f544-ce73-5345-8389-f0acd616a4b0,1,ziji@直积 (direct product),ziji@produk langsung (direct product),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:1025c3da-3569-54b7-aab7-88921b62a489,index-entry/unit-027/main/002,urn:uuid:d026f544-ce73-5345-8389-f0acd616a4b0,2,banziji@半直积 (semidirect product),banziji@produk semilangsung (semidirect product),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:dd154c62-7a3f-5464-861f-71bf7cc8162d,index-entry/unit-027/main/003,urn:uuid:d026f544-ce73-5345-8389-f0acd616a4b0,3,ermiantiqun@二面体群 (dihedral group),ermiantiqun@grup dihedral (dihedral group),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:d1a46ac4-1d97-58e6-845f-fde763f69bd6,index-entry/unit-027/main/005,urn:uuid:d026f544-ce73-5345-8389-f0acd616a4b0,5,zhenghelie@正合列 (exact sequence),zhenghelie@barisan eksak (exact sequence),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:4cb2de7f-32a4-5d36-979f-e4b587d1f139,index-entry/unit-027/main/006,urn:uuid:d026f544-ce73-5345-8389-f0acd616a4b0,6,qunkuozhang@群扩张 (group extension),qunkuozhang@ekstensi grup (group extension),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:cc6fbefc-6612-5197-9017-bf6d67ff74e6,index-entry/unit-027/sym1/004,urn:uuid:d026f544-ce73-5345-8389-f0acd616a4b0,4,$D_{2n}$,$D_{2n}$,latex-index-key,source_key_preserved_target_key_localized

@@ -1,0 +1,153 @@
+{
+  "status": "PASS",
+  "unit": "unit-027-bab-4-produk-langsung-semilangsung-dan-ekstensi-grup",
+  "authority": "chapter4.tex:365-517 (blank line 517 omitted from 365-516 mapping)",
+  "target": "chapter4.tex:366-517",
+  "data": "backend/data/unit-027-bab-4-produk-langsung-semilangsung-dan-ekstensi-grup.json",
+  "schema": "backend/schema/open-math-corpus-unit.schema.v1.json",
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "provenance_actor": "Codex acting on the user's instruction",
+  "artifact": {
+    "path": "artifacts/unit-027-bab-4-produk-langsung-semilangsung-dan-ekstensi-grup-id.pdf",
+    "pages": 7,
+    "bytes": 97427,
+    "sha256": "8eeab2d34a745b0e5a12acc29c0c5474e9c84d1248686d743302c03859851dd7"
+  },
+  "counts": {
+    "sections": 1,
+    "concepts": 304,
+    "textual_environment_markers": 56,
+    "textual_environment_pairs": 28,
+    "active_environment_pairs": 28,
+    "labels": 8,
+    "ordinary_references": 4,
+    "equation_references": 1,
+    "citations": 0,
+    "list_items": 15,
+    "protected_math_zones": 171,
+    "diagrams": 7,
+    "tikzcd_diagrams": 4,
+    "polygon_drawings": 3,
+    "diagram_arrows": 30,
+    "polygon_drawing_commands": 15,
+    "index_entries": 6,
+    "terminology_rows": 9,
+    "source_corrections": 2,
+    "translation_precision_repairs": 1,
+    "style_normalizations": 2,
+    "qa_events": 16,
+    "visual_qa_witnesses": 4,
+    "exercises": 0,
+    "hints": 0,
+    "answers": 0,
+    "solutions": 0,
+    "csv_projections": 6,
+    "uuidv5_entities_audited": 364
+  },
+  "checks": {
+    "deterministic_regeneration_one": "PASS",
+    "deterministic_regeneration_two": "PASS",
+    "shared_schema_and_uuidv5": "PASS",
+    "exact_csv_projection": "PASS",
+    "no_stale_unit_026_ids_or_data": "PASS",
+    "exact_authority_candidate_target_boundary": "PASS",
+    "complete_tex_surface_topology": "PASS",
+    "native_diagram_and_index_provenance": "PASS",
+    "two_source_corrections": "PASS",
+    "translation_precision_tr_001": "PASS",
+    "no_invented_exercise_or_solution_surfaces": "PASS",
+    "component_rights_non_endorsement_and_closure_exceptions": "PASS",
+    "build_pdf_and_visual_preflight_bindings": "PASS",
+    "canonical_structure_pdf_and_render_bindings": "PASS",
+    "independent_preflight_preserved_separately": "PASS",
+    "terminology_binding": "PASS",
+    "all_full_file_and_line_span_bindings": "PASS",
+    "validation_mutated_outputs": false
+  },
+  "binding_audit": {
+    "occurrences": 80,
+    "full_file_occurrences": 50,
+    "line_span_occurrences": 30,
+    "unique_paths": 38,
+    "paths": [
+      "00_control/SOURCE_MANIFEST.csv",
+      "00_control/TERMINOLOGY.id-ID.csv",
+      "artifacts/unit-027-bab-4-produk-langsung-semilangsung-dan-ekstensi-grup-id.pdf",
+      "authority/archives/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b.zip",
+      "authority/pdfs/Al-jabr-1.pdf",
+      "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter4.tex",
+      "build/unit-027-candidate/chapter4-products-group-extensions-id.tex",
+      "build/unit-027-staging/terminology-delta.csv",
+      "qa/UNIT_027_BUILD_FINAL.log",
+      "qa/UNIT_027_INDEPENDENT_REVIEW_20260825.md",
+      "qa/UNIT_027_PREPROMOTION_AUDIT_20260825.md",
+      "qa/UNIT_027_TERMINOLOGY_AUDIT_20260825.md",
+      "qa/UNIT_027_VISUAL_PREFLIGHT_20260825.md",
+      "qa/UNIT_027_VISUAL_QA_20260825.md",
+      "qa/unit-027-evidence/render-hash-inventory.json",
+      "qa/unit-027-evidence/structure-and-pdf-qa.json",
+      "repo/fonts/NotoSansCJKsc-Black.otf",
+      "repo/fonts/NotoSansCJKsc-Medium.otf",
+      "repo/fonts/NotoSansCJKsc-Regular.otf",
+      "repo/fonts/NotoSerifCJKsc-Bold.otf",
+      "repo/fonts/OFL-1.1-Noto-CJK.txt",
+      "repo/source/AJbook.cls",
+      "repo/source/LICENSE",
+      "repo/source/Lanzhou.png",
+      "repo/source/ccby.png",
+      "repo/source/chapter4.tex",
+      "repo/source/coverpage-id-unit-027.tex",
+      "repo/source/font-setup-id.tex",
+      "repo/source/locale-ui-id.tex",
+      "repo/source/myarrows.sty",
+      "repo/source/mycommand.sty",
+      "repo/source/titles-setup-id.tex",
+      "repo/source/titles-setup.tex",
+      "repo/source/unit-027-bab-4-produk-langsung-semilangsung-dan-ekstensi-grup.tex",
+      "repo/source/unit-027-crossrefs.aux",
+      "scripts/build_unit_027.ps1",
+      "scripts/check_unit_027_candidate.py",
+      "scripts/check_unit_027_structure.py"
+    ]
+  },
+  "identities": {
+    "backend/data/unit-027-bab-4-produk-langsung-semilangsung-dan-ekstensi-grup.json": {
+      "bytes": 262798,
+      "sha256": "c014e552acfa52db88c15784d4150708465faf9fe54a5fcd839d8742dec8abf4"
+    },
+    "backend/csv/unit-027-bindings.csv": {
+      "bytes": 17194,
+      "sha256": "4d31f0e9423d69690e86e61c598f8583b97df3863500e37c9537aff66d018c03"
+    },
+    "backend/csv/unit-027-entities.csv": {
+      "bytes": 75869,
+      "sha256": "45c8bf8f6ae3ff57bff24e007e6e29f99b0e67d375f827230ab666165938281a"
+    },
+    "backend/csv/unit-027-qa.csv": {
+      "bytes": 6263,
+      "sha256": "7bb6d80fe260cc3528d464fce4690b92a1c1af6c859a7a32587ae1a6b4875997"
+    },
+    "backend/csv/unit-027-relations.csv": {
+      "bytes": 206505,
+      "sha256": "c98d5e6a79d46171b806d3294b96b2afadc983d89edf99cd8a86dad3fa1915c4"
+    },
+    "backend/csv/unit-027-rights.csv": {
+      "bytes": 1287,
+      "sha256": "4836630530f87a11a64fe233c59970e2ff7942695a8dbf404f7a0583a275197e"
+    },
+    "backend/csv/unit-027-surfaces.csv": {
+      "bytes": 3156,
+      "sha256": "c340c91ea58623cf7d294139d687330c591fffb8af8ab1532e2aa21400b2f178"
+    }
+  },
+  "tools": {
+    "scripts/generate_unit_027_backend.py": {
+      "bytes": 51471,
+      "sha256": "29c4e9d70188dc5ab1f9136718c0e97af829b36ac8c73d5c5316e4129f16e441"
+    },
+    "scripts/validate_unit_027_backend.py": {
+      "bytes": 24668,
+      "sha256": "5be54c3072a4d2857c1546630afe2c3712aa9fbd326002ab358f214315252e81"
+    }
+  }
+}

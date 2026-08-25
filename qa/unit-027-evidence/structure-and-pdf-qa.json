@@ -1,0 +1,2180 @@
+{
+  "actionable_defects": [],
+  "cross_pdf_semantic_identity": true,
+  "documents": {
+    "artifact": {
+      "actions": {
+        "all_uris_https": true,
+        "annotation_additional_actions": 0,
+        "broken_destinations": [],
+        "catalog_additional_action": false,
+        "counts": {
+          "/GoTo": 10,
+          "/URI": 3
+        },
+        "gotos": [
+          "theorem.4.3.2",
+          "equation.4.1",
+          "theorem.4.3.4",
+          "theorem.4.3.4",
+          "page.1",
+          "page.3",
+          "page.4",
+          "page.4",
+          "page.1",
+          "page.3"
+        ],
+        "links": [
+          {
+            "action": "/URI",
+            "ordinal_on_page": 1,
+            "page": 2,
+            "rect": [
+              115.616,
+              286.124,
+              174.552,
+              298.856
+            ],
+            "target": "https://www.wwli.asia"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 2,
+            "page": 2,
+            "rect": [
+              275.999,
+              196.424,
+              388.975,
+              208.385
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 3,
+            "page": 2,
+            "rect": [
+              164.469,
+              182.725,
+              258.616,
+              194.687
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 3,
+            "rect": [
+              73.48,
+              107.141,
+              93.964,
+              121.258
+            ],
+            "target": "theorem.4.3.2"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 5,
+            "rect": [
+              149.353,
+              622.981,
+              162.085,
+              637.098
+            ],
+            "target": "equation.4.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 6,
+            "rect": [
+              393.762,
+              503.407,
+              414.245,
+              517.524
+            ],
+            "target": "theorem.4.3.4"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 2,
+            "page": 6,
+            "rect": [
+              355.542,
+              475.671,
+              376.025,
+              489.788
+            ],
+            "target": "theorem.4.3.4"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 7,
+            "rect": [
+              102.202,
+              229.809,
+              107.184,
+              243.926
+            ],
+            "target": "page.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 2,
+            "page": 7,
+            "rect": [
+              198.113,
+              204.902,
+              203.094,
+              219.019
+            ],
+            "target": "page.3"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 3,
+            "page": 7,
+            "rect": [
+              408.299,
+              244.753,
+              413.281,
+              258.87
+            ],
+            "target": "page.4"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 4,
+            "page": 7,
+            "rect": [
+              404.922,
+              219.846,
+              409.903,
+              233.963
+            ],
+            "target": "page.4"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 5,
+            "page": 7,
+            "rect": [
+              416.827,
+              204.902,
+              421.809,
+              219.019
+            ],
+            "target": "page.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 6,
+            "page": 7,
+            "rect": [
+              82.206,
+              133.669,
+              87.187,
+              147.786
+            ],
+            "target": "page.3"
+          }
+        ],
+        "out_of_bounds_rectangles": [],
+        "page_additional_actions": 0,
+        "unsafe": [],
+        "uris": [
+          "https://www.wwli.asia",
+          "https://creativecommons.org/licenses/by/4.0/",
+          "https://creativecommons.org/licenses/by/4.0/"
+        ]
+      },
+      "catalog_keys": [
+        "/Lang",
+        "/Names",
+        "/OpenAction",
+        "/Outlines",
+        "/PageLabels",
+        "/PageMode",
+        "/Pages",
+        "/Type"
+      ],
+      "checks": {
+        "action_counts": true,
+        "fonts_embedded": true,
+        "known_math_font_nul_census": true,
+        "language_id_ID": true,
+        "link_closure": true,
+        "metadata_exact": true,
+        "no_active_payloads": true,
+        "outline_exact": true,
+        "rectangles_in_bounds": true,
+        "safe_actions": true,
+        "seven_pages": true,
+        "text_blocks_in_bounds": true,
+        "text_has_no_replacement_characters": true,
+        "thirty_destinations": true,
+        "untagged_disclosed": true
+      },
+      "encrypted": false,
+      "fonts": {
+        "pdffonts_all_embedded": true,
+        "pdffonts_rows": 22,
+        "pdffonts_stderr": "",
+        "pypdf_all_embedded": true,
+        "pypdf_unique": 22,
+        "records": [
+          {
+            "basefont": "/YLYDUJ+CMEX10",
+            "embedded": true,
+            "normalized": "/CMEX10",
+            "object": "42 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "basefont": "/ASISTJ+CMMI10",
+            "embedded": true,
+            "normalized": "/CMMI10",
+            "object": "38 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "basefont": "/TWSHNB+CMMI5",
+            "embedded": true,
+            "normalized": "/CMMI5",
+            "object": "47 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/LKDCOX+CMMI7",
+            "embedded": true,
+            "normalized": "/CMMI7",
+            "object": "40 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/NCBACQ+CMR10",
+            "embedded": true,
+            "normalized": "/CMR10",
+            "object": "39 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/YDVBMF+CMR5",
+            "embedded": true,
+            "normalized": "/CMR5",
+            "object": "62 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/OXBSHQ+CMR7",
+            "embedded": true,
+            "normalized": "/CMR7",
+            "object": "44 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/HJDNQZ+CMSY10",
+            "embedded": true,
+            "normalized": "/CMSY10",
+            "object": "43 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "basefont": "/MBPISN+CMSY5",
+            "embedded": true,
+            "normalized": "/CMSY5",
+            "object": "64 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/IVDYSG+CMSY7",
+            "embedded": true,
+            "normalized": "/CMSY7",
+            "object": "41 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/BDQCCU+LMMono12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono12-Regular-Identity-H",
+            "object": "20 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/OFMELP+LMMono9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono9-Regular-Identity-H",
+            "object": "27 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/LUNYHP+LMRoman10-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Bold-Identity-H",
+            "object": "45 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/VCWKGA+LMRoman10-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Regular-Identity-H",
+            "object": "36 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/LETDJZ+LMRoman12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman12-Regular-Identity-H",
+            "object": "11 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/WBPKTA+LMRoman17-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman17-Regular-Identity-H",
+            "object": "9 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/OYEEQF+LMRoman8-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman8-Regular-Identity-H",
+            "object": "34 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/BSULKL+LMRoman9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman9-Regular-Identity-H",
+            "object": "22 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/HIMBLR+MSAM10",
+            "embedded": true,
+            "normalized": "/MSAM10",
+            "object": "53 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/IHXBPI+MSBM10",
+            "embedded": true,
+            "normalized": "/MSBM10",
+            "object": "52 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/XFOZVD+TeXGyreHeros-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Bold-Identity-H",
+            "object": "13 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/LDFMPK+TeXGyreHeros-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Regular-Identity-H",
+            "object": "15 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          }
+        ]
+      },
+      "geometry": {
+        "fitz_text_blocks_out_of_bounds": []
+      },
+      "identity": {
+        "bytes": 97427,
+        "path": "artifacts/unit-027-bab-4-produk-langsung-semilangsung-dan-ekstensi-grup-id.pdf",
+        "sha256": "8eeab2d34a745b0e5a12acc29c0c5474e9c84d1248686d743302c03859851dd7"
+      },
+      "language": "id-ID",
+      "metadata": {
+        "/Author": "Wen-Wei Li",
+        "/CreationDate": "D:20260825000000Z",
+        "/Creator": "LaTeX with hyperref",
+        "/Keywords": "aljabar, teori grup, produk langsung, produk semilangsung, grup dihedral, ekstensi grup, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.3 lengkap",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 27: Produk Langsung, Produk Semilangsung, dan Ekstensi Grup"
+      },
+      "name_tree_keys": [
+        "/Dests"
+      ],
+      "named_destinations": {
+        "Doc-Start": 1,
+        "Item.1": 4,
+        "Item.2": 4,
+        "Item.3": 4,
+        "Item.4": 4,
+        "Item.5": 4,
+        "Item.6": 4,
+        "Item.7": 7,
+        "Item.8": 7,
+        "equation.4.1": 4,
+        "page.1": 3,
+        "page.2": 4,
+        "page.3": 5,
+        "page.4": 6,
+        "page.5": 7,
+        "proof.1": 3,
+        "proof.2": 5,
+        "proof.3": 6,
+        "section*.1": 7,
+        "section*.2": 7,
+        "section.4.3": 3,
+        "theorem.4.3.1": 3,
+        "theorem.4.3.2": 3,
+        "theorem.4.3.3": 4,
+        "theorem.4.3.4": 4,
+        "theorem.4.3.5": 5,
+        "theorem.4.3.6": 5,
+        "theorem.4.3.7": 6,
+        "unit027-symbol-index.0": 7,
+        "unit027-term-index.0": 7
+      },
+      "open_action": {
+        "fit": "/Fit",
+        "kind": "direct_page_destination",
+        "page": 1
+      },
+      "outline": [
+        {
+          "depth": 0,
+          "page": 3,
+          "title": "4.3 Produk Langsung, Produk Semilangsung, dan Ekstensi Grup"
+        },
+        {
+          "depth": 0,
+          "page": 7,
+          "title": "Indeks Istilah"
+        },
+        {
+          "depth": 0,
+          "page": 7,
+          "title": "Indeks Simbol"
+        }
+      ],
+      "page_geometry": [
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 1,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 2,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 3,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 4,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 5,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 6,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 7,
+          "rotate": 0
+        }
+      ],
+      "pages": 7,
+      "payloads": {
+        "embedded_files": false,
+        "forms": false,
+        "javascript": false
+      },
+      "pdf_header": "%PDF-1.7",
+      "pdfinfo": {
+        "Author": "Wen-Wei Li",
+        "CreationDate": "Tue Aug 25 02:00:00 2026 W. Europe Daylight Time",
+        "Creator": "LaTeX with hyperref",
+        "Custom Metadata": "no",
+        "Encrypted": "no",
+        "File size": "97427 bytes",
+        "Form": "none",
+        "JavaScript": "no",
+        "Keywords": "aljabar, teori grup, produk langsung, produk semilangsung, grup dihedral, ekstensi grup, id-ID",
+        "Metadata Stream": "no",
+        "Optimized": "no",
+        "PDF version": "1.7",
+        "Page rot": "0",
+        "Page size": "498.9 x 708.66 pts",
+        "Pages": "7",
+        "Producer": "MiKTeX-dvipdfmx (20260404)",
+        "Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.3 lengkap",
+        "Suspects": "no",
+        "Tagged": "no",
+        "Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 27: Produk Langsung, Produk Semilangsung, dan Ekstensi Grup",
+        "UserProperties": "no"
+      },
+      "tagged": false,
+      "text": {
+        "mupdf_sha256": "38c3589371134e4c89ca5dce3142ccd1c3ab578905df3eb2a2234ac7f85cb6dc",
+        "nul_characters": {
+          "mupdf": 1,
+          "pdftotext_layout": 0,
+          "pypdf": 8
+        },
+        "pdftotext_layout_sha256": "16b0a16dbd39a152ba80f41e24227a05f5189c83cd095b86894f3af7106d9a50",
+        "pypdf_page_sha256": [
+          "49ef35fce814e814db7a4703752fb2cf4918bb91f087b994a5dee92b8a0cfbae",
+          "3cbac3678d24a3e5679d2953f4c54175df1789da82c6beee0e521e597f4ced09",
+          "c0e0c6d449fefe356f00be52d048663b7b7647c2469b3593611836412047fa26",
+          "aac098fae1b547b118142d8615a41b2c6aef1239872e88b5ec1eed83d442a491",
+          "2077f4e500954ecaaff8ced09b47d039876923600b9609f35cefb82ebed23d16",
+          "f77c59162bdf89ecb43fdd3d8b3b0394513e2558e1791713634cac204acfe497",
+          "e9c6b2ea827494f26887c5d5ec5796677f59f53b66c65b96c971a0d2a58ef085"
+        ],
+        "pypdf_sha256": "2e44e3d4681f9fe86d543d8e919b00d79df6ddd18732d89be833df37230663fe",
+        "replacement_characters": 0
+      },
+      "tool_diagnostics": {
+        "pdfinfo_stderr": "",
+        "pdftotext_stderr": ""
+      }
+    },
+    "build-c": {
+      "actions": {
+        "all_uris_https": true,
+        "annotation_additional_actions": 0,
+        "broken_destinations": [],
+        "catalog_additional_action": false,
+        "counts": {
+          "/GoTo": 10,
+          "/URI": 3
+        },
+        "gotos": [
+          "theorem.4.3.2",
+          "equation.4.1",
+          "theorem.4.3.4",
+          "theorem.4.3.4",
+          "page.1",
+          "page.3",
+          "page.4",
+          "page.4",
+          "page.1",
+          "page.3"
+        ],
+        "links": [
+          {
+            "action": "/URI",
+            "ordinal_on_page": 1,
+            "page": 2,
+            "rect": [
+              115.616,
+              286.124,
+              174.552,
+              298.856
+            ],
+            "target": "https://www.wwli.asia"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 2,
+            "page": 2,
+            "rect": [
+              275.999,
+              196.424,
+              388.975,
+              208.385
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 3,
+            "page": 2,
+            "rect": [
+              164.469,
+              182.725,
+              258.616,
+              194.687
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 3,
+            "rect": [
+              73.48,
+              107.141,
+              93.964,
+              121.258
+            ],
+            "target": "theorem.4.3.2"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 5,
+            "rect": [
+              149.353,
+              622.981,
+              162.085,
+              637.098
+            ],
+            "target": "equation.4.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 6,
+            "rect": [
+              393.762,
+              503.407,
+              414.245,
+              517.524
+            ],
+            "target": "theorem.4.3.4"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 2,
+            "page": 6,
+            "rect": [
+              355.542,
+              475.671,
+              376.025,
+              489.788
+            ],
+            "target": "theorem.4.3.4"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 7,
+            "rect": [
+              102.202,
+              229.809,
+              107.184,
+              243.926
+            ],
+            "target": "page.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 2,
+            "page": 7,
+            "rect": [
+              198.113,
+              204.902,
+              203.094,
+              219.019
+            ],
+            "target": "page.3"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 3,
+            "page": 7,
+            "rect": [
+              408.299,
+              244.753,
+              413.281,
+              258.87
+            ],
+            "target": "page.4"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 4,
+            "page": 7,
+            "rect": [
+              404.922,
+              219.846,
+              409.903,
+              233.963
+            ],
+            "target": "page.4"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 5,
+            "page": 7,
+            "rect": [
+              416.827,
+              204.902,
+              421.809,
+              219.019
+            ],
+            "target": "page.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 6,
+            "page": 7,
+            "rect": [
+              82.206,
+              133.669,
+              87.187,
+              147.786
+            ],
+            "target": "page.3"
+          }
+        ],
+        "out_of_bounds_rectangles": [],
+        "page_additional_actions": 0,
+        "unsafe": [],
+        "uris": [
+          "https://www.wwli.asia",
+          "https://creativecommons.org/licenses/by/4.0/",
+          "https://creativecommons.org/licenses/by/4.0/"
+        ]
+      },
+      "catalog_keys": [
+        "/Lang",
+        "/Names",
+        "/OpenAction",
+        "/Outlines",
+        "/PageLabels",
+        "/PageMode",
+        "/Pages",
+        "/Type"
+      ],
+      "checks": {
+        "action_counts": true,
+        "fonts_embedded": true,
+        "known_math_font_nul_census": true,
+        "language_id_ID": true,
+        "link_closure": true,
+        "metadata_exact": true,
+        "no_active_payloads": true,
+        "outline_exact": true,
+        "rectangles_in_bounds": true,
+        "safe_actions": true,
+        "seven_pages": true,
+        "text_blocks_in_bounds": true,
+        "text_has_no_replacement_characters": true,
+        "thirty_destinations": true,
+        "untagged_disclosed": true
+      },
+      "encrypted": false,
+      "fonts": {
+        "pdffonts_all_embedded": true,
+        "pdffonts_rows": 22,
+        "pdffonts_stderr": "",
+        "pypdf_all_embedded": true,
+        "pypdf_unique": 22,
+        "records": [
+          {
+            "basefont": "/EZQASR+CMEX10",
+            "embedded": true,
+            "normalized": "/CMEX10",
+            "object": "42 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "basefont": "/DBZUJU+CMMI10",
+            "embedded": true,
+            "normalized": "/CMMI10",
+            "object": "38 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "basefont": "/NSWASO+CMMI5",
+            "embedded": true,
+            "normalized": "/CMMI5",
+            "object": "47 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/AOXMUH+CMMI7",
+            "embedded": true,
+            "normalized": "/CMMI7",
+            "object": "40 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/FTBJZS+CMR10",
+            "embedded": true,
+            "normalized": "/CMR10",
+            "object": "39 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/OIMMJV+CMR5",
+            "embedded": true,
+            "normalized": "/CMR5",
+            "object": "62 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/YXECEX+CMR7",
+            "embedded": true,
+            "normalized": "/CMR7",
+            "object": "44 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/VVZYUQ+CMSY10",
+            "embedded": true,
+            "normalized": "/CMSY10",
+            "object": "43 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "basefont": "/YUZVKW+CMSY5",
+            "embedded": true,
+            "normalized": "/CMSY5",
+            "object": "64 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/DAIECP+CMSY7",
+            "embedded": true,
+            "normalized": "/CMSY7",
+            "object": "41 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/OEJSSW+LMMono12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono12-Regular-Identity-H",
+            "object": "20 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/USWUZJ+LMMono9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono9-Regular-Identity-H",
+            "object": "27 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/RYPDJP+LMRoman10-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Bold-Identity-H",
+            "object": "45 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/NYNHCN+LMRoman10-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Regular-Identity-H",
+            "object": "36 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/ZOMNHQ+LMRoman12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman12-Regular-Identity-H",
+            "object": "11 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/WTZMWC+LMRoman17-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman17-Regular-Identity-H",
+            "object": "9 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/PGPVMQ+LMRoman8-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman8-Regular-Identity-H",
+            "object": "34 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/FIUSHB+LMRoman9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman9-Regular-Identity-H",
+            "object": "22 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/IXDDAJ+MSAM10",
+            "embedded": true,
+            "normalized": "/MSAM10",
+            "object": "53 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/IOOTRX+MSBM10",
+            "embedded": true,
+            "normalized": "/MSBM10",
+            "object": "52 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/CRNPZU+TeXGyreHeros-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Bold-Identity-H",
+            "object": "13 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/HVLBBE+TeXGyreHeros-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Regular-Identity-H",
+            "object": "15 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          }
+        ]
+      },
+      "geometry": {
+        "fitz_text_blocks_out_of_bounds": []
+      },
+      "identity": {
+        "bytes": 97436,
+        "path": "build/unit-027-c-20260825/unit-027-bab-4-produk-langsung-semilangsung-dan-ekstensi-grup.pdf",
+        "sha256": "c8ec8a08e94c9f762b94029bc9b2fe68d4bf1e2242511f2464958c0548b817c3"
+      },
+      "language": "id-ID",
+      "metadata": {
+        "/Author": "Wen-Wei Li",
+        "/CreationDate": "D:20260825000000Z",
+        "/Creator": "LaTeX with hyperref",
+        "/Keywords": "aljabar, teori grup, produk langsung, produk semilangsung, grup dihedral, ekstensi grup, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.3 lengkap",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 27: Produk Langsung, Produk Semilangsung, dan Ekstensi Grup"
+      },
+      "name_tree_keys": [
+        "/Dests"
+      ],
+      "named_destinations": {
+        "Doc-Start": 1,
+        "Item.1": 4,
+        "Item.2": 4,
+        "Item.3": 4,
+        "Item.4": 4,
+        "Item.5": 4,
+        "Item.6": 4,
+        "Item.7": 7,
+        "Item.8": 7,
+        "equation.4.1": 4,
+        "page.1": 3,
+        "page.2": 4,
+        "page.3": 5,
+        "page.4": 6,
+        "page.5": 7,
+        "proof.1": 3,
+        "proof.2": 5,
+        "proof.3": 6,
+        "section*.1": 7,
+        "section*.2": 7,
+        "section.4.3": 3,
+        "theorem.4.3.1": 3,
+        "theorem.4.3.2": 3,
+        "theorem.4.3.3": 4,
+        "theorem.4.3.4": 4,
+        "theorem.4.3.5": 5,
+        "theorem.4.3.6": 5,
+        "theorem.4.3.7": 6,
+        "unit027-symbol-index.0": 7,
+        "unit027-term-index.0": 7
+      },
+      "open_action": {
+        "fit": "/Fit",
+        "kind": "direct_page_destination",
+        "page": 1
+      },
+      "outline": [
+        {
+          "depth": 0,
+          "page": 3,
+          "title": "4.3 Produk Langsung, Produk Semilangsung, dan Ekstensi Grup"
+        },
+        {
+          "depth": 0,
+          "page": 7,
+          "title": "Indeks Istilah"
+        },
+        {
+          "depth": 0,
+          "page": 7,
+          "title": "Indeks Simbol"
+        }
+      ],
+      "page_geometry": [
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 1,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 2,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 3,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 4,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 5,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 6,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 7,
+          "rotate": 0
+        }
+      ],
+      "pages": 7,
+      "payloads": {
+        "embedded_files": false,
+        "forms": false,
+        "javascript": false
+      },
+      "pdf_header": "%PDF-1.7",
+      "pdfinfo": {
+        "Author": "Wen-Wei Li",
+        "CreationDate": "Tue Aug 25 02:00:00 2026 W. Europe Daylight Time",
+        "Creator": "LaTeX with hyperref",
+        "Custom Metadata": "no",
+        "Encrypted": "no",
+        "File size": "97436 bytes",
+        "Form": "none",
+        "JavaScript": "no",
+        "Keywords": "aljabar, teori grup, produk langsung, produk semilangsung, grup dihedral, ekstensi grup, id-ID",
+        "Metadata Stream": "no",
+        "Optimized": "no",
+        "PDF version": "1.7",
+        "Page rot": "0",
+        "Page size": "498.9 x 708.66 pts",
+        "Pages": "7",
+        "Producer": "MiKTeX-dvipdfmx (20260404)",
+        "Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.3 lengkap",
+        "Suspects": "no",
+        "Tagged": "no",
+        "Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 27: Produk Langsung, Produk Semilangsung, dan Ekstensi Grup",
+        "UserProperties": "no"
+      },
+      "tagged": false,
+      "text": {
+        "mupdf_sha256": "38c3589371134e4c89ca5dce3142ccd1c3ab578905df3eb2a2234ac7f85cb6dc",
+        "nul_characters": {
+          "mupdf": 1,
+          "pdftotext_layout": 0,
+          "pypdf": 8
+        },
+        "pdftotext_layout_sha256": "16b0a16dbd39a152ba80f41e24227a05f5189c83cd095b86894f3af7106d9a50",
+        "pypdf_page_sha256": [
+          "49ef35fce814e814db7a4703752fb2cf4918bb91f087b994a5dee92b8a0cfbae",
+          "3cbac3678d24a3e5679d2953f4c54175df1789da82c6beee0e521e597f4ced09",
+          "c0e0c6d449fefe356f00be52d048663b7b7647c2469b3593611836412047fa26",
+          "aac098fae1b547b118142d8615a41b2c6aef1239872e88b5ec1eed83d442a491",
+          "2077f4e500954ecaaff8ced09b47d039876923600b9609f35cefb82ebed23d16",
+          "f77c59162bdf89ecb43fdd3d8b3b0394513e2558e1791713634cac204acfe497",
+          "e9c6b2ea827494f26887c5d5ec5796677f59f53b66c65b96c971a0d2a58ef085"
+        ],
+        "pypdf_sha256": "2e44e3d4681f9fe86d543d8e919b00d79df6ddd18732d89be833df37230663fe",
+        "replacement_characters": 0
+      },
+      "tool_diagnostics": {
+        "pdfinfo_stderr": "",
+        "pdftotext_stderr": ""
+      }
+    },
+    "build-d": {
+      "actions": {
+        "all_uris_https": true,
+        "annotation_additional_actions": 0,
+        "broken_destinations": [],
+        "catalog_additional_action": false,
+        "counts": {
+          "/GoTo": 10,
+          "/URI": 3
+        },
+        "gotos": [
+          "theorem.4.3.2",
+          "equation.4.1",
+          "theorem.4.3.4",
+          "theorem.4.3.4",
+          "page.1",
+          "page.3",
+          "page.4",
+          "page.4",
+          "page.1",
+          "page.3"
+        ],
+        "links": [
+          {
+            "action": "/URI",
+            "ordinal_on_page": 1,
+            "page": 2,
+            "rect": [
+              115.616,
+              286.124,
+              174.552,
+              298.856
+            ],
+            "target": "https://www.wwli.asia"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 2,
+            "page": 2,
+            "rect": [
+              275.999,
+              196.424,
+              388.975,
+              208.385
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 3,
+            "page": 2,
+            "rect": [
+              164.469,
+              182.725,
+              258.616,
+              194.687
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 3,
+            "rect": [
+              73.48,
+              107.141,
+              93.964,
+              121.258
+            ],
+            "target": "theorem.4.3.2"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 5,
+            "rect": [
+              149.353,
+              622.981,
+              162.085,
+              637.098
+            ],
+            "target": "equation.4.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 6,
+            "rect": [
+              393.762,
+              503.407,
+              414.245,
+              517.524
+            ],
+            "target": "theorem.4.3.4"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 2,
+            "page": 6,
+            "rect": [
+              355.542,
+              475.671,
+              376.025,
+              489.788
+            ],
+            "target": "theorem.4.3.4"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 7,
+            "rect": [
+              102.202,
+              229.809,
+              107.184,
+              243.926
+            ],
+            "target": "page.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 2,
+            "page": 7,
+            "rect": [
+              198.113,
+              204.902,
+              203.094,
+              219.019
+            ],
+            "target": "page.3"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 3,
+            "page": 7,
+            "rect": [
+              408.299,
+              244.753,
+              413.281,
+              258.87
+            ],
+            "target": "page.4"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 4,
+            "page": 7,
+            "rect": [
+              404.922,
+              219.846,
+              409.903,
+              233.963
+            ],
+            "target": "page.4"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 5,
+            "page": 7,
+            "rect": [
+              416.827,
+              204.902,
+              421.809,
+              219.019
+            ],
+            "target": "page.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 6,
+            "page": 7,
+            "rect": [
+              82.206,
+              133.669,
+              87.187,
+              147.786
+            ],
+            "target": "page.3"
+          }
+        ],
+        "out_of_bounds_rectangles": [],
+        "page_additional_actions": 0,
+        "unsafe": [],
+        "uris": [
+          "https://www.wwli.asia",
+          "https://creativecommons.org/licenses/by/4.0/",
+          "https://creativecommons.org/licenses/by/4.0/"
+        ]
+      },
+      "catalog_keys": [
+        "/Lang",
+        "/Names",
+        "/OpenAction",
+        "/Outlines",
+        "/PageLabels",
+        "/PageMode",
+        "/Pages",
+        "/Type"
+      ],
+      "checks": {
+        "action_counts": true,
+        "fonts_embedded": true,
+        "known_math_font_nul_census": true,
+        "language_id_ID": true,
+        "link_closure": true,
+        "metadata_exact": true,
+        "no_active_payloads": true,
+        "outline_exact": true,
+        "rectangles_in_bounds": true,
+        "safe_actions": true,
+        "seven_pages": true,
+        "text_blocks_in_bounds": true,
+        "text_has_no_replacement_characters": true,
+        "thirty_destinations": true,
+        "untagged_disclosed": true
+      },
+      "encrypted": false,
+      "fonts": {
+        "pdffonts_all_embedded": true,
+        "pdffonts_rows": 22,
+        "pdffonts_stderr": "",
+        "pypdf_all_embedded": true,
+        "pypdf_unique": 22,
+        "records": [
+          {
+            "basefont": "/YLYDUJ+CMEX10",
+            "embedded": true,
+            "normalized": "/CMEX10",
+            "object": "42 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "basefont": "/ASISTJ+CMMI10",
+            "embedded": true,
+            "normalized": "/CMMI10",
+            "object": "38 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "basefont": "/TWSHNB+CMMI5",
+            "embedded": true,
+            "normalized": "/CMMI5",
+            "object": "47 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/LKDCOX+CMMI7",
+            "embedded": true,
+            "normalized": "/CMMI7",
+            "object": "40 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/NCBACQ+CMR10",
+            "embedded": true,
+            "normalized": "/CMR10",
+            "object": "39 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/YDVBMF+CMR5",
+            "embedded": true,
+            "normalized": "/CMR5",
+            "object": "62 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/OXBSHQ+CMR7",
+            "embedded": true,
+            "normalized": "/CMR7",
+            "object": "44 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/HJDNQZ+CMSY10",
+            "embedded": true,
+            "normalized": "/CMSY10",
+            "object": "43 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "basefont": "/MBPISN+CMSY5",
+            "embedded": true,
+            "normalized": "/CMSY5",
+            "object": "64 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/IVDYSG+CMSY7",
+            "embedded": true,
+            "normalized": "/CMSY7",
+            "object": "41 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/BDQCCU+LMMono12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono12-Regular-Identity-H",
+            "object": "20 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/OFMELP+LMMono9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono9-Regular-Identity-H",
+            "object": "27 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/LUNYHP+LMRoman10-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Bold-Identity-H",
+            "object": "45 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/VCWKGA+LMRoman10-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Regular-Identity-H",
+            "object": "36 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/LETDJZ+LMRoman12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman12-Regular-Identity-H",
+            "object": "11 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/WBPKTA+LMRoman17-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman17-Regular-Identity-H",
+            "object": "9 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/OYEEQF+LMRoman8-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman8-Regular-Identity-H",
+            "object": "34 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/BSULKL+LMRoman9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman9-Regular-Identity-H",
+            "object": "22 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/HIMBLR+MSAM10",
+            "embedded": true,
+            "normalized": "/MSAM10",
+            "object": "53 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/IHXBPI+MSBM10",
+            "embedded": true,
+            "normalized": "/MSBM10",
+            "object": "52 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/XFOZVD+TeXGyreHeros-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Bold-Identity-H",
+            "object": "13 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/LDFMPK+TeXGyreHeros-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Regular-Identity-H",
+            "object": "15 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          }
+        ]
+      },
+      "geometry": {
+        "fitz_text_blocks_out_of_bounds": []
+      },
+      "identity": {
+        "bytes": 97427,
+        "path": "build/unit-027-d-20260825/unit-027-bab-4-produk-langsung-semilangsung-dan-ekstensi-grup.pdf",
+        "sha256": "8eeab2d34a745b0e5a12acc29c0c5474e9c84d1248686d743302c03859851dd7"
+      },
+      "language": "id-ID",
+      "metadata": {
+        "/Author": "Wen-Wei Li",
+        "/CreationDate": "D:20260825000000Z",
+        "/Creator": "LaTeX with hyperref",
+        "/Keywords": "aljabar, teori grup, produk langsung, produk semilangsung, grup dihedral, ekstensi grup, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.3 lengkap",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 27: Produk Langsung, Produk Semilangsung, dan Ekstensi Grup"
+      },
+      "name_tree_keys": [
+        "/Dests"
+      ],
+      "named_destinations": {
+        "Doc-Start": 1,
+        "Item.1": 4,
+        "Item.2": 4,
+        "Item.3": 4,
+        "Item.4": 4,
+        "Item.5": 4,
+        "Item.6": 4,
+        "Item.7": 7,
+        "Item.8": 7,
+        "equation.4.1": 4,
+        "page.1": 3,
+        "page.2": 4,
+        "page.3": 5,
+        "page.4": 6,
+        "page.5": 7,
+        "proof.1": 3,
+        "proof.2": 5,
+        "proof.3": 6,
+        "section*.1": 7,
+        "section*.2": 7,
+        "section.4.3": 3,
+        "theorem.4.3.1": 3,
+        "theorem.4.3.2": 3,
+        "theorem.4.3.3": 4,
+        "theorem.4.3.4": 4,
+        "theorem.4.3.5": 5,
+        "theorem.4.3.6": 5,
+        "theorem.4.3.7": 6,
+        "unit027-symbol-index.0": 7,
+        "unit027-term-index.0": 7
+      },
+      "open_action": {
+        "fit": "/Fit",
+        "kind": "direct_page_destination",
+        "page": 1
+      },
+      "outline": [
+        {
+          "depth": 0,
+          "page": 3,
+          "title": "4.3 Produk Langsung, Produk Semilangsung, dan Ekstensi Grup"
+        },
+        {
+          "depth": 0,
+          "page": 7,
+          "title": "Indeks Istilah"
+        },
+        {
+          "depth": 0,
+          "page": 7,
+          "title": "Indeks Simbol"
+        }
+      ],
+      "page_geometry": [
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 1,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 2,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 3,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 4,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 5,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 6,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 7,
+          "rotate": 0
+        }
+      ],
+      "pages": 7,
+      "payloads": {
+        "embedded_files": false,
+        "forms": false,
+        "javascript": false
+      },
+      "pdf_header": "%PDF-1.7",
+      "pdfinfo": {
+        "Author": "Wen-Wei Li",
+        "CreationDate": "Tue Aug 25 02:00:00 2026 W. Europe Daylight Time",
+        "Creator": "LaTeX with hyperref",
+        "Custom Metadata": "no",
+        "Encrypted": "no",
+        "File size": "97427 bytes",
+        "Form": "none",
+        "JavaScript": "no",
+        "Keywords": "aljabar, teori grup, produk langsung, produk semilangsung, grup dihedral, ekstensi grup, id-ID",
+        "Metadata Stream": "no",
+        "Optimized": "no",
+        "PDF version": "1.7",
+        "Page rot": "0",
+        "Page size": "498.9 x 708.66 pts",
+        "Pages": "7",
+        "Producer": "MiKTeX-dvipdfmx (20260404)",
+        "Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.3 lengkap",
+        "Suspects": "no",
+        "Tagged": "no",
+        "Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 27: Produk Langsung, Produk Semilangsung, dan Ekstensi Grup",
+        "UserProperties": "no"
+      },
+      "tagged": false,
+      "text": {
+        "mupdf_sha256": "38c3589371134e4c89ca5dce3142ccd1c3ab578905df3eb2a2234ac7f85cb6dc",
+        "nul_characters": {
+          "mupdf": 1,
+          "pdftotext_layout": 0,
+          "pypdf": 8
+        },
+        "pdftotext_layout_sha256": "16b0a16dbd39a152ba80f41e24227a05f5189c83cd095b86894f3af7106d9a50",
+        "pypdf_page_sha256": [
+          "49ef35fce814e814db7a4703752fb2cf4918bb91f087b994a5dee92b8a0cfbae",
+          "3cbac3678d24a3e5679d2953f4c54175df1789da82c6beee0e521e597f4ced09",
+          "c0e0c6d449fefe356f00be52d048663b7b7647c2469b3593611836412047fa26",
+          "aac098fae1b547b118142d8615a41b2c6aef1239872e88b5ec1eed83d442a491",
+          "2077f4e500954ecaaff8ced09b47d039876923600b9609f35cefb82ebed23d16",
+          "f77c59162bdf89ecb43fdd3d8b3b0394513e2558e1791713634cac204acfe497",
+          "e9c6b2ea827494f26887c5d5ec5796677f59f53b66c65b96c971a0d2a58ef085"
+        ],
+        "pypdf_sha256": "2e44e3d4681f9fe86d543d8e919b00d79df6ddd18732d89be833df37230663fe",
+        "replacement_characters": 0
+      },
+      "tool_diagnostics": {
+        "pdfinfo_stderr": "",
+        "pdftotext_stderr": ""
+      }
+    }
+  },
+  "final_build_log": {
+    "braids_warnings": 1,
+    "evidence_sanitized": true,
+    "fatal_diagnostics": {
+      "emergency_stop": 0,
+      "empty_link_target": 0,
+      "fatal_error": 0,
+      "latex_error": 0,
+      "missing_character": 0,
+      "overfull": 0,
+      "undefined_citations": 0,
+      "undefined_control_sequence": 0,
+      "undefined_references": 0
+    },
+    "fontspec_CJK_advisories": 6,
+    "identity": {
+      "bytes": 86569,
+      "path": "qa/UNIT_027_BUILD_FINAL.log",
+      "sha256": "b18386c3273612276813fa1c9fa00a606becc3d35e980e68351f258bfc893cb4"
+    },
+    "latex_release_warnings": 3,
+    "page_marker": 7,
+    "raw_log_has_profile_path": true,
+    "underfull_hbox_badness": [
+      3168,
+      2865,
+      10000,
+      1406
+    ],
+    "underfull_vbox_badness": [
+      1478
+    ],
+    "xecjk_warnings": 1
+  },
+  "status": "PASS_WITH_WARNINGS"
+}

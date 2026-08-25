@@ -363,84 +363,84 @@ Sebagai latihan singkat, mari kita lihat bagaimana beberapa konstruksi aljabar d
 	\psi & \longmapsto f := [M \to K(M) \xrightarrow{\psi} A].
 \end{align*}
 Dari sudut pandang fungtor adjoin (Definisi \ref{def:adjunction-pair}; lihat juga Proposisi \ref{prop:adjunction-pointwise}), hal ini tidak lain mengatakan bahwa $(K, U)$ membentuk pasangan adjoin. Oleh karena itu, hingga isomorfisme, sifat universal menentukan secara tunggal $K(M)$ beserta $M \to K(M)$.
-\section{直积, 半直积与群扩张}\label{sec:group-extensions}
-无论构造新群或分解既有的群都会碰上积构造. 我们从幺半群的情形入手.
+\section{Produk Langsung, Produk Semilangsung, dan Ekstensi Grup}\label{sec:group-extensions}
+Baik ketika membangun grup baru maupun menguraikan grup yang sudah ada, kita akan menjumpai konstruksi produk. Kita mulai dengan kasus monoid.
 
-\begin{definition}[幺半群的直积]\label{def:monoid-times}\index{ziji@直积 (direct product)}
-	设 $I$ 为集合, $(M_i)_{i \in I}$ 为一族以 $I$ 为指标的幺半群. 在集合的积 $\prod_{i \in I} M_i$ 上定义如下的幺半群结构:
+\begin{definition}[Produk langsung monoid]\label{def:monoid-times}\index{ziji@produk langsung (direct product)}
+	Misalkan $I$ suatu himpunan dan $(M_i)_{i \in I}$ suatu keluarga monoid yang diindeks oleh $I$. Pada produk himpunan $\prod_{i \in I} M_i$, definisikan struktur monoid sebagai berikut:
 	\begin{compactitem}
-		\item 将 $\prod_{i \in I} M_i$ 中的元素表作 $(x_i)_{i \in I}$, 则二元运算由 $(x_i)_{i \in I} (y_i)_{i \in I} = (x_i y_i)_{i \in I}$ 给出;
-		\item 幺元为 $(1)_{i \in I}$;
-		\item 若 $(x_i)_{i \in I}$ 中每个 $x_i$ 皆可逆, 则 $(x_i)_{i \in I}^{-1} = (x_i^{-1})_{i \in I}$.
+		\item Tuliskan unsur-unsur $\prod_{i \in I} M_i$ sebagai $(x_i)_{i \in I}$; operasi binernya diberikan oleh $(x_i)_{i \in I} (y_i)_{i \in I} = (x_i y_i)_{i \in I}$;
+		\item unsur identitasnya adalah $(1)_{i \in I}$;
+		\item jika dalam $(x_i)_{i \in I}$ setiap $x_i$ invertibel, maka $(x_i)_{i \in I}^{-1} = (x_i^{-1})_{i \in I}$.
 	\end{compactitem}
-	由此可知若每个 $M_i$ 都是群, 则 $\prod_{i \in I} M_i$ 亦然. 称此为 $(M_i)_{i \in I}$ 的\emph{直积}. 对每个 $j \in I$ 定义投影同态
+	Dengan demikian, jika setiap $M_i$ merupakan grup, maka $\prod_{i \in I} M_i$ juga merupakan grup. Bagi keluarga $(M_i)_{i \in I}$, grup ini disebut \emph{produk langsung}. Untuk setiap $j \in I$, definisikan homomorfisme proyeksi
 	\begin{align*}
 		p_j: \prod_{i \in I} M_i & \longrightarrow M_j \\
 		(x_i)_{i \in I} & \longmapsto x_j.
 	\end{align*}
-	有限个幺半群 $M_1, \ldots. M_n$ 的直积也写作 $M_1 \times \cdots \times M_n$.
+	Produk langsung dari sejumlah berhingga monoid $M_1, \ldots. M_n$ juga ditulis sebagai $M_1 \times \cdots \times M_n$.
 \end{definition}
 
 \begin{lemma}\label{prop:product-monoid-univ-prop}
-	沿用先前符号. 积 $\prod_{i \in I} M_i$ 满足下述性质: 对任意幺半群 $M'$ 及一族同态 $\varphi_i: M' \to M_i$, 存在唯一的 $\varphi: M' \to M$ 使得图表
+	Dengan notasi di atas, produk $\prod_{i \in I} M_i$ memenuhi sifat berikut: untuk setiap monoid $M'$ dan setiap keluarga homomorfisme $\varphi_i: M' \to M_i$, terdapat tepat satu $\varphi: M' \to \prod_{i \in I} M_i$ sedemikian sehingga diagram
 	\[ \begin{tikzcd}
 		M' \arrow[rd, "\varphi_j"] \arrow[d, "{\exists! \varphi}"'] & \\
 		\prod_{i \in I} M_i \arrow[r, "p_j"'] & M_j
 	\end{tikzcd} \]
-	对每个 $j$ 皆交换 (即: $\forall j \in I, \; \varphi_j = p_j \circ \varphi$).
+	komutatif untuk setiap $j$ (yakni, $\forall j \in I, \; \varphi_j = p_j \circ \varphi$).
 \end{lemma}
 \begin{proof}
-	唯一的取法是 $\forall x \in M', \; \varphi(x) = (\varphi_i(x))_{i \in I}$. 易证 $\varphi$ 是同态.
+	Satu-satunya pilihan adalah $\forall x \in M', \; \varphi(x) = (\varphi_i(x))_{i \in I}$. Mudah diperiksa bahwa $\varphi$ merupakan homomorfisme.
 \end{proof}
 
-幺半群的直积实则是一种范畴论的构造, 而引理 \ref{prop:product-monoid-univ-prop} 给出了相应的泛性质. 在群论的研究中, \emph{半直积}是更富弹性也更为复杂的概念.
+Produk langsung monoid sesungguhnya merupakan suatu konstruksi kategoris, dan Lemma \ref{prop:product-monoid-univ-prop} memberikan sifat universal yang bersesuaian. Dalam kajian teori grup, \emph{produk semilangsung} merupakan konsep yang lebih lentur sekaligus lebih rumit.
 
-\begin{definition}[群的半直积]\index{banziji@半直积 (semidirect product)}
-	设 $H, N$ 为群, 并给定同态 $\alpha: H \to \Aut(N)$. 相应的半直积 $N \rtimes_{\alpha} H$ 为如下定义的群 (下标 $\alpha$ 经常略去):
+\begin{definition}[Produk semilangsung grup]\index{banziji@produk semilangsung (semidirect product)}
+	Misalkan $H, N$ grup dan diberikan homomorfisme $\alpha: H \to \Aut(N)$. Produk semilangsung yang bersesuaian, $N \rtimes_{\alpha} H$, adalah grup yang didefinisikan sebagai berikut (subskrip $\alpha$ sering dihilangkan):
 	\begin{compactitem}
-		\item 作为集合, $N \rtimes H$ 无非是积集 $N \times H$;
-		\item 二元运算是 $(n, h)(n', h') = (n \alpha(h)(n'), hh')$, 其中 $n,n' \in N$, $h,h' \in H$.
+		\item Sebagai himpunan, $N \rtimes H$ tidak lain adalah produk himpunan $N \times H$;
+		\item operasi binernya adalah $(n, h)(n', h') = (n \alpha(h)(n'), hh')$, dengan $n,n' \in N$, $h,h' \in H$.
 	\end{compactitem}
 \end{definition}
 
-首先注意到 $N \rtimes H$ 满足结合律, 其幺元是 $(1,1)$ 而 $(n,h)^{-1} = (\alpha(h^{-1})(n^{-1}), h^{-1})$, 这些验证都是简单然而稍显冗长的. 对此宜作进一步的解释.
+Pertama-tama, perhatikan bahwa $N \rtimes H$ memenuhi hukum asosiatif, unsur identitasnya adalah $(1,1)$, dan $(n,h)^{-1} = (\alpha(h^{-1})(n^{-1}), h^{-1})$. Semua pemeriksaan ini mudah, meskipun agak panjang. Penjelasan lebih lanjut akan berguna.
 \begin{compactenum}
-	\item 透过单同态 $h \mapsto (1, h)$ 和 $n \mapsto (n,1)$ 可将 $H$ 和 $N$ 都视为 $N \rtimes H$ 的子群. 从二元运算的定义立得 $N \lhd (N \rtimes H)$. 符号 $N \rtimes H$ 遂有了便于记忆的诠释, 它实际是 $N \lhd \cdots$ 的变形.
-	\item 半直积里的二元运算可以拆开来看:
+	\item Melalui homomorfisme injektif $h \mapsto (1, h)$ dan $n \mapsto (n,1)$, baik $H$ maupun $N$ dapat dipandang sebagai subgrup dari $N \rtimes H$. Definisi operasi biner langsung memberikan $N \lhd (N \rtimes H)$. Dengan demikian, notasi $N \rtimes H$ memiliki mnemonik yang mudah diingat: notasi ini sebenarnya merupakan deformasi dari $N \lhd \cdots$.
+	\item Operasi biner dalam produk semilangsung dapat diuraikan menjadi:
     \begin{inparaenum}
-		\item $H$ 内部的乘法,
-		\item $N$ 内部的乘法,
-		\item $H$ 与 $N$ 之间的乘法.
+		\item perkalian di dalam $H$,
+		\item perkalian di dalam $N$,
+		\item perkalian antara $H$ dan $N$.
 	\end{inparaenum}
-	无论怎么乘, 我们都希望将结果写成形如 $(n, h) = n \cdot h$ 的标准形. 唯一待厘清的是如何将形如 $h \cdot n$ 的元素化成标准形. 既然 $N$ 是正规子群, 自然的想法是在 $N \rtimes H$ 里考虑
+	Bagaimanapun perkalian dilakukan, kita ingin menuliskan hasilnya dalam bentuk normal $(n, h) = n \cdot h$. Satu-satunya hal yang masih perlu diperjelas ialah cara mengubah unsur berbentuk $h \cdot n$ ke bentuk normal. Karena $N$ merupakan subgrup normal, gagasan alaminya adalah meninjau, di dalam $N \rtimes H$,
 	\begin{gather}\label{eqn:semidirect-multiplication}
 		hn = \left( h n h^{-1} \right) h = \underbracket{\Ad_h(n)}_{\in N} h.
 	\end{gather}
-	于是乘法结构归结到同态 $H \ni h \mapsto \Ad_h|_N \in \Aut(N)$, 这正是半直积定义里的 $\alpha$.
-	\item 当 $\alpha$ 是平凡同态时, $N \rtimes H = N \times H$.
+	Dengan demikian, struktur perkaliannya ditentukan oleh homomorfisme $H \ni h \mapsto \Ad_h|_N \in \Aut(N)$, dan homomorfisme ini tepat merupakan $\alpha$ dalam definisi produk semilangsung.
+	\item Jika $\alpha$ merupakan homomorfisme trivial, maka $N \rtimes H = N \times H$.
 \end{compactenum}
 
-以下说明如何将一个给定的群描述为半直积.
+Berikut dijelaskan cara mendeskripsikan suatu grup yang diberikan sebagai produk semilangsung.
 \begin{lemma}\label{prop:internal-semidirect}
-	设 $G$ 为群, $H, N$ 为其子群而且 $H \subset N_G(N)$. 定义 $\alpha: H \to \Aut(N)$ 为 $\alpha(h) = \Ad_h|_N$, 则映射
+	Misalkan $G$ suatu grup, sedangkan $H, N$ merupakan subgrup-subgrup dari grup tersebut dengan $H \subset N_G(N)$. Definisikan $\alpha: H \to \Aut(N)$ melalui $\alpha(h) = \Ad_h|_N$. Maka pemetaan
 	\begin{align*}
 		\mu: N \rtimes H & \longrightarrow G \\
 		(n, h) & \longmapsto nh
 	\end{align*}
-	是同态; $\mu$ 是同构当且仅当 $NH = G$, $N \cap H = \{1\}$. 这时我们也称 $G$ 是子群 $N, H$ 的半直积.
+	merupakan homomorfisme; $\mu$ merupakan isomorfisme jika dan hanya jika $NH = G$ dan $N \cap H = \{1\}$. Dalam hal ini, kita juga mengatakan bahwa $G$ merupakan produk semilangsung dari subgrup $N, H$.
 	
-	如果 $N \cap H = \{1\}$ 且 $N \subset N_G(H)$, 则 $nh=hn$ 对任何 $n \in N$, $h \in H$ 恒成立; 换言之此时 $\alpha=1$.
+	Jika $N \cap H = \{1\}$ dan $N \subset N_G(H)$, maka $nh=hn$ untuk setiap $n \in N$, $h \in H$; dengan kata lain, dalam hal ini $\alpha=1$.
 \end{lemma}
 \begin{proof}
-	关于 $\mu$ 是同态的验证可参照之前讨论, 特别是 \eqref{eqn:semidirect-multiplication}. 条件 $NH=G$ 确保 $G$ 中每个元素都能写作 $nh$ 的形式, 而条件 $N \cap H = \{1\}$ 确保写法唯一, 同样由先前讨论可知此时 $\mu$ 是同构; 反向断言是自明的.
+	Pemeriksaan bahwa $\mu$ merupakan homomorfisme dapat merujuk pada pembahasan sebelumnya, khususnya \eqref{eqn:semidirect-multiplication}. Syarat $NH=G$ memastikan bahwa setiap unsur $G$ dapat ditulis dalam bentuk $nh$, sedangkan syarat $N \cap H = \{1\}$ memastikan bahwa penulisannya tunggal. Pembahasan sebelumnya kembali menunjukkan bahwa $\mu$ merupakan isomorfisme dalam keadaan ini; pernyataan sebaliknya jelas.
 	
-	至于乘法交换性, 仅须注意到
+	Untuk komutativitas perkalian, cukup perhatikan bahwa
 	\[ nhn^{-1}h^{-1} \in nHn^{-1}H \cap N hNh^{-1} \]
-	由正规化子的条件知右项等于 $H \cap N = \{1\}$.
+	menurut syarat-syarat normalisator, ruas kanan sama dengan $H \cap N = \{1\}$.
 \end{proof}
 
-\begin{example}\label{eg:dihedral-group}\index{ermiantiqun@二面体群 (dihedral group)}\index[sym1]{$D_{2n}$}
-	设 $n \in \Z_{\geq 0}$. 取循环群 $H := \Z/2\Z$, $N := \Z/n\Z$, 其二元运算写作加法 $+$. 令 $\tau$ 为 $H$ 中的非平凡元, 定义 $\alpha: H \to \Aut(N)$ 使得 $\alpha(\tau): x \mapsto -x$, 得到的 $N \rtimes H$ 是\emph{二面体群} $D_{2n}$. 几何上看, $D_{2n}$ 由固定平面上正 $n$ 边形的所有刚体运动组成. 这样的变换必然固定多边形的重心 (取为坐标原点), 分成旋转和反射两类. 请端详下图:
+\begin{example}\label{eg:dihedral-group}\index{ermiantiqun@grup dihedral (dihedral group)}\index[sym1]{$D_{2n}$}
+	Misalkan $n \in \Z_{\geq 0}$. Ambil grup siklik $H := \Z/2\Z$ dan $N := \Z/n\Z$, dengan operasi biner yang ditulis secara aditif sebagai $+$. Misalkan $\tau$ unsur taktrivial dari $H$, dan definisikan $\alpha: H \to \Aut(N)$ sedemikian sehingga $\alpha(\tau): x \mapsto -x$. Produk $N \rtimes H$ yang diperoleh adalah \emph{grup dihedral} $D_{2n}$. Untuk $n \geq 3$, secara geometris, $D_{2n}$ terdiri atas semua gerak kaku suatu segi-$n$ beraturan pada suatu bidang yang telah ditetapkan. Transformasi-transformasi ini tentu menetapkan titik berat poligon tersebut (yang kita ambil sebagai titik asal koordinat), dan terbagi menjadi dua jenis: rotasi dan pencerminan. Perhatikan gambar berikut:
 	\begin{center}\begin{tikzpicture}[baseline=(0:0cm)]
 		\foreach \x in {0,120,240}
 			\draw (\x :1cm) -- (\x + 120 :1cm);
@@ -460,62 +460,61 @@ Dari sudut pandang fungtor adjoin (Definisi \ref{def:adjunction-pair}; lihat jug
 			\draw[dashed] (\x :1.3cm) -- (\x + 180 :1.3cm);
 		\node at (270:2cm) {$n=5$};
 	\end{tikzpicture}\end{center}
-	子群 $N = \Z/n\Z$ 对应到保持正 $n$ 边形的旋转 ($k + n\Z$ 的转角为 $\frac{2\pi k}{n}$), 剩下 $n$ 个元素是对图中各虚线的镜射, 例如 $\tau$ 可取为对水平轴的镜射. 请读者试着验证.
+	Subgrup $N = \Z/n\Z$ bersesuaian dengan rotasi yang mempertahankan segi-$n$ beraturan itu (sudut rotasi $k + n\Z$ adalah $\frac{2\pi k}{n}$), sedangkan $n$ unsur sisanya merupakan pencerminan terhadap garis-garis putus-putus pada gambar. Sebagai contoh, $\tau$ dapat diambil sebagai pencerminan terhadap sumbu horizontal. Silakan pembaca memeriksanya.
 \end{example}
 
-表法 $G = NH \simeq N \rtimes H$ 也称为内半直积分解, 因为 $NH$ 由群 $G$ 自身的乘法结构描述, 而 $N \rtimes H$ 可谓是从外部构造的. 它们是一体两面, 不必强作区分. 对于直积, 我们还可以刻画多变元的情形.
+Penulisan $G = NH \simeq N \rtimes H$ juga disebut dekomposisi produk semilangsung internal, sebab $NH$ dideskripsikan melalui struktur perkalian di dalam grup $G$ sendiri, sedangkan $N \rtimes H$ dapat dipandang sebagai konstruksi dari luar. Keduanya merupakan dua sudut pandang atas hal yang sama dan tidak perlu dibedakan secara kaku. Untuk produk langsung, kita juga dapat mengarakterisasi kasus dengan banyak variabel.
 \begin{lemma}\label{prop:internal-direct}
-	设 $G_1, \ldots, G_n$ 为群 $G$ 的子群, 假设
+	Misalkan $G_1, \ldots, G_n$ merupakan subgrup-subgrup dari grup $G$, dan andaikan bahwa
 	\begin{compactitem}
-		\item 对每个 $i$ 皆有 $G_i \lhd G$,
-		\item 对每个 $i$ 皆有 $G_i \cap (G_1 \cdots \widehat{G_i} \cdots G_n) = \{1\}$, 其中 $\widehat{\cdots}$ 表示略去该项,
+		\item untuk setiap $i$, berlaku $G_i \lhd G$,
+		\item untuk setiap $i$, berlaku $G_i \cap (G_1 \cdots \widehat{G_i} \cdots G_n) = \{1\}$, dengan $\widehat{\cdots}$ menyatakan bahwa suku tersebut dihilangkan,
 	\end{compactitem}
-	则 $G_i$, $G_j$ 的元素对乘法相交换 ($i \neq j$), 此时 $G_1 \cdots G_n$ 是 $G$ 的正规子群, 而且
+	maka unsur-unsur $G_i$ dan $G_j$ saling komutatif terhadap perkalian ($i \neq j$). Dalam hal ini, $G_1 \cdots G_n$ merupakan subgrup normal dari $G$, dan
 	\begin{align*}
 		\prod_{i=1}^n G_i & \stackrel{\sim}{\longrightarrow} G_1 \cdots G_n \\
 		(g_1, \ldots, g_n) & \longmapsto g_1 \cdots g_n.
 	\end{align*}
-	 当 $G = G_1 \cdots G_n$ 时, 此同构 $\prod_i G_i \rightiso G$ 称作 $G$ 的\emph{内直积}分解.
+	 Jika $G = G_1 \cdots G_n$, isomorfisme $\prod_i G_i \rightiso G$ ini disebut dekomposisi \emph{produk langsung internal} dari $G$.
 \end{lemma}
 \begin{proof}
-	乘法交换性和 $n=2$ 的情形已经包含于引理 \ref{prop:internal-semidirect}; 由此亦可推出对任意子列 $1 \leq i_1 < \cdots < i_m \leq n$, 乘积 $G_{i_1} \cdots G_{i_m}$ 仍为 $G$ 的正规子群. 对 $n$ 用引理 \ref{prop:internal-semidirect} 递归地论证就得到一般情形.
+	Komutativitas perkalian dan kasus $n=2$ sudah tercakup dalam Lemma \ref{prop:internal-semidirect}. Dari sini juga dapat disimpulkan bahwa, untuk setiap subbarisan $1 \leq i_1 < \cdots < i_m \leq n$, produk $G_{i_1} \cdots G_{i_m}$ tetap merupakan subgrup normal dari $G$. Penerapan Lemma \ref{prop:internal-semidirect} secara rekursif pada $n$ memberikan kasus umum.
 \end{proof}
 
-\begin{definition}[正合列] \label{def:exact-seq-group}\index{zhenghelie@正合列 (exact sequence)}
-	考虑一列群同态
+\begin{definition}[Barisan eksak] \label{def:exact-seq-group}\index{zhenghelie@barisan eksak (exact sequence)}
+	Tinjau suatu barisan homomorfisme grup
 	\[ \cdots \xrightarrow{f_0} G_1 \xrightarrow{f_1} G_2 \xrightarrow{f_2} \cdots \xrightarrow{f_i} G_{i+1} \to \cdots, \]
-	长度或有限或无限. 若对所有 $i$ 都有
+	yang panjangnya dapat berhingga ataupun tak hingga. Jika untuk setiap $i$ berlaku
 	\[ \Image(f_i) = \Ker(f_{i+1}), \]
-	则称此列\emph{正合}. 我们经常把 $\{1\}$ 简写为 $1$, 或用加性符号记为 $0$. 举例明之, 对于任意同态 $\varphi: G \to G'$, 列 $G \to G' \to 1$ 正合当且仅当 $\varphi$ 是满的, 列 $1 \to G \to G'$ 正合当且仅当 $\varphi$ 是单的, 而我们恒有正合列
+	maka barisan tersebut disebut \emph{eksak}. Kita sering menyingkat $\{1\}$ sebagai $1$, atau menuliskannya sebagai $0$ dalam notasi aditif. Sebagai contoh, untuk sebarang homomorfisme $\varphi: G \to G'$, barisan $G \to G' \to 1$ eksak jika dan hanya jika $\varphi$ surjektif, barisan $1 \to G \to G'$ eksak jika dan hanya jika $\varphi$ injektif, dan kita selalu mempunyai barisan eksak
 	\[ 1 \to \Ker(\varphi) \to G \xrightarrow{\varphi} \Image(\varphi)  \to 1 \]
-	其中 $\Ker(\varphi) \to G$ 是自然的包含映射.
+	dengan $\Ker(\varphi) \to G$ sebagai pemetaan inklusi natural.
 \end{definition}
-正合列经常和交换图表 (见 \S\ref{sec:cat-and-morphism}) 搭配. 其妙用在同调代数中才会完全彰显.
+Barisan eksak sering digunakan bersama diagram komutatif (lihat \S\ref{sec:cat-and-morphism}). Kegunaannya baru akan tampak sepenuhnya dalam aljabar homologis.
 
-形如
+Barisan eksak berbentuk
 \[ 1 \to N \to G \xrightarrow{p} H \to 1 \]
-的正合列称为\emph{群扩张}. 若有群同态的交换图表\index{qunkuozhang@群扩张 (group extension)}
+disebut \emph{ekstensi grup}. Jika terdapat diagram komutatif homomorfisme grup\index{qunkuozhang@ekstensi grup (group extension)}
 \[\begin{tikzcd}
 	1 \arrow[r] & N \arrow[r] \arrow[equal, d] & G \arrow[r, "p"] \arrow[d, "\varphi"] & H \arrow[equal, d] \arrow[r] & 1 \\
 	1 \arrow[r] & N \arrow[r] & G' \arrow[r, "{p'}"'] & H \arrow[r] & 1
 \end{tikzcd}\]
-其横行皆是群扩张, 则称 $\varphi$ 是群扩张的等价. 不难验证此时 $\varphi$ 必为同构. 对于给定的 $H$ 和 $N$, 群扩张在等价意义下的分类是代数学中不时碰到的问题.
+dengan kedua baris merupakan ekstensi grup, maka $\varphi$ disebut suatu ekuivalensi ekstensi grup. Mudah diperiksa bahwa $\varphi$ pasti merupakan isomorfisme. Untuk $H$ dan $N$ yang diberikan, klasifikasi ekstensi grup hingga ekuivalensi merupakan masalah yang sesekali dijumpai dalam aljabar.
 
-对于群扩张 $1 \to N \to G \xrightarrow{p} H \to 1$, 同态 $s: H \to G$ 若满足 $p s = \identity_H$, 则称为该扩张的一个\emph{分裂}. 由此可建立半直积与可裂扩张的联系, 细说如下.
+Untuk ekstensi grup $1 \to N \to G \xrightarrow{p} H \to 1$, suatu homomorfisme $s: H \to G$ yang memenuhi $p s = \identity_H$ disebut \emph{pemecahan} dari ekstensi tersebut. Dari sini dapat dibangun hubungan antara produk semilangsung dan ekstensi terpecah, sebagai berikut.
 \begin{enumerate}
-	\item 设 $G = N \rtimes_\alpha H$ 为半直积, 则有可裂的群扩张
+	\item Misalkan $G = N \rtimes_\alpha H$ suatu produk semilangsung. Maka terdapat ekstensi grup terpecah
 		\[ \begin{tikzcd}
 			1 \arrow[r] & N \arrow[r] & G \arrow[r, "p"] & H \arrow[bend left=30, l, "s"] \arrow[r] & 1
 		\end{tikzcd} \]
-		其中 $p: G \to H$ 是投影同态 $(n, h) \mapsto h$, 而 $s: H \hookrightarrow G$ 是包含同态 $s(h) = (1,h)$.
-	\item 反之, 给定如上的群扩张及其分裂 $s$, 定义 $\alpha: H \to \Aut(N)$ 为伴随自同构 $\alpha(h) = \Ad(s(h))|_N$, 则有群扩张的等价
+		dengan $p: G \to H$ homomorfisme proyeksi $(n, h) \mapsto h$, sedangkan $s: H \hookrightarrow G$ homomorfisme inklusi $s(h) = (1,h)$.
+	\item Sebaliknya, jika diberikan ekstensi grup di atas beserta pemecahannya $s$, definisikan $\alpha: H \to \Aut(N)$ melalui pembatasan automorfisme adjoin, $\alpha(h) = \Ad(s(h))|_N$. Maka terdapat ekuivalensi ekstensi grup
 		\[ \begin{tikzcd}
 			1 \arrow[r] & N \arrow[r] \arrow[equal, d] & N \rtimes_\alpha H \arrow[r] \arrow[d, "\varphi"] & H \arrow[equal, d] \arrow[r] & 1 \\
 			1 \arrow[r] & N \arrow[r] & G \arrow[r] & H \arrow[r] & 1
 		\end{tikzcd} \]
-		其中 $\varphi(n, h) := n s(h)$. 请读者验证 $\varphi$ 确实是一对一的群同态.
+		dengan $\varphi(n, h) := n s(h)$. Silakan pembaca memeriksa bahwa $\varphi$ memang merupakan homomorfisme grup yang injektif.
 \end{enumerate}
-
 \section{群作用和计数原理}\label{sec:group-action}
 无论从实际应用还是历史的发展观之, 抽象的群往往都由它在某集合上的作用所描述, 而考察种种群作用又是研究群性质的重要手段. 本节的第一个目的是澄清群作用的基本概念.
 

@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan, seluruh Bab 1, seluruh Bab 2, seluruh Bab 3 termasuk latihannya, serta pembukaan Bab 4 sampai Bagian 4.2 telah diterjemahkan dan diterima dalam dua puluh enam unit pembaca. Bagian 4.3 menjadi span sumber kanonik berikutnya.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan, seluruh Bab 1, seluruh Bab 2, seluruh Bab 3 termasuk latihannya, serta pembukaan Bab 4 sampai Bagian 4.3 telah diterjemahkan dan diterima dalam dua puluh tujuh unit pembaca. Bagian 4.4 menjadi span sumber kanonik berikutnya.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh checkpoint pembaca 0.3.0 (96 halaman; Unit 1-9)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf)
 
@@ -63,6 +63,8 @@ Status saat ini: **Pendahuluan, seluruh Bab 1, seluruh Bab 2, seluruh Bab 3 term
 [Baca atau unduh PDF Unit 25](artifacts/unit-025-bab-4-semigrup-monoid-dan-grup-id.pdf)
 
 [Baca atau unduh PDF Unit 26](artifacts/unit-026-bab-4-homomorfisme-dan-grup-hasil-bagi-id.pdf)
+
+[Baca atau unduh PDF Unit 27](artifacts/unit-027-bab-4-produk-langsung-semilangsung-dan-ekstensi-grup-id.pdf)
 
 Checkpoint `0.6.0` menggabungkan satu sampul pembaca dan seluruh 228 halaman
 Unit 001-024: pendahuluan serta Bab 1, Bab 2, dan Bab 3 lengkap. Build kedua
@@ -127,6 +129,7 @@ pwsh -NoProfile -File scripts/build_unit_023.ps1 -OutputDirectory build/unit-023
 pwsh -NoProfile -File scripts/build_unit_024.ps1 -OutputDirectory build/unit-024-replay
 pwsh -NoProfile -File scripts/build_unit_025.ps1 -OutputDirectory build/unit-025-replay
 pwsh -NoProfile -File scripts/build_unit_026.ps1 -OutputDirectory build/unit-026-replay
+pwsh -NoProfile -File scripts/build_unit_027.ps1 -OutputDirectory build/unit-027-replay
 ```
 
 Skrip menjalankan XeLaTeX tanpa shell escape, indeks dan bibliografi yang dibutuhkan setiap unit, lalu lintasan konvergensi XeLaTeX. Tanggal sumber dan seed gambar sampul dipatok. Dua build bersih untuk setiap unit menghasilkan halaman yang identik piksel demi piksel ketika dirender, meskipun serialisasi kontainer PDF XeTeX belum identik byte di direktori keluaran yang berbeda.
@@ -397,9 +400,18 @@ Artefak Unit 26 yang diterima:
 - receipt penerimaan lokal ada di [`qa/UNIT_026_ADMISSION_20260825.md`](qa/UNIT_026_ADMISSION_20260825.md); bukti visual ada di [`qa/UNIT_026_VISUAL_QA_20260825.md`](qa/UNIT_026_VISUAL_QA_20260825.md), bukti backend ada di [`qa/unit-026-evidence/backend-validation.json`](qa/unit-026-evidence/backend-validation.json), dan audit akhir independen ada di [`qa/UNIT_026_FINAL_AUDIT_20260825.md`](qa/UNIT_026_FINAL_AUDIT_20260825.md).
 - Unit 26 dipublikasikan pada commit isi `a4b2a204b381033e96329968c7802ab54e6c40dd`; seluruh 50 path / 4.953.751 byte cocok dengan blob komit pada pembacaan balik anonim. Inventaris lengkap ada di [`qa/PUBLICATION_GITHUB_UNIT_026_CONTENT_READBACK.json`](qa/PUBLICATION_GITHUB_UNIT_026_CONTENT_READBACK.json), dan receipt publikasi ada di [`qa/PUBLICATION_GITHUB_UNIT_026_20260825.md`](qa/PUBLICATION_GITHUB_UNIT_026_20260825.md).
 
+Artefak Unit 27 yang diterima:
+
+- 7 halaman; 97.427 byte; SHA-256 `8eeab2d34a745b0e5a12acc29c0c5474e9c84d1248686d743302c03859851dd7`.
+- rentang otoritas Bagian 4.3 lengkap adalah `chapter4.tex:365-517`; baris 517 hanya pemisah kosong. Kandidat 12.675 byte / SHA-256 `aa7fa71a2cf748b29b9ca6ddfc6297d6af8d8ffcc6943ec061c1235d44f5f563` menempati target kanonik baris 366-517 secara byte-identik. File target lengkap 166.211 byte / SHA-256 `5a4ec3ec5f420c694f7e1207f02a79c558da0f18c6c1f23969856c481f9a7420`; sufiks otoritas mulai baris 518 tetap utuh pada target mulai baris 518.
+- backend 262.798 byte; SHA-256 `c014e552acfa52db88c15784d4150708465faf9fe54a5fcd839d8742dec8abf4`; 364 entitas UUIDv5 yang diaudit mencakup 304 entitas konsep kompatibel, 28 pasangan lingkungan, 8 label, 5 rujukan, 15 butir, 171 zona matematika, 7 diagram, 6 entri indeks, 9 istilah, 2 koreksi sumber, 1 perbaikan presisi terjemahan, dan 2 normalisasi gaya. Tidak ada sitasi, latihan, petunjuk, jawaban, atau solusi yang diada-adakan. Enam proyeksi CSV deterministik dan 80 binding pada 38 path hidup lulus audit.
+- koreksi `O013-LI-U027-COR-001` memulihkan kodomain sifat universal produk menjadi `\prod_{i\in I}M_i`; `O013-LI-U027-COR-002` membatasi interpretasi geometris poligon dihedral pada `n\geq3` tanpa mempersempit konstruksi aljabarnya. Perbaikan `O013-LI-U027-TR-001` menyatakan aksi pemecahan sebagai pembatasan automorfisme adjoin, sebab pembatasannya pada `N` tidak mesti merupakan automorfisme dalam dari `N`.
+- reflow daring 142 mm terpusat memakai panel cakupan prosa, bukan blok kemajuan terisi/kosong. Dua build bersih dan artefak menghasilkan 42 render; semua perbandingan C-ke-D dan D-ke-artefak identik piksel dalam Poppler maupun MuPDF, dengan tepi luar bersih. Tiga outline, 30 tujuan bernama, 10 tautan internal, 3 URI HTTPS, dan 22 fon tertanam lulus; PDF tanpa tag tetap dicatat sebagai keterbatasan aksesibilitas.
+- receipt penerimaan lokal ada di [`qa/UNIT_027_ADMISSION_20260825.md`](qa/UNIT_027_ADMISSION_20260825.md); bukti visual ada di [`qa/UNIT_027_VISUAL_QA_20260825.md`](qa/UNIT_027_VISUAL_QA_20260825.md), bukti backend ada di [`qa/unit-027-evidence/backend-validation.json`](qa/unit-027-evidence/backend-validation.json), dan audit akhir independen ada di [`qa/UNIT_027_FINAL_AUDIT_20260825.md`](qa/UNIT_027_FINAL_AUDIT_20260825.md).
+
 ## Backend modular
 
-`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-026-bab-4-homomorfisme-dan-grup-hasil-bagi.json` adalah catatan kanonik dua puluh enam unit yang telah diterima. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7, Unit 18, dan Unit 24 mempertahankan latihan sebagai entitas bagian terurut serta setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat. Unit 10-26 memakai identitas yang sama untuk permukaan matematika, diagram, rujukan eksternal, indeks, sitasi, koreksi atau normalisasi sumber, serta provenance model; receipt penerimaan masing-masing mengikat bukti lokal dan, setelah publikasi, bukti publiknya.
+`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-027-bab-4-produk-langsung-semilangsung-dan-ekstensi-grup.json` adalah catatan kanonik dua puluh tujuh unit yang telah diterima. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7, Unit 18, dan Unit 24 mempertahankan latihan sebagai entitas bagian terurut serta setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat. Unit 10-27 memakai identitas yang sama untuk permukaan matematika, diagram, rujukan eksternal, indeks, sitasi, koreksi atau normalisasi sumber, serta provenance model; receipt penerimaan masing-masing mengikat bukti lokal dan, setelah publikasi, bukti publiknya.
 
 Validasi:
 
@@ -430,6 +442,7 @@ python scripts/validate_backend.py --data backend/data/unit-023-bab-3-sekilas-te
 python scripts/validate_backend.py --data backend/data/unit-024-bab-3-latihan.json
 python scripts/validate_backend.py --data backend/data/unit-025-bab-4-semigrup-monoid-dan-grup.json
 python scripts/validate_backend.py --data backend/data/unit-026-bab-4-homomorfisme-dan-grup-hasil-bagi.json
+python scripts/validate_backend.py --data backend/data/unit-027-bab-4-produk-langsung-semilangsung-dan-ekstensi-grup.json
 ```
 
 Validator memeriksa skema, keunikan dan relasi ID, urutan bagian, hash file dan rentang baris, penutupan sitasi/rujukan/diagram/indeks, bukti build, serta kesesuaian byte proyeksi CSV.
@@ -480,6 +493,7 @@ Teks sumber dan terjemahan ditangani menurut Creative Commons Attribution 4.0 In
 - [ ] Bab 4 — Teori grup
   - [x] Pembukaan bab dan Bagian 4.1 — Semigrup, Monoid, dan Grup `chapter4.tex:1-176`
   - [x] Bagian 4.2 — Homomorfisme dan Grup Hasil Bagi `chapter4.tex:177-364`
+  - [x] Bagian 4.3 — Produk Langsung, Produk Semilangsung, dan Ekstensi Grup `chapter4.tex:365-517`
 - [ ] Bab 5 — Dasar-dasar teori gelanggang
 - [ ] Bab 6 — Teori modul
 - [ ] Bab 7 — Dasar-dasar aljabar
