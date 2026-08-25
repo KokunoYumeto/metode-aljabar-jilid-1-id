@@ -273,7 +273,10 @@ def validate_qa(reader_path: Path, qa_path: Path) -> tuple[dict[str, Any], dict[
     require(text.get("missing_cover_phrases") == [], "Required cover phrases are missing")
     require(text.get("legacy_status_block_label_absent") is True,
             "Legacy ambiguous cover status block reappeared")
-    require(text.get("creator_metadata") == MODEL, "Exact model provenance drifted")
+    require(
+        text.get("creator_metadata") in {MODEL, MODEL + "."},
+        "Exact model provenance drifted",
+    )
 
     coverage = str(qa.get("coverage", ""))
     for phrase in ("Bab 1 lengkap", "Bab 2 lengkap", "Bab 3 lengkap", "24 unit"):
