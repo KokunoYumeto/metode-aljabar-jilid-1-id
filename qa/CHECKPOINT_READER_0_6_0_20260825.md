@@ -57,7 +57,7 @@ accessibility is not claimed.
 - fail-closed QA runner: 38,484 bytes; SHA-256
   `bd17d43fa371371ae792433c4518f9e5d808599afb6b88f51223e00f61280c9c`;
 - machine QA record, repository-normalized LF bytes: 127,824 bytes; SHA-256
-  `80f55f247aee173986b10e21b1918914c6a6b450df6b52b8955f5e1d2a4138ce`;
+  `5e1ee5fcc9a6a3d6578a71d3771b8a3eea1389ca71e708ee489cbec6fe68d084`;
 - all-page visual receipt, repository-normalized LF bytes: 1,493 bytes;
   SHA-256
   `c685ecf54eafbb0be7482ee25fe6382826525ed83e16621c93cce3c7cd22ff99`.

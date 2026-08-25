@@ -28,6 +28,7 @@ MANIFEST_NAME = "30-MANIFEST.json"
 SUMS_NAME = "40-SHA256SUMS.txt"
 QA_REL = "qa/checkpoint-0.6.0-evidence/structure-text-navigation-font-render-qa.json"
 VISUAL_REL = "qa/checkpoint-0.6.0-evidence/VISUAL_REVIEW.md"
+EVIDENCE_NORMALIZATION_REL = "qa/CHECKPOINT_0.6.0_EVIDENCE_NORMALIZATION_20260825.md"
 GITHUB_READBACK_REL = "qa/PUBLICATION_GITHUB_CHECKPOINT_0.6.0_CONTENT_READBACK.json"
 MODEL = "OpenAI Codex gpt-5.6-sol, Ultra"
 CONCEPT_DOI = "10.5281/zenodo.22059759"
@@ -384,10 +385,17 @@ def main() -> None:
             "Edition commit does not contain the validated reader bytes")
     for evidence_rel in (QA_REL, VISUAL_REL):
         evidence_bytes = (ROOT / evidence_rel).read_bytes()
-        require(committed_blob(args.checkpoint_content_commit, evidence_rel) == evidence_bytes,
-                f"Checkpoint content commit does not contain validated evidence: {evidence_rel}")
+        require(committed_blob(args.checkpoint_content_commit, evidence_rel),
+                f"Checkpoint content commit lacks its original evidence: {evidence_rel}")
         require(committed_blob(args.edition_commit, evidence_rel) == evidence_bytes,
                 f"Edition commit does not contain validated evidence: {evidence_rel}")
+    normalization_path = ROOT / EVIDENCE_NORMALIZATION_REL
+    require(normalization_path.is_file(), "Missing evidence-normalization receipt")
+    require(
+        committed_blob(args.edition_commit, EVIDENCE_NORMALIZATION_REL)
+        == normalization_path.read_bytes(),
+        "Edition commit does not contain the evidence-normalization receipt",
+    )
     reader_identity = digest(reader_source)
     github_readback_path = (
         args.github_readback.resolve()
