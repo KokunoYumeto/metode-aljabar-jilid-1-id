@@ -187,7 +187,14 @@ def pdf_facts(path: Path) -> dict[str, object]:
 def validate_qa(reader_path: Path, qa_path: Path) -> tuple[dict[str, Any], dict[str, object]]:
     qa = load_json(qa_path)
     require(qa.get("status") == "PASS", "Checkpoint QA status is not PASS")
-    require(qa.get("deterministic_rebuild") is True, "Deterministic rebuild did not pass")
+    deterministic = qa.get("deterministic_rebuild")
+    require(isinstance(deterministic, dict), "Checkpoint QA lacks deterministic rebuild evidence")
+    require(
+        deterministic.get("status") == "PASS"
+        and deterministic.get("byte_identical") is True
+        and deterministic.get("final_sha256") == deterministic.get("rebuilt_sha256"),
+        "Deterministic rebuild did not pass",
+    )
     require(qa.get("unit_start_pages_1_based") == EXPECTED_UNIT_STARTS, "Unit starts drifted")
 
     artifact = qa.get("artifact")
@@ -197,6 +204,11 @@ def validate_qa(reader_path: Path, qa_path: Path) -> tuple[dict[str, Any], dict[
     require(artifact.get("pages") == EXPECTED_READER_PAGES, "Checkpoint page count drifted")
     require(artifact.get("bytes") == actual_digest["bytes"], "Checkpoint bytes differ from QA")
     require(artifact.get("sha256") == actual_digest["sha256"], "Checkpoint SHA-256 differs from QA")
+    require(
+        deterministic.get("final_sha256") == actual_digest["sha256"]
+        and deterministic.get("bytes") == actual_digest["bytes"],
+        "Deterministic rebuild identity differs from the release reader",
+    )
 
     source_units = qa.get("source_units")
     require(isinstance(source_units, list), "Checkpoint QA lacks source_units")
