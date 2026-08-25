@@ -1,0 +1,1535 @@
+{
+  "build_log": {
+    "braids_warnings": 1,
+    "evidence_sanitized": true,
+    "fatal_diagnostics": {
+      "emergency_stop": 0,
+      "empty_link_target": 0,
+      "fatal_error": 0,
+      "missing_character": 0,
+      "overfull": 0,
+      "undefined_citations": 0,
+      "undefined_control_sequence": 0,
+      "undefined_references": 0
+    },
+    "fontspec_CJK_advisories": 6,
+    "identity": {
+      "bytes": 86417,
+      "path": "qa/UNIT_026_BUILD_FINAL.log",
+      "sha256": "f26903ed598b9191005e00dd8f2d55b2de09eb0464722ed5bef24e9f9f93f8fd"
+    },
+    "latex_release_warnings": 3,
+    "raw_log_has_profile_path": true,
+    "underfull_badness": [
+      1365,
+      3168,
+      2865,
+      10000
+    ],
+    "xecjk_warnings": 1
+  },
+  "cross_pdf_semantic_identity": true,
+  "documents": {
+    "artifact": {
+      "actions": {
+        "all_uris_https": true,
+        "annotation_AA": 0,
+        "broken_destinations": [],
+        "catalog_AA": false,
+        "counts": {
+          "/GoTo": 25,
+          "/URI": 3
+        },
+        "gotos": [
+          "equation.4.1",
+          "equation.4.1",
+          "equation.4.1",
+          "equation.4.1",
+          "equation.4.2",
+          "equation.4.1",
+          "theorem.4.2.5",
+          "theorem.4.2.7",
+          "theorem.4.2.7",
+          "theorem.4.2.7",
+          "theorem.4.2.8",
+          "cite.0@DN00",
+          "theorem.4.2.12",
+          "theorem.4.2.12",
+          "page.6",
+          "page.2",
+          "page.1",
+          "page.1",
+          "page.5",
+          "page.5",
+          "page.3",
+          "page.1",
+          "page.1",
+          "page.2",
+          "page.2"
+        ],
+        "open_action_present": true,
+        "out_of_bounds_rects": [],
+        "page_AA": 0,
+        "unsafe": [],
+        "uris": [
+          "https://www.wwli.asia",
+          "https://creativecommons.org/licenses/by/4.0/",
+          "https://creativecommons.org/licenses/by/4.0/"
+        ]
+      },
+      "catalog_keys": [
+        "/Lang",
+        "/Names",
+        "/OpenAction",
+        "/Outlines",
+        "/PageLabels",
+        "/PageMode",
+        "/Pages",
+        "/Type"
+      ],
+      "checks": {
+        "44_destinations": true,
+        "action_counts": true,
+        "fonts_embedded": true,
+        "language_id_ID": true,
+        "link_closure": true,
+        "mupdf_recovers_CJK_title": true,
+        "nine_pages": true,
+        "no_active_payloads": true,
+        "no_replacement_chars": true,
+        "outline_exact": true,
+        "rects_in_bounds": true,
+        "safe_actions": true,
+        "text_blocks_in_bounds": true,
+        "untagged_disclosed": true
+      },
+      "encrypted": false,
+      "fonts": {
+        "pdffonts_all_embedded": true,
+        "pdffonts_rows": 22,
+        "pdffonts_stderr": "Syntax Error: Missing language pack for 'Adobe-GB1' mapping",
+        "pypdf_all_embedded": true,
+        "pypdf_unique": 23,
+        "records": [
+          {
+            "basefont": "/HIYJCJ+CMEX10",
+            "embedded": true,
+            "normalized": "/CMEX10",
+            "object": "57 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/AVNLYV+CMMI10",
+            "embedded": true,
+            "normalized": "/CMMI10",
+            "object": "38 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/FXZQZU+CMMI7",
+            "embedded": true,
+            "normalized": "/CMMI7",
+            "object": "44 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/KAMIOD+CMR10",
+            "embedded": true,
+            "normalized": "/CMR10",
+            "object": "40 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/LQKNHS+CMR5",
+            "embedded": true,
+            "normalized": "/CMR5",
+            "object": "45 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/OAAPPO+CMR7",
+            "embedded": true,
+            "normalized": "/CMR7",
+            "object": "39 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/YQSPMM+CMSY10",
+            "embedded": true,
+            "normalized": "/CMSY10",
+            "object": "41 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/AOZAQV+CMSY7",
+            "embedded": true,
+            "normalized": "/CMSY7",
+            "object": "46 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/RYOJND+FandolHei-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/FandolHei-Regular-Identity-H",
+            "object": "86 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/CTMYOC+LMMono12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono12-Regular-Identity-H",
+            "object": "20 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/CMLROB+LMMono9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono9-Regular-Identity-H",
+            "object": "27 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/ZBNEDC+LMRoman10-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Bold-Identity-H",
+            "object": "42 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/JSDVAS+LMRoman10-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Regular-Identity-H",
+            "object": "36 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/KYNEAR+LMRoman12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman12-Regular-Identity-H",
+            "object": "11 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/ZESAME+LMRoman17-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman17-Regular-Identity-H",
+            "object": "9 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/KOQDGB+LMRoman7-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman7-Regular-Identity-H",
+            "object": "73 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/QICJJW+LMRoman8-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman8-Regular-Identity-H",
+            "object": "34 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/JDYSQS+LMRoman9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman9-Regular-Identity-H",
+            "object": "22 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/BOOIQN+MSAM10",
+            "embedded": true,
+            "normalized": "/MSAM10",
+            "object": "64 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/NXAKMY+MSBM10",
+            "embedded": true,
+            "normalized": "/MSBM10",
+            "object": "70 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/VMSCUL+NotoSansCJKsc-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/NotoSansCJKsc-Regular-Identity-H",
+            "object": "84 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/THDHRI+TeXGyreHeros-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Bold-Identity-H",
+            "object": "13 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/HPOKDC+TeXGyreHeros-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Regular-Identity-H",
+            "object": "15 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          }
+        ]
+      },
+      "geometry": {
+        "fitz_text_blocks_out_of_bounds": []
+      },
+      "identity": {
+        "bytes": 115284,
+        "path": "artifacts/unit-026-bab-4-homomorfisme-dan-grup-hasil-bagi-id.pdf",
+        "sha256": "e3c0e0241901eb0f5f2477a1fe09f64eff34af325dc209b25aa8d71900deb089"
+      },
+      "language": "id-ID",
+      "metadata": {
+        "/Author": "Wen-Wei Li",
+        "/CreationDate": "D:20260825000000Z",
+        "/Creator": "LaTeX with hyperref",
+        "/Keywords": "aljabar, teori grup, homomorfisme, grup hasil bagi, grup Grothendieck, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.2 lengkap",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 26: Homomorfisme dan Grup Hasil Bagi"
+      },
+      "named_destinations": {
+        "Doc-Start": 1,
+        "Item.1": 3,
+        "Item.2": 3,
+        "Item.3": 7,
+        "Item.4": 7,
+        "Item.5": 7,
+        "cite.0@DN00": 9,
+        "equation.4.1": 4,
+        "equation.4.2": 5,
+        "page.1": 3,
+        "page.2": 4,
+        "page.3": 5,
+        "page.4": 6,
+        "page.5": 7,
+        "page.6": 8,
+        "page.7": 9,
+        "proof.1": 4,
+        "proof.2": 5,
+        "proof.3": 5,
+        "proof.4": 6,
+        "proof.5": 6,
+        "proof.6": 7,
+        "proof.7": 7,
+        "proof.8": 8,
+        "section*.1": 9,
+        "section*.2": 9,
+        "section*.3": 9,
+        "section.4.2": 3,
+        "theorem.4.2.1": 3,
+        "theorem.4.2.10": 7,
+        "theorem.4.2.11": 7,
+        "theorem.4.2.12": 7,
+        "theorem.4.2.13": 8,
+        "theorem.4.2.2": 3,
+        "theorem.4.2.3": 4,
+        "theorem.4.2.4": 5,
+        "theorem.4.2.5": 5,
+        "theorem.4.2.6": 5,
+        "theorem.4.2.7": 6,
+        "theorem.4.2.8": 6,
+        "theorem.4.2.9": 7,
+        "unit026-bibliography.0": 9,
+        "unit026-symbol-index.0": 9,
+        "unit026-term-index.0": 9
+      },
+      "outline": [
+        {
+          "depth": 0,
+          "page": 3,
+          "title": "4.2 Homomorfisme dan grup hasil bagi"
+        },
+        {
+          "depth": 0,
+          "page": 9,
+          "title": "Daftar Pustaka"
+        },
+        {
+          "depth": 0,
+          "page": 9,
+          "title": "Indeks Istilah"
+        },
+        {
+          "depth": 0,
+          "page": 9,
+          "title": "Indeks Simbol"
+        }
+      ],
+      "page_sizes_points": [
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ]
+      ],
+      "pages": 9,
+      "payloads": {
+        "embedded_files": false,
+        "forms": false,
+        "javascript": false
+      },
+      "pdf_header": "%PDF-1.7",
+      "pdfinfo": {
+        "Author": "Wen-Wei Li",
+        "CreationDate": "Tue Aug 25 02:00:00 2026 W. Europe Daylight Time",
+        "Creator": "LaTeX with hyperref",
+        "Custom Metadata": "no",
+        "Encrypted": "no",
+        "File size": "115284 bytes",
+        "Form": "none",
+        "JavaScript": "no",
+        "Keywords": "aljabar, teori grup, homomorfisme, grup hasil bagi, grup Grothendieck, id-ID",
+        "Metadata Stream": "no",
+        "Optimized": "no",
+        "PDF version": "1.7",
+        "Page rot": "0",
+        "Page size": "498.9 x 708.66 pts",
+        "Pages": "9",
+        "Producer": "MiKTeX-dvipdfmx (20260404)",
+        "Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.2 lengkap",
+        "Suspects": "no",
+        "Tagged": "no",
+        "Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 26: Homomorfisme dan Grup Hasil Bagi",
+        "UserProperties": "no"
+      },
+      "tagged": false,
+      "text": {
+        "mupdf_contains_代数学引论": true,
+        "mupdf_nul": 1,
+        "mupdf_replacement": 0,
+        "mupdf_sha256": "274d87fbe1e99cfdafb3d4013df7eba3b712013c29f9de47f3ff1a09f788a215",
+        "pdftotext_nul": 0,
+        "pdftotext_replacement": 0,
+        "pdftotext_sha256": "68e864c12f8571028cc7f6d1d923baf801f07690cba0891e63d26bc0dd333266",
+        "pdftotext_stderr": "Syntax Error: Missing language pack for 'Adobe-GB1' mapping\nSyntax Error: Unknown font tag 'F35'\nSyntax Error (40524): No font in show/space",
+        "poppler_contains_代数学引论": false,
+        "pypdf_contains_代数学引论": false,
+        "pypdf_nul": 15,
+        "pypdf_page_sha256": [
+          "968f7e3066db061ce224570fe8eb91956137428e1a91e666679a5b1e73cc38f0",
+          "3cbac3678d24a3e5679d2953f4c54175df1789da82c6beee0e521e597f4ced09",
+          "aaa3a601c7b735591fe1cb505d52a77f77e833869cd009978744ef5af19dabbf",
+          "729ec6d9c11a7768dbb87ba09fd8313a3edea9937541face85ea3e7dedec73b7",
+          "f1e21473706fa19ed7ecba8fae184c1045d230db8e2941a6987bfb7bae812459",
+          "81bd924da84a847fad06e4679d73e0acfc2327415587162a9b70d64e69b0007e",
+          "971fa025ad2a5a0ad00f94052e9570f88dcfeb5f02a140e490a8870420bbd002",
+          "7334ca82a5d27a4c64cb24c453230f82998b718defc61d89e85af6524cec6e01",
+          "4361191b90db8f5d8eaa032bde8005d80000e235fbe8738e216de6bdcd90a4c7"
+        ],
+        "pypdf_replacement": 0,
+        "pypdf_sha256": "18d124a9f0f2c435d1fcaabec0204e0b28582fcf8e069bcea80b0c2e9a99246e"
+      },
+      "tool_diagnostics": {
+        "mutool_info_stderr": "",
+        "mutool_info_stdout": "<REPO>\\artifacts\\unit-026-bab-4-homomorfisme-dan-grup-hasil-bagi-id.pdf:\n\nPDF-1.7\nInfo object (2 0 R):\n<</Creator(LaTeX with hyperref)/Title<FEFF004D00650074006F0064006500200041006C006A0061006200610072002C0020004A0069006C0069006400200031003A0020004100720073006900740065006B0074007500720020004400610073006100720020002D00200055006E00690074002000320036003A00200048006F006D006F006D006F0072006600690073006D0065002000640061006E0020004700720075007000200048006100730069006C00200042006100670069>/Subject<FEFF005400650072006A0065006D006100680061006E002000420061006800610073006100200049006E0064006F006E006500730069006100200069006E0064006500700065006E00640065006E003B002000420061006700690061006E00200034002E00320020006C0065006E0067006B00610070>/Author<FEFF00570065006E002D0057006500690020004C0069>/Keywords<FEFF0061006C006A0061006200610072002C002000740065006F0072006900200067007200750070002C00200068006F006D006F006D006F0072006600690073006D0065002C0020006700720075007000200068006100730069006C00200062006100670069002C00200067007200750070002000470072006F007400680065006E0064006900650063006B002C002000690064002D00490044>/Producer(MiKTeX-dvipdfmx \\(20260404\\))/CreationDate(D:20260825000000Z)>>\nPages: 9\n\nRetrieving info from pages 1-9...",
+        "pdfinfo_stderr": ""
+      }
+    },
+    "build-c": {
+      "actions": {
+        "all_uris_https": true,
+        "annotation_AA": 0,
+        "broken_destinations": [],
+        "catalog_AA": false,
+        "counts": {
+          "/GoTo": 25,
+          "/URI": 3
+        },
+        "gotos": [
+          "equation.4.1",
+          "equation.4.1",
+          "equation.4.1",
+          "equation.4.1",
+          "equation.4.2",
+          "equation.4.1",
+          "theorem.4.2.5",
+          "theorem.4.2.7",
+          "theorem.4.2.7",
+          "theorem.4.2.7",
+          "theorem.4.2.8",
+          "cite.0@DN00",
+          "theorem.4.2.12",
+          "theorem.4.2.12",
+          "page.6",
+          "page.2",
+          "page.1",
+          "page.1",
+          "page.5",
+          "page.5",
+          "page.3",
+          "page.1",
+          "page.1",
+          "page.2",
+          "page.2"
+        ],
+        "open_action_present": true,
+        "out_of_bounds_rects": [],
+        "page_AA": 0,
+        "unsafe": [],
+        "uris": [
+          "https://www.wwli.asia",
+          "https://creativecommons.org/licenses/by/4.0/",
+          "https://creativecommons.org/licenses/by/4.0/"
+        ]
+      },
+      "catalog_keys": [
+        "/Lang",
+        "/Names",
+        "/OpenAction",
+        "/Outlines",
+        "/PageLabels",
+        "/PageMode",
+        "/Pages",
+        "/Type"
+      ],
+      "checks": {
+        "44_destinations": true,
+        "action_counts": true,
+        "fonts_embedded": true,
+        "language_id_ID": true,
+        "link_closure": true,
+        "mupdf_recovers_CJK_title": true,
+        "nine_pages": true,
+        "no_active_payloads": true,
+        "no_replacement_chars": true,
+        "outline_exact": true,
+        "rects_in_bounds": true,
+        "safe_actions": true,
+        "text_blocks_in_bounds": true,
+        "untagged_disclosed": true
+      },
+      "encrypted": false,
+      "fonts": {
+        "pdffonts_all_embedded": true,
+        "pdffonts_rows": 22,
+        "pdffonts_stderr": "Syntax Error: Missing language pack for 'Adobe-GB1' mapping",
+        "pypdf_all_embedded": true,
+        "pypdf_unique": 23,
+        "records": [
+          {
+            "basefont": "/RSVGVJ+CMEX10",
+            "embedded": true,
+            "normalized": "/CMEX10",
+            "object": "57 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/XVZDDW+CMMI10",
+            "embedded": true,
+            "normalized": "/CMMI10",
+            "object": "38 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/NMXKIE+CMMI7",
+            "embedded": true,
+            "normalized": "/CMMI7",
+            "object": "44 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/JLYHJJ+CMR10",
+            "embedded": true,
+            "normalized": "/CMR10",
+            "object": "40 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/CNAEET+CMR5",
+            "embedded": true,
+            "normalized": "/CMR5",
+            "object": "45 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/BNPYFN+CMR7",
+            "embedded": true,
+            "normalized": "/CMR7",
+            "object": "39 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/ZIUPRI+CMSY10",
+            "embedded": true,
+            "normalized": "/CMSY10",
+            "object": "41 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/KIUWET+CMSY7",
+            "embedded": true,
+            "normalized": "/CMSY7",
+            "object": "46 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/MGDJWK+FandolHei-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/FandolHei-Regular-Identity-H",
+            "object": "86 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/ZTWTHC+LMMono12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono12-Regular-Identity-H",
+            "object": "20 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/NIUDIS+LMMono9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono9-Regular-Identity-H",
+            "object": "27 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/HNMROF+LMRoman10-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Bold-Identity-H",
+            "object": "42 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/DLEXRU+LMRoman10-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Regular-Identity-H",
+            "object": "36 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/YRLAXT+LMRoman12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman12-Regular-Identity-H",
+            "object": "11 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/MZJLPA+LMRoman17-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman17-Regular-Identity-H",
+            "object": "9 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/JYYPFA+LMRoman7-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman7-Regular-Identity-H",
+            "object": "73 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/QPCBSG+LMRoman8-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman8-Regular-Identity-H",
+            "object": "34 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/TZXKUI+LMRoman9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman9-Regular-Identity-H",
+            "object": "22 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/KLSURW+MSAM10",
+            "embedded": true,
+            "normalized": "/MSAM10",
+            "object": "64 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/RMJWNP+MSBM10",
+            "embedded": true,
+            "normalized": "/MSBM10",
+            "object": "70 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/URTPAO+NotoSansCJKsc-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/NotoSansCJKsc-Regular-Identity-H",
+            "object": "84 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/VOGCUQ+TeXGyreHeros-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Bold-Identity-H",
+            "object": "13 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/WTSHVC+TeXGyreHeros-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Regular-Identity-H",
+            "object": "15 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          }
+        ]
+      },
+      "geometry": {
+        "fitz_text_blocks_out_of_bounds": []
+      },
+      "identity": {
+        "bytes": 115288,
+        "path": "build/unit-026-c-20260825/unit-026-bab-4-homomorfisme-dan-grup-hasil-bagi.pdf",
+        "sha256": "de415fed2c9aceafc41d5e22d2dd6d73e81c37f3a3463af18d73f59409b09dbf"
+      },
+      "language": "id-ID",
+      "metadata": {
+        "/Author": "Wen-Wei Li",
+        "/CreationDate": "D:20260825000000Z",
+        "/Creator": "LaTeX with hyperref",
+        "/Keywords": "aljabar, teori grup, homomorfisme, grup hasil bagi, grup Grothendieck, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.2 lengkap",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 26: Homomorfisme dan Grup Hasil Bagi"
+      },
+      "named_destinations": {
+        "Doc-Start": 1,
+        "Item.1": 3,
+        "Item.2": 3,
+        "Item.3": 7,
+        "Item.4": 7,
+        "Item.5": 7,
+        "cite.0@DN00": 9,
+        "equation.4.1": 4,
+        "equation.4.2": 5,
+        "page.1": 3,
+        "page.2": 4,
+        "page.3": 5,
+        "page.4": 6,
+        "page.5": 7,
+        "page.6": 8,
+        "page.7": 9,
+        "proof.1": 4,
+        "proof.2": 5,
+        "proof.3": 5,
+        "proof.4": 6,
+        "proof.5": 6,
+        "proof.6": 7,
+        "proof.7": 7,
+        "proof.8": 8,
+        "section*.1": 9,
+        "section*.2": 9,
+        "section*.3": 9,
+        "section.4.2": 3,
+        "theorem.4.2.1": 3,
+        "theorem.4.2.10": 7,
+        "theorem.4.2.11": 7,
+        "theorem.4.2.12": 7,
+        "theorem.4.2.13": 8,
+        "theorem.4.2.2": 3,
+        "theorem.4.2.3": 4,
+        "theorem.4.2.4": 5,
+        "theorem.4.2.5": 5,
+        "theorem.4.2.6": 5,
+        "theorem.4.2.7": 6,
+        "theorem.4.2.8": 6,
+        "theorem.4.2.9": 7,
+        "unit026-bibliography.0": 9,
+        "unit026-symbol-index.0": 9,
+        "unit026-term-index.0": 9
+      },
+      "outline": [
+        {
+          "depth": 0,
+          "page": 3,
+          "title": "4.2 Homomorfisme dan grup hasil bagi"
+        },
+        {
+          "depth": 0,
+          "page": 9,
+          "title": "Daftar Pustaka"
+        },
+        {
+          "depth": 0,
+          "page": 9,
+          "title": "Indeks Istilah"
+        },
+        {
+          "depth": 0,
+          "page": 9,
+          "title": "Indeks Simbol"
+        }
+      ],
+      "page_sizes_points": [
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ]
+      ],
+      "pages": 9,
+      "payloads": {
+        "embedded_files": false,
+        "forms": false,
+        "javascript": false
+      },
+      "pdf_header": "%PDF-1.7",
+      "pdfinfo": {
+        "Author": "Wen-Wei Li",
+        "CreationDate": "Tue Aug 25 02:00:00 2026 W. Europe Daylight Time",
+        "Creator": "LaTeX with hyperref",
+        "Custom Metadata": "no",
+        "Encrypted": "no",
+        "File size": "115288 bytes",
+        "Form": "none",
+        "JavaScript": "no",
+        "Keywords": "aljabar, teori grup, homomorfisme, grup hasil bagi, grup Grothendieck, id-ID",
+        "Metadata Stream": "no",
+        "Optimized": "no",
+        "PDF version": "1.7",
+        "Page rot": "0",
+        "Page size": "498.9 x 708.66 pts",
+        "Pages": "9",
+        "Producer": "MiKTeX-dvipdfmx (20260404)",
+        "Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.2 lengkap",
+        "Suspects": "no",
+        "Tagged": "no",
+        "Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 26: Homomorfisme dan Grup Hasil Bagi",
+        "UserProperties": "no"
+      },
+      "tagged": false,
+      "text": {
+        "mupdf_contains_代数学引论": true,
+        "mupdf_nul": 1,
+        "mupdf_replacement": 0,
+        "mupdf_sha256": "274d87fbe1e99cfdafb3d4013df7eba3b712013c29f9de47f3ff1a09f788a215",
+        "pdftotext_nul": 0,
+        "pdftotext_replacement": 0,
+        "pdftotext_sha256": "68e864c12f8571028cc7f6d1d923baf801f07690cba0891e63d26bc0dd333266",
+        "pdftotext_stderr": "Syntax Error: Missing language pack for 'Adobe-GB1' mapping\nSyntax Error: Unknown font tag 'F35'\nSyntax Error (40524): No font in show/space",
+        "poppler_contains_代数学引论": false,
+        "pypdf_contains_代数学引论": false,
+        "pypdf_nul": 15,
+        "pypdf_page_sha256": [
+          "968f7e3066db061ce224570fe8eb91956137428e1a91e666679a5b1e73cc38f0",
+          "3cbac3678d24a3e5679d2953f4c54175df1789da82c6beee0e521e597f4ced09",
+          "aaa3a601c7b735591fe1cb505d52a77f77e833869cd009978744ef5af19dabbf",
+          "729ec6d9c11a7768dbb87ba09fd8313a3edea9937541face85ea3e7dedec73b7",
+          "f1e21473706fa19ed7ecba8fae184c1045d230db8e2941a6987bfb7bae812459",
+          "81bd924da84a847fad06e4679d73e0acfc2327415587162a9b70d64e69b0007e",
+          "971fa025ad2a5a0ad00f94052e9570f88dcfeb5f02a140e490a8870420bbd002",
+          "7334ca82a5d27a4c64cb24c453230f82998b718defc61d89e85af6524cec6e01",
+          "4361191b90db8f5d8eaa032bde8005d80000e235fbe8738e216de6bdcd90a4c7"
+        ],
+        "pypdf_replacement": 0,
+        "pypdf_sha256": "18d124a9f0f2c435d1fcaabec0204e0b28582fcf8e069bcea80b0c2e9a99246e"
+      },
+      "tool_diagnostics": {
+        "mutool_info_stderr": "",
+        "mutool_info_stdout": "<REPO>\\build\\unit-026-c-20260825\\unit-026-bab-4-homomorfisme-dan-grup-hasil-bagi.pdf:\n\nPDF-1.7\nInfo object (2 0 R):\n<</Creator(LaTeX with hyperref)/Title<FEFF004D00650074006F0064006500200041006C006A0061006200610072002C0020004A0069006C0069006400200031003A0020004100720073006900740065006B0074007500720020004400610073006100720020002D00200055006E00690074002000320036003A00200048006F006D006F006D006F0072006600690073006D0065002000640061006E0020004700720075007000200048006100730069006C00200042006100670069>/Subject<FEFF005400650072006A0065006D006100680061006E002000420061006800610073006100200049006E0064006F006E006500730069006100200069006E0064006500700065006E00640065006E003B002000420061006700690061006E00200034002E00320020006C0065006E0067006B00610070>/Author<FEFF00570065006E002D0057006500690020004C0069>/Keywords<FEFF0061006C006A0061006200610072002C002000740065006F0072006900200067007200750070002C00200068006F006D006F006D006F0072006600690073006D0065002C0020006700720075007000200068006100730069006C00200062006100670069002C00200067007200750070002000470072006F007400680065006E0064006900650063006B002C002000690064002D00490044>/Producer(MiKTeX-dvipdfmx \\(20260404\\))/CreationDate(D:20260825000000Z)>>\nPages: 9\n\nRetrieving info from pages 1-9...",
+        "pdfinfo_stderr": ""
+      }
+    },
+    "build-d": {
+      "actions": {
+        "all_uris_https": true,
+        "annotation_AA": 0,
+        "broken_destinations": [],
+        "catalog_AA": false,
+        "counts": {
+          "/GoTo": 25,
+          "/URI": 3
+        },
+        "gotos": [
+          "equation.4.1",
+          "equation.4.1",
+          "equation.4.1",
+          "equation.4.1",
+          "equation.4.2",
+          "equation.4.1",
+          "theorem.4.2.5",
+          "theorem.4.2.7",
+          "theorem.4.2.7",
+          "theorem.4.2.7",
+          "theorem.4.2.8",
+          "cite.0@DN00",
+          "theorem.4.2.12",
+          "theorem.4.2.12",
+          "page.6",
+          "page.2",
+          "page.1",
+          "page.1",
+          "page.5",
+          "page.5",
+          "page.3",
+          "page.1",
+          "page.1",
+          "page.2",
+          "page.2"
+        ],
+        "open_action_present": true,
+        "out_of_bounds_rects": [],
+        "page_AA": 0,
+        "unsafe": [],
+        "uris": [
+          "https://www.wwli.asia",
+          "https://creativecommons.org/licenses/by/4.0/",
+          "https://creativecommons.org/licenses/by/4.0/"
+        ]
+      },
+      "catalog_keys": [
+        "/Lang",
+        "/Names",
+        "/OpenAction",
+        "/Outlines",
+        "/PageLabels",
+        "/PageMode",
+        "/Pages",
+        "/Type"
+      ],
+      "checks": {
+        "44_destinations": true,
+        "action_counts": true,
+        "fonts_embedded": true,
+        "language_id_ID": true,
+        "link_closure": true,
+        "mupdf_recovers_CJK_title": true,
+        "nine_pages": true,
+        "no_active_payloads": true,
+        "no_replacement_chars": true,
+        "outline_exact": true,
+        "rects_in_bounds": true,
+        "safe_actions": true,
+        "text_blocks_in_bounds": true,
+        "untagged_disclosed": true
+      },
+      "encrypted": false,
+      "fonts": {
+        "pdffonts_all_embedded": true,
+        "pdffonts_rows": 22,
+        "pdffonts_stderr": "Syntax Error: Missing language pack for 'Adobe-GB1' mapping",
+        "pypdf_all_embedded": true,
+        "pypdf_unique": 23,
+        "records": [
+          {
+            "basefont": "/HIYJCJ+CMEX10",
+            "embedded": true,
+            "normalized": "/CMEX10",
+            "object": "57 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/AVNLYV+CMMI10",
+            "embedded": true,
+            "normalized": "/CMMI10",
+            "object": "38 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/FXZQZU+CMMI7",
+            "embedded": true,
+            "normalized": "/CMMI7",
+            "object": "44 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/KAMIOD+CMR10",
+            "embedded": true,
+            "normalized": "/CMR10",
+            "object": "40 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/LQKNHS+CMR5",
+            "embedded": true,
+            "normalized": "/CMR5",
+            "object": "45 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/OAAPPO+CMR7",
+            "embedded": true,
+            "normalized": "/CMR7",
+            "object": "39 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/YQSPMM+CMSY10",
+            "embedded": true,
+            "normalized": "/CMSY10",
+            "object": "41 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/AOZAQV+CMSY7",
+            "embedded": true,
+            "normalized": "/CMSY7",
+            "object": "46 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/RYOJND+FandolHei-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/FandolHei-Regular-Identity-H",
+            "object": "86 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/CTMYOC+LMMono12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono12-Regular-Identity-H",
+            "object": "20 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/CMLROB+LMMono9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono9-Regular-Identity-H",
+            "object": "27 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/ZBNEDC+LMRoman10-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Bold-Identity-H",
+            "object": "42 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/JSDVAS+LMRoman10-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Regular-Identity-H",
+            "object": "36 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/KYNEAR+LMRoman12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman12-Regular-Identity-H",
+            "object": "11 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/ZESAME+LMRoman17-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman17-Regular-Identity-H",
+            "object": "9 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/KOQDGB+LMRoman7-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman7-Regular-Identity-H",
+            "object": "73 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/QICJJW+LMRoman8-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman8-Regular-Identity-H",
+            "object": "34 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/JDYSQS+LMRoman9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman9-Regular-Identity-H",
+            "object": "22 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/BOOIQN+MSAM10",
+            "embedded": true,
+            "normalized": "/MSAM10",
+            "object": "64 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/NXAKMY+MSBM10",
+            "embedded": true,
+            "normalized": "/MSBM10",
+            "object": "70 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1"
+          },
+          {
+            "basefont": "/VMSCUL+NotoSansCJKsc-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/NotoSansCJKsc-Regular-Identity-H",
+            "object": "84 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/THDHRI+TeXGyreHeros-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Bold-Identity-H",
+            "object": "13 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          },
+          {
+            "basefont": "/HPOKDC+TeXGyreHeros-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Regular-Identity-H",
+            "object": "15 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0"
+          }
+        ]
+      },
+      "geometry": {
+        "fitz_text_blocks_out_of_bounds": []
+      },
+      "identity": {
+        "bytes": 115284,
+        "path": "build/unit-026-d-20260825/unit-026-bab-4-homomorfisme-dan-grup-hasil-bagi.pdf",
+        "sha256": "e3c0e0241901eb0f5f2477a1fe09f64eff34af325dc209b25aa8d71900deb089"
+      },
+      "language": "id-ID",
+      "metadata": {
+        "/Author": "Wen-Wei Li",
+        "/CreationDate": "D:20260825000000Z",
+        "/Creator": "LaTeX with hyperref",
+        "/Keywords": "aljabar, teori grup, homomorfisme, grup hasil bagi, grup Grothendieck, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.2 lengkap",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 26: Homomorfisme dan Grup Hasil Bagi"
+      },
+      "named_destinations": {
+        "Doc-Start": 1,
+        "Item.1": 3,
+        "Item.2": 3,
+        "Item.3": 7,
+        "Item.4": 7,
+        "Item.5": 7,
+        "cite.0@DN00": 9,
+        "equation.4.1": 4,
+        "equation.4.2": 5,
+        "page.1": 3,
+        "page.2": 4,
+        "page.3": 5,
+        "page.4": 6,
+        "page.5": 7,
+        "page.6": 8,
+        "page.7": 9,
+        "proof.1": 4,
+        "proof.2": 5,
+        "proof.3": 5,
+        "proof.4": 6,
+        "proof.5": 6,
+        "proof.6": 7,
+        "proof.7": 7,
+        "proof.8": 8,
+        "section*.1": 9,
+        "section*.2": 9,
+        "section*.3": 9,
+        "section.4.2": 3,
+        "theorem.4.2.1": 3,
+        "theorem.4.2.10": 7,
+        "theorem.4.2.11": 7,
+        "theorem.4.2.12": 7,
+        "theorem.4.2.13": 8,
+        "theorem.4.2.2": 3,
+        "theorem.4.2.3": 4,
+        "theorem.4.2.4": 5,
+        "theorem.4.2.5": 5,
+        "theorem.4.2.6": 5,
+        "theorem.4.2.7": 6,
+        "theorem.4.2.8": 6,
+        "theorem.4.2.9": 7,
+        "unit026-bibliography.0": 9,
+        "unit026-symbol-index.0": 9,
+        "unit026-term-index.0": 9
+      },
+      "outline": [
+        {
+          "depth": 0,
+          "page": 3,
+          "title": "4.2 Homomorfisme dan grup hasil bagi"
+        },
+        {
+          "depth": 0,
+          "page": 9,
+          "title": "Daftar Pustaka"
+        },
+        {
+          "depth": 0,
+          "page": 9,
+          "title": "Indeks Istilah"
+        },
+        {
+          "depth": 0,
+          "page": 9,
+          "title": "Indeks Simbol"
+        }
+      ],
+      "page_sizes_points": [
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ]
+      ],
+      "pages": 9,
+      "payloads": {
+        "embedded_files": false,
+        "forms": false,
+        "javascript": false
+      },
+      "pdf_header": "%PDF-1.7",
+      "pdfinfo": {
+        "Author": "Wen-Wei Li",
+        "CreationDate": "Tue Aug 25 02:00:00 2026 W. Europe Daylight Time",
+        "Creator": "LaTeX with hyperref",
+        "Custom Metadata": "no",
+        "Encrypted": "no",
+        "File size": "115284 bytes",
+        "Form": "none",
+        "JavaScript": "no",
+        "Keywords": "aljabar, teori grup, homomorfisme, grup hasil bagi, grup Grothendieck, id-ID",
+        "Metadata Stream": "no",
+        "Optimized": "no",
+        "PDF version": "1.7",
+        "Page rot": "0",
+        "Page size": "498.9 x 708.66 pts",
+        "Pages": "9",
+        "Producer": "MiKTeX-dvipdfmx (20260404)",
+        "Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.2 lengkap",
+        "Suspects": "no",
+        "Tagged": "no",
+        "Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 26: Homomorfisme dan Grup Hasil Bagi",
+        "UserProperties": "no"
+      },
+      "tagged": false,
+      "text": {
+        "mupdf_contains_代数学引论": true,
+        "mupdf_nul": 1,
+        "mupdf_replacement": 0,
+        "mupdf_sha256": "274d87fbe1e99cfdafb3d4013df7eba3b712013c29f9de47f3ff1a09f788a215",
+        "pdftotext_nul": 0,
+        "pdftotext_replacement": 0,
+        "pdftotext_sha256": "68e864c12f8571028cc7f6d1d923baf801f07690cba0891e63d26bc0dd333266",
+        "pdftotext_stderr": "Syntax Error: Missing language pack for 'Adobe-GB1' mapping\nSyntax Error: Unknown font tag 'F35'\nSyntax Error (40524): No font in show/space",
+        "poppler_contains_代数学引论": false,
+        "pypdf_contains_代数学引论": false,
+        "pypdf_nul": 15,
+        "pypdf_page_sha256": [
+          "968f7e3066db061ce224570fe8eb91956137428e1a91e666679a5b1e73cc38f0",
+          "3cbac3678d24a3e5679d2953f4c54175df1789da82c6beee0e521e597f4ced09",
+          "aaa3a601c7b735591fe1cb505d52a77f77e833869cd009978744ef5af19dabbf",
+          "729ec6d9c11a7768dbb87ba09fd8313a3edea9937541face85ea3e7dedec73b7",
+          "f1e21473706fa19ed7ecba8fae184c1045d230db8e2941a6987bfb7bae812459",
+          "81bd924da84a847fad06e4679d73e0acfc2327415587162a9b70d64e69b0007e",
+          "971fa025ad2a5a0ad00f94052e9570f88dcfeb5f02a140e490a8870420bbd002",
+          "7334ca82a5d27a4c64cb24c453230f82998b718defc61d89e85af6524cec6e01",
+          "4361191b90db8f5d8eaa032bde8005d80000e235fbe8738e216de6bdcd90a4c7"
+        ],
+        "pypdf_replacement": 0,
+        "pypdf_sha256": "18d124a9f0f2c435d1fcaabec0204e0b28582fcf8e069bcea80b0c2e9a99246e"
+      },
+      "tool_diagnostics": {
+        "mutool_info_stderr": "",
+        "mutool_info_stdout": "<REPO>\\build\\unit-026-d-20260825\\unit-026-bab-4-homomorfisme-dan-grup-hasil-bagi.pdf:\n\nPDF-1.7\nInfo object (2 0 R):\n<</Creator(LaTeX with hyperref)/Title<FEFF004D00650074006F0064006500200041006C006A0061006200610072002C0020004A0069006C0069006400200031003A0020004100720073006900740065006B0074007500720020004400610073006100720020002D00200055006E00690074002000320036003A00200048006F006D006F006D006F0072006600690073006D0065002000640061006E0020004700720075007000200048006100730069006C00200042006100670069>/Subject<FEFF005400650072006A0065006D006100680061006E002000420061006800610073006100200049006E0064006F006E006500730069006100200069006E0064006500700065006E00640065006E003B002000420061006700690061006E00200034002E00320020006C0065006E0067006B00610070>/Author<FEFF00570065006E002D0057006500690020004C0069>/Keywords<FEFF0061006C006A0061006200610072002C002000740065006F0072006900200067007200750070002C00200068006F006D006F006D006F0072006600690073006D0065002C0020006700720075007000200068006100730069006C00200062006100670069002C00200067007200750070002000470072006F007400680065006E0064006900650063006B002C002000690064002D00490044>/Producer(MiKTeX-dvipdfmx \\(20260404\\))/CreationDate(D:20260825000000Z)>>\nPages: 9\n\nRetrieving info from pages 1-9...",
+        "pdfinfo_stderr": ""
+      }
+    }
+  },
+  "status": "PASS_WITH_WARNINGS"
+}

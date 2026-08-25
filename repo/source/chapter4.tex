@@ -176,194 +176,193 @@ Jelas bahwa $Z_G(E)$ dan $N_G(E)$ keduanya merupakan subgrup, dan $Z_G(E)\lhd N_
 \begin{remark}\label{rem:HN}
 	Jika $N,H\subset G$ merupakan subgrup dan $H\subset N_G(N)$, maka $HN=NH$ merupakan subgrup dari $G$ dan $N\lhd HN$. Pembaca diminta memeriksanya sendiri.
 \end{remark}
-\section{同态和商群}\label{sec:homomorphism}
-同态的意义是保结构的映射. 对于带二元运算的非空集 $S_1, S_2$, 同态 $\varphi: S_1 \to S_2$ 所要保持的结构无非是二元运算, 即: $\forall x,y \in S_1, \; \varphi(xy)=\varphi(x)\varphi(y)$. 准此要领可定义半群的同态. 然而幺半群的情形更常见也更为实用, 此时我们要求同态必须兼保乘法和幺元.\index{tongtai@同态 (homomorphism)}
+\section{Homomorfisme dan grup hasil bagi}\label{sec:homomorphism}
+Makna homomorfisme adalah peta pelestari struktur. Untuk himpunan tak kosong $S_1, S_2$ yang dilengkapi operasi biner, struktur yang harus dilestarikan oleh homomorfisme $\varphi: S_1 \to S_2$ tidak lain adalah operasi biner tersebut, yakni $\forall x,y \in S_1, \; \varphi(xy)=\varphi(x)\varphi(y)$. Dengan gagasan ini kita dapat mendefinisikan homomorfisme semigrup. Namun, kasus monoid lebih umum dijumpai dan lebih berguna; dalam hal ini kita mensyaratkan agar homomorfisme melestarikan perkalian sekaligus unsur identitas.\index{homomorfisme@homomorfisme (homomorphism)}
 
-\begin{definition}[同态与同构]
-	设 $M_1, M_2$ 为幺半群. 映射 $\varphi: M_1 \to M_2$ 如满足下述性质即称为\emph{同态}
+\begin{definition}[Homomorfisme dan isomorfisme]
+	Misalkan $M_1, M_2$ adalah monoid. Suatu peta $\varphi: M_1 \to M_2$ disebut \emph{homomorfisme} apabila memenuhi sifat-sifat berikut.
 	\begin{compactenum}[(i)]
 		\item $\forall x,y \in M_1, \; \varphi(xy) = \varphi(x) \varphi(y)$;
 		\item $\varphi(1)=1$.
 	\end{compactenum}
-	从幺半群 $M$ 映至自身的同态称为\emph{自同态}, 如恒等映射 $\identity_M: M \to M$. 同态的合成仍为同态. 取常值 $1$ 的同态称作\emph{平凡同态}.\index{zitongtai@自同态 (endomorphism)}
+	Homomorfisme dari monoid $M$ ke dirinya sendiri disebut \emph{endomorfisme}; contohnya ialah peta identitas $\identity_M: M \to M$. Komposisi homomorfisme tetap merupakan homomorfisme. Homomorfisme bernilai konstan $1$ disebut \emph{homomorfisme trivial}.\index{endomorfisme@endomorfisme (endomorphism)}
 
-	若存在同态 $\psi: M_2 \to M_1$ 使得 $\varphi \psi = \identity_{M_2}$, $\psi \varphi = \identity_{M_1}$, 则称 $\varphi$ 可逆而 $\psi$ 是 $\varphi$ 的逆; 可逆同态称作\emph{同构}, 写成 $\varphi: M_1 \rightiso M_2$. 此时我们也称 $M_1$ 与 $M_2$ 同构. 从幺半群映至自身的同构称为\emph{自同构}.\index{tonggou}\index{zitonggou@自同构 (automorphism)}
+	Jika terdapat homomorfisme $\psi: M_2 \to M_1$ sedemikian sehingga $\varphi \psi = \identity_{M_2}$ dan $\psi \varphi = \identity_{M_1}$, maka $\varphi$ disebut invertibel dan $\psi$ disebut invers dari $\varphi$; homomorfisme invertibel disebut \emph{isomorfisme}, dan ditulis $\varphi: M_1 \rightiso M_2$. Dalam hal ini kita juga mengatakan bahwa $M_1$ dan $M_2$ isomorfik. Isomorfisme dari suatu monoid ke dirinya sendiri disebut \emph{automorfisme}.\index{isomorfisme}\index{automorfisme@automorfisme (automorphism)}
 \end{definition}
 
-从 $M_1$ 到 $M_2$ 的同态所成集合写作 $\Hom(M_1, M_2)$. 下述性质是显然的:
+Himpunan semua homomorfisme dari $M_1$ ke $M_2$ ditulis $\Hom(M_1, M_2)$. Sifat-sifat berikut jelas:
 \begin{compactitem}
-	\item $\varphi: M_1 \to M_2$ 的逆若存在则唯一, 记作 $\varphi^{-1}$;
-	\item $\varphi$ 可逆当且仅当 $\varphi$ 是双射.
-	\item $\varphi$ 诱导出单位群之间的映射 $M_1^\times \to M_2^\times$. 事实上 $\forall x \in M_1^\times, \;\varphi(x)^{-1} = \varphi(x^{-1})$.
-	\item 对任意幺半群 $M$, 它的所有自同态对映射的合成 $\circ$ 构成一个幺半群 $\End(M) := \Hom(M, M)$, 后者的单位群 $\Aut(M)$ 是 $M$ 的\emph{自同构群}, 顾名思义由自同构组成.
+	\item invers dari $\varphi: M_1 \to M_2$, jika ada, bersifat tunggal dan ditulis $\varphi^{-1}$;
+	\item $\varphi$ invertibel jika dan hanya jika $\varphi$ merupakan bijeksi;
+	\item $\varphi$ menginduksi peta antara grup unit $M_1^\times \to M_2^\times$. Sesungguhnya, $\forall x \in M_1^\times, \;\varphi(x)^{-1} = \varphi(x^{-1})$;
+	\item untuk setiap monoid $M$, semua endomorfismenya, terhadap komposisi peta $\circ$, membentuk monoid $\End(M) := \Hom(M, M)$; grup unit dari monoid tersebut, yaitu $\Aut(M)$, merupakan \emph{grup automorfisme} $M$ dan, sesuai namanya, terdiri atas automorfisme.
 \end{compactitem}
 
-我们已经对幺半群定义了同态的概念. 群是幺半群的特例, 群之间的同态也称为\emph{群同态}, 同样地定义群同构, 群自同构等概念. 而同态的定义在群的情形还有如下简化, 对于实际操作相当方便, 我们以后将不加说明地使用.
+Kita telah mendefinisikan konsep homomorfisme untuk monoid. Grup merupakan kasus khusus monoid; homomorfisme antara grup juga disebut \emph{homomorfisme grup}. Isomorfisme grup, automorfisme grup, dan konsep-konsep serupa didefinisikan dengan cara yang sama. Dalam kasus grup, definisi homomorfisme juga mempunyai penyederhanaan berikut, yang sangat memudahkan perhitungan dan selanjutnya akan kita gunakan tanpa keterangan tambahan.
 \begin{proposition}
-	设 $G_1$, $G_2$ 为群. 映射 $\varphi: G_1 \to G_2$ 为群同态当且仅当对所有 $x, y \in G_1$ 皆有 $\varphi(xy)=\varphi(x)\varphi(y)$.
+	Misalkan $G_1$, $G_2$ adalah grup. Peta $\varphi: G_1 \to G_2$ merupakan homomorfisme grup jika dan hanya jika untuk semua $x, y \in G_1$ berlaku $\varphi(xy)=\varphi(x)\varphi(y)$.
 \end{proposition}
 \begin{proof}
-	关键是``当''的方向. 对 $\varphi(1)\varphi(1) = \varphi(1 \cdot 1) = \varphi(1)$ 两边左乘以 $\varphi(1)^{-1}$ 即得 $\varphi(1) = 1$.
+	Bagian penting adalah arah ``jika''. Dari $\varphi(1)\varphi(1) = \varphi(1 \cdot 1) = \varphi(1)$, kalikan kedua ruas dari kiri dengan $\varphi(1)^{-1}$ untuk memperoleh $\varphi(1) = 1$.
 \end{proof}
 
-有一类群自同构格外常见, 称为\emph{内自同构}或\emph{伴随同构}: 设 $G$ 为群,对 于 $x \in G$, 定义自同构\index{zitonggou!内自同构 (inner automorphism)}
+Ada satu jenis automorfisme grup yang sangat umum, yang disebut \emph{automorfisme dalam} atau \emph{automorfisme adjoin}: untuk grup $G$ dan $x \in G$, definisikan automorfisme\index{automorfisme!automorfisme dalam (inner automorphism)}
 \begin{align*}
 	\Ad_x: G & \longrightarrow G \\
 	g & \longmapsto {}^x g := xgx^{-1}.
 \end{align*}
-容易验证 $\Ad_1 = \identity_G$ 而且 $\Ad_{xy} = \Ad_x \circ \Ad_y$, 因此我们进一步导出群同态
+Mudah diperiksa bahwa $\Ad_1 = \identity_G$ dan $\Ad_{xy} = \Ad_x \circ \Ad_y$, sehingga selanjutnya kita memperoleh homomorfisme grup
 \begin{align*}
 	\Ad: G & \longrightarrow \Aut(G) \\
 	x & \longmapsto \Ad_x.
 \end{align*}
 
 \begin{definition}
-	设 $\varphi: G_1 \to G_2$ 为群同态. 它的像记作 $\Image(\varphi) := \{\varphi(x) : x \in G_1\}$, 而其\emph{核}定义为 \index{he@核 (kernel)}\index[sym1]{Ker@$\Ker$}
+	Misalkan $\varphi: G_1 \to G_2$ adalah homomorfisme grup. Bayangannya ditulis $\Image(\varphi) := \{\varphi(x) : x \in G_1\}$, sedangkan \emph{kernelnya} didefinisikan sebagai \index{kernel@kernel (kernel)}\index[sym1]{Ker@$\Ker$}
 	\[ \Ker(\varphi) := \varphi^{-1}(1). \]
 \end{definition}
-从定义立刻得到 $\Image(\varphi)$ 是 $G_2$ 的子群, 而 $\Ker(\varphi)$ 是 $G_1$ 的正规子群. 举例明之, 群的中心 $Z_G$ 可描述为核 $\Ker\left[ \Ad: G \to \Aut(G) \right]$.
+Langsung dari definisi diperoleh bahwa $\Image(\varphi)$ merupakan subgrup dari $G_2$, sedangkan $\Ker(\varphi)$ merupakan subgrup normal dari $G_1$. Sebagai contoh, pusat grup $Z_G$ dapat dideskripsikan sebagai kernel $\Ker\left[ \Ad: G \to \Aut(G) \right]$.
 
-到了回头考察商结构的时候. 设 $S$ 为非空集合, 而 $\sim$ 是 $S$ 上的等价关系, 相应的等价类构成了商集 $S/\sim$. 包含元素 $x \in S$ 的等价类记为 $[x]$. 数学家关心的一般问题是: 如何让 $S/\sim$ 继承 $S$ 的代数或拓扑等诸般结构? 在此我们假设 $S$ 带有二元运算, 继承的意义是让商映射 $x \mapsto [x]$ 保持二元运算, 换言之, 要求等式
+Sekarang saatnya kembali menelaah struktur hasil bagi. Misalkan $S$ adalah himpunan tak kosong dan $\sim$ adalah relasi ekuivalensi pada $S$; kelas-kelas ekuivalensi yang bersesuaian membentuk himpunan hasil bagi $S/\sim$. Kelas ekuivalensi yang memuat unsur $x \in S$ ditulis $[x]$. Pertanyaan umum yang menjadi perhatian matematikawan ialah: bagaimana $S/\sim$ dapat mewarisi struktur aljabar, topologi, atau struktur lain dari $S$? Di sini kita anggap $S$ dilengkapi operasi biner. Yang dimaksud dengan mewarisi ialah bahwa peta hasil bagi $x \mapsto [x]$ melestarikan operasi biner; dengan kata lain, kita menghendaki persamaan
 \[ [x] \cdot [y] = [x \cdot y], \quad x,y \in S \]
-在 $S/\sim$ 中成立. 显然这唯一地刻画了 $S/\sim$ 的二元运算, 问题是此运算是否良定? 读者沉思半晌当可明白, 这里必须加上条件
+berlaku dalam $S/\sim$. Jelas bahwa persamaan ini mencirikan secara tunggal operasi biner pada $S/\sim$. Persoalannya adalah apakah operasi tersebut terdefinisi dengan baik. Setelah merenungkannya sejenak, pembaca akan melihat bahwa kita harus menambahkan syarat
 \begin{gather}\label{eqn:quotient-condition}
 	(x \sim x') \wedge (y \sim y') \implies xy \sim x'y', \quad x,x',y,y' \in S.
 \end{gather}
 
-这般定出的结构 $S/\sim$ 称作\emph{商结构}. 若 $S$ 是半群 (或幺半群, 群), 则 $S/\sim$ 亦然; 在后两种情况下, $S/\sim$ 的幺元是 $[1]$, 元素的逆由 $[x]^{-1} = [x^{-1}]$ 给出. 以下考虑幺半群 $M$ 的情形. 对于 $M$ 上满足 \eqref{eqn:quotient-condition} 的等价关系 $\sim$, 映射 $x \mapsto [x]$ 给出同态 $M \to M/\sim$. 商幺半群 $M/\sim$ 满足如下性质.
+Struktur $S/\sim$ yang didefinisikan demikian disebut \emph{struktur hasil bagi}. Jika $S$ merupakan semigrup (atau monoid, atau grup), maka demikian pula $S/\sim$; dalam dua kasus terakhir, unsur identitas $S/\sim$ adalah $[1]$, sedangkan khusus dalam kasus grup, invers setiap unsur diberikan oleh $[x]^{-1} = [x^{-1}]$. Berikutnya, tinjau kasus monoid $M$. Untuk relasi ekuivalensi pada $M$ yang memenuhi \eqref{eqn:quotient-condition}, katakanlah $\sim$, peta $x \mapsto [x]$ memberikan homomorfisme $M \to M/\sim$. Monoid hasil bagi $M/\sim$ memenuhi sifat berikut.
 
 \begin{proposition}\label{prop:quotient-monoid-univ-prop}
-	对于任意同态 $\varphi: M \to M'$ 使得 $(x \sim y) \implies \varphi(x)=\varphi(y)$ 者, 存在唯一的同态 $\bar{\varphi}: (M/\sim) \to M'$ 使得下图交换.
+	Untuk setiap homomorfisme $\varphi: M \to M'$ yang memenuhi $(x \sim y) \implies \varphi(x)=\varphi(y)$, terdapat homomorfisme tunggal $\bar{\varphi}: (M/\sim) \to M'$ yang membuat diagram berikut komutatif.
 	\[ \begin{tikzcd}
 		M \arrow[r, "\varphi"] \arrow[d] & M' \\
 		M/\sim \arrow[ru, "{\exists! \bar{\varphi}}"'] &
 	\end{tikzcd} \]
 \end{proposition}
-这里的 $\bar{\varphi}$ 称为 $\varphi$ 的诱导同态. 图表交换意谓 $\bar{\varphi}$ 与 $M \to M/\sim$ 的合成等于 $\varphi$, 请参看 \S\ref{sec:cat-and-morphism} 的讨论.
+Homomorfisme $\bar{\varphi}$ ini disebut homomorfisme terimbas oleh $\varphi$. Diagram komutatif berarti bahwa komposisi $\bar{\varphi}$ dengan $M \to M/\sim$ sama dengan $\varphi$; lihat pembahasan dalam \S\ref{sec:cat-and-morphism}.
 \begin{proof}
-	唯一的取法是 $\bar{\varphi}([x]) = \varphi(x)$, 其中 $x \in M$.
+	Satu-satunya pilihan ialah $\bar{\varphi}([x]) = \varphi(x)$, dengan $x \in M$.
 \end{proof}
 
 \begin{proposition}\label{prop:1st-homomorphism-monoid}
-	设 $\varphi: M \to M'$ 为满同态. 定义 $M$ 上的等价关系 $x \sim y \iff \varphi(x)=\varphi(y)$, 则 $\sim$ 满足 \eqref{eqn:quotient-condition}, 而且诱导同态 $\bar{\varphi}: (M/\sim) \to M'$ 是同构.
+	Misalkan $\varphi: M \to M'$ adalah homomorfisme surjektif. Definisikan relasi ekuivalensi pada $M$ dengan $x \sim y \iff \varphi(x)=\varphi(y)$. Maka $\sim$ memenuhi \eqref{eqn:quotient-condition}, dan homomorfisme terimbas $\bar{\varphi}: (M/\sim) \to M'$ merupakan isomorfisme.
 \end{proposition}
 \begin{proof}
-	条件 \eqref{eqn:quotient-condition} 一望可知. 从 $\sim$ 的定义知 $\bar{\varphi}$ 是双射, 故为同构.
+	Syarat \eqref{eqn:quotient-condition} langsung terlihat. Dari definisi $\sim$ diketahui bahwa $\bar{\varphi}$ merupakan bijeksi, sehingga merupakan isomorfisme.
 \end{proof}
 
-对于群 $G$ 的情形, 满足条件 \eqref{eqn:quotient-condition} 的等价关系有更简单的描述: 定义 $N := \{x \in G : 1 \sim x\}$, 则
+Untuk grup $G$, relasi ekuivalensi yang memenuhi syarat \eqref{eqn:quotient-condition} mempunyai deskripsi yang lebih sederhana. Definisikan $N := \{x \in G : 1 \sim x\}$. Maka
 \begin{gather}\label{eqn:quotient-condition-group}
 	(x \sim y) \iff \left( x^{-1} y \in N \right).
 \end{gather}
-因此等价关系 $\sim$ 完全由子集 $N$ 确定. 反之, 给定子集 $N$, 可直接验证 \eqref{eqn:quotient-condition-group} 给出等价关系当且仅当 $N$ 包含 $1$ 而且对取逆和乘法封闭, 亦即 $N$ 是子群; 它满足 \eqref{eqn:quotient-condition} 当且仅当 $N$ 是正规子群. 我们有双射  (回忆定义 \ref{def:coset})
+Jadi relasi ekuivalensi $\sim$ sepenuhnya ditentukan oleh himpunan bagian $N$. Sebaliknya, untuk suatu himpunan bagian $N$, dapat diperiksa langsung bahwa \eqref{eqn:quotient-condition-group} mendefinisikan relasi ekuivalensi jika dan hanya jika $N$ memuat $1$ serta tertutup terhadap invers dan perkalian, yakni jika dan hanya jika $N$ merupakan subgrup. Relasi ini memenuhi \eqref{eqn:quotient-condition} jika dan hanya jika $N$ merupakan subgrup normal. Kita memperoleh bijeksi berikut (ingat Definisi \ref{def:coset}):
 \begin{align*}
 	G/\sim & \stackrel{\sim}{\longrightarrow} G/N \\
 	[x] & \longmapsto xN = Nx.
 \end{align*}
-这就解释了以下的商群定义.
+Hal ini menjelaskan definisi grup hasil bagi berikut.
 
-\begin{definition}[商群]\index{shang}
-	设 $G$ 为群, $N$ 为其正规子群. 在陪集空间 $G/N$ 上定义二元运算
+\begin{definition}[Grup hasil bagi]\index{hasil bagi}
+	Misalkan $G$ adalah grup dan $N$ adalah subgrup normalnya. Pada ruang koset $G/N$, definisikan operasi biner
 	\[ xN \cdot yN = xy N, \quad x,y \in G. \]
-	这使得 $G/N$ 构成一个群, 称为 $G$ 模 $N$ 的\emph{商群}, 其中的幺元是 $1 \cdot N$ 而逆由 $(xN)^{-1} = x^{-1}N$ 给出. 群同态
+	Dengan operasi ini, $G/N$ membentuk grup yang disebut \emph{grup hasil bagi} $G$ modulo $N$; unsur identitasnya adalah $1 \cdot N$, sedangkan invers diberikan oleh $(xN)^{-1} = x^{-1}N$. Homomorfisme grup
 	\begin{align*}
 		\pi: G & \longrightarrow G/N \\
 		x & \longmapsto xN
 	\end{align*}
-	称为商同态.
+	disebut homomorfisme hasil bagi.
 \end{definition}
-注意到商同态 $\pi: G \to G/N$ 总是满的,  而且 $\Ker(\pi) = N$. 现在可以陈述同态的几个基本性质.
+Perhatikan bahwa homomorfisme hasil bagi $\pi: G \to G/N$ selalu surjektif, dan $\Ker(\pi) = N$. Sekarang kita dapat menyatakan beberapa sifat dasar homomorfisme.
 
 \begin{proposition}\label{prop:1st-homomorphism}
-	设 $\varphi: G_1 \to G_2$ 是群同态, 则 $\varphi$ 诱导出同构 $\bar{\varphi}: G_1/\Ker(\varphi) \rightiso \Image(\varphi)$, 它映陪集 $g \cdot \Ker(\varphi)$ 为 $\varphi(g)$.
+	Misalkan $\varphi: G_1 \to G_2$ adalah homomorfisme grup. Maka $\varphi$ menginduksi isomorfisme $\bar{\varphi}: G_1/\Ker(\varphi) \rightiso \Image(\varphi)$ yang memetakan koset $g \cdot \Ker(\varphi)$ ke $\varphi(g)$.
 \end{proposition}
 \begin{proof}
-	应用命题 \ref{prop:1st-homomorphism-monoid}.
+	Terapkan Proposisi \ref{prop:1st-homomorphism-monoid}.
 \end{proof}
 
 \begin{proposition}\label{prop:2nd-homomorphism}
-	设 $\varphi: G_1 \to G_2$ 是群之间的满同态. 则有双射
+	Misalkan $\varphi: G_1 \to G_2$ adalah homomorfisme surjektif antara grup. Maka terdapat bijeksi
 	\[ \begin{tikzcd}[row sep=small]
-		\left\{ \text{子群 }  H_2 \subset G_2  \right\} \arrow[leftrightarrow, r, "1:1"] & \left\{ \text{子群 } H_1 \subset G_1 : H_1 \supset \Ker(\varphi)  \right\} \\
-		\left\{ \text{正规子群 }  H_2 \lhd G_2  \right\} \arrow[phantom, u, "\subset" description, sloped] \arrow[leftrightarrow, r, "1:1"] & \left\{ \text{正规子群 } H_1 \lhd G_1 : H_1 \supset \Ker(\varphi)  \right\} \arrow[phantom, u, "\subset" description, sloped] \\
+		\left\{ \text{subgrup }  H_2 \subset G_2  \right\} \arrow[leftrightarrow, r, "1:1"] & \left\{ \text{subgrup } H_1 \subset G_1 : H_1 \supset \Ker(\varphi)  \right\} \\
+		\left\{ \text{subgrup normal }  H_2 \lhd G_2  \right\} \arrow[phantom, u, "\subset" description, sloped] \arrow[leftrightarrow, r, "1:1"] & \left\{ \text{subgrup normal } H_1 \lhd G_1 : H_1 \supset \Ker(\varphi)  \right\} \arrow[phantom, u, "\subset" description, sloped] \\
 		H_2 \arrow[mapsto, r] & \varphi^{-1}(H_2) \\
 		\varphi(H_1) & H_1 \arrow[mapsto, l] .
 	\end{tikzcd} \]
-	此双射满足 $H_2 \subset H'_2 \iff \varphi^{-1}(H_2) \subset \varphi^{-1}(H'_2)$. 而且合成态射 $G_1 \xrightarrow{\varphi} G_2 \twoheadrightarrow G_2/H_2$ 诱导出同构 $G_1/\varphi^{-1}(H_2) \rightiso G_2/H_2$.
+	Bijeksi ini memenuhi $H_2 \subset H'_2 \iff \varphi^{-1}(H_2) \subset \varphi^{-1}(H'_2)$. Selain itu, morfisme komposit $G_1 \xrightarrow{\varphi} G_2 \twoheadrightarrow G_2/H_2$ menginduksi isomorfisme $G_1/\varphi^{-1}(H_2) \rightiso G_2/H_2$.
 \end{proposition}
-当 $\varphi$ 是商同态 $G \twoheadrightarrow G/N$ 时, 断言的同构可写成熟悉的形式 $G/H \rightiso (G/N) \big/ (H/N)$, 其中 $N \subset H$, $N, H \lhd G$.
+Ketika $\varphi$ adalah homomorfisme hasil bagi $G \twoheadrightarrow G/N$, isomorfisme dalam pernyataan tersebut dapat ditulis dalam bentuk yang lazim, yakni $G/H \rightiso (G/N) \big/ (H/N)$, dengan $N \subset H$ serta $N, H \lhd G$.
 \begin{proof}
-	易见子群 $H_1 \supset \Ker(\varphi)$ 蕴涵 $H_1 = \varphi^{-1}(\varphi(H_1))$, 而 $\varphi$ 满蕴涵 $H_2 = \varphi(\varphi^{-1}(H_2))$, 由此得到互逆的双射. 显然 $\varphi$, $\varphi^{-1}$ 都保持包含关系. 关于正规子群的对应则是因为 $\varphi(g H_1 g^{-1}) = \varphi(g) \varphi(H_1) \varphi(g)^{-1}$ 而 $\varphi$ 满, 上述双射导致
+	Mudah dilihat bahwa subgrup $H_1 \supset \Ker(\varphi)$ mengakibatkan $H_1 = \varphi^{-1}(\varphi(H_1))$, sedangkan surjektivitas $\varphi$ mengakibatkan $H_2 = \varphi(\varphi^{-1}(H_2))$; dari sini diperoleh dua bijeksi yang saling invers. Jelas bahwa $\varphi$ dan $\varphi^{-1}$ sama-sama melestarikan relasi pencakupan. Korespondensi untuk subgrup normal diperoleh dari $\varphi(g H_1 g^{-1}) = \varphi(g) \varphi(H_1) \varphi(g)^{-1}$ dan surjektivitas $\varphi$: bijeksi di atas memberikan
 	\[ \forall g \in G_1, \; g H_1 g^{-1} = H_1 \iff \forall \bar{g} \in G_2, \; \bar{g} \varphi(H_1) \bar{g}^{-1} = \varphi(H_1). \]
-	最后, 同构 $G_1/\varphi^{-1}(H_2) \rightiso G_2/H_2$ 源自命题 \ref{prop:1st-homomorphism}.
+	Terakhir, isomorfisme $G_1/\varphi^{-1}(H_2) \rightiso G_2/H_2$ berasal dari Proposisi \ref{prop:1st-homomorphism}.
 \end{proof}
 
 \begin{proposition}\label{prop:3rd-homomorphism}
-	设 $H, N$ 是 $G$ 的子群而 $H \subset N_G(N)$, 则 $N \cap H \lhd H$, 而且合成同态 $H \hookrightarrow HN \twoheadrightarrow HN/N$ 诱导出的同态
-	\[ \theta: H/N \cap H \to HN/N \]
-	是同构.
+	Misalkan $H, N$ adalah subgrup dari $G$ dan $H \subset N_G(N)$. Maka $N \cap H \lhd H$, dan homomorfisme terimbas dari homomorfisme komposit $H \hookrightarrow HN \twoheadrightarrow HN/N$, yaitu
+	\[ \theta: H/(N \cap H) \to HN/N \]
+	merupakan isomorfisme.
 \end{proposition}
-关于子群 $HN$ 请见注记 \ref{rem:HN}. 许多书上采用的假设是 $N \lhd G$, 结果实则是等价的, 以 $HN$ 代 $G$ 即可.
+Untuk subgrup $HN$, lihat Catatan \ref{rem:HN}. Banyak buku menggunakan asumsi $N \lhd G$, tetapi hasilnya sebenarnya ekuivalen apabila $HN$ digunakan sebagai pengganti $G$.
 \begin{proof}
-	%	同态 $\theta$ 将陪集 $h(N \cap H)$ 映至 $hN$. 另一方面, 定义
+	% Homomorfisme $\theta$ memetakan koset $h(N \cap H)$ ke $hN$. Di pihak lain, definisikan
 	%	\begin{align*}
-	%		\psi: HN/N & \longrightarrow H/N \cap H \\
+	%		\psi: HN/N & \longrightarrow H/(N \cap H) \\
 	%		hn N & \longmapsto h (N \cap H), \quad h \in H, \; n \in N
 	%	\end{align*}
-	%	由于对任意 $h, h' \in H$, $n, n' \in N$, 我们有 $hn=h'n'$ 当且仅当 $nn'^{-1} = h^{-1}h' \in N \cap H$, 故 $\psi$ 确实良定; 由 $N$ 的正规性能证明 $\psi$ 是群同态. 容易验证 $\psi = \theta^{-1}$.
-	从 $N_G(N)$ 的定义立得 $N \cap H \lhd H$. 将商同态 $\pi: HN \to HN/N$ 限制到 $H$ 上, 显然其像为 $\pi(H) = \pi(HN) = HN/N$, 核则为 $H \cap \Ker(\pi) = N \cap H$. 所以命题 \ref{prop:1st-homomorphism} 给出同构 $H/N \cap H \rightiso HN/N$, 这正是断言中的 $\theta$.
+	% Untuk setiap $h, h' \in H$, $n, n' \in N$, kita mempunyai $hn=h'n'$ jika dan hanya jika $nn'^{-1} = h^{-1}h' \in N \cap H$. Jadi $\psi$ memang terdefinisi dengan baik; dari kenormalan $N$ dapat dibuktikan bahwa $\psi$ merupakan homomorfisme grup. Mudah diperiksa bahwa $\psi = \theta^{-1}$.
+	Dari definisi $N_G(N)$ langsung diperoleh $N \cap H \lhd H$. Batasi homomorfisme hasil bagi $\pi: HN \to HN/N$ pada $H$. Jelas bahwa bayangannya adalah $\pi(H) = \pi(HN) = HN/N$, sedangkan kernelnya adalah $H \cap \Ker(\pi) = N \cap H$. Karena itu, Proposisi \ref{prop:1st-homomorphism} memberikan isomorfisme $H/(N \cap H) \rightiso HN/N$, yang tepat merupakan $\theta$ dalam pernyataan.
 \end{proof}
 
-\begin{example}[循环群的结构]\label{eg:cyclic-group}\index{xunhuanqun}
-	考虑群 $\Z$, 二元运算取为整数加法. 对于 $n \in \Z$, 商群 $\Z/n\Z$ 是循环群, 生成元可取为陪集 $1 + n\Z$. 由上述结果导出:
+\begin{example}[Struktur grup siklik]\label{eg:cyclic-group}\index{grup siklik}
+	Tinjau grup $\Z$ dengan penjumlahan bilangan bulat sebagai operasi binernya. Untuk $n \in \Z$, grup hasil bagi $\Z/n\Z$ merupakan grup siklik dengan koset $1 + n\Z$ sebagai salah satu pembangkitnya. Hasil-hasil di atas memberikan:
 	\begin{compactenum}[(i)]
-		\item 任何循环群都同构于某个 $\Z/n\Z$: 若 $G=\lrangle{x}$, 则有满同态 $\Z \to \lrangle{x}$ 映 $1$ 为 $x$, 根据例 \ref{eg:Z-as-group} 其核必为 $n\Z$ 的形式. 应用命题 \ref{prop:1st-homomorphism} 可得 $\lrangle{x} \simeq \Z/n\Z$; 进一步, 若 $\text{ord}(x)$ 有限则等于 $|n|$.
-		\item 群 $\Z/n\Z$ 的子群都形如 $m\Z/n\Z$, 其中 $m \mid n$: 这是命题 \ref{prop:2nd-homomorphism} 施于 $\Z \twoheadrightarrow \Z/n\Z$ 的结果, 因为 $m\Z \supset n\Z$ 当且仅当 $m \mid n$.
-		\item 设 $m \mid n$. 映射 $x \mapsto mx$ 显然诱导群同构 $\Z/\frac{n}{m}\Z \rightiso m\Z/n\Z$, 故 $m\Z/n\Z$ 是 $\frac{n}{m}$ 阶循环群.
+		\item setiap grup siklik isomorfik dengan suatu $\Z/n\Z$: jika $G=\lrangle{x}$, terdapat homomorfisme surjektif $\Z \to \lrangle{x}$ yang memetakan $1$ ke $x$, dan menurut Contoh \ref{eg:Z-as-group}, kernelnya harus berbentuk $n\Z$. Penerapan Proposisi \ref{prop:1st-homomorphism} memberikan $\lrangle{x} \simeq \Z/n\Z$; selanjutnya, jika $\text{ord}(x)$ berhingga, maka nilainya sama dengan $|n|$;
+		\item setiap subgrup dari $\Z/n\Z$ berbentuk $m\Z/n\Z$, dengan $m \mid n$: ini merupakan hasil penerapan Proposisi \ref{prop:2nd-homomorphism} pada $\Z \twoheadrightarrow \Z/n\Z$, sebab $m\Z \supset n\Z$ jika dan hanya jika $m \mid n$;
+		\item misalkan $n \ne 0$ dan $m \mid n$. Peta $x \mapsto mx$ jelas menginduksi isomorfisme grup $\Z/\frac{n}{m}\Z \rightiso m\Z/n\Z$, sehingga $m\Z/n\Z$ merupakan grup siklik berorde $\left|\frac{n}{m}\right|$. Jika $n=0$, subgrup $m\Z/0\Z=m\Z$ merupakan grup siklik tak hingga untuk $m\ne0$, sedangkan $0\Z/0\Z$ merupakan grup trivial.
 	\end{compactenum}
-	习见的同余式 $a \equiv b \mod n$ 说的无非是陪集 $a+n\Z$ 和 $b+n\Z$ 在 $\Z/n\Z$ 中相等.
+	Kongruensi yang lazim $a \equiv b \mod n$ tidak lain menyatakan bahwa koset $a+n\Z$ dan $b+n\Z$ sama dalam $\Z/n\Z$.
 \end{example}
 
 \begin{proposition}\label{prop:ord-power}
-	设 $x \in G$ 阶数有限, 则 $x^{\text{ord}(x)}=1$; 若 $G$ 有限则 $x^{|G|}=1$.
+	Misalkan $x \in G$ berorde hingga. Maka $x^{\text{ord}(x)}=1$; jika $G$ berhingga, maka $x^{|G|}=1$.
 \end{proposition}
 \begin{proof}
-	仅须在循环子群 $\lrangle{x} \simeq \Z/\text{ord}(x)\Z$ 中验证. 当 $G$ 有限时命题 \ref{prop:Lagrange} 蕴涵 $\text{ord}(x)$ 整除 $|G|$.
+	Cukup periksa pernyataan tersebut dalam subgrup siklik $\lrangle{x} \simeq \Z/\text{ord}(x)\Z$. Jika $G$ berhingga, Proposisi \ref{prop:Lagrange} menyatakan bahwa $\text{ord}(x)$ membagi $|G|$.
 \end{proof}
 
-谨介绍从交换幺半群构造交换群的一种基本构造.
-\begin{definition-theorem}\label{def:K-group}\index{Grothendieck 群}
-	设 $M$ 为交换幺半群, 二元运算表作加法 $(x,y) \mapsto x+y$. 定义商集
+Berikut kita perkenalkan suatu konstruksi dasar yang menghasilkan grup abelian dari monoid komutatif.
+\begin{definition-theorem}\label{def:K-group}\index{grup Grothendieck}
+	Misalkan $M$ adalah monoid komutatif, dengan operasi biner yang ditulis secara aditif sebagai $(x,y) \mapsto x+y$. Definisikan himpunan hasil bagi
 	\[ K(M) := M \times M \bigg/ (x,y) \sim (x',y') \iff \exists z \in M,\; x+y'+z=x'+y+z, \]
-	含 $(x,y)$ 的等价类记为 $[x,y]$, 并在 $K(M)$ 上定义二元运算 $[x,y] + [x',y'] = [x+x',y+y']$, 则 $(K(M),+)$ 构成交换群, $x \mapsto [x,0]$ 给出同态 $M \to K(M)$, 并且有如下泛性质: 对任意交换群 $(A,+)$ 和幺半群同态 $f: M \to A$, 存在唯一的 $\psi: K(M) \to A$ 使下图交换
+	kelas ekuivalensi yang memuat $(x,y)$ ditulis $[x,y]$, dan definisikan operasi biner pada $K(M)$ dengan $[x,y] + [x',y'] = [x+x',y+y']$. Maka $(K(M),+)$ membentuk grup abelian, peta $x \mapsto [x,0]$ memberikan homomorfisme $M \to K(M)$, dan berlaku sifat universal berikut: untuk setiap grup abelian $(A,+)$ dan homomorfisme monoid $f: M \to A$, terdapat satu-satunya $\psi: K(M) \to A$ yang membuat diagram berikut komutatif:
 	\[ \begin{tikzcd}
 		M \arrow[r] \arrow[rd, "f"'] & K(M) \arrow[d, "\exists!\;\psi"] \\
 		& A
 	\end{tikzcd}\]
-	称 $K(M)$ 为 $M$ 给出的 \emph{Grothendieck 群}.
+	Grup $K(M)$ disebut \emph{grup Grothendieck} yang dihasilkan oleh $M$.
 \end{definition-theorem}
 \begin{proof}
-	容易验证 $\sim$ 是等价关系, 而且 $K(M)$ 的加法良定; 定义中的 $z$ 对此是必要的, 因为 $M$ 对加法未必有消去律. 同样地, 验证 $(K(M), +)$ 成群而 $x \mapsto [x,0]$ 为同态乃是例行公事: 元素 $[x,y]$ 的加法逆元无非是 $-[x,y] := [y,x]$. 泛性质中 $\psi$ 的唯一选择是 $\psi([x,y]) = \psi([x,0]-[y,0]) = f(x)-f(y)$, 这是良定的.
+	Mudah diperiksa bahwa $\sim$ merupakan relasi ekuivalensi dan bahwa penjumlahan pada $K(M)$ terdefinisi dengan baik. Unsur $z$ dalam definisi diperlukan karena $M$ belum tentu memenuhi hukum pembatalan untuk penjumlahan. Dengan cara serupa, pemeriksaan bahwa $(K(M), +)$ membentuk grup dan bahwa $x \mapsto [x,0]$ merupakan homomorfisme adalah rutin: invers aditif dari unsur $[x,y]$ tidak lain adalah $-[x,y] := [y,x]$. Dalam sifat universal tersebut, satu-satunya pilihan bagi $\psi$ ialah $\psi([x,y]) = \psi([x,0]-[y,0]) = f(x)-f(y)$, dan peta ini terdefinisi dengan baik.
 \end{proof}
-等价类 $[x,y]$ 可以设想成 $x-y$. 当 $M$ 取为 $\Z_{\geq 0}$ 时, 以上正是构造整数 $\Z$ 的经典手法, 由之可以进一步定义 $\Z$ 上的乘法及初等算术 (见 \cite[第零章, \S 3]{DN00}); 注意到以上构造未见负数或减法, 故无循环论证之虞. Grothendieck 群还会在更深入的代数理论中反复出现, 容后再述.
+Kelas ekuivalensi $[x,y]$ dapat dibayangkan sebagai $x-y$. Jika $M$ diambil sebagai $\Z_{\geq 0}$, konstruksi di atas tepat merupakan cara klasik untuk membangun bilangan bulat $\Z$; dari konstruksi ini selanjutnya dapat didefinisikan perkalian dan aritmetika elementer pada $\Z$ (lihat \cite[Bab nol, \S 3]{DN00}). Perhatikan bahwa konstruksi di atas sama sekali tidak menggunakan bilangan negatif ataupun pengurangan, sehingga tidak terjadi penalaran melingkar. Grup Grothendieck akan muncul berulang kali dalam teori aljabar yang lebih lanjut; pembahasannya kita tunda hingga nanti.
 
 \begin{remark}\label{rem:grp-cat}
-	从范畴 (定义 \ref{def:category}) 观点看, 定义
+	Dari sudut pandang kategori (Definisi \ref{def:category}), definisikan
 	\begin{compactitem}
-		\item $\cate{Mon}$: 以所有幺半群为对象的范畴;
-		\item $\cate{Grp}$: 以所有群为对象的范畴;
-		\item $\cate{Ab}$: 以所有交换群 (Abel 群) 为对象的范畴.
+		\item $\cate{Mon}$: kategori yang objek-objeknya adalah semua monoid;
+		\item $\cate{Grp}$: kategori yang objek-objeknya adalah semua grup;
+		\item $\cate{Ab}$: kategori yang objek-objeknya adalah semua grup abelian.
 	\end{compactitem}
-	这些范畴的态射都取作同态. 显然有 $\cate{Ab} \subset \cate{Grp} \subset \cate{Mon}$, 其中 $\subset$ 表示前者是后者的全子范畴 (定义 \ref{def:subcategory}). 严格说来, 这里得限制量词``所有''的范围, 以避免集合论悖论. 为此就必须按本章开头的办法, 固定一个 Grothendieck 宇宙 $\mathcal{U}$, 并假设所论的结构都是定义在 $\mathcal{U}$-集上的, 如此一来 $\cate{Mon}$ 等都是 $\mathcal{U}$-范畴. 详见定义 \ref{def:U-cat} 及其后的讨论.
+	Morfisme dalam semua kategori ini adalah homomorfisme. Jelas bahwa $\cate{Ab} \subset \cate{Grp} \subset \cate{Mon}$, dengan $\subset$ menyatakan bahwa kategori di sebelah kiri merupakan subkategori penuh (Definisi \ref{def:subcategory}) dari kategori di sebelah kanan. Secara ketat, jangkauan kuantor ``semua'' di sini harus dibatasi agar paradoks teori himpunan dapat dihindari. Untuk itu, seperti pada awal bab ini, kita harus menetapkan suatu semesta Grothendieck $\mathcal{U}$ dan menganggap bahwa semua struktur yang dibahas didefinisikan pada himpunan-$\mathcal{U}$. Dengan demikian, $\cate{Mon}$ dan kategori-kategori lainnya merupakan kategori-$\mathcal{U}$. Lihat Definisi \ref{def:U-cat} dan pembahasan setelahnya untuk perincian.
 \end{remark}
 
-以下且来个牛刀小试, 看如何从范畴的高度梳理一些代数构造. 命 $\cate{CMon}$ 为交换幺半群所成范畴. 从定义--定理 \ref{def:K-group} 可见交换幺半群的同态 $\phi: M \to N$ 自然地诱导出 $\psi: K(M) \to K(N)$ (在泛性质中取 $f: M \xrightarrow{\varphi} N \to K(N)$), 而且 $K: \cate{CMon} \to \cate{Ab}$ 构成函子 (定义 \ref{def:functor}). 另一方面, 交换群自然也是交换幺半群, 故有忘却函子 $U: \cate{Ab} \to \cate{CMon}$; 定义--定理 \ref{def:K-group} 的泛性质可以改写成双射
+Sebagai latihan singkat, mari kita lihat bagaimana beberapa konstruksi aljabar dapat ditata dari sudut pandang kategori. Misalkan $\cate{CMon}$ adalah kategori monoid komutatif. Dari Definisi--Teorema \ref{def:K-group}, suatu homomorfisme monoid komutatif $\varphi: M \to N$ secara natural menginduksi $\psi: K(M) \to K(N)$ (dalam sifat universal, ambil $f: M \xrightarrow{\varphi} N \to K(N)$), dan $K: \cate{CMon} \to \cate{Ab}$ membentuk fungtor (Definisi \ref{def:functor}). Di pihak lain, grup abelian secara natural juga merupakan monoid komutatif, sehingga terdapat fungtor pelupa $U: \cate{Ab} \to \cate{CMon}$; sifat universal dalam Definisi--Teorema \ref{def:K-group} dapat ditulis kembali sebagai bijeksi
 \begin{align*}
 	\Hom_{\cate{Ab}}(K(M), A) & \longrightiso \Hom_{\cate{CMon}}(M, U(A)) \\
 	\psi & \longmapsto f := [M \to K(M) \xrightarrow{\psi} A].
 \end{align*}
-从伴随函子 (定义 \ref{def:adjunction-pair}, 也参考命题 \ref{prop:adjunction-pointwise}) 的观点看, 这说的无非是 $(K, U)$ 构成伴随对. 是故精确到同构, 泛性质唯一确定了 $K(M)$ 连同 $M \to K(M)$.
-
+Dari sudut pandang fungtor adjoin (Definisi \ref{def:adjunction-pair}; lihat juga Proposisi \ref{prop:adjunction-pointwise}), hal ini tidak lain mengatakan bahwa $(K, U)$ membentuk pasangan adjoin. Oleh karena itu, hingga isomorfisme, sifat universal menentukan secara tunggal $K(M)$ beserta $M \to K(M)$.
 \section{直积, 半直积与群扩张}\label{sec:group-extensions}
 无论构造新群或分解既有的群都会碰上积构造. 我们从幺半群的情形入手.
 

@@ -1,0 +1,142 @@
+{
+  "status": "PASS",
+  "unit": "unit-026-bab-4-homomorfisme-dan-grup-hasil-bagi",
+  "authority": "chapter4.tex:177-364 (blank line 364 omitted from 177-363 mapping)",
+  "target": "chapter4.tex:179-365",
+  "data": "backend/data/unit-026-bab-4-homomorfisme-dan-grup-hasil-bagi.json",
+  "schema": "backend/schema/open-math-corpus-unit.schema.v1.json",
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "artifact": {
+    "path": "artifacts/unit-026-bab-4-homomorfisme-dan-grup-hasil-bagi-id.pdf",
+    "pages": 9,
+    "bytes": 115284,
+    "sha256": "e3c0e0241901eb0f5f2477a1fe09f64eff34af325dc209b25aa8d71900deb089"
+  },
+  "counts": {
+    "sections": 1,
+    "concepts": 432,
+    "textual_environment_markers": 72,
+    "textual_environment_pairs": 36,
+    "active_environment_pairs": 35,
+    "commented_environment_pairs": 1,
+    "labels": 12,
+    "ordinary_references": 18,
+    "equation_references": 6,
+    "citations": 1,
+    "list_items": 12,
+    "protected_math_zones": 275,
+    "diagrams": 3,
+    "diagram_arrows": 12,
+    "index_entries": 10,
+    "terminology_rows": 33,
+    "corrections": 4,
+    "exercises": 0,
+    "hints": 0,
+    "answers": 0,
+    "solutions": 0,
+    "csv_projections": 6,
+    "uuidv5_entities_audited": 491
+  },
+  "checks": {
+    "deterministic_regeneration_one": "PASS",
+    "deterministic_regeneration_two": "PASS",
+    "shared_schema_and_uuidv5": "PASS",
+    "exact_authority_candidate_target_boundary": "PASS",
+    "complete_tex_surface_topology": "PASS",
+    "native_citation_diagram_and_index_provenance": "PASS",
+    "four_declared_corrections": "PASS",
+    "no_invented_exercise_or_solution_surfaces": "PASS",
+    "component_rights_and_non_endorsement": "PASS",
+    "build_and_all_page_visual_bindings": "PASS",
+    "terminology_binding": "PASS",
+    "all_full_file_and_line_span_bindings": "PASS",
+    "validation_mutated_outputs": false
+  },
+  "binding_audit": {
+    "occurrences": 80,
+    "full_file_occurrences": 50,
+    "line_span_occurrences": 30,
+    "unique_paths": 39,
+    "paths": [
+      "00_control/SOURCE_MANIFEST.csv",
+      "00_control/TERMINOLOGY.id-ID.csv",
+      "artifacts/unit-026-bab-4-homomorfisme-dan-grup-hasil-bagi-id.pdf",
+      "authority/archives/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b.zip",
+      "authority/pdfs/Al-jabr-1.pdf",
+      "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter4.tex",
+      "build/unit-026-candidate/chapter4-homomorphisms-quotients-id.tex",
+      "build/unit-026-staging/terminology-delta.csv",
+      "qa/UNIT_026_BUILD_FINAL.log",
+      "qa/UNIT_026_PREPROMOTION_AUDIT_20260825.md",
+      "qa/UNIT_026_TERMINOLOGY_AUDIT_20260825.md",
+      "qa/UNIT_026_TERMINOLOGY_RECOMMENDATION_20260825.md",
+      "qa/UNIT_026_TRANSLATION_REVIEW_20260824.md",
+      "qa/UNIT_026_VISUAL_QA_20260825.md",
+      "qa/unit-026-evidence/render-hash-inventory.json",
+      "qa/unit-026-evidence/structure-and-pdf-qa.json",
+      "repo/fonts/NotoSansCJKsc-Black.otf",
+      "repo/fonts/NotoSansCJKsc-Medium.otf",
+      "repo/fonts/NotoSansCJKsc-Regular.otf",
+      "repo/fonts/NotoSerifCJKsc-Bold.otf",
+      "repo/fonts/OFL-1.1-Noto-CJK.txt",
+      "repo/source/AJbook.cls",
+      "repo/source/Al-jabr.bib",
+      "repo/source/LICENSE",
+      "repo/source/Lanzhou.png",
+      "repo/source/ccby.png",
+      "repo/source/chapter4.tex",
+      "repo/source/coverpage-id-unit-026.tex",
+      "repo/source/font-setup-id.tex",
+      "repo/source/locale-ui-id.tex",
+      "repo/source/myarrows.sty",
+      "repo/source/mycommand.sty",
+      "repo/source/titles-setup-id.tex",
+      "repo/source/titles-setup.tex",
+      "repo/source/unit-026-bab-4-homomorfisme-dan-grup-hasil-bagi.tex",
+      "repo/source/unit-026-crossrefs.aux",
+      "scripts/build_unit_026.ps1",
+      "scripts/check_unit_026_candidate.py",
+      "scripts/check_unit_026_structure.py"
+    ]
+  },
+  "identities": {
+    "backend/data/unit-026-bab-4-homomorfisme-dan-grup-hasil-bagi.json": {
+      "bytes": 352612,
+      "sha256": "cceb010d8569c01e9fd7fb4149765da798a0c00409cadeb743a0326d192df29c"
+    },
+    "backend/csv/unit-026-bindings.csv": {
+      "bytes": 17161,
+      "sha256": "37e4fd60b495a19ec90fb62ef8be8f0aa95d670041fd266d5586564eacec598f"
+    },
+    "backend/csv/unit-026-entities.csv": {
+      "bytes": 107430,
+      "sha256": "9ccc9ae7290fda3fcce488345a585255b22cecbdd6475fb8c76001ecad23795f"
+    },
+    "backend/csv/unit-026-qa.csv": {
+      "bytes": 5578,
+      "sha256": "f5bd9a379402d2d005c0e01163d18deb357c4c011498657a144e90aea41148ea"
+    },
+    "backend/csv/unit-026-relations.csv": {
+      "bytes": 270652,
+      "sha256": "2940e1cf9f3ee2d96f1f14e9060da68213c1c1dc90861d237f1a32e5f1902327"
+    },
+    "backend/csv/unit-026-rights.csv": {
+      "bytes": 1287,
+      "sha256": "4836630530f87a11a64fe233c59970e2ff7942695a8dbf404f7a0583a275197e"
+    },
+    "backend/csv/unit-026-surfaces.csv": {
+      "bytes": 3424,
+      "sha256": "ab151d44b097203e4117e789a40763e2899efa4de49e040ffceebc7890b2d7a3"
+    }
+  },
+  "tools": {
+    "scripts/generate_unit_026_backend.py": {
+      "bytes": 48795,
+      "sha256": "54eed840f25ba55ab77ae51e04872b4772a48f114eec71655d665042fe14244d"
+    },
+    "scripts/validate_unit_026_backend.py": {
+      "bytes": 23503,
+      "sha256": "7632a2e33d5beac9e1d360dcb9c8d710ae4a461b794153923dad08d01fe8c11b"
+    }
+  }
+}
