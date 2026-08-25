@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "repository": "https://github.com/KokunoYumeto/metode-aljabar-jilid-1-id",
+  "branch": "main",
+  "commit": "458e6e32797e2310bd7fa53c21e78bc133723851",
+  "parent": "e9bc26191e422ab055ead3cb39fedbc228237b23",
+  "tree": "aa9f69be9e5319dd61d0d6e1e57edecbe89dcb7b",
+  "anonymous": true,
+  "authorization_header_used": false,
+  "remote_main_before": "458e6e32797e2310bd7fa53c21e78bc133723851",
+  "remote_main_after": "458e6e32797e2310bd7fa53c21e78bc133723851",
+  "path_fetch_count": 3,
+  "total_bytes_fetched": 88954,
+  "all_match": true,
+  "records": [
+    {
+      "path": "README.md",
+      "bytes": 65146,
+      "sha256": "ed6ea48a64dccaf9529bba023261f84c55fe867e0f0a9c484b76c27cab7d7635",
+      "http_status": 200
+    },
+    {
+      "path": "qa/PUBLICATION_GITHUB_UNIT_029_CONTENT_READBACK.json",
+      "bytes": 19300,
+      "sha256": "e5ecc408710f0e61263baf3d9858807ff138278339f839cd93ef41bb3bd64540",
+      "http_status": 200
+    },
+    {
+      "path": "qa/PUBLICATION_GITHUB_UNIT_029_20260826.md",
+      "bytes": 4508,
+      "sha256": "0f5ba15eef664a42b25c67cbc5e05ab237367cb013ebeb51fc5b525411e02c8d",
+      "http_status": 200
+    }
+  ],
+  "method": "credential-disabled anonymous git ls-remote plus raw.githubusercontent.com byte comparison"
+}

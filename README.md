@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan, seluruh Bab 1, seluruh Bab 2, seluruh Bab 3 termasuk latihannya, serta pembukaan Bab 4 sampai Bagian 4.4 telah diterjemahkan dan diterima dalam dua puluh delapan unit pembaca. Bagian 4.5 menjadi span sumber kanonik berikutnya.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan, seluruh Bab 1, seluruh Bab 2, seluruh Bab 3 termasuk latihannya, serta pembukaan Bab 4 sampai Bagian 4.5 telah diterjemahkan dan diterima dalam dua puluh sembilan unit pembaca. Bagian 4.6 menjadi span sumber kanonik berikutnya.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh checkpoint pembaca 0.3.0 (96 halaman; Unit 1-9)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf)
 
@@ -523,7 +523,9 @@ Teks sumber dan terjemahan ditangani menurut Creative Commons Attribution 4.0 In
 - [ ] Bab 4 — Teori grup
   - [x] Pembukaan bab dan Bagian 4.1 — Semigrup, Monoid, dan Grup `chapter4.tex:1-176`
   - [x] Bagian 4.2 — Homomorfisme dan Grup Hasil Bagi `chapter4.tex:177-364`
-  - [x] Bagian 4.3 — Produk Langsung, Produk Semilangsung, dan Ekstensi Grup `chapter4.tex:365-517`
+- [x] Bagian 4.3 — Produk Langsung, Produk Semilangsung, dan Ekstensi Grup `chapter4.tex:365-517`
+- [x] Bagian 4.4 — Aksi Grup dan Prinsip Pencacahan `chapter4.tex:518-665`
+- [x] Bagian 4.5 — Teorema Sylow `chapter4.tex:666-795`
 - [ ] Bab 5 — Dasar-dasar teori gelanggang
 - [ ] Bab 6 — Teori modul
 - [ ] Bab 7 — Dasar-dasar aljabar
