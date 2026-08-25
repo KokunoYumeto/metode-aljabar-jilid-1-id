@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "checked": "2026-08-25",
+  "authentication": "none",
+  "record_id": 22088395,
+  "public_url": "https://zenodo.org/records/22088395",
+  "doi": "10.5281/zenodo.22088395",
+  "concept_doi": "10.5281/zenodo.22059759",
+  "title": "Metode Aljabar, Jilid 1: Arsitektur Dasar — Edisi Bahasa Indonesia",
+  "title_exact_unicode_match": true,
+  "version": "0.6.0",
+  "publication_date": "2026-08-25",
+  "access_right": "open",
+  "license": "other-open",
+  "language": "ind",
+  "creators": [
+    {
+      "name": "Li, Wen-Wei"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "TTP",
+      "type": "ProjectMember"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/wenweili/AlJabr-1/commit/c4f7a01f68f5f407906b4b970640cddbbad85f6b",
+      "relation": "isDerivedFrom",
+      "scheme": "url"
+    },
+    {
+      "identifier": "978-7-04-050725-6",
+      "relation": "isDerivedFrom",
+      "scheme": "isbn"
+    },
+    {
+      "identifier": "https://github.com/KokunoYumeto/metode-aljabar-jilid-1-id/commit/ebaf9ddba8665bcc0f8ebadf042efc258b4f3894",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "file_count": 5,
+  "public_bytes": 70182496,
+  "anonymous_full_file_sha256_readback": true,
+  "publication_receipt": "qa/PUBLICATION_ZENODO_0.6.0_20260825.md",
+  "result": "PASS"
+}
