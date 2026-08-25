@@ -481,7 +481,12 @@
     "preservation_0_5_0_receipt_readback_bytes": 11654,
     "preservation_0_5_0_state": "Zenodo receipt, corrected controls exposed in README, terminology delta, backend, inventory, verifier, and sanitized receipt public; anonymous readback passed",
     "figshare_article": 33314766,
-    "figshare_state": "existing private draft found in signed-in browser with five stale 0.3.0 files; API token returns InactiveAccount; exact mixed license unavailable, so use CC0 metadata/link-only route to Zenodo 0.6.0; do not duplicate"
+    "figshare_state": "existing private draft found in signed-in browser with five stale 0.3.0 files; API token returns InactiveAccount; exact mixed license unavailable, so use CC0 metadata/link-only route to Zenodo 0.6.0; do not duplicate",
+    "controls_readback_commit": "85b9adef1d068218f1f3f80ebb61a9dbc55cc922",
+    "controls_readback_tree": "f8a2cbb1822447e2e9de804bd7803b1bfa648926",
+    "controls_readback_files": 9,
+    "controls_readback_bytes": 406221,
+    "controls_readback_method": "credential-disabled anonymous raw.githubusercontent.com byte comparison; all nine control/README/receipt paths matched"
   },
   "next_action": "Admit Unit 030 at chapter4.tex:796-935 and continue strictly in source order through the isolated Unit 042 candidate; Unit 042 may not be admitted before Units 030-041. Continue isolated translation from chapter5.tex:1184 in parallel when it does not delay sequential admission. Duncan source/build authority is admitted for the post-Li component; keep its two empty lin_alg.tex TODO subsections transparent and external assignments excluded. Preserve separate rights and keep translation dominant."
 }
