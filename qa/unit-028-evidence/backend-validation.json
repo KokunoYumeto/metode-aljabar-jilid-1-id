@@ -1,0 +1,153 @@
+{
+  "status": "PASS",
+  "unit": "unit-028-bab-4-aksi-grup-dan-prinsip-pencacahan",
+  "authority": "chapter4.tex:518-665 (blank line 665 omitted from 518-664 mapping)",
+  "target": "chapter4.tex:518-664",
+  "data": "backend/data/unit-028-bab-4-aksi-grup-dan-prinsip-pencacahan.json",
+  "schema": "backend/schema/open-math-corpus-unit.schema.v1.json",
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "provenance_actor": "Codex acting on the user's instruction",
+  "artifact": {
+    "path": "artifacts/unit-028-bab-4-aksi-grup-dan-prinsip-pencacahan-id.pdf",
+    "pages": 7,
+    "bytes": 108689,
+    "sha256": "50c40ddefa870866568f8d1621d5fc204a1fd0fd0a45bdfc74659197c585790a"
+  },
+  "counts": {
+    "sections": 1,
+    "concepts": 322,
+    "textual_environment_markers": 48,
+    "textual_environment_pairs": 24,
+    "active_environment_pairs": 24,
+    "labels": 5,
+    "ordinary_references": 7,
+    "equation_references": 1,
+    "citations": 2,
+    "list_items": 16,
+    "protected_math_zones": 213,
+    "diagrams": 1,
+    "tikzcd_diagrams": 1,
+    "polygon_drawings": 0,
+    "diagram_arrows": 2,
+    "polygon_drawing_commands": 0,
+    "index_entries": 9,
+    "terminology_rows": 25,
+    "source_corrections": 1,
+    "protected_text_localizations": 3,
+    "qa_events": 17,
+    "visual_qa_witnesses": 4,
+    "exercises": 0,
+    "hints": 0,
+    "answers": 0,
+    "solutions": 0,
+    "csv_projections": 6,
+    "uuidv5_entities_audited": 382
+  },
+  "checks": {
+    "deterministic_regeneration_one": "PASS",
+    "deterministic_regeneration_two": "PASS",
+    "shared_schema_and_uuidv5": "PASS",
+    "exact_csv_projection": "PASS",
+    "no_stale_unit_026_ids_or_data": "PASS",
+    "exact_authority_candidate_target_boundary": "PASS",
+    "complete_tex_surface_topology": "PASS",
+    "native_citation_diagram_and_index_provenance": "PASS",
+    "one_source_correction": "PASS",
+    "three_protected_text_localizations": "PASS",
+    "no_invented_exercise_or_solution_surfaces": "PASS",
+    "component_rights_non_endorsement_and_closure_exceptions": "PASS",
+    "build_pdf_and_visual_preflight_bindings": "PASS",
+    "canonical_structure_pdf_and_render_bindings": "PASS",
+    "independent_preflight_preserved_separately": "PASS",
+    "terminology_binding": "PASS",
+    "all_full_file_and_line_span_bindings": "PASS",
+    "validation_mutated_outputs": false
+  },
+  "binding_audit": {
+    "occurrences": 77,
+    "full_file_occurrences": 53,
+    "line_span_occurrences": 24,
+    "unique_paths": 39,
+    "paths": [
+      "00_control/SOURCE_MANIFEST.csv",
+      "00_control/TERMINOLOGY.id-ID.csv",
+      "artifacts/unit-028-bab-4-aksi-grup-dan-prinsip-pencacahan-id.pdf",
+      "authority/archives/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b.zip",
+      "authority/pdfs/Al-jabr-1.pdf",
+      "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter4.tex",
+      "build/unit-028-candidate/chapter4-group-actions-counting-id.tex",
+      "build/unit-028-staging/terminology-delta.csv",
+      "qa/UNIT_028_BUILD_FINAL.log",
+      "qa/UNIT_028_INDEPENDENT_REVIEW_20260825.md",
+      "qa/UNIT_028_PREPROMOTION_AUDIT_20260825.md",
+      "qa/UNIT_028_TERMINOLOGY_AUDIT_20260825.md",
+      "qa/UNIT_028_VISUAL_PREFLIGHT_20260825.md",
+      "qa/UNIT_028_VISUAL_QA_20260825.md",
+      "qa/unit-028-evidence/render-hash-inventory.json",
+      "qa/unit-028-evidence/structure-and-pdf-qa.json",
+      "repo/fonts/NotoSansCJKsc-Black.otf",
+      "repo/fonts/NotoSansCJKsc-Medium.otf",
+      "repo/fonts/NotoSansCJKsc-Regular.otf",
+      "repo/fonts/NotoSerifCJKsc-Bold.otf",
+      "repo/fonts/OFL-1.1-Noto-CJK.txt",
+      "repo/source/AJbook.cls",
+      "repo/source/Al-jabr.bib",
+      "repo/source/LICENSE",
+      "repo/source/Lanzhou.png",
+      "repo/source/ccby.png",
+      "repo/source/chapter4.tex",
+      "repo/source/coverpage-id-unit-028.tex",
+      "repo/source/font-setup-id.tex",
+      "repo/source/locale-ui-id.tex",
+      "repo/source/myarrows.sty",
+      "repo/source/mycommand.sty",
+      "repo/source/titles-setup-id.tex",
+      "repo/source/titles-setup.tex",
+      "repo/source/unit-028-bab-4-aksi-grup-dan-prinsip-pencacahan.tex",
+      "repo/source/unit-028-crossrefs.aux",
+      "scripts/build_unit_028.ps1",
+      "scripts/check_unit_028_candidate.py",
+      "scripts/check_unit_028_structure.py"
+    ]
+  },
+  "identities": {
+    "backend/data/unit-028-bab-4-aksi-grup-dan-prinsip-pencacahan.json": {
+      "bytes": 278411,
+      "sha256": "840eb52c05ac6b1bcc8a9755a8d2ee3fcfaa0e4f4479f2c4501d921f358635ab"
+    },
+    "backend/csv/unit-028-bindings.csv": {
+      "bytes": 15952,
+      "sha256": "a0e95582f3bd2371b162b48bcc3e69f85151ecd64a085d9425a80e3bfb68234f"
+    },
+    "backend/csv/unit-028-entities.csv": {
+      "bytes": 82561,
+      "sha256": "e4e8cfad54e7f0ce1922b4b0041e89d55ce2a12828d810cd3c4cb4acef75f75b"
+    },
+    "backend/csv/unit-028-qa.csv": {
+      "bytes": 6641,
+      "sha256": "2da398d6aaa9c57d6290c251d7517e61f0a6038967f9a7be1d9be5f008cd9a39"
+    },
+    "backend/csv/unit-028-relations.csv": {
+      "bytes": 206110,
+      "sha256": "c3e52c181109db608a5a07a875faa4c60c8031ff00e4f3203503c99bea172b07"
+    },
+    "backend/csv/unit-028-rights.csv": {
+      "bytes": 1287,
+      "sha256": "4836630530f87a11a64fe233c59970e2ff7942695a8dbf404f7a0583a275197e"
+    },
+    "backend/csv/unit-028-surfaces.csv": {
+      "bytes": 3107,
+      "sha256": "ec1397d1b01ca68e4a99d40cd47c2e79dad10dcc51467278af02244c153d483c"
+    }
+  },
+  "tools": {
+    "scripts/generate_unit_028_backend.py": {
+      "bytes": 53465,
+      "sha256": "ef49b9420948ee745defbc46f1cad256ab50a44bd44a04ae6967206ea5fd9467"
+    },
+    "scripts/validate_unit_028_backend.py": {
+      "bytes": 25412,
+      "sha256": "f398725e86ca0cc031312b22b8df327dbb980b6a15b40134cb787cb21705de90"
+    }
+  }
+}

@@ -515,154 +515,153 @@ Untuk ekstensi grup $1 \to N \to G \xrightarrow{p} H \to 1$, suatu homomorfisme 
 		\end{tikzcd} \]
 		dengan $\varphi(n, h) := n s(h)$. Silakan pembaca memeriksa bahwa $\varphi$ memang merupakan homomorfisme grup yang injektif.
 \end{enumerate}
-\section{群作用和计数原理}\label{sec:group-action}
-无论从实际应用还是历史的发展观之, 抽象的群往往都由它在某集合上的作用所描述, 而考察种种群作用又是研究群性质的重要手段. 本节的第一个目的是澄清群作用的基本概念.
+\section{Aksi Grup dan Prinsip Pencacahan}\label{sec:group-action}
+Baik dari sudut penerapan nyata maupun perkembangan historis, suatu grup abstrak sering dideskripsikan melalui aksinya pada sebuah himpunan, sedangkan pengkajian berbagai aksi grup merupakan sarana penting untuk meneliti sifat-sifat grup. Tujuan pertama bagian ini ialah memperjelas konsep-konsep dasar aksi grup.
 
-\begin{definition}[幺半群作用]\label{def:monoid-action} \index{qunzuoyong@群作用 (group action)}
-	设 $X$ 为集合, $M$ 为幺半群. $M$ 在 $X$ 上的作用定义为一个映射
+\begin{definition}[Aksi monoid]\label{def:monoid-action} \index{qunzuoyong@aksi grup (group action)}
+	Misalkan $X$ suatu himpunan dan $M$ suatu monoid. Suatu aksi $M$ pada $X$ didefinisikan sebagai pemetaan
 	\[ a: M \times X \to X, \]
-	称为作用映射, 它必须满足以下性质
+	yang disebut pemetaan aksi dan harus memenuhi sifat-sifat berikut:
 	\begin{compactenum}[(i)]
-		\item 对所有 $g,g' \in M$ 和 $x \in X$, 有 $a(g', a(g, x)) = a(g'g, x)$ (结合律),
-		\item 对所有 $x \in X$, 有 $a(1, x)=x$.
+		\item untuk setiap $g,g' \in M$ dan $x \in X$, berlaku $a(g', a(g, x)) = a(g'g, x)$ (hukum asosiatif),
+		\item untuk setiap $x \in X$, berlaku $a(1, x)=x$.
 	\end{compactenum}
-	带有 $M$ 作用的集合称为 $M$-集. 对所有 $m,x$ 皆有 $a(m,x)=x$ 的作用称为\emph{平凡作用}. $M$-集间的映射 $f: X \to Y$ 若满足
+	Himpunan yang dilengkapi aksi $M$ disebut himpunan-$M$. Aksi yang untuk setiap $m,x$ memenuhi $a(m,x)=x$ disebut \emph{aksi trivial}. Suatu pemetaan di antara himpunan-$M$, yaitu $f: X \to Y$,
 	\[ f(a(m, x)) = a(m, f(x)), \quad m \in M, x \in X \]
-	则称为 $M$-\emph{等变}映射. 若等变映射
+	disebut pemetaan $M$-\emph{ekuivarian} jika memenuhi persamaan tersebut. Jika pemetaan-pemetaan ekuivarian
 	\begin{tikzcd}
-		M_1 \arrow[yshift=0.5ex, r, "f"] & M_2 \arrow[yshift=-0.5ex, l, "g"]
+		X \arrow[yshift=0.5ex, r, "f"] & Y \arrow[yshift=-0.5ex, l, "g"]
 	\end{tikzcd}
-	满足 $fg = \identity_{M_2}$, $gf = \identity_{M_1}$, 则称 $f, g$ 为互逆的同构. 由此可以定义 $M$-集之间的同构概念.
+	memenuhi $fg = \identity_Y$, $gf = \identity_X$, maka $f, g$ disebut isomorfisme yang saling invers. Dengan demikian, kita dapat mendefinisikan konsep isomorfisme antara himpunan-$M$.
 \end{definition}
 
 \begin{remark}
-	一句话, 给定 $M$, 全体 $M$-集连同等变映射构成一范畴 $M\dcate{Set}$. 这里严格地说也得限制 $M$-集 $X$ 的大小, 必须假设 $M$, $X$ 同属选定的宇宙 $\mathcal{U}$, 详见定义 \ref{def:U-cat} 及相关讨论.
+	Singkatnya, untuk $M$ yang diberikan, semua himpunan-$M$ beserta pemetaan ekuivarian membentuk suatu kategori $M\dcate{Set}$. Secara ketat, ukuran himpunan-$M$ $X$ juga harus dibatasi: kita perlu mengandaikan bahwa $M$ dan $X$ termasuk dalam semesta yang sama dan telah dipilih, yaitu $\mathcal{U}$; lihat Definisi \ref{def:U-cat} beserta pembahasan terkait.
 \end{remark}
 
-% 倘若用例 \ref{eg:symmetric-group} 的语言, 那么给定 $M$ 在 $X$ 上的作用相当于给定同态 $M \to \Aut(X)$: 它将每个 $m \in M$ 映至双射 $\left[ x \mapsto a(m,x) \right] \in \Aut(X)$.
+% Dalam bahasa Contoh \ref{eg:symmetric-group}, suatu aksi $M$ pada $X$ ekuivalen dengan pemberian homomorfisme $M \to \Aut(X)$: setiap $m \in M$ dipetakan ke bijeksi $\left[ x \mapsto a(m,x) \right] \in \Aut(X)$.
 
-习惯将 $M$-集带有的作用映射略去, 并将 $a(m, x)$ 写成 $m \cdot x$ 或 $mx$. 作用映射的条件和等变性遂有自然的写法
+Menurut kebiasaan, pemetaan aksi yang melekat pada suatu himpunan-$M$ tidak dituliskan, dan $a(m, x)$ ditulis sebagai $m \cdot x$ atau $mx$. Syarat bagi pemetaan aksi dan ekuivariansinya lalu mengambil bentuk alami
 \begin{gather*}
 	m'(mx) = (m'm)x, \\
 	1 \cdot x = x, \\
 	f(mx) = mf(x),
 \end{gather*}
-其中 $ m, m' \in M, x \in X$. 这般定义的作用称为 $M$ 的左作用, 因以 $M$ 的左乘表示之故. 我们同样可以定义 $M$ 的右作用 $(x, m) \mapsto xm$. 上述定义可以逐条改写, 例如 $(xm)m' = x(mm')$ 等. 一劳永逸的方法则是利用对偶性: $M$ 的右作用无非是 $M^\text{op}$ 的左作用. 本节针对左作用的陈述都有相应的右版本, 不再赘述.
+dengan $ m, m' \in M, x \in X$. Aksi yang didefinisikan demikian disebut aksi kiri $M$, sebab dinyatakan melalui perkalian kiri oleh $M$. Dengan cara yang sama, kita dapat mendefinisikan aksi kanan $M$, yakni $(x, m) \mapsto xm$. Definisi di atas dapat ditulis ulang butir demi butir, misalnya $(xm)m' = x(mm')$, dan seterusnya. Cara yang sekaligus menangani semuanya ialah menggunakan dualitas: aksi kanan $M$ tidak lain merupakan aksi kiri $M^\text{op}$. Setiap pernyataan dalam bagian ini mengenai aksi kiri memiliki versi kanan yang bersesuaian dan tidak akan diulangi.
 
 \begin{example}
-	对任意集合 $X$, 对称群 $\mathfrak{S}_X$ 当然地作用于 $X$ 上: $a: (\sigma, x) \mapsto \sigma(x)$. 类似地, 实 $n \times n$ 矩阵所成幺半群 $M_n(\R)$ 作用于 $\R^n$: 视 $\R^n$ 元素为 $n \times 1$ 阶竖直矩阵, 则作用 $(A, x) \mapsto A x$ 无非是矩阵乘法.
+	Untuk setiap himpunan $X$, grup simetris $\mathfrak{S}_X$ beraksi secara alami pada $X$: $a: (\sigma, x) \mapsto \sigma(x)$. Demikian pula, monoid matriks real $n \times n$, yaitu $M_n(\R)$, beraksi pada $\R^n$: dengan memandang unsur $\R^n$ sebagai matriks kolom berukuran $n \times 1$, aksi $(A, x) \mapsto A x$ tidak lain adalah perkalian matriks.
 \end{example}
 
 \begin{example}
-	若群 $G$ 左作用于 $X$, 而 $Y$ 是任意集合, 则 $G$ 在 $\{f: \text{映射}\; X \to Y \}$ 上有自然的左作用 $a(g,f) = \left[ x \mapsto f(g^{-1}x) \right]$; 若 $G$ 右作用于 $X$, 则相应的左作用取为 $[x \mapsto f(xg)]$. 请读者验证细节.
+	Jika grup $G$ beraksi dari kiri pada $X$ dan $Y$ merupakan sebarang himpunan, maka terdapat aksi kiri alami $G$ pada $\{f: \text{pemetaan}\; X \to Y \}$ yang diberikan oleh $a(g,f) = \left[ x \mapsto f(g^{-1}x) \right]$; jika $G$ beraksi dari kanan pada $X$, aksi kiri yang bersesuaian diberikan oleh $[x \mapsto f(xg)]$. Verifikasilah rinciannya.
 \end{example}
 
 \begin{example}
-	以下讨论可参看 \cite[例 7.2.4]{Zh2}. 设 $n \geq 1$, 空间 $C_\infty(\R^n)$ 为速降函数空间 $\mathscr{S}(\R^n)$ (参看 \cite[例 3.2.7]{Zh1}) 在 $L^\infty(\R^n)$  中的闭包. 定义幺半群 $(\R_{\geq 0}, +)$ 在 $C_\infty(\R^n)$ 上的作用如下:
+	Pembahasan berikut dapat dibandingkan dengan \cite[Contoh 7.2.4]{Zh2}. Misalkan $n \geq 1$, dan misalkan ruang $C_\infty(\R^n)$ merupakan penutupan ruang fungsi turun cepat $\mathscr{S}(\R^n)$ (lihat \cite[Contoh 3.2.7]{Zh1}) di dalam $L^\infty(\R^n)$. Definisikan aksi monoid $(\R_{\geq 0}, +)$ pada $C_\infty(\R^n)$ sebagai berikut:
 	\[ a(t, u) =
 		\begin{cases}
 			G_t \ast u, & t > 0, \\
 			u, & t=0,
 		\end{cases}\]
-	其中 $\ast$ 是卷积而 $G_t$ 是 $\R^n$ 上熟知的热核函数
+	dengan $\ast$ menyatakan konvolusi dan $G_t$ merupakan fungsi kernel panas yang dikenal pada $\R^n$,
 	\[ G_t(x) := (4\pi t)^{-\frac{n}{2}} e^{-\|x\|^2 /4t}, \quad x \in \R^n. \]
-	根据热传导方程的理论, $v(t, \cdot) := a(t, u)$ 满足初值问题 $\frac{\partial v}{\partial t} = \Delta v$, $v(0, \cdot) = u(\cdot)$, 因此 $a$ 的确给出幺半群作用. 泛函分析中称此为算子(幺)半群. 由于热传导磨光函数的奇点, 此作用无法延拓到群 $(\R, +)$.
+	Menurut teori persamaan panas, $v(t, \cdot) := a(t, u)$ memenuhi masalah nilai awal $\frac{\partial v}{\partial t} = \Delta v$, $v(0, \cdot) = u(\cdot)$; karena itu, $a$ memang memberikan suatu aksi monoid. Dalam analisis fungsional, aksi ini disebut semigrup operator. Karena hantaran panas menghaluskan singularitas fungsi, aksi ini tidak dapat diperluas menjadi aksi grup $(\R, +)$.
 \end{example}
 
-\begin{definition}\index{guidao@轨道 (orbit)}\index{wendinghuazi@稳定化子 (stabilizer)}\index[sym1]{Stab@$\Stab$}
-	设幺半群 $M$ 作用于 $X$. 定义
+\begin{definition}\index{guidao@orbit (orbit)}\index{wendinghuazi@stabilisator (stabilizer)}\index[sym1]{Stab@$\Stab$}
+	Misalkan monoid $M$ beraksi pada $X$. Definisikan
 	\begin{compactitem}
-		\item \emph{不动点}集 $X^M := \{x \in X: \forall m \in M, \; mx=x \}$;
-		\item 对于 $x \in X$, \emph{轨道} $Mx := \{mx : m \in M \}$, 其元素称为该轨道的代表元, 轨道 $Mx$ 是 $X$ 的 $M$-子集;
-		\item 承上, 其\emph{稳定化子}定为 $M$ 的子幺半群 $\Stab_M(x) := \{m \in M : mx=x\}$.
+		\item himpunan \emph{titik tetap} $X^M := \{x \in X: \forall m \in M, \; mx=x \}$;
+		\item untuk $x \in X$, \emph{orbit} $Mx := \{mx : m \in M \}$, yang setiap unsurnya disebut wakil orbit tersebut; orbit $Mx$ merupakan subhimpunan dari $X$ yang stabil di bawah $M$;
+		\item dengan notasi di atas, \emph{stabilisatornya} didefinisikan sebagai submonoid dari $M$, yaitu $\Stab_M(x) := \{m \in M : mx=x\}$.
 	\end{compactitem}
 \end{definition}
 
-最常用的作用还是群作用. 对于群 $G$, 作用的基本构件是形如 $G/H$ 的陪集空间, 其作用映射由 $(g, xH) \mapsto gxH$ 给出. 以下结果告诉我们如何将一般的 $G$-集分解成陪集空间的无交并. 这也是计数原理的出发点.
+Aksi yang paling sering digunakan tetaplah aksi grup. Bagi suatu grup $G$, blok pembangun dasar bagi aksi adalah ruang koset berbentuk $G/H$, dengan pemetaan aksi $(g, xH) \mapsto gxH$. Hasil berikut menjelaskan cara menguraikan himpunan-$G$ umum sebagai gabungan saling lepas ruang-ruang koset. Inilah pula titik awal prinsip pencacahan.
 
 \begin{lemma}\label{prop:orbit-decomp}
-	设群 $G$ 作用于 $X$, 则
+	Misalkan grup $G$ beraksi pada $X$. Maka:
 	\begin{compactenum}[(i)]
-		\item 有轨道分解 $X = \bigsqcup_x Gx$, 其中我们对每个轨道选定代表元 $x$;
-		\item 对每个 $x \in X$, 映射
+		\item terdapat dekomposisi orbit $X = \bigsqcup_x Gx$, dengan memilih satu wakil $x$ dari setiap orbit;
+		\item untuk setiap $x \in X$, pemetaan
 			\begin{align*}
 				G/\Stab_G(x) & \longrightarrow Gx \\
 				g \cdot \Stab_G(x) & \longmapsto gx
 			\end{align*}
-			是 $G$-集间的同构;
-		\item 特别地, 我们有基数的等式 (参看 \eqref{eqn:cardinal-infinite-sum})
+			merupakan isomorfisme antara himpunan-$G$;
+		\item khususnya, kita mempunyai persamaan kardinal (lihat \eqref{eqn:cardinal-infinite-sum})
 			\[ |X| = \sum_x \left( G: \Stab_G(x) \right); \]
-		\item 对所有 $x \in X$ 和 $g \in G$, 有
+		\item untuk setiap $x \in X$ dan $g \in G$, berlaku
 			\[ \Stab_G(gx) = g \Stab_G(x) g^{-1}. \]
 	\end{compactenum}
 \end{lemma}
 \begin{proof}
-	首先证明若两轨道 $Gx, Gy$ 有交, 则 $Gx=Gy$. 诚然, 若 $gx=g'y$, 则 $x = g^{-1}g' y \in Gy$, 故 $Gx \subset Gy$; 由对称性导出 $Gx=Gy$. 由 $\forall x, \; x = 1\cdot x \in Gx$ 立得轨道分解. 关于映射 $G/\Stab_G(x) \to Gx$ 的断言是稳定化子定义的直接推论. 配合轨道分解便导出基数等式. 最后一个等式可径由定义验证.
+	Pertama, kita buktikan bahwa jika dua orbit $Gx, Gy$ beririsan, maka $Gx=Gy$. Memang, jika $gx=g'y$, maka $x = g^{-1}g' y \in Gy$, sehingga $Gx \subset Gy$; berdasarkan simetri, diperoleh $Gx=Gy$. Karena $\forall x, \; x = 1\cdot x \in Gx$, dekomposisi orbit segera diperoleh. Pernyataan mengenai pemetaan $G/\Stab_G(x) \to Gx$ merupakan akibat langsung dari definisi stabilisator. Bersama dekomposisi orbit, hal ini menghasilkan persamaan kardinal. Persamaan terakhir dapat diverifikasi langsung dari definisi.
 \end{proof}
 
-由此可见性质 ``$x,y$ 属同一轨道''给出 $X$ 上的等价关系. 相应的商集或曰轨道空间记为 $G \backslash X$; 对于右作用, 轨道空间自然就记为 $X/G$. 留意到给定 $G$ 在 $X$ 上的作用相当于给定同态 $G \to \mathfrak{S}_X$, 它映 $g$ 为 $[x \mapsto gx]$.
+Dengan demikian, sifat ``$x,y$ berada dalam orbit yang sama'' memberikan suatu relasi ekuivalensi pada $X$. Himpunan hasil bagi yang bersesuaian, atau ruang orbit, dinotasikan dengan $G \backslash X$; bagi aksi kanan, ruang orbit secara alami dinotasikan dengan $X/G$. Perhatikan bahwa memberikan aksi $G$ pada $X$ ekuivalen dengan memberikan homomorfisme $G \to \mathfrak{S}_X$ yang memetakan $g$ ke $[x \mapsto gx]$.
 \begin{definition}
-	设 $G$ 为群, $X$ 为 $G$-集, 我们称 $G$ 在 $X$ 上的作用是 \index{qunzuoyong!忠实 (faithful)}\index{qunzuoyong!传递 (transitive)}
+	Misalkan $G$ suatu grup dan $X$ suatu himpunan-$G$. Aksi $G$ pada $X$ disebut \index{qunzuoyong!setia (faithful)}\index{qunzuoyong!transitif (transitive)}
 	\begin{compactitem}
-		\item 忠实的, 如果相应的 $G \to \mathfrak{S}_X$ 是单射, 这相当于 $\bigcap_{x \in X} \Stab_G(x) = \{1\}$;
-		\item 自由的或单的, 如果对任意 $x \in X$ 都有 $\Stab_G(x) = \{1\}$;
-		\item 传递的, 如果 $X$ 仅有一个轨道, 这相当于要求 $X$ 非空, 并且对所有 $x, y \in X$ 皆存在 $g \in G$ 使得 $gx=y$;
-		\item 推而广之, 若对每个 $1 \leq m \leq n$, 群 $G$ 在 $\{ (x_1, \ldots, x_m) \in X^m: \text{相异元} \}$ 上的作用皆传递, 则称 $G$ 在 $X$ 上的作用为 $n$-传递的.
+		\item setia, jika homomorfisme $G \to \mathfrak{S}_X$ yang bersesuaian merupakan injeksi; ini ekuivalen dengan $\bigcap_{x \in X} \Stab_G(x) = \{1\}$;
+		\item bebas atau semireguler, jika untuk setiap $x \in X$ berlaku $\Stab_G(x) = \{1\}$;
+		\item transitif, jika $X$ hanya mempunyai satu orbit; ini ekuivalen dengan mensyaratkan bahwa $X$ tidak kosong dan, untuk setiap $x, y \in X$, terdapat $g \in G$ sedemikian sehingga $gx=y$;
+		\item lebih umum, jika untuk setiap $1 \leq m \leq n$, grup $G$ beraksi secara transitif pada $\{ (x_1, \ldots, x_m) \in X^m: \text{unsur-unsur berbeda} \}$, maka aksi $G$ pada $X$ disebut $n$-transitif.
 	\end{compactitem}
 
-	传递的 $G$-集又称 $G$-\emph{齐性空间}, 自由的 $G$-齐性空间称为 $G$-\emph{主齐性空间}或\emph{挠子}.\index{qixingkongjian@齐性空间 (homogeneous space)}\index{naozi@挠子 (torsor)}
+	Himpunan-$G$ yang transitif juga disebut \emph{ruang homogen}-$G$, sedangkan ruang homogen-$G$ yang bebas disebut \emph{ruang homogen utama}-$G$ atau \emph{torsor}.\index{qixingkongjian@ruang homogen (homogeneous space)}\index{naozi@torsor (torsor)}
 \end{definition}
-作为引理 \ref{prop:orbit-decomp} 的推论, 陪集空间 $G/H$ 在同构意义下穷尽了所有齐性空间.
+Sebagai akibat dari Lema \ref{prop:orbit-decomp}, hingga isomorfisme, ruang koset $G/H$ mencakup semua ruang homogen.
 
-这些术语有显然的几何渊源, 为此必须引入流形结构及底空间. 然而本节考虑的仅有集合, 主要的应用在于集合的计数问题, 详见 \S\ref{sec:Sylow}.  我们且先看些一般例子.
+Istilah-istilah ini jelas berasal dari geometri, yang untuk itu struktur manifold dan ruang dasar perlu diperkenalkan. Namun, bagian ini hanya membahas himpunan, dan penerapan utamanya adalah masalah pencacahan himpunan; lihat \S\ref{sec:Sylow}. Untuk sementara, mari kita tinjau beberapa contoh umum.
 
-\begin{example}[平移作用与陪集]
-	设 $G$ 为群而 $H$ 为其子群, 则 $H$ 在 $G$ 上的左作用 $(h, g) \mapsto hg$ 称为左平移作用. 易见
+\begin{example}[Aksi translasi dan koset]
+	Misalkan $G$ suatu grup dan $H$ subgrupnya. Aksi kiri $H$ pada $G$ yang diberikan oleh $(h, g) \mapsto hg$ disebut aksi translasi kiri. Jelas bahwa
 	\begin{inparaenum}[(i)]
-		\item 相应的轨道无非是陪集 $Hg$ ($g \in G$),
-		\item 轨道空间无非是陪集空间 $H \backslash G$,
-		\item 此作用是自由的, 它是传递的当且仅当 $H=G$.
+		\item orbit-orbit yang bersesuaian tidak lain adalah koset $Hg$ ($g \in G$),
+		\item ruang orbitnya tidak lain adalah ruang koset $H \backslash G$,
+		\item aksi ini bebas, dan transitif jika dan hanya jika $H=G$.
 	\end{inparaenum}
-	这些断言对 $H$ 在 $G$ 上的右平移作用 $(g,h) \mapsto gh$ 同样成立, 相应的轨道空间无非是 $G/H$.
+	Pernyataan yang sama berlaku bagi aksi translasi kanan $H$ pada $G$, yaitu $(g,h) \mapsto gh$; ruang orbit yang bersesuaian tidak lain adalah $G/H$.
 
-	现在设 $H, K$ 为 $G$ 的子群. 双陪集有类似的解读: 考虑 $H \times K^\text{op}$ 在 $G$ 上的左作用
+	Sekarang misalkan $H, K$ subgrup-subgrup dari $G$. Koset ganda mempunyai penafsiran serupa: tinjau aksi kiri $H \times K^\text{op}$ pada $G$,
 	\[ ((h, k), g) \mapsto hgk, \quad (h, k) \in H \times K^\text{op}, \; g \in G. \]
-	相应的轨道正好是双陪集 $HgK$ ($g \in G$), 轨道空间等同于 $H \backslash G/K$. 但此作用的其它性质则远比左陪集或右陪集的情形复杂.
+	Orbit yang bersesuaian tepat merupakan koset-koset ganda $HgK$ ($g \in G$), sedangkan ruang orbitnya diidentifikasi dengan $H \backslash G/K$. Namun, sifat-sifat lain aksi ini jauh lebih rumit daripada dalam kasus koset kiri atau koset kanan.
 \end{example}
 
-\begin{example}[共轭作用]\label{eg:conj-action} \index{gonge@共轭 (conjugation)}
-	依旧设 $G$ 为群. 伴随自同构 $\Ad: G \to \Aut(G)$ 给出的作用称为 $G$ 的\emph{共轭作用} $G \times G \to G$ (在此考虑左作用). 定义展开后无非是
+\begin{example}[Aksi konjugasi]\label{eg:conj-action} \index{gonge@konjugasi (conjugation)}
+	Tetap misalkan $G$ suatu grup. Homomorfisme adjoin $\Ad: G \to \Aut(G)$ memberikan aksi $G$ yang disebut \emph{aksi konjugasi} pada dirinya sendiri, yakni $G \times G \to G$ (di sini kita meninjau aksi kiri). Setelah definisinya diuraikan, aksi ini tidak lain adalah
 	\[ (g, x) \longmapsto {}^g x := gxg^{-1}. \]
-	共轭作用下的轨道称为 $G$ 中的\emph{共轭类}.
+	Orbit di bawah aksi konjugasi disebut \emph{kelas konjugasi} dalam $G$.
 
-	推而广之, 对任意子集 $E \subset G$ 我们业已定义子群 $N_G(E)$, 它在 $E$ 上的作用也叫共轭. 若两子集 $E, E'$ 满足 $\exists g \in G, \; E' = gEg^{-1}$, 则称 $E$ 与 $E'$ 共轭.
+	Lebih umum, untuk sebarang subhimpunan $E \subset G$, kita telah mendefinisikan subgrup $N_G(E)$; aksinya pada $E$ juga disebut konjugasi. Jika dua subhimpunan $E, E'$ memenuhi $\exists g \in G, \; E' = gEg^{-1}$, maka $E$ dan $E'$ disebut saling konjugat.
 
-	非交换群共轭作用的性状一般相当复杂. 对于 $x \in G$, 其稳定化子群正是中心化子 $Z_G(x)$, 而不动点集则是中心 $Z_G$. 剖析 $G$ 的共轭作用是了解其群结构的必由之路.
+	Perilaku aksi konjugasi pada grup nonkomutatif umumnya cukup rumit. Untuk $x \in G$, subgrup stabilisatornya tepat merupakan sentralisator $Z_G(x)$, sedangkan himpunan titik tetapnya adalah pusat $Z_G$. Menganalisis aksi konjugasi $G$ merupakan langkah yang tak terelakkan untuk memahami struktur grup tersebut.
 \end{example}
 
-挠子是一类特别常见的 $G$-集, 这套语言需要有合适的几何背景方能发力: 参看 \S\ref{sec:group-in-cat}. 以下仅介绍最初步的例子.
+Torsor merupakan jenis himpunan-$G$ yang sangat umum dijumpai. Bahasa ini baru menunjukkan kekuatannya apabila dilengkapi latar belakang geometri yang sesuai; lihat \S\ref{sec:group-in-cat}. Berikut hanya diperkenalkan contoh yang paling dasar.
 \begin{example}
-	设 $G_1$, $G_2$ 为群, 置
-	\[ \Isom(G_1, G_2) := \{ \text{ 同构 } \; \varphi: G_1 \to G_2 \}. \]
-	当 $\Isom(G_1, G_2)$ 非空时, 其上有 $\Aut(G_2)$ 的左作用 $(g, \varphi) \mapsto g \circ \varphi$, 其中 $g \in \Aut(G_2)$. 这使得 $\Isom(G_1, G_2)$ 成为 $\Aut(G_2)$-挠子. 虽然这里只考虑群同构, 类似构造实则可以在任意范畴中进行, 请参见 \S\ref{sec:cat-and-morphism}.
+	Misalkan $G_1$, $G_2$ grup, dan tetapkan
+	\[ \Isom(G_1, G_2) := \{ \text{ isomorfisme } \; \varphi: G_1 \to G_2 \}. \]
+	Jika $\Isom(G_1, G_2)$ tidak kosong, terdapat aksi kiri $\Aut(G_2)$ padanya, yakni $(g, \varphi) \mapsto g \circ \varphi$, dengan $g \in \Aut(G_2)$. Aksi ini menjadikan $\Isom(G_1, G_2)$ suatu torsor-$\Aut(G_2)$. Walaupun yang ditinjau di sini hanya isomorfisme grup, konstruksi serupa sebenarnya dapat dilakukan dalam sebarang kategori; lihat \S\ref{sec:cat-and-morphism}.
 
-	我们当然不必自限于左作用, $\Aut(G_1)$ 也借映射合成右作用于 $\Isom(G_1, G_2)$, 两侧的作用满足 $(g \circ \varphi) \circ g' = g \circ (\varphi \circ g')$, 故可并作 $\Aut(G_1)^{\text{op}} \times \Aut(G_2)$-作用, 无论左看右看 $\Isom(G_1, G_2)$ 都是挠子. 这样的结构称为双挠子.
+	Kita tentu tidak perlu membatasi diri pada aksi kiri: $\Aut(G_1)$ juga beraksi dari kanan pada $\Isom(G_1, G_2)$ melalui komposisi pemetaan. Aksi di kedua sisi ini memenuhi $(g \circ \varphi) \circ g' = g \circ (\varphi \circ g')$, sehingga dapat digabungkan menjadi aksi $\Aut(G_1)^{\text{op}} \times \Aut(G_2)$. Baik dilihat dari kiri maupun kanan, $\Isom(G_1, G_2)$ merupakan torsor. Struktur semacam ini disebut bitorsor.
 \end{example}
 
-挠子原来的定义稍显曲折, 然而它另有简捷的刻画如下, 在范畴论的框架中将会格外方便; 可参看 \S\ref{sec:group-in-cat}.
+Definisi asli torsor agak tidak langsung. Namun, terdapat karakterisasi ringkas berikut, yang akan sangat berguna dalam kerangka teori kategori; lihat \S\ref{sec:group-in-cat}.
 
 \begin{lemma}\label{prop:torsor-criterion}
-	设 $X$ 为非空 $G$-集, 则 $X$ 为挠子当且仅当映射
+	Misalkan $X$ suatu himpunan-$G$ yang tidak kosong. Maka $X$ merupakan torsor jika dan hanya jika pemetaan
 	\begin{align*}
 		\Phi: G \times X & \longrightarrow X \times X \\
 		(g, x) &  \longmapsto (x, gx)
 	\end{align*}
-	是双射.
+	merupakan bijeksi.
 \end{lemma}
 \begin{proof}
-	据定义 $\Phi^{-1}(x,y) = \{g \in G: gx=y\} \times \{x\}$. 因此映射 $\Phi$ 是单射当且仅当 $X$ 自由, 是满射当且仅当 $X$ 传递.
+	Menurut definisi, $\Phi^{-1}(x,y) = \{g \in G: gx=y\} \times \{x\}$. Karena itu, pemetaan $\Phi$ injektif jika dan hanya jika $X$ bebas, dan surjektif jika dan hanya jika $X$ transitif.
 \end{proof}
-
 \section{Sylow 定理}\label{sec:Sylow}
 首先引入 $p$-群的概念.
 

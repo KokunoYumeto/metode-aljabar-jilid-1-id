@@ -1,0 +1,2002 @@
+{
+  "actionable_defects": [],
+  "cross_pdf_semantic_identity": true,
+  "documents": {
+    "artifact": {
+      "actions": {
+        "all_uris_https": true,
+        "annotation_additional_actions": 0,
+        "broken_destinations": [],
+        "catalog_additional_action": false,
+        "counts": {
+          "/GoTo": 2,
+          "/URI": 3
+        },
+        "gotos": [
+          "cite.0@Zh2",
+          "cite.0@Zh1"
+        ],
+        "links": [
+          {
+            "action": "/URI",
+            "ordinal_on_page": 1,
+            "page": 2,
+            "rect": [
+              115.616,
+              286.124,
+              174.552,
+              298.856
+            ],
+            "target": "https://www.wwli.asia"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 2,
+            "page": 2,
+            "rect": [
+              275.999,
+              196.424,
+              388.975,
+              208.385
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 3,
+            "page": 2,
+            "rect": [
+              164.469,
+              182.725,
+              258.616,
+              194.687
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 4,
+            "rect": [
+              335.051,
+              432.549,
+              340.032,
+              446.666
+            ],
+            "target": "cite.0@Zh2"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 2,
+            "page": 4,
+            "rect": [
+              78.289,
+              404.813,
+              83.271,
+              418.93
+            ],
+            "target": "cite.0@Zh1"
+          }
+        ],
+        "out_of_bounds_rectangles": [],
+        "page_additional_actions": 0,
+        "unsafe": [],
+        "uris": [
+          "https://www.wwli.asia",
+          "https://creativecommons.org/licenses/by/4.0/",
+          "https://creativecommons.org/licenses/by/4.0/"
+        ]
+      },
+      "catalog_keys": [
+        "/Lang",
+        "/Names",
+        "/OpenAction",
+        "/Outlines",
+        "/PageLabels",
+        "/PageMode",
+        "/Pages",
+        "/Type"
+      ],
+      "checks": {
+        "action_counts": true,
+        "fonts_embedded": true,
+        "known_math_font_nul_census": true,
+        "language_id_ID": true,
+        "link_closure": true,
+        "metadata_exact": true,
+        "no_active_payloads": true,
+        "outline_exact": true,
+        "rectangles_in_bounds": true,
+        "safe_actions": true,
+        "seven_pages": true,
+        "text_blocks_in_bounds": true,
+        "text_has_no_replacement_characters": true,
+        "thirty_eight_destinations": true,
+        "untagged_disclosed": true
+      },
+      "encrypted": false,
+      "fonts": {
+        "pdffonts_all_embedded": true,
+        "pdffonts_rows": 24,
+        "pdffonts_stderr": "Syntax Error: Missing language pack for 'Adobe-GB1' mapping",
+        "pypdf_all_embedded": true,
+        "pypdf_unique": 25,
+        "records": [
+          {
+            "basefont": "/IECOQK+CMEX10",
+            "embedded": true,
+            "normalized": "/CMEX10",
+            "object": "52 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/GOLLIA+CMMI10",
+            "embedded": true,
+            "normalized": "/CMMI10",
+            "object": "38 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/RLMLRJ+CMMI5",
+            "embedded": true,
+            "normalized": "/CMMI5",
+            "object": "57 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/UNBHYY+CMMI7",
+            "embedded": true,
+            "normalized": "/CMMI7",
+            "object": "44 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/OFPJOS+CMR10",
+            "embedded": true,
+            "normalized": "/CMR10",
+            "object": "39 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/CRXSLD+CMR5",
+            "embedded": true,
+            "normalized": "/CMR5",
+            "object": "58 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/MRANWM+CMR7",
+            "embedded": true,
+            "normalized": "/CMR7",
+            "object": "53 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/AAPTFP+CMSY10",
+            "embedded": true,
+            "normalized": "/CMSY10",
+            "object": "40 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "basefont": "/PCMDXK+CMSY7",
+            "embedded": true,
+            "normalized": "/CMSY7",
+            "object": "41 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/BYWULR+EUFM10",
+            "embedded": true,
+            "normalized": "/EUFM10",
+            "object": "50 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/ILGZJM+FandolHei-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/FandolHei-Regular-Identity-H",
+            "object": "70 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": false
+          },
+          {
+            "basefont": "/MVOYQP+LMMono12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono12-Regular-Identity-H",
+            "object": "20 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/UOJMRU+LMMono9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono9-Regular-Identity-H",
+            "object": "27 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/GCOROT+LMRoman10-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Bold-Identity-H",
+            "object": "42 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/BFYNTL+LMRoman10-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Regular-Identity-H",
+            "object": "36 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/VLJYJJ+LMRoman12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman12-Regular-Identity-H",
+            "object": "11 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/MCRYII+LMRoman17-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman17-Regular-Identity-H",
+            "object": "9 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/OFLPTB+LMRoman7-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman7-Regular-Identity-H",
+            "object": "48 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/XUQUPM+LMRoman8-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman8-Regular-Identity-H",
+            "object": "34 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/UGGIVS+LMRoman9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman9-Regular-Identity-H",
+            "object": "22 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/PPYCBU+MSBM10",
+            "embedded": true,
+            "normalized": "/MSBM10",
+            "object": "51 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/IILOFT+NotoSansCJKsc-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/NotoSansCJKsc-Regular-Identity-H",
+            "object": "68 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/SWHUGO+TeXGyreHeros-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Bold-Identity-H",
+            "object": "13 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/MQSAUR+TeXGyreHeros-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Regular-Identity-H",
+            "object": "15 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/QYZDRN+rsfs10",
+            "embedded": true,
+            "normalized": "/rsfs10",
+            "object": "55 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          }
+        ]
+      },
+      "geometry": {
+        "fitz_text_blocks_out_of_bounds": []
+      },
+      "identity": {
+        "bytes": 108689,
+        "path": "artifacts/unit-028-bab-4-aksi-grup-dan-prinsip-pencacahan-id.pdf",
+        "sha256": "50c40ddefa870866568f8d1621d5fc204a1fd0fd0a45bdfc74659197c585790a"
+      },
+      "language": "id-ID",
+      "metadata": {
+        "/Author": "Wen-Wei Li",
+        "/CreationDate": "D:20260825000000Z",
+        "/Creator": "LaTeX with hyperref",
+        "/Keywords": "aljabar, teori grup, aksi grup, orbit, stabilisator, torsor, prinsip pencacahan, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.4 lengkap",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 28: Aksi Grup dan Prinsip Pencacahan"
+      },
+      "name_tree_keys": [
+        "/Dests"
+      ],
+      "named_destinations": {
+        "Doc-Start": 1,
+        "Item.1": 3,
+        "Item.2": 3,
+        "Item.3": 5,
+        "Item.4": 5,
+        "Item.5": 5,
+        "Item.6": 5,
+        "Item.7": 6,
+        "Item.8": 6,
+        "Item.9": 6,
+        "cite.0@Zh1": 7,
+        "cite.0@Zh2": 7,
+        "page.1": 3,
+        "page.2": 4,
+        "page.3": 5,
+        "page.4": 6,
+        "page.5": 7,
+        "proof.1": 5,
+        "proof.2": 7,
+        "section*.1": 7,
+        "section*.2": 7,
+        "section*.3": 7,
+        "section.4.4": 3,
+        "theorem.4.4.1": 3,
+        "theorem.4.4.10": 6,
+        "theorem.4.4.11": 6,
+        "theorem.4.4.12": 7,
+        "theorem.4.4.2": 3,
+        "theorem.4.4.3": 4,
+        "theorem.4.4.4": 4,
+        "theorem.4.4.5": 4,
+        "theorem.4.4.6": 4,
+        "theorem.4.4.7": 4,
+        "theorem.4.4.8": 5,
+        "theorem.4.4.9": 6,
+        "unit028-bibliography.0": 7,
+        "unit028-symbol-index.0": 7,
+        "unit028-term-index.0": 7
+      },
+      "open_action": {
+        "fit": "/Fit",
+        "kind": "direct_page_destination",
+        "page": 1
+      },
+      "outline": [
+        {
+          "depth": 0,
+          "page": 3,
+          "title": "4.4 Aksi Grup dan Prinsip Pencacahan"
+        },
+        {
+          "depth": 0,
+          "page": 7,
+          "title": "Daftar Pustaka"
+        },
+        {
+          "depth": 0,
+          "page": 7,
+          "title": "Indeks Istilah"
+        },
+        {
+          "depth": 0,
+          "page": 7,
+          "title": "Indeks Simbol"
+        }
+      ],
+      "page_geometry": [
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 1,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 2,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 3,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 4,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 5,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 6,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 7,
+          "rotate": 0
+        }
+      ],
+      "pages": 7,
+      "payloads": {
+        "embedded_files": false,
+        "forms": false,
+        "javascript": false
+      },
+      "pdf_header": "%PDF-1.7",
+      "pdfinfo": {
+        "Author": "Wen-Wei Li",
+        "CreationDate": "Tue Aug 25 02:00:00 2026 W. Europe Daylight Time",
+        "Creator": "LaTeX with hyperref",
+        "Custom Metadata": "no",
+        "Encrypted": "no",
+        "File size": "108689 bytes",
+        "Form": "none",
+        "JavaScript": "no",
+        "Keywords": "aljabar, teori grup, aksi grup, orbit, stabilisator, torsor, prinsip pencacahan, id-ID",
+        "Metadata Stream": "no",
+        "Optimized": "no",
+        "PDF version": "1.7",
+        "Page rot": "0",
+        "Page size": "498.9 x 708.66 pts",
+        "Pages": "7",
+        "Producer": "MiKTeX-dvipdfmx (20260404)",
+        "Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.4 lengkap",
+        "Suspects": "no",
+        "Tagged": "no",
+        "Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 28: Aksi Grup dan Prinsip Pencacahan",
+        "UserProperties": "no"
+      },
+      "tagged": false,
+      "text": {
+        "mupdf_sha256": "0c978a3f3b162f3322000e05bc3ac379cd0340e2a2f66dbe81e2aa5809190981",
+        "nul_characters": {
+          "mupdf": 0,
+          "pdftotext_layout": 0,
+          "pypdf": 5
+        },
+        "pdftotext_layout_sha256": "28c8d30312fdd613a29e441065264a62522773dd220dea2ea83d104d985ded33",
+        "pypdf_page_sha256": [
+          "b2a3dd83d103431082b977eaa2176256a46f7941b36c38ec5c9c100551319c8b",
+          "d08f0e1ef4c9c85f32e2ca14c1285d7ccd24952b210fa60fc864f054498a96e3",
+          "24ff4e202541e0eef4f0b8a1de8abfbfd5f31c65da23d8fbdf528726b70de8d3",
+          "190b8dfeedf1f1f03e47d5e2773b698c5258f0ebb75b68891590878ea21e5eb5",
+          "e81bfb129e89ab6d43a96c193ba76a78b04fb2d57f1d373ea30c4819360f4607",
+          "37cfba95e0e5eccd8e0053c6cb8acb112e59cbecb19c94ba749a379ab555bf7a",
+          "b6947a2d7662cf85f6ee3d18041ee7fdeea2a7cce2aabda97f3c8c8774633f31"
+        ],
+        "pypdf_sha256": "1139d08d861c13ee3ec9e75cdf0313bbcb4219b42cf59419ec7fbc0c0515638a",
+        "replacement_characters": 0
+      },
+      "tool_diagnostics": {
+        "pdfinfo_stderr": "",
+        "pdftotext_stderr": "Syntax Error: Missing language pack for 'Adobe-GB1' mapping\nSyntax Error: Unknown font tag 'F37'\nSyntax Error (32528): No font in show/space\nSyntax Error: Unknown font tag 'F37'\nSyntax Error (32650): No font in show/space"
+      }
+    },
+    "build-c": {
+      "actions": {
+        "all_uris_https": true,
+        "annotation_additional_actions": 0,
+        "broken_destinations": [],
+        "catalog_additional_action": false,
+        "counts": {
+          "/GoTo": 2,
+          "/URI": 3
+        },
+        "gotos": [
+          "cite.0@Zh2",
+          "cite.0@Zh1"
+        ],
+        "links": [
+          {
+            "action": "/URI",
+            "ordinal_on_page": 1,
+            "page": 2,
+            "rect": [
+              115.616,
+              286.124,
+              174.552,
+              298.856
+            ],
+            "target": "https://www.wwli.asia"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 2,
+            "page": 2,
+            "rect": [
+              275.999,
+              196.424,
+              388.975,
+              208.385
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 3,
+            "page": 2,
+            "rect": [
+              164.469,
+              182.725,
+              258.616,
+              194.687
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 4,
+            "rect": [
+              335.051,
+              432.549,
+              340.032,
+              446.666
+            ],
+            "target": "cite.0@Zh2"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 2,
+            "page": 4,
+            "rect": [
+              78.289,
+              404.813,
+              83.271,
+              418.93
+            ],
+            "target": "cite.0@Zh1"
+          }
+        ],
+        "out_of_bounds_rectangles": [],
+        "page_additional_actions": 0,
+        "unsafe": [],
+        "uris": [
+          "https://www.wwli.asia",
+          "https://creativecommons.org/licenses/by/4.0/",
+          "https://creativecommons.org/licenses/by/4.0/"
+        ]
+      },
+      "catalog_keys": [
+        "/Lang",
+        "/Names",
+        "/OpenAction",
+        "/Outlines",
+        "/PageLabels",
+        "/PageMode",
+        "/Pages",
+        "/Type"
+      ],
+      "checks": {
+        "action_counts": true,
+        "fonts_embedded": true,
+        "known_math_font_nul_census": true,
+        "language_id_ID": true,
+        "link_closure": true,
+        "metadata_exact": true,
+        "no_active_payloads": true,
+        "outline_exact": true,
+        "rectangles_in_bounds": true,
+        "safe_actions": true,
+        "seven_pages": true,
+        "text_blocks_in_bounds": true,
+        "text_has_no_replacement_characters": true,
+        "thirty_eight_destinations": true,
+        "untagged_disclosed": true
+      },
+      "encrypted": false,
+      "fonts": {
+        "pdffonts_all_embedded": true,
+        "pdffonts_rows": 24,
+        "pdffonts_stderr": "Syntax Error: Missing language pack for 'Adobe-GB1' mapping",
+        "pypdf_all_embedded": true,
+        "pypdf_unique": 25,
+        "records": [
+          {
+            "basefont": "/WPHIYJ+CMEX10",
+            "embedded": true,
+            "normalized": "/CMEX10",
+            "object": "52 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/XULLRM+CMMI10",
+            "embedded": true,
+            "normalized": "/CMMI10",
+            "object": "38 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/VMZNRE+CMMI5",
+            "embedded": true,
+            "normalized": "/CMMI5",
+            "object": "57 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/ALOWXR+CMMI7",
+            "embedded": true,
+            "normalized": "/CMMI7",
+            "object": "44 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/LGEDGO+CMR10",
+            "embedded": true,
+            "normalized": "/CMR10",
+            "object": "39 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/IVOIRY+CMR5",
+            "embedded": true,
+            "normalized": "/CMR5",
+            "object": "58 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/GKZBZR+CMR7",
+            "embedded": true,
+            "normalized": "/CMR7",
+            "object": "53 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/VCQIKQ+CMSY10",
+            "embedded": true,
+            "normalized": "/CMSY10",
+            "object": "40 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "basefont": "/ZPWMSQ+CMSY7",
+            "embedded": true,
+            "normalized": "/CMSY7",
+            "object": "41 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/ZTCACQ+EUFM10",
+            "embedded": true,
+            "normalized": "/EUFM10",
+            "object": "50 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/OHMQFY+FandolHei-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/FandolHei-Regular-Identity-H",
+            "object": "70 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": false
+          },
+          {
+            "basefont": "/BNSDCB+LMMono12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono12-Regular-Identity-H",
+            "object": "20 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/JPMJKZ+LMMono9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono9-Regular-Identity-H",
+            "object": "27 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/KEYRMJ+LMRoman10-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Bold-Identity-H",
+            "object": "42 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/KSTATQ+LMRoman10-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Regular-Identity-H",
+            "object": "36 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/PPOMKB+LMRoman12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman12-Regular-Identity-H",
+            "object": "11 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/WEXHSB+LMRoman17-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman17-Regular-Identity-H",
+            "object": "9 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/PVDUGI+LMRoman7-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman7-Regular-Identity-H",
+            "object": "48 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/GWXNUE+LMRoman8-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman8-Regular-Identity-H",
+            "object": "34 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/WRTUUR+LMRoman9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman9-Regular-Identity-H",
+            "object": "22 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/ZYKEQI+MSBM10",
+            "embedded": true,
+            "normalized": "/MSBM10",
+            "object": "51 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/GOMFYN+NotoSansCJKsc-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/NotoSansCJKsc-Regular-Identity-H",
+            "object": "68 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/AZCWJC+TeXGyreHeros-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Bold-Identity-H",
+            "object": "13 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/CCDOXZ+TeXGyreHeros-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Regular-Identity-H",
+            "object": "15 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/YIJDEA+rsfs10",
+            "embedded": true,
+            "normalized": "/rsfs10",
+            "object": "55 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          }
+        ]
+      },
+      "geometry": {
+        "fitz_text_blocks_out_of_bounds": []
+      },
+      "identity": {
+        "bytes": 108700,
+        "path": "build/unit-028-c-20260825/unit-028-bab-4-aksi-grup-dan-prinsip-pencacahan.pdf",
+        "sha256": "ea6f6dea8bab77faf52f05517ad094fbabfb5e6f5294285269e565ab6edc084a"
+      },
+      "language": "id-ID",
+      "metadata": {
+        "/Author": "Wen-Wei Li",
+        "/CreationDate": "D:20260825000000Z",
+        "/Creator": "LaTeX with hyperref",
+        "/Keywords": "aljabar, teori grup, aksi grup, orbit, stabilisator, torsor, prinsip pencacahan, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.4 lengkap",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 28: Aksi Grup dan Prinsip Pencacahan"
+      },
+      "name_tree_keys": [
+        "/Dests"
+      ],
+      "named_destinations": {
+        "Doc-Start": 1,
+        "Item.1": 3,
+        "Item.2": 3,
+        "Item.3": 5,
+        "Item.4": 5,
+        "Item.5": 5,
+        "Item.6": 5,
+        "Item.7": 6,
+        "Item.8": 6,
+        "Item.9": 6,
+        "cite.0@Zh1": 7,
+        "cite.0@Zh2": 7,
+        "page.1": 3,
+        "page.2": 4,
+        "page.3": 5,
+        "page.4": 6,
+        "page.5": 7,
+        "proof.1": 5,
+        "proof.2": 7,
+        "section*.1": 7,
+        "section*.2": 7,
+        "section*.3": 7,
+        "section.4.4": 3,
+        "theorem.4.4.1": 3,
+        "theorem.4.4.10": 6,
+        "theorem.4.4.11": 6,
+        "theorem.4.4.12": 7,
+        "theorem.4.4.2": 3,
+        "theorem.4.4.3": 4,
+        "theorem.4.4.4": 4,
+        "theorem.4.4.5": 4,
+        "theorem.4.4.6": 4,
+        "theorem.4.4.7": 4,
+        "theorem.4.4.8": 5,
+        "theorem.4.4.9": 6,
+        "unit028-bibliography.0": 7,
+        "unit028-symbol-index.0": 7,
+        "unit028-term-index.0": 7
+      },
+      "open_action": {
+        "fit": "/Fit",
+        "kind": "direct_page_destination",
+        "page": 1
+      },
+      "outline": [
+        {
+          "depth": 0,
+          "page": 3,
+          "title": "4.4 Aksi Grup dan Prinsip Pencacahan"
+        },
+        {
+          "depth": 0,
+          "page": 7,
+          "title": "Daftar Pustaka"
+        },
+        {
+          "depth": 0,
+          "page": 7,
+          "title": "Indeks Istilah"
+        },
+        {
+          "depth": 0,
+          "page": 7,
+          "title": "Indeks Simbol"
+        }
+      ],
+      "page_geometry": [
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 1,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 2,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 3,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 4,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 5,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 6,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 7,
+          "rotate": 0
+        }
+      ],
+      "pages": 7,
+      "payloads": {
+        "embedded_files": false,
+        "forms": false,
+        "javascript": false
+      },
+      "pdf_header": "%PDF-1.7",
+      "pdfinfo": {
+        "Author": "Wen-Wei Li",
+        "CreationDate": "Tue Aug 25 02:00:00 2026 W. Europe Daylight Time",
+        "Creator": "LaTeX with hyperref",
+        "Custom Metadata": "no",
+        "Encrypted": "no",
+        "File size": "108700 bytes",
+        "Form": "none",
+        "JavaScript": "no",
+        "Keywords": "aljabar, teori grup, aksi grup, orbit, stabilisator, torsor, prinsip pencacahan, id-ID",
+        "Metadata Stream": "no",
+        "Optimized": "no",
+        "PDF version": "1.7",
+        "Page rot": "0",
+        "Page size": "498.9 x 708.66 pts",
+        "Pages": "7",
+        "Producer": "MiKTeX-dvipdfmx (20260404)",
+        "Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.4 lengkap",
+        "Suspects": "no",
+        "Tagged": "no",
+        "Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 28: Aksi Grup dan Prinsip Pencacahan",
+        "UserProperties": "no"
+      },
+      "tagged": false,
+      "text": {
+        "mupdf_sha256": "0c978a3f3b162f3322000e05bc3ac379cd0340e2a2f66dbe81e2aa5809190981",
+        "nul_characters": {
+          "mupdf": 0,
+          "pdftotext_layout": 0,
+          "pypdf": 5
+        },
+        "pdftotext_layout_sha256": "28c8d30312fdd613a29e441065264a62522773dd220dea2ea83d104d985ded33",
+        "pypdf_page_sha256": [
+          "b2a3dd83d103431082b977eaa2176256a46f7941b36c38ec5c9c100551319c8b",
+          "d08f0e1ef4c9c85f32e2ca14c1285d7ccd24952b210fa60fc864f054498a96e3",
+          "24ff4e202541e0eef4f0b8a1de8abfbfd5f31c65da23d8fbdf528726b70de8d3",
+          "190b8dfeedf1f1f03e47d5e2773b698c5258f0ebb75b68891590878ea21e5eb5",
+          "e81bfb129e89ab6d43a96c193ba76a78b04fb2d57f1d373ea30c4819360f4607",
+          "37cfba95e0e5eccd8e0053c6cb8acb112e59cbecb19c94ba749a379ab555bf7a",
+          "b6947a2d7662cf85f6ee3d18041ee7fdeea2a7cce2aabda97f3c8c8774633f31"
+        ],
+        "pypdf_sha256": "1139d08d861c13ee3ec9e75cdf0313bbcb4219b42cf59419ec7fbc0c0515638a",
+        "replacement_characters": 0
+      },
+      "tool_diagnostics": {
+        "pdfinfo_stderr": "",
+        "pdftotext_stderr": "Syntax Error: Missing language pack for 'Adobe-GB1' mapping\nSyntax Error: Unknown font tag 'F37'\nSyntax Error (32528): No font in show/space\nSyntax Error: Unknown font tag 'F37'\nSyntax Error (32650): No font in show/space"
+      }
+    },
+    "build-d": {
+      "actions": {
+        "all_uris_https": true,
+        "annotation_additional_actions": 0,
+        "broken_destinations": [],
+        "catalog_additional_action": false,
+        "counts": {
+          "/GoTo": 2,
+          "/URI": 3
+        },
+        "gotos": [
+          "cite.0@Zh2",
+          "cite.0@Zh1"
+        ],
+        "links": [
+          {
+            "action": "/URI",
+            "ordinal_on_page": 1,
+            "page": 2,
+            "rect": [
+              115.616,
+              286.124,
+              174.552,
+              298.856
+            ],
+            "target": "https://www.wwli.asia"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 2,
+            "page": 2,
+            "rect": [
+              275.999,
+              196.424,
+              388.975,
+              208.385
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 3,
+            "page": 2,
+            "rect": [
+              164.469,
+              182.725,
+              258.616,
+              194.687
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 4,
+            "rect": [
+              335.051,
+              432.549,
+              340.032,
+              446.666
+            ],
+            "target": "cite.0@Zh2"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 2,
+            "page": 4,
+            "rect": [
+              78.289,
+              404.813,
+              83.271,
+              418.93
+            ],
+            "target": "cite.0@Zh1"
+          }
+        ],
+        "out_of_bounds_rectangles": [],
+        "page_additional_actions": 0,
+        "unsafe": [],
+        "uris": [
+          "https://www.wwli.asia",
+          "https://creativecommons.org/licenses/by/4.0/",
+          "https://creativecommons.org/licenses/by/4.0/"
+        ]
+      },
+      "catalog_keys": [
+        "/Lang",
+        "/Names",
+        "/OpenAction",
+        "/Outlines",
+        "/PageLabels",
+        "/PageMode",
+        "/Pages",
+        "/Type"
+      ],
+      "checks": {
+        "action_counts": true,
+        "fonts_embedded": true,
+        "known_math_font_nul_census": true,
+        "language_id_ID": true,
+        "link_closure": true,
+        "metadata_exact": true,
+        "no_active_payloads": true,
+        "outline_exact": true,
+        "rectangles_in_bounds": true,
+        "safe_actions": true,
+        "seven_pages": true,
+        "text_blocks_in_bounds": true,
+        "text_has_no_replacement_characters": true,
+        "thirty_eight_destinations": true,
+        "untagged_disclosed": true
+      },
+      "encrypted": false,
+      "fonts": {
+        "pdffonts_all_embedded": true,
+        "pdffonts_rows": 24,
+        "pdffonts_stderr": "Syntax Error: Missing language pack for 'Adobe-GB1' mapping",
+        "pypdf_all_embedded": true,
+        "pypdf_unique": 25,
+        "records": [
+          {
+            "basefont": "/IECOQK+CMEX10",
+            "embedded": true,
+            "normalized": "/CMEX10",
+            "object": "52 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/GOLLIA+CMMI10",
+            "embedded": true,
+            "normalized": "/CMMI10",
+            "object": "38 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/RLMLRJ+CMMI5",
+            "embedded": true,
+            "normalized": "/CMMI5",
+            "object": "57 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/UNBHYY+CMMI7",
+            "embedded": true,
+            "normalized": "/CMMI7",
+            "object": "44 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/OFPJOS+CMR10",
+            "embedded": true,
+            "normalized": "/CMR10",
+            "object": "39 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/CRXSLD+CMR5",
+            "embedded": true,
+            "normalized": "/CMR5",
+            "object": "58 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/MRANWM+CMR7",
+            "embedded": true,
+            "normalized": "/CMR7",
+            "object": "53 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/AAPTFP+CMSY10",
+            "embedded": true,
+            "normalized": "/CMSY10",
+            "object": "40 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "basefont": "/PCMDXK+CMSY7",
+            "embedded": true,
+            "normalized": "/CMSY7",
+            "object": "41 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/BYWULR+EUFM10",
+            "embedded": true,
+            "normalized": "/EUFM10",
+            "object": "50 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/ILGZJM+FandolHei-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/FandolHei-Regular-Identity-H",
+            "object": "70 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": false
+          },
+          {
+            "basefont": "/MVOYQP+LMMono12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono12-Regular-Identity-H",
+            "object": "20 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/UOJMRU+LMMono9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono9-Regular-Identity-H",
+            "object": "27 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/GCOROT+LMRoman10-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Bold-Identity-H",
+            "object": "42 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/BFYNTL+LMRoman10-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Regular-Identity-H",
+            "object": "36 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/VLJYJJ+LMRoman12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman12-Regular-Identity-H",
+            "object": "11 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/MCRYII+LMRoman17-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman17-Regular-Identity-H",
+            "object": "9 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/OFLPTB+LMRoman7-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman7-Regular-Identity-H",
+            "object": "48 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/XUQUPM+LMRoman8-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman8-Regular-Identity-H",
+            "object": "34 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/UGGIVS+LMRoman9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman9-Regular-Identity-H",
+            "object": "22 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/PPYCBU+MSBM10",
+            "embedded": true,
+            "normalized": "/MSBM10",
+            "object": "51 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/IILOFT+NotoSansCJKsc-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/NotoSansCJKsc-Regular-Identity-H",
+            "object": "68 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/SWHUGO+TeXGyreHeros-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Bold-Identity-H",
+            "object": "13 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/MQSAUR+TeXGyreHeros-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Regular-Identity-H",
+            "object": "15 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/QYZDRN+rsfs10",
+            "embedded": true,
+            "normalized": "/rsfs10",
+            "object": "55 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          }
+        ]
+      },
+      "geometry": {
+        "fitz_text_blocks_out_of_bounds": []
+      },
+      "identity": {
+        "bytes": 108689,
+        "path": "build/unit-028-d-20260825/unit-028-bab-4-aksi-grup-dan-prinsip-pencacahan.pdf",
+        "sha256": "50c40ddefa870866568f8d1621d5fc204a1fd0fd0a45bdfc74659197c585790a"
+      },
+      "language": "id-ID",
+      "metadata": {
+        "/Author": "Wen-Wei Li",
+        "/CreationDate": "D:20260825000000Z",
+        "/Creator": "LaTeX with hyperref",
+        "/Keywords": "aljabar, teori grup, aksi grup, orbit, stabilisator, torsor, prinsip pencacahan, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.4 lengkap",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 28: Aksi Grup dan Prinsip Pencacahan"
+      },
+      "name_tree_keys": [
+        "/Dests"
+      ],
+      "named_destinations": {
+        "Doc-Start": 1,
+        "Item.1": 3,
+        "Item.2": 3,
+        "Item.3": 5,
+        "Item.4": 5,
+        "Item.5": 5,
+        "Item.6": 5,
+        "Item.7": 6,
+        "Item.8": 6,
+        "Item.9": 6,
+        "cite.0@Zh1": 7,
+        "cite.0@Zh2": 7,
+        "page.1": 3,
+        "page.2": 4,
+        "page.3": 5,
+        "page.4": 6,
+        "page.5": 7,
+        "proof.1": 5,
+        "proof.2": 7,
+        "section*.1": 7,
+        "section*.2": 7,
+        "section*.3": 7,
+        "section.4.4": 3,
+        "theorem.4.4.1": 3,
+        "theorem.4.4.10": 6,
+        "theorem.4.4.11": 6,
+        "theorem.4.4.12": 7,
+        "theorem.4.4.2": 3,
+        "theorem.4.4.3": 4,
+        "theorem.4.4.4": 4,
+        "theorem.4.4.5": 4,
+        "theorem.4.4.6": 4,
+        "theorem.4.4.7": 4,
+        "theorem.4.4.8": 5,
+        "theorem.4.4.9": 6,
+        "unit028-bibliography.0": 7,
+        "unit028-symbol-index.0": 7,
+        "unit028-term-index.0": 7
+      },
+      "open_action": {
+        "fit": "/Fit",
+        "kind": "direct_page_destination",
+        "page": 1
+      },
+      "outline": [
+        {
+          "depth": 0,
+          "page": 3,
+          "title": "4.4 Aksi Grup dan Prinsip Pencacahan"
+        },
+        {
+          "depth": 0,
+          "page": 7,
+          "title": "Daftar Pustaka"
+        },
+        {
+          "depth": 0,
+          "page": 7,
+          "title": "Indeks Istilah"
+        },
+        {
+          "depth": 0,
+          "page": 7,
+          "title": "Indeks Simbol"
+        }
+      ],
+      "page_geometry": [
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 1,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 2,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 3,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 4,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 5,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 6,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 7,
+          "rotate": 0
+        }
+      ],
+      "pages": 7,
+      "payloads": {
+        "embedded_files": false,
+        "forms": false,
+        "javascript": false
+      },
+      "pdf_header": "%PDF-1.7",
+      "pdfinfo": {
+        "Author": "Wen-Wei Li",
+        "CreationDate": "Tue Aug 25 02:00:00 2026 W. Europe Daylight Time",
+        "Creator": "LaTeX with hyperref",
+        "Custom Metadata": "no",
+        "Encrypted": "no",
+        "File size": "108689 bytes",
+        "Form": "none",
+        "JavaScript": "no",
+        "Keywords": "aljabar, teori grup, aksi grup, orbit, stabilisator, torsor, prinsip pencacahan, id-ID",
+        "Metadata Stream": "no",
+        "Optimized": "no",
+        "PDF version": "1.7",
+        "Page rot": "0",
+        "Page size": "498.9 x 708.66 pts",
+        "Pages": "7",
+        "Producer": "MiKTeX-dvipdfmx (20260404)",
+        "Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.4 lengkap",
+        "Suspects": "no",
+        "Tagged": "no",
+        "Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 28: Aksi Grup dan Prinsip Pencacahan",
+        "UserProperties": "no"
+      },
+      "tagged": false,
+      "text": {
+        "mupdf_sha256": "0c978a3f3b162f3322000e05bc3ac379cd0340e2a2f66dbe81e2aa5809190981",
+        "nul_characters": {
+          "mupdf": 0,
+          "pdftotext_layout": 0,
+          "pypdf": 5
+        },
+        "pdftotext_layout_sha256": "28c8d30312fdd613a29e441065264a62522773dd220dea2ea83d104d985ded33",
+        "pypdf_page_sha256": [
+          "b2a3dd83d103431082b977eaa2176256a46f7941b36c38ec5c9c100551319c8b",
+          "d08f0e1ef4c9c85f32e2ca14c1285d7ccd24952b210fa60fc864f054498a96e3",
+          "24ff4e202541e0eef4f0b8a1de8abfbfd5f31c65da23d8fbdf528726b70de8d3",
+          "190b8dfeedf1f1f03e47d5e2773b698c5258f0ebb75b68891590878ea21e5eb5",
+          "e81bfb129e89ab6d43a96c193ba76a78b04fb2d57f1d373ea30c4819360f4607",
+          "37cfba95e0e5eccd8e0053c6cb8acb112e59cbecb19c94ba749a379ab555bf7a",
+          "b6947a2d7662cf85f6ee3d18041ee7fdeea2a7cce2aabda97f3c8c8774633f31"
+        ],
+        "pypdf_sha256": "1139d08d861c13ee3ec9e75cdf0313bbcb4219b42cf59419ec7fbc0c0515638a",
+        "replacement_characters": 0
+      },
+      "tool_diagnostics": {
+        "pdfinfo_stderr": "",
+        "pdftotext_stderr": "Syntax Error: Missing language pack for 'Adobe-GB1' mapping\nSyntax Error: Unknown font tag 'F37'\nSyntax Error (32528): No font in show/space\nSyntax Error: Unknown font tag 'F37'\nSyntax Error (32650): No font in show/space"
+      }
+    }
+  },
+  "final_build_log": {
+    "braids_warnings": 1,
+    "evidence_sanitized": true,
+    "fatal_diagnostics": {
+      "emergency_stop": 0,
+      "empty_link_target": 0,
+      "fatal_error": 0,
+      "latex_error": 0,
+      "missing_character": 0,
+      "overfull": 0,
+      "undefined_citations": 0,
+      "undefined_control_sequence": 0,
+      "undefined_references": 0
+    },
+    "fontspec_CJK_advisories": 6,
+    "identity": {
+      "bytes": 78086,
+      "path": "qa/UNIT_028_BUILD_FINAL.log",
+      "sha256": "e34377e726cef55c50ead5b7a5e056ca332d653b0603a3e214f7b56d44594120"
+    },
+    "latex_release_warnings": 3,
+    "page_marker": 7,
+    "raw_log_has_profile_path": false,
+    "underfull_hbox_badness": [
+      2865,
+      10000
+    ],
+    "underfull_vbox_badness": [],
+    "xecjk_warnings": 1
+  },
+  "status": "PASS_WITH_WARNINGS"
+}
