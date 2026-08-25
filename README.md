@@ -67,6 +67,10 @@ dua renderer mencakup semua 229 halaman; 766 tujuan bernama dan 414 tautan
 internal tertutup; seluruh 599 objek fon tertanam; dan inspeksi visual semua
 halaman lulus. Bab 4-10 belum disertakan. Receipt build dan QA tersedia di
 [`qa/CHECKPOINT_READER_0_6_0_20260825.md`](qa/CHECKPOINT_READER_0_6_0_20260825.md).
+Checkpoint GitHub dipublikasikan pada commit
+`5641d5453c85cf007135603037db8805f7fa4f42`; seluruh tujuh path / 3.894.209
+byte cocok pada pembacaan balik anonim. Receipt publikasinya tersedia di
+[`qa/PUBLICATION_GITHUB_CHECKPOINT_0.6.0_20260825.md`](qa/PUBLICATION_GITHUB_CHECKPOINT_0.6.0_20260825.md).
 
 Versi preservasi saat ini, `0.5.0`, tersedia pada [Zenodo DOI 10.5281/zenodo.22071178](https://doi.org/10.5281/zenodo.22071178). Seluruh pembaruan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat. Rekaman ini memuat checkpoint gabungan 183 halaman, paket sumber/backend ringkas, pemberitahuan hak, manifest, dan checksum: lima berkas / 68.091.032 byte yang seluruhnya cocok pada pembacaan balik anonim. Checkpoint menggabungkan kedelapan belas reader menjadi pendahuluan serta Bab 1 dan Bab 2 lengkap. Build kedua identik byte; seluruh 182 halaman unit tidak berubah secara visual setelah penggabungan, dan QA navigasi, font, tautan, serta 183 halaman lulus. Checkpoint GitHub dipublikasikan pada commit `1c3479a8fdf8c23c2f72789db2bbc969a4b9b639`; seluruh tujuh path / 3.026.587 byte cocok pada pembacaan balik anonim. Receipt tersedia di [`qa/PUBLICATION_GITHUB_CHECKPOINT_0.5.0_20260824.md`](qa/PUBLICATION_GITHUB_CHECKPOINT_0.5.0_20260824.md) dan [`qa/PUBLICATION_ZENODO_0.5.0_20260824.md`](qa/PUBLICATION_ZENODO_0.5.0_20260824.md).
 

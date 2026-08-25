@@ -56,10 +56,11 @@ accessibility is not claimed.
   `caec7a2acc505fe8a17831c719a0c5a999ac34b6b1d471c2cea5bb5eeabaa9cd`;
 - fail-closed QA runner: 38,484 bytes; SHA-256
   `bd17d43fa371371ae792433c4518f9e5d808599afb6b88f51223e00f61280c9c`;
-- machine QA record: 132,747 bytes; SHA-256
-  `eb7faad5b8d2fd7c17e4fac1c924d4f8d9320d0ec28b2823364c17d0ed991b03`;
-- all-page visual receipt: 1,495 bytes; SHA-256
-  `8fc59ba81a8064962072983c0e2e18a419e9b6998216716e96d40f141cfefe5d`.
+- machine QA record, repository-normalized LF bytes: 127,824 bytes; SHA-256
+  `80f55f247aee173986b10e21b1918914c6a6b450df6b52b8955f5e1d2a4138ce`;
+- all-page visual receipt, repository-normalized LF bytes: 1,493 bytes;
+  SHA-256
+  `c685ecf54eafbb0be7482ee25fe6382826525ed83e16621c93cce3c7cd22ff99`.
 
 Principal text and the Indonesian adaptation are CC BY 4.0. The credited
 `Lanzhou.png` and `AJbook.cls` fragment retain CC BY-SA 3.0; bundled Noto fonts

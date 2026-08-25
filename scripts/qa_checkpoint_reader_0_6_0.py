@@ -889,6 +889,7 @@ def main() -> None:
     STRUCTURE_JSON.write_text(
         json.dumps(result, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
+        newline="\n",
     )
     print("status=PASS")
     print(f"artifact_bytes={PDF.stat().st_size}")

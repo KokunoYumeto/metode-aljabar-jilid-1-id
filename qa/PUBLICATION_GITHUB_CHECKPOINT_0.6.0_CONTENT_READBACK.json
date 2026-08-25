@@ -1,0 +1,73 @@
+{
+  "schema_version": "2.0.0",
+  "checked_utc": "2026-08-25T00:30:03+00:00",
+  "repository": "https://github.com/KokunoYumeto/metode-aljabar-jilid-1-id",
+  "branch": "main",
+  "commit": "5641d5453c85cf007135603037db8805f7fa4f42",
+  "parent": "a3dcc9dbba79a31a2212109c90b070fa5e6bcf8e",
+  "public_branch_head": "5641d5453c85cf007135603037db8805f7fa4f42",
+  "anonymous": true,
+  "authorization_header_used": false,
+  "git_credential_helper_disabled_for_remote_ref_check": true,
+  "path_count": 7,
+  "total_bytes": 3894209,
+  "all_match": true,
+  "records": [
+    {
+      "path": "README.md",
+      "bytes": 48971,
+      "sha256": "54053fec2e88481228dfd5274ca55b60faeaeee160e68dc9c3ca7fbed668dd11",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/5641d5453c85cf007135603037db8805f7fa4f42/README.md",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.6.0-reader.pdf",
+      "bytes": 3658991,
+      "sha256": "a147c05617e61a5d22a0038f2b5b995d668f387f9531514261d273fe9b6618c5",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/5641d5453c85cf007135603037db8805f7fa4f42/output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.6.0-reader.pdf",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/CHECKPOINT_READER_0_6_0_20260825.md",
+      "bytes": 3597,
+      "sha256": "8f3d940e99c94eade9f9eae30e4e7d240a056180fe82562d6524d7defc57a7f1",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/5641d5453c85cf007135603037db8805f7fa4f42/qa/CHECKPOINT_READER_0_6_0_20260825.md",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/checkpoint-0.6.0-evidence/VISUAL_REVIEW.md",
+      "bytes": 1493,
+      "sha256": "c685ecf54eafbb0be7482ee25fe6382826525ed83e16621c93cce3c7cd22ff99",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/5641d5453c85cf007135603037db8805f7fa4f42/qa/checkpoint-0.6.0-evidence/VISUAL_REVIEW.md",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/checkpoint-0.6.0-evidence/structure-text-navigation-font-render-qa.json",
+      "bytes": 127824,
+      "sha256": "80f55f247aee173986b10e21b1918914c6a6b450df6b52b8955f5e1d2a4138ce",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/5641d5453c85cf007135603037db8805f7fa4f42/qa/checkpoint-0.6.0-evidence/structure-text-navigation-font-render-qa.json",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "scripts/build_checkpoint_reader_0_6_0.py",
+      "bytes": 14849,
+      "sha256": "caec7a2acc505fe8a17831c719a0c5a999ac34b6b1d471c2cea5bb5eeabaa9cd",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/5641d5453c85cf007135603037db8805f7fa4f42/scripts/build_checkpoint_reader_0_6_0.py",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "scripts/qa_checkpoint_reader_0_6_0.py",
+      "bytes": 38484,
+      "sha256": "bd17d43fa371371ae792433c4518f9e5d808599afb6b88f51223e00f61280c9c",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/5641d5453c85cf007135603037db8805f7fa4f42/scripts/qa_checkpoint_reader_0_6_0.py",
+      "matches_committed_blob": true
+    }
+  ]
+}
