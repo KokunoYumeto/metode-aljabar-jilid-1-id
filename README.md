@@ -382,6 +382,7 @@ Artefak Unit 25 yang diterima:
 - empat alias tampilan MakeIndex mempertahankan kunci urut romanisasi sumber tetapi menampilkan induk Indonesia `monoid` dan `grup`, bukan kepala Pinyin `yaobanqun` dan `qun`. Seluruh 25 entri indeks dan topologinya tetap utuh.
 - reflow digital berukuran 142 mm memusatkan isi dan mengganti blok kemajuan yang ambigu dengan cakupan parsial berbentuk prosa. Seluruh 10 halaman lulus inspeksi Poppler/MuPDF; 60 render tidak mempunyai mismatch piksel dalam renderer yang sama. Lima outline, 50 tujuan bernama, 32 tautan internal, 6 URI HTTPS, dan 25 fon tertanam tertutup tanpa target rusak atau aksi tidak aman.
 - receipt penerimaan lokal ada di [`qa/UNIT_025_ADMISSION_20260825.md`](qa/UNIT_025_ADMISSION_20260825.md); bukti visual ada di [`qa/UNIT_025_VISUAL_QA_20260825.md`](qa/UNIT_025_VISUAL_QA_20260825.md), bukti backend ada di [`qa/unit-025-evidence/backend-validation.json`](qa/unit-025-evidence/backend-validation.json), dan audit lokalisasi/reflow ada di [`qa/UNIT_025_INDEX_LOCALIZATION_AND_REFLOW_AUDIT_20260825.md`](qa/UNIT_025_INDEX_LOCALIZATION_AND_REFLOW_AUDIT_20260825.md).
+- Unit 25 dipublikasikan pada commit isi `6b3fbd5fb93fe7b19feae386204c282b40d5dcfc`; seluruh 52 path / 5.396.723 byte cocok dengan blob komit pada pembacaan balik anonim. Inventaris lengkap ada di [`qa/PUBLICATION_GITHUB_UNIT_025_CONTENT_READBACK.json`](qa/PUBLICATION_GITHUB_UNIT_025_CONTENT_READBACK.json), dan receipt publikasi ada di [`qa/PUBLICATION_GITHUB_UNIT_025_20260825.md`](qa/PUBLICATION_GITHUB_UNIT_025_20260825.md).
 
 ## Backend modular
 
