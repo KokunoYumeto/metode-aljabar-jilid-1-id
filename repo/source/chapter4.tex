@@ -1,179 +1,181 @@
-% LaTeX source for book ``代数学方法'' in Chinese
-% Copyright 2018  李文威 (Wen-Wei Li).
-% Permission is granted to copy, distribute and/or modify this
-% document under the terms of the Creative Commons
+% Sumber LaTeX untuk buku ``Metode Aljabar'' dalam bahasa Tionghoa
+% Hak cipta 2018 Wen-Wei Li.
+% Izin diberikan untuk menyalin, menyebarluaskan, dan/atau mengubah
+% dokumen ini berdasarkan ketentuan Creative Commons
 % Attribution 4.0 International (CC BY 4.0)
 % http://creativecommons.org/licenses/by/4.0/
+% Terjemahan Bahasa Indonesia: OpenAI Codex gpt-5.6-sol, Ultra, atas instruksi pengguna.
+% Terjemahan independen ini tidak menyiratkan dukungan penulis atau sumber manusia mana pun.
 
-% To be included
-\chapter{群论}
-群是代数学中最基本的结构之一. 本章涉及的内容大致有两类:
+% Untuk disertakan
+\chapter{Teori Grup}
+Grup merupakan salah satu struktur paling mendasar dalam aljabar. Pokok bahasan bab ini secara garis besar terbagi menjadi dua jenis:
 \begin{compactenum}
-	\item 形式构造, 包括幺半群和群的基本定义, 群作用, 直积, 自由群等概念, 这也是研究其它代数结构的基石.
-	\item 群本身的具体性质, 主要是组合面向, 包括有限群的 Sylow 三定理, 对称群和辫群的展示等. 这部分较富技巧性, 是群论引人入胜之处.
+	\item konstruksi formal, yang mencakup definisi dasar semigrup, monoid, dan grup, serta konsep-konsep seperti aksi grup, produk langsung, dan grup bebas; semuanya juga menjadi landasan untuk mempelajari struktur aljabar lainnya;
+	\item sifat-sifat konkret grup itu sendiri, terutama dari sudut pandang kombinatorial, yang mencakup tiga teorema Sylow untuk grup berhingga, grup simetris, serta presentasi grup kepang. Bagian ini kaya akan teknik dan merupakan salah satu daya tarik teori grup.
 \end{compactenum}
-我们力求做到两者的交错搭配. 对于群论的基本概念, 本书不予连篇累牍的辨析, 但在形式性质及一些初等教材遗漏的重要构造 (如自由群, 完备化等) 方面则力求详备, 这也是为后续章节作铺垫. 至于群论的具体部分, 对称群可谓是群论和表示理论的思想泉源之一, 相关的 \S\ref{sec:symmetric-group} 是对此前理论的一次总操练. 有限生成交换群的分类是群论的另一个重要结果, 本书将其纳入模论处理, 见 \S\ref{sec:PID-module}.
+Kami berupaya merajut kedua jenis bahasan tersebut secara berselang-seling. Untuk konsep dasar teori grup, buku ini tidak memberikan uraian pembedaan yang berkepanjangan. Namun, sifat-sifat formal dan beberapa konstruksi penting yang kerap terlewat dalam buku teks dasar---misalnya grup bebas dan kompletisasi---dibahas secara terperinci sebagai persiapan bagi bab-bab selanjutnya. Adapun pada sisi konkret teori grup, grup simetris merupakan salah satu sumber gagasan bagi teori grup dan teori representasi; \S\ref{sec:symmetric-group} menjadi latihan menyeluruh atas teori yang telah dikembangkan sebelumnya. Klasifikasi grup abelian yang dibangkitkan secara berhingga merupakan hasil penting lain dalam teori grup. Buku ini menanganinya di dalam teori modul; lihat \S\ref{sec:PID-module}.
 
-尽管本章在逻辑上几乎是自足的, 我们期望读者对群有些许的基本认知. 此后凡论及群, 幺半群或其它代数结构组成的范畴时, 若无另外申明, 则一律沿用关于 Grothendieck 宇宙的约定 \ref{con:U-small}, 默认这些对象都是``小''的.
+Walaupun secara logis bab ini hampir mandiri, pembaca diharapkan telah memiliki sedikit pengetahuan dasar tentang grup. Selanjutnya, setiap kali dibahas kategori yang terdiri atas grup, monoid, atau struktur aljabar lain, kecuali dinyatakan berbeda, kita selalu memakai konvensi tentang semesta Grothendieck pada \ref{con:U-small} dan menganggap objek-objek tersebut ``kecil''.
 
 \begin{wenxintishi}
-	从 \S\ref{sec:group-and-monoid} 到 \S\ref{sec:group-action} 的内容属于群论的基础知识, 本章只是采取了一个稍广泛的框架. 随后的内容相较之下需要一定的技术, 然而也同样初等. \S\ref{sec:free-group} 讨论的自由群无论怎么构造都难免琐碎, 本章从自由幺半群和融合积切入, 论证稍长但得到的结果更多, 实用上也是必要的.
+	Materi dari \S\ref{sec:group-and-monoid} sampai \S\ref{sec:group-action} merupakan pengetahuan dasar teori grup; bab ini hanya menempatkannya dalam kerangka yang sedikit lebih luas. Materi setelahnya memerlukan lebih banyak teknik, tetapi tetap bersifat elementer. Bagaimanapun cara konstruksinya, grup bebas yang dibahas dalam \S\ref{sec:free-group} tidak terhindar dari perincian yang agak panjang. Bab ini memulainya dari monoid bebas dan produk teramalgamasi. Argumennya memang lebih panjang, tetapi menghasilkan lebih banyak hal dan juga diperlukan dalam penerapan.
 
-	如前所述, 对称群 (\S\ref{sec:symmetric-group}) 是一类不得不谈的重要实例. 极限和完备化 (\S\ref{sec:group-limit}) 涉及一些点集拓扑的语言, 对以后要陈述的无穷 Galois 理论不可或缺, 更是从事进一步研究的必备素养.
+	Seperti telah disebutkan, grup simetris (\S\ref{sec:symmetric-group}) merupakan kelas contoh penting yang harus dibahas. Limit dan kompletisasi (\S\ref{sec:group-limit}) melibatkan bahasa topologi himpunan titik. Materi ini mutlak diperlukan bagi teori Galois tak hingga yang akan dipaparkan kemudian dan merupakan bekal penting untuk penelitian lebih lanjut.
 
-	本章的缺憾之一在于未探讨正多面体的旋转对称群, 这是几何直观与群论技巧的优美嵌合; 譬如正十二面体和正二十面体的群相同, 是 $60$ 阶单群, 从它到交错群 $\mathfrak{A}_5$ 的同构可用几何语言表述. 了解经典内容大有益处, 建议读者参阅相关教材如 \cite[Chapter 8]{Har00}.
+	Salah satu kekurangan bab ini ialah tidak dibahasnya grup simetri rotasi polihedron beraturan, padahal topik tersebut memadukan intuisi geometri dan teknik teori grup dengan indah. Sebagai contoh, grup dodekahedron beraturan dan ikosahedron beraturan saling isomorfik; keduanya merupakan grup sederhana berorde $60$, dan isomorfismenya dengan grup selang-seling $\mathfrak{A}_5$ dapat dinyatakan secara geometris. Pengetahuan tentang materi klasik ini sangat bermanfaat; pembaca disarankan merujuk buku teks terkait, misalnya \cite[Chapter 8]{Har00}.
 \end{wenxintishi}
 
-\section{半群, 幺半群与群}\label{sec:group-and-monoid}
-本节借鉴 Bourbaki \cite{Bou-Alg1} 定义代数结构的进路, 思路是从带有\emph{二元运算}的集合出发. 非空集合 $S$ 上的二元运算意谓一个映射 $S \times S \to S$, 一般用乘法记号写为 $(x, y) \mapsto x \cdot y$, 或索性简写为 $xy$; 二元运算可视作 $S$ 上的某种乘法. 反复操作可以得到形如 $x(yz)$, $(wx)(yz)$ 等等的表达式, 括号在此表示元素相乘的先后顺序. 如不致混淆, 我们经常略去结构 $(S, \cdot)$ 中的二元运算, 径以 $S$ 概括. Bourbaki 为这种混沌未开的结构起了个贴切的名字, 唤作``岩浆'' (法文: le magma). \index{eryuanyunsuan@二元运算 (binary operation)}
+\section{Semigrup, Monoid, dan Grup}\label{sec:group-and-monoid}
+Bagian ini mengikuti pendekatan Bourbaki \cite{Bou-Alg1} dalam mendefinisikan struktur aljabar: kita mulai dari himpunan yang dilengkapi suatu \emph{operasi biner}. Operasi biner pada himpunan tak kosong $S$ berarti suatu peta $S \times S \to S$. Biasanya operasi itu ditulis secara multiplikatif sebagai $(x, y) \mapsto x \cdot y$, atau cukup disingkat menjadi $xy$; jadi, operasi biner dapat dipandang sebagai sejenis perkalian pada $S$. Pengulangan operasi menghasilkan ekspresi seperti $x(yz)$ dan $(wx)(yz)$, dengan tanda kurung menunjukkan urutan perkalian unsur-unsurnya. Jika tidak menimbulkan kerancuan, kita sering menghilangkan operasi biner dari notasi struktur $(S, \cdot)$ dan cukup menuliskannya sebagai $S$. Bourbaki memberi struktur yang belum dikenai syarat apa pun ini nama yang tepat, yakni ``magma'' (bahasa Prancis: \emph{le magma}). \index{eryuanyunsuan@operasi biner (binary operation)}
 
-首先收集关于 $(S, \cdot)$ 的一些初步概念.
+Mula-mula kita kumpulkan beberapa konsep awal tentang $(S, \cdot)$.
 \begin{itemize}
-	\item 在 $S$ 上定义新的二元运算 $\star$ 使得 $x \star y = y \cdot x$, 得到的新结构 $(S, \star)$ 记作 $S^\text{op}$, 称为 $S$ 的相反结构.
-	\item 若对所有 $x, y \in S$ 都有等式 $xy=yx$, 则称 $S$ 满足\emph{交换律}, 或称 $S$ 是交换的; 这等价于 $S = S^\text{op}$.\index{jiaohuan@交换}
-	\item 若对所有 $x, y, z \in S$ 都有等式 $(xy)z=x(yz)$, 则称 $S$ 满足\emph{结合律}.
-	\item 设 $u \in S$, 若相应的从 $S$ 到 $S$ 的\emph{左乘}映射 $x \mapsto ux$ 是单射, 则称 $u$ 满足左消去律; 若\emph{右乘}映射 $x \mapsto xu$ 是单射, 则称 $u$ 满足右消去律.
-	\item 若 $A, B$ 为 $S$ 的子集, 定义
+	\item Definisikan operasi biner baru $\star$ pada $S$ melalui $x \star y = y \cdot x$. Struktur baru $(S, \star)$ dinotasikan dengan $S^\text{op}$ dan disebut struktur lawan dari $S$.
+	\item Jika untuk semua $x,y \in S$ berlaku $xy=yx$, maka $S$ dikatakan memenuhi \emph{hukum komutatif}, atau $S$ dikatakan komutatif; hal ini ekuivalen dengan $S=S^\text{op}$.\index{jiaohuan@komutatif}
+	\item Jika $(xy)z=x(yz)$ untuk semua $x,y,z \in S$, maka $S$ dikatakan memenuhi \emph{hukum asosiatif}.
+	\item Misalkan $u \in S$. Jika peta \emph{perkalian kiri} yang terkait dari $S$ ke $S$, yakni $x \mapsto ux$, bersifat injektif, maka $u$ dikatakan memenuhi hukum pembatalan kiri. Jika peta \emph{perkalian kanan} $x \mapsto xu$ bersifat injektif, maka $u$ dikatakan memenuhi hukum pembatalan kanan.
+	\item Jika $A,B$ merupakan subhimpunan $S$, definisikan
 		\[ A B := \{ab : a \in A, \; b \in B \} \subset S; \]
-		若 $A$ 或 $B$ 是独点集 $\{x\}$, 则 $AB$ 相应地写作 $xB$ 或 $Ax$; 在结合律的前提下还可以无歧义地定义子集 $ABC$, $ABCD$,......
-	\item 若 $S$ 的子集 $A$ 满足 $A A \subset A$, 则称 $A$ \emph{对乘法封闭}.
-	\item 元素 $1 \in S$ 称为\emph{幺元}或单位元, 如果 \index{yaoyuan@幺元 (unit)}
+		jika $A$ atau $B$ adalah himpunan tunggal $\{x\}$, maka $AB$ masing-masing ditulis sebagai $xB$ atau $Ax$. Dengan asumsi hukum asosiatif, kita juga dapat mendefinisikan subhimpunan $ABC$, $ABCD$, dan seterusnya tanpa kerancuan.
+	\item Jika subhimpunan $A$ dari $S$ memenuhi $AA \subset A$, maka $A$ dikatakan \emph{tertutup terhadap perkalian}.
+	\item Unsur $1 \in S$ disebut \emph{unsur identitas} atau unsur satuan jika \index{yaoyuan@unsur identitas (identity element)}
 		\[ \forall x \in S, \; x \cdot 1 = 1 \cdot x = x. \]
-		注意到 $S$ 的幺元至多仅一个: 若 $1, 1' \in S$ 皆为幺元, 则 $1 = 1 \cdot 1' = 1'$. 此外 $S$ 的幺元也是 $S^\text{op}$ 的幺元. 一些书籍将幺元记为 $e$.
-	\item 假设存在幺元 $1$. 对于元素 $x \in S$, 若存在 $y \in S$ 使得 $yx = 1$, 则称 $x$ 左可逆而 $y$ 是 $x$ 的一个左逆; 若条件改为 $xy=1$, 则相应地得到右逆和右可逆元的定义. 左右皆可逆的元素称为\emph{可逆元}. 幺元 $1$ 显然可逆.\index{keniyuan@可逆元 (invertible element)}
+		Perhatikan bahwa $S$ memiliki paling banyak satu unsur identitas: jika $1,1' \in S$ keduanya unsur identitas, maka $1=1\cdot 1'=1'$. Unsur identitas $S$ juga merupakan unsur identitas $S^\text{op}$. Sejumlah buku menotasikan unsur identitas dengan $e$.
+	\item Andaikan terdapat unsur identitas $1$. Untuk $x \in S$, jika terdapat $y \in S$ sedemikian sehingga $yx=1$, maka $x$ disebut invertibel-kiri dan $y$ disebut suatu invers kiri dari $x$; jika syaratnya diganti dengan $xy=1$, kita memperoleh definisi invers kanan dan unsur invertibel-kanan. Unsur yang invertibel-kiri sekaligus invertibel-kanan disebut \emph{unsur invertibel}. Unsur identitas $1$ jelas invertibel.\index{keniyuan@unsur invertibel (invertible element)}
 \end{itemize}
 
-\begin{definition}[半群与幺半群]\label{def:monoid}\index{yaobanqun@幺半群 (monoid)}
-	带有二元运算的非空集 $S$ 若满足结合律, 则称之为\emph{半群}. 存在幺元的半群称为\emph{幺半群}. 若 $M$ 是幺半群, 而子集 $M' \subset M$ 满足
+\begin{definition}[Semigrup dan monoid]\label{def:monoid}\index{yaobanqun@monoid (monoid)}
+	Himpunan tak kosong $S$ yang dilengkapi operasi biner dan memenuhi hukum asosiatif disebut \emph{semigrup}. Semigrup yang memiliki unsur identitas disebut \emph{monoid}. Jika $M$ adalah monoid dan subhimpunan $M' \subset M$ memenuhi
 	\begin{inparaenum}[(i)]
-		\item $M'$ 对乘法封闭,
+		\item $M'$ tertutup terhadap perkalian,
 		\item $1 \in M'$,
 	\end{inparaenum}
-	则称 $M'$ 为 $M$ 的子幺半群.\index{yaobanqun!子幺半群}
+	maka $M'$ disebut submonoid dari $M$.\index{yaobanqun@monoid (monoid)!submonoid}
 \end{definition}
 
-对于半群 $S$, 结合律确保了任意元素 $x_1, \ldots, x_n \in S$ 的连乘积 $x_1(x_2 (\cdots x_n)\cdots)$ 可以无歧义地写作 $x_1 \cdots x_n$, 其解读与安插括号的方式无关. 当 $S$ 交换时, 此连乘积甚且与 $x_1, \ldots, x_n$ 的顺序无关.
+Untuk semigrup $S$, hukum asosiatif memastikan bahwa produk berulang dari sembarang unsur $x_1, \ldots, x_n \in S$, yakni $x_1(x_2(\cdots x_n)\cdots)$, dapat ditulis tanpa kerancuan sebagai $x_1 \cdots x_n$; maknanya tidak bergantung pada cara menempatkan tanda kurung. Jika $S$ komutatif, produk berulang ini bahkan tidak bergantung pada urutan $x_1,\ldots,x_n$.
 
-以下设 $M$ 是幺半群. 易证其中的左 (右) 可逆元满足左 (右) 消去律. 若 $x \in M$ 可逆, 则 $x$ 的左逆与右逆皆唯一并相等, 记为 $x^{-1}$. 论证如下: 若 $x$ 有左逆元 $y$ 和右逆元 $y'$, 则 $y' = (yx)y' =y (xy') = y$, 由此可一并导出左, 右逆的唯一性和等式. 所有可逆元构成的子集记为 $M^\times$, 它对乘法封闭, 实际上
+Untuk selanjutnya, misalkan $M$ adalah monoid. Mudah dibuktikan bahwa unsur yang invertibel-kiri (berturut-turut, invertibel-kanan) memenuhi hukum pembatalan kiri (berturut-turut, kanan). Jika $x \in M$ invertibel, maka invers kiri dan invers kanan dari $x$ tunggal dan sama; unsur ini dinotasikan dengan $x^{-1}$. Berikut argumennya: jika $x$ memiliki invers kiri $y$ dan invers kanan $y'$, maka $y'=(yx)y'=y(xy')=y$. Dari sini sekaligus diperoleh ketunggalan invers kiri dan invers kanan serta kesamaan keduanya. Subhimpunan semua unsur invertibel dinotasikan dengan $M^\times$. Subhimpunan ini tertutup terhadap perkalian; bahkan,
 \[ \forall x, y \in M^\times, \; (xy)^{-1} = y^{-1} x^{-1}. \]
 
-\begin{definition}[群]\label{def:group}\index{qun@群 (group)}\index{qun!阶 (order)}
-	所有元素皆可逆的幺半群称为\emph{群}. 群 $G$ 的基数 $|G|$ 称为它的\emph{阶}.
+\begin{definition}[Grup]\label{def:group}\index{qun@grup (group)}\index{qun@grup (group)!orde (order)}
+	Monoid yang semua unsurnya invertibel disebut \emph{grup}. Kardinalitas $|G|$ dari grup $G$ disebut \emph{orde} grup tersebut.
 \end{definition}
 
-任意幺半群 $M$ 的可逆元子集 $M^\times$ 对 $M$ 的乘法构成一个群, 称为 $M$ 的单位群\index{danweiqun@单位群 (unit group)}. 根据先前关于二元运算的讨论, 可以定义\emph{交换幺半群}或\emph{交换群}的概念, 后者又称 \emph{Abel 群}. 用同样套路定义\emph{相反幺半群}或\emph{相反群}, 并沿用符号 $G \mapsto G^\text{op}$.\index[sym1]{G-op@$G^\text{op}$}
+Subhimpunan $M^\times$ dari unsur-unsur invertibel pada sembarang monoid $M$ membentuk sebuah grup terhadap perkalian pada $M$; grup ini disebut grup unit dari $M$\index{danweiqun@grup unit (unit group)}. Berdasarkan pembahasan terdahulu tentang operasi biner, kita dapat mendefinisikan \emph{monoid komutatif} dan \emph{grup komutatif}; yang terakhir juga disebut \emph{grup abelian}. Dengan cara yang sama kita mendefinisikan \emph{monoid lawan} dan \emph{grup lawan}, serta tetap menggunakan notasi $G \mapsto G^\text{op}$.\index[sym1]{G-op@$G^\text{op}$}
 
-对于 $n \in \Z_{\geq 0}$ 和 $x \in M$, 我们引入记号
-\[ x^n := \underbracket{x \cdots x}_{n \text{ 项 }}. \]
-特别地, $x^0 := 1$, 并且对可逆元有 $(x^{-1})^n = (x^n)^{-1}$, 后者可以无歧义地记作 $x^{-n}$.
+Untuk $n \in \Z_{\geq 0}$ dan $x \in M$, kita perkenalkan notasi
+\[ x^n := \underbracket{x \cdots x}_{n \text{ faktor }}. \]
+Secara khusus, $x^0:=1$, dan untuk unsur invertibel berlaku $(x^{-1})^n=(x^n)^{-1}$; ekspresi terakhir dapat dinotasikan tanpa kerancuan sebagai $x^{-n}$.
 
 \begin{convention}
-	对于交换幺半群, 惯例是将其二元运算 $\cdot$ 写成加法 $+$, 并将幺元 $1$ 写成 $0$, 元素 $x$ 的逆写成 $-x$; 但一些场合仍适用乘法记号. 必要时另外申明.
+	Untuk monoid komutatif, lazimnya operasi binernya $\cdot$ ditulis secara aditif sebagai $+$, unsur identitas $1$ ditulis sebagai $0$, dan invers unsur $x$ ditulis sebagai $-x$; meskipun demikian, notasi multiplikatif masih berguna dalam beberapa konteks. Jika diperlukan, hal ini akan dinyatakan secara tersendiri.
 \end{convention}
 
 \begin{example}
-	非负实数集 $\R_{\geq 0}$ 对加法构成幺半群, 而 $\R_{>0}$ 构成半群. 进一步说, 空间 $\R^d$ 中的任意闭凸锥 $C$ 对向量加法构成幺半群, 而 $C$ 的内点集 $\text{int}(C)$ 若非空则构成半群. 两者皆交换. 考虑锥中整点便得到幺半群 $C \cap \Z^d$ 及半群 $\text{int}(C) \cap \Z^d$; 它们一方面直接联系于线性不定方程和格点等计数组合学问题, 另一方面则定义了一类称为仿射环面簇的几何对象. 这些交换幺半群的结构远比相应的交换群要丰富的多.
+	Himpunan bilangan real tak negatif $\R_{\geq 0}$ membentuk monoid terhadap penjumlahan, sedangkan $\R_{>0}$ membentuk semigrup. Lebih lanjut, setiap kerucut konveks tertutup $C$ dalam ruang $\R^d$ membentuk monoid terhadap penjumlahan vektor, sedangkan himpunan titik interior dari $C$, yakni $\text{int}(C)$, membentuk semigrup jika tidak kosong. Keduanya komutatif. Dengan meninjau titik-titik kisi di dalam kerucut, kita memperoleh monoid $C \cap \Z^d$ dan semigrup $\text{int}(C) \cap \Z^d$. Di satu sisi, keduanya berhubungan langsung dengan persamaan Diofantin linear dan persoalan kombinatorial seperti pencacahan titik kisi; di sisi lain, keduanya mendefinisikan kelas objek geometri yang disebut varietas torik afin. Struktur monoid komutatif ini jauh lebih kaya daripada struktur grup komutatif yang bersesuaian.
 \end{example}
 
-\begin{example}[一般线性群]\index[sym1]{GL_n@$\GL(n,F)$}
-	考虑 $n \times n$ 实矩阵构成的集合 $M_n(\R)$, 并定义 $\GL(n, \R)$ 为其中的可逆矩阵构成的子集. 显见 $M_n(\R)$ 对矩阵乘法构成幺半群, 其幺元为单位矩阵, 但它不是群 (例: 零矩阵不可逆). 然而 $\GL(n, \R)$ 对矩阵乘法则构成群, 它正是 $M_n(\R)$ 的单位群. 这些结构在 $n > 1$ 时非交换.
+\begin{example}[Grup linear umum]\index[sym1]{GL_n@$\GL(n,F)$}
+	Tinjau himpunan $M_n(\R)$ dari semua matriks real berukuran $n \times n$, dan definisikan $\GL(n,\R)$ sebagai subhimpunan yang terdiri atas matriks-matriks invertibel. Jelas bahwa $M_n(\R)$ membentuk monoid terhadap perkalian matriks, dengan matriks identitas sebagai unsur identitasnya, tetapi bukan grup (misalnya, matriks nol tidak invertibel). Di sisi lain, $\GL(n,\R)$ membentuk grup terhadap perkalian matriks; grup ini tepat merupakan grup unit dari $M_n(\R)$. Struktur-struktur ini tidak komutatif apabila $n>1$.
 	
-	更一般地说,  对任意域 $F$ 依然能定义 $M_n(F)$ 和 $\GL(n,F)$, 后者称为 $F$ 上的\emph{一般线性群}; 域是一种能作加减乘除的代数结构, 如大家熟悉的 $\Q$, $\R$, $\CC$ 等, 或模素数 $p$ 的同余系 $\Z/p\Z$, 详见定义 \ref{def:field}.
+	Secara lebih umum, untuk setiap medan $F$ kita tetap dapat mendefinisikan $M_n(F)$ dan $\GL(n,F)$; yang terakhir disebut \emph{grup linear umum} atas $F$. Medan adalah struktur aljabar tempat penjumlahan, pengurangan, perkalian, dan pembagian dapat dilakukan; contohnya mencakup $\Q$, $\R$, dan $\CC$ yang telah dikenal, serta kelas-kelas kongruensi modulo bilangan prima $p$, yakni $\Z/p\Z$. Lihat Definisi \ref{def:field} untuk rinciannya.
 \end{example}
 
-\begin{example}[对称群]\label{eg:symmetric-group}\index{duichengqun@对称群 (symmetric group)}
-	从任意集合 $X$ 映到自身的全体双射构成一个群, 称为 $X$ 上的\emph{对称群} $\mathfrak{S}_X := \Aut(X)$. 其中的二元运算是双射的合成 $(f, g) \mapsto f \circ g$, 幺元为恒等映射 $\identity_X: X \to X$, 而逆元无非是逆映射. 当 $X = \{1, \ldots, n\}$ ($n \in \Z_{\geq 1}$) 时也记为 $\mathfrak{S}_n$, 称为 $n$ 次的对称群或置换群. 注意到 $|\mathfrak{S}_n| = n!$.
+\begin{example}[Grup simetris]\label{eg:symmetric-group}\index{duichengqun@grup simetris (symmetric group)}
+	Semua bijeksi dari sembarang himpunan $X$ ke dirinya sendiri membentuk sebuah grup, yang disebut \emph{grup simetris} pada $X$ dan dinotasikan dengan $\mathfrak{S}_X:=\Aut(X)$. Operasi binernya ialah komposisi bijeksi $(f,g)\mapsto f\circ g$, unsur identitasnya ialah peta identitas $\identity_X:X\to X$, dan invers setiap unsurnya tidak lain daripada peta invers. Jika $X=\{1,\ldots,n\}$ ($n\in\Z_{\geq 1}$), grup ini juga dinotasikan dengan $\mathfrak{S}_n$ dan disebut grup simetris berderajat $n$, atau grup permutasi. Perhatikan bahwa $|\mathfrak{S}_n|=n!$.
 \end{example}
-一般线性群和对称群是群论中的两类重要例子, 请读者铭记.
+Grup linear umum dan grup simetris merupakan dua kelas contoh penting dalam teori grup; pembaca hendaknya mengingat keduanya.
 
-\begin{definition}[子群和正规子群]\index{ziqun@子群 (subgroup)}\index{zhengguiziqun@正规子群 (normal subgroup)}
-	设 $G$ 为群, 子集 $H \subset G$ 被称为 $G$ 的\emph{子群}, 如果
+\begin{definition}[Subgrup dan subgrup normal]\index{ziqun@subgrup (subgroup)}\index{zhengguiziqun@subgrup normal (normal subgroup)}
+	Misalkan $G$ adalah grup. Subhimpunan $H \subset G$ disebut \emph{subgrup} dari $G$ jika
 	\begin{inparaenum}[(i)]
-		\item $H$ 是子幺半群,
-		\item 对任意 $x \in H$ 有 $x^{-1} \in H$.
+		\item $H$ adalah submonoid,
+		\item $x^{-1}\in H$ untuk setiap $x\in H$.
 	\end{inparaenum}
-	假若子群 $H$ 对所有 $x \in G$ 满足 $xH = Hx$, 则称 $H$ 为 $G$ 的\emph{正规子群}, 记作 $H \lhd G$. 子群 $\{1\} \lhd G$ 称作 $G$ 的\emph{平凡子群}.
+	Jika subgrup $H$ memenuhi $xH=Hx$ untuk semua $x\in G$, maka $H$ disebut \emph{subgrup normal} dari $G$, dan kita tulis $H\lhd G$. Subgrup $\{1\}\lhd G$ disebut \emph{subgrup trivial} dari $G$.
 \end{definition}
-正规子群的定义可以改写为 $\forall x \in G, \; xHx^{-1} = H$. 由于 $xHx^{-1} = H$ 等价于 $xHx^{-1} \subset H$ 且 $x^{-1} H x \subset H$, 验证正规性时仅须对每个 $x$ 证明 $xHx^{-1} \subset H$ 即可. 最早洞悉正规子群的重要性者是 Galois.
+Definisi subgrup normal dapat ditulis kembali sebagai $\forall x\in G,\;xHx^{-1}=H$. Karena $xHx^{-1}=H$ ekuivalen dengan $xHx^{-1}\subset H$ dan $x^{-1}Hx\subset H$, untuk memeriksa kenormalan cukup dibuktikan bahwa $xHx^{-1}\subset H$ bagi setiap $x$. Galois adalah orang pertama yang memahami pentingnya subgrup normal.
 
-\begin{definition}[单群]\index{qun!单 (simple)}
-	若群 $G$ 不具有除 $\{1\}, G$ 之外的正规子群, 则称 $G$ 为\emph{单群}.
+\begin{definition}[Grup sederhana]\index{qun@grup (group)!sederhana (simple)}
+	Jika grup $G$ tidak mempunyai subgrup normal selain $\{1\},G$, maka $G$ disebut \emph{grup sederhana}.
 \end{definition}
-交错群 $\mathfrak{A}_n$ ($n \geq 5$) 是最早被发现的一族非交换有限单群, 将于定理 \ref{prop:A_n-simple} 详述. 有限单群在同构意义下的分类是群论发展的重大里程碑. 从 Hölder 在 1892 年提出分类问题, 直到 Aschbacher 和 Smith 在 2004 年左右补全 Gorenstein 等人的证明, 历时凡百余年. 相关文献卷轶浩繁, 即便粗略地勾勒分类结果也需不少篇幅, 请有兴趣的读者查阅 \cite{Wil09}.
+Grup selang-seling $\mathfrak{A}_n$ ($n\geq 5$) merupakan keluarga pertama grup sederhana berhingga nonkomutatif yang ditemukan; hal ini akan dijelaskan secara terperinci dalam Teorema \ref{prop:A_n-simple}. Klasifikasi grup sederhana berhingga hingga isomorfisme merupakan tonggak besar dalam perkembangan teori grup. Sejak Hölder mengajukan masalah klasifikasi ini pada 1892 hingga Aschbacher dan Smith menyelesaikan bagian terakhir pembuktian Gorenstein dan para kolaboratornya sekitar 2004, pengerjaannya memakan waktu lebih dari satu abad. Literatur terkait sangat luas; bahkan gambaran kasar atas hasil klasifikasinya memerlukan ruang yang tidak sedikit. Pembaca yang berminat dipersilakan merujuk \cite{Wil09}.
 
-子群的交仍是子群, 正规子群的交依然正规. 设 $E \subset G$ 是任意子集, 则包含 $E$ 的最小子群称为由 $E$ \emph{生成}的子群, 记为 $\lrangle{E}$. 其中的元素是由 $E$ 的元素出发, 从乘法及取逆运算所能得到的所有元素. 一种直截了当的写法是 \index[sym1]{<E>@$\lrangle{E}$}
-\[ \lrangle{E} := \bigcap_{\substack{H \subset G: \text{子群} \\ H \supset E}} H. \]
-同理, 由 $E$ 生成的正规子群定义为 $\bigcap_{E \subset N \lhd G} N$. 当 $E$ 是独点集 $\{x\}$ 时, 使用简写
+Irisan subgrup-subgrup tetap merupakan subgrup, dan irisan subgrup-subgrup normal tetap normal. Misalkan $E\subset G$ adalah sembarang subhimpunan. Subgrup terkecil yang memuat $E$ disebut subgrup yang \emph{dibangkitkan} oleh $E$ dan dinotasikan dengan $\lrangle{E}$. Unsur-unsurnya adalah semua unsur yang dapat diperoleh dari unsur-unsur $E$ dengan perkalian dan pengambilan invers. Salah satu cara langsung untuk menuliskannya ialah \index[sym1]{<E>@$\lrangle{E}$}
+\[ \lrangle{E} := \bigcap_{\substack{H \subset G: \text{subgrup} \\ H \supset E}} H. \]
+Demikian pula, subgrup normal yang dibangkitkan oleh $E$ didefinisikan sebagai $\bigcap_{E \subset N \lhd G}N$. Jika $E$ adalah himpunan tunggal $\{x\}$, kita memakai singkatan
 \[ \lrangle{x} := \lrangle{\{x\}} = \{ x^n : n \in \Z \}. \]
-对于任意 $G$ 与 $x \in G$, 记 $\ord(x) := |\lrangle{x}|$, 称为 $x$ 的\emph{阶}.\index[sym1]{ordx@$\ord(x)$} \index{qun!阶 (order)}
+Untuk sembarang $G$ dan $x\in G$, kita tulis $\ord(x):=|\lrangle{x}|$ dan menyebutnya \emph{orde} dari $x$.\index[sym1]{ordx@$\ord(x)$} \index{qun@grup (group)!orde (order)}
 
-\begin{definition}[循环群]\label{def:cyclic-group}\index{xunhuanqun@循环群 (cyclic group)}
-	若群 $G$ 中存在元素 $x$ 使得 $G = \lrangle{x}$, 则称 $G$ 为循环群. 换言之, 循环群是能由单个元素生成的群. 参看例 \ref{eg:cyclic-group}.
+\begin{definition}[Grup siklik]\label{def:cyclic-group}\index{xunhuanqun@grup siklik (cyclic group)}
+	Jika terdapat unsur $x$ dalam grup $G$ sedemikian sehingga $G=\lrangle{x}$, maka $G$ disebut grup siklik. Dengan kata lain, grup siklik adalah grup yang dapat dibangkitkan oleh satu unsur. Lihat Contoh \ref{eg:cyclic-group}.
 \end{definition}
 
 \begin{example}\label{eg:Z-as-group}
-	整数全体 $\Z$ 对加法构成群. 它由 $1 \in \Z$ 生成故循环. 所有子群 $H \subset G$ 都形如 $H = n\Z = \{m \in \Z : n \mid m\}$: 当 $H \neq \{0\}$ 时取 $n$ 为 $H \cap \Z_{> 0}$的最小元即可.
+	% O013-LI-U025-COR-001: pembatas ambien G pada sumber dikoreksi menjadi \Z; lihat tinjauan QA Unit 025.
+	Himpunan semua bilangan bulat $\Z$ membentuk grup terhadap penjumlahan. Grup ini dibangkitkan oleh $1\in\Z$ dan karena itu siklik. Semua subgrup $H\subset\Z$ berbentuk $H=n\Z=\{m\in\Z:n\mid m\}$: jika $H\neq\{0\}$, cukup ambil $n$ sebagai unsur terkecil dari $H\cap\Z_{>0}$.
 \end{example}
 
-\begin{definition}[陪集]\label{def:coset}\index{peiji@陪集 (coset)}
-	设 $H$ 为群 $G$ 的子群. 定义:
+\begin{definition}[Koset]\label{def:coset}\index{peiji@koset (coset)}
+	Misalkan $H$ adalah subgrup dari grup $G$. Definisikan:
 	\begin{compactitem}
-		\item 左陪集: $G$ 中形如 $xH$ 的子集, 全体左陪集构成的集合记作 $G/H$;
-		\item 右陪集: $G$ 中形如 $Hx$ 的子集, 全体右陪集构成的集合记作 $H \backslash G$;
-		\item 双陪集: 设 $K$ 为另一子群, 则 $G$ 中形如 $HxK := \{hxk : h \in H, k \in K\}$ 的子集称为 $G$ 对 $(H,K)$ 的双陪集, 全体双陪集构成的集合记作 $H \backslash G/K$.
+		\item koset kiri: subhimpunan $G$ yang berbentuk $xH$; himpunan semua koset kiri dinotasikan dengan $G/H$;
+		\item koset kanan: subhimpunan $G$ yang berbentuk $Hx$; himpunan semua koset kanan dinotasikan dengan $H \backslash G$;
+		\item koset ganda: jika $K$ adalah subgrup lain, maka subhimpunan $G$ yang berbentuk $HxK:=\{hxk:h\in H,k\in K\}$ disebut koset ganda dari $G$ terhadap $(H,K)$; himpunan semua koset ganda dinotasikan dengan $H\backslash G/K$.
 	\end{compactitem}
-	陪集中的元素称为该陪集的一个代表元. 若 $H \lhd G$ 则左, 右陪集无异. 由于陪集的左右之分总能从符号辨明, 以下不再申明. 定义 $H$ 在 $G$ 中的指数
+	Unsur suatu koset disebut suatu wakil dari koset tersebut. Jika $H\lhd G$, tidak ada perbedaan antara koset kiri dan kanan. Karena sisi suatu koset selalu tampak dari notasinya, selanjutnya kita tidak akan menyebutkannya lagi. Definisikan indeks $H$ dalam $G$ sebagai
 	\[ (G:H) := |G/H|. \]
-	陪集空间 $G/H$ 未必有限, 在此视 $(G:H)$ 为基数. \index[sym1]{G:H@$(G:H)$}
+	Ruang koset $G/H$ tidak harus berhingga; di sini $(G:H)$ dipandang sebagai suatu kardinal. \index[sym1]{G:H@$(G:H)$}
 \end{definition}
-左, 右陪集其实是双陪集的特例, 分别取 $H$ 或 $K$ 为 $\{1\}$ 即是. 因此以下结果仅对双陪集陈述.
+Koset kiri dan kanan sebenarnya merupakan kasus khusus koset ganda, dengan masing-masing mengambil $H$ atau $K$ sama dengan $\{1\}$. Karena itu, hasil berikut hanya dirumuskan untuk koset ganda.
 \begin{lemma}\label{prop:coset-decomp}
-	设 $H, K$ 为群 $G$ 的子群, 则
+	Misalkan $H,K$ adalah subgrup dari grup $G$. Maka,
 	\begin{compactenum}[(i)]
-		\item 对于任意双陪集 $HxK$, $HyK$, 其交非空当且仅当 $HxK = HyK$;
-		\item $G$ 写作无交并 $G = \bigsqcup_x HxK$, 其中我们对 $H \backslash G / K$ 中的每个双陪集挑选一代表元 $x$.
+		\item untuk sembarang koset ganda $HxK$ dan $HyK$, irisannya tak kosong jika dan hanya jika $HxK=HyK$;
+		\item $G$ dapat ditulis sebagai gabungan saling lepas $G=\bigsqcup_x HxK$, dengan memilih satu wakil $x$ dari setiap koset ganda dalam $H\backslash G/K$.
 	\end{compactenum}
 \end{lemma}
 \begin{proof}
-	设 $HxK \cap HyK \neq \emptyset$. 若 $hxk = h'yk'$, 则 $x = h^{-1}h' y k' k^{-1} \in HyK$, 从而 $HxK \subset HHyKK = HyK$; 由对称性得$HyK \subset HxK$, 故两者相等. 由于任意 $g \in G$ 都属于 $HgK$, 断言的无交并是显然的.
+	Andaikan $HxK\cap HyK\neq\emptyset$. Jika $hxk=h'yk'$, maka $x=h^{-1}h'yk'k^{-1}\in HyK$, sehingga $HxK\subset HHyKK=HyK$; oleh simetri, $HyK\subset HxK$, dan karenanya keduanya sama. Karena setiap $g\in G$ termuat dalam $HgK$, pernyataan tentang gabungan saling lepas tersebut langsung diperoleh.
 \end{proof}
 
-对每个 $x \in G$, 左乘 $h \mapsto xh$ 给出集合间的双射 $H \to xH$, 这是因为群中的元素满足左消去律. 同理, 右乘给出双射 $H \to Hx$.
+Untuk setiap $x\in G$, perkalian kiri $h\mapsto xh$ memberikan bijeksi himpunan $H\to xH$, sebab unsur-unsur grup memenuhi hukum pembatalan kiri. Demikian pula, perkalian kanan memberikan bijeksi $H\to Hx$.
 
 \begin{proposition}\label{prop:Lagrange}
-	设 $H$ 为 群 $G$ 的子群, 则
+	Misalkan $H$ adalah subgrup dari grup $G$. Maka,
 	\begin{compactenum}[(i)]
-		\item $|G| = (G:H) |H|$, 特别地, 当 $G$ 有限时 $|H|$ 必整除 $|G|$ (称为 Lagrange 定理);
-		\item 若 $K$ 是 $H$ 的子群, 则 $(G:K) =(G:H)(H:K)$.
+		\item $|G|=(G:H)|H|$; khususnya, jika $G$ berhingga, maka $|H|$ membagi $|G|$ (disebut teorema Lagrange);
+		\item jika $K$ adalah subgrup dari $H$, maka $(G:K)=(G:H)(H:K)$.
 	\end{compactenum}
-	这里的乘法是基数的乘法.
+	Hasil kali di sini adalah hasil kali kardinal.
 \end{proposition}
 \begin{proof}
-	陪集分解
+	Dekomposisi koset
 	\begin{align*}
 		H &= \bigsqcup_y yK, \\
-		G &= \bigsqcup_x xH = \bigsqcup_{x,y} xyK 
+		G &= \bigsqcup_x xH = \bigsqcup_{x,y} xyK
 	\end{align*}
-	可用以证明 (ii). 由于 $(G:1)=|G|$, $(H:1)=|H|$, 取 $K=\{1\}$ 即得 (i). 
+	dapat digunakan untuk membuktikan (ii). Karena $(G:1)=|G|$ dan $(H:1)=|H|$, dengan mengambil $K=\{1\}$ kita memperoleh (i).
 \end{proof}
 
-\begin{definition}[中心, 中心化子与正规化子]\index{zhongxin}\index[sym1]{Z_G@$Z_G$}\index[sym1]{N_G(E)@$N_G(\cdot)$}\index[sym1]{Z_G(E)@$Z_G(\cdot)$}
-	设 $G$ 为群.
+\begin{definition}[Pusat, sentralisator, dan normalisator]\index{zhongxin@pusat}\index[sym1]{Z_G@$Z_G$}\index[sym1]{N_G(E)@$N_G(\cdot)$}\index[sym1]{Z_G(E)@$Z_G(\cdot)$}
+	Misalkan $G$ adalah grup.
 	\begin{compactenum}[(i)]
-		\item $G$ 的\emph{中心}定义为 $Z_G := \{z \in G : \forall x \in G, \; xz=zx\}$;
-		\item 设 $E \subset G$ 为任意子集, 定义其\emph{中心化子}为 $Z_G(E) := \{z \in G : \forall x \in E, \; xz=zx \}$;
-		\item 承上, 定义其\emph{正规化子}为 $N_G(E) := \{n \in G : nEn^{-1} = E \}$.
+		\item \emph{Pusat} dari $G$ didefinisikan sebagai $Z_G:=\{z\in G:\forall x\in G,\;xz=zx\}$;
+		\item jika $E\subset G$ adalah sembarang subhimpunan, \emph{sentralisatornya} didefinisikan sebagai $Z_G(E):=\{z\in G:\forall x\in E,\;xz=zx\}$;
+		\item dengan notasi yang sama, \emph{normalisatornya} didefinisikan sebagai $N_G(E):=\{n\in G:nEn^{-1}=E\}$.
 	\end{compactenum}
-	当 $E$ 是独点集 $\{x\}$ 时, 使用简写 $Z_G(x)$ 和 $N_G(x)$.
+	Jika $E$ adalah himpunan tunggal $\{x\}$, kita memakai singkatan $Z_G(x)$ dan $N_G(x)$.
 \end{definition}
 
-易见 $Z_G(E)$ 和 $N_G(E)$ 都是子群, 而且 $Z_G(E) \lhd N_G(E)$, 前者仅与 $E$ 生成的子群 $\lrangle{E}$ 有关. 若 $H$ 是子群则 $H \lhd N_G(H)$. 取 $E=G$ 即有
+Jelas bahwa $Z_G(E)$ dan $N_G(E)$ keduanya merupakan subgrup, dan $Z_G(E)\lhd N_G(E)$. Subgrup yang pertama hanya bergantung pada subgrup $\lrangle{E}$ yang dibangkitkan oleh $E$. Jika $H$ adalah subgrup, maka $H\lhd N_G(H)$. Dengan mengambil $E=G$, diperoleh
 \[ Z_G(G) = Z_G \lhd G = N_G(G). \]
 
 \begin{remark}\label{rem:HN}
-	若 $N, H \subset G$ 为子群, 而且 $H \subset N_G(N)$, 则 $HN = NH$ 是 $G$ 的子群而且 $N \lhd HN$. 请读者自行验证.
+	Jika $N,H\subset G$ merupakan subgrup dan $H\subset N_G(N)$, maka $HN=NH$ merupakan subgrup dari $G$ dan $N\lhd HN$. Pembaca diminta memeriksanya sendiri.
 \end{remark}
-
 \section{同态和商群}\label{sec:homomorphism}
 同态的意义是保结构的映射. 对于带二元运算的非空集 $S_1, S_2$, 同态 $\varphi: S_1 \to S_2$ 所要保持的结构无非是二元运算, 即: $\forall x,y \in S_1, \; \varphi(xy)=\varphi(x)\varphi(y)$. 准此要领可定义半群的同态. 然而幺半群的情形更常见也更为实用, 此时我们要求同态必须兼保乘法和幺元.\index{tongtai@同态 (homomorphism)}
 

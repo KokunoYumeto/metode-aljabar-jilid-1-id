@@ -1,0 +1,475 @@
+entity_type,id,stable_key,parent_id,order,label_id,status
+build_surface,urn:uuid:1753315b-c21b-57e0-bfa8-0a9e490a64ef,build-surface/unit-025-pdf,urn:uuid:3c486ac1-1de8-5a44-aed8-bc490b8f248f,,unit-025-pdf,pass
+citation,urn:uuid:c2417bde-a406-5b49-9a93-aeb00222bdd9,citation/unit-025/01-har00,urn:uuid:8cb7ae37-ffac-5509-a911-0fe1a30db454,,Har00,admitted:admitted
+citation,urn:uuid:450eff0b-6438-57c9-a2a8-880aa45424c2,citation/unit-025/02-bou-alg1,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,,Bou-Alg1,admitted:admitted
+citation,urn:uuid:ac3037ce-928a-57c8-bcb3-8eabb198d8d6,citation/unit-025/03-wil09,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,,Wil09,admitted:admitted
+concept,urn:uuid:70cd74b8-09e1-56df-8f41-8c831d796f7d,concept/binary-operation,,,operasi biner,admitted:admitted
+concept,urn:uuid:ba34d5bb-b251-5c35-b35f-cd914ba11abb,concept/coset,,,koset,admitted:admitted
+concept,urn:uuid:3a6ab8e9-d5a6-5393-869e-bda332ff9b34,concept/cyclic-group,,,grup siklik,admitted:admitted
+concept,urn:uuid:ba251503-a09d-5fb4-b692-1b21fdaee131,concept/double-coset-decomposition,,,dekomposisi koset ganda,admitted:admitted
+concept,urn:uuid:2ce04700-d4ef-5af9-bb9c-27af44fb726a,concept/general-linear-group,,,grup linear umum,admitted:admitted
+concept,urn:uuid:890cc3d8-c60c-5d1e-8bf8-d2aef1b49ebd,concept/generated-subgroup,,,subgrup yang dibangkitkan,admitted:admitted
+concept,urn:uuid:77854c19-0ff8-5138-94bd-20553f53f88e,concept/group,,,grup,admitted:admitted
+concept,urn:uuid:a2a88346-05d3-5c12-a35d-61ae99a96056,concept/group-center-centralizer-normalizer,,,"pusat, sentralisator, dan normalisator",admitted:admitted
+concept,urn:uuid:74e565c8-a0cf-500e-8413-2ddf85b5b4df,concept/group-theory-framework,,,kerangka formal dan konkret teori grup,admitted:admitted
+concept,urn:uuid:630ec5a2-5a4e-5b04-a9b5-3fba236d79ec,concept/invertible-element,,,unsur invertibel,admitted:admitted
+concept,urn:uuid:7e79ecdc-afe9-5e8d-b7d7-84a8d0c9596d,concept/lagrange-theorem,,,teorema Lagrange,admitted:admitted
+concept,urn:uuid:46f797cc-eef6-569b-8ac9-273b774efdb0,concept/monoid,,,monoid,admitted:admitted
+concept,urn:uuid:55b0b088-776a-5542-8ce8-30dc4c073072,concept/normal-subgroup,,,subgrup normal,admitted:admitted
+concept,urn:uuid:5a7ceec2-e0a4-56b0-8dd6-bbcd8f77ccf9,concept/opposite-structure,,,struktur lawan,admitted:admitted
+concept,urn:uuid:a3418606-ff76-5463-8ae9-8179c54c31bf,concept/semigroup,,,semigrup,admitted:admitted
+concept,urn:uuid:c42a5c21-0ae4-559c-b5c3-4e6dc1ed41ad,concept/simple-group,,,grup sederhana,admitted:admitted
+concept,urn:uuid:bb2401bb-d0aa-54d4-b672-bdb8f1b31ea5,concept/subgroup,,,subgrup,admitted:admitted
+concept,urn:uuid:de6954ae-e63f-5ad8-a75f-b80014a6543b,concept/subgroup-product-normality,,,hasil kali subgrup dan kenormalan,admitted:admitted
+concept,urn:uuid:466b1220-9ccc-56d2-a193-0cad39523da3,concept/symmetric-group,,,grup simetris,admitted:admitted
+concept,urn:uuid:56321f17-a92f-5b26-8d09-67b230089688,concept/unit-group,,,grup unit,admitted:admitted
+concept,urn:uuid:1d460b2f-290b-5b5a-968a-32793774a6b8,correction/o013-li-u025-cor-001,,,koreksi sumber terdeklarasi O013-LI-U025-COR-001; baris sumber 115; baris target 118; pembatas ambien H pada contoh grup aditif bilangan bulat diperbaiki dari G yang tidak terdefinisi menjadi Z. Bukti: qa/UNIT_025_SOURCE_AND_TRANSLATION_REVIEW_20260824.md.,admitted:admitted
+concept,urn:uuid:2a0dfcaa-379f-578c-b2a2-8051a3e99af7,localization/o013-li-u025-index-hierarchy-repair,,,"perbaikan lokalisasi indeks khusus target; empat entri bersarang pada baris target 54, 62, 101, dan 110 diberi kunci tampilan induk eksplisit; TeX sumber dan matematika tidak berubah",admitted:admitted
+concept,urn:uuid:edbffb91-faf8-5599-b524-6e24f2582ffc,surface/unit-025/environment/001-compactenum-01,,,lingkungan 001: compactenum kemunculan 1; baris target 13-16,admitted:admitted
+concept,urn:uuid:7b78ae85-d7be-56e9-939e-108a5fcfb2e4,surface/unit-025/environment/002-wenxintishi-01,,,lingkungan 002: wenxintishi kemunculan 1; baris target 21-27,admitted:admitted
+concept,urn:uuid:5e4e4dbd-18c9-5744-924e-e575afaa2c99,surface/unit-025/environment/003-itemize-01,,,lingkungan 003: itemize kemunculan 1; baris target 33-46,admitted:admitted
+concept,urn:uuid:9b42e19c-5082-53f6-a711-2f30406409e2,surface/unit-025/environment/004-definition-01,,,lingkungan 004: definition kemunculan 1; baris target 48-55,admitted:admitted
+concept,urn:uuid:a69d7223-5fec-5ca1-a367-895cdca0eacd,surface/unit-025/environment/005-inparaenum-01,,,lingkungan 005: inparaenum kemunculan 1; baris target 50-53,admitted:admitted
+concept,urn:uuid:3f774d83-740c-5596-af05-6966c2d726f8,surface/unit-025/environment/006-definition-02,,,lingkungan 006: definition kemunculan 2; baris target 62-64,admitted:admitted
+concept,urn:uuid:354fd8e9-f43b-55d0-8dec-20a834e730a4,surface/unit-025/environment/007-convention-01,,,lingkungan 007: convention kemunculan 1; baris target 72-74,admitted:admitted
+concept,urn:uuid:76d65c06-e0f9-567b-862a-1a912021c5ff,surface/unit-025/environment/008-example-01,,,lingkungan 008: example kemunculan 1; baris target 76-78,admitted:admitted
+concept,urn:uuid:bebf7585-4dfd-5d49-ab1f-d9bfb93cee0f,surface/unit-025/environment/009-example-02,,,lingkungan 009: example kemunculan 2; baris target 80-84,admitted:admitted
+concept,urn:uuid:3176a607-3331-550c-b3d2-2692fd658cee,surface/unit-025/environment/010-example-03,,,lingkungan 010: example kemunculan 3; baris target 86-88,admitted:admitted
+concept,urn:uuid:6afb6cab-ea55-5f84-8fce-62e0373890e4,surface/unit-025/environment/011-definition-03,,,lingkungan 011: definition kemunculan 3; baris target 91-98,admitted:admitted
+concept,urn:uuid:c2efcabc-8d9e-5b61-808b-cce1534feb6a,surface/unit-025/environment/012-inparaenum-02,,,lingkungan 012: inparaenum kemunculan 2; baris target 93-96,admitted:admitted
+concept,urn:uuid:c18abf00-3f4c-5d41-a138-44b15086a6b0,surface/unit-025/environment/013-definition-04,,,lingkungan 013: definition kemunculan 4; baris target 101-103,admitted:admitted
+concept,urn:uuid:031a5b2c-37aa-56bf-810d-9448bd4c0100,surface/unit-025/environment/014-definition-05,,,lingkungan 014: definition kemunculan 5; baris target 112-114,admitted:admitted
+concept,urn:uuid:5b4bbb33-af69-5fe4-81ec-9c27d39277e4,surface/unit-025/environment/015-example-04,,,lingkungan 015: example kemunculan 4; baris target 116-119,admitted:admitted
+concept,urn:uuid:edd22a0b-8c36-546b-906b-31657db39952,surface/unit-025/environment/016-definition-06,,,lingkungan 016: definition kemunculan 6; baris target 121-131,admitted:admitted
+concept,urn:uuid:eb26fb9d-f2a7-5c3c-bdbc-598342e3cb02,surface/unit-025/environment/017-compactitem-01,,,lingkungan 017: compactitem kemunculan 1; baris target 123-127,admitted:admitted
+concept,urn:uuid:d9d501cc-34dc-5f23-9271-d5403705f928,surface/unit-025/environment/018-lemma-01,,,lingkungan 018: lemma kemunculan 1; baris target 133-139,admitted:admitted
+concept,urn:uuid:f13e6d73-4345-5117-be0e-89146b14649a,surface/unit-025/environment/019-compactenum-02,,,lingkungan 019: compactenum kemunculan 2; baris target 135-138,admitted:admitted
+concept,urn:uuid:846810d2-83ff-57b3-a630-600c116ca46d,surface/unit-025/environment/020-proof-01,,,lingkungan 020: proof kemunculan 1; baris target 140-142,admitted:admitted
+concept,urn:uuid:9301afde-be57-52bd-9983-8d216b9570f7,surface/unit-025/environment/021-proposition-01,,,lingkungan 021: proposition kemunculan 1; baris target 146-153,admitted:admitted
+concept,urn:uuid:4101e054-34bb-5388-9a1b-2480b6f9d89a,surface/unit-025/environment/022-compactenum-03,,,lingkungan 022: compactenum kemunculan 3; baris target 148-151,admitted:admitted
+concept,urn:uuid:9330db45-6fe9-5958-8152-371f21edcb3a,surface/unit-025/environment/023-proof-02,,,lingkungan 023: proof kemunculan 2; baris target 154-161,admitted:admitted
+concept,urn:uuid:4eb05bb1-3481-5141-9178-03c0061cf32f,surface/unit-025/environment/024-align-01,,,lingkungan 024: align* kemunculan 1; baris target 156-159,admitted:admitted
+concept,urn:uuid:e56b822a-e184-591d-87fe-10803c01233b,surface/unit-025/environment/025-definition-07,,,lingkungan 025: definition kemunculan 7; baris target 163-171,admitted:admitted
+concept,urn:uuid:5219c29c-ec40-523a-b069-3380d52aa106,surface/unit-025/environment/026-compactenum-04,,,lingkungan 026: compactenum kemunculan 4; baris target 165-169,admitted:admitted
+concept,urn:uuid:48aa8384-43e6-5424-b41d-44514f59b92f,surface/unit-025/environment/027-remark-01,,,lingkungan 027: remark kemunculan 1; baris target 176-178,admitted:admitted
+concept,urn:uuid:1f3c0e19-6023-5184-a679-8b64cc709def,surface/unit-025/formula/display-bracket/001,,,rumus pajang 001; baris target 39-39; SHA-256 e4fdbc9ee4e60d1be264e5f51ac20d1d9fe7bd62755277ff2109d3d08827e17e,admitted:admitted
+concept,urn:uuid:4c6bdefa-69ca-502d-a641-c93a16bfc0e6,surface/unit-025/formula/display-bracket/002,,,rumus pajang 002; baris target 43-43; SHA-256 8c2d41bc3cc215ae1d89b95ef8f961360a8330709655cc9596622884edf09d33,admitted:admitted
+concept,urn:uuid:43c0e7ad-5010-54de-9a21-eb061e049d3e,surface/unit-025/formula/display-bracket/003,,,rumus pajang 003; baris target 60-60; SHA-256 f8d9c3daae914b611441edd77b29f6d40905f52cbfcee0ec5315535fc6c98d15,admitted:admitted
+concept,urn:uuid:042921e1-b4ee-5e21-9479-409c208cfad7,surface/unit-025/formula/display-bracket/004,,,rumus pajang 004; baris target 69-69; SHA-256 d2b084fbad574ee6069138f870cbeafece630d77f7b0011fb79183511aa4fccd,admitted:admitted
+concept,urn:uuid:57aa2170-88af-54a6-97e9-c70e460ad469,surface/unit-025/formula/display-bracket/005,,,rumus pajang 005; baris target 107-107; SHA-256 14562a4c2f673ec4e882e27904727863789755a72a377874d0e3818764732234,admitted:admitted
+concept,urn:uuid:898040a2-8bea-5b67-9296-ffa47e373648,surface/unit-025/formula/display-bracket/006,,,rumus pajang 006; baris target 109-109; SHA-256 89f5190c16d946d1a25fed1a5b1f7dfc4088aac0a00d807289ab40ecc9e70f76,admitted:admitted
+concept,urn:uuid:70be6623-62ee-5d81-ba09-f40ad41283af,surface/unit-025/formula/display-bracket/007,,,rumus pajang 007; baris target 129-129; SHA-256 4aed10fe18ddf4b3544fec8a933ca8b44e720f50b97eba19b2c925c5fb982533,admitted:admitted
+concept,urn:uuid:9a67092b-0dc6-5571-9acd-a29937e08f0f,surface/unit-025/formula/display-bracket/008,,,rumus pajang 008; baris target 174-174; SHA-256 ba4d914b712dd5a1100d2791802f767c7210995197a6d5e99b401374783f3878,admitted:admitted
+concept,urn:uuid:22c810e7-a905-5a85-892b-6e26ebfa15e6,surface/unit-025/formula/display-environment/001-align,,,rumus pajang lingkungan 001: align*; baris target 156-159; SHA-256 c9a7acfa2287409229c8cc75cd71440c503d754e754404e03ff88729bc17ecd2,admitted:admitted
+concept,urn:uuid:aff9cc45-3572-524d-82e4-6b87b317a049,surface/unit-025/formula/inline/001,,,rumus sebaris 001; baris target 26; SHA-256 39fa9ec190eee7b6f4dff1100d6343e10918d044c75eac8f9e9a2596173f80c9,admitted:admitted
+concept,urn:uuid:41eadae2-64b0-5cbe-8859-25bb301bfd63,surface/unit-025/formula/inline/002,,,rumus sebaris 002; baris target 26; SHA-256 b85f5c62f3ace3d74de151c062d7a472f88440a57eb251b0cf11f9628a3a2b6c,admitted:admitted
+concept,urn:uuid:3ac316a6-dc2b-559d-9427-50c6be5529a3,surface/unit-025/formula/inline/003,,,rumus sebaris 003; baris target 30; SHA-256 8de0b3c47f112c59745f717a626932264c422a7563954872e237b223af4ad643,admitted:admitted
+concept,urn:uuid:e45569f4-0f07-5b7b-b047-0cc0a66d883a,surface/unit-025/formula/inline/004,,,rumus sebaris 004; baris target 30; SHA-256 a9cab8a3e9c9fa63e94b37d8c3b45da71850091af020a5f0e01ca15b05a49206,admitted:admitted
+concept,urn:uuid:5234ee6f-e8fb-58df-8b05-fb05e8c28583,surface/unit-025/formula/inline/005,,,rumus sebaris 005; baris target 30; SHA-256 96b9aac8fc049bbbae71e849f337fbe5405e797389dddc7541d2cc744f2a967f,admitted:admitted
+concept,urn:uuid:2e6d25e3-166c-5bdc-a964-ae774ccbf2c1,surface/unit-025/formula/inline/006,,,rumus sebaris 006; baris target 30; SHA-256 769a4e6d0003189c7e96c5d9b7e810a0d11c3a12832527ec94b0f86d277f51ca,admitted:admitted
+concept,urn:uuid:30ca4e02-cb0e-570a-b140-c9189c2d51b2,surface/unit-025/formula/inline/007,,,rumus sebaris 007; baris target 30; SHA-256 8de0b3c47f112c59745f717a626932264c422a7563954872e237b223af4ad643,admitted:admitted
+concept,urn:uuid:e8b23a5d-9d70-518f-bfff-90de4451d785,surface/unit-025/formula/inline/008,,,rumus sebaris 008; baris target 30; SHA-256 c89ecdd140d0782fb343f136c203eff29fcee2ef4a3c4efb4ad2023fe097bf5d,admitted:admitted
+concept,urn:uuid:575e000a-4ee3-564e-a01c-a8530fdce332,surface/unit-025/formula/inline/009,,,rumus sebaris 009; baris target 30; SHA-256 c0ba4f4c209909a31971efd624ea5b291148920a20b49244a59200013bfe734c,admitted:admitted
+concept,urn:uuid:f77ebee2-de42-5a10-b6f6-144943c1e6ef,surface/unit-025/formula/inline/010,,,rumus sebaris 010; baris target 30; SHA-256 94ab40df40f05969fd132f025ae54665fe89f1b848afbc1525615a38fbb2464f,admitted:admitted
+concept,urn:uuid:964e6c0c-435c-57cd-b09a-580eb9300e42,surface/unit-025/formula/inline/011,,,rumus sebaris 011; baris target 30; SHA-256 8de0b3c47f112c59745f717a626932264c422a7563954872e237b223af4ad643,admitted:admitted
+concept,urn:uuid:1ef9386e-209a-5087-b4f8-15b525514188,surface/unit-025/formula/inline/012,,,rumus sebaris 012; baris target 32; SHA-256 94ab40df40f05969fd132f025ae54665fe89f1b848afbc1525615a38fbb2464f,admitted:admitted
+concept,urn:uuid:11c55616-7bf3-5d85-aad7-08c6cf7bf8ef,surface/unit-025/formula/inline/013,,,rumus sebaris 013; baris target 34; SHA-256 362138992adfe80451c58ba83346e08fac69ce24150229ffd526540efb3ea0e5,admitted:admitted
+concept,urn:uuid:9f8d433e-4880-5786-821b-5847af4d261a,surface/unit-025/formula/inline/014,,,rumus sebaris 014; baris target 34; SHA-256 8de0b3c47f112c59745f717a626932264c422a7563954872e237b223af4ad643,admitted:admitted
+concept,urn:uuid:770b9692-3400-52ef-ba27-7ffe510aecdc,surface/unit-025/formula/inline/015,,,rumus sebaris 015; baris target 34; SHA-256 ec8bc1c4fc51983463be1d8ee130505eb7539ac34f25cfba5a201e46d9bed0f1,admitted:admitted
+concept,urn:uuid:9b2ba258-03e1-5c1d-8344-9d35d9a4d9fb,surface/unit-025/formula/inline/016,,,rumus sebaris 016; baris target 34; SHA-256 9e4a740f63abf849a5f73819ab2668df9321167a3dee5ec5ec0a78c3bd1af93d,admitted:admitted
+concept,urn:uuid:aaac1703-c6f3-5be7-aefa-fe6c843cce0f,surface/unit-025/formula/inline/017,,,rumus sebaris 017; baris target 34; SHA-256 a70047622b175e1283a4c97b88c653b7a846dc61838d42415f6a900f9dc473d3,admitted:admitted
+concept,urn:uuid:2a8d8202-ec71-5e48-a060-425a8fe631a5,surface/unit-025/formula/inline/018,,,rumus sebaris 018; baris target 34; SHA-256 8de0b3c47f112c59745f717a626932264c422a7563954872e237b223af4ad643,admitted:admitted
+concept,urn:uuid:bd52a86d-329e-5d50-b262-625755f72fb4,surface/unit-025/formula/inline/019,,,rumus sebaris 019; baris target 35; SHA-256 6075f8112cee99455b812313a070c83f26aab1e638f65f4363288995d43d4b50,admitted:admitted
+concept,urn:uuid:2a8d281f-cf6e-5fc4-93cc-e7caf419bf7c,surface/unit-025/formula/inline/020,,,rumus sebaris 020; baris target 35; SHA-256 56b0fa37161d44da3e99d51dc476ae203677e613dde45c1cf1cf9bb371d4bfee,admitted:admitted
+concept,urn:uuid:d20c6314-28b7-5655-8245-9acfce3fdb41,surface/unit-025/formula/inline/021,,,rumus sebaris 021; baris target 35; SHA-256 8de0b3c47f112c59745f717a626932264c422a7563954872e237b223af4ad643,admitted:admitted
+concept,urn:uuid:0da6502d-2d2e-564e-8e0b-3ad8e2cad682,surface/unit-025/formula/inline/022,,,rumus sebaris 022; baris target 35; SHA-256 8de0b3c47f112c59745f717a626932264c422a7563954872e237b223af4ad643,admitted:admitted
+concept,urn:uuid:14c0f236-eeda-5376-927e-04989d3f9738,surface/unit-025/formula/inline/023,,,rumus sebaris 023; baris target 35; SHA-256 4022d46e7cdcbf7ab12ef8455d8ed78be7cabd4309e2c5592d31ce982208bf6a,admitted:admitted
+concept,urn:uuid:25dff609-a076-5065-a009-de51236332c4,surface/unit-025/formula/inline/024,,,rumus sebaris 024; baris target 36; SHA-256 b8b776c11312195242017213bbb40297297be91ecdf46a358a54e0331d6b56d5,admitted:admitted
+concept,urn:uuid:51311564-7b32-55aa-8eca-1613dc4e6a76,surface/unit-025/formula/inline/025,,,rumus sebaris 025; baris target 36; SHA-256 3954e379123f9fb4ab6aad2acbd8d91ddb2fcfab60abb76a6b55689f29e32295,admitted:admitted
+concept,urn:uuid:47c11c26-663e-5121-b279-f83a009711b1,surface/unit-025/formula/inline/026,,,rumus sebaris 026; baris target 36; SHA-256 8de0b3c47f112c59745f717a626932264c422a7563954872e237b223af4ad643,admitted:admitted
+concept,urn:uuid:ec886218-ae58-5f5d-8e07-dd5a269c5bdd,surface/unit-025/formula/inline/027,,,rumus sebaris 027; baris target 37; SHA-256 7f6cf40b81199c63f84a3afe5238959af289f44cac5f37d968d5f614b7d52b6e,admitted:admitted
+concept,urn:uuid:c90ee62b-b65c-5aae-ae71-efe73453bbd5,surface/unit-025/formula/inline/028,,,rumus sebaris 028; baris target 37; SHA-256 8de0b3c47f112c59745f717a626932264c422a7563954872e237b223af4ad643,admitted:admitted
+concept,urn:uuid:bba84304-e797-5b4f-9852-80a1f4b9929f,surface/unit-025/formula/inline/029,,,rumus sebaris 029; baris target 37; SHA-256 8de0b3c47f112c59745f717a626932264c422a7563954872e237b223af4ad643,admitted:admitted
+concept,urn:uuid:bca2bdba-66b7-5a3b-a35c-0d9415881a42,surface/unit-025/formula/inline/030,,,rumus sebaris 030; baris target 37; SHA-256 9fea96feb9950d530671c757fed15a4b171f3367ed4a90a89e0dbbfe7d69d224,admitted:admitted
+concept,urn:uuid:8e02c695-12c3-58e6-a358-ddfcf5697444,surface/unit-025/formula/inline/031,,,rumus sebaris 031; baris target 37; SHA-256 0bfe935e70c321c7ca3afc75ce0d0ca2f98b5422e008bb31c00c6d7f1f1c0ad6,admitted:admitted
+concept,urn:uuid:0c44acbf-9fce-58a6-aef6-69d826f68402,surface/unit-025/formula/inline/032,,,rumus sebaris 032; baris target 37; SHA-256 d07f92ab00d99ae37e18e6b30692839f601bc1544eff3d61f9f6448ba7048cb2,admitted:admitted
+concept,urn:uuid:9fccd1d6-7bcc-5ef1-bd74-93d8255c8154,surface/unit-025/formula/inline/033,,,rumus sebaris 033; baris target 37; SHA-256 0bfe935e70c321c7ca3afc75ce0d0ca2f98b5422e008bb31c00c6d7f1f1c0ad6,admitted:admitted
+concept,urn:uuid:3bf03617-020b-5d92-911b-6ef877ee1482,surface/unit-025/formula/inline/034,,,rumus sebaris 034; baris target 38; SHA-256 b17c8419f544abd0648345006bbe975b43acf9fc878712a1116312f3e1e24b2e,admitted:admitted
+concept,urn:uuid:3228b6cd-c1b2-5852-8009-092170f770e0,surface/unit-025/formula/inline/035,,,rumus sebaris 035; baris target 38; SHA-256 8de0b3c47f112c59745f717a626932264c422a7563954872e237b223af4ad643,admitted:admitted
+concept,urn:uuid:d5b6712e-40d7-5e10-9052-479b4dae842b,surface/unit-025/formula/inline/036,,,rumus sebaris 036; baris target 40; SHA-256 559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd,admitted:admitted
+concept,urn:uuid:245af7db-07bb-57b3-9e25-be95ed83f9e0,surface/unit-025/formula/inline/037,,,rumus sebaris 037; baris target 40; SHA-256 df7e70e5021544f4834bbee64a9e3789febc4be81470df629cad6ddb03320a5c,admitted:admitted
+concept,urn:uuid:459ab1bb-72e2-5b7d-849d-aa6b53a6bf45,surface/unit-025/formula/inline/038,,,rumus sebaris 038; baris target 40; SHA-256 aea71cbfc818e6c47fb505484c0c772b19e321f99cb46a338a5b7c1931a1204d,admitted:admitted
+concept,urn:uuid:d23a0da3-9c85-59c6-a409-d020bfcb12a2,surface/unit-025/formula/inline/039,,,rumus sebaris 039; baris target 40; SHA-256 38164fbd17603d73f696b8b4d72664d735bb6a7c88577687fd2ae33fd6964153,admitted:admitted
+concept,urn:uuid:00864986-60d2-5cd5-8d2a-3b65fcec3a35,surface/unit-025/formula/inline/040,,,rumus sebaris 040; baris target 40; SHA-256 cee6c645555441df5957ad29a06a8aab2667a9de67ab722371fcb5cc5aeb1d9d,admitted:admitted
+concept,urn:uuid:b0504d2f-05ba-5c61-9650-62cdbc1cc9e4,surface/unit-025/formula/inline/041,,,rumus sebaris 041; baris target 40; SHA-256 0f341bc7cf9eb5bd73e51cf67ed8b4f3d031ad57549484baad241202ab839e7f,admitted:admitted
+concept,urn:uuid:3da4731e-0125-50e1-af48-055469303043,surface/unit-025/formula/inline/042,,,rumus sebaris 042; baris target 40; SHA-256 b5d4045c3f466fa91fe2cc6abe79232a1a57cdf104f7a26e716e0a1e2789df78,admitted:admitted
+concept,urn:uuid:1e005597-bed5-5173-8379-45c3c3592ac9,surface/unit-025/formula/inline/043,,,rumus sebaris 043; baris target 40; SHA-256 e12e115acf4552b2568b55e93cbd39394c4ef81c82447fafc997882a02d23677,admitted:admitted
+concept,urn:uuid:520b56ad-d67a-554c-ae2d-af271b6dc585,surface/unit-025/formula/inline/044,,,rumus sebaris 044; baris target 41; SHA-256 559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd,admitted:admitted
+concept,urn:uuid:6cce756c-0e0e-5fb5-a163-e116f5238c3c,surface/unit-025/formula/inline/045,,,rumus sebaris 045; baris target 41; SHA-256 8de0b3c47f112c59745f717a626932264c422a7563954872e237b223af4ad643,admitted:admitted
+concept,urn:uuid:8ed57406-d99e-58c2-9cc4-3baf34aecbf4,surface/unit-025/formula/inline/046,,,rumus sebaris 046; baris target 41; SHA-256 a3405ed7e4665ccd2f921966df88dee341e0f91385f30150c08c91f6775dad17,admitted:admitted
+concept,urn:uuid:13232a58-b219-5d86-acd8-07cda1a82a6d,surface/unit-025/formula/inline/047,,,rumus sebaris 047; baris target 41; SHA-256 559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd,admitted:admitted
+concept,urn:uuid:88596b8d-8a77-5ae9-b37f-a1ce6a194a15,surface/unit-025/formula/inline/048,,,rumus sebaris 048; baris target 42; SHA-256 6fd120cf87f5058a4b9b69532c6a0309ee492986e6a9e1eee6f441e0851fb673,admitted:admitted
+concept,urn:uuid:9901de34-b0ea-5624-a3be-5b064cfa08ca,surface/unit-025/formula/inline/049,,,rumus sebaris 049; baris target 44; SHA-256 8de0b3c47f112c59745f717a626932264c422a7563954872e237b223af4ad643,admitted:admitted
+concept,urn:uuid:f784dfad-b743-5592-bbfe-5d6f5b554d52,surface/unit-025/formula/inline/050,,,rumus sebaris 050; baris target 44; SHA-256 7a91ede546c9d1fa0d8b330461df470e02596350aae339775b2b1a0a7ea37ce3,admitted:admitted
+concept,urn:uuid:292f99f9-3d08-54ae-b582-422592562043,surface/unit-025/formula/inline/051,,,rumus sebaris 051; baris target 44; SHA-256 c7c2e6d53fe736b86e7990ce46aefbe38c5c73ebd3ebc21cf428f1025d597e07,admitted:admitted
+concept,urn:uuid:71ffd427-21e8-50e6-b21a-edbde3e03093,surface/unit-025/formula/inline/052,,,rumus sebaris 052; baris target 44; SHA-256 8de0b3c47f112c59745f717a626932264c422a7563954872e237b223af4ad643,admitted:admitted
+concept,urn:uuid:610e85b8-5abf-5cdb-b749-84bbe655d44d,surface/unit-025/formula/inline/053,,,rumus sebaris 053; baris target 44; SHA-256 a70047622b175e1283a4c97b88c653b7a846dc61838d42415f6a900f9dc473d3,admitted:admitted
+concept,urn:uuid:8f81c352-b9d4-52af-90ef-6389366531ba,surface/unit-025/formula/inline/054,,,rumus sebaris 054; baris target 44; SHA-256 3f79bb7b435b05321651daefd374cdc681dc06faa65e374e38337b88ca046dea,admitted:admitted
+concept,urn:uuid:1d57c135-dd5b-539b-8136-695baba47a40,surface/unit-025/formula/inline/055,,,rumus sebaris 055; baris target 45; SHA-256 6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b,admitted:admitted
+concept,urn:uuid:afabee9f-4c9c-5769-9784-c10756828f4d,surface/unit-025/formula/inline/056,,,rumus sebaris 056; baris target 45; SHA-256 073950fc02a4c8b084bc7661d3b4d94f05afbc69b2db0f00468609a7594d5d53,admitted:admitted
+concept,urn:uuid:7e880752-ed9d-5be1-ae5a-05b28370fbfb,surface/unit-025/formula/inline/057,,,rumus sebaris 057; baris target 45; SHA-256 c48253f623b6809294271052c616de117723e520a140aef5f0d479949aafd61a,admitted:admitted
+concept,urn:uuid:8ee60d21-0c30-57f1-a41d-271d4481da90,surface/unit-025/formula/inline/058,,,rumus sebaris 058; baris target 45; SHA-256 03bacd31c73eca6f8e11297c97391fc11a2627ba06b1db351e5925ad63a6837e,admitted:admitted
+concept,urn:uuid:0a2b2264-af84-5714-9a36-fca6eb78d805,surface/unit-025/formula/inline/059,,,rumus sebaris 059; baris target 45; SHA-256 2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881,admitted:admitted
+concept,urn:uuid:c208587b-267c-538d-82d9-e2711debdf17,surface/unit-025/formula/inline/060,,,rumus sebaris 060; baris target 45; SHA-256 a1fce4363854ff888cff4b8e7875d600c2682390412a8cf79b37d0b11148b0fa,admitted:admitted
+concept,urn:uuid:3c40ae4a-2b68-50dc-b030-d6ae467d013f,surface/unit-025/formula/inline/061,,,rumus sebaris 061; baris target 45; SHA-256 2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881,admitted:admitted
+concept,urn:uuid:8ca4e020-2ad7-5f39-ad64-05a7fd96a305,surface/unit-025/formula/inline/062,,,rumus sebaris 062; baris target 45; SHA-256 8dd7afc8f2c5e6cb50d29b3823b75699beed787e2860f1ec4ddfa1501744e3c8,admitted:admitted
+concept,urn:uuid:d6b57ca1-489c-57a1-82a1-289ba4e2894d,surface/unit-025/formula/inline/063,,,rumus sebaris 063; baris target 45; SHA-256 6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b,admitted:admitted
+concept,urn:uuid:c88fa39c-3bda-5c13-82cc-0d75d4e3a210,surface/unit-025/formula/inline/064,,,rumus sebaris 064; baris target 49; SHA-256 8de0b3c47f112c59745f717a626932264c422a7563954872e237b223af4ad643,admitted:admitted
+concept,urn:uuid:cfcfcaa5-0fdd-5147-b140-1c807c8a34cf,surface/unit-025/formula/inline/065,,,rumus sebaris 065; baris target 49; SHA-256 08f271887ce94707da822d5263bae19d5519cb3614e0daedc4c7ce5dab7473f1,admitted:admitted
+concept,urn:uuid:651b9c3b-20a6-5e60-89c0-679aa8970b12,surface/unit-025/formula/inline/066,,,rumus sebaris 066; baris target 49; SHA-256 75593d745b36dfa3a318d761ae449464313424f6ec10b20f0bd0ec8a3ef36327,admitted:admitted
+concept,urn:uuid:ed4494e7-32f8-5ea0-95a1-4b40789c5b59,surface/unit-025/formula/inline/067,,,rumus sebaris 067; baris target 51; SHA-256 76a8c8c02bf83b7a32554e070f81dcef3cba91eff7b50773334b2297820293d0,admitted:admitted
+concept,urn:uuid:68891ee6-5f8d-5a75-926b-3962b3c228da,surface/unit-025/formula/inline/068,,,rumus sebaris 068; baris target 52; SHA-256 99469bb7a52e4c26d37072816292700121116ff2a46431f9dc49e055c52abb74,admitted:admitted
+concept,urn:uuid:a7558c85-4f0c-5557-87ca-29dcc4f1db1f,surface/unit-025/formula/inline/069,,,rumus sebaris 069; baris target 54; SHA-256 76a8c8c02bf83b7a32554e070f81dcef3cba91eff7b50773334b2297820293d0,admitted:admitted
+concept,urn:uuid:00a50060-94f9-54a6-8dd6-e71b11cc8d0e,surface/unit-025/formula/inline/070,,,rumus sebaris 070; baris target 54; SHA-256 08f271887ce94707da822d5263bae19d5519cb3614e0daedc4c7ce5dab7473f1,admitted:admitted
+concept,urn:uuid:90a13727-d875-526c-9e30-543434d6211e,surface/unit-025/formula/inline/071,,,rumus sebaris 071; baris target 57; SHA-256 8de0b3c47f112c59745f717a626932264c422a7563954872e237b223af4ad643,admitted:admitted
+concept,urn:uuid:96a92315-05ce-5be3-b324-545270942c91,surface/unit-025/formula/inline/072,,,rumus sebaris 072; baris target 57; SHA-256 fed9abc931ec3e09221692c4da1367b6d0ef0f7966b1c6b8491fbe74078c534f,admitted:admitted
+concept,urn:uuid:a842308b-fd5a-5474-8823-fd0429418f21,surface/unit-025/formula/inline/073,,,rumus sebaris 073; baris target 57; SHA-256 561322efcd0bd895be965f13c137ffe04647ad84eaf7692ce4c865c24fa95ae1,admitted:admitted
+concept,urn:uuid:bb8ba2d2-19b0-50c8-96a4-58888f3f1622,surface/unit-025/formula/inline/074,,,rumus sebaris 074; baris target 57; SHA-256 2c53a04620719cc9c41a95c8bcfcf0543e1632322811d8eb21d83cb507d82cec,admitted:admitted
+concept,urn:uuid:8387c9a0-430c-5858-84a8-0584f44991cd,surface/unit-025/formula/inline/075,,,rumus sebaris 075; baris target 57; SHA-256 8de0b3c47f112c59745f717a626932264c422a7563954872e237b223af4ad643,admitted:admitted
+concept,urn:uuid:d959b8a3-d52d-5650-b39a-d25230d56639,surface/unit-025/formula/inline/076,,,rumus sebaris 076; baris target 57; SHA-256 8ddd936cd3e85364c35765fc3fdbbd3644acd1928314c9acf70f89f1f31f5e46,admitted:admitted
+concept,urn:uuid:7a900ea0-0c1b-5c84-a203-37cc63e61cfa,surface/unit-025/formula/inline/077,,,rumus sebaris 077; baris target 59; SHA-256 08f271887ce94707da822d5263bae19d5519cb3614e0daedc4c7ce5dab7473f1,admitted:admitted
+concept,urn:uuid:09bb844c-cc35-55a4-af34-cd0228cf5b04,surface/unit-025/formula/inline/078,,,rumus sebaris 078; baris target 59; SHA-256 127d3b98c666fc2e42a660874ff64e0e428495619c1b32ea2725c25c2b53ae21,admitted:admitted
+concept,urn:uuid:a7cb4c66-1d7c-5648-b50f-8825c520c821,surface/unit-025/formula/inline/079,,,rumus sebaris 079; baris target 59; SHA-256 2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881,admitted:admitted
+concept,urn:uuid:5fe207de-9e0b-5814-b3ec-f6c65fef3471,surface/unit-025/formula/inline/080,,,rumus sebaris 080; baris target 59; SHA-256 65e8ec76ae768d6c6d9835b9f7c9e0ec1c2c315aa57f24bf321e678254ab30bc,admitted:admitted
+concept,urn:uuid:f2aa4d39-814b-58b6-8d15-daa8053f3ebb,surface/unit-025/formula/inline/081,,,rumus sebaris 081; baris target 59; SHA-256 2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881,admitted:admitted
+concept,urn:uuid:835c5922-44c5-51a4-a1e9-c91448dc2864,surface/unit-025/formula/inline/082,,,rumus sebaris 082; baris target 59; SHA-256 a1fce4363854ff888cff4b8e7875d600c2682390412a8cf79b37d0b11148b0fa,admitted:admitted
+concept,urn:uuid:26fd1358-6633-5c43-ac4c-5af8a3596ebc,surface/unit-025/formula/inline/083,,,rumus sebaris 083; baris target 59; SHA-256 241d1cd21689b8a9c0bd2867dd5bbfe9252f802a62b1aa79d027120f956c8d33,admitted:admitted
+concept,urn:uuid:acba630d-2434-53a0-82df-389910865041,surface/unit-025/formula/inline/084,,,rumus sebaris 084; baris target 59; SHA-256 fa264d7bd28b6cce911a0cece862a6acefe4619fcbf4feaa9687ec1394fd3f31,admitted:admitted
+concept,urn:uuid:226adcdd-e3b9-5182-ac01-20f3f5f9c083,surface/unit-025/formula/inline/085,,,rumus sebaris 085; baris target 59; SHA-256 b30262e10086d55a683b5fb54d69fc3d0e8aaeed84db7cc4ebaa80ca54f7eae9,admitted:admitted
+concept,urn:uuid:918092c9-3697-5ea3-bdf5-351780554e2a,surface/unit-025/formula/inline/086,,,rumus sebaris 086; baris target 63; SHA-256 17ae9736e9152689babd72e19b006e9fc6bf7a3e357ec3223ec0d4e434364a7d,admitted:admitted
+concept,urn:uuid:8405f982-ed65-5487-bf09-f633bff50230,surface/unit-025/formula/inline/087,,,rumus sebaris 087; baris target 63; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:59cccb75-21c3-5833-ad02-799f6ce5c402,surface/unit-025/formula/inline/088,,,rumus sebaris 088; baris target 66; SHA-256 b30262e10086d55a683b5fb54d69fc3d0e8aaeed84db7cc4ebaa80ca54f7eae9,admitted:admitted
+concept,urn:uuid:56722298-6bec-5914-a130-0ff6b4236675,surface/unit-025/formula/inline/089,,,rumus sebaris 089; baris target 66; SHA-256 08f271887ce94707da822d5263bae19d5519cb3614e0daedc4c7ce5dab7473f1,admitted:admitted
+concept,urn:uuid:dcfee417-bf3b-5fe4-baec-7101a276af53,surface/unit-025/formula/inline/090,,,rumus sebaris 090; baris target 66; SHA-256 08f271887ce94707da822d5263bae19d5519cb3614e0daedc4c7ce5dab7473f1,admitted:admitted
+concept,urn:uuid:ee77943b-9a83-5c53-a67e-53eb2414cc01,surface/unit-025/formula/inline/091,,,rumus sebaris 091; baris target 66; SHA-256 08f271887ce94707da822d5263bae19d5519cb3614e0daedc4c7ce5dab7473f1,admitted:admitted
+concept,urn:uuid:bc07138e-23b2-521f-a798-f78dd8f19b83,surface/unit-025/formula/inline/092,,,rumus sebaris 092; baris target 66; SHA-256 a4b6a47b01bb170a9bd37eecb8e44876844818b69af98d0e89ef452acb80aa8c,admitted:admitted
+concept,urn:uuid:057d65b0-a18c-533a-b9d8-8c324c0b206f,surface/unit-025/formula/inline/093,,,rumus sebaris 093; baris target 66; SHA-256 12549accac01edb8d3336237a5b7cc64896e5003a69dccf44eb395d1bafc4757,admitted:admitted
+concept,urn:uuid:25582769-d3ee-588b-aa6e-7cb6307d2a05,surface/unit-025/formula/inline/094,,,rumus sebaris 094; baris target 68; SHA-256 9c0b5987c421aa34ace50dbcfe1f21663f295e0ad0753622ee0cd4d5cadeea3e,admitted:admitted
+concept,urn:uuid:e984cb4d-211d-5429-9c29-50b677053bfc,surface/unit-025/formula/inline/095,,,rumus sebaris 095; baris target 68; SHA-256 127d3b98c666fc2e42a660874ff64e0e428495619c1b32ea2725c25c2b53ae21,admitted:admitted
+concept,urn:uuid:3619fd35-20cd-5f0f-8473-5e813f889e4e,surface/unit-025/formula/inline/096,,,rumus sebaris 096; baris target 70; SHA-256 69f674d3f5e4dac49ebf4c2fea48594968c3e21f07e5eaf567dfe17caa85dd78,admitted:admitted
+concept,urn:uuid:c460f211-e707-54b9-a922-27e590d63fe7,surface/unit-025/formula/inline/097,,,rumus sebaris 097; baris target 70; SHA-256 53e41baf7b842559af900a19283bb262b75008f8b6dbb98a66d44b5f2aa35814,admitted:admitted
+concept,urn:uuid:f7291a53-041e-5de3-bd99-61e014208f3c,surface/unit-025/formula/inline/098,,,rumus sebaris 098; baris target 70; SHA-256 c8746ad113f2efd74c34b1c3a62fd03ba9b0d1440a29b21589e757372d838efb,admitted:admitted
+concept,urn:uuid:f8ffacc2-93fc-5d67-9efb-71b009253e85,surface/unit-025/formula/inline/099,,,rumus sebaris 099; baris target 73; SHA-256 8779068734acaecef5eade1125fa197127b8de9f72991a7d8b05d154e0183a24,admitted:admitted
+concept,urn:uuid:9e888e0d-0074-5dd6-952b-18287320d48b,surface/unit-025/formula/inline/100,,,rumus sebaris 100; baris target 73; SHA-256 a318c24216defe206feeb73ef5be00033fa9c4a74d0b967f6532a26ca5906d3b,admitted:admitted
+concept,urn:uuid:5280f1ac-9fbc-5d39-95a8-200c0e3fc77e,surface/unit-025/formula/inline/101,,,rumus sebaris 101; baris target 73; SHA-256 6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b,admitted:admitted
+concept,urn:uuid:a918e880-a9f0-5d3f-8c16-bced05ee7798,surface/unit-025/formula/inline/102,,,rumus sebaris 102; baris target 73; SHA-256 5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9,admitted:admitted
+concept,urn:uuid:2e52120d-dbbf-5129-9cf8-0243780579e9,surface/unit-025/formula/inline/103,,,rumus sebaris 103; baris target 73; SHA-256 2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881,admitted:admitted
+concept,urn:uuid:073b3301-22c0-5926-b2c1-7dd5d65242ff,surface/unit-025/formula/inline/104,,,rumus sebaris 104; baris target 73; SHA-256 a420962426d711880258b007d6767792992f6700fa93f127dafe1f7333e50466,admitted:admitted
+concept,urn:uuid:6a64c378-bc54-5cc9-b71c-6edd2bd0abfc,surface/unit-025/formula/inline/105,,,rumus sebaris 105; baris target 77; SHA-256 41f86268df2339e22490d54ec2106c75b08539c328b586f99da3d6a92021c45c,admitted:admitted
+concept,urn:uuid:bda8b4dd-f95b-58a8-9e07-6fc809db7cc8,surface/unit-025/formula/inline/106,,,rumus sebaris 106; baris target 77; SHA-256 5fe490d6d3e91b994e0bec319360f3dce0fb03a6e20c721bd8837c9153da5d40,admitted:admitted
+concept,urn:uuid:f8a602b1-709d-50df-8c7e-de4316c3973c,surface/unit-025/formula/inline/107,,,rumus sebaris 107; baris target 77; SHA-256 6b23c0d5f35d1b11f9b683f0b0a617355deb11277d91ae091d399c655b87940d,admitted:admitted
+concept,urn:uuid:a234b512-318f-5975-8f8d-d032dce94833,surface/unit-025/formula/inline/108,,,rumus sebaris 108; baris target 77; SHA-256 6e42d74a72040d0be987c13c49f130a3ac0df6617ec7a604477b6587a0ead67d,admitted:admitted
+concept,urn:uuid:d6940a10-5f77-5d0b-adb0-d11aa0c00fb2,surface/unit-025/formula/inline/109,,,rumus sebaris 109; baris target 77; SHA-256 6b23c0d5f35d1b11f9b683f0b0a617355deb11277d91ae091d399c655b87940d,admitted:admitted
+concept,urn:uuid:648e7d78-4e4c-5a4c-a9ad-5b85587e99b3,surface/unit-025/formula/inline/110,,,rumus sebaris 110; baris target 77; SHA-256 ff868ce9bfa468563f54fe5f2c9a19671b8a92fa063ad1442ca05889a9d69fb3,admitted:admitted
+concept,urn:uuid:17a4e24f-3b8d-527a-a94a-51f4fdbcc023,surface/unit-025/formula/inline/111,,,rumus sebaris 111; baris target 77; SHA-256 9baae7b47ed94607dddde2b629dfee8848f95b82fdf49337a447ce8e9ca94671,admitted:admitted
+concept,urn:uuid:57ee767c-148d-58bf-86fc-14cc067d242d,surface/unit-025/formula/inline/112,,,rumus sebaris 112; baris target 77; SHA-256 2b4e7581d83596acb2238645c3ef050e0e2604245fb0d5e6f4770c9834a3c1bc,admitted:admitted
+concept,urn:uuid:0533b50a-1f5a-5260-8c26-2b701f16039f,surface/unit-025/formula/inline/113,,,rumus sebaris 113; baris target 80; SHA-256 a2e85bc1ac7fd47c107b4c918292777b16eb4255282084344d42957d395130ee,admitted:admitted
+concept,urn:uuid:61599d7a-85fe-559e-b596-835da18e79d3,surface/unit-025/formula/inline/114,,,rumus sebaris 114; baris target 81; SHA-256 5737543040c2a506ef5b894318ccdaadbca3f3b633e0fd427696ba4c79242658,admitted:admitted
+concept,urn:uuid:df0c6ba6-d922-52fe-a6a2-316191164466,surface/unit-025/formula/inline/115,,,rumus sebaris 115; baris target 81; SHA-256 914b998e86b35790d59614955d38bcccf0bd6dc1b0b02477bd9ff742fe409472,admitted:admitted
+concept,urn:uuid:6119e7c7-ac58-5739-8c24-d542af3998da,surface/unit-025/formula/inline/116,,,rumus sebaris 116; baris target 81; SHA-256 54890b02781f30a02f05b81b285654d5c349c756ec4a549088c153e78a8b0490,admitted:admitted
+concept,urn:uuid:d3bd25b3-b185-519d-b42c-dd455122b382,surface/unit-025/formula/inline/117,,,rumus sebaris 117; baris target 81; SHA-256 5737543040c2a506ef5b894318ccdaadbca3f3b633e0fd427696ba4c79242658,admitted:admitted
+concept,urn:uuid:209ca518-0ede-518d-b779-d9ab463694cf,surface/unit-025/formula/inline/118,,,rumus sebaris 118; baris target 81; SHA-256 54890b02781f30a02f05b81b285654d5c349c756ec4a549088c153e78a8b0490,admitted:admitted
+concept,urn:uuid:f596e7bf-9f7a-59ef-a6b7-793478afd38a,surface/unit-025/formula/inline/119,,,rumus sebaris 119; baris target 81; SHA-256 5737543040c2a506ef5b894318ccdaadbca3f3b633e0fd427696ba4c79242658,admitted:admitted
+concept,urn:uuid:f621e735-43fd-5838-ab76-d827db807440,surface/unit-025/formula/inline/120,,,rumus sebaris 120; baris target 81; SHA-256 f6283b2d053942151249b9a150b6e4011308eda0a614de940c5eff3d3b26663d,admitted:admitted
+concept,urn:uuid:79e2430e-97a7-5155-b0d5-97196e860b93,surface/unit-025/formula/inline/121,,,rumus sebaris 121; baris target 83; SHA-256 f67ab10ad4e4c53121b6a5fe4da9c10ddee905b978d3788d2723d7bfacbe28a9,admitted:admitted
+concept,urn:uuid:26fa90cd-3f16-54a8-bef0-437261345a40,surface/unit-025/formula/inline/122,,,rumus sebaris 122; baris target 83; SHA-256 5550ec9ec6b36667b4d15a48e8bd9e55037e312e940c29627697b57e89d5d2ee,admitted:admitted
+concept,urn:uuid:286b8d8c-b9a6-5fdb-bce7-f6a3b4a00f9a,surface/unit-025/formula/inline/123,,,rumus sebaris 123; baris target 83; SHA-256 a2e85bc1ac7fd47c107b4c918292777b16eb4255282084344d42957d395130ee,admitted:admitted
+concept,urn:uuid:218f7e44-3343-5894-8d29-c9b1a375cdf4,surface/unit-025/formula/inline/124,,,rumus sebaris 124; baris target 83; SHA-256 f67ab10ad4e4c53121b6a5fe4da9c10ddee905b978d3788d2723d7bfacbe28a9,admitted:admitted
+concept,urn:uuid:d6d275ce-cad1-5862-b05a-6fa14cf25875,surface/unit-025/formula/inline/125,,,rumus sebaris 125; baris target 83; SHA-256 3f115f6cb4125cf9b842102ffa7bc07aaae49873311aad457a1d04b391e5b6a0,admitted:admitted
+concept,urn:uuid:a78f8956-b22a-553c-b073-c937b2c55d8a,surface/unit-025/formula/inline/126,,,rumus sebaris 126; baris target 83; SHA-256 b53f9683364fb5fd05b6fb5edd28f4b4eb107e88a9129bb4a5be73b1f361b034,admitted:admitted
+concept,urn:uuid:5aacb082-d9a7-5350-8240-4dfb4b370680,surface/unit-025/formula/inline/127,,,rumus sebaris 127; baris target 83; SHA-256 167caac527a0def7a15b212f8a35c292965cc308139b7dea9f1c20f5c4d94a69,admitted:admitted
+concept,urn:uuid:6462988b-944d-5036-a623-aa78bbb0a40f,surface/unit-025/formula/inline/128,,,rumus sebaris 128; baris target 83; SHA-256 148de9c5a7a44d19e56cd9ae1a554bf67847afb0c58f6e12fa29ac7ddfca9940,admitted:admitted
+concept,urn:uuid:371dab9a-9900-568f-b1dd-d78814b58e2c,surface/unit-025/formula/inline/129,,,rumus sebaris 129; baris target 83; SHA-256 10d62255ac4e1c5ccd87c81f12670690a6aa9b2f58171e744c12233edb9e9fbb,admitted:admitted
+concept,urn:uuid:a9751281-8e6f-57fa-996d-92f9baa659bb,surface/unit-025/formula/inline/130,,,rumus sebaris 130; baris target 87; SHA-256 4b68ab3847feda7d6c62c1fbcbeebfa35eab7351ed5e78f4ddadea5df64b8015,admitted:admitted
+concept,urn:uuid:ccf7a61e-0ce2-5b77-9404-e6effa69d318,surface/unit-025/formula/inline/131,,,rumus sebaris 131; baris target 87; SHA-256 4b68ab3847feda7d6c62c1fbcbeebfa35eab7351ed5e78f4ddadea5df64b8015,admitted:admitted
+concept,urn:uuid:44689194-1ea9-52e3-857e-816d69f13769,surface/unit-025/formula/inline/132,,,rumus sebaris 132; baris target 87; SHA-256 9254e2b7bedce423c877196faf18b5828947d3813834f68e0a608a4873117ab9,admitted:admitted
+concept,urn:uuid:4c5f9889-ad70-580c-9264-11ad0614b621,surface/unit-025/formula/inline/133,,,rumus sebaris 133; baris target 87; SHA-256 efcfb9b2d47a1b6aa1941ab7abf8cfc85894af04988269ea0cdb85b83f4eee63,admitted:admitted
+concept,urn:uuid:b4ffa7d6-ff80-5e0b-ba24-33aae629f2ce,surface/unit-025/formula/inline/134,,,rumus sebaris 134; baris target 87; SHA-256 02a65703468982f5d06f4e29da9e6490ad854b21f144d346062c124efb732a68,admitted:admitted
+concept,urn:uuid:f781b816-4a5b-5bcf-9406-a2b14c9e6a87,surface/unit-025/formula/inline/135,,,rumus sebaris 135; baris target 87; SHA-256 2fd6d9c7c789c6a2c525a9868bfa102bb7433080b2fd324a3dd90862171495b5,admitted:admitted
+concept,urn:uuid:179688e6-a793-5bc1-a459-7e659058a4ff,surface/unit-025/formula/inline/136,,,rumus sebaris 136; baris target 87; SHA-256 b3c335322f2a8db5254453a3240fc079e13aeab1bff3538bfc9ec9f26480184a,admitted:admitted
+concept,urn:uuid:c8607747-cafd-53f0-b01e-335e29c2c918,surface/unit-025/formula/inline/137,,,rumus sebaris 137; baris target 87; SHA-256 888c3e2d763c63c02f5c03daec7409e34f44e08fc8ce54291adc0a5e549d4acf,admitted:admitted
+concept,urn:uuid:82afa51a-c023-5e86-a8b7-0e54669d81cf,surface/unit-025/formula/inline/138,,,rumus sebaris 138; baris target 87; SHA-256 1b16b1df538ba12dc3f97edbb85caa7050d46c148134290feba80f8236c83db9,admitted:admitted
+concept,urn:uuid:2b7a8639-bea9-5c8a-a1eb-aa1cb19a5a05,surface/unit-025/formula/inline/139,,,rumus sebaris 139; baris target 87; SHA-256 57943057975b5c6dec402b60a274557cc84e0074eeb40aac6071927b80040ecc,admitted:admitted
+concept,urn:uuid:6727aa70-5155-5911-b1d8-d3d1ae378b1b,surface/unit-025/formula/inline/140,,,rumus sebaris 140; baris target 92; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:fd1e125c-97b7-54b4-a817-c6a09aad3389,surface/unit-025/formula/inline/141,,,rumus sebaris 141; baris target 92; SHA-256 b769953aa0bd4d4259eb2741a8bc6a28469885934f36608b54177bd9f7b0ade1,admitted:admitted
+concept,urn:uuid:0db415c5-ee2a-5a95-98aa-0d417bd1f8f7,surface/unit-025/formula/inline/142,,,rumus sebaris 142; baris target 92; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:e8ddf9c6-4d64-513f-a980-d33a5fd0b325,surface/unit-025/formula/inline/143,,,rumus sebaris 143; baris target 94; SHA-256 44bd7ae60f478fae1061e11a7739f4b94d1daf917982d33b6fc8a01a63f89c21,admitted:admitted
+concept,urn:uuid:cd0cc365-3fbb-5d5c-b93a-80381b1c6b6e,surface/unit-025/formula/inline/144,,,rumus sebaris 144; baris target 95; SHA-256 8cc8924e4803906e886ce41dc3d43574fbb0ecbd5c1b8c0f74b026048e16496e,admitted:admitted
+concept,urn:uuid:a67c6fbb-7ea2-5b70-97ca-8615d6dbcbf0,surface/unit-025/formula/inline/145,,,rumus sebaris 145; baris target 95; SHA-256 cf6c89ac53c1148114cc8b3e63e66e99895a13ba5e5fcd16519cb691fb97f6cf,admitted:admitted
+concept,urn:uuid:7fce825b-fa79-5df0-ab64-3e102dc7e397,surface/unit-025/formula/inline/146,,,rumus sebaris 146; baris target 97; SHA-256 44bd7ae60f478fae1061e11a7739f4b94d1daf917982d33b6fc8a01a63f89c21,admitted:admitted
+concept,urn:uuid:c68d1db2-5381-5b8b-8899-8ac66d59cac1,surface/unit-025/formula/inline/147,,,rumus sebaris 147; baris target 97; SHA-256 a21caf6476fefef6c9e3275fc315d32b5cdc11dc1b5be8b630fcc7b0eae72a59,admitted:admitted
+concept,urn:uuid:e8fbdc32-98a7-5a35-ba89-11bccaff35cf,surface/unit-025/formula/inline/148,,,rumus sebaris 148; baris target 97; SHA-256 3faccb525a29c5c66379ad205d954d7822aa6ecb75b815bd94d489678ce6aa50,admitted:admitted
+concept,urn:uuid:10623afa-c3fc-5515-8f21-b1076df469dc,surface/unit-025/formula/inline/149,,,rumus sebaris 149; baris target 97; SHA-256 44bd7ae60f478fae1061e11a7739f4b94d1daf917982d33b6fc8a01a63f89c21,admitted:admitted
+concept,urn:uuid:810c0792-406f-5dbe-8f23-e07eecf8d91e,surface/unit-025/formula/inline/150,,,rumus sebaris 150; baris target 97; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:b2c71d1e-2fd6-5d56-b47f-71aee0c1a446,surface/unit-025/formula/inline/151,,,rumus sebaris 151; baris target 97; SHA-256 245846ef754e57b244fab562157ea3db41b03794f848e0eb66a4641873354bc8,admitted:admitted
+concept,urn:uuid:0a5de223-2e99-5feb-9a00-6219366779cc,surface/unit-025/formula/inline/152,,,rumus sebaris 152; baris target 97; SHA-256 d7611dc9206b2f6972b8bce52a722b20ea403ca55bc2b796acf0c6ecbc8cffc0,admitted:admitted
+concept,urn:uuid:c8dcb005-feba-5d71-8d62-a1f89a0f7d45,surface/unit-025/formula/inline/153,,,rumus sebaris 153; baris target 97; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:cd3ddeb2-7c47-5b1f-9cd5-7845278ab2c4,surface/unit-025/formula/inline/154,,,rumus sebaris 154; baris target 99; SHA-256 2d46a1bcf327ab91c9712a0b423b0765025c0b0cbb260dc2a158cc9f42a59a51,admitted:admitted
+concept,urn:uuid:75e05d7e-acaa-5944-b6d9-a9c0d751d3c4,surface/unit-025/formula/inline/155,,,rumus sebaris 155; baris target 99; SHA-256 71edad2e1231e40333bf5a9216edcdc63faf99f93d81518315b5e9b972e95bcd,admitted:admitted
+concept,urn:uuid:2c14c5dc-fbb6-593e-8dc4-cbe69ca2c9e5,surface/unit-025/formula/inline/156,,,rumus sebaris 156; baris target 99; SHA-256 df1608a062dafadd021ca67238744f536608b0a0693ed7ff8f8279db78bc4a3c,admitted:admitted
+concept,urn:uuid:94f8d14d-c277-57dc-abb7-50a4f2f9e532,surface/unit-025/formula/inline/157,,,rumus sebaris 157; baris target 99; SHA-256 4ffa7a1472e458ca85257fb7694e87812debe68dca12b927a40e97c77e7918a8,admitted:admitted
+concept,urn:uuid:7bd725d8-fe52-5d74-b733-e71ce68dcb28,surface/unit-025/formula/inline/158,,,rumus sebaris 158; baris target 99; SHA-256 df1608a062dafadd021ca67238744f536608b0a0693ed7ff8f8279db78bc4a3c,admitted:admitted
+concept,urn:uuid:c2eca17a-e864-5a4e-81f6-b7bd21e46cab,surface/unit-025/formula/inline/159,,,rumus sebaris 159; baris target 99; SHA-256 2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881,admitted:admitted
+concept,urn:uuid:74e942a7-4175-5f57-aca9-8fa5c0aefc9b,surface/unit-025/formula/inline/160,,,rumus sebaris 160; baris target 102; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:a58cd6e0-c3e2-5280-b65b-8ed85cc6281f,surface/unit-025/formula/inline/161,,,rumus sebaris 161; baris target 102; SHA-256 d9dbbabc33a7c71352792687d3cf94fda250d3b003d215e688a394243b7b62f3,admitted:admitted
+concept,urn:uuid:35cad95e-33f8-5714-9dd1-61f2ba94f12d,surface/unit-025/formula/inline/162,,,rumus sebaris 162; baris target 102; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:725c8624-2801-5042-801d-ecdf66ee73c2,surface/unit-025/formula/inline/163,,,rumus sebaris 163; baris target 104; SHA-256 a834fc72674b289026ad5dcebb6f74e867401d24a0ee1cb7d78c16b2bec7303b,admitted:admitted
+concept,urn:uuid:dbf39e92-d2ec-58a8-ae17-d2167a450e21,surface/unit-025/formula/inline/164,,,rumus sebaris 164; baris target 104; SHA-256 989068e1c57a2d8f1fce2ac4d14b16ee58d18a132d7cd971476595fe57c70737,admitted:admitted
+concept,urn:uuid:4238c285-822b-53aa-823b-36fa6fcf473b,surface/unit-025/formula/inline/165,,,rumus sebaris 165; baris target 106; SHA-256 dc59d42827a489995809b81823f6540a141bf58f7720c62f36d8bd2e5f183b3e,admitted:admitted
+concept,urn:uuid:d0337a1e-d676-5eda-bc79-7ae5667992ab,surface/unit-025/formula/inline/166,,,rumus sebaris 166; baris target 106; SHA-256 a9f51566bd6705f7ea6ad54bb9deb449f795582d6529a0e22207b8981233ec58,admitted:admitted
+concept,urn:uuid:070326dc-77f4-5ebc-9d79-a1b8806d1a32,surface/unit-025/formula/inline/167,,,rumus sebaris 167; baris target 106; SHA-256 a9f51566bd6705f7ea6ad54bb9deb449f795582d6529a0e22207b8981233ec58,admitted:admitted
+concept,urn:uuid:913aaea4-868c-596f-b7ef-0726a2da57d1,surface/unit-025/formula/inline/168,,,rumus sebaris 168; baris target 106; SHA-256 878ea4f75c1ed9ed4f54579e31483bc12e4d59b47808f517dc24b4043c386d3c,admitted:admitted
+concept,urn:uuid:13d473d1-db6d-5f19-ba28-bc2dc149054b,surface/unit-025/formula/inline/169,,,rumus sebaris 169; baris target 106; SHA-256 a9f51566bd6705f7ea6ad54bb9deb449f795582d6529a0e22207b8981233ec58,admitted:admitted
+concept,urn:uuid:f85d3272-c1c3-591a-9b96-12d4e8771b29,surface/unit-025/formula/inline/170,,,rumus sebaris 170; baris target 106; SHA-256 878ea4f75c1ed9ed4f54579e31483bc12e4d59b47808f517dc24b4043c386d3c,admitted:admitted
+concept,urn:uuid:63e79b07-20bc-541c-b6f4-eeab890bb203,surface/unit-025/formula/inline/171,,,rumus sebaris 171; baris target 108; SHA-256 a9f51566bd6705f7ea6ad54bb9deb449f795582d6529a0e22207b8981233ec58,admitted:admitted
+concept,urn:uuid:6d97b26f-9b03-5861-94e7-c65e67cfa86a,surface/unit-025/formula/inline/172,,,rumus sebaris 172; baris target 108; SHA-256 159e87dce6c55ac45a766f6b97a9e8b7775ecf047733f2c9b222c1f8f64aaa4e,admitted:admitted
+concept,urn:uuid:c646c171-d49d-5664-956b-4debc3abf31a,surface/unit-025/formula/inline/173,,,rumus sebaris 173; baris target 108; SHA-256 a9f51566bd6705f7ea6ad54bb9deb449f795582d6529a0e22207b8981233ec58,admitted:admitted
+concept,urn:uuid:0a25121a-a965-598d-8c33-035c0cebb4b3,surface/unit-025/formula/inline/174,,,rumus sebaris 174; baris target 108; SHA-256 aea71cbfc818e6c47fb505484c0c772b19e321f99cb46a338a5b7c1931a1204d,admitted:admitted
+concept,urn:uuid:5c6ad774-7715-560e-895a-c92382939cd2,surface/unit-025/formula/inline/175,,,rumus sebaris 175; baris target 110; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:b8d09316-4cf6-5019-aba2-959088ef432f,surface/unit-025/formula/inline/176,,,rumus sebaris 176; baris target 110; SHA-256 3faccb525a29c5c66379ad205d954d7822aa6ecb75b815bd94d489678ce6aa50,admitted:admitted
+concept,urn:uuid:c4e85a62-1946-5e0b-9aa1-62ef9491d4ee,surface/unit-025/formula/inline/177,,,rumus sebaris 177; baris target 110; SHA-256 c4844b5fd4503170c616e9bdf72a69d6cea00e5e22bd387e5a584756870ea7e4,admitted:admitted
+concept,urn:uuid:a99f2bd1-a91b-50b7-9a3e-021d2a23652a,surface/unit-025/formula/inline/178,,,rumus sebaris 178; baris target 110; SHA-256 2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881,admitted:admitted
+concept,urn:uuid:32290d56-c926-577c-a6f5-ee374ca585e8,surface/unit-025/formula/inline/179,,,rumus sebaris 179; baris target 110; SHA-256 8156610e3aa73e6eab3cdfb0b180078e2d005df78f80d5db95861d376fd33039,admitted:admitted
+concept,urn:uuid:37b81222-419f-53e3-af6b-80577a5b8c01,surface/unit-025/formula/inline/180,,,rumus sebaris 180; baris target 113; SHA-256 2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881,admitted:admitted
+concept,urn:uuid:6d71ec36-d9cc-58ad-8b43-0703b08741fb,surface/unit-025/formula/inline/181,,,rumus sebaris 181; baris target 113; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:5ac14135-31f9-5284-a668-61695902295e,surface/unit-025/formula/inline/182,,,rumus sebaris 182; baris target 113; SHA-256 096d2a23e8c1060e9bc1bf1421f42a8d6d125607649743c29dc1c74d9d80ee92,admitted:admitted
+concept,urn:uuid:1b3bc383-b0ec-5a94-b923-f1983074d5b3,surface/unit-025/formula/inline/183,,,rumus sebaris 183; baris target 113; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:6b5551e7-87ad-5c12-9eb4-142e493a76de,surface/unit-025/formula/inline/184,,,rumus sebaris 184; baris target 118; SHA-256 7f2315ed2fa0ec0812af179c8fdd98a8bc4c935c2236d0684ad444a2528bb732,admitted:admitted
+concept,urn:uuid:c2bd8097-5533-52fa-bccf-746b5c595076,surface/unit-025/formula/inline/185,,,rumus sebaris 185; baris target 118; SHA-256 9e6740f0c9a0e293365c18a15396e2161f51b837ae7ac6f53062137759664ae3,admitted:admitted
+concept,urn:uuid:21aad73a-df46-528a-85a5-6b813f59915f,surface/unit-025/formula/inline/186,,,rumus sebaris 186; baris target 118; SHA-256 457bb8f99f7ca79c78adb524f3b7da0ee316f0293c0a05b7816e747c852ae398,admitted:admitted
+concept,urn:uuid:10d5aca0-c430-50c3-8625-4e8d29d8c512,surface/unit-025/formula/inline/187,,,rumus sebaris 187; baris target 118; SHA-256 5f68a7da8dcb8101fc04297ab9b6e11c42292c79f51a5719f3ad4545e0ec1b3a,admitted:admitted
+concept,urn:uuid:1af7bdff-f130-520b-b5c9-a8df3c54dc2a,surface/unit-025/formula/inline/188,,,rumus sebaris 188; baris target 118; SHA-256 4dfb6a8daaa2dca46c8e377d5d63af6fd38fee0fd1e58a1f0f2adb5f3559d9d4,admitted:admitted
+concept,urn:uuid:2e505cb0-8a93-5503-b568-ac4775549984,surface/unit-025/formula/inline/189,,,rumus sebaris 189; baris target 118; SHA-256 1b16b1df538ba12dc3f97edbb85caa7050d46c148134290feba80f8236c83db9,admitted:admitted
+concept,urn:uuid:741e7f51-095e-58f2-8010-557c96d55c9a,surface/unit-025/formula/inline/190,,,rumus sebaris 190; baris target 118; SHA-256 b4c52e2f2604d9010f9e4429f76eec7042223c2faf2eb4f39e316183dfb3f458,admitted:admitted
+concept,urn:uuid:80c4c342-173b-5500-97ee-958345dcfaff,surface/unit-025/formula/inline/191,,,rumus sebaris 191; baris target 122; SHA-256 44bd7ae60f478fae1061e11a7739f4b94d1daf917982d33b6fc8a01a63f89c21,admitted:admitted
+concept,urn:uuid:4a69c53f-bebd-58ac-a0f4-17f95a807124,surface/unit-025/formula/inline/192,,,rumus sebaris 192; baris target 122; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:09a4eaf6-a998-5032-a8e4-18a87a24ac22,surface/unit-025/formula/inline/193,,,rumus sebaris 193; baris target 124; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:5b41140e-43e4-5278-a855-e2b272f72468,surface/unit-025/formula/inline/194,,,rumus sebaris 194; baris target 124; SHA-256 a84930fe2b1e8523b06f74e45367e3595581d42da77dc98b70bdff79c829f563,admitted:admitted
+concept,urn:uuid:12b93fb0-d4db-5a7d-a063-99154240cb0c,surface/unit-025/formula/inline/195,,,rumus sebaris 195; baris target 124; SHA-256 3c96e4e6f8c4a06e2631f63bde6bed4d887505ee60088cdacf90032a80e18993,admitted:admitted
+concept,urn:uuid:bf2f8484-4f34-502d-8e6b-0a83945d1233,surface/unit-025/formula/inline/196,,,rumus sebaris 196; baris target 125; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:2cfa3689-e120-5b20-8557-7b3a8d4c8e4b,surface/unit-025/formula/inline/197,,,rumus sebaris 197; baris target 125; SHA-256 ff94fe54203a912ee5ed2b3372fdc137d11a53d9c4cf2e7e342139ff365c95a6,admitted:admitted
+concept,urn:uuid:7837a82e-177e-57f0-87a8-da767d5e268f,surface/unit-025/formula/inline/198,,,rumus sebaris 198; baris target 125; SHA-256 1e02d4b94bef5a52cacf9f466c53e12f6504528e42572026b5b3446a4a2519b9,admitted:admitted
+concept,urn:uuid:27aaf3b5-a3ff-5c5a-ba6e-38990d4fc539,surface/unit-025/formula/inline/199,,,rumus sebaris 199; baris target 126; SHA-256 86be9a55762d316a3026c2836d044f5fc76e34da10e1b45feee5f18be7edb177,admitted:admitted
+concept,urn:uuid:19ca63bb-3d73-5411-8f9d-16c7aa00c970,surface/unit-025/formula/inline/200,,,rumus sebaris 200; baris target 126; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:93c0cab6-f558-5577-877c-07fb37758dbc,surface/unit-025/formula/inline/201,,,rumus sebaris 201; baris target 126; SHA-256 3bc80d9fe9a61d6145bf7e5ef37b6c6bef8a26172792d9e781afbcbbcde3e409,admitted:admitted
+concept,urn:uuid:1c0e57c2-8e0f-5261-93ac-41aa98408460,surface/unit-025/formula/inline/202,,,rumus sebaris 202; baris target 126; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:b65330ea-c2d8-5323-a36a-9c31ae7c9fa2,surface/unit-025/formula/inline/203,,,rumus sebaris 203; baris target 126; SHA-256 cfc584bb5e98620858aa85d44aba0a8aa1c8976440a1b63eca8fe95d309004ed,admitted:admitted
+concept,urn:uuid:52b9c38b-6589-5f00-8fd8-59610c892a3c,surface/unit-025/formula/inline/204,,,rumus sebaris 204; baris target 126; SHA-256 21292e34d21b480157de0354e554ea9a6487dc05bd1ed0c23732a9aee7a88148,admitted:admitted
+concept,urn:uuid:586bc354-4af0-52f0-a1b9-c5f2801d9130,surface/unit-025/formula/inline/205,,,rumus sebaris 205; baris target 128; SHA-256 245846ef754e57b244fab562157ea3db41b03794f848e0eb66a4641873354bc8,admitted:admitted
+concept,urn:uuid:ce681a06-2dd3-5a0c-919e-90a5af9c78bf,surface/unit-025/formula/inline/206,,,rumus sebaris 206; baris target 128; SHA-256 44bd7ae60f478fae1061e11a7739f4b94d1daf917982d33b6fc8a01a63f89c21,admitted:admitted
+concept,urn:uuid:ab53434c-5f8e-5b94-8feb-a604ab570e24,surface/unit-025/formula/inline/207,,,rumus sebaris 207; baris target 128; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:561e00c9-ac00-532f-b9a5-e16b5ea64edd,surface/unit-025/formula/inline/208,,,rumus sebaris 208; baris target 130; SHA-256 3c96e4e6f8c4a06e2631f63bde6bed4d887505ee60088cdacf90032a80e18993,admitted:admitted
+concept,urn:uuid:2f5154b6-367f-5d6b-a573-a5ed12cdf7b8,surface/unit-025/formula/inline/209,,,rumus sebaris 209; baris target 130; SHA-256 2a86cf2a9571de7c77d416586272c94c49337b9a08949175ea915ffae3af9112,admitted:admitted
+concept,urn:uuid:cb8ee0ef-acd6-5d9b-a1dc-afc6d8aacca1,surface/unit-025/formula/inline/210,,,rumus sebaris 210; baris target 130; SHA-256 2a86cf2a9571de7c77d416586272c94c49337b9a08949175ea915ffae3af9112,admitted:admitted
+concept,urn:uuid:0caf788d-e1aa-582e-a378-7ba3d35b3e76,surface/unit-025/formula/inline/211,,,rumus sebaris 211; baris target 132; SHA-256 44bd7ae60f478fae1061e11a7739f4b94d1daf917982d33b6fc8a01a63f89c21,admitted:admitted
+concept,urn:uuid:05b227b9-f6a2-5710-8909-57b2c3ff5d39,surface/unit-025/formula/inline/212,,,rumus sebaris 212; baris target 132; SHA-256 86be9a55762d316a3026c2836d044f5fc76e34da10e1b45feee5f18be7edb177,admitted:admitted
+concept,urn:uuid:dafc78d4-db77-5902-8b3d-4542d608f8b5,surface/unit-025/formula/inline/213,,,rumus sebaris 213; baris target 132; SHA-256 474b886beaa4b8bb8996c478ccc60cc035299eb5cd96d87ed01ccebe72385252,admitted:admitted
+concept,urn:uuid:f4099d62-4189-524a-b2f4-0a9c33916f26,surface/unit-025/formula/inline/214,,,rumus sebaris 214; baris target 134; SHA-256 0260f57e50fe98d3673f2947e00d1e613f32010c91b3ffcc0c64347144aa3e18,admitted:admitted
+concept,urn:uuid:598235d2-8abb-5ddf-84f7-42c3e6f1d62a,surface/unit-025/formula/inline/215,,,rumus sebaris 215; baris target 134; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:164d74d3-4032-53f3-a32b-8278cdf21bdd,surface/unit-025/formula/inline/216,,,rumus sebaris 216; baris target 136; SHA-256 86242a7b0aab28bec68a4b14aa1c2f4b3227a68d32b24ded284e5ed4f87f08b9,admitted:admitted
+concept,urn:uuid:cb028cba-232f-53d5-8ae2-2230b07ad261,surface/unit-025/formula/inline/217,,,rumus sebaris 217; baris target 136; SHA-256 9e5e01e711971b40129c36db757d83d1ccf43060bb24d0a12219efbb2c269fbe,admitted:admitted
+concept,urn:uuid:81c4f7bc-b843-5e84-abc4-efc86f001cf7,surface/unit-025/formula/inline/218,,,rumus sebaris 218; baris target 136; SHA-256 d097ed82229ecbe86caaa5ba71b73b59280680d4656625984a90380569ec1c6e,admitted:admitted
+concept,urn:uuid:4a264e76-71ea-592c-a1ae-a1cd40c1a42b,surface/unit-025/formula/inline/219,,,rumus sebaris 219; baris target 137; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:ce6320ba-16ff-5482-b3e6-bc2e8d6aed2a,surface/unit-025/formula/inline/220,,,rumus sebaris 220; baris target 137; SHA-256 8f08478ddb18f930e4e719b18c1da0edb69765c96e0fd1a1436200c16b19b4c9,admitted:admitted
+concept,urn:uuid:96a2653d-4e4c-5223-8931-9740ac919e3b,surface/unit-025/formula/inline/221,,,rumus sebaris 221; baris target 137; SHA-256 2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881,admitted:admitted
+concept,urn:uuid:617dd727-162f-5675-9d60-6aa12027ce68,surface/unit-025/formula/inline/222,,,rumus sebaris 222; baris target 137; SHA-256 21292e34d21b480157de0354e554ea9a6487dc05bd1ed0c23732a9aee7a88148,admitted:admitted
+concept,urn:uuid:d6c048e5-30bc-5e7e-892e-75599627c6af,surface/unit-025/formula/inline/223,,,rumus sebaris 223; baris target 141; SHA-256 93719efd11051729e4fbd3a6b2e08aa96be4a4991118007fb84947bcb1f0b06a,admitted:admitted
+concept,urn:uuid:0062aac2-66ea-522c-8749-f8e99555189f,surface/unit-025/formula/inline/224,,,rumus sebaris 224; baris target 141; SHA-256 5a9045ae6f5aa4dbe88c4ef12ebc835c6834d6aa86bee9dac814aee5f47043bf,admitted:admitted
+concept,urn:uuid:dbb67505-3331-54d4-909f-9b0ad103119b,surface/unit-025/formula/inline/225,,,rumus sebaris 225; baris target 141; SHA-256 0226b5bc37846d9bdc0a222a67d242d2afee04486e2cc6d9006075b5ba8b33b5,admitted:admitted
+concept,urn:uuid:7ce3fbe0-0106-53e3-a3cf-12bf26452c8f,surface/unit-025/formula/inline/226,,,rumus sebaris 226; baris target 141; SHA-256 8df18d7df13657fc69a1645f3fe4b478267033b897e1c29b0ca9a42df80f409d,admitted:admitted
+concept,urn:uuid:f39dc4f7-dcb9-522c-a8c7-914c4c5bf048,surface/unit-025/formula/inline/227,,,rumus sebaris 227; baris target 141; SHA-256 5fc3854028b288ee60116fb3fb68ab540b5a728682f4e96f417a8e91a27b0fd1,admitted:admitted
+concept,urn:uuid:be38c849-f9d0-5e6e-823c-15a5ea2499f3,surface/unit-025/formula/inline/228,,,rumus sebaris 228; baris target 141; SHA-256 27739fc97a460d5a923c2b10ee43129dba285a54c50d680b82a9eb703b23af5a,admitted:admitted
+concept,urn:uuid:839b7cf3-1d58-55bf-8290-076cfe34cae1,surface/unit-025/formula/inline/229,,,rumus sebaris 229; baris target 141; SHA-256 9119af1e1d65fe7f5904287ae8014c6ae663791491e9c2abcb48b12891f7bd5b,admitted:admitted
+concept,urn:uuid:ae69a344-72d0-5caf-92e0-5185f7ef1d36,surface/unit-025/formula/inline/230,,,rumus sebaris 230; baris target 144; SHA-256 3faccb525a29c5c66379ad205d954d7822aa6ecb75b815bd94d489678ce6aa50,admitted:admitted
+concept,urn:uuid:1ea423ab-2aad-5eb9-aa62-b7a93592f469,surface/unit-025/formula/inline/231,,,rumus sebaris 231; baris target 144; SHA-256 fb146dcaf94a92c8375639500184a4812eefd0c79c8cc7c441281175152df5a5,admitted:admitted
+concept,urn:uuid:1e49f70c-3b8a-5e7d-8037-93340e2da597,surface/unit-025/formula/inline/232,,,rumus sebaris 232; baris target 144; SHA-256 d2b5ab209345011a0a1c7b368b394219a628c8c9df273db356b8e13c81bdbe38,admitted:admitted
+concept,urn:uuid:95d5503a-4c81-55a3-b565-d07b60163c68,surface/unit-025/formula/inline/233,,,rumus sebaris 233; baris target 144; SHA-256 ac365481969c3d31c664d8e0d3c3085cdfd5d1eb04645ab50991601827ce259d,admitted:admitted
+concept,urn:uuid:c13b18fe-4f93-5fa1-ac8a-5ca087e9ce90,surface/unit-025/formula/inline/234,,,rumus sebaris 234; baris target 147; SHA-256 44bd7ae60f478fae1061e11a7739f4b94d1daf917982d33b6fc8a01a63f89c21,admitted:admitted
+concept,urn:uuid:898044b7-adc1-5c6e-b8c9-39c1a6c6a3b4,surface/unit-025/formula/inline/235,,,rumus sebaris 235; baris target 147; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:b4296016-764e-50c4-ad97-55492b1ea6a5,surface/unit-025/formula/inline/236,,,rumus sebaris 236; baris target 149; SHA-256 1374f10854a72ccf8b2952dde6582a443d93f3a6327b979ab9ef1feb3f13b40f,admitted:admitted
+concept,urn:uuid:8610d36f-a43b-5108-9ead-27f04093dfa3,surface/unit-025/formula/inline/237,,,rumus sebaris 237; baris target 149; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:dd1a8bc2-8e9b-55fe-85e9-d1745b414329,surface/unit-025/formula/inline/238,,,rumus sebaris 238; baris target 149; SHA-256 37a9c090f1ca3b3a1f0866a2b5f3bb4a3564414258fb84413d5602700292d63b,admitted:admitted
+concept,urn:uuid:68ee4b41-dc16-520f-ac25-ab1e6b01a425,surface/unit-025/formula/inline/239,,,rumus sebaris 239; baris target 149; SHA-256 17ae9736e9152689babd72e19b006e9fc6bf7a3e357ec3223ec0d4e434364a7d,admitted:admitted
+concept,urn:uuid:d0f238bb-8ff4-5a56-9bcd-2db5bd3ea407,surface/unit-025/formula/inline/240,,,rumus sebaris 240; baris target 150; SHA-256 86be9a55762d316a3026c2836d044f5fc76e34da10e1b45feee5f18be7edb177,admitted:admitted
+concept,urn:uuid:f28ba224-b48c-5f3c-b507-9a982148877a,surface/unit-025/formula/inline/241,,,rumus sebaris 241; baris target 150; SHA-256 44bd7ae60f478fae1061e11a7739f4b94d1daf917982d33b6fc8a01a63f89c21,admitted:admitted
+concept,urn:uuid:911b99c4-e085-5732-a6c5-d2420b3fa308,surface/unit-025/formula/inline/242,,,rumus sebaris 242; baris target 150; SHA-256 22e02f6fba60e8ce9f6da53efa038270a642bb91a708d5341661779cc45b1093,admitted:admitted
+concept,urn:uuid:c74ffb3d-c527-504c-9c80-903528b2e680,surface/unit-025/formula/inline/243,,,rumus sebaris 243; baris target 160; SHA-256 db4a6808aec7b6db60a76ba3edabfd44ad67955bbe874e64699d7153488effa3,admitted:admitted
+concept,urn:uuid:b3d45f09-7c01-5969-bf06-d51cc7270fc2,surface/unit-025/formula/inline/244,,,rumus sebaris 244; baris target 160; SHA-256 e2b7d39a47e71323a51342d600465dec389c9d4247d664ac599f844d4b72f4f3,admitted:admitted
+concept,urn:uuid:33a7e6ca-8437-5514-9b13-96a6e3af5c94,surface/unit-025/formula/inline/245,,,rumus sebaris 245; baris target 160; SHA-256 69facf1eec412bfc72779aee432e6baccf39dcb4fec86102fee3381c23f9ba19,admitted:admitted
+concept,urn:uuid:96a78dc0-e95e-5213-94aa-a3648b285fc7,surface/unit-025/formula/inline/246,,,rumus sebaris 246; baris target 163; SHA-256 002e7b932201ea6629d761bbafe81ff1921aedc6e0da1bf2fad69e18894ac533,admitted:admitted
+concept,urn:uuid:5347f7d2-f8e6-5dfc-987f-a5d07abf2681,surface/unit-025/formula/inline/247,,,rumus sebaris 247; baris target 163; SHA-256 4d21a7fe7e5e05dfe4dd53742f7691aaa4d860ea8be6cfa80b0686ffd487c7f9,admitted:admitted
+concept,urn:uuid:39fc1d2d-e3e3-5c55-822b-5eb15a9323e6,surface/unit-025/formula/inline/248,,,rumus sebaris 248; baris target 163; SHA-256 3d394fe0a5dd4303a2ffb2e0b2dbadd2803fe5442b571ad565269011992a4ae9,admitted:admitted
+concept,urn:uuid:9f5cbf2f-4ac2-5dfe-85c9-ad75ae545378,surface/unit-025/formula/inline/249,,,rumus sebaris 249; baris target 164; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:0b0692d3-7000-538e-a84c-0f267d0995ca,surface/unit-025/formula/inline/250,,,rumus sebaris 250; baris target 166; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:a7d83ad7-51d4-557f-951e-ab1066aa1c81,surface/unit-025/formula/inline/251,,,rumus sebaris 251; baris target 166; SHA-256 a53c601d7016ed5b916e3bad4f2730b9a5dc9f9bc5c745267876f70ff1ed7675,admitted:admitted
+concept,urn:uuid:44eb6093-7183-579a-86fe-95e95e3bfb38,surface/unit-025/formula/inline/252,,,rumus sebaris 252; baris target 167; SHA-256 dc59d42827a489995809b81823f6540a141bf58f7720c62f36d8bd2e5f183b3e,admitted:admitted
+concept,urn:uuid:c5b65ef4-f2bb-5d3e-9b7e-5214cdeb1a99,surface/unit-025/formula/inline/253,,,rumus sebaris 253; baris target 167; SHA-256 09cce1fe3b26c5d1b633e1e42aaebac9e2376170f83adb9b403a00b4c45a9aa2,admitted:admitted
+concept,urn:uuid:f64b228d-dcd4-576f-862e-e68d7d5aa647,surface/unit-025/formula/inline/254,,,rumus sebaris 254; baris target 168; SHA-256 f6cfce15b48fac214e412fd1d5417978597c270547453104ff8b53f5de9aab0d,admitted:admitted
+concept,urn:uuid:e0a69383-81fe-5d1c-875d-62c19ab0f6c4,surface/unit-025/formula/inline/255,,,rumus sebaris 255; baris target 170; SHA-256 a9f51566bd6705f7ea6ad54bb9deb449f795582d6529a0e22207b8981233ec58,admitted:admitted
+concept,urn:uuid:d683eb80-a21a-518c-84a7-fc6b061e5622,surface/unit-025/formula/inline/256,,,rumus sebaris 256; baris target 170; SHA-256 aea71cbfc818e6c47fb505484c0c772b19e321f99cb46a338a5b7c1931a1204d,admitted:admitted
+concept,urn:uuid:eae4ff3e-99d5-556d-8f52-d1d253736299,surface/unit-025/formula/inline/257,,,rumus sebaris 257; baris target 170; SHA-256 adca0008476879c1df6921ecf2308957cb001996276252a7c46f72b7a0fb37d6,admitted:admitted
+concept,urn:uuid:4396940d-9519-5872-a9ea-47d11afee170,surface/unit-025/formula/inline/258,,,rumus sebaris 258; baris target 170; SHA-256 cb714839ae4f931b9f4589aa4f72c099bf4ba94499592657cf6ffa0711fb679b,admitted:admitted
+concept,urn:uuid:a2650661-6a69-5f64-89f4-eb84205b74a0,surface/unit-025/formula/inline/259,,,rumus sebaris 259; baris target 173; SHA-256 7d5553f388ec0155e0202e3954dbb98a13ca85b86cebe536cc29b5269c609185,admitted:admitted
+concept,urn:uuid:dcd51b23-2f40-5c35-9ff7-fbcddf19d354,surface/unit-025/formula/inline/260,,,rumus sebaris 260; baris target 173; SHA-256 20f2a134157ef0152df28fbf4f6f40a6a47d75637b5b93d9e44b185f89453dc6,admitted:admitted
+concept,urn:uuid:52aee021-fe1b-52da-a8e6-7fcd8774c3ed,surface/unit-025/formula/inline/261,,,rumus sebaris 261; baris target 173; SHA-256 b7c1d09401438980e6ceea829ac56ec4d6c659bce18155c21c0e4e6f18221566,admitted:admitted
+concept,urn:uuid:95676364-bf59-5317-a836-e6300daef02b,surface/unit-025/formula/inline/262,,,rumus sebaris 262; baris target 173; SHA-256 878ea4f75c1ed9ed4f54579e31483bc12e4d59b47808f517dc24b4043c386d3c,admitted:admitted
+concept,urn:uuid:5768fdd8-9009-5e30-af55-57b5b3741b45,surface/unit-025/formula/inline/263,,,rumus sebaris 263; baris target 173; SHA-256 a9f51566bd6705f7ea6ad54bb9deb449f795582d6529a0e22207b8981233ec58,admitted:admitted
+concept,urn:uuid:f6666a6d-d5f6-5470-92b2-da35ee22a54e,surface/unit-025/formula/inline/264,,,rumus sebaris 264; baris target 173; SHA-256 44bd7ae60f478fae1061e11a7739f4b94d1daf917982d33b6fc8a01a63f89c21,admitted:admitted
+concept,urn:uuid:a355c393-e52a-5e75-ac21-f21169f00217,surface/unit-025/formula/inline/265,,,rumus sebaris 265; baris target 173; SHA-256 9ddeb2212bc35534f7ad6fd1a71bce46d19e626c94b91fcc435fb6c26786f798,admitted:admitted
+concept,urn:uuid:6aa20efe-abe9-5705-8b3d-e69f0b5dedb7,surface/unit-025/formula/inline/266,,,rumus sebaris 266; baris target 173; SHA-256 191985f11180f610e6cf4e01b349e5a514e50668dc554440398410afd17890e3,admitted:admitted
+concept,urn:uuid:84956460-b7c2-520c-b083-31a0b1499b1c,surface/unit-025/formula/inline/267,,,rumus sebaris 267; baris target 177; SHA-256 61e3a5f9082b6ff5ac722586df35fa58c1a2b62be9a114c480b9c1fb6fecb392,admitted:admitted
+concept,urn:uuid:ff8d323f-33d1-5f2f-b313-59ce3dd8b230,surface/unit-025/formula/inline/268,,,rumus sebaris 268; baris target 177; SHA-256 79dee46d6f7b2458eb21b7db61b27d84de73011745e799280910c7c25c8ca8ac,admitted:admitted
+concept,urn:uuid:8db5aa78-c0e7-5396-a143-80582eeb95f1,surface/unit-025/formula/inline/269,,,rumus sebaris 269; baris target 177; SHA-256 464e0ff50b61ebb7b8d4fa7c8a19c9803a86a9bf5e9f1432daeaa5ae1722fb8e,admitted:admitted
+concept,urn:uuid:263817aa-b8df-5778-a98b-0869731264e4,surface/unit-025/formula/inline/270,,,rumus sebaris 270; baris target 177; SHA-256 333e0a1e27815d0ceee55c473fe3dc93d56c63e3bee2b3b4aee8eed6d70191a3,admitted:admitted
+concept,urn:uuid:40e4d3da-15c3-5dd9-b52d-6f63a5237b90,surface/unit-025/formula/inline/271,,,rumus sebaris 271; baris target 177; SHA-256 cad6421144f8e9fa4a0420dc7fae21376f0c00cb67d1561845a9d9ef1cbf2fc3,admitted:admitted
+concept,urn:uuid:50df6f4e-9074-5e2c-8ece-6051d0896ffa,surface/unit-025/item/001,,,butir daftar 001; baris target 14,admitted:admitted
+concept,urn:uuid:27346000-7bd9-5e46-80cb-42cbadc440c4,surface/unit-025/item/002,,,butir daftar 002; baris target 15,admitted:admitted
+concept,urn:uuid:c8f6cc1d-2d04-5ca4-8154-4ba0ca41a447,surface/unit-025/item/003,,,butir daftar 003; baris target 34,admitted:admitted
+concept,urn:uuid:fb3f5ac6-43df-55c4-a2df-29da80a90c91,surface/unit-025/item/004,,,butir daftar 004; baris target 35,admitted:admitted
+concept,urn:uuid:469b4a06-f709-57f9-a307-d0b13de354e5,surface/unit-025/item/005,,,butir daftar 005; baris target 36,admitted:admitted
+concept,urn:uuid:43a8b31a-7894-5643-92da-4451731ef5f3,surface/unit-025/item/006,,,butir daftar 006; baris target 37,admitted:admitted
+concept,urn:uuid:05273123-5031-5a68-b4f2-031c789ab794,surface/unit-025/item/007,,,butir daftar 007; baris target 38,admitted:admitted
+concept,urn:uuid:631bd617-8a7c-565f-817e-9bff55160d37,surface/unit-025/item/008,,,butir daftar 008; baris target 41,admitted:admitted
+concept,urn:uuid:6dd19318-05b6-503f-9d03-2527f63ad2f2,surface/unit-025/item/009,,,butir daftar 009; baris target 42,admitted:admitted
+concept,urn:uuid:f1c4d49f-2a02-548c-aa21-fd2e34ae662d,surface/unit-025/item/010,,,butir daftar 010; baris target 45,admitted:admitted
+concept,urn:uuid:bdbc6a58-7fed-5942-ab65-a3aec88287cd,surface/unit-025/item/011,,,butir daftar 011; baris target 51,admitted:admitted
+concept,urn:uuid:7c169ce4-2111-51d4-ae6d-c3b4e4ad209c,surface/unit-025/item/012,,,butir daftar 012; baris target 52,admitted:admitted
+concept,urn:uuid:08bbace3-8f2b-56bd-b59e-e22abacd2555,surface/unit-025/item/013,,,butir daftar 013; baris target 94,admitted:admitted
+concept,urn:uuid:ee61eb16-44bb-5264-9ac3-f9f1cb800f22,surface/unit-025/item/014,,,butir daftar 014; baris target 95,admitted:admitted
+concept,urn:uuid:7fae764f-5c02-52df-8ef2-2ae85bc9a55c,surface/unit-025/item/015,,,butir daftar 015; baris target 124,admitted:admitted
+concept,urn:uuid:9b18b104-e8ce-560a-b6d2-b9a44f5408fc,surface/unit-025/item/016,,,butir daftar 016; baris target 125,admitted:admitted
+concept,urn:uuid:dfcc4316-9836-55cf-8c18-57a56371c07d,surface/unit-025/item/017,,,butir daftar 017; baris target 126,admitted:admitted
+concept,urn:uuid:b4b5519c-5ea3-5093-a462-0a3f5bc13074,surface/unit-025/item/018,,,butir daftar 018; baris target 136,admitted:admitted
+concept,urn:uuid:83c37a7d-d139-59d4-a446-cd4ab2de1c1f,surface/unit-025/item/019,,,butir daftar 019; baris target 137,admitted:admitted
+concept,urn:uuid:0064b95b-0b4a-549f-a68f-742926e07f74,surface/unit-025/item/020,,,butir daftar 020; baris target 149,admitted:admitted
+concept,urn:uuid:11298b41-7bd7-57b5-83cb-41850a2d6a96,surface/unit-025/item/021,,,butir daftar 021; baris target 150,admitted:admitted
+concept,urn:uuid:258a0df5-947d-55ef-8b4b-e1dc18e11804,surface/unit-025/item/022,,,butir daftar 022; baris target 166,admitted:admitted
+concept,urn:uuid:1a8da0d9-1bf7-5af3-ad2b-5acad2964ba9,surface/unit-025/item/023,,,butir daftar 023; baris target 167,admitted:admitted
+concept,urn:uuid:af438a6b-56ef-5108-af7c-e74cf3555778,surface/unit-025/item/024,,,butir daftar 024; baris target 168,admitted:admitted
+concept,urn:uuid:89b6d1d3-2dc9-50fc-b320-6787c6befbce,surface/unit-025/label/001,,,label 001: sec:group-and-monoid; baris target 29,admitted:admitted
+concept,urn:uuid:ba250f1e-c88c-54db-9553-650eab3b14c0,surface/unit-025/label/002,,,label 002: def:monoid; baris target 48,admitted:admitted
+concept,urn:uuid:5b7c43e4-bbc9-5a10-8404-76d0e93557e4,surface/unit-025/label/003,,,label 003: def:group; baris target 62,admitted:admitted
+concept,urn:uuid:dec0a34f-5e65-5c62-88ba-dc8b9273521d,surface/unit-025/label/004,,,label 004: eg:symmetric-group; baris target 86,admitted:admitted
+concept,urn:uuid:0db01248-65c0-5f97-890a-2b00adfe6c21,surface/unit-025/label/005,,,label 005: def:cyclic-group; baris target 112,admitted:admitted
+concept,urn:uuid:43b5f251-effc-5c55-aae4-9c9add4a18a0,surface/unit-025/label/006,,,label 006: eg:Z-as-group; baris target 116,admitted:admitted
+concept,urn:uuid:76c03917-cf81-55db-86ab-3287371a78be,surface/unit-025/label/007,,,label 007: def:coset; baris target 121,admitted:admitted
+concept,urn:uuid:6748d1e2-6c00-55e1-aee6-681f402be9ab,surface/unit-025/label/008,,,label 008: prop:coset-decomp; baris target 133,admitted:admitted
+concept,urn:uuid:ac413c07-2d87-566b-ade1-b9912ed1caf3,surface/unit-025/label/009,,,label 009: prop:Lagrange; baris target 146,admitted:admitted
+concept,urn:uuid:b2d1f959-7517-5b02-8df3-6ff65ef940c2,surface/unit-025/label/010,,,label 010: rem:HN; baris target 176,admitted:admitted
+concept,urn:uuid:23f70d3a-dcd1-5eac-9481-971aa0c0b4e5,surface/unit-025/reference/ordinary/001,,,rujukan ordinary 001: sec:symmetric-group; baris target 17,admitted:admitted
+concept,urn:uuid:9fe76e87-8376-5701-b153-681f76c6427c,surface/unit-025/reference/ordinary/002,,,rujukan ordinary 002: sec:PID-module; baris target 17,admitted:admitted
+concept,urn:uuid:cbf86bf5-f170-52b2-b220-b43225d38a8a,surface/unit-025/reference/ordinary/003,,,rujukan ordinary 003: con:U-small; baris target 19,admitted:admitted
+concept,urn:uuid:13c2e745-296e-59ad-8171-7c01cea2528a,surface/unit-025/reference/ordinary/004,,,rujukan ordinary 004: sec:group-and-monoid; baris target 22,admitted:admitted
+concept,urn:uuid:c2700569-3cf5-5748-982f-a031c1baffb8,surface/unit-025/reference/ordinary/005,,,rujukan ordinary 005: sec:group-action; baris target 22,admitted:admitted
+concept,urn:uuid:912c0e10-2efb-5822-8013-2dad9ee37ecf,surface/unit-025/reference/ordinary/006,,,rujukan ordinary 006: sec:free-group; baris target 22,admitted:admitted
+concept,urn:uuid:552136b3-0764-542f-be2c-da1b2d69a168,surface/unit-025/reference/ordinary/007,,,rujukan ordinary 007: sec:symmetric-group; baris target 24,admitted:admitted
+concept,urn:uuid:3c3d22d0-a4e2-5b84-8fc0-d6c22d5c6b53,surface/unit-025/reference/ordinary/008,,,rujukan ordinary 008: sec:group-limit; baris target 24,admitted:admitted
+concept,urn:uuid:748b2895-2252-5b93-bb40-c5e36952ec15,surface/unit-025/reference/ordinary/009,,,rujukan ordinary 009: def:field; baris target 83,admitted:admitted
+concept,urn:uuid:91c08989-6908-5fcb-8c54-4cfba6f3519e,surface/unit-025/reference/ordinary/010,,,rujukan ordinary 010: prop:A_n-simple; baris target 104,admitted:admitted
+concept,urn:uuid:fa83937f-de2e-5a87-981e-2b32f6c9ac6d,surface/unit-025/reference/ordinary/011,,,rujukan ordinary 011: eg:cyclic-group; baris target 113,admitted:admitted
+concept,urn:uuid:20d828f6-5cfa-5db7-bb8d-aac483c0e91b,surface/unit-025/terminology-row/001,,,baris terminologi 001: binary operation -> operasi biner; status admitted; scope group theory and algebra; baris target 30,admitted:admitted
+concept,urn:uuid:d9f89542-27de-51ad-9c06-25a304390643,surface/unit-025/terminology-row/002,,,baris terminologi 002: semigroup -> semigrup; status admitted; scope group theory and algebra; baris target 48,admitted:admitted
+concept,urn:uuid:366796b0-6239-5e9c-aa3e-eb0005730f3b,surface/unit-025/terminology-row/003,,,baris terminologi 003: monoid -> monoid; status admitted; scope group theory and algebra; baris target 48,admitted:admitted
+concept,urn:uuid:73cbca55-5df9-586b-8ade-6ee695622cf3,surface/unit-025/terminology-row/004,,,baris terminologi 004: submonoid -> submonoid; status admitted; scope group theory and algebra; baris target 54,admitted:admitted
+concept,urn:uuid:ab3a1506-16c9-5468-956c-aa4a38aa7f24,surface/unit-025/terminology-row/005,,,baris terminologi 005: identity element -> unsur identitas; status admitted; scope group theory and algebra; baris target 42,admitted:admitted
+concept,urn:uuid:5ed895bf-d721-577b-adfd-c004f38363e0,surface/unit-025/terminology-row/006,,,baris terminologi 006: left cancellation law -> hukum pembatalan kiri; status admitted; scope group theory and algebra; baris target 37,admitted:admitted
+concept,urn:uuid:39d51604-eb89-50f8-ac89-67c4e52cbeed,surface/unit-025/terminology-row/007,,,baris terminologi 007: right cancellation law -> hukum pembatalan kanan; status admitted; scope group theory and algebra; baris target 37,admitted:admitted
+concept,urn:uuid:3863b397-ad61-5caa-895b-9b991654885b,surface/unit-025/terminology-row/008,,,baris terminologi 008: unit group -> grup unit; status admitted; scope group theory and algebra; baris target 66,admitted:admitted
+concept,urn:uuid:c0961897-5d2c-5738-a340-ffc2febbb45a,surface/unit-025/terminology-row/009,,,baris terminologi 009: subgroup -> subgrup; status admitted; scope group theory; baris target 91,admitted:admitted
+concept,urn:uuid:59e6a758-37d9-58ff-87eb-31e38c8442b6,surface/unit-025/terminology-row/010,,,baris terminologi 010: normal subgroup -> subgrup normal; status admitted; scope group theory; baris target 91,admitted:admitted
+concept,urn:uuid:53cbdb33-b936-541f-80af-0b9c1600f860,surface/unit-025/terminology-row/011,,,baris terminologi 011: trivial subgroup -> subgrup trivial; status admitted; scope group theory; baris target 97,admitted:admitted
+concept,urn:uuid:4d12b9e9-173b-5911-801c-c8e399866233,surface/unit-025/terminology-row/012,,,baris terminologi 012: simple group -> grup sederhana; status admitted; scope group theory; baris target 101,admitted:admitted
+concept,urn:uuid:be873a0a-b746-5496-bcf4-ab02e7612bc6,surface/unit-025/terminology-row/013,,,baris terminologi 013: generated subgroup -> subgrup yang dibangkitkan; status admitted; scope group theory; baris target 106,admitted:admitted
+concept,urn:uuid:0507c895-6b84-5309-8534-0920f096cb9c,surface/unit-025/terminology-row/014,,,baris terminologi 014: cyclic group -> grup siklik; status admitted; scope group theory; baris target 112,admitted:admitted
+concept,urn:uuid:2c92b706-b204-5b52-8694-9485c01f38d5,surface/unit-025/terminology-row/015,,,baris terminologi 015: group order -> orde grup; status admitted; scope group theory; baris target 62,admitted:admitted
+concept,urn:uuid:b9f1a1dd-d934-5cc2-940c-eff5546d8c69,surface/unit-025/terminology-row/016,,,baris terminologi 016: element order -> orde unsur; status admitted; scope group theory; baris target 110,admitted:admitted
+concept,urn:uuid:71f63464-cc0d-5571-9880-d7b787bcc25f,surface/unit-025/terminology-row/017,,,baris terminologi 017: coset -> koset; status admitted; scope group theory; baris target 121,admitted:admitted
+concept,urn:uuid:a65f0606-a6cd-5f0e-b437-c434c01f3943,surface/unit-025/terminology-row/018,,,baris terminologi 018: left coset -> koset kiri; status admitted; scope group theory; baris target 124,admitted:admitted
+concept,urn:uuid:1922f5f5-7ed2-5eaf-9787-af23b3d1b840,surface/unit-025/terminology-row/019,,,baris terminologi 019: right coset -> koset kanan; status admitted; scope group theory; baris target 125,admitted:admitted
+concept,urn:uuid:6aa5b605-3b9e-562b-82c3-a02a6a342d60,surface/unit-025/terminology-row/020,,,baris terminologi 020: double coset -> koset ganda; status admitted; scope group theory; baris target 126,admitted:admitted
+concept,urn:uuid:d2b3af2b-1f42-5043-b0ec-9d5b9b374746,surface/unit-025/terminology-row/021,,,baris terminologi 021: center (group theory) -> pusat; status admitted; scope group theory; baris target 163,admitted:admitted
+concept,urn:uuid:ea761928-248d-5860-8a03-886edc7d840e,surface/unit-025/terminology-row/022,,,baris terminologi 022: centralizer -> sentralisator; status admitted; scope group theory; baris target 163,admitted:admitted
+concept,urn:uuid:d8814bc2-f8ad-5edc-8e81-9f2b448227dc,surface/unit-025/terminology-row/023,,,baris terminologi 023: normalizer -> normalisator; status admitted; scope group theory; baris target 163,admitted:admitted
+concept,urn:uuid:1bf3023f-8ded-529d-a0d6-8b174d59f200,surface/unit-025/terminology-row/024,,,baris terminologi 024: symmetric group -> grup simetris; status admitted; scope group theory; baris target 86,admitted:admitted
+concept,urn:uuid:00e6bddf-2af9-5c95-8bb1-dfa874c93a70,surface/unit-025/terminology-row/025,,,baris terminologi 025: alternating group -> grup selang-seling; status admitted; scope group theory; baris target 104,admitted:admitted
+concept,urn:uuid:ab6a54bd-8efc-56ec-a0b4-b400d431df15,surface/unit-025/terminology-row/026,,,baris terminologi 026: permutation group -> grup permutasi; status admitted; scope group theory; baris target 87,admitted:admitted
+concept,urn:uuid:e2d58b0a-b7f1-53eb-9ad4-da5e16c1e658,surface/unit-025/terminology-row/027,,,baris terminologi 027: general linear group -> grup linear umum; status admitted; scope group theory and linear algebra; baris target 80,admitted:admitted
+concept,urn:uuid:8400e695-b79c-5c91-9999-994b6797f800,surface/unit-025/terminology-row/028,,,baris terminologi 028: magma -> magma; status admitted; scope group theory and algebra; baris target 30,admitted:admitted
+concept,urn:uuid:c2d16bac-b110-512e-b9f7-3c9c259ddd51,surface/unit-025/terminology-row/029,,,baris terminologi 029: index of a subgroup -> indeks subgrup; status admitted; scope group theory; baris target 128,admitted:admitted
+concept,urn:uuid:920a5de9-8d2b-5b7f-93cb-47f15cbf129a,surface/unit-025/terminology-row/030,,,baris terminologi 030: Lagrange's theorem -> teorema Lagrange; status admitted; scope group theory; baris target 149,admitted:admitted
+course,urn:uuid:a5f3ad58-ce3c-5f5f-b581-1f842ae79192,course/o013,urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78,,Graduate Algebra,admitted:admitted
+edition,urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49,edition/wenweili/aljabr-1/c4f7a01f68f5f407906b4b970640cddbbad85f6b,urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397,,c4f7a01f68f5f407906b4b970640cddbbad85f6b,admitted:admitted
+index_entry,urn:uuid:2d6a2bc9-437e-53de-936b-371189a3e1da,index-entry/unit-025/main/001,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,1,001,admitted:admitted
+index_entry,urn:uuid:a18641fe-9554-58c2-970a-c00faca46a68,index-entry/unit-025/main/002,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,2,002,admitted:admitted
+index_entry,urn:uuid:9be9a859-b494-57b5-9fff-025d3bd7ba04,index-entry/unit-025/main/003,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,3,003,admitted:admitted
+index_entry,urn:uuid:95248768-b2d5-5ba6-aac7-d0280845d617,index-entry/unit-025/main/004,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,4,004,admitted:admitted
+index_entry,urn:uuid:a5e9e678-37bb-59ed-ae96-2906f542db14,index-entry/unit-025/main/005,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,5,005,admitted:admitted
+index_entry,urn:uuid:72d77253-248e-5954-80c4-42faa2f0f88f,index-entry/unit-025/main/006,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,6,006,admitted:admitted
+index_entry,urn:uuid:55f99b51-864b-54de-8922-21ef2cf8a812,index-entry/unit-025/main/007,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,7,007,admitted:admitted
+index_entry,urn:uuid:a326768f-0718-557d-a8e7-364cafffa5bc,index-entry/unit-025/main/008,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,8,008,admitted:admitted
+index_entry,urn:uuid:63e37923-e171-5038-9951-97ef70eec4eb,index-entry/unit-025/main/009,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,9,009,admitted:admitted
+index_entry,urn:uuid:df4af563-bbb1-5dcf-b9cd-f18e79dab1ed,index-entry/unit-025/main/012,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,12,012,admitted:admitted
+index_entry,urn:uuid:fd9558be-1e00-5e8a-8c4f-29bd0923b2e2,index-entry/unit-025/main/013,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,13,013,admitted:admitted
+index_entry,urn:uuid:4b4d45cd-3a05-5b19-bd2b-dba554467001,index-entry/unit-025/main/014,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,14,014,admitted:admitted
+index_entry,urn:uuid:4b00a99f-1fed-5482-83d8-c41e8fd81fb2,index-entry/unit-025/main/015,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,15,015,admitted:admitted
+index_entry,urn:uuid:390dea50-3efa-568c-9709-0a1b5a0d8498,index-entry/unit-025/main/018,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,18,018,admitted:admitted
+index_entry,urn:uuid:c2b86c17-7ff8-5a8e-bf9b-cfaf5f103f52,index-entry/unit-025/main/019,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,19,019,admitted:admitted
+index_entry,urn:uuid:ca34a5f5-f035-5d84-995d-2081879ef679,index-entry/unit-025/main/020,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,20,020,admitted:admitted
+index_entry,urn:uuid:7bccf8e4-967a-5ff5-9435-567e1fa66a13,index-entry/unit-025/main/022,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,22,022,admitted:admitted
+index_entry,urn:uuid:91d15ebe-0bb7-570d-ba0f-1c15f04c3d93,index-entry/unit-025/sym1/010,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,10,010,admitted:admitted
+index_entry,urn:uuid:62e8e0d2-32fd-5fcc-a227-566821474b80,index-entry/unit-025/sym1/011,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,11,011,admitted:admitted
+index_entry,urn:uuid:c85a018c-b9e8-5b58-bd63-bc3e0632e2e9,index-entry/unit-025/sym1/016,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,16,016,admitted:admitted
+index_entry,urn:uuid:c52278f6-998e-5c17-9f72-a581738e4d3a,index-entry/unit-025/sym1/017,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,17,017,admitted:admitted
+index_entry,urn:uuid:1a9c761b-40a2-5fc8-9a54-67990801fda9,index-entry/unit-025/sym1/021,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,21,021,admitted:admitted
+index_entry,urn:uuid:eb6a0c20-cb02-53c6-b0fe-7c39831aa380,index-entry/unit-025/sym1/023,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,23,023,admitted:admitted
+index_entry,urn:uuid:79407449-4f56-53bd-ba89-3e4ed64f345e,index-entry/unit-025/sym1/024,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,24,024,admitted:admitted
+index_entry,urn:uuid:7a8ae622-e97f-5fd6-82c9-92c6152b2fd6,index-entry/unit-025/sym1/025,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,25,025,admitted:admitted
+prerequisite,urn:uuid:3f5dc8e0-0198-5016-b767-ded1b9ec3d13,prerequisite/basic-group-theory,,,pengetahuan dasar tentang grup,admitted:admitted
+prerequisite,urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7,prerequisite/basic-mathematical-literacy,,,kematangan matematika dasar,admitted:admitted
+prerequisite,urn:uuid:dd69ccfd-7399-53a2-83fe-84127b1baf1d,prerequisite/categories-and-morphisms,,,kategori dan morfisme,admitted:admitted
+prerequisite,urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f,prerequisite/cauchy-sequences-and-completeness,,,barisan Cauchy dan kelengkapan,admitted:admitted
+prerequisite,urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee,prerequisite/elementary-number-theory,,,teori bilangan elementer,admitted:admitted
+prerequisite,urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4,prerequisite/elementary-set-theory,,,teori himpunan elementer,admitted:admitted
+prerequisite,urn:uuid:e3c2ed29-b6a0-5f8d-9613-6f2b41d962c8,prerequisite/functor-categories,,,kategori fungtor,admitted:admitted
+prerequisite,urn:uuid:3e864ace-90f6-56b3-8ce5-2e0690dbc9f8,prerequisite/functors-and-natural-transformations,,,fungtor dan transformasi natural,admitted:admitted
+prerequisite,urn:uuid:c0b1a30a-634a-5e76-98d3-49bde5a5821c,prerequisite/limits-and-colimits,,,limit dan kolimit,admitted:admitted
+prerequisite,urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec,prerequisite/linear-transformations,,,transformasi linear,admitted:admitted
+prerequisite,urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7,prerequisite/mathematical-logic,,,bahasa logika dan penalaran,admitted:admitted
+prerequisite,urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288,prerequisite/matrices,,,matriks,admitted:admitted
+prerequisite,urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8,prerequisite/permutations-and-symmetric-groups,,,permutasi dan grup simetris,admitted:admitted
+prerequisite,urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96,prerequisite/point-set-topology,,,topologi himpunan titik elementer,admitted:admitted
+prerequisite,urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14,prerequisite/polynomials,,,polinom,admitted:admitted
+prerequisite,urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f,prerequisite/real-analysis-basics,,,dasar-dasar analisis real,admitted:admitted
+prerequisite,urn:uuid:9fac54c6-e671-58b9-b840-4799739adb1e,prerequisite/representable-functors-and-yoneda,,,fungtor representabel dan Lema Yoneda,admitted:admitted
+prerequisite,urn:uuid:8cab24d2-0f78-5bf9-96f8-5b2f2b07168d,prerequisite/universal-properties-and-comma-categories,,,sifat universal dan kategori koma,admitted:admitted
+prerequisite,urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396,prerequisite/vector-spaces,,,ruang vektor,admitted:admitted
+program,urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78,program/open-mathematics-curriculum/2026,,,Open Mathematics Curriculum,admitted:admitted
+qa_event,urn:uuid:aeefcfc0-a17a-5dc3-9208-27bd8c9e7043,qa/unit-025/admission-gate,urn:uuid:3c486ac1-1de8-5a44-aed8-bc490b8f248f,,admission-gate,pass
+qa_event,urn:uuid:95a821b9-6b6c-5149-9b71-3679dc71f028,qa/unit-025/all-page-visual-review,urn:uuid:3c486ac1-1de8-5a44-aed8-bc490b8f248f,,all-page-visual-review,pass
+qa_event,urn:uuid:1ce537be-0616-5684-b520-f5e5054695a8,qa/unit-025/build-log,urn:uuid:3c486ac1-1de8-5a44-aed8-bc490b8f248f,,build-log,pass
+qa_event,urn:uuid:13c327c5-b532-5cc5-bc40-78204420059a,qa/unit-025/candidate-check,urn:uuid:3c486ac1-1de8-5a44-aed8-bc490b8f248f,,candidate-check,pass
+qa_event,urn:uuid:d2d508fd-ec31-5d52-b95b-bf6d0be04755,qa/unit-025/canonical-integration,urn:uuid:3c486ac1-1de8-5a44-aed8-bc490b8f248f,,canonical-integration,pass
+qa_event,urn:uuid:04fe2fc4-4fef-5bed-934a-93efd17f996f,qa/unit-025/index-hierarchy-localization,urn:uuid:3c486ac1-1de8-5a44-aed8-bc490b8f248f,,index-hierarchy-localization,pass
+qa_event,urn:uuid:4e337455-2d38-55d7-addf-ad7167fc4c08,qa/unit-025/prepromotion-evidence,urn:uuid:3c486ac1-1de8-5a44-aed8-bc490b8f248f,,prepromotion-evidence,pass
+qa_event,urn:uuid:f7fdf2d9-b125-5adb-83df-d4b8fd871cd9,qa/unit-025/source-correction,urn:uuid:3c486ac1-1de8-5a44-aed8-bc490b8f248f,,source-correction,pass
+qa_event,urn:uuid:38ddd03a-e9e9-5132-82c6-66d91ec403bc,qa/unit-025/source-review,urn:uuid:3c486ac1-1de8-5a44-aed8-bc490b8f248f,,source-review,pass
+qa_event,urn:uuid:cbd9ad38-de63-5378-b5c7-9a23eebeab67,qa/unit-025/terminology-control,urn:uuid:3c486ac1-1de8-5a44-aed8-bc490b8f248f,,terminology-control,pass
+qa_event,urn:uuid:d730a160-8925-53e9-b29f-f9a8e8b183a6,qa/unit-025/terminology-evidence,urn:uuid:3c486ac1-1de8-5a44-aed8-bc490b8f248f,,terminology-evidence,pass
+resource,urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397,resource/wenweili/aljabr-1,,,"Metode Aljabar, Jilid 1: Arsitektur Dasar",admitted:admitted
+rights,urn:uuid:10faf5cd-990f-5850-87b4-26922b062485,rights/ajbook-fragment-cc-by-sa-3.0,,,AJbook.cls DeclareSourcemap fragment,applies
+rights,urn:uuid:e18339ae-66cd-5304-b544-b220dd41380d,rights/lanzhou-cc-by-sa-3.0,,,Lanzhou.png,retained_not_used_by_unit
+rights,urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430,rights/noto-fonts-ofl-1.1,,,Noto Sans CJK SC and Noto Serif CJK SC fonts,applies
+rights,urn:uuid:0baf6c47-021d-5310-9475-81519e710250,rights/principal-cc-by-4.0,,,"Principal text, source, PDF, and Indonesian translation",applies
+section,urn:uuid:8cb7ae37-ffac-5509-a911-0fe1a30db454,unit/bab-4-semigrup-monoid-dan-grup/section/01,urn:uuid:3c486ac1-1de8-5a44-aed8-bc490b8f248f,1,Pengantar Bab 4,admitted:admitted
+section,urn:uuid:e75f23e9-ad13-53b2-98bc-621546d69e24,unit/bab-4-semigrup-monoid-dan-grup/section/02,urn:uuid:3c486ac1-1de8-5a44-aed8-bc490b8f248f,2,"Semigrup, Monoid, dan Grup",admitted:admitted
+unit,urn:uuid:3c486ac1-1de8-5a44-aed8-bc490b8f248f,unit/bab-4-semigrup-monoid-dan-grup,urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49,25,"Bab 4: Semigrup, Monoid, dan Grup",admitted:admitted

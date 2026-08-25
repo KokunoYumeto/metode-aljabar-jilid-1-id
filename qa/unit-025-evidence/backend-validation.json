@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "unit": "unit-025-bab-4-semigrup-monoid-dan-grup",
+  "authority": "chapter4.tex:1-176",
+  "target": "chapter4.tex:1-178",
+  "data": "backend/data/unit-025-bab-4-semigrup-monoid-dan-grup.json",
+  "schema": "backend/schema/open-math-corpus-unit.schema.v1.json",
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "artifact": {
+    "path": "artifacts/unit-025-bab-4-semigrup-monoid-dan-grup-id.pdf",
+    "pages": 10,
+    "bytes": 123117,
+    "sha256": "511d1c0889c0882639be49d00580c0634de7e3074c757616ac10a3f2fa854615"
+  },
+  "counts": {
+    "concepts": 404,
+    "sections": 2,
+    "environments": 27,
+    "labels": 10,
+    "ordinary_references": 11,
+    "citations": 3,
+    "items": 24,
+    "inline_formulae": 271,
+    "bracket_display_formulae": 8,
+    "environment_display_formulae": 1,
+    "formulae_total": 280,
+    "index_entries": 25,
+    "terminology_rows": 30,
+    "corrections": 1,
+    "exercises": 0,
+    "hints": 0,
+    "diagrams": 0,
+    "csv_projections": 6
+  },
+  "checks": {
+    "deterministic_regeneration_one": "PASS",
+    "deterministic_regeneration_two": "PASS",
+    "shared_schema_and_uuidv5": "PASS",
+    "authority_candidate_target_boundary": "PASS",
+    "complete_tex_surface_topology": "PASS",
+    "exact_concept_section_prerequisite_and_unit_ownership": "PASS",
+    "citation_and_index_provenance": "PASS",
+    "correction_provenance": "PASS",
+    "component_rights": "PASS",
+    "build_and_visual_bindings": "PASS",
+    "terminology_binding": "PASS",
+    "all_full_file_and_line_span_bindings": "PASS",
+    "validation_mutated_outputs": false
+  },
+  "binding_audit": {
+    "occurrences": 101,
+    "full_file_occurrences": 45,
+    "line_span_occurrences": 56,
+    "unique_paths": 34,
+    "paths": [
+      "00_control/SOURCE_MANIFEST.csv",
+      "00_control/TERMINOLOGY.id-ID.csv",
+      "artifacts/unit-025-bab-4-semigrup-monoid-dan-grup-id.pdf",
+      "authority/archives/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b.zip",
+      "authority/pdfs/Al-jabr-1.pdf",
+      "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter4.tex",
+      "qa/UNIT_025_BUILD_FINAL.log",
+      "qa/UNIT_025_PREPROMOTION_AUDIT_20260825.md",
+      "qa/UNIT_025_SOURCE_AND_TRANSLATION_REVIEW_20260824.md",
+      "qa/UNIT_025_TERMINOLOGY_AUDIT_20260825.md",
+      "qa/UNIT_025_VISUAL_QA_20260825.md",
+      "repo/fonts/NotoSansCJKsc-Black.otf",
+      "repo/fonts/NotoSansCJKsc-Medium.otf",
+      "repo/fonts/NotoSansCJKsc-Regular.otf",
+      "repo/fonts/NotoSerifCJKsc-Bold.otf",
+      "repo/fonts/OFL-1.1-Noto-CJK.txt",
+      "repo/source/AJbook.cls",
+      "repo/source/Al-jabr.bib",
+      "repo/source/LICENSE",
+      "repo/source/Lanzhou.png",
+      "repo/source/ccby.png",
+      "repo/source/chapter4.tex",
+      "repo/source/coverpage-id-unit-025.tex",
+      "repo/source/font-setup-id.tex",
+      "repo/source/locale-ui-id.tex",
+      "repo/source/myarrows.sty",
+      "repo/source/mycommand.sty",
+      "repo/source/titles-setup-id.tex",
+      "repo/source/titles-setup.tex",
+      "repo/source/unit-025-bab-4-semigrup-monoid-dan-grup.tex",
+      "repo/source/unit-025-crossrefs.aux",
+      "scripts/build_unit_025.ps1",
+      "scripts/check_unit_025_candidate.py",
+      "scripts/check_unit_025_structure.py"
+    ]
+  },
+  "identities": {
+    "backend/data/unit-025-bab-4-semigrup-monoid-dan-grup.json": {
+      "bytes": 328559,
+      "sha256": "478545e6f43f8557b3ea2da4dece92b9346886139cd3dea114336746aa9357a1"
+    },
+    "backend/csv/unit-025-bindings.csv": {
+      "bytes": 23457,
+      "sha256": "f5c3dbee19ef73a22785687cb2cac7c0119416a668e756fc1861be463ada73ff"
+    },
+    "backend/csv/unit-025-entities.csv": {
+      "bytes": 93457,
+      "sha256": "c794d6687345542829d9de5bcdd3c7605e9cc40da1f844b0852ba46ea0d5a8e9"
+    },
+    "backend/csv/unit-025-qa.csv": {
+      "bytes": 4481,
+      "sha256": "628889d89573d3cc94a9f1be131c61f584de50ce9d9e6c09a4b33f10cc69f81f"
+    },
+    "backend/csv/unit-025-relations.csv": {
+      "bytes": 220016,
+      "sha256": "7da2909a2022d727ba61b60ce37c919ab31152e76c501f3cd7e0718dfd92655e"
+    },
+    "backend/csv/unit-025-rights.csv": {
+      "bytes": 1287,
+      "sha256": "4836630530f87a11a64fe233c59970e2ff7942695a8dbf404f7a0583a275197e"
+    },
+    "backend/csv/unit-025-surfaces.csv": {
+      "bytes": 6961,
+      "sha256": "b75ee120a430d832b696cc7bbfc063062c74f8e94ea863178f01721efd699b25"
+    }
+  },
+  "tools": {
+    "scripts/generate_unit_025_backend.py": {
+      "bytes": 44990,
+      "sha256": "46502f26af1c604eb0fd30b44046db97a001fb3aea431e9d9fee47c67ed9f363"
+    },
+    "scripts/validate_unit_025_backend.py": {
+      "bytes": 24318,
+      "sha256": "795743bdef581769150fcbe7562641e9e8ebe4d7fffa1ef97d2bef70704b8128"
+    }
+  }
+}

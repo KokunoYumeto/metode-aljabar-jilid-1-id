@@ -1,0 +1,10 @@
+PASS Unit 025 reader/PDF/visual gate
+artifact bytes=123117 sha256=511d1c0889c0882639be49d00580c0634de7e3074c757616ac10a3f2fa854615 pages=10
+canonical target bytes=159681 sha256=b1b055416d392a66708047afb20a14175566c7839286979baac6289d3d125419 records=1900
+canonical lines=1-178 records=178 bytes=20464 sha256=5da737ae9f32b4c4b75bb34d615eacd2acb2e68d8e69bdf2a25db590aad8281a candidate_byte_identical=yes
+driver loads only the canonical target span; candidate dependency=no
+clean H/I PDFs have different container bytes but identical extracted content, structure, and page-identical Poppler and MuPDF rasters; I is the frozen artifact
+PDF outlines=5 destinations=50 actions={"/GoTo": 32, "/URI": 6} broken_named_links=0 fonts=25 language=id-ID tagged=no
+log counts={"emergency_stops": 0, "empty_external_link_targets": 0, "fatal_errors": 0, "missing_characters": 0, "overfull_boxes": 0, "undefined_citations": 0, "undefined_control_sequences": 0, "undefined_references": 0, "underfull_hboxes": 3, "underfull_vboxes": 0}
+Every page was inspected in Poppler and MuPDF. The centered 142 mm reflow, guarded reading box, and final-remark enlargement eliminate the narrow-column, split-box, orphan, cross-page-hyphen, and sparse-page defects, with zero overfull boxes, empty-target links, clipping, overlap, edge ink, tofu, Han residue, Pinyin index heads, or broken navigation.
+provenance model=OpenAI Codex gpt-5.6-sol, Ultra

@@ -1,0 +1,1428 @@
+{
+  "schema_version": "1.0.0",
+  "unit_id": "O013-LI-U025",
+  "status": "PASS",
+  "scope": "Chapter 4 opening and complete Section 4.1, Semigroups, Monoids, and Groups; partial Chapter 4 reader.",
+  "canonical_target": {
+    "path": "repo/source/chapter4.tex",
+    "bytes": 159681,
+    "sha256": "b1b055416d392a66708047afb20a14175566c7839286979baac6289d3d125419",
+    "line_records": 1900,
+    "span_lines": "1-178",
+    "span_line_records": 178,
+    "span_bytes": 20464,
+    "span_sha256": "5da737ae9f32b4c4b75bb34d615eacd2acb2e68d8e69bdf2a25db590aad8281a",
+    "span_equals_isolated_candidate": true
+  },
+  "candidate": {
+    "path": "build/unit-025-candidate/chapter4-group-basics-id.tex",
+    "bytes": 20464,
+    "sha256": "5da737ae9f32b4c4b75bb34d615eacd2acb2e68d8e69bdf2a25db590aad8281a"
+  },
+  "driver": {
+    "path": "repo/source/unit-025-bab-4-semigrup-monoid-dan-grup.tex",
+    "bytes": 8176,
+    "sha256": "8a9bed7ac738ab41b663951b0cdb18186f88b249622da1b5187df4f6c12fd30c"
+  },
+  "cover": {
+    "path": "repo/source/coverpage-id-unit-025.tex",
+    "bytes": 3576,
+    "sha256": "f0f9fb7f1232b92cb469678b7664113ea4c2a19b4e285306751c33604086c28d"
+  },
+  "crossrefs": {
+    "path": "repo/source/unit-025-crossrefs.aux",
+    "bytes": 351,
+    "sha256": "cbfc9fee8e501a1675a15ed8e763882f48523bfbe59fcf50523eda12d65342e9"
+  },
+  "build_script": {
+    "path": "scripts/build_unit_025.ps1",
+    "bytes": 5047,
+    "sha256": "3d40571937e1c05f74cd626896b108cb98b6d99cb446e8ef24d22e13a190c96e"
+  },
+  "structure_checker": {
+    "path": "scripts/check_unit_025_structure.py",
+    "bytes": 6106,
+    "sha256": "899e18526193008895af1241bea1b5fd3c3aa1586f9fcae8ff8bc8a452a39a60"
+  },
+  "candidate_checker": {
+    "path": "scripts/check_unit_025_candidate.py",
+    "bytes": 12628,
+    "sha256": "bd146f046b09c104460572d5817a486541449a45ad6de37809a1341a1622cbbb"
+  },
+  "source_review": {
+    "path": "qa/UNIT_025_SOURCE_AND_TRANSLATION_REVIEW_20260824.md",
+    "bytes": 7278,
+    "sha256": "6808b93200f40a987182320ae67e59fefdab7515588b061835b1037523807086"
+  },
+  "terminology_audit": {
+    "path": "qa/UNIT_025_TERMINOLOGY_AUDIT_20260825.md",
+    "bytes": 3501,
+    "sha256": "6b1180e019297141038bd548653b9d4c7130388111c5441fec96218633822a0e"
+  },
+  "prepromotion_audit": {
+    "path": "qa/UNIT_025_PREPROMOTION_AUDIT_20260825.md",
+    "bytes": 2133,
+    "sha256": "39fab50288570c8a9ce3be52c39639e0a2a7da8f7066a826266dbf7e6570908d"
+  },
+  "evidence_generator": {
+    "path": "scripts/generate_unit_025_evidence.py",
+    "bytes": 41129,
+    "sha256": "4ea6a0b914e4d805d53f2c31f3c8e8069e56f240febfa660679e7f213ba94de2"
+  },
+  "artifact": {
+    "path": "artifacts/unit-025-bab-4-semigrup-monoid-dan-grup-id.pdf",
+    "bytes": 123117,
+    "sha256": "511d1c0889c0882639be49d00580c0634de7e3074c757616ac10a3f2fa854615"
+  },
+  "clean_builds": {
+    "h": {
+      "path": "build/unit-025-h-20260825/unit-025-bab-4-semigrup-monoid-dan-grup.pdf",
+      "bytes": 123100,
+      "sha256": "a1645230a6bb64d43f77a8608b1edff50769e819e337471673ac1ab4ece80d6a"
+    },
+    "i": {
+      "path": "build/unit-025-i-20260825/unit-025-bab-4-semigrup-monoid-dan-grup.pdf",
+      "bytes": 123117,
+      "sha256": "511d1c0889c0882639be49d00580c0634de7e3074c757616ac10a3f2fa854615"
+    }
+  },
+  "build_log": {
+    "path": "qa/UNIT_025_BUILD_FINAL.log",
+    "bytes": 85827,
+    "sha256": "ee9a4e064edf0cf8cc4710e32c89eda7a8623bceb5ec5fbc75d8ef663826cd2a"
+  },
+  "render_inventory": {
+    "path": "qa/unit-025-evidence/render-hash-inventory.json",
+    "bytes": 14979,
+    "sha256": "ec007cc1a58aeb14dcc413aa759c5b75cfda727a645e66c878095a94a2f4c080"
+  },
+  "contact_sheet_directory": "build/unit-025-final-visual-20260825/contact-sheets",
+  "structure": {
+    "math_spans": 280,
+    "labels": 10,
+    "references": 11,
+    "citations": 3,
+    "index_entries": 25,
+    "item_markers": 24,
+    "definitions": 7,
+    "examples": 4,
+    "lemmas": 1,
+    "propositions": 1,
+    "remarks": 1,
+    "proofs": 2,
+    "conventions": 1,
+    "declared_corrections": [
+      "O013-LI-U025-COR-001"
+    ]
+  },
+  "external_crossref_labels": [
+    "con:U-small",
+    "def:field",
+    "eg:cyclic-group",
+    "prop:A_n-simple",
+    "sec:PID-module",
+    "sec:free-group",
+    "sec:group-action",
+    "sec:group-limit",
+    "sec:symmetric-group"
+  ],
+  "pdf": {
+    "pages": 10,
+    "pdf_header": "%PDF-1.7",
+    "encrypted": false,
+    "language": "id-ID",
+    "tagged": false,
+    "page_sizes_pt": [
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ],
+      [
+        498.9,
+        708.66
+      ]
+    ],
+    "page_text_character_counts": [
+      364,
+      937,
+      1756,
+      2583,
+      2315,
+      2812,
+      2755,
+      2132,
+      2042,
+      1090
+    ],
+    "metadata": {
+      "/Creator": "LaTeX with hyperref",
+      "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 25: Semigrup, Monoid, dan Grup",
+      "/Subject": "Terjemahan Bahasa Indonesia independen; Pengantar Bab 4 dan Bagian 4.1 lengkap",
+      "/Author": "Wen-Wei Li",
+      "/Keywords": "aljabar, teori grup, semigrup, monoid, grup, subgrup, koset, id-ID",
+      "/Producer": "MiKTeX-dvipdfmx (20260404)",
+      "/CreationDate": "D:20260825000000Z"
+    },
+    "outline": [
+      "4 Teori Grup",
+      "4.1 Semigrup, Monoid, dan Grup",
+      "Daftar Pustaka",
+      "Indeks Istilah",
+      "Indeks Simbol"
+    ],
+    "named_destination_count": 50,
+    "named_destination_pages_1_based": {
+      "Doc-Start": 1,
+      "Item.1": 3,
+      "Item.10": 9,
+      "Item.11": 9,
+      "Item.12": 9,
+      "Item.13": 9,
+      "Item.2": 3,
+      "Item.3": 5,
+      "Item.4": 5,
+      "Item.5": 7,
+      "Item.6": 7,
+      "Item.7": 9,
+      "Item.8": 9,
+      "Item.9": 9,
+      "chapter.4": 3,
+      "cite.0@Bou-Alg1": 10,
+      "cite.0@Har00": 10,
+      "cite.0@Wil09": 10,
+      "page.1": 3,
+      "page.2": 4,
+      "page.3": 5,
+      "page.4": 6,
+      "page.5": 7,
+      "page.6": 8,
+      "page.7": 9,
+      "page.8": 10,
+      "proof.1": 9,
+      "proof.2": 9,
+      "section*.1": 10,
+      "section*.2": 10,
+      "section*.3": 10,
+      "section.4.1": 4,
+      "theorem.4.1.1": 5,
+      "theorem.4.1.10": 8,
+      "theorem.4.1.11": 8,
+      "theorem.4.1.12": 8,
+      "theorem.4.1.13": 9,
+      "theorem.4.1.14": 9,
+      "theorem.4.1.15": 9,
+      "theorem.4.1.2": 6,
+      "theorem.4.1.3": 6,
+      "theorem.4.1.4": 6,
+      "theorem.4.1.5": 6,
+      "theorem.4.1.6": 7,
+      "theorem.4.1.7": 7,
+      "theorem.4.1.8": 7,
+      "theorem.4.1.9": 8,
+      "unit025-bibliography.0": 10,
+      "unit025-symbol-index.0": 10,
+      "unit025-term-index.0": 10
+    },
+    "go_to_targets": [
+      "cite.0@Bou-Alg1",
+      "cite.0@Har00",
+      "cite.0@Wil09",
+      "page.2",
+      "page.2",
+      "page.2",
+      "page.2",
+      "page.3",
+      "page.3",
+      "page.3",
+      "page.3",
+      "page.4",
+      "page.4",
+      "page.4",
+      "page.4",
+      "page.4",
+      "page.5",
+      "page.5",
+      "page.5",
+      "page.5",
+      "page.5",
+      "page.6",
+      "page.6",
+      "page.6",
+      "page.6",
+      "page.6",
+      "page.6",
+      "page.7",
+      "page.7",
+      "page.7",
+      "page.7",
+      "section.4.1"
+    ],
+    "broken_named_go_to_targets": [],
+    "annotation_actions": {
+      "/GoTo": 32,
+      "/URI": 6
+    },
+    "uri_targets": [
+      "https://creativecommons.org/licenses/by/4.0/",
+      "https://creativecommons.org/licenses/by/4.0/",
+      "https://doi.org/10.1007/978-0-387-22676-7",
+      "https://doi.org/10.1007/978-0-387-22676-7",
+      "https://doi.org/10.1007/978-1-84800-988-2",
+      "https://www.wwli.asia"
+    ],
+    "acroform_present": false,
+    "javascript_name_tree": false,
+    "embedded_files": false,
+    "catalog_additional_actions": false,
+    "open_action_safe": true,
+    "unsafe_actions": [],
+    "fonts": [
+      {
+        "basefont": "/ANZIHY+LMRoman10-Italic",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/AQWFRT+LMMono10-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/BQFHST+LMRoman10-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/BYFBVO+MSAM7",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/CIBDET+CMSY10",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/CJBMZB+CMEX10",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/EYEBEU+LMRoman7-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/FKZTVR+TeXGyreHeros-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/JDTARM+CMSY7",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/JGTKJG+CMMI7",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/LOXLLL+CMMI10",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/LWUKBW+TeXGyreHeros-Bold",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/LYJKOV+LMRoman9-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/NKREZT+LMMono12-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/NLCBKA+MSAM10",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/QNLLSK+CMR10",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/TGKWEH+LMRoman12-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/UQCLZU+LMMono9-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/UVKNRQ+LMRoman10-Bold",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/VMBBFN+LMRoman17-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/WARYSU+LMRomanCaps10-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/WOGNTO+CMR7",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/WTOCLX+EUFM10",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/ZQKXZB+MSBM10",
+        "subtype": "/Type1",
+        "embedded": true,
+        "subset": true
+      },
+      {
+        "basefont": "/ZRILXC+LMRoman8-Regular",
+        "subtype": "/Type0",
+        "embedded": true,
+        "subset": true
+      }
+    ],
+    "font_count": 25,
+    "embedded_font_count": 25,
+    "subset_font_count": 25,
+    "all_fonts_embedded": true,
+    "pypdf_text_sha256": "89ced3606c5d11415a547aa927a63b4190de0278618d4d38a1b7380ae6564140",
+    "fitz_text_sha256": "8d27902fb1f6458b5eb285d9ac3ce0b18d748f491eeb44a877b4170eaf647e84",
+    "pdfplumber_layout_text_sha256": "7abad42770a1b5cc31aca9e590153f9b0130079ac915860627e67cd0985d781c",
+    "poppler_layout_text_sha256": "625b770c23a5db959ad9ef3bf84faefa30aded21c92b6c9f9a41c93e66d01c95",
+    "pypdf_nul_count": 1,
+    "fitz_nul_count": 0,
+    "pdfplumber_nul_count": 0,
+    "poppler_nul_byte_count": 0,
+    "unicode_minus_counts": {
+      "pypdf": 16,
+      "fitz": 17,
+      "pdfplumber": 16,
+      "poppler": 17
+    },
+    "pdfplumber_cid0_count": 1,
+    "pypdf_nul_contexts": [
+      "s sebagai 0, dan invers unsur x ditulis sebagai \u0000x; meskipun\ndemikian, notasi multiplikatif masi"
+    ],
+    "replacement_character_counts": {
+      "pypdf": 0,
+      "fitz": 0,
+      "pdfplumber": 0
+    },
+    "fitz_out_of_bounds_text_blocks": [],
+    "pdfplumber_out_of_bounds_characters": [],
+    "unresolved_token_count": 0,
+    "han_character_count": 0,
+    "standalone_pinyin_index_heads": []
+  },
+  "clean_build_pdf_records": {
+    "h": {
+      "pages": 10,
+      "pdf_header": "%PDF-1.7",
+      "encrypted": false,
+      "language": "id-ID",
+      "tagged": false,
+      "page_sizes_pt": [
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ]
+      ],
+      "page_text_character_counts": [
+        364,
+        937,
+        1756,
+        2583,
+        2315,
+        2812,
+        2755,
+        2132,
+        2042,
+        1090
+      ],
+      "metadata": {
+        "/Creator": "LaTeX with hyperref",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 25: Semigrup, Monoid, dan Grup",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Pengantar Bab 4 dan Bagian 4.1 lengkap",
+        "/Author": "Wen-Wei Li",
+        "/Keywords": "aljabar, teori grup, semigrup, monoid, grup, subgrup, koset, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/CreationDate": "D:20260825000000Z"
+      },
+      "outline": [
+        "4 Teori Grup",
+        "4.1 Semigrup, Monoid, dan Grup",
+        "Daftar Pustaka",
+        "Indeks Istilah",
+        "Indeks Simbol"
+      ],
+      "named_destination_count": 50,
+      "named_destination_pages_1_based": {
+        "Doc-Start": 1,
+        "Item.1": 3,
+        "Item.10": 9,
+        "Item.11": 9,
+        "Item.12": 9,
+        "Item.13": 9,
+        "Item.2": 3,
+        "Item.3": 5,
+        "Item.4": 5,
+        "Item.5": 7,
+        "Item.6": 7,
+        "Item.7": 9,
+        "Item.8": 9,
+        "Item.9": 9,
+        "chapter.4": 3,
+        "cite.0@Bou-Alg1": 10,
+        "cite.0@Har00": 10,
+        "cite.0@Wil09": 10,
+        "page.1": 3,
+        "page.2": 4,
+        "page.3": 5,
+        "page.4": 6,
+        "page.5": 7,
+        "page.6": 8,
+        "page.7": 9,
+        "page.8": 10,
+        "proof.1": 9,
+        "proof.2": 9,
+        "section*.1": 10,
+        "section*.2": 10,
+        "section*.3": 10,
+        "section.4.1": 4,
+        "theorem.4.1.1": 5,
+        "theorem.4.1.10": 8,
+        "theorem.4.1.11": 8,
+        "theorem.4.1.12": 8,
+        "theorem.4.1.13": 9,
+        "theorem.4.1.14": 9,
+        "theorem.4.1.15": 9,
+        "theorem.4.1.2": 6,
+        "theorem.4.1.3": 6,
+        "theorem.4.1.4": 6,
+        "theorem.4.1.5": 6,
+        "theorem.4.1.6": 7,
+        "theorem.4.1.7": 7,
+        "theorem.4.1.8": 7,
+        "theorem.4.1.9": 8,
+        "unit025-bibliography.0": 10,
+        "unit025-symbol-index.0": 10,
+        "unit025-term-index.0": 10
+      },
+      "go_to_targets": [
+        "cite.0@Bou-Alg1",
+        "cite.0@Har00",
+        "cite.0@Wil09",
+        "page.2",
+        "page.2",
+        "page.2",
+        "page.2",
+        "page.3",
+        "page.3",
+        "page.3",
+        "page.3",
+        "page.4",
+        "page.4",
+        "page.4",
+        "page.4",
+        "page.4",
+        "page.5",
+        "page.5",
+        "page.5",
+        "page.5",
+        "page.5",
+        "page.6",
+        "page.6",
+        "page.6",
+        "page.6",
+        "page.6",
+        "page.6",
+        "page.7",
+        "page.7",
+        "page.7",
+        "page.7",
+        "section.4.1"
+      ],
+      "broken_named_go_to_targets": [],
+      "annotation_actions": {
+        "/GoTo": 32,
+        "/URI": 6
+      },
+      "uri_targets": [
+        "https://creativecommons.org/licenses/by/4.0/",
+        "https://creativecommons.org/licenses/by/4.0/",
+        "https://doi.org/10.1007/978-0-387-22676-7",
+        "https://doi.org/10.1007/978-0-387-22676-7",
+        "https://doi.org/10.1007/978-1-84800-988-2",
+        "https://www.wwli.asia"
+      ],
+      "acroform_present": false,
+      "javascript_name_tree": false,
+      "embedded_files": false,
+      "catalog_additional_actions": false,
+      "open_action_safe": true,
+      "unsafe_actions": [],
+      "fonts": [
+        {
+          "basefont": "/ABPHRZ+LMRoman8-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/BDULIX+LMRoman17-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/BFMBSZ+LMRoman12-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/BTTLVY+LMRoman10-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/DIBJLH+EUFM10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/DUCMFJ+LMRoman7-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/EDYQGQ+CMSY7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/FACYKZ+LMRoman9-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/FBPFEH+LMMono10-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/GAMLTX+LMRoman10-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/HDUBIK+CMR7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/IFMBDJ+CMEX10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/MPCUMR+LMMono9-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/MQEHPJ+MSAM10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/NCDUDT+LMRoman10-Italic",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/PBWVXY+CMMI10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/PPJDHX+CMMI7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/RLZYIM+LMMono12-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/RZMMWX+CMSY10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/SQFFVE+LMRomanCaps10-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/VJJDJE+TeXGyreHeros-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/VJMDSU+MSAM7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/XOMITN+TeXGyreHeros-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/YSJRNC+CMR10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/YXMLKI+MSBM10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        }
+      ],
+      "font_count": 25,
+      "embedded_font_count": 25,
+      "subset_font_count": 25,
+      "all_fonts_embedded": true,
+      "pypdf_text_sha256": "89ced3606c5d11415a547aa927a63b4190de0278618d4d38a1b7380ae6564140",
+      "fitz_text_sha256": "8d27902fb1f6458b5eb285d9ac3ce0b18d748f491eeb44a877b4170eaf647e84",
+      "pdfplumber_layout_text_sha256": "7abad42770a1b5cc31aca9e590153f9b0130079ac915860627e67cd0985d781c",
+      "poppler_layout_text_sha256": "625b770c23a5db959ad9ef3bf84faefa30aded21c92b6c9f9a41c93e66d01c95",
+      "pypdf_nul_count": 1,
+      "fitz_nul_count": 0,
+      "pdfplumber_nul_count": 0,
+      "poppler_nul_byte_count": 0,
+      "unicode_minus_counts": {
+        "pypdf": 16,
+        "fitz": 17,
+        "pdfplumber": 16,
+        "poppler": 17
+      },
+      "pdfplumber_cid0_count": 1,
+      "pypdf_nul_contexts": [
+        "s sebagai 0, dan invers unsur x ditulis sebagai \u0000x; meskipun\ndemikian, notasi multiplikatif masi"
+      ],
+      "replacement_character_counts": {
+        "pypdf": 0,
+        "fitz": 0,
+        "pdfplumber": 0
+      },
+      "fitz_out_of_bounds_text_blocks": [],
+      "pdfplumber_out_of_bounds_characters": [],
+      "unresolved_token_count": 0,
+      "han_character_count": 0,
+      "standalone_pinyin_index_heads": []
+    },
+    "i": {
+      "pages": 10,
+      "pdf_header": "%PDF-1.7",
+      "encrypted": false,
+      "language": "id-ID",
+      "tagged": false,
+      "page_sizes_pt": [
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ],
+        [
+          498.9,
+          708.66
+        ]
+      ],
+      "page_text_character_counts": [
+        364,
+        937,
+        1756,
+        2583,
+        2315,
+        2812,
+        2755,
+        2132,
+        2042,
+        1090
+      ],
+      "metadata": {
+        "/Creator": "LaTeX with hyperref",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 25: Semigrup, Monoid, dan Grup",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Pengantar Bab 4 dan Bagian 4.1 lengkap",
+        "/Author": "Wen-Wei Li",
+        "/Keywords": "aljabar, teori grup, semigrup, monoid, grup, subgrup, koset, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/CreationDate": "D:20260825000000Z"
+      },
+      "outline": [
+        "4 Teori Grup",
+        "4.1 Semigrup, Monoid, dan Grup",
+        "Daftar Pustaka",
+        "Indeks Istilah",
+        "Indeks Simbol"
+      ],
+      "named_destination_count": 50,
+      "named_destination_pages_1_based": {
+        "Doc-Start": 1,
+        "Item.1": 3,
+        "Item.10": 9,
+        "Item.11": 9,
+        "Item.12": 9,
+        "Item.13": 9,
+        "Item.2": 3,
+        "Item.3": 5,
+        "Item.4": 5,
+        "Item.5": 7,
+        "Item.6": 7,
+        "Item.7": 9,
+        "Item.8": 9,
+        "Item.9": 9,
+        "chapter.4": 3,
+        "cite.0@Bou-Alg1": 10,
+        "cite.0@Har00": 10,
+        "cite.0@Wil09": 10,
+        "page.1": 3,
+        "page.2": 4,
+        "page.3": 5,
+        "page.4": 6,
+        "page.5": 7,
+        "page.6": 8,
+        "page.7": 9,
+        "page.8": 10,
+        "proof.1": 9,
+        "proof.2": 9,
+        "section*.1": 10,
+        "section*.2": 10,
+        "section*.3": 10,
+        "section.4.1": 4,
+        "theorem.4.1.1": 5,
+        "theorem.4.1.10": 8,
+        "theorem.4.1.11": 8,
+        "theorem.4.1.12": 8,
+        "theorem.4.1.13": 9,
+        "theorem.4.1.14": 9,
+        "theorem.4.1.15": 9,
+        "theorem.4.1.2": 6,
+        "theorem.4.1.3": 6,
+        "theorem.4.1.4": 6,
+        "theorem.4.1.5": 6,
+        "theorem.4.1.6": 7,
+        "theorem.4.1.7": 7,
+        "theorem.4.1.8": 7,
+        "theorem.4.1.9": 8,
+        "unit025-bibliography.0": 10,
+        "unit025-symbol-index.0": 10,
+        "unit025-term-index.0": 10
+      },
+      "go_to_targets": [
+        "cite.0@Bou-Alg1",
+        "cite.0@Har00",
+        "cite.0@Wil09",
+        "page.2",
+        "page.2",
+        "page.2",
+        "page.2",
+        "page.3",
+        "page.3",
+        "page.3",
+        "page.3",
+        "page.4",
+        "page.4",
+        "page.4",
+        "page.4",
+        "page.4",
+        "page.5",
+        "page.5",
+        "page.5",
+        "page.5",
+        "page.5",
+        "page.6",
+        "page.6",
+        "page.6",
+        "page.6",
+        "page.6",
+        "page.6",
+        "page.7",
+        "page.7",
+        "page.7",
+        "page.7",
+        "section.4.1"
+      ],
+      "broken_named_go_to_targets": [],
+      "annotation_actions": {
+        "/GoTo": 32,
+        "/URI": 6
+      },
+      "uri_targets": [
+        "https://creativecommons.org/licenses/by/4.0/",
+        "https://creativecommons.org/licenses/by/4.0/",
+        "https://doi.org/10.1007/978-0-387-22676-7",
+        "https://doi.org/10.1007/978-0-387-22676-7",
+        "https://doi.org/10.1007/978-1-84800-988-2",
+        "https://www.wwli.asia"
+      ],
+      "acroform_present": false,
+      "javascript_name_tree": false,
+      "embedded_files": false,
+      "catalog_additional_actions": false,
+      "open_action_safe": true,
+      "unsafe_actions": [],
+      "fonts": [
+        {
+          "basefont": "/ANZIHY+LMRoman10-Italic",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/AQWFRT+LMMono10-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/BQFHST+LMRoman10-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/BYFBVO+MSAM7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/CIBDET+CMSY10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/CJBMZB+CMEX10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/EYEBEU+LMRoman7-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/FKZTVR+TeXGyreHeros-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/JDTARM+CMSY7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/JGTKJG+CMMI7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/LOXLLL+CMMI10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/LWUKBW+TeXGyreHeros-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/LYJKOV+LMRoman9-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/NKREZT+LMMono12-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/NLCBKA+MSAM10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/QNLLSK+CMR10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/TGKWEH+LMRoman12-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/UQCLZU+LMMono9-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/UVKNRQ+LMRoman10-Bold",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/VMBBFN+LMRoman17-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/WARYSU+LMRomanCaps10-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/WOGNTO+CMR7",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/WTOCLX+EUFM10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/ZQKXZB+MSBM10",
+          "subtype": "/Type1",
+          "embedded": true,
+          "subset": true
+        },
+        {
+          "basefont": "/ZRILXC+LMRoman8-Regular",
+          "subtype": "/Type0",
+          "embedded": true,
+          "subset": true
+        }
+      ],
+      "font_count": 25,
+      "embedded_font_count": 25,
+      "subset_font_count": 25,
+      "all_fonts_embedded": true,
+      "pypdf_text_sha256": "89ced3606c5d11415a547aa927a63b4190de0278618d4d38a1b7380ae6564140",
+      "fitz_text_sha256": "8d27902fb1f6458b5eb285d9ac3ce0b18d748f491eeb44a877b4170eaf647e84",
+      "pdfplumber_layout_text_sha256": "7abad42770a1b5cc31aca9e590153f9b0130079ac915860627e67cd0985d781c",
+      "poppler_layout_text_sha256": "625b770c23a5db959ad9ef3bf84faefa30aded21c92b6c9f9a41c93e66d01c95",
+      "pypdf_nul_count": 1,
+      "fitz_nul_count": 0,
+      "pdfplumber_nul_count": 0,
+      "poppler_nul_byte_count": 0,
+      "unicode_minus_counts": {
+        "pypdf": 16,
+        "fitz": 17,
+        "pdfplumber": 16,
+        "poppler": 17
+      },
+      "pdfplumber_cid0_count": 1,
+      "pypdf_nul_contexts": [
+        "s sebagai 0, dan invers unsur x ditulis sebagai \u0000x; meskipun\ndemikian, notasi multiplikatif masi"
+      ],
+      "replacement_character_counts": {
+        "pypdf": 0,
+        "fitz": 0,
+        "pdfplumber": 0
+      },
+      "fitz_out_of_bounds_text_blocks": [],
+      "pdfplumber_out_of_bounds_characters": [],
+      "unresolved_token_count": 0,
+      "han_character_count": 0,
+      "standalone_pinyin_index_heads": []
+    }
+  },
+  "deterministic_replay": {
+    "container_byte_identity_h_i": false,
+    "artifact_byte_identical_to_i": true,
+    "semantic_and_render_identity": true,
+    "container_drift_adjudication": {
+      "status": "JUSTIFIED",
+      "cause": "XeTeX/xdvipdfmx regenerated six-letter embedded-font subset prefixes across clean runs; these names alter compressed PDF container bytes without altering font families, extracted text, PDF structure, or decoded pixels.",
+      "normalized_font_family_identity": true,
+      "font_subset_prefixes": {
+        "h": [
+          "ABPHRZ",
+          "BDULIX",
+          "BFMBSZ",
+          "BTTLVY",
+          "DIBJLH",
+          "DUCMFJ",
+          "EDYQGQ",
+          "FACYKZ",
+          "FBPFEH",
+          "GAMLTX",
+          "HDUBIK",
+          "IFMBDJ",
+          "MPCUMR",
+          "MQEHPJ",
+          "NCDUDT",
+          "PBWVXY",
+          "PPJDHX",
+          "RLZYIM",
+          "RZMMWX",
+          "SQFFVE",
+          "VJJDJE",
+          "VJMDSU",
+          "XOMITN",
+          "YSJRNC",
+          "YXMLKI"
+        ],
+        "i": [
+          "ANZIHY",
+          "AQWFRT",
+          "BQFHST",
+          "BYFBVO",
+          "CIBDET",
+          "CJBMZB",
+          "EYEBEU",
+          "FKZTVR",
+          "JDTARM",
+          "JGTKJG",
+          "LOXLLL",
+          "LWUKBW",
+          "LYJKOV",
+          "NKREZT",
+          "NLCBKA",
+          "QNLLSK",
+          "TGKWEH",
+          "UQCLZU",
+          "UVKNRQ",
+          "VMBBFN",
+          "WARYSU",
+          "WOGNTO",
+          "WTOCLX",
+          "ZQKXZB",
+          "ZRILXC"
+        ],
+        "artifact": [
+          "ANZIHY",
+          "AQWFRT",
+          "BQFHST",
+          "BYFBVO",
+          "CIBDET",
+          "CJBMZB",
+          "EYEBEU",
+          "FKZTVR",
+          "JDTARM",
+          "JGTKJG",
+          "LOXLLL",
+          "LWUKBW",
+          "LYJKOV",
+          "NKREZT",
+          "NLCBKA",
+          "QNLLSK",
+          "TGKWEH",
+          "UQCLZU",
+          "UVKNRQ",
+          "VMBBFN",
+          "WARYSU",
+          "WOGNTO",
+          "WTOCLX",
+          "ZQKXZB",
+          "ZRILXC"
+        ]
+      },
+      "selected_container": "i"
+    },
+    "semantic_hashes": {
+      "pypdf_text_sha256": {
+        "h": "89ced3606c5d11415a547aa927a63b4190de0278618d4d38a1b7380ae6564140",
+        "i": "89ced3606c5d11415a547aa927a63b4190de0278618d4d38a1b7380ae6564140",
+        "artifact": "89ced3606c5d11415a547aa927a63b4190de0278618d4d38a1b7380ae6564140"
+      },
+      "fitz_text_sha256": {
+        "h": "8d27902fb1f6458b5eb285d9ac3ce0b18d748f491eeb44a877b4170eaf647e84",
+        "i": "8d27902fb1f6458b5eb285d9ac3ce0b18d748f491eeb44a877b4170eaf647e84",
+        "artifact": "8d27902fb1f6458b5eb285d9ac3ce0b18d748f491eeb44a877b4170eaf647e84"
+      },
+      "pdfplumber_layout_text_sha256": {
+        "h": "7abad42770a1b5cc31aca9e590153f9b0130079ac915860627e67cd0985d781c",
+        "i": "7abad42770a1b5cc31aca9e590153f9b0130079ac915860627e67cd0985d781c",
+        "artifact": "7abad42770a1b5cc31aca9e590153f9b0130079ac915860627e67cd0985d781c"
+      },
+      "poppler_layout_text_sha256": {
+        "h": "625b770c23a5db959ad9ef3bf84faefa30aded21c92b6c9f9a41c93e66d01c95",
+        "i": "625b770c23a5db959ad9ef3bf84faefa30aded21c92b6c9f9a41c93e66d01c95",
+        "artifact": "625b770c23a5db959ad9ef3bf84faefa30aded21c92b6c9f9a41c93e66d01c95"
+      }
+    },
+    "render_count": 60,
+    "same_renderer_page_mismatches": {
+      "poppler": 0,
+      "mupdf": 0
+    }
+  },
+  "log_counts": {
+    "overfull_boxes": 0,
+    "underfull_hboxes": 3,
+    "underfull_vboxes": 0,
+    "empty_external_link_targets": 0,
+    "undefined_control_sequences": 0,
+    "undefined_references": 0,
+    "undefined_citations": 0,
+    "missing_characters": 0,
+    "fatal_errors": 0,
+    "emergency_stops": 0
+  },
+  "checks": {
+    "canonical_target_and_span": true,
+    "candidate_and_structure_checkers": true,
+    "artifact_equals_replay_i": true,
+    "page_count": true,
+    "semantic_replay": true,
+    "render_replay": true,
+    "pdf_safety": true,
+    "navigation": true,
+    "accessibility_baseline": true,
+    "fonts": true,
+    "text_tokens": true,
+    "log": true,
+    "page_edges": true,
+    "structure": true,
+    "external_crossrefs": true,
+    "index_localization": true,
+    "reader_reflow": true
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "renderers_inspected": [
+      "Poppler",
+      "MuPDF (mutool and PyMuPDF)"
+    ],
+    "finding": "Every physical page was inspected in both renderer families. The 142 mm centered reflow fills the digital page legibly, with no clipping, overlap, tofu, edge contact, split guidance fragment, cross-page hyphenated word, orphan formula/heading, sparse final-content page, or untranslated Pinyin index heading.",
+    "page_findings": {
+      "1": "Cover centered and balanced; the prose scope box states partial Chapter 4 coverage without ambiguous progress blocks.",
+      "2": "Attribution, CC BY 4.0 notice, component notices, independent/non-endorsed status, and OpenAI Codex gpt-5.6-sol, Ultra provenance are legible and unclipped.",
+      "3": "Chapter 4 opening is centered on the 142 mm digital measure; the complete orientation is present and the reading-guidance box is not stranded at the foot.",
+      "4": "The complete Petunjuk membaca box begins and ends coherently, followed by the Section 4.1 opening and its first two bullets; no split-box fragment or orphan formula remains.",
+      "5": "Associativity, cancellation, product, identity, invertibility, and Definition 4.1.1 are legible; displays are centered and the page transition is coherent.",
+      "6": "Group definitions, inverse identities, conventions, and Examples 4.1.4-4.1.5 are intact; no cross-page hyphenated word or overflow remains.",
+      "7": "General linear and symmetric group examples and subgroup/simple-group definitions are complete, with stable mathematical glyphs and citations.",
+      "8": "Generated, normal, and cyclic subgroup material, the corrected integer-subgroup example, cosets, and the start of Lemma 4.1.12 are present without clipping.",
+      "9": "Lemma 4.1.12, Proposition 4.1.13, both proofs, Definition 4.1.14, and Catatan 4.1.15 remain together; the former sparse final-content page is eliminated.",
+      "10": "Bibliography, localized term index, and symbol index share one readable page; no untranslated yaobanqun/qun hierarchy heads remain and all live page links are visible."
+    }
+  },
+  "reflow_adjudication": "A centered 142 mm by 198 mm digital-page measure, 1.16 leading, a twelve-line Needspace guard for the reading-guidance box, and a three-line local enlargement for the sole final remark remove the narrow print-column feel, split-box fragment, orphan formula/heading, cross-page hyphenated word, and sparse final-content page. The result is ten physical pages without reducing the type size or changing mathematical content.",
+  "rights": {
+    "principal_text_and_translation": "CC BY 4.0",
+    "AJbook_class_fragment": "CC BY-SA 3.0",
+    "bundled_noto_fonts": "SIL OFL 1.1",
+    "Lanzhou_png_in_wider_closure": "CC BY-SA 3.0; not used by this reader"
+  },
+  "language": "id-ID",
+  "source_author": "Wen-Wei Li",
+  "translation_status": "independent and non-endorsed",
+  "build_date": "2026-08-25",
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

@@ -1,0 +1,243 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8
+
+% Unit pembaca Bahasa Indonesia untuk Methods of Algebra, Volume 1.
+% Teks sumber: Copyright 2018 Wen-Wei Li, CC BY 4.0.
+% Terjemahan ini dilisensikan menurut CC BY 4.0.
+% Provenans produksi: OpenAI Codex gpt-5.6-sol, Ultra.
+
+\documentclass[
+	colors = true,
+	coverpage = coverpage-id-unit-025.tex,
+	fontsetup = font-setup-id.tex,
+	titlesetup = titles-setup-id.tex,
+	CJKthechapter = false
+]{AJbook}
+
+\input{locale-ui-id.tex}
+
+% Standard Indonesian mathematical heading for lemma environments.
+\makeatletter
+\AtBeginDocument{\gdef\mkheader@lemma{\setparms@lemma\@thm{lemma}{theorem}{Lema}}}
+\makeatother
+
+% Keep retained source-language bibliography metadata portable.
+\setCJKmainfont[
+	Path=../fonts/,
+	BoldFont=NotoSansCJKsc-Medium.otf,
+	ItalicFont=NotoSansCJKsc-Regular.otf
+]{NotoSansCJKsc-Regular.otf}
+
+\DefineBibliographyStrings{english}{
+	in = {dalam},
+	editor = {penyunting},
+	byeditor = {disunting oleh},
+	backrefpage = {dirujuk pada hlm\adddot},
+	backrefpages = {dirujuk pada hlm\adddot}
+}
+
+\newcommand{\BuildDateID}{25 Agustus 2026}
+\newcommand{\BuildDateShortID}{2026-08-25}
+\AtBeginDocument{\renewcommand{\chaptermark}[1]{\markboth{Bab \thechapter\quad #1}{}}}
+% Standalone digital readers do not need print-only blank verso pages.
+\AtBeginDocument{\let\cleardoublepage\clearpage}
+% Reflow the chapter opening to use the first content page efficiently.
+\titlespacing*{name=\chapter}{1pc}{-4em}{0pt}
+\usepackage{needspace}
+% Keep the reading guidance explicit and legible in this partial reader.
+\renewtcolorbox{wenxintishi}{
+	breakable,
+	enhanced,
+	width = \textwidth,
+	colback = white, colbacktitle = white,
+	colframe = gray!50, boxrule=0.2mm,
+	coltitle = black,
+	fonttitle = \sffamily,
+	attach boxed title to top left = {yshift=-\tcboxedtitleheight/2, xshift=\tcboxedtitlewidth/4},
+	boxed title style = {boxrule=0pt, colframe=white},
+	before skip = 0.25cm,
+	top = 1.5mm,
+	bottom = 1.5mm,
+	title = {Petunjuk membaca}
+}
+% A breakable box may still begin with an unusably short first fragment.
+% Reserve enough room for a coherent opening before the environment starts.
+\BeforeBeginEnvironment{wenxintishi}{\Needspace{12\baselineskip}}
+% This range contains one short concluding remark. Give the preceding content
+% page enough local depth to keep it with Section 4.1 instead of creating an
+% otherwise empty final content page before the bibliography.
+\AtBeginEnvironment{remark}{\enlargethispage{3\baselineskip}}
+
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\SetSymbolFont{stmry}{bold}{U}{stmry}{m}{n}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{tikz-cd}
+\usetikzlibrary{positioning, patterns, calc, matrix, shapes.arrows, shapes.symbols}
+\usepackage{braids}
+\usepackage{tqft}
+\usepackage{ytableau}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{myarrows}
+\usepackage{mycommand}
+
+\usepackage[noautomatic]{imakeidx}
+\makeindex[
+	columns=2,
+	program=makeindex,
+	intoc=true,
+	title={Indeks Istilah}]
+\makeindex[
+	columns=3,
+	program=makeindex,
+	intoc=true,
+	name=sym1,
+	title={Indeks Simbol}]
+
+\usepackage{xr}
+\usepackage[unicode, bookmarksnumbered]{hyperref}
+% Import only frozen printed numbers. The empty URL prevents false links to a
+% PDF that is not part of this standalone reader.
+\externaldocument{unit-025-crossrefs}[]
+% Preserve live links for labels defined inside this unit, but typeset frozen
+% references to other units without manufacturing absent PDF destinations.
+\let\UnitTwentyFiveOriginalRef\ref
+\newcommand{\UnitTwentyFiveMarkExternalRef}[1]{%
+	\expandafter\def\csname unit025external:#1\endcsname{1}}
+\newcommand{\UnitTwentyFiveRef}[1]{%
+	\ifcsname unit025external:#1\endcsname
+		\begin{NoHyper}\UnitTwentyFiveOriginalRef{#1}\end{NoHyper}%
+	\else
+		\UnitTwentyFiveOriginalRef{#1}%
+	\fi}
+\UnitTwentyFiveMarkExternalRef{con:U-small}
+\UnitTwentyFiveMarkExternalRef{sec:group-action}
+\UnitTwentyFiveMarkExternalRef{sec:free-group}
+\UnitTwentyFiveMarkExternalRef{sec:group-limit}
+\UnitTwentyFiveMarkExternalRef{sec:PID-module}
+\UnitTwentyFiveMarkExternalRef{sec:symmetric-group}
+\UnitTwentyFiveMarkExternalRef{def:field}
+\UnitTwentyFiveMarkExternalRef{prop:A_n-simple}
+\UnitTwentyFiveMarkExternalRef{eg:cyclic-group}
+\hypersetup{
+	pdfauthor = {Wen-Wei Li},
+	pdftitle = {Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 25: Semigrup, Monoid, dan Grup},
+	pdfsubject = {Terjemahan Bahasa Indonesia independen; Pengantar Bab 4 dan Bagian 4.1 lengkap},
+	pdfkeywords = {aljabar, teori grup, semigrup, monoid, grup, subgrup, koset, id-ID},
+	pdflang = {id-ID},
+	CJKbookmarks = true}
+
+\addbibresource{Al-jabr.bib}
+
+% Load the exact inclusive target-line span from the canonical integrated
+% source. Target lines 1--178 are the translated chapter introduction and
+% complete Section 4.1; target line 179 begins untranslated Section 4.2.
+% scripts/build_unit_025.ps1 validates the complete strict-UTF-8 target and
+% hash-gates the exact 178-record span before XeLaTeX runs.
+\ExplSyntaxOn
+\ior_new:N \l__unit_twenty_five_source_ior
+\tl_new:N \l__unit_twenty_five_source_tl
+\int_new:N \l__unit_twenty_five_line_int
+\cs_new_protected:Npn \unit_twenty_five_input_range:nnn #1#2#3
+  {
+    \tl_clear:N \l__unit_twenty_five_source_tl
+    \int_zero:N \l__unit_twenty_five_line_int
+    \ior_open:Nn \l__unit_twenty_five_source_ior {#1}
+    \ior_str_map_inline:Nn \l__unit_twenty_five_source_ior
+      {
+        \int_incr:N \l__unit_twenty_five_line_int
+        \int_compare:nNnT {\l__unit_twenty_five_line_int} > {#2 - 1}
+          {
+            \int_compare:nNnT {\l__unit_twenty_five_line_int} < {#3 + 1}
+              {
+                \tl_put_right:Nn \l__unit_twenty_five_source_tl {##1}
+                \tl_put_right:Nx \l__unit_twenty_five_source_tl
+                  {\char_generate:nn {10} {12}}
+              }
+          }
+      }
+    \ior_close:N \l__unit_twenty_five_source_ior
+    \exp_args:NV \scantokens \l__unit_twenty_five_source_tl
+  }
+\NewDocumentCommand{\InputSourceLineRange}{mmm}
+  {\unit_twenty_five_input_range:nnn {#1} {#2} {#3}}
+\ExplSyntaxOff
+
+\begin{document}
+	\hypersetup{pageanchor=false}
+	\pagestyle{empty}
+	\input{coverpage-id-unit-025.tex}
+	\pagestyle{fancy}
+	\pagenumbering{roman}
+	\setcounter{page}{1}
+
+	\mainmatter
+	\hypersetup{pageanchor=true}
+	% Reflow the standalone reader to a centered digital-page measure. This
+	% avoids the source volume's narrow print column and uses the page evenly.
+	\newgeometry{
+		textwidth=142mm,
+		textheight=198mm,
+		headheight=5ex,
+		headsep=5ex,
+		asymmetric}
+	\setlength{\headwidth}{\textwidth}
+	\setcounter{chapter}{3}
+	\begingroup
+	\setlength{\emergencystretch}{3em}
+	\setstretch{1.16}
+	% Keep short mathematical clauses, hyphenated words, and theorem openings
+	% from being stranded across physical page boundaries in the digital reader.
+	\clubpenalty=10000
+	\widowpenalty=10000
+	\displaywidowpenalty=10000
+	\brokenpenalty=10000
+	\let\ref\UnitTwentyFiveRef
+	\InputSourceLineRange{chapter4.tex}{1}{178}
+	\endgroup
+
+	\backmatter
+	\begingroup
+	\setlength{\emergencystretch}{3em}
+	\clearpage
+	\phantomsection
+	\pdfbookmark[0]{Daftar Pustaka}{unit025-bibliography}
+	{\Large\sffamily\bfseries Daftar Pustaka\par}\smallskip
+	\begingroup
+	\small
+	\setlength{\bibitemsep}{0.25\baselineskip}
+	\printbibliography[heading=none]
+	\endgroup
+	% Keep the short bibliography and two indexes together where possible.
+	\let\clearpage\relax
+	\let\cleardoublepage\relax
+	\IfFileExists{\jobname.ind}{
+		\begingroup
+		\renewenvironment{theindex}
+			{\par\bigskip
+			 \phantomsection
+			 \pdfbookmark[0]{Indeks Istilah}{unit025-term-index}
+			 {\large\sffamily\bfseries Indeks Istilah\par}\smallskip
+			 \begin{multicols}{2}
+			 \expandafter\let\expandafter\item\csname @idxitem\endcsname}
+			{\end{multicols}}
+		\input{\jobname.ind}
+		\endgroup
+	}{}
+	\IfFileExists{sym1.ind}{
+		\begingroup
+		\renewenvironment{theindex}
+			{\par\bigskip
+			 \phantomsection
+			 \pdfbookmark[0]{Indeks Simbol}{unit025-symbol-index}
+			 {\large\sffamily\bfseries Indeks Simbol\par}\smallskip
+			 \begin{multicols}{3}
+			 \expandafter\let\expandafter\item\csname @idxitem\endcsname}
+			{\end{multicols}}
+		\input{sym1.ind}
+		\endgroup
+	}{}
+	\endgroup
+\end{document}

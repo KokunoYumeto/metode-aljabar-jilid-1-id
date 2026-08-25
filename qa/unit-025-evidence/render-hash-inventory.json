@@ -1,0 +1,415 @@
+{
+  "schema_version": "1.0.0",
+  "unit_id": "O013-LI-U025",
+  "status": "PASS",
+  "page_count": 10,
+  "render_resolution_dpi": 144,
+  "render_dimensions_px": [
+    998,
+    1418
+  ],
+  "clean_builds": {
+    "h": {
+      "path": "build/unit-025-h-20260825/unit-025-bab-4-semigrup-monoid-dan-grup.pdf",
+      "bytes": 123100,
+      "sha256": "a1645230a6bb64d43f77a8608b1edff50769e819e337471673ac1ab4ece80d6a"
+    },
+    "i": {
+      "path": "build/unit-025-i-20260825/unit-025-bab-4-semigrup-monoid-dan-grup.pdf",
+      "bytes": 123117,
+      "sha256": "511d1c0889c0882639be49d00580c0634de7e3074c757616ac10a3f2fa854615"
+    },
+    "artifact": {
+      "path": "artifacts/unit-025-bab-4-semigrup-monoid-dan-grup-id.pdf",
+      "bytes": 123117,
+      "sha256": "511d1c0889c0882639be49d00580c0634de7e3074c757616ac10a3f2fa854615"
+    }
+  },
+  "render_count": 60,
+  "contact_sheet_count": 6,
+  "comparisons": {
+    "h-i/poppler": {
+      "page_count_equal": true,
+      "png_byte_identical": true,
+      "raw_pixel_identical": true,
+      "mismatching_png_pages": [],
+      "mismatching_raw_pages": []
+    },
+    "h-i/mupdf": {
+      "page_count_equal": true,
+      "png_byte_identical": true,
+      "raw_pixel_identical": true,
+      "mismatching_png_pages": [],
+      "mismatching_raw_pages": []
+    },
+    "h-artifact/poppler": {
+      "page_count_equal": true,
+      "png_byte_identical": true,
+      "raw_pixel_identical": true,
+      "mismatching_png_pages": [],
+      "mismatching_raw_pages": []
+    },
+    "h-artifact/mupdf": {
+      "page_count_equal": true,
+      "png_byte_identical": true,
+      "raw_pixel_identical": true,
+      "mismatching_png_pages": [],
+      "mismatching_raw_pages": []
+    },
+    "i-artifact/poppler": {
+      "page_count_equal": true,
+      "png_byte_identical": true,
+      "raw_pixel_identical": true,
+      "mismatching_png_pages": [],
+      "mismatching_raw_pages": []
+    },
+    "i-artifact/mupdf": {
+      "page_count_equal": true,
+      "png_byte_identical": true,
+      "raw_pixel_identical": true,
+      "mismatching_png_pages": [],
+      "mismatching_raw_pages": []
+    }
+  },
+  "contact_sheets": {
+    "h-poppler": {
+      "path": "build/unit-025-final-visual-20260825/contact-sheets/h-poppler.png",
+      "bytes": 813118,
+      "sha256": "119cbadaa97bc67fdd837f3caa56ac5d378624e55a4bc06b775c8ba66523a7f4"
+    },
+    "h-mupdf": {
+      "path": "build/unit-025-final-visual-20260825/contact-sheets/h-mupdf.png",
+      "bytes": 813297,
+      "sha256": "08b80de4fd8c109d2708b7884b2a2c1bec36ee2ccd6fb75800b7f12cede4ab50"
+    },
+    "i-poppler": {
+      "path": "build/unit-025-final-visual-20260825/contact-sheets/i-poppler.png",
+      "bytes": 813118,
+      "sha256": "119cbadaa97bc67fdd837f3caa56ac5d378624e55a4bc06b775c8ba66523a7f4"
+    },
+    "i-mupdf": {
+      "path": "build/unit-025-final-visual-20260825/contact-sheets/i-mupdf.png",
+      "bytes": 813297,
+      "sha256": "08b80de4fd8c109d2708b7884b2a2c1bec36ee2ccd6fb75800b7f12cede4ab50"
+    },
+    "artifact-poppler": {
+      "path": "build/unit-025-final-visual-20260825/contact-sheets/artifact-poppler.png",
+      "bytes": 813118,
+      "sha256": "119cbadaa97bc67fdd837f3caa56ac5d378624e55a4bc06b775c8ba66523a7f4"
+    },
+    "artifact-mupdf": {
+      "path": "build/unit-025-final-visual-20260825/contact-sheets/artifact-mupdf.png",
+      "bytes": 813297,
+      "sha256": "08b80de4fd8c109d2708b7884b2a2c1bec36ee2ccd6fb75800b7f12cede4ab50"
+    }
+  },
+  "renderer_aggregate_hashes": {
+    "poppler": {
+      "png_set_sha256": "1491abccd371c77b1d2228a7ea17db5015376df1aec5012a02a53c9cb9764c99",
+      "raw_rgb_set_sha256": "8154a1f665528043ab2218202d3bffb6de9cd9372a92e63d41a88a287ffd3569"
+    },
+    "mupdf": {
+      "png_set_sha256": "f8ea5c6c88036eef9e8f7f5d27f9ffbba2b48c5bdc1f7b7a6ecee4279749f7ca",
+      "raw_rgb_set_sha256": "3332ffed65d6a8d1be48ae931f71dabb9d570cefe871df1ff460b57c8e79040d"
+    }
+  },
+  "renderers": {
+    "poppler": [
+      {
+        "page": 1,
+        "path": "qa/unit-025-evidence/poppler-artifact/page-01.png",
+        "bytes": 75251,
+        "sha256": "198c029406268270cb2a227c046d9f99461843f81a4ab61084045b1a4c6e93a4",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "2577b5bcabdae3ae4f8a0d2206f1c838352e9129d5da7e7169af9b78e90162da",
+        "outer_3px_ink": 0,
+        "ink_pixels": 45573
+      },
+      {
+        "page": 2,
+        "path": "qa/unit-025-evidence/poppler-artifact/page-02.png",
+        "bytes": 140606,
+        "sha256": "8566643e20e0538fc2850fc833818c241c8bc856fef21cb71cb7c0b4dc1b6a47",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "d783f7f5398f0b64768ed850973bf0b8790517d2e872f9bcc0a7ebc0377452e5",
+        "outer_3px_ink": 0,
+        "ink_pixels": 68272
+      },
+      {
+        "page": 3,
+        "path": "qa/unit-025-evidence/poppler-artifact/page-03.png",
+        "bytes": 184189,
+        "sha256": "4aa3d2becfbec1d1a70bbfb13dd5f48efcad9efc263a3dbbdd3a44c18799bc63",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "7978848e20299c35f121496cca0abc348bdc3b4876cff4b1d778da9a953c0871",
+        "outer_3px_ink": 0,
+        "ink_pixels": 195679
+      },
+      {
+        "page": 4,
+        "path": "qa/unit-025-evidence/poppler-artifact/page-04.png",
+        "bytes": 275641,
+        "sha256": "f5315a0273fb9227c0936963b94b95121b17d432b194726999145d368f13ee06",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "c523d38ea85961c8fdb867f0ef192e89356150f2c1d42cf76bbb653ae0cd2104",
+        "outer_3px_ink": 0,
+        "ink_pixels": 128637
+      },
+      {
+        "page": 5,
+        "path": "qa/unit-025-evidence/poppler-artifact/page-05.png",
+        "bytes": 249415,
+        "sha256": "8c719999212491fa01124157bb1d774fb121aa7ed5f59b69b479fe3e8aa36d3d",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "0d19ecb4aeeb74690f62d939f30308a3e94b53649e0deb6bb73d7e74f119396e",
+        "outer_3px_ink": 0,
+        "ink_pixels": 104253
+      },
+      {
+        "page": 6,
+        "path": "qa/unit-025-evidence/poppler-artifact/page-06.png",
+        "bytes": 296417,
+        "sha256": "1f3d74a34f0e61208a7a3d72ab62627496957142e311affe05bc332791995a98",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "b0528790a465bd498882e0a54170b5db904784656fc11b9ca32de649ae166a11",
+        "outer_3px_ink": 0,
+        "ink_pixels": 129546
+      },
+      {
+        "page": 7,
+        "path": "qa/unit-025-evidence/poppler-artifact/page-07.png",
+        "bytes": 305662,
+        "sha256": "51506d7b9f00d7b0f73c4659a8d3832adc7fe1c73b09e832b98acb8a90920b9a",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "b1ce8817be7560b5c27d8e66dfaa330b3f16302a43e9d756a755fd1e05236af0",
+        "outer_3px_ink": 0,
+        "ink_pixels": 130315
+      },
+      {
+        "page": 8,
+        "path": "qa/unit-025-evidence/poppler-artifact/page-08.png",
+        "bytes": 241506,
+        "sha256": "d9d9dfbd1d20c759eaf9182327966fb8aafb375ee523bbd0bf5e708439b66741",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "ea142b1d8085d5798423cc5f03c76597f309defe3c1e7f9644d3eeff356103be",
+        "outer_3px_ink": 0,
+        "ink_pixels": 99874
+      },
+      {
+        "page": 9,
+        "path": "qa/unit-025-evidence/poppler-artifact/page-09.png",
+        "bytes": 246623,
+        "sha256": "2a0f6f2209d5ff09fddeb9a1149afd9ddf32b207b9a6c3a15444de62c6e60091",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "9b3dee33aaf13761d2fbc58781473fd97b7a29b5d15c7f3dad5e23bc673e6c55",
+        "outer_3px_ink": 0,
+        "ink_pixels": 96484
+      },
+      {
+        "page": 10,
+        "path": "qa/unit-025-evidence/poppler-artifact/page-10.png",
+        "bytes": 155742,
+        "sha256": "a214072e8a1609bab6d341723eafa6e93cc1f92282dacec56689351e2b25eb8e",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "5c0cf848482d24faa1a8b39068b26becc8d9cdc255b96b5fb20c079acff309ef",
+        "outer_3px_ink": 0,
+        "ink_pixels": 50788
+      }
+    ],
+    "mupdf": [
+      {
+        "page": 1,
+        "path": "qa/unit-025-evidence/mupdf-artifact/page-01.png",
+        "bytes": 68457,
+        "sha256": "a5b8b6250d6a728e2599ca9fb26565865ad0171a75fc04011eddae89959c7e51",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "66936e7deae761253b56c0fc77d4ee0ea509e3a11735752ed452039c1fd5b87e",
+        "outer_3px_ink": 0,
+        "ink_pixels": 46189
+      },
+      {
+        "page": 2,
+        "path": "qa/unit-025-evidence/mupdf-artifact/page-02.png",
+        "bytes": 115886,
+        "sha256": "579bcf99384992173b6a2b994b37d8812c8e302be6772a88d3cb594ace1ef38f",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "5a4fb60c3a91e559f9bef1b564f1607f9ff544f02ac89ed4362004cc98f4c315",
+        "outer_3px_ink": 0,
+        "ink_pixels": 68128
+      },
+      {
+        "page": 3,
+        "path": "qa/unit-025-evidence/mupdf-artifact/page-03.png",
+        "bytes": 155780,
+        "sha256": "b056c30ccd971d79a4ae7f26bdc02631255444605c9f58b248b85dff022b54d4",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "199baecdf0ecfe0a27e8e5b8e67d8e62de9ea6ee545d1f9c7418a2d4bc9a8c3a",
+        "outer_3px_ink": 0,
+        "ink_pixels": 195857
+      },
+      {
+        "page": 4,
+        "path": "qa/unit-025-evidence/mupdf-artifact/page-04.png",
+        "bytes": 231938,
+        "sha256": "9a908a13e354e14042c0ada8391bfad96ee71cd3338e8c5455400bfab54aba09",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "9ff686042bf1aa280b6067b788cf34442a5179f60da7f86a1180c5b7104a8f6e",
+        "outer_3px_ink": 0,
+        "ink_pixels": 129510
+      },
+      {
+        "page": 5,
+        "path": "qa/unit-025-evidence/mupdf-artifact/page-05.png",
+        "bytes": 206785,
+        "sha256": "ea3ab0b30139449a96f381b987166016e8776be9a7a1d39499f95c7f057f4cd5",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "f59a328621c3be45a88e89145e9df6a0cca16d82f79462c5d7b812e977593487",
+        "outer_3px_ink": 0,
+        "ink_pixels": 103969
+      },
+      {
+        "page": 6,
+        "path": "qa/unit-025-evidence/mupdf-artifact/page-06.png",
+        "bytes": 243408,
+        "sha256": "7b97bbb0de70c4b66836aee62a2be68adb50ce549ae8b1bd51a1e91b83b9cd2e",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "dee7381933043e535d7ba0b3125534d2d155159293b74f5278021ec6fa798c56",
+        "outer_3px_ink": 0,
+        "ink_pixels": 129586
+      },
+      {
+        "page": 7,
+        "path": "qa/unit-025-evidence/mupdf-artifact/page-07.png",
+        "bytes": 249738,
+        "sha256": "84d7c14b9289cc66d57e879e0d7ef38ce6d13e5b146919c538d6757d8fff2a0a",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "74f514c3c93da98678eeb603c4d52f84775cac2187a83fd3d2b4b5290b9fbd0c",
+        "outer_3px_ink": 0,
+        "ink_pixels": 129919
+      },
+      {
+        "page": 8,
+        "path": "qa/unit-025-evidence/mupdf-artifact/page-08.png",
+        "bytes": 200549,
+        "sha256": "5de7e2d9f956dcb0065bce58ee02ddee9fc35d48eb3a3a418ae71301188a9c83",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "7253ef3f12ef966970e15e9a846387b7185a14c6b5e481aac63d0dc2333ee7d4",
+        "outer_3px_ink": 0,
+        "ink_pixels": 99826
+      },
+      {
+        "page": 9,
+        "path": "qa/unit-025-evidence/mupdf-artifact/page-09.png",
+        "bytes": 201762,
+        "sha256": "49b96c4ffad641f745121484f1572f070e1e7c7c8631a539699dbdef51db7250",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "5127611f61ce8de613f5316e7583495608aa8fe1e380066c551e82f0a4053775",
+        "outer_3px_ink": 0,
+        "ink_pixels": 96348
+      },
+      {
+        "page": 10,
+        "path": "qa/unit-025-evidence/mupdf-artifact/page-10.png",
+        "bytes": 127152,
+        "sha256": "116d06c08b9d54f15dda5438eb97887511ff1a2fdf3caea07f4cc9c545efffae",
+        "dimensions_px": [
+          998,
+          1418
+        ],
+        "raw_rgb_sha256": "ed8f5daadd36f74cb279ca8b7df99ce2ac605ce0f04423ce1c57bdc4a6766ca2",
+        "outer_3px_ink": 0,
+        "ink_pixels": 50737
+      }
+    ]
+  },
+  "manual_inspection": {
+    "status": "PASS",
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "renderers_inspected": [
+      "Poppler",
+      "MuPDF (mutool and PyMuPDF)"
+    ],
+    "finding": "Every physical page was inspected in both renderer families. The 142 mm centered reflow fills the digital page legibly, with no clipping, overlap, tofu, edge contact, split guidance fragment, cross-page hyphenated word, orphan formula/heading, sparse final-content page, or untranslated Pinyin index heading.",
+    "page_findings": {
+      "1": "Cover centered and balanced; the prose scope box states partial Chapter 4 coverage without ambiguous progress blocks.",
+      "2": "Attribution, CC BY 4.0 notice, component notices, independent/non-endorsed status, and OpenAI Codex gpt-5.6-sol, Ultra provenance are legible and unclipped.",
+      "3": "Chapter 4 opening is centered on the 142 mm digital measure; the complete orientation is present and the reading-guidance box is not stranded at the foot.",
+      "4": "The complete Petunjuk membaca box begins and ends coherently, followed by the Section 4.1 opening and its first two bullets; no split-box fragment or orphan formula remains.",
+      "5": "Associativity, cancellation, product, identity, invertibility, and Definition 4.1.1 are legible; displays are centered and the page transition is coherent.",
+      "6": "Group definitions, inverse identities, conventions, and Examples 4.1.4-4.1.5 are intact; no cross-page hyphenated word or overflow remains.",
+      "7": "General linear and symmetric group examples and subgroup/simple-group definitions are complete, with stable mathematical glyphs and citations.",
+      "8": "Generated, normal, and cyclic subgroup material, the corrected integer-subgroup example, cosets, and the start of Lemma 4.1.12 are present without clipping.",
+      "9": "Lemma 4.1.12, Proposition 4.1.13, both proofs, Definition 4.1.14, and Catatan 4.1.15 remain together; the former sparse final-content page is eliminated.",
+      "10": "Bibliography, localized term index, and symbol index share one readable page; no untranslated yaobanqun/qun hierarchy heads remain and all live page links are visible."
+    }
+  },
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

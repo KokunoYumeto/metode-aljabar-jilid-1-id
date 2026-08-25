@@ -29,6 +29,30 @@ LICENSE_NAME = "20-LICENSES.md"
 MANIFEST_NAME = "30-MANIFEST.json"
 SUMS_NAME = "40-SHA256SUMS.txt"
 EXPECTED_NAMES = [READER_NAME, ZIP_NAME, LICENSE_NAME, MANIFEST_NAME, SUMS_NAME]
+EXPECTED_RIGHTS = [
+    ("principal source text and Indonesian adaptation", "CC BY 4.0"),
+    ("credited Lanzhou.png and credited AJbook.cls fragment", "CC BY-SA 3.0"),
+    ("bundled Noto fonts", "SIL OFL 1.1"),
+]
+LICENSE_REQUIRED_PHRASES = [
+    "Tidak ada satu label lisensi yang menggantikan hak setiap komponennya.",
+    "Methods in Algebra, Volume 1",
+    "Wen-Wei Li",
+    "Creative Commons Attribution 4.0 International",
+    "https://creativecommons.org/licenses/by/4.0/",
+    "edisi ini independen serta tidak disahkan oleh penulis atau penerbit sumber",
+    "repo/source/LICENSE",
+    "repo/source/AJbook.cls",
+    "Guido",
+    "dpprdan",
+    "CC BY-SA 3.0",
+    "repo/source/Lanzhou.png",
+    "Chk2011",
+    "repo/fonts/",
+    "SIL Open Font License 1.1",
+    "repo/fonts/OFL-1.1-Noto-CJK.txt",
+    "tidak mengubah atau memperluas izin komponen pihak ketiga",
+]
 HEX40 = re.compile(r"[0-9a-f]{40}\Z")
 HEX64 = re.compile(r"[0-9a-f]{64}\Z")
 ZENODO_DOI = re.compile(r"10\.5281/zenodo\.(\d+)\Z")
@@ -69,6 +93,133 @@ def load_json(path: Path) -> dict[str, Any]:
     return value
 
 
+def normalize_license_id(value: object) -> str:
+    if isinstance(value, dict):
+        value = value.get("id")
+    return str(value or "")
+
+
+def people_names(value: object) -> list[str]:
+    require(isinstance(value, list), "People metadata must be a list")
+    require(all(isinstance(item, dict) for item in value), "People metadata contains a non-object")
+    return [str(item.get("name", "")) for item in value]
+
+
+def contributor_signatures(value: object) -> list[tuple[str, str]]:
+    require(isinstance(value, list), "Contributor metadata must be a list")
+    require(all(isinstance(item, dict) for item in value),
+            "Contributor metadata contains a non-object")
+    return [(str(item.get("name", "")), str(item.get("type", ""))) for item in value]
+
+
+def related_identifier_signatures(value: object) -> list[tuple[str, str, str]]:
+    require(isinstance(value, list), "Related-identifier metadata must be a list")
+    require(all(isinstance(item, dict) for item in value),
+            "Related-identifier metadata contains a non-object")
+    signatures = [
+        (
+            str(item.get("identifier", "")),
+            str(item.get("relation", "")),
+            str(item.get("scheme", "")),
+        )
+        for item in value
+    ]
+    require(len(signatures) == len(set(signatures)), "Related identifiers contain duplicates")
+    return signatures
+
+
+def validate_metadata_semantics(
+    actual: object,
+    expected: dict[str, Any],
+    *,
+    context: str,
+    public_record: bool = False,
+) -> None:
+    """Compare the publication-critical metadata while allowing API-added fields."""
+    require(isinstance(actual, dict), f"{context} metadata is not an object")
+    scalar_fields = [
+        "title",
+        "publication_date",
+        "description",
+        "access_right",
+        "language",
+        "notes",
+        "version",
+    ]
+    if public_record:
+        resource_type = actual.get("resource_type")
+        require(isinstance(resource_type, dict),
+                f"{context} lacks a public resource-type object")
+        require(
+            resource_type.get("type") == expected["upload_type"]
+            and resource_type.get("subtype") == expected["publication_type"],
+            f"{context} resource type drifted: {resource_type!r}",
+        )
+    else:
+        scalar_fields.extend(("imprint_publisher", "upload_type", "publication_type"))
+    for field in scalar_fields:
+        require(actual.get(field) == expected[field],
+                f"{context} {field} drifted: {actual.get(field)!r}")
+    require(
+        normalize_license_id(actual.get("license"))
+        == normalize_license_id(expected.get("license")),
+        f"{context} license drifted: {actual.get('license')!r}",
+    )
+    require(
+        people_names(actual.get("creators")) == people_names(expected.get("creators")),
+        f"{context} creators drifted: {actual.get('creators')!r}",
+    )
+    require(
+        contributor_signatures(actual.get("contributors"))
+        == contributor_signatures(expected.get("contributors")),
+        f"{context} contributors drifted: {actual.get('contributors')!r}",
+    )
+    actual_keywords = actual.get("keywords")
+    expected_keywords = expected.get("keywords")
+    require(isinstance(actual_keywords, list) and isinstance(expected_keywords, list),
+            f"{context} keywords are not lists")
+    require(all(isinstance(item, str) for item in actual_keywords + expected_keywords),
+            f"{context} keywords contain a non-string value")
+    require(len(actual_keywords) == len(set(actual_keywords)),
+            f"{context} keywords contain duplicates")
+    require(len(expected_keywords) == len(set(expected_keywords)),
+            f"{context} expected keywords contain duplicates")
+    require(set(actual_keywords) == set(expected_keywords),
+            f"{context} keywords drifted: {actual_keywords!r}")
+    require(
+        set(related_identifier_signatures(actual.get("related_identifiers")))
+        == set(related_identifier_signatures(expected.get("related_identifiers"))),
+        f"{context} related identifiers drifted: {actual.get('related_identifiers')!r}",
+    )
+
+
+def validate_draft_envelope(
+    draft: object,
+    *,
+    draft_id: int,
+    version_doi: str,
+    context: str,
+    expected_metadata: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    require(isinstance(draft, dict), f"{context} draft response is not an object")
+    require(draft.get("id") == draft_id, f"{context} returned a different draft ID")
+    require(not draft.get("submitted") and draft.get("state") == "unsubmitted",
+            f"{context} is not the expected unsubmitted draft: {draft.get('state')}")
+    require(str(draft.get("conceptrecid", "")) == str(CONCEPT_RECORD_ID),
+            f"{context} left concept record {CONCEPT_RECORD_ID}: {draft.get('conceptrecid')}")
+    draft_metadata = draft.get("metadata")
+    require(isinstance(draft_metadata, dict), f"{context} lacks metadata")
+    reserved = draft_metadata.get("prereserve_doi", {})
+    require(isinstance(reserved, dict), f"{context} lacks a reserved DOI object")
+    require(reserved.get("doi") == version_doi,
+            f"{context} reserved DOI drifted: {reserved.get('doi')}")
+    require(str(reserved.get("recid", "")) == str(draft_id),
+            f"{context} reserved record ID drifted: {reserved.get('recid')}")
+    if expected_metadata is not None:
+        validate_metadata_semantics(draft_metadata, expected_metadata, context=context)
+    return draft
+
+
 def validate_stage(stage: Path) -> tuple[dict[str, Any], dict[str, dict[str, object]]]:
     zenodo_dir = stage / "zenodo"
     require(zenodo_dir.is_dir(), f"Missing Zenodo stage directory: {zenodo_dir}")
@@ -91,6 +242,8 @@ def validate_stage(stage: Path) -> tuple[dict[str, Any], dict[str, dict[str, obj
     require(work.get("language") == "id-ID", "Manifest language is not id-ID")
     require(work.get("status") == "partial_public_active", "Manifest status drifted")
     require(work.get("model") == MODEL, "Manifest model provenance drifted")
+    require(work.get("independent_nonendorsed") is True,
+            "Manifest does not preserve the independent/non-endorsed relationship")
     coverage = str(work.get("coverage", ""))
     require("TTP" not in str(work), "Manifest work metadata contains a forbidden organization label")
     for phrase in ("Unit 001-024", "Bab 4-10 Li", "Duncan", "CRing", "belum disertakan"):
@@ -108,6 +261,17 @@ def validate_stage(stage: Path) -> tuple[dict[str, Any], dict[str, dict[str, obj
     doi_match = ZENODO_DOI.fullmatch(version_doi)
     require(doi_match is not None and version_doi != CONCEPT_DOI,
             f"Manifest has an invalid reserved version DOI: {version_doi}")
+
+    rights = manifest.get("rights")
+    require(isinstance(rights, list), "Manifest rights must be a list")
+    require(all(isinstance(item, dict) for item in rights),
+            "Manifest rights contains a non-object")
+    rights_pairs = [
+        (str(item.get("component", "")), str(item.get("license", "")))
+        for item in rights
+    ]
+    require(rights_pairs == EXPECTED_RIGHTS,
+            f"Manifest component-rights boundary drifted: {rights_pairs!r}")
 
     manifest_files = manifest.get("files")
     require(isinstance(manifest_files, list) and len(manifest_files) == 3,
@@ -127,6 +291,16 @@ def validate_stage(stage: Path) -> tuple[dict[str, Any], dict[str, dict[str, obj
     require(reader.get("language") == "id-ID", "Reader /Lang evidence drifted")
     require(reader.get("widgets") == 0 and reader.get("unsafe_actions") == 0,
             "Reader contains unexpected interactive or unsafe actions")
+    require(manifest_by_name[LICENSE_NAME].get("role") == "controlling_component_rights_notice",
+            "License notice is not marked as the controlling component-rights file")
+
+    license_text = (zenodo_dir / LICENSE_NAME).read_text(encoding="utf-8")
+    require("\x00" not in license_text, "License notice contains a NUL byte")
+    require("TTP" not in license_text,
+            "License notice contains a forbidden organization-label occurrence")
+    for phrase in LICENSE_REQUIRED_PHRASES:
+        require(phrase in license_text,
+                f"License notice lacks required rights/attribution phrase: {phrase}")
 
     qa = manifest.get("qa", {})
     require(qa.get("reader_pages") == 229 and qa.get("source_units") == 24,
@@ -357,14 +531,12 @@ def main() -> None:
         }
     )
     base = f"https://zenodo.org/api/deposit/depositions/{args.draft_id}"
-    draft = request(authenticated, "GET", base, accepted={200}).json()
-    require(draft.get("id") == args.draft_id, "Zenodo returned a different draft ID")
-    require(not draft.get("submitted") and draft.get("state") == "unsubmitted",
-            f"Expected existing unsubmitted draft, got {draft.get('state')}")
-    require(str(draft.get("conceptrecid", "")) == str(CONCEPT_RECORD_ID),
-            f"Draft is not in concept record {CONCEPT_RECORD_ID}: {draft.get('conceptrecid')}")
-    reserved = draft.get("metadata", {}).get("prereserve_doi", {}).get("doi")
-    require(reserved == version_doi, f"Unexpected reserved DOI: {reserved}")
+    draft = validate_draft_envelope(
+        request(authenticated, "GET", base, accepted={200}).json(),
+        draft_id=args.draft_id,
+        version_doi=version_doi,
+        context="Initial Zenodo response",
+    )
 
     zenodo_dir = stage / "zenodo"
     files = [zenodo_dir / name for name in EXPECTED_NAMES]
@@ -430,9 +602,14 @@ def main() -> None:
     }
     require("TTP" not in json.dumps(nonpeople_metadata, ensure_ascii=False),
             "Organization label leaked into prose or non-person metadata")
-    request(authenticated, "PUT", base, json={"metadata": metadata})
+    draft = validate_draft_envelope(
+        request(authenticated, "PUT", base, json={"metadata": metadata}).json(),
+        draft_id=args.draft_id,
+        version_doi=version_doi,
+        context="Zenodo PUT response",
+        expected_metadata=metadata,
+    )
 
-    draft = request(authenticated, "GET", base, accepted={200}).json()
     if not payload_already_present:
         bucket = draft["links"]["bucket"]
         for path in files:
@@ -445,7 +622,13 @@ def main() -> None:
                     headers={"Content-Type": "application/octet-stream"},
                 )
 
-    draft = request(authenticated, "GET", base, accepted={200}).json()
+    draft = validate_draft_envelope(
+        request(authenticated, "GET", base, accepted={200}).json(),
+        draft_id=args.draft_id,
+        version_doi=version_doi,
+        context="Final pre-publish Zenodo response",
+        expected_metadata=metadata,
+    )
     draft_files = draft.get("files", [])
     require(draft_inventory_matches(draft_files, expected),
             f"Draft byte inventory differs: {[item.get('filename') for item in draft_files]}")
@@ -480,6 +663,12 @@ def main() -> None:
     require(public_names[0] == READER_NAME,
             f"Primary visible file is not the reader: {public_names}")
     public_metadata = public.get("metadata", {})
+    validate_metadata_semantics(
+        public_metadata,
+        metadata,
+        context="Anonymous postpublication record",
+        public_record=True,
+    )
     require(public_metadata.get("title") == TITLE and public_metadata.get("version") == VERSION,
             "Published title/version metadata differs")
     public_description = str(public_metadata.get("description", ""))
