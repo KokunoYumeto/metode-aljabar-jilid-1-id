@@ -1,0 +1,1842 @@
+{
+  "actionable_defects": [],
+  "contact_sheets": [
+    {
+      "bytes": 1289413,
+      "path": "qa/unit-032-evidence/contact-sheets/build-i-poppler.png",
+      "sha256": "360a093590109540eb3fadaac310cc0ad081c333a88f6ae3313f67f4cf95544e",
+      "size": [
+        1245,
+        3017
+      ]
+    },
+    {
+      "bytes": 1289488,
+      "path": "qa/unit-032-evidence/contact-sheets/build-j-poppler.png",
+      "sha256": "19c15a1596e2bdd71e4d8cff4caa5ce1d855a3ca966017723e66946f2c56ac25",
+      "size": [
+        1245,
+        3017
+      ]
+    },
+    {
+      "bytes": 1289752,
+      "path": "qa/unit-032-evidence/contact-sheets/artifact-poppler.png",
+      "sha256": "000663fdb782f616a5781a0ed66ded2cdac6406bd7944b3b5bfde68a05906a6b",
+      "size": [
+        1245,
+        3017
+      ]
+    },
+    {
+      "bytes": 1292688,
+      "path": "qa/unit-032-evidence/contact-sheets/build-i-mupdf.png",
+      "sha256": "f670dc2f3179e009d7e4ebd5ced3c0e760e6770501376e2f30539e778cfccb96",
+      "size": [
+        1245,
+        3017
+      ]
+    },
+    {
+      "bytes": 1292855,
+      "path": "qa/unit-032-evidence/contact-sheets/build-j-mupdf.png",
+      "sha256": "6fd7318c066fdf2d0ecd68c87a136e3cd5f7ff95621e9ef07bc0bd8d61137771",
+      "size": [
+        1245,
+        3017
+      ]
+    },
+    {
+      "bytes": 1293603,
+      "path": "qa/unit-032-evidence/contact-sheets/artifact-mupdf.png",
+      "sha256": "5ff5df051c04f88b03edb0a66d3454d4acec68e59dce9dd370dd4891656636db",
+      "size": [
+        1245,
+        3017
+      ]
+    }
+  ],
+  "decoded_pixel_comparisons": {
+    "mupdf": {
+      "build-i_vs_build-j": {
+        "all_13_decoded_pixel_identical": true,
+        "pages": [
+          {
+            "decoded_pixel_identical": true,
+            "page": 1,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 2,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 3,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 4,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 5,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 6,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 7,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 8,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 9,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 10,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 11,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 12,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 13,
+            "png_byte_identical": true
+          }
+        ]
+      },
+      "build-j_vs_artifact": {
+        "all_13_decoded_pixel_identical": true,
+        "pages": [
+          {
+            "decoded_pixel_identical": true,
+            "page": 1,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 2,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 3,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 4,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 5,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 6,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 7,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 8,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 9,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 10,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 11,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 12,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 13,
+            "png_byte_identical": true
+          }
+        ]
+      }
+    },
+    "poppler": {
+      "build-i_vs_build-j": {
+        "all_13_decoded_pixel_identical": true,
+        "pages": [
+          {
+            "decoded_pixel_identical": true,
+            "page": 1,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 2,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 3,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 4,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 5,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 6,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 7,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 8,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 9,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 10,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 11,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 12,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 13,
+            "png_byte_identical": true
+          }
+        ]
+      },
+      "build-j_vs_artifact": {
+        "all_13_decoded_pixel_identical": true,
+        "pages": [
+          {
+            "decoded_pixel_identical": true,
+            "page": 1,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 2,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 3,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 4,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 5,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 6,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 7,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 8,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 9,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 10,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 11,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 12,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 13,
+            "png_byte_identical": true
+          }
+        ]
+      }
+    }
+  },
+  "edge_gate": {
+    "all_78_zero_ink": true,
+    "outer_band_pixels": 3
+  },
+  "manual_visual_review": {
+    "actionable_defects": [],
+    "pages": {
+      "1": "Sampul terpusat, utuh, dan terbaca; judul, identitas Unit 32, kotak cakupan, serta tanggal tidak terpotong.",
+      "10": "Dua rumus himpunan dukungan hingga telah direflow dengan benar; proposisi, bukti, dan awal presentasi grup tidak melampaui margin.",
+      "11": "Presentasi grup, dua contoh, tiga masalah Dehn, dan koreksi nama Guralnick tampil jelas; daftar tetap terjajar dan utuh.",
+      "12": "Teorema Nielsen–Schreier, bukti topologis, diagram bouquet, dan paragraf graf terbaca penuh tanpa kliping atau glif rusak.",
+      "13": "Penutup bukti, diagram graf, daftar pustaka, dan indeks istilah lengkap; underfull ketiga nonfatal dan ruang akhir halaman wajar.",
+      "2": "Halaman edisi dan hak utuh; atribusi, lisensi komponen, nonpengesahan, URL, dan provenans model terbaca tanpa tumpang tindih.",
+      "3": "Pembuka Bagian 4.8, dua definisi universal, rumus, dan dua diagram komutatif tersusun rapi tanpa kliping atau glif hilang.",
+      "4": "Naturalisasi, sifat adjoin, konstruksi kata, dan persamaan tampil dalam bidang halaman yang seimbang dan mudah diikuti.",
+      "5": "Lema monoid bebas serta Definisi 4.8.5 dan daftar tiga butir terbaca utuh; underfull pertama hanya ruang daftar nonfatal.",
+      "6": "Relasi produk teramalgamasi, Lema 4.8.6, bukti bernomor, dan diagram tampil utuh; underfull kedua tidak menimbulkan tabrakan.",
+      "7": "Bentuk tereduksi, persamaan bernomor, Lema 4.8.7, dan awal buktinya terletak dalam margin serta tetap jelas.",
+      "8": "Dua aksi pada Sigma, penutup bukti, Proposisi 4.8.8, dan rumus homomorfisme terbaca tanpa luapan atau kehilangan simbol.",
+      "9": "Kata tereduksi, produk bebas, dan Definisi 4.8.10 tersusun stabil; diagram kecil dan semua rujukan silang terbaca."
+    },
+    "status": "PASS"
+  },
+  "preflight_observation": {
+    "bytes": 56752,
+    "path": "build/unit-032-preflight-final/preflight-observation.json",
+    "sha256": "ad4162f8ccc0b7836e0f95eefd7be1f2cf8b5e929be5ba3c2bebcf488d76307e"
+  },
+  "renderer_versions": {
+    "mupdf": "mutool version 1.23.0",
+    "poppler": "pdftoppm version 24.04.0 Copyright 2005-2024 The Poppler Developers - http://poppler.freedesktop.org Copyright 1996-2011, 2022 Glyph & Cog, LLC"
+  },
+  "renderers": {
+    "mupdf": {
+      "artifact": {
+        "document": "artifact",
+        "dpi": 144,
+        "engine": "mupdf",
+        "pages": [
+          {
+            "decoded_rgb_sha256": "7784a090d1bc4f5198df356bd6da317e35f07a56055805ba604b670c6a26d382",
+            "nonwhite_bbox": [
+              140,
+              111,
+              813,
+              1325
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 1,
+            "path": "qa/unit-032-evidence/renders/mupdf/artifact/page-01.png",
+            "png_bytes": 79016,
+            "png_sha256": "442ee38c5178ae5afcc1de4864f0ba1a21f33197cbc5ac33d628d60ba1fc6985",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "4849122d8ffc1142033d4b979ab02f346be0edd14160059b9db948eb7e49a43e",
+            "nonwhite_bbox": [
+              99,
+              118,
+              848,
+              1242
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 2,
+            "path": "qa/unit-032-evidence/renders/mupdf/artifact/page-02.png",
+            "png_bytes": 110080,
+            "png_sha256": "e479b6a479a2096bfcc1cd92bb8c72496937186bf16aa3d49711c00682d21d57",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "c1fd92289411884d2ec42f89e7747d0522dff1d77974e9ca6058502b52f7032e",
+            "nonwhite_bbox": [
+              97,
+              81,
+              902,
+              1084
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 3,
+            "path": "qa/unit-032-evidence/renders/mupdf/artifact/page-03.png",
+            "png_bytes": 145532,
+            "png_sha256": "fe1d87b1f0f6cdaef57b7ca5f5def1ff4b85b00cf5414f7526d75467f8f98d30",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "7e2c72c327b1ed080d7d0b92906d74300a6782279849f816fdaf2680b51f7fd1",
+            "nonwhite_bbox": [
+              97,
+              81,
+              902,
+              1275
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 4,
+            "path": "qa/unit-032-evidence/renders/mupdf/artifact/page-04.png",
+            "png_bytes": 185695,
+            "png_sha256": "400696225a5bbd44b5c21f6249c9404f7bf6bea94a41b5c0dfc53a45595bef22",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "c090e9a23fc6de22d457043ef03ab8871c8df09c3655db4921d2431d7be3af64",
+            "nonwhite_bbox": [
+              96,
+              81,
+              902,
+              1042
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 5,
+            "path": "qa/unit-032-evidence/renders/mupdf/artifact/page-05.png",
+            "png_bytes": 145519,
+            "png_sha256": "b1c8594f938d1d4052692579a2cf2bc726846e5d9194f9b115e9359479799380",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "fba21e95297d0fa0dcc65475692ac20ef52614295f2373d190a6efc896bc0490",
+            "nonwhite_bbox": [
+              97,
+              81,
+              902,
+              1190
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 6,
+            "path": "qa/unit-032-evidence/renders/mupdf/artifact/page-06.png",
+            "png_bytes": 151956,
+            "png_sha256": "2596e6e913bc617a270c613ad58b08d795d3f593da55bca2a7feeb7ad9a9ea1e",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "d955c655fc3dec35825e7614c692d98faf18274834fa218a3e018c94cdde4169",
+            "nonwhite_bbox": [
+              96,
+              81,
+              902,
+              1157
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 7,
+            "path": "qa/unit-032-evidence/renders/mupdf/artifact/page-07.png",
+            "png_bytes": 171219,
+            "png_sha256": "e8d2dfd3145bcc6c85b9c48f61b35796a68f9263ae7432cc2df2aa9a93dda3ce",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "7d6d87e7fe009ef992b0e7136333221afb2caf8a5a4cf797aad39819e84b7f40",
+            "nonwhite_bbox": [
+              96,
+              81,
+              902,
+              1160
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 8,
+            "path": "qa/unit-032-evidence/renders/mupdf/artifact/page-08.png",
+            "png_bytes": 167760,
+            "png_sha256": "bc7f141e8c30c522c5b5d6a98986dfd0a170d6294d87c0739b00a4da8e51ae8a",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "2e86b45402441c49d3b49f9b4a2f4e222752ac7d0e70e79528a3927db992c90d",
+            "nonwhite_bbox": [
+              96,
+              81,
+              903,
+              1246
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 9,
+            "path": "qa/unit-032-evidence/renders/mupdf/artifact/page-09.png",
+            "png_bytes": 228000,
+            "png_sha256": "168fc64228be21d6a07db097baa6763188189bbb16f01dc891db594a52032e4a",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "c9d19a0fa10e8baaff18acb63f11a5e3dbb51f6e86180db91ed2b883d5479e6b",
+            "nonwhite_bbox": [
+              96,
+              81,
+              903,
+              1235
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 10,
+            "path": "qa/unit-032-evidence/renders/mupdf/artifact/page-10.png",
+            "png_bytes": 176805,
+            "png_sha256": "caad11ab9c62b787abc2e5d367238d1eef561dc3cb766427093eb57142632383",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "3338cb5b70c9ecd29c145b355ae581bfecb89a270d3f08d985d352386cc7cf62",
+            "nonwhite_bbox": [
+              97,
+              81,
+              902,
+              1275
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 11,
+            "path": "qa/unit-032-evidence/renders/mupdf/artifact/page-11.png",
+            "png_bytes": 203280,
+            "png_sha256": "6bbf6fa5b8343a0c17b1ebff1ad0ec1b6a268361d2cafb8c5f97e312e9cb12d2",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "50e92a5fc9afc0cea7c5780601f02aaa7866edf33062577ac279a7a19e9e51d3",
+            "nonwhite_bbox": [
+              95,
+              81,
+              902,
+              1187
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 12,
+            "path": "qa/unit-032-evidence/renders/mupdf/artifact/page-12.png",
+            "png_bytes": 207095,
+            "png_sha256": "e2563c6cab409a76a36bf878c0e990dbb2afa78ab75bb165859604d3d5fb09e2",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "4c89c727226c5ba2fd20ef2c1813b1a2404da3338a8c43be06b5b3ab5e3d6cd6",
+            "nonwhite_bbox": [
+              97,
+              81,
+              902,
+              1053
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 13,
+            "path": "qa/unit-032-evidence/renders/mupdf/artifact/page-13.png",
+            "png_bytes": 149726,
+            "png_sha256": "d1664d1d6c1c497cc13118bd847dbc9265c2f0a224b4b6f093ea06a373d53433",
+            "size": [
+              998,
+              1418
+            ]
+          }
+        ],
+        "stderr": "",
+        "stdout": ""
+      },
+      "build-i": {
+        "document": "build-i",
+        "dpi": 144,
+        "engine": "mupdf",
+        "pages": [
+          {
+            "decoded_rgb_sha256": "7784a090d1bc4f5198df356bd6da317e35f07a56055805ba604b670c6a26d382",
+            "nonwhite_bbox": [
+              140,
+              111,
+              813,
+              1325
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 1,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-i/page-01.png",
+            "png_bytes": 79016,
+            "png_sha256": "442ee38c5178ae5afcc1de4864f0ba1a21f33197cbc5ac33d628d60ba1fc6985",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "4849122d8ffc1142033d4b979ab02f346be0edd14160059b9db948eb7e49a43e",
+            "nonwhite_bbox": [
+              99,
+              118,
+              848,
+              1242
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 2,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-i/page-02.png",
+            "png_bytes": 110080,
+            "png_sha256": "e479b6a479a2096bfcc1cd92bb8c72496937186bf16aa3d49711c00682d21d57",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "c1fd92289411884d2ec42f89e7747d0522dff1d77974e9ca6058502b52f7032e",
+            "nonwhite_bbox": [
+              97,
+              81,
+              902,
+              1084
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 3,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-i/page-03.png",
+            "png_bytes": 145532,
+            "png_sha256": "fe1d87b1f0f6cdaef57b7ca5f5def1ff4b85b00cf5414f7526d75467f8f98d30",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "7e2c72c327b1ed080d7d0b92906d74300a6782279849f816fdaf2680b51f7fd1",
+            "nonwhite_bbox": [
+              97,
+              81,
+              902,
+              1275
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 4,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-i/page-04.png",
+            "png_bytes": 185695,
+            "png_sha256": "400696225a5bbd44b5c21f6249c9404f7bf6bea94a41b5c0dfc53a45595bef22",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "c090e9a23fc6de22d457043ef03ab8871c8df09c3655db4921d2431d7be3af64",
+            "nonwhite_bbox": [
+              96,
+              81,
+              902,
+              1042
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 5,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-i/page-05.png",
+            "png_bytes": 145519,
+            "png_sha256": "b1c8594f938d1d4052692579a2cf2bc726846e5d9194f9b115e9359479799380",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "fba21e95297d0fa0dcc65475692ac20ef52614295f2373d190a6efc896bc0490",
+            "nonwhite_bbox": [
+              97,
+              81,
+              902,
+              1190
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 6,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-i/page-06.png",
+            "png_bytes": 151956,
+            "png_sha256": "2596e6e913bc617a270c613ad58b08d795d3f593da55bca2a7feeb7ad9a9ea1e",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "d955c655fc3dec35825e7614c692d98faf18274834fa218a3e018c94cdde4169",
+            "nonwhite_bbox": [
+              96,
+              81,
+              902,
+              1157
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 7,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-i/page-07.png",
+            "png_bytes": 171219,
+            "png_sha256": "e8d2dfd3145bcc6c85b9c48f61b35796a68f9263ae7432cc2df2aa9a93dda3ce",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "7d6d87e7fe009ef992b0e7136333221afb2caf8a5a4cf797aad39819e84b7f40",
+            "nonwhite_bbox": [
+              96,
+              81,
+              902,
+              1160
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 8,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-i/page-08.png",
+            "png_bytes": 167760,
+            "png_sha256": "bc7f141e8c30c522c5b5d6a98986dfd0a170d6294d87c0739b00a4da8e51ae8a",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "2e86b45402441c49d3b49f9b4a2f4e222752ac7d0e70e79528a3927db992c90d",
+            "nonwhite_bbox": [
+              96,
+              81,
+              903,
+              1246
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 9,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-i/page-09.png",
+            "png_bytes": 228000,
+            "png_sha256": "168fc64228be21d6a07db097baa6763188189bbb16f01dc891db594a52032e4a",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "c9d19a0fa10e8baaff18acb63f11a5e3dbb51f6e86180db91ed2b883d5479e6b",
+            "nonwhite_bbox": [
+              96,
+              81,
+              903,
+              1235
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 10,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-i/page-10.png",
+            "png_bytes": 176805,
+            "png_sha256": "caad11ab9c62b787abc2e5d367238d1eef561dc3cb766427093eb57142632383",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "3338cb5b70c9ecd29c145b355ae581bfecb89a270d3f08d985d352386cc7cf62",
+            "nonwhite_bbox": [
+              97,
+              81,
+              902,
+              1275
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 11,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-i/page-11.png",
+            "png_bytes": 203280,
+            "png_sha256": "6bbf6fa5b8343a0c17b1ebff1ad0ec1b6a268361d2cafb8c5f97e312e9cb12d2",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "50e92a5fc9afc0cea7c5780601f02aaa7866edf33062577ac279a7a19e9e51d3",
+            "nonwhite_bbox": [
+              95,
+              81,
+              902,
+              1187
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 12,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-i/page-12.png",
+            "png_bytes": 207095,
+            "png_sha256": "e2563c6cab409a76a36bf878c0e990dbb2afa78ab75bb165859604d3d5fb09e2",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "4c89c727226c5ba2fd20ef2c1813b1a2404da3338a8c43be06b5b3ab5e3d6cd6",
+            "nonwhite_bbox": [
+              97,
+              81,
+              902,
+              1053
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 13,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-i/page-13.png",
+            "png_bytes": 149726,
+            "png_sha256": "d1664d1d6c1c497cc13118bd847dbc9265c2f0a224b4b6f093ea06a373d53433",
+            "size": [
+              998,
+              1418
+            ]
+          }
+        ],
+        "stderr": "",
+        "stdout": ""
+      },
+      "build-j": {
+        "document": "build-j",
+        "dpi": 144,
+        "engine": "mupdf",
+        "pages": [
+          {
+            "decoded_rgb_sha256": "7784a090d1bc4f5198df356bd6da317e35f07a56055805ba604b670c6a26d382",
+            "nonwhite_bbox": [
+              140,
+              111,
+              813,
+              1325
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 1,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-j/page-01.png",
+            "png_bytes": 79016,
+            "png_sha256": "442ee38c5178ae5afcc1de4864f0ba1a21f33197cbc5ac33d628d60ba1fc6985",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "4849122d8ffc1142033d4b979ab02f346be0edd14160059b9db948eb7e49a43e",
+            "nonwhite_bbox": [
+              99,
+              118,
+              848,
+              1242
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 2,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-j/page-02.png",
+            "png_bytes": 110080,
+            "png_sha256": "e479b6a479a2096bfcc1cd92bb8c72496937186bf16aa3d49711c00682d21d57",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "c1fd92289411884d2ec42f89e7747d0522dff1d77974e9ca6058502b52f7032e",
+            "nonwhite_bbox": [
+              97,
+              81,
+              902,
+              1084
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 3,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-j/page-03.png",
+            "png_bytes": 145532,
+            "png_sha256": "fe1d87b1f0f6cdaef57b7ca5f5def1ff4b85b00cf5414f7526d75467f8f98d30",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "7e2c72c327b1ed080d7d0b92906d74300a6782279849f816fdaf2680b51f7fd1",
+            "nonwhite_bbox": [
+              97,
+              81,
+              902,
+              1275
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 4,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-j/page-04.png",
+            "png_bytes": 185695,
+            "png_sha256": "400696225a5bbd44b5c21f6249c9404f7bf6bea94a41b5c0dfc53a45595bef22",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "c090e9a23fc6de22d457043ef03ab8871c8df09c3655db4921d2431d7be3af64",
+            "nonwhite_bbox": [
+              96,
+              81,
+              902,
+              1042
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 5,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-j/page-05.png",
+            "png_bytes": 145519,
+            "png_sha256": "b1c8594f938d1d4052692579a2cf2bc726846e5d9194f9b115e9359479799380",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "fba21e95297d0fa0dcc65475692ac20ef52614295f2373d190a6efc896bc0490",
+            "nonwhite_bbox": [
+              97,
+              81,
+              902,
+              1190
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 6,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-j/page-06.png",
+            "png_bytes": 151956,
+            "png_sha256": "2596e6e913bc617a270c613ad58b08d795d3f593da55bca2a7feeb7ad9a9ea1e",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "d955c655fc3dec35825e7614c692d98faf18274834fa218a3e018c94cdde4169",
+            "nonwhite_bbox": [
+              96,
+              81,
+              902,
+              1157
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 7,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-j/page-07.png",
+            "png_bytes": 171219,
+            "png_sha256": "e8d2dfd3145bcc6c85b9c48f61b35796a68f9263ae7432cc2df2aa9a93dda3ce",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "7d6d87e7fe009ef992b0e7136333221afb2caf8a5a4cf797aad39819e84b7f40",
+            "nonwhite_bbox": [
+              96,
+              81,
+              902,
+              1160
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 8,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-j/page-08.png",
+            "png_bytes": 167760,
+            "png_sha256": "bc7f141e8c30c522c5b5d6a98986dfd0a170d6294d87c0739b00a4da8e51ae8a",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "2e86b45402441c49d3b49f9b4a2f4e222752ac7d0e70e79528a3927db992c90d",
+            "nonwhite_bbox": [
+              96,
+              81,
+              903,
+              1246
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 9,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-j/page-09.png",
+            "png_bytes": 228000,
+            "png_sha256": "168fc64228be21d6a07db097baa6763188189bbb16f01dc891db594a52032e4a",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "c9d19a0fa10e8baaff18acb63f11a5e3dbb51f6e86180db91ed2b883d5479e6b",
+            "nonwhite_bbox": [
+              96,
+              81,
+              903,
+              1235
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 10,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-j/page-10.png",
+            "png_bytes": 176805,
+            "png_sha256": "caad11ab9c62b787abc2e5d367238d1eef561dc3cb766427093eb57142632383",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "3338cb5b70c9ecd29c145b355ae581bfecb89a270d3f08d985d352386cc7cf62",
+            "nonwhite_bbox": [
+              97,
+              81,
+              902,
+              1275
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 11,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-j/page-11.png",
+            "png_bytes": 203280,
+            "png_sha256": "6bbf6fa5b8343a0c17b1ebff1ad0ec1b6a268361d2cafb8c5f97e312e9cb12d2",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "50e92a5fc9afc0cea7c5780601f02aaa7866edf33062577ac279a7a19e9e51d3",
+            "nonwhite_bbox": [
+              95,
+              81,
+              902,
+              1187
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 12,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-j/page-12.png",
+            "png_bytes": 207095,
+            "png_sha256": "e2563c6cab409a76a36bf878c0e990dbb2afa78ab75bb165859604d3d5fb09e2",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "4c89c727226c5ba2fd20ef2c1813b1a2404da3338a8c43be06b5b3ab5e3d6cd6",
+            "nonwhite_bbox": [
+              97,
+              81,
+              902,
+              1053
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 13,
+            "path": "qa/unit-032-evidence/renders/mupdf/build-j/page-13.png",
+            "png_bytes": 149726,
+            "png_sha256": "d1664d1d6c1c497cc13118bd847dbc9265c2f0a224b4b6f093ea06a373d53433",
+            "size": [
+              998,
+              1418
+            ]
+          }
+        ],
+        "stderr": "",
+        "stdout": ""
+      }
+    },
+    "poppler": {
+      "artifact": {
+        "document": "artifact",
+        "dpi": 144,
+        "engine": "poppler",
+        "pages": [
+          {
+            "decoded_rgb_sha256": "fd29311d9c36a6c6c13b1676858d4363ff74eff88470c692b24f04b1894966c6",
+            "nonwhite_bbox": [
+              140,
+              111,
+              813,
+              1324
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 1,
+            "path": "qa/unit-032-evidence/renders/poppler/artifact/page-01.png",
+            "png_bytes": 85840,
+            "png_sha256": "d1670009996248a999409af78edafed5ff42c28ee22b7df7622e811819a6fc37",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "8af8dc5fdd628474721095624e4269b82275a8a09d7bb36462a69aec49588c8c",
+            "nonwhite_bbox": [
+              99,
+              118,
+              848,
+              1242
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 2,
+            "path": "qa/unit-032-evidence/renders/poppler/artifact/page-02.png",
+            "png_bytes": 136376,
+            "png_sha256": "4758fa3169ccfc9b55f2a84417d3d191e3a8ad2bafd41b842a1a64612b266786",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "6ccbe7f065919e8f332422a9ca6f805769fe91f560abbbf52bb056a368420b62",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1083
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 3,
+            "path": "qa/unit-032-evidence/renders/poppler/artifact/page-03.png",
+            "png_bytes": 172095,
+            "png_sha256": "98febb8d3b596ba0fb5eb1ac96214ab00f6ac28d9cae8c2c45ea4441d5a21091",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "ad58c486f771654f28137506727e192b00d3ccaa591a806b0a69262a2037c92c",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1274
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 4,
+            "path": "qa/unit-032-evidence/renders/poppler/artifact/page-04.png",
+            "png_bytes": 225913,
+            "png_sha256": "d34b134b8effb55d9a53b3ada70373272993f94461a4402b98223333974ee324",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "28a4ad9704a3eca98ab0bb2176455945ccd83a8c6ff3468991c42e9e3e7a5404",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1041
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 5,
+            "path": "qa/unit-032-evidence/renders/poppler/artifact/page-05.png",
+            "png_bytes": 173593,
+            "png_sha256": "cf7366ab6ef2e719ef6e3f436572de857aed45da887e0fa9b4c0f61086d051ac",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "f39ba05a87340950f9651427234bd35e781e359d3d0facffb4d62be0b1e85d2b",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1189
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 6,
+            "path": "qa/unit-032-evidence/renders/poppler/artifact/page-06.png",
+            "png_bytes": 180329,
+            "png_sha256": "3469407267c4d5e7cb72dfe7fd7d7667243c4eeabda0123bac2d56db597cf172",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "08b5eefd10a5c19e9adccd1817d3d307c5a3aa95b1ba914c4d3e86d270b0fed4",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1156
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 7,
+            "path": "qa/unit-032-evidence/renders/poppler/artifact/page-07.png",
+            "png_bytes": 206658,
+            "png_sha256": "683438cbf4f6bbc089cff2bc269f416faae2d82d25743689721b7bcecb2fa705",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "a8ad43e4cc4812e05d85da4b3f3ae43a3217b275cbdd4a237249b3903b614f53",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1160
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 8,
+            "path": "qa/unit-032-evidence/renders/poppler/artifact/page-08.png",
+            "png_bytes": 204447,
+            "png_sha256": "2498c79570251f2b9f25c5b16321f51b3bb3bd93b9c4d8bfcb9e874ecddf27a2",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "aca60508760d7577cbe2bf258566c91f41506321b386032cb568ecb92eaf7371",
+            "nonwhite_bbox": [
+              96,
+              80,
+              903,
+              1245
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 9,
+            "path": "qa/unit-032-evidence/renders/poppler/artifact/page-09.png",
+            "png_bytes": 274328,
+            "png_sha256": "0af73a7eee1554b0eff3bc0f56c84cbe780765cbf62c6623ec081be990e18ed2",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "db94e927552329d588c0759798b3a280c6d779a332bb43d81272098df3ca70e0",
+            "nonwhite_bbox": [
+              96,
+              80,
+              903,
+              1234
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 10,
+            "path": "qa/unit-032-evidence/renders/poppler/artifact/page-10.png",
+            "png_bytes": 214455,
+            "png_sha256": "c5b1fd3879feae6bd798962812489d18fbcebd7d0f85945807db87ed756ee48d",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "fb7a2faac4507b0d6413d32e825436d3174e6c36c5b5e818d73b8d0361495efc",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1274
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 11,
+            "path": "qa/unit-032-evidence/renders/poppler/artifact/page-11.png",
+            "png_bytes": 243009,
+            "png_sha256": "ebc77ef107ba5fafb15a4ec61f12a40e326a36982eb071ce4224bd728e14031f",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "ae7fcba651d06836a2801ec1aaf1bae7ccc0db8e8915e6df5cb64347457f6fd7",
+            "nonwhite_bbox": [
+              95,
+              80,
+              901,
+              1186
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 12,
+            "path": "qa/unit-032-evidence/renders/poppler/artifact/page-12.png",
+            "png_bytes": 246081,
+            "png_sha256": "5e387a2e73fb2551c37f1836e9fbd291bf25069889f39f98fa96563d44a0a382",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "502370188c39b27a650a05f49edf10189faae117c9f5ac7016a74858f87f5c34",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1053
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 13,
+            "path": "qa/unit-032-evidence/renders/poppler/artifact/page-13.png",
+            "png_bytes": 175483,
+            "png_sha256": "5a6f1e423387eb32e00909d703391ebe81d83315d2586bad6718794e6ba88702",
+            "size": [
+              998,
+              1418
+            ]
+          }
+        ],
+        "stderr": "Syntax Error: Missing language pack for 'Adobe-GB1' mapping\nSyntax Error: Unknown font tag 'F43'\nSyntax Error (55417): No font in show/space",
+        "stdout": ""
+      },
+      "build-i": {
+        "document": "build-i",
+        "dpi": 144,
+        "engine": "poppler",
+        "pages": [
+          {
+            "decoded_rgb_sha256": "fd29311d9c36a6c6c13b1676858d4363ff74eff88470c692b24f04b1894966c6",
+            "nonwhite_bbox": [
+              140,
+              111,
+              813,
+              1324
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 1,
+            "path": "qa/unit-032-evidence/renders/poppler/build-i/page-01.png",
+            "png_bytes": 85840,
+            "png_sha256": "d1670009996248a999409af78edafed5ff42c28ee22b7df7622e811819a6fc37",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "8af8dc5fdd628474721095624e4269b82275a8a09d7bb36462a69aec49588c8c",
+            "nonwhite_bbox": [
+              99,
+              118,
+              848,
+              1242
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 2,
+            "path": "qa/unit-032-evidence/renders/poppler/build-i/page-02.png",
+            "png_bytes": 136376,
+            "png_sha256": "4758fa3169ccfc9b55f2a84417d3d191e3a8ad2bafd41b842a1a64612b266786",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "6ccbe7f065919e8f332422a9ca6f805769fe91f560abbbf52bb056a368420b62",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1083
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 3,
+            "path": "qa/unit-032-evidence/renders/poppler/build-i/page-03.png",
+            "png_bytes": 172095,
+            "png_sha256": "98febb8d3b596ba0fb5eb1ac96214ab00f6ac28d9cae8c2c45ea4441d5a21091",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "ad58c486f771654f28137506727e192b00d3ccaa591a806b0a69262a2037c92c",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1274
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 4,
+            "path": "qa/unit-032-evidence/renders/poppler/build-i/page-04.png",
+            "png_bytes": 225913,
+            "png_sha256": "d34b134b8effb55d9a53b3ada70373272993f94461a4402b98223333974ee324",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "28a4ad9704a3eca98ab0bb2176455945ccd83a8c6ff3468991c42e9e3e7a5404",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1041
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 5,
+            "path": "qa/unit-032-evidence/renders/poppler/build-i/page-05.png",
+            "png_bytes": 173593,
+            "png_sha256": "cf7366ab6ef2e719ef6e3f436572de857aed45da887e0fa9b4c0f61086d051ac",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "f39ba05a87340950f9651427234bd35e781e359d3d0facffb4d62be0b1e85d2b",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1189
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 6,
+            "path": "qa/unit-032-evidence/renders/poppler/build-i/page-06.png",
+            "png_bytes": 180329,
+            "png_sha256": "3469407267c4d5e7cb72dfe7fd7d7667243c4eeabda0123bac2d56db597cf172",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "08b5eefd10a5c19e9adccd1817d3d307c5a3aa95b1ba914c4d3e86d270b0fed4",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1156
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 7,
+            "path": "qa/unit-032-evidence/renders/poppler/build-i/page-07.png",
+            "png_bytes": 206658,
+            "png_sha256": "683438cbf4f6bbc089cff2bc269f416faae2d82d25743689721b7bcecb2fa705",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "a8ad43e4cc4812e05d85da4b3f3ae43a3217b275cbdd4a237249b3903b614f53",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1160
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 8,
+            "path": "qa/unit-032-evidence/renders/poppler/build-i/page-08.png",
+            "png_bytes": 204447,
+            "png_sha256": "2498c79570251f2b9f25c5b16321f51b3bb3bd93b9c4d8bfcb9e874ecddf27a2",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "aca60508760d7577cbe2bf258566c91f41506321b386032cb568ecb92eaf7371",
+            "nonwhite_bbox": [
+              96,
+              80,
+              903,
+              1245
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 9,
+            "path": "qa/unit-032-evidence/renders/poppler/build-i/page-09.png",
+            "png_bytes": 274328,
+            "png_sha256": "0af73a7eee1554b0eff3bc0f56c84cbe780765cbf62c6623ec081be990e18ed2",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "db94e927552329d588c0759798b3a280c6d779a332bb43d81272098df3ca70e0",
+            "nonwhite_bbox": [
+              96,
+              80,
+              903,
+              1234
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 10,
+            "path": "qa/unit-032-evidence/renders/poppler/build-i/page-10.png",
+            "png_bytes": 214455,
+            "png_sha256": "c5b1fd3879feae6bd798962812489d18fbcebd7d0f85945807db87ed756ee48d",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "fb7a2faac4507b0d6413d32e825436d3174e6c36c5b5e818d73b8d0361495efc",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1274
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 11,
+            "path": "qa/unit-032-evidence/renders/poppler/build-i/page-11.png",
+            "png_bytes": 243009,
+            "png_sha256": "ebc77ef107ba5fafb15a4ec61f12a40e326a36982eb071ce4224bd728e14031f",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "ae7fcba651d06836a2801ec1aaf1bae7ccc0db8e8915e6df5cb64347457f6fd7",
+            "nonwhite_bbox": [
+              95,
+              80,
+              901,
+              1186
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 12,
+            "path": "qa/unit-032-evidence/renders/poppler/build-i/page-12.png",
+            "png_bytes": 246081,
+            "png_sha256": "5e387a2e73fb2551c37f1836e9fbd291bf25069889f39f98fa96563d44a0a382",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "502370188c39b27a650a05f49edf10189faae117c9f5ac7016a74858f87f5c34",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1053
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 13,
+            "path": "qa/unit-032-evidence/renders/poppler/build-i/page-13.png",
+            "png_bytes": 175483,
+            "png_sha256": "5a6f1e423387eb32e00909d703391ebe81d83315d2586bad6718794e6ba88702",
+            "size": [
+              998,
+              1418
+            ]
+          }
+        ],
+        "stderr": "Syntax Error: Missing language pack for 'Adobe-GB1' mapping\nSyntax Error: Unknown font tag 'F43'\nSyntax Error (55417): No font in show/space",
+        "stdout": ""
+      },
+      "build-j": {
+        "document": "build-j",
+        "dpi": 144,
+        "engine": "poppler",
+        "pages": [
+          {
+            "decoded_rgb_sha256": "fd29311d9c36a6c6c13b1676858d4363ff74eff88470c692b24f04b1894966c6",
+            "nonwhite_bbox": [
+              140,
+              111,
+              813,
+              1324
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 1,
+            "path": "qa/unit-032-evidence/renders/poppler/build-j/page-01.png",
+            "png_bytes": 85840,
+            "png_sha256": "d1670009996248a999409af78edafed5ff42c28ee22b7df7622e811819a6fc37",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "8af8dc5fdd628474721095624e4269b82275a8a09d7bb36462a69aec49588c8c",
+            "nonwhite_bbox": [
+              99,
+              118,
+              848,
+              1242
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 2,
+            "path": "qa/unit-032-evidence/renders/poppler/build-j/page-02.png",
+            "png_bytes": 136376,
+            "png_sha256": "4758fa3169ccfc9b55f2a84417d3d191e3a8ad2bafd41b842a1a64612b266786",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "6ccbe7f065919e8f332422a9ca6f805769fe91f560abbbf52bb056a368420b62",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1083
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 3,
+            "path": "qa/unit-032-evidence/renders/poppler/build-j/page-03.png",
+            "png_bytes": 172095,
+            "png_sha256": "98febb8d3b596ba0fb5eb1ac96214ab00f6ac28d9cae8c2c45ea4441d5a21091",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "ad58c486f771654f28137506727e192b00d3ccaa591a806b0a69262a2037c92c",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1274
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 4,
+            "path": "qa/unit-032-evidence/renders/poppler/build-j/page-04.png",
+            "png_bytes": 225913,
+            "png_sha256": "d34b134b8effb55d9a53b3ada70373272993f94461a4402b98223333974ee324",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "28a4ad9704a3eca98ab0bb2176455945ccd83a8c6ff3468991c42e9e3e7a5404",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1041
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 5,
+            "path": "qa/unit-032-evidence/renders/poppler/build-j/page-05.png",
+            "png_bytes": 173593,
+            "png_sha256": "cf7366ab6ef2e719ef6e3f436572de857aed45da887e0fa9b4c0f61086d051ac",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "f39ba05a87340950f9651427234bd35e781e359d3d0facffb4d62be0b1e85d2b",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1189
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 6,
+            "path": "qa/unit-032-evidence/renders/poppler/build-j/page-06.png",
+            "png_bytes": 180329,
+            "png_sha256": "3469407267c4d5e7cb72dfe7fd7d7667243c4eeabda0123bac2d56db597cf172",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "08b5eefd10a5c19e9adccd1817d3d307c5a3aa95b1ba914c4d3e86d270b0fed4",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1156
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 7,
+            "path": "qa/unit-032-evidence/renders/poppler/build-j/page-07.png",
+            "png_bytes": 206658,
+            "png_sha256": "683438cbf4f6bbc089cff2bc269f416faae2d82d25743689721b7bcecb2fa705",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "a8ad43e4cc4812e05d85da4b3f3ae43a3217b275cbdd4a237249b3903b614f53",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1160
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 8,
+            "path": "qa/unit-032-evidence/renders/poppler/build-j/page-08.png",
+            "png_bytes": 204447,
+            "png_sha256": "2498c79570251f2b9f25c5b16321f51b3bb3bd93b9c4d8bfcb9e874ecddf27a2",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "aca60508760d7577cbe2bf258566c91f41506321b386032cb568ecb92eaf7371",
+            "nonwhite_bbox": [
+              96,
+              80,
+              903,
+              1245
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 9,
+            "path": "qa/unit-032-evidence/renders/poppler/build-j/page-09.png",
+            "png_bytes": 274328,
+            "png_sha256": "0af73a7eee1554b0eff3bc0f56c84cbe780765cbf62c6623ec081be990e18ed2",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "db94e927552329d588c0759798b3a280c6d779a332bb43d81272098df3ca70e0",
+            "nonwhite_bbox": [
+              96,
+              80,
+              903,
+              1234
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 10,
+            "path": "qa/unit-032-evidence/renders/poppler/build-j/page-10.png",
+            "png_bytes": 214455,
+            "png_sha256": "c5b1fd3879feae6bd798962812489d18fbcebd7d0f85945807db87ed756ee48d",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "fb7a2faac4507b0d6413d32e825436d3174e6c36c5b5e818d73b8d0361495efc",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1274
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 11,
+            "path": "qa/unit-032-evidence/renders/poppler/build-j/page-11.png",
+            "png_bytes": 243009,
+            "png_sha256": "ebc77ef107ba5fafb15a4ec61f12a40e326a36982eb071ce4224bd728e14031f",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "ae7fcba651d06836a2801ec1aaf1bae7ccc0db8e8915e6df5cb64347457f6fd7",
+            "nonwhite_bbox": [
+              95,
+              80,
+              901,
+              1186
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 12,
+            "path": "qa/unit-032-evidence/renders/poppler/build-j/page-12.png",
+            "png_bytes": 246081,
+            "png_sha256": "5e387a2e73fb2551c37f1836e9fbd291bf25069889f39f98fa96563d44a0a382",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "502370188c39b27a650a05f49edf10189faae117c9f5ac7016a74858f87f5c34",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1053
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 13,
+            "path": "qa/unit-032-evidence/renders/poppler/build-j/page-13.png",
+            "png_bytes": 175483,
+            "png_sha256": "5a6f1e423387eb32e00909d703391ebe81d83315d2586bad6718794e6ba88702",
+            "size": [
+              998,
+              1418
+            ]
+          }
+        ],
+        "stderr": "Syntax Error: Missing language pack for 'Adobe-GB1' mapping\nSyntax Error: Unknown font tag 'F43'\nSyntax Error (55417): No font in show/space",
+        "stdout": ""
+      }
+    }
+  },
+  "status": "PASS_WITH_WARNINGS"
+}

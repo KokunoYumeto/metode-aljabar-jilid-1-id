@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan, seluruh Bab 1, seluruh Bab 2, seluruh Bab 3 termasuk latihannya, serta pembukaan Bab 4 sampai Bagian 4.7 telah diterjemahkan dan diterima dalam tiga puluh satu unit pembaca. Bagian 4.8 menjadi span sumber kanonik berikutnya.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan, seluruh Bab 1, seluruh Bab 2, seluruh Bab 3 termasuk latihannya, serta pembukaan Bab 4 sampai Bagian 4.8 telah diterjemahkan dan diterima dalam tiga puluh dua unit pembaca. Bagian 4.9 menjadi span sumber kanonik berikutnya.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh checkpoint pembaca 0.3.0 (96 halaman; Unit 1-9)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf)
 
@@ -73,6 +73,8 @@ Status saat ini: **Pendahuluan, seluruh Bab 1, seluruh Bab 2, seluruh Bab 3 term
 [Baca atau unduh PDF Unit 30](artifacts/unit-030-bab-4-deret-komposisi-grup-id.pdf)
 
 [Baca atau unduh PDF Unit 31](artifacts/unit-031-bab-4-grup-solvabel-dan-nilpoten-id.pdf)
+
+[Baca atau unduh PDF Unit 32](artifacts/unit-032-bab-4-grup-bebas-id.pdf)
 
 Checkpoint `0.6.0` menggabungkan satu sampul pembaca dan seluruh 228 halaman
 Unit 001-024: pendahuluan serta Bab 1, Bab 2, dan Bab 3 lengkap. Build kedua
@@ -463,9 +465,19 @@ Artefak Unit 31 yang diterima:
 - receipt penerimaan lokal ada di [`qa/UNIT_031_ADMISSION_20260826.md`](qa/UNIT_031_ADMISSION_20260826.md); bukti visual ada di [`qa/UNIT_031_VISUAL_QA_20260826.md`](qa/UNIT_031_VISUAL_QA_20260826.md), bukti backend ada di [`qa/unit-031-evidence/backend-validation.json`](qa/unit-031-evidence/backend-validation.json), dan audit akhir independen ada di [`qa/UNIT_031_FINAL_AUDIT_20260826.md`](qa/UNIT_031_FINAL_AUDIT_20260826.md).
 - Unit 31 dipublikasikan pada commit isi `257fafa97f8582e243b4f69b67c68a0e287b7b3d`; seluruh 54 path / 5.016.055 byte cocok dengan blob komit pada pembacaan balik anonim. Inventaris lengkap ada di [`qa/PUBLICATION_GITHUB_UNIT_031_CONTENT_READBACK.json`](qa/PUBLICATION_GITHUB_UNIT_031_CONTENT_READBACK.json), dan receipt publikasi ada di [`qa/PUBLICATION_GITHUB_UNIT_031_20260826.md`](qa/PUBLICATION_GITHUB_UNIT_031_20260826.md).
 
+Artefak Unit 32 yang diterima:
+
+- 13 halaman; 149.624 byte; SHA-256 `904330916e20f0782b6464cb85e07001851940f4adf153f6592cd34087dbadbf`.
+- rentang otoritas Bagian 4.8 lengkap adalah `chapter4.tex:1108-1388`; baris 1388 hanya pemisah kosong. Kandidat 27.910 byte / SHA-256 `28e8fd2475a89b4617c26b21f0753aa95a81c7bc8524b7540881281159ab4cfc` menempati target kanonik baris 1104-1383 secara byte-identik. File target lengkap 181.896 byte / SHA-256 `4381ae10c0e44eca80c40c25d602af39ed9da2e3725a35968ad697d40cc7f680`; Bagian 4.9 yang belum diterjemahkan dimulai pada target baris 1384 dan bersesuaian dengan baris otoritas 1389.
+- backend 460.681 byte; SHA-256 `a3f68cd45d5fc44720e769c7a12d745a4af78d7a361e6e8b81a1c5019be1a030`; 589 catatan kompatibel-konsep dan 660 identitas UUIDv5 yang diaudit mencakup 52 pasangan lingkungan, 10 label, 20 rujukan, enam kemunculan sitasi, 11 butir daftar, 367 zona matematika, 11 diagram/28 panah, delapan perintah gambar, tujuh entri indeks, 30 istilah, dua koreksi sumber, 13 lokalisasi teks terlindungi, empat lokalisasi penunjuk sitasi, dan dua reflow digital. Tidak ada latihan, petunjuk, jawaban, atau solusi yang diada-adakan. Enam proyeksi CSV deterministik dan 94 kemunculan binding pada 39 path hidup lulus audit.
+- koreksi `O013-LI-U032-COR-001` menyelaraskan indeks akhir penutup normal dengan jumlah relasi `w_m`; `O013-LI-U032-COR-002` membetulkan ejaan nama Guralnick. Kedua reflow digital memecah display himpunan berdukungan hingga menjadi baris yang terbaca tanpa mengubah keanggotaan, kuantor, syarat dukungan hingga, atau urutan suku.
+- dua build bersih dan artefak menghasilkan 78 render; semua perbandingan piksel dalam renderer yang sama identik dan semua tepi luar bersih. Dua overflow display sebesar 22,16992 pt dan 27,03485 pt telah dihilangkan. Tiga underfull hbox tersisa telah diperiksa dan tidak memengaruhi bacaan. Tiga outline, 30 tautan internal, enam URI aman, dan 28 fon tertanam lulus. PDF tanpa tag dan keterbatasan ekstraksi fon matematika dicatat.
+- receipt penerimaan lokal ada di [`qa/UNIT_032_ADMISSION_20260826.md`](qa/UNIT_032_ADMISSION_20260826.md); bukti visual ada di [`qa/UNIT_032_VISUAL_QA_20260826.md`](qa/UNIT_032_VISUAL_QA_20260826.md), bukti backend ada di [`qa/unit-032-evidence/backend-validation.json`](qa/unit-032-evidence/backend-validation.json), dan audit akhir independen ada di [`qa/UNIT_032_FINAL_AUDIT_20260826.md`](qa/UNIT_032_FINAL_AUDIT_20260826.md).
+- Publikasi GitHub dan pembacaan balik byte anonim adalah transaksi berikutnya; baris ini akan diganti oleh receipt publik setelah transaksi berhasil.
+
 ## Backend modular
 
-`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-031-bab-4-grup-solvabel-dan-nilpoten.json` adalah catatan kanonik tiga puluh satu unit yang telah diterima. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7, Unit 18, dan Unit 24 mempertahankan latihan sebagai entitas bagian terurut serta setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat. Unit 10-31 memakai identitas yang sama untuk permukaan matematika, diagram, rujukan eksternal, indeks, sitasi, koreksi atau normalisasi sumber, reflow digital, serta provenance model; receipt penerimaan masing-masing mengikat bukti lokal dan, setelah publikasi, bukti publiknya.
+`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-032-bab-4-grup-bebas.json` adalah catatan kanonik tiga puluh dua unit yang telah diterima. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7, Unit 18, dan Unit 24 mempertahankan latihan sebagai entitas bagian terurut serta setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat. Unit 10-32 memakai identitas yang sama untuk permukaan matematika, diagram, rujukan eksternal, indeks, sitasi, koreksi atau normalisasi sumber, reflow digital, serta provenance model; receipt penerimaan masing-masing mengikat bukti lokal dan, setelah publikasi, bukti publiknya.
 
 Validasi:
 

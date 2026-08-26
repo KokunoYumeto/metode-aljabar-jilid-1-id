@@ -1,0 +1,23 @@
+entity_type,id,stable_key,section_id,ordinal,source_value,target_value,format,status
+build_surface,urn:uuid:116e8bf2-fc6d-5c8f-ad69-47b642c6d021,build-surface/unit-032-pdf,,,pwsh -NoProfile -File scripts/build_unit_032.ps1 -OutputDirectory build/unit-032-replay,artifacts/unit-032-bab-4-grup-bebas-id.pdf,pdf,pass
+citation,urn:uuid:c54e2487-dc4b-5df8-ad24-3c1c74aacaed,citation/unit-032/01-gm12,urn:uuid:5568ebc8-788a-5478-853d-ad6479f1d1ca,,GM12,GM12,biblatex-key,preserved
+citation,urn:uuid:c54edec2-8cc2-51be-8e51-d3f0948895c0,citation/unit-032/02-de11,urn:uuid:5568ebc8-788a-5478-853d-ad6479f1d1ca,,De11,De11,biblatex-key,preserved
+citation,urn:uuid:6cee0afa-856e-5ec6-84bb-2589148906c4,citation/unit-032/03-you,urn:uuid:5568ebc8-788a-5478-853d-ad6479f1d1ca,,You,You,biblatex-key,preserved
+diagram,urn:uuid:b3f33e97-c1fa-5b72-911d-474d747f06f0,diagram/unit-032/tikzcd-01,urn:uuid:5568ebc8-788a-5478-853d-ad6479f1d1ca,1,1115-1118,1111-1114,tikzcd,audited_preserved
+diagram,urn:uuid:77a7810b-7d17-5857-b1e6-6f629092f71e,diagram/unit-032/tikzcd-02,urn:uuid:5568ebc8-788a-5478-853d-ad6479f1d1ca,2,1124-1127,1120-1123,tikzcd,audited_preserved
+diagram,urn:uuid:d352418a-0855-5fb5-8496-bf8c4c992be3,diagram/unit-032/tikzcd-03,urn:uuid:5568ebc8-788a-5478-853d-ad6479f1d1ca,3,1132-1135,1128-1131,tikzcd,audited_preserved
+diagram,urn:uuid:423d5af6-d0cb-5518-85ef-7a726f83ad45,diagram/unit-032/tikzcd-04,urn:uuid:5568ebc8-788a-5478-853d-ad6479f1d1ca,4,1150-1150,1146-1146,tikzcd,audited_preserved
+diagram,urn:uuid:cbfd6f67-b276-5e24-95ec-8c1cf1ab7075,diagram/unit-032/tikzcd-05,urn:uuid:5568ebc8-788a-5478-853d-ad6479f1d1ca,5,1176-1179,1172-1175,tikzcd,audited_preserved
+diagram,urn:uuid:18996903-1fc4-5186-b393-01ded01e6119,diagram/unit-032/tikzcd-06,urn:uuid:5568ebc8-788a-5478-853d-ad6479f1d1ca,6,1203-1206,1199-1202,tikzcd,audited_preserved
+diagram,urn:uuid:123fa56f-b990-5a8e-aa70-191ccb5670b6,diagram/unit-032/tikzcd-07,urn:uuid:5568ebc8-788a-5478-853d-ad6479f1d1ca,7,1222-1225,1218-1221,tikzcd,audited_preserved
+diagram,urn:uuid:d94dafba-47cd-5251-b250-d0b8fa568900,diagram/unit-032/tikzcd-08,urn:uuid:5568ebc8-788a-5478-853d-ad6479f1d1ca,8,1291-1294,1287-1290,tikzcd,audited_preserved
+diagram,urn:uuid:92f8697e-e08d-5b0c-8343-e2ca7cdd4ddd,diagram/unit-032/tikzcd-09,urn:uuid:5568ebc8-788a-5478-853d-ad6479f1d1ca,9,1304-1307,1300-1303,tikzcd,audited_preserved
+diagram,urn:uuid:01790fb7-6b1d-59a6-b187-ba7a5a00c2c0,diagram/unit-032/tikzpicture-01,urn:uuid:5568ebc8-788a-5478-853d-ad6479f1d1ca,10,1361-1366,1357-1362,tikzpicture,audited_preserved
+diagram,urn:uuid:d797e245-87d9-5df4-bed3-20390d42c391,diagram/unit-032/tikzpicture-02,urn:uuid:5568ebc8-788a-5478-853d-ad6479f1d1ca,11,1370-1381,1366-1377,tikzpicture,audited_preserved
+index_entry,urn:uuid:a6ab3802-63a3-5784-9762-772b4a1bcf59,index-entry/unit-032/main/001,urn:uuid:5568ebc8-788a-5478-853d-ad6479f1d1ca,1,yaobanqun!自由幺半群 (free monoid),yaobanqun!monoid bebas (free monoid),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:bbaeeeca-156f-5af8-b18e-ec295c6e86f3,index-entry/unit-032/main/002,urn:uuid:5568ebc8-788a-5478-853d-ad6479f1d1ca,2,qun!自由群 (free group),qun!grup bebas (free group),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:86222ca0-a60a-5b7a-837d-766cd69d9b25,index-entry/unit-032/main/003,urn:uuid:5568ebc8-788a-5478-853d-ad6479f1d1ca,3,rongheji@融合积 (amalgamated product),rongheji@produk teramalgamasi (amalgamated product),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:8adcf6a2-b429-5fe5-a248-dbecc78f1360,index-entry/unit-032/main/004,urn:uuid:5568ebc8-788a-5478-853d-ad6479f1d1ca,4,ziyouji@自由积 (free product),ziyouji@produk bebas (free product),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:f1713f2e-3987-5fa4-b7b0-f5efc8ca60c5,index-entry/unit-032/main/005,urn:uuid:5568ebc8-788a-5478-853d-ad6479f1d1ca,5,qunzhanshi@群展示 (group presentation),qunzhanshi@presentasi grup (group presentation),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:e247afda-131d-5c32-81ce-14de95f21309,index-entry/unit-032/main/006,urn:uuid:5568ebc8-788a-5478-853d-ad6479f1d1ca,6,youxianshengcheng@有限生成 (finitely generated),youxianshengcheng@dibangkitkan secara berhingga (finitely generated),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:f5b4613b-81bc-5fa1-810b-5af5dab08420,index-entry/unit-032/main/007,urn:uuid:5568ebc8-788a-5478-853d-ad6479f1d1ca,7,youxianzhanshi@有限展示 (finitely presented),youxianzhanshi@dipresentasikan secara berhingga (finitely presented),latex-index-key,source_key_preserved_target_key_localized

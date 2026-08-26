@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "checked_utc": "2026-08-26T02:32:24Z",
+  "status": "PASS",
+  "repository": "https://github.com/KokunoYumeto/metode-aljabar-jilid-1-id",
+  "branch": "main",
+  "commit": "8a2112a6a2d3d0e8bbedef7e30c6cc8bff5aa7b9",
+  "parent": "ca10067c2602ca7a93bb721fd46614ae0c16cdaa",
+  "tree": "548b662ae71ef7b878ace42bcd1f5baaa892e600",
+  "anonymous": true,
+  "authorization_header_used": false,
+  "remote_main_before": "8a2112a6a2d3d0e8bbedef7e30c6cc8bff5aa7b9",
+  "remote_main_after": "8a2112a6a2d3d0e8bbedef7e30c6cc8bff5aa7b9",
+  "path_fetch_count": 9,
+  "total_bytes_fetched": 413895,
+  "all_match": true,
+  "records": [
+    {
+      "path": "00_control/ADVERSE_LEDGER.jsonl",
+      "bytes": 39766,
+      "sha256": "d7b1e4fb2ddf7df2fe8dbad18ae0f148776e31f49f535611935808877f745a17",
+      "http_status": 200,
+      "matches_committed_blob": true
+    },
+    {
+      "path": "00_control/CURRENT_CURSOR.json",
+      "bytes": 37545,
+      "sha256": "02fb0796f6d590275456b65cdda32117dfbb8e8fabc8ca2c7274c43349ed34f4",
+      "http_status": 200,
+      "matches_committed_blob": true
+    },
+    {
+      "path": "00_control/CURRENT_GOAL_AND_WORKFLOW.md",
+      "bytes": 14439,
+      "sha256": "3e4d7bd0cca512d7eac274a1c3d661efc672e354598e1aee983453c4fb462904",
+      "http_status": 200,
+      "matches_committed_blob": true
+    },
+    {
+      "path": "00_control/CURRENT_STATE.md",
+      "bytes": 79254,
+      "sha256": "3868f3ea64b12629176b441e47cdf6809b7bdb1686570c4773f60a9b96e97260",
+      "http_status": 200,
+      "matches_committed_blob": true
+    },
+    {
+      "path": "00_control/DECISION_LOG.md",
+      "bytes": 83821,
+      "sha256": "2cc135adb5fd95986fa0e94aa838ae4116d26bc6074535413211283dc9c90df2",
+      "http_status": 200,
+      "matches_committed_blob": true
+    },
+    {
+      "path": "00_control/RECOVERY_POINTER.json",
+      "bytes": 14429,
+      "sha256": "ac7aead0c0e680a7680e78c8d9be513933e34e9781d1adef23208d0669bb6bf2",
+      "http_status": 200,
+      "matches_committed_blob": true
+    },
+    {
+      "path": "00_control/WORKLOG.jsonl",
+      "bytes": 91499,
+      "sha256": "635b2060c75a193acbf3fb1cc91cc09989a245cfab5b7e5adf781513751a8df2",
+      "http_status": 200,
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/PUBLICATION_GITHUB_UNIT_031_RECEIPT_READBACK.json",
+      "bytes": 1455,
+      "sha256": "8d543eb4779f0be3f05a919295af6bd6db3aadb3ed884f87ac2a47df6d96e3a4",
+      "http_status": 200,
+      "matches_committed_blob": true
+    },
+    {
+      "path": "scripts/update_controls_unit_031.py",
+      "bytes": 51687,
+      "sha256": "5101f634b23279ad028cd39458ab651588c8fb0d938b6fc17bff3942df9f5337",
+      "http_status": 200,
+      "matches_committed_blob": true
+    }
+  ],
+  "method": "credential-disabled anonymous git ls-remote plus raw.githubusercontent.com byte comparison"
+}

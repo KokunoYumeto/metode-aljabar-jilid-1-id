@@ -1,0 +1,149 @@
+{
+  "status": "PASS",
+  "unit": "unit-032-bab-4-grup-bebas",
+  "authority": "chapter4.tex:1108-1388 (blank line 1388 omitted from mapping)",
+  "target": "chapter4.tex:1104-1383",
+  "data": "backend/data/unit-032-bab-4-grup-bebas.json",
+  "schema": "backend/schema/open-math-corpus-unit.schema.v1.json",
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "provenance_actor": "Codex acting on the user's instruction",
+  "artifact": {
+    "path": "artifacts/unit-032-bab-4-grup-bebas-id.pdf",
+    "pages": 13,
+    "bytes": 149624,
+    "sha256": "904330916e20f0782b6464cb85e07001851940f4adf153f6592cd34087dbadbf"
+  },
+  "counts": {
+    "source_records_including_blank_boundary": 281,
+    "candidate_records": 280,
+    "environment_pairs": 52,
+    "environment_markers": 104,
+    "labels": 10,
+    "ordinary_references": 14,
+    "equation_references": 6,
+    "citations": 6,
+    "list_items": 11,
+    "protected_math_zones": 367,
+    "diagrams": 11,
+    "tikzcd_diagrams": 9,
+    "tikzpicture_diagrams": 2,
+    "diagram_arrows": 28,
+    "drawing_commands": 8,
+    "index_entries": 7,
+    "source_corrections": 2,
+    "protected_text_localizations": 13,
+    "citation_locator_localizations": 4,
+    "digital_reflows": 2,
+    "exercises": 0,
+    "hints": 0,
+    "answers": 0,
+    "solutions": 0,
+    "csv_projections": 6,
+    "concepts": 589,
+    "native_citations": 3,
+    "citation_occurrences": 6,
+    "terminology_rows": 30,
+    "qa_events": 18,
+    "uuidv5_entities_audited": 660
+  },
+  "checks": {
+    "deterministic_regeneration_one": "PASS",
+    "deterministic_regeneration_two": "PASS",
+    "shared_schema_uuidv5_and_exact_csv": "PASS",
+    "exact_589_entity_topology": "PASS",
+    "authority_candidate_target_boundary": "PASS",
+    "two_declared_source_corrections": "PASS",
+    "two_target_only_digital_reflows": "PASS",
+    "thirteen_protected_text_localizations": "PASS",
+    "four_citation_locator_localizations": "PASS",
+    "component_rights_and_non_endorsement": "PASS",
+    "reader_build_and_all_page_visual_bindings": "PASS",
+    "validation_mutated_outputs": false
+  },
+  "binding_audit": {
+    "occurrences": 94,
+    "line_span_occurrences": 40,
+    "unique_paths": 39,
+    "paths": [
+      "00_control/SOURCE_MANIFEST.csv",
+      "00_control/TERMINOLOGY.id-ID.csv",
+      "artifacts/unit-032-bab-4-grup-bebas-id.pdf",
+      "authority/archives/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b.zip",
+      "authority/pdfs/Al-jabr-1.pdf",
+      "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter4.tex",
+      "build/unit-032-candidate/chapter4-free-groups-id.tex",
+      "build/unit-032-staging/terminology-delta.csv",
+      "qa/UNIT_032_BUILD_FINAL.log",
+      "qa/UNIT_032_PREPROMOTION_AUDIT_20260826.md",
+      "qa/UNIT_032_TERMINOLOGY_AUDIT_20260826.md",
+      "qa/UNIT_032_TRANSLATION_REVIEW_20260825.md",
+      "qa/UNIT_032_VISUAL_PREFLIGHT_20260826.md",
+      "qa/UNIT_032_VISUAL_QA_20260826.md",
+      "qa/unit-032-evidence/render-hash-inventory.json",
+      "qa/unit-032-evidence/structure-and-pdf-qa.json",
+      "repo/fonts/NotoSansCJKsc-Black.otf",
+      "repo/fonts/NotoSansCJKsc-Medium.otf",
+      "repo/fonts/NotoSansCJKsc-Regular.otf",
+      "repo/fonts/NotoSerifCJKsc-Bold.otf",
+      "repo/fonts/OFL-1.1-Noto-CJK.txt",
+      "repo/source/AJbook.cls",
+      "repo/source/Al-jabr.bib",
+      "repo/source/LICENSE",
+      "repo/source/Lanzhou.png",
+      "repo/source/ccby.png",
+      "repo/source/chapter4.tex",
+      "repo/source/coverpage-id-unit-032.tex",
+      "repo/source/font-setup-id.tex",
+      "repo/source/locale-ui-id.tex",
+      "repo/source/myarrows.sty",
+      "repo/source/mycommand.sty",
+      "repo/source/titles-setup-id.tex",
+      "repo/source/titles-setup.tex",
+      "repo/source/unit-032-bab-4-grup-bebas.tex",
+      "repo/source/unit-032-crossrefs.aux",
+      "scripts/build_unit_032.ps1",
+      "scripts/check_unit_032_candidate.py",
+      "scripts/check_unit_032_structure.py"
+    ]
+  },
+  "identities": {
+    "backend/data/unit-032-bab-4-grup-bebas.json": {
+      "bytes": 460681,
+      "sha256": "a3f68cd45d5fc44720e769c7a12d745a4af78d7a361e6e8b81a1c5019be1a030"
+    },
+    "backend/csv/unit-032-bindings.csv": {
+      "bytes": 20646,
+      "sha256": "b7d4df6eb2ea7a4360307c89fdc890d59fcbee9dc2ce4420a86a2a35aa739aa5"
+    },
+    "backend/csv/unit-032-entities.csv": {
+      "bytes": 142810,
+      "sha256": "7259cf01faf9244446f229e06979042112459f9014a922128da0495d96afb26b"
+    },
+    "backend/csv/unit-032-qa.csv": {
+      "bytes": 5556,
+      "sha256": "d6be046cb63e8f0f493a3e859cd062caa068590d73007c963819a2080647bf27"
+    },
+    "backend/csv/unit-032-relations.csv": {
+      "bytes": 343232,
+      "sha256": "10993eeae92ee1dec93e10d5c82a0e80091558f7aabdafc2dea8c4ae4543f8ef"
+    },
+    "backend/csv/unit-032-rights.csv": {
+      "bytes": 1287,
+      "sha256": "4836630530f87a11a64fe233c59970e2ff7942695a8dbf404f7a0583a275197e"
+    },
+    "backend/csv/unit-032-surfaces.csv": {
+      "bytes": 4711,
+      "sha256": "3d7ed60f7d40a908128622832235657dde45c6aad5ec4fa540a18c9cecb3671b"
+    }
+  },
+  "tools": {
+    "scripts/generate_unit_032_backend.py": {
+      "bytes": 51943,
+      "sha256": "db57fabb7185a50ee5609d79d3a6c2e8992b413415f2a9f6032ddf2e5eb62d2b"
+    },
+    "scripts/validate_unit_032_backend.py": {
+      "bytes": 15030,
+      "sha256": "3ddb74cba94c31b19d4baa39fe8101181c8b4aee3eea52402c33da16100b150a"
+    }
+  }
+}

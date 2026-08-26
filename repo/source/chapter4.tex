@@ -1101,74 +1101,74 @@ Sekarang tinjau konstruksi lain. Untuk suatu grup $G$, ambil $Z^0 = \{1\}$, lalu
 	\end{gather*}
 	Persamaan-persamaan ini tidak lebih dari analisis elementer. Dari relasi di atas, diperoleh $L \cap L' = \{0\}$ dan bahwa $[\cdot, \cdot]$ takdegenerat pada jumlah langsung ruang vektor $W := L \oplus L'$. Dengan demikian, dari $V$ diperoleh grup Heisenberg $\mathcal{H}(W)$. Dalam mekanika kuantum, ambil $V=\R^3$ dan pilih satuan secara tepat sehingga $\hbar=1$. Maka $L$ dan $L'$ masing-masing direntang oleh momentum $p_i := \sqrt{-1}\partial_{v_i}$ dan operator posisi $q_i := x_i$ dalam ruang. Relasi $[\partial_{v_i}, x_j] = \delta_{i,j}$ menjadi relasi komutasi kanonik yang dikenal dalam mekanika kuantum. Perhatikan bahwa $p_i$ tepat merupakan transformasi Fourier dari $q_i$.
 \end{example}
-\section{自由群}\label{sec:free-group}
-设 $X$ 为集合. 概略地说, $X$ 上的自由群 $\mathbf{F}(X)$ 是由从 $X$ 的元素出发, ``形式地''进行乘法与取逆所能得到的表达式组成的群. 这些表达式称为自由群里的\emph{字}, 也称 $X$ 为字母集. 例如当 $X=\{x,y\}$ 时, $\mathbf{F}(X)$ 是由
+\section{Grup Bebas}\label{sec:free-group}
+Misalkan $X$ sebuah himpunan. Secara kasar, pada himpunan $X$, grup bebas $\mathbf{F}(X)$ adalah grup yang terdiri atas ungkapan-ungkapan yang dapat diperoleh dengan memulai dari unsur-unsur $X$, lalu melakukan perkalian dan pengambilan invers secara ``formal''. Ungkapan-ungkapan ini disebut \emph{kata} dalam grup bebas, dan $X$ disebut alfabetnya. Sebagai contoh, ketika $X=\{x,y\}$, $\mathbf{F}(X)$ adalah himpunan yang terdiri atas tak hingga banyak kata
 \[ 1, x, y, x^{-1}, y^{-1}, xy, yx, x^2, yxy, \cdots \]
-等无穷多个字组成的集合. ``自由''意谓字的乘法除群论的基本要求如结合律和 $x x^{-1}=1$ 外, 再无其它约束. 自由群可以由泛性质 (参看 \S\ref{sec:cat-universals}) 刻画. 我们也一并考虑自由幺半群.
+dan seterusnya. Kata ``bebas'' berarti bahwa perkalian kata tidak tunduk pada kendala apa pun selain syarat-syarat dasar teori grup, seperti hukum asosiatif dan $x x^{-1}=1$. Grup bebas dapat dicirikan oleh suatu sifat universal (lihat \S\ref{sec:cat-universals}). Kita juga akan membahas monoid bebas.
 
-\begin{definition}[自由幺半群]\label{def:free-monoid}\index{yaobanqun!自由幺半群 (free monoid)}
-	考虑形如 $(\mathbf{M}(X), \iota)$ 的资料, 其中$\mathbf{M}(X)$ 是幺半群而 $\iota: X \to \mathbf{M}(X)$ 是集合间的映射. 若对任意幺半群 $M'$ 及映射 $\iota': X \to M'$, 存在唯一的同态 $\varphi: \mathbf{M}(X) \to M'$ 使得下图交换
+\begin{definition}[Monoid bebas]\label{def:free-monoid}\index{yaobanqun!monoid bebas (free monoid)}
+	Perhatikan data berbentuk $(\mathbf{M}(X), \iota)$, dengan $\mathbf{M}(X)$ sebuah monoid dan $\iota: X \to \mathbf{M}(X)$ sebuah pemetaan himpunan. Jika untuk setiap monoid $M'$ dan pemetaan $\iota': X \to M'$, terdapat homomorfisme unik $\varphi: \mathbf{M}(X) \to M'$ yang membuat diagram berikut komutatif,
 	\[ \begin{tikzcd}
 		X \arrow[r, "\iota"] \arrow[rd, "{\iota'}"'] & \mathbf{M}(X) \arrow[dashed, d, "{\exists! \varphi}"] \\
 		& M'
 	\end{tikzcd} \]
-	则称 $(\mathbf{M}(X), \iota)$ 为 $X$ 上的自由幺半群.
+	maka $(\mathbf{M}(X), \iota)$ disebut monoid bebas pada $X$.
 \end{definition}
 
-\begin{definition}[自由群]\label{def:free-group}\index{qun!自由群 (free group)}
-	考虑形如 $(\mathbf{F}(X), \iota)$ 的资料, $\mathbf{F}(X)$ 是群而 $\iota: X \to \mathbf{F}(X)$ 是集合间的映射. 若对任意群 $G$ 及映射 $\iota': X \to G$, 存在唯一的同态 $\varphi: \mathbf{F}(X) \to G$ 使得下图交换
+\begin{definition}[Grup bebas]\label{def:free-group}\index{qun!grup bebas (free group)}
+	Perhatikan data berbentuk $(\mathbf{F}(X), \iota)$, dengan $\mathbf{F}(X)$ sebuah grup dan $\iota: X \to \mathbf{F}(X)$ sebuah pemetaan himpunan. Jika untuk setiap grup $G$ dan pemetaan $\iota': X \to G$, terdapat homomorfisme unik $\varphi: \mathbf{F}(X) \to G$ yang membuat diagram berikut komutatif,
 	\[ \begin{tikzcd}
 		X \arrow[r, "\iota"] \arrow[rd, "{\iota'}"'] & \mathbf{F}(X) \arrow[dashed, d, "{\exists! \varphi}"] \\
 		& G
 	\end{tikzcd} \]
-	则称 $(\mathbf{F}(X), \iota)$ 为 $X$ 上的\emph{自由群}.
+	maka $(\mathbf{F}(X), \iota)$ disebut \emph{grup bebas} pada $X$.
 \end{definition}
 
-由定义立得 $\mathbf{M}(X)$, $\mathbf{F}(X)$ 的一些形式性质, 例如任意映射 $f: X \to Y$ 给出唯一的交换图表
+Dari definisi tersebut segera diperoleh beberapa sifat formal $\mathbf{M}(X)$ dan $\mathbf{F}(X)$. Sebagai contoh, setiap pemetaan $f: X \to Y$ menghasilkan sebuah diagram komutatif unik
 \[ \begin{tikzcd}
 	X \arrow[d, "f"'] \arrow[r, "{\iota_X}"] & \mathbf{M}(X) \arrow[d, "{\varphi_f}"] \\
 	Y \arrow[r, "{\iota_Y}"'] & \mathbf{M}(Y)
 \end{tikzcd} \]
-其中 $\varphi_f$ 是同态: 在 $\mathbf{M}(X)$ 的泛性质中取 $M' = \mathbf{M}(Y)$, $\iota' = \iota_Y \circ f$ 即可; 显然 $\varphi_{\identity_X} = \identity_{\mathbf{M}(X)}$, 因此 $X \mapsto \mathbf{M}(X)$ 成为函子. 同理 $X \mapsto \mathbf{F}(X)$ 也有类似的函子性, 记号中经常略去 $\iota$.
+dengan $\varphi_f$ sebuah homomorfisme: dalam sifat universal $\mathbf{M}(X)$, cukup ambil $M' = \mathbf{M}(Y)$ dan $\iota' = \iota_Y \circ f$. Jelas bahwa $\varphi_{\identity_X} = \identity_{\mathbf{M}(X)}$, sehingga $X \mapsto \mathbf{M}(X)$ menjadi sebuah fungtor. Demikian pula, $X \mapsto \mathbf{F}(X)$ memiliki sifat fungtorial serupa. Notasi $\iota$ sering dihilangkan.
 
 \begin{remark}
-	换个角度看, 自由群的构造 $X \mapsto (\mathbf{F}(X), \iota: X \to \mathbf{F}(X))$ 决定了忘却函子 $U: \cate{Grp} \to \cate{Set}$ 的左伴随函子:
+	Dari sudut pandang lain, konstruksi grup bebas $X \mapsto (\mathbf{F}(X), \iota: X \to \mathbf{F}(X))$ menentukan fungtor adjoin kiri bagi fungtor pelupa $U: \cate{Grp} \to \cate{Set}$:
 	\begin{align*}
 		\Hom_\cate{Set}(X, G) & \longrightiso \Hom_\cate{Grp}(\mathbf{F}(X), G) \\
 		\iota' & \longmapsto \varphi.
 	\end{align*}
-	大而化之地说, 代数学中的一条基本原理是
+	Secara umum, salah satu prinsip dasar dalam aljabar adalah
 	\begin{center}
-		自由构造 = 忘却函子的左伴随.
+		konstruksi bebas = fungtor adjoin kiri dari fungtor pelupa.
 	\end{center}
-	之后讨论多项式环, 自由模等构造时还会反复见证这一原理.
+	Kita akan menjumpai prinsip ini berulang kali ketika membahas konstruksi seperti gelanggang polinomial dan modul bebas.
 \end{remark}
-给定 $X$, 由 \S\ref{sec:cat-universals} 的讨论知自由幺半群或自由群若存在, 则在差一个唯一同构的意义下是唯一的. 举自由幺半群为例, 若资料 $(F_1, \iota_1)$ 和 $(F_2, \iota_2)$ 都是自由幺半群, 则从定义知存在唯一的同态 $\begin{tikzcd}[column sep=small] F_1 \arrow[r, yshift=0.5ex, "\varphi"] & F_2 \arrow[l, yshift=-0.5ex, "\psi"] \end{tikzcd}$ 使得 $\varphi \iota_1 =\iota_2$, $\psi \iota_2 = \iota_1$. 由唯一性可知 $ \varphi\psi \iota_2 = \iota_2 \implies \varphi\psi = \identity_{F_2}$, 同理 $\psi\varphi = \identity_{F_1}$, 它们是所求的同构.
+Untuk $X$ tertentu, pembahasan dalam \S\ref{sec:cat-universals} menunjukkan bahwa jika monoid bebas atau grup bebas ada, maka objek itu unik hingga isomorfisme unik. Sebagai contoh, andaikan data $(F_1, \iota_1)$ dan $(F_2, \iota_2)$ keduanya merupakan monoid bebas. Definisi memberikan homomorfisme-homomorfisme unik $\begin{tikzcd}[column sep=small] F_1 \arrow[r, yshift=0.5ex, "\varphi"] & F_2 \arrow[l, yshift=-0.5ex, "\psi"] \end{tikzcd}$ sedemikian sehingga $\varphi \iota_1 =\iota_2$ dan $\psi \iota_2 = \iota_1$. Dari keunikan diperoleh $ \varphi\psi \iota_2 = \iota_2 \implies \varphi\psi = \identity_{F_2}$, dan demikian pula $\psi\varphi = \identity_{F_1}$, sehingga keduanya merupakan isomorfisme yang dicari.
 
-万事俱备, 只差构造. 我们先处理自由幺半群 $(\mathbf{M}(X), \iota)$. 定义 $\mathbf{M}(X)$ 为形如
+Semua yang diperlukan telah tersedia; tinggal memberikan konstruksinya. Kita mulai dengan monoid bebas $(\mathbf{M}(X), \iota)$. Definisikan $\mathbf{M}(X)$ sebagai himpunan ``kata'' berbentuk
 \[ g := x_1 x_2  \cdots x_n, \qquad n \in \Z_{\geq 0}, \quad x_1, \ldots, x_n \in X \]
-的``字''构成的集合; 严格说, 字 $g$ 是 $X$ 中一个 $n$ 项的序列 $(x_i)_{i=1}^n$; 称 $n$ 为字 $g$ 的\emph{长度}. 当 $n=0$ 时相应的字是空的 (即空序列), 记之为 $1$.
+Secara ketat, kata $g$ adalah suatu barisan dalam $X$ dengan $n$ suku, yaitu $(x_i)_{i=1}^n$; $n$ disebut \emph{panjang} kata $g$. Ketika $n=0$, kata yang bersesuaian adalah kata kosong (yakni barisan kosong), yang dinotasikan dengan $1$.
 
-设 $g = x_1 \cdots x_n$, $h = y_1 \cdots y_m$ 为两个字, 其积 $gh$ 无非是两字的合成
+Misalkan $g = x_1 \cdots x_n$ dan $h = y_1 \cdots y_m$ dua kata. Produk $gh$ tidak lain adalah konkatenasi kedua kata,
 \[ gh := x_1 \cdots x_n y_1 \cdots y_m; \]
-按定义自然有 $g \cdot 1 = g = 1 \cdot g$ 以及结合律 $g(hk) = (gh)k$. 这就赋予 $\mathbf{M}(X)$ 幺半群结构. 映射 $\iota: X \to \mathbf{M}(X)$ 将 $x \in X$ 映到长为一的字 $x \in \mathbf{M}(X)$.
+dari definisi, berlaku secara langsung $g \cdot 1 = g = 1 \cdot g$ dan hukum asosiatif $g(hk) = (gh)k$. Dengan demikian, $\mathbf{M}(X)$ memperoleh struktur monoid. Pemetaan $\iota: X \to \mathbf{M}(X)$ membawa $x \in X$ ke kata $x \in \mathbf{M}(X)$ yang panjangnya satu.
 
 \begin{lemma}
-	上述资料 $(\mathbf{M}(X), \iota)$ 是 $X$ 上的自由幺半群.
+	Data $(\mathbf{M}(X), \iota)$ yang dikonstruksi di atas adalah monoid bebas pada $X$.
 \end{lemma}
 \begin{proof}
-	对于任意幺半群 $M'$ 及映射 $\iota': X \to M'$, 定义 \ref{def:free-monoid} 中的 $\varphi$ 必满足
+	Untuk setiap monoid $M'$ dan pemetaan $\iota': X \to M'$, menurut Definisi \ref{def:free-monoid}, pemetaan $\varphi$ harus memenuhi
 	\[ \varphi: x_1 \cdots x_n \longmapsto \iota'(x_1) \cdots \iota'(x_n), \quad x_1, \ldots, x_n \in X \]
-	于是 $\varphi$ 唯一; 按 $\mathbf{M}(X)$ 的构造, 上式亦给出良定的 $\varphi$.
+	sehingga $\varphi$ unik. Berdasarkan konstruksi $\mathbf{M}(X)$, rumus di atas juga memberikan suatu $\varphi$ yang terdefinisi dengan baik.
 \end{proof}
 
-以下策略是从幺半群的融合积构造自由群.
-\begin{definition}[融合积]\label{def:amalgamated-product}\index{rongheji@融合积 (amalgamated product)}
-	令 $(M_i)_{i \in I}$ 为一族幺半群. 给定幺半群 $A$ 及一族同态 $(f_i: A \to M_i )_{i \in I}$. 满足以下泛性质的资料 $(M, (\varphi_i)_{i \in I})$ 称为 $(M_i, f_i)_{i \in I}$ 的融合积:
+Strategi berikut mengonstruksi grup bebas dengan menggunakan produk teramalgamasi monoid.
+\begin{definition}[Produk teramalgamasi]\label{def:amalgamated-product}\index{rongheji@produk teramalgamasi (amalgamated product)}
+	Misalkan $(M_i)_{i \in I}$ suatu keluarga monoid. Diberikan sebuah monoid $A$ dan suatu keluarga homomorfisme $(f_i: A \to M_i )_{i \in I}$. Data $(M, (\varphi_i)_{i \in I})$ yang memenuhi sifat universal berikut disebut produk teramalgamasi dari $(M_i, f_i)_{i \in I}$:
 	\begin{compactitem}
-		\item $M$ 是幺半群, $\forall i \in I$, $\varphi_i: M_i \to M$ 是同态;
-		\item 合成同态 $h := \varphi_i f_i: A \to M$ 与 $i$ 无关;
-		\item 若资料 $(M', (\varphi'_i)_{i \in I})$ 也满足以上性质, 则存在唯一同态 $\varphi: M \to M'$ 使得下图交换.
+		\item $M$ adalah sebuah monoid; $\forall i \in I$, $\varphi_i: M_i \to M$ adalah sebuah homomorfisme;
+		\item homomorfisme komposit $h := \varphi_i f_i: A \to M$ tidak bergantung pada $i$;
+		\item jika data $(M', (\varphi'_i)_{i \in I})$ juga memenuhi sifat-sifat di atas, maka terdapat homomorfisme unik $\varphi: M \to M'$ yang membuat diagram berikut komutatif.
 		\[ \begin{tikzcd}
 			M_i \arrow[r, "{\varphi_i}"] \arrow[rd, "{\varphi'_i}"'] & M \arrow[d, "{\exists! \varphi}"] \\
 			& M'
@@ -1176,193 +1176,193 @@ Sekarang tinjau konstruksi lain. Untuk suatu grup $G$, ambil $Z^0 = \{1\}$, lalu
 	\end{compactitem}
 \end{definition}
 
-融合积既以泛性质定义, 自然满足熟知的唯一性, 不再赘述. 在此给出一种构造方法: 取 $M_i$ 的无交并和相应的自由幺半群
+Karena produk teramalgamasi didefinisikan melalui sifat universal, produk itu tentu memiliki sifat keunikan yang lazim; kita tidak akan mengulang perinciannya. Berikut salah satu konstruksinya. Ambil gabungan saling lepas dari $M_i$ beserta monoid bebas yang bersesuaian,
 \[ S :=  \bigsqcup_{i \in I} M_i, \quad \iota: S \to \mathbf{M}(S). \]
-我们希望在 $\mathbf{M}(S)$ 中嫁接各个 $M_i$ 的乘法, 并黏合诸 $f_i$ 的像. 请考虑幺半群 $(\mathbf{M}(S), \cdot)$ 上由
+Kita ingin, di dalam $\mathbf{M}(S)$, menanamkan perkalian setiap $M_i$ dan mengidentifikasi citra-citra $f_i$. Perhatikan relasi ekuivalensi pada monoid $(\mathbf{M}(S), \cdot)$ yang dibangkitkan oleh
 \begin{gather*}
-	\underbracket{xy}_{\text{在 $M_i$ 中}} \sim \underbracket{x \cdot y}_{\text{在 $\mathbf{M}(S)$ 中}}, \quad i \in I, \; x,y \in M_i, \\
-	\underbracket{1_i}_{\text{$M_i$ 幺元}} \sim \underbracket{1}_{\text{$\mathbf{M}(S)$ 幺元}}, \quad i \in I, \\
+	\underbracket{xy}_{\text{di dalam $M_i$}} \sim \underbracket{x \cdot y}_{\text{di dalam $\mathbf{M}(S)$}}, \quad i \in I, \; x,y \in M_i, \\
+	\underbracket{1_i}_{\text{unsur identitas $M_i$}} \sim \underbracket{1}_{\text{unsur identitas $\mathbf{M}(S)$}}, \quad i \in I, \\
 	f_i(a) \sim f_j(a), \quad i,j \in I, \; a \in A,
 \end{gather*}
-和 \eqref{eqn:quotient-condition} 生成的等价关系 $\sim$. 根据 \S\ref{sec:homomorphism} 中关于商结构的讨论, 商集
+bersama \eqref{eqn:quotient-condition}; notasikan relasi ekuivalensi yang dihasilkan dengan $\sim$. Berdasarkan pembahasan struktur hasil bagi dalam \S\ref{sec:homomorphism}, himpunan hasil bagi
 \[ M := \mathbf{M}(S)/\sim. \]
-具有自然的幺半群结构. 定义合成同态 $\varphi_i: M_i \to \mathbf{M}(S) \to M$, 由构造知同态 $\varphi_i f_i$ 无关乎 $i$, 记之为 $h: A \to M$. 而且 $M$ 中任意元素总能表成形如 $\varphi_i(x)$ ($i \in I$) 的元素的积.
+memiliki struktur monoid natural. Definisikan homomorfisme komposit $\varphi_i: M_i \to \mathbf{M}(S) \to M$. Dari konstruksi, homomorfisme $\varphi_i f_i$ tidak bergantung pada $i$; notasikan homomorfisme ini dengan $h: A \to M$. Selain itu, setiap unsur $M$ selalu dapat ditulis sebagai produk unsur-unsur berbentuk $\varphi_i(x)$, dengan $i \in I$.
 
 \begin{lemma}
-	以上构造的资料 $(M, (\varphi_i)_{i \in I})$ 是 $(M_i, f_i)_{i \in I}$ 的融合积.
+	Data $(M, (\varphi_i)_{i \in I})$ yang dikonstruksi di atas adalah produk teramalgamasi dari $(M_i, f_i)_{i \in I}$.
 \end{lemma}
 \begin{proof}
-	对于定义 \ref{def:amalgamated-product} 中考察的资料 $(M' ,(\varphi'_i)_{i \in I})$, 逐步导出
+	Untuk data dalam Definisi \ref{def:amalgamated-product} yang berbentuk $(M' ,(\varphi'_i)_{i \in I})$, kita memperoleh secara berturut-turut
 	\begin{compactenum}[(i)]
-		\item 同态 $\mathbf{M}(S) \to M' $, 使得 $x \in M_i$ 的像映至 $\varphi'_i(x)$ (用定义 \ref{def:free-monoid});
-		\item 同态 $\varphi: M = (\mathbf{M}(S) /  \sim) \to M'$, 使得图表
+		\item sebuah homomorfisme $\mathbf{M}(S) \to M' $ yang membawa setiap unsur $x \in M_i$ ke $\varphi'_i(x)$ (gunakan Definisi \ref{def:free-monoid});
+		\item sebuah homomorfisme $\varphi: M = (\mathbf{M}(S) /  \sim) \to M'$ yang membuat diagram
 		\[\begin{tikzcd}[row sep=small, column sep=small]
 			\mathbf{M}(S) \arrow[r] \arrow[d] & M' \\
 			M=\mathbf{M}(S)/\sim \arrow[ru, "\varphi"']
-		\end{tikzcd}\] 交换 (利用等价关系 $\sim$ 的定义).
+		\end{tikzcd}\] komutatif (gunakan definisi relasi ekuivalensi $\sim$).
 	\end{compactenum}
-	易见 $\varphi$ 使定义 \ref{def:amalgamated-product} 中的图表交换. 既然诸 $\varphi_i$ 的像生成 $M$, 这是唯一的取法.
+	Jelas bahwa $\varphi$ membuat diagram dalam Definisi \ref{def:amalgamated-product} komutatif. Karena citra-citra $\varphi_i$ membangkitkan $M$, pilihan ini unik.
 \end{proof}
 
-根据以上构造, 融合积 $M$ 的元素总能表成形如
+Berdasarkan konstruksi di atas, unsur produk teramalgamasi $M$ selalu dapat ditulis sebagai produk berhingga berbentuk
 \[ m = \varphi_{i_1}(m_1) \varphi_{i_2}(m_2) \cdots \varphi_{i_n}(m_n), \qquad m_j \in M_{i_j} \]
-的有限积; 不致混淆时简记为
+dan, jika tidak menimbulkan kerancuan, kita menuliskannya secara ringkas sebagai
 \[ m = m_1 \cdots m_n \quad \in M. \]
-若每个 $m_j \in M_{i_j}$ 皆可逆, 则 $m_1 \cdots m_n \in M$ 亦可逆, 这是因为
+Jika setiap $m_j \in M_{i_j}$ invertibel, maka $m_1 \cdots m_n \in M$ juga invertibel, sebab
 \begin{gather}\label{eqn:word-inverse}
 	(m_1 \cdots m_n)^{-1} = m_n^{-1} \cdots m_1^{-1}.
 \end{gather}
-今引入条件
+Sekarang kita perkenalkan syarat
 \begin{equation}\label{eqn:free-product-condition}\begin{gathered}
-	\forall i \in I, \; \exists \text{ 子集 }\; 1 \in H_i \subset M_i \; \text{ 使得 }\;
+	\forall i \in I, \; \exists \text{ subhimpunan }\; 1 \in H_i \subset M_i \; \text{ sedemikian sehingga }\;
 	\begin{tikzcd}[column sep=small, row sep=tiny]
 		A \times H_i \arrow[r, "1:1"] & M_i \\
 		(a, x_i) \arrow[mapsto, r] \arrow[phantom, u, sloped, "\in" description] & f_i(a) x_i. \arrow[phantom, u, sloped, "\in" description]
 	\end{tikzcd}
 \end{gathered}\end{equation}
-将 $M$ 的元素表成 $m = m_1 \cdots m_n$ 的形式, $m_j \in M_{i_j}$, 其中 $i_1, \ldots, i_n \in I$. 集项后可以假设相邻的 $i_j$ 必相异. 据 \eqref{eqn:free-product-condition} 可设 $m_j = f_{i_j}(a_j) x_j$, 其中 $a_j \in A$ 而 $x_j \in H_{i_j}$. 我们希望在 $m$ 的表达式中将 $a_j$ 全移到左端. 为此考察 $n=2$ 的情形足矣: 在 $M_{i_1}$ 中可写 $x_1 f_{i_1}(a_2) = f_{i_1}(a'_2) x'_1$; 于是融合积 $M$ 的性质确保 $h(a_1) x_1 h(a_2) x_2 = h(a_1) h(a'_2) x'_1 x_2$. 如此工序给出的表达式
+Tuliskan suatu unsur $M$ dalam bentuk $m = m_1 \cdots m_n$, dengan $m_j \in M_{i_j}$ dan $i_1, \ldots, i_n \in I$. Setelah menggabungkan faktor-faktor, kita dapat mengasumsikan bahwa indeks-indeks $i_j$ yang bersebelahan selalu berbeda. Menurut \eqref{eqn:free-product-condition}, tulis $m_j = f_{i_j}(a_j) x_j$, dengan $a_j \in A$ dan $x_j \in H_{i_j}$. Di dalam ungkapan $m$, kita ingin memindahkan semua $a_j$ ke ujung kiri. Untuk itu, cukup perhatikan kasus $n=2$: di dalam $M_{i_1}$, kita dapat menulis $x_1 f_{i_1}(a_2) = f_{i_1}(a'_2) x'_1$; sifat produk teramalgamasi $M$ lalu memastikan bahwa $h(a_1) x_1 h(a_2) x_2 = h(a_1) h(a'_2) x'_1 x_2$. Ungkapan yang diperoleh melalui proses ini,
 \[ m = h(a) x_1 \cdots x_n \]
-称为\emph{既约}的, 其中的 $n$ 称为该表达式的\emph{长度}; 零长的既约表达式无非是 $h(a)$ 的形式 ($a \in A$).
+disebut \emph{tereduksi}; bilangan $n$ disebut \emph{panjang} ungkapan tersebut. Ungkapan tereduksi dengan panjang nol tidak lain adalah ungkapan berbentuk $h(a)$, dengan $a \in A$.
 
 \begin{lemma}
-	假设融合积中的 $A$ 满足条件 \eqref{eqn:free-product-condition}, 则每个元素都有唯一的既约表法, 两元素相等当且仅当其既约表法相同. 特别地, 此时每个 $\varphi_i: M_i \to M$ 皆单.
+	Andaikan $A$ dalam produk teramalgamasi memenuhi syarat \eqref{eqn:free-product-condition}. Maka setiap unsur memiliki representasi tereduksi yang unik, dan dua unsur sama jika dan hanya jika representasi tereduksinya sama. Khususnya, setiap $\varphi_i: M_i \to M$ bersifat injektif.
 \end{lemma}
-当每个 $f_i$ 都是群之间的单同态时, 引理条件自动成立: 考虑 $A$ 透过 $f_i$ 在 $M_i$ 上的左乘作用, 为每个轨道选取代表元即得 $H_i$.
+Jika setiap $f_i$ adalah homomorfisme injektif antargrup, syarat lemma dipenuhi secara otomatis: perhatikan aksi perkalian kiri $A$ melalui $f_i$ pada $M_i$, lalu pilih satu wakil dari setiap orbit untuk memperoleh $H_i$.
 
 \begin{proof}
-	以下思路并不难, 写严谨了则颇费笔墨, 所以我们仅述其概要. 选定一族子集 $(H_i \subset M_i)_{i \in I}$ 满足 \eqref{eqn:free-product-condition}, 定义 $\Sigma$ 为如下形式的序列所成集合
+	Gagasan berikut tidak sulit, tetapi penulisan yang sepenuhnya ketat akan cukup panjang, sehingga kita hanya memberikan garis besarnya. Pilih suatu keluarga subhimpunan $(H_i \subset M_i)_{i \in I}$ yang memenuhi \eqref{eqn:free-product-condition}. Definisikan $\Sigma$ sebagai himpunan barisan berbentuk
 	\[ [a; x_1, \ldots, x_n], \quad a \in A, \; n \geq 0, \; x_j \in H_{i_j}, x_j \neq 1, \]
-	其中 $i_1, \ldots, i_n \in I$, 我们还要求相邻的 $i_j$ 相异. 定义映射
+	dengan $i_1, \ldots, i_n \in I$, dan kita juga mensyaratkan bahwa indeks-indeks $i_j$ yang bersebelahan berbeda. Definisikan pemetaan
 	\begin{align*}
 		\Phi: \Sigma & \longrightarrow M \\
 		[a; x_1, \ldots, x_n] & \longmapsto h(a)x_1 \cdots x_n.
 	\end{align*}
-	它映 $[1]$ (取 $n=0$) 为 $1$. 先前关于既约表达式的推导蕴涵 $\Phi$ 为满, 以下仅需说明 $\Phi$ 为单.
+	Pemetaan ini membawa $[1]$ (ambil $n=0$) ke $1$. Penurunan representasi tereduksi sebelumnya menyiratkan bahwa $\Phi$ surjektif; tinggal membuktikan bahwa $\Phi$ injektif.
 
-	我们欲借 $\Phi$ 在 $\Sigma$ 中模拟 $M$ 的左乘作用. 先取定 $i \in I$. 定义幺半群作用 $\alpha_i: M_i \times \Sigma \to \Sigma$ 如下. 任意 $\xi \in M_i$ 有唯一写法 $\xi = f_i(a'') x$ (此处 $a'' \in A$, $x \in H_i$); 对于 $\sigma = [a; x_1, \ldots, x_n] \in \Sigma$, 仿前段方法定义下式涉及的 $(a', x') \in A \times H_i$: 置
+	Melalui $\Phi$, pada $\Sigma$ kita akan menyimulasikan aksi perkalian kiri $M$. Pertama, tetapkan $i \in I$. Definisikan aksi monoid $\alpha_i: M_i \times \Sigma \to \Sigma$ sebagai berikut. Setiap $\xi \in M_i$ memiliki representasi unik $\xi = f_i(a'') x$, dengan $a'' \in A$ dan $x \in H_i$. Untuk $\sigma = [a; x_1, \ldots, x_n] \in \Sigma$, definisikan $(a', x') \in A \times H_i$ yang muncul dalam rumus berikut dengan cara yang sama seperti pada paragraf sebelumnya:
 	\[ \alpha_i(\xi, \sigma) :=
 	\begin{cases}
-		[a'' a'; x', x_2, \ldots, x_n], \;\text{其中}\; x f_i(a) x_1 = f_i(a') x', & i_1 = i, \\
-		[a'' a'; x', x_1, \ldots, x_n], \;\text{其中}\; x f_i(a) = f_i(a') x', & i_1 \neq i.
+		[a'' a'; x', x_2, \ldots, x_n], \;\text{dengan}\; x f_i(a) x_1 = f_i(a') x', & i_1 = i, \\
+		[a'' a'; x', x_1, \ldots, x_n], \;\text{dengan}\; x f_i(a) = f_i(a') x', & i_1 \neq i.
 	\end{cases} \]
-	另定义作用 $\alpha_A: A \times \Sigma \to \Sigma$ 使得 $\alpha_A(a, [b; \ldots]) = [ab; \ldots]$. 视此诸作用为同态族 $M_i \to \End(\Sigma)$, $A \to \End(\Sigma)$, 其中 $\End(\Sigma)$ 表所有映射 $\Sigma \to \Sigma$ 所成幺半群.
+	Definisikan pula aksi $\alpha_A: A \times \Sigma \to \Sigma$ dengan $\alpha_A(a, [b; \ldots]) = [ab; \ldots]$. Pandang aksi-aksi ini sebagai keluarga homomorfisme $M_i \to \End(\Sigma)$ dan $A \to \End(\Sigma)$, dengan $\End(\Sigma)$ menyatakan monoid semua pemetaan $\Sigma \to \Sigma$.
 
-	据融合积的泛性质, 上述诸同态可黏合为 $M \to \End(\Sigma)$, 亦即幺半群的作用 $\alpha: M \times \Sigma \to \Sigma$. 易证
+	Berdasarkan sifat universal produk teramalgamasi, semua homomorfisme di atas dapat direkatkan menjadi $M \to \End(\Sigma)$, yakni sebuah aksi monoid $\alpha: M \times \Sigma \to \Sigma$. Mudah dibuktikan bahwa
 	\[ \alpha(\Phi(\sigma), [1]) = \sigma, \quad \sigma \in \Sigma. \]
-	由此立得 $\Phi$ 是单射.
+	Dengan demikian, segera diperoleh bahwa $\Phi$ injektif.
 \end{proof}
 
 \begin{proposition}
-	设 $X$ 为集合. 在定义 \ref{def:amalgamated-product} 中取 $I = X$, $A = \{1\}$, 对每一 $x \in X$ 取 $M_x := \Z$ (加法群); 记其融合积为 $(\mathbf{F}(X), (\iota_x)_{x \in X})$. 定 $\iota(x) = \iota_x(1)$, 则 $(\mathbf{F}(X), \iota)$ 是 $X$ 上的自由群.
+	Misalkan $X$ sebuah himpunan. Dalam Definisi \ref{def:amalgamated-product}, ambil $I = X$, $A = \{1\}$, dan untuk setiap $x \in X$ ambil $M_x := \Z$ (sebagai grup aditif); notasikan produk teramalgamasi tersebut dengan $(\mathbf{F}(X), (\iota_x)_{x \in X})$. Definisikan $\iota(x) = \iota_x(1)$. Maka $(\mathbf{F}(X), \iota)$ adalah grup bebas pada $X$.
 \end{proposition}
 \begin{proof}
-	由 \eqref{eqn:word-inverse} 知 $\mathbf{F}(X)$ 是群. 为验证泛性质, 给定群 $G$ 和映射 $\iota': X \to G$, 我们对每个 $x \in X$ 定义同态
+	Menurut \eqref{eqn:word-inverse}, $\mathbf{F}(X)$ adalah sebuah grup. Untuk memverifikasi sifat universalnya, diberikan sebuah grup $G$ dan pemetaan $\iota': X \to G$, definisikan untuk setiap $x \in X$ homomorfisme
 	\begin{align*}
 		\varphi'_x: \Z & \longrightarrow G, \\
 		a & \longmapsto \iota'(x)^a.
 	\end{align*}
-	此族同态满足定义 \ref{def:amalgamated-product} 中的条件, 故存在唯一同态 $\varphi: \mathbf{F}(X) \to G$ 使得
+	Keluarga homomorfisme ini memenuhi syarat dalam Definisi \ref{def:amalgamated-product}, sehingga terdapat homomorfisme unik $\varphi: \mathbf{F}(X) \to G$ sedemikian sehingga
 	\[ \varphi(\iota_x(a)) = \varphi'_x(a) = \iota'(x)^a, \quad x \in X, \; a \in \Z.  \]
-	根据群同态的性质, 上式可以化约到 $a=1$ 的情形, 亦即 $\varphi(\iota(x)) = \iota'(x)$, 这正是自由群的泛性质.
+	Berdasarkan sifat homomorfisme grup, rumus di atas dapat direduksi ke kasus $a=1$, yakni $\varphi(\iota(x)) = \iota'(x)$, yang tepat merupakan sifat universal grup bebas.
 \end{proof}
 
-从关于融合积的讨论知 $\mathbf{F}(X)$ 的元素能表成 $\iota_x(a) \iota_y(b) \cdots$ 的形式, 其中 $x, y, \ldots \in X$ 而 $a, b, \ldots \in \Z$, 我们简记为 $x^a y^b \cdots$. 进一步还能拆解为 $a, b, \ldots \in \{\pm 1\}$ 的情形, 称 $\mathbf{F}(X)$ 中形如
-\[ x_1^{\pm 1} \cdots x_n^{\pm 1}, \quad x_1, \ldots, x_n \in X,  \; (\text{ 容许重复 }) \]
-的表达式称为\emph{字}. 相应地可定义\emph{既约字}的概念. 定义 $g \in \mathbf{F}(X)$ 的\emph{长度}为这般表达式的最短长度. 易见 $\ell(g)=0 \iff g=1$, 而 $\ell(g)=1 \iff g \in \iota(X) \sqcup \iota(X)^{-1}$.
+Dari pembahasan produk teramalgamasi, unsur-unsur $\mathbf{F}(X)$ dapat ditulis dalam bentuk $\iota_x(a) \iota_y(b) \cdots$, dengan $x, y, \ldots \in X$ dan $a, b, \ldots \in \Z$; kita menuliskannya secara ringkas sebagai $x^a y^b \cdots$. Selanjutnya, setiap pangkat dapat diuraikan sehingga $a, b, \ldots \in \{\pm 1\}$. Ungkapan dalam $\mathbf{F}(X)$ yang berbentuk
+\[ x_1^{\pm 1} \cdots x_n^{\pm 1}, \quad x_1, \ldots, x_n \in X,  \; (\text{ pengulangan diperbolehkan }) \]
+disebut \emph{kata}. Sejalan dengan itu, kita dapat mendefinisikan konsep \emph{kata tereduksi}. Untuk $g \in \mathbf{F}(X)$, definisikan \emph{panjang}nya sebagai panjang minimum di antara semua ungkapan semacam itu. Jelas bahwa $\ell(g)=0 \iff g=1$, sedangkan $\ell(g)=1 \iff g \in \iota(X) \sqcup \iota(X)^{-1}$.
 
-融合积的用途不止于此. 考虑以下情形: 在定义 \ref{def:amalgamated-product} 中假设 $A$ 和每个 $M_i = G_i$ 都是群, 而且 $f_i$ 单. 相应的融合积记为 $\ast_{\substack{i \in I \\ A}} G_i$. 由 \eqref{eqn:word-inverse} 知 $\ast_{\substack{i \in I \\ A}} G_i$ 是群. 它带有一族态射 $\iota_i: G_i \to \ast_{\substack{i \in I \\ A}} G_i$.
+Produk teramalgamasi juga berguna di luar konstruksi ini. Perhatikan situasi berikut: dalam Definisi \ref{def:amalgamated-product}, andaikan $A$ dan setiap $M_i = G_i$ adalah grup, serta $f_i$ injektif. Produk teramalgamasi yang bersesuaian dinotasikan dengan $\ast_{\substack{i \in I \\ A}} G_i$. Menurut \eqref{eqn:word-inverse}, $\ast_{\substack{i \in I \\ A}} G_i$ adalah sebuah grup. Grup ini dilengkapi keluarga morfisme $\iota_i: G_i \to \ast_{\substack{i \in I \\ A}} G_i$.
 
-\begin{definition}[自由积]\label{def:free-product}\index{ziyouji@自由积 (free product)}
-	设 $I$ 为集合,  $(G_i)_{i \in I}$ 为一族群, 在融合积的定义中取 $A = \{1\}$, 得到的资料 $(\ast_{i \in I} G_i, (\iota_i)_{i \in I})$ 称为 $(G_i)_{i \in I}$ 的自由积. 当 $I$ 是有限集 $\{1, \ldots, n\}$ 时也写作 $G_1 \ast \cdots \ast G_n$.
+\begin{definition}[Produk bebas]\label{def:free-product}\index{ziyouji@produk bebas (free product)}
+	Misalkan $I$ sebuah himpunan dan $(G_i)_{i \in I}$ suatu keluarga grup. Ambil $A = \{1\}$ dalam definisi produk teramalgamasi. Data $(\ast_{i \in I} G_i, (\iota_i)_{i \in I})$ yang diperoleh disebut produk bebas dari $(G_i)_{i \in I}$. Jika $I$ adalah himpunan berhingga $\{1, \ldots, n\}$, kita juga menulisnya sebagai $G_1 \ast \cdots \ast G_n$.
 \end{definition}
-其泛性质与定义 \ref{def:amalgamated-product} 类似, 留给读者表述.
+Sifat universalnya serupa dengan Definisi \ref{def:amalgamated-product}; perumusannya diserahkan kepada pembaca.
 
-紧接着考察交换情形, 我们同样从泛性质出发, 叙述将尽量简省. 以下交换幺半群的二元运算一律用加法表示.
-\begin{definition}[自由交换幺半群与自由交换群]\label{def:free-comm-monoid}
-	设 $X$ 为集合. 若资料 $(M, \iota)$ 满足
+Selanjutnya, kita perhatikan kasus komutatif. Sekali lagi kita mulai dari sifat universal dan akan menyajikannya sesingkat mungkin. Semua operasi biner pada monoid komutatif berikut ditulis secara aditif.
+\begin{definition}[Monoid komutatif bebas dan grup komutatif bebas]\label{def:free-comm-monoid}
+	Misalkan $X$ sebuah himpunan. Jika data $(M, \iota)$ memenuhi
 	\begin{inparaenum}[(i)]
-		\item $M$ 是交换幺半群,
-		\item $\iota: X \to M$ 是映射,
-		\item 对任意资料 $(M', \iota')$ 如上, 存在唯一同态 $\varphi: M \to M'$ 使得图表
+		\item $M$ adalah monoid komutatif,
+		\item $\iota: X \to M$ adalah sebuah pemetaan,
+		\item untuk setiap data $(M', \iota')$ seperti di atas, terdapat homomorfisme unik $\varphi: M \to M'$ yang membuat diagram
 			\begin{tikzcd}[row sep=small, column sep=small]
 				X \arrow[r, "\iota"] \arrow[rd, "{\iota'}"'] & M \arrow[d, "\varphi"] \\
 				& M'
 			\end{tikzcd}
-			交换.
+			komutatif.
 	\end{inparaenum}
-	则称 $(M, \iota)$ 为 $X$ 上的自由交换幺半群. 若在条件中要求 $M, M'$ 为交换群, 就得到自由交换群的概念.
+	maka $(M, \iota)$ disebut monoid komutatif bebas pada $X$. Jika dalam syarat-syarat tersebut $M, M'$ diwajibkan menjadi grup komutatif, kita memperoleh konsep grup komutatif bebas.
 \end{definition}
-我们将用直和来进行构造.
+Kita akan menggunakan jumlah langsung untuk konstruksinya.
 \begin{proposition}\label{prop:monoid-direct-sum}
-	设 $(M_i)_{i \in I}$ 为一族交换幺半群, 定义其\emph{直和}为子幺半群
-	\[ \bigoplus_{i \in I} M_i := \left\{ (m_i)_{i \in I} \in \prod_{i \in I} M_i : \text{除至多有限个 $i$ 外}, \; m_i = 0 \right\}. \]
-	则相对于包含态射 $\iota_j: M_j \to \bigoplus_{i \in I} M_i$ (即: 嵌入第 $j$ 个位置), 以下泛性质成立: 对任意一族交换幺半群同态 $\iota'_j: M_j \to M'$, 下图交换.
+	Misalkan $(M_i)_{i \in I}$ suatu keluarga monoid komutatif. Definisikan \emph{jumlah langsung}nya sebagai submonoid
+	\[ \begin{aligned} \bigoplus_{i \in I} M_i &:= \Bigl\{ (m_i)_{i \in I} \in \prod_{i \in I} M_i : {} \\ &\qquad \text{untuk semua kecuali paling banyak berhingga banyak $i$}, \; m_i = 0 \Bigr\}. \end{aligned} \]
+	Berkenaan dengan morfisme inklusi $\iota_j: M_j \to \bigoplus_{i \in I} M_i$ (yakni penyisipan pada posisi ke-$j$), sifat universal berikut berlaku: untuk setiap keluarga homomorfisme monoid komutatif $\iota'_j: M_j \to M'$, diagram berikut komutatif.
 	\[ \begin{tikzcd}
 		M_j \arrow[r, "\iota_j"] \arrow[rd, "{\iota'_j}"'] & \bigoplus_{i \in I} M_i \arrow[d, "{\exists! \varphi}"] \\
 		& M'
 	\end{tikzcd} \]
 \end{proposition}
 \begin{proof}
-	能且仅能取 $\varphi: (m_i)_{i \in I} \mapsto \sum_{i \in I} \iota'_i(m_i)$, 后者是有限和.
+	Satu-satunya pilihan yang mungkin adalah $\varphi: (m_i)_{i \in I} \mapsto \sum_{i \in I} \iota'_i(m_i)$, dan jumlah terakhir ini berhingga.
 \end{proof}
 
-回到 $X$ 上的自由交换幺半群. 其构造是取 $X$ 份 $\Z_{\geq 0}$ 的直和
-\[ \Z_{\geq 0}^{\oplus X} := \left\{ \text{形式和 } \; \sum_{x \in X} a_x \cdot x : \forall x, \; a_x \in \Z_{\geq 0}, \; \text{仅有限项非零} \right\}. \]
-``形式和''意谓 $\sum_x a_x x$ 其实应看成元素族 $(a_x)_{x \in X}$; 映射 $\iota: X \to \Z_{\geq 0}^{\oplus X}$ 由 $\iota(x) = 1 \cdot x =: x$ 给出.
+Kembali ke monoid komutatif bebas pada $X$. Dengan himpunan indeks $X$, konstruksinya adalah jumlah langsung dari salinan-salinan $\Z_{\geq 0}$,
+\[ \begin{aligned} \Z_{\geq 0}^{\oplus X} &:= \Bigl\{ \text{jumlah formal } \; \sum_{x \in X} a_x \cdot x : {} \\ &\qquad \forall x, \; a_x \in \Z_{\geq 0}, \; \text{hanya berhingga banyak suku yang tak nol} \Bigr\}. \end{aligned} \]
+Istilah ``jumlah formal'' berarti bahwa $\sum_x a_x x$ sebenarnya harus dipandang sebagai keluarga unsur $(a_x)_{x \in X}$. Pemetaan $\iota: X \to \Z_{\geq 0}^{\oplus X}$ diberikan oleh $\iota(x) = 1 \cdot x =: x$.
 
-若在以上定义中将幺半群 $\Z_{\geq 0}$ 换成群 $\Z$, 就得到自由交换群 $(\Z^{\oplus X}, \iota)$. 注意到 $-(\sum_x a_x x) = \sum_x (-a_x) x$.
+Jika dalam definisi di atas monoid $\Z_{\geq 0}$ diganti dengan grup $\Z$, kita memperoleh grup komutatif bebas $(\Z^{\oplus X}, \iota)$. Perhatikan bahwa $-(\sum_x a_x x) = \sum_x (-a_x) x$.
 
 \begin{proposition}
-	任何群 $G$ 都能表成某个自由群的商. 实际上若子集 $X \subset G$ 生成 $G$, 则 $X \hookrightarrow G$ 诱导满同态 $p: \mathbf{F}(X) \to G$.
+	Setiap grup $G$ dapat ditulis sebagai grup hasil bagi dari suatu grup bebas. Lebih tepatnya, jika subhimpunan $X \subset G$ membangkitkan $G$, maka inklusi $X \hookrightarrow G$ menginduksi homomorfisme surjektif $p: \mathbf{F}(X) \to G$.
 \end{proposition}
 \begin{proof}
-	同态 $p$ 映 $\mathbf{F}(X)$ 中的字 $x_1^{\pm 1} \cdots x_n^{\pm 1}$ 为 $x_1^{\pm 1} \cdots x_n^{\pm 1} \in G$, 故 $\Image(p) = \lrangle{X}$.
+	Homomorfisme $p$ membawa kata dalam $\mathbf{F}(X)$ yang berbentuk $x_1^{\pm 1} \cdots x_n^{\pm 1}$ ke $x_1^{\pm 1} \cdots x_n^{\pm 1} \in G$, sehingga $\Image(p) = \lrangle{X}$.
 \end{proof}
 
-正规子群 $\Ker(p) \lhd \mathbf{F}(X)$ 的元素可以视为生成元 $X$ 在 $G$ 中满足的\emph{关系}, 我们欲以一组生成元描述之. 确切地说, 对任意群 $\mathcal{G}$ 及其子集 $Y$, 定义 $\lrangle{Y}_{\text{nor}}$ 为 $\mathcal{G}$ 中包含 $Y$ 的最小正规子群, 它作为子群由 $\left\{ gyg^{-1}: y \in Y, \; g \in \mathcal{G} \right\}$ 生成. 我们希望取 $Y \subset \mathbf{F}(X)$ 使得 $\lrangle{Y}_{\text{nor}} = \Ker(p)$, 这就引向了以下概念.
+Unsur-unsur subgrup normal $\Ker(p) \lhd \mathbf{F}(X)$ dapat dipandang sebagai \emph{relasi} yang dipenuhi oleh pembangkit-pembangkit $X$ di dalam $G$, dan kita ingin mendeskripsikannya dengan suatu himpunan pembangkit. Secara tepat, untuk setiap grup $\mathcal{G}$ dan subhimpunannya $Y$, definisikan $\lrangle{Y}_{\text{nor}}$ sebagai subgrup normal terkecil dalam $\mathcal{G}$ yang memuat $Y$. Sebagai subgrup, objek ini dibangkitkan oleh $\left\{ gyg^{-1}: y \in Y, \; g \in \mathcal{G} \right\}$. Kita ingin memilih $Y \subset \mathbf{F}(X)$ sedemikian sehingga $\lrangle{Y}_{\text{nor}} = \Ker(p)$; hal ini membawa kita pada konsep berikut.
 
-\begin{definition}[群展示]\index{qunzhanshi@群展示 (group presentation)}
-	群 $G$ 的\emph{展示}意指一个集合 $X$, 子集 $Y \subset \mathbf{F}(X)$ 连同一个同构
+\begin{definition}[Presentasi grup]\index{qunzhanshi@presentasi grup (group presentation)}
+	Sebuah \emph{presentasi} grup $G$ terdiri atas suatu himpunan $X$, suatu subhimpunan $Y \subset \mathbf{F}(X)$, dan sebuah isomorfisme
 	\[ \mathbf{F}(X)/\lrangle{Y}_{\mathrm{nor}} \rightiso G; \]
-	当 $X$ 可取为有限集时称 $G$ \emph{有限生成}, 当 $X, Y$ 俱有限时称 $G$ 具备\emph{有限展示}. \index{youxianshengcheng@有限生成 (finitely generated)} \index{youxianzhanshi@有限展示 (finitely presented)}
+	Jika $X$ dapat dipilih berhingga, maka $G$ disebut \emph{dibangkitkan secara berhingga}; jika $X, Y$ keduanya dapat dipilih berhingga, maka $G$ disebut \emph{dipresentasikan secara berhingga}. \index{youxianshengcheng@dibangkitkan secara berhingga (finitely generated)} \index{youxianzhanshi@dipresentasikan secara berhingga (finitely presented)}
 \end{definition}
-一句话, 展示 = 生成元 + 关系. 习惯将有限展示写成
+Singkatnya, presentasi = pembangkit + relasi. Presentasi berhingga lazim ditulis dalam bentuk
 \[ G = \lrangle{ \; x_1, \ldots, x_n  \big| w_1=1, \ldots, w_m=1 \; } \]
-的形式. 其中 $X = \{x_1, \ldots, x_n\}$ 而 $\Ker[\mathbf{F}(X) \to G] = \lrangle{w_1, \ldots, w_n}_\text{nor}$.
+dengan $X = \{x_1, \ldots, x_n\}$ dan $\Ker[\mathbf{F}(X) \to G] = \lrangle{w_1, \ldots, w_m}_\text{nor}$.
 
 \begin{example}\label{eg:dihedral-presentation}
-	对于 $n \in \Z_{\geq 1}$, 例 \ref{eg:dihedral-group} 的二面体群 $D_{2n}$ 有如下展示
+	Untuk $n \in \Z_{\geq 1}$, grup dihedral $D_{2n}$ dari Contoh \ref{eg:dihedral-group} memiliki presentasi
 	\[ D_{2n} = \lrangle{ a, b \big| a^n=1, b^2=1, b^{-1}ab = a^{-1}  }. \]
-	参照例 \ref{eg:dihedral-group} 的符号, 生成元 $a$ 对应于 $\Z/n\Z$ 的生成元 $1+n\Z$, 而 $b$ 对应于 $\tau \in \Z/2\Z$. 我们还可以使用生成元 $\sigma := ab$, $\tau := b$ 给出另一套展示
+	Dengan notasi Contoh \ref{eg:dihedral-group}, pembangkit $a$ di dalam $\Z/n\Z$ bersesuaian dengan pembangkit $1+n\Z$, sedangkan $b$ bersesuaian dengan $\tau \in \Z/2\Z$. Kita juga dapat menggunakan pembangkit $\sigma := ab$ dan $\tau := b$ untuk memberikan presentasi lain,
 	\[ D_{2n} \simeq \lrangle{ \sigma, \tau \big| \sigma^2=1, \tau^2 = 1, (\sigma\tau)^n=1}. \]
 \end{example}
 
 \begin{example}
-	R.\ Guranlnick 和 G.\ Malle 证明了一切非交换有限单群都可以用两个相互共轭的元素生成, 见 \cite[Corollary 8.3]{GM12}; 当然, 其间的关系可以极复杂. 证明技术是曲折的, 依赖于有限单群的分类和较深入的群表示论.
+	R.\ Guralnick dan G.\ Malle membuktikan bahwa setiap grup sederhana berhingga yang nonkomutatif dapat dibangkitkan oleh dua unsur yang saling konjugat; lihat \cite[Corollary 8.3]{GM12}. Tentu saja, relasi di antara keduanya dapat sangat rumit. Teknik pembuktiannya berliku dan bergantung pada klasifikasi grup sederhana berhingga serta teori representasi grup yang cukup mendalam.
 \end{example}
 
-莫忘我们的初衷是探索 $G$ 的结构. 对给定的有限展示, M.\ Dehn \cite{De11} 提出了以下问题.
+Ingat bahwa tujuan awal kita adalah menyelidiki struktur $G$. Untuk suatu presentasi berhingga, M.\ Dehn \cite{De11} mengajukan masalah-masalah berikut.
 \begin{description}
-	\item[字问题] 如何判断给定的字 $w \in \mathbf{F}(X)$ 是否属于 $\lrangle{Y}_{\mathrm{nor}}$?
-	\item[共轭问题] 如何判断两字 $w, w' \in \mathbf{F}(X)$ 在 $G$ 中的像是否共轭?
-	\item[同构问题] 如何判断两个有限展示是否给出同构的群?
+	\item[Masalah kata] Bagaimana menentukan apakah suatu kata $w \in \mathbf{F}(X)$ termasuk dalam $\lrangle{Y}_{\mathrm{nor}}$?
+	\item[Masalah konjugasi] Bagaimana menentukan apakah citra dua kata $w, w' \in \mathbf{F}(X)$ saling konjugat di dalam $G$?
+	\item[Masalah isomorfisme] Bagaimana menentukan apakah dua presentasi berhingga memberikan grup-grup yang isomorfik?
 \end{description}
-三个问题在算法上都是不可判定的, 但对于特定的某类群 (例如辫群 $\mathcal{B}_n$) 则存在算法. 这类问题属于\emph{组合群论}, 本书不拟细说. 读者在定理 \ref{prop:S_n-presentation} 的证明中当可领略其复杂性. 关于可判定性或曰可计算性的研究属于数理逻辑的一支, 称为\emph{递归论}.
+Ketiga masalah tersebut secara algoritmik tidak dapat diputuskan, tetapi algoritme tersedia untuk kelas-kelas grup tertentu (misalnya grup kepang $\mathcal{B}_n$). Masalah-masalah semacam ini termasuk dalam \emph{teori grup kombinatorial}, yang tidak akan dibahas secara terperinci dalam buku ini. Pembaca dapat memperoleh gambaran tentang kerumitannya dalam pembuktian Teorema \ref{prop:S_n-presentation}. Kajian tentang keterputusan (decidability), atau keterkomputasian (computability), merupakan salah satu cabang logika matematika yang disebut \emph{teori rekursi}.
 
 \begin{theorem}[Nielsen--Schreier]
-	自由群的子群也是自由群.
+	Setiap subgrup dari grup bebas juga merupakan grup bebas.
 \end{theorem}
 \begin{proof}
-	我们采取拓扑论证. 考虑自由群 $\mathbf{F}(X)$; 论证中读者可假设 $X$ 有限, 以利直观. 设 $(B_X, \star)$ 是由 $X$ 份 $\mathbb{S}^1$ 粘在一点得到的带基点拓扑空间, 例如当 $|X|=4$ 时:
+	Kita menggunakan argumen topologis. Perhatikan grup bebas $\mathbf{F}(X)$; demi intuisi, pembaca boleh mengasumsikan bahwa $X$ berhingga selama argumen ini. Misalkan $(B_X, \star)$ adalah ruang topologis bertitik dasar yang diperoleh sebagai berikut: untuk setiap unsur dari $X$, ambil satu salinan $\mathbb{S}^1$, lalu rekatkan semua salinan tersebut pada satu titik. Sebagai contoh, ketika $|X|=4$:
 	\[ B_X \; = \; \begin{tikzpicture}[baseline=(current bounding box.center)]
 		\draw (0,0) .. controls (1, 1.5) and (-1, 1.5) .. (0,0);
 		\draw[rotate=90] (0,0) .. controls (1, 1.5) and (-1, 1.5) .. (0,0);
 		\draw[rotate=180] (0,0) .. controls (1, 1.5) and (-1, 1.5) .. (0,0);
 		\draw[rotate=270] (0,0) .. controls (1, 1.5) and (-1, 1.5) .. (0,0);
 	\end{tikzpicture}\]
-	我们断言存在群同构 $\mathbf{F}(X) \rightiso \pi_1(B_X, \star)$, 它将 $x \in X$ 映至 $B_X$ 中从 $\star$ 出发, 沿第 $x$ 份 $\mathbb{S}^1$ 顺向绕一圈的道路. 当 $|X|=1$ 时这无非是习见的同构 $\pi_1(\mathbb{S}^1, \star) \rightiso \Z$ \cite[第四章 \S 3.1]{You}. 一般情形则从 van Kampen 定理导出, 其有限版本可见 \cite[附录B]{You}.
+	Kita mengklaim adanya isomorfisme grup $\mathbf{F}(X) \rightiso \pi_1(B_X, \star)$ yang membawa $x \in X$ ke lintasan di $B_X$ yang berawal di $\star$ dan mengelilingi satu kali, dalam arah positif, salinan berlabel $x$ dari $\mathbb{S}^1$. Ketika $|X|=1$, ini tidak lain adalah isomorfisme yang lazim $\pi_1(\mathbb{S}^1, \star) \rightiso \Z$ \cite[Bab IV \S 3.1]{You}. Kasus umum mengikuti dari teorema van Kampen; versi berhingganya dapat ditemukan dalam \cite[Lampiran B]{You}.
 
-	回顾图的概念. 一个图 $\Gamma = (V, E, s, t)$ 是由顶点集 $V$ 和边集 $E$ 组成的, 边有头尾两端, 由一对映射 $s, t: E \to V$ 给出. 从 $\Gamma$ 可以构造其几何实现 $|\Gamma|$: 说穿了, 这无非是对每个边具体地取一份区间 $[0, 1]$, 并沿顶点黏合成 $|\Gamma|$. 以下等同 $\Gamma$ 与 $|\Gamma|$, 所论的图因之是无向的. 先前定义的 $B_X$ 就是仅有一个顶点的图. 图论的一个基本结果断言当 $\Gamma$ 连通时, 必存在极大子树 $T$: 它是 $\Gamma$ 的子图, 包含 $\Gamma$ 的每个顶点并且不含回路. 直观地看, 我们可以在 $\Gamma$ 中让树 $T$ 连续地收缩到某顶点 $\star$ (这称为形变收缩, 见 \cite[第四章 \S 4.3]{You}); 譬如在下图中缩掉粗线标出的极大子树, 就得到之前的四叶幸运草.
+	Ingat kembali konsep graf. Sebuah graf $\Gamma = (V, E, s, t)$ terdiri atas himpunan verteks $V$ dan himpunan sisi $E$; setiap sisi memiliki ujung awal dan ujung akhir yang ditentukan oleh sepasang pemetaan $s, t: E \to V$. Dari $\Gamma$ dapat dikonstruksi realisasi geometriknya $|\Gamma|$: secara konkret, ambil satu salinan interval $[0, 1]$ untuk setiap sisi, lalu rekatkan interval-interval tersebut pada verteks-verteks untuk membentuk $|\Gamma|$. Selanjutnya kita mengidentifikasi $\Gamma$ dengan $|\Gamma|$, sehingga graf yang dibahas dianggap tak berarah. Ruang $B_X$ yang didefinisikan sebelumnya adalah graf dengan satu verteks. Sebuah hasil dasar teori graf menyatakan bahwa jika $\Gamma$ terhubung, maka terdapat pohon rentang maksimal $T$: suatu subgraf dari $\Gamma$ yang memuat setiap verteks $\Gamma$ dan tidak memuat sirkuit. Secara intuitif, di dalam $\Gamma$ kita dapat mengontraksikan pohon $T$ secara kontinu ke suatu verteks $\star$ (ini disebut retraksi deformasi; lihat \cite[Bab IV \S 4.3]{You}). Sebagai contoh, dengan mengontraksikan pohon rentang maksimal yang ditandai garis tebal dalam gambar berikut, kita memperoleh kembali semanggi berdaun empat di atas.
 	\begin{center}\begin{tikzpicture}[every node/.style={circle, draw, fill=black}, bentcurve/.style={bend left=90, looseness=3} ]
 		\begin{scope}[scale=0.6]
 			\coordinate (A) at (0,0) {};
@@ -1375,13 +1375,12 @@ Sekarang tinjau konstruksi lain. Untuk suatu grup $G$, ambil $Z^0 = \{1\}$, lalu
 		\foreach \x in {A, B, C, D}
 			\draw[circle, fill=black] (\x) circle[radius=2pt];
 	\end{tikzpicture}\end{center}
-	一般情形下, 因 $T$ 含所有顶点, 商空间 $\Gamma/T$ 将同胚于某个 $B_Y$. 故
-	\[ \pi_1(\Gamma, \star)  \rightiso \pi_1(\Gamma/T, \star) \simeq \pi_1(B_Y, \star) \; \text{是自由群}. \]
-	取定集合 $X$, 复叠空间的理论 \cite[第五章 \S 4]{You} 告诉我们对 $\mathbf{F}(X) \simeq \pi_1(B_X, \star)$ 的任意子群 $H$, 皆存在复叠空间  $\widetilde{B_X} \to B_X$ 使得 $H$ 是单同态 $\pi_1\left( \widetilde{B_X}, \star \right) \to \pi_1(B_X, \star)$ 的像. 至此, 我们只消证明 $\pi_1\left(\widetilde{B_X}, \star\right)$ 自由; 断言归结为以下性质:
-	\begin{center} 图的复叠空间仍为图. \end{center}
-	这是复叠空间的道路提升性质的直接推论.
+	Dalam kasus umum, karena $T$ memuat semua verteks, ruang hasil bagi $\Gamma/T$ akan homeomorfik dengan suatu $B_Y$. Oleh karena itu,
+	\[ \pi_1(\Gamma, \star)  \rightiso \pi_1(\Gamma/T, \star) \simeq \pi_1(B_Y, \star) \; \text{adalah grup bebas}. \]
+	Tetapkan suatu himpunan $X$. Teori ruang penutup \cite[Bab V \S 4]{You} menyatakan bahwa untuk $\mathbf{F}(X) \simeq \pi_1(B_X, \star)$ dan setiap subgrupnya $H$, terdapat ruang penutup $\widetilde{B_X} \to B_X$ sedemikian sehingga $H$ adalah citra homomorfisme injektif $\pi_1\left( \widetilde{B_X}, \star \right) \to \pi_1(B_X, \star)$. Dengan demikian, kita hanya perlu membuktikan bahwa $\pi_1\left(\widetilde{B_X}, \star\right)$ bebas; klaim ini tereduksi pada sifat berikut:
+	\begin{center} Ruang penutup dari suatu graf tetap merupakan graf. \end{center}
+	Ini adalah akibat langsung dari sifat pengangkatan lintasan untuk ruang penutup.
 \end{proof}
-
 \section{对称群}\label{sec:symmetric-group}
 对集合 $X$, 其\emph{对称群} $\mathfrak{S}_X$ 是全体双射 $X \xrightarrow{1:1} X$ 对映射合成所构成的群, 它自然地左作用于 $X$ 上, 其中元素也称为置换. 本节仅关心 $n := |X|$ 有限的情形, 此时 $|\mathfrak{S}_X| = n!$. 习惯上经常将 $X$ 的元素等同于 $\{1, \ldots, n\}$ 并记 $\mathfrak{S}_n := \mathfrak{S}_{\{1, \ldots, n\}}$. 
 
