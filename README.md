@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan, seluruh Bab 1, seluruh Bab 2, seluruh Bab 3 termasuk latihannya, serta pembukaan Bab 4 sampai Bagian 4.9 telah diterjemahkan dan diterima secara lokal dalam tiga puluh tiga unit pembaca dengan backend modular tervalidasi. Publikasi dan pembacaan balik byte publik Unit 33 belum diklaim; Bagian 4.10 menjadi span sumber kanonik berikutnya.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan, seluruh Bab 1, seluruh Bab 2, seluruh Bab 3 termasuk latihannya, serta pembukaan Bab 4 sampai Bagian 4.9 telah diterjemahkan, diberi backend modular, dipublikasikan, dan diverifikasi byte demi byte dalam tiga puluh tiga unit pembaca. Bagian 4.10 menjadi span sumber kanonik berikutnya.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh checkpoint pembaca 0.3.0 (96 halaman; Unit 1-9)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf)
 
@@ -487,7 +487,7 @@ Artefak Unit 33 yang diterima secara lokal:
 - driver pembaca memakai definisi `\xlongequal` yang robust dan lokal pada permukaan reader karena Poppler menghilangkan garis ekstensi dvipdfmx. Relasi berlabel yang sama kini terlihat pada kedua renderer; kandidat dan matematika sumber kanonik tidak diubah oleh perbaikan renderer ini.
 - backend 396.355 byte; SHA-256 `edc5812ffd5d46d0fee21748dabbe1b75e71dd1226d3261c073db8930bebe4d7`; 485 catatan kompatibel-konsep dan 561 identitas UUIDv5 yang diaudit mencakup 22 peristiwa QA terurut serta 104 kemunculan binding pada 41 path hidup / 46 rentang baris. Enam proyeksi CSV deterministik berputar balik byte-identik terhadap JSON kanonik. Tidak ada latihan, petunjuk, jawaban, solusi, atau sitasi yang diada-adakan.
 - receipt penerimaan sumber/reader/backend ada di [`qa/UNIT_033_ADMISSION_20260826.md`](qa/UNIT_033_ADMISSION_20260826.md), bukti visual ada di [`qa/UNIT_033_VISUAL_QA_20260826.md`](qa/UNIT_033_VISUAL_QA_20260826.md), bukti backend ada di [`qa/unit-033-evidence/backend-validation.json`](qa/unit-033-evidence/backend-validation.json), dan audit akhir independen ada di [`qa/UNIT_033_FINAL_AUDIT_20260826.md`](qa/UNIT_033_FINAL_AUDIT_20260826.md). Provenance produksi dan peninjauan: `OpenAI Codex gpt-5.6-sol, Ultra`, atas instruksi pengguna; kredit Wen-Wei Li dan kontributor manusia tetap dipertahankan.
-- publikasi dan pembacaan balik byte publik Unit 33 belum diklaim pada batas ini.
+- Unit 33 dipublikasikan pada commit isi `486965a43410fc2b815b0955486771f3048fdd36`; seluruh 58 path / 5.065.986 byte cocok dengan blob komit pada pembacaan balik anonim. Inventaris lengkap ada di [`qa/PUBLICATION_GITHUB_UNIT_033_CONTENT_READBACK.json`](qa/PUBLICATION_GITHUB_UNIT_033_CONTENT_READBACK.json), dan receipt publikasi ada di [`qa/PUBLICATION_GITHUB_UNIT_033_20260826.md`](qa/PUBLICATION_GITHUB_UNIT_033_20260826.md).
 
 ## Backend modular
 
