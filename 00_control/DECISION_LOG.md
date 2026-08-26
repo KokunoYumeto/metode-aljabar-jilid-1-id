@@ -1426,3 +1426,17 @@ delta needed to replay the canonical promotion. Receipt commit
 for all three changed paths / 95,609 bytes. Advance canonical admission to
 Unit 031 at `chapter4.tex:936`; Unit 042 remains isolated until Units 031-041
 have been admitted in order. The full O013 goal remains active.
+
+## D088 — 2026-08-26 — Unit 031 published and cursor advanced
+
+Publish complete Section 4.7 at authority chapter4.tex:936-1107 only after the final
+nine-page reader, schema-valid backend, independent admission audit, content
+commit, receipt commit, and both anonymous readback inventories agree. Content
+commit 257fafa97f8582e243b4f69b67c68a0e287b7b3d, tree 87f0db21f8e76e71c0a9f01757a3bffa93d557b9, and receipt commit
+ca10067c2602ca7a93bb721fd46614ae0c16cdaa, tree 93271eadcaa3ed557314de89d3f9baaf3995b489, are the exact public
+boundary. The initial 42.13312 pt display overflow is closed by separately
+provenanced target-only reflow O013-LI-U031-REFLOW-001; compact indexes remove
+the sparse tenth page. These are resolved reader defects, not blockers. Advance
+to Unit 032 at chapter4.tex:1108 while preserving the full Li, Duncan,
+selected-CRing, and separate connective/mastery architecture with Etingof
+reference-only.

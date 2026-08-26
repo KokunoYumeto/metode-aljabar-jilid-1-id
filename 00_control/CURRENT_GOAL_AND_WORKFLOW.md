@@ -81,46 +81,33 @@ The user's exact retained instructions are
 7. Admit only verified bytes, update cursor/state/receipts, commit and push the
    meaningful boundary immediately, then verify public bytes and continue.
 
-Current admitted boundary: Li Units 001-030 through complete Section 4.6.
-Unit 030 authority is `chapter4.tex:796-935`, 140 normalized-LF records / 7,981
-bytes / SHA-256
-`7803452c4285c57e419a2cb2a288b3733975555fafd6b7a88c5732da369220c1`;
-blank boundary line 935 is excluded from the 139-record candidate. The reviewed
-candidate is 10,044 bytes / SHA-256
-`7e39460c871f38145772d66c95160214d3bf33f18c15f858b4ee874e65474b4b`.
-Canonical `chapter4.tex` is 172,726 bytes / SHA-256
-`245a891930cefb1c18cbd1208386ba5131c56b8b5930510c329577eeeb96cddc`.
-Its centered seven-page reader is 91,961 bytes / SHA-256
-`43ad2ffa2516f2f4394bcb82ad2e585f21c1e9e36a87870f4406a78597f18d74`,
-and its schema-valid backend is 179,924 bytes / SHA-256
-`1dae77cebf984b8a1dfad0a3d90714d3b4f69c0632042cea768939eb1a77f806`.
-The admission receipt is 11,879 bytes / SHA-256
-`9ea189ac1cb7997861dc7a6af6c993ecb5fe6293610185e6f6ae8b98889680c0`;
-the independent final audit is 4,610 bytes / SHA-256
-`c752b8eb28c4f2667f501b4b0298e521cd01752724139b947029f8f6f1032baf`;
-backend validation is 5,716 bytes / SHA-256
-`f175a22f2b8d9df56038b880b332d3a862681d5da7cea31cb2313af501753a50`;
-and the structural/PDF and render inventories are respectively 57,377 bytes /
-`5b11c997ca331611871e22928f560f89757651053803bffc91ac1d118b89be02`
-and 34,392 bytes /
-`2d77180e791121c76abbf097936bc69036113c1bebb3232346897619d4f9b131`.
+Current admitted boundary: Li Units 001-031 through complete Section 4.7.
+Unit 031 authority is chapter4.tex:936-1107, 172 normalized-LF records / 16,048
+bytes / SHA-256 647d22446e75cde39b7b9f53d6658f39de78c5d773d51d6f446d651e1734967b; blank boundary line 1107 is excluded from the
+171-record target mapping at canonical lines 933-1103. The final candidate is
+19,855 bytes / SHA-256 6bc4b1f7dd6cde6673915eba75cdf96cca6e8312d060d1fda0da25cb7073ee81; canonical chapter4.tex is 176,533 bytes / SHA-256 440ed304a808c687d2e431eff1dbdbe0fe01458d7f8c82b47f515659307cf28f.
+Its centered nine-page reader is 126,053 bytes / SHA-256 313667c3f87439ccaac3f8708653bb352af0ba7a16c9d09b159ad1b836cc32fb, and its schema-valid
+backend is 367,588 bytes / SHA-256 307828cd0dc47e8229a01fd08beaad3cb3c6fdd4aa09e4f973ba28d86f92f391. Backend validation is
+5,837 bytes / SHA-256 51fe7f83d5b2c6a192d322b3e96899affb52045e16d9958f285497fe6840f7ca; the admission receipt is
+4,547 bytes / SHA-256 ee981426d7d15c47d975315c10c7566566d4397bb34e1be3c8bca3f20f334f06; and the final audit is
+5,539 bytes / SHA-256 64e2e14a1824bb2311c37f371446a95f20e2113743cd6869111d20df9b5b38d7.
+
 All deterministic source, mathematics, terminology, topology, build, PDF,
 dual-renderer visual, backend, rights, privacy, and independent-audit gates
-pass; one source correction and two protected-text localizations are explicit,
-and the PDF's untagged-accessibility limitation is disclosed.
-Unit 030 content commit `cff3f5537a86fd2feb21609f2c47b533b51c99bf`,
-tree `39cca775954c9d2e097d3bdd413f7c03cf9719a6`, passed anonymous readback for
-all 49 changed paths / 3,068,734 bytes. Its inventory is 21,524 bytes /
-SHA-256 `350935011c75afe1c091c4f0edc06029941acb0c299e7ac624352986cdbb6c22`.
-Receipt commit `3e8ef513db7439dc4f14e17f349fec19b30e99d8`, tree
-`9f29340f0b81c9f4d13363842e38fe7510eea568`, passed anonymous readback for
-all three receipt paths / 95,609 bytes and is the verified remote base. Its
-inventory is 1,300 bytes / SHA-256
-`a4d9c791fadb8aaefd04dc183c2c0dcb5afd8bcbe5c5495503981768a1ec4d3f`.
-The 229-page checkpoint reader `0.6.0`, covering Units 001-024 and complete
-Chapters 1-3, remains public at content commit
-`5641d5453c85cf007135603037db8805f7fa4f42`; all GitHub checkpoint and Zenodo
-release bytes passed anonymous readback.
+pass. O013-LI-U031-COR-001 is separately provenanced. The first reader exposed
+a 42.13312 pt overflow in a four-term display; target-only reflow
+O013-LI-U031-REFLOW-001 splits it without changing equality, signs, terms, or
+order. Compact final indexes remove the sparse tenth page. The final reader has
+nine centered pages and no actionable visual or build defect; its untagged
+accessibility limitation is disclosed.
+
+Content commit 257fafa97f8582e243b4f69b67c68a0e287b7b3d, tree 87f0db21f8e76e71c0a9f01757a3bffa93d557b9, passed
+anonymous readback for 54 paths /
+5,016,055 bytes. Receipt commit ca10067c2602ca7a93bb721fd46614ae0c16cdaa,
+tree 93271eadcaa3ed557314de89d3f9baaf3995b489, passed anonymous readback for
+3 paths / 99,685 bytes
+and is the verified remote base. The 229-page checkpoint reader 0.6.0 remains
+the nonduplicative Zenodo preservation release.
 
 A bounded Indonesian field-usage check found no suitable Indonesian arXiv TeX
 after a finite search and therefore used two openly readable Indonesian
@@ -197,31 +184,15 @@ assertions. Content commit `bb913c53781e06b9a5fd0f57b981581faa7649c8`,
 navigation correction `b9909c801f7bc1123e274c8036bb5b75f4ed0414`, and
 receipt commit `a3dcc9dbba79a31a2212109c90b070fa5e6bcf8e` all passed
 anonymous readback. Checkpoint 0.6.0 is now built, inspected, public, and
-anonymously read back on both GitHub and Zenodo. Unit 030 content and sanitized
-receipt are public and byte-verified. The following admission boundary is Unit
-031, complete Section 4.7 at `chapter4.tex:936-1107`; its 171-record isolated
-candidate is 19,850 bytes / SHA-256
-`b6bc5e41ed428dfde4526558b9a3ef36117cc55a7c0386bc360affa78b82fb01`.
-Its fail-closed checker (15,597 bytes / SHA-256
-`5557a3c54146d0e5fffe09406874ab252443d943f938448cfd3e534eb35b384b`)
-passes against the 16,048-byte authority slice / SHA-256
-`647d22446e75cde39b7b9f53d6658f39de78c5d773d51d6f446d651e1734967b`.
-Before canonical promotion, adjudicate its local solvable/supersolvable/
-nilpotent-group terms against the live 421-row glossary, promote only the
-reviewed delta, and preserve its one declared proof repair and eight protected-
-text localizations. Units 031-042 remain isolated source-order candidates and
-may not skip admission order; Units 031-035 finish Chapter 4, Unit 036 begins
-Chapter 5, and Units 037-041 continue through the complete monoid- and
-polynomial-ring section. Unit 041 covers
-`chapter5.tex:783-956`; its candidate is 20,217 bytes, SHA-256
-`e9e3d7d1c518e4fbb85a32f819a228d5077f59088fd6ea353d675d87ce71bc72`.
-Its checker passes twice with four separately proven source corrections. Unit
-042 then covers the complete unique-factorization section at
-`chapter5.tex:958-1182`; its 225-record candidate is 29,674 bytes, SHA-256
-`a76cf155134f6ae7a4a5e7a94cd9a5424ac83e277264f8d4228bdc5a2ed4b41a`,
-and its checker passes twice with seven separately proved source corrections.
-The isolated translation cursor is now `chapter5.tex:1184`; Unit 043 has not
-started.
+anonymously read back on both GitHub and Zenodo. Unit 031 and complete Section 4.7 are public and byte-verified.
+The following source-order admission boundary is Unit 032 at chapter4.tex:1108-1388; its
+27,685-byte isolated candidate has SHA-256
+19583aa71814bbed580d51f39eeaf113a399ec13fef5773a39b6e6cf16289140. Its checker has SHA-256 5bbaa33eb27b6acf6f1530f5473926cb0a2a9b6216ff4c492f88840795ab4d89. The candidate
+remains isolated until Unit 032 terminology, integration, reader, backend,
+build, all-page visual, publication, and anonymous-readback gates pass. The
+active cursor is chapter4.tex:1108 and the cursor after Unit 032 will be
+chapter4.tex:1389. Units 032-042 remain strictly source-ordered. The isolated
+translation cursor remains chapter5.tex:1184; Unit 043 has not started.
 
 The Duncan source/build gate is independently admitted: exact source freeze
 42,710 bytes / SHA-256

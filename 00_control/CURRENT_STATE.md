@@ -1189,27 +1189,47 @@ at `chapter4.tex:936-1107` is the next canonical admission boundary after Unit
   `0b214e2d8967d26cb25023bbee23d39b4e4b2795` closed that earlier boundary; its
   three receipt-boundary files / 11,654 bytes also passed anonymous readback.
 
+## Unit 031 public boundary
+
+Current admitted boundary: Li Units 001-031 through complete Section 4.7.
+Unit 031 authority is chapter4.tex:936-1107, 172 normalized-LF records / 16,048
+bytes / SHA-256 647d22446e75cde39b7b9f53d6658f39de78c5d773d51d6f446d651e1734967b; blank boundary line 1107 is excluded from the
+171-record target mapping at canonical lines 933-1103. The final candidate is
+19,855 bytes / SHA-256 6bc4b1f7dd6cde6673915eba75cdf96cca6e8312d060d1fda0da25cb7073ee81; canonical chapter4.tex is 176,533 bytes / SHA-256 440ed304a808c687d2e431eff1dbdbe0fe01458d7f8c82b47f515659307cf28f.
+Its centered nine-page reader is 126,053 bytes / SHA-256 313667c3f87439ccaac3f8708653bb352af0ba7a16c9d09b159ad1b836cc32fb, and its schema-valid
+backend is 367,588 bytes / SHA-256 307828cd0dc47e8229a01fd08beaad3cb3c6fdd4aa09e4f973ba28d86f92f391. Backend validation is
+5,837 bytes / SHA-256 51fe7f83d5b2c6a192d322b3e96899affb52045e16d9958f285497fe6840f7ca; the admission receipt is
+4,547 bytes / SHA-256 ee981426d7d15c47d975315c10c7566566d4397bb34e1be3c8bca3f20f334f06; and the final audit is
+5,539 bytes / SHA-256 64e2e14a1824bb2311c37f371446a95f20e2113743cd6869111d20df9b5b38d7.
+
+All deterministic source, mathematics, terminology, topology, build, PDF,
+dual-renderer visual, backend, rights, privacy, and independent-audit gates
+pass. O013-LI-U031-COR-001 is separately provenanced. The first reader exposed
+a 42.13312 pt overflow in a four-term display; target-only reflow
+O013-LI-U031-REFLOW-001 splits it without changing equality, signs, terms, or
+order. Compact final indexes remove the sparse tenth page. The final reader has
+nine centered pages and no actionable visual or build defect; its untagged
+accessibility limitation is disclosed.
+
+Content commit 257fafa97f8582e243b4f69b67c68a0e287b7b3d, tree 87f0db21f8e76e71c0a9f01757a3bffa93d557b9, passed
+anonymous readback for 54 paths /
+5,016,055 bytes. Receipt commit ca10067c2602ca7a93bb721fd46614ae0c16cdaa,
+tree 93271eadcaa3ed557314de89d3f9baaf3995b489, passed anonymous readback for
+3 paths / 99,685 bytes
+and is the verified remote base. The 229-page checkpoint reader 0.6.0 remains
+the nonduplicative Zenodo preservation release.
+
 ## Exact next action
 
-Unit 030 at `chapter4.tex:796-935` is public and read back. Admit Unit 031,
-complete Section 4.7 at `chapter4.tex:936-1107`, next. Its isolated candidate
-is 19,850 bytes / SHA-256
-`b6bc5e41ed428dfde4526558b9a3ef36117cc55a7c0386bc360affa78b82fb01`;
-its checker is 15,597 bytes / SHA-256
-`5557a3c54146d0e5fffe09406874ab252443d943f938448cfd3e534eb35b384b`
-and passes against the 16,048-byte authority slice / SHA-256
-`647d22446e75cde39b7b9f53d6658f39de78c5d773d51d6f446d651e1734967b`.
-Before promotion, adjudicate its local `grup solvabel`, `grup supersolvabel`,
-`grup nilpoten`, commutator/series, symplectic, derivative, and canonical-
-commutation terminology against the live 421-row glossary; append only a
-reviewed delta. Preserve one declared proof repair and eight protected-text
-localizations. Then integrate canonical source, build and inspect every page,
-validate the backend, publish narrowly, and perform anonymous byte readback.
-Continue Units 032-042 strictly in source order; Unit 042 may not skip the
-intervening admission cursor. Resume new isolated translation from
-`chapter5.tex:1184` only when it does not delay sequential admission. Preserve
-the existing Zenodo/Figshare lineages; do not create a duplicate or flatten
-component rights.
+Unit 031 and complete Section 4.7 are public and byte-verified.
+The following source-order admission boundary is Unit 032 at chapter4.tex:1108-1388; its
+27,685-byte isolated candidate has SHA-256
+19583aa71814bbed580d51f39eeaf113a399ec13fef5773a39b6e6cf16289140. Its checker has SHA-256 5bbaa33eb27b6acf6f1530f5473926cb0a2a9b6216ff4c492f88840795ab4d89. The candidate
+remains isolated until Unit 032 terminology, integration, reader, backend,
+build, all-page visual, publication, and anonymous-readback gates pass. The
+active cursor is chapter4.tex:1108 and the cursor after Unit 032 will be
+chapter4.tex:1389. Units 032-042 remain strictly source-ordered. The isolated
+translation cursor remains chapter5.tex:1184; Unit 043 has not started.
 
 ## Not complete
 
