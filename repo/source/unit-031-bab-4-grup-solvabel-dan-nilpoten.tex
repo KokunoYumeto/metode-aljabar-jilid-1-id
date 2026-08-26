@@ -1,0 +1,204 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8
+
+% Unit pembaca Bahasa Indonesia untuk Methods of Algebra, Volume 1.
+% Teks sumber: Copyright 2018 Wen-Wei Li, CC BY 4.0.
+% Terjemahan ini dilisensikan menurut CC BY 4.0.
+% Provenans produksi: OpenAI Codex gpt-5.6-sol, Ultra.
+
+\documentclass[
+	colors = true,
+	coverpage = coverpage-id-unit-031.tex,
+	fontsetup = font-setup-id.tex,
+	titlesetup = titles-setup-id.tex,
+	CJKthechapter = false
+]{AJbook}
+
+\input{locale-ui-id.tex}
+
+\makeatletter
+\AtBeginDocument{\gdef\mkheader@lemma{\setparms@lemma\@thm{lemma}{theorem}{Lema}}}
+\makeatother
+
+\setCJKmainfont[
+	Path=../fonts/,
+	BoldFont=NotoSansCJKsc-Medium.otf,
+	ItalicFont=NotoSansCJKsc-Regular.otf
+]{NotoSansCJKsc-Regular.otf}
+
+\DefineBibliographyStrings{english}{
+	in = {dalam},
+	editor = {penyunting},
+	byeditor = {disunting oleh},
+	backrefpage = {dirujuk pada hlm\adddot},
+	backrefpages = {dirujuk pada hlm\adddot}
+}
+
+\newcommand{\BuildDateID}{26 Agustus 2026}
+\newcommand{\BuildDateShortID}{2026-08-26}
+\AtBeginDocument{\renewcommand{\chaptermark}[1]{\markboth{Bab \thechapter\quad #1}{}}}
+\AtBeginDocument{\let\cleardoublepage\clearpage}
+
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\SetSymbolFont{stmry}{bold}{U}{stmry}{m}{n}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{tikz-cd}
+\usetikzlibrary{positioning, patterns, calc, matrix, shapes.arrows, shapes.symbols}
+\usepackage{braids}
+\usepackage{tqft}
+\usepackage{ytableau}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{myarrows}
+\usepackage{mycommand}
+
+\usepackage[noautomatic]{imakeidx}
+\makeindex[
+	columns=2,
+	program=makeindex,
+	intoc=true,
+	title={Indeks Istilah}]
+\makeindex[
+	columns=3,
+	program=makeindex,
+	intoc=true,
+	name=sym1,
+	title={Indeks Simbol}]
+
+\usepackage{xr}
+\usepackage[unicode, bookmarksnumbered]{hyperref}
+\externaldocument{unit-031-crossrefs}[]
+\let\UnitThirtyOneOriginalRef\ref
+\newcommand{\UnitThirtyOneMarkExternalRef}[1]{%
+	\expandafter\def\csname unit031external:#1\endcsname{1}}
+\newcommand{\UnitThirtyOneRef}[1]{%
+	\ifcsname unit031external:#1\endcsname
+		\begin{NoHyper}\UnitThirtyOneOriginalRef{#1}\end{NoHyper}%
+	\else
+		\UnitThirtyOneOriginalRef{#1}%
+	\fi}
+\UnitThirtyOneMarkExternalRef{def:normal-series}
+\UnitThirtyOneMarkExternalRef{def:central-series}
+\UnitThirtyOneMarkExternalRef{prop:abelian-composition-series}
+\UnitThirtyOneMarkExternalRef{prop:p-group-center}
+\hypersetup{
+	pdfauthor = {Wen-Wei Li},
+	pdftitle = {Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 31: Grup Solvabel dan Grup Nilpoten},
+	pdfsubject = {Terjemahan Bahasa Indonesia independen; Bagian 4.7 lengkap},
+	pdfkeywords = {aljabar, teori grup, grup solvabel, grup nilpoten, abelianisasi, Feit-Thompson, grup Heisenberg, id-ID},
+	pdflang = {id-ID},
+	CJKbookmarks = true}
+
+\addbibresource{Al-jabr.bib}
+
+% Load the exact inclusive target-line span from the canonical integrated
+% source. scripts/build_unit_031.ps1 hash-gates this range before XeLaTeX.
+\ExplSyntaxOn
+\ior_new:N \l__unit_thirty_one_source_ior
+\tl_new:N \l__unit_thirty_one_source_tl
+\int_new:N \l__unit_thirty_one_line_int
+\cs_new_protected:Npn \unit_thirty_one_input_range:nnn #1#2#3
+  {
+    \tl_clear:N \l__unit_thirty_one_source_tl
+    \int_zero:N \l__unit_thirty_one_line_int
+    \ior_open:Nn \l__unit_thirty_one_source_ior {#1}
+    \ior_str_map_inline:Nn \l__unit_thirty_one_source_ior
+      {
+        \int_incr:N \l__unit_thirty_one_line_int
+        \int_compare:nNnT {\l__unit_thirty_one_line_int} > {#2 - 1}
+          {
+            \int_compare:nNnT {\l__unit_thirty_one_line_int} < {#3 + 1}
+              {
+                \tl_put_right:Nn \l__unit_thirty_one_source_tl {##1}
+                \tl_put_right:Nx \l__unit_thirty_one_source_tl
+                  {\char_generate:nn {10} {12}}
+              }
+          }
+      }
+    \ior_close:N \l__unit_thirty_one_source_ior
+    \exp_args:NV \scantokens \l__unit_thirty_one_source_tl
+  }
+\NewDocumentCommand{\InputSourceLineRange}{mmm}
+  {\unit_thirty_one_input_range:nnn {#1} {#2} {#3}}
+\ExplSyntaxOff
+
+\begin{document}
+	\hypersetup{pageanchor=false}
+	\pagestyle{empty}
+	\input{coverpage-id-unit-031.tex}
+	\pagestyle{fancy}
+	\pagenumbering{roman}
+	\setcounter{page}{1}
+
+	\mainmatter
+	\hypersetup{pageanchor=true}
+	\raggedbottom
+	\newgeometry{
+		centering,
+		textwidth=142mm,
+		textheight=198mm,
+		headheight=5ex,
+		headsep=5ex}
+	\setlength{\headwidth}{\textwidth}
+	\setcounter{chapter}{4}
+	\setcounter{section}{6}
+	\begingroup
+	\setlength{\emergencystretch}{3em}
+	\setstretch{1.16}
+	\clubpenalty=10000
+	\widowpenalty=10000
+	\displaywidowpenalty=10000
+	\brokenpenalty=10000
+	\let\ref\UnitThirtyOneRef
+	\InputSourceLineRange{chapter4.tex}{933}{1103}
+	\endgroup
+
+	\begingroup
+	\setlength{\emergencystretch}{3em}
+	\par\bigskip
+	\phantomsection
+	\pdfbookmark[0]{Daftar Pustaka}{unit031-bibliography}
+	{\Large\sffamily\bfseries Daftar Pustaka\par}\smallskip
+	\begingroup
+	\small
+	\setlength{\bibitemsep}{0.25\baselineskip}
+	\printbibliography[heading=none]
+	\endgroup
+	\let\clearpage\relax
+	\let\cleardoublepage\relax
+	\IfFileExists{\jobname.ind}{
+		\begingroup
+		\renewenvironment{theindex}
+			{\par\smallskip
+			 \phantomsection
+			 \pdfbookmark[0]{Indeks Istilah}{unit031-term-index}
+			 \noindent{\small\sffamily\bfseries Indeks Istilah.}\enspace
+			 \small
+			 \let\UnitThirtyOneIndexPar\par
+			 \let\par\relax
+			 \def\item{\unskip\hspace{1.25em}\penalty0}
+			 \let\indexspace\relax}
+			{\let\par\UnitThirtyOneIndexPar\par}
+		\input{\jobname.ind}
+		\endgroup
+	}{}
+	\IfFileExists{sym1.ind}{
+		\begingroup
+		\renewenvironment{theindex}
+			{\par\smallskip
+			 \phantomsection
+			 \pdfbookmark[0]{Indeks Simbol}{unit031-symbol-index}
+			 \noindent{\small\sffamily\bfseries Indeks Simbol.}\enspace
+			 \small
+			 \let\UnitThirtyOneSymbolIndexPar\par
+			 \let\par\relax
+			 \def\item{\unskip\hspace{1.25em}\penalty0}
+			 \let\indexspace\relax}
+			{\let\par\UnitThirtyOneSymbolIndexPar\par}
+		\input{sym1.ind}
+		\endgroup
+	}{}
+	\endgroup
+\end{document}

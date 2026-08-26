@@ -930,107 +930,107 @@ Perhatikan bahwa setiap grup berorde prima merupakan grup siklik.
 \end{proof}
 
 Kita akan mendeskripsikan struktur grup abelian berhingga secara terperinci dalam Korolari \ref{prop:finite-abelian-structure}.
-\section{可解群与幂零群}\label{sec:solvable-groups}
-可解群的概念源于 Galois 对高次方程根式解的研究, 幂零与超可解群则是其变体. 这些概念在 Lie 群, Lie 代数的研究中占有重要地位, 本节主要介绍其群论的面向. 请先回忆定义 \ref{def:normal-series}, \ref{def:central-series} 中的子群列.
+\section{Grup Solvabel dan Grup Nilpoten}\label{sec:solvable-groups}
+Konsep grup solvabel berawal dari kajian Galois tentang penyelesaian persamaan berderajat tinggi dengan radikal; grup nilpoten dan grup supersolvabel merupakan variasinya. Konsep-konsep ini berperan penting dalam kajian grup Lie dan aljabar Lie; bagian ini terutama memperkenalkan segi teori grupnya. Ingat kembali deret subgrup dalam Definisi \ref{def:normal-series} dan \ref{def:central-series}.
 
-\begin{definition}\label{def:solvable-nilpotent-group}\index{kejiequn@可解群 (solvable group)}\index{chaokejiequn@超可解群 (supersolvable group)}\index{milingqun@幂零群 (nilpotent group)}
-	设 $G$ 为群.
+\begin{definition}\label{def:solvable-nilpotent-group}\index{kejiequn@grup solvabel (solvable group)}\index{chaokejiequn@grup supersolvabel (supersolvable group)}\index{milingqun@grup nilpoten (nilpotent group)}
+	Misalkan $G$ suatu grup.
 	\begin{enumerate}
-		\item 若存在正规列 $G = G_0 \supset G_1 \supset \cdots \supset G_r = \{1\}$ 使得每个子商都交换, 则称之为\emph{可解群};
-		\item 承上, 若对每个 $i$ 皆有 $G_i \lhd G$, 且 $G_i/G_{i+1}$ 是素数阶循环群, 则称之为\emph{超可解群};
-		\item 如果存在中心列 $G = G_0 \supset G_1 \supset \cdots \supset G_r = \{1\}$, 则称之为\emph{幂零群}.
+		\item Jika terdapat deret normal $G = G_0 \supset G_1 \supset \cdots \supset G_r = \{1\}$ yang setiap subkuosiennya abelian, grup tersebut disebut \emph{grup solvabel};
+		\item Dalam keadaan di atas, jika untuk setiap $i$ berlaku $G_i \lhd G$ dan $G_i/G_{i+1}$ merupakan grup siklik berorde prima, grup tersebut disebut \emph{grup supersolvabel};
+		\item Jika terdapat deret sentral $G = G_0 \supset G_1 \supset \cdots \supset G_r = \{1\}$, grup tersebut disebut \emph{grup nilpoten}.
 	\end{enumerate}
 \end{definition}
 
-我们希望在上述定义中找到一类典则的正规列/中心列, 借以检验一个群是否可解或幂零. 以下概念是必要的.
+Kita hendak menemukan deret normal atau deret sentral yang kanonik dalam definisi di atas, agar dapat menentukan apakah suatu grup solvabel atau nilpoten. Konsep-konsep berikut diperlukan untuk tujuan itu.
 \begin{definition}\index[sym1]{$[x,y]$}
-	对于 $x, y \in G$, 定义\emph{换位子}
+	Untuk $x, y \in G$, definisikan \emph{komutator}
 	\[ [x,y] := xyx^{-1}y^{-1}. \]
-	对任意子集 $A, B \subset G$, 置 $[A, B] \lhd G$ 为包含 $\{[a,b] : a \in A, b \in B\}$ 的最小正规子群, 或简称为它们生成的正规子群. 递归地定义 $G$ 之
+	Untuk sebarang subhimpunan $A, B \subset G$, tetapkan $[A, B] \lhd G$ sebagai subgrup normal terkecil yang memuat $\{[a,b] : a \in A, b \in B\}$, atau, singkatnya, subgrup normal yang dibangkitkan oleh himpunan itu. Definisikan secara rekursif hal-hal berikut untuk $G$:
 	\begin{itemize}
-		\item \emph{导出列}: \begin{tikzpicture}[baseline] \matrix (M) [matrix of math nodes, left delimiter={\{} ] {
+		\item \emph{deret turunan}: \begin{tikzpicture}[baseline] \matrix (M) [matrix of math nodes, left delimiter={\{} ] {
 			\mathscr{D}^{i+1} G := [\mathscr{D}^i G, \mathscr{D}^i G] \\
 			\mathscr{D}^0 G := G, \\
 		}; \node at (M-1-1.east) [right=1em] {($i \geq 0$)}; \end{tikzpicture}
-		\item \emph{降中心列}: \begin{tikzpicture}[baseline] \matrix (M) [matrix of math nodes, left delimiter={\{} ] {
+		\item \emph{deret sentral menurun}: \begin{tikzpicture}[baseline] \matrix (M) [matrix of math nodes, left delimiter={\{} ] {
 			\mathscr{C}^{i+1} G := [\mathscr{C}^i G, G] \\
 			\mathscr{C}^0 G := G. \\
 		}; \node at (M-1-1.east) [right=1em] {($i \geq 0$)}; \end{tikzpicture}
 	\end{itemize}
 \end{definition}
 
-容易验证以下性质. 设 $i \in \Z_{\geq 0}$:
+Sifat-sifat berikut mudah diverifikasi. Misalkan $i \in \Z_{\geq 0}$:
 \begin{compactitem}
-	\item $xy=yx \iff [x,y]=1$, 而 $[x,y]^{-1} = [y,x]$;
-	\item 对于任意群同态 $\varphi: G_1 \to G_2$, 有 $\varphi [x,y] = [\varphi(x), \varphi(y)]$;
+	\item $xy=yx \iff [x,y]=1$, dan $[x,y]^{-1} = [y,x]$;
+	\item untuk setiap homomorfisme grup $\varphi: G_1 \to G_2$, berlaku $\varphi [x,y] = [\varphi(x), \varphi(y)]$;
 	\item $\mathscr{D}^i G \subset \mathscr{C}^i G$;
-	\item $\mathscr{D}^i G \lhd G$, $\mathscr{C}^i G \lhd G$: 事实上 $G$ 的任何自同构都保持子群 $\mathscr{D}^i G$ 和 $\mathscr{C}^i G$.
+	\item $\mathscr{D}^i G \lhd G$, $\mathscr{C}^i G \lhd G$: bahkan setiap automorfisme dari $G$ mempertahankan subgrup $\mathscr{D}^i G$ dan $\mathscr{C}^i G$.
 \end{compactitem}
-关于 $\mathscr{D}^i G$, $\mathscr{C}^i G$ 的性质可以递归地证明. 我们也称 $G_\text{der} := \mathscr{D}^1 G$ 为 $G$ 的\emph{导出子群}. 而 $G_\text{ab} := G/G_\text{der}$ 称为 $G$ 的\emph{交换化}. 下述泛性质表明了 $G \twoheadrightarrow G_\text{ab}$ 是 $G$ 的``极大交换商''. \index{daochuziqun@导出子群 (derived subgroup)}\index[sym1]{$G_\text{der}$} \index[sym1]{$G_\text{ab}$}
+Sifat-sifat $\mathscr{D}^i G$ dan $\mathscr{C}^i G$ dapat dibuktikan secara rekursif. Kita juga menyebut $G_\text{der} := \mathscr{D}^1 G$ sebagai \emph{subgrup turunan} dari $G$. Selanjutnya, $G_\text{ab} := G/G_\text{der}$ disebut \emph{abelianisasi} dari $G$. Sifat universal berikut menunjukkan bahwa $G \twoheadrightarrow G_\text{ab}$ merupakan ``grup hasil bagi abelian terbesar'' dari $G$. \index{daochuziqun@subgrup turunan (derived subgroup)}\index[sym1]{$G_\text{der}$} \index[sym1]{$G_\text{ab}$}
 
 \begin{lemma}\label{prop:abelianization}
-	商群 $G_{\mathrm{ab}}$ 是交换群. 对任意交换群 $A$ 和同态 $\varphi: G \to A$, 存在唯一的同态 $\psi: G_{\mathrm{ab}} \to A$ 使下图交换.
+	Grup hasil bagi $G_{\mathrm{ab}}$ merupakan grup abelian. Untuk setiap grup abelian $A$ dan homomorfisme $\varphi: G \to A$, terdapat tepat satu homomorfisme $\psi: G_{\mathrm{ab}} \to A$ yang membuat diagram berikut komutatif.
 	\[ \begin{tikzcd}
 		G \arrow[twoheadrightarrow, r] \arrow[d, "\varphi"'] & G_{\mathrm{ab}} \arrow[dashed, ld, "{\exists ! \; \psi}"] \\
 		A &
 	\end{tikzcd} \]
-	特别地, 商群 $G/N$ 交换当且仅当 $N \supset G_\text{der}$, 相应地有商同态 $G_{\mathrm{ab}} \twoheadrightarrow G/N$.
+	Khususnya, grup hasil bagi $G/N$ abelian jika dan hanya jika $N \supset G_\text{der}$; dengan demikian, terdapat homomorfisme hasil bagi yang bersesuaian $G_{\mathrm{ab}} \twoheadrightarrow G/N$.
 \end{lemma}
 \begin{proof}
-	设 $x,y \in G$ 映至 $\bar{x}, \bar{y} \in G/G_\text{der}$, 则 $[\bar{x}, \bar{y}]$ 是 $[x,y] \in G_\text{der}$ 的像, 故平凡. 关于 $\psi$ 的存在性相当于 $\Ker(\varphi) \supset G_\text{der}$, 由 $1 = [\varphi(x), \varphi(y)] = \varphi([x,y])$ 立可导出. 唯一性则缘于  $\psi(\bar{x}) = \varphi(x)$.
+	Misalkan $x,y \in G$ dipetakan ke $\bar{x}, \bar{y} \in G/G_\text{der}$. Maka $[\bar{x}, \bar{y}]$ merupakan bayangan dari $[x,y] \in G_\text{der}$, sehingga trivial. Eksistensi $\psi$ ekuivalen dengan $\Ker(\varphi) \supset G_\text{der}$, yang langsung diperoleh dari $1 = [\varphi(x), \varphi(y)] = \varphi([x,y])$. Keunikannya mengikuti dari $\psi(\bar{x}) = \varphi(x)$.
 \end{proof}
 
 \begin{lemma}\label{prop:solvable-nilpotent-characterization}
-	对任意群 $G$,
+	Untuk setiap grup $G$,
 	\begin{compactenum}[(i)]
-		\item 对每个 $i$, 商群 $\mathscr{D}^i G/\mathscr{D}^{i+1} G$ 交换, 而 $\mathscr{C}^i G/\mathscr{C}^{i+1} G$ 包含于 $Z_{G/\mathscr{C}^{i+1} G}$;
-		\item 群 $G$ 可解当且仅当 $n$ 充分大时 $\mathscr{D}^n G = \{1\}$;
-		\item 群 $G$ 幂零当且仅当 $n$ 充分大时 $\mathscr{C}^n G = \{1\}$.
+		\item untuk setiap $i$, grup hasil bagi $\mathscr{D}^i G/\mathscr{D}^{i+1} G$ abelian, sedangkan $\mathscr{C}^i G/\mathscr{C}^{i+1} G$ termuat dalam $Z_{G/\mathscr{C}^{i+1} G}$;
+		\item grup $G$ solvabel jika dan hanya jika, untuk $n$ yang cukup besar, berlaku $\mathscr{D}^n G = \{1\}$;
+		\item grup $G$ nilpoten jika dan hanya jika, untuk $n$ yang cukup besar, berlaku $\mathscr{C}^n G = \{1\}$.
 	\end{compactenum}
 \end{lemma}
 \begin{proof}
-	先证 (i). 商群 $\mathscr{D}^i G/\mathscr{D}^{i+1} G$ 交换缘于引理 \ref{prop:abelianization}. 另一方面, 置 $\bar{G} := G/\mathscr{C}^{i+1}G$; 据定义 $[\mathscr{C}^i G, G] \subset \mathscr{C}^{i+1}G$ 等价于 $[\mathscr{C}^i G/\mathscr{C}^{i+1} G, \;\bar{G}] = \{1\}$, 后者又等价于 $\mathscr{C}^i G/\mathscr{C}^{i+1} G \subset Z_{\bar{G}}$.
+	Pertama, kita buktikan (i). Grup hasil bagi $\mathscr{D}^i G/\mathscr{D}^{i+1} G$ abelian menurut Lema \ref{prop:abelianization}. Di sisi lain, tetapkan $\bar{G} := G/\mathscr{C}^{i+1}G$. Berdasarkan definisi, $[\mathscr{C}^i G, G] \subset \mathscr{C}^{i+1}G$ ekuivalen dengan $[\mathscr{C}^i G/\mathscr{C}^{i+1} G, \;\bar{G}] = \{1\}$, dan pernyataan terakhir ekuivalen dengan $\mathscr{C}^i G/\mathscr{C}^{i+1} G \subset Z_{\bar{G}}$.
 
-	现证 (ii). 假设有正规列 $G = G_0 \supset G_1 \supset \cdots \supset G_r = \{1\}$, 其子商皆交换. 对 $G \twoheadrightarrow G/G_1$ 应用引理 \ref{prop:abelianization} 可得 $\mathscr{D}^1 G \subset G_1$. 由此递归地对所有 $i \geq 0$ 导出 $\mathscr{D}^i G \subset G_i$. 是以 $\mathscr{D}^r G = \{1\}$. 反之若 $\mathscr{D}^r G = \{1\}$, 则正规列 $G_i := \mathscr{D}^i G$ 满足所需条件.
+	Sekarang kita buktikan (ii). Andaikan terdapat deret normal $G = G_0 \supset G_1 \supset \cdots \supset G_r = \{1\}$ yang semua subkuosiennya abelian. Pada homomorfisme $G \twoheadrightarrow G/G_1$, terapkan Lema \ref{prop:abelianization}; diperoleh $\mathscr{D}^1 G \subset G_1$. Dari sini, secara rekursif, untuk setiap $i \geq 0$ diperoleh $\mathscr{D}^i G \subset G_i$. Karena itu, $\mathscr{D}^r G = \{1\}$. Sebaliknya, jika $\mathscr{D}^r G = \{1\}$, deret normal $G_i := \mathscr{D}^i G$ memenuhi syarat yang diperlukan.
 
-	对 (iii) 的证明类似. 设有中心列 $G = G_0 \supset G_1 \supset \cdots \supset G_r = \{1\}$. 对 (i) 的论证中业已说明了 $G_i/G_{i+1} \subset Z_{G/G_{i+1}}$ 蕴涵 $[G_i, G] \subset G_{i+1}$ ($i=0$ 的情形是显然的), 故可递归地导出 $\mathscr{C}^i G \subset G_i$, 故 $\mathscr{C}^r G = \{1\}$. 反之假设 $\mathscr{C}^r G = \{1\}$, 那么 $G_i := \mathscr{C}^i G$ 给出所求的中心列. 证毕.
+	Pembuktian (iii) serupa. Andaikan terdapat deret sentral $G = G_0 \supset G_1 \supset \cdots \supset G_r = \{1\}$. Dalam pembuktian (i) telah ditunjukkan bahwa $G_i/G_{i+1} \subset Z_{G/G_{i+1}}$ menyiratkan $[G_i, G] \subset G_{i+1}$ (kasus $i=0$ sudah jelas). Karena itu, secara rekursif diperoleh $\mathscr{C}^i G \subset G_i$, sehingga $\mathscr{C}^r G = \{1\}$. Sebaliknya, andaikan $\mathscr{C}^r G = \{1\}$. Maka $G_i := \mathscr{C}^i G$ memberikan deret sentral yang dikehendaki. Pembuktian selesai.
 \end{proof}
 
 \begin{remark}
-	设 $G$ 为幂零群, $\mathscr{C}^n G = \{1\}$, 则对任意 $x \in G$, 映射 $[x, \cdot]: g \mapsto [x, g]$ 迭代 $n$ 次后的像落在 $\mathscr{C}^n G$, 故成为平凡映射 $g \mapsto 1$. 这解释了``幂零''一词的来由.
+	Misalkan $G$ grup nilpoten dan $\mathscr{C}^n G = \{1\}$. Untuk setiap $x \in G$, setelah pemetaan $[x, \cdot]: g \mapsto [x, g]$ diiterasikan $n$ kali, bayangannya termuat dalam $\mathscr{C}^n G$, sehingga pemetaan tersebut menjadi pemetaan trivial $g \mapsto 1$. Hal ini menjelaskan asal istilah ``nilpoten''.
 \end{remark}
 
 \begin{lemma}\label{prop:solvable-ses}
-	设 $G$ 为群, 用 $\mathcal{P}$ 代表可解, 超可解或幂零三种性质之一.
+	Misalkan $G$ suatu grup, dan gunakan $\mathcal{P}$ untuk menyatakan salah satu dari ketiga sifat: solvabel, supersolvabel, atau nilpoten.
 	\begin{compactitem}
-		\item 若 $G$ 具有性质 $\mathcal{P}$, 则 $G$ 的子群和商群都有性质 $\mathcal{P}$;
-		\item 设 $N \lhd G$, 令 $\bar{G} := G/N$, 则 $G$ 可解当且仅当 $N, \bar{G}$ 皆可解.
+		\item Jika $G$ memiliki sifat $\mathcal{P}$, subgrup dan grup hasil bagi dari $G$ juga memiliki sifat $\mathcal{P}$;
+		\item misalkan $N \lhd G$ dan tetapkan $\bar{G} := G/N$. Maka $G$ solvabel jika dan hanya jika $N, \bar{G}$ keduanya solvabel.
 	\end{compactitem}
 \end{lemma}
 \begin{proof}
-	设 $N$ 是 $G$ 的子群, $\bar{G}$ 是 $G$ 的商群. 由定义知 $\mathscr{D}^i N \subset \mathscr{D}^i G$, 而 $\mathscr{D}^i \bar{G}$ 是 $\mathscr{D}^i G$ 的商群; 类似性质对 $\mathscr{C}^i G$ 亦成立. 由此知性质 $\mathcal{P} \in \left\{\text{可解}, \text{幂零}\right\}$ 传递到 $N$ 和 $\bar{G}$ 上. 接着证明 $N \lhd G$ 和 $\bar{G} = G/N$ 皆可解蕴涵 $G$ 可解: 假设 $\mathscr{D}^r \bar{G} = \{1\}$ 且 $\mathscr{D}^s N = \{1\}$, 则 $\mathscr{D}^r G \subset N$, 而 $\mathscr{D}^{r+s} G \subset \mathscr{D}^s N = \{1\}$, 故 $G$ 可解.
+	Misalkan $N$ suatu subgrup dari $G$ dan $\bar{G}$ suatu grup hasil bagi dari $G$. Dari definisi, $\mathscr{D}^i N \subset \mathscr{D}^i G$, sedangkan $\mathscr{D}^i \bar{G}$ merupakan grup hasil bagi dari $\mathscr{D}^i G$; sifat serupa juga berlaku untuk $\mathscr{C}^i G$. Karena itu, sifat $\mathcal{P} \in \left\{\text{solvabel}, \text{nilpoten}\right\}$ diwarisi oleh $N$ dan $\bar{G}$. Selanjutnya, kita buktikan bahwa jika $N \lhd G$ dan $\bar{G} = G/N$ keduanya solvabel, maka $G$ solvabel: andaikan $\mathscr{D}^r \bar{G} = \{1\}$ dan $\mathscr{D}^s N = \{1\}$. Maka $\mathscr{D}^r G \subset N$, sedangkan $\mathscr{D}^{r+s} G \subset \mathscr{D}^s N = \{1\}$, sehingga $G$ solvabel.
 
-	最后证明超可解性可以传递到子群 $N$ 和商群 $\bar{G}$. 设有 $G = G_0 \supset \cdots \supset G_r = \{1\}$ 使得 $G_i \lhd G$ 且各子商皆为素数阶循环群. 取 $N_i := N \cap G_i$ 及 $\bar{G}_i := \pi(G_i)$ (正规情形), 其中 $\pi: G \to \bar{G}$ 是满同态, 分别得到 $N$ 与 $\bar{G}$ 中满足类似性质的子群列, 故 $N, \bar{G}$ 皆为超可解群.
+	Terakhir, kita buktikan bahwa supersolvabilitas diwarisi oleh subgrup $N$ dan grup hasil bagi $\bar{G}$. Andaikan terdapat $G = G_0 \supset \cdots \supset G_r = \{1\}$ sedemikian sehingga $G_i \lhd G$ dan setiap subkuosien merupakan grup siklik berorde prima. Ambil $N_i := N \cap G_i$ dan $\bar{G}_i := \pi(G_i)$ (untuk kasus normal), dengan $\pi: G \to \bar{G}$ suatu homomorfisme surjektif. Ini memberikan deret subgrup di $N$ dan $\bar{G}$ dengan sifat serupa. Setiap subkuosien terinduksi bersifat trivial atau merupakan grup siklik berorde prima; setelah suku-suku berulang dihapus, hanya kemungkinan kedua yang tersisa. Karena itu, $N, \bar{G}$ keduanya merupakan grup supersolvabel.
 \end{proof}
 
-由 $\mathscr{D}^i G \subset \mathscr{C}^i G$ 知幂零蕴涵可解. 事实上还有下述稍强的结果.
+Dari $\mathscr{D}^i G \subset \mathscr{C}^i G$, diketahui bahwa nilpoten menyiratkan solvabel. Bahkan, terdapat hasil yang sedikit lebih kuat berikut ini.
 \begin{lemma}
-	对于有限群, 幂零 $\implies$ 超可解 $\implies$ 可解.
+	Untuk grup berhingga, nilpoten $\implies$ supersolvabel $\implies$ solvabel.
 \end{lemma}
 \begin{proof}
-	显然超可解蕴涵可解. 现给定幂零群 $G$, 假设 $\mathscr{C}^{r+1}G = \{1\}$. 已知 $\mathscr{C}^r G$ 包含于 $G = G/\mathscr{C}^{r+1} G$ 的中心; 特别地, 它是交换群. 故可取其中的合成列
+	Jelas bahwa supersolvabel menyiratkan solvabel. Sekarang, misalkan diberikan grup nilpoten $G$ dan andaikan $\mathscr{C}^{r+1}G = \{1\}$. Diketahui bahwa $\mathscr{C}^r G$ termuat dalam pusat dari $G = G/\mathscr{C}^{r+1} G$; khususnya, subgrup itu abelian. Karena itu, dapat dipilih suatu deret komposisi di dalamnya,
 	\[ \mathscr{C}^r G = V_0 \supset V_1 \supset \cdots \supset V_{s+1} = \{1\} \]
-	使其子商皆为素数阶循环群 (命题 \ref{prop:abelian-composition-series}). 对降中心列的长度 $r$ 作归纳, 知 $\bar{G} := G/\mathscr{C}^r G$ 也有正规列
+	yang semua subkuosiennya merupakan grup siklik berorde prima (Proposisi \ref{prop:abelian-composition-series}). Dengan melakukan induksi pada panjang $r$ dari deret sentral menurun, diketahui bahwa $\bar{G} := G/\mathscr{C}^r G$ juga mempunyai deret normal
 	\[ \bar{G} = \bar{G}_0  \supset \cdots \supset \bar{G}_{t+1} = \{1\}, \quad \bar{G}_i \lhd \bar{G} \]
-	满足与 $(V_i)_i$ 相同的性质. 取 $G_i$ 为 $\bar{G}_i$ 在 $G$ 中原像, 则 $G_i \lhd G$; 另一方面, $V_j \subset \mathscr{C}^r G \subset Z_G$ 蕴涵 $V_j \lhd G$. 于是子群列
+	yang memenuhi sifat yang sama seperti $(V_i)_i$. Ambil $G_i$ sebagai prabayang $\bar{G}_i$ di dalam $G$; maka $G_i \lhd G$. Di sisi lain, $V_j \subset \mathscr{C}^r G \subset Z_G$ menyiratkan $V_j \lhd G$. Dengan demikian, deret subgrup
 	\[ G = G_0 \supset \cdots \supset G_t \supset V_0 \supset \cdots \supset V_{s+1} = \{1\} \]
-	满足超可解群所需条件.
+	memenuhi syarat yang diperlukan untuk grup supersolvabel.
 \end{proof}
 
-关于可解有限群最著名的结果当属 Feit--Thompson 定理 \cite{FT63}: 任意奇数阶有限群皆可解. 该定理曾经有力地推动了有限群的分类工作; 作为一篇有限群论的论文, 其长度与繁复亦属空前, 然而还远远不是绝后的.\index{Feit--Thompson 定理}
+Hasil paling terkenal tentang grup solvabel berhingga ialah Teorema Feit--Thompson \cite{FT63}: setiap grup berhingga berorde ganjil merupakan grup solvabel. Teorema ini pernah mendorong klasifikasi grup berhingga dengan kuat; sebagai sebuah makalah teori grup berhingga, panjang dan kerumitannya belum pernah tertandingi pada masanya, meskipun jauh dari yang terakhir.\index{Teorema Feit--Thompson}
 
 \begin{example}
-	可解群的典型例子是上三角矩阵群. 具体地说, 选定任意域 $\Bbbk$, 记 $\GL(n,\Bbbk)$ 为 $\Bbbk$ 上的 $n \times n$ 可逆矩阵对乘法构成的群 ($n \in \Z_{\geq 1}$). 考虑 $\GL(n, \Bbbk)$ 的如下子群
+	Contoh khas grup solvabel ialah grup matriks segitiga atas. Secara lebih konkret, pilih sebarang medan $\Bbbk$, dan notasikan dengan $\GL(n,\Bbbk)$ grup matriks invertibel atas $\Bbbk$ berukuran $n \times n$ terhadap perkalian ($n \in \Z_{\geq 1}$). Tinjau subgrup-subgrup berikut dari $\GL(n, \Bbbk)$:
 	\[
 		B := \begin{pmatrix}
 		* & \cdots & & * \\
@@ -1042,66 +1042,65 @@ Kita akan mendeskripsikan struktur grup abelian berhingga secara terperinci dala
 		& \ddots & & \vdots \\
 		0 & & & 1
 	\end{pmatrix} \]
-	其中 $*$ 表任意元素, 此外对 $B$, $U$ 分别要求对角元全可逆和全为 $1$. 那么 $B$ 是可解群, $U$ 是幂零群. 这些性质可以用矩阵计算说明, 但这里从抽象观点考察或许更合适: 以下设 $\mathcal{V}$ 为 $n$ 维 $\Bbbk$-向量空间. 考虑线性子空间链
+	dengan $*$ menyatakan sebarang unsur; selain itu, untuk $B$ dan $U$, masing-masing disyaratkan bahwa semua entri diagonalnya invertibel dan semuanya sama dengan $1$. Maka $B$ merupakan grup solvabel dan $U$ merupakan grup nilpoten. Sifat-sifat ini dapat dijelaskan melalui perhitungan matriks, tetapi mungkin lebih tepat jika kita meninjaunya dari sudut pandang abstrak. Berikut ini, misalkan $\mathcal{V}$ suatu ruang vektor berdimensi $n$ atas $\Bbbk$. Tinjau rantai subruang linear
 	\[ \mathcal{V} = \mathcal{V}_0 \supset \cdots \supset \mathcal{V}_n = \{0\}, \quad \dim_\Bbbk \mathcal{V}_i/\mathcal{V}_{i+1} = 1 \quad (0 \leq i < n). \]
-	方便起见, 对 $m > n$ 置 $\mathcal{V}_m := \{0\}$. 记 $\mathcal{V}$ 的线性自同构群为 $\GL(\mathcal{V})$. 命
+	Demi kemudahan, untuk $m > n$, tetapkan $\mathcal{V}_m := \{0\}$. Notasikan grup automorfisme linear dari $\mathcal{V}$ dengan $\GL(\mathcal{V})$. Tetapkan
 	\begin{equation*}
 		U_r := \left\{ x \in \GL(\mathcal{V}) : \forall i, \; (x - 1)(\mathcal{V}_i) \subset \mathcal{V}_{i+r} \right\}, \quad r \in \Z_{\geq 1};
 	\end{equation*}
-	当然, $1$ 代表恒等映射. 显然 $U_1 \supset U_2 \supset \cdots \supset U_n = \{1\}$. 一并留意到 $U_r$ 的定义蕴涵 $\forall i, \; x(\mathcal{V}_i) \subset \mathcal{V}_i$. 我们断言每个 $U_r$ 都是子群, 而且对所有 $r,s$ 都有 $[U_r, U_s] \subset U_{r+s}$.
+	tentu saja, $1$ menyatakan pemetaan identitas. Jelas bahwa $U_1 \supset U_2 \supset \cdots \supset U_n = \{1\}$. Perhatikan pula bahwa definisi $U_r$ menyiratkan $\forall i, \; x(\mathcal{V}_i) \subset \mathcal{V}_i$. Kita menyatakan bahwa setiap $U_r$ merupakan subgrup dan, untuk setiap $r,s$, berlaku $[U_r, U_s] \subset U_{r+s}$.
 
-	首先, 若 $x, x' \in U_r$, 则 $xx' - 1 = (x-1)x' + (x'-1)$ 依然将每个 $\mathcal{V}_i$ 映入 $\mathcal{V}_{i+r}$, 故 $U_r$ 对乘法封闭. 若 $x = 1-X \in U_r$, 则 $\End_\Bbbk(\mathcal{V})$ 中的等式 $X^n=0$ 和
+	Pertama, jika $x, x' \in U_r$, maka $xx' - 1 = (x-1)x' + (x'-1)$ tetap memetakan setiap $\mathcal{V}_i$ ke dalam $\mathcal{V}_{i+r}$, sehingga $U_r$ tertutup terhadap perkalian. Jika $x = 1-X \in U_r$, dalam $\End_\Bbbk(\mathcal{V})$ berlaku identitas $X^n=0$ dan
 	\[ (1-X)^{-1} = \sum_{k=0}^{n-1} X^k = 1 + X \sum_{k=1}^{n-1} X^{k-1} \; \in U_r, \]
-	说明 $U_r$ 对取逆封闭. 现在设 $x = 1-X \in U_r$ 而 $y = 1-Y \in U_s$. 按上式在 $\End_\Bbbk(\mathcal{V})$ 中展开 $[y,x] = y x y^{-1} x^{-1}$. 为了方便集项, 我们用 $qX, vY$ 取代 $X, Y$, 其中 $q,v$ 是形式变元; 这相当于容许线性变换的系数为 $q,v$ 的多项式. 于是
+	menunjukkan bahwa $U_r$ tertutup terhadap invers. Sekarang, misalkan $x = 1-X \in U_r$ dan $y = 1-Y \in U_s$. Dalam $\End_\Bbbk(\mathcal{V})$, kembangkan $[y,x] = y x y^{-1} x^{-1}$ menggunakan rumus di atas. Agar suku-sukunya mudah dikelompokkan, kita menggunakan $qX,vY$ sebagai pengganti $X,Y$, dengan $q,v$ peubah formal; ini setara dengan memperbolehkan koefisien transformasi linear berupa polinomial dalam $q,v$. Maka,
 	\begin{multline*}
 		(1-vY) (1-qX) (1-vY)^{-1} (1-qX)^{-1} = (1-vY) (1-qX) \cdot \sum_{h=0}^{n-1} v^h Y^h \cdot \sum_{k=0}^{n-1} q^k X^k \\
-		= \text{常数项} + \text{仅含 $q$ 的项} + \text{仅含 $v$ 的项} + \text{含 $qv$ 的项}.
+		= \text{suku konstan} + \text{suku yang hanya memuat $q$} \\ {}+ \text{suku yang hanya memuat $v$} + \text{suku yang memuat $qv$}.
 	\end{multline*}
-	左式代入 $q=v=0$ 可知常数项为 $1$; 代入 $v=0$ (或 $q=0$) 可知仅含 $q$ (或仅含 $v$) 的项为 $0$; 代入 $q=v=1$ 则得到 $[y,x]$: 其中含 $qv$ 的项同时有 $X$ 和 $Y$ 出现, 这样的项必将 $\mathcal{V}_i$ 映入 $\mathcal{V}_{i+r+s}$. 综之 $[x,y]^{-1} = [y,x] \in U_{r+s}$, 于是证出了 $[U_r, U_s] \subset U_{r+s}$. 作为推论, $xyx^{-1} = [x,y]y$ 导致 $r \geq s \implies U_r \lhd U_s$.
+	Dengan menyubstitusikan $q=v=0$ pada ruas kiri, diketahui bahwa suku konstannya adalah $1$. Dengan menyubstitusikan $v=0$ (atau $q=0$), diketahui bahwa suku yang hanya memuat $q$ (atau hanya memuat $v$) adalah $0$. Substitusi $q=v=1$ menghasilkan $[y,x]$: setiap suku yang memuat $qv$ memuat $X$ dan $Y$ sekaligus, sehingga suku seperti itu pasti memetakan $\mathcal{V}_i$ ke dalam $\mathcal{V}_{i+r+s}$. Kesimpulannya, $[x,y]^{-1} = [y,x] \in U_{r+s}$, sehingga terbukti bahwa $[U_r, U_s] \subset U_{r+s}$. Sebagai akibatnya, $xyx^{-1} = [x,y]y$ memberikan $r \geq s \implies U_r \lhd U_s$.
 	
-	以下定义 $U := U_1$. 于是乎 $U_r \lhd U$ 和 $[U_r, U] \subset U_{r+1}$. 这说明 $(U_r)_{1 \leq r \leq n}$ 是 $U$ 的中心列, 从而 $U$ 是幂零群. 我们有满的群同态 $\Phi$
+	Sekarang definisikan $U := U_1$. Dengan demikian, $U_r \lhd U$ dan $[U_r, U] \subset U_{r+1}$. Ini menunjukkan bahwa $(U_r)_{1 \leq r \leq n}$ merupakan deret sentral dari $U$, sehingga $U$ merupakan grup nilpoten. Kita mempunyai homomorfisme grup surjektif $\Phi$,
 	\begin{align*}
 		B := \left\{ x \in \GL(\mathcal{V}): \forall i, \; x (\mathcal{V}_i) \subset \mathcal{V}_i \right\} & \stackrel{\Phi}{\twoheadrightarrow} \bigoplus_{i=0}^{n-1} \GL\left( \mathcal{V}_i/\mathcal{V}_{i+1} \right) \simeq (\Bbbk^\times)^n, \\
 		x & \mapsto \left( x \big|_{\mathcal{V}_i/\mathcal{V}_{i+1}} \right)_{i=0}^{n-1} ,
 	\end{align*}
-	其中因为 $x$ 保持每个 $\mathcal{V}_i$, 可取 $x$ 在每个子商 $\mathcal{V}_i/\mathcal{V}_{i+1}$ 上的诱导自同构. 显然 $\Ker(\Phi) = U$, 所以 $U \lhd B$ 而且 $B/U \simeq \Image(\Phi)$ 交换. 若取定 $\mathcal{V}$ 的基 $e_1, \ldots, e_n$ 使得
+	karena $x$ mempertahankan setiap $\mathcal{V}_i$, dapat diambil automorfisme terinduksi dari $x$ pada setiap subkuosien $\mathcal{V}_i/\mathcal{V}_{i+1}$. Jelas bahwa $\Ker(\Phi) = U$, sehingga $U \lhd B$ dan $B/U \simeq \Image(\Phi)$ abelian. Jika kita memilih dari $\mathcal{V}$ suatu basis $e_1, \ldots, e_n$ sedemikian sehingga
 	\[ \mathcal{V}_i = \bigoplus_{1 \leq j \leq n-i} \Bbbk e_j \]
-	并且将 $\GL(\mathcal{V})$ 中的元素写成矩阵, 一切回归之前对 $B, U$ 的矩阵定义, 而 $x|_{\mathcal{V}_i/\mathcal{V}_{i+1}}$ 恰是 $x$ 的第 $i$ 个对角元. 从 $B/U$ 交换和引理 \ref{prop:solvable-ses} 立见 $B$ 可解.
+	dan menuliskan unsur-unsur $\GL(\mathcal{V})$ sebagai matriks, semuanya kembali pada definisi matriks sebelumnya untuk $B,U$, sedangkan $x|_{\mathcal{V}_i/\mathcal{V}_{i+1}}$ tepat merupakan entri diagonal dari $x$ dengan nomor $i$. Karena $B/U$ abelian, Lema \ref{prop:solvable-ses} langsung menunjukkan bahwa $B$ solvabel.
 \end{example}
 
-现在考虑另一种构造. 对于群 $G$, 取 $Z^0 = \{1\}$, 并递归地定义 $Z^{i+1} \lhd G$ 为 $Z_{G/Z^i}$ 对商同态 $G \twoheadrightarrow G/Z^i$ 的原像 ($i \geq 0$). 因此 $Z^{i+1} \supset Z^i$. 称 $\{1\} = Z^0 \subset Z^1 \subset \cdots $ 为群 $G$ 的\emph{升中心列}. 设若存在 $n$ 使得 $Z^n = G$, 逆序观察遂得 $G = Z^n \supset Z^{n-1} \supset \cdots \supset Z^0 = \{1\}$, 由构造易知此为 $G$ 的中心列, 故此时 $G$ 幂零.
+Sekarang tinjau konstruksi lain. Untuk suatu grup $G$, ambil $Z^0 = \{1\}$, lalu definisikan secara rekursif $Z^{i+1} \lhd G$ sebagai prabayang dari $Z_{G/Z^i}$ di bawah homomorfisme hasil bagi $G \twoheadrightarrow G/Z^i$ ($i \geq 0$). Dengan demikian, $Z^{i+1} \supset Z^i$. Deret $\{1\} = Z^0 \subset Z^1 \subset \cdots$ disebut \emph{deret sentral menaik} dari grup $G$. Jika terdapat $n$ sedemikian sehingga $Z^n = G$, dengan membaca urutannya secara terbalik, diperoleh $G = Z^n \supset Z^{n-1} \supset \cdots \supset Z^0 = \{1\}$. Dari konstruksinya, deret ini mudah dilihat sebagai deret sentral dari $G$, sehingga dalam keadaan ini $G$ nilpoten.
 
 \begin{proposition}\label{prop:p-group-nilpotent}
-	令 $p$ 为素数, 则有限 $p$-群皆幂零.
+	Misalkan $p$ bilangan prima. Maka setiap $p$-grup berhingga merupakan grup nilpoten.
 \end{proposition}
 \begin{proof}
-	设 $|G|=p^n$. 考虑 $G$ 的升中心列 $(Z^i)_i$; 由前述观察知对每个 $i \geq 0$, 或者 $Z^i = G$ 或者 $G/Z^i$ 是非平凡 $p$-群. 后一情形下推论 \ref{prop:p-group-center} 蕴涵 $Z_{G/Z^i} \neq \{1\}$ 故 $Z^{i+1} \supsetneq Z^i$, 此时 $p \mid (Z^{i+1} : Z^i)$. 于是升中心列必须在 $n$ 步内止于 $G$.
+	Misalkan $|G|=p^n$. Untuk $G$, tinjau deret sentral menaik $(Z^i)_i$. Berdasarkan pengamatan sebelumnya, untuk setiap $i \geq 0$, berlaku $Z^i = G$ atau $G/Z^i$ merupakan $p$-grup nontrivial. Dalam kasus terakhir, Korolari \ref{prop:p-group-center} menyiratkan $Z_{G/Z^i} \neq \{1\}$, sehingga $Z^{i+1} \supsetneq Z^i$; dalam keadaan ini, $p \mid (Z^{i+1} : Z^i)$. Karena itu, deret sentral menaik tersebut harus dalam paling banyak $n$ langkah mencapai $G$.
 \end{proof}
 
-\begin{example}\index{Heisenberg 群}
-	Heisenberg 群是一类特别的幂零群. 为方便起见, 我们仅在实数域 $\R$ 上操作. 考虑一个有限维 $\R$-向量空间 $W$ 连同其上的非退化双线性型
+\begin{example}\index{grup Heisenberg}
+	Grup Heisenberg merupakan suatu kelas khusus grup nilpoten. Demi kemudahan, kita hanya bekerja di atas medan bilangan real $\R$. Tinjau suatu ruang vektor berdimensi hingga atas $\R$, yaitu $W$, beserta bentuk bilinear takdegenerat
 	\[ \lrangle{\cdot|\cdot}: W \times W \to \R, \]
-	并假设 $\lrangle{\cdot|\cdot}$ 反对称: $\forall w, w', \; \lrangle{w|w'} = -\lrangle{w'|w}$; 这类双线性型称作辛形式. 定义
+	dan andaikan bahwa $\lrangle{\cdot|\cdot}$ antisimetris: $\forall w, w', \; \lrangle{w|w'} = -\lrangle{w'|w}$. Bentuk bilinear semacam itu disebut bentuk simplektik. Definisikan
 	\[ \mathcal{H}(W) := \R \times W, \]
-	其上的二元运算定为
+	dengan operasi biner
 	\[ (t, X) \cdot (s, Y) := \left( t+s+\frac{\lrangle{X,Y}}{2}, X+Y \right). \]
-	请读者验证 $\mathcal{H}(W)$ 满足群公理, 而且 $\R = \R \times \{0\}$ 正是 $\mathcal{H}(W)$ 的中心. 我们有群的正合列
+	Pembaca dipersilakan memverifikasi bahwa $\mathcal{H}(W)$ memenuhi aksioma grup dan bahwa $\R = \R \times \{0\}$ tepat merupakan pusat dari $\mathcal{H}(W)$. Kita mempunyai barisan eksak grup
 	\[ 0 \to \R \to \mathcal{H}(W) \to W \to 0 \]
-	其中 $\R$ 和 $W$ 对加法构成群. 因而 $\mathcal{H}(W) \supset \R \supset \{0\}$ 是中心列, $\mathcal{H}(W)$ 是幂零群.
+	dengan $\R$ dan $W$ dipandang sebagai grup terhadap penjumlahan. Karena itu, $\mathcal{H}(W) \supset \R \supset \{0\}$ merupakan deret sentral dan $\mathcal{H}(W)$ merupakan grup nilpoten.
 
-	为说明 Heisenberg 群的来由, 下面取定 $n$ 维 $\R$-向量空间 $V$. 我们须考虑 $V$ 上的某个复值函数空间, 具体选取无关宏旨, 以下不妨就使用速降函数空间 $\mathscr{S}(V) \ni f$; 定义其上的算子空间
+	Untuk menjelaskan asal-usul grup Heisenberg, berikutnya tetapkan suatu ruang vektor berdimensi $n$ atas $\R$, yaitu $V$. Kita perlu meninjau suatu ruang fungsi bernilai kompleks pada $V$; pilihan konkretnya tidak penting. Berikut ini, kita dapat menggunakan ruang fungsi turun cepat $\mathscr{S}(V) \ni f$. Definisikan ruang-ruang operator padanya,
 	\begin{align*}
-		L' & := \left\{ f \mapsto xf : x \in \Hom_\R(V, \R) \right\} \quad (\text{逐点乘以 }\; x), \\
-		L & := \left\{ f \mapsto \partial_v f : v \in V \right\} \quad (\text{方向导数}).
+		L' & := \left\{ f \mapsto xf : x \in \Hom_\R(V, \R) \right\} \quad (\text{perkalian titik demi titik dengan }\; x), \\
+		L & := \left\{ f \mapsto \partial_v f : v \in V \right\} \quad (\text{turunan berarah}).
 	\end{align*}
-	若选取 $V$ 的一组基 $v_1, \ldots, v_n$ 及其对偶基 $x_1, \ldots, x_n$ (即: $x_i(v_j) = \delta_{i,j}$), 那么 $\partial_{v_1}, \ldots, \partial_{v_n}$ 和 $x_1, \ldots, x_n$ 分别构成了 $L$ 和 $L'$ 的基. 对于任意线性算子 $X, Y: \mathscr{S}(V) \to \mathscr{S}(V)$, 相应的换位子 $[X, Y]$ 定义成线性算子 $XY - YX$. 则 $[\cdot, \cdot]$ 是反对称双线性型, 而且对任意 $1 \leq i,j \leq n$ 有
+	Jika pada $V$ dipilih suatu basis $v_1, \ldots, v_n$ beserta basis dualnya $x_1, \ldots, x_n$ (yakni, $x_i(v_j) = \delta_{i,j}$), maka $\partial_{v_1}, \ldots, \partial_{v_n}$ dan $x_1, \ldots, x_n$ masing-masing membentuk basis dari $L$ dan $L'$. Untuk sebarang operator linear $X, Y: \mathscr{S}(V) \to \mathscr{S}(V)$, komutator yang bersesuaian $[X, Y]$ didefinisikan sebagai operator linear $XY - YX$. Maka $[\cdot, \cdot]$ merupakan bentuk bilinear antisimetris dan, untuk setiap $1 \leq i,j \leq n$, berlaku
 	\begin{gather*}
 		[x_i, x_j] = 0, \quad [\partial_{v_i}, \partial_{v_j}] = 0, \\
 		[\partial_{v_i}, x_j] = \delta_{i,j} := \begin{cases} 1, & i=j, \\ 0, & i \neq j.  \end{cases}
 	\end{gather*}
-	这些等式不外是初等数学分析. 由以上关系式知 $L \cap L' = \{0\}$, 且 $[\cdot, \cdot]$ 在向量空间的直和 $W := L \oplus L'$ 上非退化. 如此遂从 $V$ 得到 Heisenberg 群 $\mathcal{H}(W)$. 在量子力学中, 取 $V=\R^3$ 并适当选取量纲使得 $\hbar=1$, 则 $L$ 和 $L'$ 分别由空间中的动量 $p_i := \sqrt{-1}\partial_{v_i}$ 和位置算子 $q_i := x_i$ 张成. 关系式 $[\partial_{v_i}, x_j] = \delta_{i,j}$ 化作量子力学里熟知的典则对易关系. 注意到 $p_i$ 正是 $q_i$ 的 Fourier 变换.
+	Persamaan-persamaan ini tidak lebih dari analisis elementer. Dari relasi di atas, diperoleh $L \cap L' = \{0\}$ dan bahwa $[\cdot, \cdot]$ takdegenerat pada jumlah langsung ruang vektor $W := L \oplus L'$. Dengan demikian, dari $V$ diperoleh grup Heisenberg $\mathcal{H}(W)$. Dalam mekanika kuantum, ambil $V=\R^3$ dan pilih satuan secara tepat sehingga $\hbar=1$. Maka $L$ dan $L'$ masing-masing direntang oleh momentum $p_i := \sqrt{-1}\partial_{v_i}$ dan operator posisi $q_i := x_i$ dalam ruang. Relasi $[\partial_{v_i}, x_j] = \delta_{i,j}$ menjadi relasi komutasi kanonik yang dikenal dalam mekanika kuantum. Perhatikan bahwa $p_i$ tepat merupakan transformasi Fourier dari $q_i$.
 \end{example}
-
 \section{自由群}\label{sec:free-group}
 设 $X$ 为集合. 概略地说, $X$ 上的自由群 $\mathbf{F}(X)$ 是由从 $X$ 的元素出发, ``形式地''进行乘法与取逆所能得到的表达式组成的群. 这些表达式称为自由群里的\emph{字}, 也称 $X$ 为字母集. 例如当 $X=\{x,y\}$ 时, $\mathbf{F}(X)$ 是由
 \[ 1, x, y, x^{-1}, y^{-1}, xy, yx, x^2, yxy, \cdots \]

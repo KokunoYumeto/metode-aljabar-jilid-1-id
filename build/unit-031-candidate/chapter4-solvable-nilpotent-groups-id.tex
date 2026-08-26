@@ -1,0 +1,171 @@
+\section{Grup Solvabel dan Grup Nilpoten}\label{sec:solvable-groups}
+Konsep grup solvabel berawal dari kajian Galois tentang penyelesaian persamaan berderajat tinggi dengan radikal; grup nilpoten dan grup supersolvabel merupakan variasinya. Konsep-konsep ini berperan penting dalam kajian grup Lie dan aljabar Lie; bagian ini terutama memperkenalkan segi teori grupnya. Ingat kembali deret subgrup dalam Definisi \ref{def:normal-series} dan \ref{def:central-series}.
+
+\begin{definition}\label{def:solvable-nilpotent-group}\index{kejiequn@grup solvabel (solvable group)}\index{chaokejiequn@grup supersolvabel (supersolvable group)}\index{milingqun@grup nilpoten (nilpotent group)}
+	Misalkan $G$ suatu grup.
+	\begin{enumerate}
+		\item Jika terdapat deret normal $G = G_0 \supset G_1 \supset \cdots \supset G_r = \{1\}$ yang setiap subkuosiennya abelian, grup tersebut disebut \emph{grup solvabel};
+		\item Dalam keadaan di atas, jika untuk setiap $i$ berlaku $G_i \lhd G$ dan $G_i/G_{i+1}$ merupakan grup siklik berorde prima, grup tersebut disebut \emph{grup supersolvabel};
+		\item Jika terdapat deret sentral $G = G_0 \supset G_1 \supset \cdots \supset G_r = \{1\}$, grup tersebut disebut \emph{grup nilpoten}.
+	\end{enumerate}
+\end{definition}
+
+Kita hendak menemukan deret normal atau deret sentral yang kanonik dalam definisi di atas, agar dapat menentukan apakah suatu grup solvabel atau nilpoten. Konsep-konsep berikut diperlukan untuk tujuan itu.
+\begin{definition}\index[sym1]{$[x,y]$}
+	Untuk $x, y \in G$, definisikan \emph{komutator}
+	\[ [x,y] := xyx^{-1}y^{-1}. \]
+	Untuk sebarang subhimpunan $A, B \subset G$, tetapkan $[A, B] \lhd G$ sebagai subgrup normal terkecil yang memuat $\{[a,b] : a \in A, b \in B\}$, atau, singkatnya, subgrup normal yang dibangkitkan oleh himpunan itu. Definisikan secara rekursif hal-hal berikut untuk $G$:
+	\begin{itemize}
+		\item \emph{deret turunan}: \begin{tikzpicture}[baseline] \matrix (M) [matrix of math nodes, left delimiter={\{} ] {
+			\mathscr{D}^{i+1} G := [\mathscr{D}^i G, \mathscr{D}^i G] \\
+			\mathscr{D}^0 G := G, \\
+		}; \node at (M-1-1.east) [right=1em] {($i \geq 0$)}; \end{tikzpicture}
+		\item \emph{deret sentral menurun}: \begin{tikzpicture}[baseline] \matrix (M) [matrix of math nodes, left delimiter={\{} ] {
+			\mathscr{C}^{i+1} G := [\mathscr{C}^i G, G] \\
+			\mathscr{C}^0 G := G. \\
+		}; \node at (M-1-1.east) [right=1em] {($i \geq 0$)}; \end{tikzpicture}
+	\end{itemize}
+\end{definition}
+
+Sifat-sifat berikut mudah diverifikasi. Misalkan $i \in \Z_{\geq 0}$:
+\begin{compactitem}
+	\item $xy=yx \iff [x,y]=1$, dan $[x,y]^{-1} = [y,x]$;
+	\item untuk setiap homomorfisme grup $\varphi: G_1 \to G_2$, berlaku $\varphi [x,y] = [\varphi(x), \varphi(y)]$;
+	\item $\mathscr{D}^i G \subset \mathscr{C}^i G$;
+	\item $\mathscr{D}^i G \lhd G$, $\mathscr{C}^i G \lhd G$: bahkan setiap automorfisme dari $G$ mempertahankan subgrup $\mathscr{D}^i G$ dan $\mathscr{C}^i G$.
+\end{compactitem}
+Sifat-sifat $\mathscr{D}^i G$ dan $\mathscr{C}^i G$ dapat dibuktikan secara rekursif. Kita juga menyebut $G_\text{der} := \mathscr{D}^1 G$ sebagai \emph{subgrup turunan} dari $G$. Selanjutnya, $G_\text{ab} := G/G_\text{der}$ disebut \emph{abelianisasi} dari $G$. Sifat universal berikut menunjukkan bahwa $G \twoheadrightarrow G_\text{ab}$ merupakan ``grup hasil bagi abelian terbesar'' dari $G$. \index{daochuziqun@subgrup turunan (derived subgroup)}\index[sym1]{$G_\text{der}$} \index[sym1]{$G_\text{ab}$}
+
+\begin{lemma}\label{prop:abelianization}
+	Grup hasil bagi $G_{\mathrm{ab}}$ merupakan grup abelian. Untuk setiap grup abelian $A$ dan homomorfisme $\varphi: G \to A$, terdapat tepat satu homomorfisme $\psi: G_{\mathrm{ab}} \to A$ yang membuat diagram berikut komutatif.
+	\[ \begin{tikzcd}
+		G \arrow[twoheadrightarrow, r] \arrow[d, "\varphi"'] & G_{\mathrm{ab}} \arrow[dashed, ld, "{\exists ! \; \psi}"] \\
+		A &
+	\end{tikzcd} \]
+	Khususnya, grup hasil bagi $G/N$ abelian jika dan hanya jika $N \supset G_\text{der}$; dengan demikian, terdapat homomorfisme hasil bagi yang bersesuaian $G_{\mathrm{ab}} \twoheadrightarrow G/N$.
+\end{lemma}
+\begin{proof}
+	Misalkan $x,y \in G$ dipetakan ke $\bar{x}, \bar{y} \in G/G_\text{der}$. Maka $[\bar{x}, \bar{y}]$ merupakan bayangan dari $[x,y] \in G_\text{der}$, sehingga trivial. Eksistensi $\psi$ ekuivalen dengan $\Ker(\varphi) \supset G_\text{der}$, yang langsung diperoleh dari $1 = [\varphi(x), \varphi(y)] = \varphi([x,y])$. Keunikannya mengikuti dari $\psi(\bar{x}) = \varphi(x)$.
+\end{proof}
+
+\begin{lemma}\label{prop:solvable-nilpotent-characterization}
+	Untuk setiap grup $G$,
+	\begin{compactenum}[(i)]
+		\item untuk setiap $i$, grup hasil bagi $\mathscr{D}^i G/\mathscr{D}^{i+1} G$ abelian, sedangkan $\mathscr{C}^i G/\mathscr{C}^{i+1} G$ termuat dalam $Z_{G/\mathscr{C}^{i+1} G}$;
+		\item grup $G$ solvabel jika dan hanya jika, untuk $n$ yang cukup besar, berlaku $\mathscr{D}^n G = \{1\}$;
+		\item grup $G$ nilpoten jika dan hanya jika, untuk $n$ yang cukup besar, berlaku $\mathscr{C}^n G = \{1\}$.
+	\end{compactenum}
+\end{lemma}
+\begin{proof}
+	Pertama, kita buktikan (i). Grup hasil bagi $\mathscr{D}^i G/\mathscr{D}^{i+1} G$ abelian menurut Lema \ref{prop:abelianization}. Di sisi lain, tetapkan $\bar{G} := G/\mathscr{C}^{i+1}G$. Berdasarkan definisi, $[\mathscr{C}^i G, G] \subset \mathscr{C}^{i+1}G$ ekuivalen dengan $[\mathscr{C}^i G/\mathscr{C}^{i+1} G, \;\bar{G}] = \{1\}$, dan pernyataan terakhir ekuivalen dengan $\mathscr{C}^i G/\mathscr{C}^{i+1} G \subset Z_{\bar{G}}$.
+
+	Sekarang kita buktikan (ii). Andaikan terdapat deret normal $G = G_0 \supset G_1 \supset \cdots \supset G_r = \{1\}$ yang semua subkuosiennya abelian. Pada homomorfisme $G \twoheadrightarrow G/G_1$, terapkan Lema \ref{prop:abelianization}; diperoleh $\mathscr{D}^1 G \subset G_1$. Dari sini, secara rekursif, untuk setiap $i \geq 0$ diperoleh $\mathscr{D}^i G \subset G_i$. Karena itu, $\mathscr{D}^r G = \{1\}$. Sebaliknya, jika $\mathscr{D}^r G = \{1\}$, deret normal $G_i := \mathscr{D}^i G$ memenuhi syarat yang diperlukan.
+
+	Pembuktian (iii) serupa. Andaikan terdapat deret sentral $G = G_0 \supset G_1 \supset \cdots \supset G_r = \{1\}$. Dalam pembuktian (i) telah ditunjukkan bahwa $G_i/G_{i+1} \subset Z_{G/G_{i+1}}$ menyiratkan $[G_i, G] \subset G_{i+1}$ (kasus $i=0$ sudah jelas). Karena itu, secara rekursif diperoleh $\mathscr{C}^i G \subset G_i$, sehingga $\mathscr{C}^r G = \{1\}$. Sebaliknya, andaikan $\mathscr{C}^r G = \{1\}$. Maka $G_i := \mathscr{C}^i G$ memberikan deret sentral yang dikehendaki. Pembuktian selesai.
+\end{proof}
+
+\begin{remark}
+	Misalkan $G$ grup nilpoten dan $\mathscr{C}^n G = \{1\}$. Untuk setiap $x \in G$, setelah pemetaan $[x, \cdot]: g \mapsto [x, g]$ diiterasikan $n$ kali, bayangannya termuat dalam $\mathscr{C}^n G$, sehingga pemetaan tersebut menjadi pemetaan trivial $g \mapsto 1$. Hal ini menjelaskan asal istilah ``nilpoten''.
+\end{remark}
+
+\begin{lemma}\label{prop:solvable-ses}
+	Misalkan $G$ suatu grup, dan gunakan $\mathcal{P}$ untuk menyatakan salah satu dari ketiga sifat: solvabel, supersolvabel, atau nilpoten.
+	\begin{compactitem}
+		\item Jika $G$ memiliki sifat $\mathcal{P}$, subgrup dan grup hasil bagi dari $G$ juga memiliki sifat $\mathcal{P}$;
+		\item misalkan $N \lhd G$ dan tetapkan $\bar{G} := G/N$. Maka $G$ solvabel jika dan hanya jika $N, \bar{G}$ keduanya solvabel.
+	\end{compactitem}
+\end{lemma}
+\begin{proof}
+	Misalkan $N$ suatu subgrup dari $G$ dan $\bar{G}$ suatu grup hasil bagi dari $G$. Dari definisi, $\mathscr{D}^i N \subset \mathscr{D}^i G$, sedangkan $\mathscr{D}^i \bar{G}$ merupakan grup hasil bagi dari $\mathscr{D}^i G$; sifat serupa juga berlaku untuk $\mathscr{C}^i G$. Karena itu, sifat $\mathcal{P} \in \left\{\text{solvabel}, \text{nilpoten}\right\}$ diwarisi oleh $N$ dan $\bar{G}$. Selanjutnya, kita buktikan bahwa jika $N \lhd G$ dan $\bar{G} = G/N$ keduanya solvabel, maka $G$ solvabel: andaikan $\mathscr{D}^r \bar{G} = \{1\}$ dan $\mathscr{D}^s N = \{1\}$. Maka $\mathscr{D}^r G \subset N$, sedangkan $\mathscr{D}^{r+s} G \subset \mathscr{D}^s N = \{1\}$, sehingga $G$ solvabel.
+
+	Terakhir, kita buktikan bahwa supersolvabilitas diwarisi oleh subgrup $N$ dan grup hasil bagi $\bar{G}$. Andaikan terdapat $G = G_0 \supset \cdots \supset G_r = \{1\}$ sedemikian sehingga $G_i \lhd G$ dan setiap subkuosien merupakan grup siklik berorde prima. Ambil $N_i := N \cap G_i$ dan $\bar{G}_i := \pi(G_i)$ (untuk kasus normal), dengan $\pi: G \to \bar{G}$ suatu homomorfisme surjektif. Ini memberikan deret subgrup di $N$ dan $\bar{G}$ dengan sifat serupa. Setiap subkuosien terinduksi bersifat trivial atau merupakan grup siklik berorde prima; setelah suku-suku berulang dihapus, hanya kemungkinan kedua yang tersisa. Karena itu, $N, \bar{G}$ keduanya merupakan grup supersolvabel.
+\end{proof}
+
+Dari $\mathscr{D}^i G \subset \mathscr{C}^i G$, diketahui bahwa nilpoten menyiratkan solvabel. Bahkan, terdapat hasil yang sedikit lebih kuat berikut ini.
+\begin{lemma}
+	Untuk grup berhingga, nilpoten $\implies$ supersolvabel $\implies$ solvabel.
+\end{lemma}
+\begin{proof}
+	Jelas bahwa supersolvabel menyiratkan solvabel. Sekarang, misalkan diberikan grup nilpoten $G$ dan andaikan $\mathscr{C}^{r+1}G = \{1\}$. Diketahui bahwa $\mathscr{C}^r G$ termuat dalam pusat dari $G = G/\mathscr{C}^{r+1} G$; khususnya, subgrup itu abelian. Karena itu, dapat dipilih suatu deret komposisi di dalamnya,
+	\[ \mathscr{C}^r G = V_0 \supset V_1 \supset \cdots \supset V_{s+1} = \{1\} \]
+	yang semua subkuosiennya merupakan grup siklik berorde prima (Proposisi \ref{prop:abelian-composition-series}). Dengan melakukan induksi pada panjang $r$ dari deret sentral menurun, diketahui bahwa $\bar{G} := G/\mathscr{C}^r G$ juga mempunyai deret normal
+	\[ \bar{G} = \bar{G}_0  \supset \cdots \supset \bar{G}_{t+1} = \{1\}, \quad \bar{G}_i \lhd \bar{G} \]
+	yang memenuhi sifat yang sama seperti $(V_i)_i$. Ambil $G_i$ sebagai prabayang $\bar{G}_i$ di dalam $G$; maka $G_i \lhd G$. Di sisi lain, $V_j \subset \mathscr{C}^r G \subset Z_G$ menyiratkan $V_j \lhd G$. Dengan demikian, deret subgrup
+	\[ G = G_0 \supset \cdots \supset G_t \supset V_0 \supset \cdots \supset V_{s+1} = \{1\} \]
+	memenuhi syarat yang diperlukan untuk grup supersolvabel.
+\end{proof}
+
+Hasil paling terkenal tentang grup solvabel berhingga ialah Teorema Feit--Thompson \cite{FT63}: setiap grup berhingga berorde ganjil merupakan grup solvabel. Teorema ini pernah mendorong klasifikasi grup berhingga dengan kuat; sebagai sebuah makalah teori grup berhingga, panjang dan kerumitannya belum pernah tertandingi pada masanya, meskipun jauh dari yang terakhir.\index{Teorema Feit--Thompson}
+
+\begin{example}
+	Contoh khas grup solvabel ialah grup matriks segitiga atas. Secara lebih konkret, pilih sebarang medan $\Bbbk$, dan notasikan dengan $\GL(n,\Bbbk)$ grup matriks invertibel atas $\Bbbk$ berukuran $n \times n$ terhadap perkalian ($n \in \Z_{\geq 1}$). Tinjau subgrup-subgrup berikut dari $\GL(n, \Bbbk)$:
+	\[
+		B := \begin{pmatrix}
+		* & \cdots & & * \\
+		& \ddots & & \vdots \\
+		0 & & & *
+	\end{pmatrix} \; \supset \;
+		U := \begin{pmatrix}
+		1 & \cdots & & * \\
+		& \ddots & & \vdots \\
+		0 & & & 1
+	\end{pmatrix} \]
+	dengan $*$ menyatakan sebarang unsur; selain itu, untuk $B$ dan $U$, masing-masing disyaratkan bahwa semua entri diagonalnya invertibel dan semuanya sama dengan $1$. Maka $B$ merupakan grup solvabel dan $U$ merupakan grup nilpoten. Sifat-sifat ini dapat dijelaskan melalui perhitungan matriks, tetapi mungkin lebih tepat jika kita meninjaunya dari sudut pandang abstrak. Berikut ini, misalkan $\mathcal{V}$ suatu ruang vektor berdimensi $n$ atas $\Bbbk$. Tinjau rantai subruang linear
+	\[ \mathcal{V} = \mathcal{V}_0 \supset \cdots \supset \mathcal{V}_n = \{0\}, \quad \dim_\Bbbk \mathcal{V}_i/\mathcal{V}_{i+1} = 1 \quad (0 \leq i < n). \]
+	Demi kemudahan, untuk $m > n$, tetapkan $\mathcal{V}_m := \{0\}$. Notasikan grup automorfisme linear dari $\mathcal{V}$ dengan $\GL(\mathcal{V})$. Tetapkan
+	\begin{equation*}
+		U_r := \left\{ x \in \GL(\mathcal{V}) : \forall i, \; (x - 1)(\mathcal{V}_i) \subset \mathcal{V}_{i+r} \right\}, \quad r \in \Z_{\geq 1};
+	\end{equation*}
+	tentu saja, $1$ menyatakan pemetaan identitas. Jelas bahwa $U_1 \supset U_2 \supset \cdots \supset U_n = \{1\}$. Perhatikan pula bahwa definisi $U_r$ menyiratkan $\forall i, \; x(\mathcal{V}_i) \subset \mathcal{V}_i$. Kita menyatakan bahwa setiap $U_r$ merupakan subgrup dan, untuk setiap $r,s$, berlaku $[U_r, U_s] \subset U_{r+s}$.
+
+	Pertama, jika $x, x' \in U_r$, maka $xx' - 1 = (x-1)x' + (x'-1)$ tetap memetakan setiap $\mathcal{V}_i$ ke dalam $\mathcal{V}_{i+r}$, sehingga $U_r$ tertutup terhadap perkalian. Jika $x = 1-X \in U_r$, dalam $\End_\Bbbk(\mathcal{V})$ berlaku identitas $X^n=0$ dan
+	\[ (1-X)^{-1} = \sum_{k=0}^{n-1} X^k = 1 + X \sum_{k=1}^{n-1} X^{k-1} \; \in U_r, \]
+	menunjukkan bahwa $U_r$ tertutup terhadap invers. Sekarang, misalkan $x = 1-X \in U_r$ dan $y = 1-Y \in U_s$. Dalam $\End_\Bbbk(\mathcal{V})$, kembangkan $[y,x] = y x y^{-1} x^{-1}$ menggunakan rumus di atas. Agar suku-sukunya mudah dikelompokkan, kita menggunakan $qX,vY$ sebagai pengganti $X,Y$, dengan $q,v$ peubah formal; ini setara dengan memperbolehkan koefisien transformasi linear berupa polinomial dalam $q,v$. Maka,
+	\begin{multline*}
+		(1-vY) (1-qX) (1-vY)^{-1} (1-qX)^{-1} = (1-vY) (1-qX) \cdot \sum_{h=0}^{n-1} v^h Y^h \cdot \sum_{k=0}^{n-1} q^k X^k \\
+		= \text{suku konstan} + \text{suku yang hanya memuat $q$} \\ {}+ \text{suku yang hanya memuat $v$} + \text{suku yang memuat $qv$}.
+	\end{multline*}
+	Dengan menyubstitusikan $q=v=0$ pada ruas kiri, diketahui bahwa suku konstannya adalah $1$. Dengan menyubstitusikan $v=0$ (atau $q=0$), diketahui bahwa suku yang hanya memuat $q$ (atau hanya memuat $v$) adalah $0$. Substitusi $q=v=1$ menghasilkan $[y,x]$: setiap suku yang memuat $qv$ memuat $X$ dan $Y$ sekaligus, sehingga suku seperti itu pasti memetakan $\mathcal{V}_i$ ke dalam $\mathcal{V}_{i+r+s}$. Kesimpulannya, $[x,y]^{-1} = [y,x] \in U_{r+s}$, sehingga terbukti bahwa $[U_r, U_s] \subset U_{r+s}$. Sebagai akibatnya, $xyx^{-1} = [x,y]y$ memberikan $r \geq s \implies U_r \lhd U_s$.
+	
+	Sekarang definisikan $U := U_1$. Dengan demikian, $U_r \lhd U$ dan $[U_r, U] \subset U_{r+1}$. Ini menunjukkan bahwa $(U_r)_{1 \leq r \leq n}$ merupakan deret sentral dari $U$, sehingga $U$ merupakan grup nilpoten. Kita mempunyai homomorfisme grup surjektif $\Phi$,
+	\begin{align*}
+		B := \left\{ x \in \GL(\mathcal{V}): \forall i, \; x (\mathcal{V}_i) \subset \mathcal{V}_i \right\} & \stackrel{\Phi}{\twoheadrightarrow} \bigoplus_{i=0}^{n-1} \GL\left( \mathcal{V}_i/\mathcal{V}_{i+1} \right) \simeq (\Bbbk^\times)^n, \\
+		x & \mapsto \left( x \big|_{\mathcal{V}_i/\mathcal{V}_{i+1}} \right)_{i=0}^{n-1} ,
+	\end{align*}
+	karena $x$ mempertahankan setiap $\mathcal{V}_i$, dapat diambil automorfisme terinduksi dari $x$ pada setiap subkuosien $\mathcal{V}_i/\mathcal{V}_{i+1}$. Jelas bahwa $\Ker(\Phi) = U$, sehingga $U \lhd B$ dan $B/U \simeq \Image(\Phi)$ abelian. Jika kita memilih dari $\mathcal{V}$ suatu basis $e_1, \ldots, e_n$ sedemikian sehingga
+	\[ \mathcal{V}_i = \bigoplus_{1 \leq j \leq n-i} \Bbbk e_j \]
+	dan menuliskan unsur-unsur $\GL(\mathcal{V})$ sebagai matriks, semuanya kembali pada definisi matriks sebelumnya untuk $B,U$, sedangkan $x|_{\mathcal{V}_i/\mathcal{V}_{i+1}}$ tepat merupakan entri diagonal dari $x$ dengan nomor $i$. Karena $B/U$ abelian, Lema \ref{prop:solvable-ses} langsung menunjukkan bahwa $B$ solvabel.
+\end{example}
+
+Sekarang tinjau konstruksi lain. Untuk suatu grup $G$, ambil $Z^0 = \{1\}$, lalu definisikan secara rekursif $Z^{i+1} \lhd G$ sebagai prabayang dari $Z_{G/Z^i}$ di bawah homomorfisme hasil bagi $G \twoheadrightarrow G/Z^i$ ($i \geq 0$). Dengan demikian, $Z^{i+1} \supset Z^i$. Deret $\{1\} = Z^0 \subset Z^1 \subset \cdots$ disebut \emph{deret sentral menaik} dari grup $G$. Jika terdapat $n$ sedemikian sehingga $Z^n = G$, dengan membaca urutannya secara terbalik, diperoleh $G = Z^n \supset Z^{n-1} \supset \cdots \supset Z^0 = \{1\}$. Dari konstruksinya, deret ini mudah dilihat sebagai deret sentral dari $G$, sehingga dalam keadaan ini $G$ nilpoten.
+
+\begin{proposition}\label{prop:p-group-nilpotent}
+	Misalkan $p$ bilangan prima. Maka setiap $p$-grup berhingga merupakan grup nilpoten.
+\end{proposition}
+\begin{proof}
+	Misalkan $|G|=p^n$. Untuk $G$, tinjau deret sentral menaik $(Z^i)_i$. Berdasarkan pengamatan sebelumnya, untuk setiap $i \geq 0$, berlaku $Z^i = G$ atau $G/Z^i$ merupakan $p$-grup nontrivial. Dalam kasus terakhir, Korolari \ref{prop:p-group-center} menyiratkan $Z_{G/Z^i} \neq \{1\}$, sehingga $Z^{i+1} \supsetneq Z^i$; dalam keadaan ini, $p \mid (Z^{i+1} : Z^i)$. Karena itu, deret sentral menaik tersebut harus dalam paling banyak $n$ langkah mencapai $G$.
+\end{proof}
+
+\begin{example}\index{grup Heisenberg}
+	Grup Heisenberg merupakan suatu kelas khusus grup nilpoten. Demi kemudahan, kita hanya bekerja di atas medan bilangan real $\R$. Tinjau suatu ruang vektor berdimensi hingga atas $\R$, yaitu $W$, beserta bentuk bilinear takdegenerat
+	\[ \lrangle{\cdot|\cdot}: W \times W \to \R, \]
+	dan andaikan bahwa $\lrangle{\cdot|\cdot}$ antisimetris: $\forall w, w', \; \lrangle{w|w'} = -\lrangle{w'|w}$. Bentuk bilinear semacam itu disebut bentuk simplektik. Definisikan
+	\[ \mathcal{H}(W) := \R \times W, \]
+	dengan operasi biner
+	\[ (t, X) \cdot (s, Y) := \left( t+s+\frac{\lrangle{X,Y}}{2}, X+Y \right). \]
+	Pembaca dipersilakan memverifikasi bahwa $\mathcal{H}(W)$ memenuhi aksioma grup dan bahwa $\R = \R \times \{0\}$ tepat merupakan pusat dari $\mathcal{H}(W)$. Kita mempunyai barisan eksak grup
+	\[ 0 \to \R \to \mathcal{H}(W) \to W \to 0 \]
+	dengan $\R$ dan $W$ dipandang sebagai grup terhadap penjumlahan. Karena itu, $\mathcal{H}(W) \supset \R \supset \{0\}$ merupakan deret sentral dan $\mathcal{H}(W)$ merupakan grup nilpoten.
+
+	Untuk menjelaskan asal-usul grup Heisenberg, berikutnya tetapkan suatu ruang vektor berdimensi $n$ atas $\R$, yaitu $V$. Kita perlu meninjau suatu ruang fungsi bernilai kompleks pada $V$; pilihan konkretnya tidak penting. Berikut ini, kita dapat menggunakan ruang fungsi turun cepat $\mathscr{S}(V) \ni f$. Definisikan ruang-ruang operator padanya,
+	\begin{align*}
+		L' & := \left\{ f \mapsto xf : x \in \Hom_\R(V, \R) \right\} \quad (\text{perkalian titik demi titik dengan }\; x), \\
+		L & := \left\{ f \mapsto \partial_v f : v \in V \right\} \quad (\text{turunan berarah}).
+	\end{align*}
+	Jika pada $V$ dipilih suatu basis $v_1, \ldots, v_n$ beserta basis dualnya $x_1, \ldots, x_n$ (yakni, $x_i(v_j) = \delta_{i,j}$), maka $\partial_{v_1}, \ldots, \partial_{v_n}$ dan $x_1, \ldots, x_n$ masing-masing membentuk basis dari $L$ dan $L'$. Untuk sebarang operator linear $X, Y: \mathscr{S}(V) \to \mathscr{S}(V)$, komutator yang bersesuaian $[X, Y]$ didefinisikan sebagai operator linear $XY - YX$. Maka $[\cdot, \cdot]$ merupakan bentuk bilinear antisimetris dan, untuk setiap $1 \leq i,j \leq n$, berlaku
+	\begin{gather*}
+		[x_i, x_j] = 0, \quad [\partial_{v_i}, \partial_{v_j}] = 0, \\
+		[\partial_{v_i}, x_j] = \delta_{i,j} := \begin{cases} 1, & i=j, \\ 0, & i \neq j.  \end{cases}
+	\end{gather*}
+	Persamaan-persamaan ini tidak lebih dari analisis elementer. Dari relasi di atas, diperoleh $L \cap L' = \{0\}$ dan bahwa $[\cdot, \cdot]$ takdegenerat pada jumlah langsung ruang vektor $W := L \oplus L'$. Dengan demikian, dari $V$ diperoleh grup Heisenberg $\mathcal{H}(W)$. Dalam mekanika kuantum, ambil $V=\R^3$ dan pilih satuan secara tepat sehingga $\hbar=1$. Maka $L$ dan $L'$ masing-masing direntang oleh momentum $p_i := \sqrt{-1}\partial_{v_i}$ dan operator posisi $q_i := x_i$ dalam ruang. Relasi $[\partial_{v_i}, x_j] = \delta_{i,j}$ menjadi relasi komutasi kanonik yang dikenal dalam mekanika kuantum. Perhatikan bahwa $p_i$ tepat merupakan transformasi Fourier dari $q_i$.
+\end{example}

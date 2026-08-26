@@ -1,0 +1,155 @@
+{
+  "status": "PASS",
+  "unit": "unit-031-bab-4-grup-solvabel-dan-nilpoten",
+  "authority": "chapter4.tex:936-1107 (blank line 1107 omitted from mapping)",
+  "target": "chapter4.tex:933-1103",
+  "data": "backend/data/unit-031-bab-4-grup-solvabel-dan-nilpoten.json",
+  "schema": "backend/schema/open-math-corpus-unit.schema.v1.json",
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "provenance_actor": "Codex acting on the user's instruction",
+  "artifact": {
+    "path": "artifacts/unit-031-bab-4-grup-solvabel-dan-nilpoten-id.pdf",
+    "pages": 9,
+    "bytes": 126053,
+    "sha256": "313667c3f87439ccaac3f8708653bb352af0ba7a16c9d09b159ad1b836cc32fb"
+  },
+  "counts": {
+    "sections": 1,
+    "concepts": 433,
+    "textual_environment_markers": 62,
+    "textual_environment_pairs": 31,
+    "active_environment_pairs": 31,
+    "labels": 6,
+    "ordinary_references": 7,
+    "equation_references": 0,
+    "citations": 1,
+    "list_items": 14,
+    "protected_math_zones": 326,
+    "diagrams": 3,
+    "tikzpicture_diagrams": 2,
+    "tikzcd_diagrams": 1,
+    "diagram_arrows": 3,
+    "drawing_commands": 2,
+    "index_entries": 9,
+    "terminology_rows": 14,
+    "source_corrections": 1,
+    "digital_reflows": 1,
+    "protected_text_localizations": 8,
+    "qa_events": 18,
+    "visual_qa_witnesses": 4,
+    "exercises": 0,
+    "hints": 0,
+    "answers": 0,
+    "solutions": 0,
+    "csv_projections": 6,
+    "uuidv5_entities_audited": 497
+  },
+  "checks": {
+    "deterministic_regeneration_one": "PASS",
+    "deterministic_regeneration_two": "PASS",
+    "shared_schema_and_uuidv5": "PASS",
+    "exact_csv_projection": "PASS",
+    "no_stale_unit_026_029_or_030_ids_or_data": "PASS",
+    "exact_authority_candidate_target_boundary": "PASS",
+    "complete_tex_surface_topology": "PASS",
+    "native_citation_and_index_provenance": "PASS",
+    "one_declared_proof_repair": "PASS",
+    "one_target_only_digital_reflow": "PASS",
+    "eight_protected_text_localizations": "PASS",
+    "no_invented_exercise_or_solution_surfaces": "PASS",
+    "component_rights_non_endorsement_and_closure_exceptions": "PASS",
+    "build_pdf_and_visual_preflight_bindings": "PASS",
+    "canonical_structure_pdf_and_render_bindings": "PASS",
+    "independent_preflight_preserved_separately": "PASS",
+    "terminology_binding": "PASS",
+    "all_full_file_and_line_span_bindings": "PASS",
+    "validation_mutated_outputs": false
+  },
+  "binding_audit": {
+    "occurrences": 82,
+    "full_file_occurrences": 54,
+    "line_span_occurrences": 28,
+    "unique_paths": 39,
+    "paths": [
+      "00_control/SOURCE_MANIFEST.csv",
+      "00_control/TERMINOLOGY.id-ID.csv",
+      "artifacts/unit-031-bab-4-grup-solvabel-dan-nilpoten-id.pdf",
+      "authority/archives/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b.zip",
+      "authority/pdfs/Al-jabr-1.pdf",
+      "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter4.tex",
+      "build/unit-031-candidate/chapter4-solvable-nilpotent-groups-id.tex",
+      "build/unit-031-staging/terminology-delta.csv",
+      "qa/UNIT_031_BUILD_FINAL.log",
+      "qa/UNIT_031_PREPROMOTION_AUDIT_20260826.md",
+      "qa/UNIT_031_TERMINOLOGY_AUDIT_20260826.md",
+      "qa/UNIT_031_TRANSLATION_REVIEW_20260826.md",
+      "qa/UNIT_031_VISUAL_PREFLIGHT_20260826.md",
+      "qa/UNIT_031_VISUAL_QA_20260826.md",
+      "qa/unit-031-evidence/render-hash-inventory.json",
+      "qa/unit-031-evidence/structure-and-pdf-qa.json",
+      "repo/fonts/NotoSansCJKsc-Black.otf",
+      "repo/fonts/NotoSansCJKsc-Medium.otf",
+      "repo/fonts/NotoSansCJKsc-Regular.otf",
+      "repo/fonts/NotoSerifCJKsc-Bold.otf",
+      "repo/fonts/OFL-1.1-Noto-CJK.txt",
+      "repo/source/AJbook.cls",
+      "repo/source/Al-jabr.bib",
+      "repo/source/LICENSE",
+      "repo/source/Lanzhou.png",
+      "repo/source/ccby.png",
+      "repo/source/chapter4.tex",
+      "repo/source/coverpage-id-unit-031.tex",
+      "repo/source/font-setup-id.tex",
+      "repo/source/locale-ui-id.tex",
+      "repo/source/myarrows.sty",
+      "repo/source/mycommand.sty",
+      "repo/source/titles-setup-id.tex",
+      "repo/source/titles-setup.tex",
+      "repo/source/unit-031-bab-4-grup-solvabel-dan-nilpoten.tex",
+      "repo/source/unit-031-crossrefs.aux",
+      "scripts/build_unit_031.ps1",
+      "scripts/check_unit_031_candidate.py",
+      "scripts/check_unit_031_structure.py"
+    ]
+  },
+  "identities": {
+    "backend/data/unit-031-bab-4-grup-solvabel-dan-nilpoten.json": {
+      "bytes": 367588,
+      "sha256": "307828cd0dc47e8229a01fd08beaad3cb3c6fdd4aa09e4f973ba28d86f92f391"
+    },
+    "backend/csv/unit-031-bindings.csv": {
+      "bytes": 17259,
+      "sha256": "23ec2f8e2a0075c386d0d17497f2308016f392d71e96d3cbb3a407084665496e"
+    },
+    "backend/csv/unit-031-entities.csv": {
+      "bytes": 113256,
+      "sha256": "db129201bc85195e20d7a433161115a90ad6f8bce720298489c1f6ff62541868"
+    },
+    "backend/csv/unit-031-qa.csv": {
+      "bytes": 7229,
+      "sha256": "1e2978602913f40897471ccfb0537b420e8aa8f479b1a20699b6af8dcede0506"
+    },
+    "backend/csv/unit-031-relations.csv": {
+      "bytes": 269242,
+      "sha256": "377da2b276a916566ba34b7a305226ad1962db37555e270238c15b2265e559f4"
+    },
+    "backend/csv/unit-031-rights.csv": {
+      "bytes": 1287,
+      "sha256": "4836630530f87a11a64fe233c59970e2ff7942695a8dbf404f7a0583a275197e"
+    },
+    "backend/csv/unit-031-surfaces.csv": {
+      "bytes": 3270,
+      "sha256": "fda085f4b23d3693b3c46e4cc87ae5c2c4a142b2880a6fc6f3aae5d6884217fc"
+    }
+  },
+  "tools": {
+    "scripts/generate_unit_031_backend.py": {
+      "bytes": 56505,
+      "sha256": "7212894b3b6dafa05cb94ba8463a553fc5815db664fbe32c970dfda2580b11c3"
+    },
+    "scripts/validate_unit_031_backend.py": {
+      "bytes": 27458,
+      "sha256": "11fe3377638fa952ceb1badaa7a11d29866e65d46e51cd8a459b950167212242"
+    }
+  }
+}
