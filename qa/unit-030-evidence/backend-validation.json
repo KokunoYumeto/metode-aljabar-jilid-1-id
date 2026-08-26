@@ -1,0 +1,153 @@
+{
+  "status": "PASS",
+  "unit": "unit-030-bab-4-deret-komposisi-grup",
+  "authority": "chapter4.tex:796-935 (blank line 935 omitted from mapping)",
+  "target": "chapter4.tex:794-932",
+  "data": "backend/data/unit-030-bab-4-deret-komposisi-grup.json",
+  "schema": "backend/schema/open-math-corpus-unit.schema.v1.json",
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "provenance_actor": "Codex acting on the user's instruction",
+  "artifact": {
+    "path": "artifacts/unit-030-bab-4-deret-komposisi-grup-id.pdf",
+    "pages": 7,
+    "bytes": 91961,
+    "sha256": "43ad2ffa2516f2f4394bcb82ad2e585f21c1e9e36a87870f4406a78597f18d74"
+  },
+  "counts": {
+    "sections": 1,
+    "concepts": 181,
+    "textual_environment_markers": 52,
+    "textual_environment_pairs": 26,
+    "active_environment_pairs": 26,
+    "labels": 10,
+    "ordinary_references": 8,
+    "equation_references": 1,
+    "citations": 0,
+    "list_items": 0,
+    "protected_math_zones": 88,
+    "diagrams": 6,
+    "tikzcd_diagrams": 6,
+    "polygon_drawings": 0,
+    "diagram_arrows": 23,
+    "polygon_drawing_commands": 0,
+    "index_entries": 6,
+    "terminology_rows": 8,
+    "source_corrections": 1,
+    "protected_text_localizations": 2,
+    "qa_events": 17,
+    "visual_qa_witnesses": 4,
+    "exercises": 0,
+    "hints": 0,
+    "answers": 0,
+    "solutions": 0,
+    "csv_projections": 6,
+    "uuidv5_entities_audited": 242
+  },
+  "checks": {
+    "deterministic_regeneration_one": "PASS",
+    "deterministic_regeneration_two": "PASS",
+    "shared_schema_and_uuidv5": "PASS",
+    "exact_csv_projection": "PASS",
+    "no_stale_unit_026_or_029_ids_or_data": "PASS",
+    "exact_authority_candidate_target_boundary": "PASS",
+    "complete_tex_surface_topology": "PASS",
+    "native_citation_and_index_provenance": "PASS",
+    "one_source_correction": "PASS",
+    "two_protected_text_localizations": "PASS",
+    "no_invented_exercise_or_solution_surfaces": "PASS",
+    "component_rights_non_endorsement_and_closure_exceptions": "PASS",
+    "build_pdf_and_visual_preflight_bindings": "PASS",
+    "canonical_structure_pdf_and_render_bindings": "PASS",
+    "independent_preflight_preserved_separately": "PASS",
+    "terminology_binding": "PASS",
+    "all_full_file_and_line_span_bindings": "PASS",
+    "validation_mutated_outputs": false
+  },
+  "binding_audit": {
+    "occurrences": 81,
+    "full_file_occurrences": 53,
+    "line_span_occurrences": 28,
+    "unique_paths": 39,
+    "paths": [
+      "00_control/SOURCE_MANIFEST.csv",
+      "00_control/TERMINOLOGY.id-ID.csv",
+      "artifacts/unit-030-bab-4-deret-komposisi-grup-id.pdf",
+      "authority/archives/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b.zip",
+      "authority/pdfs/Al-jabr-1.pdf",
+      "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter4.tex",
+      "build/unit-030-candidate/chapter4-group-composition-series-id.tex",
+      "build/unit-030-staging/terminology-delta.csv",
+      "qa/UNIT_030_BUILD_FINAL.log",
+      "qa/UNIT_030_PREPROMOTION_AUDIT_20260826.md",
+      "qa/UNIT_030_TERMINOLOGY_AUDIT_20260826.md",
+      "qa/UNIT_030_TRANSLATION_REVIEW_20260825.md",
+      "qa/UNIT_030_VISUAL_PREFLIGHT_20260826.md",
+      "qa/UNIT_030_VISUAL_QA_20260826.md",
+      "qa/unit-030-evidence/render-hash-inventory.json",
+      "qa/unit-030-evidence/structure-and-pdf-qa.json",
+      "repo/fonts/NotoSansCJKsc-Black.otf",
+      "repo/fonts/NotoSansCJKsc-Medium.otf",
+      "repo/fonts/NotoSansCJKsc-Regular.otf",
+      "repo/fonts/NotoSerifCJKsc-Bold.otf",
+      "repo/fonts/OFL-1.1-Noto-CJK.txt",
+      "repo/source/AJbook.cls",
+      "repo/source/Al-jabr.bib",
+      "repo/source/LICENSE",
+      "repo/source/Lanzhou.png",
+      "repo/source/ccby.png",
+      "repo/source/chapter4.tex",
+      "repo/source/coverpage-id-unit-030.tex",
+      "repo/source/font-setup-id.tex",
+      "repo/source/locale-ui-id.tex",
+      "repo/source/myarrows.sty",
+      "repo/source/mycommand.sty",
+      "repo/source/titles-setup-id.tex",
+      "repo/source/titles-setup.tex",
+      "repo/source/unit-030-bab-4-deret-komposisi-grup.tex",
+      "repo/source/unit-030-crossrefs.aux",
+      "scripts/build_unit_030.ps1",
+      "scripts/check_unit_030_candidate.py",
+      "scripts/check_unit_030_structure.py"
+    ]
+  },
+  "identities": {
+    "backend/data/unit-030-bab-4-deret-komposisi-grup.json": {
+      "bytes": 179924,
+      "sha256": "1dae77cebf984b8a1dfad0a3d90714d3b4f69c0632042cea768939eb1a77f806"
+    },
+    "backend/csv/unit-030-bindings.csv": {
+      "bytes": 17056,
+      "sha256": "ee8553d1b18e7804e84200bb2756d321392cf5273268ef52b876e69784400f7d"
+    },
+    "backend/csv/unit-030-entities.csv": {
+      "bytes": 47986,
+      "sha256": "bb61cc8d97250c98b6b481cb0c3a83e06f0e05aa4b69ec684d96c29dfae93b62"
+    },
+    "backend/csv/unit-030-qa.csv": {
+      "bytes": 6622,
+      "sha256": "4ee7bde23901f1197913f0714b417a4937a5f07d945af455c185746584c5f4e2"
+    },
+    "backend/csv/unit-030-relations.csv": {
+      "bytes": 119343,
+      "sha256": "498e6e24f3cea0d9809d380068fd605f9ceed06e9fd31a22a55bcf36110bb32e"
+    },
+    "backend/csv/unit-030-rights.csv": {
+      "bytes": 1287,
+      "sha256": "4836630530f87a11a64fe233c59970e2ff7942695a8dbf404f7a0583a275197e"
+    },
+    "backend/csv/unit-030-surfaces.csv": {
+      "bytes": 2966,
+      "sha256": "264aff425f61c6e085de320077edc142cf2fc4988b1705b415130554f0aa625a"
+    }
+  },
+  "tools": {
+    "scripts/generate_unit_030_backend.py": {
+      "bytes": 52396,
+      "sha256": "9d48c8edd97506b112d9a58c55a41ac14777055a2cbdfb9cf923a6abd1de93fa"
+    },
+    "scripts/validate_unit_030_backend.py": {
+      "bytes": 25432,
+      "sha256": "d4ebee5adad836b52ed145786ce2fb5f9e7e9f183b4fa7040bf326724eb0ce1a"
+    }
+  }
+}

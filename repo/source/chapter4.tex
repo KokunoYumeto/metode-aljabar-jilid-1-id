@@ -791,50 +791,50 @@ Argumen berikut patut disimak; pembuktian lain dapat dilihat, misalnya, dalam \c
 
 	Sebaliknya, andaikan $|G| = p_1^{a_1} \cdots p_r^{a_r}$ dan bahwa, untuk setiap $1 \leq i \leq r$, terdapat subgrup Sylow $p_i$ yang normal, yakni $H_{p_i}$. Orde subgrup-subgrup ini saling koprima. Dengan menggunakan Proposisi \ref{prop:Lagrange}, dapat diverifikasi dalam $G$ bahwa $H_{p_i} \cap \prod_{j \neq i} H_{p_j} = \{1\}$. Dengan demikian, syarat-syarat Lema \ref{prop:internal-direct} terpenuhi, dan kita memperoleh isomorfisme $\prod_{i=1}^r H_{p_i} \rightiso H_{p_1} \cdots H_{p_r} \subset G$. Dengan membandingkan orde, diperoleh $H_{p_1} \cdots H_{p_r} = G$.
 \end{proof}
-\section{群的合成列}\label{sec:composition-series-grp}
-将一个群设法拆解为较小的构件是群论的常见手法, 合成列是其中一例.
+\section{Deret Komposisi Grup}\label{sec:composition-series-grp}
+Salah satu cara yang lazim dalam teori grup ialah menguraikan suatu grup menjadi komponen-komponen yang lebih kecil; deret komposisi merupakan salah satu contohnya.
 
-\begin{definition}[正规列]\label{def:normal-series}\index{zhengguilie@正规列 (normal series)}
-	群 $G$ 的递降子群链
+\begin{definition}[Deret normal]\label{def:normal-series}\index{zhengguilie@deret normal (normal series)}
+	Tinjau suatu rantai subgrup menurun dari grup $G$,
 	\[ G = G_0 \supset G_1 \supset \cdots \supset G_n = \{1\} \]
-	如满足 $\forall 0 \leq i < n,\;  G_{i+1} \lhd G_i$, 则称之为\emph{正规列}, 而群族
+	Jika rantai tersebut memenuhi $\forall 0 \leq i < n,\;  G_{i+1} \lhd G_i$, rantai itu disebut \emph{deret normal}, sedangkan keluarga grup
 	\[ G_i/G_{i+1}, \quad i=0, \ldots, n-1 \]
-	称为该列的\emph{子商}. 正规列的\emph{加细}是透过形如 \index{zishang@子商 (subquotient)}
+	disebut \emph{subkuosien} deret tersebut. Suatu \emph{penghalusan} deret normal diperoleh dengan berulang kali menyisipkan suku dalam bentuk \index{zishang@subkuosien (subquotient)}
 	\[ \left[ \cdots \supset G_i \supset G_{i+1} \supset \cdots \right] \leadsto \left[ \cdots \supset G_i \supset G' \supset G_{i+1} \supset \cdots \right] \]
-	的反复插项得到的新列. 插入 $G' = G_i$ 或 $G_{i+1}$ 得到的加细是平凡的; 反之则称为\emph{真加细}.
+	ke dalam deret tersebut. Penyisipan $G' = G_i$ atau $G_{i+1}$ menghasilkan penghalusan trivial; selain itu, penghalusannya disebut \emph{penghalusan sejati}.
 \end{definition}
 
-下节将考虑一种特殊的正规列, 在此一并定义.
-\begin{definition}[中心列]\label{def:central-series}\index{zhongxinlie@中心列 (central series)}
-	群 $G$ 的正规列 $G = G_0 \supset G_1 \supset \cdots$ 如对每个 $i$ 都满足
+Pada bagian berikutnya akan dibahas suatu deret normal yang khusus; kita definisikan sekaligus di sini.
+\begin{definition}[Deret sentral]\label{def:central-series}\index{zhongxinlie@deret sentral (central series)}
+	Suatu deret normal dari grup $G$, yakni $G = G_0 \supset G_1 \supset \cdots$, yang untuk setiap $i$ memenuhi
 	\begin{gather*}
 		G_i \lhd G, \\
 		G_i/G_{i+1} \subset Z_{G/G_{i+1}},
 	\end{gather*}
-	则称为\emph{中心列}.
+	disebut \emph{deret sentral}.
 \end{definition}
 
-\begin{definition}[合成列]\label{def:composition-series}\index{hechenglie@合成列 (composition series)}
-	若群 $G$ 的正规列 $G = G_0 \supset G_1 \supset \cdots$ 满足 $G_{i+1} \subsetneq G_i$, 而且子商皆为单群, 则称之为\emph{合成列}.
+\begin{definition}[Deret komposisi]\label{def:composition-series}\index{hechenglie@deret komposisi (composition series)}
+	Jika suatu deret normal dari grup $G$, yaitu $G = G_0 \supset G_1 \supset \cdots$, memenuhi $G_{i+1} \subsetneq G_i$ dan semua subkuosiennya merupakan grup sederhana, deret itu disebut \emph{deret komposisi}.
 \end{definition}
-细观单群定义可见合成列正是无冗余项, 而且无法再(真)加细的列. 有限群总有合成列, 一般的群则未必.
+Dengan mencermati definisi grup sederhana, terlihat bahwa deret komposisi tepat merupakan deret tanpa suku berlebih dan tidak dapat lagi mengalami penghalusan (sejati). Setiap grup berhingga mempunyai deret komposisi, sedangkan grup umum belum tentu mempunyainya.
 
-\begin{lemma}[Zassenhaus 引理]\label{prop:Zassenhaus}
-	固定群 $G$, 考虑子群 $U, V$ 及各自的正规子群 $u \lhd U$, $v \lhd V$. 则有
+\begin{lemma}[Lema Zassenhaus]\label{prop:Zassenhaus}
+	Tetapkan suatu grup $G$. Tinjau subgrup-subgrup $U, V$ beserta subgrup normalnya masing-masing, yaitu $u \lhd U$ dan $v \lhd V$. Maka,
 	\begin{gather*}
 		u(U \cap v) \lhd u(U \cap V), \\
 		(u \cap V) v \lhd (U \cap V)v,
 	\end{gather*}
-	其中各项在注记 \ref{rem:HN} 的意义下都是子群, 而且有自然的同构
+	dengan semua suku merupakan subgrup dalam pengertian Catatan \ref{rem:HN}; selain itu, terdapat isomorfisme alami
 	\[ \dfrac{u (U \cap V)}{u (U \cap v)} \simeq \dfrac{(U \cap V)v}{(u \cap V)v}. \]
 \end{lemma}
 \begin{proof}
-	我们将表解各子群之间的关系, 图例如下:
+	Kita akan menyajikan hubungan di antara subgrup-subgrup tersebut melalui diagram, dengan keterangan sebagai berikut:
 	\[ \begin{tikzcd}
-		G \arrow[dash, d] \\ H: \text{子群}
+		G \arrow[dash, d] \\ H: \text{subgrup}
 	\end{tikzcd} \quad
 	\begin{tikzcd}
-		G \arrow[dash, d, "\triangledown" description] \\ N: \text{正规子群}
+		G \arrow[dash, d, "\triangledown" description] \\ N: \text{subgrup normal}
 	\end{tikzcd} \quad
 	\begin{tikzcd}[column sep=tiny]
 		A \arrow[dash, rd] & & B \arrow[dash, ld] \\
@@ -844,7 +844,7 @@ Argumen berikut patut disimak; pembuktian lain dapat dilihat, misalnya, dalam \c
 		{}& HN \arrow[dash, ld] \arrow[dash, rd, "\triangledown" description] & \\
 		H & & N
 	\end{tikzcd}\]
-	其中 $H \subset N_G(N)$. 现断言有以下图表:
+	dengan $H \subset N_G(N)$. Sekarang kita nyatakan bahwa diagram berikut berlaku:
 	\[ \begin{tikzcd}[column sep=tiny]
 		{} & U \arrow[dash, d] & & V \arrow[dash, d] & \\
 		& u(U \cap V) \arrow[dash, dd, "\triangledown" description] \arrow[dash, rd] & & (U \cap V)v \arrow[dash, dd, "\triangledown" description] \arrow[dash, ld] & \\
@@ -853,84 +853,83 @@ Argumen berikut patut disimak; pembuktian lain dapat dilihat, misalnya, dalam \c
 		u \arrow[dash, rd] & & (u \cap V)(U \cap v) \arrow[dash, ld] \arrow[dash, rd] & & v \arrow[dash, ld] \\
 		& u \cap V & & U \cap v &
 	\end{tikzcd} \]
-	首先留意有性质 $U \cap V \subset N_G(u) \cap N_G(v)$ 等等, 图中的积 $u(U \cap V)$ 等因而是子群. 图例第一条 (即: 子群在下) 显然成立. 又可逐一验证
+	Pertama, perhatikan sifat $U \cap V \subset N_G(u) \cap N_G(v)$ dan sifat-sifat serupa; karena itu, hasil kali $u(U \cap V)$ dan hasil kali lain dalam diagram merupakan subgrup. Keterangan pertama dalam legenda (yakni, subgrup berada di bawah) jelas berlaku. Selanjutnya, dapat diverifikasi satu per satu bahwa
 	\begin{align*}
 		u(U \cap v) \cap (U \cap V) & = (u \cap V)(U \cap v) = (U \cap V) \cap (u \cap V)v, \\
 		u \cap (u \cap V)(U \cap v) & = u \cap V, \\
 		(u \cap V)(U \cap v) \cap v & = U \cap v.
 	\end{align*}
-	故图例第三条 (子群交) 也成立. 同理可验证图例第四条 (子群积). 至于第二条 (正规子群), 从 $v \lhd V$ 可导出 $U \cap v \lhd U \cap V$, 从而 $u(U \cap v) \lhd u(U \cap V)$; 同理有 $(u \cap V)v \lhd (U \cap V)v$, 取交即得 $(u \cap V)(U \cap v) \lhd U \cap V$. 至此证成断言.
+	Dengan demikian, keterangan ketiga dalam legenda (irisan subgrup) juga berlaku. Dengan cara yang sama, keterangan keempat (hasil kali subgrup) dapat diverifikasi. Untuk keterangan kedua (subgrup normal), dari $v \lhd V$ diperoleh $U \cap v \lhd U \cap V$, sehingga $u(U \cap v) \lhd u(U \cap V)$; dengan cara yang sama, $(u \cap V)v \lhd (U \cap V)v$. Dengan mengambil irisan, diperoleh $(u \cap V)(U \cap v) \lhd U \cap V$. Dengan demikian, pernyataan tentang diagram terbukti.
 
-	现在考虑图表中的两个平行四边形. 分别运用命题 \ref{prop:3rd-homomorphism} 可得自然同构
+	Sekarang tinjau kedua jajaran genjang dalam diagram. Dengan menerapkan Proposisi \ref{prop:3rd-homomorphism} pada masing-masing jajaran genjang, diperoleh isomorfisme alami
 	\begin{equation*}\begin{tikzcd}[column sep=tiny, row sep=small]
 		\dfrac{u (U \cap V)}{u(U \cap v)} \arrow[rd, "\simeq"'] &  & \dfrac{(U \cap V)v}{(u \cap V)v} \arrow[ld, "\simeq"] \\
 		& \dfrac{U \cap V}{(u \cap V)(U \cap v)} &
 	\end{tikzcd}\end{equation*}
-	明所欲证.
+	Inilah yang hendak dibuktikan.
 \end{proof}
 
 \begin{definition}\label{def:JH-subquotients}
-	设 $G = G_0 \supset \cdots$ 为正规列, 我们视其子商 $(G_i/G_{i+1})_{i \geq 0}$ 为不计顺序, 但计入重数的集合. 如果两个正规列长度相同, 而且其子商在上述意义下相等, 则称两正规列\emph{等价}.
+	Misalkan $G = G_0 \supset \cdots$ suatu deret normal. Kita memandang subkuosien-subkuosiennya $(G_i/G_{i+1})_{i \geq 0}$ sebagai suatu himpunan yang urutannya diabaikan, tetapi multiplikitasnya diperhitungkan. Jika dua deret normal memiliki panjang yang sama dan subkuosiennya sama dalam pengertian tersebut, kedua deret normal itu disebut \emph{ekuivalen}.
 \end{definition}
 
-\begin{theorem}[Schreier 加细定理]\label{prop:Schreier}
-	设
+\begin{theorem}[Teorema Penghalusan Schreier]\label{prop:Schreier}
+	Misalkan
 	\begin{align*}
 		G & = G_0 \supset \cdots \supset G_r \supset G_{r+1} = \{1\}, \\
 		G & = H_0 \supset \cdots \supset H_s \supset H_{s+1} = \{1\}
 	\end{align*}
-	为 $G$ 的两个正规列, 则两者有等价的加细.
+	merupakan dua deret normal dari $G$. Maka keduanya mempunyai penghalusan yang ekuivalen.
 \end{theorem}
 \begin{proof}
-	对每个 $0 \leq i \leq r$, $0 \leq j \leq s$ 定义
+	Untuk setiap $0 \leq i \leq r$ dan $0 \leq j \leq s$, definisikan
 	\begin{align*}
 		G_{i,j} & := G_{i+1} (H_j \cap G_i), \\
 		H_{j,i} & := (G_i \cap H_j) H_{j+1}.
 	\end{align*}
-	先看 $G_{i,j}$, 由 $G_{i+1} \lhd G_i$ 知其为子群. 包含关系 $G_{i, j+1} \lhd G_{i,j}$ 成立, 而且
+	Pertama, tinjau $G_{i,j}$. Karena $G_{i+1} \lhd G_i$, objek tersebut merupakan subgrup. Relasi subgrup normal $G_{i, j+1} \lhd G_{i,j}$ berlaku, dan
 	\[ G_{i,0} = G_{i+1} (G \cap G_i) = G_i, \quad G_{i,s+1} = G_{i+1}, \]
-	遂得到 $(G_i)_{i=0}^r$ 的加细
-	\[ \mathcal{G} := \left[ \cdots \supset G_i = G_{i, 0} \supset G_{i, 1} \supset \cdots G_{i, s} \supset G_{i, s+1}= G_{i+1} \supset \cdots \right] . \]
-	同理可见 $H_{j, i}$ 给出 $(H_j)_{j=0}^s$ 的加细, 记为 $\mathcal{H}$. 在引理 \ref{prop:Zassenhaus} 中取 $u := G_{i+1}$, $U := G_i$ 和 $v := H_{j+1}$, $V := H_j$, 遂导出
+	sehingga diperoleh penghalusan dari $(G_i)_{i=0}^r$,
+	\[ \mathcal{G} := \left[ \cdots \supset G_i = G_{i, 0} \supset G_{i, 1} \supset \cdots \supset G_{i, s} \supset G_{i, s+1}= G_{i+1} \supset \cdots \right] . \]
+	Dengan cara yang sama, $H_{j, i}$ memberikan penghalusan dari $(H_j)_{j=0}^s$, yang kita notasikan dengan $\mathcal{H}$. Dalam Lema \ref{prop:Zassenhaus}, ambil $u := G_{i+1}$, $U := G_i$, $v := H_{j+1}$, dan $V := H_j$; maka diperoleh
 	\[ \dfrac{G_{i,j}}{G_{i,j+1}} = \dfrac{u(U \cap V)}{u(U \cap v)} \simeq \dfrac{(U \cap V)v}{(u \cap V)v} = \dfrac{H_{j,i}}{H_{j,i+1}}. \]
 
-	当 $(i,j)$ 取遍所有可能, 正规列 $\mathcal{G}$, $\mathcal{H}$ 的各个子商在同构两边都恰好出现一次. 证毕.
+	Ketika $(i,j)$ menjelajahi semua kemungkinan, setiap subkuosien deret normal $\mathcal{G}$ dan $\mathcal{H}$ muncul tepat satu kali pada masing-masing ruas isomorfisme di atas. Pembuktian selesai.
 \end{proof}
 
-\begin{theorem}[Jordan--Hölder 定理]\label{prop:JH-group}\index{Jordan--Hölder 定理}
-	群 $G$ 的任两个合成列皆等价.
+\begin{theorem}[Teorema Jordan--Hölder]\label{prop:JH-group}\index{Teorema Jordan--Hölder}
+	Sebarang dua deret komposisi dari suatu grup $G$ ekuivalen.
 \end{theorem}
 \begin{proof}
-	这是定理 \ref{prop:Schreier} 配合定义 \ref{def:composition-series} 的直接推论.
+	Pernyataan ini merupakan akibat langsung dari Teorema \ref{prop:Schreier} bersama Definisi \ref{def:composition-series}.
 \end{proof}
 
-因此, 一旦群 $G$ 有合成列, 则其子商在定义 \ref{def:JH-subquotients} 的意义下无关合成列的选取.
-\begin{definition}\index{hechengyinzi@合成因子 (composition factor)}
-	假设群 $G$ 有合成列, 定义其\emph{合成因子}或 Jordan--Hölder 因子集 $\text{JH}(G)$ 为其任意合成列的全体子商 (不计顺序, 计入重数).
+Karena itu, begitu suatu grup $G$ mempunyai deret komposisi, subkuosien-subkuosiennya dalam pengertian Definisi \ref{def:JH-subquotients} tidak bergantung pada deret komposisi yang dipilih.
+\begin{definition}\index{hechengyinzi@faktor komposisi (composition factor)}
+	Andaikan suatu grup $G$ mempunyai deret komposisi. \emph{Faktor komposisi} grup tersebut, atau himpunan faktor Jordan--Hölder $\text{JH}(G)$, didefinisikan sebagai seluruh subkuosien dari sebarang deret komposisinya, dengan urutan diabaikan tetapi multiplikitas diperhitungkan.
 \end{definition}
 
-带重数集 $\text{JH}(G)$ 是一种管用的不变量, 但它无法在同构意义下刻画群. 例如群 $\Z/4\Z$ 与 $\Z/2\Z \times \Z/2\Z$ 的合成因子都是 $\{ \Z/2\Z, \Z/2\Z\}$, 但两群不同构.
+Himpunan dengan multiplikitas $\text{JH}(G)$ merupakan invarian yang berguna, tetapi tidak mencirikan grup hingga isomorfisme. Sebagai contoh, grup $\Z/4\Z$ dan $\Z/2\Z \times \Z/2\Z$ sama-sama mempunyai faktor komposisi $\{ \Z/2\Z, \Z/2\Z\}$, tetapi kedua grup itu tidak isomorfik.
 
-此外, 给定群的正合列 $1 \to N \to G \xrightarrow{\pi} Q \to 1$. 假设 $N$, $Q$ 皆有合成列, 则 $G$ 亦有合成列, 而且
+Selain itu, misalkan diberikan barisan eksak grup $1 \to N \to G \xrightarrow{\pi} Q \to 1$. Andaikan $N$ dan $Q$ sama-sama mempunyai deret komposisi. Maka $G$ juga mempunyai deret komposisi, dan
 \begin{gather}\label{eqn:JH-ses}
 	\text{JH}(G) = \text{JH}(N) \cup  \text{JH}(Q),
 \end{gather}
-这里的并集当然是计入重数的. 论证如下: 分别考虑 $Q$ 和 $N$ 的合成列 $(Q_i)_i$, $(N_j)_j$, 两者可以衔接成合成列
+dengan gabungan tersebut tentu saja memperhitungkan multiplikitas. Argumennya sebagai berikut: tinjau masing-masing $Q$ dan $N$ beserta deret komposisinya $(Q_i)_i$ dan $(N_j)_j$; kedua deret itu dapat disambungkan menjadi deret komposisi
 \[ G \supset \pi^{-1}(Q_1) \supset \cdots \supset \pi^{-1}(Q_r) = N \supset N_1 \supset \cdots . \]
-其合成因子正是 $\text{JH}(N) \cup  \text{JH}(Q)$.
+Faktor komposisinya tepat $\text{JH}(N) \cup  \text{JH}(Q)$.
 
 \begin{proposition}\label{prop:abelian-composition-series}
-	若 $G$ 为有限交换群, 则 $\text{JH}(G)$ 中的元素都是素数阶群.
+	Jika $G$ suatu grup abelian berhingga, unsur-unsur $\text{JH}(G)$ semuanya merupakan grup berorde prima.
 \end{proposition}
-留意: 素数阶群都是循环群.
+Perhatikan bahwa setiap grup berorde prima merupakan grup siklik.
 \begin{proof}
-	可假设 $G$ 非平凡群. 推论 \ref{prop:group-Cauchy} 确保存在素数 $p$ 及 $p$ 阶元素 $t \in G$. 考虑交换群的正合列
+	Kita boleh mengandaikan bahwa $G$ merupakan grup nontrivial. Korolari \ref{prop:group-Cauchy} menjamin adanya bilangan prima $p$ dan unsur berorde $p$, yaitu $t \in G$. Tinjau barisan eksak grup abelian
 	\[ 1 \to \lrangle{t} \to G \to G/\lrangle{t} \to 1 \]
-	并利用 \eqref{eqn:JH-ses} 施递归于 $|G|$, 即得所求.
+	dan terapkan \eqref{eqn:JH-ses} secara rekursif terhadap $|G|$ untuk memperoleh hasil yang dikehendaki.
 \end{proof}
 
-我们将在推论 \ref{prop:finite-abelian-structure} 详细描述有限交换群的结构.
-
+Kita akan mendeskripsikan struktur grup abelian berhingga secara terperinci dalam Korolari \ref{prop:finite-abelian-structure}.
 \section{可解群与幂零群}\label{sec:solvable-groups}
 可解群的概念源于 Galois 对高次方程根式解的研究, 幂零与超可解群则是其变体. 这些概念在 Lie 群, Lie 代数的研究中占有重要地位, 本节主要介绍其群论的面向. 请先回忆定义 \ref{def:normal-series}, \ref{def:central-series} 中的子群列.
 

@@ -1,0 +1,139 @@
+\section{Deret Komposisi Grup}\label{sec:composition-series-grp}
+Salah satu cara yang lazim dalam teori grup ialah menguraikan suatu grup menjadi komponen-komponen yang lebih kecil; deret komposisi merupakan salah satu contohnya.
+
+\begin{definition}[Deret normal]\label{def:normal-series}\index{zhengguilie@deret normal (normal series)}
+	Tinjau suatu rantai subgrup menurun dari grup $G$,
+	\[ G = G_0 \supset G_1 \supset \cdots \supset G_n = \{1\} \]
+	Jika rantai tersebut memenuhi $\forall 0 \leq i < n,\;  G_{i+1} \lhd G_i$, rantai itu disebut \emph{deret normal}, sedangkan keluarga grup
+	\[ G_i/G_{i+1}, \quad i=0, \ldots, n-1 \]
+	disebut \emph{subkuosien} deret tersebut. Suatu \emph{penghalusan} deret normal diperoleh dengan berulang kali menyisipkan suku dalam bentuk \index{zishang@subkuosien (subquotient)}
+	\[ \left[ \cdots \supset G_i \supset G_{i+1} \supset \cdots \right] \leadsto \left[ \cdots \supset G_i \supset G' \supset G_{i+1} \supset \cdots \right] \]
+	ke dalam deret tersebut. Penyisipan $G' = G_i$ atau $G_{i+1}$ menghasilkan penghalusan trivial; selain itu, penghalusannya disebut \emph{penghalusan sejati}.
+\end{definition}
+
+Pada bagian berikutnya akan dibahas suatu deret normal yang khusus; kita definisikan sekaligus di sini.
+\begin{definition}[Deret sentral]\label{def:central-series}\index{zhongxinlie@deret sentral (central series)}
+	Suatu deret normal dari grup $G$, yakni $G = G_0 \supset G_1 \supset \cdots$, yang untuk setiap $i$ memenuhi
+	\begin{gather*}
+		G_i \lhd G, \\
+		G_i/G_{i+1} \subset Z_{G/G_{i+1}},
+	\end{gather*}
+	disebut \emph{deret sentral}.
+\end{definition}
+
+\begin{definition}[Deret komposisi]\label{def:composition-series}\index{hechenglie@deret komposisi (composition series)}
+	Jika suatu deret normal dari grup $G$, yaitu $G = G_0 \supset G_1 \supset \cdots$, memenuhi $G_{i+1} \subsetneq G_i$ dan semua subkuosiennya merupakan grup sederhana, deret itu disebut \emph{deret komposisi}.
+\end{definition}
+Dengan mencermati definisi grup sederhana, terlihat bahwa deret komposisi tepat merupakan deret tanpa suku berlebih dan tidak dapat lagi mengalami penghalusan (sejati). Setiap grup berhingga mempunyai deret komposisi, sedangkan grup umum belum tentu mempunyainya.
+
+\begin{lemma}[Lema Zassenhaus]\label{prop:Zassenhaus}
+	Tetapkan suatu grup $G$. Tinjau subgrup-subgrup $U, V$ beserta subgrup normalnya masing-masing, yaitu $u \lhd U$ dan $v \lhd V$. Maka,
+	\begin{gather*}
+		u(U \cap v) \lhd u(U \cap V), \\
+		(u \cap V) v \lhd (U \cap V)v,
+	\end{gather*}
+	dengan semua suku merupakan subgrup dalam pengertian Catatan \ref{rem:HN}; selain itu, terdapat isomorfisme alami
+	\[ \dfrac{u (U \cap V)}{u (U \cap v)} \simeq \dfrac{(U \cap V)v}{(u \cap V)v}. \]
+\end{lemma}
+\begin{proof}
+	Kita akan menyajikan hubungan di antara subgrup-subgrup tersebut melalui diagram, dengan keterangan sebagai berikut:
+	\[ \begin{tikzcd}
+		G \arrow[dash, d] \\ H: \text{subgrup}
+	\end{tikzcd} \quad
+	\begin{tikzcd}
+		G \arrow[dash, d, "\triangledown" description] \\ N: \text{subgrup normal}
+	\end{tikzcd} \quad
+	\begin{tikzcd}[column sep=tiny]
+		A \arrow[dash, rd] & & B \arrow[dash, ld] \\
+		& A \cap B &
+	\end{tikzcd} \quad
+	\begin{tikzcd}[column sep=tiny]
+		{}& HN \arrow[dash, ld] \arrow[dash, rd, "\triangledown" description] & \\
+		H & & N
+	\end{tikzcd}\]
+	dengan $H \subset N_G(N)$. Sekarang kita nyatakan bahwa diagram berikut berlaku:
+	\[ \begin{tikzcd}[column sep=tiny]
+		{} & U \arrow[dash, d] & & V \arrow[dash, d] & \\
+		& u(U \cap V) \arrow[dash, dd, "\triangledown" description] \arrow[dash, rd] & & (U \cap V)v \arrow[dash, dd, "\triangledown" description] \arrow[dash, ld] & \\
+		& & U \cap V \arrow[dash, dd, "\triangledown" description] & & \\
+		& u(U \cap v) \arrow[dash, ld] \arrow[dash, rd] & & (u \cap V)v \arrow[dash, ld] \arrow[dash, rd] & \\
+		u \arrow[dash, rd] & & (u \cap V)(U \cap v) \arrow[dash, ld] \arrow[dash, rd] & & v \arrow[dash, ld] \\
+		& u \cap V & & U \cap v &
+	\end{tikzcd} \]
+	Pertama, perhatikan sifat $U \cap V \subset N_G(u) \cap N_G(v)$ dan sifat-sifat serupa; karena itu, hasil kali $u(U \cap V)$ dan hasil kali lain dalam diagram merupakan subgrup. Keterangan pertama dalam legenda (yakni, subgrup berada di bawah) jelas berlaku. Selanjutnya, dapat diverifikasi satu per satu bahwa
+	\begin{align*}
+		u(U \cap v) \cap (U \cap V) & = (u \cap V)(U \cap v) = (U \cap V) \cap (u \cap V)v, \\
+		u \cap (u \cap V)(U \cap v) & = u \cap V, \\
+		(u \cap V)(U \cap v) \cap v & = U \cap v.
+	\end{align*}
+	Dengan demikian, keterangan ketiga dalam legenda (irisan subgrup) juga berlaku. Dengan cara yang sama, keterangan keempat (hasil kali subgrup) dapat diverifikasi. Untuk keterangan kedua (subgrup normal), dari $v \lhd V$ diperoleh $U \cap v \lhd U \cap V$, sehingga $u(U \cap v) \lhd u(U \cap V)$; dengan cara yang sama, $(u \cap V)v \lhd (U \cap V)v$. Dengan mengambil irisan, diperoleh $(u \cap V)(U \cap v) \lhd U \cap V$. Dengan demikian, pernyataan tentang diagram terbukti.
+
+	Sekarang tinjau kedua jajaran genjang dalam diagram. Dengan menerapkan Proposisi \ref{prop:3rd-homomorphism} pada masing-masing jajaran genjang, diperoleh isomorfisme alami
+	\begin{equation*}\begin{tikzcd}[column sep=tiny, row sep=small]
+		\dfrac{u (U \cap V)}{u(U \cap v)} \arrow[rd, "\simeq"'] &  & \dfrac{(U \cap V)v}{(u \cap V)v} \arrow[ld, "\simeq"] \\
+		& \dfrac{U \cap V}{(u \cap V)(U \cap v)} &
+	\end{tikzcd}\end{equation*}
+	Inilah yang hendak dibuktikan.
+\end{proof}
+
+\begin{definition}\label{def:JH-subquotients}
+	Misalkan $G = G_0 \supset \cdots$ suatu deret normal. Kita memandang subkuosien-subkuosiennya $(G_i/G_{i+1})_{i \geq 0}$ sebagai suatu himpunan yang urutannya diabaikan, tetapi multiplikitasnya diperhitungkan. Jika dua deret normal memiliki panjang yang sama dan subkuosiennya sama dalam pengertian tersebut, kedua deret normal itu disebut \emph{ekuivalen}.
+\end{definition}
+
+\begin{theorem}[Teorema Penghalusan Schreier]\label{prop:Schreier}
+	Misalkan
+	\begin{align*}
+		G & = G_0 \supset \cdots \supset G_r \supset G_{r+1} = \{1\}, \\
+		G & = H_0 \supset \cdots \supset H_s \supset H_{s+1} = \{1\}
+	\end{align*}
+	merupakan dua deret normal dari $G$. Maka keduanya mempunyai penghalusan yang ekuivalen.
+\end{theorem}
+\begin{proof}
+	Untuk setiap $0 \leq i \leq r$ dan $0 \leq j \leq s$, definisikan
+	\begin{align*}
+		G_{i,j} & := G_{i+1} (H_j \cap G_i), \\
+		H_{j,i} & := (G_i \cap H_j) H_{j+1}.
+	\end{align*}
+	Pertama, tinjau $G_{i,j}$. Karena $G_{i+1} \lhd G_i$, objek tersebut merupakan subgrup. Relasi subgrup normal $G_{i, j+1} \lhd G_{i,j}$ berlaku, dan
+	\[ G_{i,0} = G_{i+1} (G \cap G_i) = G_i, \quad G_{i,s+1} = G_{i+1}, \]
+	sehingga diperoleh penghalusan dari $(G_i)_{i=0}^r$,
+	\[ \mathcal{G} := \left[ \cdots \supset G_i = G_{i, 0} \supset G_{i, 1} \supset \cdots \supset G_{i, s} \supset G_{i, s+1}= G_{i+1} \supset \cdots \right] . \]
+	Dengan cara yang sama, $H_{j, i}$ memberikan penghalusan dari $(H_j)_{j=0}^s$, yang kita notasikan dengan $\mathcal{H}$. Dalam Lema \ref{prop:Zassenhaus}, ambil $u := G_{i+1}$, $U := G_i$, $v := H_{j+1}$, dan $V := H_j$; maka diperoleh
+	\[ \dfrac{G_{i,j}}{G_{i,j+1}} = \dfrac{u(U \cap V)}{u(U \cap v)} \simeq \dfrac{(U \cap V)v}{(u \cap V)v} = \dfrac{H_{j,i}}{H_{j,i+1}}. \]
+
+	Ketika $(i,j)$ menjelajahi semua kemungkinan, setiap subkuosien deret normal $\mathcal{G}$ dan $\mathcal{H}$ muncul tepat satu kali pada masing-masing ruas isomorfisme di atas. Pembuktian selesai.
+\end{proof}
+
+\begin{theorem}[Teorema Jordan--Hölder]\label{prop:JH-group}\index{Teorema Jordan--Hölder}
+	Sebarang dua deret komposisi dari suatu grup $G$ ekuivalen.
+\end{theorem}
+\begin{proof}
+	Pernyataan ini merupakan akibat langsung dari Teorema \ref{prop:Schreier} bersama Definisi \ref{def:composition-series}.
+\end{proof}
+
+Karena itu, begitu suatu grup $G$ mempunyai deret komposisi, subkuosien-subkuosiennya dalam pengertian Definisi \ref{def:JH-subquotients} tidak bergantung pada deret komposisi yang dipilih.
+\begin{definition}\index{hechengyinzi@faktor komposisi (composition factor)}
+	Andaikan suatu grup $G$ mempunyai deret komposisi. \emph{Faktor komposisi} grup tersebut, atau himpunan faktor Jordan--Hölder $\text{JH}(G)$, didefinisikan sebagai seluruh subkuosien dari sebarang deret komposisinya, dengan urutan diabaikan tetapi multiplikitas diperhitungkan.
+\end{definition}
+
+Himpunan dengan multiplikitas $\text{JH}(G)$ merupakan invarian yang berguna, tetapi tidak mencirikan grup hingga isomorfisme. Sebagai contoh, grup $\Z/4\Z$ dan $\Z/2\Z \times \Z/2\Z$ sama-sama mempunyai faktor komposisi $\{ \Z/2\Z, \Z/2\Z\}$, tetapi kedua grup itu tidak isomorfik.
+
+Selain itu, misalkan diberikan barisan eksak grup $1 \to N \to G \xrightarrow{\pi} Q \to 1$. Andaikan $N$ dan $Q$ sama-sama mempunyai deret komposisi. Maka $G$ juga mempunyai deret komposisi, dan
+\begin{gather}\label{eqn:JH-ses}
+	\text{JH}(G) = \text{JH}(N) \cup  \text{JH}(Q),
+\end{gather}
+dengan gabungan tersebut tentu saja memperhitungkan multiplikitas. Argumennya sebagai berikut: tinjau masing-masing $Q$ dan $N$ beserta deret komposisinya $(Q_i)_i$ dan $(N_j)_j$; kedua deret itu dapat disambungkan menjadi deret komposisi
+\[ G \supset \pi^{-1}(Q_1) \supset \cdots \supset \pi^{-1}(Q_r) = N \supset N_1 \supset \cdots . \]
+Faktor komposisinya tepat $\text{JH}(N) \cup  \text{JH}(Q)$.
+
+\begin{proposition}\label{prop:abelian-composition-series}
+	Jika $G$ suatu grup abelian berhingga, unsur-unsur $\text{JH}(G)$ semuanya merupakan grup berorde prima.
+\end{proposition}
+Perhatikan bahwa setiap grup berorde prima merupakan grup siklik.
+\begin{proof}
+	Kita boleh mengandaikan bahwa $G$ merupakan grup nontrivial. Korolari \ref{prop:group-Cauchy} menjamin adanya bilangan prima $p$ dan unsur berorde $p$, yaitu $t \in G$. Tinjau barisan eksak grup abelian
+	\[ 1 \to \lrangle{t} \to G \to G/\lrangle{t} \to 1 \]
+	dan terapkan \eqref{eqn:JH-ses} secara rekursif terhadap $|G|$ untuk memperoleh hasil yang dikehendaki.
+\end{proof}
+
+Kita akan mendeskripsikan struktur grup abelian berhingga secara terperinci dalam Korolari \ref{prop:finite-abelian-structure}.

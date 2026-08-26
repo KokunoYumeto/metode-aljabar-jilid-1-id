@@ -1,0 +1,2182 @@
+{
+  "actionable_defects": [],
+  "cross_pdf_semantic_identity": true,
+  "documents": {
+    "artifact": {
+      "actions": {
+        "all_uris_https": true,
+        "annotation_additional_actions": 0,
+        "broken_destinations": [],
+        "catalog_additional_action": false,
+        "counts": {
+          "/GoTo": 11,
+          "/URI": 3
+        },
+        "gotos": [
+          "theorem.4.6.4",
+          "theorem.4.6.6",
+          "theorem.4.6.3",
+          "theorem.4.6.5",
+          "equation.4.1",
+          "page.1",
+          "page.4",
+          "page.4",
+          "page.1",
+          "page.1",
+          "page.1"
+        ],
+        "links": [
+          {
+            "action": "/URI",
+            "ordinal_on_page": 1,
+            "page": 2,
+            "rect": [
+              115.616,
+              272.425,
+              174.552,
+              285.157
+            ],
+            "target": "https://www.wwli.asia"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 2,
+            "page": 2,
+            "rect": [
+              275.999,
+              182.725,
+              388.975,
+              194.687
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 3,
+            "page": 2,
+            "rect": [
+              164.469,
+              169.027,
+              258.616,
+              180.988
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 6,
+            "rect": [
+              160.358,
+              492.674,
+              180.842,
+              506.791
+            ],
+            "target": "theorem.4.6.4"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 2,
+            "page": 6,
+            "rect": [
+              350.417,
+              347.527,
+              370.9,
+              361.644
+            ],
+            "target": "theorem.4.6.6"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 3,
+            "page": 6,
+            "rect": [
+              48.189,
+              333.659,
+              68.672,
+              347.776
+            ],
+            "target": "theorem.4.6.3"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 4,
+            "page": 6,
+            "rect": [
+              163.546,
+              290.959,
+              184.03,
+              305.076
+            ],
+            "target": "theorem.4.6.5"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 7,
+            "rect": [
+              112.956,
+              420.513,
+              125.688,
+              434.63
+            ],
+            "target": "equation.4.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 2,
+            "page": 7,
+            "rect": [
+              280.478,
+              329.187,
+              285.086,
+              341.919
+            ],
+            "target": "page.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 3,
+            "page": 7,
+            "rect": [
+              48.189,
+              315.488,
+              52.798,
+              328.22
+            ],
+            "target": "page.4"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 4,
+            "page": 7,
+            "rect": [
+              166.143,
+              315.488,
+              170.752,
+              328.22
+            ],
+            "target": "page.4"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 5,
+            "page": 7,
+            "rect": [
+              301.513,
+              315.488,
+              306.121,
+              328.22
+            ],
+            "target": "page.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 6,
+            "page": 7,
+            "rect": [
+              434.892,
+              315.488,
+              439.501,
+              328.22
+            ],
+            "target": "page.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 7,
+            "page": 7,
+            "rect": [
+              155.364,
+              301.789,
+              159.973,
+              314.522
+            ],
+            "target": "page.1"
+          }
+        ],
+        "out_of_bounds_rectangles": [],
+        "page_additional_actions": 0,
+        "unsafe": [],
+        "uris": [
+          "https://www.wwli.asia",
+          "https://creativecommons.org/licenses/by/4.0/",
+          "https://creativecommons.org/licenses/by/4.0/"
+        ]
+      },
+      "catalog_keys": [
+        "/Lang",
+        "/Names",
+        "/OpenAction",
+        "/Outlines",
+        "/PageLabels",
+        "/PageMode",
+        "/Pages",
+        "/Type"
+      ],
+      "checks": {
+        "action_counts": true,
+        "fonts_embedded": true,
+        "known_math_font_nul_census": true,
+        "language_id_ID": true,
+        "link_closure": true,
+        "metadata_exact": true,
+        "no_active_payloads": true,
+        "outline_exact": true,
+        "rectangles_in_bounds": true,
+        "safe_actions": true,
+        "seven_pages": true,
+        "text_blocks_in_bounds": true,
+        "text_has_no_replacement_characters": true,
+        "twenty_five_destinations": true,
+        "untagged_disclosed": true
+      },
+      "encrypted": false,
+      "fonts": {
+        "pdffonts_all_embedded": true,
+        "pdffonts_rows": 21,
+        "pdffonts_stderr": "",
+        "pypdf_all_embedded": true,
+        "pypdf_unique": 21,
+        "records": [
+          {
+            "basefont": "/UXRQIO+CMMI10",
+            "embedded": true,
+            "normalized": "/CMMI10",
+            "object": "38 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/JRHFAL+CMMI5",
+            "embedded": true,
+            "normalized": "/CMMI5",
+            "object": "47 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/YALAGC+CMMI7",
+            "embedded": true,
+            "normalized": "/CMMI7",
+            "object": "42 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/OJOFTI+CMR10",
+            "embedded": true,
+            "normalized": "/CMR10",
+            "object": "39 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/ACINMQ+CMR5",
+            "embedded": true,
+            "normalized": "/CMR5",
+            "object": "48 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/BCJOPG+CMR7",
+            "embedded": true,
+            "normalized": "/CMR7",
+            "object": "40 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/UXNAIG+CMSY10",
+            "embedded": true,
+            "normalized": "/CMSY10",
+            "object": "41 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/KJWHGT+CMSY7",
+            "embedded": true,
+            "normalized": "/CMSY7",
+            "object": "46 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/SFHSTB+LMMono12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono12-Regular-Identity-H",
+            "object": "20 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/KPYYPW+LMMono9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono9-Regular-Identity-H",
+            "object": "27 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/PUAYDD+LMRoman10-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Bold-Identity-H",
+            "object": "44 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/AWXAPW+LMRoman10-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Regular-Identity-H",
+            "object": "36 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/CDVRDB+LMRoman12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman12-Regular-Identity-H",
+            "object": "11 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/EQUKOC+LMRoman17-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman17-Regular-Identity-H",
+            "object": "9 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/PGNMTT+LMRoman8-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman8-Regular-Identity-H",
+            "object": "34 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/KHTDTZ+LMRoman9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman9-Regular-Identity-H",
+            "object": "22 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/LHBJPA+MSAM10",
+            "embedded": true,
+            "normalized": "/MSAM10",
+            "object": "43 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/OATOPN+MSAM7",
+            "embedded": true,
+            "normalized": "/MSAM7",
+            "object": "53 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/AIATJG+MSBM10",
+            "embedded": true,
+            "normalized": "/MSBM10",
+            "object": "49 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/IXNRPW+TeXGyreHeros-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Bold-Identity-H",
+            "object": "13 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/LJNEIT+TeXGyreHeros-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Regular-Identity-H",
+            "object": "15 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          }
+        ]
+      },
+      "geometry": {
+        "fitz_text_blocks_out_of_bounds": []
+      },
+      "identity": {
+        "bytes": 91961,
+        "path": "artifacts/unit-030-bab-4-deret-komposisi-grup-id.pdf",
+        "sha256": "43ad2ffa2516f2f4394bcb82ad2e585f21c1e9e36a87870f4406a78597f18d74"
+      },
+      "language": "id-ID",
+      "metadata": {
+        "/Author": "Wen-Wei Li",
+        "/CreationDate": "D:20260825000000Z",
+        "/Creator": "LaTeX with hyperref",
+        "/Keywords": "aljabar, teori grup, deret normal, deret komposisi, Lema Zassenhaus, Jordan–Hölder, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.6 lengkap",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 30: Deret Komposisi Grup"
+      },
+      "name_tree_keys": [
+        "/Dests"
+      ],
+      "named_destinations": {
+        "Doc-Start": 1,
+        "equation.4.1": 6,
+        "page.1": 3,
+        "page.2": 4,
+        "page.3": 5,
+        "page.4": 6,
+        "page.5": 7,
+        "proof.1": 4,
+        "proof.2": 5,
+        "proof.3": 6,
+        "proof.4": 7,
+        "section*.1": 7,
+        "section*.2": 7,
+        "section.4.6": 3,
+        "theorem.4.6.1": 3,
+        "theorem.4.6.2": 3,
+        "theorem.4.6.3": 3,
+        "theorem.4.6.4": 4,
+        "theorem.4.6.5": 5,
+        "theorem.4.6.6": 5,
+        "theorem.4.6.7": 6,
+        "theorem.4.6.8": 6,
+        "theorem.4.6.9": 7,
+        "unit030-bibliography.0": 7,
+        "unit030-term-index.0": 7
+      },
+      "open_action": {
+        "fit": "/Fit",
+        "kind": "direct_page_destination",
+        "page": 1
+      },
+      "outline": [
+        {
+          "depth": 0,
+          "page": 3,
+          "title": "4.6 Deret Komposisi Grup"
+        },
+        {
+          "depth": 0,
+          "page": 7,
+          "title": "Daftar Pustaka"
+        },
+        {
+          "depth": 0,
+          "page": 7,
+          "title": "Indeks Istilah"
+        }
+      ],
+      "page_geometry": [
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 1,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 2,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 3,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 4,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 5,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 6,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 7,
+          "rotate": 0
+        }
+      ],
+      "pages": 7,
+      "payloads": {
+        "embedded_files": false,
+        "forms": false,
+        "javascript": false
+      },
+      "pdf_header": "%PDF-1.7",
+      "pdfinfo": {
+        "Author": "Wen-Wei Li",
+        "CreationDate": "Tue Aug 25 02:00:00 2026 W. Europe Daylight Time",
+        "Creator": "LaTeX with hyperref",
+        "Custom Metadata": "no",
+        "Encrypted": "no",
+        "File size": "91961 bytes",
+        "Form": "none",
+        "JavaScript": "no",
+        "Keywords": "aljabar, teori grup, deret normal, deret komposisi, Lema Zassenhaus, Jordan–Hölder, id-ID",
+        "Metadata Stream": "no",
+        "Optimized": "no",
+        "PDF version": "1.7",
+        "Page rot": "0",
+        "Page size": "498.9 x 708.66 pts",
+        "Pages": "7",
+        "Producer": "MiKTeX-dvipdfmx (20260404)",
+        "Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.6 lengkap",
+        "Suspects": "no",
+        "Tagged": "no",
+        "Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 30: Deret Komposisi Grup",
+        "UserProperties": "no"
+      },
+      "tagged": false,
+      "text": {
+        "mupdf_sha256": "feddd35fd437e5fd54df930eb723e34bf1d4fbaa455b6e37f301d29a98724b95",
+        "nul_characters": {
+          "mupdf": 0,
+          "pdftotext_layout": 0,
+          "pypdf": 0
+        },
+        "pdftotext_layout_sha256": "4981751c00c7fdf1c71b5b7dfa745a9fec1d26ab974270347e07aa3441069810",
+        "pypdf_page_sha256": [
+          "2b4973127e42cd86d1eacc99d58a444f0b3fe0ff274669acd4016b5b0cc24201",
+          "dc07c26cd79eebb3ca84e2f136c81b4c34323023ff92b5cfdd679747fe39b667",
+          "73bf5a8c78ecdbcf019b8ac18ca159bdd75a6b720aae148a167f0f74c4764d76",
+          "1faea0f7488ae735a4213be22bf2eb95084989eca5cd2b210f222c87526eac7f",
+          "e0a29b7c8fcb01c0e985308c449dbffbe34fc70c7e6641dbf16a3cb6ed89f4be",
+          "0c39543d59a93d69a0d015a08b6017315f5eddffc7f6170cf01acec5b03e205d",
+          "1bf749e9c2af0dd4cd44206ee0f457fb687abd02a228784e0d2f20981323fddc"
+        ],
+        "pypdf_sha256": "11651ea5345369797cd1cd522f1870841be47652d8d895305e3b64fffbb43935",
+        "replacement_characters": 0
+      },
+      "tool_diagnostics": {
+        "pdfinfo_stderr": "",
+        "pdftotext_stderr": ""
+      }
+    },
+    "build-i": {
+      "actions": {
+        "all_uris_https": true,
+        "annotation_additional_actions": 0,
+        "broken_destinations": [],
+        "catalog_additional_action": false,
+        "counts": {
+          "/GoTo": 11,
+          "/URI": 3
+        },
+        "gotos": [
+          "theorem.4.6.4",
+          "theorem.4.6.6",
+          "theorem.4.6.3",
+          "theorem.4.6.5",
+          "equation.4.1",
+          "page.1",
+          "page.4",
+          "page.4",
+          "page.1",
+          "page.1",
+          "page.1"
+        ],
+        "links": [
+          {
+            "action": "/URI",
+            "ordinal_on_page": 1,
+            "page": 2,
+            "rect": [
+              115.616,
+              272.425,
+              174.552,
+              285.157
+            ],
+            "target": "https://www.wwli.asia"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 2,
+            "page": 2,
+            "rect": [
+              275.999,
+              182.725,
+              388.975,
+              194.687
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 3,
+            "page": 2,
+            "rect": [
+              164.469,
+              169.027,
+              258.616,
+              180.988
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 6,
+            "rect": [
+              160.358,
+              492.674,
+              180.842,
+              506.791
+            ],
+            "target": "theorem.4.6.4"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 2,
+            "page": 6,
+            "rect": [
+              350.417,
+              347.527,
+              370.9,
+              361.644
+            ],
+            "target": "theorem.4.6.6"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 3,
+            "page": 6,
+            "rect": [
+              48.189,
+              333.659,
+              68.672,
+              347.776
+            ],
+            "target": "theorem.4.6.3"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 4,
+            "page": 6,
+            "rect": [
+              163.546,
+              290.959,
+              184.03,
+              305.076
+            ],
+            "target": "theorem.4.6.5"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 7,
+            "rect": [
+              112.956,
+              420.513,
+              125.688,
+              434.63
+            ],
+            "target": "equation.4.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 2,
+            "page": 7,
+            "rect": [
+              280.478,
+              329.187,
+              285.086,
+              341.919
+            ],
+            "target": "page.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 3,
+            "page": 7,
+            "rect": [
+              48.189,
+              315.488,
+              52.798,
+              328.22
+            ],
+            "target": "page.4"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 4,
+            "page": 7,
+            "rect": [
+              166.143,
+              315.488,
+              170.752,
+              328.22
+            ],
+            "target": "page.4"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 5,
+            "page": 7,
+            "rect": [
+              301.513,
+              315.488,
+              306.121,
+              328.22
+            ],
+            "target": "page.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 6,
+            "page": 7,
+            "rect": [
+              434.892,
+              315.488,
+              439.501,
+              328.22
+            ],
+            "target": "page.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 7,
+            "page": 7,
+            "rect": [
+              155.364,
+              301.789,
+              159.973,
+              314.522
+            ],
+            "target": "page.1"
+          }
+        ],
+        "out_of_bounds_rectangles": [],
+        "page_additional_actions": 0,
+        "unsafe": [],
+        "uris": [
+          "https://www.wwli.asia",
+          "https://creativecommons.org/licenses/by/4.0/",
+          "https://creativecommons.org/licenses/by/4.0/"
+        ]
+      },
+      "catalog_keys": [
+        "/Lang",
+        "/Names",
+        "/OpenAction",
+        "/Outlines",
+        "/PageLabels",
+        "/PageMode",
+        "/Pages",
+        "/Type"
+      ],
+      "checks": {
+        "action_counts": true,
+        "fonts_embedded": true,
+        "known_math_font_nul_census": true,
+        "language_id_ID": true,
+        "link_closure": true,
+        "metadata_exact": true,
+        "no_active_payloads": true,
+        "outline_exact": true,
+        "rectangles_in_bounds": true,
+        "safe_actions": true,
+        "seven_pages": true,
+        "text_blocks_in_bounds": true,
+        "text_has_no_replacement_characters": true,
+        "twenty_five_destinations": true,
+        "untagged_disclosed": true
+      },
+      "encrypted": false,
+      "fonts": {
+        "pdffonts_all_embedded": true,
+        "pdffonts_rows": 21,
+        "pdffonts_stderr": "",
+        "pypdf_all_embedded": true,
+        "pypdf_unique": 21,
+        "records": [
+          {
+            "basefont": "/CFTNMR+CMMI10",
+            "embedded": true,
+            "normalized": "/CMMI10",
+            "object": "38 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/HOMBWH+CMMI5",
+            "embedded": true,
+            "normalized": "/CMMI5",
+            "object": "47 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/MGCBQV+CMMI7",
+            "embedded": true,
+            "normalized": "/CMMI7",
+            "object": "42 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/KWQTWI+CMR10",
+            "embedded": true,
+            "normalized": "/CMR10",
+            "object": "39 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/NHAONJ+CMR5",
+            "embedded": true,
+            "normalized": "/CMR5",
+            "object": "48 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/LWJADT+CMR7",
+            "embedded": true,
+            "normalized": "/CMR7",
+            "object": "40 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/AFHHAG+CMSY10",
+            "embedded": true,
+            "normalized": "/CMSY10",
+            "object": "41 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/MIZLDR+CMSY7",
+            "embedded": true,
+            "normalized": "/CMSY7",
+            "object": "46 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/WOFNIS+LMMono12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono12-Regular-Identity-H",
+            "object": "20 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/EDORKJ+LMMono9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono9-Regular-Identity-H",
+            "object": "27 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/VBXRCA+LMRoman10-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Bold-Identity-H",
+            "object": "44 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/LCSCFS+LMRoman10-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Regular-Identity-H",
+            "object": "36 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/ZYRRVK+LMRoman12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman12-Regular-Identity-H",
+            "object": "11 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/SFZXUV+LMRoman17-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman17-Regular-Identity-H",
+            "object": "9 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/CMCFRB+LMRoman8-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman8-Regular-Identity-H",
+            "object": "34 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/ISUTCE+LMRoman9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman9-Regular-Identity-H",
+            "object": "22 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/GSNMZR+MSAM10",
+            "embedded": true,
+            "normalized": "/MSAM10",
+            "object": "43 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/ZNUGIX+MSAM7",
+            "embedded": true,
+            "normalized": "/MSAM7",
+            "object": "53 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/RQAMUO+MSBM10",
+            "embedded": true,
+            "normalized": "/MSBM10",
+            "object": "49 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/FIPKXZ+TeXGyreHeros-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Bold-Identity-H",
+            "object": "13 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/TIMBFM+TeXGyreHeros-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Regular-Identity-H",
+            "object": "15 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          }
+        ]
+      },
+      "geometry": {
+        "fitz_text_blocks_out_of_bounds": []
+      },
+      "identity": {
+        "bytes": 91960,
+        "path": "build/unit-030-clean-i/unit-030-bab-4-deret-komposisi-grup.pdf",
+        "sha256": "cb5b2c5279e7c5574457846873a456cb644d2a1d54ace7ddc975378e036e00cd"
+      },
+      "language": "id-ID",
+      "metadata": {
+        "/Author": "Wen-Wei Li",
+        "/CreationDate": "D:20260825000000Z",
+        "/Creator": "LaTeX with hyperref",
+        "/Keywords": "aljabar, teori grup, deret normal, deret komposisi, Lema Zassenhaus, Jordan–Hölder, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.6 lengkap",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 30: Deret Komposisi Grup"
+      },
+      "name_tree_keys": [
+        "/Dests"
+      ],
+      "named_destinations": {
+        "Doc-Start": 1,
+        "equation.4.1": 6,
+        "page.1": 3,
+        "page.2": 4,
+        "page.3": 5,
+        "page.4": 6,
+        "page.5": 7,
+        "proof.1": 4,
+        "proof.2": 5,
+        "proof.3": 6,
+        "proof.4": 7,
+        "section*.1": 7,
+        "section*.2": 7,
+        "section.4.6": 3,
+        "theorem.4.6.1": 3,
+        "theorem.4.6.2": 3,
+        "theorem.4.6.3": 3,
+        "theorem.4.6.4": 4,
+        "theorem.4.6.5": 5,
+        "theorem.4.6.6": 5,
+        "theorem.4.6.7": 6,
+        "theorem.4.6.8": 6,
+        "theorem.4.6.9": 7,
+        "unit030-bibliography.0": 7,
+        "unit030-term-index.0": 7
+      },
+      "open_action": {
+        "fit": "/Fit",
+        "kind": "direct_page_destination",
+        "page": 1
+      },
+      "outline": [
+        {
+          "depth": 0,
+          "page": 3,
+          "title": "4.6 Deret Komposisi Grup"
+        },
+        {
+          "depth": 0,
+          "page": 7,
+          "title": "Daftar Pustaka"
+        },
+        {
+          "depth": 0,
+          "page": 7,
+          "title": "Indeks Istilah"
+        }
+      ],
+      "page_geometry": [
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 1,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 2,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 3,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 4,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 5,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 6,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 7,
+          "rotate": 0
+        }
+      ],
+      "pages": 7,
+      "payloads": {
+        "embedded_files": false,
+        "forms": false,
+        "javascript": false
+      },
+      "pdf_header": "%PDF-1.7",
+      "pdfinfo": {
+        "Author": "Wen-Wei Li",
+        "CreationDate": "Tue Aug 25 02:00:00 2026 W. Europe Daylight Time",
+        "Creator": "LaTeX with hyperref",
+        "Custom Metadata": "no",
+        "Encrypted": "no",
+        "File size": "91960 bytes",
+        "Form": "none",
+        "JavaScript": "no",
+        "Keywords": "aljabar, teori grup, deret normal, deret komposisi, Lema Zassenhaus, Jordan–Hölder, id-ID",
+        "Metadata Stream": "no",
+        "Optimized": "no",
+        "PDF version": "1.7",
+        "Page rot": "0",
+        "Page size": "498.9 x 708.66 pts",
+        "Pages": "7",
+        "Producer": "MiKTeX-dvipdfmx (20260404)",
+        "Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.6 lengkap",
+        "Suspects": "no",
+        "Tagged": "no",
+        "Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 30: Deret Komposisi Grup",
+        "UserProperties": "no"
+      },
+      "tagged": false,
+      "text": {
+        "mupdf_sha256": "feddd35fd437e5fd54df930eb723e34bf1d4fbaa455b6e37f301d29a98724b95",
+        "nul_characters": {
+          "mupdf": 0,
+          "pdftotext_layout": 0,
+          "pypdf": 0
+        },
+        "pdftotext_layout_sha256": "4981751c00c7fdf1c71b5b7dfa745a9fec1d26ab974270347e07aa3441069810",
+        "pypdf_page_sha256": [
+          "2b4973127e42cd86d1eacc99d58a444f0b3fe0ff274669acd4016b5b0cc24201",
+          "dc07c26cd79eebb3ca84e2f136c81b4c34323023ff92b5cfdd679747fe39b667",
+          "73bf5a8c78ecdbcf019b8ac18ca159bdd75a6b720aae148a167f0f74c4764d76",
+          "1faea0f7488ae735a4213be22bf2eb95084989eca5cd2b210f222c87526eac7f",
+          "e0a29b7c8fcb01c0e985308c449dbffbe34fc70c7e6641dbf16a3cb6ed89f4be",
+          "0c39543d59a93d69a0d015a08b6017315f5eddffc7f6170cf01acec5b03e205d",
+          "1bf749e9c2af0dd4cd44206ee0f457fb687abd02a228784e0d2f20981323fddc"
+        ],
+        "pypdf_sha256": "11651ea5345369797cd1cd522f1870841be47652d8d895305e3b64fffbb43935",
+        "replacement_characters": 0
+      },
+      "tool_diagnostics": {
+        "pdfinfo_stderr": "",
+        "pdftotext_stderr": ""
+      }
+    },
+    "build-j": {
+      "actions": {
+        "all_uris_https": true,
+        "annotation_additional_actions": 0,
+        "broken_destinations": [],
+        "catalog_additional_action": false,
+        "counts": {
+          "/GoTo": 11,
+          "/URI": 3
+        },
+        "gotos": [
+          "theorem.4.6.4",
+          "theorem.4.6.6",
+          "theorem.4.6.3",
+          "theorem.4.6.5",
+          "equation.4.1",
+          "page.1",
+          "page.4",
+          "page.4",
+          "page.1",
+          "page.1",
+          "page.1"
+        ],
+        "links": [
+          {
+            "action": "/URI",
+            "ordinal_on_page": 1,
+            "page": 2,
+            "rect": [
+              115.616,
+              272.425,
+              174.552,
+              285.157
+            ],
+            "target": "https://www.wwli.asia"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 2,
+            "page": 2,
+            "rect": [
+              275.999,
+              182.725,
+              388.975,
+              194.687
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/URI",
+            "ordinal_on_page": 3,
+            "page": 2,
+            "rect": [
+              164.469,
+              169.027,
+              258.616,
+              180.988
+            ],
+            "target": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 6,
+            "rect": [
+              160.358,
+              492.674,
+              180.842,
+              506.791
+            ],
+            "target": "theorem.4.6.4"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 2,
+            "page": 6,
+            "rect": [
+              350.417,
+              347.527,
+              370.9,
+              361.644
+            ],
+            "target": "theorem.4.6.6"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 3,
+            "page": 6,
+            "rect": [
+              48.189,
+              333.659,
+              68.672,
+              347.776
+            ],
+            "target": "theorem.4.6.3"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 4,
+            "page": 6,
+            "rect": [
+              163.546,
+              290.959,
+              184.03,
+              305.076
+            ],
+            "target": "theorem.4.6.5"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 1,
+            "page": 7,
+            "rect": [
+              112.956,
+              420.513,
+              125.688,
+              434.63
+            ],
+            "target": "equation.4.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 2,
+            "page": 7,
+            "rect": [
+              280.478,
+              329.187,
+              285.086,
+              341.919
+            ],
+            "target": "page.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 3,
+            "page": 7,
+            "rect": [
+              48.189,
+              315.488,
+              52.798,
+              328.22
+            ],
+            "target": "page.4"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 4,
+            "page": 7,
+            "rect": [
+              166.143,
+              315.488,
+              170.752,
+              328.22
+            ],
+            "target": "page.4"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 5,
+            "page": 7,
+            "rect": [
+              301.513,
+              315.488,
+              306.121,
+              328.22
+            ],
+            "target": "page.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 6,
+            "page": 7,
+            "rect": [
+              434.892,
+              315.488,
+              439.501,
+              328.22
+            ],
+            "target": "page.1"
+          },
+          {
+            "action": "/GoTo",
+            "ordinal_on_page": 7,
+            "page": 7,
+            "rect": [
+              155.364,
+              301.789,
+              159.973,
+              314.522
+            ],
+            "target": "page.1"
+          }
+        ],
+        "out_of_bounds_rectangles": [],
+        "page_additional_actions": 0,
+        "unsafe": [],
+        "uris": [
+          "https://www.wwli.asia",
+          "https://creativecommons.org/licenses/by/4.0/",
+          "https://creativecommons.org/licenses/by/4.0/"
+        ]
+      },
+      "catalog_keys": [
+        "/Lang",
+        "/Names",
+        "/OpenAction",
+        "/Outlines",
+        "/PageLabels",
+        "/PageMode",
+        "/Pages",
+        "/Type"
+      ],
+      "checks": {
+        "action_counts": true,
+        "fonts_embedded": true,
+        "known_math_font_nul_census": true,
+        "language_id_ID": true,
+        "link_closure": true,
+        "metadata_exact": true,
+        "no_active_payloads": true,
+        "outline_exact": true,
+        "rectangles_in_bounds": true,
+        "safe_actions": true,
+        "seven_pages": true,
+        "text_blocks_in_bounds": true,
+        "text_has_no_replacement_characters": true,
+        "twenty_five_destinations": true,
+        "untagged_disclosed": true
+      },
+      "encrypted": false,
+      "fonts": {
+        "pdffonts_all_embedded": true,
+        "pdffonts_rows": 21,
+        "pdffonts_stderr": "",
+        "pypdf_all_embedded": true,
+        "pypdf_unique": 21,
+        "records": [
+          {
+            "basefont": "/UXRQIO+CMMI10",
+            "embedded": true,
+            "normalized": "/CMMI10",
+            "object": "38 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/JRHFAL+CMMI5",
+            "embedded": true,
+            "normalized": "/CMMI5",
+            "object": "47 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/YALAGC+CMMI7",
+            "embedded": true,
+            "normalized": "/CMMI7",
+            "object": "42 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/OJOFTI+CMR10",
+            "embedded": true,
+            "normalized": "/CMR10",
+            "object": "39 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/ACINMQ+CMR5",
+            "embedded": true,
+            "normalized": "/CMR5",
+            "object": "48 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/BCJOPG+CMR7",
+            "embedded": true,
+            "normalized": "/CMR7",
+            "object": "40 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/UXNAIG+CMSY10",
+            "embedded": true,
+            "normalized": "/CMSY10",
+            "object": "41 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/KJWHGT+CMSY7",
+            "embedded": true,
+            "normalized": "/CMSY7",
+            "object": "46 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/SFHSTB+LMMono12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono12-Regular-Identity-H",
+            "object": "20 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/KPYYPW+LMMono9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMMono9-Regular-Identity-H",
+            "object": "27 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/PUAYDD+LMRoman10-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Bold-Identity-H",
+            "object": "44 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/AWXAPW+LMRoman10-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman10-Regular-Identity-H",
+            "object": "36 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/CDVRDB+LMRoman12-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman12-Regular-Identity-H",
+            "object": "11 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/EQUKOC+LMRoman17-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman17-Regular-Identity-H",
+            "object": "9 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/PGNMTT+LMRoman8-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman8-Regular-Identity-H",
+            "object": "34 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/KHTDTZ+LMRoman9-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/LMRoman9-Regular-Identity-H",
+            "object": "22 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/LHBJPA+MSAM10",
+            "embedded": true,
+            "normalized": "/MSAM10",
+            "object": "43 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/OATOPN+MSAM7",
+            "embedded": true,
+            "normalized": "/MSAM7",
+            "object": "53 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/AIATJG+MSBM10",
+            "embedded": true,
+            "normalized": "/MSBM10",
+            "object": "49 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/IXNRPW+TeXGyreHeros-Bold-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Bold-Identity-H",
+            "object": "13 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "basefont": "/LJNEIT+TeXGyreHeros-Regular-Identity-H",
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Regular-Identity-H",
+            "object": "15 0",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          }
+        ]
+      },
+      "geometry": {
+        "fitz_text_blocks_out_of_bounds": []
+      },
+      "identity": {
+        "bytes": 91961,
+        "path": "build/unit-030-clean-j/unit-030-bab-4-deret-komposisi-grup.pdf",
+        "sha256": "43ad2ffa2516f2f4394bcb82ad2e585f21c1e9e36a87870f4406a78597f18d74"
+      },
+      "language": "id-ID",
+      "metadata": {
+        "/Author": "Wen-Wei Li",
+        "/CreationDate": "D:20260825000000Z",
+        "/Creator": "LaTeX with hyperref",
+        "/Keywords": "aljabar, teori grup, deret normal, deret komposisi, Lema Zassenhaus, Jordan–Hölder, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.6 lengkap",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 30: Deret Komposisi Grup"
+      },
+      "name_tree_keys": [
+        "/Dests"
+      ],
+      "named_destinations": {
+        "Doc-Start": 1,
+        "equation.4.1": 6,
+        "page.1": 3,
+        "page.2": 4,
+        "page.3": 5,
+        "page.4": 6,
+        "page.5": 7,
+        "proof.1": 4,
+        "proof.2": 5,
+        "proof.3": 6,
+        "proof.4": 7,
+        "section*.1": 7,
+        "section*.2": 7,
+        "section.4.6": 3,
+        "theorem.4.6.1": 3,
+        "theorem.4.6.2": 3,
+        "theorem.4.6.3": 3,
+        "theorem.4.6.4": 4,
+        "theorem.4.6.5": 5,
+        "theorem.4.6.6": 5,
+        "theorem.4.6.7": 6,
+        "theorem.4.6.8": 6,
+        "theorem.4.6.9": 7,
+        "unit030-bibliography.0": 7,
+        "unit030-term-index.0": 7
+      },
+      "open_action": {
+        "fit": "/Fit",
+        "kind": "direct_page_destination",
+        "page": 1
+      },
+      "outline": [
+        {
+          "depth": 0,
+          "page": 3,
+          "title": "4.6 Deret Komposisi Grup"
+        },
+        {
+          "depth": 0,
+          "page": 7,
+          "title": "Daftar Pustaka"
+        },
+        {
+          "depth": 0,
+          "page": 7,
+          "title": "Indeks Istilah"
+        }
+      ],
+      "page_geometry": [
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 1,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 2,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 3,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 4,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 5,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 6,
+          "rotate": 0
+        },
+        {
+          "crop_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            498.9,
+            708.66
+          ],
+          "page": 7,
+          "rotate": 0
+        }
+      ],
+      "pages": 7,
+      "payloads": {
+        "embedded_files": false,
+        "forms": false,
+        "javascript": false
+      },
+      "pdf_header": "%PDF-1.7",
+      "pdfinfo": {
+        "Author": "Wen-Wei Li",
+        "CreationDate": "Tue Aug 25 02:00:00 2026 W. Europe Daylight Time",
+        "Creator": "LaTeX with hyperref",
+        "Custom Metadata": "no",
+        "Encrypted": "no",
+        "File size": "91961 bytes",
+        "Form": "none",
+        "JavaScript": "no",
+        "Keywords": "aljabar, teori grup, deret normal, deret komposisi, Lema Zassenhaus, Jordan–Hölder, id-ID",
+        "Metadata Stream": "no",
+        "Optimized": "no",
+        "PDF version": "1.7",
+        "Page rot": "0",
+        "Page size": "498.9 x 708.66 pts",
+        "Pages": "7",
+        "Producer": "MiKTeX-dvipdfmx (20260404)",
+        "Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.6 lengkap",
+        "Suspects": "no",
+        "Tagged": "no",
+        "Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 30: Deret Komposisi Grup",
+        "UserProperties": "no"
+      },
+      "tagged": false,
+      "text": {
+        "mupdf_sha256": "feddd35fd437e5fd54df930eb723e34bf1d4fbaa455b6e37f301d29a98724b95",
+        "nul_characters": {
+          "mupdf": 0,
+          "pdftotext_layout": 0,
+          "pypdf": 0
+        },
+        "pdftotext_layout_sha256": "4981751c00c7fdf1c71b5b7dfa745a9fec1d26ab974270347e07aa3441069810",
+        "pypdf_page_sha256": [
+          "2b4973127e42cd86d1eacc99d58a444f0b3fe0ff274669acd4016b5b0cc24201",
+          "dc07c26cd79eebb3ca84e2f136c81b4c34323023ff92b5cfdd679747fe39b667",
+          "73bf5a8c78ecdbcf019b8ac18ca159bdd75a6b720aae148a167f0f74c4764d76",
+          "1faea0f7488ae735a4213be22bf2eb95084989eca5cd2b210f222c87526eac7f",
+          "e0a29b7c8fcb01c0e985308c449dbffbe34fc70c7e6641dbf16a3cb6ed89f4be",
+          "0c39543d59a93d69a0d015a08b6017315f5eddffc7f6170cf01acec5b03e205d",
+          "1bf749e9c2af0dd4cd44206ee0f457fb687abd02a228784e0d2f20981323fddc"
+        ],
+        "pypdf_sha256": "11651ea5345369797cd1cd522f1870841be47652d8d895305e3b64fffbb43935",
+        "replacement_characters": 0
+      },
+      "tool_diagnostics": {
+        "pdfinfo_stderr": "",
+        "pdftotext_stderr": ""
+      }
+    }
+  },
+  "final_build_log": {
+    "braids_warnings": 1,
+    "evidence_sanitized": true,
+    "fatal_diagnostics": {
+      "emergency_stop": 0,
+      "empty_link_target": 0,
+      "fatal_error": 0,
+      "latex_error": 0,
+      "missing_character": 0,
+      "overfull": 0,
+      "undefined_citations": 0,
+      "undefined_control_sequence": 0,
+      "undefined_references": 0
+    },
+    "fontspec_CJK_advisories": 5,
+    "identity": {
+      "bytes": 76370,
+      "path": "qa/UNIT_030_BUILD_FINAL.log",
+      "sha256": "728d7f4f2845e87132e6bf494784a16eced1b9f9f2644f97a10ae477a9df43f9"
+    },
+    "latex_release_warnings": 3,
+    "page_marker": 7,
+    "profile_name_occurrences": 0,
+    "raw_log_has_profile_path": false,
+    "sanitization": {
+      "lane_root_placeholder_occurrences": 8,
+      "line_records_preserved": 2269,
+      "miktex_placeholder_occurrences": 252,
+      "profile_name_occurrences": 0,
+      "relative_build_prefix_occurrences": 0,
+      "windows_user_path_occurrences": 0
+    },
+    "sanitized_log_reproduced_from_build_j": true,
+    "underfull_hbox_badness": [
+      10000
+    ],
+    "underfull_vbox_badness": [
+      10000,
+      10000,
+      10000,
+      4913
+    ],
+    "windows_user_path_occurrences": 0,
+    "xecjk_warnings": 1
+  },
+  "status": "PASS_WITH_WARNINGS"
+}

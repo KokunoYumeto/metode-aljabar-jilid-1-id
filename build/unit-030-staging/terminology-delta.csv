@@ -1,0 +1,9 @@
+source_term,target_term,status,scope,note
+"normal series","deret normal","admitted","group theory","Use for a descending subgroup chain with each successive subgroup normal in its predecessor; preserve the source distinction from central and composition series."
+"central series","deret sentral","admitted","group theory","Use for the normal series whose successive quotient embeds in the center of the corresponding quotient group."
+"composition series","deret komposisi","admitted","group theory","Use for a strict normal series with simple successive subquotients; retain the established grup sederhana term."
+"subquotient","subkuosien","admitted","group theory","Use for the quotient G_i/G_{i+1} in a series; preserve multiplicity even when order is ignored."
+"refinement","penghalusan","admitted","group theory","Use for inserting intermediate subgroups into a series; distinguish a trivial refinement from a proper refinement."
+"proper refinement","penghalusan sejati","admitted","group theory","Use when an inserted subgroup is neither endpoint of the refined interval."
+"composition factor","faktor komposisi","admitted","group theory","Use for the subquotients of a composition series and for the Jordan--Hölder factor multiset."
+"multiplicity","multiplikitas","admitted","group theory","Use when repeated subquotients or factors are counted in a multiset or union."

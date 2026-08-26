@@ -1,0 +1,1096 @@
+{
+  "contact_sheets": [
+    {
+      "bytes": 542710,
+      "path": "qa/unit-030-evidence/contact-sheets/build-i-poppler.png",
+      "sha256": "30d3cb25f6ad2f23af7de9632b2c6b17c38eb94174f0871717967a4881605509",
+      "size": [
+        1245,
+        1815
+      ]
+    },
+    {
+      "bytes": 542814,
+      "path": "qa/unit-030-evidence/contact-sheets/build-j-poppler.png",
+      "sha256": "2f4f5df193dc2e98dd58f6e0b5505e248933a49369dd556edfca459dbb5f927f",
+      "size": [
+        1245,
+        1815
+      ]
+    },
+    {
+      "bytes": 543088,
+      "path": "qa/unit-030-evidence/contact-sheets/artifact-poppler.png",
+      "sha256": "76eea216b24869c430fa9a4f31d2b1f57aabfbb313a30866bdee61096e07ac5e",
+      "size": [
+        1245,
+        1815
+      ]
+    },
+    {
+      "bytes": 539351,
+      "path": "qa/unit-030-evidence/contact-sheets/build-i-mupdf.png",
+      "sha256": "1fd659801402f2e590d343089fecb8864b7ca9320b809db37bbef7722581ae3a",
+      "size": [
+        1245,
+        1815
+      ]
+    },
+    {
+      "bytes": 539413,
+      "path": "qa/unit-030-evidence/contact-sheets/build-j-mupdf.png",
+      "sha256": "f837e09249a9dda4b076fc532a5852424be68b18e46e98c35b338fce111492f6",
+      "size": [
+        1245,
+        1815
+      ]
+    },
+    {
+      "bytes": 539660,
+      "path": "qa/unit-030-evidence/contact-sheets/artifact-mupdf.png",
+      "sha256": "eb92fea4d482de19777e56c3ee377aa249ebd49d438768f795cf7ebb067e3e2b",
+      "size": [
+        1245,
+        1815
+      ]
+    }
+  ],
+  "decoded_pixel_comparisons": {
+    "mupdf": {
+      "build-i_vs_build-j": {
+        "all_7_decoded_pixel_identical": true,
+        "pages": [
+          {
+            "decoded_pixel_identical": true,
+            "page": 1,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 2,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 3,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 4,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 5,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 6,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 7,
+            "png_byte_identical": true
+          }
+        ]
+      },
+      "build-j_vs_artifact": {
+        "all_7_decoded_pixel_identical": true,
+        "pages": [
+          {
+            "decoded_pixel_identical": true,
+            "page": 1,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 2,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 3,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 4,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 5,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 6,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 7,
+            "png_byte_identical": true
+          }
+        ]
+      }
+    },
+    "poppler": {
+      "build-i_vs_build-j": {
+        "all_7_decoded_pixel_identical": true,
+        "pages": [
+          {
+            "decoded_pixel_identical": true,
+            "page": 1,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 2,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 3,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 4,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 5,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 6,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 7,
+            "png_byte_identical": true
+          }
+        ]
+      },
+      "build-j_vs_artifact": {
+        "all_7_decoded_pixel_identical": true,
+        "pages": [
+          {
+            "decoded_pixel_identical": true,
+            "page": 1,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 2,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 3,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 4,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 5,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 6,
+            "png_byte_identical": true
+          },
+          {
+            "decoded_pixel_identical": true,
+            "page": 7,
+            "png_byte_identical": true
+          }
+        ]
+      }
+    }
+  },
+  "edge_gate": {
+    "all_42_zero_ink": true,
+    "outer_band_pixels": 3
+  },
+  "identities": {
+    "artifact": {
+      "bytes": 91961,
+      "path": "artifacts/unit-030-bab-4-deret-komposisi-grup-id.pdf",
+      "sha256": "43ad2ffa2516f2f4394bcb82ad2e585f21c1e9e36a87870f4406a78597f18d74"
+    },
+    "build-i": {
+      "bytes": 91960,
+      "path": "build/unit-030-clean-i/unit-030-bab-4-deret-komposisi-grup.pdf",
+      "sha256": "cb5b2c5279e7c5574457846873a456cb644d2a1d54ace7ddc975378e036e00cd"
+    },
+    "build-j": {
+      "bytes": 91961,
+      "path": "build/unit-030-clean-j/unit-030-bab-4-deret-komposisi-grup.pdf",
+      "sha256": "43ad2ffa2516f2f4394bcb82ad2e585f21c1e9e36a87870f4406a78597f18d74"
+    },
+    "build-j_artifact_byte_identical": true,
+    "final-build-log": {
+      "bytes": 76370,
+      "path": "qa/UNIT_030_BUILD_FINAL.log",
+      "sha256": "728d7f4f2845e87132e6bf494784a16eced1b9f9f2644f97a10ae477a9df43f9"
+    }
+  },
+  "manual_visual_review": {
+    "actionable_defects": [],
+    "findings": {
+      "1": "Hierarki sampul, judul Unit 30, panel ruang lingkup, tanggal, dan margin seimbang serta mudah dibaca.",
+      "2": "Atribusi edisi dan sumber, ISBN, lisensi, non-endorsement, provenance model, tautan, dan lencana CC tampil utuh tanpa tabrakan.",
+      "3": "Judul Bagian 4.6 serta definisi deret normal, sentral, dan komposisi tersusun jelas dengan lebar teks terpusat.",
+      "4": "Lema Zassenhaus dan keenam diagram tikzcd terbaca jelas; label subgrup dan subgrup normal terlokalisasi tanpa merusak topologi.",
+      "5": "Teorema Penghalusan Schreier, relasi Jordan--Hölder, dan rumus-rumus terkait mengalir alami; kotak teorema dan rujukan tidak terpotong.",
+      "6": "Bukti faktor komposisi grup abelian, daftar pustaka kosong yang dinyatakan, dan indeks istilah run-in mengisi halaman akhir secara alami dengan margin aman.",
+      "7": "Halaman indeks dan penutup tetap memiliki margin bawah aman; tidak ada ruang kosong yang mengganggu atau elemen yang terpotong."
+    },
+    "pages_per_document": 7,
+    "renderers": [
+      "Poppler",
+      "MuPDF"
+    ],
+    "status": "PASS"
+  },
+  "renderer_versions": {
+    "mupdf": "mutool version 1.23.0",
+    "poppler": "pdftoppm version 24.04.0 Copyright 2005-2024 The Poppler Developers - http://poppler.freedesktop.org Copyright 1996-2011, 2022 Glyph & Cog, LLC"
+  },
+  "renderers": {
+    "mupdf": {
+      "artifact": {
+        "document": "artifact",
+        "dpi": 144,
+        "engine": "mupdf",
+        "pages": [
+          {
+            "decoded_rgb_sha256": "a2976583ff0620442d3f334506b869f831938d1d57da7a37179c63fadac0ad7c",
+            "nonwhite_bbox": [
+              140,
+              111,
+              813,
+              1325
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 1,
+            "path": "qa/unit-030-evidence/renders/mupdf/artifact/page-01.png",
+            "png_bytes": 80446,
+            "png_sha256": "d83be2b11584964b9138aabac2157bb4ec7a66db1e9aa0c7ef2bff108af004e8",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "91f89455b14b7f1d29940fc3e1d12ee8e449ce43774e5e258e39fd75ead94d70",
+            "nonwhite_bbox": [
+              100,
+              118,
+              831,
+              1242
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 2,
+            "path": "qa/unit-030-evidence/renders/mupdf/artifact/page-02.png",
+            "png_bytes": 111808,
+            "png_sha256": "64ffbc2507b555072f77b02c208f5a1d5ee49d16b82a18326a61d346bf251a53",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "174dadfaf627325831bdb534d768a05e19b479076c3d66cf861eeb471f55866b",
+            "nonwhite_bbox": [
+              96,
+              81,
+              902,
+              1259
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 3,
+            "path": "qa/unit-030-evidence/renders/mupdf/artifact/page-03.png",
+            "png_bytes": 148962,
+            "png_sha256": "1043743c7c19887b7571bc51e3bf3e9e052b71f4197f082fc425234a94267f84",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "9d8c4a3827ee5ee7d4e81c3a534b2cc6aca8b9c698b2fb815151b7496134ee63",
+            "nonwhite_bbox": [
+              97,
+              81,
+              901,
+              1275
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 4,
+            "path": "qa/unit-030-evidence/renders/mupdf/artifact/page-04.png",
+            "png_bytes": 103901,
+            "png_sha256": "368d9482963a687c33312d511e0f74b23e3cafbb266f6531ee37fd4da4ba331b",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "aaefb29e7713c572749cd8d830130a61336474dc0f581528baf928bf6e9b9cd8",
+            "nonwhite_bbox": [
+              96,
+              81,
+              901,
+              1268
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 5,
+            "path": "qa/unit-030-evidence/renders/mupdf/artifact/page-05.png",
+            "png_bytes": 151238,
+            "png_sha256": "a56dbebcd2746ddf327379d97cfc130479451d5ceb5790b240aeeafd08d5f1e6",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "026913ef91a678f7aa088836cb5fdd7e75d176c6b478ae7017e7e7dff3e73bc5",
+            "nonwhite_bbox": [
+              96,
+              81,
+              902,
+              1275
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 6,
+            "path": "qa/unit-030-evidence/renders/mupdf/artifact/page-06.png",
+            "png_bytes": 175694,
+            "png_sha256": "a763a145dce6409df676275bcec09dc4b7031ed12ccbfda429b7ee4a5e2bc8fb",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "27610ccfe39f6f688565c2e7cabf5452d1393eaf19fd66d949c4752b9d89cc85",
+            "nonwhite_bbox": [
+              95,
+              81,
+              902,
+              814
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 7,
+            "path": "qa/unit-030-evidence/renders/mupdf/artifact/page-07.png",
+            "png_bytes": 103845,
+            "png_sha256": "f6ae96763b19701ab5a6f354fb6ab052526c022bffce546082fd84e99b87d55e",
+            "size": [
+              998,
+              1418
+            ]
+          }
+        ],
+        "stderr": "",
+        "stdout": ""
+      },
+      "build-i": {
+        "document": "build-i",
+        "dpi": 144,
+        "engine": "mupdf",
+        "pages": [
+          {
+            "decoded_rgb_sha256": "a2976583ff0620442d3f334506b869f831938d1d57da7a37179c63fadac0ad7c",
+            "nonwhite_bbox": [
+              140,
+              111,
+              813,
+              1325
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 1,
+            "path": "qa/unit-030-evidence/renders/mupdf/build-i/page-01.png",
+            "png_bytes": 80446,
+            "png_sha256": "d83be2b11584964b9138aabac2157bb4ec7a66db1e9aa0c7ef2bff108af004e8",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "91f89455b14b7f1d29940fc3e1d12ee8e449ce43774e5e258e39fd75ead94d70",
+            "nonwhite_bbox": [
+              100,
+              118,
+              831,
+              1242
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 2,
+            "path": "qa/unit-030-evidence/renders/mupdf/build-i/page-02.png",
+            "png_bytes": 111808,
+            "png_sha256": "64ffbc2507b555072f77b02c208f5a1d5ee49d16b82a18326a61d346bf251a53",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "174dadfaf627325831bdb534d768a05e19b479076c3d66cf861eeb471f55866b",
+            "nonwhite_bbox": [
+              96,
+              81,
+              902,
+              1259
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 3,
+            "path": "qa/unit-030-evidence/renders/mupdf/build-i/page-03.png",
+            "png_bytes": 148962,
+            "png_sha256": "1043743c7c19887b7571bc51e3bf3e9e052b71f4197f082fc425234a94267f84",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "9d8c4a3827ee5ee7d4e81c3a534b2cc6aca8b9c698b2fb815151b7496134ee63",
+            "nonwhite_bbox": [
+              97,
+              81,
+              901,
+              1275
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 4,
+            "path": "qa/unit-030-evidence/renders/mupdf/build-i/page-04.png",
+            "png_bytes": 103901,
+            "png_sha256": "368d9482963a687c33312d511e0f74b23e3cafbb266f6531ee37fd4da4ba331b",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "aaefb29e7713c572749cd8d830130a61336474dc0f581528baf928bf6e9b9cd8",
+            "nonwhite_bbox": [
+              96,
+              81,
+              901,
+              1268
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 5,
+            "path": "qa/unit-030-evidence/renders/mupdf/build-i/page-05.png",
+            "png_bytes": 151238,
+            "png_sha256": "a56dbebcd2746ddf327379d97cfc130479451d5ceb5790b240aeeafd08d5f1e6",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "026913ef91a678f7aa088836cb5fdd7e75d176c6b478ae7017e7e7dff3e73bc5",
+            "nonwhite_bbox": [
+              96,
+              81,
+              902,
+              1275
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 6,
+            "path": "qa/unit-030-evidence/renders/mupdf/build-i/page-06.png",
+            "png_bytes": 175694,
+            "png_sha256": "a763a145dce6409df676275bcec09dc4b7031ed12ccbfda429b7ee4a5e2bc8fb",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "27610ccfe39f6f688565c2e7cabf5452d1393eaf19fd66d949c4752b9d89cc85",
+            "nonwhite_bbox": [
+              95,
+              81,
+              902,
+              814
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 7,
+            "path": "qa/unit-030-evidence/renders/mupdf/build-i/page-07.png",
+            "png_bytes": 103845,
+            "png_sha256": "f6ae96763b19701ab5a6f354fb6ab052526c022bffce546082fd84e99b87d55e",
+            "size": [
+              998,
+              1418
+            ]
+          }
+        ],
+        "stderr": "",
+        "stdout": ""
+      },
+      "build-j": {
+        "document": "build-j",
+        "dpi": 144,
+        "engine": "mupdf",
+        "pages": [
+          {
+            "decoded_rgb_sha256": "a2976583ff0620442d3f334506b869f831938d1d57da7a37179c63fadac0ad7c",
+            "nonwhite_bbox": [
+              140,
+              111,
+              813,
+              1325
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 1,
+            "path": "qa/unit-030-evidence/renders/mupdf/build-j/page-01.png",
+            "png_bytes": 80446,
+            "png_sha256": "d83be2b11584964b9138aabac2157bb4ec7a66db1e9aa0c7ef2bff108af004e8",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "91f89455b14b7f1d29940fc3e1d12ee8e449ce43774e5e258e39fd75ead94d70",
+            "nonwhite_bbox": [
+              100,
+              118,
+              831,
+              1242
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 2,
+            "path": "qa/unit-030-evidence/renders/mupdf/build-j/page-02.png",
+            "png_bytes": 111808,
+            "png_sha256": "64ffbc2507b555072f77b02c208f5a1d5ee49d16b82a18326a61d346bf251a53",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "174dadfaf627325831bdb534d768a05e19b479076c3d66cf861eeb471f55866b",
+            "nonwhite_bbox": [
+              96,
+              81,
+              902,
+              1259
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 3,
+            "path": "qa/unit-030-evidence/renders/mupdf/build-j/page-03.png",
+            "png_bytes": 148962,
+            "png_sha256": "1043743c7c19887b7571bc51e3bf3e9e052b71f4197f082fc425234a94267f84",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "9d8c4a3827ee5ee7d4e81c3a534b2cc6aca8b9c698b2fb815151b7496134ee63",
+            "nonwhite_bbox": [
+              97,
+              81,
+              901,
+              1275
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 4,
+            "path": "qa/unit-030-evidence/renders/mupdf/build-j/page-04.png",
+            "png_bytes": 103901,
+            "png_sha256": "368d9482963a687c33312d511e0f74b23e3cafbb266f6531ee37fd4da4ba331b",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "aaefb29e7713c572749cd8d830130a61336474dc0f581528baf928bf6e9b9cd8",
+            "nonwhite_bbox": [
+              96,
+              81,
+              901,
+              1268
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 5,
+            "path": "qa/unit-030-evidence/renders/mupdf/build-j/page-05.png",
+            "png_bytes": 151238,
+            "png_sha256": "a56dbebcd2746ddf327379d97cfc130479451d5ceb5790b240aeeafd08d5f1e6",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "026913ef91a678f7aa088836cb5fdd7e75d176c6b478ae7017e7e7dff3e73bc5",
+            "nonwhite_bbox": [
+              96,
+              81,
+              902,
+              1275
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 6,
+            "path": "qa/unit-030-evidence/renders/mupdf/build-j/page-06.png",
+            "png_bytes": 175694,
+            "png_sha256": "a763a145dce6409df676275bcec09dc4b7031ed12ccbfda429b7ee4a5e2bc8fb",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "27610ccfe39f6f688565c2e7cabf5452d1393eaf19fd66d949c4752b9d89cc85",
+            "nonwhite_bbox": [
+              95,
+              81,
+              902,
+              814
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 7,
+            "path": "qa/unit-030-evidence/renders/mupdf/build-j/page-07.png",
+            "png_bytes": 103845,
+            "png_sha256": "f6ae96763b19701ab5a6f354fb6ab052526c022bffce546082fd84e99b87d55e",
+            "size": [
+              998,
+              1418
+            ]
+          }
+        ],
+        "stderr": "",
+        "stdout": ""
+      }
+    },
+    "poppler": {
+      "artifact": {
+        "document": "artifact",
+        "dpi": 144,
+        "engine": "poppler",
+        "pages": [
+          {
+            "decoded_rgb_sha256": "7154a9f72e9fa29c6168ec2195461af4fded233d5c9ee605fc7df97bc5d7309f",
+            "nonwhite_bbox": [
+              140,
+              111,
+              813,
+              1324
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 1,
+            "path": "qa/unit-030-evidence/renders/poppler/artifact/page-01.png",
+            "png_bytes": 89105,
+            "png_sha256": "0c7037926c878020428d9d2779c72fa28c73a79944add7cc8f64cce4252486a0",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "fe1cf0a92c60b6624fefcc7710de29c6343602de9c516825e4ed95be77b2ba17",
+            "nonwhite_bbox": [
+              100,
+              118,
+              831,
+              1241
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 2,
+            "path": "qa/unit-030-evidence/renders/poppler/artifact/page-02.png",
+            "png_bytes": 137129,
+            "png_sha256": "b4b08f978b2d7c55ed88abe946fe73441ea367fc76e45e9b706a35a7e997281f",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "f2bd25610007f2e499970224c05241482a0269ceb95f0f00b0c8c98faed0674b",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1259
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 3,
+            "path": "qa/unit-030-evidence/renders/poppler/artifact/page-03.png",
+            "png_bytes": 177041,
+            "png_sha256": "137c0fe7d07deb1ea9d3e6a626ffc313f56233f1b3b2ac84f0455ff6fcf5511f",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "bbda4031df668cb9bce1c29fc712ff22caddf8f211831bec4c53afa1243e2a97",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1274
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 4,
+            "path": "qa/unit-030-evidence/renders/poppler/artifact/page-04.png",
+            "png_bytes": 115542,
+            "png_sha256": "9fd3732c864e8f9f29561be193592e737d4c5c07f2fbaf609ed156420c0c1f43",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "2d582735d436dcffc5b465f3b530f2e5527b208f544c70a726fa7fdbdcd14c33",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1267
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 5,
+            "path": "qa/unit-030-evidence/renders/poppler/artifact/page-05.png",
+            "png_bytes": 177429,
+            "png_sha256": "ea81235361457e34fea194ca7c6a374d0dd703201b1a01865b1b66f66610c1e3",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "73b8dfc8ab203c0f4f1f2d9d11fbb9caf2a61abdac33684ae01b3003ef2d5c08",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1274
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 6,
+            "path": "qa/unit-030-evidence/renders/poppler/artifact/page-06.png",
+            "png_bytes": 210536,
+            "png_sha256": "0da26ad6c1fec18ac655805aa3df781ee04a33dec562b6892958f17985647578",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "fd5fea524574c3c2182dbbfbd8aa4e747a4d0637c6458acc20c51579fb2c91a4",
+            "nonwhite_bbox": [
+              95,
+              80,
+              901,
+              813
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 7,
+            "path": "qa/unit-030-evidence/renders/poppler/artifact/page-07.png",
+            "png_bytes": 121324,
+            "png_sha256": "ecd4ef7ae89d5d2c193333e3849cb0857f7c445b32bdf684887e3e0d0adcbdcd",
+            "size": [
+              998,
+              1418
+            ]
+          }
+        ],
+        "stderr": "",
+        "stdout": ""
+      },
+      "build-i": {
+        "document": "build-i",
+        "dpi": 144,
+        "engine": "poppler",
+        "pages": [
+          {
+            "decoded_rgb_sha256": "7154a9f72e9fa29c6168ec2195461af4fded233d5c9ee605fc7df97bc5d7309f",
+            "nonwhite_bbox": [
+              140,
+              111,
+              813,
+              1324
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 1,
+            "path": "qa/unit-030-evidence/renders/poppler/build-i/page-01.png",
+            "png_bytes": 89105,
+            "png_sha256": "0c7037926c878020428d9d2779c72fa28c73a79944add7cc8f64cce4252486a0",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "fe1cf0a92c60b6624fefcc7710de29c6343602de9c516825e4ed95be77b2ba17",
+            "nonwhite_bbox": [
+              100,
+              118,
+              831,
+              1241
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 2,
+            "path": "qa/unit-030-evidence/renders/poppler/build-i/page-02.png",
+            "png_bytes": 137129,
+            "png_sha256": "b4b08f978b2d7c55ed88abe946fe73441ea367fc76e45e9b706a35a7e997281f",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "f2bd25610007f2e499970224c05241482a0269ceb95f0f00b0c8c98faed0674b",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1259
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 3,
+            "path": "qa/unit-030-evidence/renders/poppler/build-i/page-03.png",
+            "png_bytes": 177041,
+            "png_sha256": "137c0fe7d07deb1ea9d3e6a626ffc313f56233f1b3b2ac84f0455ff6fcf5511f",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "bbda4031df668cb9bce1c29fc712ff22caddf8f211831bec4c53afa1243e2a97",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1274
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 4,
+            "path": "qa/unit-030-evidence/renders/poppler/build-i/page-04.png",
+            "png_bytes": 115542,
+            "png_sha256": "9fd3732c864e8f9f29561be193592e737d4c5c07f2fbaf609ed156420c0c1f43",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "2d582735d436dcffc5b465f3b530f2e5527b208f544c70a726fa7fdbdcd14c33",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1267
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 5,
+            "path": "qa/unit-030-evidence/renders/poppler/build-i/page-05.png",
+            "png_bytes": 177429,
+            "png_sha256": "ea81235361457e34fea194ca7c6a374d0dd703201b1a01865b1b66f66610c1e3",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "73b8dfc8ab203c0f4f1f2d9d11fbb9caf2a61abdac33684ae01b3003ef2d5c08",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1274
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 6,
+            "path": "qa/unit-030-evidence/renders/poppler/build-i/page-06.png",
+            "png_bytes": 210536,
+            "png_sha256": "0da26ad6c1fec18ac655805aa3df781ee04a33dec562b6892958f17985647578",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "fd5fea524574c3c2182dbbfbd8aa4e747a4d0637c6458acc20c51579fb2c91a4",
+            "nonwhite_bbox": [
+              95,
+              80,
+              901,
+              813
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 7,
+            "path": "qa/unit-030-evidence/renders/poppler/build-i/page-07.png",
+            "png_bytes": 121324,
+            "png_sha256": "ecd4ef7ae89d5d2c193333e3849cb0857f7c445b32bdf684887e3e0d0adcbdcd",
+            "size": [
+              998,
+              1418
+            ]
+          }
+        ],
+        "stderr": "",
+        "stdout": ""
+      },
+      "build-j": {
+        "document": "build-j",
+        "dpi": 144,
+        "engine": "poppler",
+        "pages": [
+          {
+            "decoded_rgb_sha256": "7154a9f72e9fa29c6168ec2195461af4fded233d5c9ee605fc7df97bc5d7309f",
+            "nonwhite_bbox": [
+              140,
+              111,
+              813,
+              1324
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 1,
+            "path": "qa/unit-030-evidence/renders/poppler/build-j/page-01.png",
+            "png_bytes": 89105,
+            "png_sha256": "0c7037926c878020428d9d2779c72fa28c73a79944add7cc8f64cce4252486a0",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "fe1cf0a92c60b6624fefcc7710de29c6343602de9c516825e4ed95be77b2ba17",
+            "nonwhite_bbox": [
+              100,
+              118,
+              831,
+              1241
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 2,
+            "path": "qa/unit-030-evidence/renders/poppler/build-j/page-02.png",
+            "png_bytes": 137129,
+            "png_sha256": "b4b08f978b2d7c55ed88abe946fe73441ea367fc76e45e9b706a35a7e997281f",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "f2bd25610007f2e499970224c05241482a0269ceb95f0f00b0c8c98faed0674b",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1259
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 3,
+            "path": "qa/unit-030-evidence/renders/poppler/build-j/page-03.png",
+            "png_bytes": 177041,
+            "png_sha256": "137c0fe7d07deb1ea9d3e6a626ffc313f56233f1b3b2ac84f0455ff6fcf5511f",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "bbda4031df668cb9bce1c29fc712ff22caddf8f211831bec4c53afa1243e2a97",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1274
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 4,
+            "path": "qa/unit-030-evidence/renders/poppler/build-j/page-04.png",
+            "png_bytes": 115542,
+            "png_sha256": "9fd3732c864e8f9f29561be193592e737d4c5c07f2fbaf609ed156420c0c1f43",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "2d582735d436dcffc5b465f3b530f2e5527b208f544c70a726fa7fdbdcd14c33",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1267
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 5,
+            "path": "qa/unit-030-evidence/renders/poppler/build-j/page-05.png",
+            "png_bytes": 177429,
+            "png_sha256": "ea81235361457e34fea194ca7c6a374d0dd703201b1a01865b1b66f66610c1e3",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "73b8dfc8ab203c0f4f1f2d9d11fbb9caf2a61abdac33684ae01b3003ef2d5c08",
+            "nonwhite_bbox": [
+              96,
+              80,
+              901,
+              1274
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 6,
+            "path": "qa/unit-030-evidence/renders/poppler/build-j/page-06.png",
+            "png_bytes": 210536,
+            "png_sha256": "0da26ad6c1fec18ac655805aa3df781ee04a33dec562b6892958f17985647578",
+            "size": [
+              998,
+              1418
+            ]
+          },
+          {
+            "decoded_rgb_sha256": "fd5fea524574c3c2182dbbfbd8aa4e747a4d0637c6458acc20c51579fb2c91a4",
+            "nonwhite_bbox": [
+              95,
+              80,
+              901,
+              813
+            ],
+            "outer_3px_ink_pixels": 0,
+            "page": 7,
+            "path": "qa/unit-030-evidence/renders/poppler/build-j/page-07.png",
+            "png_bytes": 121324,
+            "png_sha256": "ecd4ef7ae89d5d2c193333e3849cb0857f7c445b32bdf684887e3e0d0adcbdcd",
+            "size": [
+              998,
+              1418
+            ]
+          }
+        ],
+        "stderr": "",
+        "stdout": ""
+      }
+    }
+  },
+  "status": "PASS_WITH_WARNINGS",
+  "warnings": [
+    "PDF is untagged; no tagged-accessibility claim is made.",
+    "dvipdfmx subset tags vary between I and J; normalized semantics and decoded pixels agree.",
+    "Mathematics fonts have incomplete Unicode maps; stable extractor NUL counts are disclosed.",
+    "Poppler lacks optional Adobe-GB1 mapping data; extraction and rendering gates pass."
+  ]
+}

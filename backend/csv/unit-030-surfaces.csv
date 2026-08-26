@@ -1,0 +1,14 @@
+entity_type,id,stable_key,section_id,ordinal,source_value,target_value,format,status
+build_surface,urn:uuid:d6f9adaa-ce85-5cba-ba63-b5e9de994aa6,build-surface/unit-030-pdf,,,pwsh -NoProfile -File scripts/build_unit_030.ps1 -OutputDirectory build/unit-030-replay,artifacts/unit-030-bab-4-deret-komposisi-grup-id.pdf,pdf,pass
+diagram,urn:uuid:ed0e43ad-9ae7-5070-aa63-1dd49a0ee216,diagram/unit-030/tikzcd-01,urn:uuid:fca3605a-bfef-5847-840c-5ec5bbc9bfee,1,835-837,833-835,tikzcd,audited_preserved
+diagram,urn:uuid:72cd24e6-7a4a-50f9-90fd-f61886ee74b6,diagram/unit-030/tikzcd-02,urn:uuid:fca3605a-bfef-5847-840c-5ec5bbc9bfee,2,838-840,836-838,tikzcd,audited_preserved
+diagram,urn:uuid:aa76205c-1f43-552d-a6f2-766328c7d4dd,diagram/unit-030/tikzcd-03,urn:uuid:fca3605a-bfef-5847-840c-5ec5bbc9bfee,3,841-844,839-842,tikzcd,audited_preserved
+diagram,urn:uuid:811c2136-0a45-5a66-aa04-790901a8ab72,diagram/unit-030/tikzcd-04,urn:uuid:fca3605a-bfef-5847-840c-5ec5bbc9bfee,4,845-848,843-846,tikzcd,audited_preserved
+diagram,urn:uuid:ec49fd4c-a0ca-5f4c-adac-4eaaa83b37df,diagram/unit-030/tikzcd-05,urn:uuid:fca3605a-bfef-5847-840c-5ec5bbc9bfee,5,850-857,848-855,tikzcd,audited_preserved
+diagram,urn:uuid:36e1e6fa-2feb-563e-88b9-864293008b3a,diagram/unit-030/tikzcd-06,urn:uuid:fca3605a-bfef-5847-840c-5ec5bbc9bfee,6,867-870,865-868,tikzcd,audited_preserved
+index_entry,urn:uuid:41b019bf-b90b-51f8-a0e0-c6ffa43cb6a1,index-entry/unit-030/main/001,urn:uuid:fca3605a-bfef-5847-840c-5ec5bbc9bfee,1,zhengguilie@正规列 (normal series),zhengguilie@deret normal (normal series),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:d35b3caf-e0e6-56cd-80df-20a53a9f9651,index-entry/unit-030/main/002,urn:uuid:fca3605a-bfef-5847-840c-5ec5bbc9bfee,2,zishang@子商 (subquotient),zishang@subkuosien (subquotient),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:82305782-6416-5dea-bad4-ff803c8d0f9c,index-entry/unit-030/main/003,urn:uuid:fca3605a-bfef-5847-840c-5ec5bbc9bfee,3,zhongxinlie@中心列 (central series),zhongxinlie@deret sentral (central series),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:77cdf09b-3711-5693-a26c-d41d93b72e55,index-entry/unit-030/main/004,urn:uuid:fca3605a-bfef-5847-840c-5ec5bbc9bfee,4,hechenglie@合成列 (composition series),hechenglie@deret komposisi (composition series),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:9571b16a-8ae9-53d4-8982-1fa67c8a25a1,index-entry/unit-030/main/005,urn:uuid:fca3605a-bfef-5847-840c-5ec5bbc9bfee,5,Jordan--Hölder 定理,Teorema Jordan--Hölder,latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:0b93c94e-d795-5211-85e1-5126930bdfa5,index-entry/unit-030/main/006,urn:uuid:fca3605a-bfef-5847-840c-5ec5bbc9bfee,6,hechengyinzi@合成因子 (composition factor),hechengyinzi@faktor komposisi (composition factor),latex-index-key,source_key_preserved_target_key_localized
