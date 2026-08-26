@@ -1440,3 +1440,18 @@ the sparse tenth page. These are resolved reader defects, not blockers. Advance
 to Unit 032 at chapter4.tex:1108 while preserving the full Li, Duncan,
 selected-CRing, and separate connective/mastery architecture with Etingof
 reference-only.
+
+## D089 — 2026-08-26 — Unit 032 published and cursor advanced
+
+Publish complete Section 4.8 at authority chapter4.tex:1108-1388 only after the final
+thirteen-page reader, schema-valid backend, independent admission audit, content
+commit, receipt commit, and both anonymous readback inventories agree. Content
+commit bc5e43a75925d522a80600724d6d95e40ad55f75, tree 13afc9751570e15d24a77063606a455dc420f69a, and receipt commit
+5780621108e60521427b20a77090114590abe6b0, tree 1f88e8d6901c01eed57ecb602484eb6c2bff1b87, are the exact public
+boundary. Initial 22.16992 pt and 27.03485 pt set-builder display overflows are
+closed by separately provenanced target-only reflows O013-LI-U032-REFLOW-001
+and O013-LI-U032-REFLOW-002. Exactly three visually non-actionable underfull
+hboxes and the untagged-PDF accessibility limitation remain disclosed. Advance
+to Unit 033 at chapter4.tex:1389 while preserving the full Li, Duncan,
+selected-CRing, and separate connective/mastery architecture with Etingof
+reference-only.

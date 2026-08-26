@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "checked_utc": "2026-08-26T03:38:31+00:00",
+  "repository": "https://github.com/KokunoYumeto/metode-aljabar-jilid-1-id",
+  "branch": "main",
+  "commit": "5780621108e60521427b20a77090114590abe6b0",
+  "parent": "bc5e43a75925d522a80600724d6d95e40ad55f75",
+  "tree": "1f88e8d6901c01eed57ecb602484eb6c2bff1b87",
+  "remote_main_ref_endpoint": "https://github.com/KokunoYumeto/metode-aljabar-jilid-1-id.git",
+  "remote_main_ref_method": "anonymous git ls-remote with credential helper disabled",
+  "remote_main_before": "5780621108e60521427b20a77090114590abe6b0",
+  "remote_main_after": "5780621108e60521427b20a77090114590abe6b0",
+  "remote_main_matches_commit": true,
+  "anonymous": true,
+  "authorization_header_used": false,
+  "path_fetch_count": 3,
+  "total_bytes_fetched": 104435,
+  "all_match": true,
+  "records": [
+    {
+      "path": "README.md",
+      "bytes": 74628,
+      "sha256": "d2198a7c58d0742f8d547418086f7dab63cc66410aa577cf4a19fdead92c8130",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/5780621108e60521427b20a77090114590abe6b0/README.md",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/PUBLICATION_GITHUB_UNIT_032_20260826.md",
+      "bytes": 1711,
+      "sha256": "c59915bc05e2e26f4828daafbad1442b7923c47e5e5f0289f2409072d91ee32e",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/5780621108e60521427b20a77090114590abe6b0/qa/PUBLICATION_GITHUB_UNIT_032_20260826.md",
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/PUBLICATION_GITHUB_UNIT_032_CONTENT_READBACK.json",
+      "bytes": 28096,
+      "sha256": "09a04f7d85ca36da65fd856cdf9b203ceefa63579ea9766574351bff1cde8e5c",
+      "http_status": 200,
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/5780621108e60521427b20a77090114590abe6b0/qa/PUBLICATION_GITHUB_UNIT_032_CONTENT_READBACK.json",
+      "matches_committed_blob": true
+    }
+  ]
+}

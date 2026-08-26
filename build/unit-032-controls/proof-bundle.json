@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-26",
+  "unit": {
+    "candidate": {
+      "path": "build/unit-032-candidate/chapter4-free-groups-id.tex",
+      "bytes": 27910,
+      "sha256": "28e8fd2475a89b4617c26b21f0753aa95a81c7bc8524b7540881281159ab4cfc"
+    },
+    "target": {
+      "path": "repo/source/chapter4.tex",
+      "bytes": 181896,
+      "sha256": "4381ae10c0e44eca80c40c25d602af39ed9da2e3725a35968ad697d40cc7f680"
+    },
+    "reader": {
+      "path": "artifacts/unit-032-bab-4-grup-bebas-id.pdf",
+      "bytes": 149624,
+      "sha256": "904330916e20f0782b6464cb85e07001851940f4adf153f6592cd34087dbadbf",
+      "pages": 13
+    },
+    "backend": {
+      "path": "backend/data/unit-032-bab-4-grup-bebas.json",
+      "bytes": 460681,
+      "sha256": "a3f68cd45d5fc44720e769c7a12d745a4af78d7a361e6e8b81a1c5019be1a030"
+    },
+    "backend_validation": {
+      "path": "qa/unit-032-evidence/backend-validation.json",
+      "bytes": 5422,
+      "sha256": "b66c40151489b4d162e63e9edef3da1d7c593362002bb8e0b9a6f5ba3410be6d"
+    },
+    "admission_receipt": {
+      "path": "qa/UNIT_032_ADMISSION_20260826.md",
+      "bytes": 4274,
+      "sha256": "065bba6285a1668abdd29f8d349f9f905b048755dc429e8e8d08d7944dc5c1f0"
+    },
+    "final_audit": {
+      "path": "qa/UNIT_032_FINAL_AUDIT_20260826.md",
+      "bytes": 5421,
+      "sha256": "e8d214df7a0feaf60a14a93e2b554db8fe881379caf98109737a9947f5d9e9e5"
+    },
+    "visual_receipt": {
+      "path": "qa/UNIT_032_VISUAL_QA_20260826.md",
+      "bytes": 5996,
+      "sha256": "8f0e63c07a43e1c8e96415ccda97507c6a1e1a81b4cf2c344b9fb761a653a976"
+    },
+    "build_log": {
+      "path": "qa/UNIT_032_BUILD_FINAL.log",
+      "bytes": 78679,
+      "sha256": "3da283cc2d95f15148c6a5c5392951134235c104b7bd8fdee7844ea4217d2a31"
+    },
+    "terminology_audit": {
+      "path": "qa/UNIT_032_TERMINOLOGY_AUDIT_20260826.md",
+      "bytes": 3255,
+      "sha256": "2dc5c4ed17f810c5b15fa4c16db491530dce6e3d0597344118fd4f5bd5668b83"
+    },
+    "terminology_delta": {
+      "path": "build/unit-032-staging/terminology-delta.csv",
+      "bytes": 4745,
+      "sha256": "3d742473a35c0bdd890fecbfe3f0dc37e8dc96f8452287c6fadc35dda46d6fad"
+    },
+    "glossary": {
+      "path": "00_control/TERMINOLOGY.id-ID.csv",
+      "bytes": 74335,
+      "sha256": "bb58d18ad5802c5c2159db092f0fc322761f8f9559ea7efd3789ab8d7317e582"
+    }
+  },
+  "publication": {
+    "content_commit": "bc5e43a75925d522a80600724d6d95e40ad55f75",
+    "content_tree": "13afc9751570e15d24a77063606a455dc420f69a",
+    "content_readback": {
+      "path": "qa/PUBLICATION_GITHUB_UNIT_032_CONTENT_READBACK.json",
+      "bytes": 28096,
+      "sha256": "09a04f7d85ca36da65fd856cdf9b203ceefa63579ea9766574351bff1cde8e5c"
+    },
+    "receipt": {
+      "path": "qa/PUBLICATION_GITHUB_UNIT_032_20260826.md",
+      "bytes": 1711,
+      "sha256": "c59915bc05e2e26f4828daafbad1442b7923c47e5e5f0289f2409072d91ee32e"
+    },
+    "receipt_commit": "5780621108e60521427b20a77090114590abe6b0",
+    "receipt_tree": "1f88e8d6901c01eed57ecb602484eb6c2bff1b87",
+    "receipt_readback": {
+      "path": "qa/PUBLICATION_GITHUB_UNIT_032_RECEIPT_READBACK.json",
+      "bytes": 2069,
+      "sha256": "161c67848ab6652e8f4e95c43e05ecbeb4340b640fc68f183f6cb2dc52e17f49"
+    }
+  }
+}
