@@ -1,14 +1,17 @@
 # Current state
 
 Updated: 2026-08-26  
-Status: active; Li Units 001-029 are public and byte-verified through complete
-Chapter 4 Section 4.5. Unit 029 is public at content commit
-`e9bc26191e422ab055ead3cb39fedbc228237b23`; all 44 paths / 3,398,169 bytes
+Status: active; Li Units 001-030 are public and byte-verified through complete
+Chapter 4 Section 4.6. Unit 030 is public at content commit
+`cff3f5537a86fd2feb21609f2c47b533b51c99bf`; all 49 paths / 3,068,734 bytes
 passed anonymous readback. Receipt commit
-`458e6e32797e2310bd7fa53c21e78bc133723851` and all three paths / 88,954 bytes
-also passed. The canonical next boundary is Unit 030 at `chapter4.tex:796`;
-isolated translation reaches Unit 042 and `chapter5.tex:1184`, while Unit 043
-has not started.
+`3e8ef513db7439dc4f14e17f349fec19b30e99d8` and all three paths / 95,609
+bytes also passed. The canonical next boundary is Unit 031 at
+`chapter4.tex:936`; isolated translation reaches Unit 042 and
+`chapter5.tex:1184`, while Unit 043 has not started. The full active objective
+continues from the complete Li edition through complete licensed Duncan,
+selected repaired CRing spans, and the separately provenanced connective and
+mastery layer; this boundary is not a completion claim.
 Unit 028 remains public at content commit
 `0806e5c44a497d108b517e29664ec68aae273a88`; all 47 paths / 4,028,645 bytes
 passed anonymous readback. Receipt commit
@@ -18,12 +21,58 @@ bytes also passed. Unit 027 content commit
 `990b16be3633d71c4373b66598bbc64beacd1fe1` both passed anonymous readback.
 The 229-page checkpoint 0.6.0 is public on GitHub and Zenodo DOI
 `10.5281/zenodo.22088395` under the unchanged concept DOI; all five Zenodo
-files / 70,182,496 bytes passed anonymous SHA-256 readback. Chapter 4 Unit 030
-at `chapter4.tex:796-935` is the next canonical admission boundary after Unit
-029 publication; isolated translation reaches Unit 042 and
+files / 70,182,496 bytes passed anonymous SHA-256 readback. Chapter 4 Unit 031
+at `chapter4.tex:936-1107` is the next canonical admission boundary after Unit
+030 publication; isolated translation reaches Unit 042 and
 `chapter5.tex:1184`, while Unit 043 has not started.
 
 ## Completed
+
+### Unit 030 admission and public boundary
+
+- Complete Section 4.6, `chapter4.tex:796-935`, is translated, independently
+  audited, canonically integrated, built, admitted, and public. Its authority
+  slice is 140 normalized-LF records / 7,981 bytes / SHA-256
+  `7803452c4285c57e419a2cb2a288b3733975555fafd6b7a88c5732da369220c1`;
+  blank boundary line 935 is excluded from the 139-record candidate. The
+  reviewed candidate is 10,044 bytes / SHA-256
+  `7e39460c871f38145772d66c95160214d3bf33f18c15f858b4ee874e65474b4b`.
+- Canonical `chapter4.tex` is 172,726 bytes / SHA-256
+  `245a891930cefb1c18cbd1208386ba5131c56b8b5930510c329577eeeb96cddc`.
+  The centered seven-page reader is 91,961 bytes / SHA-256
+  `43ad2ffa2516f2f4394bcb82ad2e585f21c1e9e36a87870f4406a78597f18d74`;
+  its schema-valid backend is 179,924 bytes / SHA-256
+  `1dae77cebf984b8a1dfad0a3d90714d3b4f69c0632042cea768939eb1a77f806`.
+- The admitted surface preserves 26 environment pairs, ten labels, nine
+  references, six index entries, 88 protected mathematical zones, and six
+  `tikzcd` diagrams / 23 arrows, with no exercises, hints, solutions, or
+  citations. Correction `O013-LI-U030-COR-001` restores the uniquely forced
+  missing `\supset`; two protected-text localizations preserve diagram
+  topology. Eight reviewed terminology rows yield a 421-row live glossary.
+- The admission receipt is `qa/UNIT_030_ADMISSION_20260826.md`, 11,879 bytes /
+  SHA-256 `9ea189ac1cb7997861dc7a6af6c993ecb5fe6293610185e6f6ae8b98889680c0`;
+  independent final audit is 4,610 bytes / SHA-256
+  `c752b8eb28c4f2667f501b4b0298e521cd01752724139b947029f8f6f1032baf`;
+  backend validation is 5,716 bytes / SHA-256
+  `f175a22f2b8d9df56038b880b332d3a862681d5da7cea31cb2313af501753a50`.
+  Structural/PDF evidence is 57,377 bytes / SHA-256
+  `5b11c997ca331611871e22928f560f89757651053803bffc91ac1d118b89be02`;
+  all-page render inventory is 34,392 bytes / SHA-256
+  `2d77180e791121c76abbf097936bc69036113c1bebb3232346897619d4f9b131`.
+  All deterministic gates pass; the PDF is explicitly untagged.
+- Content commit `cff3f5537a86fd2feb21609f2c47b533b51c99bf`, tree
+  `39cca775954c9d2e097d3bdd413f7c03cf9719a6`, passed anonymous readback for
+  49 immutable paths / 3,068,734 bytes. Content inventory
+  `qa/PUBLICATION_GITHUB_UNIT_030_CONTENT_READBACK.json` is 21,524 bytes /
+  SHA-256 `350935011c75afe1c091c4f0edc06029941acb0c299e7ac624352986cdbb6c22`.
+  Receipt commit `3e8ef513db7439dc4f14e17f349fec19b30e99d8`, tree
+  `9f29340f0b81c9f4d13363842e38fe7510eea568`, passed anonymous readback for
+  three paths / 95,609 bytes. Receipt inventory
+  `qa/PUBLICATION_GITHUB_UNIT_030_RECEIPT_READBACK.json` is 1,300 bytes /
+  SHA-256 `a4d9c791fadb8aaefd04dc183c2c0dcb5afd8bcbe5c5495503981768a1ec4d3f`.
+- Unit 031 is now the active sequential boundary. Its isolated candidate covers
+  `chapter4.tex:936-1107`; it may advance only after terminology, canonical,
+  backend, build, all-page QA, publication, and readback gates pass.
 
 ### Unit 029 admission and public boundary
 
@@ -55,7 +104,8 @@ at `chapter4.tex:796-935` is the next canonical admission boundary after Unit
   three paths / 88,954 bytes. The durable receipt inventory is
   `qa/PUBLICATION_GITHUB_UNIT_029_RECEIPT_READBACK.json`, 1,300 bytes,
   SHA-256 `40d9e291c5c10fdcefdcc0dc5fbb6039e855140e09679d6f07ac58cd085b4b68`.
-  The canonical next boundary is Unit 030 at `chapter4.tex:796`.
+  At that historical boundary, the next source range was Unit 030 at
+  `chapter4.tex:796`.
 
 - Unit 028, complete Section 4.4 at `chapter4.tex:518-665`, is admitted and
   public. Its final candidate is 13,017 bytes / SHA-256
@@ -1141,14 +1191,25 @@ at `chapter4.tex:796-935` is the next canonical admission boundary after Unit
 
 ## Exact next action
 
-Unit 029 at `chapter4.tex:666-795` is public and read back. Continue Units
-030-042 strictly in source order from `chapter4.tex:796`; the isolated Unit 042 candidate may not skip
-the intervening admission cursor. Resume new isolated translation from
-`chapter5.tex:1184` only when it does not delay sequential admission. For each
-unit, promote terminology, integrate canonical source, build and inspect the
-reader, validate the backend, publish narrowly, and perform anonymous byte
-readback. Preserve the existing Zenodo/Figshare lineages; do not create a
-duplicate or flatten component rights.
+Unit 030 at `chapter4.tex:796-935` is public and read back. Admit Unit 031,
+complete Section 4.7 at `chapter4.tex:936-1107`, next. Its isolated candidate
+is 19,850 bytes / SHA-256
+`b6bc5e41ed428dfde4526558b9a3ef36117cc55a7c0386bc360affa78b82fb01`;
+its checker is 15,597 bytes / SHA-256
+`5557a3c54146d0e5fffe09406874ab252443d943f938448cfd3e534eb35b384b`
+and passes against the 16,048-byte authority slice / SHA-256
+`647d22446e75cde39b7b9f53d6658f39de78c5d773d51d6f446d651e1734967b`.
+Before promotion, adjudicate its local `grup solvabel`, `grup supersolvabel`,
+`grup nilpoten`, commutator/series, symplectic, derivative, and canonical-
+commutation terminology against the live 421-row glossary; append only a
+reviewed delta. Preserve one declared proof repair and eight protected-text
+localizations. Then integrate canonical source, build and inspect every page,
+validate the backend, publish narrowly, and perform anonymous byte readback.
+Continue Units 032-042 strictly in source order; Unit 042 may not skip the
+intervening admission cursor. Resume new isolated translation from
+`chapter5.tex:1184` only when it does not delay sequential admission. Preserve
+the existing Zenodo/Figshare lineages; do not create a duplicate or flatten
+component rights.
 
 ## Not complete
 

@@ -1387,3 +1387,42 @@ readback for three paths / 88,954 bytes. The durable cursor advances to Unit
 030, `chapter4.tex:796-935`; Units 030-042 remain strictly sequential and
 Unit 042 may not skip the intervening boundaries. Zenodo remains at the
 nonduplicative 0.6.0 checkpoint.
+
+## D086 — 2026-08-26 — Unit 030 locally admitted
+
+Admit complete Section 4.6 at authority `chapter4.tex:796-935`, with blank
+boundary line 935 omitted from the 139-record substantive mapping. The
+reviewed candidate is 10,044 bytes / SHA-256
+`7e39460c871f38145772d66c95160214d3bf33f18c15f858b4ee874e65474b4b`;
+its eight-row terminology delta is 1,377 bytes / SHA-256
+`fe0b91971953c8d14568fd1144f0799d8c36b6c6a7cc09be8dd11d688de3c7a4`.
+Both are publication inputs so the admitted splice is independently
+replayable. Canonical `chapter4.tex` is 172,726 bytes / SHA-256
+`245a891930cefb1c18cbd1208386ba5131c56b8b5930510c329577eeeb96cddc`.
+The centered seven-page reader is 91,961 bytes / SHA-256
+`43ad2ffa2516f2f4394bcb82ad2e585f21c1e9e36a87870f4406a78597f18d74`;
+the schema-valid backend is 179,924 bytes / SHA-256
+`1dae77cebf984b8a1dfad0a3d90714d3b4f69c0632042cea768939eb1a77f806`.
+All source, topology, eight-term, build, PDF, 42-render dual-engine visual,
+rights, backend, privacy, and independent-audit gates pass. One separately
+provenanced correction restores the uniquely forced missing `\supset` at
+authority line 895 / target line 893; two protected diagram labels are
+localized without altering diagram topology. The untagged PDF, local Poppler
+Adobe-GB1 diagnostic, and volatile font-subset tags are disclosed as
+nonblocking limitations. Publication and anonymous byte readback are next;
+the cursor remains at Unit 030 until that closure passes.
+
+## D087 — 2026-08-26 — Unit 030 published and cursor advanced
+
+Publish the exact admitted Unit 030 boundary at content commit
+`cff3f5537a86fd2feb21609f2c47b533b51c99bf`, parent
+`bc55f1f527529718a41978b880666b6a0fa96f32`, tree
+`39cca775954c9d2e097d3bdd413f7c03cf9719a6`. Credential-disabled anonymous
+readback fetched all 49 immutable changed paths / 3,068,734 bytes and matched
+every committed blob, including the exact reviewed candidate and terminology
+delta needed to replay the canonical promotion. Receipt commit
+`3e8ef513db7439dc4f14e17f349fec19b30e99d8`, tree
+`9f29340f0b81c9f4d13363842e38fe7510eea568`, then passed anonymous readback
+for all three changed paths / 95,609 bytes. Advance canonical admission to
+Unit 031 at `chapter4.tex:936`; Unit 042 remains isolated until Units 031-041
+have been admitted in order. The full O013 goal remains active.
