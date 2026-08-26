@@ -1381,144 +1381,144 @@ Ketiga masalah tersebut secara algoritmik tidak dapat diputuskan, tetapi algorit
 	\begin{center} Ruang penutup dari suatu graf tetap merupakan graf. \end{center}
 	Ini adalah akibat langsung dari sifat pengangkatan lintasan untuk ruang penutup.
 \end{proof}
-\section{对称群}\label{sec:symmetric-group}
-对集合 $X$, 其\emph{对称群} $\mathfrak{S}_X$ 是全体双射 $X \xrightarrow{1:1} X$ 对映射合成所构成的群, 它自然地左作用于 $X$ 上, 其中元素也称为置换. 本节仅关心 $n := |X|$ 有限的情形, 此时 $|\mathfrak{S}_X| = n!$. 习惯上经常将 $X$ 的元素等同于 $\{1, \ldots, n\}$ 并记 $\mathfrak{S}_n := \mathfrak{S}_{\{1, \ldots, n\}}$. 
+\section{Grup Simetris}\label{sec:symmetric-group}
+Untuk suatu himpunan $X$, \emph{grup simetris} $\mathfrak{S}_X$ adalah grup semua bijeksi $X \xrightarrow{1:1} X$ terhadap komposisi pemetaan. Grup ini beraksi secara natural dari kiri pada $X$, dan unsur-unsurnya juga disebut permutasi. Bagian ini hanya membahas kasus ketika $n := |X|$ berhingga; dalam hal ini $|\mathfrak{S}_X| = n!$. Lazimnya, unsur-unsur $X$ diidentifikasi dengan $\{1, \ldots, n\}$ dan ditulis $\mathfrak{S}_n := \mathfrak{S}_{\{1, \ldots, n\}}$.
 
-对集合 $X$, $Y$ 存在自然的群嵌入 $\mathfrak{S}_X \times \mathfrak{S}_Y \hookrightarrow \mathfrak{S}_{X \sqcup Y}$, 或记作 $\mathfrak{S}_n \times \mathfrak{S}_m \hookrightarrow \mathfrak{S}_{n+m}$. 这里 $\mathfrak{S}_X$ 和 $\mathfrak{S}_Y$ 在 $\mathfrak{S}_{X \sqcup Y}$ 中之所以对乘法交换, 是因为它们所挪动的元素``不交''. 这自然地导向下述定义.
+Untuk himpunan $X$ dan $Y$, terdapat pembenaman grup natural $\mathfrak{S}_X \times \mathfrak{S}_Y \hookrightarrow \mathfrak{S}_{X \sqcup Y}$, yang juga dapat ditulis sebagai $\mathfrak{S}_n \times \mathfrak{S}_m \hookrightarrow \mathfrak{S}_{n+m}$. Unsur-unsur $\mathfrak{S}_X$ dan $\mathfrak{S}_Y$ di dalam $\mathfrak{S}_{X \sqcup Y}$ saling komutatif karena unsur-unsur yang mereka gerakkan ``saling lepas''. Hal ini secara natural mengantar kita pada definisi berikut.
 
-\begin{definition}\index{duichengqun}\index{xunhuan@循环 (cycle)}\index{duihuan@对换 (transposition)} \index[sym1]{S_n@$\mathfrak{S}_n$}
-	设 $a_1, \ldots, a_m$ 是 $X$ 中相异的元素. 对称群 $\mathfrak{S}_X$ 中的 $m$-\emph{循环} (又称轮换) $(a_1 \cdots a_m)$ 是下述映射 $\sigma: X \to X$
+\begin{definition}\index{duichengqun@grup simetris (symmetric group)}\index{xunhuan@siklus (cycle)}\index{duihuan@transposisi (transposition)} \index[sym1]{S_n@$\mathfrak{S}_n$}
+	Misalkan $a_1, \ldots, a_m$ unsur-unsur berbeda dari $X$. Di dalam grup simetris $\mathfrak{S}_X$, $m$-\emph{siklus} (juga disebut permutasi siklik) $(a_1 \cdots a_m)$ adalah pemetaan $\sigma: X \to X$ berikut:
 	\begin{gather*}
 		\sigma(a_i) = a_{i+1}, \quad i \in \Z/m\Z, \\
 		\sigma(x)=x, \quad x \notin \{a_1, \ldots, a_m\},
 	\end{gather*}
-	在此将下标 $\{1, \ldots, m\}$ 方便地视为 $\Z/m\Z$ 中元素, 即模 $m$ 的同余类. 称 $m$ 为该循环的长度; $2$-循环 $(a b)$ 又称\emph{对换}. 我们称 $\mathfrak{S}_X$ 中两个循环 $(a_1 \cdots a_m)$, $(b_1 \cdots b_k)$ 不交, 如果 $\{a_1, \ldots, a_m\} \cap \{b_1, \ldots, b_k\} = \emptyset$. 
+	Di sini, demi kemudahan, indeks $\{1, \ldots, m\}$ dipandang sebagai unsur-unsur $\Z/m\Z$, yaitu kelas-kelas kongruensi modulo $m$. Bilangan $m$ disebut panjang siklus tersebut; $2$-siklus $(a b)$ juga disebut \emph{transposisi}. Dua siklus di dalam $\mathfrak{S}_X$, yakni $(a_1 \cdots a_m)$ dan $(b_1 \cdots b_k)$, disebut saling lepas jika $\{a_1, \ldots, a_m\} \cap \{b_1, \ldots, b_k\} = \emptyset$.
 \end{definition}
-由先前讨论可知不交的循环对乘法相交换. 同样显然的是 $\text{ord}((a_1 \cdots a_m)) = m$.
+Dari pembahasan sebelumnya, siklus-siklus yang saling lepas komutatif terhadap perkalian. Jelas pula bahwa $\text{ord}((a_1 \cdots a_m)) = m$.
 
-\begin{proposition}[循环分解]\label{prop:cyclic-decomposition}
-	每个 $\sigma \in \mathfrak{S}_X$ 都能表成不交的循环之积
+\begin{proposition}[Dekomposisi siklus]\label{prop:cyclic-decomposition}
+	Setiap $\sigma \in \mathfrak{S}_X$ dapat dinyatakan sebagai hasil kali siklus-siklus yang saling lepas,
 	\[ \sigma = (a_1 a_2 \cdots) (b_1 b_2 \cdots) \cdots \]
-	其中的循环 $(a_1 \cdots)$, $(b_1 \cdots)$ 在至多差一个顺序的意义下唯一. 由于 $1$-循环是单位元, 乘积中可以省去.
+	dan siklus-siklus $(a_1 \cdots)$, $(b_1 \cdots)$ di dalamnya unik hingga perubahan urutan. Karena setiap $1$-siklus merupakan unsur identitas, semua siklus panjang satu itu boleh dihilangkan dari hasil kali.
 \end{proposition}
 \begin{proof}
-	这无非是 $X$ 在 $\sigma$ 生成的有限循环群 $\lrangle{\sigma}$ 下的轨道分解 (引理 \ref{prop:orbit-decomp}), 每个循环对应到一个轨道, 描述了 $\sigma$ 在该轨道上的作用.
+	Pernyataan ini tidak lain adalah dekomposisi $X$ menjadi orbit-orbit di bawah grup siklik berhingga yang dibangkitkan oleh $\sigma$, yakni $\lrangle{\sigma}$ (Lema \ref{prop:orbit-decomp}). Setiap siklus bersesuaian dengan satu orbit dan mendeskripsikan aksi $\sigma$ pada orbit itu.
 \end{proof}
 
-我们称循环分解中出现的循环长度 $n_1, n_2, \ldots$ (包括长度为一的循环) 为 $\sigma$ 的循环型, 计重数不计顺序. 为了得到唯一性, 不妨排成 $n_1 \geq n_2 \geq \cdots$, 循环型因之对应于整数 $n := |X|$ 的分拆: $n = n_1 + n_2 + \cdots$. 上面对阶数的讨论蕴涵 $\sigma$ 的阶数等于 $n_1, n_2, \ldots$ 的最小公倍数. \index{fenchai@分拆 (partition)}
+Panjang-panjang siklus $n_1, n_2, \ldots$ yang muncul dalam dekomposisi siklus (termasuk siklus-siklus berpanjang satu) disebut tipe siklus dari $\sigma$, dengan memperhitungkan multiplisitas tetapi mengabaikan urutan. Untuk memperoleh keunikan, kita dapat mengurutkannya sebagai $n_1 \geq n_2 \geq \cdots$; dengan demikian, tipe siklus bersesuaian dengan partisi bilangan bulat $n := |X|$, yakni $n = n_1 + n_2 + \cdots$. Pembahasan tentang orde di atas menyiratkan bahwa orde $\sigma$ sama dengan kelipatan persekutuan terkecil dari $n_1, n_2, \ldots$. \index{fenchai@partisi (partition)}
 
-据此, 共轭作用在对称群情形下有干净的陈述.
+Berdasarkan hal ini, aksi konjugasi dalam kasus grup simetris dapat dinyatakan dengan rapi.
 \begin{lemma}\label{prop:cycle-type}
-	设 $\tau = (a_1 a_2 \cdots) (b_1 \cdots) \cdots$ 为上述的循环分解, $\tau \in \mathfrak{S}_X$, 则
+	Misalkan $\tau = (a_1 a_2 \cdots) (b_1 \cdots) \cdots$ adalah dekomposisi siklus di atas dan $\tau \in \mathfrak{S}_X$. Maka
 	\[ \sigma \tau \sigma^{-1} = (\sigma(a_1) \sigma(a_2) \cdots) (\sigma(b_1) \cdots) \cdots. \]
-	作为推论, 元素 $\tau$ 的共轭类由其循环型确定; $\mathfrak{S}_X$ 中的共轭类一一对应于循环型 $n_1 \geq n_2 \geq \cdots$, 后者又一一对应于整数 $n = |X|$ 的分拆.
+	Sebagai akibatnya, kelas konjugasi unsur $\tau$ ditentukan oleh tipe siklusnya; kelas-kelas konjugasi di dalam $\mathfrak{S}_X$ berkorespondensi satu-satu dengan tipe-tipe siklus $n_1 \geq n_2 \geq \cdots$, yang pada gilirannya berkorespondensi satu-satu dengan partisi bilangan bulat $n = |X|$.
 \end{lemma}
 \begin{proof}
-	易见 $\sigma \tau \sigma^{-1}$ 将 $\sigma(a_i)$ 映至 $\sigma(a_{i+1})$, 将 $\sigma(b_j)$ 映至 $\sigma(b_{j+1})$, 依此类推. 由于 $\sigma$ 是双射, 由此唯一确定了 $\sigma \tau \sigma^{-1}$ 的循环分解. 适当选取 $\sigma$ 即可使 $\sigma\tau\sigma^{-1}$ 成为任意与 $\tau$ 有同样循环型的元素, 证毕. 
+	Jelas bahwa $\sigma \tau \sigma^{-1}$ memetakan $\sigma(a_i)$ ke $\sigma(a_{i+1})$, memetakan $\sigma(b_j)$ ke $\sigma(b_{j+1})$, dan demikian seterusnya. Karena $\sigma$ bijektif, hal ini menentukan secara unik dekomposisi siklus $\sigma \tau \sigma^{-1}$. Dengan memilih $\sigma$ secara sesuai, $\sigma\tau\sigma^{-1}$ dapat dibuat menjadi sebarang unsur yang memiliki tipe siklus sama dengan $\tau$, dan pembuktian selesai.
 \end{proof}
 
-下面我们改采符号 $\mathfrak{S}_n$.
+Selanjutnya kita menggunakan notasi $\mathfrak{S}_n$.
 \begin{lemma}\label{prop:S_n-generation}
-	群 $\mathfrak{S}_n$ 由对换 $\tau_i = (i \quad i+1)$ 生成, 这里 $1 \leq i < n$.
+	Grup $\mathfrak{S}_n$ dibangkitkan oleh transposisi-transposisi $\tau_i = (i \quad i+1)$, dengan $1 \leq i < n$.
 \end{lemma}
 \begin{proof}
-	将给定的置换 $\sigma$ 视同数列 $\sigma(1), \ldots, \sigma(n)$, 则表 $\sigma$ 为诸 $\tau_i$ 的积相当于借由反复交换数列中的相邻项, 将 $\sigma(1), \ldots, \sigma(n)$ 逐步化成 $1, \ldots, n$; 这当然是可行的. 严格论证留给有闲情逸致的读者.
+	Pandang suatu permutasi $\sigma$ sebagai barisan $\sigma(1), \ldots, \sigma(n)$. Menyatakan $\sigma$ sebagai hasil kali berbagai $\tau_i$ setara dengan mengubah $\sigma(1), \ldots, \sigma(n)$ secara bertahap menjadi $1, \ldots, n$ melalui pertukaran berulang atas suku-suku yang bersebelahan; hal ini tentu dapat dilakukan. Pembuktian yang ketat diserahkan kepada pembaca yang memiliki waktu senggang.
 \end{proof}
 
 \begin{lemma}\index[sym1]{sgn@$\sgn$}
-	存在唯一的群同态 $\sgn: \mathfrak{S}_n \to \{\pm 1\}$ 使得 $\sgn((a_1 \cdots a_m)) = (-1)^{m+1}$.
+	Terdapat homomorfisme grup unik $\sgn: \mathfrak{S}_n \to \{\pm 1\}$ sedemikian sehingga $\sgn((a_1 \cdots a_m)) = (-1)^{m+1}$.
 \end{lemma}
 \begin{proof}
-	群 $\mathfrak{S}_n$ 在函数集 $\{ f: \Z^n \to \Z\}$ 上有自然的左作用
+	Grup $\mathfrak{S}_n$ memiliki aksi kiri natural pada himpunan fungsi $\{ f: \Z^n \to \Z\}$,
 	\[ (\sigma f)(x_1, \ldots, x_n) = f(x_{\sigma(1)}, \ldots, x_{\sigma(n)}), \]
-	此作用对函数的逐点加法显然为线性: $\sigma(f \pm g) = \sigma f \pm \sigma g$. 今考虑函数
+	dan aksi ini jelas linear terhadap penjumlahan fungsi secara titik demi titik: $\sigma(f \pm g) = \sigma f \pm \sigma g$. Sekarang perhatikan fungsi
 	\[ \Delta(x_1, \ldots, x_n) = \prod_{1 \leq i < j \leq n} (x_j - x_i). \]
-	对于 $\sigma \in \mathfrak{S}_n$, 显见存在 $\sgn(\sigma) \in \{\pm 1\}$ 使得 $\sigma \Delta = \sgn(\sigma)\Delta$. 因为 $\Delta$ 不恒为零 (代入 $x_i = i$ 可知), $\sgn(\sigma)$ 是唯一确定的, 因而 $\sgn: \mathfrak{S}_n \to \{\pm1 \}$ 是群同态. 容易验证对每个 $1 \leq i < n$ 皆有 $\tau_i \Delta = -\Delta$. 对换之间两两共轭, 故对所有对换 $\tau \in \mathfrak{S}_n$ 皆有 $\sgn(\tau)=-1$. 由
+	Untuk $\sigma \in \mathfrak{S}_n$, jelas terdapat $\sgn(\sigma) \in \{\pm 1\}$ sedemikian sehingga $\sigma \Delta = \sgn(\sigma)\Delta$. Karena $\Delta$ bukan fungsi nol (sebagaimana terlihat dengan mensubstitusikan $x_i = i$), $\sgn(\sigma)$ ditentukan secara unik; akibatnya, $\sgn: \mathfrak{S}_n \to \{\pm1 \}$ adalah homomorfisme grup. Mudah diperiksa bahwa untuk setiap $1 \leq i < n$ berlaku $\tau_i \Delta = -\Delta$. Semua transposisi saling konjugat, sehingga bagi setiap transposisi $\tau \in \mathfrak{S}_n$ berlaku $\sgn(\tau)=-1$. Dari
 	\[(a_1 \cdots a_m) = (a_1 a_m) (a_1 \cdots a_{m-1}) = \cdots = (a_1 a_m) (a_1 a_{m-1}) \cdots (a_1 a_2) \]
-	可见 $\sgn((a_1 \cdots a_m)) = (-1)^{m+1}$. 唯一性导自命题 \ref{prop:cyclic-decomposition}. 
+	diperoleh $\sgn((a_1 \cdots a_m)) = (-1)^{m+1}$. Keunikan mengikuti dari Proposisi \ref{prop:cyclic-decomposition}.
 \end{proof}
 
-\begin{definition}[交错群]\index[sym1]{A_n@$\mathfrak{A}_n$}
-	定义\emph{交错群} $\mathfrak{A}_n$ 为 $\Ker[ \mathfrak{S}_n \xrightarrow{\sgn} \{\pm 1\}]$, 它是 $\mathfrak{S}_n$ 的正规子群.
+\begin{definition}[Grup selang-seling]\index[sym1]{A_n@$\mathfrak{A}_n$}
+	\emph{Grup selang-seling} $\mathfrak{A}_n$ didefinisikan sebagai $\Ker[ \mathfrak{S}_n \xrightarrow{\sgn} \{\pm 1\}]$; grup ini merupakan subgrup normal dari $\mathfrak{S}_n$.
 \end{definition}
-落在 $\mathfrak{A}_n$ 中的置换称为偶置换, 否则称为奇置换. 当 $n > 1$ 时 $(\mathfrak{S}_n : \mathfrak{A}_n) = |\{\pm 1\}| = 2$. 当 $n \geq 4$ 时 $\mathfrak{A}_n$ 非交换, 例如: $(1 2 3)(1 2 4) = (1 3) (2 4)$ 而 $(1 2 4)(1 2 3) = (1 4) (2 3)$.
+Permutasi yang terletak di dalam $\mathfrak{A}_n$ disebut permutasi genap, sedangkan yang lain disebut permutasi ganjil. Ketika $n > 1$, $(\mathfrak{S}_n : \mathfrak{A}_n) = |\{\pm 1\}| = 2$. Ketika $n \geq 4$, $\mathfrak{A}_n$ tidak abelian; sebagai contoh, $(1 2 3)(1 2 4) = (1 3) (2 4)$, sedangkan $(1 2 4)(1 2 3) = (1 4) (2 3)$.
 
-我们需要以下简单的性质:
+Kita memerlukan sifat-sifat sederhana berikut:
 \begin{itemize}
-	\item 群 $\mathfrak{S}_n$ 的导出子群 (见 \S\ref{sec:solvable-groups}) $\mathscr{D}^1 \mathfrak{S}_n$ 等于 $\mathfrak{A}_n$. 当 $n=1$ 时此为显然. 以下解释 $n \geq 2$ 情形: $\mathfrak{S}_n$ 由对换生成, 每个对换都共轭于 $(1 \; 2)$, 故交换商 $\mathfrak{S}_n / \mathscr{D}^1 \mathfrak{S}_n$ 由 $(1 \; 2)$ 的像生成, 这是二阶元. 另一方面引理 \ref{prop:abelianization} 给出满同态
-		\[ \mathfrak{S}_n / \mathscr{D}^1 \mathfrak{S}_n \stackrel{\text{商同态}}{\twoheadrightarrow} \mathfrak{S}_n/\mathfrak{A}_n \simeq \{ \pm 1\}. \]
-		比较阶数可见以上同态实为同构, 亦即 $\mathscr{D}^1 \mathfrak{S}_n = \mathfrak{A}_n$.
-	\item 所有 $\mathfrak{S}_n$ 中长度为奇数的循环皆包含于 $\mathfrak{A}_n$.
-	\item 当 $n \geq 3$ 时, $\mathfrak{A}_n$ 由 $3$-循环 (形如 $(i j k)$) 生成. 这是由于任意 $\sigma \in \mathfrak{A}_n$ 可以表成对换的积, $\sgn(\sigma)=1$ 确保乘积有偶数个项. 运用以下观察
+	\item Untuk grup $\mathfrak{S}_n$, subgrup turunannya (lihat \S\ref{sec:solvable-groups}) $\mathscr{D}^1 \mathfrak{S}_n$ sama dengan $\mathfrak{A}_n$. Untuk $n=1$, hal ini jelas. Berikut penjelasan untuk kasus $n \geq 2$: $\mathfrak{S}_n$ dibangkitkan oleh transposisi-transposisi, dan setiap transposisi konjugat dengan $(1 \; 2)$, sehingga hasil bagi abelian $\mathfrak{S}_n / \mathscr{D}^1 \mathfrak{S}_n$ dibangkitkan oleh bayangan $(1 \; 2)$, yang merupakan unsur berorde dua. Di sisi lain, Lema \ref{prop:abelianization} memberikan homomorfisme surjektif
+		\[ \mathfrak{S}_n / \mathscr{D}^1 \mathfrak{S}_n \stackrel{\text{homomorfisme hasil bagi}}{\twoheadrightarrow} \mathfrak{S}_n/\mathfrak{A}_n \simeq \{ \pm 1\}. \]
+		Dengan membandingkan orde, homomorfisme di atas ternyata merupakan isomorfisme; jadi $\mathscr{D}^1 \mathfrak{S}_n = \mathfrak{A}_n$.
+	\item Semua siklus berpanjang ganjil di dalam $\mathfrak{S}_n$ termuat di dalam $\mathfrak{A}_n$.
+	\item Ketika $n \geq 3$, $\mathfrak{A}_n$ dibangkitkan oleh $3$-siklus (yang berbentuk $(i j k)$). Ini karena setiap $\sigma \in \mathfrak{A}_n$ dapat dinyatakan sebagai hasil kali transposisi, dan $\sgn(\sigma)=1$ memastikan bahwa hasil kali tersebut memiliki jumlah suku yang genap. Dengan menggunakan pengamatan berikut,
 		\[ (i j)(k l) = \begin{cases}
 			1, & \{i,j\} = \{k,l\}, \\
-			\text{$3$-循环}, & \{i,j\} \cap \ \{k,l\}\; \text{恰有一元素}, \\
+			\text{$3$-siklus}, & \{i,j\} \cap \ \{k,l\}\; \text{tepat satu unsur}, \\
 			(i j k) (j k l), & \{i,j\} \cap \ \{k,l\} = \emptyset
 		\end{cases} \]
-		可将乘积改写为 $3$-循环的积.
-	\item 当 $n \geq 5$ 时, 任两个 $3$-循环 $(i j k)$, $(i' j' k')$ 在 $\mathfrak{A}_n$ 中共轭. 首先留意到引理 \ref{prop:cycle-type} 蕴涵存在 $\sigma \in \mathfrak{S}_n$ 使得 $\sigma (i j k) \sigma^{-1} = (i' j' k')$. 若 $\sigma \in \mathfrak{A}_n$ 则收工, 否则取相异元 $l, m \in \{1, \ldots, n\} \smallsetminus \{i,j,k\}$ 并置 $\sigma' := \sigma \cdot (l m) \in \mathfrak{A}_n$; 对之仍有 $\sigma' (i j k) (\sigma')^{-1} = (i' j' k')$.
+		hasil kali itu dapat ditulis ulang sebagai hasil kali $3$-siklus.
+	\item Ketika $n \geq 5$, sebarang dua $3$-siklus $(i j k)$ dan $(i' j' k')$ saling konjugat di dalam $\mathfrak{A}_n$. Pertama, perhatikan bahwa Lema \ref{prop:cycle-type} menyiratkan adanya $\sigma \in \mathfrak{S}_n$ sedemikian sehingga $\sigma (i j k) \sigma^{-1} = (i' j' k')$. Jika $\sigma \in \mathfrak{A}_n$, kita selesai. Jika tidak, ambil unsur-unsur berbeda $l, m \in \{1, \ldots, n\} \smallsetminus \{i,j,k\}$ dan tetapkan $\sigma' := \sigma \cdot (l m) \in \mathfrak{A}_n$; tetap berlaku $\sigma' (i j k) (\sigma')^{-1} = (i' j' k')$.
 \end{itemize}
-以下记任意置换 $\sigma$ 的不动点集为 $\text{Fix}(\sigma) := \left\{ i: \sigma(i)=i \right\}$.
+Berikutnya, untuk sebarang permutasi $\sigma$, tulis himpunan titik tetapnya sebagai $\text{Fix}(\sigma) := \left\{ i: \sigma(i)=i \right\}$.
 
 \begin{theorem}[É.\ Galois]\label{prop:A_n-simple}
-	当 $n \geq 5$ 时 $\mathfrak{A}_n$ 是单群.
+	Ketika $n \geq 5$, $\mathfrak{A}_n$ adalah grup sederhana.
 \end{theorem}
 \begin{proof}
-	设 $H \lhd \mathfrak{A}_n$, $H \neq \{1\}$. 从以上性质可知找出一个 $3$-循环 $\sigma \in H$ 即足. 兹断言取 $\sigma \in H \smallsetminus \{1\}$ 使得 $\left|\text{Fix}(\sigma)\right|$ 极大便是.
+	Misalkan $H \lhd \mathfrak{A}_n$ dan $H \neq \{1\}$. Berdasarkan sifat-sifat di atas, cukup mencari sebuah $3$-siklus $\sigma \in H$. Kita mengklaim bahwa suatu $\sigma \in H \smallsetminus \{1\}$ yang memaksimumkan $\left|\text{Fix}(\sigma)\right|$ memiliki sifat ini.
 	
-	如果 $\sigma$ 的循环分解中只有对换, 那么分解中至少含两项如 $(i j) (k l)$, 其中 $\{i,j\} \cap \{k,l\} = \emptyset$. 由于 $n \geq 5$, 可取 $r \notin \{i,j,k, l\}$ 并定义
+	Jika dekomposisi siklus $\sigma$ hanya memuat transposisi, dekomposisi itu memiliki sekurang-kurangnya dua suku, katakanlah $(i j) (k l)$, dengan $\{i,j\} \cap \{k,l\} = \emptyset$. Karena $n \geq 5$, kita dapat mengambil $r \notin \{i,j,k, l\}$ dan mendefinisikan
 	\begin{equation}\label{eqn:tau-sigma-simple}
 		\tau := (k l r), \quad \sigma' := [\tau, \sigma] = \tau\sigma\tau^{-1}\sigma^{-1} \in H \quad (\because H \lhd \mathfrak{A}_n).
 	\end{equation}
-	可直接验证 $i,j \in \text{Fix}(\sigma') \smallsetminus \text{Fix}(\sigma)$, $\sigma'(k) = r \neq k$, 以及
+	Dapat diperiksa langsung bahwa $i,j \in \text{Fix}(\sigma') \smallsetminus \text{Fix}(\sigma)$, bahwa $\sigma'(k) = r \neq k$, dan bahwa
 	\[ \text{Fix}(\sigma) \smallsetminus \{r\} = \text{Fix}(\sigma) \smallsetminus \{k, l, r\} = \text{Fix}(\sigma) \cap \text{Fix}(\tau) \subset \text{Fix}(\sigma'). \]
-	综之 $\left|\text{Fix}(\sigma')\right| > \left|\mathrm{Fix}(\sigma)\right|$, 矛盾.
+	Secara keseluruhan, $\left|\text{Fix}(\sigma')\right| > \left|\mathrm{Fix}(\sigma)\right|$, suatu kontradiksi.
 	
-	设 $\sigma$ 的循环分解中包含长度 $>2$ 的项 $(i j k \cdots)$. 假若 $\sigma = (i j k)$ 则是所求的 $3$-循环; 否则因为 $\sigma$ 不可能是 $4$-循环, $\sigma$ 除了 $i,j,k$ 之外还挪动至少两个相异元 $r, l$. 依然以 \eqref{eqn:tau-sigma-simple} 式定义 $\sigma' \in H$. 可以验证 $j \in \text{Fix}(\sigma')$, $\sigma'(k) = l \neq k$ 和
+	Misalkan dekomposisi siklus $\sigma$ memuat suku berpanjang $>2$, yakni $(i j k \cdots)$. Jika $\sigma = (i j k)$, kita telah memperoleh $3$-siklus yang dicari. Jika tidak, karena $\sigma$ tidak mungkin berupa $4$-siklus, $\sigma$ menggerakkan, selain $i,j,k$, sekurang-kurangnya dua unsur berbeda $r,l$. Sekali lagi, melalui \eqref{eqn:tau-sigma-simple}, definisikan $\sigma' \in H$. Dapat diperiksa bahwa $j \in \text{Fix}(\sigma')$, bahwa $\sigma'(k) = l \neq k$, dan bahwa
 	\[ \text{Fix}(\sigma) = \text{Fix}(\sigma) \smallsetminus \{k,l,r\} = \text{Fix}(\sigma) \cap \text{Fix}(\tau) \subset \text{Fix}(\sigma'). \]
-	仍得到矛盾 $\left|\text{Fix}(\sigma')\right| > \left|\mathrm{Fix}(\sigma)\right|$. 明所欲证.
+	Sekali lagi kita memperoleh kontradiksi $\left|\text{Fix}(\sigma')\right| > \left|\mathrm{Fix}(\sigma)\right|$. Ini membuktikan klaim.
 \end{proof}
 
-当 $n \geq 5$ 时 $\mathfrak{A}_n$ 是非交换单群, 因此它必然等于自身的导出子群 $\mathscr{D}^1 \mathfrak{A}_n$. 下述推论是证明五次以上方程无根式解 (定理 \ref{prop:Abel-Ruffini}) 的群论钥匙.
-\begin{corollary}\label{prop:S_n-unsolvable}\index{kejiequn}
-	当 $n \geq 5$ 时, 对所有 $i \geq 1$ 都有 $\mathscr{D}^i \mathfrak{S}_n = \mathfrak{A}_n$; 作为推论, 当 $n \geq 5$ 时 $\mathfrak{S}_n$ 不可解.
+Ketika $n \geq 5$, $\mathfrak{A}_n$ adalah grup sederhana nonabelian, sehingga grup ini harus sama dengan subgrup turunannya sendiri, $\mathscr{D}^1 \mathfrak{A}_n$. Akibat berikut merupakan kunci teori grup bagi pembuktian bahwa persamaan berderajat lima atau lebih tidak dapat diselesaikan dengan radikal (Teorema \ref{prop:Abel-Ruffini}).
+\begin{corollary}\label{prop:S_n-unsolvable}\index{kejiequn@grup solvabel (solvable group)}
+	Ketika $n \geq 5$, untuk setiap $i \geq 1$ berlaku $\mathscr{D}^i \mathfrak{S}_n = \mathfrak{A}_n$; akibatnya, ketika $n \geq 5$, $\mathfrak{S}_n$ tidak solvabel.
 \end{corollary}
 \begin{proof}
-	已知 $\mathscr{D}^1 \mathfrak{S}_n = \mathfrak{A}_n$. 配合前述讨论, 当 $n \geq 5$ 时, 对所有 $i \geq 1$ 皆有 $\mathscr{D}^i \mathfrak{S}_n = \mathscr{D}^{i-1} \mathfrak{A}_n = \mathfrak{A}_n$. 关于不可解性的断言请见引理 \ref{prop:solvable-nilpotent-characterization}.
+	Kita telah mengetahui bahwa $\mathscr{D}^1 \mathfrak{S}_n = \mathfrak{A}_n$. Bersama pembahasan sebelumnya, ketika $n \geq 5$, untuk setiap $i \geq 1$ berlaku $\mathscr{D}^i \mathfrak{S}_n = \mathscr{D}^{i-1} \mathfrak{A}_n = \mathfrak{A}_n$. Untuk pernyataan bahwa grup tersebut tidak solvabel, lihat Lema \ref{prop:solvable-nilpotent-characterization}.
 \end{proof}
 
-读者可以动手验证 $\mathscr{D}^1 \mathfrak{A}_4 = \left\{\identity, (1 2)(3 4), (1 3) (2 4), (1 4)(2 3)\right\}$, 同构于 $(\Z/2\Z)^2$. 因此 $n < 5$ 时 $\mathfrak{S}_n$ 确实可解.
+Pembaca dapat memeriksa secara langsung bahwa \[ \mathscr{D}^1 \mathfrak{A}_4 = \left\{\identity, (1 2)(3 4), (1 3) (2 4), (1 4)(2 3)\right\} , \] yang isomorfik dengan $(\Z/2\Z)^2$. Jadi, ketika $n < 5$, $\mathfrak{S}_n$ memang solvabel.
 
-我们接着考察 $\mathfrak{S}_n$ 的展示. 为此不妨一并考虑例 \ref{eg:braid} 提到的辫群 $\mathcal{B}_n$. 简要摘录之前的构造如下: 形象地看, $\mathcal{B}_n$ 是由所有 $n$ 条线编成的辫子为元素的群, 辫子在空间 $\R^3$ 中连续的形变下 (不动端点, 不割断线) 视为等价. 辫子可以图解为诸如 ($n=2,3$)
+Selanjutnya kita mempelajari presentasi $\mathfrak{S}_n$. Untuk itu, kita sekaligus mempertimbangkan grup kepang yang disebutkan dalam Contoh \ref{eg:braid}, yakni $\mathcal{B}_n$. Berikut ringkasan singkat konstruksi sebelumnya: secara visual, unsur-unsur $\mathcal{B}_n$ adalah kepang yang dibentuk oleh semua konfigurasi $n$ untai, dengan kepang-kepang yang dapat dideformasi secara kontinu di dalam ruang $\R^3$ (titik-titik ujung tetap dan untai-untai tidak dipotong) dipandang ekuivalen. Kepang dapat digambarkan, misalnya, sebagai berikut (untuk $n=2,3$):
 \begin{center}\begin{tikzpicture}[baseline=(braid)]
 	\braid[style strands={1}, style strands={2}] (braid) s_1;
 	\end{tikzpicture} \qquad \begin{tikzpicture}[baseline=(braid), yscale=0.8]
 	\braid[style strands={1}, style strands={2}, style strands={3}] (braid)  s_1 s_2^{-1};
 \end{tikzpicture}\end{center}
-的形式. 辫群中的乘法是将辫子从上而下地接合, 如
+Perkalian di dalam grup kepang dilakukan dengan menyambungkan kepang dari atas ke bawah, misalnya
 \begin{center}\begin{tikzpicture}[baseline=(braid)]
 	\braid[style strands={1}, style strands={2}] (braid) s_1;
 	\end{tikzpicture} \quad $\bullet$ \quad \begin{tikzpicture}[baseline=(braid)]
 	\braid[style strands={1}, style strands={2}] (braid) s_1^{-1};
 	\end{tikzpicture} \quad $=$ \quad \begin{tikzpicture}[baseline=(braid), yscale=0.8]
 	\braid[style strands={1}, style strands={2}] (braid) s_1 s_1^{-1};
-	\end{tikzpicture} \quad $\xlongequal{\text{拉直}}$ \quad
+	\end{tikzpicture} \quad $\xlongequal{\text{diluruskan}}$ \quad
 	\begin{tikzpicture}[baseline=(M), yscale=0.8]
 	\draw (0,1) -- (0,-1);
 	\draw (1,1) -- (1,-1);
 	\coordinate (M) at (0,0);
 \end{tikzpicture}\end{center}
-结合律一望可知, $\mathcal{B}_n$ 的幺元是 $n$ 条平行线 $\vert \cdots \vert$. 辫子的图表对水平轴作镜射给出其逆, 何以故? 请端详上图.
+Hukum asosiatif langsung terlihat, dan unsur identitas $\mathcal{B}_n$ adalah $n$ untai sejajar $\vert \cdots \vert$. Pencerminan diagram kepang terhadap sumbu horizontal memberikan inversnya; mengapa demikian? Perhatikan dengan saksama gambar di atas.
 
-两组辫子的``横向并列''导出群同态 $\mathcal{B}_n \times \mathcal{B}_m \to \mathcal{B}_{n+m}$.
+``Peletakan berdampingan'' secara horizontal atas dua kepang menghasilkan homomorfisme grup $\mathcal{B}_n \times \mathcal{B}_m \to \mathcal{B}_{n+m}$.
 
-显然 $\mathcal{B}_1 = \{1\}$. 以下假设 $n \geq 2$. 对 $1 \leq i < n$, 定义元素 $\sigma_i \in \mathcal{B}_n$ 使得其中第 $i$, $i+1$ 条线的缠绕模式为
+Jelas bahwa $\mathcal{B}_1 = \{1\}$. Berikutnya, andaikan $n \geq 2$. Untuk $1 \leq i < n$, definisikan unsur $\sigma_i \in \mathcal{B}_n$ sedemikian sehingga pola persilangan untai ke-$i$ dan ke-$i+1$ adalah
 \begin{center} \begin{tikzpicture}
 	\braid[style strands={1}, style strands={2}] (braid) s_1;
 	\node[above] at (braid-1-s) {$i$};
 	\node[above] at (braid-2-s) {$i+1$};
 \end{tikzpicture} \end{center}
-其余诸线则不相缠绕. 容易看出当 $|i-j| > 1$ 时, $\sigma_i$, $\sigma_j$ 影响的线不交故 $\sigma_i \sigma_j = \sigma_j \sigma_i$; 另一方面, ``杨--Baxter 方程''
+sedangkan untai-untai lainnya tidak saling berpilin. Mudah dilihat bahwa ketika $|i-j| > 1$, untai-untai yang dipengaruhi oleh $\sigma_i$ dan $\sigma_j$ saling lepas, sehingga $\sigma_i \sigma_j = \sigma_j \sigma_i$. Di sisi lain, ``persamaan Yang--Baxter''
 \[ \begin{tikzpicture}[yscale=0.6, baseline=(braid)]
 	\braid[style strands={1}, style strands={2}, style strands={3}] (braid) s_1 s_2 s_1;
 	\node[above] at (braid-1-s) {$i$};
@@ -1532,74 +1532,74 @@ Ketiga masalah tersebut secara algoritmik tidak dapat diputuskan, tetapi algorit
 	\node[above] at (braid-2-s) {$i+1$};
 	\node[above] at (braid-3-s) {$i+2$};
 \end{tikzpicture} \]
-表明 $\sigma_i \sigma_{i+1} \sigma_i = \sigma_{i+1} \sigma_i \sigma_{i+1}$ 对 $1 \leq i < n-1$ 恒成立. 请读者试着直观地理解
+menunjukkan bahwa $\sigma_i \sigma_{i+1} \sigma_i = \sigma_{i+1} \sigma_i \sigma_{i+1}$ selalu berlaku untuk $1 \leq i < n-1$. Pembaca dipersilakan mencoba memahami secara intuitif bahwa
 \begin{inparaenum}[(a)]
-	\item 元素 $\sigma_1, \ldots, \sigma_{n-1}$ 生成 $\mathcal{B}_n$,
-	\item 关系式 $|i-j| > 1 \implies \sigma_i \sigma_j = \sigma_j \sigma_i$ 和 $\sigma_i \sigma_{i+1} \sigma_i = \sigma_{i+1} \sigma_i \sigma_{i+1}$ 完全描述了 $\mathcal{B}_n$ 的结构.
+	\item unsur-unsur $\sigma_1, \ldots, \sigma_{n-1}$ membangkitkan $\mathcal{B}_n$,
+	\item relasi-relasi $|i-j| > 1 \implies \sigma_i \sigma_j = \sigma_j \sigma_i$ dan $\sigma_i \sigma_{i+1} \sigma_i = \sigma_{i+1} \sigma_i \sigma_{i+1}$ sepenuhnya mendeskripsikan struktur $\mathcal{B}_n$.
 \end{inparaenum}
-更精简的说法是借助群的展示
+Pernyataan yang lebih ringkas menggunakan presentasi grup
 \begin{equation}\label{eqn:braid-presentation} \left\langle \sigma_1, \ldots, \sigma_{n-1} \Biggr| \begin{array}{ll}
 	\sigma_i \sigma_j = \sigma_j \sigma_i, & |i-j| > 1 \\
 	\sigma_i \sigma_{i+1} \sigma_i = \sigma_{i+1} \sigma_i \sigma_{i+1}, & 1 \leq i < n-1
 	\end{array} \right\rangle \rightiso \mathcal{B}_n. \end{equation}
 
-这个展示既可以从 $\mathcal{B}_n$ 的拓扑诠释推导, 亦可直接当作辫群的组合学定义. 留意到 $\mathcal{B}_2 \simeq \Z$, 当 $n \geq 3$ 时 $\mathcal{B}_n$ 是无穷非交换群.
+Presentasi ini dapat diturunkan dari interpretasi topologis $\mathcal{B}_n$, atau dapat langsung dijadikan definisi kombinatorial grup kepang. Perhatikan bahwa $\mathcal{B}_2 \simeq \Z$, sedangkan ketika $n \geq 3$, $\mathcal{B}_n$ merupakan grup tak hingga nonabelian.
 
-现在我们来联系 $\mathcal{B}_n$ 与 $\mathfrak{S}_n$. 对每条辫子 $x \in \mathcal{B}_n$, 定义相应的 $\sigma \in \mathfrak{S}_n$ 使得辫图从底端 $i$ 走到顶端 $\sigma(i)$ 如下
+Sekarang kita hubungkan $\mathcal{B}_n$ dengan $\mathfrak{S}_n$. Untuk setiap kepang $x \in \mathcal{B}_n$, definisikan $\sigma \in \mathfrak{S}_n$ yang bersesuaian sedemikian sehingga pada diagram kepang, lintasan dari ujung bawah $i$ berakhir di ujung atas $\sigma(i)$, seperti berikut:
 \begin{center}\begin{tikzpicture}[scale=0.5]
 	\node (S) at (-1.7, 1) {$\sigma(i)$};
 	\node (E) at (1.7, -1) {$i$};
 	\draw (S) -- (E) node[midway, fill=white, anchor=center, sloped] {$\cdots$};
 \end{tikzpicture}\end{center}
-易见这给出群同态 $\mathcal{B}_n \to \mathfrak{S}_n$, 它使图表
+Jelas bahwa hal ini memberikan homomorfisme grup $\mathcal{B}_n \to \mathfrak{S}_n$ yang membuat diagram
 \[\begin{tikzcd}
 	\mathcal{B}_n \times \mathcal{B}_m \arrow[r] \arrow[d] & \mathcal{B}_{n+m} \arrow[d] \\
 	\mathfrak{S}_n \times \mathfrak{S}_m \arrow[r] & \mathfrak{S}_{n+m}
 \end{tikzcd}\]
-交换, 并将 $\sigma_i \in \mathcal{B}_n$ 映到对换
+komutatif, dan memetakan $\sigma_i \in \mathcal{B}_n$ ke transposisi
 \[ \tau_i := (i \quad i+1) \in \mathfrak{S}_n, \quad 1 \leq i < n. \]
-引理 \ref{prop:S_n-generation} 断言它们生成 $\mathfrak{S}_n$. 如改从 $\mathcal{B}_n$ 的展示 \eqref{eqn:braid-presentation} 切入, 我们可以先在 $\mathfrak{S}_n$ 中验证关系式
+Lema \ref{prop:S_n-generation} menyatakan bahwa transposisi-transposisi itu membangkitkan $\mathfrak{S}_n$. Jika kita mulai dari presentasi $\mathcal{B}_n$ dalam \eqref{eqn:braid-presentation}, pertama-tama kita dapat memeriksa relasi-relasi berikut di dalam $\mathfrak{S}_n$:
 \begin{gather*}
 	|i-j| > 1 \implies \tau_i \tau_j = \tau_j \tau_i, \\
 	\tau_i^2 = 1, \quad 1 \leq i < n, \\
 	\tau_i \tau_{i+1} \tau_i = \tau_{i+1} \tau_i \tau_{i+1} = (i \quad i+2), \quad 1 \leq i < n-1.
 \end{gather*}
-所以 $\sigma_i \mapsto \tau_i$ 确定了同态 $\mathcal{B}_n \to \mathfrak{S}_n$. 这就引出一个显然的问题: 这些关系式是否给出 $\mathfrak{S}_n$ 的展示?
+Jadi, $\sigma_i \mapsto \tau_i$ menentukan suatu homomorfisme $\mathcal{B}_n \to \mathfrak{S}_n$. Hal ini memunculkan pertanyaan yang wajar: apakah relasi-relasi tersebut memberikan presentasi $\mathfrak{S}_n$?
 
-为避免歧义, 另立符号 $\tilde{\tau}_i$ 代入以上三族关系式, 联立后能够化作等价形式
+Untuk menghindari ketaksaan, gunakan simbol baru $\tilde{\tau}_i$ di dalam ketiga keluarga relasi di atas. Secara bersama-sama, relasi-relasi itu dapat ditulis dalam bentuk ekuivalen
 \begin{equation}\label{eqn:S_n-presentation}\begin{gathered}
 	\tilde{\tau}_i^2 = 1, \quad 1 \leq i < n \\
 	|i-j| > 1 \implies (\tilde{\tau}_i \tilde{\tau}_j)^2 = 1, \\
 	(\tilde{\tau}_i \tilde{\tau}_{i+1})^3 = 1, \quad 1 \leq i < n-1.
 \end{gathered}\end{equation}
-定义 $\mathfrak{S}'_n := \lrangle{\tilde{\tau}_1, \ldots, \tilde{\tau}_n \big| \text{满足于}\; \eqref{eqn:S_n-presentation} }$, 另外约定 $\mathfrak{S}'_1 := \{1\}$. 因之有群同态 $\mathcal{B}_n \twoheadrightarrow \mathfrak{S}'_n \twoheadrightarrow \mathfrak{S}_n$, 满足 $\sigma_i \mapsto \tilde{\tau}_i \mapsto \tau_i$. 从 $\mathcal{B}_n$ 过渡到 $\mathfrak{S}'_n$ 相当于忽视缠绕
+Definisikan $\mathfrak{S}'_n := \lrangle{\tilde{\tau}_1, \ldots, \tilde{\tau}_{n-1} \big| \text{memenuhi}\; \eqref{eqn:S_n-presentation} }$, serta tetapkan $\mathfrak{S}'_1 := \{1\}$. Dengan demikian, terdapat homomorfisme grup $\mathcal{B}_n \twoheadrightarrow \mathfrak{S}'_n \twoheadrightarrow \mathfrak{S}_n$ yang memenuhi $\sigma_i \mapsto \tilde{\tau}_i \mapsto \tau_i$. Beralih dari $\mathcal{B}_n$ ke $\mathfrak{S}'_n$ berarti mengabaikan lilitan ganda
 \begin{tikzpicture}[baseline=(braid), yscale=0.5, xscale=0.7]
 	\braid[style strands={1}, style strands={2}] (braid) s_1 s_1;
 \end{tikzpicture}.
 
 \begin{theorem}\label{prop:S_n-presentation}
-	映射 $\mathfrak{S}'_n \to \mathfrak{S}_n$ 是同构, 换言之 \eqref{eqn:S_n-presentation} 确实给出 $\mathfrak{S}_n$ 的展示.
+	Pemetaan $\mathfrak{S}'_n \to \mathfrak{S}_n$ merupakan isomorfisme; dengan kata lain, \eqref{eqn:S_n-presentation} memang memberikan presentasi $\mathfrak{S}_n$.
 \end{theorem}
 \begin{proof}
-	既然 $\mathfrak{S}'_n \to \mathfrak{S}_n$ 是满同态, 只要递归地证明 $|\mathfrak{S}'_n| \leq n!$ 即可. 因 $n=1,2$ 的情形是平凡的, 以下设 $n > 2$. 展示 \eqref{eqn:S_n-presentation} 给出自然同态 $\mathfrak{S}'_{n-1} \to \mathfrak{S}'_n$. 我们暂不知这是否为单射, 但总能让 $\mathfrak{S}'_{n-1}$ 以右乘作用在 $\mathfrak{S}'_n$ 上并考察其轨道. 今断言
+	Karena $\mathfrak{S}'_n \to \mathfrak{S}_n$ adalah homomorfisme surjektif, cukup dibuktikan secara rekursif bahwa $|\mathfrak{S}'_n| \leq n!$. Kasus $n=1,2$ trivial, sehingga selanjutnya andaikan $n > 2$. Presentasi \eqref{eqn:S_n-presentation} memberikan homomorfisme natural $\mathfrak{S}'_{n-1} \to \mathfrak{S}'_n$. Kita belum mengetahui apakah homomorfisme ini injektif, tetapi kita selalu dapat membiarkan $\mathfrak{S}'_{n-1}$ beraksi pada $\mathfrak{S}'_n$ melalui perkalian kanan dan mempelajari orbit-orbitnya. Kita mengklaim bahwa
 	\[ \mathfrak{S}'_n = 1 \cdot \mathfrak{S}'_{n-1} \cup \tilde{\tau}_{n-1}\mathfrak{S}'_{n-1} \cup \cdots \cup (\tilde{\tau}_1 \cdots \tilde{\tau}_{n-1} \mathfrak{S}'_{n-1}), \]
-	若此式成立, 立得 $\mathfrak{S}'_n \leq n |\mathfrak{S}'_{n-1}| \leq n(n-1)! = n!$.
+	jika kesamaan ini berlaku, segera diperoleh $|\mathfrak{S}'_n| \leq n |\mathfrak{S}'_{n-1}| \leq n(n-1)! = n!$.
 	
-	仅须证明等式右侧在每个 $\tilde{\tau}_i$ 的左乘下保持封闭. 考虑 $\tilde{\tau}_i (\tilde{\tau}_j \cdots \tilde{\tau}_{n-1}) \mathfrak{S}'_{n-1}$: 当 $i=j-1$ 或 $i=j$ 时显然有封闭性 ($\tilde{\tau}_j^2 = 1$); 当 $i < j-1$ 时用 \eqref{eqn:S_n-presentation} 可将 $\tilde{\tau}_i$ 朝右吸收到 $\mathfrak{S}'_{n-1}$, 依然封闭. 故以下假设 $i>j$. 我们利用 \eqref{eqn:S_n-presentation} 的第二式将 $\bm{\tilde{\tau}_i}$ 右移 (为强调故变化字体), 直到
+	Cukup dibuktikan bahwa ruas kanan kesamaan tersebut tertutup terhadap perkalian kiri oleh setiap $\tilde{\tau}_i$. Perhatikan $\tilde{\tau}_i (\tilde{\tau}_j \cdots \tilde{\tau}_{n-1}) \mathfrak{S}'_{n-1}$: ketika $i=j-1$ atau $i=j$, ketertutupan langsung terlihat ($\tilde{\tau}_j^2 = 1$); ketika $i < j-1$, dengan \eqref{eqn:S_n-presentation}, $\tilde{\tau}_i$ dapat digeser ke kanan dan diserap ke dalam $\mathfrak{S}'_{n-1}$, sehingga ketertutupan tetap berlaku. Jadi, selanjutnya andaikan $i>j$. Kita menggunakan relasi kedua dalam \eqref{eqn:S_n-presentation} untuk menggeser $\bm{\tilde{\tau}_i}$ ke kanan (jenis hurufnya diubah untuk memberi penekanan), hingga diperoleh
 	\[ \cdots \tilde{\tau}_{i-2} \bm{\tilde{\tau}_i} \tilde{\tau}_{i-1} \tilde{\tau}_i \tilde{\tau}_{i+1} \cdots \mathfrak{S}'_{n-1}. \]
-	接着应用 \eqref{eqn:S_n-presentation} 的第三式 (或它在 \eqref{eqn:braid-presentation} 中的形式) 化之为
+	Kemudian, gunakan relasi ketiga dalam \eqref{eqn:S_n-presentation} (atau bentuknya dalam \eqref{eqn:braid-presentation}) untuk mengubah ungkapan itu menjadi
 	\[ \cdots \tilde{\tau}_{i-2} \tilde{\tau}_{i-1} \tilde{\tau}_i \bm{\tilde{\tau}_{i-1}} \tilde{\tau}_{i+1} \cdots \mathfrak{S}'_{n-1}. \]
-	上式标出的 $\bm{\tilde{\tau}_{i-1}}$ 可一路右移直到并入 $\mathfrak{S}'_{n-1}$, 故所求的左乘封闭性成立.
+	Unsur $\bm{\tilde{\tau}_{i-1}}$ yang ditandai di atas dapat digeser terus ke kanan hingga terserap ke dalam $\mathfrak{S}'_{n-1}$; jadi, ketertutupan terhadap perkalian kiri yang diperlukan telah terbukti.
 \end{proof}
 
-展示 \eqref{eqn:S_n-presentation} 表明对称群属于一类称为 Coxeter 群的构造, 它们带有形如 $W = \lrangle{S \big| (st)^{m(s,t)}=1, \; s,t \in S}$ 的展示, 其中
+Presentasi \eqref{eqn:S_n-presentation} menunjukkan bahwa grup simetris termasuk dalam suatu kelas konstruksi yang disebut grup Coxeter. Grup-grup ini memiliki presentasi berbentuk $W = \lrangle{S \big| (st)^{m(s,t)}=1, \; s,t \in S}$, dengan
 \begin{compactitem}
-	\item $S$ 是有限集,
-	\item $m: S \times S \to \Z_{\geq 1} \sqcup \{\infty\}$ (取 $\infty$ 意谓无关系),
+	\item $S$ sebuah himpunan berhingga,
+	\item $m: S \times S \to \Z_{\geq 1} \sqcup \{\infty\}$ (nilai $\infty$ berarti tidak ada relasi),
 	\item $\forall s,t \in S, \; m(s,t)=m(t,s)$,
 	\item $s=t \iff m(s,t)=1$.
 \end{compactitem}
-例 \ref{eg:dihedral-presentation} 表明二面体群 $D_{2n}$ 也具有这种展示. Coxeter 群是研究 Lie 群, Lie 代数和相关表示理论的必备工具. \index{Coxeter 群}
+Contoh \ref{eg:dihedral-presentation} menunjukkan bahwa grup dihedral $D_{2n}$ juga memiliki presentasi semacam ini. Grup Coxeter merupakan perangkat yang tak tergantikan dalam studi grup Lie, aljabar Lie, dan teori representasi terkait. \index{grup Coxeter (Coxeter group)}
 
 \section{群的极限和完备化}\label{sec:group-limit}
 基于 \S\ref{sec:free-group} 的构造和例 \ref{eg:complete-cocomplete}, 群范畴 $\cate{Grp}$ 和其子范畴 $\cate{Ab}$ 中可以定义极限 $\varinjlim$ 和 $\varprojlim$. 构造方法已在例 \ref{eg:complete-cocomplete} 大致说明. 本节将深入探讨 $\varprojlim$ 的情形.

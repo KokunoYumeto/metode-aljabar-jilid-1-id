@@ -1,0 +1,23 @@
+entity_type,id,stable_key,section_id,ordinal,source_value,target_value,format,status
+build_surface,urn:uuid:31b24373-e9f8-5b4e-98bd-0e82d5d83741,build-surface/unit-033-pdf,,,pwsh -NoProfile -File scripts/build_unit_033.ps1 -OutputDirectory build/unit-033-replay,artifacts/unit-033-bab-4-grup-simetris-id.pdf,pdf,pass
+diagram,urn:uuid:cb5c1daa-94da-5435-81f0-f2f6cbc800b3,diagram/unit-033/tikzcd-01,urn:uuid:3e92104f-a336-51d7-972f-cbf2151082ed,11,1560-1563,1555-1558,tikzcd,audited_preserved
+diagram,urn:uuid:2bc4f897-ad74-5f2c-b34d-5c7ccabeee94,diagram/unit-033/tikzpicture-01,urn:uuid:3e92104f-a336-51d7-972f-cbf2151082ed,1,1498-1500,1493-1495,tikzpicture,audited_preserved
+diagram,urn:uuid:075e2288-7006-50e9-912e-23589a888719,diagram/unit-033/tikzpicture-02,urn:uuid:3e92104f-a336-51d7-972f-cbf2151082ed,2,1500-1502,1495-1497,tikzpicture,audited_preserved
+diagram,urn:uuid:22c16c16-dd86-5ab4-ab49-713d519e0341,diagram/unit-033/tikzpicture-03,urn:uuid:3e92104f-a336-51d7-972f-cbf2151082ed,3,1504-1506,1499-1501,tikzpicture,audited_preserved
+diagram,urn:uuid:8bc18bbb-651d-5047-8357-9ed604673f1a,diagram/unit-033/tikzpicture-04,urn:uuid:3e92104f-a336-51d7-972f-cbf2151082ed,4,1506-1508,1501-1503,tikzpicture,audited_preserved
+diagram,urn:uuid:ce52a08a-d51e-5b4b-9422-b767d302a639,diagram/unit-033/tikzpicture-05,urn:uuid:3e92104f-a336-51d7-972f-cbf2151082ed,5,1508-1510,1503-1505,tikzpicture,audited_preserved
+diagram,urn:uuid:e7818072-d603-5a9d-b975-4b0b42890291,diagram/unit-033/tikzpicture-06,urn:uuid:3e92104f-a336-51d7-972f-cbf2151082ed,6,1511-1515,1506-1510,tikzpicture,audited_preserved
+diagram,urn:uuid:7a4af319-f9d3-5b8b-b753-fe89db11d044,diagram/unit-033/tikzpicture-07,urn:uuid:3e92104f-a336-51d7-972f-cbf2151082ed,7,1521-1525,1516-1520,tikzpicture,audited_preserved
+diagram,urn:uuid:d417fe7b-1b2e-5dae-a740-9b37d76e51e4,diagram/unit-033/tikzpicture-08,urn:uuid:3e92104f-a336-51d7-972f-cbf2151082ed,8,1527-1532,1522-1527,tikzpicture,audited_preserved
+diagram,urn:uuid:c1adafe9-a1a6-5c84-8c44-f6edcc5b1b9b,diagram/unit-033/tikzpicture-09,urn:uuid:3e92104f-a336-51d7-972f-cbf2151082ed,9,1534-1539,1529-1534,tikzpicture,audited_preserved
+diagram,urn:uuid:ffa32813-3715-54d0-97cc-11b09c485f47,diagram/unit-033/tikzpicture-10,urn:uuid:3e92104f-a336-51d7-972f-cbf2151082ed,10,1554-1558,1549-1553,tikzpicture,audited_preserved
+diagram,urn:uuid:42e72c14-f50d-51d2-adb3-d7ed5fc13596,diagram/unit-033/tikzpicture-11,urn:uuid:3e92104f-a336-51d7-972f-cbf2151082ed,12,1581-1583,1576-1578,tikzpicture,audited_preserved
+index_entry,urn:uuid:b50d47a7-b5a9-54fc-b115-bfed74f023c1,index-entry/unit-033/main/001,urn:uuid:3e92104f-a336-51d7-972f-cbf2151082ed,1,duichengqun,duichengqun@grup simetris (symmetric group),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:0845a232-643b-5b3c-89e6-a60350d77eaf,index-entry/unit-033/main/002,urn:uuid:3e92104f-a336-51d7-972f-cbf2151082ed,2,xunhuan@循环 (cycle),xunhuan@siklus (cycle),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:a21d40d6-f046-5a0e-b7cb-851aed96d0f2,index-entry/unit-033/main/003,urn:uuid:3e92104f-a336-51d7-972f-cbf2151082ed,3,duihuan@对换 (transposition),duihuan@transposisi (transposition),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:507245da-ae55-5388-8cd8-2d128bf2d52c,index-entry/unit-033/main/005,urn:uuid:3e92104f-a336-51d7-972f-cbf2151082ed,5,fenchai@分拆 (partition),fenchai@partisi (partition),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:e7336399-6060-54b9-976f-3b0449713103,index-entry/unit-033/main/008,urn:uuid:3e92104f-a336-51d7-972f-cbf2151082ed,8,kejiequn,kejiequn@grup solvabel (solvable group),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:d250107c-3b10-5551-8702-56e4f22bc24f,index-entry/unit-033/main/009,urn:uuid:3e92104f-a336-51d7-972f-cbf2151082ed,9,Coxeter 群,grup Coxeter (Coxeter group),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:77962a71-786a-5793-86ef-a7d455aceef0,index-entry/unit-033/sym1/004,urn:uuid:3e92104f-a336-51d7-972f-cbf2151082ed,4,S_n@$\mathfrak{S}_n$,S_n@$\mathfrak{S}_n$,latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:bf28924a-0224-56ef-8838-1160e20ac6b6,index-entry/unit-033/sym1/006,urn:uuid:3e92104f-a336-51d7-972f-cbf2151082ed,6,sgn@$\sgn$,sgn@$\sgn$,latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:d595bf13-e2ac-57c3-9c0d-06ddab69e80b,index-entry/unit-033/sym1/007,urn:uuid:3e92104f-a336-51d7-972f-cbf2151082ed,7,A_n@$\mathfrak{A}_n$,A_n@$\mathfrak{A}_n$,latex-index-key,source_key_preserved_target_key_localized

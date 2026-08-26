@@ -1,0 +1,160 @@
+{
+  "status": "PASS",
+  "unit": "unit-033-bab-4-grup-simetris",
+  "authority": "chapter4.tex:1389-1608 (blank line 1608 omitted from mapping)",
+  "target": "chapter4.tex:1384-1602",
+  "data": "backend/data/unit-033-bab-4-grup-simetris.json",
+  "schema": "backend/schema/open-math-corpus-unit.schema.v1.json",
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "provenance_actor": "Codex acting on the user's instruction",
+  "artifact": {
+    "path": "artifacts/unit-033-bab-4-grup-simetris-id.pdf",
+    "pages": 10,
+    "bytes": 118964,
+    "sha256": "0af07d45c9aee57e28a6f27fe6162afda253e15c44779ccf07ac591516bd1f1d"
+  },
+  "counts": {
+    "source_records_including_blank_boundary": 220,
+    "candidate_records": 219,
+    "environment_pairs": 43,
+    "environment_markers": 86,
+    "labels": 10,
+    "ordinary_references": 10,
+    "equation_references": 10,
+    "citations": 0,
+    "list_items": 10,
+    "protected_math_zones": 311,
+    "diagrams": 12,
+    "tikzcd_diagrams": 1,
+    "tikzpicture_diagrams": 11,
+    "diagram_arrows": 4,
+    "braid_commands": 9,
+    "draw_commands": 3,
+    "node_commands": 10,
+    "drawing_commands": 22,
+    "index_entries": 9,
+    "source_corrections": 2,
+    "protected_text_localizations": 5,
+    "index_localizations": 9,
+    "terminology_normalizations": 2,
+    "citation_locator_localizations": 0,
+    "digital_reflows": 1,
+    "exercises": 0,
+    "hints": 0,
+    "answers": 0,
+    "solutions": 0,
+    "csv_projections": 6,
+    "concepts": 485,
+    "native_citations": 0,
+    "citation_occurrences": 0,
+    "terminology_rows": 13,
+    "qa_events": 22,
+    "driver_rendering_workarounds": 1,
+    "uuidv5_entities_audited": 561
+  },
+  "checks": {
+    "deterministic_regeneration_one": "PASS",
+    "deterministic_regeneration_two": "PASS",
+    "shared_schema_uuidv5_and_exact_csv": "PASS",
+    "json_csv_roundtrip": "PASS",
+    "exact_485_entity_topology": "PASS",
+    "authority_candidate_target_boundary": "PASS",
+    "two_declared_source_corrections": "PASS",
+    "two_terminology_normalizations": "PASS",
+    "one_source_target_digital_reflow": "PASS",
+    "five_protected_text_localizations": "PASS",
+    "nine_index_localizations": "PASS",
+    "driver_only_xlongequal_workaround": "PASS",
+    "component_rights_and_non_endorsement": "PASS",
+    "reader_build_and_all_page_visual_bindings": "PASS",
+    "validation_mutated_outputs": false
+  },
+  "binding_audit": {
+    "occurrences": 104,
+    "line_span_occurrences": 46,
+    "unique_paths": 41,
+    "paths": [
+      "00_control/SOURCE_MANIFEST.csv",
+      "00_control/TERMINOLOGY.id-ID.csv",
+      "artifacts/unit-033-bab-4-grup-simetris-id.pdf",
+      "authority/archives/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b.zip",
+      "authority/pdfs/Al-jabr-1.pdf",
+      "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter4.tex",
+      "build/unit-033-candidate/chapter4-symmetric-groups-id.tex",
+      "build/unit-033-staging/terminology-delta.csv",
+      "qa/UNIT_033_BUILD_FINAL.log",
+      "qa/UNIT_033_PREPROMOTION_AUDIT_20260826.md",
+      "qa/UNIT_033_TERMINOLOGY_AUDIT_20260826.md",
+      "qa/UNIT_033_TRANSLATION_REVIEW_20260825.md",
+      "qa/UNIT_033_VISUAL_PREFLIGHT_20260826.md",
+      "qa/UNIT_033_VISUAL_QA_20260826.md",
+      "qa/unit-033-evidence/render-hash-inventory.json",
+      "qa/unit-033-evidence/structure-and-pdf-qa.json",
+      "repo/fonts/NotoSansCJKsc-Black.otf",
+      "repo/fonts/NotoSansCJKsc-Medium.otf",
+      "repo/fonts/NotoSansCJKsc-Regular.otf",
+      "repo/fonts/NotoSerifCJKsc-Bold.otf",
+      "repo/fonts/OFL-1.1-Noto-CJK.txt",
+      "repo/source/AJbook.cls",
+      "repo/source/Al-jabr.bib",
+      "repo/source/LICENSE",
+      "repo/source/Lanzhou.png",
+      "repo/source/ccby.png",
+      "repo/source/chapter4.tex",
+      "repo/source/coverpage-id-unit-033.tex",
+      "repo/source/font-setup-id.tex",
+      "repo/source/locale-ui-id.tex",
+      "repo/source/myarrows.sty",
+      "repo/source/mycommand.sty",
+      "repo/source/titles-setup-id.tex",
+      "repo/source/titles-setup.tex",
+      "repo/source/unit-033-bab-4-grup-simetris.tex",
+      "repo/source/unit-033-crossrefs.aux",
+      "scripts/build_unit_033.ps1",
+      "scripts/check_unit_033_candidate.py",
+      "scripts/check_unit_033_structure.py",
+      "scripts/generate_unit_033_evidence.py",
+      "scripts/preflight_unit_033.py"
+    ]
+  },
+  "identities": {
+    "backend/data/unit-033-bab-4-grup-simetris.json": {
+      "bytes": 396355,
+      "sha256": "edc5812ffd5d46d0fee21748dabbe1b75e71dd1226d3261c073db8930bebe4d7"
+    },
+    "backend/csv/unit-033-bindings.csv": {
+      "bytes": 23064,
+      "sha256": "de73d256e3b79feba747bde4c8459f72ae17403798b18209a60c37ae0984dfaf"
+    },
+    "backend/csv/unit-033-entities.csv": {
+      "bytes": 119120,
+      "sha256": "140314b6a8793716d505d412537b5fa366d9c0940fa20ed04358dd4bac16c828"
+    },
+    "backend/csv/unit-033-qa.csv": {
+      "bytes": 6878,
+      "sha256": "a22cfec414e8eeeba3ec0037f8c0a4e2d14453b3e22ad2d6fc6319d141253d89"
+    },
+    "backend/csv/unit-033-relations.csv": {
+      "bytes": 290073,
+      "sha256": "8dd001f77ff8f7e555e18431f9684164e73743fb2018abb2b02c0149fc132f35"
+    },
+    "backend/csv/unit-033-rights.csv": {
+      "bytes": 1287,
+      "sha256": "4836630530f87a11a64fe233c59970e2ff7942695a8dbf404f7a0583a275197e"
+    },
+    "backend/csv/unit-033-surfaces.csv": {
+      "bytes": 4684,
+      "sha256": "4bc8e4b0d6c16605d7e4af24802ef62d79a2be9df0a7c642c7858ae39359f74f"
+    }
+  },
+  "tools": {
+    "scripts/generate_unit_033_backend.py": {
+      "bytes": 56289,
+      "sha256": "f5638780ec5ed9a625d654731a3b9a4d513ac52665ab87251c4fa63e81eadb07"
+    },
+    "scripts/validate_unit_033_backend.py": {
+      "bytes": 20983,
+      "sha256": "a4330af03955ea3c9ddcdedbd587be996f0e564844b9084e1be0190f25b0006b"
+    }
+  }
+}
