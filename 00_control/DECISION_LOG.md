@@ -1455,3 +1455,20 @@ hboxes and the untagged-PDF accessibility limitation remain disclosed. Advance
 to Unit 033 at chapter4.tex:1389 while preserving the full Li, Duncan,
 selected-CRing, and separate connective/mastery architecture with Etingof
 reference-only.
+
+## D090 — 2026-08-26 — Unit 033 published and cursor advanced
+
+Publish complete Section 4.9 at authority chapter4.tex:1389-1608 only after the final
+ten-page reader, schema-valid backend, independent admission audit, content
+commit, receipt commit, and both anonymous readback inventories agree. Content
+commit 486965a43410fc2b815b0955486771f3048fdd36, tree 5ecad82be506ddaa6d14e232c41d693e3d11318e, and
+receipt commit 7176f4fe4a29dc6680703cb80ff9b01d0f4fe7cd, tree 7f6b8ce86c47d26c39e791fe2ee3ec2613d96792,
+are the exact public boundary. O013-LI-U033-REFLOW-001 removes the measured
+11.9841 pt Klein-four equality overflow without changing mathematics. A
+reader-driver-only robust xlongequal definition closes Poppler's loss of the
+dvipdfmx extensible rule while preserving the labelled relation and leaving
+candidate/canonical mathematics unchanged. Exactly one visually non-actionable
+underfull hbox and the untagged-PDF limitation remain disclosed. Advance to
+Unit 034 at chapter4.tex:1609 while preserving the full Li, Duncan,
+selected-CRing, and separate connective/mastery architecture with Etingof
+reference-only.

@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-26",
+  "unit": {
+    "candidate": {
+      "path": "build/unit-033-candidate/chapter4-symmetric-groups-id.tex",
+      "bytes": 23099,
+      "sha256": "1abae4c95d52e98c6c2375c5394bd4a7f5d4319ef018849ae10c4c0ac6598d76"
+    },
+    "target": {
+      "path": "repo/source/chapter4.tex",
+      "bytes": 185920,
+      "sha256": "a462826136cced1b766a2807ca61e055539bd4427b5f5da89df4573bdbbeccde"
+    },
+    "reader": {
+      "path": "artifacts/unit-033-bab-4-grup-simetris-id.pdf",
+      "bytes": 118964,
+      "sha256": "0af07d45c9aee57e28a6f27fe6162afda253e15c44779ccf07ac591516bd1f1d",
+      "pages": 10
+    },
+    "backend": {
+      "path": "backend/data/unit-033-bab-4-grup-simetris.json",
+      "bytes": 396355,
+      "sha256": "edc5812ffd5d46d0fee21748dabbe1b75e71dd1226d3261c073db8930bebe4d7"
+    },
+    "backend_validation": {
+      "path": "qa/unit-033-evidence/backend-validation.json",
+      "bytes": 5827,
+      "sha256": "3a9d9d832d6ce69d5db364355cf38aceef7e4c8a68c9eeb0ba750203bd0a2fcb"
+    },
+    "admission_receipt": {
+      "path": "qa/UNIT_033_ADMISSION_20260826.md",
+      "bytes": 5246,
+      "sha256": "0e709035df89517191f6115ba04f2df966134ff598562f352310dc1b1ad83240"
+    },
+    "final_audit": {
+      "path": "qa/UNIT_033_FINAL_AUDIT_20260826.md",
+      "bytes": 5721,
+      "sha256": "96ae3fd16d2019497883176a6ef154689e7a0051d1547c3fd483b4fd73c80aec"
+    },
+    "visual_receipt": {
+      "path": "qa/UNIT_033_VISUAL_QA_20260826.md",
+      "bytes": 5285,
+      "sha256": "c6380aa1402c7571242b21a08275e758ed7c189cf16b2e637e1220a01ec14e36"
+    },
+    "build_log": {
+      "path": "qa/UNIT_033_BUILD_FINAL.log",
+      "bytes": 75964,
+      "sha256": "ecc90e94457ba8e47e08329ed38a342e58576546a0c2c1733756cf470be702e8"
+    },
+    "terminology_audit": {
+      "path": "qa/UNIT_033_TERMINOLOGY_AUDIT_20260826.md",
+      "bytes": 3699,
+      "sha256": "efdb7d0cfd43484e2b6b36604e13c7bbcc4dcee188745c637703b164f8abae13"
+    },
+    "terminology_delta": {
+      "path": "build/unit-033-staging/terminology-delta.csv",
+      "bytes": 1987,
+      "sha256": "783f39a1d80f93613f1d60c53ab77c7ce0a4c5c799c8ea25248f427e4049437b"
+    },
+    "glossary": {
+      "path": "00_control/TERMINOLOGY.id-ID.csv",
+      "bytes": 76280,
+      "sha256": "9a999be8091cfb9429975d6dcf98aca3d6d3b432ab909891651c9c32e0c79f4c"
+    },
+    "digital_reflow": {
+      "path": "qa/UNIT_033_DIGITAL_REFLOW_20260826.md",
+      "bytes": 2112,
+      "sha256": "804ca5d503d08eeeae0cc6f1a9b0cbe8f4edf47ff9a95e4bf901e5f34ffa0f87"
+    },
+    "structure_pdf_evidence": {
+      "path": "qa/unit-033-evidence/structure-and-pdf-qa.json",
+      "bytes": 27516,
+      "sha256": "8edbcd847cedeb88f6f464d699e823864a77a8c4c077ec846228c51b177e707c"
+    },
+    "render_inventory": {
+      "path": "qa/unit-033-evidence/render-hash-inventory.json",
+      "bytes": 46048,
+      "sha256": "7e0bc3fd33a0d1d8c44f6ec7bb43016eb9ea1b281139ae28b69ded144954b915"
+    }
+  },
+  "publication": {
+    "content_commit": "486965a43410fc2b815b0955486771f3048fdd36",
+    "content_tree": "5ecad82be506ddaa6d14e232c41d693e3d11318e",
+    "content_readback": {
+      "path": "qa/PUBLICATION_GITHUB_UNIT_033_CONTENT_READBACK.json",
+      "bytes": 25393,
+      "sha256": "73ed0432a83c12ed978ff150dc4ca4b9422c0181213ae614d46d6ddff28cf195"
+    },
+    "receipt": {
+      "path": "qa/PUBLICATION_GITHUB_UNIT_033_20260826.md",
+      "bytes": 1726,
+      "sha256": "7b5f4bdd02d76cb9cb83934596aa2de5aa04b6a8c4c02291d6554a470780974b"
+    },
+    "receipt_commit": "7176f4fe4a29dc6680703cb80ff9b01d0f4fe7cd",
+    "receipt_tree": "7f6b8ce86c47d26c39e791fe2ee3ec2613d96792",
+    "receipt_readback": {
+      "path": "qa/PUBLICATION_GITHUB_UNIT_033_RECEIPT_READBACK.json",
+      "bytes": 2069,
+      "sha256": "25907bbac9615103001bdbb6c9bfae68b680866eb8c6ab4e3b5fe6b3c000174d"
+    }
+  }
+}

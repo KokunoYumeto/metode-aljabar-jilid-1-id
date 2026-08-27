@@ -1,13 +1,13 @@
 # Current state
 
 Updated: 2026-08-26  
-Status: active; Li Units 001-032 are public and byte-verified through complete
-Chapter 4 Section 4.8. Unit 032 is public at content commit
-`bc5e43a75925d522a80600724d6d95e40ad55f75`; all 64 paths /
-6,515,805 bytes passed anonymous readback. Receipt
-commit `5780621108e60521427b20a77090114590abe6b0` and all 3 paths /
-104,435 bytes also passed. The canonical next
-boundary is Unit 033 at `chapter4.tex:1389`; isolated translation reaches Unit
+Status: active; Li Units 001-033 are public and byte-verified through complete
+Chapter 4 Section 4.9. Unit 033 is public at content commit
+`486965a43410fc2b815b0955486771f3048fdd36`; all 58 paths /
+5,065,986 bytes passed anonymous readback. Receipt
+commit `7176f4fe4a29dc6680703cb80ff9b01d0f4fe7cd` and all 3 paths /
+105,259 bytes also passed. The canonical next
+boundary is Unit 034 at `chapter4.tex:1609`; isolated translation reaches Unit
 042 and `chapter5.tex:1184`, while Unit 043 has not started. The full active
 objective continues from the complete Li edition through complete licensed
 Duncan, selected repaired CRing spans, and the separately provenanced
@@ -1176,48 +1176,49 @@ connective and mastery layer; this boundary is not a completion claim.
   `0b214e2d8967d26cb25023bbee23d39b4e4b2795` closed that earlier boundary; its
   three receipt-boundary files / 11,654 bytes also passed anonymous readback.
 
-## Unit 032 public boundary
+## Unit 033 public boundary
 
-Current admitted boundary: Li Units 001-032 through complete Section 4.8.
-Unit 032 authority is chapter4.tex:1108-1388, 281 normalized-LF records / 22,547
-bytes / SHA-256 5a7083cd89d13e776bbf94189f7f96f5d976cd962cba7a8d4c6b2453bd59c8af; blank boundary line 1388 is excluded from the
-280-record target mapping at canonical lines 1104-1383. The final candidate is
-27,910 bytes / SHA-256 28e8fd2475a89b4617c26b21f0753aa95a81c7bc8524b7540881281159ab4cfc; canonical chapter4.tex is 181,896 bytes / SHA-256 4381ae10c0e44eca80c40c25d602af39ed9da2e3725a35968ad697d40cc7f680.
-Its centered thirteen-page reader is 149,624 bytes / SHA-256 904330916e20f0782b6464cb85e07001851940f4adf153f6592cd34087dbadbf, and its schema-valid
-backend is 460,681 bytes / SHA-256 a3f68cd45d5fc44720e769c7a12d745a4af78d7a361e6e8b81a1c5019be1a030. Backend validation is
-5,422 bytes / SHA-256 b66c40151489b4d162e63e9edef3da1d7c593362002bb8e0b9a6f5ba3410be6d; the admission receipt is
-4,274 bytes / SHA-256 065bba6285a1668abdd29f8d349f9f905b048755dc429e8e8d08d7944dc5c1f0; and the final audit is
-5,421 bytes / SHA-256 e8d214df7a0feaf60a14a93e2b554db8fe881379caf98109737a9947f5d9e9e5.
+Current admitted boundary: Li Units 001-033 through complete Section 4.9.
+Unit 033 authority is chapter4.tex:1389-1608, 220 normalized-LF records / 19,076
+bytes / SHA-256 c86fdd5bf99aec013ea42ca0042242066c12a8ed7133dd735a3f237446712b4a; blank boundary line 1608 is excluded from the
+219-record target mapping at canonical lines 1384-1602. The final candidate is
+23,099 bytes / SHA-256 1abae4c95d52e98c6c2375c5394bd4a7f5d4319ef018849ae10c4c0ac6598d76; canonical chapter4.tex is 185,920 bytes / SHA-256 a462826136cced1b766a2807ca61e055539bd4427b5f5da89df4573bdbbeccde.
+Its centered ten-page reader is 118,964 bytes / SHA-256 0af07d45c9aee57e28a6f27fe6162afda253e15c44779ccf07ac591516bd1f1d, and its schema-valid
+backend is 396,355 bytes / SHA-256 edc5812ffd5d46d0fee21748dabbe1b75e71dd1226d3261c073db8930bebe4d7. Backend validation is
+5,827 bytes / SHA-256 3a9d9d832d6ce69d5db364355cf38aceef7e4c8a68c9eeb0ba750203bd0a2fcb; the admission receipt is
+5,246 bytes / SHA-256 0e709035df89517191f6115ba04f2df966134ff598562f352310dc1b1ad83240; and the final audit is
+5,721 bytes / SHA-256 96ae3fd16d2019497883176a6ef154689e7a0051d1547c3fd483b4fd73c80aec.
 
 All deterministic source, mathematics, terminology, topology, build, PDF,
 dual-renderer visual, backend, rights, privacy, and independent-audit gates
-pass. O013-LI-U032-COR-001 and O013-LI-U032-COR-002 are separately provenanced.
-The first reader exposed 22.16992 pt and 27.03485 pt overflows in finite-support
-set-builder displays; target-only reflows O013-LI-U032-REFLOW-001 and
-O013-LI-U032-REFLOW-002 remove them without changing set membership,
-quantifiers, finite-support conditions, or term order. The final reader has
-thirteen centered pages and no actionable visual or build defect. Exactly three
-visually non-actionable underfull hboxes and its untagged-PDF accessibility
-limitation are disclosed.
+pass. O013-LI-U033-COR-001 and O013-LI-U033-COR-002 are separately provenanced.
+O013-LI-U033-REFLOW-001 removes a measured 11.9841 pt Klein-four equality
+overflow without changing mathematics. A driver-only robust xlongequal repair
+retains the same labelled equality in Poppler and MuPDF after Poppler dropped
+dvipdfmx's extensible rule; no candidate or canonical formula changed. The
+final reader has ten centered pages and no actionable defect. Exactly one
+visually non-actionable underfull hbox and its untagged-PDF limitation are
+disclosed.
 
-Content commit bc5e43a75925d522a80600724d6d95e40ad55f75, tree 13afc9751570e15d24a77063606a455dc420f69a, passed
-anonymous readback for 64 paths /
-6,515,805 bytes. Receipt commit 5780621108e60521427b20a77090114590abe6b0,
-tree 1f88e8d6901c01eed57ecb602484eb6c2bff1b87, passed anonymous readback for
-3 paths / 104,435 bytes
-and is the verified remote base. The 229-page checkpoint reader 0.6.0 remains
-the nonduplicative Zenodo preservation release.
+Content commit 486965a43410fc2b815b0955486771f3048fdd36, tree 5ecad82be506ddaa6d14e232c41d693e3d11318e,
+passed anonymous readback for 58 paths /
+5,065,986 bytes. Receipt commit
+7176f4fe4a29dc6680703cb80ff9b01d0f4fe7cd, tree 7f6b8ce86c47d26c39e791fe2ee3ec2613d96792, passed
+anonymous readback for 3 paths /
+105,259 bytes and is the verified remote base. The
+229-page checkpoint reader 0.6.0 remains the nonduplicative Zenodo preservation
+release.
 
 ## Exact next action
 
-Unit 032 and complete Section 4.8 are public and byte-verified.
-The following source-order admission boundary is Unit 033 at chapter4.tex:1389-1608; its
-23,074-byte isolated candidate has SHA-256
-09e8ec87919a6620e5baac6a07b470b2d03d24a5775d8c66bf6de9af43dc1953. Its checker has SHA-256 670016f2f054139c5da78fb2c412f68f7836d2bc4c1dab0282a4041e3a6baa4f. The candidate
-remains isolated until Unit 033 terminology, integration, reader, backend,
+Unit 033 and complete Section 4.9 are public and byte-verified.
+The following source-order admission boundary is Unit 034 at chapter4.tex:1609-1744; its
+19,001-byte isolated candidate has SHA-256
+4bcbe121f0ec5ac80f05db74d5ae30a71a9ee5c8ff24f8ebf10e42250b6dd076. Its checker has SHA-256 be0444bed3bbf76d3402d637db7dba4e534bdeb8eb7ba2306dc75db5f183051a. The candidate
+remains isolated until Unit 034 terminology, integration, reader, backend,
 build, all-page visual, publication, and anonymous-readback gates pass. The
-active cursor is chapter4.tex:1389 and the cursor after Unit 033 will be
-chapter4.tex:1609. Units 033-042 remain strictly source-ordered. The isolated
+active cursor is chapter4.tex:1609 and the cursor after Unit 034 will be
+chapter4.tex:1745. Units 034-042 remain strictly source-ordered. The isolated
 translation cursor remains chapter5.tex:1184; Unit 043 has not started.
 
 ## Not complete
