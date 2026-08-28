@@ -2,7 +2,9 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan serta Bab 1–5 lengkap telah diterjemahkan ke Bahasa Indonesia dan dipublikasikan. Batas Bab 5 beserta checkpoint gabungan 385 halaman telah dibaca balik byte demi byte; Bab 6 sedang diterjemahkan dalam batch besar dan telah mencapai lebih dari 83%.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan serta Bab 1–6 lengkap telah diterjemahkan ke Bahasa Indonesia. Pembaca Bab 6 berjumlah 75 halaman dan checkpoint gabungan berjumlah 460 halaman; keduanya lulus build, pemeriksaan backend, dan inspeksi visual berbatas. Bab 7 sedang diterjemahkan dalam batch besar.** Repositori ini belum merupakan terjemahan lengkap buku.
+
+[Baca atau unduh checkpoint pembaca melalui Bab 6 (460 halaman; pendahuluan dan Bab 1–6 lengkap)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-through-bab-6-reader.pdf)
 
 [Baca atau unduh checkpoint pembaca melalui Bab 5 (385 halaman; pendahuluan dan Bab 1–5 lengkap)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-through-bab-5-reader.pdf)
 
@@ -86,17 +88,22 @@ Status saat ini: **Pendahuluan serta Bab 1–5 lengkap telah diterjemahkan ke Ba
 
 [Baca atau unduh PDF Bab 5 lengkap](artifacts/unit-043-bab-5-pengantar-teori-gelanggang-id.pdf)
 
-Checkpoint terbaru menggabungkan satu sampul reader-first dan 36 komponen
-hash-gated menjadi 385 halaman: pendahuluan serta Bab 1–5 lengkap. Seluruh 385
-halaman dirender tepat sekali dan diperiksa melalui sebelas lembar kontak;
-tidak ada halaman hilang, terduplikasi, kosong karena galat, terpotong,
-bertumpuk, terputar, rusak, atau tidak terbaca. Sampul memakai masthead judul
-lebar penuh yang terpusat dan rute baca eksplisit, tanpa blok kemajuan
-terisi/tidak-terisi yang ambigu. Receipt penerimaan bab dan reader ada di
-[`qa/UNIT_043_CHAPTER_5_ADMISSION_20260828.md`](qa/UNIT_043_CHAPTER_5_ADMISSION_20260828.md),
-dan receipt visual tunggal ada di
-[`qa/UNIT_043_COMBINED_READER_VISUAL_QA_20260828.md`](qa/UNIT_043_COMBINED_READER_VISUAL_QA_20260828.md).
-Checkpoint Bab 5 dipublikasikan pada commit isi
+[Baca atau unduh PDF Bab 6 lengkap](artifacts/unit-044-bab-6-modul-id.pdf)
+
+Checkpoint terbaru menggabungkan satu sampul reader-first dan 37 komponen
+hash-gated menjadi 460 halaman: pendahuluan serta Bab 1–6 lengkap. Sebanyak 384
+halaman isi lama cocok tepat dengan checkpoint Bab 5, dan 75 halaman tambahan
+cocok tepat dengan pembaca Bab 6 yang seluruh halamannya telah dirender dan
+diperiksa melalui lima lembar kontak. Sampul serta batas halaman 385/386 dan
+halaman akhir diperiksa lagi pada 120 dpi. Tidak ditemukan halaman terpotong,
+bertumpuk, kosong karena galat, atau teks/diagram yang keluar dari bidang baca;
+log final juga memuat nol kotak meluber. Receipt penerimaan ada di
+[`qa/UNIT_044_CHAPTER_6_ADMISSION_20260828.md`](qa/UNIT_044_CHAPTER_6_ADMISSION_20260828.md),
+sedangkan bukti PDF dan checkpoint ada di
+[`qa/CHAPTER_6_PDF_STRUCTURAL_QA.json`](qa/CHAPTER_6_PDF_STRUCTURAL_QA.json) dan
+[`qa/unit-044-evidence/checkpoint-through-bab-6-structural-qa.json`](qa/unit-044-evidence/checkpoint-through-bab-6-structural-qa.json).
+
+Checkpoint Bab 5 sebelumnya dipublikasikan pada commit isi
 `77272543e77851dc799215bebbbcefad9c3b05fc`; seluruh 71 path / 18.916.874 byte
 cocok dengan blob komit melalui pembacaan balik anonim. Inventaris ada di
 [`qa/PUBLICATION_GITHUB_UNIT_043_CONTENT_READBACK.json`](qa/PUBLICATION_GITHUB_UNIT_043_CONTENT_READBACK.json),
@@ -115,7 +122,7 @@ Checkpoint GitHub dipublikasikan pada commit
 byte cocok pada pembacaan balik anonim. Receipt publikasinya tersedia di
 [`qa/PUBLICATION_GITHUB_CHECKPOINT_0.6.0_20260825.md`](qa/PUBLICATION_GITHUB_CHECKPOINT_0.6.0_20260825.md).
 
-Versi preservasi saat ini, `0.6.0`, tersedia pada [Zenodo DOI 10.5281/zenodo.22088395](https://doi.org/10.5281/zenodo.22088395). Seluruh pembaruan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat. Rekaman ini memuat checkpoint gabungan 229 halaman, paket sumber/backend ringkas, pemberitahuan hak, manifest, dan checksum: lima berkas / 70.182.496 byte yang seluruhnya cocok pada pembacaan balik anonim. Cakupannya ialah Unit 001-024—pendahuluan serta Bab 1, Bab 2, dan Bab 3 lengkap; Bab 4-10, komponen Duncan, enam segmen CRing, dan lapisan penghubung/penguasaan belum disertakan. Checkpoint GitHub dipublikasikan pada commit konten `5641d5453c85cf007135603037db8805f7fa4f42`; paket sumber preservasi mengikat commit edisi `ebaf9ddba8665bcc0f8ebadf042efc258b4f3894`. Receipt tersedia di [`qa/PUBLICATION_GITHUB_CHECKPOINT_0.6.0_20260825.md`](qa/PUBLICATION_GITHUB_CHECKPOINT_0.6.0_20260825.md) dan [`qa/PUBLICATION_ZENODO_0.6.0_20260825.md`](qa/PUBLICATION_ZENODO_0.6.0_20260825.md).
+Versi preservasi saat ini, `0.7.0`, tersedia pada [Zenodo DOI 10.5281/zenodo.22149764](https://doi.org/10.5281/zenodo.22149764). Seluruh pembaruan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat. Rekaman ini memuat checkpoint gabungan 385 halaman melalui Bab 5, paket sumber/backend ringkas, pemberitahuan hak, manifest, dan checksum: lima berkas / 75.149.703 byte yang seluruhnya cocok pada pembacaan balik anonim. Bab 6–10, komponen Duncan, enam segmen CRing, dan lapisan penghubung/penguasaan belum disertakan dalam versi Zenodo tersebut. Receipt tersedia di [`qa/PUBLICATION_ZENODO_0.7.0_20260828.md`](qa/PUBLICATION_ZENODO_0.7.0_20260828.md) dan [`qa/ZENODO_0.7.0_PUBLIC_READBACK_20260828.json`](qa/ZENODO_0.7.0_PUBLIC_READBACK_20260828.json).
 
 Item karya Figshare yang sama tetap dipertahankan sebagai satu garis versi, bukan diduplikasi. Pemilih lisensi Figshare tidak menyediakan pilihan yang dapat mewakili gabungan hak komponen edisi ini; karena itu versi berikutnya harus berupa rekaman metadata CC0 yang menautkan checkpoint Zenodo, bukan salinan berkas dengan lisensi yang diratakan secara keliru. Lisensi teks utama/adaptasi adalah CC BY 4.0; `Lanzhou.png` dan fragmen `AJbook.cls` yang dikreditkan tetap CC BY-SA 3.0, font Noto tetap OFL 1.1, dan Fandol 0.3 tetap GPLv3 dengan pengecualian font, sebagaimana dirinci dalam `LICENSES.md`.
 
@@ -645,7 +652,14 @@ Teks sumber dan terjemahan ditangani menurut Creative Commons Attribution 4.0 In
   - [x] Gelanggang monoid dan gelanggang polinomial
   - [x] Faktorisasi unik dan polinomial simetris
   - [x] Seluruh latihan Bab 5 dengan 11 petunjuk
-- [ ] Bab 6 — Teori modul
+- [x] Bab 6 — Teori modul `chapter6.tex:1-1994`
+  - [x] Konsep dasar dan operasi dasar pada modul
+  - [x] Modul bebas dan ruang vektor
+  - [x] Hasil kali tensor dan perubahan gelanggang
+  - [x] Modul terbangkitkan hingga atas daerah ideal utama
+  - [x] Barisan eksak; modul projektif, injektif, dan datar
+  - [x] Syarat rantai, deret komposisi, dan modul semisederhana
+  - [x] Modul tak terurai serta seluruh latihan Bab 6 dengan 8 petunjuk
 - [ ] Bab 7 — Dasar-dasar aljabar
 - [ ] Bab 8 — Perluasan medan
 - [ ] Bab 9 — Teori Galois

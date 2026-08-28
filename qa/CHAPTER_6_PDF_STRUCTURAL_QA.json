@@ -1,0 +1,55 @@
+{
+  "schema": "o013.chapter6.pdf-structural-qa.v1",
+  "status": "PASS",
+  "pdf": "artifacts/unit-044-bab-6-modul-id.pdf",
+  "bytes": 465036,
+  "sha256": "2c493005920fdd757e5786477fdf99b20aced1653348be7a076fa7a829a5c1d3",
+  "pages": 75,
+  "page_size_points": [
+    498.9,
+    708.66
+  ],
+  "metadata": {
+    "/Creator": "LaTeX with hyperref",
+    "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Bab 6: Modul",
+    "/Subject": "Terjemahan Bahasa Indonesia independen; Bab 6 lengkap",
+    "/Author": "Wen-Wei Li",
+    "/Keywords": "aljabar, modul, modul bebas, hasil kali tensor, eksak, projektif, injektif, datar, Noetherian, Artinian, semisederhana, id-ID",
+    "/Producer": "MiKTeX-dvipdfmx (20260404)",
+    "/CreationDate": "D:20260828000000Z"
+  },
+  "minimum_extracted_text_characters": 151,
+  "low_text_pages_under_25_characters": [],
+  "link_annotations": 239,
+  "out_of_bounds_links": [],
+  "rendered_pages": 75,
+  "contact_sheets": [
+    {
+      "path": "tmp/pdfs/chapter6-visual-final/contact-01.png",
+      "bytes": 1014166,
+      "sha256": "ad4f45b5b0b8c756f90f59aa4149e99effdd1087cca48e85d047693bfda01237"
+    },
+    {
+      "path": "tmp/pdfs/chapter6-visual-final/contact-02.png",
+      "bytes": 1113033,
+      "sha256": "7967c0994610b5931bdaae1d56a698bf0813084ac5d11e5d3d401a70e813e85e"
+    },
+    {
+      "path": "tmp/pdfs/chapter6-visual-final/contact-03.png",
+      "bytes": 1074634,
+      "sha256": "ab9443821048da351954d81506f8e2ec6160047d3bd1f0cf54a179307cbe54be"
+    },
+    {
+      "path": "tmp/pdfs/chapter6-visual-final/contact-04.png",
+      "bytes": 1191315,
+      "sha256": "9dbc3e5648a084f99905930e9ab62a948c7cb1f33a7a6c72c62ca69261bc380c"
+    },
+    {
+      "path": "tmp/pdfs/chapter6-visual-final/contact-05.png",
+      "bytes": 1041009,
+      "sha256": "60f07651d1f4018e0402b6dda4b4f7cecfc170e545d91a6b1e5990e22948f653"
+    }
+  ],
+  "failures": [],
+  "visual_inspection": "PASS: all 75 rendered pages inspected across five contact sheets; text blocks are centered within the page geometry, diagrams and displays remain inside the text area, no clipping/overlap/blank pages were observed, and bibliography plus both indexes are legible."
+}

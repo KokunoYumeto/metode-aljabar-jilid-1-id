@@ -1,0 +1,49 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8
+% Build-only full-corpus label witness for standalone chapter readers.
+% It uses the current canonical translated prefix and frozen untranslated tail.
+\documentclass[
+	colors = false,
+	fontsetup = font-setup-id.tex,
+	titlesetup = titles-setup-id.tex,
+	CJKthechapter = false
+]{AJbook}
+
+\input{locale-ui-id.tex}
+\setCJKmainfont[Path=../fonts/,BoldFont=NotoSansCJKsc-Medium.otf,ItalicFont=NotoSansCJKsc-Regular.otf]{NotoSansCJKsc-Regular.otf}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\SetSymbolFont{stmry}{bold}{U}{stmry}{m}{n}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\usepackage{tikz-cd}
+\usetikzlibrary{positioning, patterns, calc, matrix, shapes.arrows, shapes.symbols}
+\usepackage{braids}
+\usepackage{tqft}
+\usepackage{ytableau}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{myarrows}
+\usepackage{mycommand}
+\usepackage[noautomatic]{imakeidx}
+\makeindex[columns=2,program=makeindex,intoc=true]
+\makeindex[columns=3,program=makeindex,intoc=true,name=sym1]
+\usepackage[unicode,bookmarksnumbered]{hyperref}
+\addbibresource{Al-jabr.bib}
+
+\begin{document}
+\mainmatter
+\include{prelude}
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
+\include{chapter5}
+\include{chapter6}
+\include{chapter7}
+\include{chapter8}
+\include{chapter9}
+\include{chapter10}
+\end{document}

@@ -1,0 +1,85 @@
+{
+  "schema": "o013-unit-backend-validation-v1",
+  "unit": "O013-LI-U044",
+  "result": "pass",
+  "generated": "2026-08-28",
+  "authority": {
+    "range": "chapter6.tex:1-1994",
+    "bytes": 160950,
+    "sha256": "c825f51dc19c254c89a7ede05723b62d6cd2b18cc6ac8c78d9ea00c3b8434e49"
+  },
+  "target": {
+    "range": "chapter6.tex:1-1994",
+    "bytes": 193563,
+    "sha256": "15c09af18eeab6ce1a4c5a4cb69b1b3a42bc2422b015f21f77ccfbb3c94f7e14",
+    "candidate_identical": true
+  },
+  "reader_reflow": {
+    "bytes": 193613,
+    "sha256": "e83fc702c2a2839c1e3941b9ab0a83c67b474bd72c2846433dac854c959f8f28",
+    "layout_only_changes": 3
+  },
+  "topology": {
+    "environment_starts": 363,
+    "environment_ends": 363,
+    "labels": 98,
+    "references": 224,
+    "citations": 6,
+    "indexes": 70,
+    "items": 132,
+    "top_level_exercises": 14,
+    "exercise_items": 22,
+    "hints": 8,
+    "tikzcd": 37,
+    "tikzpicture": 7
+  },
+  "sections": 12,
+  "rights_components": 5,
+  "build_surfaces": 2,
+  "qa_events": 6,
+  "schema_validation": "pass",
+  "semantic_validation": "pass",
+  "csv_projections": 6,
+  "backend": {
+    "path": "backend/data/unit-044-bab-6-teori-modul.json",
+    "bytes": 225398,
+    "sha256": "aaf3db8135914ca8ceaef457883666da8b2f814833147792b819f0f09c2a5eac"
+  },
+  "csv": {
+    "bindings": {
+      "path": "backend/csv/unit-044-bindings.csv",
+      "bytes": 78255,
+      "sha256": "1618c2408252d341425908912229db5fe9e67d5d53038803e2e01a2c82d54fd8"
+    },
+    "entities": {
+      "path": "backend/csv/unit-044-entities.csv",
+      "bytes": 31531,
+      "sha256": "eee55ddaf7a3a467973bd473a15562f6b243fb8df356e40181cc211c830ff595"
+    },
+    "qa": {
+      "path": "backend/csv/unit-044-qa.csv",
+      "bytes": 2022,
+      "sha256": "da8130eb280e46aea651e53150659b3d61a08d74dca00cc99e39c44028fc3703"
+    },
+    "relations": {
+      "path": "backend/csv/unit-044-relations.csv",
+      "bytes": 75202,
+      "sha256": "0fe4f62137c481f1acae65098f17071289e0ee8d2f0bc008b83389c0adde96eb"
+    },
+    "rights": {
+      "path": "backend/csv/unit-044-rights.csv",
+      "bytes": 1831,
+      "sha256": "51552480f0c11a909250f8f368305ec2156d54729111edcd2bf9e9e4d556ef7f"
+    },
+    "surfaces": {
+      "path": "backend/csv/unit-044-surfaces.csv",
+      "bytes": 25952,
+      "sha256": "9e7231d6d5585dc4cabca4210c4f5cd5a975c7efbf0881077a6880a9481a889f"
+    }
+  },
+  "generator": {
+    "path": "scripts/generate_unit_044_backend.py",
+    "bytes": 22582,
+    "sha256": "9237f7068648f99f081aafaa6e4743c71ff307b972eed8eec351687ae47c7128"
+  }
+}

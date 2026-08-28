@@ -840,7 +840,7 @@ Salah satu sifat paling mendasar dari hasil kali tensor adalah relasi adjoinnya 
   \[ \left( (Q, R)\dcate{Mod}\right)^\text{op} \times \left((R, S)\dcate{Mod}\right)^\text{op} \times \left((Q, S)\dcate{Mod}\right) \to \cate{Ab}. \]
 \end{theorem}
 \begin{proof}
-	Kita buktikan pernyataan pertama. Menurut Catatan \ref{rem:bimodule-balanced}, $\Hom_{(Q,S)\dcate{Mod}} \left( M \dotimes{R} N, A \right)$ dapat diidentifikasi dengan grup aditif semua hasil kali seimbang $B$ dari $M \times N$ ke $A$ (dengan memperhitungkan struktur bimodul $(Q, S)$); tulis korespondensi ini sebagai $\varphi \leftrightarrow B$. Memberikan hasil kali seimbang $B: M \times N \to A$ ekuivalen dengan memberikan peta $N \ni y \mapsto B(\cdot, y) = \varphi(\bullet \otimes y)$, yang kita tulis sebagai $\Phi$. Definisi hasil kali seimbang diterjemahkan menjadi
+	Kita buktikan pernyataan pertama. Menurut Catatan \ref{rem:bimodule-balanced}, $\Hom_{(Q,S)\dcate{Mod}} \allowbreak \left( M \dotimes{R} N, A \right)$ dapat diidentifikasi dengan grup aditif semua hasil kali seimbang $B$ dari $M \times N$ ke $A$ (dengan memperhitungkan struktur bimodul $(Q, S)$); tulis korespondensi ini sebagai $\varphi \leftrightarrow B$. Memberikan hasil kali seimbang $B: M \times N \to A$ ekuivalen dengan memberikan peta $N \ni y \mapsto B(\cdot, y) = \varphi(\bullet \otimes y)$, yang kita tulis sebagai $\Phi$. Definisi hasil kali seimbang diterjemahkan menjadi
 	\begin{compactitem}
 		\item $\Phi \in \Hom(N, \Hom(M, A))$ (ruas kanan adalah $\Hom$ dalam kategori grup aditif $\cate{Ab}$);
 		\item bayangan $qm$ di bawah $\Phi(n)$ (yakni $B(qm, n)$) sama dengan perkalian kiri oleh $q$ atas bayangan $m$ di bawah $\Phi(n)$ (yakni $B(m, n)$); singkatnya, $\Phi(n) \in \Hom({}_Q M, {}_Q A)$;
@@ -963,7 +963,7 @@ Sekarang anggap $R$ suatu gelanggang komutatif. Korolari \ref{prop:module-monoid
 	Bagi homomorfisme $R \to S$ antara gelanggang-gelanggang komutatif, fungtor $P_{R \to S}: R\dcate{Mod} \to S\dcate{Mod}$ mempunyai struktur fungtor monoidal alami.
 \end{proposition}
 \begin{proof}
-	Kita hanya memberikan isomorfisme fungtor $P_{R \to S}(-) \dotimes{S} P_{R \to S}(-) \xrightarrow[\xi]{\sim} P_{R \to S}\left( - \dotimes{R} - \right)$ yang diperlukan bagi fungtor monoidal. Ingat bahwa $P_{R \to S}(M) = M \dotimes{R} S$. Untuk $R$-modul $M$, $N$, definisikan $\xi(M,N)$ sebagai komposisi isomorfisme-isomorfisme berikut:
+	Kita hanya memberikan isomorfisme fungtor berikut, yang diperlukan bagi fungtor monoidal: \[P_{R \to S}(-) \dotimes{S} P_{R \to S}(-) \xrightarrow[\xi]{\sim} P_{R \to S}\left( - \dotimes{R} - \right).\] Ingat bahwa $P_{R \to S}(M) = M \dotimes{R} S$. Untuk $R$-modul $M$, $N$, definisikan $\xi(M,N)$ sebagai komposisi isomorfisme-isomorfisme berikut:
 	\[\begin{tikzcd}[row sep=small, column sep=tiny, every cell/.style={scale=0.93, transform shape, inner xsep=1ex, inner ysep=0.85ex}]
 		\left( M \dotimes{R} S \right) \dotimes{S} \left( N \dotimes{R} S \right) \arrow[r, "\sim"] & \left( M \dotimes{R} S \right) \dotimes{S} \left( S \dotimes{R} N \right) \arrow[r, "\sim"] & M \dotimes{R} \left( S \dotimes{R} N \right) \arrow[r, "\sim"] & \left( M \dotimes{R} N \right) \dotimes{R} S \\
 		(x \otimes s) \otimes (y \otimes t) \arrow[mapsto, r] & (x \otimes s) \otimes (t \otimes y) \arrow[mapsto, r] & (x \otimes st \otimes y) \arrow[mapsto, r] & (x \otimes y) \otimes st
@@ -1798,7 +1798,7 @@ Selanjutnya tetapkan gelanggang $R$ dan tinjau kasus kategori $\mathcal{C} = R\d
 	\forall i,j, \; p_i \iota_j & = \begin{cases}
 		\identity_{M_i}, & i=j \\
 		0, & i \neq j
-	\end{cases} \quad \because\text{diperiksa setelah mengomposisikan kedua ruas dengan monomorfisme $\iota_i$ dari kiri}, \\
+	\end{cases} \quad \because\substack{\text{diperiksa setelah mengomposisikan kedua ruas} \\ \text{dengan monomorfisme }\iota_i\text{ dari kiri}}, \\
 	\sum_{i=1}^n \iota_i p_i & = \sum_{i=1}^n e_i = \identity_M.
 \end{align*}
 Ini tepat merupakan versi $n$-ary dari Definisi \ref{def:biproduct} tentang biproduk, sehingga $\bigoplus_{i=1}^n M_i = M$.

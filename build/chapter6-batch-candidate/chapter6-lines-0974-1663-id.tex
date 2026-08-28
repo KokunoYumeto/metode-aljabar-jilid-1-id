@@ -1,0 +1,690 @@
+\section{Modul Terbangkitkan Hingga atas Daerah Ideal Utama}\label{sec:PID-module}
+Semua gelanggang dalam bagian ini adalah daerah integral komutatif tak nol dengan satuan. Untuk ideal utama gelanggang $R$, gunakan notasi baku $(a) := Ra$, dengan $a \in R$. Perhatikan bahwa $(a)(b) = (ab)$. Sekarang terapkan Definisi \ref{def:tor-ann} tentang unsur torsi dan bagian torsi pada daerah integral $R$. Semua unsur torsi dalam sebarang $R$-modul $M$ membentuk submodul $M_\text{tor} \subset M$, yang disebut \emph{submodul torsi}; sebab $ax=0$, $by=0$ menyiratkan $ab(x+y)=0$. Untuk ideal utama $(a)$, bagian torsi terkait $M[\mathfrak{a}] \subset M$ cukup ditulis $M[a]$.
+
+\begin{definition}
+	Misalkan $M$ suatu $R$-modul. \emph{Hasil bagi bebas torsi}-nya didefinisikan sebagai modul hasil bagi \index[sym1]{$M_\text{tf}$}\index[sym1]{$M_\text{tor}$}
+	\[ M_\text{tf} := M/M_\text{tor}. \]
+\end{definition}
+Perhatikan bahwa setiap homomorfisme modul $\varphi: M \to N$ memenuhi $\varphi(M_\text{tor}) \subset N_\text{tor}$ dan karena itu menginduksi $\varphi_\text{tf}: M_\text{tf} \to N_\text{tf}$. Jelas bahwa hasil bagi bebas torsi $M \mapsto M_\text{tf}$ sebenarnya memberikan suatu fungtor.
+
+\begin{lemma}
+	Hasil bagi bebas torsi $M_\text{tf}$ dari setiap $R$-modul $M$ adalah modul bebas torsi. Tarik balik sepanjang homomorfisme hasil bagi $M \to M_\text{tf}$ memberikan isomorfisme natural
+	\[ \Hom_R(M_\text{tf}, N) \rightiso \Hom_R(M, N), \quad \text{jika $N$ adalah $R$-modul bebas torsi.} \]
+\end{lemma}
+Tulis $R\dcate{Mod}_\text{tf}$ untuk subkategori penuh semua $R$-modul bebas torsi. Maka fungtor $M \mapsto M_\text{tf}$ bersama isomorfisme di atas memberikan fungtor adjoin kiri bagi fungtor inklusi $R\dcate{Mod}_\text{tf} \to R\dcate{Mod}$. Inilah sifat universal hasil bagi bebas torsi.
+
+\begin{proof}
+	Misalkan $\bar{x} \in M_\text{tf}$ suatu unsur torsi dan pilih prabayang $x \in M$; untuk pernyataan pertama, cukup dibuktikan $x \in M_\text{tor}$. Ambil $r \in R$, $r \neq 0$, dengan $r\bar{x} = 0$. Maka $rx \in M_\text{tor}$; pilih lagi $s \in R$ tak nol sehingga $srx=0$, dan diperoleh $x \in M_\text{tor}$.
+
+	Sekarang misalkan $N$ bebas torsi dan $\varphi \in \Hom_R(M, N)$. Sifat $\varphi(M_\text{tor}) \subset N_\text{tor} = \{0\}$ bersama Proposisi \ref{prop:1st-homomorphism-module} segera memberikan faktorisasi $\varphi = [M \to M_\text{tf} \xrightarrow{\varphi_\text{tf}} N]$.
+\end{proof}
+
+\begin{convention}
+	Dalam sisa bagian ini, selalu diasumsikan bahwa $R$ adalah daerah ideal utama (lihat Definisi \ref{def:PID}).
+\end{convention}
+
+\begin{lemma}\label{prop:PID-free-submodule}
+	Misalkan $E$ modul bebas atas $R$. Setiap submodul $M$ dari $E$ adalah bebas, dan $\rank_R(M) \leq \rank_R(E)$. 
+\end{lemma}
+Untuk basis dan rank $\rank_R(E)$ dari modul bebas $E$, lihat Definisi \ref{def:rank-module}.
+\begin{proof}
+	Perhatikan bahwa $M$ bebas torsi. Tetapkan basis $X$ dari $E$ dan tinjau himpunan
+	\[ \mathcal{P} := \left\{ (Y,Y',b) :
+		\begin{array}{l}
+			Y' \subset Y: \; X \; \text{memuat kedua himpunan itu} \\
+			M_Y := M \cap \sum_{y \in Y} Ry \; \text{adalah modul bebas} \\
+			b: Y' \to M \; \text{adalah suatu peta} \\
+			\{b(y) : y \in Y'\} \;\text{membentuk basis dari $M_Y$}
+		\end{array}
+	\right\}. \]
+	Berikan $\mathcal{P}$ urutan parsial
+	\[ (Y, Y', b) \leq (Y_1, Y'_1, b_1) \iff (Y \subset Y_1) \wedge (Y' \subset Y'_1) \wedge (b_1|_{Y'} = b). \]
+	Jelas bahwa $\mathcal{P}$ tidak kosong (ia memuat $Y=Y'=\emptyset$), dan setiap rantainya mempunyai batas atas: ambil gabungan semua $Y' \subset Y$ dalam rantai tersebut, yaitu $\mathcal{Y}' \subset \mathcal{Y}$, lalu rekatkan fungsi-fungsi $b$ menjadi $\mathcal{Y}' \to M$; hasilnya memberikan basis bagi $M_{\mathcal{Y}}$. Lemma Zorn (Teorema \ref{prop:Zorn}) menjamin bahwa $(\mathcal{P}, \leq)$ mempunyai unsur maksimal. Cukup dibuktikan bahwa setiap unsur maksimal $(Y,Y',b)$ memenuhi $Y=X$; dalam hal ini $\rank_R(M) = |Y'| \leq |X| = \rank_R(E)$.
+
+	Andaikan $(Y,Y',b) \in \mathcal{P}$ dan $Y \neq X$. Untuk $x \in X \smallsetminus Y$, definisikan ideal
+	\[ \mathfrak{a} := \left\{a \in R : \left( ax + \sum_{y \in Y} Ry \right) \cap M \neq \emptyset \right\}. \]
+	\begin{enumerate}
+		\item Jika $\mathfrak{a}=\{0\}$, maka $M_{Y \sqcup \{x\}} = M_Y$. Dengan mengambil $Y_1 = Y \sqcup \{x\}$, $Y'_1 = Y'$, dan $b_1 = b$, diperoleh unsur $\mathcal{P}$ yang secara ketat lebih besar daripada $(Y,Y',b)$.
+		\item Jika $\mathfrak{a} \neq \{0\}$, pilih unsur tak nol $a \in R$ sehingga $\mathfrak{a} = (a)$, dan pilih $m_x \in M$ dengan
+			\[ m_x \in ax + \sum_{y \in Y} Ry. \]
+			Jika sebarang unsur $m'$ dari $M_{Y \sqcup \{x\}}$ dikembangkan dalam $E$ terhadap $Y \sqcup \{x\}$, koefisien $x$ harus berada dalam $(a)$. Karena itu terdapat $r \in R$ sehingga $m' - rm_x \in M_Y$. Maka
+			\[ M_{Y \sqcup \{x\}} = Rm_x \oplus M_Y, \]
+		sehingga dapat diambil $Y_1 := Y \sqcup \{x\}$, $Y'_1 := Y' \sqcup \{x\}$, dan $b_1: Y_1 \to M$ yang memenuhi $b|_{Y'}=b$, $b(x) = m_x$; data ini memberikan unsur $\mathcal{P}$ yang secara ketat lebih besar daripada $(Y,Y',b)$.
+	\end{enumerate}
+	Dengan demikian, unsur maksimal $(Y,Y',b)$ dari $(\mathcal{P}, \leq)$ harus memenuhi $Y=X$.
+\end{proof}
+Jika $\rank_R(E) = |X|$ berhingga, keberadaan unsur maksimal dalam $(\mathcal{P}, \leq)$ pada pembuktian di atas jelas dan tidak memerlukan Lemma Zorn. Sebagai penerapan, diperoleh dekomposisi jumlah langsung berikut.
+
+\begin{proposition}\label{prop:decomp-tor-free}
+	Misalkan $M$ suatu $R$-modul dan $M_\text{tf}$ dibangkitkan secara berhingga. Maka $M_\text{tf}$ adalah modul bebas, dan terdapat submodul bebas $E \subset M$ ber-rank hingga sehingga $M = M_\text{tor} \oplus E$.
+\end{proposition}
+\begin{proof}
+	Pilih suatu himpunan pembangkit berhingga $X$ dari $R$-modul bebas torsi terbangkitkan hingga $M_\text{tf}$, lalu ambil subhimpunan bebas linear maksimal $Y$ di dalamnya. Untuk setiap $x \in X \smallsetminus Y$, kita mungkin tidak dapat menulis $x$ sebagai kombinasi linear dari $Y$; tetapi karena $Y \sqcup \{x\}$ bergantung linear, selalu terdapat $a_x \in R$, $a_x \neq 0$, sehingga $a_x x \in \sum_{y \in Y} Ry$. Tetapkan $a := \prod_{x \in X \smallsetminus Y} a_x$. Maka homomorfisme
+	\begin{align*}
+		M_\text{tf} & \longrightarrow \bigoplus_{y \in Y} Ry = R^{\oplus Y} \\
+		m & \longmapsto am
+	\end{align*}
+	bersifat injektif. Lemma \ref{prop:PID-free-submodule} segera menunjukkan bahwa $M_\text{tf}$ adalah modul bebas ber-rank hingga.
+
+	Pilih basis $B$ dari $M_\text{tf}$, dan untuk setiap $\bar{b} \in B$, pilih prabayang $b \in M$. Mudah diperiksa bahwa $E := \sum_{\bar{b} \in B} Rb = \bigoplus_{\bar{b} \in B} Rb$ adalah submodul bebas dari $M$, dan bahwa pembatasan $M \to M_\text{tf}$ memberikan isomorfisme $E \rightiso M_\text{tf}$. Dengan demikian, $M = M_\text{tor} \oplus E$.
+\end{proof}
+
+Berdasarkan Proposisi \ref{prop:decomp-tor-free}, sering kali berguna mereduksi kajian modul terbangkitkan hingga atas $R$ ke kasus $M = M_\text{tor}$. Dalam keadaan ini berlaku dekomposisi berikut. Ingat bahwa daerah ideal utama $R$ merupakan daerah faktorisasi tunggal (Teorema \ref{prop:PID-UFD}).
+
+\begin{lemma}\label{prop:PID-primary-decomp}
+	Andaikan $R$-modul $M$ memenuhi $\mathrm{ann}(M) \neq \{0\}$. Misalkan unsur $\prod_{i=1}^m p_i^{n_i}$ dari $R$ membangkitkan ideal $\mathrm{ann}(M)$, dengan $p_1, \ldots, p_m$ unsur-unsur tak tereduksi dari $R$ yang saling tidak membagi. Maka $M$ mempunyai dekomposisi jumlah langsung
+	\[ M = \bigoplus_{i=1}^m M[p_i^{n_i}]. \]
+	Submodul dalam dekomposisi yang bersesuaian dengan $p = p_i$ juga dapat ditulis secara lebih intrinsik sebagai $M[p^\infty] := \bigcup_{n \geq 0} M[p^n]$ dan disebut \emph{bagian $p$-primer} dari $M$. \index[sym1]{$M[p^\infty]$}\index{bagian $p$-primer ($p$-primary part)}
+\end{lemma}
+\begin{proof}
+	Pandang $M$ sebagai modul atas $R/(\prod_{i=1}^m p_i^{n_i})$. Tetapkan $I_i := (p_i^{n_i})$. Faktorisasi tunggal dalam daerah ideal utama menyiratkan $(\prod_i p_i^{n_i}) = \bigcap_i I_i$, dan $I_1, \ldots, I_m$ memenuhi hipotesis Teorema \ref{prop:CRT}; jadi
+	\[ R \big/ ( \prod_{i=1}^m p_i^{n_i} ) \rightiso \prod_{i=1}^m R/(p_i^{n_i}). \]
+	Lemma \ref{prop:prod-module} memberikan dekomposisi jumlah langsung terkait $M = \bigoplus_{i=1}^m M_i$, dengan setiap $M_i$ sebenarnya suatu modul atas $R/(p_i^{n_i})$. Dari syarat-syaratnya, untuk setiap $N$ berlaku $(\prod_{j \neq i} p_j^{n_j}) + (p_i^N) = R$; dengan mudah diperoleh $M_i = M[p_i^{n_i}] = M[p_i^{\infty}]$.
+\end{proof}
+
+Kini semua persiapan selesai untuk membuktikan teorema struktur modul atas daerah ideal utama beserta akibat-akibatnya.
+\begin{theorem}[Teorema pembagi elementer]\label{prop:elementary-divisor-sub}\index{teorema pembagi elementer (Theorem of elementary divisors)}
+	Misalkan $E$ modul bebas ber-rank $n$ atas $R$ ($n \in \Z_{\geq 0}$) dan $M$ suatu submodulnya. Maka terdapat basis $\{e_1, \ldots, e_n\}$ dari $E$ dan keluarga ideal $\mathfrak{d}_i = (d_i)$, $i=1, \ldots, n$, yang memenuhi
+	\begin{itemize}
+		\item $\mathfrak{d}_1 \supset \cdots \supset \mathfrak{d}_n$;
+		\item definisikan $0 \leq k \leq n$ melalui $\mathfrak{d}_i \neq (0) \iff i \leq k$. Maka unsur-unsur
+			\[ d_i e_i, \quad 1 \leq i \leq k \]
+		membentuk basis dari $M$.
+	\end{itemize}
+	Rantai ideal $\mathfrak{d}_1 \supset \mathfrak{d}_2 \supset \cdots \supset \mathfrak{d}_n$ demikian sepenuhnya ditentukan oleh modul $E$ dan $M$, sedangkan ideal-ideal sejatinya sepenuhnya ditentukan oleh kelas isomorfisme $E/M$.
+\end{theorem}
+\begin{proof}
+	Pertama, buktikan keberadaan basis demikian. Untuk setiap $\lambda \in \Hom_R(E, R)$, bayangan $\lambda(M)$ adalah ideal dari $R$. Keluarga ideal $\{ \lambda(M): \lambda \in \Hom_R(E, R) \}$ selalu mempunyai unsur maksimal terhadap inklusi $\subset$; jika tidak, kita dapat mengekstrak rantai ideal naik tak hingga $\mathfrak{a}_1 \subsetneq \mathfrak{a}_2 \subsetneq \cdots$, bertentangan dengan Lemma \ref{prop:ACC-PID}. Pilih unsur maksimal $\lambda_1(M) = \lrangle{d_1} =: \mathfrak{d}_1$. Jika $d_1 = 0$, maka $M=\{0\}$; dalam hal ini, ambil sebarang basis $e_1, \ldots, e_n$.
+
+	Jika $d_1 \neq 0$, pilih $x_1 \in M$, $x_1 \neq 0$, sehingga $\lambda_1(x_1) = d_1$. Kita menyatakan bahwa untuk setiap $\lambda \in \Hom_R(E, R)$ berlaku $\lambda(x_1) \in (d_1)$; ini ekuivalen dengan pernyataan bahwa ideal $(b) := (\lambda(x_1)) + (d_1)$ memenuhi $(b)=(d_1)$. Jika tidak, $(b) \supsetneq (d_1)$, sehingga terdapat $u, v \in R$ dengan
+	\[ b = u\lambda(x_1) + v\lambda_1(x_1) = (u\lambda + v\lambda_1)(x_1) \notin (d_1), \]
+	bertentangan dengan maksimalitas $\lambda_1(M)$. Karena $\lambda$ sebarang, semua koordinat $x_1$ terhadap sebarang basis $E$ habis dibagi $d_1$; maka terdapat $e_1 \in E$ sehingga $x_1 = d_1 e_1$.
+
+	Menurut Lemma \ref{prop:PID-free-submodule}, $E' := \Ker(\lambda_1)$ juga modul bebas, dan $E' \cap Re_1 = \{0\}$. Dari $\lambda_1(e_1) = 1$, setiap $e \in E$ mempunyai representasi tunggal
+	\[ e = \lambda_1(e) e_1 + \underbracket{e - \lambda_1(e)e_1}_{\in E'} \in R e_1 \oplus E', \]
+	sehingga $E = R e_1 \oplus E'$. Jika $e \in M$, maka $\lambda_1(e) e_1 \in (d_1) e_1 = R x_1 \subset M$, sehingga
+	\[ M = Rx_1 \oplus \underbracket{(M \cap E')}_{:= M'}. \]
+	Ulangi prosedur sebelumnya pada $M' \subset E'$ untuk memperoleh $\mathfrak{d}_2 = (d_2) = \lambda_2(M')$, dengan $\lambda_2 \in \Hom_R(E', R)$. Pilih $x_2 \in M'$ sehingga $\lambda_2(x_2) = d_2$. Kita menyatakan bahwa $\mathfrak{d}_1 \supset \mathfrak{d}_2$: homomorfisme $\lambda_2$ dapat diperluas menjadi $\tilde{\lambda}_2: E \to R$ dengan $\tilde{\lambda}_2(e_1)=0$. Di sisi lain, pilih $u,v \in R$ sehingga $(ud_1 + vd_2) = (d_1) + (d_2)$. Bersama definisi $E'$, diperoleh
+	\[ ud_1 + vd_2 = (u \lambda_1 + v\tilde{\lambda}_2)(x_1 + x_2) \in (u \lambda_1 + v\tilde{\lambda}_2)(M), \]
+	sehingga maksimalitas $\lambda_1(M)$ memberikan $(d_1) + (d_2) = (d_1)$, yakni $\mathfrak{d}_1 \supset \mathfrak{d}_2$. Dengan mengulangi penurunan rank ini, diperoleh semua $e_i$ dan $\mathfrak{d}_i$ yang diperlukan.
+
+	Terakhir, buktikan ketunggalan. Perhatikan bahwa
+	\begin{gather*}
+		(E/M)_\text{tor} \simeq \bigoplus_{\substack{1 \leq i \leq k \\ \mathfrak{d}_i \neq R}} R/\mathfrak{d}_i, \quad (E/M)_\text{tf} \simeq R^{\oplus (n-k)}.
+	\end{gather*}
+	Karena $R$ suatu daerah integral, Catatan \ref{rem:IBN} memungkinkan kita membaca $n-k$ dari $(E/M)_\text{tf}$. Jika data tersisa $\mathfrak{d}_i \neq R$ dapat dibaca dari $N := (E/M)_\text{tor}$, maka $|\{i: \mathfrak{d}_i = R \}|$ juga dapat ditentukan dari $\rank_R(M)$. Jadi kita beralih ke kajian $N := \bigoplus_{i=1}^k R/\mathfrak{d}_i$. Untuk menyederhanakan notasi, anggap $\mathfrak{d}_1 \neq R$.
+
+	Lemma \ref{prop:PID-primary-decomp} menyatakan $N$ sebagai $\bigoplus_p N[p^\infty]$, dan dekomposisi ini hanya bergantung pada struktur modul $N$. Untuk setiap unsur tak tereduksi $p$ yang dipilih, mudah dilihat bahwa $(R/\mathfrak{d}_i)[p^\infty] = R/(p^{n_i})$, dengan $n_i$ banyaknya kemunculan $p$ dalam faktorisasi tak tereduksi $d_i$ (lihat pembuktian Lemma \ref{prop:PID-primary-decomp}). Masalahnya tereduksi ke kasus $d_i = p^{n_i}$, dengan $p$ unsur tak tereduksi tetap dan $1 \leq n_1 \leq n_2 \leq \cdots \leq n_h$.
+	
+	Tulis $pN$ untuk submodul $\{px: x \in N\}$. Maka terdapat isomorfisme
+	\[\begin{tikzcd}[row sep=tiny]
+		\frac{N}{pN} \arrow[r, "\sim"] & \bigoplus_{1 \leq i \leq h} \frac{R/(p^{n_i})}{pR/(p^{n_i})} \arrow[rd, "\sim"', "\text{Proposisi \ref{prop:2nd-homomorphism-module}}"] & \\
+		& & (R/(p))^{\oplus h} \\
+		N[p] \arrow[r, "\sim"] & \bigoplus_{1 \leq i \leq h} p^{n_i - 1} \frac{R}{p^{n_i} R} \arrow[ru, "\sim"] & 
+	\end{tikzcd}\]
+	Dengan menerapkan pengamatan ini pada $p^j N = \bigoplus_i p^j R/(p^{n_i})$, banyaknya suku jumlah langsung yang tak nol, $\nu_j := |\{i: n_i > j\}|$, dapat dibaca dari struktur modul $p^j N$:
+	\begin{gather}\label{eqn:PID-decomp-nu_j}
+		\dim_{R/(p)} (p^j N)[p] = \nu_j = \dim_{R/(p)} \frac{p^j N}{p^{j+1} N}.
+	\end{gather}
+
+	Mengadaptasi metode \S\ref{sec:symmetric-poly}, sajikan data $n_1 \leq \cdots \leq n_h$ sebagai berikut: dari bawah ke atas, letakkan $n_i$ kotak pada baris ke-$i$, seperti dalam diagram berikut (ambil $n_1=n_2=1$, $n_3=2$, ...): \index{diagram Young}
+	\ytableausetup{mathmode}
+	\begin{equation}\label{eqn:PID-decomp-diagram} \begin{ytableau}
+		\none & \none[\nu_0] & \none[\nu_1] & \none[\cdots] & \none \\
+		\none[n_h] & & & \none[\cdots] & \\
+		\none[\vdots] & \none[\vdots] & \none[\vdots] \\
+		\none[n_3] & & \\
+		\none[n_2] & \\
+		\none[n_1] &
+	\end{ytableau}\end{equation}
+	Dengan menghitung secara vertikal, mudah dilihat bahwa kolom ke-$j+1$ mempunyai tepat $\nu_j$ kotak. Jadi data $(n_i)_{i \geq 1}$ dan $(\nu_j)_{j \geq 0}$ merupakan dua sisi dari hal yang sama dan saling menentukan. Dengan \eqref{eqn:PID-decomp-nu_j}, $(\nu_j)_j$ dapat dibaca dari struktur $N$, dan kemudian $(n_i)_i$ dapat dipulihkan.
+\end{proof}
+Setelah basis $E$ dan para pembangkit $M$ diberikan, pembuktian di atas juga dapat dirumuskan sebagai algoritma matriks; hasilnya disebut bentuk normal Smith dari suatu matriks. Lihat \cite[Bab 6 \S 5]{DN00}.
+
+\begin{theorem}\label{prop:elementary-divisor}
+	Setiap modul terbangkitkan hingga $N$ atas daerah ideal utama $R$ isomorfik dengan modul berbentuk
+	\[ N \simeq \bigoplus_{i=1}^n R/\mathfrak{d}_i, \quad R \neq \mathfrak{d}_1 \supset \cdots \supset \mathfrak{d}_n \]
+	dan rantai ideal sejati $\mathfrak{d}_1 \supset \cdots \supset \mathfrak{d}_n$ ditentukan secara tunggal oleh kelas isomorfisme $N$; ideal-ideal ini disebut pembagi elementer dari $N$.
+\end{theorem}
+\begin{proof}
+	Tuliskan $N$ sebagai $E/M$, dengan $E$ suatu modul bebas atas $R$ ber-rank hingga. Terapkan Teorema \ref{prop:elementary-divisor-sub} pada $M \subset E$.
+\end{proof}
+
+Karena $\Z$-modul tidak lain adalah grup abelian (Contoh \ref{eg:Z-modules}), kita langsung memperoleh teorema struktur klasik berikut.
+\begin{corollary}\label{prop:finite-abelian-structure}
+	Setiap grup abelian terbangkitkan hingga $G$ isomorfik dengan grup berbentuk $\bigoplus_{i=1}^n \Z/d_i\Z$, dengan
+	\[ d_1, \ldots, d_n \in \Z_{\geq 0} \smallsetminus \{1\}, \quad d_1 \mid  d_2  \mid  \cdots  \mid  d_n \]
+	yang ditentukan secara tunggal oleh kelas isomorfisme $G$. Jika $G$ berhingga, maka $d_1, \ldots, d_n$ semuanya tak nol.
+\end{corollary}
+
+\begin{remark}\label{rem:primary-elementary-divisor}
+	Dalam mempelajari dekomposisi pada Teorema \ref{prop:elementary-divisor}, pendekatan lain adalah mula-mula memakai Proposisi \ref{prop:decomp-tor-free} untuk mereduksi ke kasus $N = N_\text{tor}$. Dalam keadaan ini, kita dapat
+	\begin{inparaenum}[(a)]
+		\item terlebih dahulu memakai Lemma \ref{prop:PID-primary-decomp} untuk menulis $N$ secara tunggal sebagai jumlah langsung bagian-bagian $p$-primer, lalu menetapkan $p$ dan mereduksi ke kasus $N = N[p^\infty]$,
+		\item atau menguraikan setiap suku jumlah langsung $R/\mathfrak{d}_i$ dari $N$ menjadi bagian-bagian primer (perhatikan bahwa $\mathfrak{d}_i \neq \{0\}$); langkah ini tidak lain adalah Teorema Sisa Cina (Teorema \ref{prop:CRT}).
+	\end{inparaenum}
+	Kedua jalan tentu berujung pada hasil yang sama. Pada akhirnya, diperoleh keluarga invarian yang lebih halus $(p^{v_1}), (p^{v_2}), \ldots$ untuk $N$, dengan $p$ merentang sejumlah hingga unsur prima dan $v_1 \leq v_2 \leq \cdots$. Modul $N$ secara bersesuaian terurai sebagai jumlah langsung modul-modul $R/(p^{v_i})$. Versi ini kadang lebih nyaman daripada Teorema \ref{prop:elementary-divisor}.
+\end{remark}
+
+Berikut penerapan sederhana. Grup abelian $(A,+)$ disebut mempunyai \emph{eksponen} $m \in \Z_{\geq 1}$ jika $mA=\{0\}$; Proposisi \ref{prop:ord-power} menyatakan bahwa setiap grup abelian berhingga mempunyai eksponen. Bagi grup bereksponen $m$, definisikan grup dualnya sebagai $A^\vee := \Hom(A, \frac{1}{m}\Z/\Z)$, dengan penjumlahan $(f_1 + f_2)(\cdot) = f_1(\cdot) + f_2(\cdot)$; grup ini juga bereksponen $m$. Dalam definisi ini, $\frac{1}{m}\Z/\Z$ jelas dapat diganti dengan $\Z/m\Z$; keuntungan pilihan pertama ialah bahwa ia sama dengan $(\Q/\Z)[m] \subset \Q/\Z$. Dengan demikian, $\Hom(A, \frac{1}{m}\Z/\Z) = \Hom(A, \Q/\Z)$ (periksalah), sehingga definisi $A^\vee := \Hom(A, \Q/\Z)$ mencakup semua eksponen sekaligus. \index{grup!eksponen (exponent)}
+
+Sebagai contoh, ambil $A := \Z/n\Z$. Terdapat isomorfisme grup $\Z/n\Z \rightiso A^\vee$ yang memetakan $a + n\Z \in A$ ke unsur $\left[ b+n\Z \mapsto \frac{ab}{n} + \Z \in \Q/\Z \right]$ dari $A^\vee$. Verifikasinya langsung dan diserahkan kepada pembaca.
+
+Semua grup abelian yang mempunyai eksponen membentuk kategori $\cate{Ab}_e$. Jika $\varphi: A \to B$ homomorfisme dalam $\cate{Ab}_e$, secara alami terdapat homomorfisme $\varphi^\vee: B^\vee \to A^\vee$ yang ``menarik balik'' $f$ menjadi $f \circ \varphi$. Jelas bahwa $(\varphi \psi)^\vee = \psi^\vee \varphi^\vee$, sehingga $A \mapsto A^\vee$ memberikan fungtor aditif $D: \cate{Ab}_e \to \cate{Ab}_e^{\text{op}}$. Dalam $\cate{Ab}_e$ terdapat isomorfisme natural
+\[\begin{tikzcd}[row sep=tiny]
+	(A \times B)^\vee \arrow[r, "\sim"] & A^\vee \times B^\vee &  \\
+	f \arrow[phantom, u, "\in" description, sloped] \arrow[mapsto, r] & (f|_{A \times 0}, f|_{0 \times B}) \arrow[phantom, u, "\in" description, sloped] & \left( A, B \in \Obj(\cate{Ab}_e) \right) \\
+	\left[ (a,b) \mapsto f_1(a) + f_2(b) \right] & (f_1, f_2) \arrow[mapsto, l] &
+\end{tikzcd}\]
+Jadi $(f_1, f_2)$ dapat diidentifikasi dengan unsur $(A \times B)^\vee$. Ini juga merupakan akibat formal bahwa fungtor $D$ mempertahankan biproduk (Proposisi \ref{prop:biproduct-preservation}). Selain itu, terdapat homomorfisme ``evaluasi'' natural
+\begin{equation}\label{eqn:ab-group-duality} \begin{aligned}
+	\iota_A: A & \longrightarrow A^{\vee\vee} = D^\text{op} D(A) \\
+	a & \longmapsto \left[ A^\vee \ni f \mapsto f(a) \right].
+\end{aligned}\end{equation}
+Sebagai latihan sederhana, periksa bahwa untuk setiap $A \xrightarrow{\varphi} B$ berlaku $\varphi^{\vee\vee} \circ \iota_A = \iota_B \circ \varphi$. Dalam bahasa teori kategori di atas, $\iota := (\iota_A)_A$ memberikan morfisme antar-fungtor
+$\begin{tikzcd}
+	\cate{Ab}_e \arrow[bend left=35, r, "\identity", ""' name=U] \arrow[bend right=35, r, "{D^\text{op} D}"', "" name=D] & \arrow[Rightarrow, to path=(U) -- (D) \tikztonodes, "\iota"] \cate{Ab}_e
+\end{tikzcd}$.
+Kini Contoh \ref{eg:vectf-duality} mempunyai analog berikut.
+\begin{corollary}[Dualitas grup abelian berhingga]\label{prop:finite-duality}
+	Misalkan $A$ suatu grup abelian berhingga. Maka $\iota_A: A \rightiso A^{\vee\vee}$.
+\end{corollary}
+\begin{proof}
+	Tulis $\Psi_{A,B}$ untuk isomorfisme natural di atas, $(A \times B)^{\vee\vee} \rightiso (A^\vee \times B^\vee)^\vee \rightiso A^{\vee\vee} \times B^{\vee\vee}$. Seperti yang diharapkan, dengan menjabarkan definisinya terlihat bahwa diagram berikut komutatif:
+	\[\begin{tikzcd}[row sep=tiny]
+		& (A \times B)^{\vee\vee} \arrow[dd, "\simeq"', "\Psi_{A,B}"] & \lambda \arrow[phantom, l, "\ni" description, sloped] \arrow[mapsto, dd] \\
+		A \times B \arrow[ru, "{\iota_{A \times B}}"] \arrow[rd, "\iota_A \times \iota_B"'] & \\
+		& A^{\vee\vee} \times B^{\vee\vee} & \arrow[phantom, l, "\ni" description, sloped] \left( f_A \mapsto \lambda((f_A, 0)), \; f_B \mapsto \lambda((0, f_B)) \right)
+	\end{tikzcd}\]
+	Menurut Korolari \ref{prop:finite-abelian-structure}, masalah tereduksi ke kasus $A = \Z/n\Z$. Deskripsi $(\Z/n\Z)^\vee$ di atas langsung menunjukkan bahwa $\iota_{\Z/n\Z}$ adalah isomorfisme.
+\end{proof}
+Jadi $\iota: \identity \to D^\text{op} D$ merupakan isomorfisme antar-fungtor, sedangkan $D, D^\text{op}$ adalah ekuivalensi kategori aditif. Berikut adalah akibat formal dari ``dualitas'' ini.
+
+\begin{corollary}\label{prop:finite-duality-2}
+	Misalkan $H$ subgrup dari grup abelian berhingga $A$. Peta $f \mapsto f|_H$ memberikan homomorfisme ``restriksi'' $r_H: A^\vee \to H^\vee$; tulis kernelnya sebagai $H^\perp$. Maka
+	\begin{compactenum}[(i)]
+		\item $r_H: A^\vee/H^\perp \rightiso H^\vee$;
+		\item $H^\perp = (A/H)^\vee \hookrightarrow A^\vee$;
+		\item sebagai subgrup dari $A^{\vee\vee}$, berlaku $H^{\vee\vee} = H^{\perp\perp}$, dan $\iota_A|_H: H \rightiso H^{\perp\perp}$.
+	\end{compactenum}
+\end{corollary}
+\begin{proof}
+	Karena $D$ memberikan ekuivalensi kategori aditif, ia mengubah $A/H = \Coker\left[H \hookrightarrow A\right]$ menjadi $\Ker(r_H) = H^\perp$, serta mengubah $H = \Ker[A \to A/H]$ menjadi $\Coker\left[ (A/H)^\vee \to A^\vee \right] = \Coker\left[ H^\perp \hookrightarrow A^\vee \right] = A^\vee/H^\perp$. Ini membuktikan (i) dan (ii).
+	
+	Selanjutnya tinjau (iii). Pandang $H \hookrightarrow A$ sebagai kernel dari $A \to A/H$. Karena $D^\text{op} D$ mempertahankan kernel, homomorfisme natural terinduksi $H^{\vee\vee} \to A^{\vee\vee}$ dapat diidentifikasi dengan $\Ker\left[ A^{\vee\vee} \to (A/H)^{\vee\vee}\right]$. Namun $A^{\vee\vee} \to (A/H)^{\vee\vee} \simeq (H^\perp)^\vee$ tidak lain adalah $r_{H^\perp}$, yang kernelnya tepat $H^{\perp\perp}$. Karena pembatasan $\iota_A$ pada $H$ adalah $\iota_H: H \rightiso H^{\vee\vee}$ (akibat fungtorialitas $\iota$), (iii) terbukti.
+\end{proof}
+Pembaca tentu mengenal sifat serupa untuk ruang vektor berdimensi hingga dan ruang dualnya.
+ 
+\section{Pengantar Barisan Eksak}\label{sec:exactseq-module}
+Tetapkan gelanggang $R$. Berikut hanya ditinjau modul kiri atas $R$; kasus modul kanan atas $R$ (yakni modul kiri atas $R^\text{op}$) sepenuhnya sama. Kasus bimodul $(R,S)$ juga dapat ditangani dengan cara serupa.
+
+Kategori modul $R\dcate{Mod}$ adalah model bagi apa yang disebut kategori abelian. Rinciannya ditunda hingga bab aljabar homologis. Secara kasar, ini berarti bahwa
+\begin{itemize}
+	\item $R\dcate{Mod}$ adalah kategori aditif (Korolari \ref{prop:Mod-cat-additive}); khususnya, terdapat biproduk dalam $R\dcate{Mod}$, dan himpunan homomorfisme $\Hom_R(M, N)$ mempunyai struktur grup aditif alami;
+	\item setiap morfisme $f: M \to N$ dalam $R\dcate{Mod}$ mempunyai kernel $\Ker(f) \hookrightarrow M$ dan kokernel $N \twoheadrightarrow \Coker(f)$, yang masing-masing merupakan kasus khusus ekualiser dan koekualiser dalam teori kategori (lihat Teorema \ref{prop:module-cat-completeness});
+	\item berdasarkan butir sebelumnya, morfisme natural $M/\Ker(f) \to \Ker\left[ N \to \Coker(f) \right]$ adalah isomorfisme; ini langsung dari definisi.
+\end{itemize}
+Dari sifat-sifat di atas dapat dibangun teori umum aljabar homologis, sebagaimana dirintis oleh Grothendieck dalam \cite{Gr57}. Namun, semua hasil dalam bagian ini dapat diperiksa langsung dari sudut pandang modul.
+
+\begin{definition}\index{kompleks@kompleks (complex)}\index{barisan eksak}
+	Sebuah \emph{kompleks} $R$-modul adalah suatu barisan $R$-modul beserta homomorfisme berturutan di antaranya, berbentuk
+	\[ \cdots \to W \to X \to Y \to Z \to \cdots, \]
+	yang dapat memanjang tak hingga atau mempunyai ujung pada satu atau kedua sisi. Kita mensyaratkan bahwa setiap dua homomorfisme yang tersambung ujung-ke-pangkal
+	\[ X \to Y \to Z, \]
+	berkomposisi menjadi peta nol $X \xrightarrow{0} Z$, atau secara ekuivalen $\Image[X \to Y] \subset \Ker[Y \to Z]$. \emph{Grup homologi} kompleks pada $Y$ didefinisikan sebagai $R$-modul \index{homologi@homologi (homology)}
+	\[ \Ker[Y \to Z] \big/ \Image[X \to Y]. \]
+	Jika $\Ker[Y \to Z] = \Image[X \to Y]$, kompleks disebut \emph{eksak} pada suku $Y$. Kompleks yang eksak di setiap suku disebut \emph{barisan eksak}.
+\end{definition}
+
+Biasanya suku-suku kompleks diberi indeks bilangan bulat dan ditulis $[ \cdots \to  M_i \xrightarrow{d_i} M_{i-1} \to \cdots]$ atau $(M_\bullet, d_\bullet)$. Syarat kompleks lalu menjadi, untuk setiap suku $M_i$ yang bukan ujung,
+\[ d_i d_{i+1} = 0, \]
+sedangkan grup homologi pada suku ke-$i$ ditulis
+\[ \Hm_i(M_\bullet) := \frac{\Ker[d_i: M_i \to M_{i-1}]}{\Image[d_{i+1}: M_{i+1} \to M_i ]}. \]
+Keeksakan menjadi syarat $\Hm_i(M_\bullet) = 0$.
+
+Kompleks tanpa ujung $M_\bullet$ dapat terbatas atas ($k \gg 0 \implies M_k = 0$), terbatas bawah ($k \gg 0 \implies M_{-k}=0$), atau terbatas ($|k| \gg 0 \implies M_k = 0$). Suku-suku nol berlebih dapat dihilangkan tanpa memengaruhi keeksakan; misalnya, kompleks terbatas selalu dapat ditulis dalam bentuk $0 \to M_n \to \cdots \to M_1 \to 0$.
+
+Jika kompleks diindeks dengan superskrip $(M^\bullet, d^\bullet)$ dan disyaratkan $d^i: M^i \to M^{i+1}$, teorinya sepenuhnya serupa. Karena indeks berada di atas, \index[sym1]{Hi@$\Hm^i$, $\Hm_i$}
+\[ \Hm^i(M^\bullet) := \frac{\Ker[d^i: M^i \to M^{i+1}]}{\Image[d^{i-1}: M^{i-1} \to M^i]}. \]
+disebut \emph{grup kohomologi} pada $i$. Kedua konvensi indeks dihubungkan dengan menetapkan $M^i := M_{-i}$ dan mengambil $d^i: M^i \to M^{i+1}$ sebagai $d_{-i}$. \index{kohomologi@kohomologi (cohomology)}
+
+Sesekali kita juga menangani kompleks siklik, yang berarti indeks dalam definisi diambil dari $i \in \Z/n\Z$. Homomorfisme $d_i$ sering cukup ditulis $d$.
+\begin{definition}
+	Untuk dua kompleks $M_\bullet$, $N_\bullet$ dengan konvensi indeks yang sama, suatu morfisme di antaranya adalah keluarga homomorfisme $\phi = (\phi_i: M_i \to N_i)_i$ yang membuat diagram berikut komutatif untuk setiap $i$:
+	\[ \begin{tikzcd}
+	M_i \arrow[r, "d_i"] \arrow[d, "{\phi_i}"'] & M_{i-1} \arrow[d, "{\phi_{i-1}}"] \\
+	N_i \arrow[r, "d_i"'] & N_{i-1}.
+	\end{tikzcd}\]
+	Dengan demikian terdapat konsep isomorfisme kompleks, dan kompleks-kompleks $R$-modul dengan ujung tertentu (atau tak terbatas) membentuk suatu kategori. Morfisme $\phi$ menginduksi homomorfisme yang jelas pada tingkat homologi, $\Hm_i(\phi): \Hm_i(M_\bullet) \to \Hm_i(N_\bullet)$.
+\end{definition}
+Homologi membentuk keluarga fungtor aditif $(\Hm_i)_{a<i<b}$ dari kategori kompleks ke $\cate{Ab}$. Selain itu, keluarga kompleks $(M_{\bullet,i})_{i \in I}$ dapat dibangun suku demi suku menjadi
+\begin{compactitem}
+	\item produk $\prod_i M_{\bullet,i}$,
+	\item jumlah langsung $\bigoplus_i M_{\bullet,i}$, atau lebih umum,
+	\item limit $\varprojlim_i M_{\bullet,i}$ atau $\varinjlim_i M_{\bullet,i}$.
+\end{compactitem}
+Dalam kasus limit, $I$ harus merupakan kategori kecil. Untuk setiap morfisme $i \to j$ dalam $I$, perlu diberikan apa yang disebut homomorfisme transisi $M_{\bullet,j} \to M_{\bullet,i}$ (untuk $\varprojlim$) atau $M_{\bullet,i} \to M_{\bullet,j}$ (untuk $\varinjlim$), yang kompatibel dengan komposisi morfisme dalam $I$; di sini semua homomorfisme tentu berarti homomorfisme kompleks. Fungtorialitas menunjukkan bahwa $\forall i, \; g_i f_i = 0 \implies (\prod_i g_i) (\prod_i f_i)=0$, dan seterusnya; jadi konstruksi-konstruksi ini tetap menghasilkan kompleks.
+
+\begin{lemma}\label{prop:mod-prod-exactness}
+	Produk (atau jumlah langsung) suatu keluarga kompleks $(M_{\bullet,i})_i$ eksak jika dan hanya jika setiap $M_{\bullet,i}$ eksak. $\varinjlim$ terarah ke atas dari barisan-barisan eksak (lihat Catatan \ref{rem:filtrant-mod-limit}) tetap eksak.
+\end{lemma}
+\begin{proof}
+	Untuk menangani keeksakan, cukup ditinjau kompleks tiga suku $L_i \xrightarrow{f_i} M_i \xrightarrow{g_i} N_i$. Jelas bahwa $\Image(\prod_i f_i) = \prod_i \Image(f_i)$ dan $\Ker(\prod_i g_i) = \prod_i \Ker(g_i)$; hal yang sama berlaku dengan $\bigoplus_i$ menggantikan $\prod_i$, sehingga pernyataan pertama jelas. Dalam kasus $\varinjlim$ terarah ke atas, harus dibuktikan $\Ker(\varinjlim_i g_i) \subset \Image(\varinjlim_i f_i)$. Ini merupakan penerapan langsung konstruksi dalam Catatan \ref{rem:filtrant-mod-limit} dan diserahkan sebagai latihan.
+\end{proof}
+
+Berikutnya, kita tinjau beberapa jenis barisan eksak yang paling sederhana. Ingat bahwa satu-satunya homomorfisme dari atau ke modul nol adalah homomorfisme nol.
+\begin{itemize}
+	\item Barisan $0 \to M \to 0$ eksak jika dan hanya jika $M = \{0\}$;
+	\item barisan $0 \to M' \to M$ eksak jika dan hanya jika $M' \to M$ injektif: keeksakan ekuivalen dengan $\Ker[M' \to M] = \Image[0 \to M'] = 0$;
+	\item barisan $M \to M'' \to 0$ eksak jika dan hanya jika $M \to M''$ surjektif: keeksakan ekuivalen dengan $\Image[M \to M''] = \Ker[M'' \to 0] = M''$;
+	\item barisan $0 \to M' \to M \to 0$ eksak jika dan hanya jika $M \to M'$ adalah isomorfisme; ini merupakan akibat dua pernyataan sebelumnya.
+\end{itemize}
+
+\begin{definition}\index{barisan eksak!pendek}
+	\emph{Barisan eksak pendek} adalah barisan eksak berbentuk $0 \to M' \xrightarrow{f} M \xrightarrow{g} M'' \to 0$.
+\end{definition}
+Menurut contoh di atas, $M' \hookrightarrow M$ dalam barisan eksak pendek dapat dipandang sebagai penyertaan submodul, sedangkan $M \to M''$ surjektif. Keeksakan pada suku tengah $M$ ekuivalen dengan $\Ker[M \xrightarrow{g} M''] = M'$. Jadi, menurut Proposisi \ref{prop:quotient-image-module}, hingga isomorfisme kompleks, barisan eksak pendek tidak lain adalah deskripsi konstruksi modul hasil bagi $M'' = M/M'$. Barisan eksak pendek modul dapat dianalogikan dengan ekstensi grup yang dibahas dalam \S\ref{sec:group-extensions}, tetapi kasus modul lebih sederhana. Sejalan dengan pembelahan ekstensi grup, barisan eksak pendek modul juga mempunyai konsep pembelahan yang terkait dengan dekomposisi biproduk modul (lihat Definisi \ref{def:biproduct}). 
+
+\begin{proposition}\label{prop:split-ses-mod}
+	Misalkan $0 \to M' \xrightarrow{f} M \xrightarrow{g} M'' \to 0$ suatu barisan eksak pendek dalam kategori $R\dcate{Mod}$. Pernyataan berikut ekuivalen.
+	\begin{enumerate}[(i)]
+		\item Terdapat $s: M'' \to M$ sehingga $gs = \identity_{M''}$.
+		\item Terdapat $r: M \to M'$ sehingga $rf = \identity_{M'}$.
+		\item Terdapat diagram $\begin{tikzcd} M' \arrow[yshift=-0.7ex, r, "f"'] & M \arrow[yshift=0.7ex, l, "r"'] \arrow[yshift=-0.7ex, r, "g"'] & M'' \arrow[yshift=0.7ex, l, "s"'] \end{tikzcd}$ yang membuat $M$ menjadi biproduk $M' \oplus M''$.
+		\item Peta $g_*: \Hom(X, M) \to \Hom(X, M'')$ surjektif untuk setiap $R$-modul $X$.
+		\item Peta $f^*: \Hom(M, X) \to \Hom(M', X)$ surjektif untuk setiap $R$-modul $X$.
+	\end{enumerate}
+	Jika salah satu syarat di atas dipenuhi, barisan eksak pendek $0 \to M' \to M \to M'' \to 0$ disebut \emph{terbelah}.
+\end{proposition}
+Ingat bahwa $g_*(\varphi) = g\varphi$ dan $f^*(\psi) = \psi f$. Berdasarkan pertimbangan topologis, untuk $f: M' \to M$ dan $g: M \to M''$ yang diberikan, jika $gs = \identity$, $s$ disebut suatu \emph{seksi} dari $g$; jika $rf = \identity$, $r$ disebut suatu \emph{retraksi} dari $f$. Keberadaan seksi dan retraksi masing-masing menyiratkan bahwa $g$ surjektif dan $f$ injektif.
+\begin{proof}
+	Pertama buktikan (i) $\implies$ (iii). Jika $gs = \identity_{M''}$, maka $g( \identity_M - sg) = g - gsg = 0$, sehingga terdapat $r: M \to M'$ dan faktorisasi $(\identity_M - sg) = fr $. Dengan mengomposisikan $f$ di sebelah kanan, diperoleh $frf = f-sgf = f$. Karena $f$ injektif, $rf=\identity_{M'}$. Dengan demikian, diperoleh sifat-sifat pendefinisi biproduk
+	\[ rf = \identity_{M'}, \quad gs = \identity_{M''}, \quad fr + sg  = \identity_M. \]
+	Demikian pula, mulai dari $rf = \identity_{M'}$, diperoleh $s: M'' \to M$ sehingga $(\identity_M - fr) = sg$, yang membuktikan (ii) $\implies$ (iii). Implikasi (iii) $\implies$ (i), (ii) jelas.
+	
+	Dari $g_* s_* = (gs)_*$ dan $f^* r^* = (rf)^*$, diperoleh (i) $\implies$ (iv) dan (ii) $\implies$ (v). Sebaliknya, dengan mengambil $X = M''$ dalam (iv), diperoleh $s \in \Hom_R(M'', M)$ sehingga $g_*(s) = gs = \identity_{M''}$; jadi (iv) $\implies$ (i). Demikian pula, mengambil $X = M'$ menunjukkan (v) $\implies$ (ii).
+\end{proof}
+
+Sekarang kita perkenalkan alat dasar untuk mempelajari barisan eksak, yang lazim disebut \emph{Lemma Ular}. Tinjau diagram komutatif berikut:
+\[\begin{tikzcd}
+	& \Ker' \arrow[r] \arrow[d] & \Ker \arrow[r] \arrow[d] & \Ker'' \arrow[d] & \\
+	& X' \arrow[d] \arrow[r]  & X \arrow[d] \arrow[r]  & X'' \arrow[r] \arrow[d, ""{coordinate, name=Z}] & 0  \\
+	0 \arrow[r] & Y' \arrow[r] \arrow[d] & Y \arrow[r] \arrow[d] & Y'' \arrow[d] & \\
+	& \Coker' \arrow[uuurr, "\delta" description, crossing over, dashed, leftarrow, rounded corners, to path= {-- ([xshift=-2ex]\tikztostart.west) |- (Z) [near end]\tikztonodes -| ([xshift=2ex]\tikztotarget.east) -- (\tikztotarget) } ] \arrow[r] & \Coker \arrow[r] & \Coker'' &
+\end{tikzcd}\]
+di mana
+\begin{itemize}
+	\item $X' \to X \to X'' \to 0$ dan $0 \to Y' \to Y \to Y''$ keduanya barisan eksak,
+	\item $\Ker' := \Ker[X' \to Y'] \hookrightarrow X'$, dan $\Ker$, $\Ker''$ didefinisikan serupa,
+	\item $Y' \twoheadrightarrow \Coker' := \Coker[X' \to Y']$, dan $\Coker$, $\Coker''$ didefinisikan serupa; jadi setiap kolom vertikal dalam diagram eksak,
+	\item homomorfisme $X' \to X$, $Y' \to Y$, dan seterusnya secara alami menginduksi homomorfisme $\Ker' \to \Ker$, $\Coker' \to \Coker$, dan seterusnya.
+\end{itemize}
+Dari konstruksinya, bagian garis penuh jelas membentuk diagram komutatif. Konstruksi \emph{homomorfisme penghubung} $\delta: \Ker'' \dashrightarrow \Coker'$ masih perlu dijelaskan; kita bagi menjadi tiga langkah:
+\begin{compactenum}[(i)]
+	\item Untuk $x'' \in \Ker''$ yang diberikan, keeksakan $X \to X'' \to 0$ memungkinkan kita memilih $x \in X$ dengan $x \mapsto x''$.
+	\item Misalkan $y \in Y$ bayangan $x$ di bawah $X \to Y$. Kekomutatifan diagram menunjukkan $y \in \Ker[Y \to Y'']$.
+	\item Karena $Y' \to Y \to Y''$ eksak, terdapat tepat satu $y' \in Y'$ dengan $y' \mapsto y$; kemudian petakan $y' \mapsto \bar{y}' \in \Coker'$.
+\end{compactenum}
+Dengan menggunakan kekomutatifan dan keeksakan diagram, dua pilihan $x$ pada langkah pertama berbeda paling banyak sebesar bayangan $X' \to X$. Karena itu, nilai $y$ pada langkah kedua berbeda paling banyak sebesar bayangan $X' \to Y' \hookrightarrow Y$, dan $\bar{y}'$ tidak bergantung pada pilihan $x$. Jadi homomorfisme penghubung $\delta(x'') = \bar{y}'$ terdefinisi dengan baik.
+
+\begin{proposition}\label{prop:snake-lemma-mod}\index{Lemma Ular (Snake Lemma)}
+	Barisan $\Ker' \to \Ker \to \Ker'' \xrightarrow{\delta} \Coker' \to \Coker \to \Coker''$ eksak.
+\end{proposition}
+\begin{proof}
+	Kita hanya memeriksa suku $\Ker''$ dan $\Coker'$; yang lain mudah. Andaikan dalam konstruksi di atas $x'' \mapsto \bar{y}' = 0$. Dengan menelusuri konstruksi, ini ekuivalen dengan keberadaan $x' \in X'$ sehingga $x - (x'\;\text{yang dipetakan}) \in \Ker$. Karena $X' \to X \to X''$ eksak, pernyataan terakhir ekuivalen dengan $x'' \in \Image[\Ker \to \Ker'']$. Jadi barisan eksak pada $\Ker''$.
+
+	Sekarang tinjau $y' \in Y'$ dan bayangannya $\bar{y}' \in \Coker'$. Syarat $\bar{y}' \mapsto 0 \in \Coker$ ekuivalen dengan $\exists x_0 \in X$ yang dipetakan ke bayangan $y' \in Y'$ dalam $Y$. Bayangan $x_0$ di bawah $X \to X'' \to Y''$ otomatis nol, sehingga $x_0 \mapsto x'' \in \Ker''$. Dengan mengingat konstruksi homomorfisme penghubung $\delta$, diperoleh bahwa $\bar{y}' \mapsto 0$ ekuivalen dengan adanya $x'' \in \Ker''$ sehingga $\delta(x'') = \bar{y}'$.
+\end{proof}
+Teknik pembuktian ini adalah contoh khas ``penelusuran diagram''; salah satu cirinya ialah mencobanya sendiri sering lebih cepat daripada membacanya. Berikut contoh berguna lain, yang disebut \emph{Lemma Lima}. Atas alasan tersebut, pembuktiannya diserahkan kepada pembaca.
+
+\begin{proposition}\label{prop:5-lemma-mod}
+	Tinjau diagram komutatif $R$-modul
+	\[\begin{tikzcd}
+		X_1 \arrow[r] \arrow[d, "f_1"] & X_2 \arrow[r] \arrow[d, "f_2"] & X_3 \arrow[r] \arrow[d, "f_3"] & X_4 \arrow[r] \arrow[d, "f_4"] & X_5 \arrow[d, "f_5"] \\
+		Y_1 \arrow[r] & Y_2 \arrow[r] & Y_3 \arrow[r] & Y_4 \arrow[r] & Y_5
+	\end{tikzcd}\]
+	dan andaikan kedua baris horizontal eksak.
+	\begin{enumerate}
+		\item Jika $f_1$ surjektif dan $f_2, f_4$ injektif, maka $f_3$ injektif;
+		\item jika $f_5$ injektif dan $f_2, f_4$ surjektif, maka $f_3$ surjektif;
+		\item khususnya, jika $f_1$ surjektif, $f_5$ injektif, dan $f_2, f_4$ isomorfisme, maka $f_3$ isomorfisme.
+	\end{enumerate}
+\end{proposition}
+
+Untuk memahami definisi berikutnya, perhatikan bahwa jika $0 \to X' \to X \to X''$ suatu kompleks, Proposisi \ref{prop:1st-homomorphism-module} menunjukkan bahwa $X' \to X$ difaktorkan melalui $X' \to \Ker[X \to X'']$. Menurut pembahasan sebelumnya, kompleks itu eksak jika dan hanya jika $X' \rightiso \Ker[X \to X'']$. Demikian pula, kompleks $X' \to X \to X'' \to 0$ menginduksi morfisme $\Coker[X' \to X] \to X''$, dan keeksakan ekuivalen dengan $\Coker[X' \to X] \rightiso X''$.
+
+\begin{definition}
+	Misalkan $R$, $S$ gelanggang dan $F: R\dcate{Mod} \to S\dcate{Mod}$ suatu fungtor aditif.
+	\begin{itemize}
+		\item Jika untuk setiap barisan eksak $0 \to X' \to X \to X''$ dalam $R\dcate{Mod}$, bayangannya $0 \to FX' \to FX \to FX''$ juga eksak, maka $F$ disebut fungtor \emph{eksak kiri};
+		\item jika untuk setiap barisan eksak $X' \to X \to X'' \to 0$ dalam $R\dcate{Mod}$, bayangannya $FX' \to FX \to FX'' \to 0$ juga eksak, maka $F$ disebut fungtor \emph{eksak kanan};
+		\item fungtor yang eksak kiri dan kanan disebut \emph{fungtor eksak}.\index{fungtor!eksak (exact)}
+	\end{itemize}
+\end{definition}
+
+Keeksakan kiri/kanan fungtor dipertahankan oleh komposisi. Karena fungtor aditif $F$ mempertahankan morfisme nol, untuk $(M_\bullet, d_\bullet)$ yang diberikan, bayangannya $(FM_\bullet, F(d_\bullet))$ tetap merupakan kompleks. Definisi fungtor eksak kiri ekuivalen dengan mempertahankan kernel morfisme. Memang, menurut pembahasan sebelum definisi, $F$ eksak kiri jika dan hanya jika, apabila $0 \to X' \to X \to X''$ eksak, morfisme komposit natural
+\[\begin{tikzcd}
+	F(\Ker[X \to X'']) \arrow[rr, bend left=15] & FX' \arrow[l, "\sim"'] \arrow[r] & \Ker[FX \to FX'']
+\end{tikzcd}\]
+adalah isomorfisme, yakni $F$ mempertahankan kernel. Demikian pula, keeksakan kanan ekuivalen dengan $F$ mempertahankan kokernel. Perhatikan pula bahwa dalam kategori modul selalu berlaku $\Image[X \to Y] = \Ker[Y \to \Coker(X \to Y)]$; jadi fungtor eksak juga mempertahankan bayangan morfisme.
+
+Perhatikan bahwa $(M_\bullet, d_\bullet)$ dapat diuraikan menjadi gabungan kompleks-kompleks
+\begin{gather*}
+	\mathfrak{C}_i: \quad 0 \to N_i \hookrightarrow M_i \xrightarrow{d_i} N_{i-1} \to 0, \qquad N_i := \Ker(d_i)
+\end{gather*}
+Sebaliknya, dari suatu rangkaian $(\mathfrak{C}_i)_i$ yang diberikan, kita dapat menyambungkannya kembali menjadi kompleks $(M_\bullet, d_\bullet)$; dan $(M_\bullet, d_\bullet)$ eksak jika dan hanya jika setiap $\mathfrak{C}_i$ eksak. Jadi untuk memeriksa keeksakan $F$, cukup meninjau barisan eksak pendek.
+
+\begin{proposition}
+	Untuk fungtor aditif $F: R\dcate{Mod} \to S\dcate{Mod}$, pernyataan berikut ekuivalen: 
+	\begin{compactitem}
+		\item $F$ eksak,
+		\item $F$ mempertahankan semua barisan eksak pendek,
+		\item $F$ mempertahankan semua barisan eksak.
+	\end{compactitem}
+	Jika $F$ eksak, maka untuk setiap kompleks $(M_\bullet, d_\bullet)$ dan setiap $i$ terdapat isomorfisme natural $\Hm_i(FM_\bullet) \rightiso F(\Hm_i(M_\bullet))$.
+\end{proposition}
+\begin{proof}
+	Bagian pertama telah dijelaskan. Untuk bagian kedua, perhatikan bahwa fungtor eksak mempertahankan kernel, bayangan, dan kokernel morfisme hingga isomorfisme; karena itu, ia menginduksi isomorfisme
+	\[ \frac{\Ker(F(d_i))}{\Image(F(d_{i+1}))} \rightiso \frac{F(\Ker(d_i))}{F(\Image(d_{i+1}))}. \]
+	Pernyataan terbukti.
+\end{proof}
+
+Ingat kembali konsep fungtor yang mempertahankan limit (Definisi \ref{def:preservation-limit}). Dalam bagian ini, semuanya dipertimbangkan dalam kategori-$\cate{Ab}$.
+\begin{proposition}
+	Fungtor aditif $F: R\dcate{Mod} \to S\dcate{Mod}$ eksak kiri jika dan hanya jika mempertahankan semua $\varprojlim$ berhingga, dan eksak kanan jika dan hanya jika mempertahankan semua $\varinjlim$ berhingga.
+\end{proposition}
+\begin{proof}
+	Proposisi \ref{prop:biproduct-preservation} menyatakan bahwa fungtor aditif mempertahankan biproduk, sehingga mempertahankan semua produk dan koproduk berhingga. Karena $F$ eksak kiri (atau kanan) ekuivalen dengan mempertahankan kernel (atau kokernel), dan dalam kategori-$\cate{Ab}$ sifat terakhir ekuivalen dengan $F$ mempertahankan ekualiser (atau koekualiser), hasilnya mengikuti dari Catatan \ref{rem:preservation-limit}.
+\end{proof}
+ 
+\section{Modul Projektif, Modul Injektif, dan Modul Datar}
+Pertama-tama, tinjau tiga gelanggang $A$, $B$, $C$ beserta berbagai bimodul yang bersesuaian, lalu kaji keeksakan fungtor-fungtor dalam \S\ref{sec:change-of-rings}. Sebagai pengingat: untuk setiap kategori $\mathcal{C}$, $\varprojlim$ dalam $\mathcal{C}^\text{op}$ tidak lain adalah $\varinjlim$ dalam $\mathcal{C}$.
+\begin{proposition}\label{prop:Hom-mod-exact}
+	Fungtor-fungtor dalam Definisi \ref{def:Hom-bimodule}
+	\begin{align*}
+		\Hom((-)_C, (-)_C): & (B,C)\dcate{Mod}^\text{op} \times (A,C)\dcate{Mod} \to (A,B)\dcate{Mod}, \\
+		\Hom({}_A (-), {}_A(-)): & (A,B)\dcate{Mod}^\text{op} \times (A,C)\dcate{Mod} \to (B,C)\dcate{Mod}
+	\end{align*}
+	mempertahankan semua $\varprojlim$ dalam kedua variabel, sehingga eksak kiri dalam kedua variabel.
+\end{proposition}
+\begin{proof}
+	Proposisi \ref{prop:Hom-exact} menyatakan bahwa $\Hom$ mempertahankan setiap $\varprojlim$ dalam kedua variabel, sedangkan keaditifannya jelas.
+\end{proof}
+
+\begin{proposition}\label{prop:tensor-mod-exact}
+	Fungtor hasil kali tensor
+	\[ - \dotimes{B} -: (A,B)\dcate{Mod} \times (B,C)\dcate{Mod} \longrightarrow (A,C)\dcate{Mod} \]
+	mempertahankan semua $\varinjlim$ dalam kedua variabel, sehingga eksak kanan dalam kedua variabel.
+\end{proposition}
+\begin{proof}
+	Menurut Teorema \ref{prop:adjuncion-limit} dan Teorema \ref{prop:Hom-tensor-adjunction}, fungtor $\otimes$ mempertahankan $\varinjlim$ dalam setiap variabel, sedangkan keaditifannya jelas.
+\end{proof}
+
+Mulai sekarang tetapkan suatu gelanggang $R$. Ingat bahwa $(R, \Z)\dcate{Mod} = R\dcate{Mod}$, $(\Z_, R)\dcate{Mod} = \cated{Mod}R$, dan $(\Z_, \Z)\dcate{Mod} = \cate{Ab}$; karena itu, fungtor $\Hom$ dan $\otimes$ yang didefinisikan untuk bimodul dalam Proposisi \ref{prop:Hom-mod-exact}, \ref{prop:tensor-mod-exact} juga disederhanakan dengan cara yang bersesuaian.
+
+\begin{definition}\label{def:inj-proj-modules}\index{mo!projektif/injektif (projective/injective)}
+	Berikut ini, misalkan $P, I$ adalah modul kiri $R$; kasus modul kanan serupa:
+	\begin{enumerate}
+		\item jika fungtor $\Hom(P, -): R\dcate{Mod} \to \cate{Ab}$ eksak, maka $P$ disebut \emph{modul projektif};
+		\item jika fungtor $\Hom(-, I): R\dcate{Mod}^\text{op} \to \cate{Ab}$ eksak, yakni mempertahankan barisan eksak pendek, maka $I$ disebut \emph{modul injektif}.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}\index{mo!datar (flat)}
+	Misalkan $M$ adalah modul kiri $R$. Jika fungtor
+	\[ - \dotimes{R} M: \cated{Mod}R \to \cate{Ab} \]
+	eksak, maka $M$ disebut \emph{modul datar}. Kasus modul kanan serupa.
+\end{definition}
+
+\begin{lemma}\label{prop:flat-proj-mod-summand}
+	Jumlah langsung $\bigoplus_{i \in I} M_i$ adalah modul datar (atau projektif) jika dan hanya jika setiap $M_i$ adalah modul datar (atau projektif); produk langsung $\prod_{i \in I} M_i$ adalah modul injektif jika dan hanya jika setiap $M_i$ adalah modul injektif.
+\end{lemma}
+\begin{proof}
+	Proposisi \ref{prop:Hom-mod-exact}, \ref{prop:tensor-mod-exact} langsung memberikan isomorfisme natural
+	\begin{align*}
+		\Hom(\bigoplus_i M_i, -) & \simeq \prod_i \Hom(M_i, -), \\
+		\Hom(-, \prod_i M_i) & \simeq \prod_i \Hom(-, M_i), \\
+		- \dotimes{R} \left( \bigoplus_i M_i \right) & \simeq \bigoplus_i (- \dotimes{R} M_i).
+	\end{align*}
+	Selanjutnya cukup terapkan Lemma \ref{prop:mod-prod-exactness}.
+\end{proof}
+
+\begin{example}\label{eg:flat-proj-freemod}
+	Untuk setiap himpunan $X$, modul kiri $R$ bebas $R^{\oplus X}$ sekaligus datar dan projektif. Gunakan Lemma \ref{prop:flat-proj-mod-summand} untuk mereduksi pada kasus $|X|=1$, $R^{\oplus X} = R$; dalam kasus ini $\Hom(R,-)$ dan $- \dotimes{R} R$ keduanya isomorfik dengan fungtor identitas, sehingga eksak.
+\end{example}
+
+\begin{proposition}
+	$\varinjlim$ terfilter (Catatan \ref{rem:filtrant-mod-limit}) dari modul-modul datar tetap merupakan modul datar.
+\end{proposition}
+\begin{proof}
+	Misalkan $I$ adalah kategori terfilter, dan untuk setiap objek $i$ diberikan modul datar $P_i$ beserta keluarga morfisme yang kompatibel $(P_i \to P_j)_{i \to j}$. Diketahui bahwa hasil kali tensor mempertahankan setiap $\varinjlim$ (Proposisi \ref{prop:tensor-mod-exact}), sedangkan Lemma \ref{prop:mod-prod-exactness} menyatakan bahwa $\varinjlim$ terfilter mempertahankan barisan eksak. Oleh sebab itu, keeksakan $0 \to M' \to M \to M'' \to 0$ mengakibatkan, dalam diagram komutatif berikut,
+	\[ \begin{tikzcd}
+		0 \arrow[r] & M' \dotimes{R} \varinjlim_i P_i \arrow[r] & M \dotimes{R} \varinjlim_i P_i \arrow[r] & M'' \dotimes{R} \varinjlim_i P_i \arrow[r] & 0 \\
+		0 \arrow[r] & \varinjlim_i (M' \dotimes{R} P_i) \arrow[dash, u, "\simeq"] \arrow[r] & \varinjlim_i (M \dotimes{R} P_i) \arrow[dash, u, "\simeq"] \arrow[r] & \varinjlim_i (M'' \dotimes{R} P_i) \arrow[dash, u, "\simeq"] \arrow[r] & 0
+	\end{tikzcd} \]
+	baris kedua eksak, sehingga baris pertama juga eksak.
+\end{proof}
+
+Kembali ke modul projektif dan modul injektif dalam Definisi \ref{def:inj-proj-modules}; sifat universalnya dinyatakan oleh diagram berikut.
+\begin{enumerate}
+	\item Modul $P$ projektif jika dan hanya jika, untuk setiap barisan eksak $M \to M'' \to 0$ dan setiap $P \to M''$, panah $\dashrightarrow$ dapat diisikan pada diagram berikut agar diagram komutatif:
+	\[\begin{tikzcd}
+		& P \arrow[dashed, ld, "\exists"'] \arrow[d] & & \\
+		M \arrow[r] & M'' \arrow[r] & 0 & \text{(eksak)};
+	\end{tikzcd}\]
+	\item Modul $I$ injektif jika dan hanya jika, untuk setiap barisan eksak $0 \to M' \to M$ dan setiap $M' \to I$, panah $\dashrightarrow$ dapat diisikan pada diagram berikut agar diagram komutatif:
+	\[\begin{tikzcd}
+		& I & & \\
+		M \arrow[dashed, ru, "\exists"] & M' \arrow[l] \arrow[u] & 0 \arrow[l] & \text{(eksak)} ;
+	\end{tikzcd}\]
+\end{enumerate}
+Kedua sifat universal ini saling dual: satu diperoleh dari yang lain dengan membalik arah semua panah pada diagram komutatif. Namun, sifat kedua jenis modul tersebut cukup berbeda. Mengingat kedudukan klasik keduanya dalam aljabar homologis, bagian ini melanjutkan dengan pembahasan lebih jauh tetapi sangat terbatas; pembaca dapat merujuk lebih lanjut pada monograf seperti \cite[Chapter 1]{Lam99}.
+
+\begin{proposition}\label{prop:proj-mod-characterization}
+	Dalam barisan eksak pendek $0 \to I \xrightarrow{f} M \xrightarrow{g} P \to 0$, jika
+	\begin{inparaenum}[(i)]
+		\item $I$ adalah modul injektif, atau
+		\item $P$ adalah modul projektif,
+	\end{inparaenum}
+	maka barisan eksak pendek ini terbelah. Suatu modul kiri $R$, $P$, adalah modul projektif jika dan hanya jika ia dapat dinyatakan sebagai suku langsung suatu modul bebas $F$; dalam hal ini, basis $F$ dapat dipilih agar bersesuaian dengan sebarang keluarga pembangkit $P$ yang diberikan.
+\end{proposition}
+\begin{proof}
+	Jika $I$ injektif, keeksakan $0 \to I \to M$ mengakibatkan keeksakan $\Hom_R(M,I) \xrightarrow{f^*} \Hom_R(I,I) \to 0$. Jadi terdapat $r \in \Hom_R(M,I)$ sehingga $rf = \identity_I$, dan Proposisi \ref{prop:split-ses-mod} mengakibatkan $0 \to I \to M \to P \to 0$ terbelah. Dengan cara serupa, jika $P$ projektif, maka $\Hom_R(P,M) \xrightarrow{g_*} \Hom_R(P,P) \to 0$ eksak; dari sini diperoleh suatu penampang $s$ bagi $g$ beserta keterbelahannya.
+
+	Sekarang buktikan bagian kedua. Misalkan $P$ projektif dan dibangkitkan oleh subhimpunan $S$. Tetapkan $F := R^{\oplus S}$. Surjeksi $F \twoheadrightarrow P$ yang dihasilkan memiliki penampang menurut bagian pertama, sehingga Proposisi \ref{prop:split-ses-mod} menanamkan $P$ sebagai suku langsung $F$. Sebaliknya, Contoh \ref{eg:flat-proj-freemod} telah menunjukkan bahwa setiap modul bebas $F$ projektif, sehingga Lemma \ref{prop:flat-proj-mod-summand} mengakibatkan suku langsungnya $P$ juga projektif.
+\end{proof}
+
+Dengan menerapkan Lemma \ref{prop:flat-proj-mod-summand} bersama Contoh \ref{eg:flat-proj-freemod}, diperoleh hasil berikut.
+\begin{corollary}
+	Setiap modul projektif adalah datar.
+\end{corollary}
+
+Setiap modul $M$ selalu dapat dinyatakan sebagai hasil bagi suatu modul bebas, dan karena itu juga sebagai hasil bagi suatu modul projektif $P$; dalam istilah barisan eksak, $P \to M \to 0$. Karena definisi modul injektif dual dengan definisi modul projektif, pertanyaan yang wajar ialah apakah terdapat barisan eksak $0 \to M \to I$ dengan $I$ injektif, yakni: apakah setiap modul dapat ditanamkan ke dalam modul injektif? Jawabannya ya (Teorema \ref{prop:inj-embedding}), tetapi pembuktiannya memerlukan sedikit usaha. Konstruksi dalam kedua arah ini merupakan landasan resolusi projektif (atau resolusi bebas) dan resolusi injektif, yang sangat penting dalam aljabar homologis. Pertama-tama kita bangun beberapa sifat umum modul injektif.
+
+\begin{proposition}[R.\ Baer]\label{prop:Baer-inj}
+	Modul $I$ adalah modul injektif jika dan hanya jika, untuk setiap ideal kiri $\mathfrak{a} \subset R$, setiap homomorfisme modul $f: \mathfrak{a} \to I$ dapat diperluas menjadi homomorfisme $R \to I$.
+\end{proposition} 
+\begin{proof}
+	Sifat modul injektif setara dengan pernyataan bahwa untuk setiap penanaman modul $g: M' \hookrightarrow M$, setiap homomorfisme $h: M' \to I$ dapat diperluas menjadi $\tilde{h}: M \to I$. Karakterisasi dalam pernyataan hanyalah kasus khusus $M' = \mathfrak{a} \hookrightarrow R = M$. Sekarang andaikan sifat perluasan dalam pernyataan berlaku. Tinjau himpunan terurut parsial tak kosong $(\mathcal{P}, \leq)$ yang unsur-unsurnya berbentuk $(M_1, h_1)$, dengan $M' \subset M_1 \subset M$ suatu modul antara, $h_1: M_1 \to I$ suatu perluasan $h$, dan $(M_1, h_1) \leq (M_2, h_2)$ jika dan hanya jika $(M_1 \subset M_2) \wedge (h_2|_{M_1} = h_1)$. Argumen gabungan yang lazim dan Lemma Zorn menjamin adanya unsur maksimal dalam $\mathcal{P}$. Kami menyatakan bahwa jika $(M_1, h_1) \in \mathcal{P}$ maksimal, maka $M_1=M$.
+	
+	Jika $M_1 \neq M$, pilih $x \in M \smallsetminus M_1$ dan definisikan ideal kiri $\mathfrak{a} := \{r \in R: rx \in M_1 \}$. Dengan demikian terdapat homomorfisme komposisi $\phi: \mathfrak{a} \xrightarrow{r \mapsto rx} M_1 \xrightarrow{h_1} I$. Menurut asumsi, terdapat perluasan $\tilde{\phi}: R \to I$ dari $\phi$. Tetapkan
+	\begin{align*}
+		h_2: (M_2 := M_1 + Rx) & \longrightarrow I \\
+		x_1 + rx & \longmapsto h_1(x_1) + \tilde{\phi}(r);
+	\end{align*}
+	Dari definisi $\phi$ dapat diperiksa bahwa $h_2: M_2 \to I$ terdefinisi dengan baik. Maka $(M_2, h_2) > (M_1, h_1)$, membuktikan pernyataan.
+\end{proof}
+
+Berikut ini suatu $\Z$-modul $A$ disebut dapat dibagi jika $n \neq 0 \implies nA=A$.
+\begin{lemma}\label{prop:divisible-injective}
+	Suatu $\Z$-modul $I$ dapat dibagi jika dan hanya jika ia merupakan $\Z$-modul injektif.
+\end{lemma}
+\begin{proof}
+	Untuk setiap $n \in \Z \smallsetminus \{0\}$, kita mempunyai diagram komutatif:
+	\[\begin{tikzcd}
+		\Hom_{\Z}(\Z, I) \arrow[r, "\text{restriksi}"] \arrow[d, "\phi \mapsto \phi(1)"', "\simeq"] & \Hom_{\Z}(n\Z, I) \arrow[d, "\phi \mapsto \phi(n)", "\simeq"'] \\
+		I \arrow[r, "a \mapsto na"'] & I
+	\end{tikzcd} \]
+	Karena setiap ideal tak nol dari $\Z$ berbentuk $\mathfrak{a} = n\Z$, cukup terapkan Proposisi \ref{prop:Baer-inj}.
+\end{proof}
+
+Grup abelian dan $\Z$-modul merupakan hal yang sama, sedangkan grup aditif $\Q$ dapat dibagi. Jumlah langsung dan hasil bagi $\Z$-modul yang dapat dibagi jelas dapat dibagi.
+\begin{lemma}
+	Setiap $\Z$-modul $A$ dapat ditanamkan ke dalam suatu $\Z$-modul injektif.
+\end{lemma}
+\begin{proof}
+	Nyatakan $A$ sebagai hasil bagi suatu $\Z$-modul bebas: $A \simeq \Z^{\oplus X}/N$. Gunakan penanaman $\Z^{\oplus X}/N \hookrightarrow \Q^{\oplus X}/N$ dan perhatikan bahwa $\Q^{\oplus X}/N$ dapat dibagi.
+\end{proof}
+
+Untuk langkah berikutnya, ingat bahwa bagi gelanggang $R$ dan $S$, modul kiri $S$, $N$, serta bimodul-$(S,R)$, $P$, Definisi \ref{def:Hom-bimodule} memberi $\Hom_{S\dcate{Mod}}(P, N)$ struktur modul kiri $R$: menurut Konvensi \ref{con:Hom-assoc}, tetapkan
+\[ p(rf) = (pr)f, \quad p \in P, \; r \in R, \; f: P \to N. \]
+\begin{lemma}\label{prop:inj-production-lemma}
+	Di bawah asumsi di atas, jika $N$ adalah modul kiri $S$ yang injektif dan $P$ adalah modul kanan $R$ yang datar, maka $\Hom_{S\dcate{Mod}}(P, N)$ adalah modul kiri $R$ yang injektif.
+\end{lemma}
+\begin{proof}
+	Gunakan isomorfisme natural
+	\[ \Hom_{R\dcate{Mod}}\left( -, \Hom_{S\dcate{Mod}}(P, N) \right) \rightiso \Hom_{S\dcate{Mod}}\left( P \dotimes{R} -, N\right), \]
+	di sini relasi adjoin dalam Teorema \ref{prop:Hom-tensor-adjunction} digunakan; syarat-syarat tersebut menunjukkan bahwa fungtor di ruas kanan mempertahankan barisan eksak.
+\end{proof}
+
+\begin{theorem}\label{prop:inj-embedding}
+	Setiap modul $R$, $M$, dapat ditanamkan ke dalam suatu modul $R$ yang injektif.
+\end{theorem}
+\begin{proof}
+	Pandang $M$ sebagai modul kiri $\Z$ dan tanamkan ke dalam modul kiri $\Z$ yang injektif, $J$. Pandang $R$ sebagai bimodul-$(\Z,R)$. Contoh \ref{eg:flat-proj-freemod} bersama Lemma \ref{prop:inj-production-lemma} (ambil $S=\Z$, $P = {}_\Z R_R$) mengakibatkan $\Hom_{\Z\dcate{Mod}}(R, J)$ merupakan modul kiri $R$ yang injektif. Jadi
+	\[\begin{tikzcd}[row sep=small]
+		M \arrow[r, "\sim"] & \Hom_{R\dcate{Mod}}(R,M) \arrow[r] & \Hom_{\Z\dcate{Mod}}(R, M) \arrow[r] & \Hom_{\Z\dcate{Mod}}(R, J) \\
+		x \arrow[mapsto, r] \arrow[phantom, u, sloped, "\in" description] & (r \mapsto rx) \arrow[phantom, u, sloped, "\in" description] & &
+	\end{tikzcd}\]
+	merupakan rangkaian penanaman modul kiri $R$ (menurut pengingat sebelumnya, setiap $\Hom$ memiliki struktur modul kiri $R$ yang berasal dari $R_R$), dan titik akhirnya adalah modul injektif.
+\end{proof}
+
+\section{Syarat Rantai dan Deret Komposisi Modul}
+Deret komposisi yang dibahas dalam bagian ini merupakan perumuman alami dari kasus grup dalam \S\ref{sec:composition-series-grp}, dan secara teknis lebih sederhana. Syarat rantai merupakan salah satu konsep paling mendasar dalam teori modul.
+
+\begin{definition}\label{def:ACC-DCC-mod}\index{mo!Artinian/Noetherian}
+	Suatu modul $M$ disebut \emph{modul Noetherian}, atau dikatakan memenuhi \emph{syarat rantai naik}, jika untuk setiap rantai naik submodul
+	$$ M_0 \subset \cdots \subset M_i \subset M_{i+1} \subset \cdots, \quad i \in \Z_{\geq 0} $$
+	terdapat $k$ sehingga $i \geq k \implies M_i = M_k$. Suatu modul $M$ disebut \emph{modul Artinian}, atau dikatakan memenuhi \emph{syarat rantai turun}, jika untuk setiap rantai turun submodul
+	$$ M_0 \supset \cdots \supset M_i \supset M_{i+1} \supset \cdots, \quad i \in \Z_{\geq 0} $$
+	terdapat $k$ sehingga $i \geq k \implies M_i = M_k$.
+	
+	Jika gelanggang $R$, sebagai modul kiri $R$, merupakan modul Noetherian (atau Artinian), maka $R$ disebut gelanggang Noetherian (atau Artinian) kiri; gelanggang Noetherian (atau Artinian) kanan didefinisikan secara serupa.\index{huan!Artinian/Noetherian}
+\end{definition}
+Syarat $i \geq k \implies M_i = M_k$ di atas lazim disebut kestabilan rantai. Untuk gelanggang Noetherian/Artinian kiri (kanan), syaratnya tidak lain adalah syarat rantai naik/turun bagi ideal kiri (kanan); pada gelanggang komutatif tidak perlu dibedakan kiri dan kanan. Berikut beberapa contoh dasar.
+\begin{itemize}
+	\item Jelas bahwa $\Z$ adalah gelanggang Noetherian tetapi bukan gelanggang Artinian; sesungguhnya, menurut Lemma \ref{prop:ACC-PID}, setiap daerah ideal utama (Definisi \ref{def:PID}) merupakan gelanggang komutatif Noetherian.
+	\item Setiap gelanggang pembagian merupakan gelanggang Noetherian dan Artinian kiri maupun kanan. Ruang vektor atas gelanggang pembagian merupakan modul Noetherian atau Artinian jika dan hanya jika dimensinya hingga.
+	\item Pelokalan gelanggang komutatif $R \leadsto R[S^{-1}]$ mempertahankan sifat Noetherian dan Artinian (Proposisi \ref{prop:localization-ideals}), dengan $S \subset R$ sebarang subhimpunan multiplikatif yang tidak memuat nol.
+\end{itemize}
+
+\begin{lemma}\label{prop:noetherian-mod-ses}
+	Dalam barisan eksak pendek $0 \to M' \to M \to M'' \to 0$, $M$ merupakan modul Noetherian (atau Artinian) jika dan hanya jika $M'$ dan $M''$ keduanya merupakan modul Noetherian (atau Artinian).
+	
+	Misalkan $M$ dan $N$ adalah submodul dari suatu modul $\Omega$. Jika $M$ dan $N$ keduanya modul Noetherian (atau Artinian), maka demikian pula $M + N \subset \Omega$. Khususnya, sifat modul Noetherian (atau Artinian) dipertahankan oleh submodul, hasil bagi, dan jumlah langsung berhingga.
+\end{lemma}
+\begin{proof}
+	Untuk pernyataan pertama, rantai naik (atau turun) dalam $M'$ dan $M''$ masing-masing dapat ditanamkan dan ditarik balik menjadi rantai yang bersesuaian dalam $M$, tanpa mengubah relasi inklusi (Proposisi \ref{prop:2nd-homomorphism-module}); karena itu $M'$ dan $M''$ mewarisi syarat rantai dari $M$. Sekarang misalkan $M'$ dan $M''$ keduanya modul Noetherian (atau Artinian), dan tinjau suatu rantai naik (atau turun) $(M_i)_{i=1}^\infty$ dalam $M$. Menurut asumsi,
+	\[ M'_i := M_i \cap M', \qquad M''_i := (M_i + M')/M' \]
+	sebagai rantai dalam $M'$ dan $M''$, keduanya stabil untuk $i \gg 0$. Proposisi \ref{prop:3rd-homomorphism-module} mengakibatkan bahwa $0 \to M'_i \to M_i \to M''_i \to 0$ eksak. Dalam kasus rantai naik, untuk diagram komutatif
+	\[\begin{tikzcd}
+		0 \arrow[r] & M'_i \arrow[r] \arrow[hookrightarrow, d] & M_i \arrow[r] \arrow[hookrightarrow, d] & M''_i \arrow[hookrightarrow, d] \arrow[r] & 0 \\
+		0 \arrow[r] & M'_{i+1} \arrow[r] & M_{i+1} \arrow[r] & M''_{i+1} \arrow[r] & 0
+	\end{tikzcd}\]
+	jika $i \gg 0$, maka $M'_i \hookrightarrow M'_{i+1}$ dan $M''_i \hookrightarrow M''_{i+1}$ keduanya menjadi isomorfisme. Menurut Proposisi \ref{prop:5-lemma-mod}, Proposisi \ref{prop:snake-lemma-mod}, atau pengejaran diagram langsung, $M_i \hookrightarrow M_{i+1}$ juga merupakan isomorfisme pada saat itu. Kasus rantai turun serupa.
+	
+	Untuk membuktikan pernyataan kedua, cukup terapkan hasil di atas pada barisan eksak pendek
+	\[\begin{tikzcd}
+		0 \arrow[r] & N \arrow[r] & M+N \arrow[r] & (M+N)/N \arrow[r] \arrow[d, "\simeq"] & 0 \\
+		& & & M/M \cap N & (\because\;\text{Proposisi \ref{prop:3rd-homomorphism-module}})
+	\end{tikzcd}\]
+	.
+\end{proof}
+
+\begin{proposition}
+	Misalkan $R$ adalah gelanggang Noetherian (atau Artinian) kiri. Maka setiap modul kiri $R$ yang dibangkitkan secara hingga merupakan modul Noetherian (atau Artinian). Hasil yang sama berlaku dengan mengganti kiri oleh kanan.
+\end{proposition}
+\begin{proof}
+	Cukup tinjau kasus Noetherian. Misalkan $M$ dibangkitkan oleh subhimpunan hingga $X$; terapkan hasil di atas pada barisan eksak $R^{\oplus X} \to M \to 0$.
+\end{proof}
+
+\begin{lemma}\label{prop:fg-noetherian}
+	Modul $M$ merupakan modul Noetherian jika dan hanya jika setiap submodul $N \subset M$ dibangkitkan secara hingga.
+\end{lemma}
+\begin{proof}
+	Andaikan $N$ tidak dibangkitkan secara hingga. Kita dapat memilih secara rekursif $x_1, \ldots, x_i, \ldots$ dalam $N$ sedemikian sehingga $N_i := \lrangle{x_1, \ldots, x_i}$ memenuhi $N_{i+1} \supsetneq N_i$. Ini menghasilkan rantai naik submodul yang tidak pernah stabil, sehingga $M$ bukan Noetherian. Sebaliknya, andaikan setiap submodul $N$ dibangkitkan secara hingga. Untuk suatu rantai naik $(M_i)_{i=1}^\infty$ dalam $M$, definisikan submodul $N := \bigcup_i M_i$. Misalkan $N$ dibangkitkan oleh subhimpunan hingga $X$. Karena setiap $x \in X$ termasuk dalam suatu $M_{i(x)}$, maka $i \geq \max\{i(x) : x \in X\} \implies M_i = N$, sehingga rantai naik itu menjadi stabil.
+\end{proof}
+
+\begin{remark}\label{rem:noetherian-mod-S}
+	Mudah dilihat bahwa $M$ merupakan modul Noetherian (atau Artinian) jika dan hanya jika setiap keluarga submodul $\mathcal{S} \neq \emptyset$ dari $M$ mempunyai unsur maksimal (atau minimal) terhadap $\subset$. Sifat ini jelas mengakibatkan syarat rantai (untuk suatu rantai $(M_i)_{i=1}^\infty$, tinjau $\mathcal{S} = \{M_i : i \geq 1 \}$). Sebaliknya, jika suatu keluarga submodul $\mathcal{S}$ tidak mempunyai unsur maksimal (atau minimal), maka darinya dapat dipilih suatu rantai naik (atau turun) dengan $M_i \neq M_{i+1}$, $i=1,2, \ldots$.
+\end{remark}
+
+Teorema berikut memberikan cara sistematis untuk membangun gelanggang komutatif Noetherian, yang terutama penting dalam geometri aljabar.
+\begin{theorem}[Teorema Basis Hilbert]\index{Teorema Basis Hilbert (Hilbert's Basis Theorem)}
+	Misalkan $R$ adalah gelanggang komutatif Noetherian. Maka untuk setiap $n \geq 1$, gelanggang polinomial $R[X_1, \ldots, X_n]$ juga merupakan gelanggang Noetherian.
+\end{theorem}
+Khususnya, setiap hasil bagi gelanggang polinomial dalam berhingga banyak variabel dengan koefisien dalam suatu medan merupakan gelanggang Noetherian.
+\begin{proof}
+	Karena $R[X_1, \ldots, X_{n+1}] \simeq R[X_1, \ldots, X_n][X_{n+1}]$, pernyataan direduksi pada kasus $n=1$, yakni gelanggang $R[X]$. Untuk suatu ideal $\mathfrak{a} \subset R[X]$, kami akan menunjukkan cara membangun secara rekursif suatu barisan unsur $f_1, \ldots, f_m \in \mathfrak{a}$ yang membangkitkan $\mathfrak{a}$; Lemma \ref{prop:fg-noetherian} kemudian mengakibatkan bahwa $R[X]$ merupakan gelanggang Noetherian.
+
+	Untuk setiap $f = \sum_{k=0}^n a_k X^k \in R[X]$, $a_n \neq 0$, definisikan koefisien utamanya sebagai
+	\[ \text{in}(f) := a_n. \]
+	Pilih $f_1 \in \mathfrak{a} \smallsetminus \{0\}$ dengan $\deg f_1$ minimal. Sekarang andaikan $f_1, \ldots, f_k \in \mathfrak{a}$ telah dipilih. Jika $\mathfrak{a} = \lrangle{f_1, \ldots, f_k}$, konstruksi berhenti; jika tidak, pilih $f_{k+1} \in \mathfrak{a}$ sedemikian sehingga
+	\begin{inparaenum}[(i)]
+		\item $f_{k+1} \in \mathfrak{a} \smallsetminus \lrangle{f_1, \ldots, f_k}$;
+		\item di bawah syarat sebelumnya, $\deg f_{k+1}$ mempunyai nilai sekecil mungkin.
+	\end{inparaenum}
+	Tetapkan $\alpha_i := \text{in}(f_i)$. Berdasarkan syarat rantai naik pada $R$, ideal $\lrangle{\alpha_1, \ldots}$ mempunyai keluarga pembangkit $\alpha_1, \ldots, \alpha_m$. Jika konstruksi di atas dapat berlanjut sampai langkah ke-$m+1$, maka
+	\[ \text{in}(f_{m+1}) = \sum_{i=1}^m u_i \alpha_i, \quad u_1, \ldots, u_m \in R. \]
+	Berdasarkan pemilihan pada $m$ langkah pertama, untuk $i = 1, \ldots, m$ berlaku $d_i := \deg f_{m+1} - \deg f_i \geq 0$. Jelas bahwa
+	\[ f_{m+1} - \sum_{i=1}^m u_i f_i X^{d_i} \quad \in \mathfrak{a} \smallsetminus \lrangle{f_1, \ldots, f_m} \]
+	mempunyai derajat yang lebih kecil secara ketat daripada $\deg f_{m+1}$, bertentangan dengan pemilihan $f_{m+1}$.
+\end{proof}
+
+Untuk gelanggang deret pangkat formal dalam Definisi \ref{def:formal-series}, terdapat pula hasil yang bersesuaian.
+\begin{theorem}
+	Misalkan $R$ adalah gelanggang komutatif Noetherian. Maka untuk setiap $n \geq 1$, gelanggang $R\llbracket X_1, \ldots, X_n \rrbracket$ juga merupakan gelanggang Noetherian.
+\end{theorem}
+\begin{proof}
+	Dengan $R \llbracket X_1, \ldots, X_{n+1}\rrbracket \simeq R \llbracket X_1, \ldots, X_n \rrbracket \llbracket X_{n+1}\rrbracket$, kita mereduksi pada kasus gelanggang $R \llbracket X \rrbracket$. Gagasan pembuktian berikut serupa dengan kasus $R[X]$, tetapi sekarang suku berderajat terendah yang harus ditinjau:
+	\begin{compactitem}
+		\item untuk setiap $f = \sum_{n \geq m} a_n X^n \in R\llbracket X \rrbracket$, dengan $a_m \neq 0$, tetapkan $v_X(f) := \min\{n: a_n \neq 0\}$;
+		\item ubah definisi $\text{in}(f)$ menjadi $a_m$;
+		\item dalam argumen tersebut, ganti $\deg$ dengan $v_X$;
+	\end{compactitem}
+	Pembangkit $f_1, \ldots, f_m$ dikonstruksi dengan cara yang persis sama. Pada langkah terakhir, gunakan unsur-unsur berbentuk $\sum_{i=1}^m u_i f_i X^{d_i}$ untuk mengeliminasi secara berulang suku berderajat terendah dari $f_{m+1}$, hingga akhirnya diperoleh $f_{m+1} \in \lrangle{f_1, \ldots, f_m}$.
+\end{proof}
+
+Sekarang, tanpa banyak usaha, kita dapat memindahkan konsep deret komposisi dari \S\ref{sec:composition-series-grp} ke teori modul. Berikut ini kita menetapkan gelanggang $R$ dan meninjau modul kirinya.
+\begin{definition}\index{deretkomposisi}
+	Misalkan $(I, \leq)$ adalah himpunan terurut total. Suatu \emph{filtrasi} modul $M$ yang diindeks oleh $I$ adalah suatu keluarga submodul
+	\[ M_i \subset M\; (i \in I), \qquad i \leq j \implies M_j \subset M_i. \]
+	Sekarang tinjau $I = \{0, \ldots, n\}$ dan suatu filtrasi berbentuk $M = M_0 \supset M_1 \supset \cdots \supset M_n = \{0\}$. Modul-modul hasil bagi $M_i/M_{i+1}$ disebut subkuosiennya. Jika setiap subkuosien merupakan modul sederhana, filtrasi itu disebut \emph{deret komposisi}. Panjangnya didefinisikan sebagai $n$.
+\end{definition}
+Seperti dalam kasus grup, suatu filtrasi berbentuk di atas dapat diperhalus dengan menyisipkan suku:
+\[ (\cdots \supset M_i \supset M_{i+1} \supset \cdots) \leadsto (\cdots \supset M_i \supset N \supset M_{i+1} \supset \cdots). \]
+Deret komposisi adalah filtrasi tanpa suku redundan ($M_{i+1} \subsetneq M_i$) dan tanpa penghalusan sejati ($M_i \supset N \supset M_{i+1} \implies (N=M_i) \vee (N=M_{i+1})$). Karena di sini normalitas subgrup tidak perlu dipersoalkan, argumen yang diperlukan jauh lebih sederhana daripada dalam kasus grup (\S\ref{sec:composition-series-grp}).
+
+\begin{lemma}\label{prop:mod-finite-length}\index{mo!panjang hingga (finite length)}
+	Modul $M$ mempunyai deret komposisi jika dan hanya jika ia sekaligus merupakan modul Noetherian dan modul Artinian. Modul semacam ini disebut modul \emph{berpanjang hingga}.
+\end{lemma}
+\begin{proof}
+	Untuk suatu filtrasi $(M_i)_{i=0}^n$, perhatikan bahwa setiap subkuosien $M_i/M_{i+1}$ merupakan modul sederhana, sehingga tentu sekaligus merupakan modul Noetherian dan Artinian. Dengan menerapkan Proposisi \ref{prop:noetherian-mod-ses} langkah demi langkah pada barisan eksak pendek $0 \to M_{i+1} \to M_i \to M_i/M_{i+1} \to 0$, mulai dari $i=n-1$, diperoleh bahwa $M_{n-1}, \ldots, M_0 = M$ semuanya sekaligus Noetherian dan Artinian.
+	
+	Untuk arah sebaliknya, andaikan $M$ merupakan modul Noetherian dan tinjau keluarga submodul $\mathcal{S} = \{N : N \subsetneq M \; \text{submodul sejati}\}$. Jika $M \neq \{0\}$, maka $\mathcal{S} \neq \emptyset$, sehingga Catatan \ref{rem:noetherian-mod-S} mengakibatkan bahwa $\mathcal{S}$ memuat suatu unsur maksimal $M_1$; dengan kata lain, $M/M_1$ merupakan modul sederhana. Karena $M_1$ juga Noetherian, jika $M_1 \neq 0$, proses ini dapat diteruskan dan menghasilkan rantai turun $M = M_0 \supsetneq M_1 \supsetneq \cdots$. Jika $M$ juga Artinian, rantai turun ini harus berhenti pada $\{0\}$ setelah berhingga banyak langkah; berdasarkan konstruksinya, setiap $M_i/M_{i+1}$ sederhana. Inilah deret komposisi yang dicari.
+\end{proof}
+
+Untuk suatu deret komposisi $(M_i)_{i=0}^n$ dari modul $M$, definisikan himpunan faktor Jordan--Hölder atau faktor komposisinya sebagai \index{faktorkomposisi}\index[sym1]{JH(M)@$\text{JH}(M)$}
+\[ \text{JH}(M) := \{M_i/M_{i+1} : i=0, \ldots, n-1 \}. \]
+Biasanya hanya kelas isomorfisme dari subkuosien $M_i/M_{i+1}$ yang diperhatikan. Karena subkuosien-subkuosien yang isomorfik boleh muncul beberapa kali, $\text{JH}(M)$ harus dipandang sebagai multihimpunan. Terdapat operasi gabungan natural $\cup$ pada multihimpunan (multiplisitas unsur-unsurnya dijumlahkan). Jika dua deret komposisi modul $M$ mempunyai multihimpunan faktor Jordan--Hölder yang sama (dengan memperhitungkan multiplisitas), kedua deret komposisi itu disebut ekuivalen.
+
+\begin{theorem}[Teorema Jordan--Hölder untuk Modul]\label{prop:JH-mod}
+	Untuk modul berpanjang hingga $M$, setiap dua deret komposisi ekuivalen. Dengan kata lain, definisi multihimpunan $\text{JH}(M)$ tidak bergantung pada pemilihan deret komposisi. Khususnya, panjang deret komposisi juga tunggal.
+	
+	Dalam barisan eksak pendek $0 \to M' \to M \to M'' \to 0$, modul $M$ berpanjang hingga jika dan hanya jika demikian pula $M'$ dan $M''$; dalam hal ini, dengan memperhitungkan multiplisitas, berlaku
+	\[ \text{JH}(M) = \text{JH}(M') \cup \text{JH}(M''). \]
+\end{theorem}
+\begin{proof}
+	Seperti di atas, ini merupakan versi sederhana dari kasus grup dalam \S\ref{sec:composition-series-grp}: Lemma Zassenhaus \ref{prop:Zassenhaus} dan Teorema Penghalusan Schreier \ref{prop:Schreier} yang penting juga berlaku untuk modul. Hubungan antara barisan eksak pendek dan modul berpanjang hingga merupakan akibat langsung Proposisi \ref{prop:noetherian-mod-ses} dan Lemma \ref{prop:mod-finite-length}.
+\end{proof}
+ 

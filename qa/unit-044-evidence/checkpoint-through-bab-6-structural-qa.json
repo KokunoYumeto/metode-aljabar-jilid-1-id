@@ -1,0 +1,28 @@
+{
+  "schema": "o013-checkpoint-through-chapter6-structural-qa-v1",
+  "result": "pass",
+  "output": {
+    "path": "output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-through-bab-6-reader.pdf",
+    "pages": 460,
+    "bytes": 6750492,
+    "sha256": "ff8a1fdb65e36bfa8dbb47dd707c96e10daf2d6bf33363ecd2da6f73f6d2f4cd"
+  },
+  "inherited_pages_compared": 384,
+  "inherited_page_identity_mismatches": [],
+  "appended_chapter6_pages_compared": 75,
+  "appended_page_identity_mismatches": [],
+  "boundary_pages_rendered": [
+    "page-1.png",
+    "page-385.png",
+    "page-386.png",
+    "page-460.png"
+  ],
+  "boundary_text_lengths": {
+    "page_1": 1174,
+    "page_385": 189,
+    "page_386": 501,
+    "page_460": 151
+  },
+  "visual_inspection": "PASS: new checkpoint cover and pages 385, 386, and 460 inspected at 120 dpi; cover is centered and readable, the Chapter 5-to-6 boundary is correct, and the final index is unclipped. The remaining 459 pages inherit exact page identities from the previously inspected Chapter 5 reader and the all-page-inspected Chapter 6 reader.",
+  "failures": []
+}

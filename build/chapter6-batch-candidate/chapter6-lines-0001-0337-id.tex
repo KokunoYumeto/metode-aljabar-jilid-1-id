@@ -1,0 +1,337 @@
+% Sumber LaTeX untuk buku ``Metode Aljabar'' dalam bahasa Mandarin
+% Hak Cipta 2018  Wen-Wei Li.
+% Izin diberikan untuk menyalin, mendistribusikan, dan/atau memodifikasi
+% dokumen ini berdasarkan ketentuan Creative Commons
+% Attribution 4.0 International (CC BY 4.0)
+% http://creativecommons.org/licenses/by/4.0/
+
+% Untuk disertakan
+\chapter{Teori Modul}\label{sec:modules}
+Menurut cara perkalian skalarnya, modul dibedakan menjadi modul kiri dan modul kanan. Secara kasar, modul kiri $M$ atas gelanggang $R$ dapat dianalogikan dengan ruang vektor: $M$ sendiri merupakan grup terhadap penjumlahan dan dilengkapi perkalian skalar kiri oleh $R$, yaitu $R \times M \to M$. Dari sudut pandang ini, ruang vektor adalah modul atas medan, sedangkan grup abelian tidak lain adalah $\Z$-modul.
+
+Modul merupakan struktur yang lentur dan sangat luas kegunaannya dalam matematika; sebagai contoh,
+\begin{inparaenum}[(a)]
+	\item teorema struktur modul terbangkitkan hingga atas daerah ideal utama mencakup klasifikasi grup abelian terbangkitkan hingga serta teori bentuk kanonik transformasi linear;
+	\item kategori modul atas gelanggang $R$ sekaligus merupakan contoh baku dalam teori kategori dan pola dasar awal bagi aljabar homologis;
+	\item hasil kali tensor modul memberikan contoh yang sangat baik bagi kategori monoidal simetris.
+\end{inparaenum}
+Jika dikembangkan lebih jauh, pembahasan dalam bab ini mengenai barisan eksak serta modul projektif dan injektif mengarah ke teori gelanggang komutatif dan aljabar homologis; sementara itu, pembahasan modul semisederhana dan modul tak teruraikan secara alami menuju teori representasi grup dan aljabar. Ke arah mana pun kita melangkah, hasil kali tensor merupakan alat yang wajib dikuasai dan salah satu pokok utama dalam pengantar teori modul.
+
+Mulai bab ini, sudut pandang teori kategori akan diperkenalkan secara bertahap. Di satu pihak, sudut pandang ini menata sifat-sifat modul secara efisien, termasuk berbagai fungtor antarkategori modul dan transformasi natural di antaranya. Di pihak lain, ini memberi kesempatan kepada pembaca untuk membiasakan diri dengan gagasan teori kategori: konsep seperti fungtor adjoin, limit, sifat universal, dan kategori monoidal semuanya memperoleh tempat yang sesuai dalam teori modul, menunjukkan bahwa perangkat abstrak ini bersifat alami sekaligus perlu.
+
+\begin{wenxintishi}
+	Hasil kali tensor adalah salah satu pokok kunci teori modul. Untuk mencakup keadaan umum, kita akan membangun teori umum dalam konteks bimodul; karena itu, perumusannya tampak lebih rumit. Pembaca dapat memulai dari kasus gelanggang komutatif; lihat Contoh \ref{eg:bimodule-comm}. Kita akan memakai bahasa kategori monoidal dan fungtor monoidal untuk menyatakan berbagai sifat hasil kali tensor. Pembaca tidak perlu menelaah setiap definisi teori kategori yang terkait satu demi satu, tetapi hendaknya benar-benar memahami gagasan pokok kategori monoidal: kategori monoidal adalah kategori yang dilengkapi ``hasil kali tensor'' $\otimes$ beserta berbagai isomorfisme kendala, sedangkan fungtor monoidal adalah fungtor yang mempertahankan $\otimes$ hingga isomorfisme natural.
+	
+	Pembahasan bab ini tentang barisan eksak, modul projektif/injektif, dan syarat rantai dapat dipandang sebagai pemanasan sebelum memasuki teori gelanggang komutatif dan aljabar homologis; pembahasannya memang hanya pengantar. Kerangka umum yang tepat untuk mempelajari konsep-konsep tersebut adalah kategori abelian; kategori modul kiri atas gelanggang $R$ merupakan contoh khas kategori abelian.
+\end{wenxintishi}
+
+\section{Konsep Dasar}
+Dari sudut pandang formal, modul adalah grup aditif yang dilengkapi suatu keluarga operator perkalian. Ingat kembali asumsi kita: grup aditif berarti grup abelian $A$ dengan operasi biner yang ditulis $+$, unsur identitas yang ditulis $0$, dan invers aditif unsur $a \in A$ yang ditulis $-a$.
+
+\begin{definition}\index{modul@modul (module)}
+	Misalkan $R$ suatu gelanggang. Sebuah \emph{modul} kiri atas $R$ terdiri atas data berikut:
+	\begin{itemize}
+		\item grup aditif $(M, +)$;
+		\item peta $R \times M \to M$, yang ditulis $(r, m) \mapsto r \cdot m = rm$ (perkalian kiri), dengan sifat-sifat berikut:
+		\begin{align*}
+			r(m_1 + m_2) &= rm_1 + rm_2, \qquad r \in R, \; m_1, m_2 \in M, \\
+			(r_1 + r_2)m &= r_1 m + r_2 m, \qquad r_1, r_2 \in R, \; m \in M, \\
+			(r_1 r_2)m & = r_1 (r_2 m), \\
+			1_R \cdot m & = m.
+		\end{align*}
+	\end{itemize}
+	Jika perkalian kiri dalam definisi diganti dengan perkalian kanan $(m, r) \mapsto mr$, dan syaratnya diganti dengan $m(r_1 r_2) = (mr_1)r_2$ dan seterusnya, konsep yang diperoleh disebut modul kanan atas $R$. Biasanya cukup dikatakan bahwa $M$ adalah modul kiri atau modul kanan atas $R$.
+\end{definition}
+
+Sebagaimana dalam kasus ruang vektor yang telah dikenal, operasi $R \times M \to M$ juga disebut perkalian skalar oleh $R$. Dari aksioma-aksioma di atas mudah diturunkan sifat-sifat berikut dalam modul kiri $M$ atas $R$:
+\begin{equation}\label{eqn:multiples-in-module}\begin{aligned}
+	0 \cdot m & = 0, \quad m \in M, \\
+	(-1_R) \cdot m & = -m, \\
+	(n \cdot 1_R) \cdot m & = nm = \underbracket{m + \cdots + m}_{n\text{ suku}}, \quad n \in \Z_{\geq 0}, \\
+	(-n \cdot 1_R) \cdot m & = -(nm).
+\end{aligned}\end{equation}
+Dengan demikian, ungkapan berbentuk $n \cdot m$ ($n \in \Z$) tidak ambigu: ungkapan itu dapat dipandang sebagai operasi kelipatan dalam $(M,+)$ maupun sebagai aksi perkalian oleh $n \cdot 1_R \in R$. Kasus modul kanan serupa.
+
+\begin{remark}\label{rem:module-multiplication}
+	Menurut Contoh \ref{eg:End-ring}, himpunan endomorfisme $\End(M)$ dari sebarang grup aditif $(M, +)$ memiliki struktur gelanggang alami; perkaliannya adalah komposisi homomorfisme dan penjumlahannya adalah penjumlahan homomorfisme ``titik demi titik''. Memberikan struktur modul kiri atas $R$ pada $(M,+)$ ekuivalen dengan memberikan homomorfisme gelanggang
+	\begin{align*}
+		R & \longrightarrow \End(M) \\
+		r & \longmapsto [m \mapsto rm],
+	\end{align*}
+	sedangkan memberikan struktur modul kanan atas $R$ ekuivalen dengan memberikan homomorfisme gelanggang
+	\begin{align*}
+		R^\text{op} & \longrightarrow \End(M) \\
+		r & \longmapsto [m \mapsto mr].
+	\end{align*}
+	Dari sini segera diperoleh
+	\begin{center}
+		modul kiri atas $R$ = modul kanan atas $R^\text{op}$.
+	\end{center}
+	Untuk gelanggang komutatif $R$, tidak perlu dibedakan modul kiri dan kanan; kita cukup menyebutnya $R$-modul.
+\end{remark}
+
+\begin{example}
+	Setiap gelanggang $R$, dengan perkalian kiri pada dirinya sendiri, merupakan modul kiri atas $R$; dengan perkalian kanan, ia merupakan modul kanan atas $R$.
+\end{example}
+
+\begin{example}\label{eg:Z-modules}
+	Modul atas gelanggang bilangan bulat $\Z$ tidak lain adalah grup aditif. Hal ini karena hanya ada satu aksi perkalian $\Z$ pada $M$, yakni yang diberikan oleh \eqref{eqn:multiples-in-module}. Jadi, teori grup abelian dapat dipandang sebagai salah satu cabang teori modul.
+\end{example}
+
+\begin{definition}\label{def:submodule}\index{submodul@submodul (submodule)}
+	Misalkan $M$ suatu modul kiri atas $R$. Jika subhimpunan $M' \subset M$ memenuhi
+	\begin{itemize}
+		\item ketertutupan terhadap penjumlahan: $M'$ adalah subgrup dari grup aditif $(M, +)$,
+		\item ketertutupan terhadap perkalian skalar: untuk setiap $r \in R$ dan $m \in M'$, berlaku $rm \in M'$,
+	\end{itemize}
+	maka $M'$ disebut \emph{submodul} dari $M$. Definisi submodul bagi modul kanan serupa.
+
+	Jika modul kiri atau kanan $M$ tidak mempunyai submodul selain $\{0\}$ dan $M$ sendiri, serta $M \neq \{0\}$, maka $M$ disebut \emph{modul sederhana}.\index{modul!sederhana (simple)}
+\end{definition}
+
+Dalam uraian berikut, anggap $M$ sebagai modul kiri atas $R$. Misalkan $\{M_i: i \in I\}$ suatu keluarga submodul dari $M$. Maka jumlahnya
+\[ \sum_{i \in I} M_i := \left\{ 
+	\begin{array}{ll}
+		m_{i_1} + \cdots + m_{i_r} : & r \in \Z_{\geq 1}, \; i_1, \ldots, i_r \in I \\
+		& \forall 1 \leq k \leq r, \; m_{i_k} \in M_{i_k}
+	\end{array} \right\} \]
+(dengan konvensi bahwa jumlah kosong adalah $\{0\}$) dan irisannya (untuk $I \neq \emptyset$)
+\[ \bigcap_{i \in I} M_i \]
+tetap merupakan submodul. Jika $S$ adalah subhimpunan dari $M$, kita dapat mendefinisikan submodul $\lrangle{S}$ yang dibangkitkan oleh $S$ sebagai submodul terkecil dalam $M$ yang memuat $S$, yakni
+\[ \lrangle{S} := \bigcap_{\substack{M': \text{submodul} \\ M' \supset S}} M'. \]
+Jika $S$ adalah himpunan satu elemen $\{x\}$, maka $\lrangle{S} = \lrangle{x}$ memiliki deskripsi langsung $Rx := \{rx : r \in R\}$. Secara umum, mudah diperiksa bahwa $\lrangle{S} = \sum_{x \in S} Rx \subset M$. Modul yang dapat ditulis dalam bentuk $Rx$ disebut \emph{modul siklik}; bila $R=\Z$, modul siklik tidak lain adalah grup siklik.
+
+Untuk modul kanan atas $R$, kita dapat mendefinisikan submodul $xR$ dan seterusnya dengan cara yang sama; rinciannya tidak diulangi.
+
+\begin{example}
+	Gelanggang $R$ memiliki struktur modul kiri dan modul kanan alami atas dirinya sendiri melalui perkaliannya. Dengan membandingkan definisi submodul dan ideal pada \ref{def:ideals}, diperoleh
+	\begin{center}
+		submodul dari $R$ sebagai modul kiri atas $R$ = ideal kiri dari $R$, \\
+		submodul dari $R$ sebagai modul kanan atas $R$ = ideal kanan dari $R$.
+	\end{center}
+	Teori modul sendiri dibangun di atas konsep gelanggang; kelak akan kita lihat bagaimana sudut pandang $R$-modul dapat digunakan untuk menyimpulkan sifat-sifat teori gelanggang dari $R$.
+\end{example}
+
+\begin{definition}\index{homomorfisme}
+	Misalkan $M_1$, $M_2$ modul kiri atas $R$. Sebuah peta $\varphi: M_1 \to M_2$ disebut \emph{homomorfisme modul} dari $M_1$ ke $M_2$ jika memenuhi
+	\begin{itemize}
+		\item $\varphi$ adalah homomorfisme grup aditif: untuk semua $x, y \in M_1$, berlaku $\varphi(x+y)=\varphi(x) + \varphi(y)$,
+		\item $\varphi$ mempertahankan perkalian skalar: untuk semua $r \in R$ dan $x \in M_1$, berlaku $\varphi(rx) = r\varphi(x)$.
+	\end{itemize}
+	Peta identitas jelas merupakan homomorfisme, dan komposisi homomorfisme $\varphi: M_1 \to M_2$, $\psi: M_2 \to M_3$, yakni $\psi\varphi: M_1 \to M_3$, tetap merupakan homomorfisme. Dengan demikian diperoleh kategori modul kiri atas $R$, yaitu $R\dcate{Mod}$, beserta konsep isomorfisme, automorfisme, dan sebagainya. Kategori modul kanan atas $R$ didefinisikan secara serupa dan ditulis $\cated{Mod}R$.\index{isomorfisme}
+
+	Untuk homomorfisme $\varphi$ di atas, definisikan \emph{kernel}-nya, atau kernel nolnya, sebagai $\Ker(\varphi) := \{x \in M_1 : \varphi(x)=0 \}$, dan \emph{bayangan}-nya sebagai $\Image(\varphi) := \{\varphi(x) : x \in M_1\}$. Keduanya masing-masing merupakan submodul dari $M_1$ dan $M_2$.\index{kernel}
+\end{definition}
+
+Seperti pada kasus monoid dan gelanggang, homomorfisme $\varphi: M_1 \to M_2$ adalah isomorfisme jika dan hanya jika $\varphi$ bijektif. Dalam hal itu, peta inversnya $\varphi^{-1}: M_2 \to M_1$ juga merupakan homomorfisme modul: cukup terapkan $\varphi^{-1}$ pada persamaan-persamaan yang dipenuhi $\varphi$ dalam definisi.
+
+\begin{remark}\label{rem:Mod-cat-preadditive}
+	Seperti untuk grup abelian atau $\Z$-modul, bagi sebarang modul kiri (atau kanan) $M, M'$ atas $R$, himpunan homomorfisme $\Hom_{R\dcate{Mod}}(M, M') =: \Hom_R(M, M')$ membentuk grup aditif: untuk sebarang $\phi, \psi \in \Hom_R(M, M')$, definisikan
+	\[ \phi + \psi := [m \mapsto \phi(m) + \psi(m) ] \in \Hom_R(M, M'). \]
+	Unsur nol dari grup $\Hom_R(M, M')$ adalah \emph{morfisme nol} $\forall m \mapsto 0$. Selain itu, operasi komposisi homomorfisme
+	\begin{align*}
+		\Hom_R(M', M'') \times \Hom_R(M, M') & \longrightarrow \Hom_R(M, M'') \\
+		(\phi, \psi) & \longmapsto \phi \psi
+	\end{align*}
+	merupakan peta $\Z$-bilinear, yakni:
+	\[ \phi(\psi_1 + \psi_2) = \phi\psi_1 + \phi\psi_2, \quad (\phi_1 + \phi_2)\psi = \phi_1\psi + \phi_2\psi. \]
+
+	Dari sini terlihat pula bahwa himpunan endomorfisme $\End_R(M)$ dari $M$ memiliki struktur gelanggang alami, dengan perkalian yang diberikan oleh komposisi. Sekarang tinjau modul kanan $M$ atas $R$. Modul $M$ memperoleh struktur modul kiri alami atas $D := \End_R(M)$ sebagai berikut:
+	\begin{align*}
+		D \times M & \longrightarrow M \\
+		(\phi, m) & \longmapsto \phi(m).
+	\end{align*}
+	Pokoknya adalah bahwa aksi perkalian $D$ ``komutatif'' dengan aksi $R$, dalam arti $\phi(mr)=\phi(m)r$. Kelak kita akan melihat kegunaan struktur ini; lihat Konvensi \ref{con:Hom-assoc}, \ref{con:left-right-End}.
+\end{remark}
+
+Menurut Catatan \ref{rem:module-multiplication}, kategori $R\dcate{Mod}$ ekuivalen dengan $\cated{Mod}R^\text{op}$. Demi kemudahan, selanjutnya kita menetapkan gelanggang $R$ dan hanya membahas modul kiri.
+
+Sekarang kita tinjau struktur hasil bagi modul. Singkatnya, memberikan suatu relasi ekuivalensi $\sim$ pada modul kiri $M$ yang ``mempertahankan struktur modul'' ekuivalen dengan memberikan suatu submodul $N$; kaitan keduanya adalah
+\[ x \sim y \iff x-y \in N. \]
+Rinciannya dapat dilihat pada pembahasan \ref{sec:homomorphism}. Di sini kita hanya menjelaskan cara membangun modul hasil bagi $M \twoheadrightarrow M/N$ dari submodul $N \subset M$ yang diberikan. Pertama, sebagai grup aditif, hasil bagi $(M/N, +)$ sudah terdefinisi: unsur-unsurnya adalah koset aditif berbentuk $x+N$, dengan operasi biner $(x+N) + (y+N) = x+y + N$. Yang tersisa adalah menambahkan perkalian skalar oleh $R$.
+
+\begin{definition}\index{hasil bagi}
+	Misalkan $N \subset M$ suatu submodul. Pada grup hasil bagi aditif $M/N$, definisikan struktur modul kiri atas $R$ dengan
+	\[ r (x+N) = rx + N, \qquad r \in R, \; x \in M. \]
+	Maka peta hasil bagi $M \to M/N$ merupakan homomorfisme modul, dan $M/N$ disebut \emph{modul hasil bagi} dari $M$ oleh $N$.
+\end{definition}
+
+Modul hasil bagi memiliki sejumlah sifat formal yang serupa dengan grup hasil bagi, gelanggang hasil bagi, dan sebagainya. Berikut ringkasannya. Pembuktiannya serupa dengan kasus grup dan bahkan lebih sederhana karena tidak perlu mempertimbangkan masalah komutativitas.
+
+\begin{proposition}\label{prop:1st-homomorphism-module}
+	Modul hasil bagi $M \twoheadrightarrow M/N$ memenuhi sifat universal berikut: untuk setiap homomorfisme modul $\varphi: M \to M'$, jika $N \subset \Ker(\varphi)$, maka terdapat tepat satu homomorfisme $\bar{\varphi}: M/N \to M'$ sehingga diagram
+	\[ \begin{tikzcd}
+		M \arrow[rd, "\varphi"'] \arrow[r] & M/N \arrow[d, "{\exists! \; \bar{\varphi}}"]\\
+		& M'
+	\end{tikzcd}\]
+	komutatif.
+\end{proposition}
+\begin{proof}
+	Satu-satunya pilihan adalah $\bar{\varphi}(x + N) = \varphi(x)$; mudah diperiksa bahwa peta ini terdefinisi dengan baik.
+\end{proof}
+
+\begin{proposition}\label{prop:quotient-image-module}
+	Misalkan $\varphi: M_1 \to M_2$ suatu homomorfisme modul. Maka $\varphi$ menginduksi isomorfisme $\bar{\varphi}: M_1/\Ker(\varphi) \rightiso \Image(\varphi)$ yang memetakan $m + \Ker(\varphi)$ ke $\varphi(m)$.
+\end{proposition}
+\begin{proof}
+	Terapkan Proposisi \ref{prop:1st-homomorphism-module}.
+\end{proof}
+
+\begin{proposition}\label{prop:2nd-homomorphism-module}
+	Misalkan $\varphi: M_1 \to M_2$ suatu homomorfisme modul surjektif. Maka terdapat bijeksi
+	\[ \begin{tikzcd}[row sep=tiny]
+		\left\{ \text{submodul }  N_2 \subset M_2  \right\} \arrow[r, "1:1"] & \left\{ \text{submodul } N_1 \subset M_1 : N_1 \supset \Ker(\varphi)  \right\} \\
+		N_2 \arrow[mapsto,r] & \varphi^{-1}(N_2) \\
+		\varphi(N_1) & N_1 \arrow[mapsto, l].
+	\end{tikzcd} \]
+	Bijeksi ini memenuhi $N_2 \subset N'_2 \iff \varphi^{-1}(N_2) \subset \varphi^{-1}(N'_2)$. Selain itu, morfisme komposit $M_1 \xrightarrow{\varphi} M_2 \twoheadrightarrow M_2/N_2$ menginduksi isomorfisme $M_1/\varphi^{-1}(N_2) \rightiso M_2/N_2$.
+\end{proposition}
+Dengan mengambil $\varphi$ sebagai homomorfisme hasil bagi $M \twoheadrightarrow M/N$, isomorfisme dalam pernyataan dapat ditulis dalam bentuk yang dikenal, $M/N' \rightiso (M/N) \big/ (N'/N)$, dengan $N \subset N'$.
+\begin{proof}
+	Rutin.
+\end{proof}
+
+\begin{proposition}\label{prop:3rd-homomorphism-module}
+	Misalkan $M, N$ submodul dari $\mathcal{M}$. Homomorfisme komposit $M \hookrightarrow M+N \twoheadrightarrow (M + N)/N$ menginduksi isomorfisme modul natural
+	\begin{align*}
+		M/(M \cap N) & \rightiso (M+N)/N, \\
+		m + (M \cap N) & \mapsto m + N, \quad m \in M.
+	\end{align*}
+\end{proposition}
+\begin{proof}
+	Batasi homomorfisme hasil bagi $\pi: \mathcal{M} \to \mathcal{M}/N$ pada $M$. Bayangannya jelas $\pi(M) = M+N$, sedangkan kernelnya $M \cap \Ker(\pi) = M \cap N$. Dengan menerapkan Proposisi \ref{prop:quotient-image-module}, diperoleh isomorfisme $M/(M \cap N) \rightiso (M+N)/N$ yang memetakan $m + (M \cap N)$ ke $m + N$.
+\end{proof}
+
+\begin{definition}\label{def:cokernel}
+	Untuk homomorfisme modul $f: M \to M'$, definisikan \emph{kokernel}-nya sebagai $\Coker(f) := M'/\Image(f)$.
+\end{definition}
+Sifat-sifat lebih lanjut dari kategori modul $R\dcate{Mod}$ akan dipelajari dalam \S\ref{sec:exactseq-module}.
+
+\section{Operasi Dasar pada Modul}\label{sec:mod-operations}
+Dalam bagian ini, tetapkan gelanggang $R$ dan anggap semua modul sebagai modul kiri atas $R$. Kasus modul kanan sepenuhnya serupa.
+
+\begin{definition}\label{def:tor-ann}
+	Misalkan $M$ suatu $R$-modul.
+	\begin{itemize}\index[sym1]{ann@$\text{ann}_M$}
+		\item \emph{Anihilator} suatu unsur $x \in M$ didefinisikan sebagai ideal kiri dari $R$ berikut:
+		\[ \text{ann}_M(x) := \{r \in R : rx=0 \}. \]
+		Jika $\text{ann}_M(x)=\{0\}$, maka $x$ disebut \emph{bebas torsi}; jika tidak, $x$ disebut \emph{unsur torsi}. Modul yang semua unsur tak nolnya bebas torsi disebut \emph{modul bebas torsi}. \index{modul!bebas torsi (torsion-free)}
+		\item Anihilator modul $M$ didefinisikan sebagai ideal dua sisi dari $R$ berikut:
+		\[ \text{ann}(M) := \left\{r \in R: \forall x \in M, \; rx=0 \right\} = \bigcap_{x \in M} \text{ann}_M(x). \]
+		Jika ideal dua sisi $I$ dari $R$ termuat dalam $\text{ann}(M)$, maka $M$ secara alami menjadi modul atas $R/I$: penjumlahannya tetap, sedangkan perkalian skalarnya didefinisikan oleh $(r + I)m = rm$, dengan $(r,m) \in R \times M$.
+		\item \emph{Bagian $\mathfrak{a}$-torsi} dari modul $M$ terhadap ideal kanan $\mathfrak{a} \subset R$ didefinisikan sebagai submodul \index[sym1]{$M[\mathfrak{a}]$}
+		\[ M[\mathfrak{a}] := \left\{ m \in M: \forall a \in \mathfrak{a}, \; am=0 \right\}. \]
+	\end{itemize}
+\end{definition}
+Istilah-istilah ini akan digunakan dalam \S\ref{sec:PID-module}. Pembaca dipersilakan memeriksa bahwa anihilator $M$, ketika dipandang sebagai modul atas $R/\mathrm{ann}(M)$, otomatis sama dengan $\{0\}$.
+
+Tujuan selanjutnya dalam bagian ini adalah teorema berikut. \index[sym1]{R-Mod@$R\dcate{Mod}$}
+\begin{theorem}\label{prop:module-cat-completeness}
+	Kategori $R\dcate{Mod}$ lengkap dan kolengkap, serta mempunyai objek nol.
+\end{theorem}
+
+Objek nol adalah objek yang sekaligus merupakan objek awal dan objek terminal; lihat Definisi \ref{def:universal-objects}. Untuk kelengkapan dan kekolengkapan, lihat Definisi \ref{def:completeness}; secara eksplisit, kategori $R$-modul mempunyai semua limit kecil. Untuk kata sifat ``kecil'', lihat Definisi \ref{def:U-cat}. Kasus khusus $\Z$-modul, yakni grup abelian, telah digambarkan dalam Contoh \ref{eg:complete-cocomplete}. Pembuktian berikut sekaligus memperkenalkan beberapa notasi baku untuk jumlah langsung dan produk langsung.
+
+\begin{proof}
+	Catatan \ref{rem:Mod-cat-preadditive} telah menunjukkan bahwa $R\dcate{Mod}$ adalah kategori-$\cate{Ab}$: artinya, himpunan-$\Hom$ di dalamnya mempunyai struktur grup aditif alami yang membuat komposisi morfisme bilinear. Khususnya, untuk setiap $M$, $M'$ terdapat morfisme nol $0: M \to M'$ yang memetakan setiap unsur ke $0$. Berikutnya kita membangun berbagai limit secara berurutan.
+
+	\begin{asparaenum}
+		\item Objek nol dalam kategori $R\dcate{Mod}$ adalah modul nol $\{0\}$, yang sering cukup ditulis $0$. Struktur modul padanya hanya mungkin diberikan oleh $r \cdot 0 = 0$. Jelas bahwa semua morfisme dari atau ke modul nol tepat merupakan morfisme nol; jadi, modul ini memang objek nol dalam kategori $R\dcate{Mod}$.
+
+		\item Selanjutnya kita membangun produk dan koproduk dalam $R\dcate{Mod}$. Misalkan $I$ suatu himpunan kecil dan $\{M_i : i \in I\}$ suatu keluarga $R$-modul. Definisikan \emph{produk} (atau \emph{produk langsung}) $\prod_{i \in I} M_i$ sebagai
+		\begin{align*}
+			\prod_{i \in I} M_i & := \left\{ (m_i)_{i \in I} : \forall i \in I, \; m_i \in M_i \right\}, \\
+			(m_i)_{i \in I} + (m'_i)_{i \in I} & := (m_i + m'_i)_{i \in I}, \\
+			r(m_i)_{i \in I} & := (rm_i)_{i \in I}, \quad r \in R.
+		\end{align*}
+		Jelas bahwa $\prod_{i \in I} M_i$ merupakan $R$-modul, dengan unsur nol yang diberikan oleh $\forall i \in I, \; m_i = 0$. Modul ini dilengkapi keluarga homomorfisme proyeksi
+		\begin{align*}
+			p_j: \prod_{i \in I} M_i & \longrightarrow M_j, \qquad j \in I \\
+			(m_i)_{i \in I} & \longmapsto m_j.
+		\end{align*}
+
+		Definisikan \emph{koproduk}-nya (yang lazim disebut \emph{jumlah langsung}) sebagai \index{jumlah langsung@jumlah langsung (direct sum)}
+		\begin{gather*}
+			\bigoplus_{i \in I} M_i := \left\{ (m_i)_{i \in I} \in \prod_{i \in I} M_i : \text{hanya berhingga banyak } m_i \neq 0 \right\}.
+		\end{gather*}
+		Mudah dilihat bahwa $\bigoplus_{i \in I} M_i$ merupakan submodul dari $\prod_{i \in I} M_i$. Modul ini dilengkapi keluarga homomorfisme inklusi
+		\begin{align*}
+			\iota_j: M_j & \longrightarrow \prod_{i \in I} M_i \\
+			m_j & \longmapsto (m_i)_{i \in I}, \quad m_i :=
+			\begin{cases}
+				m_j, & i=j, \\
+				0, & i \neq j.
+			\end{cases}
+		\end{align*}
+
+		Jika setiap $M_i = M$, produk langsung dan jumlah langsung yang bersangkutan sering ditulis $M^I$ dan $M^{\oplus I}$. Bila $I=\{1, \ldots, n\}$, kita sering memakai notasi $M_1 \times \cdots \times M_n$ dan $M_1 \oplus \cdots \oplus M_n$; keduanya jelas merupakan $R$-modul yang sama. Pembaca dapat pula melihat pembahasan biproduk dalam \ref{def:biproduct}. Kembali ke kasus $I$ umum, kita sekarang memeriksa sifat-sifat kategoris produk dan koproduk dari \S\ref{sec:limits}.
+
+		Diberikan modul $M$ dan keluarga homomorfisme $\phi_j: M \to M_j$, kita menginginkan tepat satu $\phi: M \to \prod_{i \in I} M_i$ yang membuat diagram berikut komutatif untuk setiap $j \in I$:
+		\[ \begin{tikzcd}
+			M \arrow[rd, "\phi_j"'] \arrow[r, "\phi"] & \prod_{i \in I} M_i \arrow[d, "p_j"] \\
+			& M_j
+		\end{tikzcd} \]
+		Diagram ini menentukan koordinat ke-$j$ dari $\phi(m)$, sehingga satu-satunya pilihan jelas adalah $\phi(m) = (\phi_i(m))_{i \in I}$. Inilah sifat universal yang dimaksud.
+
+		Demikian pula, diberikan modul $M$ dan keluarga homomorfisme $\psi_j: M_j \to M$, homomorfisme $\psi$ yang membuat diagram
+		\[ \begin{tikzcd}
+			\bigoplus_{i \in I} M_i \arrow[r, "\psi"] & M \\
+			M_j \arrow[u, "\iota_j"] \arrow[ru, "\psi_j"'] &
+		\end{tikzcd} \]
+		komutatif untuk setiap $j \in I$ mempunyai satu-satunya pilihan: $\psi((m_i)_{i \in I}) = \sum_{i \in I} \psi_i(m_i)$ (jumlah berhingga). Hal ini karena $\bigoplus_{i \in I} M_i = \sum_{i \in I} \Image(\iota_i)$. Dengan demikian selesailah konstruksi produk dan koproduk.
+
+		\item Langkah berikutnya adalah membangun ekualiser dan koekualiser dalam $R\dcate{Mod}$ (lihat \S\ref{sec:limits}). Tinjau sepasang homomorfisme $f, g: X \to Y$. Sifat universal ekualiser $\Ker(f,g) \to X$ pada \eqref{eqn:equalizer} menjadi:
+	    \begin{compactitem}
+			\item homomorfisme $\iota: \Ker(f,g) \to X$ memenuhi $f\iota = g\iota$;
+			\item jika $\phi: L \to X$ memenuhi $f\phi = g\phi$, maka terdapat faktorisasi tunggal $\phi = [L \xrightarrow{\exists! \phi_0} \Ker(f,g) \xrightarrow{\iota} X]$.
+		\end{compactitem}
+		Berdasarkan struktur grup aditif pada himpunan $\Hom$, syarat-syarat di atas dapat ditulis ulang sebagai $(f-g)\iota = 0$, $(f-g)\phi = 0$. Jadi, membangun $\Ker(f,g) \to X$ sama dengan membangun $\Ker(f-g, 0) \to X$. Kita segera mereduksi ke kasus $g=0$.
+
+		Dengan cara yang sama, dari sifat universal koekualiser $Y \to \Coker(f,g)$ pada \eqref{eqn:coequalizer}, terlihat bahwa koekualiser itu tidak lain adalah $Y \to \Coker(f-g, 0)$. Sekali lagi kita mereduksi ke kasus $g=0$.
+
+		\item Sekarang uraikan ekualiser $\Ker(f,0) \to X$, dengan $f: X \to Y$ suatu homomorfisme $R$-modul. Sifat universalnya menjadi:
+			\[ \left[ \phi: L \to X, \; f \phi = 0 \right] \implies \phi \; \text{mempunyai faktorisasi tunggal} \; L \to \Ker(f,0) \to X. \]
+			Karena $f\phi = 0 \iff \Image(\phi) \subset \Ker(f)$, kernel $\Ker(f) \hookrightarrow X$ memberikan ekualiser $\Ker(f,0) \to X$ yang dicari.\index{ekualiser}
+
+		\item Kasus koekualiser $Y \to \Coker(f,0)$ serupa; sifat universalnya menjadi:\index{koekualiser}
+			\[ \left[ \psi: Y \to L, \; \psi f = 0 \right] \implies \psi \; \text{mempunyai faktorisasi tunggal} \; Y \to \Coker(f,0) \to L. \]
+			Karena $\psi f = 0 \iff \Image(f) \subset \Ker(\psi)$, Proposisi \ref{prop:1st-homomorphism-module} menunjukkan bahwa kokernel $Y \to \Coker(f) := Y/\Image(f)$ memberikan koekualiser yang dicari.
+	\end{asparaenum}
+
+	Menurut konstruksi di atas dan Korolari \ref{prop:completeness-criterion}, kategori $R\dcate{Mod}$ mempunyai semua limit kecil.
+\end{proof}
+
+\begin{remark}\label{rem:filtrant-mod-limit}
+	Seperti pada kasus himpunan, $\varinjlim$ terarah ke atas dari modul mempunyai konstruksi yang lebih mudah dipahami; konstruksi ini mencakup apa yang dalam aljabar lazim disebut limit langsung. Misalkan $I$ suatu kategori kecil terarah ke atas (Definisi \ref{def:filtrant-cat}) dan tinjau fungtor $\alpha: I \to R\dcate{Mod}$, yang pada objek ditulis $i \mapsto M_i$. Maka, sebagai himpunan, $\varinjlim_i M_i := \varinjlim \alpha$ dapat diambil sebagai
+	\[ \varinjlim_i M_i := \left( \bigsqcup_{i \in \Obj(I)} M_i \right) \bigg/\sim \]
+	dengan $\sim$ relasi ekuivalensi yang didefinisikan oleh \eqref{eqn:filtrant-equiv}; dengan kata lain, ini adalah $\varinjlim$ dari fungtor komposit $I \xrightarrow{\alpha} R\dcate{Mod} \to \cate{Set}$. Seperti pada kasus gelanggang (Proposisi \ref{prop:ring-filtrant-limit}), pokoknya adalah memilih struktur $R$-modul yang membuat $M_j \to \varinjlim_i M_i$ menjadi homomorfisme; pilihannya jelas sekaligus tunggal. Pembaca dipersilakan mengikuti argumen pada kasus gelanggang. Jika $I$ terurut total dan semua homomorfisme transisi $i \leq j \implies M_i \to M_j$ injektif, limit tersebut dapat ditulis secara wajar sebagai $\bigcup_i M_i$.
+\end{remark}
+
+Sebagai contoh, setiap modul $M$ dapat dinyatakan sebagai $\varinjlim$ dari submodul-submodul terbangkitkan hingganya. Limit ini terarah ke atas, dan penulisan $M = \bigcup_{\substack{N \subset M \\ \text{submodul terbangkitkan hingga}}} N$ juga sudah jelas.
+
+\begin{corollary}\label{prop:Mod-cat-additive}
+	Kategori $R\dcate{Mod}$ adalah kategori aditif (lihat Definisi \ref{def:additive-cat}). Khususnya, produk langsung dan jumlah langsung berhingga dari $R$-modul adalah sama.
+\end{corollary}
+\begin{proof}
+	Teorema \ref{prop:module-cat-completeness} membangun produk dan koproduk. Berdasarkan definisi biproduk \ref{def:biproduct} dan Teorema \ref{prop:biproduct-criterion}, ini menyiratkan keberadaan biproduk; jadi kategori-$\cate{Ab}$ $R\dcate{Mod}$ memang merupakan kategori aditif. Kesamaan produk langsung dan jumlah langsung berhingga adalah Proposisi \ref{prop:additive-prod-coprod}, dan juga jelas dari konstruksinya.
+\end{proof}
+
+\begin{lemma}\label{prop:prod-module}
+	Misalkan gelanggang $R$ merupakan produk langsung $R = \prod_{i \in I} R_i$, dengan $I$ suatu himpunan berhingga. Untuk setiap $i \in I$, definisikan ideal dua sisi dari $R$ sebagai $\mathfrak{b}_i := \prod_{\substack{j \in I \\ j \neq i}} R_j$, serta
+	\[ e_i := (\delta_{i,j})_{j \in I} \; \in R, \quad \delta_{i,j} = \begin{cases} 1, & i=j \\ 0, & i \neq j. \end{cases} \]
+	Untuk setiap modul kiri $M$ atas $R$, definisikan $M_i := \left\{ m \in M : \mathfrak{b}_i m = 0 \right\}$. Maka terdapat dekomposisi jumlah langsung
+	\begin{equation*}\begin{tikzcd}[row sep=tiny]
+		\bigoplus_{i \in I} M_i \arrow[r, "\sim"] & M \\
+		(m_i)_{i \in I} \arrow[mapsto, r] \arrow[phantom, u, "\in" description, sloped] & \sum_{i \in I} m_i \arrow[phantom, u, "\in" description, sloped] \\
+		(e_i m)_{i \in I} & m \arrow[mapsto, l]
+	\end{tikzcd}\end{equation*}
+\end{lemma}
+\begin{proof}
+	Gunakan sifat $\mathfrak{b}_i e_i = 0$, $\sum_i e_i = 1$, dan $i \neq j \implies e_j \in \mathfrak{b}_i$ untuk memeriksanya.
+\end{proof}
+Di sini $M_i$ juga dapat dipandang sebagai modul kiri atas $R_i \simeq R/\mathfrak{b}_i$.
+\begin{remark}
+	Sebaliknya, diberikan keluarga modul kiri $M_i$ atas $R_i$, tarik masing-masing kembali menjadi modul kiri atas $R$ melalui homomorfisme proyeksi $R \to R_i$, lalu bentuk jumlah langsung $M = \bigoplus_i M_i$. Mudah diperiksa bahwa kedua konstruksi ini saling invers hingga isomorfisme natural. Jadi, memberikan satu modul atas $R$ ekuivalen dengan memberikan satu keluarga modul atas $R_i$. Dalam bahasa teori kategori, kita memperoleh ekuivalensi kategori antara $R\dcate{Mod}$ dan $\prod_{i \in I} (R_i\dcate{Mod})$.
+\end{remark}
+ 
+ 

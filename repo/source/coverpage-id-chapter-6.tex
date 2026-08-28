@@ -1,0 +1,70 @@
+% Copyright 2022 Wen-Wei Li. CC BY 4.0.
+\setCJKfamilyfont{coverfont}[Path=../fonts/]{NotoSerifCJKsc-Bold.otf}
+\setCJKfamilyfont{cover-author-font}[Path=../fonts/]{NotoSansCJKsc-Regular.otf}
+
+\begin{titlepage}
+\pgfmathsetseed{20260828}
+\begin{tikzpicture}[remember picture,overlay]
+	\node[anchor=center,align=center] (title) at ([yshift=-9em] current page.north)
+		{\fontsize{45}{45}\selectfont\CJKfamily{coverfont}Metode Aljabar};
+	\node[anchor=center,align=center] (volume) at ([yshift=-6.5em] title.center)
+		{\fontsize{27}{30}\selectfont\CJKfamily{coverfont}Jilid 1: Arsitektur Dasar};
+	\node[anchor=center,align=center,text width=31em] (unit) at ([yshift=-6em] volume.south)
+		{\fontsize{16}{20}\selectfont\CJKfamily{cover-author-font}
+		Bab 6 lengkap\\[0.35em]
+		\fontsize{13}{16}\selectfont Modul};
+	\node[anchor=center] (author) at ([yshift=-4em] unit.south)
+		{\fontsize{18}{18}\selectfont\CJKfamily{cover-author-font}Wen-Wei Li};
+	\draw[line width=2pt,color=black!70!gray]
+		([xshift=-15em,yshift=2em] unit.north) -- ++(30em,0);
+	\shade[top color=gray,bottom color=black]
+		([xshift=-17em,yshift=1em] title.north) rectangle ++(-1em,-20em);
+	\node[anchor=south,draw=black!30,fill=white,rounded corners=3pt,
+		inner xsep=1.2em,inner ysep=1em,text width=29em,align=left]
+		at ([yshift=8.2em] current page.south)
+		{\sffamily\textbf{Seluruh Bab 6 dalam satu pembaca}\par\smallskip
+		Dua belas bagian membahas modul, modul bebas, hasil kali tensor,
+		perubahan gelanggang, eksak kiri dan kanan, modul projektif, injektif,
+		dan datar, kondisi Noetherian dan Artinian, modul semisederhana, serta
+		modul tak terurai. Penutup memuat 14 latihan utama, 22 butir termasuk
+		subbutir, dan 8 petunjuk.\par\smallskip
+		\small 12 bagian \textbullet\ 14 latihan \textbullet\ 8 petunjuk\par
+		\small teks lengkap Bab 6 \textbullet\ indeks istilah dan simbol};
+	\node[opacity=0.7] at ([yshift=5em] current page.south)
+		{\small\sffamily \BuildDateShortID};
+\end{tikzpicture}
+
+\clearpage
+\begin{center}
+	\Large{\sffamily\bfseries\thmheiti Edisi daring \\ revisi Februari 2023} \\ \vspace{2em}
+	\Large{\sffamily\bfseries\thmheiti Tanggal kompilasi: \BuildDateID} \\ \vspace{1em}
+	Buku sumber diterbitkan oleh Higher Education Press \\
+	(edisi pertama Januari 2019; versi daring direvisi Februari 2023) \\
+	\texttt{ISBN: 978-7-04-050725-6}
+\end{center}
+\vfill
+\begin{flushleft}\small
+	Wen-Wei Li \\
+	Laman penulis: \href{https://www.wwli.asia}{www.wwli.asia} \\
+	(termasuk daftar ralat dan informasi edisi sumber)
+\end{flushleft}
+\vspace{1.5em}
+\noindent
+\begin{minipage}[b]{0.12\textwidth}
+	\includegraphics[width=\linewidth]{ccby.png}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.82\textwidth}
+	\small\sffamily
+	Edisi Bahasa Indonesia ini merupakan terjemahan independen dari karya Wen-Wei Li.
+	Teks sumber dan terjemahan dilisensikan menurut Creative Commons Atribusi 4.0
+	Internasional (CC BY 4.0): \url{https://creativecommons.org/licenses/by/4.0/}.
+	Perubahan mencakup penerjemahan, penyesuaian tipografi, dan koreksi terbatas yang
+	dicatat dalam riwayat unit tanpa mengubah maksud matematis. Edisi ini tidak disahkan
+	oleh penulis sumber. Fragmen kelas AJbook yang dikreditkan tetap CC BY-SA 3.0;
+	fon Noto yang dibundel tetap SIL OFL 1.1. Fon Fandol 0.3 yang disediakan oleh
+	toolchain tetap GPLv3 dengan pengecualian fon: \url{https://ctan.org/pkg/fandol}.
+	Provenans produksi: \mbox{OpenAI Codex gpt-5.6-sol, Ultra}; catatan ini terpisah
+	dari kepengarangan sumber dan kredit kontributor manusia.
+\end{minipage}
+\cleardoublepage
+\end{titlepage}

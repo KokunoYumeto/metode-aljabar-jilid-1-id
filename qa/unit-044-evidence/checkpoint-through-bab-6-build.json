@@ -1,0 +1,278 @@
+{
+  "schema": "o013-checkpoint-through-chapter-6-build-v1",
+  "result": "pass",
+  "coverage": "Pendahuluan and complete Chapters 1-6",
+  "component_count": 37,
+  "inputs": [
+    {
+      "title": "Pendahuluan",
+      "path": "artifacts/unit-001-pendahuluan.pdf",
+      "pages": 21,
+      "bytes": 199926,
+      "sha256": "b3fca2af76b793a19877ffc822d6ec89c2494641f7e1dfa468b158c7bec30a3e"
+    },
+    {
+      "title": "Bab 1 - ZFC",
+      "path": "artifacts/unit-002-bab-1-zfc.pdf",
+      "pages": 12,
+      "bytes": 161147,
+      "sha256": "ff2eb3fd1ec5abaa7989d0c29c419c04f99368dc3f278799be460e30042bfe58"
+    },
+    {
+      "title": "Bab 1 - Struktur Urutan dan Bilangan Ordinal",
+      "path": "artifacts/unit-003-bab-1-struktur-urutan-dan-ordinal.pdf",
+      "pages": 11,
+      "bytes": 134858,
+      "sha256": "031e231bc5d2ac74cada865700d8f76dda327941c7f442e6d47324b848103df8"
+    },
+    {
+      "title": "Bab 1 - Rekursi Transfinit dan Penerapannya",
+      "path": "artifacts/unit-004-bab-1-rekursi-transfinit-dan-penerapannya.pdf",
+      "pages": 8,
+      "bytes": 107332,
+      "sha256": "e48aa97d15ad9c192df5d744bfc8290fc816c4b681322295352517a02e267c13"
+    },
+    {
+      "title": "Bab 1 - Bilangan Kardinal",
+      "path": "artifacts/unit-005-bab-1-kardinal.pdf",
+      "pages": 12,
+      "bytes": 128554,
+      "sha256": "205359b6c3b406a4f6595908381147e2bb3dba6aab8fdc9057436b11bec252de"
+    },
+    {
+      "title": "Bab 1 - Semesta Grothendieck",
+      "path": "artifacts/unit-006-bab-1-semesta-grothendieck.pdf",
+      "pages": 9,
+      "bytes": 120808,
+      "sha256": "1fe15c59de6021b376643269423f2ef12e7b986f048ae39a31d8b1df9f7562c4"
+    },
+    {
+      "title": "Bab 1 - Latihan",
+      "path": "artifacts/unit-007-bab-1-latihan.pdf",
+      "pages": 4,
+      "bytes": 100435,
+      "sha256": "e7d4d6745f88b56c7ef840499c8e1d759b2bbbc14a245e8fc477fb0a6504a2b1"
+    },
+    {
+      "title": "Bab 2 - Pengantar Teori Kategori",
+      "path": "artifacts/unit-008-bab-2-pengantar-teori-kategori.pdf",
+      "pages": 5,
+      "bytes": 100805,
+      "sha256": "0db18bfbae3ffd2194447781a77effb4f57f8bd8521baa3acb334b474f0773cd"
+    },
+    {
+      "title": "Bab 2 - Kategori dan Morfisme (2.1)",
+      "path": "artifacts/unit-009-bab-2-kategori-dan-morfisme.pdf",
+      "pages": 13,
+      "bytes": 143207,
+      "sha256": "1a71610ba997348ce22db69944fec3529d9d6e6c2ef6ece48faa30df90ac5ce6"
+    },
+    {
+      "title": "Bab 2 - Fungtor dan Transformasi Natural (2.2)",
+      "path": "artifacts/unit-010-bab-2-fungtor-dan-transformasi-natural.pdf",
+      "pages": 15,
+      "bytes": 153352,
+      "sha256": "a06c4152e6233270cfa138b6c99ae9f307246fe2e1eac6b72a9533c9d74bfce4"
+    },
+    {
+      "title": "Bab 2 - Kategori Fungtor (2.3)",
+      "path": "artifacts/unit-011-bab-2-kategori-fungtor.pdf",
+      "pages": 7,
+      "bytes": 105391,
+      "sha256": "f18ea37d945b08961f14e49581dd13a5a3024307fe3d33a77c7d5bb5631859fe"
+    },
+    {
+      "title": "Bab 2 - Sifat Universal dan Kategori Koma (2.4)",
+      "path": "artifacts/unit-012-bab-2-sifat-universal-dan-kategori-koma.pdf",
+      "pages": 10,
+      "bytes": 121388,
+      "sha256": "1671beea4ab78c848d577f9b8428d5717de2ac55f309f4f075c455409fd878a9"
+    },
+    {
+      "title": "Bab 2 - Fungtor Representabel dan Lema Yoneda (2.5)",
+      "path": "artifacts/unit-013-bab-2-fungtor-representabel-dan-lema-yoneda.pdf",
+      "pages": 7,
+      "bytes": 106162,
+      "sha256": "03ced2b80bf14814d01bc73cf378bfab820ec40ad0571eaa33cf514d79d760cf"
+    },
+    {
+      "title": "Bab 2 - Dasar-Dasar Fungtor Adjoin (2.6)",
+      "path": "artifacts/unit-014-bab-2-fungtor-adjoin-dasar.pdf",
+      "pages": 9,
+      "bytes": 121761,
+      "sha256": "1241ca5ff345ff5315d5e3f4e6fcb1f37af2b0e948f458306c4b790035779d04"
+    },
+    {
+      "title": "Bab 2 - Contoh, Keunikan, dan Ekuivalensi Adjoin (2.6)",
+      "path": "artifacts/unit-015-bab-2-contoh-keunikan-dan-ekuivalensi-adjoin.pdf",
+      "pages": 10,
+      "bytes": 120466,
+      "sha256": "6f2a9be12465300ac7af2ea086b643b6891b1f9e23af66241a40086ac476c8ef"
+    },
+    {
+      "title": "Bab 2 - Limit (2.7)",
+      "path": "artifacts/unit-016-bab-2-limit.pdf",
+      "pages": 16,
+      "bytes": 159462,
+      "sha256": "6d6838019efca962d7282c7be3df136f32abed3a8f111f2e4e5996bbeb4d789b"
+    },
+    {
+      "title": "Bab 2 - Kelengkapan (2.8)",
+      "path": "artifacts/unit-017-bab-2-kelengkapan.pdf",
+      "pages": 9,
+      "bytes": 112236,
+      "sha256": "bfcec32b3ba20f8c170a3389a1b651613f1fa437945662ca32dd62fcf0edba5e"
+    },
+    {
+      "title": "Bab 2 - Latihan",
+      "path": "artifacts/unit-018-bab-2-latihan.pdf",
+      "pages": 4,
+      "bytes": 83578,
+      "sha256": "4fc2997e6eafc8f2e74d8a03e3351cb49d99a95ae96ff254a211fbf505f6e00c"
+    },
+    {
+      "title": "Bab 3 - Definisi Dasar (3.1)",
+      "path": "artifacts/unit-019-bab-3-definisi-dasar.pdf",
+      "pages": 12,
+      "bytes": 125710,
+      "sha256": "af7a4561db5e8ab1798d4475c589beb42f9fb84795bd167c0ffc17241866783a"
+    },
+    {
+      "title": "Bab 3 - Keketatan dan Teorema Koherensi (3.2)",
+      "path": "artifacts/unit-020-bab-3-keketatan-dan-teorema-koherensi.pdf",
+      "pages": 5,
+      "bytes": 93053,
+      "sha256": "8d8a7c8f537681525d97952a7f163f95a5063275047989c26f0387f50172e1ed"
+    },
+    {
+      "title": "Bab 3 - Struktur Kepang (3.3)",
+      "path": "artifacts/unit-021-bab-3-struktur-kepang.pdf",
+      "pages": 9,
+      "bytes": 115395,
+      "sha256": "ff12bd0dbff7ba40d16050aef9f51b2b676dcfbeaa2e5808407373936fc37371"
+    },
+    {
+      "title": "Bab 3 - Kategori Diperkaya dan Aditif (3.4)",
+      "path": "artifacts/unit-022-bab-3-kategori-diperkaya-dan-aditif.pdf",
+      "pages": 9,
+      "bytes": 117933,
+      "sha256": "a9144221d3a4d8d01e186d5f7a81714b0ec240590f23dd9ea1dbf06b5252a323"
+    },
+    {
+      "title": "Bab 3 - Sekilas tentang 2-Kategori (3.5)",
+      "path": "artifacts/unit-023-bab-3-sekilas-tentang-2-kategori.pdf",
+      "pages": 7,
+      "bytes": 98735,
+      "sha256": "5fb682094a829d8abd878aaf3f5e36cda7763323d1a8417d4e36595a7959add4"
+    },
+    {
+      "title": "Bab 3 - Latihan",
+      "path": "artifacts/unit-024-bab-3-latihan-kategori-monoidal.pdf",
+      "pages": 4,
+      "bytes": 86255,
+      "sha256": "1b61a1e2b856f2ef5d9dbc800c6e593aeb776fd85e2480a53b26286639292e71"
+    },
+    {
+      "title": "Bab 4 - Semigrup, Monoid, dan Grup",
+      "path": "artifacts/unit-025-bab-4-semigrup-monoid-dan-grup-id.pdf",
+      "pages": 10,
+      "bytes": 123117,
+      "sha256": "511d1c0889c0882639be49d00580c0634de7e3074c757616ac10a3f2fa854615"
+    },
+    {
+      "title": "Bab 4 - Homomorfisme dan Grup Hasil Bagi",
+      "path": "artifacts/unit-026-bab-4-homomorfisme-dan-grup-hasil-bagi-id.pdf",
+      "pages": 9,
+      "bytes": 115284,
+      "sha256": "e3c0e0241901eb0f5f2477a1fe09f64eff34af325dc209b25aa8d71900deb089"
+    },
+    {
+      "title": "Bab 4 - Produk Langsung, Semilangsung, dan Ekstensi",
+      "path": "artifacts/unit-027-bab-4-produk-langsung-semilangsung-dan-ekstensi-grup-id.pdf",
+      "pages": 7,
+      "bytes": 97427,
+      "sha256": "8eeab2d34a745b0e5a12acc29c0c5474e9c84d1248686d743302c03859851dd7"
+    },
+    {
+      "title": "Bab 4 - Aksi Grup dan Prinsip Pencacahan",
+      "path": "artifacts/unit-028-bab-4-aksi-grup-dan-prinsip-pencacahan-id.pdf",
+      "pages": 7,
+      "bytes": 108689,
+      "sha256": "50c40ddefa870866568f8d1621d5fc204a1fd0fd0a45bdfc74659197c585790a"
+    },
+    {
+      "title": "Bab 4 - Teorema Sylow",
+      "path": "artifacts/unit-029-bab-4-teorema-sylow-id.pdf",
+      "pages": 6,
+      "bytes": 99689,
+      "sha256": "64fde52948525fc5b159f76fbed6571c150e4184a87e47e715164aec135e5012"
+    },
+    {
+      "title": "Bab 4 - Deret Komposisi Grup",
+      "path": "artifacts/unit-030-bab-4-deret-komposisi-grup-id.pdf",
+      "pages": 7,
+      "bytes": 91961,
+      "sha256": "43ad2ffa2516f2f4394bcb82ad2e585f21c1e9e36a87870f4406a78597f18d74"
+    },
+    {
+      "title": "Bab 4 - Grup Solvabel dan Nilpoten",
+      "path": "artifacts/unit-031-bab-4-grup-solvabel-dan-nilpoten-id.pdf",
+      "pages": 9,
+      "bytes": 126053,
+      "sha256": "313667c3f87439ccaac3f8708653bb352af0ba7a16c9d09b159ad1b836cc32fb"
+    },
+    {
+      "title": "Bab 4 - Grup Bebas",
+      "path": "artifacts/unit-032-bab-4-grup-bebas-id.pdf",
+      "pages": 13,
+      "bytes": 149624,
+      "sha256": "904330916e20f0782b6464cb85e07001851940f4adf153f6592cd34087dbadbf"
+    },
+    {
+      "title": "Bab 4 - Grup Simetris",
+      "path": "artifacts/unit-033-bab-4-grup-simetris-id.pdf",
+      "pages": 10,
+      "bytes": 118964,
+      "sha256": "0af07d45c9aee57e28a6f27fe6162afda253e15c44779ccf07ac591516bd1f1d"
+    },
+    {
+      "title": "Bab 4 - Limit dan Pelengkapan Grup",
+      "path": "artifacts/unit-034-bab-4-limit-dan-kompletisasi-grup-id.pdf",
+      "pages": 9,
+      "bytes": 136702,
+      "sha256": "e69eef970ade092dae4d0e8740092ae8611010bca83ab190e3331e145e852272"
+    },
+    {
+      "title": "Bab 4 - Grup dalam Kategori dan Latihan",
+      "path": "artifacts/unit-035-bab-4-grup-dalam-kategori-dan-latihan-id.pdf",
+      "pages": 9,
+      "bytes": 135943,
+      "sha256": "1cf97dd523ae1a8c5185c4b22a8e6b0dab6e7514ab5387c34959c417f4e35442"
+    },
+    {
+      "title": "Bab 5 - Pengantar Teori Gelanggang (lengkap)",
+      "path": "artifacts/unit-043-bab-5-pengantar-teori-gelanggang-id.pdf",
+      "pages": 60,
+      "bytes": 714227,
+      "sha256": "08fc765af88eea5bb1cb2181223c4217cbeee17a5ec28621cb79193491196762"
+    },
+    {
+      "title": "Bab 6 - Teori Modul (lengkap)",
+      "path": "artifacts/unit-044-bab-6-modul-id.pdf",
+      "pages": 75,
+      "bytes": 465036,
+      "sha256": "2c493005920fdd757e5786477fdf99b20aced1653348be7a076fa7a829a5c1d3"
+    }
+  ],
+  "output": {
+    "path": "output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-through-bab-6-reader.pdf",
+    "pages": 460,
+    "bytes": 6750492,
+    "sha256": "ff8a1fdb65e36bfa8dbb47dd707c96e10daf2d6bf33363ecd2da6f73f6d2f4cd"
+  },
+  "builder": {
+    "path": "scripts/build_checkpoint_reader_through_chapter_6.py",
+    "bytes": 10719,
+    "sha256": "655e2fcd874597bca6fc20a4d8bef626c42ac5a8e1b43f1f34eb2131444fce0d"
+  }
+}
