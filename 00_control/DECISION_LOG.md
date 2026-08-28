@@ -1497,3 +1497,12 @@ deterministic machinery. Run one bounded gate per meaningful batch and do not
 reopen a passing boundary without a concrete new defect. Translation and usable
 reader coverage dominate; the full Li/Duncan/selected-CRing/connective-mastery
 goal and all component rights remain unchanged.
+
+## D093 — 2026-08-28 — Complete Chapter 4 public; Chapter 5 becomes one production boundary
+
+Unit 035 and complete Chapter 4 are published and anonymously byte-verified.
+The already-passing Units 036–043 have been consolidated, in exact source
+order, into one complete 1,382-record Chapter 5 candidate. The production lane
+will promote/build/index/publish that chapter once, rather than reproduce the
+retired microscopic per-unit cadence. This changes cadence, not mathematical
+scope, rights, authority, or the full O013 terminal condition.

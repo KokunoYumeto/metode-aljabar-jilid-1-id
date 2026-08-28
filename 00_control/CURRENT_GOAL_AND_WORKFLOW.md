@@ -242,3 +242,17 @@ built, all-page QA-admitted, publicly pushed, and left with exact recovery and
 release receipts. Etingof remains reference-only. Missing the mastery layer
 does not block source translation, but does block calling the package a
 complete independent-study product.
+
+## Live cursor after complete Chapter 4 — 2026-08-28
+
+Unit 035 and complete Chapter 4 are public and byte-verified at content commit
+`d50b8944116b4f40eef7bcd487e0125226b412b8` and receipt commit
+`0644fe36d85ceeef6a2f623a4a6831fba8f9ff94`. Complete Chapter 5 is already a
+single passing 1,382-record candidate at
+`build/unit-043-candidate/chapter5-complete-id.tex`, 156,081 bytes / SHA-256
+`33a1c65ce1ddea061e02d32a9a250d6db4444eb2251d5b721c8501f95a7f0e3c`.
+Promote, build, backend-index, and publish it as one chapter boundary rather
+than eight unit ceremonies. Chapter 6 lines 1–337 are already translated in
+isolation; continue from line 338 in parallel. The complete finite terminal
+condition remains all Li, Duncan, six CRing spans, and separate connective and
+mastery material built, indexed, and publicly preserved.

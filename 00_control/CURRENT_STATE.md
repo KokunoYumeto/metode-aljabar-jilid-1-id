@@ -1230,3 +1230,23 @@ Unit 043 has not started.
   admitted architecture.
 - Final O013 publication/receipts. No upstream issue may be opened before the
   complete O013 corpus, and at most one concise signed issue is allowed then.
+
+## 2026-08-28 live state — Chapter 4 public; Chapter 5 translation complete
+
+Unit 035 closes Chapter 4 and passed its single source, reader, backend, visual,
+publication, and anonymous byte-readback boundary. Content is public at
+`d50b8944116b4f40eef7bcd487e0125226b412b8`; its receipt is public at
+`0644fe36d85ceeef6a2f623a4a6831fba8f9ff94`.
+
+The complete Chapter 5 authority is 1,382 records / 122,998 bytes / SHA-256
+`e747d16b2ebacc95cf1c34da4bc8b7775a5ed8787b6d1edc2cc8e303535ac143`.
+Its complete Indonesian candidate is 156,081 bytes / SHA-256
+`33a1c65ce1ddea061e02d32a9a250d6db4444eb2251d5b721c8501f95a7f0e3c`;
+the whole-chapter checker passes with 480 environment markers, 80 labels, 112
+references, seven citations, 74 indexes, 112 items, 22 top-level exercises / 31
+including subitems, 11 hints, and no source solutions. The 22-row terminology
+delta is frozen. The next action is one complete-chapter production boundary.
+
+Chapter 6 lines 1–337 are translated in isolation at 28,906 bytes / SHA-256
+`55d99163b73efef90d6a28ebe6a96faff4b68018e7ec5f04212d530cb80fee34`;
+the parallel translation cursor is line 338.
