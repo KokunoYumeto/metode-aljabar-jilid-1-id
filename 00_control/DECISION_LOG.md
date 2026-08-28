@@ -1472,3 +1472,28 @@ underfull hbox and the untagged-PDF limitation remain disclosed. Advance to
 Unit 034 at chapter4.tex:1609 while preserving the full Li, Duncan,
 selected-CRing, and separate connective/mastery architecture with Etingof
 reference-only.
+
+## D091 — 2026-08-28 — Unit 034 published and cursor advanced
+
+Publish complete Section 4.10 at authority chapter4.tex:1609-1744 only after the final
+nine-page reader, schema-valid backend, independent audit, explicit Fandol
+rights repair, content commit, receipt commit, and both anonymous readback
+inventories agree. Content commit 6ce7def3bb18fc272b1b3054fa96e14fec4c49a7, tree 69020f506d514ea74ffb01f6b898edc0e84bbfa5, and
+receipt commit 73dcdb7186d0be22e6a6436d9fd592e8a1b33c53, tree b88f16c0607b23b3f6c31f651b2ea40beaf74872, are the exact public
+boundary. O013-LI-U034-COR-001 aligns the p-adic index with the declared index
+set. O013-LI-U034-REFLOW-001 removes the measured 26.11896 pt overflow without
+changing mathematics. Fandol remains GPLv3 with its document-embedding font
+exception, separately recorded from CC BY and OFL components. Advance to Unit
+035 at chapter4.tex:1745 while preserving the full Li, Duncan, selected-CRing,
+and separate connective/mastery architecture with Etingof reference-only.
+
+## D092 — 2026-08-28 — Replace microscopic QA cadence with translation-first batching
+
+The user rejected the elapsed-time cost of repeated small-unit QA and
+publication ceremony. Complete the already-translated Unit 035 boundary, then
+process prepared Units 036-042 in coherent source-order batches and translate
+the remaining Li chapters in large contiguous batches. Reuse the established
+deterministic machinery. Run one bounded gate per meaningful batch and do not
+reopen a passing boundary without a concrete new defect. Translation and usable
+reader coverage dominate; the full Li/Duncan/selected-CRing/connective-mastery
+goal and all component rights remain unchanged.

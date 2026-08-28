@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-28",
+  "unit": {
+    "candidate": {"path": "build/unit-034-candidate/chapter4-group-limits-completions-id.tex", "bytes": 19019, "sha256": "8f5ffb27fcf5b8163dea021d6d075f091b15251b9c07efb7578ac16f1b428b62"},
+    "target": {"path": "repo/source/chapter4.tex", "bytes": 189935, "sha256": "37ff3990850d81505ded1d1b71ca9318ea6dd3d1343a18e49495bf83d8367569"},
+    "reader": {"path": "artifacts/unit-034-bab-4-limit-dan-kompletisasi-grup-id.pdf", "pages": 9, "bytes": 136702, "sha256": "e69eef970ade092dae4d0e8740092ae8611010bca83ab190e3331e145e852272"},
+    "backend": {"path": "backend/data/unit-034-bab-4-limit-dan-kompletisasi-grup.json", "bytes": 341684, "sha256": "c475108a1d6ed5d4c2084adc00c122e1a3294b5d44e6af3e302d39a06d7a6c35"},
+    "backend_validation": {"path": "qa/unit-034-evidence/backend-validation.json", "bytes": 6315, "sha256": "41e019eaca9e2af1363b1ed573817e7d08ae2c895547fb57153ffb41c98a2eaf"},
+    "admission_receipt": {"path": "qa/UNIT_034_ADMISSION_20260828.md", "bytes": 6376, "sha256": "518043b82d0a3396b10019d7efcad0e1db728f88832681482e4a3e5aeb0798ef"},
+    "final_audit": {"path": "qa/UNIT_034_FINAL_AUDIT_20260828.md", "bytes": 6715, "sha256": "d542ca6aa5bc79f406c5490114cb07ebbeed15b74aac247a2c8aa8feab8b5517"},
+    "visual_receipt": {"path": "qa/UNIT_034_VISUAL_QA_20260827.md", "bytes": 5015, "sha256": "ceefb6b40c21b99ca4a673e32223323dcdb19373dbcdcf6822a79c8e0111a2a6"},
+    "build_log": {"path": "qa/UNIT_034_BUILD_FINAL.log", "bytes": 77357, "sha256": "bb4b9b6d7de341239eb137173b7dc774f4774298cccf534645cb2561ca9a779d"},
+    "terminology_audit": {"path": "qa/UNIT_034_TERMINOLOGY_AUDIT_20260827.md", "bytes": 8808, "sha256": "7b0cedcff9f1747cc56371b9b64a7529f357c426fbec0de55ed1e34c52e39b55"},
+    "terminology_delta": {"path": "build/unit-034-staging/terminology-delta.csv", "bytes": 6613, "sha256": "077b2903a33cdcf2df893a9ef57926b3c5d5157fc4be670f5aad10bdfdccf659"},
+    "glossary": {"path": "00_control/TERMINOLOGY.id-ID.csv", "bytes": 82586, "sha256": "59e66d5acf8f8e792327730c01a236d3bc7570b9f71a200b9a6d7b9a71fa3955"},
+    "digital_reflow": {"path": "qa/UNIT_034_DIGITAL_REFLOW_20260827.md", "bytes": 8792, "sha256": "dbf1fa80899a626843e01b8561132e8a849adeaa9abcb08302211038fed5447a"},
+    "structure_pdf_evidence": {"path": "qa/unit-034-evidence/structure-and-pdf-qa.json", "bytes": 31319, "sha256": "4c37064eaa05cfcb0b70718b27c2213a36e1dfa0eda6bf098fd92c06fd641e2d"},
+    "render_inventory": {"path": "qa/unit-034-evidence/render-hash-inventory.json", "bytes": 41802, "sha256": "c1e54d2d0d2527542b8b0f575614d8cc27d7c7238a3ea859074d271d9945c3ba"},
+    "fandol_authority": {"path": "repo/fonts/FANDOL-AUTHORITY.json", "bytes": 2557, "sha256": "1b74145b289d1c87f79f2e633934f10404adf9a4c02349c7db523de63b892a1f"},
+    "fandol_license": {"path": "repo/fonts/GPL-3.0-with-Fandol-font-exception.txt", "bytes": 35737, "sha256": "853b586f0d520493390e571431afaf36a5fbb27dcfd239338a7ee9b0505cb004"},
+    "fandol_readme": {"path": "repo/fonts/FANDOL-README.txt", "bytes": 645, "sha256": "32537e063f4c7d4aebf016d5c8279cbce13f34fc8970f24b2578a3c04d0f8ca6"}
+  },
+  "publication": {
+    "content_commit": "6ce7def3bb18fc272b1b3054fa96e14fec4c49a7",
+    "content_tree": "69020f506d514ea74ffb01f6b898edc0e84bbfa5",
+    "content_readback": {"path": "qa/PUBLICATION_GITHUB_UNIT_034_CONTENT_READBACK.json", "bytes": 42018, "sha256": "bf5893caa2ade62ab1dfe4d01a217798352d216ef40c3a533e1d49691a8cad95"},
+    "receipt": {"path": "qa/PUBLICATION_GITHUB_UNIT_034_20260828.md", "bytes": 1814, "sha256": "b000820c57c018b2d56f38c769d4b6c2c635736ea602b21ba87191bfb528b997"},
+    "receipt_commit": "73dcdb7186d0be22e6a6436d9fd592e8a1b33c53",
+    "receipt_tree": "b88f16c0607b23b3f6c31f651b2ea40beaf74872",
+    "receipt_readback": {"path": "qa/PUBLICATION_GITHUB_UNIT_034_RECEIPT_READBACK.json", "bytes": 3187, "sha256": "00f360782a266e46c9b9a008a777ca6c892f83f942171c243e503a5cd8018b45"}
+  }
+}
