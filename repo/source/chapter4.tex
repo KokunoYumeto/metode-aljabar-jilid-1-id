@@ -1601,140 +1601,140 @@ Presentasi \eqref{eqn:S_n-presentation} menunjukkan bahwa grup simetris termasuk
 \end{compactitem}
 Contoh \ref{eg:dihedral-presentation} menunjukkan bahwa grup dihedral $D_{2n}$ juga memiliki presentasi semacam ini. Grup Coxeter merupakan perangkat yang tak tergantikan dalam studi grup Lie, aljabar Lie, dan teori representasi terkait. \index{grup Coxeter (Coxeter group)}
 
-\section{群的极限和完备化}\label{sec:group-limit}
-基于 \S\ref{sec:free-group} 的构造和例 \ref{eg:complete-cocomplete}, 群范畴 $\cate{Grp}$ 和其子范畴 $\cate{Ab}$ 中可以定义极限 $\varinjlim$ 和 $\varprojlim$. 构造方法已在例 \ref{eg:complete-cocomplete} 大致说明. 本节将深入探讨 $\varprojlim$ 的情形.
+\section{Limit dan Pelengkapan Grup}\label{sec:group-limit}
+Berdasarkan konstruksi dalam \S\ref{sec:free-group} dan Contoh \ref{eg:complete-cocomplete}, di dalam kategori grup $\cate{Grp}$ dan subkategorinya $\cate{Ab}$ dapat didefinisikan limit $\varinjlim$ dan $\varprojlim$. Cara konstruksinya telah digariskan dalam Contoh \ref{eg:complete-cocomplete}. Bagian ini akan membahas kasus $\varprojlim$ secara lebih mendalam.
 
-对于小范畴 $I$, 给定函子 $\beta: I^\text{op} \to \cate{Grp}$ 相当于给定一族群 $\{ G_i := \beta(i) : i \in \Obj(I) \}$, 并对每个箭头 $s: i \to j$ 指定群同态 $\beta(s): G_j \to G_i$, 使得
+Untuk kategori kecil $I$, pemberian fungtor $\beta: I^\text{op} \to \cate{Grp}$ ekuivalen dengan pemberian suatu keluarga grup $\{ G_i := \beta(i) : i \in \Obj(I) \}$, serta, untuk setiap panah $s: i \to j$, suatu homomorfisme grup $\beta(s): G_j \to G_i$, sedemikian sehingga
 \begin{compactitem}
 	\item $\beta(\identity: i \to i)=\identity_{G_i}$,
-	\item 合成箭头 $i \to j \to k$ 给出合成同态 $G_k \to G_j \to G_i$.
+	\item panah-panah komposabel $i \to j \to k$ menghasilkan homomorfisme komposabel $G_k \to G_j \to G_i$.
 \end{compactitem}
-例 \ref{eg:complete-cocomplete} 已将 $\varprojlim_i G_i := \varprojlim \beta$ 的存在性归结为积和等化子的存在性. 铺开定理 \ref{prop:limit-buildingblocks} 证明中的构造, 便得到明白的表法
+Contoh \ref{eg:complete-cocomplete} telah mereduksi eksistensi limit proyektif $\varprojlim_i G_i := \varprojlim \beta$ menjadi eksistensi produk dan ekualiser. Dengan menuliskan secara eksplisit konstruksi dalam bukti Teorema \ref{prop:limit-buildingblocks}, diperoleh deskripsi konkret
 \[
 	\varprojlim_i G_i := \left\{ (x_i)_{i \in I} \in \prod_{i \in I} G_i : \forall s: i \to j, \; \beta(s)(x_j) = x_i \right\}.
 \]
-显然 $\varprojlim_i G_i$ 构成直积 $\prod_{i \in I} G_i$ 的子群. 同时我们也得到自明的投影同态 $p_j: \varprojlim_i G_i \to G_j$.
+Jelas bahwa $\varprojlim_i G_i$ merupakan subgrup dari produk langsung $\prod_{i \in I} G_i$. Kita juga memperoleh homomorfisme proyeksi yang kanonik $p_j: \varprojlim_i G_i \to G_j$.
 
-以下将假设 $I$ 实由偏序集 $(I, \leq)$ 给出 (参看例 \ref{eg:categories}); 并且 $(I, \leq)$ 是\emph{滤过}的, 即任意两元素都有共同上界 (定义 \ref{def:filtrant-poset}). 滤过偏序是滤过范畴的一个特例, 请见定义 \ref{def:filtrant-cat}.\index{luguoxuji}
+Selanjutnya kita akan mengandaikan bahwa $I$ berasal dari poset $(I, \leq)$ (lihat Contoh \ref{eg:categories}); selain itu, $(I, \leq)$ diasumsikan \emph{terarah ke atas}, yakni setiap dua unsur mempunyai suatu batas atas bersama (Definisi \ref{def:filtrant-poset}). Poset terarah ke atas merupakan kasus khusus kategori terarah ke atas; lihat Definisi \ref{def:filtrant-cat}.\index{poset terarah ke atas (filtered poset)}
 
-首先回顾一些点集拓扑学的定义, 详见 \cite[第一章]{FL14}.
-\begin{definition}\label{def:topological-group}\index{tuopuqun@拓扑群 (topological group)}
-	一个拓扑群 $G$ 意指群 $G$ 上带有拓扑结构, 使得乘法 $m: G \times G \to G$ 与取逆运算 $i: G \to G$ 皆为连续映射.
+Pertama-tama kita mengingat kembali beberapa definisi dari topologi himpunan titik; lihat \cite[Bab I]{FL14} untuk rinciannya.
+\begin{definition}\label{def:topological-group}\index{grup topologis (topological group)}
+	Sebuah grup topologis $G$ adalah grup $G$ yang dilengkapi struktur topologi sedemikian sehingga perkalian $m: G \times G \to G$ dan operasi pengambilan invers $i: G \to G$ keduanya merupakan peta kontinu.
 \end{definition}
-典型例子是加法群 $(\R^n, +)$. 作为推论, 任意 $g \in G$ 的左乘或右乘作用都给出同胚 $G \to G$, 取逆亦同. 基于此, 群的拓扑完全由幺元 $1$ 的邻域基反映, 因为总能以左右乘法将基平移到 $G$ 的每一点, 而且 $1$ 的一组邻域基各个取逆后仍是邻域基. 反过来, 给定群 $G$ 的一族子集 $\{H_i \ni 1\}_{i \in I}$, 能否靠左右平移赋予 $G$ 拓扑群结构, 并使该子集给出 $1$ 处的开邻域基? 以下情形对我们已经足够了: 假定 $(I, \leq)$ 是滤过偏序集, $i \leq j \implies H_j \subset H_i$ 而且 $\forall i \; H_i \lhd G$, 那么这样的拓扑总是存在: 事实上
-\[ \text{子集}\; E \subset G\; \text{为开} \iff \forall x \in E, \; \exists i \in I, \; xH_i = H_i x \subset E. \]
-易见这的确使 $G$ 成拓扑群, 验证留作简单习题. 进一步, 拓扑的分离性公理也简化了.
+Contoh khasnya ialah grup aditif $(\R^n, +)$. Sebagai konsekuensi, perkalian kiri maupun kanan oleh setiap $g \in G$ memberikan homeomorfisme $G \to G$, demikian pula pengambilan invers. Oleh karena itu, topologi grup sepenuhnya tercermin oleh suatu basis lingkungan bagi unsur identitas $1$: melalui perkalian kiri atau kanan, basis tersebut selalu dapat ditranslasikan ke setiap titik di $G$, dan invers dari setiap anggota basis lingkungan di $1$ kembali membentuk basis lingkungan. Sebaliknya, pada suatu grup $G$, jika diberikan suatu keluarga himpunan bagian $\{H_i \ni 1\}_{i \in I}$, dapatkah translasi kiri dan kanan digunakan untuk memberi $G$ struktur grup topologis sedemikian sehingga keluarga itu menjadi basis lingkungan terbuka di $1$? Kasus berikut sudah memadai bagi keperluan kita: andaikan $(I, \leq)$ merupakan poset terarah ke atas, $i \leq j \implies H_j \subset H_i$, dan $\forall i \; H_i \lhd G$. Maka topologi demikian selalu ada; tepatnya,
+\[ \text{himpunan bagian}\; E \subset G\; \text{terbuka} \iff \forall x \in E, \; \exists i \in I, \; xH_i = H_i x \subset E. \]
+Mudah dilihat bahwa definisi ini memang menjadikan $G$ grup topologis; verifikasinya diserahkan sebagai latihan sederhana. Lebih lanjut, aksioma pemisahan bagi topologi tersebut juga menjadi sederhana.
 
 \begin{lemma}\label{prop:top-group-separation}
-	设 $G$ 为拓扑群, 则
+	Jika $G$ merupakan grup topologis, maka
 	\begin{equation}\label{eqn:top-group-Hausdorff}
-		G:\; \text{Hausdorff} \iff \{1\} \subset G\; \text{为闭子集} \iff \bigcap_{U \ni 1: \text{开邻域}} U = \{1\}.
+		G:\; \text{Hausdorff} \iff \{1\} \subset G\; \text{himpunan bagian tertutup} \iff \bigcap_{U \ni 1: \text{lingkungan terbuka}} U = \{1\}.
 	\end{equation}
-	此外, 任何 $x \in G$ 都有一组由闭邻域构成的邻域基.
+	Selain itu, setiap $x \in G$ mempunyai suatu basis lingkungan yang terdiri atas lingkungan-lingkungan tertutup.
 \end{lemma}
 \begin{proof}
-	先处理第一条. 对每个 $x \in G$ 置 $\mathfrak{N}_x := \left\{ x \;\text{的所有邻域} \right\}$. 先前关于邻域基的讨论给出 $\mathfrak{N}_x = x\mathfrak{N}_1 = x \mathfrak{N}_1^{-1}$ (意谓对每个邻域都用 $x$ 平移或取逆), 从而
+	Kita buktikan dahulu pernyataan pertama. Untuk setiap $x \in G$, tetapkan $\mathfrak{N}_x := \left\{ \text{semua lingkungan dari } x \right\}$. Pembahasan terdahulu mengenai basis lingkungan memberikan $\mathfrak{N}_x = x\mathfrak{N}_1 = x \mathfrak{N}_1^{-1}$ (artinya, setiap lingkungan ditranslasikan oleh $x$ atau diambil inversnya), sehingga
 	\begin{equation*}\begin{aligned}
 		x \in \overline{\left\{ 1 \right\}} & \iff 1 \in \bigcap_{V \in \mathfrak{N}_x} V = \bigcap_{U \in \mathfrak{N}_1} xU^{-1} \\
 		& \iff x^{-1} \in \bigcap_{U \in \mathfrak{N}_1} U^{-1} \iff x \in \bigcap_{U \in \mathfrak{N}_1} U.
 	\end{aligned}\end{equation*}
-	换言之 $\overline{\{1\}} = \bigcap_{U \in \mathfrak{N}_1} U$. 由之立见第二个 $\iff$. 对第一个 $\iff$ 仅 $\Leftarrow$ 方向非平凡: 定义连续函数 $\nu: G \times G \to G$ 映 $(x,y)$ 为 $xy^{-1}$, 那么 $G$ 是 Hausdorff 空间等价于对角子集 $\Delta_G \subset G \times G$ 为闭, 但 $\Delta_G = \nu^{-1}(1)$ 而 $\{1\} \subset G$ 为闭.
+	Dengan kata lain, $\overline{\{1\}} = \bigcap_{U \in \mathfrak{N}_1} U$. Dari sini $\iff$ kedua langsung diperoleh. Untuk $\iff$ pertama, hanya arah $\Leftarrow$ yang tidak seketika: definisikan fungsi kontinu $\nu: G \times G \to G$ yang memetakan $(x,y)$ ke $xy^{-1}$. Ruang $G$ bersifat Hausdorff tepat ketika himpunan diagonal $\Delta_G \subset G \times G$ tertutup; tetapi $\Delta_G = \nu^{-1}(1)$, sedangkan $\{1\} \subset G$ tertutup.
 
-	第二条即刻化约到 $x=1$ 的情形; 由于群运算的连续性, 对任何开邻域 $V \ni 1$ 皆存在开集 $U \ni 1$ 使得 $U^{-1}U \subset V$, 只须观察到闭包 $\bar{U}$ 包含于 $U^{-1} \cdot U$: 这是因为 $g \in \bar{U}$ 蕴涵 $Ug \cap U \neq \emptyset$.
+	Pernyataan kedua segera tereduksi pada kasus $x=1$. Karena operasi grup kontinu, untuk setiap lingkungan terbuka $V \ni 1$ terdapat himpunan terbuka $U \ni 1$ sedemikian sehingga $U^{-1}U \subset V$. Cukup diperhatikan bahwa penutup $\bar{U}$ termuat dalam $U^{-1} \cdot U$: ini karena $g \in \bar{U}$ mengakibatkan $Ug \cap U \neq \emptyset$.
 \end{proof}
 
 \begin{lemma}\label{prop:open-closed-subgroup}
-	设拓扑群 $G$ 的子群 $H$ 是 $1$ 的邻域, 则 $H$ 既开又闭, 而且 $G$ 紧蕴涵 $(G:H)$ 有限.
+	Andaikan $G$ sebuah grup topologis dan subgrupnya $H$ merupakan lingkungan bagi $1$. Maka $H$ sekaligus terbuka dan tertutup, dan jika $G$ kompak maka $(G:H)$ berhingga.
 \end{lemma}
 \begin{proof}
-	取开集 $U$ 使得 $1 \in U \subset H$, 因此 $H = \bigcup_{x \in H} Ux$ 为开. 取 $G/H$ 在 $G$ 中的一族代表元 $\Xi$, 则陪集分解 (引理 \ref{prop:coset-decomp}) 给出 $G$ 的开覆盖 $G = \bigsqcup_{x \in \Xi} xH$. 于是 $H = G \smallsetminus \bigsqcup_{\substack{x \in \Xi \\ xH \neq H}} xH$ 为闭, 而且当 $G$ 紧时 $\Xi$ 有限.
+	Ambil himpunan terbuka $U$ dengan $1 \in U \subset H$. Dengan demikian, $H = \bigcup_{x \in H} Ux$ terbuka. Untuk $G/H$, ambil suatu keluarga wakil di dalam $G$ dan nyatakan keluarga ini sebagai $\Xi$. Dekomposisi koset (Lema \ref{prop:coset-decomp}) memberikan bagi $G$ liput terbuka $G = \bigsqcup_{x \in \Xi} xH$. Oleh sebab itu, $H = G \smallsetminus \bigsqcup_{\substack{x \in \Xi \\ xH \neq H}} xH$ tertutup, dan jika $G$ kompak maka $\Xi$ berhingga.
 \end{proof}
 
-回到 $\varprojlim_i G_i$. 今假设每个 $G_i$ 皆是拓扑群, 且对每个 $i \leq j$ 同态 $G_j \to G_i$ 皆连续. 我们赋 $\prod_{i \in I} G_i$ 予积拓扑 (见 \cite[\S 3.3]{Xiong}), 其子群 $\varprojlim_i G_i$ 遂继承了自然的拓扑群结构.
+Kembali ke $\varprojlim_i G_i$. Sekarang andaikan setiap $G_i$ merupakan grup topologis dan, untuk setiap $i \leq j$, homomorfisme $G_j \to G_i$ kontinu. Kita memberi $\prod_{i \in I} G_i$ topologi produk (lihat \cite[\S 3.3]{Xiong}); subgrupnya $\varprojlim_i G_i$ dengan demikian mewarisi struktur grup topologis alami.
 \begin{lemma}\label{prop:completion-compactness}
-	拓扑群 $\varprojlim_i G_i$ 在 $1$ 处有一组形如
-	\[ \mathcal{U}_{I_0} = \bigcap_{i \in I_0} p_i^{-1}(U_i), \qquad I_0 \subset I: \; \text{ 有限子集}, \quad U_i \ni 1: \; \text{开子集} \]
-	的邻域基. 若每个 $G_i$ 都是 Hausdorff 空间, 则 $\varprojlim_i G_i$ 亦然; 如进一步假设每个 $G_i$ 皆紧, 则 $\varprojlim_i G_i$ 是紧 Hausdorff 空间.
+	Grup topologis $\varprojlim_i G_i$ mempunyai suatu basis lingkungan di $1$ yang berbentuk
+	\[ \begin{aligned} \mathcal{U}_{I_0} &= \bigcap_{i \in I_0} p_i^{-1}(U_i), \qquad\\ I_0 &\subset I: \; \text{himpunan bagian berhingga}, \quad\\ U_i &\ni 1: \; \text{himpunan bagian terbuka} \end{aligned} \]
+	Jika setiap $G_i$ merupakan ruang Hausdorff, maka $\varprojlim_i G_i$ juga demikian; jika selanjutnya setiap $G_i$ kompak, maka $\varprojlim_i G_i$ merupakan ruang Hausdorff kompak.
 \end{lemma}
-由于已设 $(I, \leq)$ 滤过, 描述邻域基时可取 $I_0$ 的上界 $j$, 从而化约到 $I_0 = \{j\}$ 的情形.
+Karena $(I, \leq)$ telah diasumsikan terarah ke atas, ketika mendeskripsikan basis lingkungan kita dapat mengambil bagi $I_0$ suatu batas atas $j$, sehingga tereduksi pada kasus $I_0 = \{j\}$.
 \begin{proof}
-	邻域基的描述是积拓扑定义的直接推论. Hausdorff 空间的积和子空间仍是 Hausdorff 的, 而 Tychonoff 定理 \cite[定理 7.7.2]{Xiong} 断言紧空间的积仍紧; 从 Hausdorff 性质可推出 $\varprojlim_i G_i$ 是 $\prod_i G_i$ 的闭子群 (它由一族连续函数的等式定义), 故紧.
+	Deskripsi basis lingkungan tersebut merupakan konsekuensi langsung dari definisi topologi produk. Produk dan subruang dari ruang-ruang Hausdorff tetap Hausdorff, sedangkan Teorema Tychonoff \cite[Teorema 7.7.2]{Xiong} menyatakan bahwa produk ruang-ruang kompak tetap kompak. Sifat Hausdorff mengakibatkan $\varprojlim_i G_i$ merupakan subgrup tertutup dari $\prod_i G_i$ (subgrup itu didefinisikan oleh suatu keluarga persamaan antara fungsi-fungsi kontinu), sehingga kompak.
 \end{proof}
 
-在代数及数论中, 较常见的是每个 $G_i$ 皆为有限群的情形, 此时赋予 $G_i$ 离散拓扑使之成为 Hausdorff 紧群.
-\begin{definition}[pro-有限群]\label{def:profinite-group}\index{pro-youxianqun@pro-有限群 (pro-finite group)}
-	同构意义下形如 $\varprojlim_i G_i$, 其中 $(I, \leq)$ 滤过而且每个 $G_i$ 皆有限的拓扑群, 称作 \emph{pro-有限群}.
+Dalam aljabar dan teori bilangan, kasus yang lebih sering dijumpai ialah ketika setiap $G_i$ merupakan grup berhingga. Dalam hal ini, topologi diskret pada $G_i$ menjadikannya grup Hausdorff kompak.
+\begin{definition}[grup profinit]\label{def:profinite-group}\index{grup profinit (pro-finite group)}
+	Sebuah grup topologis yang, hingga isomorfisme, berbentuk $\varprojlim_i G_i$, dengan $(I, \leq)$ terarah ke atas dan setiap $G_i$ berhingga, disebut \emph{grup profinit}.
 \end{definition}
 
 \begin{theorem}\label{prop:profinite-characterization}
-	一个拓扑群 $G$ 是 pro-有限群当且仅当它是 Hausdorff 紧群, 而且 $1$ 处有一组由正规子群构成的邻域基.
+	Sebuah grup topologis $G$ merupakan grup profinit jika dan hanya jika grup tersebut kompak dan Hausdorff, serta $1$ mempunyai suatu basis lingkungan yang terdiri atas subgrup-subgrup normal.
 \end{theorem}
 \begin{proof}
-	假设 $G = \varprojlim_i G_i$ 为 pro-有限. 我们业已说明 $G$ 为 Hausdorff 紧群. 引理 \ref{prop:completion-compactness} 中的 $U_i$ 可取为 $\{1\}$, 从而 $1$ 的邻域基由一族正规开子群 $U$ 组成.
+	Andaikan $G = \varprojlim_i G_i$ merupakan grup profinit. Kita telah menunjukkan bahwa $G$ kompak dan Hausdorff. Pada Lema \ref{prop:completion-compactness}, kita dapat mengambil $U_i$ sebagai $\{1\}$, sehingga basis lingkungan bagi $1$ terdiri atas suatu keluarga subgrup normal terbuka $U$.
 
-	现假设拓扑群 $G$ 满足所示条件, 取一组正规子群构成的邻域基, 记为 $I$; 集合的包含关系使 $I$ 成为偏序集, 邻域基的性质确保 $(I, \leq)$ 滤过. 将对应于 $i \in I$ 的正规子群记为 $N_i$. 引理 \ref{prop:open-closed-subgroup} 蕴涵 $G/N_i$ 有限, $N_i$ 既开且闭.
+	Sekarang andaikan grup topologis $G$ memenuhi syarat-syarat yang dinyatakan. Ambil suatu basis lingkungan yang terdiri atas subgrup-subgrup normal dan nyatakan basis tersebut dengan $I$. Relasi inklusi terbalik pada himpunan-himpunan tersebut menjadikan $I$ sebuah poset, sedangkan sifat basis lingkungan memastikan bahwa $(I, \leq)$ terarah ke atas. Nyatakan subgrup normal yang bersesuaian dengan $i \in I$ sebagai $N_i$. Lema \ref{prop:open-closed-subgroup} mengakibatkan $G/N_i$ berhingga, sementara $N_i$ terbuka sekaligus tertutup.
 
-	根据泛性质, 全体商映射 $q_i: G \to G/N_i$ 确定了同态 $\varphi: G \to \varprojlim_i G/N_i$. 我们断言 $\varphi$ 是拓扑群的同构. 首先, 不难验证 $\varphi$ 连续, 而且 Hausdorff 性质确保 $\Ker(\varphi) = \bigcap_{i \in I} N_i = \{1\}$, 故 $\varphi$ 为单射. 今断言 $\Image(\varphi)$ 在 $\varprojlim_i G/N_i$ 中稠密. 诚然, 取 $x = (x_i)_i \in \varprojlim_i G/N_i$, 对任意有限子集 $I_0 \subset I$, 仅需说明 $x^{-1} \Image(\varphi)$ 交 $\bigcap_{i \in I_0} \Ker(p_i)$. 根据滤过偏序集的定义 , 存在 $I_0$ 的一个上界 $k \in I$; 取 $y \in G$ 使得 $q_k(y) = x_k$, 那么对每个 $i \in I_0$ 都会有 $q_i(y) = x_i$, 因而 $x^{-1} \varphi(y) \in \bigcap_{i \in I_0} \Ker(p_i)$.
+	Menurut sifat universal, seluruh peta hasil bagi $q_i: G \to G/N_i$ menentukan homomorfisme $\varphi: G \to \varprojlim_i G/N_i$. Kita menegaskan bahwa $\varphi$ merupakan isomorfisme grup topologis. Pertama, mudah diverifikasi bahwa $\varphi$ kontinu. Selain itu, sifat Hausdorff memastikan $\Ker(\varphi) = \bigcap_{i \in I} N_i = \{1\}$, sehingga $\varphi$ injektif. Sekarang kita buktikan bahwa $\Image(\varphi)$ rapat di dalam $\varprojlim_i G/N_i$. Ambil $x = (x_i)_i \in \varprojlim_i G/N_i$. Untuk setiap himpunan bagian berhingga $I_0 \subset I$, cukup dibuktikan bahwa $x^{-1} \Image(\varphi)$ beririsan dengan $\bigcap_{i \in I_0} \Ker(p_i)$. Berdasarkan definisi poset terarah ke atas, terdapat bagi $I_0$ suatu batas atas $k \in I$. Ambil $y \in G$ sedemikian sehingga $q_k(y) = x_k$. Maka, bagi setiap $i \in I_0$, berlaku $q_i(y) = x_i$, sehingga $x^{-1} \varphi(y) \in \bigcap_{i \in I_0} \Ker(p_i)$.
 
-	由于 $G$ 和 $\varprojlim_i G/N_i$ 都是紧 Hausdorff 空间, 综上 $\varphi$ 自动成为同胚 (见 \cite[\S 7.2]{Xiong}). 明所欲证.
+	Karena $G$ dan $\varprojlim_i G/N_i$ keduanya merupakan ruang Hausdorff kompak, kesimpulan di atas membuat $\varphi$ otomatis menjadi homeomorfisme (lihat \cite[\S 7.2]{Xiong}). Terbuktilah pernyataan tersebut.
 \end{proof}
 \begin{remark}\label{rem:totally-disconnected}
-	以上条件可以化成更有拓扑味儿的形式: $G$ 为 pro-有限当且仅当 $G$ 是完全不连通的紧群. 证明见 \cite[命题 1.9.3]{FL14}.
+	Syarat-syarat di atas dapat dinyatakan dalam bentuk yang lebih bercorak topologis: $G$ merupakan grup profinit jika dan hanya jika $G$ merupakan grup kompak yang tak terhubung total. Untuk buktinya, lihat \cite[Proposisi 1.9.3]{FL14}.
 \end{remark}
 
-\begin{definition}[群的完备化]\label{def:group-completion} \index{wanbeihua@完备化 (completion)}
-	设 $G$ 为群. 假设偏序集 $(I, \leq)$ 滤过. 对每个 $i \in \Obj(I)$ 取定正规子群 $H_i \lhd G$, 并假设 $i \leq j \implies H_j \subset H_i$. 则在 $\varprojlim$ 的定义中可取 $G_i := G/H_i$, 而且 $i \leq j$ (即 $i \to j$) 给出商同态 $G/H_j \twoheadrightarrow G/H_i$. 极限 $\varprojlim_i G/H_i$ 称作 $G$ 对子群族 $(H_i)_{i \in I}$ 的\emph{完备化}.
+\begin{definition}[pelengkapan grup]\label{def:group-completion} \index{pelengkapan (completion)}
+	Misalkan $G$ sebuah grup dan andaikan poset $(I, \leq)$ terarah ke atas. Untuk setiap $i \in \Obj(I)$, pilih subgrup normal $H_i \lhd G$, dan andaikan $i \leq j \implies H_j \subset H_i$. Dalam definisi $\varprojlim$, kita dapat mengambil $G_i := G/H_i$, dan $i \leq j$ (yakni $i \to j$) memberikan homomorfisme hasil bagi $G/H_j \twoheadrightarrow G/H_i$. Limit $\varprojlim_i G/H_i$ dari $G$ relatif terhadap keluarga subgrup $(H_i)_{i \in I}$ disebut \emph{pelengkapan}.
 \end{definition}
-完备化带有显然的同态 $\iota: G \xrightarrow{g \mapsto (gH_i)_{i \in I}} \varprojlim_i G/H_i$. 以下概略解释``完备化''与拓扑的关联. 简单起见, 今后假定偏序集 $I$ 可数. 读者对于以 Cauchy 列从 $\Q$ 构造 $\R$ 的手法理应有基本的认知.
+Pelengkapan dilengkapi homomorfisme yang kanonik $\iota: G \xrightarrow{g \mapsto (gH_i)_{i \in I}} \varprojlim_i G/H_i$. Berikut ini kita jelaskan secara ringkas hubungan antara ``pelengkapan'' dan topologi. Untuk menyederhanakan pembahasan, selanjutnya kita andaikan poset $I$ terhitung. Pembaca seharusnya telah mengenal cara menggunakan barisan Cauchy untuk berangkat dari $\Q$ dan mengonstruksi $\R$.
 \begin{definition}
-	拓扑群 $G$ 中的点列 $(x_n)_{n \geq 0}$ 称为 \emph{Cauchy 列}, 如果对任意 $1$ 的开邻域 $U$, 存在 $N \geq 0$ 使得 $n, m \geq N \implies x_n x_m^{-1} \in U$. 假定 $G$ 在 $1$ 处有一组可数邻域基, 如果群 $G$ 的每个 Cauchy 序列都收敛, 则称 $G$ 为\emph{完备}的.
+	Dalam grup topologis $G$, suatu barisan titik $(x_n)_{n \geq 0}$ disebut \emph{barisan Cauchy} apabila, untuk setiap lingkungan terbuka di $1$, katakanlah $U$, terdapat $N \geq 0$ sedemikian sehingga $n, m \geq N \implies x_n x_m^{-1} \in U$. Andaikan $G$ mempunyai basis lingkungan terhitung di $1$. Jika setiap barisan Cauchy dalam grup $G$ konvergen, maka $G$ disebut \emph{lengkap}.
 \end{definition}
 
-今后总假设有 $1$ 的可数邻域基. 考虑 $G$ 在拓扑意义下的完备化: 这系指一个拓扑群的同态 $\iota: G \to \hat{G}$, 满足下述性质:
+Selanjutnya selalu diasumsikan bahwa terdapat basis lingkungan terhitung bagi $1$. Tinjau pelengkapan $G$ dalam pengertian topologis, yaitu suatu homomorfisme grup topologis $\iota: G \to \hat{G}$ yang memenuhi sifat-sifat berikut:
 \begin{enumerate}[\bfseries {CO}.1]
-	\item $\iota: G \to \iota(G) \subset \hat{G}$ 是同胚;
-	\item $\iota$ 的像稠密;
-	\item $\hat{G}$ 是完备的 Hausdorff 拓扑群.
+	\item $\iota: G \to \iota(G) \subset \hat{G}$ merupakan homeomorfisme;
+	\item citra $\iota$ rapat;
+	\item $\hat{G}$ merupakan grup topologis Hausdorff yang lengkap.
 \end{enumerate}
-完备化的构造方式不止一种, 要旨在于性质 \textbf{CO.1} --- \textbf{CO.3} 唯一刻画了 $(\hat{G}, \iota)$, 精确到一个唯一同构; 其证明可以参照大同小异的命题 \ref{prop:completion-ring-characterization}, 或度量空间情形 \cite[\S 8.1]{Xiong}. 如直观地把握, 则这三条性质说明 $\hat{G}$ 中元素可以用 $G$ 中的 Cauchy 列代表, 而且只要 $\hat{x}, \hat{y} \in \hat{G}$ 足够接近, 则 $G$ 中以之为极限的 Cauchy 列 $(x_n)_n$, $(y_n)_n$ 也会足够接近 (当 $n \gg 0$); 于是 $\hat{G}$ 的结构完全被 $G$ 确定. 如此则思过半矣.
+Pelengkapan dapat dikonstruksi dengan lebih dari satu cara. Pokoknya ialah bahwa sifat \textbf{CO.1} --- \textbf{CO.3} mencirikan $(\hat{G}, \iota)$ secara unik hingga isomorfisme tunggal; buktinya dapat mengikuti Proposisi \ref{prop:completion-ring-characterization}, yang sangat serupa, atau kasus ruang metrik dalam \cite[\S 8.1]{Xiong}. Secara intuitif, ketiga sifat ini menyatakan bahwa unsur-unsur $\hat{G}$ dapat direpresentasikan oleh barisan-barisan Cauchy dalam $G$. Selain itu, apabila $\hat{x}, \hat{y} \in \hat{G}$ cukup dekat, maka dalam $G$ barisan Cauchy $(x_n)_n$, $(y_n)_n$ yang masing-masing berlimit pada kedua unsur tersebut juga cukup dekat (untuk $n \gg 0$). Dengan demikian, struktur $\hat{G}$ ditentukan sepenuhnya oleh $G$. Intuisi ini menangkap sebagian besar gagasannya.
 
 \begin{theorem}
-	考虑定义 \ref{def:group-completion} 中的资料 $\{ H_i \lhd G \}_{i \in I}$ 并假定 $\bigcap_i H_i = \{1\}$, 赋予 $G$ 以 $\{H_i : i \in I \}$ 为 $1$ 的邻域基之 Hausdorff 拓扑群结构, 并赋予每个 $G/H_i$ 离散拓扑. 进一步设 $I$ 可数, 则 $\iota: G \to \varprojlim_i G/H_i$ 满足 \textbf{CO.1} --- \textbf{CO.3}, 因而也是拓扑意义下的完备化.
+	Tinjau, dalam Definisi \ref{def:group-completion}, data $\{ H_i \lhd G \}_{i \in I}$, dan andaikan $\bigcap_i H_i = \{1\}$. Beri $G$ struktur grup topologis Hausdorff dengan $\{H_i : i \in I \}$ sebagai basis lingkungan bagi $1$, dan beri setiap $G/H_i$ topologi diskret. Jika selanjutnya $I$ terhitung, maka $\iota: G \to \varprojlim_i G/H_i$ memenuhi \textbf{CO.1} --- \textbf{CO.3}, sehingga juga merupakan pelengkapan dalam pengertian topologis.
 \end{theorem}
 \begin{proof}
-	可数条件蕴涵 $G$ 和 $\hat{G} := \varprojlim_i G/H_i$ 在幺元处确实有可数邻域基. 由 $\Ker(\iota) = \bigcap_i H_i = \{1\}$ 知 $\iota$ 为单. 引理 \ref{prop:completion-compactness} 中 $\hat{G}$ 的邻域基 $\mathcal{U}_j := \{ \hat{y}=(\bar{y}_i)_i \in \hat{G}: i \leq j \implies \bar{y}_i = 1 \}$ 满足 $\iota^{-1}(\mathcal{U}_j) = H_j$, 因此得到 $\iota$ 连续和 \textbf{CO.1}. 至于 \textbf{CO.2}, 对 $\hat{x} = (\bar{x}_i)_i \in \hat{G}$ 和任给之 $j \in I$, 取 $G \ni x_j \mapsto \bar{x}_j$, 则 $\iota(x_j) \in \hat{x}\mathcal{U}_j$, 故 $\iota(G)$ 稠密.
+	Syarat keterhitungan memastikan bahwa $G$ dan $\hat{G} := \varprojlim_i G/H_i$ memang mempunyai basis lingkungan terhitung di unsur identitas. Karena $\Ker(\iota) = \bigcap_i H_i = \{1\}$, peta $\iota$ injektif. Dalam Lema \ref{prop:completion-compactness}, basis lingkungan bagi $\hat{G}$ diberikan oleh $\mathcal{U}_j := \{ \hat{y}=(\bar{y}_i)_i \in \hat{G}: i \leq j \implies \bar{y}_i = 1 \}$ dan memenuhi $\iota^{-1}(\mathcal{U}_j) = H_j$. Dengan demikian diperoleh kontinuitas $\iota$ dan \textbf{CO.1}. Untuk \textbf{CO.2}, bagi $\hat{x} = (\bar{x}_i)_i \in \hat{G}$ dan setiap $j \in I$, ambil $G \ni x_j \mapsto \bar{x}_j$. Maka $\iota(x_j) \in \hat{x}\mathcal{U}_j$, sehingga $\iota(G)$ rapat.
 	
-	兹确立 \textbf{CO.3}. 对于 $\hat{G}$ 中 Cauchy 列 $(\hat{x}_n)_n$, 对任给之 $j$, 当 $n,m \gg 0$ 时 $\hat{x}_n \hat{x}_m^{-1} \in \mathcal{U}_j$, 故 $\hat{x}_n$ 的 $j$-分量当 $n \gg 0$ 时为常数, 记作 $\bar{x}_j \in G/H_j$. 置 $\hat{x} := (\bar{x}_i)_i \in \hat{G}$ 即为 $(\hat{x}_n)_n$ 的极限.
+	Sekarang kita buktikan \textbf{CO.3}. Di dalam $\hat{G}$, ambil barisan Cauchy $(\hat{x}_n)_n$. Untuk setiap $j$, jika $n,m \gg 0$ maka $\hat{x}_n \hat{x}_m^{-1} \in \mathcal{U}_j$. Jadi komponen $\hat{x}_n$ yang berindeks $j$ konstan untuk $n \gg 0$; nyatakan nilai itu sebagai $\bar{x}_j \in G/H_j$. Kemudian $\hat{x} := (\bar{x}_i)_i \in \hat{G}$ merupakan limit dari $(\hat{x}_n)_n$.
 \end{proof}
 
 \begin{remark}
-	若舍去邻域基的可数条件, 则完备性须改以网 (Moore--Smith 收敛性) 或滤子的语言陈述, 我们将在 \S\ref{sec:filters} 引入滤子, 并回头考察 $\iota: G \to \hat{G}$ 的构造.
+	Jika syarat keterhitungan basis lingkungan ditiadakan, kelengkapan harus dirumuskan dengan bahasa net (kekonvergenan Moore--Smith) atau filter. Kita akan memperkenalkan filter dalam \S\ref{sec:filters}, lalu kembali menelaah konstruksi $\iota: G \to \hat{G}$.
 \end{remark}
 
-\begin{example}[$p$-进数]\label{eg:p-adic}\index[sym1]{Z_p@$\Z_p$}
-	取 $I$ 为全序集 $\Z_{\geq 0}$. 对每个 $i \geq 0$ 定义 $H_i := p^{i+1} \Z$. 完备化 $\varprojlim_i \Z/p^{i+1} \Z$ 记作 $\Z_p$, 其元素无非是一族 $(a_i \in \Z/p^{i+1} \Z)_{i \geq 1}$, 满足 $a_{i+1} \mapsto a_i$. 称此为 $p$-进数的加法群; 我们会在 \S\ref{sec:ring-limits} 探讨 $\Z_p$ 上的乘法结构.
+\begin{example}[bilangan bulat $p$-adik]\label{eg:p-adic}\index[sym1]{Z_p@$\Z_p$}
+	Ambil $I$ sebagai himpunan terurut total $\Z_{\geq 0}$. Untuk setiap $i \geq 0$, definisikan $H_i := p^{i+1} \Z$. Pelengkapan $\varprojlim_i \Z/p^{i+1} \Z$ dinyatakan sebagai $\Z_p$; unsur-unsurnya tidak lain ialah keluarga $(a_i \in \Z/p^{i+1} \Z)_{i \geq 0}$ yang memenuhi $a_{i+1} \mapsto a_i$. Grup ini disebut grup aditif bilangan bulat $p$-adik; dalam \S\ref{sec:ring-limits} kita akan membahas struktur perkalian pada $\Z_p$.
 \end{example}
 
-\begin{example}[Tate 模]\index{Tate 模}
-	设 $A$ 为交换群, $\ell$ 为素数. 仍取 $I = \Z_{\geq 0}$ 如上. 对每个 $N \in \Z$ 置 $A[N] := \Ker[a \mapsto a^N]$, 显然 $N \mid N' \implies A[N] \subset A[N']$; 置 $A[\ell^\infty] := \bigcup_{n \geq 0} A[\ell^n]$. 定义函子 $V: I^\text{op} \to \cate{Ab}$ 为
+\begin{example}[Modul Tate]\index{modul Tate (Tate module)}
+	Misalkan $A$ suatu grup abelian dan $\ell$ suatu bilangan prima. Ambil lagi $I = \Z_{\geq 0}$ seperti di atas. Untuk setiap $N \in \Z$, tetapkan $A[N] := \Ker[a \mapsto a^N]$. Jelas bahwa $N \mid N' \implies A[N] \subset A[N']$; tetapkan $A[\ell^\infty] := \bigcup_{n \geq 0} A[\ell^n]$. Definisikan fungtor $V: I^\text{op} \to \cate{Ab}$ dengan
 	\begin{align*}
 		V(i) & := A[\ell^\infty], \\
 		V(i \to i+1) & := [a \mapsto a^\ell].
 	\end{align*}
-	置 $V_\ell(A) := \varprojlim_i V(i)$. 其元素 $(a_i \in A[\ell^\infty])_{i \geq 0}$ 须满足 $a_{i+1}^\ell = a_i$. 称此为\emph{有理 Tate 模}. 以同样方式定义一函子 $T: I^\text{op} \to \cate{Ab}$, 但要求 $T(0) = \{1\}$, 得到的极限是
+	Tetapkan $V_\ell(A) := \varprojlim_i V(i)$. Unsur-unsurnya $(a_i \in A[\ell^\infty])_{i \geq 0}$ harus memenuhi $a_{i+1}^\ell = a_i$. Objek ini disebut \emph{modul Tate rasional}. Dengan cara yang sama, definisikan fungtor $T: I^\text{op} \to \cate{Ab}$, tetapi dengan syarat $T(0) = \{1\}$. Limit yang diperoleh ialah
 	\[ T_\ell(A) := \varprojlim_i T(i) \subset V_\ell(A), \]
-	称为群 $A$ 的 \emph{Tate 模}. 请留意到 $T(i) = A[\ell^i]$.
+	yang disebut \emph{modul Tate} dari grup $A$. Perhatikan bahwa $T(i) = A[\ell^i]$.
 
-	举例明之. 取复环面 $E := \CC \big/(\Z \oplus \Z\tau)$ 所成的加法群, 其中 $\text{Im}(\tau) > 0$. 映射 $(a,b) \mapsto a+b\tau$ 导出同构 $(\R/\Z)^2 \rightiso E$, 而 $(\R/\Z)[\ell^i] = \ell^{-i}\Z/\Z$. 易见图表
+Sebagai contoh, ambil grup aditif dari torus kompleks $E := \CC \big/(\Z \oplus \Z\tau)$, dengan $\text{Im}(\tau) > 0$. Peta $(a,b) \mapsto a+b\tau$ menginduksi isomorfisme $(\R/\Z)^2 \rightiso E$, sedangkan $(\R/\Z)[\ell^i] = \ell^{-i}\Z/\Z$. Mudah dilihat bahwa diagram
 	\[ \begin{tikzcd}
 		a \bmod \Z \arrow[mapsto]{r} \arrow[mapsto, bend right=60]{ddd} \arrow[phantom, d, sloped, "\in" description] & \ell^{i+1}a \bmod \ell^{i+1} \Z \arrow[mapsto, bend left=60]{ddd} \arrow[phantom, d, sloped, "\in" description] \\
-		\ell^{-i-1}\Z/\Z \arrow[d, "{\text{乘以} \ell}"'] \arrow[r, "\sim"] & \Z/\ell^{i+1} \Z \arrow[d, "{\text{商}}"] \\
+		\ell^{-i-1}\Z/\Z \arrow[d, "{\text{dikalikan dengan} \ell}"'] \arrow[r, "\sim"] & \Z/\ell^{i+1} \Z \arrow[d, "{\text{hasil bagi}}"] \\
 		\ell^{-i}\Z/\Z \arrow[r, "\sim"'] & \Z/\ell^i \Z \\
 		\ell a \bmod \Z \arrow[mapsto]{r} \arrow[phantom, u, sloped, "\in" description] & \ell^{i+1} a \bmod \ell^i \Z \arrow[phantom, u, sloped, "\in" description]
 	\end{tikzcd} \]
-	交换, 故 $T_\ell(E) \simeq \Z_\ell \oplus \Z_\ell$. 令 $\Gamma := \Z \oplus \Z\tau$, 以上论证实则说明了 $T_\ell(E)$ 自然同构于 $\Gamma$ 对 $(\ell^i \Gamma)_{i \geq 0}$ 的完备化.
+komutatif, sehingga $T_\ell(E) \simeq \Z_\ell \oplus \Z_\ell$. Tetapkan $\Gamma := \Z \oplus \Z\tau$. Argumen di atas sebenarnya menunjukkan bahwa $T_\ell(E)$ isomorfis secara alami dengan pelengkapan $\Gamma$ relatif terhadap $(\ell^i \Gamma)_{i \geq 0}$.
 
-	当 $\ell$ 取遍所有素数, 不妨设想 $T_\ell(E)$ 代数地``模拟''了定义 $E$ 的格 $\Gamma$, 而后者又是 $E$ 的拓扑不变量 $H_1(E, \Z)$. 这般手法对复环面自然是迂回. 然而 $E$ 又可看作射影平面 $\mathbb{P}^2(\CC)$ 中的三次代数曲线, 连同一个给定的点 $O$ (对应于复环面的零点), 此即域 $\CC$ 上的\emph{椭圆曲线}; 后一种解读能在任意代数闭域上操作, 相应的曲线依然是交换群. 这种代数框架是处理相关数论问题所必须的, 此时不易沿用习见的同调理论, Tate 模 $T_\ell(E)$ 就成为极有力的工具.
+Ketika $\ell$ merentang semua bilangan prima, kita dapat membayangkan bahwa $T_\ell(E)$ secara aljabar ``menyimulasikan'' kisi yang mendefinisikan $E$, yaitu $\Gamma$, sedangkan bagi $E$ kisi tersebut merupakan invarian topologis $H_1(E, \Z)$. Cara ini tentu berputar-putar untuk torus kompleks. Akan tetapi, $E$ juga dapat dipandang sebagai kurva aljabar kubik di bidang proyektif $\mathbb{P}^2(\CC)$, bersama sebuah titik terpilih $O$ (yang bersesuaian dengan titik nol pada torus kompleks); inilah, di atas medan $\CC$, sebuah \emph{kurva eliptik}. Penafsiran terakhir dapat digunakan di atas sebarang medan tertutup secara aljabar, dan kurva yang bersesuaian tetap merupakan grup abelian. Kerangka aljabar ini sangat diperlukan untuk menangani masalah-masalah terkait dalam teori bilangan, karena teori homologi yang lazim tidak mudah diterapkan. Dalam keadaan demikian, modul Tate $T_\ell(E)$ menjadi alat yang sangat ampuh.
 \end{example}
 
 \section{范畴中的群}\label{sec:group-in-cat}

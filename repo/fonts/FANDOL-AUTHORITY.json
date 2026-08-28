@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "component": "Fandol fonts used by the XeLaTeX closure",
+  "package": "fandol",
+  "version": "0.3",
+  "authors": [
+    "Clerk Ma",
+    "Jie Su"
+  ],
+  "official_package_page": "https://ctan.org/pkg/fandol",
+  "official_archive_url": "https://mirrors.ctan.org/fonts/fandol.zip",
+  "archive_identity": {
+    "bytes": 26688406,
+    "sha256": "9278f01b417ded5766d98c3937192a1a6a2c73a5e94a3493fdfc932b2a55005a"
+  },
+  "license": "GNU GPL version 3 with the Fandol font exception",
+  "license_evidence": {
+    "copying_path": "repo/fonts/GPL-3.0-with-Fandol-font-exception.txt",
+    "copying_bytes": 35737,
+    "copying_sha256": "853b586f0d520493390e571431afaf36a5fbb27dcfd239338a7ee9b0505cb004",
+    "readme_path": "repo/fonts/FANDOL-README.txt",
+    "readme_bytes": 645,
+    "readme_sha256": "32537e063f4c7d4aebf016d5c8279cbce13f34fc8970f24b2578a3c04d0f8ca6",
+    "exception_effect": "Embedding this font or unaltered portions of it in a document does not by itself cause the resulting document to be covered by the GNU GPL."
+  },
+  "build_font_files": [
+    {
+      "name": "FandolSong-Regular.otf",
+      "bytes": 4947904,
+      "sha256": "a3820003227d4abe31fe28b493200d94a849ccfd078b50a019264f70353020b0"
+    },
+    {
+      "name": "FandolSong-Bold.otf",
+      "bytes": 5777588,
+      "sha256": "ffa76a70e128947a4dd22151d5ee829b23e24ce3cb6fe8ad49891cd1c2d9e9b9"
+    },
+    {
+      "name": "FandolKai-Regular.otf",
+      "bytes": 7790552,
+      "sha256": "ea7e7fb4f9b3ac694a68d43946e04d21deed6e8c29a7c2d3081e1a4138f2f827"
+    },
+    {
+      "name": "FandolHei-Regular.otf",
+      "bytes": 5808908,
+      "sha256": "4afa97aa8751e0118617df88272b58d43691b5cffb7ea024c4580496e9f34d28"
+    },
+    {
+      "name": "FandolHei-Bold.otf",
+      "bytes": 3581972,
+      "sha256": "42ca2de27b45e16a284768673b6205a5add9e17871ee0e7db9c0d03f061d96fd"
+    },
+    {
+      "name": "FandolFang-Regular.otf",
+      "bytes": 6961384,
+      "sha256": "d838ad32ce2244d8144f408c37fe71065aba6fbbc80759a4d2aa2033948d5bc9"
+    }
+  ],
+  "unit_034_embedded_font_evidence": {
+    "font_name": "/FandolHei-Regular-Identity-H",
+    "font_file_identity": {
+      "bytes": 5808908,
+      "sha256": "4afa97aa8751e0118617df88272b58d43691b5cffb7ea024c4580496e9f34d28"
+    },
+    "evidence_path": "qa/unit-034-evidence/structure-and-pdf-qa.json"
+  },
+  "required_treatment": "Keep Fandol attribution, the GPLv3 text, and the font exception with the edition; keep this font component separate from the book's CC BY 4.0 content license and the Noto OFL 1.1 component."
+}

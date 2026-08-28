@@ -1,0 +1,168 @@
+{
+  "status": "PASS",
+  "unit": "unit-034-bab-4-limit-dan-kompletisasi-grup",
+  "authority": "chapter4.tex:1609-1744 (blank line 1744 omitted from mapping)",
+  "target": "chapter4.tex:1604-1738",
+  "data": "backend/data/unit-034-bab-4-limit-dan-kompletisasi-grup.json",
+  "schema": "backend/schema/open-math-corpus-unit.schema.v1.json",
+  "provenance_model": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "provenance_actor": "Codex acting on the user's instruction",
+  "artifact": {
+    "path": "artifacts/unit-034-bab-4-limit-dan-kompletisasi-grup-id.pdf",
+    "pages": 9,
+    "bytes": 136702,
+    "sha256": "e69eef970ade092dae4d0e8740092ae8611010bca83ab190e3331e145e852272"
+  },
+  "counts": {
+    "source_records_including_blank_boundary": 136,
+    "candidate_records": 135,
+    "environment_pairs": 25,
+    "environment_markers": 50,
+    "labels": 11,
+    "ordinary_references": 16,
+    "equation_references": 0,
+    "citation_occurrences": 6,
+    "citation_keys": 2,
+    "list_items": 5,
+    "protected_math_zones": 276,
+    "diagrams": 1,
+    "tikzcd_diagrams": 1,
+    "tikzpicture_diagrams": 0,
+    "diagram_arrows": 12,
+    "drawing_commands": 0,
+    "index_entries": 6,
+    "source_corrections": 1,
+    "protected_text_localizations": 9,
+    "index_localizations": 6,
+    "terminology_rows": 37,
+    "terminology_normalizations": 0,
+    "citation_locator_localizations": 3,
+    "digital_reflows": 1,
+    "exercises": 0,
+    "hints": 0,
+    "answers": 0,
+    "solutions": 0,
+    "csv_projections": 6,
+    "concepts": 419,
+    "native_citations": 2,
+    "qa_events": 22,
+    "reader_external_reference_isolations": 10,
+    "uuidv5_entities_audited": 482
+  },
+  "checks": {
+    "deterministic_regeneration_one": "PASS",
+    "deterministic_regeneration_two": "PASS",
+    "shared_schema_uuidv5_and_exact_csv": "PASS",
+    "json_csv_roundtrip": "PASS",
+    "exact_419_entity_topology": "PASS",
+    "authority_candidate_target_boundary": "PASS",
+    "one_declared_source_correction": "PASS",
+    "one_target_only_digital_reflow": "PASS",
+    "nine_protected_text_localizations": "PASS",
+    "three_citation_locator_localizations": "PASS",
+    "six_index_localizations": "PASS",
+    "ten_external_reference_isolations": "PASS",
+    "component_rights_and_non_endorsement": "PASS",
+    "reader_build_and_all_page_visual_bindings": "PASS",
+    "validation_mutated_outputs": false
+  },
+  "binding_audit": {
+    "occurrences": 82,
+    "line_span_occurrences": 18,
+    "unique_paths": 44,
+    "paths": [
+      "00_control/SOURCE_MANIFEST.csv",
+      "00_control/TERMINOLOGY.id-ID.csv",
+      "artifacts/unit-034-bab-4-limit-dan-kompletisasi-grup-id.pdf",
+      "authority/archives/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b.zip",
+      "authority/pdfs/Al-jabr-1.pdf",
+      "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter4.tex",
+      "build/unit-034-candidate/chapter4-group-limits-completions-id.tex",
+      "build/unit-034-staging/terminology-delta.csv",
+      "qa/UNIT_034_BUILD_FINAL.log",
+      "qa/UNIT_034_PREPROMOTION_AUDIT_20260827.md",
+      "qa/UNIT_034_TERMINOLOGY_AUDIT_20260827.md",
+      "qa/UNIT_034_TRANSLATION_REVIEW_20260825.md",
+      "qa/UNIT_034_VISUAL_PREFLIGHT_20260827.md",
+      "qa/UNIT_034_VISUAL_QA_20260827.md",
+      "qa/unit-034-evidence/render-hash-inventory.json",
+      "qa/unit-034-evidence/structure-and-pdf-qa.json",
+      "repo/fonts/FANDOL-AUTHORITY.json",
+      "repo/fonts/FANDOL-README.txt",
+      "repo/fonts/GPL-3.0-with-Fandol-font-exception.txt",
+      "repo/fonts/NotoSansCJKsc-Black.otf",
+      "repo/fonts/NotoSansCJKsc-Medium.otf",
+      "repo/fonts/NotoSansCJKsc-Regular.otf",
+      "repo/fonts/NotoSerifCJKsc-Bold.otf",
+      "repo/fonts/OFL-1.1-Noto-CJK.txt",
+      "repo/source/AJbook.cls",
+      "repo/source/Al-jabr.bib",
+      "repo/source/LICENSE",
+      "repo/source/Lanzhou.png",
+      "repo/source/ccby.png",
+      "repo/source/chapter4.tex",
+      "repo/source/coverpage-id-unit-034.tex",
+      "repo/source/font-setup-id.tex",
+      "repo/source/locale-ui-id.tex",
+      "repo/source/myarrows.sty",
+      "repo/source/mycommand.sty",
+      "repo/source/titles-setup-id.tex",
+      "repo/source/titles-setup.tex",
+      "repo/source/unit-034-bab-4-limit-dan-kompletisasi-grup.tex",
+      "repo/source/unit-034-crossrefs.aux",
+      "scripts/build_unit_034.ps1",
+      "scripts/check_unit_034_candidate.py",
+      "scripts/check_unit_034_structure.py",
+      "scripts/generate_unit_034_evidence.py",
+      "scripts/preflight_unit_034.py"
+    ]
+  },
+  "identities": {
+    "backend/data/unit-034-bab-4-limit-dan-kompletisasi-grup.json": {
+      "bytes": 341684,
+      "sha256": "c475108a1d6ed5d4c2084adc00c122e1a3294b5d44e6af3e302d39a06d7a6c35"
+    },
+    "backend/csv/unit-034-bindings.csv": {
+      "bytes": 16270,
+      "sha256": "24f44ab727b2b8f67ab0ba3f70d0734a4fdf81be1caec7cf74bba5fcb8c3d2fa"
+    },
+    "backend/csv/unit-034-entities.csv": {
+      "bytes": 105362,
+      "sha256": "bb77ce01071b906d67e7b0d27d3030e6522e6ba60ed37dabc5c6c474d206ff6d"
+    },
+    "backend/csv/unit-034-qa.csv": {
+      "bytes": 7108,
+      "sha256": "a1fad7c90e661cef04e03a7f6ad24f236b3420f3a6d982227f65964f2826cfb8"
+    },
+    "backend/csv/unit-034-relations.csv": {
+      "bytes": 262237,
+      "sha256": "c059f9b956029c4e7f73f23cce84de5dabc6dd266f81ead92d69bbcadce3afdf"
+    },
+    "backend/csv/unit-034-rights.csv": {
+      "bytes": 1831,
+      "sha256": "51552480f0c11a909250f8f368305ec2156d54729111edcd2bf9e9e4d556ef7f"
+    },
+    "backend/csv/unit-034-surfaces.csv": {
+      "bytes": 2312,
+      "sha256": "cc15d433141cc4421bf7db842ab0998020cb77b580ba720e942c50012d1c023f"
+    }
+  },
+  "tools": {
+    "scripts/generate_unit_034_backend.py": {
+      "bytes": 61316,
+      "sha256": "5ffecbe472b01a679f05a87b4eff203b4584fdd72dd367f39262a1a068688064"
+    },
+    "scripts/validate_unit_034_backend.py": {
+      "bytes": 21154,
+      "sha256": "8c00a5779bfc3aa7fa5decd4c33db8e6ba593c4f8456fccd394add7e2bc8971e"
+    },
+    "backend/schema/open-math-corpus-unit.schema.v1.json": {
+      "bytes": 21358,
+      "sha256": "bad45d310e429926f1c05283232e6f8ccc7a7461c0c99faea8509497054efbc3"
+    },
+    "scripts/validate_backend.py": {
+      "bytes": 40768,
+      "sha256": "67cb86238b3ccdff028e4968d1808609968d971dcf29f849a29728801b616a2d"
+    }
+  }
+}

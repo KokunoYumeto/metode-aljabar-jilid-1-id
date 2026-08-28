@@ -1,0 +1,135 @@
+\section{Limit dan Pelengkapan Grup}\label{sec:group-limit}
+Berdasarkan konstruksi dalam \S\ref{sec:free-group} dan Contoh \ref{eg:complete-cocomplete}, di dalam kategori grup $\cate{Grp}$ dan subkategorinya $\cate{Ab}$ dapat didefinisikan limit $\varinjlim$ dan $\varprojlim$. Cara konstruksinya telah digariskan dalam Contoh \ref{eg:complete-cocomplete}. Bagian ini akan membahas kasus $\varprojlim$ secara lebih mendalam.
+
+Untuk kategori kecil $I$, pemberian fungtor $\beta: I^\text{op} \to \cate{Grp}$ ekuivalen dengan pemberian suatu keluarga grup $\{ G_i := \beta(i) : i \in \Obj(I) \}$, serta, untuk setiap panah $s: i \to j$, suatu homomorfisme grup $\beta(s): G_j \to G_i$, sedemikian sehingga
+\begin{compactitem}
+	\item $\beta(\identity: i \to i)=\identity_{G_i}$,
+	\item panah-panah komposabel $i \to j \to k$ menghasilkan homomorfisme komposabel $G_k \to G_j \to G_i$.
+\end{compactitem}
+Contoh \ref{eg:complete-cocomplete} telah mereduksi eksistensi limit proyektif $\varprojlim_i G_i := \varprojlim \beta$ menjadi eksistensi produk dan ekualiser. Dengan menuliskan secara eksplisit konstruksi dalam bukti Teorema \ref{prop:limit-buildingblocks}, diperoleh deskripsi konkret
+\[
+	\varprojlim_i G_i := \left\{ (x_i)_{i \in I} \in \prod_{i \in I} G_i : \forall s: i \to j, \; \beta(s)(x_j) = x_i \right\}.
+\]
+Jelas bahwa $\varprojlim_i G_i$ merupakan subgrup dari produk langsung $\prod_{i \in I} G_i$. Kita juga memperoleh homomorfisme proyeksi yang kanonik $p_j: \varprojlim_i G_i \to G_j$.
+
+Selanjutnya kita akan mengandaikan bahwa $I$ berasal dari poset $(I, \leq)$ (lihat Contoh \ref{eg:categories}); selain itu, $(I, \leq)$ diasumsikan \emph{terarah ke atas}, yakni setiap dua unsur mempunyai suatu batas atas bersama (Definisi \ref{def:filtrant-poset}). Poset terarah ke atas merupakan kasus khusus kategori terarah ke atas; lihat Definisi \ref{def:filtrant-cat}.\index{poset terarah ke atas (filtered poset)}
+
+Pertama-tama kita mengingat kembali beberapa definisi dari topologi himpunan titik; lihat \cite[Bab I]{FL14} untuk rinciannya.
+\begin{definition}\label{def:topological-group}\index{grup topologis (topological group)}
+	Sebuah grup topologis $G$ adalah grup $G$ yang dilengkapi struktur topologi sedemikian sehingga perkalian $m: G \times G \to G$ dan operasi pengambilan invers $i: G \to G$ keduanya merupakan peta kontinu.
+\end{definition}
+Contoh khasnya ialah grup aditif $(\R^n, +)$. Sebagai konsekuensi, perkalian kiri maupun kanan oleh setiap $g \in G$ memberikan homeomorfisme $G \to G$, demikian pula pengambilan invers. Oleh karena itu, topologi grup sepenuhnya tercermin oleh suatu basis lingkungan bagi unsur identitas $1$: melalui perkalian kiri atau kanan, basis tersebut selalu dapat ditranslasikan ke setiap titik di $G$, dan invers dari setiap anggota basis lingkungan di $1$ kembali membentuk basis lingkungan. Sebaliknya, pada suatu grup $G$, jika diberikan suatu keluarga himpunan bagian $\{H_i \ni 1\}_{i \in I}$, dapatkah translasi kiri dan kanan digunakan untuk memberi $G$ struktur grup topologis sedemikian sehingga keluarga itu menjadi basis lingkungan terbuka di $1$? Kasus berikut sudah memadai bagi keperluan kita: andaikan $(I, \leq)$ merupakan poset terarah ke atas, $i \leq j \implies H_j \subset H_i$, dan $\forall i \; H_i \lhd G$. Maka topologi demikian selalu ada; tepatnya,
+\[ \text{himpunan bagian}\; E \subset G\; \text{terbuka} \iff \forall x \in E, \; \exists i \in I, \; xH_i = H_i x \subset E. \]
+Mudah dilihat bahwa definisi ini memang menjadikan $G$ grup topologis; verifikasinya diserahkan sebagai latihan sederhana. Lebih lanjut, aksioma pemisahan bagi topologi tersebut juga menjadi sederhana.
+
+\begin{lemma}\label{prop:top-group-separation}
+	Jika $G$ merupakan grup topologis, maka
+	\begin{equation}\label{eqn:top-group-Hausdorff}
+		G:\; \text{Hausdorff} \iff \{1\} \subset G\; \text{himpunan bagian tertutup} \iff \bigcap_{U \ni 1: \text{lingkungan terbuka}} U = \{1\}.
+	\end{equation}
+	Selain itu, setiap $x \in G$ mempunyai suatu basis lingkungan yang terdiri atas lingkungan-lingkungan tertutup.
+\end{lemma}
+\begin{proof}
+	Kita buktikan dahulu pernyataan pertama. Untuk setiap $x \in G$, tetapkan $\mathfrak{N}_x := \left\{ \text{semua lingkungan dari } x \right\}$. Pembahasan terdahulu mengenai basis lingkungan memberikan $\mathfrak{N}_x = x\mathfrak{N}_1 = x \mathfrak{N}_1^{-1}$ (artinya, setiap lingkungan ditranslasikan oleh $x$ atau diambil inversnya), sehingga
+	\begin{equation*}\begin{aligned}
+		x \in \overline{\left\{ 1 \right\}} & \iff 1 \in \bigcap_{V \in \mathfrak{N}_x} V = \bigcap_{U \in \mathfrak{N}_1} xU^{-1} \\
+		& \iff x^{-1} \in \bigcap_{U \in \mathfrak{N}_1} U^{-1} \iff x \in \bigcap_{U \in \mathfrak{N}_1} U.
+	\end{aligned}\end{equation*}
+	Dengan kata lain, $\overline{\{1\}} = \bigcap_{U \in \mathfrak{N}_1} U$. Dari sini $\iff$ kedua langsung diperoleh. Untuk $\iff$ pertama, hanya arah $\Leftarrow$ yang tidak seketika: definisikan fungsi kontinu $\nu: G \times G \to G$ yang memetakan $(x,y)$ ke $xy^{-1}$. Ruang $G$ bersifat Hausdorff tepat ketika himpunan diagonal $\Delta_G \subset G \times G$ tertutup; tetapi $\Delta_G = \nu^{-1}(1)$, sedangkan $\{1\} \subset G$ tertutup.
+
+	Pernyataan kedua segera tereduksi pada kasus $x=1$. Karena operasi grup kontinu, untuk setiap lingkungan terbuka $V \ni 1$ terdapat himpunan terbuka $U \ni 1$ sedemikian sehingga $U^{-1}U \subset V$. Cukup diperhatikan bahwa penutup $\bar{U}$ termuat dalam $U^{-1} \cdot U$: ini karena $g \in \bar{U}$ mengakibatkan $Ug \cap U \neq \emptyset$.
+\end{proof}
+
+\begin{lemma}\label{prop:open-closed-subgroup}
+	Andaikan $G$ sebuah grup topologis dan subgrupnya $H$ merupakan lingkungan bagi $1$. Maka $H$ sekaligus terbuka dan tertutup, dan jika $G$ kompak maka $(G:H)$ berhingga.
+\end{lemma}
+\begin{proof}
+	Ambil himpunan terbuka $U$ dengan $1 \in U \subset H$. Dengan demikian, $H = \bigcup_{x \in H} Ux$ terbuka. Untuk $G/H$, ambil suatu keluarga wakil di dalam $G$ dan nyatakan keluarga ini sebagai $\Xi$. Dekomposisi koset (Lema \ref{prop:coset-decomp}) memberikan bagi $G$ liput terbuka $G = \bigsqcup_{x \in \Xi} xH$. Oleh sebab itu, $H = G \smallsetminus \bigsqcup_{\substack{x \in \Xi \\ xH \neq H}} xH$ tertutup, dan jika $G$ kompak maka $\Xi$ berhingga.
+\end{proof}
+
+Kembali ke $\varprojlim_i G_i$. Sekarang andaikan setiap $G_i$ merupakan grup topologis dan, untuk setiap $i \leq j$, homomorfisme $G_j \to G_i$ kontinu. Kita memberi $\prod_{i \in I} G_i$ topologi produk (lihat \cite[\S 3.3]{Xiong}); subgrupnya $\varprojlim_i G_i$ dengan demikian mewarisi struktur grup topologis alami.
+\begin{lemma}\label{prop:completion-compactness}
+	Grup topologis $\varprojlim_i G_i$ mempunyai suatu basis lingkungan di $1$ yang berbentuk
+	\[ \begin{aligned} \mathcal{U}_{I_0} &= \bigcap_{i \in I_0} p_i^{-1}(U_i), \qquad\\ I_0 &\subset I: \; \text{himpunan bagian berhingga}, \quad\\ U_i &\ni 1: \; \text{himpunan bagian terbuka} \end{aligned} \]
+	Jika setiap $G_i$ merupakan ruang Hausdorff, maka $\varprojlim_i G_i$ juga demikian; jika selanjutnya setiap $G_i$ kompak, maka $\varprojlim_i G_i$ merupakan ruang Hausdorff kompak.
+\end{lemma}
+Karena $(I, \leq)$ telah diasumsikan terarah ke atas, ketika mendeskripsikan basis lingkungan kita dapat mengambil bagi $I_0$ suatu batas atas $j$, sehingga tereduksi pada kasus $I_0 = \{j\}$.
+\begin{proof}
+	Deskripsi basis lingkungan tersebut merupakan konsekuensi langsung dari definisi topologi produk. Produk dan subruang dari ruang-ruang Hausdorff tetap Hausdorff, sedangkan Teorema Tychonoff \cite[Teorema 7.7.2]{Xiong} menyatakan bahwa produk ruang-ruang kompak tetap kompak. Sifat Hausdorff mengakibatkan $\varprojlim_i G_i$ merupakan subgrup tertutup dari $\prod_i G_i$ (subgrup itu didefinisikan oleh suatu keluarga persamaan antara fungsi-fungsi kontinu), sehingga kompak.
+\end{proof}
+
+Dalam aljabar dan teori bilangan, kasus yang lebih sering dijumpai ialah ketika setiap $G_i$ merupakan grup berhingga. Dalam hal ini, topologi diskret pada $G_i$ menjadikannya grup Hausdorff kompak.
+\begin{definition}[grup profinit]\label{def:profinite-group}\index{grup profinit (pro-finite group)}
+	Sebuah grup topologis yang, hingga isomorfisme, berbentuk $\varprojlim_i G_i$, dengan $(I, \leq)$ terarah ke atas dan setiap $G_i$ berhingga, disebut \emph{grup profinit}.
+\end{definition}
+
+\begin{theorem}\label{prop:profinite-characterization}
+	Sebuah grup topologis $G$ merupakan grup profinit jika dan hanya jika grup tersebut kompak dan Hausdorff, serta $1$ mempunyai suatu basis lingkungan yang terdiri atas subgrup-subgrup normal.
+\end{theorem}
+\begin{proof}
+	Andaikan $G = \varprojlim_i G_i$ merupakan grup profinit. Kita telah menunjukkan bahwa $G$ kompak dan Hausdorff. Pada Lema \ref{prop:completion-compactness}, kita dapat mengambil $U_i$ sebagai $\{1\}$, sehingga basis lingkungan bagi $1$ terdiri atas suatu keluarga subgrup normal terbuka $U$.
+
+	Sekarang andaikan grup topologis $G$ memenuhi syarat-syarat yang dinyatakan. Ambil suatu basis lingkungan yang terdiri atas subgrup-subgrup normal dan nyatakan basis tersebut dengan $I$. Relasi inklusi terbalik pada himpunan-himpunan tersebut menjadikan $I$ sebuah poset, sedangkan sifat basis lingkungan memastikan bahwa $(I, \leq)$ terarah ke atas. Nyatakan subgrup normal yang bersesuaian dengan $i \in I$ sebagai $N_i$. Lema \ref{prop:open-closed-subgroup} mengakibatkan $G/N_i$ berhingga, sementara $N_i$ terbuka sekaligus tertutup.
+
+	Menurut sifat universal, seluruh peta hasil bagi $q_i: G \to G/N_i$ menentukan homomorfisme $\varphi: G \to \varprojlim_i G/N_i$. Kita menegaskan bahwa $\varphi$ merupakan isomorfisme grup topologis. Pertama, mudah diverifikasi bahwa $\varphi$ kontinu. Selain itu, sifat Hausdorff memastikan $\Ker(\varphi) = \bigcap_{i \in I} N_i = \{1\}$, sehingga $\varphi$ injektif. Sekarang kita buktikan bahwa $\Image(\varphi)$ rapat di dalam $\varprojlim_i G/N_i$. Ambil $x = (x_i)_i \in \varprojlim_i G/N_i$. Untuk setiap himpunan bagian berhingga $I_0 \subset I$, cukup dibuktikan bahwa $x^{-1} \Image(\varphi)$ beririsan dengan $\bigcap_{i \in I_0} \Ker(p_i)$. Berdasarkan definisi poset terarah ke atas, terdapat bagi $I_0$ suatu batas atas $k \in I$. Ambil $y \in G$ sedemikian sehingga $q_k(y) = x_k$. Maka, bagi setiap $i \in I_0$, berlaku $q_i(y) = x_i$, sehingga $x^{-1} \varphi(y) \in \bigcap_{i \in I_0} \Ker(p_i)$.
+
+	Karena $G$ dan $\varprojlim_i G/N_i$ keduanya merupakan ruang Hausdorff kompak, kesimpulan di atas membuat $\varphi$ otomatis menjadi homeomorfisme (lihat \cite[\S 7.2]{Xiong}). Terbuktilah pernyataan tersebut.
+\end{proof}
+\begin{remark}\label{rem:totally-disconnected}
+	Syarat-syarat di atas dapat dinyatakan dalam bentuk yang lebih bercorak topologis: $G$ merupakan grup profinit jika dan hanya jika $G$ merupakan grup kompak yang tak terhubung total. Untuk buktinya, lihat \cite[Proposisi 1.9.3]{FL14}.
+\end{remark}
+
+\begin{definition}[pelengkapan grup]\label{def:group-completion} \index{pelengkapan (completion)}
+	Misalkan $G$ sebuah grup dan andaikan poset $(I, \leq)$ terarah ke atas. Untuk setiap $i \in \Obj(I)$, pilih subgrup normal $H_i \lhd G$, dan andaikan $i \leq j \implies H_j \subset H_i$. Dalam definisi $\varprojlim$, kita dapat mengambil $G_i := G/H_i$, dan $i \leq j$ (yakni $i \to j$) memberikan homomorfisme hasil bagi $G/H_j \twoheadrightarrow G/H_i$. Limit $\varprojlim_i G/H_i$ dari $G$ relatif terhadap keluarga subgrup $(H_i)_{i \in I}$ disebut \emph{pelengkapan}.
+\end{definition}
+Pelengkapan dilengkapi homomorfisme yang kanonik $\iota: G \xrightarrow{g \mapsto (gH_i)_{i \in I}} \varprojlim_i G/H_i$. Berikut ini kita jelaskan secara ringkas hubungan antara ``pelengkapan'' dan topologi. Untuk menyederhanakan pembahasan, selanjutnya kita andaikan poset $I$ terhitung. Pembaca seharusnya telah mengenal cara menggunakan barisan Cauchy untuk berangkat dari $\Q$ dan mengonstruksi $\R$.
+\begin{definition}
+	Dalam grup topologis $G$, suatu barisan titik $(x_n)_{n \geq 0}$ disebut \emph{barisan Cauchy} apabila, untuk setiap lingkungan terbuka di $1$, katakanlah $U$, terdapat $N \geq 0$ sedemikian sehingga $n, m \geq N \implies x_n x_m^{-1} \in U$. Andaikan $G$ mempunyai basis lingkungan terhitung di $1$. Jika setiap barisan Cauchy dalam grup $G$ konvergen, maka $G$ disebut \emph{lengkap}.
+\end{definition}
+
+Selanjutnya selalu diasumsikan bahwa terdapat basis lingkungan terhitung bagi $1$. Tinjau pelengkapan $G$ dalam pengertian topologis, yaitu suatu homomorfisme grup topologis $\iota: G \to \hat{G}$ yang memenuhi sifat-sifat berikut:
+\begin{enumerate}[\bfseries {CO}.1]
+	\item $\iota: G \to \iota(G) \subset \hat{G}$ merupakan homeomorfisme;
+	\item citra $\iota$ rapat;
+	\item $\hat{G}$ merupakan grup topologis Hausdorff yang lengkap.
+\end{enumerate}
+Pelengkapan dapat dikonstruksi dengan lebih dari satu cara. Pokoknya ialah bahwa sifat \textbf{CO.1} --- \textbf{CO.3} mencirikan $(\hat{G}, \iota)$ secara unik hingga isomorfisme tunggal; buktinya dapat mengikuti Proposisi \ref{prop:completion-ring-characterization}, yang sangat serupa, atau kasus ruang metrik dalam \cite[\S 8.1]{Xiong}. Secara intuitif, ketiga sifat ini menyatakan bahwa unsur-unsur $\hat{G}$ dapat direpresentasikan oleh barisan-barisan Cauchy dalam $G$. Selain itu, apabila $\hat{x}, \hat{y} \in \hat{G}$ cukup dekat, maka dalam $G$ barisan Cauchy $(x_n)_n$, $(y_n)_n$ yang masing-masing berlimit pada kedua unsur tersebut juga cukup dekat (untuk $n \gg 0$). Dengan demikian, struktur $\hat{G}$ ditentukan sepenuhnya oleh $G$. Intuisi ini menangkap sebagian besar gagasannya.
+
+\begin{theorem}
+	Tinjau, dalam Definisi \ref{def:group-completion}, data $\{ H_i \lhd G \}_{i \in I}$, dan andaikan $\bigcap_i H_i = \{1\}$. Beri $G$ struktur grup topologis Hausdorff dengan $\{H_i : i \in I \}$ sebagai basis lingkungan bagi $1$, dan beri setiap $G/H_i$ topologi diskret. Jika selanjutnya $I$ terhitung, maka $\iota: G \to \varprojlim_i G/H_i$ memenuhi \textbf{CO.1} --- \textbf{CO.3}, sehingga juga merupakan pelengkapan dalam pengertian topologis.
+\end{theorem}
+\begin{proof}
+	Syarat keterhitungan memastikan bahwa $G$ dan $\hat{G} := \varprojlim_i G/H_i$ memang mempunyai basis lingkungan terhitung di unsur identitas. Karena $\Ker(\iota) = \bigcap_i H_i = \{1\}$, peta $\iota$ injektif. Dalam Lema \ref{prop:completion-compactness}, basis lingkungan bagi $\hat{G}$ diberikan oleh $\mathcal{U}_j := \{ \hat{y}=(\bar{y}_i)_i \in \hat{G}: i \leq j \implies \bar{y}_i = 1 \}$ dan memenuhi $\iota^{-1}(\mathcal{U}_j) = H_j$. Dengan demikian diperoleh kontinuitas $\iota$ dan \textbf{CO.1}. Untuk \textbf{CO.2}, bagi $\hat{x} = (\bar{x}_i)_i \in \hat{G}$ dan setiap $j \in I$, ambil $G \ni x_j \mapsto \bar{x}_j$. Maka $\iota(x_j) \in \hat{x}\mathcal{U}_j$, sehingga $\iota(G)$ rapat.
+	
+	Sekarang kita buktikan \textbf{CO.3}. Di dalam $\hat{G}$, ambil barisan Cauchy $(\hat{x}_n)_n$. Untuk setiap $j$, jika $n,m \gg 0$ maka $\hat{x}_n \hat{x}_m^{-1} \in \mathcal{U}_j$. Jadi komponen $\hat{x}_n$ yang berindeks $j$ konstan untuk $n \gg 0$; nyatakan nilai itu sebagai $\bar{x}_j \in G/H_j$. Kemudian $\hat{x} := (\bar{x}_i)_i \in \hat{G}$ merupakan limit dari $(\hat{x}_n)_n$.
+\end{proof}
+
+\begin{remark}
+	Jika syarat keterhitungan basis lingkungan ditiadakan, kelengkapan harus dirumuskan dengan bahasa net (kekonvergenan Moore--Smith) atau filter. Kita akan memperkenalkan filter dalam \S\ref{sec:filters}, lalu kembali menelaah konstruksi $\iota: G \to \hat{G}$.
+\end{remark}
+
+\begin{example}[bilangan bulat $p$-adik]\label{eg:p-adic}\index[sym1]{Z_p@$\Z_p$}
+	Ambil $I$ sebagai himpunan terurut total $\Z_{\geq 0}$. Untuk setiap $i \geq 0$, definisikan $H_i := p^{i+1} \Z$. Pelengkapan $\varprojlim_i \Z/p^{i+1} \Z$ dinyatakan sebagai $\Z_p$; unsur-unsurnya tidak lain ialah keluarga $(a_i \in \Z/p^{i+1} \Z)_{i \geq 0}$ yang memenuhi $a_{i+1} \mapsto a_i$. Grup ini disebut grup aditif bilangan bulat $p$-adik; dalam \S\ref{sec:ring-limits} kita akan membahas struktur perkalian pada $\Z_p$.
+\end{example}
+
+\begin{example}[Modul Tate]\index{modul Tate (Tate module)}
+	Misalkan $A$ suatu grup abelian dan $\ell$ suatu bilangan prima. Ambil lagi $I = \Z_{\geq 0}$ seperti di atas. Untuk setiap $N \in \Z$, tetapkan $A[N] := \Ker[a \mapsto a^N]$. Jelas bahwa $N \mid N' \implies A[N] \subset A[N']$; tetapkan $A[\ell^\infty] := \bigcup_{n \geq 0} A[\ell^n]$. Definisikan fungtor $V: I^\text{op} \to \cate{Ab}$ dengan
+	\begin{align*}
+		V(i) & := A[\ell^\infty], \\
+		V(i \to i+1) & := [a \mapsto a^\ell].
+	\end{align*}
+	Tetapkan $V_\ell(A) := \varprojlim_i V(i)$. Unsur-unsurnya $(a_i \in A[\ell^\infty])_{i \geq 0}$ harus memenuhi $a_{i+1}^\ell = a_i$. Objek ini disebut \emph{modul Tate rasional}. Dengan cara yang sama, definisikan fungtor $T: I^\text{op} \to \cate{Ab}$, tetapi dengan syarat $T(0) = \{1\}$. Limit yang diperoleh ialah
+	\[ T_\ell(A) := \varprojlim_i T(i) \subset V_\ell(A), \]
+	yang disebut \emph{modul Tate} dari grup $A$. Perhatikan bahwa $T(i) = A[\ell^i]$.
+
+Sebagai contoh, ambil grup aditif dari torus kompleks $E := \CC \big/(\Z \oplus \Z\tau)$, dengan $\text{Im}(\tau) > 0$. Peta $(a,b) \mapsto a+b\tau$ menginduksi isomorfisme $(\R/\Z)^2 \rightiso E$, sedangkan $(\R/\Z)[\ell^i] = \ell^{-i}\Z/\Z$. Mudah dilihat bahwa diagram
+	\[ \begin{tikzcd}
+		a \bmod \Z \arrow[mapsto]{r} \arrow[mapsto, bend right=60]{ddd} \arrow[phantom, d, sloped, "\in" description] & \ell^{i+1}a \bmod \ell^{i+1} \Z \arrow[mapsto, bend left=60]{ddd} \arrow[phantom, d, sloped, "\in" description] \\
+		\ell^{-i-1}\Z/\Z \arrow[d, "{\text{dikalikan dengan} \ell}"'] \arrow[r, "\sim"] & \Z/\ell^{i+1} \Z \arrow[d, "{\text{hasil bagi}}"] \\
+		\ell^{-i}\Z/\Z \arrow[r, "\sim"'] & \Z/\ell^i \Z \\
+		\ell a \bmod \Z \arrow[mapsto]{r} \arrow[phantom, u, sloped, "\in" description] & \ell^{i+1} a \bmod \ell^i \Z \arrow[phantom, u, sloped, "\in" description]
+	\end{tikzcd} \]
+komutatif, sehingga $T_\ell(E) \simeq \Z_\ell \oplus \Z_\ell$. Tetapkan $\Gamma := \Z \oplus \Z\tau$. Argumen di atas sebenarnya menunjukkan bahwa $T_\ell(E)$ isomorfis secara alami dengan pelengkapan $\Gamma$ relatif terhadap $(\ell^i \Gamma)_{i \geq 0}$.
+
+Ketika $\ell$ merentang semua bilangan prima, kita dapat membayangkan bahwa $T_\ell(E)$ secara aljabar ``menyimulasikan'' kisi yang mendefinisikan $E$, yaitu $\Gamma$, sedangkan bagi $E$ kisi tersebut merupakan invarian topologis $H_1(E, \Z)$. Cara ini tentu berputar-putar untuk torus kompleks. Akan tetapi, $E$ juga dapat dipandang sebagai kurva aljabar kubik di bidang proyektif $\mathbb{P}^2(\CC)$, bersama sebuah titik terpilih $O$ (yang bersesuaian dengan titik nol pada torus kompleks); inilah, di atas medan $\CC$, sebuah \emph{kurva eliptik}. Penafsiran terakhir dapat digunakan di atas sebarang medan tertutup secara aljabar, dan kurva yang bersesuaian tetap merupakan grup abelian. Kerangka aljabar ini sangat diperlukan untuk menangani masalah-masalah terkait dalam teori bilangan, karena teori homologi yang lazim tidak mudah diterapkan. Dalam keadaan demikian, modul Tate $T_\ell(E)$ menjadi alat yang sangat ampuh.
+\end{example}

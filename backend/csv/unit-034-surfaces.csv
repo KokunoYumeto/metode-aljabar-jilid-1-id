@@ -1,0 +1,11 @@
+entity_type,id,stable_key,section_id,ordinal,source_value,target_value,format,status
+build_surface,urn:uuid:9ab84b3e-1ff7-560d-87fd-0d977754c39e,build-surface/unit-034-pdf,,,pwsh -NoProfile -File scripts/build_unit_034.ps1 -OutputDirectory build/unit-034-replay,artifacts/unit-034-bab-4-limit-dan-kompletisasi-grup-id.pdf,pdf,pass
+citation,urn:uuid:b91761ac-2a05-556f-bfe5-80877bdd9e4f,citation/unit-034/01-fl14,urn:uuid:3f49a4a1-3db8-50ca-97a3-fd5ec0846161,,FL14,FL14,biblatex-key,preserved
+citation,urn:uuid:bbff4157-44d9-5852-b321-02c1f5af5458,citation/unit-034/02-xiong,urn:uuid:3f49a4a1-3db8-50ca-97a3-fd5ec0846161,,Xiong,Xiong,biblatex-key,preserved
+diagram,urn:uuid:644a810c-a813-5d49-97d7-a6dc8ba9a41b,diagram/unit-034/tikzcd-01,urn:uuid:3f49a4a1-3db8-50ca-97a3-fd5ec0846161,1,1734-1739,1729-1734,tikzcd,audited_preserved
+index_entry,urn:uuid:d094308a-09de-5036-9d4f-b65e4be79330,index-entry/unit-034/main/001,urn:uuid:3f49a4a1-3db8-50ca-97a3-fd5ec0846161,1,luguoxuji,poset terarah ke atas (filtered poset),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:6b6e50f0-b2c4-506c-bed3-411dcb6a4bdb,index-entry/unit-034/main/002,urn:uuid:3f49a4a1-3db8-50ca-97a3-fd5ec0846161,2,tuopuqun@拓扑群 (topological group),grup topologis (topological group),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:47097795-cd73-57e0-b889-53e482ec389d,index-entry/unit-034/main/003,urn:uuid:3f49a4a1-3db8-50ca-97a3-fd5ec0846161,3,pro-youxianqun@pro-有限群 (pro-finite group),grup profinit (pro-finite group),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:c421e4e2-3842-5780-9dbb-666bab72b073,index-entry/unit-034/main/004,urn:uuid:3f49a4a1-3db8-50ca-97a3-fd5ec0846161,4,wanbeihua@完备化 (completion),pelengkapan (completion),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:da742847-8f70-5db7-b31f-5a88d6f94984,index-entry/unit-034/main/006,urn:uuid:3f49a4a1-3db8-50ca-97a3-fd5ec0846161,6,Tate 模,modul Tate (Tate module),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:217ec906-0492-593d-ad2e-5ec92bbb4b5d,index-entry/unit-034/sym1/005,urn:uuid:3f49a4a1-3db8-50ca-97a3-fd5ec0846161,5,Z_p@$\Z_p$,Z_p@$\Z_p$,latex-index-key,source_key_preserved_target_key_localized

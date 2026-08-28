@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan, seluruh Bab 1, seluruh Bab 2, seluruh Bab 3 termasuk latihannya, serta pembukaan Bab 4 sampai Bagian 4.9 telah diterjemahkan, diberi backend modular, dipublikasikan, dan diverifikasi byte demi byte dalam tiga puluh tiga unit pembaca. Bagian 4.10 menjadi span sumber kanonik berikutnya.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan, seluruh Bab 1, seluruh Bab 2, seluruh Bab 3 termasuk latihannya, serta pembukaan Bab 4 sampai Bagian 4.9 telah diterjemahkan, diberi backend modular, dipublikasikan, dan diverifikasi byte demi byte dalam tiga puluh tiga unit pembaca. Bagian 4.10 telah diterjemahkan dan diterima secara lokal sebagai Unit 34; publikasi dan pembacaan balik byte masih berlangsung.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh checkpoint pembaca 0.3.0 (96 halaman; Unit 1-9)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf)
 
@@ -78,6 +78,8 @@ Status saat ini: **Pendahuluan, seluruh Bab 1, seluruh Bab 2, seluruh Bab 3 term
 
 [Baca atau unduh PDF Unit 33](artifacts/unit-033-bab-4-grup-simetris-id.pdf)
 
+[Baca atau unduh PDF Unit 34](artifacts/unit-034-bab-4-limit-dan-kompletisasi-grup-id.pdf)
+
 Checkpoint `0.6.0` menggabungkan satu sampul pembaca dan seluruh 228 halaman
 Unit 001-024: pendahuluan serta Bab 1, Bab 2, dan Bab 3 lengkap. Build kedua
 identik byte. Seluruh 228 halaman unit identik piksel dengan reader mandiri;
@@ -92,7 +94,7 @@ byte cocok pada pembacaan balik anonim. Receipt publikasinya tersedia di
 
 Versi preservasi saat ini, `0.6.0`, tersedia pada [Zenodo DOI 10.5281/zenodo.22088395](https://doi.org/10.5281/zenodo.22088395). Seluruh pembaruan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat. Rekaman ini memuat checkpoint gabungan 229 halaman, paket sumber/backend ringkas, pemberitahuan hak, manifest, dan checksum: lima berkas / 70.182.496 byte yang seluruhnya cocok pada pembacaan balik anonim. Cakupannya ialah Unit 001-024—pendahuluan serta Bab 1, Bab 2, dan Bab 3 lengkap; Bab 4-10, komponen Duncan, enam segmen CRing, dan lapisan penghubung/penguasaan belum disertakan. Checkpoint GitHub dipublikasikan pada commit konten `5641d5453c85cf007135603037db8805f7fa4f42`; paket sumber preservasi mengikat commit edisi `ebaf9ddba8665bcc0f8ebadf042efc258b4f3894`. Receipt tersedia di [`qa/PUBLICATION_GITHUB_CHECKPOINT_0.6.0_20260825.md`](qa/PUBLICATION_GITHUB_CHECKPOINT_0.6.0_20260825.md) dan [`qa/PUBLICATION_ZENODO_0.6.0_20260825.md`](qa/PUBLICATION_ZENODO_0.6.0_20260825.md).
 
-Item karya Figshare yang sama tetap dipertahankan sebagai satu garis versi, bukan diduplikasi. Pemilih lisensi Figshare tidak menyediakan pilihan yang dapat mewakili gabungan hak komponen edisi ini; karena itu versi berikutnya harus berupa rekaman metadata CC0 yang menautkan checkpoint Zenodo, bukan salinan berkas dengan lisensi yang diratakan secara keliru. Lisensi teks utama/adaptasi adalah CC BY 4.0; `Lanzhou.png` dan fragmen `AJbook.cls` yang dikreditkan tetap CC BY-SA 3.0, sedangkan font Noto tetap OFL 1.1, sebagaimana dirinci dalam `LICENSES.md`.
+Item karya Figshare yang sama tetap dipertahankan sebagai satu garis versi, bukan diduplikasi. Pemilih lisensi Figshare tidak menyediakan pilihan yang dapat mewakili gabungan hak komponen edisi ini; karena itu versi berikutnya harus berupa rekaman metadata CC0 yang menautkan checkpoint Zenodo, bukan salinan berkas dengan lisensi yang diratakan secara keliru. Lisensi teks utama/adaptasi adalah CC BY 4.0; `Lanzhou.png` dan fragmen `AJbook.cls` yang dikreditkan tetap CC BY-SA 3.0, font Noto tetap OFL 1.1, dan Fandol 0.3 tetap GPLv3 dengan pengecualian font, sebagaimana dirinci dalam `LICENSES.md`.
 
 ## Identitas sumber
 
@@ -112,7 +114,7 @@ sumber maupun kredit dan lisensi setiap komponen yang dipertahankan di bawah.
 
 ## Membangun unit pembaca
 
-Prasyarat: PowerShell 7, XeLaTeX, Biber, MakeIndex, serta paket-paket TeX yang dimuat oleh sumber. Font Noto CJK yang diperlukan sudah disertakan dengan lisensi OFL 1.1.
+Prasyarat: PowerShell 7, XeLaTeX, Biber, MakeIndex, serta paket-paket TeX yang dimuat oleh sumber. Font Noto CJK yang diperlukan sudah disertakan dengan lisensi OFL 1.1. Paket Fandol 0.3 diperlukan sebagai dependensi sistem; identitas font dan lisensi GPLv3 dengan pengecualian font dibekukan di `repo/fonts/FANDOL-AUTHORITY.json`.
 
 ```powershell
 pwsh -NoProfile -File scripts/build_unit_001.ps1 -OutputDirectory build/unit-001-replay
@@ -146,7 +148,9 @@ pwsh -NoProfile -File scripts/build_unit_028.ps1 -OutputDirectory build/unit-028
 pwsh -NoProfile -File scripts/build_unit_029.ps1 -OutputDirectory build/unit-029-replay
 pwsh -NoProfile -File scripts/build_unit_030.ps1 -OutputDirectory build/unit-030-replay
 pwsh -NoProfile -File scripts/build_unit_031.ps1 -OutputDirectory build/unit-031-replay
+pwsh -NoProfile -File scripts/build_unit_032.ps1 -OutputDirectory build/unit-032-replay
 pwsh -NoProfile -File scripts/build_unit_033.ps1 -OutputDirectory build/unit-033-replay
+pwsh -NoProfile -File scripts/build_unit_034.ps1 -OutputDirectory build/unit-034-replay
 ```
 
 Skrip menjalankan XeLaTeX tanpa shell escape, indeks dan bibliografi yang dibutuhkan setiap unit, lalu lintasan konvergensi XeLaTeX. Tanggal sumber dan seed gambar sampul dipatok. Dua build bersih untuk setiap unit menghasilkan halaman yang identik piksel demi piksel ketika dirender, meskipun serialisasi kontainer PDF XeTeX belum identik byte di direktori keluaran yang berbeda.
@@ -478,7 +482,7 @@ Artefak Unit 32 yang diterima:
 - receipt penerimaan lokal ada di [`qa/UNIT_032_ADMISSION_20260826.md`](qa/UNIT_032_ADMISSION_20260826.md); bukti visual ada di [`qa/UNIT_032_VISUAL_QA_20260826.md`](qa/UNIT_032_VISUAL_QA_20260826.md), bukti backend ada di [`qa/unit-032-evidence/backend-validation.json`](qa/unit-032-evidence/backend-validation.json), dan audit akhir independen ada di [`qa/UNIT_032_FINAL_AUDIT_20260826.md`](qa/UNIT_032_FINAL_AUDIT_20260826.md).
 - Unit 32 dipublikasikan pada commit isi `bc5e43a75925d522a80600724d6d95e40ad55f75`; seluruh 64 path / 6.515.805 byte cocok dengan blob komit pada pembacaan balik anonim. Inventaris lengkap ada di [`qa/PUBLICATION_GITHUB_UNIT_032_CONTENT_READBACK.json`](qa/PUBLICATION_GITHUB_UNIT_032_CONTENT_READBACK.json), dan receipt publikasi ada di [`qa/PUBLICATION_GITHUB_UNIT_032_20260826.md`](qa/PUBLICATION_GITHUB_UNIT_032_20260826.md).
 
-Artefak Unit 33 yang diterima secara lokal:
+Artefak Unit 33 yang diterima dan dipublikasikan:
 
 - 10 halaman; 118.964 byte; SHA-256 `0af07d45c9aee57e28a6f27fe6162afda253e15c44779ccf07ac591516bd1f1d`.
 - rentang otoritas Bagian 4.9 lengkap adalah `chapter4.tex:1389-1608`; baris 1608 hanya pemisah kosong. Kandidat 23.099 byte / SHA-256 `1abae4c95d52e98c6c2375c5394bd4a7f5d4319ef018849ae10c4c0ac6598d76` menempati target kanonik baris 1384-1602 secara byte-identik. File target lengkap 185.920 byte / SHA-256 `a462826136cced1b766a2807ca61e055539bd4427b5f5da89df4573bdbbeccde`; Bagian 4.10 yang belum diterjemahkan dimulai pada target baris 1604 dan bersesuaian dengan baris otoritas 1609.
@@ -489,9 +493,19 @@ Artefak Unit 33 yang diterima secara lokal:
 - receipt penerimaan sumber/reader/backend ada di [`qa/UNIT_033_ADMISSION_20260826.md`](qa/UNIT_033_ADMISSION_20260826.md), bukti visual ada di [`qa/UNIT_033_VISUAL_QA_20260826.md`](qa/UNIT_033_VISUAL_QA_20260826.md), bukti backend ada di [`qa/unit-033-evidence/backend-validation.json`](qa/unit-033-evidence/backend-validation.json), dan audit akhir independen ada di [`qa/UNIT_033_FINAL_AUDIT_20260826.md`](qa/UNIT_033_FINAL_AUDIT_20260826.md). Provenance produksi dan peninjauan: `OpenAI Codex gpt-5.6-sol, Ultra`, atas instruksi pengguna; kredit Wen-Wei Li dan kontributor manusia tetap dipertahankan.
 - Unit 33 dipublikasikan pada commit isi `486965a43410fc2b815b0955486771f3048fdd36`; seluruh 58 path / 5.065.986 byte cocok dengan blob komit pada pembacaan balik anonim. Inventaris lengkap ada di [`qa/PUBLICATION_GITHUB_UNIT_033_CONTENT_READBACK.json`](qa/PUBLICATION_GITHUB_UNIT_033_CONTENT_READBACK.json), dan receipt publikasi ada di [`qa/PUBLICATION_GITHUB_UNIT_033_20260826.md`](qa/PUBLICATION_GITHUB_UNIT_033_20260826.md).
 
+Artefak Unit 34 yang diterima secara lokal:
+
+- 9 halaman; 136.702 byte; SHA-256 `e69eef970ade092dae4d0e8740092ae8611010bca83ab190e3331e145e852272`.
+- rentang otoritas Bagian 4.10 lengkap adalah `chapter4.tex:1609-1744`; baris 1744 hanya pemisah kosong. Kandidat 19.019 byte / SHA-256 `8f5ffb27fcf5b8163dea021d6d075f091b15251b9c07efb7578ac16f1b428b62` menempati target kanonik baris 1604-1738 secara byte-identik. File target lengkap 189.935 byte / SHA-256 `37ff3990850d81505ded1d1b71ca9318ea6dd3d1343a18e49495bf83d8367569`; Bagian 4.11 yang belum diterjemahkan secara kanonik dimulai pada target baris 1740 dan bersesuaian dengan baris otoritas 1745.
+- struktur sumber mempertahankan 25 pasangan lingkungan, 11 label, 16 rujukan, enam kemunculan sitasi dari dua kunci bibliografi, lima butir daftar, 276 zona matematika, satu diagram dengan 12 panah, dan enam entri indeks. Satu koreksi sumber menyelaraskan indeks keluarga kompatibel bilangan bulat p-adik dengan himpunan indeks yang telah dinyatakan. Sembilan lokalisasi teks terlindungi, tiga lokalisasi penunjuk sitasi, enam lokalisasi indeks, dan satu reflow digital dicatat terpisah. Tidak ada latihan, petunjuk, jawaban, atau solusi yang diada-adakan.
+- satu display basis lingkungan direflow menjadi tiga baris terpusat tanpa mengubah matematika dan menghilangkan overflow terukur 26,11896 pt. Dua build bersih dan artefak menghasilkan 54 render; semua perbandingan piksel dalam renderer yang sama identik dan semua tepi luar bersih. Empat outline, 39 tujuan bernama, 20 tautan internal, lima aksi URI HTTPS aman, dan 31 objek fon tertanam lulus. Tidak ada kotak meluber atau kurang isi; PDF tanpa tag serta keterbatasan ekstraksi fon matematika dicatat.
+- kedua build mengambil isi reader dari ekstraksi hash-gated atas target kanonik baris 1604-1738 dan memverifikasi byte hasil ekstraksi terhadap kandidat yang diterima; driver tidak lagi membaca path kandidat terisolasi secara langsung.
+- backend 341.684 byte; SHA-256 `c475108a1d6ed5d4c2084adc00c122e1a3294b5d44e6af3e302d39a06d7a6c35`; 419 catatan kompatibel-konsep dan 482 identitas UUIDv5 yang diaudit mencakup 22 peristiwa QA serta 82 kemunculan binding pada 44 path hidup / 18 rentang baris. Catatan hak kelima mengikat Fandol 0.3 sebagai GPLv3 dengan pengecualian font, terpisah dari teks CC BY 4.0 dan font Noto OFL 1.1. Enam proyeksi CSV deterministik berputar balik byte-identik terhadap JSON kanonik; receipt validasi juga mengikat identitas skema dan validator bersama.
+- receipt penerimaan sumber/reader/backend ada di [`qa/UNIT_034_ADMISSION_20260828.md`](qa/UNIT_034_ADMISSION_20260828.md), bukti visual ada di [`qa/UNIT_034_VISUAL_QA_20260827.md`](qa/UNIT_034_VISUAL_QA_20260827.md), bukti backend ada di [`qa/unit-034-evidence/backend-validation.json`](qa/unit-034-evidence/backend-validation.json), dan audit akhir independen ada di [`qa/UNIT_034_FINAL_AUDIT_20260828.md`](qa/UNIT_034_FINAL_AUDIT_20260828.md). Provenance produksi dan peninjauan: `OpenAI Codex gpt-5.6-sol, Ultra`, atas instruksi pengguna; kredit Wen-Wei Li dan kontributor manusia tetap dipertahankan.
+
 ## Backend modular
 
-`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-033-bab-4-grup-simetris.json` adalah catatan kanonik tiga puluh tiga unit yang telah diterima. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7, Unit 18, dan Unit 24 mempertahankan latihan sebagai entitas bagian terurut serta setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat. Unit 10-33 memakai identitas yang sama untuk permukaan matematika, diagram, rujukan eksternal, indeks, sitasi, koreksi atau normalisasi sumber, reflow digital, serta provenance model; receipt penerimaan masing-masing mengikat bukti lokal dan, setelah publikasi, bukti publiknya.
+`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-034-bab-4-limit-dan-kompletisasi-grup.json` adalah catatan kanonik tiga puluh empat unit yang telah diterima. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7, Unit 18, dan Unit 24 mempertahankan latihan sebagai entitas bagian terurut serta setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat. Unit 10-34 memakai identitas yang sama untuk permukaan matematika, diagram, rujukan eksternal, indeks, sitasi, koreksi atau normalisasi sumber, reflow digital, serta provenance model; receipt penerimaan masing-masing mengikat bukti lokal dan, setelah publikasi, bukti publiknya.
 
 Validasi:
 
@@ -545,7 +559,7 @@ Validator memeriksa skema, keunikan dan relasi ID, urutan bagian, hash file dan 
 
 ## Lisensi
 
-Teks sumber dan terjemahan ditangani menurut Creative Commons Attribution 4.0 International (CC BY 4.0). Penutupan repositori memiliki pengecualian komponen yang tidak boleh diratakan menjadi satu klaim lisensi: fragmen teratribusi dalam `AJbook.cls` memerlukan CC BY-SA 3.0, `Lanzhou.png` berasal dari materi CC BY-SA 3.0, dan font Noto memakai SIL OFL 1.1. Lihat [LICENSES.md](LICENSES.md) dan proyeksi `backend/csv/*-rights.csv` untuk rincian.
+Teks sumber dan terjemahan ditangani menurut Creative Commons Attribution 4.0 International (CC BY 4.0). Penutupan repositori memiliki pengecualian komponen yang tidak boleh diratakan menjadi satu klaim lisensi: fragmen teratribusi dalam `AJbook.cls` memerlukan CC BY-SA 3.0, `Lanzhou.png` berasal dari materi CC BY-SA 3.0, font Noto memakai SIL OFL 1.1, dan font Fandol memakai GPLv3 dengan pengecualian penyematan font. Lihat [LICENSES.md](LICENSES.md) dan proyeksi `backend/csv/*-rights.csv` untuk rincian.
 
 ## Kemajuan
 

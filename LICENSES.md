@@ -17,7 +17,8 @@ Salinan pemberitahuan sumber terdapat di `repo/source/LICENSE`.
 
 Font Noto CJK di `repo/fonts/` memakai SIL Open Font License 1.1. Teks lisensi lengkap terdapat di `repo/fonts/OFL-1.1-Noto-CJK.txt`.
 
+Penutupan XeLaTeX juga memakai Fandol 0.3 karya Clerk Ma dan Jie Su. Fandol memakai GNU GPL versi 3 dengan pengecualian font yang menyatakan bahwa penyematan font atau bagian font yang tidak diubah ke dalam dokumen tidak dengan sendirinya menjadikan dokumen itu tercakup GPL. Salinan otoritatif `COPYING` dan `README` dari paket CTAN tersedia sebagai `repo/fonts/GPL-3.0-with-Fandol-font-exception.txt` dan `repo/fonts/FANDOL-README.txt`; identitas paket dan font yang dipakai build tercatat di `repo/fonts/FANDOL-AUTHORITY.json`. Perlakukan Fandol sebagai komponen tersendiri, bukan sebagai bagian berlisensi CC BY 4.0 atau OFL 1.1.
+
 ## Metadata dan kode baru
 
 Metadata, skrip build/validasi, dan dokumentasi baru dalam repositori ini tidak mengubah atau memperluas izin komponen pihak ketiga. Jika materi baru kelak diberi lisensi terpisah, catatan hak komponen di backend harus menyatakannya secara eksplisit.
-

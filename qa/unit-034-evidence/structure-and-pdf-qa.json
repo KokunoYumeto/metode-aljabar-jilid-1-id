@@ -1,0 +1,1176 @@
+{
+  "actionable_defects": [],
+  "artifact_byte_identical_to_build_j": true,
+  "cross_pdf_semantic_identity": true,
+  "documents": {
+    "artifact": {
+      "action_counts": {
+        "/GoTo": 20,
+        "/URI": 5
+      },
+      "fonts": {
+        "all_embedded": true,
+        "semantic_projection": [
+          {
+            "embedded": true,
+            "normalized": "/CMEX10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMMI10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMMI5",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMMI6",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMMI7",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMMI9",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMMIB10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMR10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMR5",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMR7",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMSY10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMSY5",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMSY7",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "embedded": true,
+            "normalized": "/EUFM10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/EUFM7",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/FandolHei-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": false
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMMono12-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMMono9-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRoman10-Bold-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRoman10-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRoman12-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRoman17-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRoman7-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRoman8-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRoman9-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRomanCaps10-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/MSAM10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/MSBM10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/NotoSansCJKsc-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Bold-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          }
+        ],
+        "unique": 31
+      },
+      "identity": {
+        "bytes": 136702,
+        "path": "artifacts/unit-034-bab-4-limit-dan-kompletisasi-grup-id.pdf",
+        "sha256": "e69eef970ade092dae4d0e8740092ae8611010bca83ab190e3331e145e852272"
+      },
+      "metadata": {
+        "/Author": "Wen-Wei Li",
+        "/CreationDate": "D:20260827000000Z",
+        "/Creator": "LaTeX with hyperref",
+        "/Keywords": "aljabar, teori grup, limit proyektif, grup topologis, grup profinit, pelengkapan, bilangan bulat p-adik, modul Tate, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.10 lengkap",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 34: Limit dan Pelengkapan Grup"
+      },
+      "named_destinations": {
+        "Doc-Start": 1,
+        "Item.1": 6,
+        "Item.2": 6,
+        "Item.3": 6,
+        "cite.0@FL14": 9,
+        "cite.0@Xiong": 8,
+        "equation.4.7": 4,
+        "page.1": 3,
+        "page.2": 4,
+        "page.3": 5,
+        "page.4": 6,
+        "page.5": 7,
+        "page.6": 8,
+        "page.7": 9,
+        "proof.1": 4,
+        "proof.2": 4,
+        "proof.3": 5,
+        "proof.4": 5,
+        "proof.5": 7,
+        "section*.1": 8,
+        "section*.2": 9,
+        "section*.3": 9,
+        "section.4.10": 3,
+        "theorem.4.10.1": 3,
+        "theorem.4.10.10": 7,
+        "theorem.4.10.11": 7,
+        "theorem.4.10.12": 7,
+        "theorem.4.10.13": 7,
+        "theorem.4.10.2": 4,
+        "theorem.4.10.3": 4,
+        "theorem.4.10.4": 5,
+        "theorem.4.10.5": 5,
+        "theorem.4.10.6": 5,
+        "theorem.4.10.7": 6,
+        "theorem.4.10.8": 6,
+        "theorem.4.10.9": 6,
+        "unit034-bibliography.0": 8,
+        "unit034-symbol-index.0": 9,
+        "unit034-term-index.0": 9
+      },
+      "outline": [
+        {
+          "depth": 0,
+          "page": 3,
+          "title": "4.10 Limit dan Pelengkapan Grup"
+        },
+        {
+          "depth": 0,
+          "page": 8,
+          "title": "Daftar Pustaka"
+        },
+        {
+          "depth": 0,
+          "page": 9,
+          "title": "Indeks Istilah"
+        },
+        {
+          "depth": 0,
+          "page": 9,
+          "title": "Indeks Simbol"
+        }
+      ],
+      "pages": 9,
+      "safe": true,
+      "tagged": false,
+      "text": {
+        "mupdf_nul_characters": 0,
+        "mupdf_sha256": "85b63671e9f03fd0cebaf8f2960dc7b7129034d55e686d9de08b731804119878",
+        "pypdf_nul_characters": 46,
+        "pypdf_sha256": "472977812d43d9934481974d963b110556296f533fc85f8d28af07391f6bf865",
+        "replacement_characters": 0
+      }
+    },
+    "build-i": {
+      "action_counts": {
+        "/GoTo": 20,
+        "/URI": 5
+      },
+      "fonts": {
+        "all_embedded": true,
+        "semantic_projection": [
+          {
+            "embedded": true,
+            "normalized": "/CMEX10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMMI10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMMI5",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMMI6",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMMI7",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMMI9",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMMIB10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMR10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMR5",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMR7",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMSY10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMSY5",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMSY7",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "embedded": true,
+            "normalized": "/EUFM10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/EUFM7",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/FandolHei-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": false
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMMono12-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMMono9-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRoman10-Bold-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRoman10-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRoman12-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRoman17-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRoman7-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRoman8-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRoman9-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRomanCaps10-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/MSAM10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/MSBM10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/NotoSansCJKsc-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Bold-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          }
+        ],
+        "unique": 31
+      },
+      "identity": {
+        "bytes": 136700,
+        "path": "build/unit-034-final-i/unit-034-bab-4-limit-dan-kompletisasi-grup.pdf",
+        "sha256": "970402b3ab3e510c2f72c44723528616eb3456020433ed9cf7b7cce2d56ce83a"
+      },
+      "metadata": {
+        "/Author": "Wen-Wei Li",
+        "/CreationDate": "D:20260827000000Z",
+        "/Creator": "LaTeX with hyperref",
+        "/Keywords": "aljabar, teori grup, limit proyektif, grup topologis, grup profinit, pelengkapan, bilangan bulat p-adik, modul Tate, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.10 lengkap",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 34: Limit dan Pelengkapan Grup"
+      },
+      "named_destinations": {
+        "Doc-Start": 1,
+        "Item.1": 6,
+        "Item.2": 6,
+        "Item.3": 6,
+        "cite.0@FL14": 9,
+        "cite.0@Xiong": 8,
+        "equation.4.7": 4,
+        "page.1": 3,
+        "page.2": 4,
+        "page.3": 5,
+        "page.4": 6,
+        "page.5": 7,
+        "page.6": 8,
+        "page.7": 9,
+        "proof.1": 4,
+        "proof.2": 4,
+        "proof.3": 5,
+        "proof.4": 5,
+        "proof.5": 7,
+        "section*.1": 8,
+        "section*.2": 9,
+        "section*.3": 9,
+        "section.4.10": 3,
+        "theorem.4.10.1": 3,
+        "theorem.4.10.10": 7,
+        "theorem.4.10.11": 7,
+        "theorem.4.10.12": 7,
+        "theorem.4.10.13": 7,
+        "theorem.4.10.2": 4,
+        "theorem.4.10.3": 4,
+        "theorem.4.10.4": 5,
+        "theorem.4.10.5": 5,
+        "theorem.4.10.6": 5,
+        "theorem.4.10.7": 6,
+        "theorem.4.10.8": 6,
+        "theorem.4.10.9": 6,
+        "unit034-bibliography.0": 8,
+        "unit034-symbol-index.0": 9,
+        "unit034-term-index.0": 9
+      },
+      "outline": [
+        {
+          "depth": 0,
+          "page": 3,
+          "title": "4.10 Limit dan Pelengkapan Grup"
+        },
+        {
+          "depth": 0,
+          "page": 8,
+          "title": "Daftar Pustaka"
+        },
+        {
+          "depth": 0,
+          "page": 9,
+          "title": "Indeks Istilah"
+        },
+        {
+          "depth": 0,
+          "page": 9,
+          "title": "Indeks Simbol"
+        }
+      ],
+      "pages": 9,
+      "safe": true,
+      "tagged": false,
+      "text": {
+        "mupdf_nul_characters": 0,
+        "mupdf_sha256": "85b63671e9f03fd0cebaf8f2960dc7b7129034d55e686d9de08b731804119878",
+        "pypdf_nul_characters": 46,
+        "pypdf_sha256": "472977812d43d9934481974d963b110556296f533fc85f8d28af07391f6bf865",
+        "replacement_characters": 0
+      }
+    },
+    "build-j": {
+      "action_counts": {
+        "/GoTo": 20,
+        "/URI": 5
+      },
+      "fonts": {
+        "all_embedded": true,
+        "semantic_projection": [
+          {
+            "embedded": true,
+            "normalized": "/CMEX10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMMI10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMMI5",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMMI6",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMMI7",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMMI9",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMMIB10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMR10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMR5",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMR7",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMSY10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMSY5",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/CMSY7",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": false
+          },
+          {
+            "embedded": true,
+            "normalized": "/EUFM10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/EUFM7",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/FandolHei-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": false
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMMono12-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMMono9-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRoman10-Bold-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRoman10-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRoman12-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRoman17-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRoman7-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRoman8-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRoman9-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/LMRomanCaps10-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/MSAM10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/MSBM10",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type1",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/NotoSansCJKsc-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Bold-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          },
+          {
+            "embedded": true,
+            "normalized": "/TeXGyreHeros-Regular-Identity-H",
+            "streams": [
+              "/FontFile3"
+            ],
+            "subtype": "/Type0",
+            "to_unicode": true
+          }
+        ],
+        "unique": 31
+      },
+      "identity": {
+        "bytes": 136702,
+        "path": "build/unit-034-final-j/unit-034-bab-4-limit-dan-kompletisasi-grup.pdf",
+        "sha256": "e69eef970ade092dae4d0e8740092ae8611010bca83ab190e3331e145e852272"
+      },
+      "metadata": {
+        "/Author": "Wen-Wei Li",
+        "/CreationDate": "D:20260827000000Z",
+        "/Creator": "LaTeX with hyperref",
+        "/Keywords": "aljabar, teori grup, limit proyektif, grup topologis, grup profinit, pelengkapan, bilangan bulat p-adik, modul Tate, id-ID",
+        "/Producer": "MiKTeX-dvipdfmx (20260404)",
+        "/Subject": "Terjemahan Bahasa Indonesia independen; Bagian 4.10 lengkap",
+        "/Title": "Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 34: Limit dan Pelengkapan Grup"
+      },
+      "named_destinations": {
+        "Doc-Start": 1,
+        "Item.1": 6,
+        "Item.2": 6,
+        "Item.3": 6,
+        "cite.0@FL14": 9,
+        "cite.0@Xiong": 8,
+        "equation.4.7": 4,
+        "page.1": 3,
+        "page.2": 4,
+        "page.3": 5,
+        "page.4": 6,
+        "page.5": 7,
+        "page.6": 8,
+        "page.7": 9,
+        "proof.1": 4,
+        "proof.2": 4,
+        "proof.3": 5,
+        "proof.4": 5,
+        "proof.5": 7,
+        "section*.1": 8,
+        "section*.2": 9,
+        "section*.3": 9,
+        "section.4.10": 3,
+        "theorem.4.10.1": 3,
+        "theorem.4.10.10": 7,
+        "theorem.4.10.11": 7,
+        "theorem.4.10.12": 7,
+        "theorem.4.10.13": 7,
+        "theorem.4.10.2": 4,
+        "theorem.4.10.3": 4,
+        "theorem.4.10.4": 5,
+        "theorem.4.10.5": 5,
+        "theorem.4.10.6": 5,
+        "theorem.4.10.7": 6,
+        "theorem.4.10.8": 6,
+        "theorem.4.10.9": 6,
+        "unit034-bibliography.0": 8,
+        "unit034-symbol-index.0": 9,
+        "unit034-term-index.0": 9
+      },
+      "outline": [
+        {
+          "depth": 0,
+          "page": 3,
+          "title": "4.10 Limit dan Pelengkapan Grup"
+        },
+        {
+          "depth": 0,
+          "page": 8,
+          "title": "Daftar Pustaka"
+        },
+        {
+          "depth": 0,
+          "page": 9,
+          "title": "Indeks Istilah"
+        },
+        {
+          "depth": 0,
+          "page": 9,
+          "title": "Indeks Simbol"
+        }
+      ],
+      "pages": 9,
+      "safe": true,
+      "tagged": false,
+      "text": {
+        "mupdf_nul_characters": 0,
+        "mupdf_sha256": "85b63671e9f03fd0cebaf8f2960dc7b7129034d55e686d9de08b731804119878",
+        "pypdf_nul_characters": 46,
+        "pypdf_sha256": "472977812d43d9934481974d963b110556296f533fc85f8d28af07391f6bf865",
+        "replacement_characters": 0
+      }
+    }
+  },
+  "final_build_log": {
+    "forbidden_diagnostics": {
+      "emergency_stop": 0,
+      "empty_link_target": 0,
+      "fatal_error": 0,
+      "latex_error": 0,
+      "missing_character": 0,
+      "overfull": 0,
+      "undefined_citations": 0,
+      "undefined_control_sequence": 0,
+      "undefined_references": 0
+    },
+    "identity": {
+      "bytes": 77357,
+      "path": "qa/UNIT_034_BUILD_FINAL.log",
+      "sha256": "bb4b9b6d7de341239eb137173b7dc774f4774298cccf534645cb2561ca9a779d"
+    },
+    "nonfatal_underfull_hboxes": 0,
+    "page_marker": 9,
+    "sanitization": {
+      "lane_root_placeholder_occurrences": 9,
+      "line_records_preserved": 2274,
+      "miktex_placeholder_occurrences": 253,
+      "profile_name_occurrences": 0,
+      "windows_user_path_occurrences": 0
+    },
+    "sanitized_log_reproduced_from_build_j": true,
+    "warning_counts": {
+      "braids": 1,
+      "fontspec_cjk": 6,
+      "latex_release": 3,
+      "xecjk": 1
+    }
+  },
+  "status": "PASS_WITH_WARNINGS"
+}
