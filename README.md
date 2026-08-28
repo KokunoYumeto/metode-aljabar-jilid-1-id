@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan serta Bab 1–5 lengkap telah diterjemahkan ke Bahasa Indonesia. Unit 001–035 telah dipublikasikan dan dibaca balik byte demi byte; Bab 5 lengkap telah dipromosikan, dibangun, diindeks dalam backend, dan lolos satu inspeksi reader gabungan 385 halaman. Batas Bab 5 sedang dipublikasikan.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan serta Bab 1–5 lengkap telah diterjemahkan ke Bahasa Indonesia dan dipublikasikan. Batas Bab 5 beserta checkpoint gabungan 385 halaman telah dibaca balik byte demi byte; Bab 6 sedang diterjemahkan dalam batch besar dan telah mencapai lebih dari 83%.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh checkpoint pembaca melalui Bab 5 (385 halaman; pendahuluan dan Bab 1–5 lengkap)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-through-bab-5-reader.pdf)
 
@@ -96,6 +96,12 @@ terisi/tidak-terisi yang ambigu. Receipt penerimaan bab dan reader ada di
 [`qa/UNIT_043_CHAPTER_5_ADMISSION_20260828.md`](qa/UNIT_043_CHAPTER_5_ADMISSION_20260828.md),
 dan receipt visual tunggal ada di
 [`qa/UNIT_043_COMBINED_READER_VISUAL_QA_20260828.md`](qa/UNIT_043_COMBINED_READER_VISUAL_QA_20260828.md).
+Checkpoint Bab 5 dipublikasikan pada commit isi
+`77272543e77851dc799215bebbbcefad9c3b05fc`; seluruh 71 path / 18.916.874 byte
+cocok dengan blob komit melalui pembacaan balik anonim. Inventaris ada di
+[`qa/PUBLICATION_GITHUB_UNIT_043_CONTENT_READBACK.json`](qa/PUBLICATION_GITHUB_UNIT_043_CONTENT_READBACK.json),
+dan receipt publikasi ada di
+[`qa/PUBLICATION_GITHUB_UNIT_043_20260828.md`](qa/PUBLICATION_GITHUB_UNIT_043_20260828.md).
 
 Checkpoint `0.6.0` menggabungkan satu sampul pembaca dan seluruh 228 halaman
 Unit 001-024: pendahuluan serta Bab 1, Bab 2, dan Bab 3 lengkap. Build kedua
