@@ -1,18 +1,18 @@
 {
-  "schema_version": 2,
-  "updated": "2026-08-25",
-  "state": "published_reader_first_v0_6_0_anonymous_full_byte_readback_pass",
-  "record_id": 22088395,
+  "schema_version": 3,
+  "updated": "2026-08-28",
+  "state": "published_reader_filename_primary_v0_7_0_anonymous_full_byte_readback_pass",
+  "record_id": 22149764,
   "concept_record_id": 22059759,
-  "doi": "10.5281/zenodo.22088395",
+  "doi": "10.5281/zenodo.22149764",
   "concept_doi": "10.5281/zenodo.22059759",
-  "public_url": "https://zenodo.org/records/22088395",
-  "version": "0.6.0",
+  "public_url": "https://zenodo.org/records/22149764",
+  "version": "0.7.0",
   "title": "Metode Aljabar, Jilid 1: Arsitektur Dasar — Edisi Bahasa Indonesia",
-  "edition_commit": "ebaf9ddba8665bcc0f8ebadf042efc258b4f3894",
-  "checkpoint_content_commit": "5641d5453c85cf007135603037db8805f7fa4f42",
+  "edition_commit": "ed841157313e5a57f8dad5c4983c9ae0d54fd54f",
+  "checkpoint_content_commit": "77272543e77851dc799215bebbbcefad9c3b05fc",
   "status": "partial_public_active",
-  "coverage": "Units 001-024: complete prelude and complete Li Chapters 1-3. Li Chapters 4-10, the admitted Duncan component, the six selected CRing spans, and the separately provenanced connective/mastery layer are absent.",
+  "coverage": "Complete prelude and complete Li Chapters 1-5; Chapters 6-10, Duncan, selected CRing spans, and connective/mastery material remain unfinished.",
   "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
   "creator_names": [
     "Li, Wen-Wei"
@@ -27,31 +27,62 @@
   "access_right": "open",
   "license_metadata": "other-open",
   "language": "ind",
-  "publication_date": "2026-08-25",
+  "publication_date": "2026-08-28",
   "file_count": 5,
-  "public_bytes_verified": 70182496,
+  "public_bytes_verified": 75149703,
+  "reader_filename_primary": true,
+  "api_array_order_is_not_a_presentation_contract": true,
   "anonymous_public_api_readback": true,
   "anonymous_all_file_sha256_readback": true,
-  "publication_receipt": "qa/PUBLICATION_ZENODO_0.6.0_20260825.md",
-  "publication_receipt_bytes": 2103,
-  "publication_receipt_sha256": "359a755687fff9bbd4b8640b92359e10815711f83175ae77b3deb8215cbeaef8",
-  "metadata_readback": "qa/ZENODO_0.6.0_METADATA_READBACK_20260825.json",
-  "payload_stage": "tmp/release-0.6.0-20260825/zenodo/",
-  "primary_file": "00-metode-aljabar-jilid-1-id-checkpoint-0.6.0-reader.pdf",
-  "primary_file_pages": 229,
-  "primary_file_bytes": 3658991,
-  "primary_file_sha256": "a147c05617e61a5d22a0038f2b5b995d668f387f9531514261d273fe9b6618c5",
-  "source_backend_file": "10-metode-aljabar-jilid-1-id-source-backend-0.6.0.zip",
-  "source_backend_bytes": 66517285,
-  "source_backend_sha256": "7bf99ece03a79431308873830bc8f4a64e679f9ce64b62101cbecd6740ca7f8f",
-  "licenses_file_bytes": 1545,
-  "licenses_file_sha256": "5e09add2b65bd432824f52c5b581c7349db274ef89066fb189f05fd31ce0af29",
-  "manifest_sha256": "3de497301d600047acb8324c0022e28e99b5b66709fff9fa4f25877a4b3fc78d",
-  "checksums_sha256": "e7498edf386a6f7fac090c4fcd4109bc7c58b4c8cd433a4a67f753b79bf3bb49",
-  "previous_public_record_id": 22071178,
-  "previous_public_doi": "10.5281/zenodo.22071178",
-  "previous_public_version": "0.5.0",
-  "figshare_article_id": 33314766,
-  "figshare_route": "Retain the existing item only. Because Figshare cannot represent the exact mixed component rights, any update must be a CC0 metadata/link item pointing to Zenodo DOI 10.5281/zenodo.22088395, never a false-license byte mirror.",
-  "next_action": "Admit Chapter 4 Unit 025, then Units 026-033, strictly in source order. Update this same Zenodo concept only at a later coherent verified checkpoint; never create a duplicate concept."
+  "publication_receipt": {
+    "path": "qa/PUBLICATION_ZENODO_0.7.0_20260828.md",
+    "bytes": 1734,
+    "sha256": "4e03fdfd5faf09f6541b5b7692846c25bac131e9547885a3855d044cd082f4e4"
+  },
+  "metadata_and_file_readback": {
+    "path": "qa/ZENODO_0.7.0_PUBLIC_READBACK_20260828.json",
+    "bytes": 3530,
+    "sha256": "c4614ffd8e527427abd48a5da437bf9724c68f9e88a485eae2b03c311212f0df"
+  },
+  "files": [
+    {
+      "name": "00-metode-aljabar-jilid-1-id-checkpoint-through-bab-5-reader.pdf",
+      "bytes": 6133398,
+      "sha256": "44f866552abbd52dfc17ed942fb291c9b58457d7452c409ec7808a48a3318bc4",
+      "file_id": "277717ae-c598-409f-8f0e-869129bc6a09",
+      "anonymous_http_status": 200
+    },
+    {
+      "name": "10-metode-aljabar-jilid-1-id-source-backend-0.7.0.zip",
+      "bytes": 69008894,
+      "sha256": "af7094287bb37d5f40f10a08798804df798ec2bea97cdd7eba89c684d82e5483",
+      "file_id": "50a57a3a-d82c-46e2-b6c6-4584bf05e8fe",
+      "anonymous_http_status": 200
+    },
+    {
+      "name": "20-LICENSES.md",
+      "bytes": 2179,
+      "sha256": "2ed0c233653830f5d939dfafd7a32d4adbe4e2ef8a3b265c0760ccedb07f2554",
+      "file_id": "b2b31185-d043-4744-8d87-8985335986c3",
+      "anonymous_http_status": 200
+    },
+    {
+      "name": "30-MANIFEST.json",
+      "bytes": 4817,
+      "sha256": "ffdc26097c286f3414b3caff02d3e53ef2611b8d0b6fad617df434a86709c688",
+      "file_id": "098b2a33-a459-41ff-b938-59002952a7cd",
+      "anonymous_http_status": 200
+    },
+    {
+      "name": "40-SHA256SUMS.txt",
+      "bytes": 415,
+      "sha256": "dc63c9ca7dd5326562a4885f093ec860f0fc19ea968723ab1f885c87bc44483c",
+      "file_id": "091108fe-cea6-4480-a949-821f8ce7285d",
+      "anonymous_http_status": 200
+    }
+  ],
+  "previous_public_record_id": 22088395,
+  "previous_public_doi": "10.5281/zenodo.22088395",
+  "previous_public_version": "0.6.0",
+  "next_action": "Promote the passing complete Chapter 6 candidate, merge its terminology deltas once, generate one chapter-level backend and reader, run one bounded deterministic gate, publish/read back, then continue complete Chapter 7. Translation remains dominant."
 }

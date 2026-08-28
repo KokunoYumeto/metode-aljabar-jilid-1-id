@@ -1506,3 +1506,21 @@ order, into one complete 1,382-record Chapter 5 candidate. The production lane
 will promote/build/index/publish that chapter once, rather than reproduce the
 retired microscopic per-unit cadence. This changes cadence, not mathematical
 scope, rights, authority, or the full O013 terminal condition.
+
+## D094 — 2026-08-28 — Complete Chapter 5 preserved in existing Zenodo lineage
+
+Publish complete Chapter 5 once at GitHub content commit `77272543e77851dc799215bebbbcefad9c3b05fc` and
+receipt commit `ed841157313e5a57f8dad5c4983c9ae0d54fd54f`, then preserve the 385-page reader and compact
+resumable source/backend package as Zenodo 0.7.0 at DOI
+`10.5281/zenodo.22149764` under the existing concept. Anonymous readback proves
+all five files / 75,149,703 bytes. Zenodo's API array order is not presentation
+metadata; the unique `00-` filename makes the reader filename-primary. Advance
+to complete Chapter 6 without reopening Chapter 5 QA.
+
+## D095 — 2026-08-28 — Chapter 6 remains one production boundary
+
+The four contiguous Chapter 6 translations assemble to one 1,994-record
+candidate. A real duplicate-paragraph/math-token assembly defect was corrected
+once; all four segment checkers and the whole-chapter closure now pass. Promote,
+backend-index, build, visually inspect, and publish Chapter 6 once rather than
+returning to microscopic unit ceremonies.

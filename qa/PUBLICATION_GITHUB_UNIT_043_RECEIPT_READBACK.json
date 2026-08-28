@@ -1,0 +1,66 @@
+{
+  "schema_version": "2.0.0",
+  "unit": "043",
+  "boundary": "receipt",
+  "repository": "https://github.com/KokunoYumeto/metode-aljabar-jilid-1-id",
+  "branch": "main",
+  "commit": "ed841157313e5a57f8dad5c4983c9ae0d54fd54f",
+  "tree": "078c3c705d43c1380248cf66c9f0a70135bc0674",
+  "parent": "77272543e77851dc799215bebbbcefad9c3b05fc",
+  "expected_manifest": {
+    "schema_version": "1.0.0",
+    "canonical_sha256": "ca3bc957b8536098fc02d96b477deea0150758b551e4795f1b6f789590a5de8c",
+    "path_count": 3,
+    "total_bytes": 138729
+  },
+  "remote_branch_ref_endpoint": "https://github.com/KokunoYumeto/metode-aljabar-jilid-1-id.git",
+  "remote_branch_ref_method": "anonymous git ls-remote with credential helper, prompts, extra headers, and proxies disabled",
+  "remote_branch_before": "ed841157313e5a57f8dad5c4983c9ae0d54fd54f",
+  "remote_branch_after": "ed841157313e5a57f8dad5c4983c9ae0d54fd54f",
+  "remote_branch_matches_commit": true,
+  "rest_api_used": false,
+  "anonymous": true,
+  "authorization_header_used": false,
+  "proxy_authorization_header_used": false,
+  "ambient_proxy_used": false,
+  "redirects_followed": 0,
+  "deterministic_inventory": true,
+  "path_fetch_count": 3,
+  "total_bytes_fetched": 138729,
+  "all_match": true,
+  "records": [
+    {
+      "path": "README.md",
+      "bytes": 86785,
+      "sha256": "2e3def3615be594ae496b1b548a579d4b8ffdab29e239267831bd63764dfefe2",
+      "http_status": 200,
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/ed841157313e5a57f8dad5c4983c9ae0d54fd54f/README.md",
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/ed841157313e5a57f8dad5c4983c9ae0d54fd54f/README.md",
+      "redirects_followed": 0,
+      "matches_expected_manifest": true,
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/PUBLICATION_GITHUB_UNIT_043_20260828.md",
+      "bytes": 2061,
+      "sha256": "8a51edf1740614b08efe97087efef5fecc2912046d26915d9ff7125bb68bfeb5",
+      "http_status": 200,
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/ed841157313e5a57f8dad5c4983c9ae0d54fd54f/qa/PUBLICATION_GITHUB_UNIT_043_20260828.md",
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/ed841157313e5a57f8dad5c4983c9ae0d54fd54f/qa/PUBLICATION_GITHUB_UNIT_043_20260828.md",
+      "redirects_followed": 0,
+      "matches_expected_manifest": true,
+      "matches_committed_blob": true
+    },
+    {
+      "path": "qa/PUBLICATION_GITHUB_UNIT_043_CONTENT_READBACK.json",
+      "bytes": 49883,
+      "sha256": "e7c9d370bd82d2f24acb8af6a20573c66c4cd72b80a2cf2d5c836070f24d307d",
+      "http_status": 200,
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/ed841157313e5a57f8dad5c4983c9ae0d54fd54f/qa/PUBLICATION_GITHUB_UNIT_043_CONTENT_READBACK.json",
+      "final_url": "https://raw.githubusercontent.com/KokunoYumeto/metode-aljabar-jilid-1-id/ed841157313e5a57f8dad5c4983c9ae0d54fd54f/qa/PUBLICATION_GITHUB_UNIT_043_CONTENT_READBACK.json",
+      "redirects_followed": 0,
+      "matches_expected_manifest": true,
+      "matches_committed_blob": true
+    }
+  ]
+}

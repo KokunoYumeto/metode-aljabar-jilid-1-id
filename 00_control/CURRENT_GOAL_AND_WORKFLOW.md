@@ -256,3 +256,21 @@ than eight unit ceremonies. Chapter 6 lines 1–337 are already translated in
 isolation; continue from line 338 in parallel. The complete finite terminal
 condition remains all Li, Duncan, six CRing spans, and separate connective and
 mastery material built, indexed, and publicly preserved.
+
+## Live cursor after public complete Chapter 5 — 2026-08-28
+
+Complete Chapter 5 is public at content commit `77272543e77851dc799215bebbbcefad9c3b05fc` and receipt
+commit `ed841157313e5a57f8dad5c4983c9ae0d54fd54f`. The 385-page combined reader is 6,133,398 bytes,
+SHA-256 `44f866552abbd52dfc17ed942fb291c9b58457d7452c409ec7808a48a3318bc4`.
+Zenodo version 0.7.0 is public in the existing concept at DOI
+`10.5281/zenodo.22149764`; all five files / 75,149,703 bytes passed anonymous
+SHA-256 readback.
+
+Complete Chapter 6 is now a passing 1,994-record isolated candidate at
+`build/chapter6-batch-candidate/chapter6-complete-id.tex`, 193,563 bytes,
+SHA-256 `15c09af18eeab6ce1a4c5a4cb69b1b3a42bc2422b015f21f77ccfbb3c94f7e14`.
+All four segment checkers and the whole-chapter closure checker pass. Promote,
+index, build, and publish it as one chapter boundary. Chapters 7-9 are being
+translated in parallel. The terminal condition remains all Li, complete
+Duncan, six selected repaired CRing spans, and the separate connective/mastery
+layer; no intermediate chapter completes the goal.

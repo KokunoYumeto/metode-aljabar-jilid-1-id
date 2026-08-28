@@ -31,53 +31,70 @@
     "result": "PASS; 7 roots / 135 pages / byte-identical PDFs / pixel-identical Poppler replays; keep two empty lin_alg.tex TODO subsections transparent and excluded assignments absent"
   },
   "current_boundary": {
-    "source": "chapter4.tex:1745-1898",
-    "source_span_bytes": 14398,
-    "source_span_sha256": "f841860520d4ab35dc82354f288bc295c4681f9faffc8f5a645c92a3af1dd287",
-    "source_mapping": "authority lines 1745-1898 map to 154 target records at canonical lines 1740-1893",
-    "candidate": "build/unit-035-candidate/chapter4-groups-in-categories-and-exercises-id.tex",
-    "candidate_bytes": 18089,
-    "candidate_sha256": "5d9bf6e5c9c17c83821f1bba63078f4d28e3836428f4557e0727ee5b1046c2ca",
-    "target": "repo/source/chapter4.tex:1740-1893",
-    "target_full_bytes": 193626,
-    "target_full_sha256": "2b682d67292e4c439ccc9f6d46f72d3d0eb7cb5bf8b3a3a5999210c45ef547c5",
-    "backend": "backend/data/unit-035-bab-4-grup-dalam-kategori-dan-latihan.json",
-    "backend_bytes": 239379,
-    "backend_sha256": "372a7dfa2ffc919b7fe5859b020c87f4bd143669331aeed1c0c270c65e9f02a7",
-    "backend_validation": "qa/unit-035-evidence/backend-validation.json",
-    "backend_validation_bytes": 2495,
-    "backend_validation_sha256": "0b5699f7e7f7d576c80379781ec809f7d7f4a9cea008d3e999e0a87925922c88",
-    "admission_receipt": "qa/UNIT_035_ADMISSION_20260828.md",
-    "admission_receipt_bytes": 4373,
-    "admission_receipt_sha256": "8edc8100d11bda120408c8209d5e4bc97de07bac9d744957fc70db4ab7d7ef82",
-    "visual_qa": "all 9 pages inspected at once; eight diagrams, complete 26-exercise/36-item/five-hint block, embedded fonts, and safe PDF structure pass; the one wide diagram remains inside the page",
-    "corrections": [
-      "O013-LI-U035-COR-001 corrects the swapped subgroup/coset family bounds in the Neumann lemma exercise"
-    ],
-    "component_rights": "principal text/translation CC BY 4.0; AJbook fragment and unused Lanzhou image CC BY-SA 3.0; Noto OFL 1.1; Fandol 0.3 GPLv3 with font exception",
-    "content_commit": "d50b8944116b4f40eef7bcd487e0125226b412b8",
-    "content_tree": "dbb2b9dc64b5e6191cffd44d846a9acdba3f8445",
-    "content_readback_path_fetches": 39,
-    "content_readback_bytes": 4306859,
-    "content_readback_inventory": "qa/PUBLICATION_GITHUB_UNIT_035_CONTENT_READBACK.json",
-    "content_readback_inventory_bytes": 27026,
-    "content_readback_inventory_sha256": "53cd5467adb34115a20ebcd7af82c269244ccead44652b5944997e761fa7df04",
-    "receipt": "qa/PUBLICATION_GITHUB_UNIT_035_20260828.md",
-    "receipt_bytes": 1744,
-    "receipt_sha256": "a73369a4f3fb0c2dd4c002fa5b948aff015caff78b74342d46a526cdfa551d92",
-    "receipt_commit": "0644fe36d85ceeef6a2f623a4a6831fba8f9ff94",
-    "receipt_tree": "9eadd11dc1f57e7b6be0e02b66bb858b62653d6f",
-    "receipt_readback_files": 3,
-    "receipt_readback_bytes": 113817,
-    "receipt_readback_inventory": "qa/PUBLICATION_GITHUB_UNIT_035_RECEIPT_READBACK.json",
-    "receipt_readback_inventory_bytes": 3187,
-    "receipt_readback_inventory_sha256": "9eb807244550abd1f0c1ca05fb4684e5a102edd15b299f0c92ef0bbb2e007a0d",
-    "state": "public_readback_passed; complete Chapter 4",
-    "unit": "unit-035-bab-4-grup-dalam-kategori-dan-latihan",
-    "pdf": "artifacts/unit-035-bab-4-grup-dalam-kategori-dan-latihan-id.pdf",
-    "pdf_pages": 9,
-    "pdf_bytes": 135943,
-    "pdf_sha256": "1cf97dd523ae1a8c5185c4b22a8e6b0dab6e7514ab5387c34959c417f4e35442",
+    "id": "unit-043-complete-chapter-5",
+    "component": "li-volume-1-complete",
+    "source": "chapter5.tex:1-1382",
+    "authority_records": 1382,
+    "authority_bytes": 122998,
+    "authority_sha256": "e747d16b2ebacc95cf1c34da4bc8b7775a5ed8787b6d1edc2cc8e303535ac143",
+    "target": {
+      "path": "repo/source/chapter5.tex",
+      "bytes": 156081,
+      "sha256": "33a1c65ce1ddea061e02d32a9a250d6db4444eb2251d5b721c8501f95a7f0e3c"
+    },
+    "chapter_reader": {
+      "path": "artifacts/unit-043-bab-5-pengantar-teori-gelanggang-id.pdf",
+      "bytes": 714227,
+      "sha256": "08fc765af88eea5bb1cb2181223c4217cbeee17a5ec28621cb79193491196762"
+    },
+    "combined_reader_through_chapter_5": {
+      "path": "output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-through-bab-5-reader.pdf",
+      "bytes": 6133398,
+      "sha256": "44f866552abbd52dfc17ed942fb291c9b58457d7452c409ec7808a48a3318bc4",
+      "pages": 385
+    },
+    "backend": {
+      "path": "backend/data/unit-043-bab-5-pengantar-teori-gelanggang.json",
+      "bytes": 226984,
+      "sha256": "50fe8288e70ae62f378a5f4091f8e5d337c450db9fe3fd2c531abd0bfeab6061"
+    },
+    "backend_validation": {
+      "path": "qa/unit-043-evidence/backend-validation.json",
+      "bytes": 3131,
+      "sha256": "22bced23609b160b30c3c6af1b67d3cca48a4d381e0406f392c80b015b854717"
+    },
+    "admission_receipt": {
+      "path": "qa/UNIT_043_CHAPTER_5_ADMISSION_20260828.md",
+      "bytes": 5521,
+      "sha256": "29c56a6148c480553639d5e3304afb2a79809a410d73c8c8770085b484b33f87"
+    },
+    "content_commit": "77272543e77851dc799215bebbbcefad9c3b05fc",
+    "content_tree": "f7505b3dceb651adce89f6c0637e38b4df002e05",
+    "content_readback_paths": 71,
+    "content_readback_bytes": 18916874,
+    "receipt_commit": "ed841157313e5a57f8dad5c4983c9ae0d54fd54f",
+    "receipt_tree": "078c3c705d43c1380248cf66c9f0a70135bc0674",
+    "receipt_readback": {
+      "path": "qa/PUBLICATION_GITHUB_UNIT_043_RECEIPT_READBACK.json",
+      "bytes": 3187,
+      "sha256": "564f21b04c12c95a7853753d2af67f95d93c9ff9c300a9286cafbd0a47a9d351"
+    },
+    "zenodo_record_id": 22149764,
+    "zenodo_doi": "10.5281/zenodo.22149764",
+    "zenodo_concept_doi": "10.5281/zenodo.22059759",
+    "zenodo_public_bytes": 75149703,
+    "zenodo_receipt": {
+      "path": "qa/PUBLICATION_ZENODO_0.7.0_20260828.md",
+      "bytes": 1734,
+      "sha256": "4e03fdfd5faf09f6541b5b7692846c25bac131e9547885a3855d044cd082f4e4"
+    },
+    "zenodo_readback": {
+      "path": "qa/ZENODO_0.7.0_PUBLIC_READBACK_20260828.json",
+      "bytes": 3530,
+      "sha256": "c4614ffd8e527427abd48a5da437bf9724c68f9e88a485eae2b03c311212f0df"
+    },
+    "state": "public_github_and_zenodo_anonymous_full_byte_readback_passed",
+    "coverage": "complete prelude and complete Li Chapters 1-5",
     "model": "OpenAI Codex gpt-5.6-sol, Ultra"
   },
   "previous_public_unit_023": {
@@ -159,26 +176,31 @@
     "candidate_rule": "Unit 024 is complete and public. Its immediate navigation repair is pixel-neutral and closes the sole index destination. Content/correction commits and receipt were anonymously read back."
   },
   "next_cursor": {
-    "immediate_action": "Promote the already-passing complete Chapter 5 candidate in one batch, merge its 22-row terminology delta, generate one chapter-level reader/backend, run one bounded deterministic gate, publish/read back, and continue Chapter 6 from the already-translated lines 1-337 candidate. The full Li/Duncan/CRing/connective-mastery goal remains active.",
-    "coverage": "complete prelude and Chapters 1-4 public; complete Chapter 5 translated and awaiting one chapter-level production boundary; Chapter 6 lines 1-337 translated in isolation",
-    "next_admission_unit": "chapter-5-complete-bab-5-dasar-teori-gelanggang",
-    "next_admission_source": "chapter5.tex:1-1382",
-    "next_authority_bytes": 122998,
-    "next_authority_sha256": "e747d16b2ebacc95cf1c34da4bc8b7775a5ed8787b6d1edc2cc8e303535ac143",
-    "next_candidate": "build/unit-043-candidate/chapter5-complete-id.tex",
-    "next_candidate_bytes": 156081,
-    "next_candidate_sha256": "33a1c65ce1ddea061e02d32a9a250d6db4444eb2251d5b721c8501f95a7f0e3c",
-    "next_candidate_checker": "build/unit-043-candidate/check_chapter5_complete.py",
-    "next_candidate_checker_bytes": 8694,
-    "next_candidate_checker_sha256": "25bc78ea79586e33531820ebdbfed426af1451cc7750cdb59dc0a4a8143ab9f9",
-    "cursor_after_next_admission": "chapter6.tex:1; isolated translation already covers lines 1-337",
-    "post_li_component": "complete admitted Duncan CC BY 4.0 repository, six exact repaired CRing GFDL spans, and separate connective/mastery layer; Etingof reference-only"
+    "immediate_action": "Promote the passing complete Chapter 6 candidate, merge its terminology deltas once, generate one chapter-level backend and reader, run one bounded deterministic gate, publish/read back, then continue complete Chapter 7. Translation remains dominant.",
+    "next_admission_unit": "chapter-6-complete-modules",
+    "next_admission_source": "chapter6.tex:1-1994",
+    "next_authority_bytes": 160950,
+    "next_authority_sha256": "c825f51dc19c254c89a7ede05723b62d6cd2b18cc6ac8c78d9ea00c3b8434e49",
+    "next_candidate": {
+      "path": "build/chapter6-batch-candidate/chapter6-complete-id.tex",
+      "bytes": 193563,
+      "sha256": "15c09af18eeab6ce1a4c5a4cb69b1b3a42bc2422b015f21f77ccfbb3c94f7e14"
+    },
+    "next_candidate_checker": {
+      "path": "build/chapter6-batch-candidate/check_chapter6_complete.py",
+      "bytes": 4866,
+      "sha256": "d19acd54cd5bb96abe66fe678c8d5a8070fb6de5d681b8a81d6bc0c9c5001a86"
+    },
+    "candidate_result": "PASS; all four segment checkers and whole-chapter closure pass; 1994 records, 12 sections, 98 labels, 224 references, 6 citations, 70 indexes, 132 item tokens",
+    "cursor_after_next_admission": "chapter7.tex:1",
+    "parallel_translation": "complete Chapters 7-9 are in isolated chapter-level production",
+    "terminal_scope": "remaining Li Chapters 7-10, complete Duncan, six selected repaired CRing spans, and separate connective/mastery layer"
   },
   "publication_resume": {
-    "github": "Unit 035 completes public Chapter 4. Content commit d50b8944116b4f40eef7bcd487e0125226b412b8 / tree dbb2b9dc64b5e6191cffd44d846a9acdba3f8445 passed 39-path / 4306859-byte anonymous readback. Receipt commit 0644fe36d85ceeef6a2f623a4a6831fba8f9ff94 / tree 9eadd11dc1f57e7b6be0e02b66bb858b62653d6f passed 3-path / 113817-byte anonymous readback. Do not duplicate the repository or publication lineage.",
-    "zenodo": "Version 0.6.0 is public at DOI 10.5281/zenodo.22088395 under concept DOI 10.5281/zenodo.22059759. All 5 files / 70182496 bytes passed anonymous SHA-256 readback; title, version, creator, single organization contributor, license metadata, language, access, date, and related identifiers passed anonymous metadata readback. Never create a duplicate concept.",
-    "figshare": "Retain existing private draft article 33314766. The API token returns InactiveAccount, but the signed-in browser exposes the draft. Its license selector cannot represent mixed component rights; update this same item only as a CC0 metadata/link record to Zenodo 0.6.0, then publish/read back. Never create a duplicate work item.",
-    "controls_readback": "The last separately published controls snapshot remains commit 85b9adef1d068218f1f3f80ebb61a9dbc55cc922 (tree f8a2cbb1822447e2e9de804bd7803b1bfa648926), which passed anonymous byte readback for nine paths / 406221 bytes. Live durable controls now bind the later verified Unit 030 receipt boundary and direct the next action to Unit 031 at chapter4.tex:936-1107."
+    "github": "Complete Chapter 5 content commit 77272543e77851dc799215bebbbcefad9c3b05fc and receipt commit ed841157313e5a57f8dad5c4983c9ae0d54fd54f passed anonymous byte readback. Do not duplicate the repository or lineage.",
+    "zenodo": "Version 0.7.0 is public at DOI 10.5281/zenodo.22149764 under concept DOI 10.5281/zenodo.22059759. All five files / 75149703 bytes passed anonymous SHA-256 readback. Do not create a duplicate concept.",
+    "figshare": "Retain the existing item only; mixed component rights require the established metadata/link route rather than false-license byte mirroring.",
+    "next": "Promote and publish complete Chapter 6 as one boundary; complete Chapter 7 translation continues in parallel."
   },
   "terminal_condition": "Continue complete Li Volume 1, then translate Alexander Duncan's complete pinned CC BY 4.0 repository, then repair and translate only the six selected CRing spans, and author the separately provenanced connective/mastery layer; keep Etingof reference-only, preserve separate component rights, and publish verified nonduplicative boundaries."
 }

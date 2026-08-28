@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": 22149764,
+  "doi": "10.5281/zenodo.22149764",
+  "concept_doi": "10.5281/zenodo.22059759",
+  "version": "0.7.0",
+  "public_url": "https://zenodo.org/records/22149764",
+  "anonymous": true,
+  "access_right": "open",
+  "reader_filename_primary": true,
+  "api_array_order_is_not_used_as_presentation_order": true,
+  "file_count": 5,
+  "total_bytes": 75149703,
+  "files": [
+    {
+      "name": "00-metode-aljabar-jilid-1-id-checkpoint-through-bab-5-reader.pdf",
+      "bytes": 6133398,
+      "sha256": "44f866552abbd52dfc17ed942fb291c9b58457d7452c409ec7808a48a3318bc4",
+      "file_id": "277717ae-c598-409f-8f0e-869129bc6a09",
+      "anonymous_http_status": 200
+    },
+    {
+      "name": "10-metode-aljabar-jilid-1-id-source-backend-0.7.0.zip",
+      "bytes": 69008894,
+      "sha256": "af7094287bb37d5f40f10a08798804df798ec2bea97cdd7eba89c684d82e5483",
+      "file_id": "50a57a3a-d82c-46e2-b6c6-4584bf05e8fe",
+      "anonymous_http_status": 200
+    },
+    {
+      "name": "20-LICENSES.md",
+      "bytes": 2179,
+      "sha256": "2ed0c233653830f5d939dfafd7a32d4adbe4e2ef8a3b265c0760ccedb07f2554",
+      "file_id": "b2b31185-d043-4744-8d87-8985335986c3",
+      "anonymous_http_status": 200
+    },
+    {
+      "name": "30-MANIFEST.json",
+      "bytes": 4817,
+      "sha256": "ffdc26097c286f3414b3caff02d3e53ef2611b8d0b6fad617df434a86709c688",
+      "file_id": "098b2a33-a459-41ff-b938-59002952a7cd",
+      "anonymous_http_status": 200
+    },
+    {
+      "name": "40-SHA256SUMS.txt",
+      "bytes": 415,
+      "sha256": "dc63c9ca7dd5326562a4885f093ec860f0fc19ea968723ab1f885c87bc44483c",
+      "file_id": "091108fe-cea6-4480-a949-821f8ce7285d",
+      "anonymous_http_status": 200
+    }
+  ],
+  "metadata": {
+    "title": "Metode Aljabar, Jilid 1: Arsitektur Dasar — Edisi Bahasa Indonesia",
+    "version": "0.7.0",
+    "publication_date": "2026-08-28",
+    "access_right": "open",
+    "language": "ind",
+    "license": "other-open",
+    "creators": [
+      {
+        "name": "Li, Wen-Wei",
+        "affiliation": null
+      }
+    ],
+    "contributors": [
+      {
+        "name": "TTP",
+        "affiliation": null,
+        "type": "ProjectMember"
+      }
+    ],
+    "keywords": [
+      "aljabar",
+      "teori himpunan",
+      "teori kategori",
+      "kategori monoidal",
+      "teori grup",
+      "teori gelanggang",
+      "Bahasa Indonesia",
+      "buku teks terbuka",
+      "graduate algebra",
+      "matematika"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/wenweili/AlJabr-1/commit/c4f7a01f68f5f407906b4b970640cddbbad85f6b",
+        "relation": "isDerivedFrom",
+        "scheme": "url"
+      },
+      {
+        "identifier": "978-7-04-050725-6",
+        "relation": "isDerivedFrom",
+        "scheme": "isbn"
+      },
+      {
+        "identifier": "https://github.com/KokunoYumeto/metode-aljabar-jilid-1-id/commit/ed841157313e5a57f8dad5c4983c9ae0d54fd54f",
+        "relation": "isSupplementTo",
+        "scheme": "url"
+      }
+    ],
+    "notes": "Status: parsial publik aktif. Unit 001-043 mencakup pendahuluan serta Bab 1-5 lengkap. Bab 6-10 Li dan komponen Duncan/CRing/konektif-penguasaan belum termasuk. Paket multi-lisensi; 20-LICENSES.md dan RIGHTS_COMPONENTS.csv mengendalikan hak setiap komponen.",
+    "resource_type": {
+      "title": "Book",
+      "type": "publication",
+      "subtype": "book"
+    }
+  },
+  "result": "PASS"
+}
