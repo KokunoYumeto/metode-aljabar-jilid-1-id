@@ -1,0 +1,62 @@
+
+\begin{Exercises}
+	\item Buktikan bahwa jika setiap unsur $x$ dalam gelanggang $R$ memenuhi $x^2=x$, maka $R$ komutatif. Coba pula kasus $x^3=x$.
+	\item Buktikan bahwa submedan prima dari suatu gelanggang pembagian selalu termuat dalam pusatnya.
+	\item Untuk sebarang medan $\Bbbk$ dan $d \in \Z_{\geq 1}$, banyaknya unsur dalam grup perkalian $\Bbbk^\times$ yang memenuhi $\text{ord}(z)=d$ tidak melebihi $\varphi(d)$, dengan $\varphi$ fungsi Euler.
+	\begin{hint} Gunakan teori polinomial siklotomik dalam bukti Teorema \ref{prop:Wedderburn-little-thm}: jika $\text{ord}(z)=d$, maka $\Phi_d(z)=0$.\end{hint}
+	\item Dengan meneruskan soal sebelumnya, buktikan bahwa setiap subgrup hingga dari $\Bbbk^\times$ merupakan grup siklik.
+		\begin{hint}
+		Untuk subgrup $H$ berorde $n$, buktikan ketaksamaan suku demi suku
+			\[ n = \sum_{d \mid n} |\{ x \in H : \text{ord}(x)=d \}| \leq \sum_{d \mid n} \varphi(d) \]
+		dengan $\varphi$ fungsi Euler, lalu gunakan rumus teori bilangan $\sum_{d \mid n} \varphi(d) = n$.
+		\end{hint}
+	\item Misalkan $D$ suatu gelanggang pembagian berkarakteristik $p>0$. Buktikan bahwa setiap subgrup hingga $H$ dari $D^\times$ merupakan grup siklik; berikan suatu contoh tandingan dalam karakteristik $0$.
+	\begin{hint}
+		Misalkan submedan prima dari $D$ adalah $\F_p = \Z/p\Z$. Buktikan bahwa $\left\{ \sum_{h \in H} a_h h : \forall h \in H, \; a_h \in \F_p \right\}$ membentuk subgelanggang hingga dari $D$, sehingga merupakan medan; contoh tandingan dapat dicari dalam gelanggang kuaternion $\mathbb{H}$ pada Contoh \ref{eg:Hamilton-quaternion}.
+	\end{hint}
+	\item Cobalah mendefinisikan lokalisasi untuk gelanggang komutatif $R$ tanpa unsur identitas: misalkan $S$ tak kosong dan tertutup terhadap perkalian. Gelanggang $R[S^{-1}]$ yang dihasilkan selalu mempunyai unsur identitas $1 = [t,t]$ (pilih sebarang $t \in S$), homomorfisme lokalisasinya adalah $r \mapsto [rt,t]$, dan invers dari $s \in S$ dalam $R[S^{-1}]$ adalah $[t,st]$.
+	\item Lengkapi argumen dalam Contoh \ref{eg:Prüfer}, dan buktikan bahwa $\prod_p \Z_p \rightiso \hat{\Z}$ merupakan homomorfisme grup topologis.
+	\item Nyatakan sifat universal yang dipenuhi oleh konstruksi gelanggang pecahan total $R \to \text{Frac}(R)$.
+	\item Diberikan poset lokal berhingga $(P, \leq)$, buktikan bahwa untuk $k=1,2,\ldots$, unsur $\zeta \in I(P, \leq)$ memenuhi
+		\begin{align*}
+			\zeta^k(x,y) & = \sum_{x = x_0 \leq \cdots \leq x_k = y} 1, \\
+			(\zeta - 1)^k(x,y) & = \sum_{x = x_0 < \cdots < x_k = y} 1,
+		\end{align*}
+		dengan $1$ menyatakan unsur identitas $I(P,\leq)$, yakni fungsi $\delta$ yang didefinisikan dalam \S\ref{sec:Mobius}.
+	\item Tambahkan batas bawah $\hat{0}$ dan batas atas $\hat{1}$ pada poset hingga $(P,\leq)$ yang diberikan, dan nyatakan poset yang dihasilkan sebagai $\hat{P}$. Tuliskan
+		\[ c_i := \left| \{ x_0, \ldots, x_i \in \hat{P} : \hat{0} = x_0 < \cdots < x_i = \hat{1} \} \right|. \]
+		Buktikan bahwa $\mu(\hat{0}, \hat{1}) = \sum_{i \geq 0} (-1)^i c_i$, dengan $\mu := \mu_{\hat{P}}$. Dapatkah Anda memberikan interpretasi topologis bagi $\mu(\hat{0}, \hat{1})$? (Lihat \cite[\S 3.8]{Stan09})
+		\begin{hint}
+			$\mu(\hat{0}, \hat{1}) = (1 + (\zeta - 1))^{-1}$.
+		\end{hint}
+	\item Dengan meneruskan soal sebelumnya, untuk $n \geq 2$ misalkan $Z(P,n)$ adalah banyaknya rantai $x_1 \leq \cdots \leq x_{n-1}$ dalam $P$. Buktikan bahwa $Z(P,n) = \sum_{i=2}^n c_i \binom{n-2}{i-2}$, sehingga definisi $Z(P,s)$ dapat diperluas ke sebarang $s \in \CC$. Buktikan bahwa $Z(P,1) = \mu(\hat{0},\hat{1}) + 1 = \sum_{i \geq 2} (-1)^i c_i$. \begin{hint} Kita mempunyai $\binom{-1}{k} = (-1)^k$. \end{hint}
+	\item Tinjau himpunan polinomial ``berpangkat pecahan'' $R := \Bbbk[X, X^{1/2}, \ldots, X^{1/2^n}, \ldots]$ di atas medan $\Bbbk$, dengan struktur gelanggang yang jelas. Buktikan bahwa $R^\times = \Bbbk^\times$, dan bahwa $X \in R$ tidak dapat difaktorkan sebagai hasil kali unsur-unsur tak tereduksi.
+	\item Buktikan bahwa suatu polinomial $P \in \Q[X]$ memenuhi $P(\Z) \subset \Z$ jika dan hanya jika $P$ berbentuk $\sum_{k=0}^n a_k \binom{X}{k}$, dengan $a_0, \ldots, a_n \in \Z$ dan $\binom{X}{k} = X(X-1) \cdots (X-k+1)/k!$; polinomial semacam itu disebut polinomial bernilai bulat. \begin{hint} Gunakan sifat segitiga Pascal dan lakukan rekursi pada $n := \deg P$. \end{hint}
+	\item Untuk polinomial homogen berderajat $m$, $f \in R[X_1, \ldots, X_n]$, di atas gelanggang komutatif $R$, buktikan bahwa turunan parsial formalnya memenuhi identitas Euler
+		\[ \sum_{i=1}^n X_i \cdot \frac{\partial f}{\partial X_i} = m f. \]
+		Cobalah memberikan interpretasi geometri diferensial ketika $R=\R$. \begin{hint} Jika $R=\R$, diferensialkan aksi penskalaan $\R^\times \times \R^n \ni (t,v) \mapsto tv \in \R^n$. \end{hint}
+	\item Perluas argumen dalam Teorema \ref{prop:sum-squares} untuk mencirikan bilangan bulat $n$ yang membuat persamaan tak tentu $n = x^2 + y^2$ mempunyai solusi, dan uraikan banyaknya solusi tersebut.
+	\item Misalkan $\omega := \frac{-1 + \sqrt{-3}}{2}$. Verifikasi bahwa $\Z[\omega] = \Z \oplus \Z\omega$ merupakan subgelanggang dari $\CC$ dan tertutup terhadap konjugasi. Teknik yang digunakan untuk $\Z[\sqrt{-1}]$ dapat diterapkan kembali; dalam hal ini tetap terdapat peta norma $N(z) = z\bar{z}$.
+		\begin{compactenum}[(i)]
+			\item Buktikan bahwa $\Z[\omega]$ merupakan daerah Euklides dan tentukan $\Z[\omega]^\times$;
+			\item Modifikasi argumen dalam Teorema \ref{prop:sum-squares} untuk mengklasifikasikan unsur-unsur tak tereduksi dalam $\Z[\omega]$ hingga perkalian dengan $\Z[\omega]^\times$; \begin{hint} Untuk $p=3$ terjadi ramifikasi, untuk $p \equiv 1 \pmod 3$ terjadi pemisahan, dan untuk $p \equiv 2 \pmod 3$ terjadi keinertan. \end{hint}
+			\item Gunakan hasil tersebut untuk mempelajari banyaknya solusi persamaan tak tentu $n = x^2 + xy + y^2$; Anda dapat memulai dari kasus ketika $n$ bilangan prima.
+		\end{compactenum}
+		Gelanggang $\Z[\omega]$ juga disebut gelanggang bilangan bulat Eisenstein.
+	\item Misalkan $\Bbbk$ suatu medan. Buktikan bahwa
+		\begin{inparaenum}[(i)]
+			\item $Z^2-XY$ merupakan unsur tak tereduksi dalam $\Bbbk[X,Y,Z]$, sehingga membangkitkan suatu ideal prima;
+			\item bayangan $X, Y, Z$ dalam gelanggang hasil bagi $\Bbbk[X,Y,Z]/(Z^2-XY)$ semuanya tak tereduksi;
+			\item faktorisasi bayangan $Z^2$ menunjukkan bahwa $\Bbbk[X,Y,Z]/(Z^2-XY)$ bukan daerah faktorisasi unik.
+		\end{inparaenum}
+	\item Jika $p$ bilangan prima, buktikan bahwa $\Phi_p(X) = \sum_{k=0}^{p-1} X^k = (X^p - 1)/(X - 1)$ tak tereduksi baik dalam $\Z[X]$ maupun $\Q[X]$. \begin{hint} Lakukan penggantian peubah $Y := X-1$, lalu gunakan Teorema \ref{prop:Eisenstein-criterion} untuk membuktikan bahwa $\left( (Y+1)^p - 1\right)/Y$ tak tereduksi dalam $\Z[Y]$. \end{hint}
+	\item Misalkan $R$ suatu daerah integral. Buktikan bahwa determinan orde $n$, $\det$, sebagai polinomial dalam entri matriks $(X_{ij})_{1 \leq i,j \leq n}$, bersifat tak tereduksi. \begin{hint} Jika $\det = fg$ dan peubah $X_{11}$ muncul dalam $f$, pertama buktikan bahwa $g$ tidak memuat peubah berbentuk $X_{1j}$, kemudian buktikan bahwa $g$ tidak memuat peubah berbentuk $X_{jj}$ (jika tidak, $X_{1j}$ harus muncul dalam $g$); akibatnya, $f$ memuat suku $X_{11} \cdots X_{nn}$. Perbandingan derajat menunjukkan bahwa $g$ konstan. \end{hint}
+	\item Kerjakan hal yang sama untuk determinan matriks persegi simetris berorde $n$, yang dipandang sebagai polinomial dalam $(X_{ij})_{i \leq j}$, dan buktikan bahwa determinan itu tak tereduksi.
+	\item Tuliskan secara eksplisit diskriminan $\delta$ pada Contoh \ref{eg:polynomial-discriminant} untuk kasus $n=2,3$.
+	\item Jika polinomial $\phi$ di atas medan $\Bbbk$ memenuhi $\phi(X+Y)=\phi(X)+\phi(Y) \in \Bbbk[X,Y]$, maka $\phi$ disebut polinomial aditif.\index{jiaxingduoxiangshi@polinomial aditif (additive polynomial)}
+		\begin{compactenum}[(i)]
+			\item Buktikan bahwa polinomial aditif membentuk gelanggang terhadap penjumlahan dan komposisi $(\phi \circ \psi)(X) = \phi(\psi(X))$.
+			\item Buktikan bahwa jika $\text{char}(\Bbbk)=0$, polinomial aditif berbentuk $\phi(X) = a_0 X$, sedangkan jika $p := \text{char}(\Bbbk)$ bilangan prima, polinomial aditif berbentuk $\phi = \sum_{i=0}^n a_i X^{p^i}$, dengan $a_i \in \Bbbk$ dan $n \geq 0$. \begin{hint} Terapkan Lema \ref{prop:Wielandt-lemma}.\end{hint}
+			\item Dalam kasus karakteristik $p > 0$, perkenalkan peubah $\tau$ untuk mendefinisikan gelanggang $\Bbbk\{\tau\}$, yang unsur-unsurnya ditulis sebagai polinomial $\sum_{i=0}^n a_i \tau^i$, tetapi perkaliannya dimodifikasi sehingga $\tau a = a^p \tau$ untuk $a \in \Bbbk$, dan dengan demikian $(a \tau^i)(b\tau^j) = ab^{p^i} \tau^{i+j}$ untuk semua $i,j \geq 0$. Buktikan bahwa $\sum_{i=0}^n a_i X^{p^i} \mapsto \sum_{i=0}^n a_i \tau^i$ memberikan isomorfisme dari gelanggang polinomial aditif ke $\Bbbk\{\tau\}$.
+		\end{compactenum}
+\end{Exercises}

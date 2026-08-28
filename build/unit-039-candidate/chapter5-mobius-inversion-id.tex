@@ -1,0 +1,146 @@
+\section{Selingan: Inversi Möbius}\label{sec:Mobius}
+Rumus inversi Möbius merupakan alat dasar dalam kombinatorika dan teori bilangan. Ada tiga tujuan pembahasan khusus dalam bagian ini: pertama, melengkapi dengan cepat kasus yang kita perlukan; kedua, memperlihatkan suatu penerapan menarik dari teori gelanggang; dan ketiga, menunjukkan bagaimana rumus inversi Möbius klasik dapat ditata dari sudut pandang yang lebih tinggi dan dirumuskan sebagai perangkat pencacahan pada himpunan terurut parsial. Bagian ini mengikuti pendekatan \cite[\S\S 3.7--3.8]{Stan09} dan menurunkan gagasan dasar inversi Möbius dengan perangkat aljabar.
+
+\begin{definition}\index{pianxuji!lokal berhingga}
+	Jika dalam himpunan terurut parsial (poset) tak kosong $(P, \leq)$, untuk setiap $x \leq y$, himpunan bagian $[x,y] := \{ z \in P: x \leq z \leq y \}$ berhingga, maka $(P,\leq)$ disebut \emph{poset lokal berhingga}.
+\end{definition}
+
+Untuk poset lokal berhingga $(P, \leq)$, definisikan gelanggang $(I(P, \leq),+,\star)$ sebagai berikut.
+\begin{compactitem}
+	\item Sebagai grup aditif, gelanggang ini terdiri atas semua fungsi $f: \{(x,y) \in P^2 : x \leq y \} \to \Q$, dengan penjumlahan \linebreak $(f+g)(x,y) = f(x,y) + g(x,y)$;
+	\item perkaliannya didefinisikan oleh $(f \star g)(x,y) = \sum_{z: \; x \leq z \leq y} f(x,z) g(z,y)$;
+	\item unsur identitas perkaliannya $\delta \in I(P, \leq)$ adalah
+	\[ \delta(x,y) = \begin{cases} 1, & x=y \\ 0, & x < y \end{cases} \]
+	Ini merupakan notasi yang lazim dalam matematika dan disebut $\delta$ Kronecker. \index{Kronecker@delta Kronecker}
+\end{compactitem}
+Sifat lokal berhingga memastikan bahwa perkalian pada $I(P, \leq)$ terdefinisi dengan baik. Verifikasi aksioma-aksioma gelanggang sama sekali tidak sulit; sebagai contoh, alasan berlakunya asosiativitas perkalian tepat sama seperti pada perkalian matriks. Perinciannya diserahkan kepada pembaca. Jika dalam definisi tersebut fungsi diperbolehkan mengambil nilai dalam medan sembarang $\Bbbk$, diperoleh apa yang disebut aljabar atas $\Bbbk$, yakni \emph{aljabar insidensi}. Konsep aljabar atas medan akan diperkenalkan dalam \S\ref{sec:algebra-def}, sehingga pembahasannya kita tunda.
+
+Pembalikan relasi urutan menghasilkan $(P, \geq)$ yang tetap merupakan poset lokal berhingga. Dengan mencermati definisi perkalian, diperoleh
+\begin{gather}\label{eqn:incidence-ring-op}
+	I(P,\geq) = I(P, \leq)^\text{op}.
+\end{gather}
+
+\begin{lemma}\label{prop:incidence-ring-inv}
+	Misalkan $(P, \leq)$ lokal berhingga. Untuk setiap $f \in I(P, \leq)$, pernyataan-pernyataan berikut ekuivalen:
+	\begin{compactitem}
+		\item $f$ mempunyai invers kiri terhadap perkalian,
+		\item untuk setiap $x \in P$, berlaku $f(x,x) \neq 0$,
+		\item $f$ mempunyai invers kanan terhadap perkalian.
+	\end{compactitem}
+	Khususnya, dalam gelanggang $I(P, \leq)$ berlaku: invertibel dari kiri $\iff$ invertibel $\iff$ invertibel dari kanan.
+\end{lemma}
+\begin{proof}
+	Rumus $g \star f = \delta$ setelah dijabarkan tidak lain adalah
+	\begin{align*}
+		g(x,x)f(x,x) & =1, \quad x \in P \\
+		g(x,y) f(y,y) & = - \sum_{x \leq z < y} g(x,z) f(z,y), \quad x,y \in P, \; x < y.
+	\end{align*}
+	Jadi berlakunya rumus tersebut mengakibatkan $\forall x \; f(x,x) \neq 0$. Sebaliknya, jika $\forall x \; f(x,x) \neq 0$, rumus di atas mendefinisikan secara tunggal $g(x,y)$ sedemikian sehingga $g \star f = \delta$. Dengan demikian, $f$ invertibel dari kiri jika dan hanya jika $f(x,x) \neq 0$. Kasus invertibel dari kanan diperoleh dengan meninjau $(P,\geq)$ dan menggunakan \eqref{eqn:incidence-ring-op}.
+\end{proof}
+
+Untuk poset lokal berhingga $(P,\leq)$, definisikan
+\begin{gather*}
+	\zeta = \zeta_P \in I(P, \leq), \quad \forall x \leq y, \; \zeta(x,y) = 1, \\
+	\mu = \mu_P \in I(P, \leq), \quad \mu := \zeta^{-1}.
+\end{gather*}
+Invertibilitas $\zeta$ di sini dijamin oleh Lema \ref{prop:incidence-ring-inv}. Fungsi $\mu$ untuk $(P, \leq)$ juga disebut \emph{fungsi Möbius} $\mu$. Penjabaran sifat $\mu \star \zeta = \delta = \zeta \star \mu$ tidak lain adalah
+\begin{gather}\label{eqn:Mobius-eq}
+	\sum_{z \in [x,y]} \mu(x,z) = \delta(x,y) = \sum_{z \in [x,y]} \mu(z,y).
+\end{gather}
+Dengan mengingat kembali rumus rekursif dalam bukti Lema \ref{prop:incidence-ring-inv}, diperoleh pula bahwa $\mu$ mengambil nilai dalam $\Z$. Fakta ini penting bagi penerapan berikutnya.\index{Mobius@fungsi Möbius}\index[sym1]{mu@$\mu$}
+
+\begin{proposition}[Rumus Inversi Möbius (Gian-Carlo Rota, 1964)]\label{prop:Mobius-inversion}\index{Mobius@inversi Möbius (Möbius inversion)}
+	Misalkan $(A,+)$ adalah grup abelian. Misalkan poset $(P,\leq)$ memenuhi
+	\[ \forall x \in P, \quad \{y \in P: y \leq x \} \;\text{berhingga}, \]
+	maka $(P,\leq)$ merupakan poset lokal berhingga; selain itu, untuk setiap fungsi $f,g: P \to A$, berlaku
+	\[ \forall x,\quad g(x) = \sum_{y \leq x} f(y) \iff \forall x,\quad f(x) = \sum_{y \leq x} g(y) \mu(y,x). \]
+\end{proposition}
+\begin{proof}
+	Syarat tersebut jelas mengakibatkan $(P,\leq)$ lokal berhingga dan semua penjumlahan dalam pernyataan berhingga. Jika rumus pertama berlaku, maka
+	\begin{align*}
+		\sum_{y \leq x} g(y) \mu(y,x) & = \sum_{z \leq y \leq x} f(z) \mu(y,x) \\
+		& = \sum_{z \leq x} \left( \sum_{z \leq y \leq x} \mu(y,x) \right) f(z).
+	\end{align*}
+	Dengan cara serupa, jika rumus kedua berlaku, maka
+	\[ \sum_{y \leq x} f(y) = \sum_{z \leq x} \left( \sum_{z \leq y \leq x} \mu(z,y)\right) g(z). \]
+	Gunakan kesamaan dalam $\Z$ yang dinyatakan oleh \eqref{eqn:Mobius-eq} untuk segera memperoleh pernyataan.
+\end{proof}
+
+\begin{example}[Polinomial kromatik]
+	Bagaimana sebuah peta dapat diwarnai dengan palet yang terdiri atas $q$ warna sehingga distrik/kabupaten yang bertetangga mempunyai warna berbeda? Diagram berikut memperlihatkan contoh Kota Lanzhou, beserta perumusannya kembali dalam teori graf.
+	\begin{center}\begin{tikzpicture}
+			\node (PIC) at (0,0) {\includegraphics[width=185pt]{Lanzhou.png}};
+			\node (TXT) [right=2em of PIC.east, text width=150pt, align=left] {
+				Jika simpul digunakan untuk menyatakan distrik/kabupaten dan pasangan yang bertetangga dihubungkan oleh sisi, maka persoalan semula ekuivalen dengan mewarnai setiap simpul suatu graf planar berhingga $\Gamma$ (dengan $q$ pilihan), sedemikian sehingga kedua ujung setiap sisi mempunyai warna berbeda. Dengan demikian, pewarnaan graf berhingga sembarang dapat dipelajari. Pewarnaan semacam ini disebut “tepat”.
+			};
+			\node (NOTE) [above=0.5em of TXT.north, text width=120pt, align=left, below delimiter=|] {
+				\footnotesize \textcolor{red}{$\bigstar$} Sumber gambar: \href{https://commons.wikimedia.org/wiki/File:Administrative_Division_Lanzhou.svg}{Wikimedia Commons}; garis biru menunjukkan Sungai Kuning.
+			};
+	\end{tikzpicture}\end{center}
+
+	Tuliskan banyaknya semua pewarnaan tepat dari $\Gamma$ sebagai $M_\Gamma(q)$. Untuk menghitungnya, abaikan dahulu apakah pewarnaan itu tepat. Dengan demikian terdapat tepat $q^{V(\Gamma)}$ pewarnaan, dengan $V(\Gamma)$ menyatakan banyaknya simpul, atau distrik/kabupaten. Kita menyebut $\Gamma'$ suatu subpeta dari $\Gamma$ jika $\Gamma'$ diperoleh dari $\Gamma$ dengan menggabungkan beberapa wilayah administratif, atau dari sudut pandang teori graf, dengan melakukan kontraksi; tuliskan $\Gamma' \leq \Gamma$. Maka semua subpeta dari $\Gamma$ membentuk poset berhingga terhadap $\leq$. Sekarang tampak bahwa
+	\[ q^{V(\Gamma)} = \sum_{\Gamma' \leq \Gamma} M_{\Gamma'}(q); \]
+	memang, untuk setiap pewarnaan peta, wilayah-wilayah bertetangga yang berwarna sama selalu dapat digabungkan sehingga pewarnaannya menjadi tepat. Dengan menerapkan Proposisi \ref{prop:Mobius-inversion}, diperoleh
+	\[ M_\Gamma(q) = \sum_{\Gamma' \leq \Gamma} q^{V(\Gamma')} \mu(\Gamma', \Gamma).  \]
+	Dengan memandang $q$ sebagai peubah, polinomial berkoefisien bulat $M_\Gamma(q)$ memberikan suatu invarian aljabar bagi graf $\Gamma$, yang disebut polinomial kromatik dari $\Gamma$. Polinomial ini diperkenalkan oleh Birkhoff dalam penelitiannya tentang masalah empat warna. Dalam fisika statistik, $M_\Gamma(q)$ bersesuaian dengan fungsi partisi model Potts antiferomagnetik keadaan-$q$ pada limit suhu nol; lihat \cite{Sok05}.
+\end{example}
+
+Langkah berikutnya adalah menurunkan inversi Möbius klasik; masih diperlukan beberapa tahap.
+\begin{lemma}\label{prop:Mobius-prod}
+	Misalkan $(P_1, \leq), \ldots, (P_n, \leq)$ adalah poset-poset lokal berhingga. Berikan struktur urutan pada himpunan produk $P := \prod_{i=1}^n P_i$ melalui $(x_i)_{i=1}^n \leq (y_i)_{i=1}^n \iff \forall i\; x_i \leq y_i$. Maka $(P, \leq)$ tetap merupakan poset lokal berhingga dan fungsi Möbiusnya adalah
+	\[ \mu_P\left( x, y \right) = \prod_{i=1}^n \mu_{P_i}(x_i, y_i), \quad x=(x_i)_i, \; y=(y_i)_i \in P \]
+\end{lemma}
+\begin{proof}
+	Sangat mudah dilihat bahwa $(P, \leq)$ merupakan poset lokal berhingga. Yang tersisa hanyalah memeriksa, untuk $\mu_P$ yang didefinisikan di atas, persamaan \eqref{eqn:Mobius-eq}. Hal ini tereduksi pada rumus penjumlahan berikut pada $P$:
+	\begin{equation*}
+		\sum_{\substack{z = (z_i)_i \in P \\ x \leq z \leq y}} = \sum_{x_1 \leq z_1 \leq y_1} \cdots \sum_{x_n \leq z_n \leq y_n}.
+	\end{equation*}
+\end{proof}
+
+Masih diperlukan suatu perumuman yang mudah. Tinjau keluarga poset lokal berhingga $(P_i, \leq)_{i \in I}$. Andaikan bahwa untuk “hampir semua” indeks $i$ (tepatnya, kecuali paling banyak sejumlah hingga indeks), kita telah menetapkan unsur $\mathring{x}_i \in P_i$. Definisikan \emph{produk terbatas} $P := \Resprod_i P_i$ sebagai
+\[ \left\{ (x_i)_i \in \prod_{i \in I} P_i : \text{untuk hampir semua $i$, berlaku}\; x_i = \mathring{x}_i  \right\} \]
+Di sini $\Resprod_i P_i$ mewarisi urutan produk pada $\prod_i P_i$: $(x_i)_i \leq (y_i)_i \iff \forall i\; x_i \leq y_i$. Maka $(P, \leq)$ tetap lokal berhingga, dan fungsi Möbiusnya tetap diberikan oleh
+\[ \mu_P\left( x, y \right) = \prod_i \mu_{P_i}(x_i, y_i) \]
+Untuk hampir semua $i$, berlaku $x_i = y_i = \mathring{x}_i$ dan $\mu_{P_i}(\mathring{x}_i, \mathring{x}_i)=1$, sehingga produk tersebut berhingga. Untuk membuktikan rumus di atas, cukup, bagi setiap $x \leq y$, memeriksa \eqref{eqn:Mobius-eq}. Akan tetapi, rumus itu hanya melibatkan indeks-indeks yang memenuhi $(x_i,y_i) \neq (\mathring{x}_i,\mathring{x}_i)$, dan hanya ada sejumlah hingga indeks $i$ demikian; karena itu persoalan segera tereduksi pada kasus produk berhingga. Sekarang kita dapat menyatakan rumus inversi Möbius klasik.
+
+\begin{example}
+	Tinjau himpunan terurut total $(\Z_{\geq 0}, \leq)$. Jelas bahwa $\{y: y \leq x\}$ merupakan himpunan berhingga untuk setiap $x$. Ambil
+	\[ \mu(n,m) := \begin{cases} 1, & n-m = 0 \\ -1, & n-m = -1, \\ 0, & \text{kasus lainnya}. \end{cases} \]
+	Tanpa perhitungan pun segera tampak bahwa \eqref{eqn:Mobius-eq} berlaku. Inilah fungsi Möbius yang dicari. Dalam kasus khusus ini, pembaca dipersilakan menerjemahkan rumus inversi pada Proposisi \ref{prop:Mobius-inversion} menjadi prinsip pencacahan yang langsung terlihat.
+\end{example}
+
+\begin{example}[A.\ F.\ Möbius, 1832]\label{eg:Mobius-classical}
+	Sekarang berikan urutan keterbagian pada $\Z_{\geq 1}$: definisikan $n \prec m \iff n \mid m$. Demikian pula, $\{y : y \prec x \}$ berhingga untuk setiap $x$, karena setiap bilangan bulat positif hanya mempunyai sejumlah hingga pembagi. Faktorisasi tunggal bilangan bulat positif memberikan isomorfisme poset:
+	\begin{align*}
+		\Resprod_{p: \text{prima}} (\Z_{\geq 0}, \leq) & \longrightiso (\Z_{\geq 1}, \prec) \\
+		(n_p)_p & \longmapsto \prod_{p: \text{prima}} p^{n_p},
+	\end{align*}
+	Ruas kiri sesungguhnya merupakan produk terbatas yang telah dijelaskan di atas, dengan $\mathring{x}_p = 0$. Karena itu $\prod_p p^{n_p}$ merupakan produk berhingga dan petanya terdefinisi dengan baik. Menurut versi produk terbatas dari Lema \ref{prop:Mobius-prod}, fungsi Möbius dari $(\Z_{\geq 1}, \prec)$, yang dilambangkan dengan $\mu$, diberikan oleh
+	\begin{align*}
+		\mu\left( \prod_p p^{n_p}, \prod_p p^{m_p} \right) & = \prod_{p: \text{prima}} \mu_{(\Z_{\geq 0}, \leq)}(n_p, m_p) \\
+		& =\begin{cases}
+			\prod_{\substack{p: \text{prima}}} (-1)^{n_p - m_p}, & \forall p \quad n_p-m_p \geq -1 \\
+			0, & \exists p\quad n_p - m_p < -1.
+	\end{cases}\end{align*}
+	Tuliskan $\mu(n) := \mu(1,n)$. Maka $\mu(d,n) = \mu(n/d)$, dan rumus di atas memberikan deskripsi langsung
+	\[ \mu(n) = \begin{cases}
+		(-1)^{(\text{banyaknya faktor prima dari }\; n)}, & n\; \text{bebas kuadrat} \neq 1, \\
+		0, & \text{kasus lainnya}.
+	\end{cases} \]
+	Untuk grup abelian $(A,+)$ dan sebarang fungsi $f, g: \Z_{\geq 1} \to A$, Proposisi \ref{prop:Mobius-inversion} menjadi
+	\[ \forall n,\; g(n) = \sum_{d \mid n} f(d) \iff \forall n,\; f(n) = \sum_{d \mid n} g(d) \mu\left( \frac{n}{d} \right). \]
+
+	Inilah rumus inversi Möbius yang dikenal luas. Dalam praktik, rumus ini dibagi lagi menjadi
+	\begin{inparaenum}[(a)]
+		\item kasus aditif: $A$ diambil sebagai grup aditif $\Z$, $\CC$, dan sebagainya; serta
+		\item kasus multiplikatif: $A$ diambil sebagai grup perkalian $\Q^\times$, fungsi rasional tak nol $\Q(X)^\times$, dan sebagainya.
+	\end{inparaenum}
+	Namun, kerangka teorinya tidak berbeda.
+\end{example}
+
+Sekarang tinjau suatu penerapan elementer. Untuk setiap $n \in \Z_{\geq 1}$, fungsi Euler yang dikenal luas $\varphi(n) := |(\Z/n\Z)^\times|$ tidak lain menghitung banyaknya bilangan bulat positif yang $\leq n$ dan relatif prima terhadap $n$. Persamaan berikut selalu berlaku:
+\begin{equation}\label{eqn:Euler-phi-sum}\begin{gathered}
+	\sum_{d \mid n} \varphi(d) = n, \\
+	\sum_{d \mid n} d \mu\left( \frac{n}{d} \right) = \varphi(n).
+\end{gathered}\end{equation}
+Salah satu penjelasan bagi persamaan pertama adalah sebagai berikut. Nyatakan seluruh $n$ bilangan rasional $\frac{1}{n}, \ldots, \frac{n}{n}$ dalam bentuk pecahan paling sederhana. Maka $\varphi(d)$ tepat merupakan banyaknya unsur yang penyebutnya menjadi $d$; penerapan inversi Möbius segera memberikan persamaan kedua. Semua ini merupakan sifat yang dikenal luas dalam teori bilangan elementer.

@@ -1,0 +1,174 @@
+\section{Dari Gelanggang Monoid ke Gelanggang Polinomial}\label{sec:polynomial-ring}
+Pembaca tentu sudah mengenal gelanggang polinomial berkoefisien rasional $\Q[X] = \left\{ a_0 + a_1 X + \cdots + a_n X^n : n \geq 0, \; a_i \in \Q \right\}$. Sebagai ruang vektor atas $\Q$, gelanggang ini mempunyai basis $\{ X^i : i \geq 0 \}$, sedangkan perkaliannya tidak lain merupakan perumusan kembali penjumlahan pada monoid $(\Z_{\geq 0}, +)$. Mengganti monoid tersebut dengan monoid sembarang menghasilkan perumuman berikut. Selanjutnya tetapkan suatu gelanggang $R$ dan tinjau polinomial dengan koefisien di dalamnya.
+
+\begin{definition}\label{def:monoidal-ring}\index{yaobanqunhuan@gelanggang monoid}\index[sym1]{$R[M]$}
+	Misalkan $M$ suatu monoid. \emph{Gelanggang monoid} $R[M]$ didefinisikan sebagai berikut: unsur-unsurnya adalah barisan dalam himpunan produk $R^M$ yang berbentuk $(r_m)_{m \in M}$, dengan hanya berhingga banyak suku tak nol. Lazimnya, $(r_m)_{m \in M}$ ditulis secara formal sebagai kombinasi linear berhingga atas $R$,
+	\[ f = \sum_{m \in M} r_m m, \]
+	dengan $r_m$ disebut koefisien $m$ dalam $f$. Penjumlahan dan perkalian pada $R[M]$ masing-masing didefinisikan oleh
+	\begin{align*}
+		\left( \sum_m r_m m \right) + \left( \sum_m s_m m \right) & = \sum_m (r_m + s_m) m, \\
+		\left( \sum_m r_m m \right) \cdot \left( \sum_m s_m m \right) & = \sum_m \left( \sum_{\substack{x, y \in M \\ xy=m}} r_x s_y \right) m,
+	\end{align*}
+	Mudah dilihat bahwa setiap jumlah di sini hanya mempunyai berhingga banyak suku tak nol, sehingga operasi-operasi tersebut terdefinisi dengan baik.
+\end{definition}
+
+Tidak sulit memeriksa bahwa $R[M]$ memenuhi aksioma-aksioma gelanggang. Unsur nolnya adalah $0 = \sum_m 0 \cdot m$ dan unsur identitasnya adalah $1 = 1_R \cdot 1_M$; di sini $1_R$ dan $1_M$ masing-masing menyatakan unsur identitas $R$ dan $M$. Sebenarnya, operasi perkalian pada $R[M]$ ditentukan secara tunggal oleh $(rm) \cdot (r'm') = rr' (mm')$ dan hukum distributif ($r,r' \in R$, $m, m' \in M$). Asosiativitas perkalian cukup diperiksa pada suku berbentuk $rm$.
+
+Perhatikan bahwa gelanggang monoid mempunyai homomorfisme natural
+\[\begin{tikzcd}[row sep=tiny]
+	M \arrow[r, "\text{monoid}"] & (R[M], \cdot) \\
+	m \arrow[mapsto, r] \arrow[phantom, u, sloped, "\in" description] & 1 \cdot m \arrow[phantom, u, sloped, "\in" description]
+\end{tikzcd} \quad
+\begin{tikzcd}[row sep=tiny]
+	R \arrow[r, "\text{gelanggang}"] & R[M] \\
+	r \arrow[mapsto, r] \arrow[phantom, u, sloped, "\in" description] & r \cdot 1. \arrow[phantom, u, sloped, "\in" description]
+\end{tikzcd}\]
+Keduanya injektif, dan bayangan keduanya saling komutatif terhadap perkalian dalam $R[M]$, yakni $(r \cdot 1)(1 \cdot m) = (1 \cdot m)(r \cdot 1)$ (meskipun $R$ dan $M$ sendiri tidak harus komutatif). Hal ini memberikan penjelasan melalui sifat universal bagi konstruksi $R[M]$.
+
+\begin{proposition}\label{prop:monoid-ring-universal}
+	Gelanggang monoid dicirikan oleh sifat universal berikut. Untuk setiap gelanggang $S$, homomorfisme monoid $f: M \to (S, \cdot)$, dan homomorfisme gelanggang $g: R \to S$, jika bayangan $f$ dan $g$ saling komutatif terhadap perkalian dalam $S$, maka terdapat homomorfisme gelanggang tunggal $\varphi: R[M] \to S$ sedemikian sehingga $f$ dan $g$ masing-masing sama dengan komposisi $M \to R[M]$ dan $R \to R[M]$ dengan $\varphi$.
+\end{proposition}
+\begin{proof}
+	Satu-satunya pilihan adalah $\varphi(rm) = g(r)f(m)$. Perinciannya diserahkan kepada pembaca.
+\end{proof}
+
+Jika pembaca bersedia menggunakan lebih dahulu istilah dalam \S\ref{sec:algebra-def}, khususnya Proposisi \ref{prop:algebra-as-homomorphism}, maka apabila $R$ komutatif, homomorfisme $R \hookrightarrow R[M]$ di atas memberi $R[M]$ struktur aljabar atas $R$. Karena itu, $R[M]$ juga disebut \emph{aljabar monoid} atas gelanggang komutatif $R$.
+
+\begin{definition}\label{def:group-ring}\index{qunhuan@gelanggang grup, aljabar grup (group ring, group algebra)}
+	Jika $M$ merupakan grup, gelanggang $R[M]$ disebut \emph{gelanggang grup} dari $M$ atas $R$. Jika $R$ komutatif, gelanggang ini juga disebut \emph{aljabar grup} atas $R$.
+\end{definition}
+
+Gelanggang grup merupakan bahasa dasar teori representasi. Sekarang kita kembali pada pengantar di awal bagian ini, yang juga merupakan salah satu konstruksi paling mendasar dalam teori gelanggang: gelanggang polinomial.
+\begin{definition}[Gelanggang polinomial]\index{duoxiangshihuan@gelanggang polinomial (polynomial ring)} \index[sym1]{$R[X,\ldots]$}
+	Untuk suatu himpunan $\mathcal{X}$, ambil $(\mathbf{M}(\mathcal{X}), \cdot)$ sebagai monoid komutatif bebas pada $\mathcal{X}$ (Definisi \ref{def:free-comm-monoid}; perhatikan bahwa di sini digunakan notasi perkalian). Maka $R[\mathcal{X}] := R[\mathbf{M}(\mathcal{X})]$ disebut gelanggang polinomial atas $R$ dengan himpunan peubah $\mathcal{X}$, dan dilengkapi peta natural $\mathcal{X} \to R[\mathcal{X}]$. Jika $\mathcal{X} = \{X, Y, \ldots\}$, ditulis pula $R[\mathcal{X}] = R[X, Y, \ldots]$.
+\end{definition}
+Jika $R$ komutatif, $R[\mathcal{X}]$ juga disebut aljabar polinomial dengan himpunan peubah $\mathcal{X}$, dan seterusnya.
+
+\begin{proposition}\label{prop:polynomial-ring-universal}
+	Sifat universal berikut mencirikan $R[\mathcal{X}]$ dan $\mathcal{X} \to R[\mathcal{X}]$. Untuk setiap gelanggang $S$, peta $f: \mathcal{X} \to S$, dan homomorfisme gelanggang $g: R \to S$, jika bayangan $f$ dan $g$ saling komutatif terhadap perkalian dalam $S$, dan bayangan $f$ juga komutatif terhadap perkalian, maka terdapat homomorfisme gelanggang tunggal $\varphi: R[\mathcal{X}] \to S$ sedemikian sehingga $f$ dan $g$ masing-masing sama dengan komposisi $\mathcal{X} \to R[\mathcal{X}]$ dan $R \to R[\mathcal{X}]$ dengan $\varphi$.
+\end{proposition}
+\begin{proof}
+	Ini merupakan gabungan sifat universal gelanggang monoid dan sifat universal $\mathbf{M}(\mathcal{X})$.
+\end{proof}
+
+Bayangan peta $\mathbf{M}(\mathcal{X}) \to R[\mathcal{X}]$ disebut monomial. Untuk setiap $f \in R[\mathcal{X}]$, koefisien $1 \in \mathbf{M}(\mathcal{X})$ dalam $f$ disebut suku konstan dari $f$. Perhatikan beberapa sifat berikut:
+\begin{itemize}
+	\item $R[\mathcal{X}]$ komutatif jika dan hanya jika $R$ komutatif;
+	\item jika $R$ merupakan daerah integral komutatif, maka $R[\mathcal{X}]$ juga demikian;
+	\item setiap homomorfisme gelanggang $R \to R'$ dan peta $\mathcal{X} \to \mathcal{X}'$ menginduksi homomorfisme natural $R[\mathcal{X}] \to R'[\mathcal{X}']$;
+	\item untuk setiap himpunan $\mathcal{X}$ dan $\mathcal{Y}$ terdapat isomorfisme natural $R[\mathcal{X}][\mathcal{Y}] = R[\mathcal{Y}][\mathcal{X}] = R[\mathcal{X} \sqcup \mathcal{Y}]$.
+\end{itemize}
+Sebagai contoh untuk sifat terakhir, kita dapat memberikan isomorfisme yang jelas secara langsung ataupun menjelaskannya dengan sifat universal. Untuk setiap gelanggang $S$, memberikan homomorfisme gelanggang $\varphi: R[\mathcal{X}][\mathcal{Y}] \to S$ ekuivalen dengan memberikan peta $\mathcal{Y} \to S$ dan homomorfisme gelanggang $R[\mathcal{X}] \to S$ yang bayangannya saling komutatif. Dengan sekali lagi menerapkan sifat universal pada yang terakhir, data ini tidak lain adalah peta $\mathcal{Y} \to S$ dan $\mathcal{X} \to S$ (yakni peta $\mathcal{X} \sqcup \mathcal{Y} \to S$), serta homomorfisme gelanggang $R \to S$, sedemikian sehingga ketiga bayangannya saling komutatif terhadap perkalian. Tepat inilah sifat universal $R[\mathcal{X} \sqcup \mathcal{Y}]$.
+
+\begin{definition}[Medan fungsi rasional]\index{youlihanshuyu@medan fungsi rasional (field of rational functions)}\index[sym1]{$F(X,\ldots)$}
+	Jika $F$ suatu medan, gelanggang polinomial $F[\mathcal{X}]$ mempunyai medan pecahan $F(\mathcal{X})$. Medan ini, yang dipandang sebagai medan atas $F$ dengan himpunan peubah $\mathcal{X}$, disebut \emph{medan fungsi rasional}. Jika $\mathcal{X} = \{X, Y, \ldots\}$, ditulis pula $F(\mathcal{X}) = F(X, Y, \ldots)$.
+\end{definition}
+Seperti polinomial di atas, fungsi rasional di sini sebenarnya bukan fungsi; istilah tersebut hanya merupakan konvensi. Nanti akan terlihat bahwa deret pangkat dalam analisis matematika (misalnya $e^X = \sum_{n \geq 0} X^n/n!$) juga mempunyai konstruksi formal.
+
+Kita uraikan lebih lanjut $R[\mathcal{X}]$. Ingat bahwa setiap unsur $\mathbf{M}(\mathcal{X})$ dapat ditulis secara tunggal sebagai $X_1^{a_1} \cdots X_n^{a_n}$, dengan $X_1, \ldots, X_n \in \mathcal{X}$ dan $a_1, \ldots, a_n \geq 0$ (tanpa memperhitungkan urutan). Karena itu, unsur $R[\mathcal{X}]$ merupakan kombinasi linear dari ``monomial'' berbentuk $X_1^{a_1} \cdots X_n^{a_n}$ (dengan koefisien dalam $R$). Inilah versi abstrak polinomial, dengan $\mathcal{X}$ tepat sebagai himpunan peubahnya. Selanjutnya kita khususkan pada kasus $\mathcal{X} = \{X_1, \ldots, X_n\}$. Dalam hal ini $R[\mathcal{X}] = R[X_1, \ldots, X_n]$ merupakan gelanggang polinomial dalam $n$ peubah, dan unsur-unsurnya ditulis dengan notasi klasik $f = f(X_1, \ldots, X_n)$. Unsur gelanggang $R[X_1, \ldots, X_n]$ berbentuk
+\[ f = \sum_{a_1, \ldots, a_n \in \Z_{\geq 0}} c_{a_1, \ldots, a_n} X_1^{a_1} \cdots X_n^{a_n}. \]
+
+Karena indeksnya agak rumit, kita sekalian memperkenalkan notasi \emph{multiindeks} yang praktis:
+\begin{align*}
+	\bm{a} & := (a_1, \ldots, a_n), \quad a_1, \ldots, a_n \in \Z_{\geq 0}, \\
+	|\bm{a}| & := a_1 + \cdots + a_n, \\
+	c_{\bm{a}} & := c_{a_1, \ldots, a_n}, \\
+	\bm{X}^{\bm{a}} & := X_1^{a_1} \cdots X_n^{a_n}.
+\end{align*}
+Dengan notasi ini, \emph{derajat total} polinomial $f$ didefinisikan sebagai $\deg f := \max\left\{ |\bm{a}| : c_{\bm{a}}\neq 0 \right\}$. Jika $f$ memenuhi $c_{\bm{a}} \neq 0 \iff |\bm{a}|=m$, maka $f$ disebut \emph{polinomial homogen} berderajat $m$.
+
+Untuk multiindeks $\bm{a} = (a_1, \ldots, a_n)$ dan $\bm{b} = (b_1, \ldots, b_n)$, tetapkan $\bm{a} + \bm{b} := (a_1 + b_1, \ldots, a_n + b_n)$. Maka perkalian dalam $R[X_1, \ldots, X_n]$ mempunyai bentuk ringkas
+\begin{equation}\label{eqn:polynomial-multiplication}
+	\left( \sum_{\bm{a}'} c'_{\bm{a}'} \bm{X}^{\bm{a}'} \right) \cdot \left( \sum_{\bm{a}''} c''_{\bm{a}''} \bm{X}^{\bm{a}''} \right) = \sum_{\bm{a}} \; \underbracket{ \left( \sum_{\bm{a}' + \bm{a}'' = \bm{a}} c'_{\bm{a}'} c''_{\bm{a}''} \right) }_{\text{jumlah berhingga}} \bm{X}^{\bm{a}}.
+\end{equation}
+
+Jika $n=1$, kita kembali pada gelanggang polinomial satu peubah $R[X]$ yang dikenal luas. Polinomial berbentuk $X^n + a_{n-1} X^{n-1} + \cdots + a_0 \in R[X]$ ($n \geq 1$) disebut \emph{polinomial monik}. Operasi turunan dalam kalkulus dapat didefinisikan secara formal pada $R[X]$. \index{shouyiduoxiangshi@polinomial monik (monic polynomial)}\index{daoshu@turunan (derivative)}
+\begin{proposition}\label{prop:polynomial-derivation}
+	Peta
+	\begin{align*}
+		\partial: R[X] & \longrightarrow R[X] \\
+		f(X) = \sum_{k \geq 0} a_k X^k & \longmapsto f'(X) := \sum_{k \geq 1} k a_k X^{k-1}
+	\end{align*}
+	memenuhi
+	\begin{compactitem}
+		\item $(rf + sg)' = rf' + sg'$, dengan $r, s \in R$ dan $f, g \in R[X]$;
+		\item aturan Leibniz: $(fg)' = fg' + f'g$.
+	\end{compactitem}
+\end{proposition}
+\begin{proof}
+	Verifikasi langsung.
+\end{proof}
+Dalam kasus banyak peubah, pada $R[X_1, \ldots, X_n]$ dapat diambil turunan parsial $\partial_i := \frac{\partial}{\partial X_i}$ terhadap setiap peubah dengan cara yang jelas.
+
+\begin{definition}[Deret pangkat formal dan deret Laurent]\label{def:formal-series} \index{xingshimijishuhuan@gelanggang deret pangkat formal (ring of formal power series)} \index[sym1]{$R \llbracket X, \ldots \rrbracket, \; R(( X, \ldots ))$}
+	Definisikan \emph{gelanggang deret pangkat formal} dalam $n$ peubah, $R \llbracket X_1, \ldots, X_n \rrbracket$, sebagai pelengkapan $R[X_1, \ldots, X_n]$ terhadap keluarga ideal
+	\begin{gather*}
+		\mathfrak{a}_i := \lrangle{X_1, \ldots, X_n}^i, \quad \mathfrak{a}_1 \supset \mathfrak{a}_2 \supset \cdots,
+	\end{gather*}
+    Di sini, menurut definisi dalam \S\ref{sec:ring-basics},
+    \[ \lrangle{X_1, \ldots, X_n} = \{f \in R[X_1, \ldots, X_n] : \text{suku konstan}=0\}. \]
+	Di sisi lain, andaikan $R$ komutatif dan ambil himpunan bagian multiplikatif dari $R\llbracket X_1, \ldots, X_n\rrbracket$,
+	\[ S := \{\bm{X}^{\bm{a}} : |\bm{a}| \geq 0 \}. \]
+	Lokalisasi $R\llbracket X_1, \ldots, X_n \rrbracket$ pada $S$ ditulis $R(\!(X_1, \ldots, X_n)\!)$ dan disebut \emph{gelanggang deret Laurent formal} atas $R$ dalam $n$ peubah.
+\end{definition}
+
+\begin{remark}
+	Tidak sulit membuktikan secara rekursif bahwa setiap unsur $\mathfrak{a}_i$ merupakan kombinasi linear dari unsur-unsur $\{ \bm{X}^{\bm{a}} : |\bm{a}| \geq i \}$ dengan koefisien dalam $R$. Unsur gelanggang deret pangkat formal biasanya didefinisikan sebagai jumlah tak hingga berbentuk
+	\[ \sum_{\bm{a}} c_{\bm{a}} \bm{X}^{\bm{a}}, \quad c_{\bm{a}} \in R \]
+	Di sini tidak disyaratkan konvergensi apa pun; karena itulah disebut ``formal''. Operasi penjumlahan (koefisien demi koefisien) dan perkalian (lihat \eqref{eqn:polynomial-multiplication}) serupa dengan kasus polinomial, sehingga perinciannya tidak diulangi. Berikut ditunjukkan bahwa gelanggang yang didefinisikan dengan cara ini tidak lain adalah $R\llbracket X_1, \ldots, X_n \rrbracket$.
+
+	Pertama-tama, perhatikan bahwa peta hasil bagi memberikan isomorfisme grup aditif
+	\[ R_{<i} := \left\{\sum_{|\bm{a}|< i} c_{\bm{a}} \bm{X}^{\bm{a}} : c_{\bm{a}} \in R \right\} \rightiso R[X_1, \ldots, X_n]/\mathfrak{a}_i, \quad i \geq 0. \]
+	Di bawah isomorfisme ini, homomorfisme hasil bagi $R[X_1, \ldots, X_n]/\mathfrak{a}_{i+1} \twoheadrightarrow R[X_1, \ldots, X_n]/\mathfrak{a}_i$ sama dengan peta pemotongan $\tau_{<i}: R_{<i+1} \to R_{<i}$ (yakni membuang suku-suku dengan $|\bm{a}| = i$); perhatikan bahwa $\tau_{<0} = 0$. Dari sini diperoleh isomorfisme
+	\begin{align*}
+		\varprojlim_{i \geq 1} R_{<i} & \stackrel{\sim}{\longrightarrow} \left\{ \text{jumlah tak hingga}\; \sum_{\bm{a}} c_{\bm{a}} \bm{X}^{\bm{a}}  \right\} \\
+		(f_i)_{i \geq 1} & \longmapsto \sum_{i \geq 1} \left( f_i - \tau_{<i-1}(f_i) \right),
+	\end{align*}
+	dengan invers
+	\begin{gather*}
+		\sum_{\bm{a}} c_{\bm{a}} \bm{X}^{\bm{a}} \longmapsto (f_i)_{i \geq 1}, \qquad f_i := \sum_{|\bm{a}| < i} c_{\bm{a}} \bm{X}^{\bm{a}}.
+	\end{gather*}
+	Dapat diperiksa secara langsung bahwa struktur gelanggang pada kedua sisi bersesuaian di bawah isomorfisme ini.
+
+	Dari sini juga tampak bahwa lokalisasi $R(\!(X_1, \ldots, X_n)\!)$ ekuivalen dengan mengizinkan, dalam jumlah tak hingga $\sum_{\bm{a}} c_{\bm{a}} \bm{X}^{\bm{a}}$, eksponen $a_1, \ldots, a_n$ bernilai bilangan bulat yang secara serentak dibatasi dari bawah. Inilah deret Laurent bagi fungsi meromorfik di sekitar kutub berorde hingga dalam teori fungsi kompleks.
+\end{remark}
+
+Seperti dalam kasus polinomial, dalam $f = \sum_{\bm{a}} c_{\bm{a}} \bm{X}^{\bm{a}}$, koefisien $c_{\bm{0}} = c_{(0, \ldots, 0)}$ disebut suku konstan dari $f$.
+
+\begin{proposition}
+	Deret pangkat formal $f \in R\llbracket X_1, \ldots, X_n \rrbracket$ invertibel jika dan hanya jika suku konstannya $c_{\bm{0}}$ invertibel dalam $R$.
+\end{proposition}
+Sebagai akibat, jika $R$ merupakan medan dan $n=1$ (yakni kasus satu peubah), maka $R(\!(X)\!)$ tidak lain adalah medan pecahan dari $R \llbracket X \rrbracket$; pembaca dipersilakan membandingkannya dengan kasus $\Q_p$.
+
+\begin{proof}
+	Tinjau homomorfisme hasil bagi terhadap ideal $\mathfrak{a}_1 = \lrangle{X_1, \ldots, X_n}$, yaitu $R\llbracket X_1, \ldots, X_n \rrbracket \twoheadrightarrow R$, yang memetakan $f$ ke $c_{\bm{0}}$. Karena itu, invertibilitas $f$ mengakibatkan $c_{\bm{0}} \in R^\times$. Sekarang kita buktikan arah sebaliknya. Andaikan suku konstan $f$ invertibel. Dengan menggunakan $c_{\bm{0}}^{-1} f$ sebagai pengganti $f$, kita tereduksi pada kasus $f \in 1 + \mathfrak{a}_1$. Argumen selanjutnya serupa dengan bukti Proposisi \ref{prop:p-adic}: tetapkan $a := 1 - f$, sehingga $a \in \mathfrak{a}_1$. Dalam gelanggang topologis Hausdorff $R \llbracket X_1, \ldots, X_n \rrbracket$ berlaku kesamaan
+	\[ (1-a)^{-1} = 1 + a + a^2 + \cdots \quad \text{(deret konvergen)}, \]
+	sehingga $f$ invertibel.
+\end{proof}
+
+Terakhir, andaikan $R$ komutatif. Polinomial $f \in R[X,Y,\ldots]$ dapat dievaluasi pada setiap titik $(x,y, \ldots) \in R \times R \times \cdots$, dan nilainya ditulis $f(x,y,\ldots)$ atau $\text{ev}_{(x,y,\ldots)}(f)$; caranya ialah mensubstitusikan $X=x$, $Y=y$, dan seterusnya ke dalam ekspresi. Secara lebih umum, tinjau polinomial dengan himpunan peubah $\mathcal{X}$, dan misalkan $R \to R'$ suatu homomorfisme antara gelanggang komutatif. Sifat universal Proposisi \ref{prop:polynomial-ring-universal} mengakibatkan bahwa untuk setiap peta $\sigma: \mathcal{X} \to R'$, terdapat homomorfisme tunggal $\text{ev}_\sigma: R[\mathcal{X}] \to R'$ yang memenuhi $\forall X \in \mathcal{X}, \;\text{ev}_\sigma(X) = \sigma(X)$. Ini sama dengan memandang $\sigma$ sebagai titik dalam ruang $(R')^\mathcal{X}$ dan mengevaluasi polinomial $f \in R[\mathcal{X}]$ pada titik tersebut. Dengan demikian diperoleh peta evaluasi yang merupakan homomorfisme gelanggang
+\begin{equation}\label{eqn:polynomial-ev}\begin{aligned}
+	\text{ev}: R[\mathcal{X}] & \longrightarrow \left\{ \text{peta } (R')^\mathcal{X} \to R' \right\} \\
+	f & \longmapsto \left[ \sigma \mapsto \text{ev}_\sigma(f) \right],
+\end{aligned}\end{equation}
+Struktur gelanggang di ruas kanan berasal dari penjumlahan dan perkalian fungsi secara titik demi titik, dengan unsur identitas perkalian berupa fungsi konstan $1$. Demi kesederhanaan, ambil homomorfisme identitas $R'=R$. Maka homomorfisme $\text{ev}$ memetakan polinomial $f \in R[\mathcal{X}]$ ke fungsi polinomial yang bersesuaian, $R^\mathcal{X} \to R$. Polinomial dan fungsi polinomial pada umumnya merupakan konsep berbeda. Sebagai contoh, ambil bilangan prima $p$, $R = \Z/p\Z$, dan himpunan satu titik $\mathcal{X} = \{X\}$. Polinomial $f(X) = X^p - X$ selalu bernilai nol pada $R$ (inilah teorema kecil Fermat dalam teori bilangan elementer; lihat Catatan \ref{rem:Fermat-little}), tetapi $f$ tidak nol sebagai unsur $(\Z/p\Z)[X]$. Dengan demikian, \eqref{eqn:polynomial-ev} tidak injektif.
+
+Di sisi lain, proposisi berikut menunjukkan bahwa apabila $R$ merupakan daerah integral tak hingga, polinomial dan fungsi polinomial di atasnya merupakan hal yang sama.
+
+\begin{proposition}\label{prop:polynomial-function}
+	Jika $R$ merupakan daerah integral tak hingga, maka dalam \eqref{eqn:polynomial-ev}, $\mathrm{ev}$ (dengan $R'=R$) merupakan homomorfisme injektif.
+\end{proposition}
+\begin{proof}
+	Kita harus menunjukkan bahwa $\text{ev}(f)=0 \implies f=0$. Karena $f$ hanya melibatkan berhingga banyak peubah dalam $\mathcal{X}$, persoalan tereduksi pada kasus berhingga $R[\mathcal{X}] = R[X_1, \ldots, X_n]$; berikut kita gunakan induksi pada $n \geq 1$. Jika $n=1$, pernyataan mengikuti fakta bahwa banyaknya akar suatu polinomial di atas medan $\text{Frac}(R)$ tidak melebihi derajatnya. Jika $n \geq 2$, tuliskan $f \neq 0$ sebagai
+	\[ f = \sum_{i=0}^m f_i(X_1, \ldots, X_{n-1}) X_n^i, \quad f_i \in R[X_1, \ldots, X_{n-1}], \; f_m \neq 0. \]
+	Maka terdapat $(r_1, \ldots, r_{n-1}) \in R^{n-1}$ sedemikian sehingga $f_m(r_1, \ldots, r_{n-1}) \neq 0$. Karena itu, $f(r_1, \ldots, r_{n-1}, X) \in R[X]$ merupakan polinomial tak nol dan dengan demikian merupakan fungsi tak nol. Terbukti.
+\end{proof}
+
+\begin{remark}
+	Sekarang kita kembali ke kerangka umum. Diberikan homomorfisme gelanggang $\phi: R \to R'$. Untuk suatu keluarga unsur dalam $R'$, yakni $\mathcal{E} = \{s_x\}_{x \in \mathcal{X}}$ (dipandang sebagai peta $\sigma: \mathcal{X} \to R'$), tuliskan bayangan homomorfisme gelanggang $\text{ev}_\sigma: R[\mathcal{X}] \to R'$ sebagai $R[\mathcal{E}]$. Ini merupakan subgelanggang dari $R'$ dan disebut subgelanggang yang dibangkitkan oleh $\{s_x\}_x$ atas $R$. Jika $\mathcal{X}=\{1, \ldots, n\}$, notasi ini disingkat menjadi $R[s_1, \ldots, s_n]$, yang terdiri atas unsur berbentuk
+	\begin{gather*}
+		f(s_1, \ldots, s_n) := \text{ev}_{(s_1, \ldots, s_n)}(f) = \sum_{\bm{a}} \phi(c_{\bm{a}}) s_1^{a_1} \cdots s_n^{a_n}, \\
+		\text{dengan} \quad f = \sum_{\bm{a}} c_{\bm{a}} \bm{X}^{\bm{a}} \in R[X_1, \ldots, X_n].
+	\end{gather*}
+	Kemiripan notasi lokalisasi $R[S^{-1}]$ dengan notasi di sini memang disengaja; alasannya diserahkan kepada pembaca untuk direnungkan.
+\end{remark}

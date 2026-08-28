@@ -1,0 +1,199 @@
+\section{Pengantar Polinomial Simetris}\label{sec:symmetric-poly}
+Tetapkan sebuah gelanggang komutatif $R$. Untuk setiap $n \in \Z_{\geq 1}$, grup simetris $\mathfrak{S}_n$ memiliki aksi alami pada gelanggang polinomial $R[X_1, \ldots, X_n]$,
+\[ (\sigma f)(X_1, \ldots, X_n) = f(X_{\sigma(1)}, \ldots, X_{\sigma(n)}), \quad \sigma \in \mathfrak{S}_n, \; f \in R[X_1, \ldots, X_n]. \]
+Definisikan
+\[ \Lambda_n = R[X_1, \ldots, X_n]^{\mathfrak{S}_n} := \left\{ f \in R[X_1, \ldots, X_n] : \forall \sigma \in \mathfrak{S}_n, \; \sigma f = f \right\}. \]
+Jelas bahwa aksi ini memenuhi sifat
+\[ \sigma(f + g) = \sigma(f) + \sigma(g), \quad \sigma(fg) = \sigma(f) \sigma(g), \quad \sigma(1)=1 \]
+Oleh karena itu, $\Lambda_n$ merupakan subgelanggang dari $R[X_1, \ldots, X_n]$, yang disebut gelanggang polinomial simetris di atas $R$ dalam $n$ peubah; unsur-unsurnya disebut \emph{polinomial simetris} dalam $n$ peubah. Untuk gelanggang fungsi rasional di atas suatu medan $F$, terdapat versi yang sepadan, yakni $F(X_1, \ldots, X_n)^{\mathfrak{S}_n}$.\index{duichengduoxiangshi@polinomial simetris (symmetric polynomial)}
+
+Uraikan $f \in R[X_1, \ldots, X_n]$ dengan notasi multiindeks dari \S\ref{sec:polynomial-ring} sebagai $\sum_{\bm{a}} c_{\bm{a}} \bm{X}^{\bm{a}}$. Sifat simetrisnya ekuivalen dengan pernyataan berikut: jika indeks $\bm{a} = (a_1, \ldots, a_n)$ dan $\bm{b} = (b_1, \ldots, b_n)$ berbeda hanya melalui suatu permutasi, maka $c_{\bm{a}} = c_{\bm{b}}$.
+
+Tinjau suatu keluarga bilangan bulat positif $\lambda_1, \ldots, \lambda_r$, dengan $1 \leq r \leq n$, tanpa memperhitungkan urutan dan dengan pengulangan diperbolehkan. Tetapkan
+\[ m_{\lambda_1, \ldots, \lambda_r} := \sum_{\bm{a}} \bm{X}^{\bm{a}}, \]
+dengan indeks $\bm{a}$ merentang semua permutasi berbeda dari $(\lambda_1, \ldots, \lambda_r, 0, \ldots, 0)$ ($n$ komponen). Untuk memperoleh keunikan, mulai sekarang kita selalu mengurutkan $\lambda_1, \ldots, \lambda_r$ dan menulis
+\begin{align*}
+	\lambda & := (\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_r), \quad \lambda_i \in \Z, \; 1 \leq i \leq r, \\
+	m_\lambda & := m_{\lambda_1, \ldots, \lambda_r}.
+\end{align*}
+Bilangan $r$ disebut panjang dari $\lambda$. Pembahasan di atas menunjukkan bahwa setiap $f \in \Lambda_n$ dapat dinyatakan sebagai jumlah hingga $f = \sum_\lambda r_\lambda m_\lambda$, dengan koefisien $r_\lambda$ yang ditentukan secara tunggal. Jika $R$ adalah medan, ini tidak lain berarti bahwa ruang vektor $\Lambda_n$ memiliki basis $(m_\lambda)_\lambda$; untuk $R$ umum, konsep yang bersesuaian ialah modul bebas atas $R$ (Definisi \ref{def:free-module}), tetapi istilah-istilah ini belum perlu kita dalami.
+
+Data $\lambda = (\lambda_1 \geq \cdots \geq \lambda_r)$ di atas lazim disebut partisi. Data ini memiliki penyajian yang sangat praktis, yaitu \emph{diagram Young}: dari atas ke bawah, pada baris ke-$i$ kita tempatkan $\lambda_i$ kotak dari kiri ke kanan, misalnya \index{Young-tu@diagram Young (Young diagram)} \index{fenchai@partisi (partition)}
+\ytableausetup{mathmode}\begin{equation*}
+	(3 \geq 2 \geq 1 \geq 1): \ydiagram{3,2,1,1} \qquad (5 \geq 4 \geq 1): \ydiagram{5,4,1}
+\end{equation*}
+dan seterusnya. Mudah dilihat bahwa diagram-diagram tersebut berkorespondensi satu-satu dengan partisi $\lambda = (\lambda_1 \geq \cdots \geq \lambda_r)$. Jika panjang partisi $r$ (yakni tinggi diagram Young) melampaui $n$ yang diberikan, maka $m_\lambda \in \Lambda_n$ yang bersesuaian ditetapkan bernilai $0$.
+
+Dalam mengkaji sifat umum diagram Young, sebaiknya batasan lebar dikesampingkan. Dalam keadaan ini diagram Young memiliki operasi ``konjugasi'' yang jelas: cerminkan diagram Young yang bersesuaian dengan $\lambda = (\lambda_1 \geq \cdots)$ terhadap sumbu $\diagdown$; bentuk yang diperoleh tetap merupakan diagram Young. Andaikan pada baris ke-$i$ bentuk itu memiliki $\bar{\lambda}_i$ kotak; data yang bersesuaian ditulis $\bar{\lambda} = (\bar{\lambda}_1 \geq \cdots)$, dan $\bar{\lambda}$ yang bersesuaian dengan $\lambda$ disebut \emph{konjugatnya}. Jelas bahwa $\overline{\overline{\lambda}} = \lambda$. Berikut sebuah contoh:
+\ytableausetup{mathmode}
+\[ \lambda: \ydiagram{3,2,1,1} \longmapsto \bar{\lambda}: \ydiagram{4,2,1}. \]
+
+\begin{definition}
+	Untuk partisi atau diagram Young, definisikan
+	\begin{compactdesc}
+		\item[Urutan dominasi] Tulis $\mu \leq \lambda$ jika untuk setiap $k$ berlaku
+			\begin{gather}\label{eqn:dominance-order}
+				\mu_1 + \cdots + \mu_k \leq \lambda_1 + \cdots + \lambda_k,
+			\end{gather}
+		\item[Urutan leksikografis] Tulis $\mu \prec \lambda$ jika terdapat $k \geq 1$ sedemikian sehingga
+			\[1 \leq i < k \implies \mu_i = \lambda_i, \quad \mu_k < \lambda_k. \]
+	\end{compactdesc}
+	Jika $k$ melampaui banyaknya baris dari $\lambda$ (atau $\mu$), disepakati bahwa $\lambda_k=0$ (atau $\mu_k=0$).
+\end{definition}
+
+\begin{proposition}\label{prop:dominance-lex-order}
+Himpunan semua partisi atau diagram Young merupakan himpunan terurut parsial (poset) di bawah urutan dominasi $\leq$, dan merupakan himpunan terurut total di bawah urutan leksikografis $\preceq$. Selain itu, untuk setiap $\lambda$, himpunan $\{\mu: \mu \leq \lambda \}$ berhingga. Kita memiliki $\mu \leq \lambda \implies \mu \preceq \lambda$.
+\end{proposition}
+\begin{proof}
+	Bagian pertama jelas. Sekarang andaikan $\mu < \lambda$. Kita dapat memilih $k \geq 1$ terkecil sedemikian sehingga $\mu_k < \lambda_k$; ini tepat berarti $\mu \prec \lambda$, dengan indeks dalam definisi tersebut adalah $k$.
+\end{proof}
+
+Walaupun unsur-unsur $\Lambda_n$ dapat dinyatakan secara tunggal sebagai kombinasi linear dari berbagai $m_\lambda$ dengan koefisien dalam $R$, perilaku basis ini terhadap perkalian tidak tampak jelas dan agak merepotkan dalam praktik. Untuk itu, kita perkenalkan objek klasik berikut.
+\begin{definition}[Polinomial simetris elementer]\label{def:elementary-symm-poly}\index{duichengduoxiangshi!elementer (elementary)}
+	Untuk $1 \leq k \leq n$, definisikan
+	\[ e_k := \sum_{1 \leq i_1 < \cdots < i_k \leq n} X_{i_1} \cdots X_{i_k}. \]
+	Jelas bahwa ini merupakan unsur $\Lambda_n$, yang disebut \emph{polinomial simetris elementer} ke-$k$ dalam $n$ peubah.
+\end{definition}
+Tetapkan $e_0 := 1$. Dengan demikian, pencirian yang ekuivalen ialah
+\begin{gather*}
+	\sum_{i=0}^n e_i Y^{n-i} = \prod_{i=1}^n (Y + X_i), \quad \text{atau} \\
+	E(Y) := \sum_{i=0}^n e_i Y^i = \prod_{i=1}^n (1 + X_i Y)
+\end{gather*}
+dengan $Y$ suatu peubah tambahan. Untuk setiap partisi $\lambda = (\lambda_1 \geq \cdots \geq \lambda_r)$, definisikan
+\[ e_\lambda := e_{\lambda_1} \cdots e_{\lambda_r} \]
+Ungkapan ini bermakna apabila $n$ lebih besar daripada atau sama dengan panjang $\bar{\lambda}$, dan $e_\lambda \in \Lambda_n$.
+
+\begin{lemma}\label{prop:m_lambda-e_lambda}
+	Untuk setiap $\lambda = (\lambda_1 \geq \cdots \geq \lambda_r)$ dan $n \geq r$, terdapat suatu keluarga $a_{\lambda, \mu} \in \Z_{\geq 0}$, dengan $\mu \leq \lambda$, sedemikian sehingga
+	\[ e_{\bar{\lambda}} = \sum_{\mu \leq \lambda} a_{\lambda, \mu} m_\mu, \quad a_{\lambda, \lambda}=1 \]
+berlaku dalam $\Lambda_n$, dengan $\mu \leq \lambda$ menyatakan urutan dominasi \eqref{eqn:dominance-order}.
+\end{lemma}
+\begin{proof}
+	Menurut definisi, hasil kali $e_{\bar{\lambda}} = e_{\bar{\lambda}_1} e_{\bar{\lambda}_2} \cdots$ merupakan jumlah dari semua monomial
+	\[ \left( X_{i_1} \cdots X_{i_{\bar{\lambda}_1}} \right)  \left( X_{j_1} \cdots X_{j_{\bar{\lambda}_2}} \right) \cdots = X_1^{b_1} \cdots X_n^{b_n} \]
+dengan indeks-indeks yang memenuhi $i_1 < \cdots < i_{\bar{\lambda}_1}$, $j_1 < \cdots < j_{\bar{\lambda}_2}$, dan seterusnya. Oleh karena itu, $e_{\bar{\lambda}} = \sum_\mu a_{\lambda, \mu} m_\mu$, dengan $a_{\lambda, \mu} \in \Z_{\geq 0}$. Untuk memahami $a_{\lambda, \mu}$ lebih lanjut, kita harus mencatat berapa kali setiap peubah $X_i$ muncul di ruas kiri, yaitu $b_i$. Untuk itu, kita isikan indeks-indeks $i_1, \ldots$, kemudian $j_1, \ldots$, dan seterusnya (sebagai penanda peubah) ke dalam kolom-kolom diagram Young dari $\lambda$, seperti berikut:
+	\[ \begin{ytableau}
+		i_1 & j_1 & \none[\cdots] \\
+		i_2 & j_2 & \none[\ddots] \\
+		\none & \none[\vdots] & \none \\
+		\none[\vdots] & j_{\bar{\lambda}_2} & \none \\
+		\none[\vdots] & \none & \none \\
+		i_{\bar{\lambda}_1} & \none & \none
+	\end{ytableau}\]
+Bilangan-bilangan dalam setiap kolom meningkat secara ketat, sehingga bilangan-bilangan $\leq r$ hanya dapat menempati $r$ baris pertama, yang seluruhnya memuat $\lambda_1 + \cdots + \lambda_r$ kotak. Jadi, untuk setiap $r \geq 1$, berlaku $b_1 + \cdots + b_r \leq \lambda_1 + \cdots + \lambda_r$. Khususnya, hal ini tetap berlaku apabila $(b_1 \geq \cdots \geq b_n) =: \mu$; maka definisi urutan dominasi memberikan $a_{\lambda,\mu} \neq 0 \implies \mu \leq \lambda$.
+
+	Jika $\mu=\lambda$, argumen di atas menunjukkan bahwa diagram Young tersebut hanya dapat diisi dengan satu cara: pada baris ke-$i$, tempatkan $\lambda_i = b_i$ buah simbol $i$. Jadi, koefisien $m_\lambda$ adalah $a_{\lambda, \lambda} = 1$, sebagaimana hendak dibuktikan.
+\end{proof}
+% Koefisien tak negatif $a_{\lambda,\mu}$ ini memiliki kandungan kombinatorial dan geometris yang halus.
+
+Sifat universal memberikan homomorfisme dari gelanggang polinomial dalam $n$ peubah $R[t_1, \ldots, t_n]$ ke $\Lambda_n$, yaitu $\Phi$, yang memetakan setiap $t_i$ ke $e_i$ dan memenuhi $\Phi|_R = \identity_R$.
+\begin{theorem}[Teorema dasar polinomial simetris]\label{prop:fund-thm-symmetric-poly}
+	Homomorfisme alami $\Phi: R[t_1, \ldots, t_n] \xrightarrow{t_i \mapsto e_i} \Lambda_n$ merupakan isomorfisme gelanggang. Karena itu, kita dapat mengidentifikasi $\Lambda_n$ dengan gelanggang polinomial dalam $n$ peubah $R[e_1, \ldots, e_n]$.
+
+	Jika $F$ adalah medan, maka $F(X_1, \ldots, X_n)^{\mathfrak{S}_n} = F(e_1, \ldots, e_n)$.
+\end{theorem}
+\begin{proof}
+	Lema \ref{prop:m_lambda-e_lambda} dan Proposisi \ref{prop:dominance-lex-order} menunjukkan bahwa $e_{\bar{\lambda}}$ dan $m_\lambda$ dihubungkan oleh suatu matriks segitiga unipoten (dengan berbagai $\lambda$ diurutkan menurut $\preceq$). Dari sini, setiap $f \in \Lambda_n$ dapat dinyatakan sebagai jumlah hingga $f = \sum_\lambda c_\lambda e_{\bar{\lambda}}$, dengan $\lambda$ merentang semua partisi yang panjangnya $\leq n$ dan $c_\lambda \in R$ ditentukan secara tunggal; hal ini berasal dari sifat yang bersesuaian bagi $m_\lambda$.
+
+	Dengan memperhatikan bahwa $e_{\bar{\lambda}} = \prod_{i \geq 1} e_{\bar{\lambda}_i}$, $e_{(0)} := 1$, dan sifat yang jelas bahwa (panjang $\lambda$ merupakan suatu bilangan $\leq n$) $\iff (\bar{\lambda}_1 \leq n)$, pernyataan tersebut ekuivalen dengan mengatakan bahwa setiap $f$ dapat dinyatakan secara tunggal sebagai polinomial dalam $e_1, \ldots, e_n$. Ini membuktikan bagian pertama.
+
+	Sekarang andaikan $F$ adalah medan. Inklusi $F(e_1, \ldots, e_n) \subset F(X_1, \ldots, X_n)^{\mathfrak{S}_n}$ jelas. Sebaliknya, setiap unsur tak nol $f \in F(X_1, \ldots, X_n)^{\mathfrak{S}_n}$ dapat dinyatakan sebagai pecahan $g/h$. Ambil $\tilde{h} := \prod_{\sigma \in \mathfrak{S}_n} \sigma h$; maka $\tilde{h}, f\tilde{h} \in \Lambda_n$. Akibatnya, $f = f\tilde{h}/\tilde{h} \in F(e_1, \ldots, e_n)$, dan bukti selesai.
+\end{proof}
+
+\begin{example}[Diskriminan]\label{eg:polynomial-discriminant} \index{panbieshi@diskriminan (discriminant)}
+	Jelas bahwa $\displaystyle\prod_{1 \leq i < j \leq n} (X_i - X_j)^2$ merupakan unsur $\Z[X_1, \ldots, X_n]^{\mathfrak{S}_n}$, sehingga dapat ditulis sebagai $\delta \in \Z[e_1, \ldots, e_n]$. Misalkan $F$ sebuah medan dan $x_1, \ldots, x_n \in F$. Dengan $Y$ sebagai peubah, tinjau polinomial monik $P = \sum_{i=0}^n (-1)^i c_i Y^{n-i} = \prod_{i=1}^n (Y - x_i)$. Koefisiennya ditentukan oleh $c_i = e_i(X_1 = x_1, \ldots, X_n = x_n)$. Oleh karena itu,
+	\[ P\; \text{memiliki akar ganda} \iff \prod_{i < j} (x_i - x_j)^2 = 0 \iff \delta(e_1 = c_1, \ldots, e_n = c_n) = 0. \]
+	Ini memberikan suatu algoritma untuk menguji keberadaan akar ganda.
+\end{example}
+
+Kelas lain dari polinomial simetris yang umum dijumpai ialah \emph{jumlah pangkat}. Untuk setiap $k \in \Z_{\geq 0}$, definisikan \index{duichengduoxiangshi!jumlah pangkat (power-sum)}
+\[ p_k := \sum_{r=1}^n X_r^k \quad \in \Lambda_n. \]
+
+\begin{theorem}[Rumus Newton] \index{Rumus Newton}
+	Jumlah pangkat $p_1, \ldots, p_n, \ldots$ memenuhi
+	\[ \sum_{\substack{i+j=k \\ 0 \leq i \leq n \\ j \geq 1}} (-1)^{j+1} e_i p_j =
+	\begin{cases}
+		k e_k, & 1 \leq k \leq n \\
+		0, & k > n.
+	\end{cases}\]
+\end{theorem}
+\begin{proof}
+	Dengan menggunakan deret pembangkit dalam peubah $Y$, lakukan perhitungan formal berikut dalam $R\llbracket Y \rrbracket$:
+	\begin{align*}
+		P(Y) & := \sum_{k \geq 1} p_k Y^{k-1} = \sum_{r=1}^n \frac{X_r}{1 - X_r Y}, \\
+		% & = \sum_{r=1}^n \frac{\dd}{\dd Y} \left( \log \frac{1}{1 - X_r Y} \right), \\
+		E(Y) & := \sum_{k=0}^n e_k Y^k = \prod_{r=1}^n (1 + X_r Y).
+	\end{align*}
+Dari sini diperoleh $P(-Y) = \frac{\dd}{\dd Y} \log E(Y) = E'(Y)/E(Y)$. Setelah memindahkan ruas, menguraikan, dan membandingkan koefisien, rumus tersebut segera diperoleh.
+\end{proof}
+Untuk $1 \leq k \leq n$, Rumus Newton secara rekursif menyatakan $p_k$ sebagai unsur dari $(-1)^{k+1} k e_k + R[e_1, \ldots, e_{k-1}]$. Jika $R \supset \Q$, karena $p_1 = e_1$, hal ini secara rekursif juga menunjukkan bahwa
+\begin{compactitem}
+	\item $R[p_1, \cdots, p_n] = R[e_1, \ldots, e_n] = \Lambda_n$,
+	\item $R[p_1, \ldots, p_n]$ dapat dipandang sebagai gelanggang polinomial di atas $R$ dalam $n$ peubah.
+\end{compactitem}
+
+Hasil dan metode yang diperoleh di atas sama pentingnya; pembahasan ini baru sekadar membuka pintu menuju teori polinomial simetris. Pembaca yang ingin melihat lebih jauh dapat merujuk pada \cite{Mac95}.
+
+% % % % % % % % % % % % % % % % % % % % %
+
+\begin{Exercises}
+	\item Buktikan bahwa jika setiap unsur $x$ dalam gelanggang $R$ memenuhi $x^2=x$, maka $R$ komutatif. Coba pula kasus $x^3=x$.
+	\item Buktikan bahwa submedan prima dari suatu gelanggang pembagian selalu termuat dalam pusatnya.
+	\item Untuk sebarang medan $\Bbbk$ dan $d \in \Z_{\geq 1}$, banyaknya unsur dalam grup perkalian $\Bbbk^\times$ yang memenuhi $\text{ord}(z)=d$ tidak melebihi $\varphi(d)$, dengan $\varphi$ fungsi Euler.
+	\begin{hint} Gunakan teori polinomial siklotomik dalam bukti Teorema \ref{prop:Wedderburn-little-thm}: jika $\text{ord}(z)=d$, maka $\Phi_d(z)=0$.\end{hint}
+	\item Dengan meneruskan soal sebelumnya, buktikan bahwa setiap subgrup hingga dari $\Bbbk^\times$ merupakan grup siklik.
+		\begin{hint}
+		Untuk subgrup $H$ berorde $n$, buktikan ketaksamaan suku demi suku
+			\[ n = \sum_{d \mid n} |\{ x \in H : \text{ord}(x)=d \}| \leq \sum_{d \mid n} \varphi(d) \]
+		dengan $\varphi$ fungsi Euler, lalu gunakan rumus teori bilangan $\sum_{d \mid n} \varphi(d) = n$.
+		\end{hint}
+	\item Misalkan $D$ suatu gelanggang pembagian berkarakteristik $p>0$. Buktikan bahwa setiap subgrup hingga $H$ dari $D^\times$ merupakan grup siklik; berikan suatu contoh tandingan dalam karakteristik $0$.
+	\begin{hint}
+		Misalkan submedan prima dari $D$ adalah $\F_p = \Z/p\Z$. Buktikan bahwa $\left\{ \sum_{h \in H} a_h h : \forall h \in H, \; a_h \in \F_p \right\}$ membentuk subgelanggang hingga dari $D$, sehingga merupakan medan; contoh tandingan dapat dicari dalam gelanggang kuaternion $\mathbb{H}$ pada Contoh \ref{eg:Hamilton-quaternion}.
+	\end{hint}
+	\item Cobalah mendefinisikan lokalisasi untuk gelanggang komutatif $R$ tanpa unsur identitas: misalkan $S$ tak kosong dan tertutup terhadap perkalian. Gelanggang $R[S^{-1}]$ yang dihasilkan selalu mempunyai unsur identitas $1 = [t,t]$ (pilih sebarang $t \in S$), homomorfisme lokalisasinya adalah $r \mapsto [rt,t]$, dan invers dari $s \in S$ dalam $R[S^{-1}]$ adalah $[t,st]$.
+	\item Lengkapi argumen dalam Contoh \ref{eg:Prüfer}, dan buktikan bahwa $\prod_p \Z_p \rightiso \hat{\Z}$ merupakan homomorfisme grup topologis.
+	\item Nyatakan sifat universal yang dipenuhi oleh konstruksi gelanggang pecahan total $R \to \text{Frac}(R)$.
+	\item Diberikan poset lokal berhingga $(P, \leq)$, buktikan bahwa untuk $k=1,2,\ldots$, unsur $\zeta \in I(P, \leq)$ memenuhi
+		\begin{align*}
+			\zeta^k(x,y) & = \sum_{x = x_0 \leq \cdots \leq x_k = y} 1, \\
+			(\zeta - 1)^k(x,y) & = \sum_{x = x_0 < \cdots < x_k = y} 1,
+		\end{align*}
+		dengan $1$ menyatakan unsur identitas $I(P,\leq)$, yakni fungsi $\delta$ yang didefinisikan dalam \S\ref{sec:Mobius}.
+	\item Tambahkan batas bawah $\hat{0}$ dan batas atas $\hat{1}$ pada poset hingga $(P,\leq)$ yang diberikan, dan nyatakan poset yang dihasilkan sebagai $\hat{P}$. Tuliskan
+		\[ c_i := \left| \{ x_0, \ldots, x_i \in \hat{P} : \hat{0} = x_0 < \cdots < x_i = \hat{1} \} \right|. \]
+		Buktikan bahwa $\mu(\hat{0}, \hat{1}) = \sum_{i \geq 0} (-1)^i c_i$, dengan $\mu := \mu_{\hat{P}}$. Dapatkah Anda memberikan interpretasi topologis bagi $\mu(\hat{0}, \hat{1})$? (Lihat \cite[\S 3.8]{Stan09})
+		\begin{hint}
+			$\mu(\hat{0}, \hat{1}) = (1 + (\zeta - 1))^{-1}$.
+		\end{hint}
+	\item Dengan meneruskan soal sebelumnya, untuk $n \geq 2$ misalkan $Z(P,n)$ adalah banyaknya rantai $x_1 \leq \cdots \leq x_{n-1}$ dalam $P$. Buktikan bahwa $Z(P,n) = \sum_{i=2}^n c_i \binom{n-2}{i-2}$, sehingga definisi $Z(P,s)$ dapat diperluas ke sebarang $s \in \CC$. Buktikan bahwa $Z(P,1) = \mu(\hat{0},\hat{1}) + 1 = \sum_{i \geq 2} (-1)^i c_i$. \begin{hint} Kita mempunyai $\binom{-1}{k} = (-1)^k$. \end{hint}
+	\item Tinjau himpunan polinomial ``berpangkat pecahan'' $R := \Bbbk[X, X^{1/2}, \ldots, X^{1/2^n}, \ldots]$ di atas medan $\Bbbk$, dengan struktur gelanggang yang jelas. Buktikan bahwa $R^\times = \Bbbk^\times$, dan bahwa $X \in R$ tidak dapat difaktorkan sebagai hasil kali unsur-unsur tak tereduksi.
+	\item Buktikan bahwa suatu polinomial $P \in \Q[X]$ memenuhi $P(\Z) \subset \Z$ jika dan hanya jika $P$ berbentuk $\sum_{k=0}^n a_k \binom{X}{k}$, dengan $a_0, \ldots, a_n \in \Z$ dan $\binom{X}{k} = X(X-1) \cdots (X-k+1)/k!$; polinomial semacam itu disebut polinomial bernilai bulat. \begin{hint} Gunakan sifat segitiga Pascal dan lakukan rekursi pada $n := \deg P$. \end{hint}
+	\item Untuk polinomial homogen berderajat $m$, $f \in R[X_1, \ldots, X_n]$, di atas gelanggang komutatif $R$, buktikan bahwa turunan parsial formalnya memenuhi identitas Euler
+		\[ \sum_{i=1}^n X_i \cdot \frac{\partial f}{\partial X_i} = m f. \]
+		Cobalah memberikan interpretasi geometri diferensial ketika $R=\R$. \begin{hint} Jika $R=\R$, diferensialkan aksi penskalaan $\R^\times \times \R^n \ni (t,v) \mapsto tv \in \R^n$. \end{hint}
+	\item Perluas argumen dalam Teorema \ref{prop:sum-squares} untuk mencirikan bilangan bulat $n$ yang membuat persamaan tak tentu $n = x^2 + y^2$ mempunyai solusi, dan uraikan banyaknya solusi tersebut.
+	\item Misalkan $\omega := \frac{-1 + \sqrt{-3}}{2}$. Verifikasi bahwa $\Z[\omega] = \Z \oplus \Z\omega$ merupakan subgelanggang dari $\CC$ dan tertutup terhadap konjugasi. Teknik yang digunakan untuk $\Z[\sqrt{-1}]$ dapat diterapkan kembali; dalam hal ini tetap terdapat peta norma $N(z) = z\bar{z}$.
+		\begin{compactenum}[(i)]
+			\item Buktikan bahwa $\Z[\omega]$ merupakan daerah Euklides dan tentukan $\Z[\omega]^\times$;
+			\item Modifikasi argumen dalam Teorema \ref{prop:sum-squares} untuk mengklasifikasikan unsur-unsur tak tereduksi dalam $\Z[\omega]$ hingga perkalian dengan $\Z[\omega]^\times$; \begin{hint} Untuk $p=3$ terjadi ramifikasi, untuk $p \equiv 1 \pmod 3$ terjadi pemisahan, dan untuk $p \equiv 2 \pmod 3$ terjadi keinertan. \end{hint}
+			\item Gunakan hasil tersebut untuk mempelajari banyaknya solusi persamaan tak tentu $n = x^2 + xy + y^2$; Anda dapat memulai dari kasus ketika $n$ bilangan prima.
+		\end{compactenum}
+		Gelanggang $\Z[\omega]$ juga disebut gelanggang bilangan bulat Eisenstein.
+	\item Misalkan $\Bbbk$ suatu medan. Buktikan bahwa
+		\begin{inparaenum}[(i)]
+			\item $Z^2-XY$ merupakan unsur tak tereduksi dalam $\Bbbk[X,Y,Z]$, sehingga membangkitkan suatu ideal prima;
+			\item bayangan $X, Y, Z$ dalam gelanggang hasil bagi $\Bbbk[X,Y,Z]/(Z^2-XY)$ semuanya tak tereduksi;
+			\item faktorisasi bayangan $Z^2$ menunjukkan bahwa $\Bbbk[X,Y,Z]/(Z^2-XY)$ bukan daerah faktorisasi unik.
+		\end{inparaenum}
+	\item Jika $p$ bilangan prima, buktikan bahwa $\Phi_p(X) = \sum_{k=0}^{p-1} X^k = (X^p - 1)/(X - 1)$ tak tereduksi baik dalam $\Z[X]$ maupun $\Q[X]$. \begin{hint} Lakukan penggantian peubah $Y := X-1$, lalu gunakan Teorema \ref{prop:Eisenstein-criterion} untuk membuktikan bahwa $\left( (Y+1)^p - 1\right)/Y$ tak tereduksi dalam $\Z[Y]$. \end{hint}
+	\item Misalkan $R$ suatu daerah integral. Buktikan bahwa determinan orde $n$, $\det$, sebagai polinomial dalam entri matriks $(X_{ij})_{1 \leq i,j \leq n}$, bersifat tak tereduksi. \begin{hint} Jika $\det = fg$ dan peubah $X_{11}$ muncul dalam $f$, pertama buktikan bahwa $g$ tidak memuat peubah berbentuk $X_{1j}$, kemudian buktikan bahwa $g$ tidak memuat peubah berbentuk $X_{jj}$ (jika tidak, $X_{1j}$ harus muncul dalam $g$); akibatnya, $f$ memuat suku $X_{11} \cdots X_{nn}$. Perbandingan derajat menunjukkan bahwa $g$ konstan. \end{hint}
+	\item Kerjakan hal yang sama untuk determinan matriks persegi simetris berorde $n$, yang dipandang sebagai polinomial dalam $(X_{ij})_{i \leq j}$, dan buktikan bahwa determinan itu tak tereduksi.
+	\item Tuliskan secara eksplisit diskriminan $\delta$ pada Contoh \ref{eg:polynomial-discriminant} untuk kasus $n=2,3$.
+	\item Jika polinomial $\phi$ di atas medan $\Bbbk$ memenuhi $\phi(X+Y)=\phi(X)+\phi(Y) \in \Bbbk[X,Y]$, maka $\phi$ disebut polinomial aditif.\index{jiaxingduoxiangshi@polinomial aditif (additive polynomial)}
+		\begin{compactenum}[(i)]
+			\item Buktikan bahwa polinomial aditif membentuk gelanggang terhadap penjumlahan dan komposisi $(\phi \circ \psi)(X) = \phi(\psi(X))$.
+			\item Buktikan bahwa jika $\text{char}(\Bbbk)=0$, polinomial aditif berbentuk $\phi(X) = a_0 X$, sedangkan jika $p := \text{char}(\Bbbk)$ bilangan prima, polinomial aditif berbentuk $\phi = \sum_{i=0}^n a_i X^{p^i}$, dengan $a_i \in \Bbbk$ dan $n \geq 0$. \begin{hint} Terapkan Lema \ref{prop:Wielandt-lemma}.\end{hint}
+			\item Dalam kasus karakteristik $p > 0$, perkenalkan peubah $\tau$ untuk mendefinisikan gelanggang $\Bbbk\{\tau\}$, yang unsur-unsurnya ditulis sebagai polinomial $\sum_{i=0}^n a_i \tau^i$, tetapi perkaliannya dimodifikasi sehingga $\tau a = a^p \tau$ untuk $a \in \Bbbk$, dan dengan demikian $(a \tau^i)(b\tau^j) = ab^{p^i} \tau^{i+j}$ untuk semua $i,j \geq 0$. Buktikan bahwa $\sum_{i=0}^n a_i X^{p^i} \mapsto \sum_{i=0}^n a_i \tau^i$ memberikan isomorfisme dari gelanggang polinomial aditif ke $\Bbbk\{\tau\}$.
+		\end{compactenum}
+\end{Exercises}

@@ -2,7 +2,9 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan serta Bab 1–4 lengkap telah diterjemahkan ke Bahasa Indonesia. Unit 001–035 telah dipublikasikan dan dibaca balik byte demi byte; Unit 035 menuntaskan Bagian 4.11 dan seluruh latihan Bab 4. Bab 5 lengkap telah diterjemahkan sebagai satu kandidat bab dan sedang diproses sebagai satu batas produksi.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan serta Bab 1–5 lengkap telah diterjemahkan ke Bahasa Indonesia. Unit 001–035 telah dipublikasikan dan dibaca balik byte demi byte; Bab 5 lengkap telah dipromosikan, dibangun, diindeks dalam backend, dan lolos satu inspeksi reader gabungan 385 halaman. Batas Bab 5 sedang dipublikasikan.** Repositori ini belum merupakan terjemahan lengkap buku.
+
+[Baca atau unduh checkpoint pembaca melalui Bab 5 (385 halaman; pendahuluan dan Bab 1–5 lengkap)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-through-bab-5-reader.pdf)
 
 [Baca atau unduh checkpoint pembaca 0.3.0 (96 halaman; Unit 1-9)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf)
 
@@ -81,6 +83,19 @@ Status saat ini: **Pendahuluan serta Bab 1–4 lengkap telah diterjemahkan ke Ba
 [Baca atau unduh PDF Unit 34](artifacts/unit-034-bab-4-limit-dan-kompletisasi-grup-id.pdf)
 
 [Baca atau unduh PDF Unit 35](artifacts/unit-035-bab-4-grup-dalam-kategori-dan-latihan-id.pdf)
+
+[Baca atau unduh PDF Bab 5 lengkap](artifacts/unit-043-bab-5-pengantar-teori-gelanggang-id.pdf)
+
+Checkpoint terbaru menggabungkan satu sampul reader-first dan 36 komponen
+hash-gated menjadi 385 halaman: pendahuluan serta Bab 1–5 lengkap. Seluruh 385
+halaman dirender tepat sekali dan diperiksa melalui sebelas lembar kontak;
+tidak ada halaman hilang, terduplikasi, kosong karena galat, terpotong,
+bertumpuk, terputar, rusak, atau tidak terbaca. Sampul memakai masthead judul
+lebar penuh yang terpusat dan rute baca eksplisit, tanpa blok kemajuan
+terisi/tidak-terisi yang ambigu. Receipt penerimaan bab dan reader ada di
+[`qa/UNIT_043_CHAPTER_5_ADMISSION_20260828.md`](qa/UNIT_043_CHAPTER_5_ADMISSION_20260828.md),
+dan receipt visual tunggal ada di
+[`qa/UNIT_043_COMBINED_READER_VISUAL_QA_20260828.md`](qa/UNIT_043_COMBINED_READER_VISUAL_QA_20260828.md).
 
 Checkpoint `0.6.0` menggabungkan satu sampul pembaca dan seluruh 228 halaman
 Unit 001-024: pendahuluan serta Bab 1, Bab 2, dan Bab 3 lengkap. Build kedua
@@ -617,7 +632,13 @@ Teks sumber dan terjemahan ditangani menurut Creative Commons Attribution 4.0 In
   - [x] Bagian 4.9 — Grup Simetris `chapter4.tex:1389-1608`
   - [x] Bagian 4.10 — Limit dan Pelengkapan Grup `chapter4.tex:1609-1744`
   - [x] Bagian 4.11 — Grup dalam Kategori dan latihan Bab 4 `chapter4.tex:1745-1898`
-- [ ] Bab 5 — Dasar-dasar teori gelanggang
+- [x] Bab 5 — Pengantar teori gelanggang `chapter5.tex:1-1382`
+  - [x] Konsep dasar dan kelas gelanggang khusus
+  - [x] Gelanggang komutatif, lokalisasi, dan inversi Möbius
+  - [x] Limit dan pelengkapan gelanggang
+  - [x] Gelanggang monoid dan gelanggang polinomial
+  - [x] Faktorisasi unik dan polinomial simetris
+  - [x] Seluruh latihan Bab 5 dengan 11 petunjuk
 - [ ] Bab 6 — Teori modul
 - [ ] Bab 7 — Dasar-dasar aljabar
 - [ ] Bab 8 — Perluasan medan

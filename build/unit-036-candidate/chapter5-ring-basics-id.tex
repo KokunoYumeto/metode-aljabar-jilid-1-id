@@ -1,0 +1,172 @@
+% Indonesian LaTeX source for book ``Methods in Algebra''
+% Copyright 2018  李文威 (Wen-Wei Li).
+% Permission is granted to copy, distribute and/or modify this
+% document under the terms of the Creative Commons
+% Attribution 4.0 International (CC BY 4.0)
+% http://creativecommons.org/licenses/by/4.0/
+
+% To be included
+\chapter{Pengantar Teori Gelanggang}\label{sec:ring}
+Gelanggang adalah struktur dengan dua operasi biner, yaitu penjumlahan dan perkalian, yang memenuhi hukum asosiatif, hukum distributif, serta kaidah-kaidah operasi yang lazim, tetapi tidak mensyaratkan perkalian komutatif. Contoh mendasar gelanggang komutatif ialah gelanggang bilangan bulat $\Z$. Lebih umum, dalam teori bilangan, semua bilangan bulat aljabar di dalam sebarang medan bilangan aljabar membentuk gelanggang komutatif terhadap penjumlahan dan perkalian; dalam konteks inilah Hilbert pertama kali memperkenalkan istilah gelanggang dalam ``Zahlbericht'' yang diterbitkan pada 1897, dengan istilah asli bahasa Jerman \textit{der Zahlring}, yakni ``gelanggang bilangan''. Contoh mendasar gelanggang takkomutatif ialah gelanggang matriks $n \times n$ atas suatu medan, misalnya gelanggang matriks real $n \times n$, $M_n(\R)$. Singkatnya, peranan struktur gelanggang dalam matematika sudah jelas.
+
+Gelanggang komutatif dan takkomutatif memiliki perbedaan nyata, baik dalam sifat-sifatnya maupun dalam sudut pandang kajiannya; medan dan gelanggang pembagian pun masing-masing mempunyai metodologi tersendiri, sehingga harus dibahas dalam bab-bab khusus. Tujuan bab ini hanyalah menguraikan konsep-konsep dasar yang dimiliki bersama, diselingi sejumlah hasil klasik yang konkret, seperti Teorema Kecil Wedderburn \ref{prop:Wedderburn-little-thm}, faktorisasi tunggal \S\ref{sec:UFD}, dan teori dasar polinomial simetris \S\ref{sec:symmetric-poly}; hasil-hasil tersebut akan muncul kembali dalam bab-bab selanjutnya.
+
+Kecuali dinyatakan lain, kita hanya mempertimbangkan gelanggang berunsur satuan dan pada umumnya mengasumsikan bahwa gelanggang yang dibahas $\neq \{0\}$. Untuk menghindari paradoks, ketika membahas kategori gelanggang $\cate{Ring}$ kita tetap memakai Konvensi \ref{con:U-small}, yaitu mengasumsikan bahwa gelanggang yang dibahas semuanya ``kecil'' dalam arti teori himpunan.
+
+\begin{wenxintishi}
+	Isi bab ini lebih bersifat formal dan diarahkan untuk membangun kerangka yang sesuai bagi bab-bab berikutnya; materi pada paruh pertama umumnya tercakup dalam mata kuliah aljabar abstrak. Pengenalan inversi Möbius dalam \S\ref{sec:Mobius} mempunyai dua tujuan: pertama, membantu pembaca yang belum mengenal rumus inversi Möbius klasik; kedua, memperlihatkan penerapan bahasa teori gelanggang dalam kombinatorika enumeratif. Latihan-latihan akan memberikan contoh lebih lanjut.
+
+	Polinomial simetris juga merupakan materi yang kerap dijumpai dalam kurikulum matematika universitas. Metode diagram Young yang diperkenalkan dalam \S\ref{sec:symmetric-poly} bukanlah cara tercepat ataupun paling sederhana; tujuannya ialah memperkenalkan suatu pola pikir dengan jangkauan penerapan yang lebih luas.
+\end{wenxintishi}
+
+\section{Konsep Dasar}\label{sec:ring-basics}
+Gelanggang adalah struktur aljabar yang dilengkapi operasi penjumlahan, pengurangan, dan perkalian. Gelanggang juga dapat dipandang sebagai struktur perkalian yang ditumpangkan pada suatu grup abelian (dengan operasi ditulis secara aditif); sudut pandang kedua ini sering lebih berguna secara teoretis.
+
+\begin{definition}\index{huan@gelanggang (ring)}
+	Sebuah \emph{gelanggang} (berunsur satuan) adalah data $(R, +, \cdot)$, dengan
+	\begin{enumerate}
+		\item $(R, +)$ suatu grup abelian; operasi binernya ditulis secara aditif sebagai $(a,b) \mapsto a+b$, unsur satuan aditifnya ditulis $0$, dan grup ini disebut grup aditif dari $R$;
+		\item operasi perkalian $\cdot: R \times R \to R$ disingkat sebagai $a \cdot b = ab$ dan memenuhi sifat-sifat berikut: untuk semua $a, b, c \in R$,
+		\begin{compactitem}
+			\item $a(b+c) = ab+ac$, \; $(b+c)a = ba + ca$ \quad (hukum distributif, atau disebut bilinearitas),
+			\item $a(bc) = (ab)c$ \quad (hukum asosiatif perkalian);
+		\end{compactitem}
+		\item terdapat unsur $1 \in R$ sedemikian sehingga untuk semua $a \in R$ berlaku $a \cdot 1 = a = 1 \cdot a$; unsur ini disebut unsur satuan (perkalian) dari $R$.\index{yaoyuan@unsur satuan}
+	\end{enumerate}
+	Jika sifat-sifat yang berkaitan dengan unsur satuan dihapus, data $(R, +, \cdot)$ yang diperoleh disebut gelanggang tanpa unsur satuan. Jika suatu himpunan bagian $S \subset R$ juga merupakan gelanggang terhadap $(+, \cdot)$ dan bersama $R$ mempunyai unsur satuan perkalian yang sama, yaitu $1$, maka $S$ disebut subgelanggang dari $R$; secara ekuivalen, $R$ disebut perluasan gelanggang dari $S$.
+\end{definition}
+
+Definisi di atas menyiratkan bahwa $(R, \cdot)$ merupakan monoid, sehingga unsur satuan $1$ bersifat unik; bila perlu, unsur ini ditulis $1_R$. Definisi subgelanggang $S \subset R$ ekuivalen dengan pernyataan bahwa $(S, +)$ merupakan subgrup dan $(S, \cdot)$ merupakan submonoid. Pemetaan perkalian kiri $b \mapsto ab$, untuk setiap $a \in R$, merupakan endomorfisme grup aditif $(R, +)$; karena itu, aksioma gelanggang menyiratkan $a \cdot 0 = 0$. Demikian pula, $0 \cdot a = 0$. Selain itu, $(-1)a + a = (-1 + 1) a = 0$ menyiratkan $(-1)a = -a$; demikian pula, $a(-1) = -a$.
+
+Perhatikan bahwa gelanggang yang memenuhi $1=0$ hanya mempunyai satu unsur, yaitu $0$, dan disebut \emph{gelanggang nol}. Kecuali dinyatakan lain, dalam bab ini gelanggang selalu berarti gelanggang taknol berunsur satuan, dan $(R, +, \cdot)$ akan disingkat menjadi $R$. Himpunan semua unsur yang invertibel terhadap perkalian dinotasikan dengan $R^\times$; notasi ini selaras dengan notasi sebelumnya untuk unsur invertibel dalam monoid.\index[sym1]{$R^\times$}
+
+\begin{definition}\index{xiangfanhuan@gelanggang lawan (opposite ring)}
+	Misalkan $R$ gelanggang. Definisikan gelanggang lawannya $R^\text{op} = (R, +, \odot)$ dengan hanya mengubah operasi perkalian $\odot$ menjadi
+	\[ a \odot b := ba, \quad a, b \in R. \]
+	Jika $R^\text{op}=R$ (yakni, $ab=ba$ selalu berlaku), maka $R$ disebut \emph{gelanggang komutatif}. \index{jiaohuan@gelanggang komutatif}
+\end{definition}
+
+\begin{definition}\index{tongtai@homomorfisme gelanggang}
+	Misalkan $R, S$ gelanggang. Suatu pemetaan $\varphi: R \to S$ disebut homomorfisme gelanggang jika memenuhi syarat-syarat berikut: untuk semua $a, b \in R$,
+	\begin{itemize}
+		\item $\varphi(a+b) = \varphi(a)+\varphi(b)$, yang ekuivalen dengan pernyataan bahwa $\varphi$ adalah homomorfisme grup-grup aditif;
+		\item $\varphi(ab)=\varphi(a)\varphi(b)$;
+		\item $\varphi(1_R) = 1_S$; dua syarat terakhir ekuivalen dengan pernyataan bahwa $\varphi$ adalah homomorfisme monoid-monoid perkalian.
+	\end{itemize}
+	Jika syarat yang berkaitan dengan $1_R$, $1_S$ dihapus, diperoleh konsep homomorfisme antara gelanggang-gelanggang tanpa unsur satuan.
+\end{definition}
+Dari sini diperoleh konsep isomorfisme gelanggang (yakni homomorfisme invertibel), endomorfisme, automorfisme, dan seterusnya, dengan pola yang sama seperti dalam pembahasan teori kategori pada \S\ref{sec:cat-and-morphism}; perinciannya tidak diulangi.
+
+Suatu homomorfisme $\varphi$ adalah isomorfisme jika dan hanya jika ia bijektif, dan citra $\varphi$, yaitu $\Image(\varphi)$, merupakan subgelanggang dari $S$. Untuk homomorfisme gelanggang terdapat pula konsep \emph{kernel} $\Ker(\varphi) := \varphi^{-1}(0)$; kita segera akan melihat bahwa kernel suatu homomorfisme tidak lain adalah ideal dua sisi di gelanggang asal.\index{he@kernel}
+
+\begin{example}\label{eg:matrix-ring}\index[sym1]{$M_n(R)$}
+	Contoh mendasar gelanggang takkomutatif ialah gelanggang matriks. Misalkan $n \in \Z_{\geq 1}$ dan $R$ gelanggang; definisikan gelanggang matriks $M_n(R)$ yang unsur-unsurnya merupakan matriks berukuran $n \times n$,
+	\[ (a_{ij})_{1 \leq i,j \leq n} = \begin{pmatrix}
+		a_{11} & \cdots & a_{1n} \\
+		\vdots & & \vdots \\
+		a_{n1} & \cdots & a_{nn}
+	\end{pmatrix}, \quad \forall i,j,\; a_{ij} \in R \]
+	dengan penjumlahan dan perkalian yang didefinisikan sebagai operasi matriks biasa; perhatikan bahwa $R$ tidak disyaratkan komutatif. Unsur satuan gelanggang matriks adalah
+	\[ 1 = \left( \begin{smallmatrix} 1_R & & \\ & \ddots & \\ & & 1_R \end{smallmatrix} \right). \]
+\end{example}
+
+\begin{example}\label{eg:End-ring}\index{zitongtaihuan@gelanggang endomorfisme}
+	Misalkan $(A, +)$ grup abelian. Himpunan endomorfisme $A$, yaitu $\End(A)$, mempunyai struktur gelanggang natural: komposisi endomorfisme memberikan perkalian $\phi \psi = \phi \circ \psi$, dengan $\phi, \psi \in \End(A)$, sedangkan penjumlahan dapat didefinisikan ``titik demi titik'' sebagai
+	\[ \phi + \psi: a \longmapsto \phi(a) + \psi(a). \]
+	Mudah diverifikasi bahwa definisi ini menjadikan $(\End(A), +, \cdot)$ sebuah gelanggang dengan unsur satuan $\identity_A$.
+\end{example}
+
+Selanjutnya, kita tinjau gelanggang hasil bagi. Misalkan $R$ gelanggang; gagasannya serupa dengan \S\ref{sec:homomorphism}. Diberikan suatu relasi ekuivalensi pada himpunan $R$, katakanlah $\sim$, dengan syarat apa $R/\sim$ dapat dibekali struktur gelanggang kanonik sedemikian sehingga pemetaan hasil bagi $R \to R/\sim$, $r \mapsto [r]$, merupakan homomorfisme gelanggang? Homomorfisme gelanggang pertama-tama harus merupakan homomorfisme grup-grup aditif. Karena itu, relasi ekuivalensi tersebut ditentukan oleh suatu subgrup aditif $I \subset R$ sedemikian sehingga untuk semua $r, r' \in R$ berlaku
+\[ (r \sim r') \iff (r-r' \sim 0) \iff (r-r' \in I). \]
+
+Sekarang masukkan pula perkalian. Relasi $\sim$ harus memenuhi syarat
+\[ (r \sim r') \wedge (s \sim s') \implies (rs \sim r's'). \]
+Dari aksioma gelanggang mudah diperoleh $rs - r's' = r(s-s') + (r-r')s'$. Oleh sebab itu, syarat kita mereduksi menjadi: $\forall r \in R$, berlaku $rI \subset I$ dan $Ir \subset I$; di sini
+\begin{align*}
+	rI & := \{ra : a \in I\} \subset R, \\
+	Ir & := \{ar : a \in I\} \subset R,
+\end{align*}
+keduanya merupakan subgrup aditif dari $R$. Bahkan, karena $R$ berunsur satuan, syarat di atas ekuivalen dengan $IR = I = RI$. Dengan demikian, kita memperoleh definisi berikut.
+
+\begin{definition}\label{def:ideals}\index{lixiang@ideal (ideal)}
+	Misalkan $R$ gelanggang dan $I \subset R$ subgrup aditif.
+	\begin{compactenum}[(i)]
+		\item Jika untuk setiap $r \in R$ berlaku $rI \subset I$, maka $I$ disebut \emph{ideal kiri} dari $R$;
+		\item jika untuk setiap $r \in R$ berlaku $Ir \subset I$, maka $I$ disebut \emph{ideal kanan} dari $R$;
+		\item jika $I$ sekaligus merupakan ideal kiri dan ideal kanan, maka ia disebut \emph{ideal dua sisi}.
+	\end{compactenum}
+	Ideal kiri, kanan, atau dua sisi yang memenuhi $I \neq R$ disebut ideal sejati. Dalam gelanggang komutatif, tidak ada perbedaan antara ideal kiri dan ideal kanan, sehingga cukup disebut ideal.
+\end{definition}
+Prasyarat bahwa $I$ merupakan subgrup aditif dapat diperlemah menjadi bahwa himpunan tersebut takkosong dan tertutup terhadap penjumlahan, karena $(-1)r = -r$. Ideal mempunyai beberapa operasi paling sederhana berikut.
+\begin{itemize}
+	\item Misalkan $I_1$, $I_2$ ideal kiri dari $R$ (atau ideal kanan, ideal dua sisi). Maka $I_1 + I_2$ dan $I_1 \cap I_2$ juga demikian. Lebih umum, untuk sebarang keluarga ideal kiri dari $R$ (atau ideal kanan, ideal dua sisi) $\{ I_t: t \in T \}$, definisikan jumlahnya sebagai
+		\[ \sum_{t \in T} I_t := \left\{ r_{t_1} + \cdots + r_{t_n} :
+		\begin{array}{l}
+			n \in \Z_{\geq 1}, \; t_1, \ldots, t_n \in T, \\
+			\forall 1 \leq j \leq n, \; r_{t_j} \in I_{t_j}
+		\end{array} \right\}, \]
+		untuk $T = \emptyset$, jumlah kosong disepakati sebagai $\{0\}$; maka $\sum_{t \in T} I_t$ juga merupakan ideal kiri (atau ideal kanan, ideal dua sisi). Demikian pula, jika $T \neq \emptyset$, pernyataan serupa berlaku untuk irisan $\bigcap_{t \in T} I_t$.
+	\item Di dalam $R$, untuk sebarang himpunan bagian $S$, ideal kiri (atau ideal kanan, ideal dua sisi) yang dibangkitkan oleh $S$ didefinisikan sebagai ideal kiri (atau ideal kanan, ideal dua sisi) terkecil yang memuat $S$, yaitu $\bigcap_{I \supset S} I$, dengan $I$ diambil dari semua ideal kiri (atau ideal kanan, ideal dua sisi).
+	\item Misalkan $I$ ideal dua sisi dan $S$ subgelanggang. Maka $S+I$ juga merupakan subgelanggang.
+	\item Misalkan $S$ subgelanggang dan $I$ ideal kiri di $R$ (atau ideal kanan, ideal dua sisi, subgelanggang). Maka $S \cap I$ juga demikian di $S$.
+	\item Definisikan hasil kali dua ideal dua sisi $I$, $J$ sebagai ideal $IJ$ yang dibangkitkan oleh himpunan bagian $\{xy : x \in I,\; y \in J\}$. Perhatikan bahwa unsur-unsur $IJ$ dapat dinyatakan sebagai jumlah dari unsur-unsur $xy$ tersebut. Operasi hasil kali mempunyai sifat-sifat sederhana berikut:
+		\begin{gather*}
+			IJ \subset I \cap J \subset I+J, \\
+			(\sum_{t \in T} I_t) J = \sum_{t \in T} (I_t J), \quad J(\sum_{t \in T} I_t) = \sum_{t \in T} J I_t, \\
+			I(JK) = (IJ)K.
+		\end{gather*}
+		Dengan menggunakan hukum asosiatif pada baris terakhir, dapat didefinisikan hasil kali berhingga ideal-ideal $I_1 \cdots I_n$. Pangkat suatu ideal $I$ dapat didefinisikan secara rekursif dengan $I^0 = R$ dan $I^k = I \cdot I^{k-1}$, dengan $k \in \Z_{\geq 1}$.
+\end{itemize}
+Ideal dua sisi yang dibangkitkan oleh berhingga banyak unsur $r_1, \ldots, r_n \in R$ biasanya dinotasikan dengan $\lrangle{r_1, \ldots, r_n}$. Dalam kasus gelanggang komutatif, lazim pula ditulis $(r_1, \ldots, r_n)$.
+
+\begin{definition}\index{shang@gelanggang hasil bagi}
+	Misalkan $I$ ideal dua sisi dari $R$. Bekali grup aditif $R/I$ dengan operasi perkalian
+	\[ (r+I) \cdot (s+I) := (rs + I), \quad r, s \in R. \]
+	Dengan demikian, $R/I$ merupakan gelanggang yang disebut \emph{gelanggang hasil bagi} dari $R$ modulo $I$. Pemetaan hasil bagi $R \twoheadrightarrow R/I$ disebut \emph{homomorfisme hasil bagi}.
+\end{definition}
+Pembahasan sebelum Definisi \ref{def:ideals} telah menunjukkan bahwa $R/I$ benar-benar merupakan gelanggang dengan unsur satuan $1_{R/I} = 1_R + I$; langsung dari definisi juga terlihat bahwa $R \twoheadrightarrow R/I$ benar-benar merupakan homomorfisme. Perhatikan bahwa $R/I$ adalah gelanggang nol jika dan hanya jika $I=R$; biasanya kita hanya mempertimbangkan kasus ketika $I$ merupakan ideal sejati. Operasi mengambil hasil bagi $R/I$ kadang-kadang juga disebut reduksi $\bmod \;I$.
+
+\begin{example}\label{eg:Z-pid}
+	Misalkan $n \in \Z$. Maka $n\Z$ merupakan ideal dari $\Z$. Jika $n \neq 0$, operasi dalam gelanggang hasil bagi $\Z/n\Z$ tidak lain adalah operasi kelas kongruensi dalam teori bilangan. Sebaliknya, setiap ideal $I \subset \Z$ harus berbentuk $I=n\Z$: hal ini jelas jika $I=\{0\}$; jika tidak, ambil unsur terkecil dari $I \cap \Z_{> 0}$ dan nyatakan unsur itu dengan $n$. Algoritma pembagian menunjukkan bahwa setiap unsur $I$ habis dibagi oleh $n$; jika disyaratkan $n \geq 0$, maka $n$ ditentukan secara unik. Ini menunjukkan bahwa $\Z$ merupakan contoh elementer daerah ideal utama, yang akan diperkenalkan kemudian dalam Definisi \ref{def:PID}.
+\end{example}
+
+Gelanggang hasil bagi memenuhi sejumlah sifat yang juga dimiliki grup hasil bagi, sebagai berikut. Pembuktiannya sama dengan kasus grup dan diserahkan sebagai latihan.
+\begin{proposition}\label{prop:quotient-ring-univ-prop}
+	Misalkan $I \subset R$ ideal dua sisi. Untuk setiap homomorfisme gelanggang $\varphi: R \to R'$ yang memenuhi $\varphi(I)=0$, terdapat homomorfisme unik $\bar{\varphi}: R/I \to R'$ yang membuat diagram berikut komutatif.
+	\[ \begin{tikzcd}[row sep=small]
+		R \arrow[r, "\varphi"] \arrow[d] & R' \\
+		R/I \arrow[ur, "{\exists! \,\bar{\varphi}}"'] &
+	\end{tikzcd} \]
+\end{proposition}
+
+\begin{proposition}\label{prop:1st-homomorphism-ring}
+	Misalkan $\varphi: R \to R'$ homomorfisme gelanggang. Maka $\Ker(\varphi) := \varphi^{-1}(0)$ merupakan ideal dua sisi dari $R$, dan homomorfisme yang diinduksikannya $\bar{\varphi}: R/\Ker(\varphi) \to \Image(\varphi)$ adalah isomorfisme gelanggang.
+\end{proposition}
+
+Selanjutnya, perhatikan bahwa untuk setiap homomorfisme gelanggang $\varphi: R_1 \to R_2$, terdapat pemetaan prabayangan yang bersesuaian antara ideal-ideal:
+\begin{equation}\label{eqn:ideal-preimage}\begin{aligned}
+	\left\{ \text{ideal dua sisi di } R_2 \right\} & \longrightarrow \left\{ \text{ideal dua sisi di } R_1 \right\} \\
+	I_2 & \longmapsto \varphi^{-1}(I_2).
+\end{aligned}\end{equation}
+Pemetaan ini memenuhi
+\[ I_2 \subset I'_2 \implies \varphi^{-1}(I_2) \subset \varphi^{-1}(I'_2). \]
+Jika $\varphi$ diambil sebagai pemetaan inklusi subgelanggang $R_1 \hookrightarrow R_2$, diperoleh $I_2 \mapsto I_2 \cap R_1$. Sekarang kita tinjau kasus ekstrem lainnya, yaitu kasus homomorfisme hasil bagi atau homomorfisme surjektif (ingat Proposisi \ref{prop:1st-homomorphism-ring}).
+
+\begin{proposition}\label{prop:2nd-homomorphism-ring}
+	Misalkan $\varphi: R_1 \to R_2$ homomorfisme gelanggang surjektif. Maka \eqref{eqn:ideal-preimage} menginduksi bijeksi
+	\[ \begin{tikzcd}[row sep=tiny]
+		\left\{ \text{ideal dua sisi}\;  I_2 \subset R_2  \right\} \arrow[leftrightarrow, r, "1:1"] & \left\{ \text{ideal dua sisi}\; I_1 \subset R_1 : I_1 \supset \Ker(\varphi)  \right\} \\
+		I_2 \arrow[mapsto, r] & \varphi^{-1}(I_2) \\
+		\varphi(I_1) & I_1 \arrow[mapsto, l].
+	\end{tikzcd} \]
+	dan homomorfisme komposit $R_1 \xrightarrow{\varphi} R_2 \twoheadrightarrow R_2/I_2$ menginduksi isomorfisme gelanggang $R_1/\varphi^{-1}(I_2) \rightiso R_2/I_2$.
+\end{proposition}
+
+Selanjutnya, tinjau subgelanggang $S \subset R$ dan ideal dua sisi $I \subset R$. Citra homomorfisme komposit $S \hookrightarrow R \twoheadrightarrow R/I$ adalah subgelanggang dari $R/I$, yaitu $(S+I)/I$, dan kernelnya jelas $I \cap S$. Pembuktian berikut sama dengan kasus grup, sehingga dihilangkan.
+\begin{proposition}\label{prop:3rd-homomorphism-ring}
+	Misalkan $S$ subgelanggang dari $R$ dan $I$ ideal dua sisi dari $R$. Maka homomorfisme komposit $S \twoheadrightarrow (S+I)/I$ menginduksi homomorfisme gelanggang
+	\[ \theta: S/(I \cap S) \to (S+I)/I \]
+	yang merupakan isomorfisme.
+\end{proposition}
+
+Konstruksi-konstruksi yang berkaitan dengan ideal kiri atau ideal kanan akan ditangani secara terpadu dalam pembahasan teori modul.

@@ -1,0 +1,170 @@
+\section{Tinjauan Awal tentang Gelanggang Komutatif}\label{sec:comm-ring-intro}
+Teori gelanggang komutatif sangat berbeda dari kasus umum yang nonkomutatif. Di satu pihak, perbedaan ini tampak pada sejumlah konsep dan teknik yang khas bagi gelanggang komutatif; di pihak lain, hal itu bersumber dari kedudukan penting gelanggang komutatif dalam geometri aljabar, teori bilangan aljabar, kombinatorika aljabar, dan bidang-bidang lainnya. Tujuan bagian ini hanyalah memaparkan konsep-konsep dasar, termasuk lokalisasi gelanggang komutatif; kajian yang lebih mendalam akan dibahas dalam bab tersendiri.
+
+Bagian ini hanya membahas gelanggang dengan unsur satuan yang komutatif, sehingga ideal kiri dan ideal kanan tidak perlu dibedakan.
+
+\begin{definition}\label{def:ring-ideal}\index{lixiang!ideal prima (prime ideal)}\index{lixiang!ideal maksimal (maximal ideal)}
+	Dalam gelanggang $R$, suatu ideal sejati $I$ disebut
+	\begin{compactitem}
+		\item \emph{ideal prima}, jika $xy \in I$ mengakibatkan $x \in I$ atau $y \in I$;
+		\item \emph{ideal maksimal}, jika $I \neq R$ dan tidak ada ideal yang memuat $I$ secara ketat.
+	\end{compactitem}
+	Himpunan semua ideal prima dan semua ideal maksimal dalam $R$ masing-masing ditulis $\Spec R$ dan $\MaxSpec R$, serta disebut spektrum prima dan spektrum ideal maksimal dari $R$. \index[sym1]{Spec@$\Spec$}\index[sym1]{MaxSpec@$\MaxSpec$}
+\end{definition}
+Untuk gelanggang sembarang, konsep kemaksimalan dapat didefinisikan bagi ideal kiri, ideal kanan, dan ideal dua sisi, tetapi kegunaannya tidak seluas dalam kasus komutatif.
+
+\begin{lemma}\label{prop:Spec-pullback}
+	Untuk setiap homomorfisme gelanggang $\varphi: R_1 \to R_2$, pemetaan dalam \eqref{eqn:ideal-preimage} membawa ideal prima ke ideal prima; dengan kata lain, $\varphi$ menginduksi peta
+	\begin{align*}
+		\varphi^\sharp: \Spec R_2 & \longrightarrow \Spec R_1 \\
+		I_2 & \longmapsto \varphi^{-1}(I_2).
+	\end{align*}
+	Dalam bahasa kategori, pemetaan
+	\begin{align*}
+		R & \longmapsto \Spec R, \\
+		[\varphi: R_1 \to R_2] & \longmapsto [\varphi^\sharp: \Spec R_2 \to \Spec R_1]
+	\end{align*}
+	mendefinisikan fungtor $\Spec: \cate{CRing}^\text{op} \to \cate{Set}$, dengan $\cate{CRing}$ menyatakan kategori gelanggang komutatif.
+\end{lemma}
+\begin{proof}
+	Misalkan $I_2$ adalah ideal prima dari $R_2$. Jika dalam $R_1$ berlaku $xy \in \varphi^{-1}(I_2)$, maka $\varphi(x)\varphi(y) \in I_2$, sehingga salah satu dari $x$ dan $y$ berada dalam $\varphi^{-1}(I_2)$. Jadi $\varphi^{-1}(I_2)$ merupakan ideal prima dari $R_1$. Untuk membuktikan bahwa $\Spec$ memberikan fungtor $\cate{CRing}^\text{op} \to \cate{Set}$, cukup buktikan bagi setiap pasangan homomorfisme $\varphi$, $\psi$ yang dapat dikomposisikan bahwa $(\varphi \circ \psi)^\sharp = \psi^\sharp \circ \varphi^\sharp$; hal ini langsung mengikuti pengamatan bahwa $(\varphi \circ \psi)^{-1} = \psi^{-1} \circ \varphi^{-1}$.
+\end{proof}
+
+\begin{remark}
+	Secara umum tidak ada hasil yang bersesuaian untuk $\MaxSpec$; lihat Contoh \ref{eg:localization-prime}.
+\end{remark}
+
+\begin{proposition}\label{prop:prime-maximal-ideals}
+	Misalkan $I$ adalah ideal sejati dari $R$. Maka
+	\begin{enumerate}
+		\item dalam bijeksi pada Proposisi \ref{prop:2nd-homomorphism-ring}
+		\begin{align*}
+			\left\{ J \subset R: \text{ideal}, \; J \supset I \right\} & \longrightarrow \{ \bar{J} \subset R/I : \text{ideal} \} \\
+			J & \longmapsto \bar{J} := J/I
+		\end{align*}
+		tersebut, $\bar{J}$ merupakan ideal prima (ideal maksimal) jika dan hanya jika $J$ demikian;
+		\item $R/I$ merupakan daerah integral jika dan hanya jika $I$ merupakan ideal prima;
+		\item $R/I$ merupakan medan jika dan hanya jika $I$ merupakan ideal maksimal.
+	\end{enumerate}
+\end{proposition}
+\begin{proof}
+	Pertama-tama, buktikan pernyataan pertama. Kasus ideal maksimal merupakan akibat langsung dari Proposisi \ref{prop:2nd-homomorphism-ring}. Lema \ref{prop:Spec-pullback} menunjukkan bahwa $\bar{J} \in \Spec R/I \implies J \in \Spec R$. Sekarang misalkan $J \in \Spec R$ dan $J \supset I$. Dalam $R/I$, berlaku $\bar{x}\bar{y} \in \bar{J}$ jika dan hanya jika $xy \in J$, dengan $x,y$ masing-masing merupakan sebarang prabayangan dari $\bar{x}, \bar{y}$. Hal ini menunjukkan bahwa $\bar{J} \in \Spec R/I$.
+
+	Dengan mengambil $J=I$, dua pernyataan yang tersisa masing-masing tereduksi menjadi: $R$ merupakan daerah integral (medan) jika dan hanya jika $\{0\}$ merupakan ideal prima (ideal maksimal). Pernyataan bahwa $\{0\}$ merupakan ideal prima tidak lain berarti $xy=0$ jika dan hanya jika $x=0$ atau $y=0$, tepat seperti definisi daerah integral. Di pihak lain, $\{0\}$ merupakan ideal maksimal jika dan hanya jika satu-satunya ideal sejati dari $R$ adalah $\{0\}$. Ini setara dengan mengatakan bahwa untuk setiap unsur tak nol $x \in R$, ideal $Rx = \lrangle{x}$ harus merupakan seluruh $R$; dengan kata lain, terdapat $y$ sedemikian sehingga $xy=1=yx$.
+\end{proof}
+
+\begin{corollary}\label{prop:maximal-implies-prime}
+	Setiap ideal maksimal merupakan ideal prima.
+\end{corollary}
+Konversnya secara umum tidak berlaku karena daerah integral belum tentu merupakan medan.
+
+\begin{proposition}\label{prop:existence-maximal-ideal}
+	Misalkan $R$ adalah gelanggang sembarang (tidak harus komutatif). Untuk setiap ideal dua sisi sejati dari $R$, katakanlah $I$, terdapat ideal dua sisi maksimal $\mathfrak{m}$ sedemikian sehingga $\mathfrak{m} \supset I$.
+\end{proposition}
+Dengan mengambil $I=\{0\}$, kita memperoleh bahwa $R$ mempunyai ideal dua sisi maksimal, asalkan gelanggang ini bukan gelanggang nol. Hasil ini biasanya diterapkan ketika $R$ merupakan gelanggang komutatif.
+\begin{proof}
+	Semua ideal berikut adalah ideal dua sisi. Dengan Proposisi \ref{prop:2nd-homomorphism-ring}, persoalan segera tereduksi pada kasus $I=\{0\}$, yakni keberadaan ideal maksimal dalam $R$. Pertama-tama, perhatikan bahwa ideal-ideal sejati dari $R$ membentuk suatu himpunan terurut parsial (poset) $(\mathcal{P}, \leq)$: definisikan $I_1 \leq I_2 \iff I_1 \subset I_2$. Dengan demikian, unsur-unsur maksimal dalam $\mathcal{P}$ tepat merupakan ideal-ideal maksimal dari $R$. Berikutnya, kita gunakan Lema Zorn (Teorema \ref{prop:Zorn}) untuk memperoleh unsur maksimal. Pertama-tama, perhatikan bahwa setiap rantai dalam $\mathcal{P}$ (yakni subhimpunan terurut total) mempunyai batas atas. Misalkan $\mathcal{C} \subset \mathcal{P}$ adalah suatu rantai. Dari sifat urutan total diketahui bahwa $J := \bigcup_{I \in \mathcal{C}} I$ juga merupakan ideal dari $R$. Jika $J = R$, maka terdapat $I \in \mathcal{C}$ sedemikian sehingga $1 \in I$, yakni $I = R$, bertentangan dengan definisi $\mathcal{P}$. Jadi $J \in \mathcal{P}$ memberikan batas atas bagi $\mathcal{C}$. Selesai.
+\end{proof}
+
+\begin{definition}\label{def:PID}\index{zhulixianghuan@daerah ideal utama (principal ideal domain)}
+	Misalkan $I$ adalah ideal dari $R$. Jika terdapat $a \in R$ sedemikian sehingga $I = \lrangle{a} = Ra$, maka $I$ disebut \emph{ideal utama}. Jika semua ideal dari daerah integral $R$ merupakan ideal utama, maka $R$ disebut \emph{daerah ideal utama}.
+\end{definition}
+Sebagai contoh, gelanggang bilangan bulat $\Z$ merupakan daerah ideal utama (Contoh \ref{eg:Z-pid}).
+
+Berikutnya, kita membahas lokalisasi gelanggang komutatif. Gagasannya adalah menambahkan secara formal invers perkalian bagi unsur-unsur tertentu dalam gelanggang.
+\begin{definition}\index{chengxingziji@himpunan bagian multiplikatif (multiplicative subset)}
+	Misalkan $R$ adalah gelanggang komutatif. Jika suatu himpunan bagian $S \subset R$ membentuk monoid terhadap perkalian gelanggang, maka $S$ disebut \emph{himpunan bagian multiplikatif} dari $R$.
+\end{definition}
+
+Untuk himpunan bagian multiplikatif $S$, \emph{lokalisasi} $R[S^{-1}]$ dikonstruksi sebagai berikut. Pertama-tama, definisikan relasi pada himpunan $R \times S$ dengan \index{jubuhua@lokalisasi (localization)}\index[sym1]{$R[S^{-1}]$}
+\[ (r,s) \sim (r',s') \iff \left[ \exists t \in S, \; trs' = tr's \right]. \]
+Mudah dibuktikan bahwa $\sim$ merupakan relasi ekuivalensi. Himpunan hasil bagi yang bersesuaian ditulis $R[S^{-1}]$, dan kelas ekuivalensi $[r,s]$ di dalamnya hendaknya dipandang sebagai ``pecahan'' $r/s$. Untuk setiap $t \in S$, berlaku $[r,s]=[rt,st]$. Karena itu, operasi gelanggang berikut merupakan pilihan yang wajar:
+\begin{gather*}
+	[r,s] + [r',s'] = [rs' + r's, ss'], \\
+	[r,s] \cdot [r',s'] = [rr', ss'].
+\end{gather*}
+Silakan periksa bahwa dengan operasi ini $R[S^{-1}]$ memang merupakan gelanggang komutatif, dengan unsur nol $0 = [0, s]$ dan unsur identitas $1 = [s,s]$, di mana $s \in S$ dapat dipilih sebarang. Dari sini diperoleh
+\begin{gather}\label{eqn:localization-zero}
+	[r,s]=0 \iff \left[ \exists t \in S, \; tr=0 \right].
+\end{gather}
+Jadi $R[S^{-1}]$ merupakan gelanggang nol jika dan hanya jika terdapat $s \in S$ sedemikian sehingga $sR=0$. Karena kita mengasumsikan bahwa $R$ mempunyai unsur satuan, hal ini juga setara dengan $0 \in S$; secara umum kasus ini selalu dikecualikan.
+
+Di pihak lain, $r \mapsto [r,1]$ memberikan homomorfisme gelanggang $R \to R[S^{-1}]$. Perhatikan bahwa bayangan setiap $s \in S$ berada dalam $R[S^{-1}]^\times$, dengan invers $[1,s]$. Lokalisasi harus dipandang bersama-sama dengan morfisme $R \to R[S^{-1}]$. Dari sudut pandang teori kategori, konstruksi lokalisasi $R \to R[S^{-1}]$ merupakan cara yang ``paling ekonomis'' untuk membuat unsur-unsur $S$ invertibel, dan dicirikan secara tunggal oleh sifat universal berikut.
+
+\begin{proposition}
+	Lokalisasi $R \to R[S^{-1}]$ memenuhi sifat universal berikut: jika suatu homomorfisme gelanggang komutatif $\varphi: R \to A$ memenuhi $\varphi(S) \subset A^\times$, maka terdapat homomorfisme gelanggang tunggal $\varphi[S^{-1}]: R[S^{-1}] \to A$ yang membuat diagram berikut komutatif.
+	\[ \begin{tikzcd}
+		R \arrow[r, "\varphi"] \arrow[d] & A \\
+		R[S^{-1}] \arrow[ru, "{\varphi[S^{-1}]}"'] &
+	\end{tikzcd} \]
+\end{proposition}
+\begin{proof}
+	Komutativitas diagram ekuivalen dengan
+	\[ [r,s] =[r,1] \cdot [1,s] \xmapsto{\varphi[S^{-1}]} \varphi(r) \varphi(s)^{-1} \in A. \]
+	Sebaliknya, mudah dibuktikan bahwa rumus ini memang mendefinisikan homomorfisme gelanggang $R[S^{-1}] \to A$.
+\end{proof}
+
+\begin{lemma}\label{prop:localization-units}
+	Misalkan $S \subset R$ adalah himpunan bagian multiplikatif dan $0 \notin S$. Unsur $[r,s] \in R[S^{-1}]$ invertibel jika dan hanya jika terdapat $r_1 \in R$ sedemikian sehingga $rr_1 \in S$.
+\end{lemma}
+\begin{proof}
+	Jika $rr_1 \in S$, maka $[r,s] [r_1 s, rr_1] = 1$. Sebaliknya, misalkan terdapat $[r',s']$ sedemikian sehingga $[r,s][r',s'] = 1$. Maka terdapat $t \in S$ sedemikian sehingga $trr' = tss'$, sehingga $r(tr') \in S$.
+\end{proof}
+
+Sebagian informasi tentang gelanggang semula $R$ mungkin hilang dalam proses lokalisasi. Dari \eqref{eqn:localization-zero} diketahui bahwa
+\[ \Ker \left[ R \to R[S^{-1}] \right] = \left\{r \in R : \exists s \in S, \; sr=0 \right\}. \]
+Kita ingin memilih $S$ sebesar mungkin agar $R[S^{-1}]$ merupakan perluasan gelanggang dari $R$. Pembahasan di atas secara natural mengarah pada hasil berikut.
+\begin{lemma}
+	Misalkan $S \subset R$ adalah himpunan bagian multiplikatif dan $0 \notin S$. Morfisme lokalisasi $R \to R[S^{-1}]$ bersifat injektif jika dan hanya jika $S$ tidak memuat pembagi nol. Di pihak lain, semua unsur bukan pembagi nol dalam $R \smallsetminus \{0\}$ membentuk himpunan bagian multiplikatif dari $R$. Lokalisasi yang bersesuaian ditulis
+	\[ R \hookrightarrow \text{Frac}(R), \]
+	dan $\text{Frac}(R)$ disebut \emph{gelanggang pecahan total} dari $R$.
+\end{lemma}
+Jika $R$ merupakan daerah integral, maka $\text{Frac}(R)$ tidak lain adalah lokalisasi pada $S := R \smallsetminus \{0\}$. Dalam hal ini, Lema \ref{prop:localization-units} menunjukkan bahwa $\text{Frac}(R)$ merupakan medan: sesungguhnya, jika $r \neq 0$, maka $[r,s]^{-1} = [s,r]$. Medan ini disebut \emph{medan pecahan} dari $R$. \index{fenshiyu@medan pecahan (field of fractions)}\index[sym1]{Frac(R)@$\text{Frac}(R)$}
+
+\begin{example}
+	Medan pecahan dari gelanggang bilangan bulat $\Z$ isomorfik dengan $\Q$: cukup petakan $[r,s] \in \text{Frac}(\Z)$ ke $r/s$.
+\end{example}
+
+Berikutnya, kita mempelajari pengaruh lokalisasi terhadap ideal. Tetapkan himpunan bagian multiplikatif $S$ dengan $0 \notin S$. Untuk setiap ideal $I \subset R$, definisikan
+\[ I[S^{-1}] := \left\{ [r, s] : r \in I, \; s \in S \right\} \subset R[S^{-1}]. \]
+Dari definisi struktur gelanggang pada $R[S^{-1}]$, mudah dibuktikan bahwa $I[S^{-1}]$ sebenarnya merupakan ideal yang dibangkitkan oleh bayangan $I$ di bawah $R \to R[S^{-1}]$. Di pihak lain, dari \eqref{eqn:ideal-preimage} diperoleh peta antarideal
+\begin{gather}\label{eqn:ideal-preimage-localization}
+	J \mapsto I := \{ r \in R : [r,1] \in J \}
+\end{gather}
+dengan $J$ suatu ideal dari $R[S^{-1}]$, sedangkan ruas kanan tidak lain adalah prabayangan $J$ di bawah $R \to R[S^{-1}]$. Sekarang perhatikan
+\[\begin{tikzcd}
+	\left\{ I: \text{ideal dari } R \right\} \arrow[r, yshift=5, "{I \mapsto I[S^{-1}]}"] & \{ J: \text{ideal dari } R[S^{-1}] \}. \arrow[l, yshift=-5, "\eqref{eqn:ideal-preimage-localization}"]
+\end{tikzcd}\]
+Kita nyatakan bahwa komposisi pada diagram di atas menurut
+\begin{tikzpicture} [baseline, xscale=0.5, yscale=0.4] \draw[->, rounded corners] (1, 0) -- (0, 0) -- (0, 1) -- (1, 1); \end{tikzpicture}
+adalah $\identity$: jelas bahwa $I \mapsfrom J$ mengakibatkan $I[S^{-1}] \subset J$. Di pihak lain, untuk setiap $[r,s] \in J$, berlaku $[r,1] = [r,s][s,1] \in J$, sehingga $r \in I$ dan dengan demikian $J \subset I[S^{-1}]$. Jadi $I \mapsto I[S^{-1}]$ bersifat surjektif, sedangkan \eqref{eqn:ideal-preimage-localization} bersifat injektif. Akan tetapi, jika ideal-ideal yang dibahas tidak dibatasi, maka komposisi pada diagram di atas menurut
+\begin{tikzpicture} [baseline, xscale=0.5, yscale=0.4] \draw[->, rounded corners] (0, 1) -- (1, 1) -- (1, 0) -- (0, 0); \end{tikzpicture}
+belum tentu merupakan $\identity$; alasannya akan tampak dari bukti berikut.
+
+\begin{proposition}\label{prop:localization-ideals}
+	Misalkan $S$ adalah himpunan bagian multiplikatif dari $R$ dan $0 \notin S$.
+	\begin{enumerate}
+		\item Untuk setiap ideal $I$, persamaan $I[S^{-1}] = R[S^{-1}]$ berlaku jika dan hanya jika $I \cap S \neq \emptyset$.
+		\item Peta $I \mapsto I[S^{-1}]$ menginduksi bijeksi
+			\[ \{I \in \Spec R : I \cap S = \emptyset \} \stackrel{1:1}{\longrightarrow} \Spec R[S^{-1}], \]
+			dengan invers berupa \eqref{eqn:ideal-preimage-localization} di atas.
+		\item Bijeksi tersebut mempertahankan relasi inklusi: $I_1 \subset I_2 \iff I_1[S^{-1}] \subset I_2[S^{-1}]$.
+	\end{enumerate}
+\end{proposition}
+\begin{proof}
+	Keanggotaan $1 \in R[S^{-1}]$ berarti bahwa unsur tersebut direpresentasikan oleh suatu kelas $[r, s]$ dengan pembilang di dalam ideal itu dan terdapat $t \in S$ sedemikian sehingga $tr = ts \in S$. Pernyataan pertama langsung diperoleh.
+
+	Sekarang misalkan $I \in \Spec R$ dan $I \cap S = \emptyset$. Dalam $R[S^{-1}]$, berlaku
+	\[ [r_1, s_1] [r_2, s_2] \in I[S^{-1}] \iff r_1 r_2 \in I \iff \left( r_1 \in I \; \text{atau} \; r_2 \in I \right), \]
+	sehingga $I[S^{-1}]$ merupakan ideal prima. Prabayangannya di bawah $R \to R[S^{-1}]$ sama dengan
+	\[ \{r \in R : \exists a \in I, \; s \in S, \quad [r, 1] = [a, s] \} \in \Spec R \quad \because\;\text{Lema \ref{prop:Spec-pullback}}; \]
+	Himpunan ini dapat ditulis lebih lanjut sebagai $\{ r \in R : \exists s \in S, \; rs \in I \}$. Karena $S$ tidak beririsan dengan ideal prima $I$, prabayangan tersebut tidak lain adalah $I$. Bersama dengan pembahasan sebelumnya, hal ini membuktikan bahwa $I \mapsto I[S^{-1}]$ merupakan bijeksi pada tingkat ideal prima. Pernyataan mengenai relasi inklusi sudah jelas.
+\end{proof}
+
+Bijeksi di atas juga dapat ditulis sebagai
+\[ \Spec R[S^{-1}] = \Spec R \smallsetminus \{I \in \Spec R : I \cap S \neq \emptyset \}. \]
+Jika spektrum prima $\Spec R$ dipandang sebagai semacam ``ruang'', efek dari $R \mapsto R[S^{-1}]$ dapat dibayangkan sebagai menghilangkan dari $\Spec R$ ``titik-titik'' yang beririsan dengan $S$. Hal ini menjelaskan asal istilah lokalisasi. Karena keterbatasan ruang, makna geometris spektrum prima belum dapat dibahas secara terperinci di sini.
+
+\begin{example}\label{eg:localization-prime}
+	Tetapkan $\mathfrak{p} \in \Spec R$. Maka $S := R \smallsetminus \mathfrak{p}$ merupakan himpunan bagian multiplikatif. Dari bijeksi di atas, ideal-ideal prima dari $R_\mathfrak{p} := R[S^{-1}]$ berkorespondensi satu-satu dengan ideal-ideal prima dari $R$ yang termuat dalam $\mathfrak{p}$, sedangkan $\mathfrak{p}[S^{-1}] = \mathfrak{p} R_\mathfrak{p}$ merupakan satu-satunya ideal maksimal dari $R_\mathfrak{p}$, meskipun $\mathfrak{p} \in \Spec R$ yang bersesuaian belum tentu maksimal. Ini merupakan teknik yang lazim dalam teori gelanggang komutatif.
+\end{example}

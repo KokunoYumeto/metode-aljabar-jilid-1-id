@@ -1,0 +1,107 @@
+{
+  "schema": "o013-unit-backend-validation-v1",
+  "unit": "O013-LI-U043",
+  "result": "pass",
+  "generated": "2026-08-28",
+  "authority": {
+    "range": "chapter5.tex:1-1382",
+    "bytes": 122998,
+    "sha256": "e747d16b2ebacc95cf1c34da4bc8b7775a5ed8787b6d1edc2cc8e303535ac143"
+  },
+  "target": {
+    "range": "chapter5.tex:1-1382",
+    "bytes": 156081,
+    "sha256": "33a1c65ce1ddea061e02d32a9a250d6db4444eb2251d5b721c8501f95a7f0e3c",
+    "candidate_identical": true
+  },
+  "topology": {
+    "environment_markers": 480,
+    "environment_pairs": 240,
+    "labels": 80,
+    "references": 112,
+    "citations": 7,
+    "indexes": 74,
+    "list_items": 112,
+    "top_level_exercises": 22,
+    "exercise_items": 31,
+    "hints": 11,
+    "diagrams": 16,
+    "tikzcd": 12,
+    "tikzpicture": 4
+  },
+  "terminology_rows": 22,
+  "sections": 10,
+  "rights_components": 5,
+  "build_surfaces": 2,
+  "qa_events": 26,
+  "correction_records": 21,
+  "correction_ids": [
+    "O013-LI-U036-COR-001",
+    "O013-LI-U036-COR-002",
+    "O013-LI-U037-COR-001",
+    "O013-LI-U038-COR-001",
+    "O013-LI-U038-COR-002",
+    "O013-LI-U039-COR-001",
+    "O013-LI-U039-COR-002",
+    "O013-LI-U040-COR-001",
+    "O013-LI-U041-COR-001",
+    "O013-LI-U041-COR-002",
+    "O013-LI-U041-COR-003",
+    "O013-LI-U041-COR-004",
+    "O013-LI-U042-COR-001",
+    "O013-LI-U042-COR-002",
+    "O013-LI-U042-COR-003",
+    "O013-LI-U042-COR-004",
+    "O013-LI-U042-COR-005",
+    "O013-LI-U042-COR-006",
+    "O013-LI-U042-COR-007",
+    "O013-LI-U043-COR-001",
+    "O013-LI-U043-COR-002"
+  ],
+  "translation_review_witnesses": 8,
+  "schema_validation": "pass",
+  "semantic_validation": "pass",
+  "csv_projections": 6,
+  "backend": {
+    "path": "backend/data/unit-043-bab-5-pengantar-teori-gelanggang.json",
+    "bytes": 226984,
+    "sha256": "50fe8288e70ae62f378a5f4091f8e5d337c450db9fe3fd2c531abd0bfeab6061"
+  },
+  "csv": {
+    "bindings": {
+      "path": "backend/csv/unit-043-bindings.csv",
+      "bytes": 66603,
+      "sha256": "1a9a98f6be6ffcc0eb03a81fd8b11f9950085967f73272380fdd5852cb1bcccf"
+    },
+    "entities": {
+      "path": "backend/csv/unit-043-entities.csv",
+      "bytes": 34970,
+      "sha256": "9ad968d17a8c9c3b5f69223a697dda093757be58ee45b2922bb06f56ad5bffb2"
+    },
+    "qa": {
+      "path": "backend/csv/unit-043-qa.csv",
+      "bytes": 12662,
+      "sha256": "7c29541ed8edaf38e631f7de4b45da3e016b358fb0eb997f8ebcbd25ffd540c4"
+    },
+    "relations": {
+      "path": "backend/csv/unit-043-relations.csv",
+      "bytes": 84929,
+      "sha256": "0d0f9c8ecf1a9a002d103d29bead1f2a78ff9d124a09ced834babfba2709853c"
+    },
+    "rights": {
+      "path": "backend/csv/unit-043-rights.csv",
+      "bytes": 1831,
+      "sha256": "51552480f0c11a909250f8f368305ec2156d54729111edcd2bf9e9e4d556ef7f"
+    },
+    "surfaces": {
+      "path": "backend/csv/unit-043-surfaces.csv",
+      "bytes": 23306,
+      "sha256": "47bfcdd911a3bfcb83bb3a67278c93378c9a3aa598b60a00ba66fac7e6e7e31d"
+    }
+  },
+  "generator": {
+    "path": "scripts/generate_unit_043_backend.py",
+    "bytes": 31116,
+    "sha256": "cf2f5bca85cded5a80bd75649591b10800b49672b175e6b5f42ea0f4b909b08c"
+  }
+}

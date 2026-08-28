@@ -1,0 +1,172 @@
+\section{Limit dan Pelengkapan Gelanggang}\label{sec:ring-limits}
+Dalam bagian ini, setiap $I$ yang muncul merupakan himpunan tak kosong atau kategori tak kosong. Kita akan membahas secara berurutan produk langsung, limit invers $\varprojlim$, dan limit langsung $\varinjlim$, sambil memperkenalkan bahasa topologi himpunan-titik untuk membahas pelengkapan.
+
+\begin{definition}\label{def:ring-direct-product}
+	Misalkan $\{R_i : i \in I\}$ suatu keluarga gelanggang. Pada taraf grup aditif, produk langsung $\prod_{i \in I} R_i$ sama seperti dalam Definisi \ref{def:monoid-times}; pada $\prod_{i \in I} R_i$ kita definisikan operasi perkalian dengan
+	\[ (r_i)_{i \in I} \cdot (s_i)_{i \in I} = (r_i \cdot s_i)_{i \in I}. \]
+	Dengan kata lain, $\prod_{i \in I} R_i$ sekaligus merupakan produk langsung monoid-monoid perkalian, dengan unsur identitas $(1_{R_i})_{i \in I}$. Mudah diperiksa bahwa $\prod_{i \in I} R_i$ memenuhi aksioma-aksioma gelanggang.
+\end{definition}
+
+Untuk setiap $j \in I$, peta proyeksi $(r_i)_{i \in I} \mapsto r_j$ merupakan homomorfisme gelanggang dari $\prod_{i \in I} R_i$ ke $R_j$. Produk langsung gelanggang beserta homomorfisme proyeksinya juga memenuhi sifat universal dalam kategori gelanggang (bandingkan Lema \ref{prop:product-monoid-univ-prop}); buktinya sama seperti dalam kasus monoid dan dihilangkan di sini.
+
+\begin{theorem}[Teorema Sisa Tiongkok]\label{prop:CRT}\index{zhongguoshengyudingli@Teorema Sisa Tiongkok (Chinese Remainder Theorem)}
+	Misalkan $R$ suatu gelanggang dan $I_1, \ldots I_n$ suatu keluarga ideal. Andaikan bahwa untuk setiap $i \neq j$ berlaku $I_i + I_j = R$. Maka homomorfisme gelanggang
+	\begin{align*}
+		\varphi: R & \longrightarrow \prod_{i=1}^n R/I_i, \\
+		r & \longmapsto \left( r \bmod I_i \right)_{i=1}^n
+	\end{align*}
+	menginduksi isomorfisme gelanggang $R \big/ (\bigcap_{i=1}^n I_i) \rightiso \prod_{i=1}^n R/I_i$.
+\end{theorem}
+Selain itu, $\varphi$ juga menginduksi isomorfisme grup $\left( R \big/ (\bigcap_{i=1}^n I_i)\right)^\times \rightiso \prod_{i=1}^n \left(R/I_i\right)^\times$.
+\begin{proof}
+	Jelas bahwa $\Ker(\varphi) = \bigcap_{i=1}^n I_i$; cukup dibuktikan bahwa $\varphi$ surjektif. Tetapkan $1 \leq i \leq n$. Untuk setiap $j \neq i$, terdapat $r_j \in I_i$ dan $s_j \in I_j$ sedemikian sehingga $r_j + s_j = 1$. Produk $\prod_j$ berikut disepakati dikalikan secara berurutan menurut $j=1,2,\ldots$. Jabarkan $1 = \prod_{j \neq i} (r_j + s_j)$, lalu pisahkan $s := \prod_j s_j \in \prod_{j \neq i} I_j$ dari jumlah semua suku lainnya, yang kita tulis sebagai $r \in I_i$. Dengan demikian diperoleh
+	\[ 1 = r + s \in I_i + \prod_{j \neq i} I_j. \]
+	Karena itu, bayangan $y_i := s$ dalam $R/I_j$, untuk $j \neq i$, adalah $0$, sedangkan bayangannya dalam $R/I_i$ adalah $1$. Karena untuk setiap $x_1, \ldots, x_n \in R$ berlaku
+	\[ \varphi(x_1 y_1 + \cdots + x_n y_n) = (x_i \bmod I_i)_{i=1}^n, \]
+	maka $\varphi$ memang surjektif.
+\end{proof}
+
+Sekarang ambil $R=\Z$ dan $I_i = a_i \Z$ dalam teorema, dengan $a_i \geq 1$. Jika $a$ adalah kelipatan persekutuan terkecil dari $a_1, \ldots, a_n$, maka $\bigcap_{i=1}^n I_i = a\Z$. Syarat teorema ekuivalen dengan $a_1, \ldots, a_n$ saling koprima secara berpasangan, sedangkan kesimpulannya menyatakan $\Z/a\Z \rightiso \prod_{i=1}^n \Z/a_i\Z$. Inilah bentuk Teorema Sisa Tiongkok dalam teori bilangan elementer.
+
+Sekarang akan dibuktikan bahwa kategori gelanggang $\cate{Ring}$ \index[sym1]{Ring@$\cate{Ring}$} mempunyai limit invers $\varprojlim$ untuk diagram tak kosong. Kita gunakan notasi dari \S\ref{sec:limits} dan tinjau fungtor $\beta: I^\text{op} \to \cate{Ring}$, dengan $I$ suatu kategori kecil (lihat Konvensi \ref{con:U-small}). Demi kemudahan notasi, kita boleh mengandaikan bahwa $I$ sebenarnya merupakan poset kecil tak kosong $(I, \leq)$, sedangkan $\beta$ bersesuaian dengan keluarga gelanggang $\{R_i = \beta(i) \}_{i \in I}$ dan keluarga homomorfisme $\{\varphi_{ij} = \beta(j \to i): R_i \to R_j \}_{i \geq j}$. Keluarga terakhir harus memenuhi syarat kompatibilitas
+\[ i \geq j \geq k \implies \varphi_{jk} \varphi_{ij} = \varphi_{ik}: R_i \to R_k. \]
+
+Berikut kita konstruksikan limit invers $\varprojlim \beta = \varprojlim_{i \in I} R_i$ dengan cara yang sama seperti dalam kasus grup pada \S\ref{sec:group-limit}.
+
+\begin{proposition}
+	Definisikan subgelanggang dari $\prod_{i \in I} R_i$ dengan
+	\[ \varprojlim_{i \in I} R_i := \left\{ (r_i)_{i \in I} \in \prod_{i \in I} R_i : \; \forall i \geq j,\; \varphi_{ij}(r_i) = r_j \right\}. \]
+	Maka $\varprojlim_{i \in I} R_i$, bersama keluarga homomorfisme proyeksi $\left( p_j: \varprojlim_{i \in I} R_i \to R_j \right)_{j \in I}$, memenuhi sifat universal berikut. Untuk setiap gelanggang $S$ dan keluarga homomorfisme $(q_j: S \to R_j)_{j \in I}$, jika diagram
+	\[ \begin{tikzcd}
+		S \arrow[r, "q_i"] \arrow[rd, "q_j"'] & R_i \arrow[d, "\varphi_{ij}"] \\
+		&  R_j
+	\end{tikzcd} \]
+	komutatif untuk setiap pasangan dalam $I$ yang memenuhi $i \geq j$, maka terdapat homomorfisme gelanggang tunggal $\varphi: S \to \varprojlim_{i \in I} R_i$ yang membuat diagram berikut komutatif untuk setiap $j \in I$:
+	\[ \begin{tikzcd}
+		S \arrow[r, "q_j"] \arrow[d, "{\exists! \, \varphi}"'] & R_j \\
+		\varprojlim_{i \in I} R_i \arrow[ru, "p_j"'] &
+	\end{tikzcd} \]
+\end{proposition}
+\begin{proof}
+	Karena setiap $\varphi_{ij}$ merupakan homomorfisme gelanggang, mudah dilihat bahwa $\varprojlim_i R_i$ adalah subgelanggang dari $\prod_{i \in I} R_i$. Kekomutatifan diagram ekuivalen dengan pernyataan bahwa, untuk setiap $s \in S$, berlaku $\varphi(s) = (q_i(s))_{i \in I}$; unsur terakhir terletak dalam $\varprojlim_i R_i$ jika dan hanya jika $(S, q_i)$ memenuhi syarat kekomutatifan dalam proposisi. Hal ini menentukan $\varphi$ secara tunggal.
+\end{proof}
+
+Untuk kategori kecil umum $I$, konstruksi limit invers $\varprojlim \beta \subset \prod_{i \in \Obj(I)} \beta(i)$ sepenuhnya serupa. Sekarang kita beralih ke pelengkapan sebagai kasus khususnya, dengan mengandaikan $(I, \leq)$ suatu poset terarah ke atas (filtered poset), sebagaimana dalam Definisi \ref{def:filtrant-poset}.
+
+\begin{definition}[Pelengkapan gelanggang]\label{def:ring-completion}\index{wanbeihua@pelengkapan}
+	Misalkan $R$ suatu gelanggang dan $(\mathfrak{a}_i)_{i \in I}$ suatu keluarga ideal sejati dua sisi dari $R$, sedemikian sehingga $i \geq j$ mengakibatkan $\mathfrak{a}_i \subset \mathfrak{a}_j$ dan dengan demikian menginduksi peta hasil bagi $\varphi_{ij}: R/\mathfrak{a}_i \to R/\mathfrak{a}_j$. Limit yang bersesuaian, $\varprojlim_{i \in I} R/\mathfrak{a}_i$, bagi $R$ terhadap $(\mathfrak{a}_i)_{i \in I}$, disebut \emph{pelengkapan}.
+\end{definition}
+Keluarga homomorfisme hasil bagi $R \to R/\mathfrak{a}_i$ menginduksi homomorfisme gelanggang natural $\iota: R \to \varprojlim_i R/\mathfrak{a}_i$, yang kernelnya adalah $\bigcap_i \mathfrak{a}_i$. Dengan menggunakan $R/\Ker(\iota)$ sebagai pengganti $R$, kita selalu dapat mereduksi pada kasus $\Ker(\iota)=\{0\}$; selanjutnya kita andaikan demikian.
+
+Tuliskan $\mathfrak{A}_j$ untuk kernel $\varprojlim_i R/\mathfrak{a}_i \to R/\mathfrak{a}_j$, yakni
+\[ \mathfrak{A}_j = \left\{ (r_i)_{i \in I} \in \varprojlim_i R/\mathfrak{a}_i : \; i \leq j \implies r_i=0 \right\}. \]
+Sekarang kita perkenalkan konsep \emph{gelanggang topologis}: \index{tuopuhuan@gelanggang topologis, medan topologis, modul topologis} ini berarti suatu gelanggang yang juga memiliki struktur ruang topologis, dengan penjumlahan, negasi, dan perkalian gelanggang semuanya kontinu; khususnya, gelanggang topologis merupakan grup abelian topologis terhadap penjumlahan. Berikan topologi diskret pada setiap $R_i := R/\mathfrak{a}_i$. Maka $\varprojlim_{i \in I} R/\mathfrak{a}_i$ tidak lain adalah pelengkapan bagi grup aditif $R$ terhadap $\{\mathfrak{a}_i\}_{i \in I}$, sebagaimana dalam Definisi \ref{def:group-completion}. Oleh sebab itu, $(\varprojlim_i R_i, +)$ menjadi grup topologis Hausdorff lengkap, dan keluarga ideal $\{\mathfrak{A}_i\}_{i \in I}$ memberikan basis lingkungan di $0$. Lebih lanjut, $\varprojlim_i R_i$ merupakan gelanggang topologis: kontinuitas perkalian langsung mengikuti sifat
+\[ (j,k \geq i) \implies \mathfrak{A}_j \cdot \mathfrak{A}_k \subset \mathfrak{A}_i. \]
+Jika setiap $R/\mathfrak{a}_i$ merupakan gelanggang berhingga, maka Lema \ref{prop:completion-compactness} menyatakan bahwa $\varprojlim_i R/\mathfrak{a}_i$ kompak.
+
+\begin{remark}\label{rem:ring-completion} \index{a-jintuopu@topologi $\mathfrak{a}$-adik}
+	Misalkan $\hat{R} := \varprojlim_i R/\mathfrak{a}_i$. Dari sudut pandang topologis, konstruksi di sini setara dengan menjadikan $(\mathfrak{a}_i)_{i \in I}$ suatu basis lingkungan dari $0 \in R$, sehingga $R$ menjadi gelanggang topologis Hausdorff (lihat \eqref{eqn:top-group-Hausdorff}), lalu, dengan meniru \S\ref{sec:group-limit}, melakukan pelengkapan gelanggang $R$ menjadi $\hat{R}$. Seperti dalam kasus grup, pelengkapan gelanggang berarti suatu homomorfisme gelanggang kontinu $\iota: R \to \hat{R}$ yang dicirikan, hingga isomorfisme tunggal, oleh sifat-sifat berikut:
+	\begin{compactenum}[\bfseries {CO}.1]
+		\item $\iota: R \to \iota(R)$ merupakan homeomorfisme,
+		\item bayangan $\iota$ rapat,
+		\item $\hat{R}$ merupakan gelanggang topologis Hausdorff lengkap.
+	\end{compactenum}
+	Dalam praktik, sering ditetapkan suatu ideal dua sisi $\mathfrak{a}$, lalu dipertimbangkan himpunan terurut total $I = (\Z_{\geq 0}, \leq)$ dan $\mathfrak{a}_i = \mathfrak{a}^{i+1}$; topologi pada $R$ dalam hal ini disebut topologi $\mathfrak{a}$-adik. Jika terdapat $\mathfrak{a}$ yang memberi $R$ topologi $\mathfrak{a}$-adik, kita katakan bahwa $R$ memiliki topologi adik; ini merupakan kelas gelanggang topologis yang lazim. Perhatikan bahwa pilihan $\mathfrak{a}$ tidak tunggal: pembaca dapat memeriksa bahwa untuk setiap $k \in \Z_{\geq 1}$, topologi adik yang ditentukan oleh $\mathfrak{a}^k$ sama dengan yang ditentukan oleh $\mathfrak{a}$.
+\end{remark}
+
+\begin{example}\label{eg:Z_p}
+	Tinjau gelanggang $R = \Z$ dan keluarga idealnya $\mathfrak{a}_i := p^{i+1} \Z$, dengan $p$ suatu bilangan prima tetap. Pelengkapan yang bersesuaian, $\Z_p$, disebut gelanggang bilangan bulat $p$-adik; gelanggang ini merupakan pelengkapan $\Z$ terhadap topologi $p\Z$-adik (selanjutnya cukup disebut topologi $p$-adik).
+\end{example}
+
+\begin{example}\label{eg:Prüfer}
+	Ambil himpunan $I := \Z_{> 1}$ dan definisikan poset terarah ke atas melalui keterbagian: $N \prec N' \iff N \mid N'$. Dalam hal ini terdapat homomorfisme hasil bagi $\Z/N'\Z \to \Z/N\Z$. Pelengkapan yang bersesuaian, $\hat{\Z} := \varprojlim_N \Z/N\Z$, disebut gelanggang Prüfer. Sebenarnya $\hat{\Z} \simeq \prod_p \Z_p$, dengan $p$ merentang semua bilangan prima. Alasannya sebagai berikut. Bilangan $N$ mempunyai faktorisasi prima tunggal $N = \prod_p p^{v_p(N)}$, dan untuk setiap $N \prec N'$ terdapat diagram komutatif
+	\[ \begin{tikzcd}
+		\prod_p (\Z/p^{v_p(N')}\Z ) \arrow[twoheadrightarrow, d] \arrow[r, "\sim"] & \Z/N'\Z \arrow[twoheadrightarrow, d] \\
+		\prod_p (\Z/p^{v_p(N)}\Z ) \arrow[r, "\sim"'] & \Z/N\Z
+	\end{tikzcd} \]
+	dengan isomorfisme-isomorfisme horizontal berasal dari Teorema Sisa Tiongkok dan homomorfisme-homomorfisme vertikal merupakan peta hasil bagi. Perbandingan kedua pelengkapan memberikan $\prod_p \Z_p \rightiso \hat{\Z}$.
+\end{example}
+
+Gelanggang $\Z_p$ merupakan contoh khas pelengkapan. Karena penerapannya luas, berikut ini kita kaji lebih lanjut sifat-sifat $\Z_p$, sekaligus memperagakan beberapa teknik dasar dalam teori gelanggang komutatif. Pertama, perhatikan bahwa konstruksi $\varprojlim$ mengakibatkan
+\begin{align*}
+	p^{n+1} \Z_p & = \left\{ (x_i)_{i \geq 0} : x_i \in p^{n+1} \cdot \Z/p^{i+1}\Z \right\} \\
+	& = \left\{ (x_i)_{i \geq 0} : i \leq n \implies x_i=0 \right\} = \Ker\left[ \Z_p \stackrel{p_n}{\twoheadrightarrow} \Z/p^{n+1}\Z \right].
+\end{align*}
+Dengan demikian, $\Z_p/p^{n+1}\Z_p \rightiso \Z/p^{n+1}\Z$. Hal ini juga mengakibatkan $p\Z_p$ merupakan ideal maksimal. Selain itu, perhatikan bahwa $p$ bukan pembagi nol dalam $\Z_p$: jika $(x_i)_i \neq 0$, pilih $n$ sedemikian sehingga $x_{n-1} \neq 0$. Maka harus berlaku $x_n \notin p^n \Z/p^{n+1}\Z$, sehingga $px_n \neq 0$.
+
+Untuk setiap $x = \left( x_i \in \Z/p^{i+1}\Z \right)_{i \geq 0} \in \Z_p$, pengamatan di atas memungkinkan kita mendefinisikan
+\[ v_p(x) := \sup\{n: x \in p^n\Z_p \} = \inf\{n : x_n \neq 0\}. \]
+Fungsi $v_p: \Z_p  \to \Z_{\geq 0} \sqcup \{\infty\}$ disebut valuasi $p$-adik.
+
+\begin{proposition}\label{prop:p-adic}\index[sym1]{Z_p}
+	Untuk setiap bilangan prima $p$, sifat-sifat berikut berlaku.
+	\begin{enumerate}
+		\item $\Z_p$ merupakan daerah integral, dan $v_p(x) = \infty \iff x=0$.
+		\item Untuk setiap $x,y \in \Z_p$,
+			\begin{align*}
+				v_p(xy) & = v_p(x) + v_p(y), \\
+				v_p(x+y) & \geq \min\{v_p(x), v_p(y)\}, \quad \text{(ketaksamaan segitiga kuat)}.
+			\end{align*}
+		\item Unsur $x \in \Z_p$ invertibel jika dan hanya jika $v_p(x)=0$.
+		\item $\Z_p$ merupakan gelanggang ideal utama, dan setiap ideal tak nol di dalamnya berbentuk $p^n \Z_p = \{x \in \Z_p: v_p(x) \geq n \}$.
+  \end{enumerate}
+\end{proposition}
+\begin{proof}
+	Tuliskan $W := \Z_p$. Argumen selanjutnya hanya memerlukan definisi $v_p(x) = \sup\{n: x \in p^n W\}$ dan sifat-sifat yang telah diamati:
+	\begin{inparaenum}[(a)]
+		\item $W \rightiso \varprojlim_{n \geq 0} W/p^{n+1}W$;
+		\item $p$ bukan pembagi nol dalam $W$;
+		\item $W/pW$ merupakan medan.
+	\end{inparaenum}
+
+	Pertama, $v_p(x)=\infty$ ekuivalen dengan $x \in \bigcap_{n \geq 0} p^{n+1}W$, tetapi (a) mengakibatkan bahwa dalam hal ini $x=0$. Selanjutnya kita buktikan bahwa $W$ merupakan daerah integral. Jika $x,y \in W$ keduanya tak nol, langkah sebelumnya memungkinkan kita menulis $x=p^{v_p(x)} x'$ dan $y=p^{v_p(y)} y'$ dengan $x',y' \notin pW$. Berkat (b), persoalan tereduksi pada pembuktian bahwa $x'y' \neq 0$. Namun, $W/pW$ merupakan medan, sehingga $x'y' \notin pW$ dan khususnya $x'y' \neq 0$.
+
+	Berikut kita buktikan kedua sifat $v_p$. Sekali lagi, tuliskan $x = p^{v_p(x)} x'$ dan $y = p^{v_p(y)} y'$. Tanpa mengurangi keumuman, andaikan $v_p(x) \geq v_p(y)$. Maka $x+y \in p^{v_p(y)}W$, sehingga $v_p(x+y) \geq \min\{ v_p(x), v_p(y)\}$. Selain itu, $x'y' \notin pW$ mengakibatkan $v_p(xy) = v_p(x) + v_p(y)$.
+
+	Misalkan $x \in W^\times$. Dengan meninjau bayangannya modulo $pW$, diperoleh $v_p(x) = 0$. Sebaliknya, andaikan $x \in W \smallsetminus pW$. Dari (c), terdapat $a \in W$ sedemikian sehingga $ax \equiv 1 \pmod{pW}$. Karena itu, tanpa mengurangi keumuman kita dapat mengandaikan $x \equiv 1 \pmod{pW}$. Tuliskan $x = 1-t$, dengan $v_p(t) \geq 1$. Dalam gelanggang topologis Hausdorff $W$ berlaku kesamaan
+	\[ x(1 + t + \cdots + t^N) = (1 - t)(1 + t + \cdots + t^N) = 1 - t^{N+1}. \]
+	Ketika $N \to \infty$, ruas kanan menuju $1$. Jika dapat dibuktikan bahwa $y_N := 1+ t +\cdots + t^N$ juga konvergen, limitnya memberikan $x^{-1}$. Untuk itu, cukup diperhatikan bahwa apabila $N' \geq N$, dalam penjumlahan $y_{N'}$, suku-suku setelah $t^N$ tidak memengaruhi kelasnya modulo $p^N W$.
+
+	Terakhir, kita buktikan pernyataan tentang ideal. Andaikan $I$ suatu ideal tak nol dalam $W$. Definisikan $n := \min\{v_p(x) : x \in I\}$; dengan demikian $I \subset p^n W$. Ambil unsur tak nol $x = p^n y \in I$ dengan $v_p(x)=n$. Maka $y$ harus invertibel, sehingga $p^n W = xW \subset I$. Terbuktilah pernyataan tersebut.
+\end{proof}
+
+Lokalisasi gelanggang $\Z_p$ pada himpunan multiplikatif $\{1,p,p^2,\ldots\}$, yaitu $\Z_p[\frac{1}{p}] =: \Q_p$, disebut \emph{medan bilangan $p$-adik}. Dari karakterisasi unsur invertibel di atas, diketahui bahwa $\Q_p = \text{Frac}(\Z_p)$; setiap unsur tak nolnya dapat ditulis secara tunggal sebagai $p^a t$, dengan $t \in \Z_p^\times$ dan $a \in \Z$. Valuasi $v_p$ juga memiliki perluasan natural ke $\Q_p$: $v_p(p^a t) = a$. Pembaca dipersilakan memeriksa bahwa ketaksamaan pada Proposisi \ref{prop:p-adic} tetap berlaku pada $\Q_p$. Di sisi lain, $\Q_p$ juga dapat dipandang sebagai pelengkapan medan $\Q$ terhadap valuasi $v_p\big|_\Q$, sehingga dapat dikonstruksi secara langsung; hal ini akan dibahas secara terperinci dalam \S\ref{sec:valued-field}.
+
+Sekarang kita beralih ke kajian $\varinjlim$. Tinjau suatu kategori kecil $I$ dan fungtor $\alpha: I \to \cate{Ring}$. Untuk $I$ yang merupakan kategori terarah ke atas (filtered category), kita akan mendefinisikan limit langsung $\varinjlim \alpha$, sebagaimana dalam Definisi \ref{def:filtrant-cat}. Dalam penerapan, $I$ sering kali merupakan poset terarah ke atas, tetapi untuk menonjolkan peranan syarat keterarahan ke atas, kita akan menangani kasus umum secara lengkap. Ingat bahwa dalam $I$, untuk setiap morfisme $f: i \to j$, terdapat homomorfisme gelanggang yang bersesuaian, $\alpha(f): \alpha(i) \to \alpha(j)$.
+
+Andaikan kategori $I$ terarah ke atas. Dalam Contoh \ref{eg:set-limits}, pada $\bigsqcup_{i \in \Obj(I)} \alpha(i)$ kita telah, melalui \eqref{eqn:filtrant-equiv}, mendefinisikan relasi ekuivalensi $\sim$. Dengan demikian, dalam $\cate{Set}$, $\varinjlim \alpha$ direalisasikan sebagai himpunan hasil bagi $\bigsqcup_{i \in \Obj(I)} \alpha(i) \big/ \sim$. Untuk setiap $j \in \Obj(I)$ terdapat peta
+\[ \iota_j: \alpha(j) \to \bigsqcup_{i \in \Obj(I)} \alpha(i) \xrightarrow{\text{peta hasil bagi}} \varinjlim \alpha. \]
+
+Sekarang akan dibuktikan bahwa himpunan hasil bagi $\varinjlim \alpha$ mempunyai struktur gelanggang tunggal sedemikian sehingga, untuk setiap $f: j \to j'$,
+\begin{equation}\label{eqn:filtrant-lim-ring} \begin{tikzcd}[row sep=small]
+	\alpha(j) \arrow[rd, "\iota_j"'] \arrow[rr, "\alpha(f)"] & & \alpha(j') \arrow[ld, "{\iota_{j'}}"] \\
+	& \varinjlim \alpha &
+\end{tikzcd}\end{equation}
+merupakan diagram komutatif dalam $\cate{Ring}$.
+
+Kita gunakan notasi dari konstruksi limit langsung terarah ke atas pada himpunan. Definisikan struktur gelanggang pada $\varinjlim \alpha$ sebagai berikut. Untuk dua kelas ekuivalensi sembarang $[r_i]$ dan $[r'_j]$, definisi kategori terarah ke atas menjamin adanya panah dari $i,j$ menuju suatu $k \in \Obj(I)$, serta unsur $r_k, r'_k \in \alpha(k)$, sedemikian sehingga $[r_i] = [r_k]$ dan $[r'_j] = [r'_k]$. Dalam \eqref{eqn:filtrant-lim-ring}, dengan mengambil $f = \identity: k \to k$, tampak bahwa $[r_i][r'_j]$ hanya mungkin didefinisikan sebagai $[r_k r'_k]$. Cara yang sama membuktikan bahwa perkalian ini terdefinisi dengan baik dan memberikan struktur gelanggang (unsur identitasnya adalah kelas ekuivalensi dari $1 \in \alpha(i)$, dengan $i$ sembarang) yang membuat \eqref{eqn:filtrant-lim-ring} selalu komutatif. Ketika membandingkan perkalian yang diperoleh dari berbagai pilihan, kita selalu dapat bergerak cukup “jauh” dalam kategori $I$ untuk menghilangkan semua ketakpastian; inilah inti Definisi \ref{def:filtrant-cat}. Dengan demikian, pernyataan tersebut telah terbukti.
+
+\begin{proposition}\label{prop:ring-filtrant-limit}
+	Untuk kategori kecil terarah ke atas $I$ dan $\alpha: I \to \cate{Ring}$ seperti di atas, gelanggang $\varinjlim \alpha$ bersama keluarga homomorfisme $\iota_j: \alpha(j) \to \varinjlim \alpha$ membentuk, dalam kategori $\cate{Ring}$, limit langsung $\varinjlim \alpha$.
+\end{proposition}
+\begin{proof}
+	Jika struktur gelanggang dilupakan, $\varinjlim \alpha$ sebagai himpunan merupakan limit langsung dari $\alpha(i)$ dalam $\cate{Set}$. Karena itu, untuk setiap gelanggang $R$ dan keluarga homomorfisme $\left( \iota'_j: \alpha(j) \to R \right)_{j \in \Obj(I)}$ sedemikian sehingga diagram
+	\[ \begin{tikzcd}[row sep=tiny]
+		\alpha(i) \arrow[dd, "\alpha(f)"'] \arrow[rd, "\iota'_i"] & \\
+		& R \\
+		\alpha(j) \arrow[ru, "\iota'_j"'] &
+		\end{tikzcd} \qquad (f: i \to j) \]
+	selalu komutatif, terdapat peta himpunan tunggal $\varphi: \varinjlim \alpha \to R$ sedemikian sehingga
+	\[ \begin{tikzcd}
+		\alpha(i) \arrow[r, "\iota_i"] \arrow[rd, "\iota'_i"'] & \varinjlim \alpha \arrow[d, "\varphi"] \\
+		& R
+	\end{tikzcd} \qquad i \in \Obj(I) \]
+	selalu komutatif. Sebenarnya $\varphi([r_i]) = \iota'_i(r_i)$; yang perlu dibuktikan ialah bahwa $\varphi$ merupakan homomorfisme gelanggang. Argumennya serupa dengan sebelumnya: gunakan syarat kategori terarah ke atas bersama sifat keluarga homomorfisme gelanggang $\iota'_j: \alpha(j) \to R$. Perinciannya diserahkan kepada pembaca.
+\end{proof}
+
+Di atas selalu diandaikan bahwa $I$ tak kosong. Sekarang kita lengkapi kasus ketika $I$ merupakan kategori kosong. Perhatikan bahwa $\varinjlim$ kosong tidak lain adalah objek awal dalam kategori. Dari \eqref{eqn:ring-struct-morphism} dan pembahasan sesudahnya, segera diperoleh hasil sederhana tetapi penting berikut.
+\begin{proposition}
+	Gelanggang bilangan bulat $\Z$ merupakan objek awal dalam kategori gelanggang $\cate{Ring}$.
+\end{proposition}
+
+Pembaca mungkin bertanya: apakah semua $\varinjlim$ kecil selalu ada dalam kategori gelanggang? Karena bab ini hanya membahas gelanggang dengan unsur satuan yang tak nol, jawabannya negatif. Contoh berikut menunjukkan bahwa koekualiser dari sepasang homomorfisme $f,g: R \to S$ belum tentu ada. Tinjau gelanggang polinomial $R = \CC[X]$ dan $S = \CC$, dengan homomorfisme $f: P \mapsto P(0)$ dan $g: P \mapsto P(1)$, di mana $P \in \CC[X]$. Jika terdapat homomorfisme gelanggang $h: S \to T$ yang memenuhi $hf=hg$, ambil $P(X)=-X$; maka $h(1) = h(P(0)-P(1)) = 0$, bertentangan dengan $h(1)=1$.

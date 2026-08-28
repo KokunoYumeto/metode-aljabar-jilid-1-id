@@ -1,0 +1,137 @@
+\section{Pengantar Polinomial Simetris}\label{sec:symmetric-poly}
+Tetapkan sebuah gelanggang komutatif $R$. Untuk setiap $n \in \Z_{\geq 1}$, grup simetris $\mathfrak{S}_n$ mempunyai aksi alami pada gelanggang polinomial $R[X_1, \ldots, X_n]$
+\[ (\sigma f)(X_1, \ldots, X_n) = f(X_{\sigma(1)}, \ldots, X_{\sigma(n)}), \quad \sigma \in \mathfrak{S}_n, \; f \in R[X_1, \ldots, X_n]. \]
+Definisikan
+\[ \Lambda_n = R[X_1, \ldots, X_n]^{\mathfrak{S}_n} := \left\{ f \in R[X_1, \ldots, X_n] : \forall \sigma \in \mathfrak{S}_n, \; \sigma f = f \right\}. \]
+Mudah dilihat bahwa aksi ini memenuhi sifat
+\[ \sigma(f + g) = \sigma(f) + \sigma(g), \quad \sigma(fg) = \sigma(f) \sigma(g), \quad \sigma(1)=1 \]
+Oleh karena itu, $\Lambda_n$ adalah subgelanggang dari $R[X_1, \ldots, X_n]$, yang disebut gelanggang polinomial simetris di atas $R$ dalam $n$ variabel; unsur-unsurnya disebut \emph{polinomial simetris} dalam $n$ variabel. Untuk medan fungsi rasional di atas suatu medan $F$, terdapat pula versi yang bersesuaian, yaitu $F(X_1, \ldots, X_n)^{\mathfrak{S}_n}$.\index{duichengduoxiangshi@polinomial simetris (symmetric polynomial)}
+
+Uraikan $f \in R[X_1, \ldots, X_n]$ sebagai $\sum_{\bm{a}} c_{\bm{a}} \bm{X}^{\bm{a}}$ dengan notasi multiindeks dari \S\ref{sec:polynomial-ring}. Maka kesimetriannya ekuivalen dengan pernyataan berikut: jika indeks $\bm{a} = (a_1, \ldots, a_n)$ dan $\bm{b} = (b_1, \ldots, b_n)$ hanya berbeda melalui suatu permutasi, maka $c_{\bm{a}} = c_{\bm{b}}$.
+
+Pertimbangkan suatu keluarga bilangan bulat positif $\lambda_1, \ldots, \lambda_r$, dengan $1 \leq r \leq n$, tanpa memperhatikan urutan dan dengan pengulangan diperbolehkan. Tetapkan
+\[ m_{\lambda_1, \ldots, \lambda_r} := \sum_{\bm{a}} \bm{X}^{\bm{a}}, \]
+dengan indeks $\bm{a}$ menjelajahi semua permutasi berbeda dari $(\lambda_1, \ldots, \lambda_r, 0, \ldots, 0)$ (sebanyak $n$ komponen). Untuk memperoleh keunikan, mulai sekarang kita selalu mengurutkan $\lambda_1, \ldots, \lambda_r$ dan menulis
+\begin{align*}
+	\lambda & := (\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_r), \quad \lambda_i \in \Z, \; \lambda_i \geq 1, \\
+	m_\lambda & := m_{\lambda_1, \ldots, \lambda_r}.
+\end{align*}
+Bilangan $r$ disebut panjang dari $\lambda$. Pembahasan sebelumnya menunjukkan bahwa setiap $f \in \Lambda_n$ dapat ditulis sebagai jumlah berhingga $f = \sum_\lambda r_\lambda m_\lambda$, dengan koefisien $r_\lambda$ yang ditentukan secara tunggal. Jika $R$ adalah medan, ini tidak lain berarti bahwa ruang vektor $\Lambda_n$ mempunyai basis $(m_\lambda)_\lambda$; untuk $R$ umum, konsep yang bersesuaian adalah modul $R$ bebas (Definisi \ref{def:free-module}), tetapi untuk sementara kita tidak perlu mendalami istilah ini.
+
+Data $\lambda = (\lambda_1 \geq \cdots \geq \lambda_r)$ di atas lazim disebut partisi. Terdapat cara yang sangat praktis untuk menyajikannya, yaitu \emph{diagram Young}: dari atas ke bawah, pada baris horizontal ke-$i$ kita tempatkan $\lambda_i$ kotak dari kiri ke kanan, misalnya \index{Young-tu@diagram Young (Young diagram)} \index{fenchai@partisi}
+\ytableausetup{mathmode}\begin{equation*}
+	(3 \geq 2 \geq 1 \geq 1): \ydiagram{3,2,1,1} \qquad (5 \geq 4 \geq 1): \ydiagram{5,4,1}
+\end{equation*}
+dan seterusnya. Mudah dilihat bahwa diagram seperti itu berkorespondensi satu-satu dengan partisi $\lambda = (\lambda_1 \geq \cdots \geq \lambda_r)$. Jika panjang partisi $r$ (yakni tinggi diagram Young) melebihi $n$ yang diberikan, maka $m_\lambda \in \Lambda_n$ yang bersesuaian ditetapkan sebagai $0$.
+
+Ketika membahas sifat umum diagram Young, sebaiknya kita mengabaikan batas lebarnya. Dalam keadaan ini, diagram Young memiliki operasi ``konjugasi'' yang jelas: cerminkan diagram Young yang bersesuaian dengan $\lambda = (\lambda_1 \geq \cdots)$ terhadap sumbu $\diagdown$; bentuk yang diperoleh tetap merupakan diagram Young. Andaikan pada baris horizontal ke-$i$ terdapat $\bar{\lambda}_i$ kotak; data yang bersesuaian ditulis $\bar{\lambda} = (\bar{\lambda}_1 \geq \cdots)$, dan $\bar{\lambda}$ disebut \emph{konjugat} dari $\lambda$. Jelas bahwa $\overline{\overline{\lambda}} = \lambda$. Salah satu contohnya adalah:
+\ytableausetup{mathmode}
+\[ \lambda: \ydiagram{3,2,1,1} \longmapsto \bar{\lambda}: \ydiagram{4,2,1}. \]
+
+\begin{definition}
+	Untuk partisi atau diagram Young, definisikan
+	\begin{compactdesc}
+		\item[urutan dominasi] Tulis $\mu \leq \lambda$ jika untuk setiap $k$ berlaku
+			\begin{gather}\label{eqn:dominance-order}
+				\mu_1 + \cdots + \mu_k \leq \lambda_1 + \cdots + \lambda_k,
+			\end{gather}
+		\item[urutan leksikografis] Tulis $\mu \prec \lambda$ jika terdapat $k \geq 1$ sedemikian sehingga
+			\[1 \leq i < k \implies \mu_i = \lambda_i, \quad \mu_k < \lambda_k. \]
+	\end{compactdesc}
+	Jika $k$ melebihi jumlah baris $\lambda$ (atau $\mu$), kita menggunakan konvensi $\lambda_k=0$ (atau $\mu_k=0$).
+\end{definition}
+
+\begin{proposition}\label{prop:dominance-lex-order}
+	Himpunan semua partisi atau diagram Young merupakan himpunan terurut parsial terhadap urutan dominasi $\leq$ dan himpunan terurut total terhadap urutan leksikografis $\preceq$. Selain itu, untuk setiap $\lambda$, himpunan $\{\mu: \mu \leq \lambda \}$ berhingga. Kita mempunyai $\mu \leq \lambda \implies \mu \preceq \lambda$.
+\end{proposition}
+\begin{proof}
+	Bagian pertama jelas. Sekarang andaikan $\mu < \lambda$; kita dapat mengambil $k \geq 1$ terkecil sedemikian sehingga $\mu_k < \lambda_k$. Inilah tepatnya indeks dalam definisi urutan leksikografis $\mu \prec \lambda$ yang dinyatakan sebagai $k$.
+\end{proof}
+
+Meskipun setiap unsur $\Lambda_n$ dapat ditulis secara tunggal menggunakan berbagai $m_\lambda$ sebagai kombinasi linear di atas $R$, sifat basis ini terhadap perkalian tidak begitu jelas dan dalam praktik agak merepotkan. Oleh karena itu, kita memperkenalkan objek klasik berikut.
+\begin{definition}[Polinomial simetris elementer]\label{def:elementary-symm-poly}\index{duichengduoxiangshi!elementer (elementary)}
+	Untuk $1 \leq k \leq n$, definisikan
+	\[ e_k := \sum_{1 \leq i_1 < \cdots < i_k \leq n} X_{i_1} \cdots X_{i_k}. \]
+	Mudah dilihat bahwa ini adalah unsur $\Lambda_n$, yang disebut \emph{polinomial simetris elementer} ke-$k$ dalam $n$ variabel.
+\end{definition}
+Tetapkan $e_0 := 1$; karakterisasi yang ekuivalen adalah
+\begin{gather*}
+	\sum_{i=0}^n e_i Y^{n-i} = \prod_{i=1}^n (Y + X_i), \quad \text{atau} \\
+	E(Y) := \sum_{i=0}^n e_i Y^i = \prod_{i=1}^n (1 + X_i Y)
+\end{gather*}
+dengan $Y$ sebagai peubah tambahan. Untuk setiap partisi $\lambda = (\lambda_1 \geq \cdots \geq \lambda_r)$, definisikan
+\[ e_\lambda := e_{\lambda_1} \cdots e_{\lambda_r} \]
+Ini terdefinisi jika $n$ lebih besar daripada atau sama dengan panjang $\bar{\lambda}$, dan $e_\lambda \in \Lambda_n$.
+
+\begin{lemma}\label{prop:m_lambda-e_lambda}
+	Untuk setiap $\lambda = (\lambda_1 \geq \cdots \geq \lambda_r)$ dan $n \geq r$, terdapat suatu keluarga $a_{\lambda, \mu} \in \Z_{\geq 0}$, dengan $\mu \leq \lambda$, sedemikian sehingga
+	\[ e_{\bar{\lambda}} = \sum_{\mu \leq \lambda} a_{\lambda, \mu} m_\mu, \quad a_{\lambda, \lambda}=1 \]
+	berlaku dalam $\Lambda_n$, dengan $\mu \leq \lambda$ menyatakan urutan dominasi \eqref{eqn:dominance-order}.
+\end{lemma}
+\begin{proof}
+	Menurut definisi, hasil kali $e_{\bar{\lambda}} = e_{\bar{\lambda}_1} e_{\bar{\lambda}_2} \cdots$ adalah jumlah dari semua monomial
+	\[ \left( X_{i_1} \cdots X_{i_{\bar{\lambda}_1}} \right)  \left( X_{j_1} \cdots X_{j_{\bar{\lambda}_2}} \right) \cdots = X_1^{b_1} \cdots X_n^{b_n} \]
+	dengan indeks-indeks yang memenuhi $i_1 < \cdots < i_{\bar{\lambda}_1}$, $j_1 < \cdots < j_{\bar{\lambda}_2}$, dan seterusnya. Dengan demikian, $e_{\bar{\lambda}} = \sum_\mu a_{\lambda, \mu} m_\mu$, dengan $a_{\lambda, \mu} \in \Z_{\geq 0}$. Untuk memahami $a_{\lambda, \mu}$ lebih lanjut, kita harus mencatat berapa kali setiap peubah $X_i$ muncul di ruas kiri, yaitu $b_i$. Untuk itu, kita isikan indeks-indeks $i_1, \ldots$, $j_1, \ldots$, dan seterusnya (sebagai label peubah) ke dalam diagram Young dari $\lambda$, kolom demi kolom, seperti berikut:
+	\[ \begin{ytableau}
+		i_1 & j_1 & \none[\cdots] \\
+		i_2 & j_2 & \none[\ddots] \\
+		\none & \none[\vdots] & \none \\
+		\none[\vdots] & j_{\bar{\lambda}_2} & \none \\
+		\none[\vdots] & \none & \none \\
+		i_{\bar{\lambda}_1} & \none & \none
+	\end{ytableau}\]
+	Angka-angka pada setiap kolom meningkat secara ketat, sehingga angka $\leq r$ hanya dapat ditempatkan pada $r$ baris pertama, yang seluruhnya memiliki $\lambda_1 + \cdots + \lambda_r$ kotak. Oleh sebab itu, untuk setiap $r \geq 1$ berlaku $b_1 + \cdots + b_r \leq \lambda_1 + \cdots + \lambda_r$. Secara khusus, hal ini juga berlaku ketika $(b_1 \geq \cdots \geq b_n) =: \mu$; jadi definisi urutan dominasi memberikan $a_{\lambda,\mu} \neq 0 \implies \mu \leq \lambda$.
+	
+	Jika $\mu=\lambda$, argumen di atas menunjukkan bahwa diagram Young mempunyai tepat satu cara pengisian: pada baris ke-$i$, tempatkan $\lambda_i = b_i$ buah angka $i$. Jadi koefisien $m_\lambda$ adalah $a_{\lambda, \lambda} = 1$. Terbukti.
+\end{proof}
+% Koefisien taknegatif $a_{\lambda,\mu}$ ini mempunyai makna kombinatorial dan geometris yang mendalam.
+
+Sifat universal memberikan suatu homomorfisme dari gelanggang polinomial dalam $n$ variabel $R[t_1, \ldots, t_n]$ ke $\Lambda_n$, yaitu $\Phi$, yang memetakan setiap $t_i$ ke $e_i$, sedangkan $\Phi|_R = \identity_R$.
+\begin{theorem}[Teorema Dasar Polinomial Simetris]\label{prop:fund-thm-symmetric-poly}
+	Homomorfisme natural $\Phi: R[t_1, \ldots, t_n] \xrightarrow{t_i \mapsto e_i} \Lambda_n$ adalah isomorfisme gelanggang. Oleh karena itu, kita dapat mengidentifikasi $\Lambda_n$ dengan gelanggang polinomial dalam $n$ variabel $R[e_1, \ldots, e_n]$.
+	
+	Jika $F$ adalah medan, maka $F(X_1, \ldots, X_n)^{\mathfrak{S}_n} = F(e_1, \ldots, e_n)$.
+\end{theorem}
+\begin{proof}
+	Lema \ref{prop:m_lambda-e_lambda} dan Proposisi \ref{prop:dominance-lex-order} menunjukkan bahwa $e_{\bar{\lambda}}$ dan $m_\lambda$ dihubungkan oleh suatu matriks segitiga unipoten (dengan berbagai $\lambda$ diurutkan menurut $\preceq$). Dengan demikian, setiap $f \in \Lambda_n$ dapat ditulis sebagai jumlah berhingga $f = \sum_\lambda c_\lambda e_{\bar{\lambda}}$, dengan $\lambda$ menjelajahi semua partisi yang panjangnya $\leq n$, dan $c_\lambda \in R$ ditentukan secara tunggal; hal ini mengikuti dari sifat yang bersesuaian untuk $m_\lambda$.
+	
+	Dengan memperhatikan $e_{\bar{\lambda}} = \prod_{i \geq 1} e_{\bar{\lambda}_i}$, $e_{(0)} := 1$, dan sifat yang jelas bahwa ($\lambda$ mempunyai panjang $\leq n$) $\iff (\bar{\lambda}_1 \leq n)$, pernyataan tersebut ekuivalen dengan mengatakan bahwa setiap $f$ dapat ditulis secara tunggal sebagai polinomial dalam $e_1, \ldots, e_n$. Ini membuktikan bagian pertama.
+	
+	Sekarang andaikan $F$ adalah medan. Inklusi $F(e_1, \ldots, e_n) \subset F(X_1, \ldots, X_n)^{\mathfrak{S}_n}$ jelas. Sebaliknya, setiap unsur tak nol $f \in F(X_1, \ldots, X_n)^{\mathfrak{S}_n}$ dapat ditulis sebagai pecahan $g/h$. Ambil $\tilde{h} := \prod_{\sigma \in \mathfrak{S}_n} \sigma h$; maka $\tilde{h}, f\tilde{h} \in \Lambda_n$. Akibatnya, $f = f\tilde{h}/\tilde{h} \in F(e_1, \ldots, e_n)$. Terbukti.
+\end{proof}
+
+\begin{example}[Diskriminan]\label{eg:polynomial-discriminant} \index{panbieshi@diskriminan (discriminant)}
+	Jelas bahwa $\displaystyle\prod_{1 \leq i < j \leq n} (X_i - X_j)^2$ termasuk dalam $\Z[X_1, \ldots, X_n]^{\mathfrak{S}_n}$, sehingga dapat kita tulis sebagai $\delta \in \Z[e_1, \ldots, e_n]$. Misalkan $F$ adalah medan dan $x_1, \ldots, x_n \in F$. Pertimbangkan polinomial monik dalam peubah $Y$, yaitu $P = \sum_{i=0}^n (-1)^i c_i Y^{n-i} = \prod_{i=1}^n (Y - x_i)$. Koefisien-koefisiennya ditentukan oleh $c_i = e_i(X_1 = x_1, \ldots, X_n = x_n)$. Oleh karena itu,
+	\[ P\; \text{mempunyai akar berganda} \iff \prod_{i < j} (x_i - x_j)^2 = 0 \iff \delta(e_1 = c_1, \ldots, e_n = c_n) = 0. \]
+	Ini memberikan suatu algoritme untuk menguji keberadaan akar berganda.
+\end{example}
+
+Kelas lain dari polinomial simetris yang lazim adalah \emph{jumlah pangkat}. Untuk setiap $k \in \Z_{\geq 0}$, definisikan \index{duichengduoxiangshi!jumlah pangkat (power-sum)}
+\[ p_k := \sum_{r=1}^n X_r^k \quad \in \Lambda_n. \]
+
+\begin{theorem}[Rumus Newton] \index{rumus Newton}
+	Jumlah pangkat $p_1, \ldots, p_n, \ldots$ memenuhi
+	\[ \sum_{\substack{i+j=k \\ 0 \leq i \leq n \\ j \geq 1}} (-1)^{j+1} e_i p_j =
+	\begin{cases}
+		k e_k, & 1 \leq k \leq n \\
+		0, & k > n.
+	\end{cases}\]
+\end{theorem}
+\begin{proof}
+	Gunakan deret pembangkit dalam peubah $Y$; di dalam $R\llbracket Y \rrbracket$, hitung secara formal
+	\begin{align*}
+		P(Y) & := \sum_{k \geq 1} p_k Y^{k-1} = \sum_{r=1}^n \frac{X_r}{1 - X_r Y}, \\
+		% & = \sum_{r=1}^n \frac{\dd}{\dd Y} \left( \log \frac{1}{1 - X_r Y} \right), \\
+		E(Y) & := \sum_{k=0}^n e_k Y^k = \prod_{r=1}^n (1 + X_r Y).
+	\end{align*}
+	Dengan demikian diperoleh $P(-Y) = \frac{\dd}{\dd Y} \log E(Y) = E'(Y)/E(Y)$. Setelah memindahkan ruas dan menguraikannya, cukup bandingkan koefisien.
+\end{proof}
+Untuk $1 \leq k \leq n$, rumus Newton secara rekursif menyatakan $p_k$ sebagai unsur dari $(-1)^{k+1} k e_k + R[e_1, \ldots, e_{k-1}]$. Jika $R \supset \Q$, karena $p_1 = e_1$, kita juga dapat menunjukkan secara rekursif bahwa
+\begin{compactitem}
+	\item $R[p_1, \cdots, p_n] = R[e_1, \ldots, e_n] = \Lambda_n$,
+	\item $R[p_1, \ldots, p_n]$ dapat dipandang sebagai gelanggang polinomial di atas $R$ dalam $n$ variabel.
+\end{compactitem}
+
+Kesimpulan dan metode yang diperoleh di atas sama pentingnya; ini baru sekadar membuka pintu menuju teori polinomial simetris. Pembaca yang ingin menyelaminya lebih jauh dapat merujuk ke \cite{Mac95}.
+
+% % % % % % % % % % % % % % % % % % % % %

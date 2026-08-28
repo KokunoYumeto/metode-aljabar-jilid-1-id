@@ -1,0 +1,225 @@
+\section{Faktorisasi Unik}\label{sec:UFD}
+Bagian ini membahas faktorisasi unsur-unsur dalam daerah integral $R$, dengan berfokus pada keterbagian di dalam daerah integral dan pada cara menyatakan unsur sebagai hasil kali unsur-unsur tak tereduksi. Contoh klasik dalam teori bilangan ialah $R = \Z$, atau secara lebih umum, $R$ berupa gelanggang tertentu yang tersusun dari bilangan bulat aljabar, seperti gelanggang bilangan bulat Gauss dalam Contoh \ref{eg:Gauss-integers}. Persoalan-persoalan ini pernah memberikan dorongan kuat bagi perkembangan teori gelanggang komutatif. Sifat faktorisasi unik juga memainkan peranan penting dalam geometri aljabar karena mencerminkan sejumlah sifat geometri yang lebih halus pada himpunan nol persamaan aljabar.
+
+Dalam daerah integral $R$, definisikan relasi keterbagian $x \mid y \iff (\exists a \in R, \; y=ax) \iff \lrangle{y} \subset \lrangle{x}$. Perhatikan bahwa $x,y$ saling membagi jika dan hanya jika yang satu diperoleh dari yang lain dengan mengalikan suatu unsur $R^\times$. Dalam persoalan keterbagian, $R^\times$ jelas tidak berperan, sehingga kita memperkenalkan monoid hasil bagi $\mathcal{P} := (R \smallsetminus \{0\})/R^\times$. Kecuali dinyatakan lain, dalam bagian ini $\mathring{x} \in \mathcal{P}$ menyatakan bayangan $x \in R \smallsetminus \{0\}$; ini hanyalah notasi sementara. Mudah dilihat bahwa keterbagian memberi $\mathcal{P}$ suatu urutan parsial:
+\[ \mathring{y} \leq \mathring{x} \iff x \mid y. \]
+Jika $x, y \in R$ mempunyai supremum dalam $\mathcal{P}$, yaitu $\mathring{d}$ (Definisi \ref{def:max-sup}), dan $d \in R$ merupakan prabayangnya, maka $d$ disebut pembagi persekutuan terbesar dari $x,y$; menurut definisi supremum, $\mathring{d}$ bersifat unik. Jika pembagi persekutuan terbesar $x,y$ adalah $\mathring{1}$, maka $x,y$ disebut relatif prima.
+
+Selanjutnya, apabila kita berbicara tentang faktorisasi unik, pembagi persekutuan terbesar, dan konsep-konsep sejenis, semuanya sebenarnya dipertimbangkan dalam $\mathcal{P} := (R \smallsetminus \{0\})/R^\times$. Karena $\mathring{x} = \mathring{y} \iff \lrangle{x}=\lrangle{y}$, unsur-unsur $\mathcal{P}$ juga dapat diidentifikasi dengan ideal-ideal utama dari $R$.
+
+\begin{definition}\label{def:UFD}\index{bukeyue@tak tereduksi (irreducible)}\index{weiyifenjiehuan@daerah faktorisasi unik (unique factorization domain)}
+	Dalam daerah integral $R$, unsur tak nol $r$ disebut \emph{tak tereduksi} jika $r \notin R^\times$ dan, di dalam $R$, hubungan $d \mid r$ mengakibatkan $\lrangle{d} = \lrangle{r}$ atau $d \in R^\times$. Sifat tak tereduksi hanya bergantung pada bayangan $r$ dalam $\mathcal{P}$. Jika setiap unsur dalam $\mathcal{P}$, yang dilambangkan $\mathring{r}$, dapat ditulis sebagai
+	\[ \mathring{r} = \prod_{i=1}^n \mathring{p}_i, \quad n \in \Z_{\geq 0} \]
+	dengan $\mathring{p}_i \in \mathcal{P}$ tak tereduksi, dan multihimpunan $\{\mathring{p}_1, \ldots, \mathring{p}_n \}$ (dengan memperhitungkan multiplisitas tetapi mengabaikan urutan) bersifat unik, maka $R$ disebut \emph{daerah faktorisasi unik}; unsur-unsur $\mathring{p}_1, \ldots, \mathring{p}_n$ (atau prabayang-prabayangnya $p_1, \ldots, p_n \in R$) disebut faktor-faktor tak tereduksi dari $\mathring{r}$ (atau dari prabayangnya $r \in R$). Disepakati bahwa $n=0 \iff \mathring{r}=1$.
+\end{definition}
+Sebagaimana diketahui, $\Z$ merupakan daerah faktorisasi unik; fakta ini juga disebut teorema dasar aritmetika. Dalam daerah faktorisasi unik, jika $a \mid b$ dan $b \neq 0$, mengalikan faktorisasi tak tereduksi dari $a$ dan $b/a$ menghasilkan faktorisasi tak tereduksi dari $b$. Sebagai akibat, faktor-faktor tak tereduksi dari $a$ (dengan multiplisitas) membentuk submultihimpunan faktor-faktor tak tereduksi dari $b$, dan hingga perkalian dengan unsur $R^\times$, setiap $b \in R \smallsetminus \{0\}$ hanya mempunyai berhingga banyak pembagi.
+
+Jika dalam daerah integral $R$ suatu unsur tak nol $p$ memenuhi $p \notin R^\times$ dan $p \mid ab \iff (p \mid a) \vee (p \mid b)$, maka $p$ disebut \emph{unsur prima}. Pertama-tama kita buat beberapa pengamatan:\index{suyuan@unsur prima (prime element)}
+\begin{itemize}
+	\item Unsur $p$ merupakan unsur prima jika dan hanya jika $\lrangle{p}$ merupakan ideal prima.
+	\item Unsur prima selalu tak tereduksi: jika terdapat faktorisasi $p=ab$, tanpa mengurangi keumuman andaikan $p \mid a$; maka $a,p$ saling membagi dan $b \in R^\times$. Kebalikannya tidak berlaku untuk daerah integral umum.
+	\item Dalam daerah faktorisasi unik, setiap dua unsur $x,y \neq 0$ selalu mempunyai pembagi persekutuan terbesar. Lebih lanjut, setiap unsur tak tereduksi $p$ dalam daerah ini merupakan unsur prima: jika $(p \nmid a) \wedge (p \nmid b)$, hasil kali faktorisasi tak tereduksi dari $a,b$ tetap tidak memuat $p$, sehingga $p \nmid ab$.
+	\item Misalkan $\mathcal{P}_0$ adalah himpunan semua ideal utama sejati di dalam $R$ (yakni $\neq R$), yang dilengkapi urutan parsial $\subset$. Maka unsur $p \in R \smallsetminus \{0\}$ tak tereduksi jika dan hanya jika $\lrangle{p}$ merupakan unsur maksimal dalam $\mathcal{P}_0$.
+	\item Dalam daerah faktorisasi unik, setiap rantai naik tak hingga dalam $\mathcal{P}_0$, yaitu $\lrangle{a_1} \subset \lrangle{a_2} \subset \cdots$, harus ``menjadi stasioner'': secara tepat, terdapat $m \geq 1$ sedemikian sehingga $\lrangle{a_m} = \lrangle{a_{m+1}} = \cdots$. Hal ini karena, hingga perkalian dengan unsur $R^\times$, setiap $a_i$ hanya mempunyai berhingga banyak pembagi. Sifat pada himpunan terurut parsial (poset) $\mathcal{P}_0$ ini disebut \emph{syarat rantai menaik}.
+	\item Sebaliknya, jika $\mathcal{P}_0$ memenuhi syarat rantai menaik di atas, setiap unsur tak nol $r \in R$ dapat difaktorkan sebagai hasil kali unsur-unsur tak tereduksi. Andaikan tidak; maka terdapat faktorisasi $r = r_1 r'$, $r_1 = r_2 r''$, dan seterusnya, dengan $r', r'', \ldots \notin R^\times$, sehingga $\lrangle{r_1} \subsetneq \lrangle{r_2} \subsetneqq \cdots$ berlanjut tanpa akhir, suatu kontradiksi.
+	\item Jika semua unsur tak tereduksi dalam $R$ merupakan unsur prima, seperti dalam daerah faktorisasi unik, faktorisasi tak tereduksi memenuhi keunikan dalam Definisi \ref{def:UFD}. Alasannya sama dengan bukti teorema dasar aritmetika: andaikan dalam $\mathcal{P}$ terdapat dua faktorisasi tak tereduksi $\mathring{p}_1 \cdots \mathring{p}_m =  \mathring{q}_1 \cdots \mathring{q}_n$. Sifat prima mengakibatkan adanya $j$ dengan $p_1 \mid q_j$, sedangkan sifat tak tereduksi mengakibatkan $\lrangle{p_1} = \lrangle{q_j}$. Dengan demikian, $\mathring{p}_1 = \mathring{q}_j$ dapat dicoret dari kedua ruas persamaan; pengulangan langkah ini memberikan keunikan.
+\end{itemize}
+Dengan demikian diperoleh pencirian lain bagi daerah faktorisasi unik.
+
+\begin{proposition}
+	Daerah integral $R$ merupakan daerah faktorisasi unik jika dan hanya jika
+	\begin{compactitem}
+		\item di dalam $R$, himpunan semua ideal utama sejati ($\neq R$), yaitu himpunan terurut parsial $(\mathcal{P}_0, \subset)$, memenuhi syarat rantai menaik;
+		\item semua unsur tak tereduksi dalam $R$ merupakan unsur prima.
+	\end{compactitem}
+\end{proposition}
+\begin{proof}
+	Telah dijelaskan bahwa daerah faktorisasi unik memenuhi syarat-syarat tersebut. Sebaliknya, pembahasan di atas menunjukkan bahwa syarat rantai menaik pada $\mathcal{P}_0$ menjamin keberadaan faktorisasi tak tereduksi, sedangkan sifat bahwa unsur tak tereduksi merupakan unsur prima menjamin keunikannya.
+\end{proof}
+
+Lokalisasi mempertahankan sifat faktorisasi unik.
+\begin{proposition}\label{prop:UFD-localization}
+	Misalkan $S$ suatu himpunan bagian multiplikatif dari daerah faktorisasi unik $R$, dengan $0 \notin S$. Maka $R[S^{-1}]$ juga merupakan daerah faktorisasi unik.
+\end{proposition}
+\begin{proof}
+	Karena $R[S^{-1}] \hookrightarrow \text{Frac}(R)$, gelanggang $R[S^{-1}]$ merupakan daerah integral. Sekarang, di dalam $R$, pilah unsur-unsur tak tereduksi $p$ menjadi dua jenis.
+	\begin{inparaenum}[(i)]
+		\item $p$ membagi suatu unsur dalam $S$; menurut Lema \ref{prop:localization-units}, ini ekuivalen dengan invertibilitas $p$ dalam $R[S^{-1}]$.
+		\item $p$ tidak membagi unsur mana pun dalam $S$; dalam hal ini $p$ tetap tak tereduksi dalam $R[S^{-1}]$, sebagaimana dibuktikan berikut. Pertama, bayangannya tidak invertibel. Selanjutnya, andaikan $p = \frac{r}{s} \cdot \frac{r'}{s'}$. Karena $p$ merupakan unsur prima, $ss'p = rr'$ mengakibatkan $p \mid r$ atau $p \mid r'$; tanpa mengurangi keumuman andaikan $p \mid r$. Maka persamaan $1 = \frac{r/p}{s} \cdot \frac{r'}{s'}$ memperlihatkan bahwa $\frac{r'}{s'}$ invertibel dalam $R[S^{-1}]$.
+	\end{inparaenum}
+
+	Diberikan unsur tak nol $\frac{r}{s} \in R[S^{-1}]$. Di dalam $R$, ambil faktorisasi tak tereduksi $\mathring{r} = \prod_{i=1}^m \mathring{p}_i \cdot \prod_{j=1}^n \mathring{q}_j$, dengan $p_i$ dan $q_j$ masing-masing merupakan unsur tak tereduksi jenis (i) dan (ii). Maka $\prod_{j=1}^n \mathring{q}_j$ memberikan faktorisasi tak tereduksi dari $\mathring{\frac{r}{s}}$. Selain itu, $\lrangle{q_j}$ merupakan ideal prima yang tidak beririsan dengan $S$; Proposisi \ref{prop:localization-ideals} menunjukkan bahwa $\lrangle{q_j}[S^{-1}] = q_j R[S^{-1}]$ juga merupakan ideal prima. Menurut pembahasan sebelumnya, hal ini menjamin keunikan faktorisasi tak tereduksi dalam $R[S^{-1}]$.
+\end{proof}
+
+Sekarang kita mulai memperluas sifat faktorisasi unik ke daerah ideal utama.
+\begin{lemma}\label{prop:ACC-PID}
+	Untuk rantai naik ideal dalam daerah ideal utama $R$,
+	\[ \mathfrak{a}_1 \subset \mathfrak{a}_2 \subset \cdots, \]
+	selalu terdapat $m \geq 1$ sedemikian sehingga $\mathfrak{a}_m = \mathfrak{a}_{m+1} = \cdots$.
+\end{lemma}
+Dengan kata lain, ideal-ideal $R$ memenuhi syarat rantai menaik. Sifat ini akan dipelajari secara lebih sistematis dalam Definisi \ref{def:ACC-DCC-mod}.
+\begin{proof}
+	Karena $\mathfrak{a} = \bigcup_{i=1}^\infty \mathfrak{a}_i$ masih merupakan ideal, ideal ini dapat ditulis dalam bentuk $\mathfrak{a}= \lrangle{a}$. Cukup pilih $m$ cukup besar sehingga $a \in \mathfrak{a}_m$.
+\end{proof}
+
+\begin{theorem}\label{prop:PID-UFD}
+	Setiap daerah ideal utama merupakan daerah faktorisasi unik; setiap ideal prima tak nol di dalamnya dibangkitkan oleh satu unsur tak tereduksi dan karena itu merupakan ideal maksimal.
+\end{theorem}
+\begin{proof}
+	Berdasarkan pencirian daerah faktorisasi unik dan Lema \ref{prop:ACC-PID}, untuk membuktikan faktorisasi unik cukup ditunjukkan bahwa di dalam $R$ setiap unsur tak tereduksi $p$ merupakan unsur prima. Karena $R$ merupakan daerah ideal utama, definisi unsur tak tereduksi mengakibatkan $\lrangle{p}$ merupakan ideal maksimal dalam $R$; Korolari \ref{prop:maximal-implies-prime} mengakibatkan $\lrangle{p}$ merupakan ideal prima, sehingga $p$ merupakan unsur prima.
+\end{proof}
+
+Menentukan apakah suatu gelanggang merupakan daerah ideal utama bukanlah perkara mudah. Ingat kembali contoh dasar: cara tradisional untuk membuktikan bahwa $\Z$ merupakan daerah ideal utama ialah pembagian bersisa. Cara ini kita perumum sedikit sebagai berikut.
+\begin{lemma}\label{prop:Euclidean-ring}\index{daerah Euklides (Euclidean domain)}
+	Misalkan $R$ suatu daerah integral. Andaikan terdapat himpunan terurut baik $L$ (Definisi \ref{def:well-ordered}) dan fungsi $N: R \smallsetminus \{0\} \to L$ sedemikian sehingga untuk setiap $x \in R$ dan $d \in R \smallsetminus \{0\}$ terdapat $q \in R$ sehingga $r := x-qd$ memenuhi
+	\[ r=0,  \quad \text{atau}\quad r \neq 0 \;\text{dan}\; N(r) < N(d). \]
+	Maka $R$ merupakan daerah ideal utama dan dengan demikian juga daerah faktorisasi unik. Daerah $R$ yang memenuhi syarat ini disebut daerah Euklides.
+\end{lemma}
+\begin{proof}
+	Syarat di atas merupakan perumuman langsung pembagian bersisa, dengan $r$ berperan sebagai sisa. Seperti dalam kasus $R=\Z$, mudah dibuktikan bahwa untuk setiap ideal tak nol $\mathfrak{a} \subset R$, jika $a \in \mathfrak{a} \smallsetminus \{0\}$ mencapai nilai terkecil yang mungkin bagi $N(a) \in L$, maka $\mathfrak{a} = \lrangle{a}$.
+\end{proof}
+
+\begin{example}\label{eg:polynomial-PID}
+	Di atas medan $\Bbbk$, gelanggang polinomial satu peubah $\Bbbk[X]$ merupakan daerah ideal utama. Cukup ambil $N$ sebagai fungsi derajat $\deg: \Bbbk[X] \smallsetminus \{0\} \to \Z_{\geq 0}$; ini sama dengan menerapkan pembagian bersisa untuk polinomial di atas medan.
+\end{example}
+
+\begin{example}\label{eg:Gauss-integers}
+	Gelanggang bilangan bulat Gauss didefinisikan sebagai
+	\[ \Z[\sqrt{-1}] := \left\{ x+y\sqrt{-1} : x,y \in \Z \right\} \quad \text{(sebagai subgelanggang dari $\CC$)}. \]
+	Kita nyatakan bahwa ini merupakan daerah Euklides dan karena itu merupakan daerah ideal utama. Dalam Lema \ref{prop:Euclidean-ring}, ambil peta norma
+	\[ N(x+y\sqrt{-1}) = |x+y\sqrt{-1}|^2 = x^2 + y^2 \;\in \Z_{\geq 0}. \]
+	Untuk memverifikasi syarat yang diperlukan, untuk $x, d$ yang diberikan cukup ambil $q \in \Z[\sqrt{-1}]$ sebagai titik kisi pada bidang kompleks yang terdekat dengan $\frac{x}{d}$, lalu perhatikan bahwa $\left| \frac{x}{d} - q \right|^2 \leq \frac{1}{2^2} + \frac{1}{2^2} = \frac{1}{2} \implies N(x-qd) < N(d)$.
+	
+	Perhatikan bahwa $\Z[\sqrt{-1}]$ tertutup terhadap operasi konjugasi $z \mapsto \bar{z}$, dan $N(z)=z\bar{z}$ merupakan homomorfisme monoid perkalian. Dari sini mudah diperoleh $\Z[\sqrt{-1}]^\times = N^{-1}(\Z^\times) = \{\pm 1, \pm\sqrt{-1}\}$.
+\end{example}
+
+Berdasarkan pertimbangan teori bilangan, perumuman yang natural ialah mengambil bilangan bulat bebas kuadrat $D \in \Z \smallsetminus \{0,1\}$, meninjau \emph{medan bilangan kuadrat} yang bersesuaian $\Q(\sqrt{D}) := \Q + \Q\sqrt{D} \subset \CC$ beserta suatu daerah integral tertentu $\mathfrak{o}_D$ di dalamnya, lalu menyelidiki apakah daerah itu mempunyai faktorisasi unik atau merupakan daerah ideal utama. Pilihan yang wajar ialah mengambil subgelanggang $\Q(\sqrt{D})$ yang tersusun dari bilangan bulat aljabar,
+\begin{equation}\label{eqn:quadratic-integer} \mathfrak{o}_D := \begin{cases}
+	\Z \oplus \Z \sqrt{D}, & D \not\equiv 1 \pmod 4 \\
+	\Z \oplus \Z \cdot \frac{1 + \sqrt{D}}{2}, & D \equiv 1 \pmod 4.
+\end{cases}\end{equation}
+Keintegralan merupakan pokok bahasan \S\ref{sec:integrality-finiteness}; untuk sementara, pembaca dipersilakan memverifikasi langsung bahwa $\mathfrak{o}_D$ merupakan subgelanggang. Ketika $D>0$, masih banyak persoalan terkait yang belum terpecahkan. Untuk $D < 0$, teorema Heegner--Stark menentukan sepenuhnya kapan $\mathfrak{o}_D$ merupakan daerah ideal utama, yaitu untuk $D$ berikut:
+\[ D = -1, -2, -3, -7, -11, -19, -43, -67, -163. \]
+Ini merupakan satu kasus khusus dari masalah bilangan kelas Gauss yang jauh lebih luas. Perkembangan teori bilangan sejak abad ke-20 menunjukkan bahwa kelas besar persoalan aljabar/teori bilangan ini berkaitan sangat erat dengan bentuk modular (objek analisis) dan kurva eliptik (objek geometri). Salah satu contohnya ialah terobosan besar D.\ Goldfeld mengenai masalah bilangan kelas; kepada pembaca yang berminat kami merekomendasikan survei yang ditulisnya sendiri \cite{Go85}.
+
+Sekarang kita lihat bagaimana faktorisasi unik dalam $\Z[\sqrt{-1}]$ dapat digunakan untuk membuktikan suatu teorema teori bilangan yang sama sekali tidak jelas; pembahasan lebih lanjut tentang struktur $\Z[\sqrt{-1}]$ diserahkan sebagai latihan.
+\begin{theorem}[Fermat]\label{prop:sum-squares}
+	Bilangan prima $p$ dapat ditulis dalam bentuk $x^2 + y^2$ ($x,y \in \Z$) jika dan hanya jika $p=2$ atau $p \equiv 1 \pmod 4$; solusi $(x,y)$ unik hingga pertukaran urutan dan perubahan tanda.
+\end{theorem}
+\begin{proof}
+	Ini merupakan akibat sederhana dari klasifikasi unsur tak tereduksi. Setiap unsur tak tereduksi $\mathfrak{p} \in \Z[\sqrt{-1}]$ membagi $N(\mathfrak{p}) := \mathfrak{p}\bar{\mathfrak{p}} \in \Z$ dan karena itu membagi suatu bilangan prima $p \in \Z$; bilangan prima tersebut unik. Jika $\mathfrak{p}$ membagi bilangan prima lain $p'$, maka $p\Z + p'\Z = \Z$ mengakibatkan $\mathfrak{p} \mid 1$, suatu kontradiksi. Klasifikasi unsur tak tereduksi dapat direduksi menjadi persoalan berikut: untuk setiap bilangan prima $p$, teliti faktorisasi tak tereduksinya dalam $\Z[\sqrt{-1}]$.
+	
+	Seperti biasa, tuliskan $\mathring{\xi}$ untuk kelas $\xi$ (unsur tak nol) $\bmod\; \Z[\sqrt{-1}]^\times$. Setiap bilangan bulat tak nol $a$ mempunyai faktorisasi unik dalam $\Z[\sqrt{-1}]$,
+	\[ \mathring{a} = \prod_{\mathring{\mathfrak{p}}} \mathring{\mathfrak{p}}^{n(\mathfrak{p})}, \quad \mathfrak{p} \in \Z[\sqrt{-1}]: \text{unsur tak tereduksi yang berbeda}, \]
+	Faktor-faktor tak tereduksi yang muncul terbagi menjadi dua jenis:
+	\begin{compactitem}
+		\item $\mathring{\mathfrak{p}} \neq \mathring{\bar{\mathfrak{p}}}$; dalam hal ini, $\bar{a}=a$ dan faktorisasi unik mengakibatkan $n(\mathfrak{p}) = n(\bar{\mathfrak{p}})$;
+		\item $\mathring{\mathfrak{p}} = \mathring{\bar{\mathfrak{p}}}$, yakni $\bar{\mathfrak{p}}=u\mathfrak{p}, \; u \in \Z[\sqrt{-1}]^\times = \{\pm 1, \pm\sqrt{-1}\}$; perhitungan langsung menunjukkan bahwa, hingga perkalian dengan unsur $\Z[\sqrt{-1}]^\times$, hanya ada dua kemungkinan: $\mathfrak{p} \in \Z$ atau $\mathfrak{p} = 1 \pm \sqrt{-1}$.
+	\end{compactitem}
+	Dengan mengambil $N$ pada kedua ruas faktorisasi, diperoleh $a^2 = \prod_{\mathring{\mathfrak{p}}} N(\mathfrak{p})^{n(\mathfrak{p})}$. Sekarang ambil $a=p$ sebagai bilangan prima. Karena $N(\mathfrak{p}) \in \Z_{> 1}$, faktorisasi tak tereduksinya memuat paling banyak dua unsur tak tereduksi. Secara khusus, untuk setiap $\mathfrak{q} \in \Z[\sqrt{-1}]$, persamaan $p = \mathfrak{q}\bar{\mathfrak{q}}$ mengakibatkan $\mathfrak{q}$ tak tereduksi. Sebagai kasus khusus, $2 = N(1 + \sqrt{-1})$ mengakibatkan $1 \pm \sqrt{-1}$ tak tereduksi.
+
+	Dengan demikian, faktorisasi $p$ terbagi menjadi tiga kasus yang saling lepas:
+	\begin{compactdesc}
+		\item[Terbelah] $\mathring{p} = \mathring{\mathfrak{p}} \mathring{\bar{\mathfrak{p}}}$ tereduksi dan $\mathring{\mathfrak{p}} \neq \mathring{\bar{\mathfrak{p}}}$. Dalam hal ini haruslah $p = \mathfrak{p}\bar{\mathfrak{p}} = N(\mathfrak{p})$, sebab kedua ruas merupakan bilangan bulat positif sehingga pengaruh unsur invertibel $\{\pm\sqrt{-1}, \pm 1\}$ dapat dikesampingkan.
+		\item[Teramifikasi] $\mathring{p} = \mathring{\mathfrak{p}}^2$ tereduksi dan $\mathring{\bar{\mathfrak{p}}} = \mathring{\mathfrak{p}}$. Karena $p$ merupakan bilangan prima, tidak mungkin $\mathfrak{p} \in \Z$; jadi dapat diambil $\mathfrak{p} = 1 \pm \sqrt{-1}$ dan $p = N(\mathfrak{p}) = 2$.
+		\item[Iners] $\mathring{p} = \mathring{\mathfrak{p}}$ tak tereduksi; setelah menggunakan unsur $\Z[\sqrt{-1}]^\times$ yang sesuai untuk menyesuaikan $\mathfrak{p}$, dapat diambil $\mathfrak{p} \in \Z$.
+	\end{compactdesc}
+	Misalkan $\mathfrak{p} = x + \sqrt{-1}y \in \Z[\sqrt{-1}]$. Maka $N(\mathfrak{p}) = x^2 + y^2$. Dari seluruh pembahasan di atas, persamaan jumlah kuadrat $p = x^2 + y^2$ mempunyai solusi jika dan hanya jika $p = N(\mathfrak{p})$. Ketika persamaan ini berlaku, $\mathfrak{p}$ tak tereduksi dan tepat bersesuaian dengan kasus ketika $p$ terbelah atau teramifikasi. Dalam hal ini, faktorisasi unik (hingga $\pm 1, \pm\sqrt{-1}$ dan $\mathfrak{p} \leftrightarrow \bar{\mathfrak{p}}$) langsung memberikan keunikan solusi $(x,y)$ (hingga perubahan tanda dan pertukaran urutan). Pernyataan yang hendak dibuktikan tereduksi pada sifat berikut bagi bilangan prima $p$:
+	\[ \text{teramifikasi} \iff p=2, \quad \text{terbelah} \iff p \equiv 1 \pmod{4}, \quad \text{iners} \iff p \equiv 3 \pmod{4}. \]
+	Kasus teramifikasi $p=2$ telah ditangani. Selain itu, mudah diperiksa bahwa $x^2 + y^2 \equiv 0,1,2 \pmod{4}$, sehingga $p \equiv 3 \pmod{4}$ mengakibatkan $p$ merupakan bilangan prima iners. Sekarang andaikan $p \equiv 1 \pmod{4}$. Teori bilangan elementer memberi tahu kita bahwa $(\Z/p\Z)^\times$ merupakan grup siklik berorde $p-1$; sebenarnya, grup perkalian setiap medan hingga bersifat siklik (latihan bab ini). Dari $(\Z/p\Z)^\times$, ambil suatu generator $g \bmod p$; dalam teori bilangan, $g$ disebut akar primitif $\bmod\; p$. Maka $g^{\frac{p-1}{2}} \equiv -1 \pmod p$, sehingga bilangan bulat $t := g^{\frac{p-1}{4}}$ memenuhi kongruensi $t^2 + 1 \equiv 0 \pmod p$. Akibatnya, dalam $\Z[\sqrt{-1}]$ berlaku $p  \mid  (t + \sqrt{-1})(t - \sqrt{-1})$. Jelas bahwa $p \nmid (t \pm \sqrt{-1})$, sehingga $p$ tereduksi dalam $\Z[\sqrt{-1}]$; karena $p \neq 2$, diperoleh bahwa $p$ terbelah.
+\end{proof}
+
+Secara umum, \{daerah Euklides\} $\subsetneq$ \{daerah ideal utama\} $\subsetneq$ \{daerah faktorisasi unik\}. Untuk contoh daerah ideal utama yang bukan daerah Euklides, lihat \cite{Wil73}; karena itu, daya guna berbagai kriteria di atas memang terbatas. Pembahasan yang lebih mendalam akan diberikan kemudian pada bagian aljabar komutatif. Berikut kita berfokus pada gelanggang polinomial atas daerah faktorisasi unik.
+
+\begin{proposition}[Uji faktor linear]
+	Tinjau polinomial berikut di atas daerah faktorisasi unik $R$:
+	\[ f(X) = a_n X^n + a_{n-1}X^{n-1} + \cdots + a_0, \quad a_n \neq 0. \]
+	Jika $\alpha  \in \text{Frac}(R)$ memenuhi $f(\alpha)=0$, maka $\alpha$ dapat ditulis sebagai $p/q$, dengan $p,q \in R$ relatif prima, $q \mid a_n$, dan $p \mid a_0$.
+\end{proposition}
+Secara khusus, jika $\alpha \in \text{Frac}(R)$ merupakan akar suatu polinomial monik dalam $R[X]$, maka $\alpha \in R$. Daerah integral yang memenuhi sifat ini disebut \emph{tertutup integral}. \index{zhengbi@tertutup integral (integrally closed)}
+\begin{proof}
+	Dalam daerah faktorisasi unik selalu terdapat $p,q$ yang relatif prima sedemikian sehingga $\alpha = p/q$. Dari $0 = \sum_{i=0}^n a_i p^i q^{n-i}$ diperoleh $q  \mid  a_n p^n$ dan $p  \mid  a_0 q^n$; pernyataan tersebut langsung mengikuti sifat relatif prima.
+\end{proof}
+
+Dalam daerah faktorisasi unik $R$, untuk setiap unsur tak tereduksi $p$, seperti biasa tuliskan kelasnya sebagai $\mathring{p} \in (R \smallsetminus \{0\})/R^\times =: \mathcal{P}$. Definisikan fungsi $v_p: R \smallsetminus \{0\} \to \Z_{\geq 0}$ sedemikian sehingga setiap $a \neq 0$ mempunyai faktorisasi berikut dalam $(R \smallsetminus \{0\})/R^\times$:
+\[ \mathring{a} = \prod_{\mathring{p}: v_p(a) \neq 0} \mathring{p}^{v_p(a)}, \]
+
+Jelas bahwa $v_p(ab) = v_p(a) + v_p(b)$; dengan ini, $v_p$ dapat diperluas menjadi homomorfisme grup $\text{Frac}(R)^\times \to \Z$. Dengan konvensi $v_p(0) := \infty$, persamaan $v_p(ab) = v_p(a)+v_p(b)$ selalu berlaku dalam $\text{Frac}(R)$. Mudah dilihat bahwa $(\forall p \; v_p(a) = 0) \iff a \in R^\times$.
+
+\begin{definition} %\index{rongdu@konten (content)}
+	Misalkan $R$ suatu daerah faktorisasi unik, $K := \mathrm{Frac}(R)$, dan $p \in R$ suatu unsur tak tereduksi. Untuk setiap polinomial tak nol $f(X) = \sum_{i=0}^n a_i X^i \in K[X]$, definisikan
+	\[ v_p(f) :=  \min\{ v_p(a_i) : i = 0, \ldots, n\}. \]
+	Selanjutnya, definisikan unsur-unsur berikut dari $K^\times/R^\times$:
+	\[ c_p(f) := \mathring{p}^{v_p(f)}, \quad c(f) := \prod_{\mathring{p}: v_p(f) \neq 0} c_p(f), \]
+\end{definition}
+
+\begin{lemma}[C.\ F.\ Gauss]\label{prop:Gauss-lemma}\index{Lema Gauss}
+	Fungsi $c$ bersifat multiplikatif, yaitu $c(fg) = c(f)c(g)$.
+\end{lemma}
+\begin{proof}
+	Misalkan $f,g \in K[X] \smallsetminus \{0\}$. Pilih wakil bagi kedua kelas konten tersebut, lalu tetapkan $f = c(f) f^\flat$ dan $g = c(g) g^\flat$ untuk mereduksi persoalan pada kasus $c(f) = c(g) = 1$; dalam kasus ini jelas bahwa $f,g \in R[X]$. Akan dibuktikan bahwa untuk setiap $p$ berlaku $v_p(fg) = 0$.
+
+	Untuk setiap $h \in R[X]$ yang tak nol, jelas bahwa $v_p(h) \geq 0$, dan $v_p(h) > 0$ jika dan hanya jika bayangan $h$ dalam $R[X]/pR[X] = (R/\lrangle{p})[X]$ bernilai nol. Karena $\lrangle{p}$ merupakan ideal prima, $(R/\lrangle{p})[X]$ merupakan daerah integral; dengan mengambil $h=f,g,fg$, langsung diperoleh $v_p(fg)=0$.
+\end{proof}
+
+\begin{remark}\label{rem:Gauss-lemma-monic}
+	Satu kasus khusus Lema Gauss yang sering digunakan adalah sebagai berikut. Misalkan $f,g \in K[X]$ polinomial monik. Maka $fg \in R[X] \implies f,g \in R[X]$: sebab polinomial monik selalu memenuhi $v_p \leq 0$, sedangkan unsur-unsur $R[X]$ memenuhi $v_p \geq 0$. Jadi, untuk setiap $p$ berlaku $v_p(f) + v_p(g) = v_p(fg) = 0$, sehingga $v_p(f)=v_p(g)=0$.
+\end{remark}
+
+\begin{theorem}\label{prop:polynomial-UFD}
+	Misalkan $R$ suatu daerah faktorisasi unik. Dengan memperluas definisi konten ke polinomial banyak peubah melalui nilai minimum valuasi pada seluruh koefisien, untuk setiap $n \geq 0$, gelanggang $R[X_1, \ldots, X_n]$ juga merupakan daerah faktorisasi unik, dengan klasifikasi unsur tak tereduksi sebagai berikut:
+	\begin{compactenum}[(a)]
+		\item $f = a$, dengan $a$ unsur tak tereduksi dalam $R$;
+		\item $c(f)=1$ dan $f$ tak tereduksi dalam $K[X_1, \ldots, X_n]$.
+	\end{compactenum}
+\end{theorem}
+\begin{proof}
+	Berdasarkan isomorfisme natural $R[X_1, \ldots, X_{n+1}] \simeq R[X_1, \ldots, X_n][X_{n+1}]$, cukup dibahas kasus $n=1$, yakni gelanggang $R[X]$.
+
+	Tetapkan $K := \text{Frac}(R)$. Menurut Contoh \ref{eg:polynomial-PID}, $K[X]$ merupakan daerah faktorisasi unik.
+	\begin{inparaenum}[(a)]
+		\item Perhatikan bahwa $R[X]^\times = R^\times$. Mudah dilihat bahwa unsur tak tereduksi dalam $R$ tetap tak tereduksi dalam $R[X]$.
+		\item Sekarang, di dalam $K[X]$, tinjau syarat $c(f)=1$ bagi unsur tak tereduksi $f$. Andaikan $f = gh$, dengan $g, h \in R[X]$. Tanpa mengurangi keumuman, dapat diandaikan $g \in R[X] \cap K[X]^\times$, sedangkan $c(f)=1$ mengakibatkan $g \in R^\times$.
+	\end{inparaenum}
+	Ringkasnya, kedua jenis unsur tersebut merupakan unsur tak tereduksi dalam $R[X]$. Setiap $f \in R[X]$ yang tak nol dapat difaktorkan dalam $K[X]$ sebagai
+	\[ f = a p_1 \cdots p_n \]
+	dengan $a \in K^\times$, sedangkan $p_1, \ldots, p_n$ merupakan unsur-unsur tak tereduksi dalam $K[X]$. Dengan menyesuaikan setiap $p_i$ menggunakan unsur $K^\times$, dapat diandaikan bahwa $c(p_i)=1$; unsur $p_i \in R[X]$ semacam ini tertentu hingga perkalian dengan unsur $R^\times$. Lema \ref{prop:Gauss-lemma} mengakibatkan $c(f)=c(a)$, sedangkan di dalam $R$ terdapat pula faktorisasi unik $a = q_1 \cdots q_m$. Faktorisasi yang diperoleh dengan cara ini, $f = q_1 \cdots q_m p_1 \cdots p_n$, unik hingga perkalian dengan suatu unsur $R^\times$. Ini membuktikan sifat faktorisasi unik bagi $R[X]$.
+\end{proof}
+
+\begin{example}
+	Misalkan $R$ suatu daerah faktorisasi unik. Teorema \ref{prop:polynomial-UFD} dan Proposisi \ref{prop:UFD-localization} mengakibatkan bahwa setiap lokalisasi dari $R[X_1, \ldots, X_n]$ juga merupakan daerah faktorisasi unik; contohnya ialah gelanggang polinomial Laurent banyak peubah $R[X_1^{\pm 1}, \ldots, X_n^{\pm 1}]$, dan sebagainya.
+\end{example}
+
+\begin{example}\label{eg:gcd-cyclotomic}
+	Tinjau suatu daerah faktorisasi unik $R$ dan unsur tak nol $X \in R$, misalnya dalam gelanggang polinomial $\Q[X], \Z[X] \ni X$. Untuk setiap $a, b \in \Z_{\geq 1}$, tuliskan pembagi persekutuan terbesarnya sebagai $(a,b)$. Akan dibuktikan bahwa $X^{(a,b)} - 1$ merupakan pembagi persekutuan terbesar dari $X^a - 1$ dan $X^b - 1$ apabila kedua unsur terakhir tak nol. Pernyataan yang sebenarnya akan dibuktikan sedikit lebih kuat: di dalam $R$, jumlah ideal $(X^a - 1) + (X^b - 1)$ sama dengan $\left( X^{(a,b)} - 1 \right)$ tanpa pembatasan tersebut.
+	\begin{compactenum}[(i)]
+		\item Jika $a \mid b$, persamaan $X^b - 1 = (X^a -1)(1 + X^a + \cdots + X^{a(\frac{b}{a} - 1)})$ menunjukkan bahwa $X^a - 1 = X^{(a,b)} - 1 \mid X^b - 1$.
+		\item Perhatikan bahwa untuk setiap unsur $f, g, t$ dalam gelanggang komutatif berlaku
+			\[ (f) + (g) = (f) + (g+tf). \]
+			Sekarang andaikan $a < b$ dan $a \nmid b$. Di dalam $\Z$, lakukan pembagian bersisa $b = aq + r$ ($0 < r < a$); maka
+			\[ X^b - 1 = X^r(X^{aq}-1) + (X^r - 1). \]
+			Dari $X^a - 1 \mid X^{aq} - 1$ langsung diperoleh persamaan ideal $(X^a - 1) + (X^b - 1) = (X^a - 1) + (X^r - 1)$. Di dalam $\Z$ berlaku pula $(a) + (b) = (a) + (r)$, yakni $(a,b)=(a,r)$. Berdasarkan algoritma Euklides, atau dengan induksi pada $\max\{a,b\}$, persoalan pada akhirnya tereduksi ke kasus (i).
+	\end{compactenum}
+\end{example}
+
+\begin{theorem}[Kriteria Eisenstein]\label{prop:Eisenstein-criterion}\index{Kriteria Eisenstein}
+	Misalkan $R$ suatu daerah faktorisasi unik, $K := \mathrm{Frac}(R)$, dan $p$ suatu unsur tak tereduksi dari daerah semula. Jika $f = \sum_{i=0}^n a_i X^i \in R[X]$ memenuhi
+	\begin{compactitem}
+		\item terdapat indeks $1 \leq k \leq n$ sedemikian sehingga $0 \leq i < k \implies p \mid a_i$;
+		\item $p \nmid a_k$;
+		\item $p^2 \nmid a_0$;
+	\end{compactitem}
+	maka $f$ mempunyai faktor tak tereduksi berderajat $\geq k$. Secara khusus, jika $k=n$, polinomial $f$ tak tereduksi dalam $K[X]$; jika sebagai tambahan $c(f)=1$, maka $f$ tak tereduksi dalam $R[X]$.
+\end{theorem}
+\begin{proof}
+	Menurut Teorema \ref{prop:polynomial-UFD}, di dalam $R[X]$ faktorkan $f = a p_1 \cdots p_m$, dengan $a \in R$, sedangkan $p_1, \ldots, p_m$ merupakan polinomial tak tereduksi yang memenuhi $c(p_i)=1$. Syarat-syarat kita mengakibatkan $p \nmid a$. Tuliskan suku konstan $p_i$ sebagai $c_i$. Karena $p^2 \nmid a_0$, setelah mengurutkan ulang indeks dapat diandaikan bahwa
+	\begin{gather*}
+		p \mid c_1, \quad p^2 \nmid c_1, \\
+		i>1 \implies p \nmid c_i.
+	\end{gather*}
+	Tinjau bayangan $f$ dalam gelanggang $(R/\lrangle{p})[X]$. Diperoleh persamaan
+	\[ (a \bmod p) \cdot \prod_{i=1}^m (p_i \bmod p) = \bar{a}_k X^k + \text{suku-suku berderajat lebih tinggi}, \quad \bar{a}_k \neq 0. \]
+	Karena $R/\lrangle{p}$ merupakan daerah integral, suku konstan $a \cdot \prod_{i > 1} p_i$ tetap tak nol setelah direduksi $\bmod p$. Karena itu, $p_1 \bmod p$ berbentuk
+	\[ \bar{b}_k X^k + \text{suku-suku berderajat lebih tinggi}, \quad \bar{b}_k \neq 0, \]
+	sehingga $\deg p_1 \geq k$, sebagaimana hendak dibuktikan.
+\end{proof}
