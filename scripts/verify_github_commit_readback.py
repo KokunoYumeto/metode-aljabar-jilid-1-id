@@ -42,6 +42,10 @@ def main() -> None:
     parser.add_argument("--boundary", required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--path", action="append", required=True)
+    parser.add_argument(
+        "--allow-descendant-main", action="store_true",
+        help="accept public main at a descendant when verifying an older immutable commit",
+    )
     args = parser.parse_args()
 
     require(len(args.commit) == 40 and len(args.parent) == 40, "commit identities must be full hashes")
@@ -64,7 +68,15 @@ def main() -> None:
     )
     require(ref.status_code == 200, f"anonymous branch ref failed: HTTP {ref.status_code}")
     remote = ref.json().get("object", {}).get("sha")
-    require(remote == args.commit, f"public main points to {remote}, not {args.commit}")
+    if remote != args.commit:
+        require(args.allow_descendant_main,
+                f"public main points to {remote}, not {args.commit}")
+        ancestry = subprocess.run(
+            ["git", "merge-base", "--is-ancestor", args.commit, str(remote)],
+            cwd=ROOT, check=False,
+        )
+        require(ancestry.returncode == 0,
+                f"public main {remote} is not a descendant of {args.commit}")
 
     records: list[dict[str, Any]] = []
     for path in sorted(expected_paths):
@@ -101,7 +113,10 @@ def main() -> None:
     }
     output = args.output if args.output.is_absolute() else ROOT / args.output
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(json.dumps(evidence, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    output.write_text(
+        json.dumps(evidence, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8", newline="\n",
+    )
     print(json.dumps({key: evidence[key] for key in (
         "boundary", "commit", "tree", "parent", "path_fetch_count",
         "total_bytes_fetched", "all_match"

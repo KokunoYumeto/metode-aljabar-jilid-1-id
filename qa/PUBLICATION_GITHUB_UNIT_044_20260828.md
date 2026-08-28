@@ -8,9 +8,9 @@ Status: **PUBLIC; ANONYMOUS COMMIT-BYTE READBACK PASS.**
 - Tree: `e6d75ec61a697ecb5667378d246a286eb7c18d79`
 - Parent: `327524e8886cef960a5b2973eab37727990cc3e2`
 - Public commit: <https://github.com/KokunoYumeto/metode-aljabar-jilid-1-id/commit/9b5fb65446413db03e9f6a877a92d622ef8b577e>
-- Anonymous readback inventory: `qa/PUBLICATION_GITHUB_UNIT_044_CONTENT_READBACK.json`; 20,221 bytes; SHA-256 `4e0adc0fcb6e49faf470444d8ab773f1b09030607f7f3f6fdacedc3a98bf8d1f`.
+- Anonymous readback inventory: `qa/PUBLICATION_GITHUB_UNIT_044_CONTENT_READBACK.json`; 19,836 bytes; SHA-256 `599df8e7aa3e2f65e8835a59d99969eaae4cd17b8fdc28993c95763cc4c118c6`.
 
-The public `main` ref resolved to the exact content commit. All 46 changed paths, totaling 8,857,965 committed bytes, were fetched without credentials from commit-pinned raw URLs and matched the corresponding committed blobs byte-for-byte.
+The public `main` ref resolved to the exact content commit on the initial check and to its public receipt-commit descendant on the repeated normalized check. All 46 changed paths, totaling 8,857,965 committed bytes, were fetched without credentials from commit-pinned raw URLs and matched the corresponding committed blobs byte-for-byte.
 
 The reader-first public files are:
 
