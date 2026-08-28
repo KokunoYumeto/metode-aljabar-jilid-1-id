@@ -1,16 +1,23 @@
 # Current state
 
-Updated: 2026-08-28  
-Status: active; Li Units 001-034 are public and byte-verified through complete
-Chapter 4 Section 4.10. Unit 034 is public at content commit
-`6ce7def3bb18fc272b1b3054fa96e14fec4c49a7`; all 61 paths / 5,186,751 bytes passed
-anonymous readback. Receipt commit `73dcdb7186d0be22e6a6436d9fd592e8a1b33c53` and all 3
-paths / 126,143 bytes also passed. The canonical next boundary is
-Unit 035 at `chapter4.tex:1745`; isolated translation reaches Unit 042 and
-`chapter5.tex:1184`, while Unit 043 has not started. The full active objective
-continues from the complete Li edition through complete licensed Duncan,
-selected repaired CRing spans, and the separately provenanced connective and
-mastery layer; this boundary is not a completion claim.
+Updated: 2026-08-29
+Status: active. The complete Wen-Wei Li Volume 1 Bahasa Indonesia source is now
+canonically admitted: prelude plus Chapters 1–10, 13,599 records / 1,459,865
+bytes, with all protected mathematics and identifiers preserved, 161 active
+top-level exercises, and 51 hints. The complete 521-page reader is 2,875,853
+bytes, SHA-256
+`c2994530e3da1711d44f8c36315c40874e87f1968d1a81c1432105de2251c2ee`;
+its deterministic multi-pass build has no fatal or unresolved diagnostics.
+All 521 pages passed one bounded overview inspection and 24 boundary/severe-
+diagnostic pages passed a 110-dpi targeted inspection, with no visible clipping,
+overlap, malformed page, or accidental blank page. Final modular backends
+Units 045–048 and their 24 CSV projections pass schema, semantic, binding, and
+deterministic regeneration checks. The immediate action is the single complete-
+Li GitHub/Zenodo publication and anonymous byte readback. In parallel, all six
+repaired CRing selections and all seven Duncan roots are undergoing final prose
+editing. The terminal objective remains the complete Li + Duncan + six CRing
+selections + separately provenanced connective/mastery corpus; this Li boundary
+is not a terminal completion claim.
 
 ## Completed
 
@@ -1284,3 +1291,22 @@ are already in isolated chapter-level translation. Integrate full chapters,
 run one bounded gate per substantial boundary, and continue through Chapter 10,
 Duncan, the six repaired CRing spans, and the connective/mastery layer. No
 intermediate chapter completes the goal.
+
+## Fast-completion state — 2026-08-28
+
+The earlier unit-scale next-action paragraphs above are historical. The live
+cursor is `FAST_COMPLETION_CURSOR_20260828.md`. Complete Chapter 7 now passes
+at 1,224 records / 132,871 bytes / SHA-256
+`6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3`.
+Complete Chapter 8 passes at 123,012 bytes / SHA-256
+`97a08d3da1ee715d97e209cb93ebc1370fa4ef24ba071d312b17f4f7902aeb31`.
+Complete Chapter 9 passes at 136,866 bytes / SHA-256
+`cb753a347ac047dff772f08916cca940fab617440e2ea50c602e8ea4e29f762d`.
+At the superseded 2026-08-28 pre-final checkpoint, Chapter 10 was the sole remaining Li translation and was in its final protected
+record pass. When it closes, Chapters 7-10 are promoted together and receive
+one complete-Li build/backend/publication/readback gate; no per-unit ceremony
+is permitted. Complete Duncan and six-span CRing translation continue in
+parallel. CRing extraction receipt SHA-256 is
+`b0e45f4028051a7283361637a8fd8f1df58a353959569e822db2eaa469033cba`;
+its nine-repair gate SHA-256 is
+`5fb6563499edc639d44b2cab60027dfdfcfba0bc5e4f808430fa22f3cbd207f9`.

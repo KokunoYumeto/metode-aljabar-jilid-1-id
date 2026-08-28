@@ -1,0 +1,93 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8
+% Pembaca lengkap Jilid 1. Teks sumber dan terjemahan: CC BY 4.0.
+% Provenans produksi: OpenAI Codex gpt-5.6-sol, Ultra.
+\documentclass[
+	colors = true,
+	fontsetup = font-setup-id.tex,
+	titlesetup = titles-setup-id.tex,
+	CJKthechapter = false
+]{AJbook}
+
+\input{locale-ui-id.tex}
+\setCJKmainfont[Path=../fonts/,BoldFont=NotoSansCJKsc-Medium.otf,ItalicFont=NotoSansCJKsc-Regular.otf]{NotoSansCJKsc-Regular.otf}
+\DefineBibliographyStrings{english}{
+	in = {dalam}, editor = {penyunting}, byeditor = {disunting oleh},
+	backrefpage = {dirujuk pada hlm\adddot}, backrefpages = {dirujuk pada hlm\adddot}}
+\newcommand{\BuildDateID}{28 Agustus 2026}
+\newcommand{\BuildDateShortID}{2026-08-28}
+\AtBeginDocument{\renewcommand{\chaptermark}[1]{\markboth{Bab \thechapter\quad #1}{}}}
+\AtBeginDocument{\let\cleardoublepage\clearpage}
+
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\SetSymbolFont{stmry}{bold}{U}{stmry}{m}{n}
+\usepackage{array}
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\usepackage{makecell}
+\usepackage{tikz-cd}
+\usetikzlibrary{positioning,patterns,calc,matrix,shapes.arrows,shapes.symbols}
+\usepackage{braids}
+\usepackage{tqft}
+\usepackage{ytableau}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{myarrows}
+\usepackage{mycommand}
+\usepackage[noautomatic]{imakeidx}
+\makeindex[columns=2,program=makeindex,intoc=true,title={Indeks Istilah}]
+\makeindex[columns=3,program=makeindex,intoc=true,name=sym1,title={Indeks Simbol}]
+\usepackage[unicode,bookmarksnumbered]{hyperref}
+\hypersetup{
+	pdfauthor = {Wen-Wei Li},
+	pdftitle = {Metode Aljabar, Jilid 1: Arsitektur Dasar - Edisi Bahasa Indonesia},
+	pdfsubject = {Terjemahan Bahasa Indonesia independen; Jilid 1 lengkap},
+	pdfkeywords = {aljabar, kategori, grup, gelanggang, modul, medan, Galois, valuasi, id-ID},
+	pdflang = {id-ID}, CJKbookmarks = true}
+\addbibresource{Al-jabr.bib}
+
+\begin{document}
+	\hypersetup{pageanchor=false}
+	\pagestyle{empty}
+	\renewcommand{\thepage}{C\arabic{page}}
+	\input{coverpage-id-full.tex}
+	\pagestyle{fancy}
+	\pagenumbering{roman}
+	\setcounter{page}{1}
+	\thispagestyle{empty}
+	\renewcommand{\contentsname}{Daftar Isi}
+	\tableofcontents
+
+	\mainmatter
+	\hypersetup{pageanchor=true}
+	\raggedbottom
+	\newgeometry{centering,textwidth=142mm,textheight=198mm,headheight=5ex,headsep=5ex}
+	\setlength{\headwidth}{\textwidth}
+	\begingroup
+	\setlength{\emergencystretch}{3em}
+	\setstretch{1.16}
+	\clubpenalty=10000
+	\widowpenalty=10000
+	\displaywidowpenalty=10000
+	\brokenpenalty=10000
+	\include{prelude}
+	\include{chapter1}
+	\include{chapter2}
+	\include{chapter3}
+	\include{chapter4}
+	\include{chapter5}
+	\include{chapter6}
+	\include{chapter7}
+	\include{chapter8}
+	\include{chapter9}
+	\include{chapter10}
+	\endgroup
+
+	\backmatter
+	\printbibliography[heading=bibintoc,title={Daftar Pustaka}]
+	{\footnotesize
+	\printindex[sym1]
+	\indexprologue{Istilah diurutkan menurut bentuk Bahasa Indonesia.}
+	\printindex}
+\end{document}

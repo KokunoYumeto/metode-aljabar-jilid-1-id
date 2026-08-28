@@ -1,0 +1,82 @@
+{
+  "schema": "o013-li-final-chapter-backend-validation-v1",
+  "unit": "O013-LI-U047",
+  "result": "pass",
+  "generated": "2026-08-29",
+  "chapter": 9,
+  "authority": {
+    "range": "chapter9.tex:1-1204",
+    "bytes": 115492,
+    "sha256": "308213ddc499ffbac98e2e6c865f0f654c9a90b321c660211acb1de7b1f95957"
+  },
+  "target": {
+    "range": "chapter9.tex:1-1204",
+    "bytes": 136866,
+    "sha256": "cb753a347ac047dff772f08916cca940fab617440e2ea50c602e8ea4e29f762d",
+    "candidate_identical": true
+  },
+  "topology": {
+    "records": 1204,
+    "environment_starts": 203,
+    "environment_ends": 203,
+    "labels": 56,
+    "references": 171,
+    "citations": 16,
+    "indexes": 32,
+    "items": 131,
+    "top_level_exercises": 20,
+    "exercise_items": 48,
+    "hints": 3,
+    "tikzcd": 16,
+    "tikzpicture": 5
+  },
+  "sections": 9,
+  "rights_components": 5,
+  "build_surfaces": 1,
+  "qa_events": 4,
+  "schema_validation": "pass",
+  "semantic_validation": "pass",
+  "csv_projections": 6,
+  "backend": {
+    "path": "backend/data/unit-047-bab-9-teori-galois.json",
+    "bytes": 138221,
+    "sha256": "d71575577e66b4aa2ce4963876522ca99d54fa6eb73ca3be081e53efb7d1d2de"
+  },
+  "csv": {
+    "bindings": {
+      "path": "backend/csv/unit-047-bindings.csv",
+      "bytes": 39716,
+      "sha256": "9172ca709a537695bd152743b1a203bbdcb01cfc93dcb0ae8611be2d708ea7d3"
+    },
+    "entities": {
+      "path": "backend/csv/unit-047-entities.csv",
+      "bytes": 21737,
+      "sha256": "4501e11d9ccc83810f02dc7879720888f1bf859ff38c7381405dcc6a251c8222"
+    },
+    "qa": {
+      "path": "backend/csv/unit-047-qa.csv",
+      "bytes": 1300,
+      "sha256": "d7cf4ba2b519997af3e91f77433833eb093453f8c4ec0d3d754caee9edccac9b"
+    },
+    "relations": {
+      "path": "backend/csv/unit-047-relations.csv",
+      "bytes": 52446,
+      "sha256": "ab922b32a501117a3f834ae468ee46468aeb546a5d65825aedf3962033a9e734"
+    },
+    "rights": {
+      "path": "backend/csv/unit-047-rights.csv",
+      "bytes": 1831,
+      "sha256": "51552480f0c11a909250f8f368305ec2156d54729111edcd2bf9e9e4d556ef7f"
+    },
+    "surfaces": {
+      "path": "backend/csv/unit-047-surfaces.csv",
+      "bytes": 14083,
+      "sha256": "b9e8af8ef6e4539f7e9a2e8f13353e5a5f42b5d2c98d79cefeedfe912244cb20"
+    }
+  },
+  "generator": {
+    "path": "scripts/generate_li_final_chapters_backend.py",
+    "bytes": 22078,
+    "sha256": "871b995bbe9f0c5875a84fa9df1e421fd8ee0459a87e6b69ba8d166ce90819a2"
+  }
+}

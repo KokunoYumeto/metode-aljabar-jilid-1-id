@@ -1,0 +1,82 @@
+{
+  "schema": "o013-li-final-chapter-backend-validation-v1",
+  "unit": "O013-LI-U045",
+  "result": "pass",
+  "generated": "2026-08-29",
+  "chapter": 7,
+  "authority": {
+    "range": "chapter7.tex:1-1224",
+    "bytes": 111676,
+    "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6"
+  },
+  "target": {
+    "range": "chapter7.tex:1-1224",
+    "bytes": 132871,
+    "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+    "candidate_identical": true
+  },
+  "topology": {
+    "records": 1224,
+    "environment_starts": 223,
+    "environment_ends": 223,
+    "labels": 66,
+    "references": 140,
+    "citations": 10,
+    "indexes": 43,
+    "items": 84,
+    "top_level_exercises": 14,
+    "exercise_items": 29,
+    "hints": 6,
+    "tikzcd": 22,
+    "tikzpicture": 3
+  },
+  "sections": 9,
+  "rights_components": 5,
+  "build_surfaces": 1,
+  "qa_events": 4,
+  "schema_validation": "pass",
+  "semantic_validation": "pass",
+  "csv_projections": 6,
+  "backend": {
+    "path": "backend/data/unit-045-bab-7-aljabar-asosiatif.json",
+    "bytes": 153133,
+    "sha256": "6f387c95573d90b9863b6b50e3650fb89cc57e1bc370624fababe8c02393f5e3"
+  },
+  "csv": {
+    "bindings": {
+      "path": "backend/csv/unit-045-bindings.csv",
+      "bytes": 48175,
+      "sha256": "d4d54cd9927498c4a5437990dddd7fc45438c7825861471e33cd2f2ccbb08e89"
+    },
+    "entities": {
+      "path": "backend/csv/unit-045-entities.csv",
+      "bytes": 22757,
+      "sha256": "68be3fb2fefeed0dd22cb2f3269797b8470f6c68461bd39867e348214e1d89e7"
+    },
+    "qa": {
+      "path": "backend/csv/unit-045-qa.csv",
+      "bytes": 1300,
+      "sha256": "01a19dbb5413f4a95c404d24feb0d86923a636044ac34663fa4ad4245e0dcb57"
+    },
+    "relations": {
+      "path": "backend/csv/unit-045-relations.csv",
+      "bytes": 54948,
+      "sha256": "1daca6e7a187b95a67b8ee9fc677a91ce51dde575628b44481f3109ce821cd39"
+    },
+    "rights": {
+      "path": "backend/csv/unit-045-rights.csv",
+      "bytes": 1831,
+      "sha256": "51552480f0c11a909250f8f368305ec2156d54729111edcd2bf9e9e4d556ef7f"
+    },
+    "surfaces": {
+      "path": "backend/csv/unit-045-surfaces.csv",
+      "bytes": 16266,
+      "sha256": "d20220b058a494e39808d81960d6eda6b052c45f339d7ea755c3e413c25d247b"
+    }
+  },
+  "generator": {
+    "path": "scripts/generate_li_final_chapters_backend.py",
+    "bytes": 22078,
+    "sha256": "871b995bbe9f0c5875a84fa9df1e421fd8ee0459a87e6b69ba8d166ce90819a2"
+  }
+}

@@ -1,0 +1,3875 @@
+{
+  "$schema": "../schema/open-math-corpus-unit.schema.v1.json",
+  "schema_name": "open-math-corpus-unit",
+  "schema_version": "1.1.0",
+  "profile": "curriculum-modular-backend-v0",
+  "dataset_id": "urn:uuid:475ce724-6b40-5602-9af9-43abe80b495c",
+  "dataset_stable_key": "dataset/unit-045/id-id",
+  "id_namespace": {
+    "algorithm": "uuid5",
+    "namespace_uuid": "urn:uuid:5d74a443-839a-5a09-b2c6-0bc48a097f2b",
+    "name_root": "https://github.com/wenweili/AlJabr-1#o013-backend-v1"
+  },
+  "workflow": {
+    "responsible_task": "urn:uuid:8bed004e-8675-5c3b-bc91-176facd4c2e8",
+    "updated": "2026-08-29",
+    "status": "admitted",
+    "admission_state": "admitted",
+    "translation_state": "visually_checked",
+    "qa_state": "translation_math_backend_build_visual_pass"
+  },
+  "program": {
+    "id": "urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78",
+    "stable_key": "program/open-mathematics-curriculum/2026",
+    "entity_type": "program",
+    "label": "Open Mathematics Curriculum",
+    "version": "2026"
+  },
+  "course": {
+    "id": "urn:uuid:a5f3ad58-ce3c-5f5f-b581-1f842ae79192",
+    "stable_key": "course/o013",
+    "entity_type": "course",
+    "program_id": "urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78",
+    "role_code": "O013",
+    "course_code": "D70",
+    "label": "Graduate Algebra",
+    "prerequisite_ids": [
+      "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
+      "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7",
+      "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+      "urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288",
+      "urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396",
+      "urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14",
+      "urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec",
+      "urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8",
+      "urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee",
+      "urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f",
+      "urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96",
+      "urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f"
+    ]
+  },
+  "resource": {
+    "id": "urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397",
+    "stable_key": "resource/wenweili/aljabr-1",
+    "entity_type": "resource",
+    "canonical_uri": "https://github.com/wenweili/AlJabr-1",
+    "author": "Wen-Wei Li",
+    "titles": [
+      {
+        "language": "zh-Hans",
+        "text": "代数学方法，卷一：基础架构"
+      },
+      {
+        "language": "en",
+        "text": "Methods in Algebra, Volume 1: Basic Architecture"
+      },
+      {
+        "language": "id-ID",
+        "text": "Metode Aljabar, Jilid 1: Arsitektur Dasar"
+      }
+    ],
+    "original_language": "zh-Hans",
+    "rights_component_ids": [
+      "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "urn:uuid:e18339ae-66cd-5304-b544-b220dd41380d",
+      "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+      "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430"
+    ]
+  },
+  "edition": {
+    "id": "urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49",
+    "stable_key": "edition/wenweili/aljabr-1/c4f7a01f68f5f407906b4b970640cddbbad85f6b",
+    "entity_type": "edition",
+    "resource_id": "urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397",
+    "branch": "master",
+    "commit": "c4f7a01f68f5f407906b4b970640cddbbad85f6b",
+    "tree": "0f9fd52748165ec89a85ba602ccb949a2ce04694",
+    "archive": {
+      "path": "authority/archives/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b.zip",
+      "bytes": 6050739,
+      "sha256": "6c8c416baa8f5ffc8810bbad6470c780413bd7917af739e07340e4b07e7eaff6"
+    },
+    "official_pdf": {
+      "path": "authority/pdfs/Al-jabr-1.pdf",
+      "bytes": 3647113,
+      "sha256": "dc751a2d5146edc9f9638471ff3fac4107eab8dd0d3331803581a06998663c38"
+    },
+    "source_manifest": {
+      "path": "00_control/SOURCE_MANIFEST.csv",
+      "bytes": 3383,
+      "sha256": "40125010171d4fa37c3312c454c3c2767325bcb27c4229c255a25b297265eb99"
+    }
+  },
+  "unit": {
+    "id": "urn:uuid:d83618a4-82db-55a1-adac-632b286086a9",
+    "stable_key": "unit/bab-7-aljabar-asosiatif",
+    "entity_type": "unit",
+    "program_id": "urn:uuid:9d8d0610-2560-5376-8679-5a9418407a78",
+    "course_id": "urn:uuid:a5f3ad58-ce3c-5f5f-b581-1f842ae79192",
+    "resource_id": "urn:uuid:a72e8c67-4b46-5049-b626-479af39b5397",
+    "edition_id": "urn:uuid:df2d23de-7370-5da5-ad49-42fb7c718c49",
+    "order": 45,
+    "source_local_id": "chapter7.tex:1-1224; complete Chapter 7",
+    "titles": [
+      {
+        "language": "zh-Hans",
+        "text": "代数初步"
+      },
+      {
+        "language": "id-ID",
+        "text": "Bab 7: Aljabar Asosiatif"
+      }
+    ],
+    "source_language": "zh-Hans",
+    "target_language": "id-ID",
+    "source_binding": {
+      "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+      "bytes": 111676,
+      "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+      "line_start": 1,
+      "line_end": 1224,
+      "span_sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+      "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+    },
+    "target_binding": {
+      "path": "repo/source/chapter7.tex",
+      "bytes": 132871,
+      "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+      "line_start": 1,
+      "line_end": 1224,
+      "span_sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+      "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+    },
+    "section_ids": [
+      "urn:uuid:603f7cfc-2034-5e51-a7cd-cae2d3bec833",
+      "urn:uuid:c093d346-aa88-5540-a83a-069566b1cb2d",
+      "urn:uuid:3dbedd7c-ef4b-598e-8404-4208b5689bae",
+      "urn:uuid:861be988-2ce1-5dbb-99be-142eaab53df0",
+      "urn:uuid:27ff280b-dc46-5896-a266-411ebdf92d06",
+      "urn:uuid:f089c23f-c614-586d-b351-988ed8ab6f39",
+      "urn:uuid:f0019833-b716-5baa-aa29-ff1de49170f1",
+      "urn:uuid:7be4f20f-ad88-58f3-ba2f-c8e3afa98161",
+      "urn:uuid:8c96c4d6-b629-599c-8fa4-c164a9c65546"
+    ],
+    "concept_ids": [
+      "urn:uuid:a5673fd7-d9c4-5159-a9b9-d63bfb0d1892",
+      "urn:uuid:b701644a-3cb0-5177-ac1e-2288c4fad9fe",
+      "urn:uuid:fd9c0eae-dbd3-57b0-8d52-529d3931f1ae",
+      "urn:uuid:6b01f673-a0e5-53d0-b2d7-f3155848f82a",
+      "urn:uuid:4fd746f6-6706-5ee0-8b3b-139c3f8523bf",
+      "urn:uuid:5e628735-ab6a-5205-b46a-15633a1d3ff4",
+      "urn:uuid:b76e6cff-6f21-5193-9f2f-f70910933d09",
+      "urn:uuid:af366ba1-87a8-5bf2-b418-2d4bdf6c3bea",
+      "urn:uuid:6e36392f-b48c-5f6f-8d55-16dca206d2b7",
+      "urn:uuid:928e5075-06f4-5412-a335-46fc479def8a",
+      "urn:uuid:606e905d-e7de-5e9d-8150-925b743a44c2",
+      "urn:uuid:d771155a-f84d-5537-8f1d-39391a482ac9",
+      "urn:uuid:9c3558fb-84be-5a71-9f0a-72a2251d39a4",
+      "urn:uuid:9b87c300-8b93-5400-8959-a1cb4cbd6da3",
+      "urn:uuid:03e7d555-f92d-523c-ae3a-26076e3c23fe",
+      "urn:uuid:90283cd6-021d-5716-8db1-212fc05fc4be",
+      "urn:uuid:8dd61eb1-cde5-5044-bcb8-b390b5352a20",
+      "urn:uuid:2db0b235-5eb2-5494-a8d5-c9a47f49cad2",
+      "urn:uuid:dabd229a-6eaa-5f3a-809a-89d6f72a86d2",
+      "urn:uuid:6b8b85c7-313b-58bd-8f6a-5d58a801db13",
+      "urn:uuid:039c07c6-af82-50f2-8235-c20d2998974b",
+      "urn:uuid:522cc8d0-722e-5797-aa4a-8937e70afdb5",
+      "urn:uuid:73464d77-5d07-52c8-891b-ab88e693ed11",
+      "urn:uuid:eb7ea6f4-98a6-5c63-9ca7-ad09cfcfe15b",
+      "urn:uuid:9e1d10ed-a14a-5cf7-aa48-9151c819f107",
+      "urn:uuid:06f44a95-33eb-50b5-abd1-b63b7addcf1d",
+      "urn:uuid:c4957adb-f7ee-5239-b4f8-b1ade3b848e4",
+      "urn:uuid:759b164a-2296-546f-b0ac-78ecd01abfe7",
+      "urn:uuid:9ef83a2d-d0c7-5ccc-96bb-03917f48b05a"
+    ],
+    "prerequisite_ids": [
+      "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
+      "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7",
+      "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+      "urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288",
+      "urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396",
+      "urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14",
+      "urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec",
+      "urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8",
+      "urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee",
+      "urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f",
+      "urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96",
+      "urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f",
+      "urn:uuid:dd69ccfd-7399-53a2-83fe-84127b1baf1d",
+      "urn:uuid:3e864ace-90f6-56b3-8ce5-2e0690dbc9f8",
+      "urn:uuid:e3c2ed29-b6a0-5f8d-9613-6f2b41d962c8",
+      "urn:uuid:8cab24d2-0f78-5bf9-96f8-5b2f2b07168d",
+      "urn:uuid:9fac54c6-e671-58b9-b840-4799739adb1e",
+      "urn:uuid:c0b1a30a-634a-5e76-98d3-49bde5a5821c",
+      "urn:uuid:3f5dc8e0-0198-5016-b767-ded1b9ec3d13",
+      "urn:uuid:ecd787ee-f056-5200-91e7-f98b3d80d458"
+    ],
+    "rights_component_ids": [
+      "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+      "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430",
+      "urn:uuid:624ac6e0-0ed9-531c-8b35-47c040240806"
+    ],
+    "citation_ids": [
+      "urn:uuid:e7611273-e3ed-554a-9f07-5637b8251d5b",
+      "urn:uuid:f72ae47f-0ebf-5af9-b960-5c29ddaa8a51",
+      "urn:uuid:9b6d7c54-23ff-5585-865e-46028588e974",
+      "urn:uuid:fe937086-a136-5d0c-9218-3a229a3f3c18",
+      "urn:uuid:5cf6df32-b69b-5941-ab48-f8d2811c467b",
+      "urn:uuid:8fd688ca-8918-5b2e-a40e-5c067b945ec8",
+      "urn:uuid:086e7712-54f6-5c76-9d15-94be68dbf88e"
+    ],
+    "diagram_ids": [
+      "urn:uuid:64746142-930e-5664-b4bd-d7c2de3085af",
+      "urn:uuid:4272bacb-edcf-5d8b-8009-058ad6436bad",
+      "urn:uuid:98c4afa4-1a99-5d39-a14c-ef944c270028",
+      "urn:uuid:66660dc6-bf20-5496-b806-e41ac1cce1a7",
+      "urn:uuid:2eb3ea58-4fa2-5562-98a4-69152f6db9f1",
+      "urn:uuid:f79715eb-0515-5b69-8f41-59a870c7ca88",
+      "urn:uuid:08f2c65c-eca6-50b3-bf07-390ff511420e",
+      "urn:uuid:16003365-a4c7-5daf-a9f6-b4dddf221a20",
+      "urn:uuid:6a83c349-c063-5f6d-b45c-4c510f1180b9",
+      "urn:uuid:5fdecaa8-51bd-57b9-a7bb-2627c9d7d86a",
+      "urn:uuid:c52c041f-9119-5756-99ec-3bbbf22e9012",
+      "urn:uuid:949c83ee-d1e4-506e-9e28-e17017ad94b0",
+      "urn:uuid:aeb09f38-8e79-54d1-9a70-8ba1e3fb4284",
+      "urn:uuid:116595fe-63d3-5050-949f-eeb0c05bf094",
+      "urn:uuid:49596351-1044-5f7f-ac8f-5eea1a5cdced",
+      "urn:uuid:c9adb312-23cf-5924-b802-b88e60aa3888",
+      "urn:uuid:97a41f0b-a500-5485-b6b0-a88fc50173cf",
+      "urn:uuid:3872af3e-969b-56bc-b978-6178eececc64",
+      "urn:uuid:db91993a-8386-5e62-b9d5-5e2d8fe3fd70",
+      "urn:uuid:cbeaa8f5-d277-510b-a118-0fe9a2804585",
+      "urn:uuid:ba5e8df8-0e25-53df-9be5-a5a8014245e4",
+      "urn:uuid:bcd7f605-246e-55d5-90a5-b6055028a5d0",
+      "urn:uuid:54d41950-9304-54c9-b852-a13b1011adf6",
+      "urn:uuid:b4b69beb-c7f7-5630-ba68-6c7fedb6aaad",
+      "urn:uuid:c223e01a-63f3-5790-97bb-6c139d63ea0c"
+    ],
+    "index_entry_ids": [
+      "urn:uuid:37ed54cc-52c0-57c4-8635-a89f3f8a6c72",
+      "urn:uuid:bad567e5-578b-5e8e-9789-a59b9ed766fb",
+      "urn:uuid:287ab2fd-368e-546c-ba6d-1b2a26775375",
+      "urn:uuid:40ec409e-a6ca-50db-bb15-05f070c6c419",
+      "urn:uuid:d4aa7eb4-f421-51e7-aedd-7328f9770d26",
+      "urn:uuid:768e011b-9e7e-5dec-a2e9-8489b2db67b0",
+      "urn:uuid:0f240e64-ad95-5a1e-a02f-0b71cb02a1bd",
+      "urn:uuid:8b78c3af-4fbf-589f-8386-3c56ad4beba8",
+      "urn:uuid:e42afbc9-3b92-5863-9507-cc3679cef2bc",
+      "urn:uuid:383e4d6e-91f5-5779-83f5-b3f905655d47",
+      "urn:uuid:1c0156c4-661a-50e4-a2c4-359be0de23bf",
+      "urn:uuid:5c68666c-47c4-5aa5-a691-dceb4d639725",
+      "urn:uuid:34a5686f-71df-5d70-8e33-2724b975ef24",
+      "urn:uuid:c541f4fc-e2d6-5615-95db-30dddfc35c57",
+      "urn:uuid:91deb9c1-e870-593a-9e6d-258c99a5b6cc",
+      "urn:uuid:e4b4873c-9816-5bc3-b509-c0994b222557",
+      "urn:uuid:a461ae2e-825d-5269-9200-e307054a1a08",
+      "urn:uuid:6888f8c5-89ba-5f70-8c7a-d918d780ac83",
+      "urn:uuid:e1374e2b-2b1a-5943-9251-fc2ffad4f79a",
+      "urn:uuid:30484e99-d1ae-520d-bb24-4173ee7c5c9d",
+      "urn:uuid:2e40c739-1419-52d1-8fbd-8a366b94e270",
+      "urn:uuid:0aab7c74-cc33-596b-a58b-0f8447ca0572",
+      "urn:uuid:193ab26d-c646-5e5c-87c0-08af1fa36f7f",
+      "urn:uuid:1a05928d-b8b7-5d0d-91fb-5a60d18cb1d1",
+      "urn:uuid:d47eacf2-4f53-5cdd-affa-209f4766fa59",
+      "urn:uuid:a0550b6a-4b44-5e1c-8f34-02d91472d7ea",
+      "urn:uuid:859108c5-577e-5429-9c14-828a01849fba",
+      "urn:uuid:1fa90b0e-ba64-57d9-a27e-01faed1858cf",
+      "urn:uuid:b49db605-dff6-54eb-8665-8a3cc90a7759",
+      "urn:uuid:879fca70-c22b-58cb-88e2-7abab6d0ffda",
+      "urn:uuid:968edeaa-89e2-56ca-ad29-2ed08fda1917",
+      "urn:uuid:7c925f06-7b49-5dd2-a065-751aacbc52ad",
+      "urn:uuid:41b5f0da-bcaa-541f-acc3-3d78da803f56",
+      "urn:uuid:a1311d7c-53c9-5a52-be0e-3c9973dd9f3e",
+      "urn:uuid:37dc79eb-58e1-5648-b89e-3400791cef6f",
+      "urn:uuid:91ffa909-7846-5562-80db-65136a819ca6",
+      "urn:uuid:4480e6bd-3c05-5bdb-a765-8d00086276e6",
+      "urn:uuid:410a2c65-83cd-5d70-b793-b9f83039970b",
+      "urn:uuid:ffca06b1-2ff8-5edb-a51e-d24b220949ce",
+      "urn:uuid:f3efe43e-411d-5387-ad7f-674afb87f320",
+      "urn:uuid:dc3a0187-62b4-518d-9a42-35d1667ee6b6",
+      "urn:uuid:794100ef-eabf-544d-afdd-ab3a75065584",
+      "urn:uuid:b25db967-de48-50fb-901d-0188e9f81100"
+    ],
+    "build_surface_ids": [
+      "urn:uuid:653cdca0-47c0-566a-8632-b683b40299fe"
+    ],
+    "qa_event_ids": [
+      "urn:uuid:8d7288de-6da6-5431-a788-f48967d478f3",
+      "urn:uuid:ac3ba159-c416-5810-a0e4-d8ab921370c3",
+      "urn:uuid:793e1c22-ed1e-59a7-afe0-e198a8663fd8",
+      "urn:uuid:148b3208-c7b6-597e-84f5-078af3705a16"
+    ],
+    "outcome_keys": [
+      "chapter-7-introduction",
+      "chapter-7-section-01",
+      "chapter-7-section-02",
+      "chapter-7-section-03",
+      "chapter-7-section-04",
+      "chapter-7-section-05",
+      "chapter-7-section-06",
+      "chapter-7-section-07",
+      "chapter-7-section-08"
+    ],
+    "surface_counts": {
+      "sections": 9,
+      "exercises": 14,
+      "hints": 6,
+      "answers": 0,
+      "solutions": 0,
+      "citations": 7,
+      "diagrams": 25,
+      "index_entries": 43
+    },
+    "translation_state": "visually_checked",
+    "admission_state": "admitted"
+  },
+  "sections": [
+    {
+      "id": "urn:uuid:603f7cfc-2034-5e51-a7cd-cae2d3bec833",
+      "stable_key": "unit/bab-7-aljabar-asosiatif/section/01",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:d83618a4-82db-55a1-adac-632b286086a9",
+      "order": 1,
+      "source_local_id": "chapter7.tex:1-26",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "第7章导言"
+        },
+        {
+          "language": "id-ID",
+          "text": "Pengantar Bab 7"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 1,
+        "line_end": 26,
+        "span_sha256": "3e131c169468b731a061d70ec498ce254d9046f563d79b2590810566e395baa1",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 1,
+        "line_end": 26,
+        "span_sha256": "7339baedec6e04b51609e3f0e27288ccd1a05cd221a3272937ab93526cc79e1d",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:a5673fd7-d9c4-5159-a9b9-d63bfb0d1892"
+      ],
+      "prerequisite_ids": [],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:c093d346-aa88-5540-a83a-069566b1cb2d",
+      "stable_key": "unit/bab-7-aljabar-asosiatif/section/02",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:d83618a4-82db-55a1-adac-632b286086a9",
+      "order": 2,
+      "source_local_id": "chapter7.tex:27-146",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "交换环上的代数"
+        },
+        {
+          "language": "id-ID",
+          "text": "Aljabar atas Gelanggang Komutatif"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 27,
+        "line_end": 146,
+        "span_sha256": "b02738a035329e303cdbd9e23ee0d94ac9e1f034ef79bc2583d49476aee11079",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 27,
+        "line_end": 146,
+        "span_sha256": "4009fcff8afe0dc7bae06fe5132a6ae10878fc89ab2491c45c14712dc1b7b4ae",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:b701644a-3cb0-5177-ac1e-2288c4fad9fe"
+      ],
+      "prerequisite_ids": [],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:3dbedd7c-ef4b-598e-8404-4208b5689bae",
+      "stable_key": "unit/bab-7-aljabar-asosiatif/section/03",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:d83618a4-82db-55a1-adac-632b286086a9",
+      "order": 3,
+      "source_local_id": "chapter7.tex:147-294",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "整性, 有限性和 Frobenius 定理"
+        },
+        {
+          "language": "id-ID",
+          "text": "Integralitas, Keterhinggaan, dan Teorema Frobenius"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 147,
+        "line_end": 294,
+        "span_sha256": "cfd3a18ecd18efea641bc358b7ec4aa9bef6530b4f513f1f3fda2cc4de70727d",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 147,
+        "line_end": 294,
+        "span_sha256": "782ba295ac51e2ddea2f79d4138377f37cccee2284fab50e9e95f553d8c87b39",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:fd9c0eae-dbd3-57b0-8d52-529d3931f1ae"
+      ],
+      "prerequisite_ids": [],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:861be988-2ce1-5dbb-99be-142eaab53df0",
+      "stable_key": "unit/bab-7-aljabar-asosiatif/section/04",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:d83618a4-82db-55a1-adac-632b286086a9",
+      "order": 4,
+      "source_local_id": "chapter7.tex:295-451",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "代数的张量积"
+        },
+        {
+          "language": "id-ID",
+          "text": "Hasil Kali Tensor Aljabar"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 295,
+        "line_end": 451,
+        "span_sha256": "03075bb7fc740a1a471860c77490011fa62b8fe29c92e5a345e6b680199f6ffc",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 295,
+        "line_end": 451,
+        "span_sha256": "6ed68bea9902011e78a2ac59f7b3c2d76e113b18bee28ea142480835f84efeec",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:6b01f673-a0e5-53d0-b2d7-f3155848f82a"
+      ],
+      "prerequisite_ids": [],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:27ff280b-dc46-5896-a266-411ebdf92d06",
+      "stable_key": "unit/bab-7-aljabar-asosiatif/section/05",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:d83618a4-82db-55a1-adac-632b286086a9",
+      "order": 5,
+      "source_local_id": "chapter7.tex:452-613",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "分次代数"
+        },
+        {
+          "language": "id-ID",
+          "text": "Aljabar Bergradasi"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 452,
+        "line_end": 613,
+        "span_sha256": "e8aae8517381b50b78cd3e3f0828969e79e3fd2cd9188c85845863ec30dff83b",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 452,
+        "line_end": 613,
+        "span_sha256": "a95a4256f58c9e32095913cbb6fa6589c0457ec09ed261f9ab93ce4d315cbbee",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:4fd746f6-6706-5ee0-8b3b-139c3f8523bf"
+      ],
+      "prerequisite_ids": [],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:f089c23f-c614-586d-b351-988ed8ab6f39",
+      "stable_key": "unit/bab-7-aljabar-asosiatif/section/06",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:d83618a4-82db-55a1-adac-632b286086a9",
+      "order": 6,
+      "source_local_id": "chapter7.tex:614-696",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "张量代数"
+        },
+        {
+          "language": "id-ID",
+          "text": "Aljabar Tensor"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 614,
+        "line_end": 696,
+        "span_sha256": "a7bbbad0c4a7fa3aef1197c1167bb708f7aa06afdd093ee5c5ad6333e0dd1733",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 614,
+        "line_end": 696,
+        "span_sha256": "563228bcca528a4d3c4611eb752c7c4ff27636327cd706604ba74f33fc80625f",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:5e628735-ab6a-5205-b46a-15633a1d3ff4"
+      ],
+      "prerequisite_ids": [],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:f0019833-b716-5baa-aa29-ff1de49170f1",
+      "stable_key": "unit/bab-7-aljabar-asosiatif/section/07",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:d83618a4-82db-55a1-adac-632b286086a9",
+      "order": 7,
+      "source_local_id": "chapter7.tex:697-864",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "对称代数和外代数"
+        },
+        {
+          "language": "id-ID",
+          "text": "Aljabar simetris dan aljabar eksterior"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 697,
+        "line_end": 864,
+        "span_sha256": "4292b77118ad9356fab8cbe891a571f11ea5add22ad55d81bde64b83db36d9fe",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 697,
+        "line_end": 864,
+        "span_sha256": "1b2260d22179b96346142259fe278e2bdc7551913ac96564f7e1535067a1fb68",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:b76e6cff-6f21-5193-9f2f-f70910933d09"
+      ],
+      "prerequisite_ids": [],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:7be4f20f-ad88-58f3-ba2f-c8e3afa98161",
+      "stable_key": "unit/bab-7-aljabar-asosiatif/section/08",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:d83618a4-82db-55a1-adac-632b286086a9",
+      "order": 8,
+      "source_local_id": "chapter7.tex:865-976",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "牛刀小试: Grassmann 簇"
+        },
+        {
+          "language": "id-ID",
+          "text": "Contoh penerapan: varietas Grassmann"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 865,
+        "line_end": 976,
+        "span_sha256": "b362a161e7c9703267037f033c17ef729dec9a09e6067d615eaff0082bfe66ce",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 865,
+        "line_end": 976,
+        "span_sha256": "ccf809b57b17fc1a721c9a824623b6e23f544562bbec652ea71a9f7be45ca322",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:af366ba1-87a8-5bf2-b418-2d4bdf6c3bea"
+      ],
+      "prerequisite_ids": [],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    },
+    {
+      "id": "urn:uuid:8c96c4d6-b629-599c-8fa4-c164a9c65546",
+      "stable_key": "unit/bab-7-aljabar-asosiatif/section/09",
+      "entity_type": "section",
+      "parent_id": "urn:uuid:d83618a4-82db-55a1-adac-632b286086a9",
+      "order": 9,
+      "source_local_id": "chapter7.tex:977-1224",
+      "titles": [
+        {
+          "language": "zh-Hans",
+          "text": "行列式, 迹, 判别式"
+        },
+        {
+          "language": "id-ID",
+          "text": "Determinan, teras, diskriminan"
+        }
+      ],
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 977,
+        "line_end": 1224,
+        "span_sha256": "3d9538d28df8817077a8c2abdecbea1cb8fd86230bfc3ca9e9d048d30d51fffc",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 977,
+        "line_end": 1224,
+        "span_sha256": "4abf83e59ae27c4f9004bde87e9b1e3d28dd25c3b155d8b88067240cd884afe2",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "concept_ids": [
+        "urn:uuid:6e36392f-b48c-5f6f-8d55-16dca206d2b7",
+        "urn:uuid:928e5075-06f4-5412-a335-46fc479def8a",
+        "urn:uuid:606e905d-e7de-5e9d-8150-925b743a44c2",
+        "urn:uuid:d771155a-f84d-5537-8f1d-39391a482ac9",
+        "urn:uuid:9c3558fb-84be-5a71-9f0a-72a2251d39a4",
+        "urn:uuid:9b87c300-8b93-5400-8959-a1cb4cbd6da3",
+        "urn:uuid:03e7d555-f92d-523c-ae3a-26076e3c23fe",
+        "urn:uuid:90283cd6-021d-5716-8db1-212fc05fc4be",
+        "urn:uuid:8dd61eb1-cde5-5044-bcb8-b390b5352a20",
+        "urn:uuid:2db0b235-5eb2-5494-a8d5-c9a47f49cad2",
+        "urn:uuid:dabd229a-6eaa-5f3a-809a-89d6f72a86d2",
+        "urn:uuid:6b8b85c7-313b-58bd-8f6a-5d58a801db13",
+        "urn:uuid:039c07c6-af82-50f2-8235-c20d2998974b",
+        "urn:uuid:522cc8d0-722e-5797-aa4a-8937e70afdb5",
+        "urn:uuid:73464d77-5d07-52c8-891b-ab88e693ed11",
+        "urn:uuid:eb7ea6f4-98a6-5c63-9ca7-ad09cfcfe15b",
+        "urn:uuid:9e1d10ed-a14a-5cf7-aa48-9151c819f107",
+        "urn:uuid:06f44a95-33eb-50b5-abd1-b63b7addcf1d",
+        "urn:uuid:c4957adb-f7ee-5239-b4f8-b1ade3b848e4",
+        "urn:uuid:759b164a-2296-546f-b0ac-78ecd01abfe7",
+        "urn:uuid:9ef83a2d-d0c7-5ccc-96bb-03917f48b05a"
+      ],
+      "prerequisite_ids": [],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250"
+      ],
+      "translation_state": "visually_checked",
+      "admission_state": "admitted"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "urn:uuid:a5673fd7-d9c4-5159-a9b9-d63bfb0d1892",
+      "stable_key": "concept/o013-li-chapter7/section-01",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "第7章导言"
+        },
+        {
+          "language": "id-ID",
+          "text": "Pengantar Bab 7"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:b701644a-3cb0-5177-ac1e-2288c4fad9fe",
+      "stable_key": "concept/o013-li-chapter7/section-02",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "交换环上的代数"
+        },
+        {
+          "language": "id-ID",
+          "text": "Aljabar atas Gelanggang Komutatif"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:fd9c0eae-dbd3-57b0-8d52-529d3931f1ae",
+      "stable_key": "concept/o013-li-chapter7/section-03",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "整性, 有限性和 Frobenius 定理"
+        },
+        {
+          "language": "id-ID",
+          "text": "Integralitas, Keterhinggaan, dan Teorema Frobenius"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:6b01f673-a0e5-53d0-b2d7-f3155848f82a",
+      "stable_key": "concept/o013-li-chapter7/section-04",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "代数的张量积"
+        },
+        {
+          "language": "id-ID",
+          "text": "Hasil Kali Tensor Aljabar"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:4fd746f6-6706-5ee0-8b3b-139c3f8523bf",
+      "stable_key": "concept/o013-li-chapter7/section-05",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "分次代数"
+        },
+        {
+          "language": "id-ID",
+          "text": "Aljabar Bergradasi"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:5e628735-ab6a-5205-b46a-15633a1d3ff4",
+      "stable_key": "concept/o013-li-chapter7/section-06",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "张量代数"
+        },
+        {
+          "language": "id-ID",
+          "text": "Aljabar Tensor"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:b76e6cff-6f21-5193-9f2f-f70910933d09",
+      "stable_key": "concept/o013-li-chapter7/section-07",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "对称代数和外代数"
+        },
+        {
+          "language": "id-ID",
+          "text": "Aljabar simetris dan aljabar eksterior"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:af366ba1-87a8-5bf2-b418-2d4bdf6c3bea",
+      "stable_key": "concept/o013-li-chapter7/section-08",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "牛刀小试: Grassmann 簇"
+        },
+        {
+          "language": "id-ID",
+          "text": "Contoh penerapan: varietas Grassmann"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:6e36392f-b48c-5f6f-8d55-16dca206d2b7",
+      "stable_key": "concept/o013-li-chapter7/section-09",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "行列式, 迹, 判别式"
+        },
+        {
+          "language": "id-ID",
+          "text": "Determinan, teras, diskriminan"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:928e5075-06f4-5412-a335-46fc479def8a",
+      "stable_key": "surface/unit-045/exercise/001",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "Unit 045 exercise occurrence 001"
+        },
+        {
+          "language": "id-ID",
+          "text": "Unit 045 kemunculan latihan 001"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:606e905d-e7de-5e9d-8150-925b743a44c2",
+      "stable_key": "surface/unit-045/exercise/002",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "Unit 045 exercise occurrence 002"
+        },
+        {
+          "language": "id-ID",
+          "text": "Unit 045 kemunculan latihan 002"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:d771155a-f84d-5537-8f1d-39391a482ac9",
+      "stable_key": "surface/unit-045/exercise/003",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "Unit 045 exercise occurrence 003"
+        },
+        {
+          "language": "id-ID",
+          "text": "Unit 045 kemunculan latihan 003"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:9c3558fb-84be-5a71-9f0a-72a2251d39a4",
+      "stable_key": "surface/unit-045/exercise/004",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "Unit 045 exercise occurrence 004"
+        },
+        {
+          "language": "id-ID",
+          "text": "Unit 045 kemunculan latihan 004"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:9b87c300-8b93-5400-8959-a1cb4cbd6da3",
+      "stable_key": "surface/unit-045/exercise/005",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "Unit 045 exercise occurrence 005"
+        },
+        {
+          "language": "id-ID",
+          "text": "Unit 045 kemunculan latihan 005"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:03e7d555-f92d-523c-ae3a-26076e3c23fe",
+      "stable_key": "surface/unit-045/exercise/006",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "Unit 045 exercise occurrence 006"
+        },
+        {
+          "language": "id-ID",
+          "text": "Unit 045 kemunculan latihan 006"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:90283cd6-021d-5716-8db1-212fc05fc4be",
+      "stable_key": "surface/unit-045/exercise/007",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "Unit 045 exercise occurrence 007"
+        },
+        {
+          "language": "id-ID",
+          "text": "Unit 045 kemunculan latihan 007"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:8dd61eb1-cde5-5044-bcb8-b390b5352a20",
+      "stable_key": "surface/unit-045/exercise/008",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "Unit 045 exercise occurrence 008"
+        },
+        {
+          "language": "id-ID",
+          "text": "Unit 045 kemunculan latihan 008"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:2db0b235-5eb2-5494-a8d5-c9a47f49cad2",
+      "stable_key": "surface/unit-045/exercise/009",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "Unit 045 exercise occurrence 009"
+        },
+        {
+          "language": "id-ID",
+          "text": "Unit 045 kemunculan latihan 009"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:dabd229a-6eaa-5f3a-809a-89d6f72a86d2",
+      "stable_key": "surface/unit-045/exercise/010",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "Unit 045 exercise occurrence 010"
+        },
+        {
+          "language": "id-ID",
+          "text": "Unit 045 kemunculan latihan 010"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:6b8b85c7-313b-58bd-8f6a-5d58a801db13",
+      "stable_key": "surface/unit-045/exercise/011",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "Unit 045 exercise occurrence 011"
+        },
+        {
+          "language": "id-ID",
+          "text": "Unit 045 kemunculan latihan 011"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:039c07c6-af82-50f2-8235-c20d2998974b",
+      "stable_key": "surface/unit-045/exercise/012",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "Unit 045 exercise occurrence 012"
+        },
+        {
+          "language": "id-ID",
+          "text": "Unit 045 kemunculan latihan 012"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:522cc8d0-722e-5797-aa4a-8937e70afdb5",
+      "stable_key": "surface/unit-045/exercise/013",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "Unit 045 exercise occurrence 013"
+        },
+        {
+          "language": "id-ID",
+          "text": "Unit 045 kemunculan latihan 013"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:73464d77-5d07-52c8-891b-ab88e693ed11",
+      "stable_key": "surface/unit-045/exercise/014",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "Unit 045 exercise occurrence 014"
+        },
+        {
+          "language": "id-ID",
+          "text": "Unit 045 kemunculan latihan 014"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:eb7ea6f4-98a6-5c63-9ca7-ad09cfcfe15b",
+      "stable_key": "surface/unit-045/hint/001",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "Unit 045 hint occurrence 001"
+        },
+        {
+          "language": "id-ID",
+          "text": "Unit 045 kemunculan petunjuk 001"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:9e1d10ed-a14a-5cf7-aa48-9151c819f107",
+      "stable_key": "surface/unit-045/hint/002",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "Unit 045 hint occurrence 002"
+        },
+        {
+          "language": "id-ID",
+          "text": "Unit 045 kemunculan petunjuk 002"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:06f44a95-33eb-50b5-abd1-b63b7addcf1d",
+      "stable_key": "surface/unit-045/hint/003",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "Unit 045 hint occurrence 003"
+        },
+        {
+          "language": "id-ID",
+          "text": "Unit 045 kemunculan petunjuk 003"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:c4957adb-f7ee-5239-b4f8-b1ade3b848e4",
+      "stable_key": "surface/unit-045/hint/004",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "Unit 045 hint occurrence 004"
+        },
+        {
+          "language": "id-ID",
+          "text": "Unit 045 kemunculan petunjuk 004"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:759b164a-2296-546f-b0ac-78ecd01abfe7",
+      "stable_key": "surface/unit-045/hint/005",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "Unit 045 hint occurrence 005"
+        },
+        {
+          "language": "id-ID",
+          "text": "Unit 045 kemunculan petunjuk 005"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:9ef83a2d-d0c7-5ccc-96bb-03917f48b05a",
+      "stable_key": "surface/unit-045/hint/006",
+      "entity_type": "concept",
+      "labels": [
+        {
+          "language": "en",
+          "text": "Unit 045 hint occurrence 006"
+        },
+        {
+          "language": "id-ID",
+          "text": "Unit 045 kemunculan petunjuk 006"
+        }
+      ]
+    }
+  ],
+  "prerequisites": [
+    {
+      "id": "urn:uuid:8fb6c957-7285-5258-978c-e1369c7e39d7",
+      "stable_key": "prerequisite/basic-mathematical-literacy",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "基本素养"
+        },
+        {
+          "language": "id-ID",
+          "text": "kematangan matematika dasar"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 54,
+        "line_end": 54
+      }
+    },
+    {
+      "id": "urn:uuid:451f60c6-04ab-54a7-9d74-9dee65d088b7",
+      "stable_key": "prerequisite/mathematical-logic",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "逻辑用语与论证"
+        },
+        {
+          "language": "id-ID",
+          "text": "bahasa logika dan penalaran"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 54,
+        "line_end": 54
+      }
+    },
+    {
+      "id": "urn:uuid:00f7d0ea-1b60-51da-843f-cca760a368e4",
+      "stable_key": "prerequisite/elementary-set-theory",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "集合常识"
+        },
+        {
+          "language": "id-ID",
+          "text": "teori himpunan elementer"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 54,
+        "line_end": 54
+      }
+    },
+    {
+      "id": "urn:uuid:d4260077-2f56-5951-8fe1-2dc390f81288",
+      "stable_key": "prerequisite/matrices",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "矩阵"
+        },
+        {
+          "language": "id-ID",
+          "text": "matriks"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:dfd6d864-afe6-5d0e-90f7-c130241cf396",
+      "stable_key": "prerequisite/vector-spaces",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "向量空间"
+        },
+        {
+          "language": "id-ID",
+          "text": "ruang vektor"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:15245348-aca2-5814-9ca8-0fce14044e14",
+      "stable_key": "prerequisite/polynomials",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "多项式"
+        },
+        {
+          "language": "id-ID",
+          "text": "polinom"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:9ef76bd8-39cf-5b09-8c2d-2d8c95f91aec",
+      "stable_key": "prerequisite/linear-transformations",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "线性变换"
+        },
+        {
+          "language": "id-ID",
+          "text": "transformasi linear"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:ee7d907b-05bc-5def-81d5-7fcd351829b8",
+      "stable_key": "prerequisite/permutations-and-symmetric-groups",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "置换与对称群"
+        },
+        {
+          "language": "id-ID",
+          "text": "permutasi dan grup simetris"
+        }
+      ],
+      "requiredness": "recommended",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 55,
+        "line_end": 55
+      }
+    },
+    {
+      "id": "urn:uuid:cae14762-1ca0-5a11-aad9-20c81d540fee",
+      "stable_key": "prerequisite/elementary-number-theory",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "初等数论"
+        },
+        {
+          "language": "id-ID",
+          "text": "teori bilangan elementer"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 56,
+        "line_end": 56
+      }
+    },
+    {
+      "id": "urn:uuid:4eedb52d-6e0a-5379-b39c-5043b067c49f",
+      "stable_key": "prerequisite/real-analysis-basics",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "实数与分析常识"
+        },
+        {
+          "language": "id-ID",
+          "text": "dasar-dasar analisis real"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 57,
+        "line_end": 57
+      }
+    },
+    {
+      "id": "urn:uuid:6a61cd7e-28fe-5c64-9573-cf9ab46e5e96",
+      "stable_key": "prerequisite/point-set-topology",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "点集拓扑学初步"
+        },
+        {
+          "language": "id-ID",
+          "text": "topologi himpunan titik elementer"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 57,
+        "line_end": 57
+      }
+    },
+    {
+      "id": "urn:uuid:b9018862-5027-50f5-9947-a9a9526cc91f",
+      "stable_key": "prerequisite/cauchy-sequences-and-completeness",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "Cauchy 列与完备性"
+        },
+        {
+          "language": "id-ID",
+          "text": "barisan Cauchy dan kelengkapan"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/prelude.tex",
+        "line_start": 57,
+        "line_end": 57
+      }
+    },
+    {
+      "id": "urn:uuid:dd69ccfd-7399-53a2-83fe-84127b1baf1d",
+      "stable_key": "prerequisite/categories-and-morphisms",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "范畴与态射"
+        },
+        {
+          "language": "id-ID",
+          "text": "kategori dan morfisme"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "line_start": 39,
+        "line_end": 198
+      }
+    },
+    {
+      "id": "urn:uuid:3e864ace-90f6-56b3-8ce5-2e0690dbc9f8",
+      "stable_key": "prerequisite/functors-and-natural-transformations",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "函子与自然变换"
+        },
+        {
+          "language": "id-ID",
+          "text": "fungtor dan transformasi natural"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "line_start": 199,
+        "line_end": 467
+      }
+    },
+    {
+      "id": "urn:uuid:e3c2ed29-b6a0-5f8d-9613-6f2b41d962c8",
+      "stable_key": "prerequisite/functor-categories",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "函子范畴"
+        },
+        {
+          "language": "id-ID",
+          "text": "kategori fungtor"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "line_start": 468,
+        "line_end": 563
+      }
+    },
+    {
+      "id": "urn:uuid:8cab24d2-0f78-5bf9-96f8-5b2f2b07168d",
+      "stable_key": "prerequisite/universal-properties-and-comma-categories",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "泛性质与逗号范畴"
+        },
+        {
+          "language": "id-ID",
+          "text": "sifat universal dan kategori koma"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "line_start": 564,
+        "line_end": 677
+      }
+    },
+    {
+      "id": "urn:uuid:9fac54c6-e671-58b9-b840-4799739adb1e",
+      "stable_key": "prerequisite/representable-functors-and-yoneda",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "可表函子与 Yoneda 引理"
+        },
+        {
+          "language": "id-ID",
+          "text": "fungtor representabel dan Lema Yoneda"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "line_start": 678,
+        "line_end": 765
+      }
+    },
+    {
+      "id": "urn:uuid:c0b1a30a-634a-5e76-98d3-49bde5a5821c",
+      "stable_key": "prerequisite/limits-and-colimits",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "极限与余极限"
+        },
+        {
+          "language": "id-ID",
+          "text": "limit dan kolimit"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter2.tex",
+        "line_start": 1111,
+        "line_end": 1405
+      }
+    },
+    {
+      "id": "urn:uuid:3f5dc8e0-0198-5016-b767-ded1b9ec3d13",
+      "stable_key": "prerequisite/basic-group-theory",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "群论基础知识"
+        },
+        {
+          "language": "id-ID",
+          "text": "pengetahuan dasar tentang grup"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter4.tex",
+        "line_start": 17,
+        "line_end": 17
+      }
+    },
+    {
+      "id": "urn:uuid:ecd787ee-f056-5200-91e7-f98b3d80d458",
+      "stable_key": "prerequisite/group-homomorphisms-kernels-and-quotients",
+      "entity_type": "prerequisite",
+      "labels": [
+        {
+          "language": "zh-Hans",
+          "text": "群同态、核与商群"
+        },
+        {
+          "language": "id-ID",
+          "text": "homomorfisme grup, kernel, dan grup hasil bagi"
+        }
+      ],
+      "requiredness": "expected",
+      "source_evidence": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter4.tex",
+        "line_start": 177,
+        "line_end": 364
+      }
+    }
+  ],
+  "rights": [
+    {
+      "id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "stable_key": "rights/principal-cc-by-4.0",
+      "entity_type": "rights",
+      "component": "Principal text, source, PDF, and Indonesian translation",
+      "holder_or_source": "Wen-Wei Li; Indonesian translation contributors for translation expression",
+      "license": "CC BY 4.0",
+      "required_treatment": "Attribute author and source, identify the Indonesian translation and changes, link the license, and imply no endorsement.",
+      "applies_to_unit": true,
+      "bindings": [
+        {
+          "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+          "bytes": 111676,
+          "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6"
+        },
+        {
+          "path": "build/chapter7-batch-candidate/chapter7-complete-id.tex",
+          "bytes": 132871,
+          "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3"
+        },
+        {
+          "path": "repo/source/chapter7.tex",
+          "bytes": 132871,
+          "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3"
+        },
+        {
+          "path": "repo/source/LICENSE",
+          "bytes": 19045,
+          "sha256": "48a83a6e39f7b2f166763b30776132c9a99aa816f17cb06f87ad5b8542a7b71f"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:e18339ae-66cd-5304-b544-b220dd41380d",
+      "stable_key": "rights/lanzhou-cc-by-sa-3.0",
+      "entity_type": "rights",
+      "component": "Lanzhou.png",
+      "holder_or_source": "Chk2011; derived from Wikimedia Administrative_Division_Lanzhou.svg",
+      "license": "CC BY-SA 3.0",
+      "required_treatment": "Keep separate attribution and source/license link, identify rasterization or other changes, and preserve share-alike treatment.",
+      "applies_to_unit": false,
+      "bindings": [
+        {
+          "path": "repo/source/Lanzhou.png",
+          "bytes": 276766,
+          "sha256": "6000d7740aab58f1959c07af2c057680e2518dcc75b225f3180ed4b996fe9455"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+      "stable_key": "rights/ajbook-fragment-cc-by-sa-3.0",
+      "entity_type": "rights",
+      "component": "AJbook.cls DeclareSourcemap fragment",
+      "holder_or_source": "Guido; revision edited by dpprdan; TeX.StackExchange answer 119136",
+      "license": "CC BY-SA 3.0",
+      "required_treatment": "Keep separate attribution and source/license link, or replace with independently written equivalent code.",
+      "applies_to_unit": true,
+      "bindings": [
+        {
+          "path": "repo/source/AJbook.cls",
+          "bytes": 13780,
+          "sha256": "f35dbe8942a880dfe70c072bcfe0491d8cc83f562c28a481b949ca4cc84f0b04"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430",
+      "stable_key": "rights/noto-fonts-ofl-1.1",
+      "entity_type": "rights",
+      "component": "Noto Sans CJK SC and Noto Serif CJK SC fonts",
+      "holder_or_source": "Google and Adobe Noto contributors",
+      "license": "OFL 1.1",
+      "required_treatment": "Retain the OFL text and font notices; do not relicense fonts as book content.",
+      "applies_to_unit": true,
+      "bindings": [
+        {
+          "path": "repo/fonts/OFL-1.1-Noto-CJK.txt",
+          "bytes": 4301,
+          "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+        }
+      ]
+    },
+    {
+      "id": "urn:uuid:624ac6e0-0ed9-531c-8b35-47c040240806",
+      "stable_key": "rights/fandol-gpl-3.0-with-font-exception",
+      "entity_type": "rights",
+      "component": "Fandol 0.3 fonts used by the XeLaTeX closure and embedded as subsets where needed",
+      "holder_or_source": "Fandol team (Clerk Ma and Jie Su); official CTAN package https://ctan.org/pkg/fandol",
+      "license": "GNU GPL version 3 with the Fandol document-embedding font exception",
+      "required_treatment": "Retain Fandol attribution, the GPLv3 text, the font exception, and access to the official source package; keep this font component separate from the book's CC BY 4.0 content license and the Noto OFL 1.1 component.",
+      "applies_to_unit": true,
+      "bindings": [
+        {
+          "path": "repo/fonts/FANDOL-AUTHORITY.json",
+          "bytes": 2557,
+          "sha256": "1b74145b289d1c87f79f2e633934f10404adf9a4c02349c7db523de63b892a1f"
+        },
+        {
+          "path": "repo/fonts/GPL-3.0-with-Fandol-font-exception.txt",
+          "bytes": 35737,
+          "sha256": "853b586f0d520493390e571431afaf36a5fbb27dcfd239338a7ee9b0505cb004"
+        },
+        {
+          "path": "artifacts/metode-aljabar-jilid-1-id-lengkap.pdf",
+          "bytes": 2875853,
+          "sha256": "c2994530e3da1711d44f8c36315c40874e87f1968d1a81c1432105de2251c2ee"
+        }
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "id": "urn:uuid:e7611273-e3ed-554a-9f07-5637b8251d5b",
+      "stable_key": "citation/unit-045/01-xi18",
+      "entity_type": "citation",
+      "bib_key": "Xi18",
+      "bibliography_path": "repo/source/Al-jabr.bib",
+      "bibliography_sha256": "4979570eb4e3a9edcddd2f975790e56c98dcb3201e03e0a1fbdd64ba60c8263e",
+      "source_line": 24,
+      "target_line": 24,
+      "section_id": "urn:uuid:603f7cfc-2034-5e51-a7cd-cae2d3bec833"
+    },
+    {
+      "id": "urn:uuid:f72ae47f-0ebf-5af9-b960-5c29ddaa8a51",
+      "stable_key": "citation/unit-045/02-zh1",
+      "entity_type": "citation",
+      "bib_key": "Zh1",
+      "bibliography_path": "repo/source/Al-jabr.bib",
+      "bibliography_sha256": "4979570eb4e3a9edcddd2f975790e56c98dcb3201e03e0a1fbdd64ba60c8263e",
+      "source_line": 79,
+      "target_line": 79,
+      "section_id": "urn:uuid:c093d346-aa88-5540-a83a-069566b1cb2d"
+    },
+    {
+      "id": "urn:uuid:9b6d7c54-23ff-5585-865e-46028588e974",
+      "stable_key": "citation/unit-045/03-xi16",
+      "entity_type": "citation",
+      "bib_key": "Xi16",
+      "bibliography_path": "repo/source/Al-jabr.bib",
+      "bibliography_sha256": "4979570eb4e3a9edcddd2f975790e56c98dcb3201e03e0a1fbdd64ba60c8263e",
+      "source_line": 177,
+      "target_line": 177,
+      "section_id": "urn:uuid:3dbedd7c-ef4b-598e-8404-4208b5689bae"
+    },
+    {
+      "id": "urn:uuid:fe937086-a136-5d0c-9218-3a229a3f3c18",
+      "stable_key": "citation/unit-045/04-lam01",
+      "entity_type": "citation",
+      "bib_key": "Lam01",
+      "bibliography_path": "repo/source/Al-jabr.bib",
+      "bibliography_sha256": "4979570eb4e3a9edcddd2f975790e56c98dcb3201e03e0a1fbdd64ba60c8263e",
+      "source_line": 271,
+      "target_line": 271,
+      "section_id": "urn:uuid:3dbedd7c-ef4b-598e-8404-4208b5689bae"
+    },
+    {
+      "id": "urn:uuid:5cf6df32-b69b-5941-ab48-f8d2811c467b",
+      "stable_key": "citation/unit-045/05-chch",
+      "entity_type": "citation",
+      "bib_key": "ChCh",
+      "bibliography_path": "repo/source/Al-jabr.bib",
+      "bibliography_sha256": "4979570eb4e3a9edcddd2f975790e56c98dcb3201e03e0a1fbdd64ba60c8263e",
+      "source_line": 482,
+      "target_line": 482,
+      "section_id": "urn:uuid:27ff280b-dc46-5896-a266-411ebdf92d06"
+    },
+    {
+      "id": "urn:uuid:8fd688ca-8918-5b2e-a40e-5c067b945ec8",
+      "stable_key": "citation/unit-045/06-bou-alg1",
+      "entity_type": "citation",
+      "bib_key": "Bou-Alg1",
+      "bibliography_path": "repo/source/Al-jabr.bib",
+      "bibliography_sha256": "4979570eb4e3a9edcddd2f975790e56c98dcb3201e03e0a1fbdd64ba60c8263e",
+      "source_line": 1120,
+      "target_line": 1120,
+      "section_id": "urn:uuid:8c96c4d6-b629-599c-8fa4-c164a9c65546"
+    },
+    {
+      "id": "urn:uuid:086e7712-54f6-5c76-9d15-94be68dbf88e",
+      "stable_key": "citation/unit-045/07-baez02",
+      "entity_type": "citation",
+      "bib_key": "Baez02",
+      "bibliography_path": "repo/source/Al-jabr.bib",
+      "bibliography_sha256": "4979570eb4e3a9edcddd2f975790e56c98dcb3201e03e0a1fbdd64ba60c8263e",
+      "source_line": 1201,
+      "target_line": 1201,
+      "section_id": "urn:uuid:8c96c4d6-b629-599c-8fa4-c164a9c65546"
+    }
+  ],
+  "diagrams": [
+    {
+      "id": "urn:uuid:64746142-930e-5664-b4bd-d7c2de3085af",
+      "stable_key": "diagram/unit-045/tikzcd-01",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:c093d346-aa88-5540-a83a-069566b1cb2d",
+      "ordinal_in_unit": 1,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 1,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 52,
+        "line_end": 55,
+        "span_sha256": "5bc872cb85600c563d53a16d0937a9eb1c0365fa1dad1f8009cc02770c287140",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 52,
+        "line_end": 55,
+        "span_sha256": "5bc872cb85600c563d53a16d0937a9eb1c0365fa1dad1f8009cc02770c287140",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:4272bacb-edcf-5d8b-8009-058ad6436bad",
+      "stable_key": "diagram/unit-045/tikzcd-02",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:c093d346-aa88-5540-a83a-069566b1cb2d",
+      "ordinal_in_unit": 2,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 2,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 99,
+        "line_end": 102,
+        "span_sha256": "450babdd347f6fb8dada47095e350f49bc1d74eab649c41832dc52143ee2e9e9",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 99,
+        "line_end": 102,
+        "span_sha256": "450babdd347f6fb8dada47095e350f49bc1d74eab649c41832dc52143ee2e9e9",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:98c4afa4-1a99-5d39-a14c-ef944c270028",
+      "stable_key": "diagram/unit-045/tikzcd-03",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:c093d346-aa88-5540-a83a-069566b1cb2d",
+      "ordinal_in_unit": 3,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 3,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 105,
+        "line_end": 108,
+        "span_sha256": "8adca0e5956ef1ab45c79fcbbd8730c358e7afbebc4ae57bfda4c22f13585b9a",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 105,
+        "line_end": 108,
+        "span_sha256": "8adca0e5956ef1ab45c79fcbbd8730c358e7afbebc4ae57bfda4c22f13585b9a",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:66660dc6-bf20-5496-b806-e41ac1cce1a7",
+      "stable_key": "diagram/unit-045/tikzcd-04",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:c093d346-aa88-5540-a83a-069566b1cb2d",
+      "ordinal_in_unit": 4,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 4,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 112,
+        "line_end": 115,
+        "span_sha256": "c681f1ba7361ac5ba27ba44c53a67985e254d44bf2c2ef3662bdcf58733128be",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 112,
+        "line_end": 115,
+        "span_sha256": "c681f1ba7361ac5ba27ba44c53a67985e254d44bf2c2ef3662bdcf58733128be",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:2eb3ea58-4fa2-5562-98a4-69152f6db9f1",
+      "stable_key": "diagram/unit-045/tikzcd-05",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:c093d346-aa88-5540-a83a-069566b1cb2d",
+      "ordinal_in_unit": 5,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 5,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 115,
+        "line_end": 118,
+        "span_sha256": "e981d7100007ebb8d80ce5de59cf1b304c394a0ec34cc55bc9df020351002a8a",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 115,
+        "line_end": 118,
+        "span_sha256": "e981d7100007ebb8d80ce5de59cf1b304c394a0ec34cc55bc9df020351002a8a",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:f79715eb-0515-5b69-8f41-59a870c7ca88",
+      "stable_key": "diagram/unit-045/tikzcd-06",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:3dbedd7c-ef4b-598e-8404-4208b5689bae",
+      "ordinal_in_unit": 6,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 6,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 260,
+        "line_end": 264,
+        "span_sha256": "5817df9892a75e8b282c6917d1965aabd1b4ec70c5274f8de58e487c021cdbaf",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 260,
+        "line_end": 264,
+        "span_sha256": "5817df9892a75e8b282c6917d1965aabd1b4ec70c5274f8de58e487c021cdbaf",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:08f2c65c-eca6-50b3-bf07-390ff511420e",
+      "stable_key": "diagram/unit-045/tikzcd-07",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:861be988-2ce1-5dbb-99be-142eaab53df0",
+      "ordinal_in_unit": 7,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 7,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 336,
+        "line_end": 339,
+        "span_sha256": "b1249a6893f1e780d024a958402277b547703104693ad8372bb2f9c46b59e600",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 336,
+        "line_end": 339,
+        "span_sha256": "b1249a6893f1e780d024a958402277b547703104693ad8372bb2f9c46b59e600",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:16003365-a4c7-5daf-a9f6-b4dddf221a20",
+      "stable_key": "diagram/unit-045/tikzcd-08",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:861be988-2ce1-5dbb-99be-142eaab53df0",
+      "ordinal_in_unit": 8,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 8,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 378,
+        "line_end": 382,
+        "span_sha256": "797fa7190dc835d666c5f6f756c528cd364bdf8356c335311f8916acc6c48bfe",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 378,
+        "line_end": 382,
+        "span_sha256": "797fa7190dc835d666c5f6f756c528cd364bdf8356c335311f8916acc6c48bfe",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:6a83c349-c063-5f6d-b45c-4c510f1180b9",
+      "stable_key": "diagram/unit-045/tikzcd-09",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:861be988-2ce1-5dbb-99be-142eaab53df0",
+      "ordinal_in_unit": 9,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 9,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 387,
+        "line_end": 390,
+        "span_sha256": "88b850bb55469662eddc5f1090a5212424a906384b768f24b5bb7d23be719fdc",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 387,
+        "line_end": 390,
+        "span_sha256": "88b850bb55469662eddc5f1090a5212424a906384b768f24b5bb7d23be719fdc",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:5fdecaa8-51bd-57b9-a7bb-2627c9d7d86a",
+      "stable_key": "diagram/unit-045/tikzcd-10",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:861be988-2ce1-5dbb-99be-142eaab53df0",
+      "ordinal_in_unit": 10,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 10,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 413,
+        "line_end": 413,
+        "span_sha256": "2340232f25abae08cc763d5edcd38923f406f777f8b64ff77a8b72203616b4f5",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 413,
+        "line_end": 413,
+        "span_sha256": "7c9079396e6a423fa44da484ddc6de84232d0f3982a28569bf476c06c06fb001",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:c52c041f-9119-5756-99ec-3bbbf22e9012",
+      "stable_key": "diagram/unit-045/tikzcd-11",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:861be988-2ce1-5dbb-99be-142eaab53df0",
+      "ordinal_in_unit": 11,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 11,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 413,
+        "line_end": 413,
+        "span_sha256": "2340232f25abae08cc763d5edcd38923f406f777f8b64ff77a8b72203616b4f5",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 413,
+        "line_end": 413,
+        "span_sha256": "7c9079396e6a423fa44da484ddc6de84232d0f3982a28569bf476c06c06fb001",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:949c83ee-d1e4-506e-9e28-e17017ad94b0",
+      "stable_key": "diagram/unit-045/tikzcd-12",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:27ff280b-dc46-5896-a266-411ebdf92d06",
+      "ordinal_in_unit": 12,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 12,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 563,
+        "line_end": 567,
+        "span_sha256": "4e71a923d0c7a2ad7fd67dbf83318fa8381bf14638a3f65237681b1f6dda70c9",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 563,
+        "line_end": 567,
+        "span_sha256": "4e71a923d0c7a2ad7fd67dbf83318fa8381bf14638a3f65237681b1f6dda70c9",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:aeb09f38-8e79-54d1-9a70-8ba1e3fb4284",
+      "stable_key": "diagram/unit-045/tikzpicture-01",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:27ff280b-dc46-5896-a266-411ebdf92d06",
+      "ordinal_in_unit": 13,
+      "source_format": "tikzpicture",
+      "source_occurrence_index": 1,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 569,
+        "line_end": 582,
+        "span_sha256": "d12e215d16fbe68c58178d1eefe418f93b755ec02804659cb609cf2191b5c299",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 569,
+        "line_end": 582,
+        "span_sha256": "d12e215d16fbe68c58178d1eefe418f93b755ec02804659cb609cf2191b5c299",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:116595fe-63d3-5050-949f-eeb0c05bf094",
+      "stable_key": "diagram/unit-045/tikzpicture-02",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:27ff280b-dc46-5896-a266-411ebdf92d06",
+      "ordinal_in_unit": 14,
+      "source_format": "tikzpicture",
+      "source_occurrence_index": 2,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 583,
+        "line_end": 593,
+        "span_sha256": "b88d66349008014c4b16d00f5cfb7b645b97208b4127aed753a4bcea7c0bcd2b",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 583,
+        "line_end": 593,
+        "span_sha256": "b88d66349008014c4b16d00f5cfb7b645b97208b4127aed753a4bcea7c0bcd2b",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:49596351-1044-5f7f-ac8f-5eea1a5cdced",
+      "stable_key": "diagram/unit-045/tikzpicture-03",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:27ff280b-dc46-5896-a266-411ebdf92d06",
+      "ordinal_in_unit": 15,
+      "source_format": "tikzpicture",
+      "source_occurrence_index": 3,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 594,
+        "line_end": 607,
+        "span_sha256": "17e6608e4b42f10f91aca7fd79504a8a79d784d679e090c7aa7a7d52c66d1847",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 594,
+        "line_end": 607,
+        "span_sha256": "17e6608e4b42f10f91aca7fd79504a8a79d784d679e090c7aa7a7d52c66d1847",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:c9adb312-23cf-5924-b802-b88e60aa3888",
+      "stable_key": "diagram/unit-045/tikzcd-13",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:f089c23f-c614-586d-b351-988ed8ab6f39",
+      "ordinal_in_unit": 16,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 13,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 639,
+        "line_end": 642,
+        "span_sha256": "396def35d3257ffdc79b63eb1e63473d5f8b0a48e7f0368ff1ba102ec274c880",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 639,
+        "line_end": 642,
+        "span_sha256": "396def35d3257ffdc79b63eb1e63473d5f8b0a48e7f0368ff1ba102ec274c880",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:97a41f0b-a500-5485-b6b0-a88fc50173cf",
+      "stable_key": "diagram/unit-045/tikzcd-14",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:f089c23f-c614-586d-b351-988ed8ab6f39",
+      "ordinal_in_unit": 17,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 14,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 648,
+        "line_end": 652,
+        "span_sha256": "04614dc09c25902e158a4640d4f07f47d661c55db95e082f7b3dc5af6a2dea11",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 648,
+        "line_end": 652,
+        "span_sha256": "04614dc09c25902e158a4640d4f07f47d661c55db95e082f7b3dc5af6a2dea11",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:3872af3e-969b-56bc-b978-6178eececc64",
+      "stable_key": "diagram/unit-045/tikzcd-15",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:f089c23f-c614-586d-b351-988ed8ab6f39",
+      "ordinal_in_unit": 18,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 15,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 668,
+        "line_end": 671,
+        "span_sha256": "1186bfd43533ef2858e25f0ccd8d35573c30bbfffcb9eda099a3c388e6c3dbb0",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 668,
+        "line_end": 671,
+        "span_sha256": "1186bfd43533ef2858e25f0ccd8d35573c30bbfffcb9eda099a3c388e6c3dbb0",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:db91993a-8386-5e62-b9d5-5e2d8fe3fd70",
+      "stable_key": "diagram/unit-045/tikzcd-16",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:f089c23f-c614-586d-b351-988ed8ab6f39",
+      "ordinal_in_unit": 19,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 16,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 678,
+        "line_end": 681,
+        "span_sha256": "2a5307c652d12b8a54f2146f407492cacdb2f46c304a36f1939781743f2c7163",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 678,
+        "line_end": 681,
+        "span_sha256": "2a5307c652d12b8a54f2146f407492cacdb2f46c304a36f1939781743f2c7163",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:cbeaa8f5-d277-510b-a118-0fe9a2804585",
+      "stable_key": "diagram/unit-045/tikzcd-17",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:f089c23f-c614-586d-b351-988ed8ab6f39",
+      "ordinal_in_unit": 20,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 17,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 683,
+        "line_end": 686,
+        "span_sha256": "296a7cd7087cd6b42ed1605f3afbf625c7851374c35aeba29762baab02746697",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 683,
+        "line_end": 686,
+        "span_sha256": "296a7cd7087cd6b42ed1605f3afbf625c7851374c35aeba29762baab02746697",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:ba5e8df8-0e25-53df-9be5-a5a8014245e4",
+      "stable_key": "diagram/unit-045/tikzcd-18",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:f0019833-b716-5baa-aa29-ff1de49170f1",
+      "ordinal_in_unit": 21,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 18,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 805,
+        "line_end": 808,
+        "span_sha256": "0db341d959509b92662281fad2b720c2de6cacc01a1daf9aa125949699116b5f",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 805,
+        "line_end": 808,
+        "span_sha256": "0db341d959509b92662281fad2b720c2de6cacc01a1daf9aa125949699116b5f",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:bcd7f605-246e-55d5-90a5-b6055028a5d0",
+      "stable_key": "diagram/unit-045/tikzcd-19",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:f0019833-b716-5baa-aa29-ff1de49170f1",
+      "ordinal_in_unit": 22,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 19,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 808,
+        "line_end": 811,
+        "span_sha256": "59e81cfc82746af0a83dd2073bb0ef0f226122d5ff0fd364338b056b1c70caf3",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 808,
+        "line_end": 811,
+        "span_sha256": "59e81cfc82746af0a83dd2073bb0ef0f226122d5ff0fd364338b056b1c70caf3",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:54d41950-9304-54c9-b852-a13b1011adf6",
+      "stable_key": "diagram/unit-045/tikzcd-20",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:8c96c4d6-b629-599c-8fa4-c164a9c65546",
+      "ordinal_in_unit": 23,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 20,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 1019,
+        "line_end": 1019,
+        "span_sha256": "70e5326c1d7234c7204de5c07d009af254e1a95c97839a7af0bf4514676dbe6b",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 1019,
+        "line_end": 1019,
+        "span_sha256": "70e5326c1d7234c7204de5c07d009af254e1a95c97839a7af0bf4514676dbe6b",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:b4b69beb-c7f7-5630-ba68-6c7fedb6aaad",
+      "stable_key": "diagram/unit-045/tikzcd-21",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:8c96c4d6-b629-599c-8fa4-c164a9c65546",
+      "ordinal_in_unit": 24,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 21,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 1026,
+        "line_end": 1029,
+        "span_sha256": "d42a22f4f5cb6a6652561c9ccbf2f8b30ae1cf0f60c0df316e321b6fb69307e0",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 1026,
+        "line_end": 1029,
+        "span_sha256": "d42a22f4f5cb6a6652561c9ccbf2f8b30ae1cf0f60c0df316e321b6fb69307e0",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    },
+    {
+      "id": "urn:uuid:c223e01a-63f3-5790-97bb-6c139d63ea0c",
+      "stable_key": "diagram/unit-045/tikzcd-22",
+      "entity_type": "diagram",
+      "section_id": "urn:uuid:8c96c4d6-b629-599c-8fa4-c164a9c65546",
+      "ordinal_in_unit": 25,
+      "source_format": "tikzcd",
+      "source_occurrence_index": 22,
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 1034,
+        "line_end": 1039,
+        "span_sha256": "96f6a1807f90e21d7a24a92d7bf52dc2e45c509dd35df96705633a4b55023c99",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 1034,
+        "line_end": 1039,
+        "span_sha256": "96f6a1807f90e21d7a24a92d7bf52dc2e45c509dd35df96705633a4b55023c99",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "rights_component_id": "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+      "state": "audited_preserved"
+    }
+  ],
+  "index_entries": [
+    {
+      "id": "urn:uuid:37ed54cc-52c0-57c4-8635-a89f3f8a6c72",
+      "stable_key": "index-entry/unit-045/main/001",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:c093d346-aa88-5540-a83a-069566b1cb2d",
+      "ordinal_in_unit": 1,
+      "source_key": "daishu@代数 (algebra)",
+      "target_key": "daishu@aljabar (algebra)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 32,
+        "line_end": 32,
+        "span_sha256": "b6769265d1ede1bfe4cf68f783e820ab18b17a7d0ae7cf7f116d65694d954af3",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 32,
+        "line_end": 32,
+        "span_sha256": "e7694b76995a148b258ee3d1c942e4a102aaa6969268278407bbfefe90114930",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:bad567e5-578b-5e8e-9789-a59b9ed766fb",
+      "stable_key": "index-entry/unit-045/main/002",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:c093d346-aa88-5540-a83a-069566b1cb2d",
+      "ordinal_in_unit": 2,
+      "source_key": "tongtai",
+      "target_key": "tongtai",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 35,
+        "line_end": 35,
+        "span_sha256": "d5ea51cd47beff37036b8840cc14a24814a460596df1e153171751d7802b1510",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 35,
+        "line_end": 35,
+        "span_sha256": "b2b3394bd21626c1e2f83b5e0fb13b77e599bad7b2f64206596a43bebd8be760",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:287ab2fd-368e-546c-ba6d-1b2a26775375",
+      "stable_key": "index-entry/unit-045/main/003",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:c093d346-aa88-5540-a83a-069566b1cb2d",
+      "ordinal_in_unit": 3,
+      "source_key": "tonggou",
+      "target_key": "tonggou",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 35,
+        "line_end": 35,
+        "span_sha256": "d5ea51cd47beff37036b8840cc14a24814a460596df1e153171751d7802b1510",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 35,
+        "line_end": 35,
+        "span_sha256": "b2b3394bd21626c1e2f83b5e0fb13b77e599bad7b2f64206596a43bebd8be760",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:40ec409e-a6ca-50db-bb15-05f070c6c419",
+      "stable_key": "index-entry/unit-045/main/004",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:c093d346-aa88-5540-a83a-069566b1cb2d",
+      "ordinal_in_unit": 4,
+      "source_key": "shang",
+      "target_key": "shang",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 42,
+        "line_end": 42,
+        "span_sha256": "7a6c6ecc2fbfc5a85c1d84e1907581398582522a88f2ab53d247801037ff95ad",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 42,
+        "line_end": 42,
+        "span_sha256": "87e777c8b97571d3fb6adb14c9c9ba18acb06d2939ee11ec2fd30014e16376ce",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:d4aa7eb4-f421-51e7-aedd-7328f9770d26",
+      "stable_key": "index-entry/unit-045/main/005",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:c093d346-aa88-5540-a83a-069566b1cb2d",
+      "ordinal_in_unit": 5,
+      "source_key": "daishu!可除代数 (division algebra)",
+      "target_key": "daishu!aljabar pembagian (division algebra)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 42,
+        "line_end": 42,
+        "span_sha256": "7a6c6ecc2fbfc5a85c1d84e1907581398582522a88f2ab53d247801037ff95ad",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 42,
+        "line_end": 42,
+        "span_sha256": "87e777c8b97571d3fb6adb14c9c9ba18acb06d2939ee11ec2fd30014e16376ce",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:768e011b-9e7e-5dec-a2e9-8489b2db67b0",
+      "stable_key": "index-entry/unit-045/main/006",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:c093d346-aa88-5540-a83a-069566b1cb2d",
+      "ordinal_in_unit": 6,
+      "source_key": "Calkin 代数",
+      "target_key": "aljabar Calkin",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 78,
+        "line_end": 78,
+        "span_sha256": "579ebf4b42714be8fe2fa754f1540d1128d13d17f5c999b8fcabc4515ad38042",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 78,
+        "line_end": 78,
+        "span_sha256": "a20b728e5026180a28d83458df1e0cfe225b8e3eb1c86dea265e27d638d1c434",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:0f240e64-ad95-5a1e-a02f-0b71cb02a1bd",
+      "stable_key": "index-entry/unit-045/main/007",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:c093d346-aa88-5540-a83a-069566b1cb2d",
+      "ordinal_in_unit": 7,
+      "source_key": "daishu!矩阵",
+      "target_key": "daishu!matriks",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 126,
+        "line_end": 126,
+        "span_sha256": "34d1f41bcf28d4a04a1d60687e2a28bb9305e061bcf200be4fa9aaaad2ca34ec",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 126,
+        "line_end": 126,
+        "span_sha256": "b0ba80ad051566a4ac554155ca9057632926ca7cda7e28b33f2c64e185b9a8a5",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:8b78c3af-4fbf-589f-8386-3c56ad4beba8",
+      "stable_key": "index-entry/unit-045/sym1/008",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:3dbedd7c-ef4b-598e-8404-4208b5689bae",
+      "ordinal_in_unit": 8,
+      "source_key": "$R[x]$",
+      "target_key": "$R[x]$",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 148,
+        "line_end": 148,
+        "span_sha256": "06ea57a23cd1d1ee69729130f000c61b427cdf9209ca3dd1270ee282250107cf",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 148,
+        "line_end": 148,
+        "span_sha256": "c68575e6cae59040d6f78dd5219af3e6f9601db5440cb2602673dcb8e7279353",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:e42afbc9-3b92-5863-9507-cc3679cef2bc",
+      "stable_key": "index-entry/unit-045/main/009",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:3dbedd7c-ef4b-598e-8404-4208b5689bae",
+      "ordinal_in_unit": 9,
+      "source_key": "zhengyuan@整元 (integral element)",
+      "target_key": "zhengyuan@unsur integral (integral element)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 157,
+        "line_end": 157,
+        "span_sha256": "8cf1708a7ef8b7593ca2bb6b5354f034b8344deda522195b6a387db7a6d4addb",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 157,
+        "line_end": 157,
+        "span_sha256": "c52b94d2db38269315c7b8741a7b5c834cecf08e2dfd2edcc4dba06b3edfafa2",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:383e4d6e-91f5-5779-83f5-b3f905655d47",
+      "stable_key": "index-entry/unit-045/main/010",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:3dbedd7c-ef4b-598e-8404-4208b5689bae",
+      "ordinal_in_unit": 10,
+      "source_key": "daishuyuan@代数元 (algebraic element)",
+      "target_key": "daishuyuan@unsur aljabar (algebraic element)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 211,
+        "line_end": 211,
+        "span_sha256": "8b2d71e3224874eabc7a7648fcb9b5027c829fc8caa4f00f972e8431df33035a",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 211,
+        "line_end": 211,
+        "span_sha256": "f5dc7837d61a74b5da039df4756cb1a6dc1314e475fa76323bb44e7d801deac8",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:1c0156c4-661a-50e4-a2c4-359be0de23bf",
+      "stable_key": "index-entry/unit-045/main/011",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:3dbedd7c-ef4b-598e-8404-4208b5689bae",
+      "ordinal_in_unit": 11,
+      "source_key": "jixiaoduoxiangshi@极小多项式 (minimal polynomial)",
+      "target_key": "jixiaoduoxiangshi@polinomial minimal (minimal polynomial)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 215,
+        "line_end": 215,
+        "span_sha256": "e904ef3bdbb477be656596d275f50c7ebcde7c099690c7d957836dd5745796da",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 215,
+        "line_end": 215,
+        "span_sha256": "374345730819fb6100dfea43cc39865c038ba79b11f97bedc44f6b575d903b14",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:5c68666c-47c4-5aa5-a691-dceb4d639725",
+      "stable_key": "index-entry/unit-045/sym1/012",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:3dbedd7c-ef4b-598e-8404-4208b5689bae",
+      "ordinal_in_unit": 12,
+      "source_key": "$P_x$",
+      "target_key": "$P_x$",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 215,
+        "line_end": 215,
+        "span_sha256": "e904ef3bdbb477be656596d275f50c7ebcde7c099690c7d957836dd5745796da",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 215,
+        "line_end": 215,
+        "span_sha256": "374345730819fb6100dfea43cc39865c038ba79b11f97bedc44f6b575d903b14",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:34a5686f-71df-5d70-8e33-2724b975ef24",
+      "stable_key": "index-entry/unit-045/main/013",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:3dbedd7c-ef4b-598e-8404-4208b5689bae",
+      "ordinal_in_unit": 13,
+      "source_key": "Frobenius 定理",
+      "target_key": "Teorema Frobenius",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 268,
+        "line_end": 268,
+        "span_sha256": "594b9d57a7f1377b812b9bd8772b50282d9253a48c4fd92eb489e61690f460ba",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 268,
+        "line_end": 268,
+        "span_sha256": "ee1f61f37e742d48ef7e0a87cfec24f7f2172ff5462dbe8991e9efb3126c29d3",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:c541f4fc-e2d6-5615-95db-30dddfc35c57",
+      "stable_key": "index-entry/unit-045/main/014",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:3dbedd7c-ef4b-598e-8404-4208b5689bae",
+      "ordinal_in_unit": 14,
+      "source_key": "bayuanshu@八元数 (octonion)",
+      "target_key": "bayuanshu@oktonion (octonion)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 291,
+        "line_end": 291,
+        "span_sha256": "389cd7bc5a17f87c0632234114c9dbe421bcdefd64306fe611ee95ca604dd605",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 291,
+        "line_end": 291,
+        "span_sha256": "3dd067d960836832222d567fa079eaddf7561b577c22f9081daf3bc1d505640f",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:91deb9c1-e870-593a-9e6d-258c99a5b6cc",
+      "stable_key": "index-entry/unit-045/main/015",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:861be988-2ce1-5dbb-99be-142eaab53df0",
+      "ordinal_in_unit": 15,
+      "source_key": "zhangliangji!代数",
+      "target_key": "zhangliangji!aljabar",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 296,
+        "line_end": 296,
+        "span_sha256": "d68f88cc5fa9b0cc59e379823df97564a97a4b1f8e906725e1a45dc484acc6b6",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 296,
+        "line_end": 296,
+        "span_sha256": "1562f1d6882fb4d92ff7ef92fc7edd57993658bdf99e61c9ea8429af8e6d6e71",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:e4b4873c-9816-5bc3-b509-c0994b222557",
+      "stable_key": "index-entry/unit-045/main/016",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:861be988-2ce1-5dbb-99be-142eaab53df0",
+      "ordinal_in_unit": 16,
+      "source_key": "shuangmo",
+      "target_key": "shuangmo",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 347,
+        "line_end": 347,
+        "span_sha256": "4d72da7de8192a8f05773dacf16758c0e22a0e7b83c9fad9ab18d82b53b9d731",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 347,
+        "line_end": 347,
+        "span_sha256": "4d72da7de8192a8f05773dacf16758c0e22a0e7b83c9fad9ab18d82b53b9d731",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:a461ae2e-825d-5269-9200-e307054a1a08",
+      "stable_key": "index-entry/unit-045/main/017",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:861be988-2ce1-5dbb-99be-142eaab53df0",
+      "ordinal_in_unit": 17,
+      "source_key": "jibianhuan",
+      "target_key": "jibianhuan",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 411,
+        "line_end": 411,
+        "span_sha256": "ef427b3d6664e9cd4d5e46c2affd8758cb8d7b76a34226bb13cb0024e1dc1d4e",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 411,
+        "line_end": 411,
+        "span_sha256": "0f01549e78de618506f71a07881bb1fe2298f33ebcf3a10373df0da03a1a4862",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:6888f8c5-89ba-5f70-8c7a-d918d780ac83",
+      "stable_key": "index-entry/unit-045/main/018",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:27ff280b-dc46-5896-a266-411ebdf92d06",
+      "ordinal_in_unit": 18,
+      "source_key": "mo!分次 (graded)",
+      "target_key": "mo!bergradasi (graded)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 455,
+        "line_end": 455,
+        "span_sha256": "cb80067a0d555253b3f50d8f2f642dacebf542ecdc35b55174a59cc41371a491",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 455,
+        "line_end": 455,
+        "span_sha256": "360f8bd93aac9a5f5a894f1acf4fd786adc3b3b6f9ee06a82d9cf862abb72a57",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:e1374e2b-2b1a-5943-9251-fc2ffad4f79a",
+      "stable_key": "index-entry/unit-045/main/019",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:27ff280b-dc46-5896-a266-411ebdf92d06",
+      "ordinal_in_unit": 19,
+      "source_key": "daishu!分次 (graded)",
+      "target_key": "daishu!bergradasi (graded)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 455,
+        "line_end": 455,
+        "span_sha256": "cb80067a0d555253b3f50d8f2f642dacebf542ecdc35b55174a59cc41371a491",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 455,
+        "line_end": 455,
+        "span_sha256": "360f8bd93aac9a5f5a894f1acf4fd786adc3b3b6f9ee06a82d9cf862abb72a57",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:30484e99-d1ae-520d-bb24-4173ee7c5c9d",
+      "stable_key": "index-entry/unit-045/main/020",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:27ff280b-dc46-5896-a266-411ebdf92d06",
+      "ordinal_in_unit": 20,
+      "source_key": "qiciyuan@齐次元 (homogeneous element)",
+      "target_key": "qiciyuan@unsur homogen (homogeneous element)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 455,
+        "line_end": 455,
+        "span_sha256": "cb80067a0d555253b3f50d8f2f642dacebf542ecdc35b55174a59cc41371a491",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 455,
+        "line_end": 455,
+        "span_sha256": "360f8bd93aac9a5f5a894f1acf4fd786adc3b3b6f9ee06a82d9cf862abb72a57",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:2e40c739-1419-52d1-8fbd-8a366b94e270",
+      "stable_key": "index-entry/unit-045/main/021",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:27ff280b-dc46-5896-a266-411ebdf92d06",
+      "ordinal_in_unit": 21,
+      "source_key": "daishu!$\\epsilon$-交换",
+      "target_key": "daishu!$\\epsilon$-komutatif",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 490,
+        "line_end": 490,
+        "span_sha256": "708e47aab1908748477aac9d23d198c88c7bafa53f1a8595f5d40fd184a53815",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 490,
+        "line_end": 490,
+        "span_sha256": "0d526b5d88aba0e0ec43bd5ad4b6c20b7dd39aca79b0dda7eca6eee0d253f900",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:0aab7c74-cc33-596b-a58b-0f8447ca0572",
+      "stable_key": "index-entry/unit-045/main/022",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:27ff280b-dc46-5896-a266-411ebdf92d06",
+      "ordinal_in_unit": 22,
+      "source_key": "bianjiegou!Koszul",
+      "target_key": "bianjiegou!Koszul",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 508,
+        "line_end": 508,
+        "span_sha256": "21b0e31a16c189f0d2245f6afcb2a322a5c978020c8f000f3948cc853f4f1eff",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 508,
+        "line_end": 508,
+        "span_sha256": "754a0372ee0386b12110afec2810881958b5d68b672ebb1ae70a5cc99fe7307b",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:193ab26d-c646-5e5c-87c0-08af1fa36f7f",
+      "stable_key": "index-entry/unit-045/main/023",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:f089c23f-c614-586d-b351-988ed8ab6f39",
+      "ordinal_in_unit": 23,
+      "source_key": "duochongxianxingyingshe@多重线性映射 (multilinear map)",
+      "target_key": "duochongxianxingyingshe@Pemetaan multilinear (multilinear map)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 617,
+        "line_end": 617,
+        "span_sha256": "ea37e7134058db2d6ad74411eee514bdf23303597458054f35f3fddb4a3e6ba3",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 617,
+        "line_end": 617,
+        "span_sha256": "38ad2e2ba51fbf0d44c2b32e5cc7cff33da1fe1c75e0a534e4766fab92b7dfe0",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:1a05928d-b8b7-5d0d-91fb-5a60d18cb1d1",
+      "stable_key": "index-entry/unit-045/sym1/024",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:f089c23f-c614-586d-b351-988ed8ab6f39",
+      "ordinal_in_unit": 24,
+      "source_key": "$T(M)$, $T^n(M)$",
+      "target_key": "$T(M)$, $T^n(M)$",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 633,
+        "line_end": 633,
+        "span_sha256": "245ed6583d439320f4d9313ccac985bbd0971b5aa907a031f22ff4293e0e66d2",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 633,
+        "line_end": 633,
+        "span_sha256": "e6faef9d3df9fd5ea93413b8717ab21ddac6719deb2592fb8e692b2d71b923a2",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:d47eacf2-4f53-5cdd-affa-209f4766fa59",
+      "stable_key": "index-entry/unit-045/main/025",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:f089c23f-c614-586d-b351-988ed8ab6f39",
+      "ordinal_in_unit": 25,
+      "source_key": "zhangliangdaishu@张量代数 (tensor algebra)",
+      "target_key": "zhangliangdaishu@Aljabar tensor (tensor algebra)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 633,
+        "line_end": 633,
+        "span_sha256": "245ed6583d439320f4d9313ccac985bbd0971b5aa907a031f22ff4293e0e66d2",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 633,
+        "line_end": 633,
+        "span_sha256": "e6faef9d3df9fd5ea93413b8717ab21ddac6719deb2592fb8e692b2d71b923a2",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:a0550b6a-4b44-5e1c-8f34-02d91472d7ea",
+      "stable_key": "index-entry/unit-045/main/026",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:f0019833-b716-5baa-aa29-ff1de49170f1",
+      "ordinal_in_unit": 26,
+      "source_key": "duichengdaishu@对称代数 (symmetric algebra)",
+      "target_key": "duichengdaishu@Aljabar simetris (symmetric algebra)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 699,
+        "line_end": 699,
+        "span_sha256": "1940eb897273c25c5ed27269b6c0c1b24fcead7c4a1789ce42cc48fdcdc56c4c",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 699,
+        "line_end": 699,
+        "span_sha256": "60f3a2313d134e1222e9c3e4978a738a4c16da31d218ba28d1b197013bdfa243",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:859108c5-577e-5429-9c14-828a01849fba",
+      "stable_key": "index-entry/unit-045/main/027",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:f0019833-b716-5baa-aa29-ff1de49170f1",
+      "ordinal_in_unit": 27,
+      "source_key": "waichengdaishu@外代数 (exterior algebra)",
+      "target_key": "waichengdaishu@Aljabar eksterior (exterior algebra)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 699,
+        "line_end": 699,
+        "span_sha256": "1940eb897273c25c5ed27269b6c0c1b24fcead7c4a1789ce42cc48fdcdc56c4c",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 699,
+        "line_end": 699,
+        "span_sha256": "60f3a2313d134e1222e9c3e4978a738a4c16da31d218ba28d1b197013bdfa243",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:1fa90b0e-ba64-57d9-a27e-01faed1858cf",
+      "stable_key": "index-entry/unit-045/sym1/028",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:f0019833-b716-5baa-aa29-ff1de49170f1",
+      "ordinal_in_unit": 28,
+      "source_key": "Sym(M)@$\\Sym(M)$, $\\Sym^n(M)$",
+      "target_key": "Sym(M)@$\\Sym(M)$, $\\Sym^n(M)$",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 699,
+        "line_end": 699,
+        "span_sha256": "1940eb897273c25c5ed27269b6c0c1b24fcead7c4a1789ce42cc48fdcdc56c4c",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 699,
+        "line_end": 699,
+        "span_sha256": "60f3a2313d134e1222e9c3e4978a738a4c16da31d218ba28d1b197013bdfa243",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:b49db605-dff6-54eb-8665-8a3cc90a7759",
+      "stable_key": "index-entry/unit-045/sym1/029",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:f0019833-b716-5baa-aa29-ff1de49170f1",
+      "ordinal_in_unit": 29,
+      "source_key": "Lambda(M)@$\\bigwedge(M)$, $\\bigwedge^n(M)$",
+      "target_key": "Lambda(M)@$\\bigwedge(M)$, $\\bigwedge^n(M)$",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 699,
+        "line_end": 699,
+        "span_sha256": "1940eb897273c25c5ed27269b6c0c1b24fcead7c4a1789ce42cc48fdcdc56c4c",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 699,
+        "line_end": 699,
+        "span_sha256": "60f3a2313d134e1222e9c3e4978a738a4c16da31d218ba28d1b197013bdfa243",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:879fca70-c22b-58cb-88e2-7abab6d0ffda",
+      "stable_key": "index-entry/unit-045/main/030",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:7be4f20f-ad88-58f3-ba2f-c8e3afa98161",
+      "ordinal_in_unit": 30,
+      "source_key": "Grassmann 簇 (Grassmannian)",
+      "target_key": "Varietas Grassmann (Grassmannian)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 866,
+        "line_end": 866,
+        "span_sha256": "5f166f7f49a699364dc3cc480c62dc6b76ff59da64f5d491f807d1c2446b4dbc",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 866,
+        "line_end": 866,
+        "span_sha256": "03da4e9179264c701d2b6e60bca0f834b9123e79968156cf735781b8db490343",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:968edeaa-89e2-56ca-ad29-2ed08fda1917",
+      "stable_key": "index-entry/unit-045/sym1/031",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:7be4f20f-ad88-58f3-ba2f-c8e3afa98161",
+      "ordinal_in_unit": 31,
+      "source_key": "G(k,V)@$\\Gras(k,V)$",
+      "target_key": "G(k,V)@$\\Gras(k,V)$",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 866,
+        "line_end": 866,
+        "span_sha256": "5f166f7f49a699364dc3cc480c62dc6b76ff59da64f5d491f807d1c2446b4dbc",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 866,
+        "line_end": 866,
+        "span_sha256": "03da4e9179264c701d2b6e60bca0f834b9123e79968156cf735781b8db490343",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:7c925f06-7b49-5dd2-a065-751aacbc52ad",
+      "stable_key": "index-entry/unit-045/main/032",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:7be4f20f-ad88-58f3-ba2f-c8e3afa98161",
+      "ordinal_in_unit": 32,
+      "source_key": "Plücker 嵌入",
+      "target_key": "Pembenaman Plücker",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 888,
+        "line_end": 888,
+        "span_sha256": "aa385a8d8e1c0de8f75dbe6dc3d1bf6835a00c81dd4d564ffb93a2f034ee3af2",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 888,
+        "line_end": 888,
+        "span_sha256": "34d9ca5094b62a8fe1de8e4d8f04380093aaaf519cc41696ede4c315ef6e103d",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:41b5f0da-bcaa-541f-acc3-3d78da803f56",
+      "stable_key": "index-entry/unit-045/main/033",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:7be4f20f-ad88-58f3-ba2f-c8e3afa98161",
+      "ordinal_in_unit": 33,
+      "source_key": "suobing@缩并 (contraction)",
+      "target_key": "suobing@Kontraksi (contraction)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 910,
+        "line_end": 910,
+        "span_sha256": "c509d21faf9646d7a54fd1be072825754ea19de9d5467071fd41e93cd2853a2a",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 910,
+        "line_end": 910,
+        "span_sha256": "2e4923e5316248f81fea75e3cfe41c3e718f07c93ecf7f2e9a9f4d2ebcc8eaee",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:a1311d7c-53c9-5a52-be0e-3c9973dd9f3e",
+      "stable_key": "index-entry/unit-045/sym1/034",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:8c96c4d6-b629-599c-8fa4-c164a9c65546",
+      "ordinal_in_unit": 34,
+      "source_key": "det(phi)@$\\det \\varphi$",
+      "target_key": "det(phi)@$\\det \\varphi$",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 980,
+        "line_end": 980,
+        "span_sha256": "0fde5da45d7f546604eff8c4ab751ef5e3fef1b5ac49c11aa708e750025cb1eb",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 980,
+        "line_end": 980,
+        "span_sha256": "6860010798649794218905b0965764ab20eed190878acfb2e57f04a66c531446",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:37dc79eb-58e1-5648-b89e-3400791cef6f",
+      "stable_key": "index-entry/unit-045/main/035",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:8c96c4d6-b629-599c-8fa4-c164a9c65546",
+      "ordinal_in_unit": 35,
+      "source_key": "hanglieshi@行列式 (determinant)",
+      "target_key": "hanglieshi@Determinan (determinant)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 981,
+        "line_end": 981,
+        "span_sha256": "8fcce6dd76fba2efc103d99e6c77d2aae8ba24f3e3c28e616a576bc89ab91e85",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 981,
+        "line_end": 981,
+        "span_sha256": "7c91dd8a7478f28b0d73f3c5f7b244d7b27bdfba2d73ca5149207dc1c1cb4457",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:91ffa909-7846-5562-80db-65136a819ca6",
+      "stable_key": "index-entry/unit-045/sym1/036",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:8c96c4d6-b629-599c-8fa4-c164a9c65546",
+      "ordinal_in_unit": 36,
+      "source_key": "Tr@$\\Tr$",
+      "target_key": "Tr@$\\Tr$",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 1044,
+        "line_end": 1044,
+        "span_sha256": "2e565e1b3adf797f930cffec2ba2ecafb01161ae85395bc5467431d06018c9a1",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 1044,
+        "line_end": 1044,
+        "span_sha256": "9651093db4bda8fcf534b77029b7fc075ea32c3261e96c1b12f8d24504fba009",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:4480e6bd-3c05-5bdb-a765-8d00086276e6",
+      "stable_key": "index-entry/unit-045/main/037",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:8c96c4d6-b629-599c-8fa4-c164a9c65546",
+      "ordinal_in_unit": 37,
+      "source_key": "ji-trace@迹 (trace)",
+      "target_key": "ji-trace@Teras (trace)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 1044,
+        "line_end": 1044,
+        "span_sha256": "2e565e1b3adf797f930cffec2ba2ecafb01161ae85395bc5467431d06018c9a1",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 1044,
+        "line_end": 1044,
+        "span_sha256": "9651093db4bda8fcf534b77029b7fc075ea32c3261e96c1b12f8d24504fba009",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:410a2c65-83cd-5d70-b793-b9f83039970b",
+      "stable_key": "index-entry/unit-045/main/038",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:8c96c4d6-b629-599c-8fa4-c164a9c65546",
+      "ordinal_in_unit": 38,
+      "source_key": "fanshu@范数 (norm)",
+      "target_key": "fanshu@norma (norm)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 1056,
+        "line_end": 1056,
+        "span_sha256": "856ff5ac34915e1d6493f8c3ac7c0493d1318f067ef65d201e9d7371983169b8",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 1056,
+        "line_end": 1056,
+        "span_sha256": "f21dda3f4c505380baea99b8a5f670d5089188ccd9a75ca9cb6c39e8e7ff0c32",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:ffca06b1-2ff8-5edb-a51e-d24b220949ce",
+      "stable_key": "index-entry/unit-045/sym1/039",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:8c96c4d6-b629-599c-8fa4-c164a9c65546",
+      "ordinal_in_unit": 39,
+      "source_key": "Tr",
+      "target_key": "Tr",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 1056,
+        "line_end": 1056,
+        "span_sha256": "856ff5ac34915e1d6493f8c3ac7c0493d1318f067ef65d201e9d7371983169b8",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 1056,
+        "line_end": 1056,
+        "span_sha256": "f21dda3f4c505380baea99b8a5f670d5089188ccd9a75ca9cb6c39e8e7ff0c32",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:f3efe43e-411d-5387-ad7f-674afb87f320",
+      "stable_key": "index-entry/unit-045/sym1/040",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:8c96c4d6-b629-599c-8fa4-c164a9c65546",
+      "ordinal_in_unit": 40,
+      "source_key": "Nm@$\\Nm$",
+      "target_key": "Nm@$\\Nm$",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 1056,
+        "line_end": 1056,
+        "span_sha256": "856ff5ac34915e1d6493f8c3ac7c0493d1318f067ef65d201e9d7371983169b8",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 1056,
+        "line_end": 1056,
+        "span_sha256": "f21dda3f4c505380baea99b8a5f670d5089188ccd9a75ca9cb6c39e8e7ff0c32",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:dc3a0187-62b4-518d-9a42-35d1667ee6b6",
+      "stable_key": "index-entry/unit-045/main/041",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:8c96c4d6-b629-599c-8fa4-c164a9c65546",
+      "ordinal_in_unit": 41,
+      "source_key": "ji-trace!迹型式 (trace form)",
+      "target_key": "ji-trace!Bentuk teras (trace form)",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 1102,
+        "line_end": 1102,
+        "span_sha256": "c9a0c59d4305ba0385a7c95cc3e4cf12c2ca7189aa236d23d4eaf5e50c642749",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 1102,
+        "line_end": 1102,
+        "span_sha256": "206469974a50d5f638fb8625de8600a99354d9d2ac5b27444a0228cfc6d017b9",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:794100ef-eabf-544d-afdd-ab3a75065584",
+      "stable_key": "index-entry/unit-045/main/042",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:8c96c4d6-b629-599c-8fa4-c164a9c65546",
+      "ordinal_in_unit": 42,
+      "source_key": "panbieshi",
+      "target_key": "panbieshi",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 1104,
+        "line_end": 1104,
+        "span_sha256": "1ad3ce2c7ea2b631f463d13252525c987682a809f7f191880849d6cd589388b4",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 1104,
+        "line_end": 1104,
+        "span_sha256": "3e88ab483be3a96ddb38a6c583b7a586acf2c5320fc2a5e771784ee8049f599c",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    },
+    {
+      "id": "urn:uuid:b25db967-de48-50fb-901d-0188e9f81100",
+      "stable_key": "index-entry/unit-045/main/043",
+      "entity_type": "index_entry",
+      "section_id": "urn:uuid:8c96c4d6-b629-599c-8fa4-c164a9c65546",
+      "ordinal_in_unit": 43,
+      "source_key": "bayuanshu",
+      "target_key": "bayuanshu",
+      "source_binding": {
+        "path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "line_start": 1201,
+        "line_end": 1201,
+        "span_sha256": "f6a3771fb2c697eaaa15c724409bd7dda8326213eb7cc4ffb4ab7c841231cc43",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "target_binding": {
+        "path": "repo/source/chapter7.tex",
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "line_start": 1201,
+        "line_end": 1201,
+        "span_sha256": "6b0d58108b5598aaa9eaeff91689288c19367fd3911a13b2fe0abf900849d89b",
+        "span_hash_algorithm": "sha256-utf8-lines-lf-v1"
+      },
+      "provenance_state": "source_key_preserved_target_key_localized"
+    }
+  ],
+  "build_surfaces": [
+    {
+      "id": "urn:uuid:653cdca0-47c0-566a-8632-b683b40299fe",
+      "stable_key": "build-surface/unit-045-complete-li-pdf",
+      "entity_type": "build_surface",
+      "unit_id": "urn:uuid:d83618a4-82db-55a1-adac-632b286086a9",
+      "kind": "pdf",
+      "working_directory": ".",
+      "command": "pwsh -NoProfile -File scripts/build_li_complete.ps1",
+      "artifact_path": "artifacts/metode-aljabar-jilid-1-id-lengkap.pdf",
+      "artifact_binding": {
+        "path": "artifacts/metode-aljabar-jilid-1-id-lengkap.pdf",
+        "bytes": 2875853,
+        "sha256": "c2994530e3da1711d44f8c36315c40874e87f1968d1a81c1432105de2251c2ee"
+      },
+      "log_binding": {
+        "path": "qa/LI_COMPLETE_BUILD_FINAL.log",
+        "bytes": 113458,
+        "sha256": "95cb040d490d7dcc91a296b2a254604fa557b16cb07d4130a6dbf8c2b7a447d1"
+      },
+      "build_script": {
+        "path": "scripts/build_li_complete.ps1",
+        "bytes": 4263,
+        "sha256": "4f7561d8ad7c975f14b48f57ea758a29d0daed882aa8c1e2bd1e7ed6cd03eaf6"
+      },
+      "page_count": 521,
+      "status": "pass",
+      "driver": {
+        "path": "repo/source/full-reader-id.tex",
+        "bytes": 2987,
+        "sha256": "bcd12bc5663513e406a1c29af299cf986dcf1856179aadca9ed08406c9c6dfb5"
+      },
+      "input_bindings": [
+        {
+          "path": "repo/source/chapter7.tex",
+          "bytes": 132871,
+          "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3"
+        },
+        {
+          "path": "repo/source/full-reader-id.tex",
+          "bytes": 2987,
+          "sha256": "bcd12bc5663513e406a1c29af299cf986dcf1856179aadca9ed08406c9c6dfb5"
+        },
+        {
+          "path": "repo/source/Al-jabr.bib",
+          "bytes": 29580,
+          "sha256": "4979570eb4e3a9edcddd2f975790e56c98dcb3201e03e0a1fbdd64ba60c8263e"
+        }
+      ],
+      "external_dependencies": [
+        "XeLaTeX",
+        "Biber",
+        "makeindex",
+        "Noto CJK fonts",
+        "Fandol 0.3 toolchain fonts"
+      ],
+      "rights_component_ids": [
+        "urn:uuid:0baf6c47-021d-5310-9475-81519e710250",
+        "urn:uuid:10faf5cd-990f-5850-87b4-26922b062485",
+        "urn:uuid:b9f7a7a7-8e18-507a-b72e-b5de733a7430",
+        "urn:uuid:624ac6e0-0ed9-531c-8b35-47c040240806"
+      ]
+    }
+  ],
+  "qa_events": [
+    {
+      "id": "urn:uuid:8d7288de-6da6-5431-a788-f48967d478f3",
+      "stable_key": "qa/unit-045/01-translation",
+      "entity_type": "qa_event",
+      "unit_id": "urn:uuid:d83618a4-82db-55a1-adac-632b286086a9",
+      "check_type": "admission_gate",
+      "result": "pass",
+      "scope": "Complete Li source/target topology, mathematics, identifiers, exercises, and hints passed the single final translation freeze.",
+      "witness": "qa/LI_COMPLETE_TRANSLATION_FREEZE.json",
+      "translation_audit_state": "pass",
+      "build_state": "pass",
+      "visual_state": "pass",
+      "witness_binding": {
+        "path": "qa/LI_COMPLETE_TRANSLATION_FREEZE.json",
+        "bytes": 12256,
+        "sha256": "52d23d06d68a3ea80b9ea691a5537e469dfecae338d21496642ad43142f66252"
+      }
+    },
+    {
+      "id": "urn:uuid:ac3ba159-c416-5810-a0e4-d8ab921370c3",
+      "stable_key": "qa/unit-045/02-build",
+      "entity_type": "qa_event",
+      "unit_id": "urn:uuid:d83618a4-82db-55a1-adac-632b286086a9",
+      "check_type": "backend_integrity",
+      "result": "pass",
+      "scope": "The deterministic 521-page XeLaTeX/Biber/makeindex build completed without fatal or unresolved diagnostics.",
+      "witness": "qa/LI_COMPLETE_BUILD_FINAL.log",
+      "translation_audit_state": "pass",
+      "build_state": "pass",
+      "visual_state": "pass",
+      "witness_binding": {
+        "path": "qa/LI_COMPLETE_BUILD_FINAL.log",
+        "bytes": 113458,
+        "sha256": "95cb040d490d7dcc91a296b2a254604fa557b16cb07d4130a6dbf8c2b7a447d1"
+      }
+    },
+    {
+      "id": "urn:uuid:793e1c22-ed1e-59a7-afe0-e198a8663fd8",
+      "stable_key": "qa/unit-045/03-visual",
+      "entity_type": "qa_event",
+      "unit_id": "urn:uuid:d83618a4-82db-55a1-adac-632b286086a9",
+      "check_type": "backend_integrity",
+      "result": "pass",
+      "scope": "All 521 pages passed the bounded overview and targeted high-resolution readability inspection.",
+      "witness": "qa/LI_COMPLETE_VISUAL_QA_20260829.json",
+      "translation_audit_state": "pass",
+      "build_state": "pass",
+      "visual_state": "pass",
+      "witness_binding": {
+        "path": "qa/LI_COMPLETE_VISUAL_QA_20260829.json",
+        "bytes": 2458,
+        "sha256": "05cb40afb267762383ade4d268ffdf27f8ce61b279411f18a5a4821e2d03f724"
+      }
+    },
+    {
+      "id": "urn:uuid:148b3208-c7b6-597e-84f5-078af3705a16",
+      "stable_key": "qa/unit-045/04-rights",
+      "entity_type": "qa_event",
+      "unit_id": "urn:uuid:d83618a4-82db-55a1-adac-632b286086a9",
+      "check_type": "backend_integrity",
+      "result": "pass",
+      "scope": "Attribution, independent-edition status, changes, non-endorsement, license, and model provenance are explicit.",
+      "witness": "repo/source/coverpage-id-full.tex",
+      "translation_audit_state": "pass",
+      "build_state": "pass",
+      "visual_state": "pass",
+      "witness_binding": {
+        "path": "repo/source/coverpage-id-full.tex",
+        "bytes": 3433,
+        "sha256": "ae6b7629b71e3eb06b1134d7439723436367f9f63921d99159a163ce182169d8"
+      }
+    }
+  ]
+}

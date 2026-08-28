@@ -1,0 +1,450 @@
+{
+  "schema": "o013.li-complete-translation-freeze.v1",
+  "result": "pass",
+  "authority_commit": "c4f7a01f68f5f407906b4b970640cddbbad85f6b",
+  "authority_tree": "0f9fd52748165ec89a85ba602ccb949a2ce04694",
+  "files": [
+    {
+      "filename": "prelude.tex",
+      "authority": {
+        "bytes": 25159,
+        "sha256": "eb854d4fa7bca307ee5290da41d642a9d64bfa0f7e919760cc21fd7fbb5cabbd",
+        "records": 191
+      },
+      "target": {
+        "bytes": 35393,
+        "sha256": "60076e51a9a2e739628f0e0ac5daa02ad117ce9ea558834ce154a24b9eee685c",
+        "records": 195
+      },
+      "authority_topology": {
+        "environment_starts": 19,
+        "environment_ends": 19,
+        "labels": 0,
+        "references": 5,
+        "citations": 12,
+        "indexes": 1,
+        "items": 30,
+        "top_level_exercises": 0,
+        "exercise_items": 0,
+        "hints": 0,
+        "inline_math_delimiters": 372
+      },
+      "target_topology": {
+        "environment_starts": 19,
+        "environment_ends": 19,
+        "labels": 0,
+        "references": 5,
+        "citations": 12,
+        "indexes": 1,
+        "items": 30,
+        "top_level_exercises": 0,
+        "exercise_items": 0,
+        "hints": 0,
+        "inline_math_delimiters": 372
+      }
+    },
+    {
+      "filename": "chapter1.tex",
+      "authority": {
+        "bytes": 49874,
+        "sha256": "3405949f78c539e5e5c3c778e0460f2fde45ad3cb246d82a97e5a9492f95fe92",
+        "records": 536
+      },
+      "target": {
+        "bytes": 64180,
+        "sha256": "f40dcba1bc87d886f6b83bd6962e9cd044d0b39282c17e326e6afbedd4f6ceee",
+        "records": 536
+      },
+      "authority_topology": {
+        "environment_starts": 95,
+        "environment_ends": 95,
+        "labels": 28,
+        "references": 24,
+        "citations": 15,
+        "indexes": 40,
+        "items": 87,
+        "top_level_exercises": 6,
+        "exercise_items": 12,
+        "hints": 6,
+        "inline_math_delimiters": 1574
+      },
+      "target_topology": {
+        "environment_starts": 95,
+        "environment_ends": 95,
+        "labels": 28,
+        "references": 24,
+        "citations": 15,
+        "indexes": 40,
+        "items": 87,
+        "top_level_exercises": 6,
+        "exercise_items": 12,
+        "hints": 6,
+        "inline_math_delimiters": 1574
+      }
+    },
+    {
+      "filename": "chapter2.tex",
+      "authority": {
+        "bytes": 139983,
+        "sha256": "56496e557f6f05efdb825be000f688a904b1d1f44a752ebecac517d0a4ba1840",
+        "records": 1645
+      },
+      "target": {
+        "bytes": 166465,
+        "sha256": "3ef0e0dd3a8a30f4e44d7f87d94a4a4343ac7097a1862180c8becaf3631cda16",
+        "records": 1645
+      },
+      "authority_topology": {
+        "environment_starts": 309,
+        "environment_ends": 309,
+        "labels": 82,
+        "references": 149,
+        "citations": 15,
+        "indexes": 92,
+        "items": 108,
+        "top_level_exercises": 13,
+        "exercise_items": 18,
+        "hints": 0,
+        "inline_math_delimiters": 3442
+      },
+      "target_topology": {
+        "environment_starts": 309,
+        "environment_ends": 309,
+        "labels": 82,
+        "references": 149,
+        "citations": 15,
+        "indexes": 92,
+        "items": 108,
+        "top_level_exercises": 13,
+        "exercise_items": 18,
+        "hints": 0,
+        "inline_math_delimiters": 3442
+      }
+    },
+    {
+      "filename": "chapter3.tex",
+      "authority": {
+        "bytes": 75571,
+        "sha256": "7198f2c477890b333237156aba30b79db587e23dde7a878ed99f527e98a558d0",
+        "records": 911
+      },
+      "target": {
+        "bytes": 89608,
+        "sha256": "443b71b515aef66c6ba8e259e65083604d227370c1ee7ca3ed49bdb5996f45fb",
+        "records": 910
+      },
+      "authority_topology": {
+        "environment_starts": 174,
+        "environment_ends": 174,
+        "labels": 41,
+        "references": 81,
+        "citations": 11,
+        "indexes": 35,
+        "items": 70,
+        "top_level_exercises": 8,
+        "exercise_items": 11,
+        "hints": 2,
+        "inline_math_delimiters": 1594
+      },
+      "target_topology": {
+        "environment_starts": 174,
+        "environment_ends": 174,
+        "labels": 41,
+        "references": 81,
+        "citations": 11,
+        "indexes": 35,
+        "items": 70,
+        "top_level_exercises": 8,
+        "exercise_items": 11,
+        "hints": 2,
+        "inline_math_delimiters": 1594
+      }
+    },
+    {
+      "filename": "chapter4.tex",
+      "authority": {
+        "bytes": 154744,
+        "sha256": "63dbb81492f02f00a2d1d42b0ad382a26db92da08e8ed8d523b92bcacab870a3",
+        "records": 1898
+      },
+      "target": {
+        "bytes": 193626,
+        "sha256": "2b682d67292e4c439ccc9f6d46f72d3d0eb7cb5bf8b3a3a5999210c45ef547c5",
+        "records": 1893
+      },
+      "authority_topology": {
+        "environment_starts": 344,
+        "environment_ends": 344,
+        "labels": 91,
+        "references": 150,
+        "citations": 20,
+        "indexes": 91,
+        "items": 150,
+        "top_level_exercises": 26,
+        "exercise_items": 36,
+        "hints": 5,
+        "inline_math_delimiters": 5024
+      },
+      "target_topology": {
+        "environment_starts": 347,
+        "environment_ends": 347,
+        "labels": 91,
+        "references": 150,
+        "citations": 20,
+        "indexes": 91,
+        "items": 150,
+        "top_level_exercises": 26,
+        "exercise_items": 36,
+        "hints": 5,
+        "inline_math_delimiters": 5034
+      }
+    },
+    {
+      "filename": "chapter5.tex",
+      "authority": {
+        "bytes": 122998,
+        "sha256": "e747d16b2ebacc95cf1c34da4bc8b7775a5ed8787b6d1edc2cc8e303535ac143",
+        "records": 1382
+      },
+      "target": {
+        "bytes": 156081,
+        "sha256": "33a1c65ce1ddea061e02d32a9a250d6db4444eb2251d5b721c8501f95a7f0e3c",
+        "records": 1382
+      },
+      "authority_topology": {
+        "environment_starts": 240,
+        "environment_ends": 240,
+        "labels": 80,
+        "references": 112,
+        "citations": 7,
+        "indexes": 73,
+        "items": 112,
+        "top_level_exercises": 22,
+        "exercise_items": 31,
+        "hints": 11,
+        "inline_math_delimiters": 4102
+      },
+      "target_topology": {
+        "environment_starts": 240,
+        "environment_ends": 240,
+        "labels": 80,
+        "references": 112,
+        "citations": 7,
+        "indexes": 73,
+        "items": 112,
+        "top_level_exercises": 22,
+        "exercise_items": 31,
+        "hints": 11,
+        "inline_math_delimiters": 4098
+      }
+    },
+    {
+      "filename": "chapter6.tex",
+      "authority": {
+        "bytes": 160950,
+        "sha256": "c825f51dc19c254c89a7ede05723b62d6cd2b18cc6ac8c78d9ea00c3b8434e49",
+        "records": 1994
+      },
+      "target": {
+        "bytes": 193563,
+        "sha256": "15c09af18eeab6ce1a4c5a4cb69b1b3a42bc2422b015f21f77ccfbb3c94f7e14",
+        "records": 1994
+      },
+      "authority_topology": {
+        "environment_starts": 363,
+        "environment_ends": 363,
+        "labels": 98,
+        "references": 224,
+        "citations": 6,
+        "indexes": 70,
+        "items": 132,
+        "top_level_exercises": 14,
+        "exercise_items": 22,
+        "hints": 7,
+        "inline_math_delimiters": 4956
+      },
+      "target_topology": {
+        "environment_starts": 363,
+        "environment_ends": 363,
+        "labels": 98,
+        "references": 224,
+        "citations": 6,
+        "indexes": 70,
+        "items": 132,
+        "top_level_exercises": 14,
+        "exercise_items": 22,
+        "hints": 7,
+        "inline_math_delimiters": 4950
+      }
+    },
+    {
+      "filename": "chapter7.tex",
+      "authority": {
+        "bytes": 111676,
+        "sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
+        "records": 1224
+      },
+      "target": {
+        "bytes": 132871,
+        "sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+        "records": 1224
+      },
+      "authority_topology": {
+        "environment_starts": 223,
+        "environment_ends": 223,
+        "labels": 66,
+        "references": 140,
+        "citations": 10,
+        "indexes": 43,
+        "items": 84,
+        "top_level_exercises": 14,
+        "exercise_items": 29,
+        "hints": 6,
+        "inline_math_delimiters": 3632
+      },
+      "target_topology": {
+        "environment_starts": 223,
+        "environment_ends": 223,
+        "labels": 66,
+        "references": 140,
+        "citations": 10,
+        "indexes": 43,
+        "items": 84,
+        "top_level_exercises": 14,
+        "exercise_items": 29,
+        "hints": 6,
+        "inline_math_delimiters": 3632
+      }
+    },
+    {
+      "filename": "chapter8.tex",
+      "authority": {
+        "bytes": 102216,
+        "sha256": "365d36bb26f16d6679169c338934eb0404c29282da568f3f1916663a6808c6d4",
+        "records": 1144
+      },
+      "target": {
+        "bytes": 121871,
+        "sha256": "68474f1dc3234410550d576c8cf2ce2fcf7f3c65a6f7a3ae23ee554a5990eb3e",
+        "records": 1144
+      },
+      "authority_topology": {
+        "environment_starts": 222,
+        "environment_ends": 222,
+        "labels": 64,
+        "references": 164,
+        "citations": 4,
+        "indexes": 47,
+        "items": 107,
+        "top_level_exercises": 16,
+        "exercise_items": 31,
+        "hints": 6,
+        "inline_math_delimiters": 3920
+      },
+      "target_topology": {
+        "environment_starts": 222,
+        "environment_ends": 222,
+        "labels": 64,
+        "references": 164,
+        "citations": 4,
+        "indexes": 47,
+        "items": 107,
+        "top_level_exercises": 16,
+        "exercise_items": 31,
+        "hints": 6,
+        "inline_math_delimiters": 3920
+      }
+    },
+    {
+      "filename": "chapter9.tex",
+      "authority": {
+        "bytes": 115492,
+        "sha256": "308213ddc499ffbac98e2e6c865f0f654c9a90b321c660211acb1de7b1f95957",
+        "records": 1204
+      },
+      "target": {
+        "bytes": 136866,
+        "sha256": "cb753a347ac047dff772f08916cca940fab617440e2ea50c602e8ea4e29f762d",
+        "records": 1204
+      },
+      "authority_topology": {
+        "environment_starts": 202,
+        "environment_ends": 202,
+        "labels": 56,
+        "references": 165,
+        "citations": 16,
+        "indexes": 32,
+        "items": 129,
+        "top_level_exercises": 20,
+        "exercise_items": 48,
+        "hints": 3,
+        "inline_math_delimiters": 3696
+      },
+      "target_topology": {
+        "environment_starts": 202,
+        "environment_ends": 202,
+        "labels": 56,
+        "references": 165,
+        "citations": 16,
+        "indexes": 32,
+        "items": 129,
+        "top_level_exercises": 20,
+        "exercise_items": 48,
+        "hints": 3,
+        "inline_math_delimiters": 3696
+      }
+    },
+    {
+      "filename": "chapter10.tex",
+      "authority": {
+        "bytes": 140834,
+        "sha256": "dae0d60d2319f62112ea1361bc567c4b0758a805e14aea06be4c71dd10b26489",
+        "records": 1472
+      },
+      "target": {
+        "bytes": 169341,
+        "sha256": "7d9464e0fb680c67d107f8eb6d501c2b43e4a44f3696cd271c983ee75d3dda55",
+        "records": 1472
+      },
+      "authority_topology": {
+        "environment_starts": 243,
+        "environment_ends": 243,
+        "labels": 78,
+        "references": 189,
+        "citations": 22,
+        "indexes": 45,
+        "items": 137,
+        "top_level_exercises": 22,
+        "exercise_items": 30,
+        "hints": 5,
+        "inline_math_delimiters": 4884
+      },
+      "target_topology": {
+        "environment_starts": 243,
+        "environment_ends": 243,
+        "labels": 78,
+        "references": 189,
+        "citations": 22,
+        "indexes": 45,
+        "items": 137,
+        "top_level_exercises": 22,
+        "exercise_items": 30,
+        "hints": 5,
+        "inline_math_delimiters": 4892
+      }
+    }
+  ],
+  "target_aggregate_topology": {
+    "environment_starts": 2437,
+    "environment_ends": 2437,
+    "labels": 684,
+    "references": 1403,
+    "citations": 138,
+    "indexes": 569,
+    "items": 1146,
+    "top_level_exercises": 161,
+    "exercise_items": 268,
+    "hints": 51,
+    "inline_math_delimiters": 37204
+  }
+}

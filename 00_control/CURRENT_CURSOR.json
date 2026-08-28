@@ -614,15 +614,40 @@
     "unit_035_receipt_readback_inventory_sha256": "9eb807244550abd1f0c1ca05fb4684e5a102edd15b299f0c92ef0bbb2e007a0d",
     "unit_035_state": "complete Chapter 4 public; content and receipt anonymous readback passed"
   },
-  "next_action": "Promote the already-passing complete Chapter 5 candidate in one batch, merge its 22-row terminology delta, generate one chapter-level reader/backend, run one bounded deterministic gate, publish/read back, and continue Chapter 6 from the already-translated lines 1-337 candidate. The full Li/Duncan/CRing/connective-mastery goal remains active.",
+  "li_complete_local_boundary": {
+    "state": "translation_build_visual_backend_pass_publication_pending",
+    "coverage": "complete prelude and complete Li Chapters 1-10",
+    "source_records": 13599,
+    "source_bytes": 1459865,
+    "top_level_exercises": 161,
+    "hints": 51,
+    "translation_freeze": "qa/LI_COMPLETE_TRANSLATION_FREEZE.json",
+    "reader": {
+      "path": "artifacts/metode-aljabar-jilid-1-id-lengkap.pdf",
+      "pages": 521,
+      "bytes": 2875853,
+      "sha256": "c2994530e3da1711d44f8c36315c40874e87f1968d1a81c1432105de2251c2ee"
+    },
+    "build_log": {
+      "path": "qa/LI_COMPLETE_BUILD_FINAL.log",
+      "bytes": 113458,
+      "sha256": "95cb040d490d7dcc91a296b2a254604fa557b16cb07d4130a6dbf8c2b7a447d1"
+    },
+    "visual_qa": "qa/LI_COMPLETE_VISUAL_QA_20260829.json",
+    "backend_units": [45, 46, 47, 48],
+    "csv_projections": 24
+  },
+  "next_action": "Commit and push the passing complete-Li boundary with path-limited Git, anonymously read it back, publish reader-first version 1.0.0 in existing Zenodo concept 10.5281/zenodo.22059759, read back all public bytes, then continue Duncan and CRing production.",
   "next_cursor": {
-    "immediate_action": "Finish and integrate complete Chapter 7 in source order, then Chapters 8-10 in chapter-sized translation batches. Run one bounded deterministic gate per substantial chapter boundary; do not reopen passing Chapter 6 QA.",
-    "next_admission_unit": "chapter-7-complete-field-theory",
-    "next_admission_source": "chapter7.tex:1-1224",
-    "next_authority_bytes": 111676,
-    "next_authority_sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
-    "parallel_translation": "complete Chapters 7-9 are in isolated chapter-level production",
-    "cursor_after_li": "complete Duncan, six selected repaired CRing spans, and separate connective/mastery layer",
+    "immediate_action": "Complete-Li GitHub push/readback and Zenodo 1.0.0 publication/readback; do not rerun passing Li QA.",
+    "next_admission_unit": "complete-duncan-seven-root-component",
+    "next_admission_source": "seven pinned Duncan TeX roots after final fluent id-ID editing",
+    "chapter7_candidate_sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+    "chapter8_candidate_sha256": "97a08d3da1ee715d97e209cb93ebc1370fa4ef24ba071d312b17f4f7902aeb31",
+    "chapter9_candidate_sha256": "cb753a347ac047dff772f08916cca940fab617440e2ea50c602e8ea4e29f762d",
+    "chapter10_authority_sha256": "dae0d60d2319f62112ea1361bc567c4b0758a805e14aea06be4c71dd10b26489",
+    "parallel_translation": "complete Duncan seven-root component and all six repaired CRing selections are in final prose editing",
+    "cursor_after_li": "complete Duncan, six selected repaired CRing spans, then separate connective/mastery layer",
     "terminal_scope": "all Li Volume 1, complete Duncan, six selected repaired CRing spans, and separate connective/mastery layer"
   }
 }

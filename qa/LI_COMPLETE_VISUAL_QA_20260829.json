@@ -1,0 +1,43 @@
+{
+  "schema": "o013-li-complete-visual-qa-v1",
+  "date": "2026-08-29",
+  "result": "pass",
+  "reader": {
+    "path": "artifacts/metode-aljabar-jilid-1-id-lengkap.pdf",
+    "pages": 521,
+    "bytes": 2875853,
+    "sha256": "c2994530e3da1711d44f8c36315c40874e87f1968d1a81c1432105de2251c2ee",
+    "page_size_points": [498.9, 708.66]
+  },
+  "renderer": "Poppler pdftoppm 26.05.0",
+  "all_page_pass": {
+    "method": "All 521 pages rendered at 36 dpi, grouped into 21 ordered 5x5 sheets, then inspected in a single ordered overview for page geometry, centering, blank-page anomalies, clipping, malformed diagrams, and gross density discontinuities.",
+    "overview": {
+      "path": "qa/li-complete-evidence/all-521-pages-overview.jpg",
+      "bytes": 1442984,
+      "sha256": "8371001e599eeab69b5fa8a73bc84bf81cdce1a902070bdab000d23ebc63f77c"
+    },
+    "rendered_pages": 521,
+    "contact_sheets": 21,
+    "finding": "The complete reader uses a centered, consistently filled text block throughout; no clipped page, accidental sparse layout, malformed page, or unexpected blank page was found. The colored region on the Chapter 5 sheet is the preserved source mathematical figure, not a render artifact."
+  },
+  "targeted_pass": {
+    "physical_pages": [1, 2, 3, 4, 19, 39, 92, 121, 186, 188, 238, 243, 306, 313, 361, 367, 402, 424, 430, 436, 448, 506, 511, 521],
+    "montage": {
+      "path": "qa/li-complete-evidence/target-pages-24.jpg",
+      "bytes": 1570576,
+      "sha256": "7dc63d6fafdc8d84267cdf34416dd454d563abba5c68fc1158dacf726237e889"
+    },
+    "finding": "Cover, title/rights matter, contents, all chapter transitions, final bibliography/index pages, and pages corresponding to the largest TeX overfull diagnostics were inspected at 110 dpi. Long mathematics remains readable inside the physical page; no visible clipping or overlap was found."
+  },
+  "build_evidence": {
+    "log": "qa/LI_COMPLETE_BUILD_FINAL.log",
+    "bytes": 113458,
+    "sha256": "95cb040d490d7dcc91a296b2a254604fa557b16cb07d4130a6dbf8c2b7a447d1",
+    "fatal_or_unresolved_diagnostics": 0,
+    "overfull_diagnostics": 22,
+    "maximum_overfull_points": 142.12717,
+    "adjudication": "The largest diagnostics occur in indivisible displayed mathematical constructions or long bibliography strings. Targeted rendering shows that none is clipped or overlaps adjacent content, so no mathematical source rewrite is justified."
+  },
+  "model": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

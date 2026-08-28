@@ -2,7 +2,9 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan serta Bab 1–6 lengkap telah diterjemahkan ke Bahasa Indonesia. Pembaca Bab 6 berjumlah 75 halaman dan checkpoint gabungan berjumlah 460 halaman; keduanya lulus build, pemeriksaan backend, dan inspeksi visual berbatas. Bab 7 sedang diterjemahkan dalam batch besar.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Seluruh Pendahuluan dan Bab 1–10 telah diterjemahkan ke Bahasa Indonesia. Edisi lengkap Wen-Wei Li ini berjumlah 521 halaman dan mempertahankan 161 latihan tingkat atas serta 51 petunjuk. Sumber, backend JSON/CSV, build, dan inspeksi visual berbatas telah lulus.** Komponen kurikulum O013 lain—catatan teori representasi Duncan, enam pilihan CRing, serta lapisan penghubung/penguasaan—tetap dikerjakan terpisah dan tidak diklaim sebagai bagian karya Li.
+
+[Baca atau unduh edisi lengkap Bahasa Indonesia (521 halaman; Pendahuluan dan Bab 1–10)](artifacts/metode-aljabar-jilid-1-id-lengkap.pdf)
 
 [Baca atau unduh checkpoint pembaca melalui Bab 6 (460 halaman; pendahuluan dan Bab 1–6 lengkap)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-through-bab-6-reader.pdf)
 
@@ -90,18 +92,18 @@ Status saat ini: **Pendahuluan serta Bab 1–6 lengkap telah diterjemahkan ke Ba
 
 [Baca atau unduh PDF Bab 6 lengkap](artifacts/unit-044-bab-6-modul-id.pdf)
 
-Checkpoint terbaru menggabungkan satu sampul reader-first dan 37 komponen
-hash-gated menjadi 460 halaman: pendahuluan serta Bab 1–6 lengkap. Sebanyak 384
-halaman isi lama cocok tepat dengan checkpoint Bab 5, dan 75 halaman tambahan
-cocok tepat dengan pembaca Bab 6 yang seluruh halamannya telah dirender dan
-diperiksa melalui lima lembar kontak. Sampul serta batas halaman 385/386 dan
-halaman akhir diperiksa lagi pada 120 dpi. Tidak ditemukan halaman terpotong,
-bertumpuk, kosong karena galat, atau teks/diagram yang keluar dari bidang baca;
-log final juga memuat nol kotak meluber. Receipt penerimaan ada di
-[`qa/UNIT_044_CHAPTER_6_ADMISSION_20260828.md`](qa/UNIT_044_CHAPTER_6_ADMISSION_20260828.md),
-sedangkan bukti PDF dan checkpoint ada di
-[`qa/CHAPTER_6_PDF_STRUCTURAL_QA.json`](qa/CHAPTER_6_PDF_STRUCTURAL_QA.json) dan
-[`qa/unit-044-evidence/checkpoint-through-bab-6-structural-qa.json`](qa/unit-044-evidence/checkpoint-through-bab-6-structural-qa.json).
+Pembaca lengkap dibangun langsung dari sebelas berkas kanonik (pendahuluan dan
+sepuluh bab) dengan XeLaTeX, Biber, serta dua indeks. Artefak final berjumlah
+521 halaman / 2.875.853 byte / SHA-256
+`c2994530e3da1711d44f8c36315c40874e87f1968d1a81c1432105de2251c2ee`.
+Seluruh 521 halaman dirender berurutan dan diperiksa melalui 21 lembar kontak;
+24 halaman batas/diagnostik diperiksa lagi pada 110 dpi. Tidak ditemukan
+halaman terpotong, bertumpuk, kosong karena galat, atau teks/diagram yang keluar
+dari halaman. Bukti ringkas tersedia di
+[`qa/LI_COMPLETE_TRANSLATION_FREEZE.json`](qa/LI_COMPLETE_TRANSLATION_FREEZE.json),
+[`qa/LI_COMPLETE_VISUAL_QA_20260829.json`](qa/LI_COMPLETE_VISUAL_QA_20260829.json),
+dan empat backend final di `backend/data/unit-045-*` sampai
+`backend/data/unit-048-*`.
 
 Checkpoint Bab 5 sebelumnya dipublikasikan pada commit isi
 `77272543e77851dc799215bebbbcefad9c3b05fc`; seluruh 71 path / 18.916.874 byte
@@ -145,6 +147,12 @@ sumber maupun kredit dan lisensi setiap komponen yang dipertahankan di bawah.
 ## Membangun unit pembaca
 
 Prasyarat: PowerShell 7, XeLaTeX, Biber, MakeIndex, serta paket-paket TeX yang dimuat oleh sumber. Font Noto CJK yang diperlukan sudah disertakan dengan lisensi OFL 1.1. Paket Fandol 0.3 diperlukan sebagai dependensi sistem; identitas font dan lisensi GPLv3 dengan pengecualian font dibekukan di `repo/fonts/FANDOL-AUTHORITY.json`.
+
+Pembaca lengkap dibangun dengan:
+
+```powershell
+pwsh -NoProfile -File scripts/build_li_complete.ps1
+```
 
 ```powershell
 pwsh -NoProfile -File scripts/build_unit_001.ps1 -OutputDirectory build/unit-001-replay

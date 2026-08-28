@@ -1,0 +1,82 @@
+{
+  "schema": "o013-li-final-chapter-backend-validation-v1",
+  "unit": "O013-LI-U048",
+  "result": "pass",
+  "generated": "2026-08-29",
+  "chapter": 10,
+  "authority": {
+    "range": "chapter10.tex:1-1472",
+    "bytes": 140834,
+    "sha256": "dae0d60d2319f62112ea1361bc567c4b0758a805e14aea06be4c71dd10b26489"
+  },
+  "target": {
+    "range": "chapter10.tex:1-1472",
+    "bytes": 169341,
+    "sha256": "7d9464e0fb680c67d107f8eb6d501c2b43e4a44f3696cd271c983ee75d3dda55",
+    "candidate_identical": true
+  },
+  "topology": {
+    "records": 1472,
+    "environment_starts": 244,
+    "environment_ends": 244,
+    "labels": 79,
+    "references": 189,
+    "citations": 22,
+    "indexes": 45,
+    "items": 138,
+    "top_level_exercises": 22,
+    "exercise_items": 31,
+    "hints": 6,
+    "tikzcd": 21,
+    "tikzpicture": 3
+  },
+  "sections": 10,
+  "rights_components": 5,
+  "build_surfaces": 1,
+  "qa_events": 4,
+  "schema_validation": "pass",
+  "semantic_validation": "pass",
+  "csv_projections": 6,
+  "backend": {
+    "path": "backend/data/unit-048-bab-10-valuasi-dan-pelengkapan.json",
+    "bytes": 163887,
+    "sha256": "33f14d20639e5023da43d7c318ae73e815ba74bcb8586133a04f676ef703ba05"
+  },
+  "csv": {
+    "bindings": {
+      "path": "backend/csv/unit-048-bindings.csv",
+      "bytes": 49520,
+      "sha256": "2c43ed5a74611975f6f6f40e3dc423998301c7f5384a356d205d266179ed2770"
+    },
+    "entities": {
+      "path": "backend/csv/unit-048-entities.csv",
+      "bytes": 25294,
+      "sha256": "a94c99315f51f58929003a68a7ef111f8abc48da10e49e725ec6881f65b45335"
+    },
+    "qa": {
+      "path": "backend/csv/unit-048-qa.csv",
+      "bytes": 1300,
+      "sha256": "5306d4be08cb2c8dacd9254548a00bf3e13db489e6fd427a2a9702234285ff06"
+    },
+    "relations": {
+      "path": "backend/csv/unit-048-relations.csv",
+      "bytes": 62915,
+      "sha256": "80d964ebf222a492a0b3b95c0d8075a6f7143dc091d5d3f23922e9d4d933f3e9"
+    },
+    "rights": {
+      "path": "backend/csv/unit-048-rights.csv",
+      "bytes": 1831,
+      "sha256": "51552480f0c11a909250f8f368305ec2156d54729111edcd2bf9e9e4d556ef7f"
+    },
+    "surfaces": {
+      "path": "backend/csv/unit-048-surfaces.csv",
+      "bytes": 17558,
+      "sha256": "f94a08459aa318663f8eb615ae2fa216caee5483710fd23af6e9dedc1d1ca8aa"
+    }
+  },
+  "generator": {
+    "path": "scripts/generate_li_final_chapters_backend.py",
+    "bytes": 22078,
+    "sha256": "871b995bbe9f0c5875a84fa9df1e421fd8ee0459a87e6b69ba8d166ce90819a2"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "schema": "o013-li-final-chapter-backend-validation-v1",
+  "unit": "O013-LI-U046",
+  "result": "pass",
+  "generated": "2026-08-29",
+  "chapter": 8,
+  "authority": {
+    "range": "chapter8.tex:1-1144",
+    "bytes": 102216,
+    "sha256": "365d36bb26f16d6679169c338934eb0404c29282da568f3f1916663a6808c6d4"
+  },
+  "target": {
+    "range": "chapter8.tex:1-1144",
+    "bytes": 121871,
+    "sha256": "68474f1dc3234410550d576c8cf2ce2fcf7f3c65a6f7a3ae23ee554a5990eb3e",
+    "candidate_identical": true
+  },
+  "topology": {
+    "records": 1144,
+    "environment_starts": 223,
+    "environment_ends": 223,
+    "labels": 64,
+    "references": 165,
+    "citations": 4,
+    "indexes": 47,
+    "items": 107,
+    "top_level_exercises": 16,
+    "exercise_items": 31,
+    "hints": 8,
+    "tikzcd": 9,
+    "tikzpicture": 1
+  },
+  "sections": 10,
+  "rights_components": 5,
+  "build_surfaces": 1,
+  "qa_events": 4,
+  "schema_validation": "pass",
+  "semantic_validation": "pass",
+  "csv_projections": 6,
+  "backend": {
+    "path": "backend/data/unit-046-bab-8-teori-medan.json",
+    "bytes": 141197,
+    "sha256": "5d3c6f58457dd5e0b2109df08a41bf998223ae80fdf201da6bb82560cf5bd25e"
+  },
+  "csv": {
+    "bindings": {
+      "path": "backend/csv/unit-046-bindings.csv",
+      "bytes": 42471,
+      "sha256": "39b362b9b3861514aee16930ddcb5507ba910c848d126b22c1d711717962d29c"
+    },
+    "entities": {
+      "path": "backend/csv/unit-046-entities.csv",
+      "bytes": 21209,
+      "sha256": "a1fd52a20c3243bca64399de643e8f25c864ac18c5d48ef3040883c55928dd55"
+    },
+    "qa": {
+      "path": "backend/csv/unit-046-qa.csv",
+      "bytes": 1300,
+      "sha256": "b90655fdeacae7267bebac43b00e75041589abc275299cad35b9d2646836e275"
+    },
+    "relations": {
+      "path": "backend/csv/unit-046-relations.csv",
+      "bytes": 49477,
+      "sha256": "2ed44ad69118ac91977e30467786bb73c37eab90d6021149f50220910183e177"
+    },
+    "rights": {
+      "path": "backend/csv/unit-046-rights.csv",
+      "bytes": 1831,
+      "sha256": "51552480f0c11a909250f8f368305ec2156d54729111edcd2bf9e9e4d556ef7f"
+    },
+    "surfaces": {
+      "path": "backend/csv/unit-046-surfaces.csv",
+      "bytes": 14578,
+      "sha256": "96b08744e07b5edbf269fc40a88a273add82ed810c46a9da691ff7d3c274f47e"
+    }
+  },
+  "generator": {
+    "path": "scripts/generate_li_final_chapters_backend.py",
+    "bytes": 22078,
+    "sha256": "871b995bbe9f0c5875a84fa9df1e421fd8ee0459a87e6b69ba8d166ce90819a2"
+  }
+}
