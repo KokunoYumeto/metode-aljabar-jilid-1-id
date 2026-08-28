@@ -1,0 +1,83 @@
+{
+  "schema": "o013-unit-backend-validation-v1",
+  "unit": "O013-LI-U035",
+  "result": "pass",
+  "generated": "2026-08-28",
+  "authority": {
+    "range": "chapter4.tex:1745-1898",
+    "bytes": 14398,
+    "sha256": "f841860520d4ab35dc82354f288bc295c4681f9faffc8f5a645c92a3af1dd287"
+  },
+  "target": {
+    "range": "chapter4.tex:1740-1893",
+    "bytes": 18089,
+    "sha256": "5d9bf6e5c9c17c83821f1bba63078f4d28e3836428f4557e0727ee5b1046c2ca",
+    "candidate_identical": true
+  },
+  "topology": {
+    "environment_pairs": 30,
+    "labels": 3,
+    "references": 15,
+    "external_references": 14,
+    "protected_math_zones": 247,
+    "diagrams": 8,
+    "diagram_arrows": 35,
+    "list_items": 41,
+    "top_level_exercises": 26,
+    "exercise_items": 36,
+    "hints": 5,
+    "indexes": 2
+  },
+  "terminology_rows": 11,
+  "corrections": [
+    "O013-LI-U035-COR-001"
+  ],
+  "rights_components": 5,
+  "schema_validation": "pass",
+  "uuidv5_uniqueness": "pass",
+  "reference_closure": "pass",
+  "json_entities": 429,
+  "csv_projections": 6,
+  "backend": {
+    "path": "backend/data/unit-035-bab-4-grup-dalam-kategori-dan-latihan.json",
+    "bytes": 239379,
+    "sha256": "372a7dfa2ffc919b7fe5859b020c87f4bd143669331aeed1c0c270c65e9f02a7"
+  },
+  "csv": {
+    "bindings": {
+      "path": "backend/csv/unit-035-bindings.csv",
+      "bytes": 12395,
+      "sha256": "4034acd64bbbb8be27096f9dbdbeb18760c43b8009fbe6910db336852dd87036"
+    },
+    "entities": {
+      "path": "backend/csv/unit-035-entities.csv",
+      "bytes": 58638,
+      "sha256": "3c468f981f7f4526f67a885ef00a097499a9b048a62f481f3817ae22f57043fd"
+    },
+    "qa": {
+      "path": "backend/csv/unit-035-qa.csv",
+      "bytes": 2382,
+      "sha256": "4cc90f0ac511706d20197cb1e1d0f0326609a45b93afadded35aa701c3ab2c82"
+    },
+    "relations": {
+      "path": "backend/csv/unit-035-relations.csv",
+      "bytes": 209022,
+      "sha256": "075e7aa381df60382cdb90155cf95dbe9b789d7bff7f39ce9ec66e39d9318ad1"
+    },
+    "rights": {
+      "path": "backend/csv/unit-035-rights.csv",
+      "bytes": 1831,
+      "sha256": "51552480f0c11a909250f8f368305ec2156d54729111edcd2bf9e9e4d556ef7f"
+    },
+    "surfaces": {
+      "path": "backend/csv/unit-035-surfaces.csv",
+      "bytes": 2277,
+      "sha256": "7b20c777f4fc2fa8427db1b96586f7b5c3ddd31d0555a38ba347a0a20fa9bafe"
+    }
+  },
+  "generator": {
+    "path": "scripts/generate_unit_035_backend.py",
+    "bytes": 25311,
+    "sha256": "2051242d17e9f9366084754ada188c431433d6f840efe26865f00004f2311259"
+  }
+}

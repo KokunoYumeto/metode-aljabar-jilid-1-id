@@ -1,0 +1,12 @@
+entity_type,id,stable_key,section_id,ordinal,source_value,target_value,format,status
+build_surface,urn:uuid:39589307-c9ab-5d85-b4f5-e5effdc50fef,build-surface/unit-035-pdf,,,pwsh -NoProfile -File scripts/build_unit_035.ps1 -OutputDirectory build/unit-035-replay,artifacts/unit-035-bab-4-grup-dalam-kategori-dan-latihan-id.pdf,pdf,pass
+diagram,urn:uuid:c3dfed56-0e2b-52f6-a8e6-19b8ac6d09ed,diagram/unit-035/tikzcd-01,urn:uuid:f2a5a2ed-50b6-578c-9ff8-59331b11d8a1,1,1759-1762,1754-1757,tikzcd,audited_preserved
+diagram,urn:uuid:4fc0d086-a8c9-506f-91fd-5f92ed2857cc,diagram/unit-035/tikzcd-02,urn:uuid:f2a5a2ed-50b6-578c-9ff8-59331b11d8a1,2,1765-1769,1760-1764,tikzcd,audited_preserved
+diagram,urn:uuid:169f196c-cdee-510d-aafb-b657da41df8a,diagram/unit-035/tikzcd-03,urn:uuid:f2a5a2ed-50b6-578c-9ff8-59331b11d8a1,3,1771-1775,1766-1770,tikzcd,audited_preserved
+diagram,urn:uuid:816bb326-73b3-5e96-a5a3-8bdc28775506,diagram/unit-035/tikzcd-04,urn:uuid:f2a5a2ed-50b6-578c-9ff8-59331b11d8a1,4,1781-1781,1776-1776,tikzcd,audited_preserved
+diagram,urn:uuid:4e585820-fc2e-57c9-ba37-b7f12351742b,diagram/unit-035/tikzcd-05,urn:uuid:f2a5a2ed-50b6-578c-9ff8-59331b11d8a1,5,1784-1784,1779-1779,tikzcd,audited_preserved
+diagram,urn:uuid:e45b37c4-fbf5-54a9-88a4-75182d1a9414,diagram/unit-035/tikzcd-06,urn:uuid:f2a5a2ed-50b6-578c-9ff8-59331b11d8a1,6,1778-1787,1773-1782,tikzcd,audited_preserved
+diagram,urn:uuid:143ffbfd-3ff0-52ec-8e6b-550e00701db9,diagram/unit-035/tikzcd-07,urn:uuid:f2a5a2ed-50b6-578c-9ff8-59331b11d8a1,7,1809-1814,1804-1809,tikzcd,audited_preserved
+diagram,urn:uuid:2844216b-3676-5899-8fcd-10c041631e4c,diagram/unit-035/tikzcd-08,urn:uuid:f2a5a2ed-50b6-578c-9ff8-59331b11d8a1,8,1837-1840,1832-1835,tikzcd,audited_preserved
+index_entry,urn:uuid:fe9adcbd-1c72-5918-9676-b63b4e75f948,index-entry/unit-035/main/001,urn:uuid:f2a5a2ed-50b6-578c-9ff8-59331b11d8a1,1,duixiang!群对象 (group object),duixiang!objek grup (group object),latex-index-key,source_key_preserved_target_key_localized
+index_entry,urn:uuid:6192babc-44c1-5f68-bc8d-e1873855c5c1,index-entry/unit-035/main/002,urn:uuid:238ab6ec-24b0-5b14-862c-d3867a59a6ce,2,zitonggou!外自同构 (outer automorphism),zitonggou!automorfisme luar (outer automorphism),latex-index-key,source_key_preserved_target_key_localized

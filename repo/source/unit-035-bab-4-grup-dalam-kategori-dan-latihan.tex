@@ -1,0 +1,115 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8
+
+% Unit pembaca Bahasa Indonesia untuk Methods of Algebra, Volume 1.
+% Teks sumber: Copyright 2018 Wen-Wei Li, CC BY 4.0.
+% Terjemahan ini dilisensikan menurut CC BY 4.0.
+% Provenans produksi: OpenAI Codex gpt-5.6-sol, Ultra.
+
+\documentclass[
+	colors = true,
+	coverpage = coverpage-id-unit-035.tex,
+	fontsetup = font-setup-id.tex,
+	titlesetup = titles-setup-id.tex,
+	CJKthechapter = false
+]{AJbook}
+
+\input{locale-ui-id.tex}
+\makeatletter
+\AtBeginDocument{\gdef\mkheader@lemma{\setparms@lemma\@thm{lemma}{theorem}{Lema}}}
+\makeatother
+\setCJKmainfont[Path=../fonts/,BoldFont=NotoSansCJKsc-Medium.otf,ItalicFont=NotoSansCJKsc-Regular.otf]{NotoSansCJKsc-Regular.otf}
+\newcommand{\BuildDateID}{28 Agustus 2026}
+\newcommand{\BuildDateShortID}{2026-08-28}
+\AtBeginDocument{\renewcommand{\chaptermark}[1]{\markboth{Bab \thechapter\quad #1}{}}}
+\AtBeginDocument{\let\cleardoublepage\clearpage}
+
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\SetSymbolFont{stmry}{bold}{U}{stmry}{m}{n}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{tikz-cd}
+\usetikzlibrary{positioning, patterns, calc, matrix, shapes.arrows, shapes.symbols}
+\usepackage{braids}
+\usepackage{tqft}
+\usepackage{ytableau}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{myarrows}
+\usepackage{mycommand}
+
+\usepackage[noautomatic]{imakeidx}
+\makeindex[columns=2,program=makeindex,intoc=true,title={Indeks Istilah}]
+\makeindex[columns=3,program=makeindex,intoc=true,name=sym1,title={Indeks Simbol}]
+
+\usepackage{xr}
+\usepackage[unicode, bookmarksnumbered]{hyperref}
+\externaldocument{unit-035-crossrefs}[]
+\let\UnitThirtyFiveOriginalRef\ref
+\newcommand{\UnitThirtyFiveMarkExternalRef}[1]{\expandafter\def\csname unit035external:#1\endcsname{1}}
+\newcommand{\UnitThirtyFiveRef}[1]{%
+	\ifcsname unit035external:#1\endcsname
+		\begin{NoHyper}\UnitThirtyFiveOriginalRef{#1}\end{NoHyper}%
+	\else
+		\UnitThirtyFiveOriginalRef{#1}%
+	\fi}
+\UnitThirtyFiveMarkExternalRef{def:group}
+\UnitThirtyFiveMarkExternalRef{prop:quotient-monoid-univ-prop}
+\UnitThirtyFiveMarkExternalRef{def:monoid-action}
+\UnitThirtyFiveMarkExternalRef{prop:torsor-criterion}
+\UnitThirtyFiveMarkExternalRef{rem:totally-disconnected}
+\UnitThirtyFiveMarkExternalRef{sec:cat-universals}
+\UnitThirtyFiveMarkExternalRef{sec:representable-functors}
+\UnitThirtyFiveMarkExternalRef{prop:Yoneda-lemma}
+\UnitThirtyFiveMarkExternalRef{def:representable-functor}
+\UnitThirtyFiveMarkExternalRef{prop:lim-Yoneda}
+\UnitThirtyFiveMarkExternalRef{prop:product-associativity}
+\UnitThirtyFiveMarkExternalRef{prop:product-commutativity}
+\UnitThirtyFiveMarkExternalRef{def:monoidal-cat}
+\UnitThirtyFiveMarkExternalRef{sec:Witt-vector}
+\hypersetup{
+	pdfauthor = {Wen-Wei Li},
+	pdftitle = {Metode Aljabar, Jilid 1: Arsitektur Dasar - Unit 35: Grup dalam Kategori dan Latihan Bab 4},
+	pdfsubject = {Terjemahan Bahasa Indonesia independen; Bagian 4.11 dan latihan Bab 4 lengkap},
+	pdfkeywords = {aljabar, teori grup, objek grup, fungtor grup, kategori, latihan, id-ID},
+	pdflang = {id-ID},
+	CJKbookmarks = true}
+\addbibresource{Al-jabr.bib}
+
+\begin{document}
+	\hypersetup{pageanchor=false}
+	\pagestyle{empty}
+	\input{coverpage-id-unit-035.tex}
+	\pagestyle{fancy}
+	\pagenumbering{roman}
+	\setcounter{page}{1}
+
+	\mainmatter
+	\hypersetup{pageanchor=true}
+	\raggedbottom
+	\newgeometry{centering,textwidth=142mm,textheight=198mm,headheight=5ex,headsep=5ex}
+	\setlength{\headwidth}{\textwidth}
+	\setcounter{chapter}{4}
+	\setcounter{section}{10}
+	% Seven numbered displays precede Section 4.11 in the complete chapter.
+	\setcounter{equation}{7}
+	\begingroup
+	\setlength{\emergencystretch}{3em}
+	\setstretch{1.16}
+	\clubpenalty=10000
+	\widowpenalty=10000
+	\displaywidowpenalty=10000
+	\brokenpenalty=10000
+	\let\ref\UnitThirtyFiveRef
+	\input{unit-035-canonical-span.tex}
+	\endgroup
+
+	\begingroup
+	\setlength{\emergencystretch}{3em}
+	\let\clearpage\relax
+	\let\cleardoublepage\relax
+	\IfFileExists{\jobname.ind}{\printindex}{ }
+	\IfFileExists{sym1.ind}{\printindex[sym1]}{ }
+	\endgroup
+\end{document}

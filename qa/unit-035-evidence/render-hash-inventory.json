@@ -1,0 +1,28 @@
+{
+  "schema": "o013-render-inventory-v1",
+  "unit": "O013-LI-U035",
+  "renderer": "pdftoppm 120 dpi PNG",
+  "source_pdf": {
+    "path": "artifacts/unit-035-bab-4-grup-dalam-kategori-dan-latihan-id.pdf",
+    "bytes": 135943,
+    "sha256": "1cf97dd523ae1a8c5185c4b22a8e6b0dab6e7514ab5387c34959c417f4e35442",
+    "pages": 9
+  },
+  "pages": [
+    {"page": 1, "path": "qa/unit-035-evidence/render-120dpi/page-1.png", "bytes": 70439, "sha256": "74c71ae3c42751d0f86749a78e5a56ea368aaabae46df62f6969e2b8d78db93f"},
+    {"page": 2, "path": "qa/unit-035-evidence/render-120dpi/page-2.png", "bytes": 123523, "sha256": "8b084d1de7ed59c85736996211da853caf5b50929c80c54ff931f47911bb9176"},
+    {"page": 3, "path": "qa/unit-035-evidence/render-120dpi/page-3.png", "bytes": 141074, "sha256": "ab7838abf2056d974e448f378ea0e9fc32a45387c6bc00c8962b9d887fd78010"},
+    {"page": 4, "path": "qa/unit-035-evidence/render-120dpi/page-4.png", "bytes": 208380, "sha256": "23329e17ff76ed455cef7cf2a9c2493b5dbd08573b31aec59b5e5172e2009902"},
+    {"page": 5, "path": "qa/unit-035-evidence/render-120dpi/page-5.png", "bytes": 164302, "sha256": "654085a043d45e8696c9dd0af48dcc0ffd653e49ea9c10cf37eead5ccb8d4b8a"},
+    {"page": 6, "path": "qa/unit-035-evidence/render-120dpi/page-6.png", "bytes": 199016, "sha256": "f4f6d1870ec00c770f7d922ae0a7b7f22f7df93865c4d9ef1f7fe732d9fb1831"},
+    {"page": 7, "path": "qa/unit-035-evidence/render-120dpi/page-7.png", "bytes": 251298, "sha256": "58e77f9f8d4aa28bce7cd8a1d55d6c86f387e34dee6f9e7553639cb3e21855b8"},
+    {"page": 8, "path": "qa/unit-035-evidence/render-120dpi/page-8.png", "bytes": 191347, "sha256": "76a7ace8a01e8731d038df6523542ff562ff6ecf4af648a9137cfbd502c2e9a6"},
+    {"page": 9, "path": "qa/unit-035-evidence/render-120dpi/page-9.png", "bytes": 19570, "sha256": "0dd9fdb213474a813ba2e3df6a68de53a760c4abbf9e8a5314b7942b36bf3a73"}
+  ],
+  "contact_sheet": {
+    "path": "qa/unit-035-evidence/all-pages-contact.png",
+    "bytes": 1688795,
+    "sha256": "936d83afb23c5eb9cc9f25d964514977a016f0c53e17e3b6ace246e5ee9cb1bf"
+  },
+  "result": "pass"
+}

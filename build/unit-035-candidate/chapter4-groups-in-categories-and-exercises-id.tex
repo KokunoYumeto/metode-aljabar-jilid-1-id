@@ -1,0 +1,154 @@
+\section{Grup dalam Kategori}\label{sec:group-in-cat}
+Sifat-sifat kategori grup $\cate{Grp}$ dan $\cate{Ab}$ telah cukup banyak dibahas. Sekarang kita membalik sudut pandang dan mencoba mengenali objek-objek yang memiliki ciri ``grup'' di dalam suatu kategori umum. Bagian ini dapat dipandang sebagai latihan awal dalam teori kategori.
+
+Selanjutnya, ambil $\mathcal{C}$ sebagai suatu kategori dan andaikan $\mathcal{C}$ mempunyai produk berhingga; khususnya, di dalam $\mathcal{C}$ terdapat objek terminal terpilih $\munit$, yaitu produk kosong.
+
+\begin{definition}\label{def:group-object}\index{duixiang!objek grup (group object)}
+	Di dalam kategori $\mathcal{C}$, sebuah \emph{objek grup} adalah suatu paket data $(G, m, i, e)$, dengan
+	\begin{compactitem}
+		\item $G$ suatu objek dari $\mathcal{C}$,
+		\item $m: G \times G \to G$ (perkalian), $i: G \to G$ (pengambilan invers), dan $e: \munit \to G$ (unsur identitas) merupakan morfisme-morfisme di dalam $\mathcal{C}$,
+	\end{compactitem}
+	yang memenuhi syarat-syarat berikut:
+	\begin{description}
+		\item[Hukum asosiatif] Di dalam $\mathcal{C}$ terdapat diagram komutatif
+			\[\begin{tikzcd}
+				G \times (G \times G) \arrow[dash, rr, "\sim"] \arrow[d, "\identity_G \times m"'] & & (G \times G) \times G \arrow[d, "m \times \identity_G"] \\
+				G \times G \arrow[r, "m"'] & G & G \times G \arrow[l, "m"]
+			\end{tikzcd}\]
+			di mana isomorfisme tanpa nama $G \times (G \times G) \simeq (G \times G) \times G$ merupakan kendala asosiativitas produk (Lema \ref{prop:product-associativity}).
+		\item[Sifat identitas] Dengan menggunakan kendala asosiativitas secara serupa (dalam kasus produk kosong), kita mensyaratkan diagram berikut komutatif:
+			\[ \begin{tikzcd}[row sep=small]
+				{} & G \arrow[ld, "\sim"'] \arrow[rd, "\sim"] \arrow[dd, "\identity_G"] &  \\
+				\munit \times G \arrow[rd, "m \circ (e \times \identity_G)"'] & & G \times \munit \arrow[ld, "m \circ(\identity_G \times e)"] \\
+				& G &
+			\end{tikzcd} \]
+		\item[Sifat invers] Diagram berikut komutatif:
+			\[ \begin{tikzcd}[row sep=small]
+				& G \arrow[ld, "{(\identity_G, i)}"'] \arrow[rd, "{(i, \identity_G)}"] \arrow[d] & \\
+				G \times G \arrow[rd, "m"'] & \munit \arrow[d, "e" inner sep=0.6em] & G \times G \arrow[ld, "m"] \\
+				& G &
+			\end{tikzcd} \]
+	\end{description}
+	Kita sering menghilangkan $(m, i, e)$ dari notasi objek grup. Homomorfisme antara dua objek grup $G_1$, $G_2$ adalah morfisme yang mempertahankan $m$, $i$, dan $e$, yaitu $\varphi: G_1 \to G_2$; ini ekuivalen dengan komutativitas diagram-diagram berikut:
+	\[ \begin{tikzcd}
+		G_1 \times G_1 \arrow[d, "\varphi \times \varphi"'] \arrow[r, "m_1"] & G_1 \arrow[d, "\varphi"] \\
+		G_2 \times G_2 \arrow[r, "m_2"'] & G_2
+	\end{tikzcd} \quad \begin{tikzcd}
+		G_1 \arrow[r, "i_1"] \arrow[d, "\varphi"'] & G_1 \arrow[d, "\varphi"] \\
+		G_2 \arrow[r, "i_2"'] & G_2
+	\end{tikzcd} \quad \begin{tikzcd}[column sep=tiny]
+		{} & \munit \arrow[ld, "e_1"'] \arrow[rd, "e_2"] & \\
+		G_1 \arrow[rr, "\varphi"'] & & G_2
+	\end{tikzcd} \]
+	Dari sini dapat didefinisikan isomorfisme dan automorfisme objek grup, serta konsep-konsep serupa lainnya. Jika morfisme komposit $G \times G \xrightarrow{\text{permutasi}} G \times G \xrightarrow{m} G$ (lihat Lema \ref{prop:product-commutativity}) sama dengan $G \times G \xrightarrow{m} G$, maka $G$ disebut \emph{komutatif}.
+\end{definition}
+
+Definisi di atas jelas merupakan penulisan ulang definisi grup dalam bahasa kategori; mengambil $\mathcal{C} = \cate{Set}$ mengembalikan kita pada Definisi \ref{def:group}. Perbedaannya ialah bahwa di sini $i$ dan $e$ sama-sama merupakan data yang diberikan, tidak seperti dalam keadaan abstrak ketika keduanya diturunkan dari struktur perkalian. Teori abstrak grup dapat dipindahkan ke $\mathcal{C}$. Sebagai contoh, di dalam $\mathcal{C}$ aksi suatu objek grup $G$ dapat dipandang sebagai objek $E \in \Obj(\mathcal{C})$ yang dilengkapi morfisme aksi
+\[ a: G \times E \to E \]
+yang memenuhi syarat-syarat dalam Definisi \ref{def:monoid-action}. Dari sini dapat dibangun konsep aksi grup di dalam kategori, morfisme ekuivarian, dan sebagainya. Tentu saja, semuanya harus ditulis ulang menggunakan panah. Sebagai contoh, kriteria bagi torsor (Lema \ref{prop:torsor-criterion}) sudah dinyatakan secara kategoris. % Di dalam kategori $\mathcal{C}$, aksi objek grup $a: G \times E \to E$ yang memenuhi kriteria tersebut lazim disebut \emph{torsor formal}. Kita akan kembali pada persoalan ini setelah membahas fungtor grup.
+
+\begin{example}
+	Objek grup di dalam kategori \cate{Top} tepat merupakan grup topologis, sedangkan objek grup di dalam kategori manifold mulus merupakan grup Lie. Aksi objek-objek grup semacam ini menjadi perhatian utama dalam geometri dan topologi. Jika kita mempertimbangkan subkategori penuh dari \cate{Top} yang terdiri atas ruang kompak tak terhubung total, objek grup di dalamnya tepat merupakan grup profinit; lihat Catatan \ref{rem:totally-disconnected}.
+\end{example}
+
+Banyaknya diagram dalam Definisi \ref{def:group-object} menunjukkan bahwa definisi objek grup dengan panah tidak mudah digunakan secara langsung. Fungtor representabel berguna di sini. Selanjutnya, misalkan $\mathcal{C}$ suatu kategori sebarang. Kita gunakan konstruksi dalam \S\ref{sec:representable-functors}, yaitu kategori $\mathcal{C}^\wedge := \text{Fct}(\mathcal{C}^\text{op}, \cate{Set})$ serta pembenaman Yoneda $h_{\mathcal{C}}: \mathcal{C} \hookrightarrow \mathcal{C}^\wedge$.
+
+\begin{definition}\label{def:group-functor}
+	Di dalam kategori $\mathcal{C}^\wedge$, sebuah \emph{fungtor grup} adalah sebuah objek $G$ beserta paket data berikut: untuk setiap $S \in \Obj(\mathcal{C})$, diberikan suatu struktur grup pada himpunan $G(S)$, dan bagi setiap morfisme di dalam $\mathcal{C}$, yakni $f: S \to T$, peta yang bersesuaian $G(f): G(T) \to G(S)$ disyaratkan merupakan homomorfisme grup. Dengan kata lain, fungtor grup tidak lain adalah fungtor berbentuk
+	\[ G: \mathcal{C}^\text{op} \to \cate{Grp} \]
+	dan konsep homomorfisme, isomorfisme, serta konsep-konsep serupa di antara fungtor-fungtor tersebut didefinisikan secara jelas.
+	%Objek yang bersesuaian di dalam $\mathcal{C}^\wedge$ adalah fungtor komposit $G: \mathcal{C} \to \cate{Grp} \xrightarrow{\text{fungtor pelupa}} \cate{Set}$.
+\end{definition}
+
+Berdasarkan Proposisi \ref{prop:lim-Yoneda}, kategori fungtor $\mathcal{C}^\wedge$ mempunyai semua limit kecil. Limit-limit tersebut didefinisikan ``titik demi titik''; misalnya, $(X \times Y)(\cdot) = X(\cdot) \times Y(\cdot)$ dan $\munit(\cdot) = \{ \text{pt} \}$, dan seterusnya. Oleh karena itu,
+\[\begin{tikzcd}[column sep=tiny]
+	\left\{ \begin{array}{ll} G \in \Obj(\mathcal{C}^\wedge) \\ \text{data}\; G(\cdot) \times G(\cdot) \xrightarrow{\text{natural}} G(\cdot), \ldots \end{array}\right. \arrow[Leftrightarrow, r] &
+	\left\{ \begin{array}{ll} G \in \Obj(\mathcal{C}^\wedge) \\ \text{data}\; (G \times G)(\cdot) \xrightarrow{\text{natural}} G(\cdot), \ldots \end{array}\right. \\
+	\left\{ \begin{array}{ll} G \in \Obj(\mathcal{C}^\wedge) \\ S \xrightarrow{f} T \leadsto \text{homomorfisme grup}\; G(T) \xrightarrow{G(f)} G(S), \ldots \end{array}\right. \arrow[Leftrightarrow, u] & \\
+	G: \mathcal{C}^{\text{op}} \to \cate{Grp} \arrow[equal, u] & G \in \Obj(\mathcal{C}^\wedge): \; \text{objek grup} \arrow[Leftrightarrow, uu]
+\end{tikzcd}\]
+Dengan demikian, fungtor grup tepat merupakan objek grup di dalam $\mathcal{C}^\wedge$.
+
+Fungtor grup lebih mudah ditangani daripada objek grup karena banyak sifat dapat diperiksa satu demi satu untuk setiap $S \in \Obj(\mathcal{C})$, yakni dengan mereduksinya pada kasus grup $G(S)$. Oleh sebab itu, kajian objek grup umum dapat dibagi menjadi dua langkah: pertama menangani kasus $\mathcal{C}^\wedge$, lalu mempelajari representabilitas fungtornya; lihat Definisi \ref{def:representable-functor}.
+
+\begin{lemma}
+	Andaikan $\mathcal{C}$ mempunyai produk berhingga. Maka
+	\begin{align*}
+		h: \left\{ \mathcal{C} \text{: objek grup} \right\} & \longrightarrow \left\{\mathcal{C}^\wedge \text{: fungtor grup} \right\}. \\
+		(G, \cdots) & \longmapsto (h_{\mathcal{C}}(G), \cdots)
+	\end{align*}
+	merupakan fungtor penuh dan setia. Setiap fungtor grup yang fungtor dasarnya $G(\cdot)$ representabel, yaitu $(G(\cdot), \cdots)$, isomorfik dengan suatu objek dalam citra $h$.
+\end{lemma}
+\begin{proof}
+	Pernyataan ini merupakan akibat langsung dari Teorema \ref{prop:Yoneda-lemma}.
+\end{proof}
+
+Salah satu contoh fungtor grup yang akan diperkenalkan dalam \S\ref{sec:Witt-vector} adalah fungtor grup aditif Witt $\WittV: \cate{CRing} \to \cate{Ab}$; di sini $\cate{CRing}$ adalah kategori gelanggang komutatif.
+
+\begin{remark}
+	Dengan cara yang sama, kita dapat mempertimbangkan aksi fungtor grup di dalam $\mathcal{C}^\wedge$: jika diberikan fungtor grup $G$ dan sebarang $E \in \Obj(\mathcal{C}^\wedge)$, suatu aksi tidak lain adalah pemberian, bagi setiap $S$, sebuah aksi grup yang sebenarnya,
+	\[ a(S): G(S) \times E(S) \to E(S) \]
+	sedemikian sehingga, bagi setiap $f: S \to T$, diagram
+	\[ \begin{tikzcd}
+		G(T) \times E(T) \arrow[d] \arrow[r] & E(T) \arrow[d] \\
+		G(S) \times E(S) \arrow[r] & E(S)
+	\end{tikzcd} \]
+	komutatif. Jika $G$ dan $E$ representabel, di dalam $\mathcal{C}$ diperoleh aksi $a: G \times E \to E$ dari objek grup.
+\end{remark}
+Dengan asas yang sama, versi kategoris dari objek gelanggang, modul, dan sebagainya dapat ditangani. Kita tidak akan membahasnya lebih lanjut di sini.
+
+\begin{Exercises}
+	\item Misalkan $S$ suatu semigrup. Buktikan bahwa unsur $1 \in S$ merupakan unsur identitas jika dan hanya jika
+		\begin{inparaenum}[(i)]
+			\item $1 \cdot 1 = 1$,
+			\item $1$ memenuhi hukum pembatalan kiri dan kanan.
+		\end{inparaenum}
+		Bandingkan pernyataan ini dengan Definisi \ref{def:monoidal-cat}.
+	\item Jelaskan Proposisi \ref{prop:quotient-monoid-univ-prop} menggunakan sifat universal (lihat pembahasan dalam \S\ref{sec:cat-universals}), lalu terangkan dalam arti apa sifat tersebut mencirikan monoid hasil bagi $M/\sim$ secara unik.
+	\item Misalkan $G$ suatu grup. Buktikan bahwa himpunan bagian $S$ merupakan subgrup jika dan hanya jika $S$ tak kosong dan tertutup terhadap operasi $(x,y) \mapsto xy^{-1}$.
+	\item Andaikan $G$ suatu grup yang setiap unsurnya $x$ memenuhi $x^2=1$. Buktikan bahwa $G$ komutatif.
+	\item Buktikan bahwa, untuk grup $G$, semua automorfisme dalam $\{\Ad_g: g \in G\}$ membentuk subgrup normal dari $\Aut(G)$. Nyatakan subgrup tersebut sebagai $\text{Inn}(G)$, dan sebut grup hasil bagi $\text{Out}(G) := \Aut(G)/\text{Inn}(G)$ sebagai \emph{grup automorfisme luar} dari $G$. Selidiki cara memperoleh secara natural, dari sebarang ekstensi grup $1 \to N \to G \to H \to 1$, suatu homomorfisme $H \to \text{Out}(N)$. \index{zitonggou!automorfisme luar (outer automorphism)}
+	\item Buktikan bahwa setiap grup sederhana yang abelian merupakan grup siklik berorde prima.
+	\item Untuk grup berhingga $G$ dan sebarang subgrupnya $H, K$, buktikan bahwa $|HK| = \frac{|H||K|}{|H \cap K|}$.
+	\item (Lema Neumann) Misalkan $H_1, \ldots, H_n$ subgrup-subgrup dari $G$, dan andaikan terdapat $\{ a_{ij} \in G \}_{\substack{1 \leq i \leq n \\ 1 \leq j \leq m}}$ sedemikian sehingga $G = \bigcup_{i,j} H_i a_{ij}$. Buktikan bahwa terdapat suatu $H_i$ dengan indeks $(G:H_i)$ berhingga.
+	\begin{hint} Kita dapat mengandaikan $n \geq 2$ dan $(G:H_1)$ tak berhingga. Dalam keadaan ini terdapat $H_1 b$ yang tidak beririsan dengan $\bigcup_j H_1 a_{1j}$. Buktikan bahwa $H_1 \subset \bigcup_{i \geq 2} \bigcup_j H_i a_{ij} b^{-1}$ untuk mereduksi secara rekursif pada kasus $n-1$.\end{hint}
+	\item Buktikan bahwa setiap grup berhingga $G$ dapat dibenamkan ke dalam suatu grup simetris $\mathfrak{S}_n$. \begin{hint} Biarkan $G$ beraksi secara setia pada suatu himpunan berhingga.\end{hint}
+	\item Misalkan $H$ subgrup dari grup $G$ dan $(G:H)$ berhingga. Buktikan bahwa terdapat subgrup normal $H' \lhd G$ sedemikian sehingga $(G:H')$ berhingga dan $H' \subset H$. \begin{hint} Biarkan $G$ beraksi pada ruang koset $G/H$, lalu tinjau kernel homomorfisme $G \to \Aut(G/H)$. \end{hint}
+	\item Buktikan bahwa jika unsur-unsur $x, y$ dalam suatu grup abelian masing-masing memiliki orde $a,b \in \Z_{\geq 1}$ yang koprima, maka $xy$ berorde $ab$.
+	\item Misalkan $A$ grup abelian berhingga dan $A'$ suatu subgrupnya. Buktikan bahwa setiap homomorfisme $A' \to \Q/\Z$ dapat diperluas menjadi homomorfisme $A \to \Q/\Z$.
+	\item Suatu grup $G$ dapat dinyatakan sebagai produk semilangsung $N \rtimes H$ jika dan hanya jika terdapat ekstensi terpecah $1 \to N \to G \to H \to 1$. Dalam arti apa kedua jenis objek tersebut (dekomposisi produk semilangsung/ekstensi terpecah) berkorespondensi satu-satu?
+	\item Misalkan $I$ suatu himpunan dan $(G_i)_{i \in I}$ suatu keluarga grup berindeks $I$. Andaikan $I_0 \subset I$ suatu himpunan bagian berhingga dan, untuk setiap $i \in I \setminus I_0$, diberikan suatu subgrup $H_i \subset G_i$ (secara ringkas: untuk \emph{hampir semua} indeks $i$, diberikan $H_i$). Definisikan \emph{produk terbatas} sebagai
+	    \[ \Resprod_{i \in I} G_i := \left\{ (x_i)_{i \in I} \in \prod_{i \in I} G_i : \exists \;\text{himpunan bagian berhingga}\; I_x \subset I, \; i \notin I_x \implies x_i \in H_i \right\}; \]
+		Dengan kata lain, kita mensyaratkan agar hampir semua koordinat $x_i$ dari unsur-unsurnya terletak di dalam $H_i$. Buktikan bahwa $\Resprod_{i \in I} G_i$ merupakan subgrup dari $\prod_{i \in I} G_i$. Jika diambil $H_i = \{1\}$, struktur yang diperoleh disebut \emph{jumlah langsung} $\bigoplus_{i \in I} G_i$ dari grup-grup tersebut.
+	\item Untuk sebarang aksi kiri suatu grup berhingga $G$ pada himpunan berhingga $X$, buktikan bahwa:
+		\begin{compactenum}[(i)]
+			\item $|G| \cdot |G \backslash X| = \sum_{g \in G} |\{x \in X : gx=x \}|$;
+			\item suatu aksi transitif merupakan $2$-transitif jika dan hanya jika $\sum_{g \in G} |\{x \in X : gx=x \}|^2 = 2|G|$.
+		\end{compactenum}
+	\item Misalkan $G$ suatu grup.
+		\begin{compactenum}[(i)]
+			\item Untuk sebarang subgrup $H \subset G$, buktikan bahwa grup automorfisme dari ruang koset $G/H$ di dalam kategori himpunan-$G$ dapat diidentifikasi dengan $N_G(H)/H$.
+			\item Untuk sebarang subgrup $H, K \subset G$, berikan secara eksplisit bijeksi dari ruang koset ganda $H \backslash G / K$ ke ruang hasil bagi $G \backslash \left(G/H \times G/K \right)$, di mana $G$, melalui aturan $(aH, bK) \xmapsto{g} (gaH, gbK)$, beraksi dari kiri pada $G/H \times G/K$.
+			\item Tinjau, di dalam $G \times G$, subgrup $\Delta := \{(g,g) : g \in G \}$. Nyatakan $\text{Conj}(G)$ sebagai himpunan kelas-kelas konjugasi di dalam $G$. Berikan secara eksplisit bijeksi dari $\Delta \backslash (G \times G) /\Delta$ ke $\text{Conj}(G)$.
+		\end{compactenum}
+	\item Buktikan bahwa untuk orde $pq$ (dengan $p < q$ bilangan prima), suatu grup $G$ selalu mempunyai subgrup Sylow $q$ yang normal dan, jika $p \nmid q-1$, berlaku $G \simeq \Z/q\Z \times \Z/p\Z$.
+	\item Buktikan bahwa grup berorde $30$ selalu mempunyai subgrup Sylow yang normal, sehingga bukan merupakan grup sederhana.
+	\item Misalkan $F$ medan berhingga dengan $|F|=q=p^m$, dengan $p$ bilangan prima (pembaca yang belum mengenal medan berhingga dapat mengambil $F := \Z/p\Z$).
+		\begin{compactenum}[(i)]
+			\item Tentukan orde grup perkalian semua matriks berkoefisien dalam $F$ yang berukuran $n \times n$ dan invertibel, yaitu $\GL(n, F)$;
+			\item Verifikasi bahwa subgrup $U$ dari $\GL(n,F)$ yang terdiri atas matriks-matriks segitiga atas unipoten merupakan subgrup Sylow $p$;
+			\item Buktikan bahwa $N_{\GL(n,F)}(U)$ merupakan subgrup yang terdiri atas semua matriks segitiga atas yang invertibel.
+		\end{compactenum}
+	\item Untuk bilangan prima $p$, buktikan bahwa di dalam grup simetris $\mathfrak{S}_p$ banyaknya $p$-subgrup adalah $(p-2)!$. Kemudian, dari Teorema Sylow Ketiga, turunkan Teorema Wilson dalam teori bilangan elementer: $(p-1)! \equiv -1 \pmod p$.
+	\item Buktikan bahwa jika $G/Z_G$ merupakan grup siklik, maka $G$ komutatif; buktikan bahwa setiap grup berorde $p^2$ (dengan $p$ bilangan prima) komutatif.
+	\item Misalkan $X$ suatu himpunan. Buktikan bahwa produk amalgamasi dari keluarga monoid $(\Z_{\geq 0})_{x \in X}$ atas $A=\{1\}$ merupakan monoid bebas $\mathbf{M}(X)$.
+	\item Buktikan bahwa abelianisasi $\mathbf{F}(X)$ adalah $\Z^{\oplus X}$. \begin{hint} Gunakan sifat universal. \end{hint}
+	\item Misalkan subgrup $H \subset G$ memenuhi $(G:H)$ berhingga. Buktikan bahwa cara berikut memberikan homomorfisme yang terdefinisi dengan baik $G_\text{ab} \xrightarrow{\text{Ver}} H_\text{ab}$, yang disebut transfer: pilih sebarang dekomposisi koset $G = \bigsqcup_{i=1}^n \rho_i H$. Untuk $g \in G$, berlaku $g \rho_i = \rho_j h_i$, dengan $h_i \in H$ dan $1 \leq j \leq n$ bergantung pada $i$. Tetapkan $\text{Ver}(g G_\text{der}) = \prod_{i=1}^n \left( h_i H_\text{der}\right)$.
+	\item Misalkan grup $G$ beraksi pada himpunan $X$, sedangkan $G_1, \ldots, G_r$ merupakan subgrup-subgrup taktrivial dari $G$, dengan $G=\lrangle{G_1, \ldots, G_r}$ dan sedikitnya satu subgrup berorde $> 2$. Buktikan hasil berikut, yang lazim disebut Lema Ping-Pong: andaikan terdapat himpunan-himpunan tak kosong dan saling lepas $X_1, \ldots, X_r \subset X$ sedemikian sehingga
+		\[ \forall 1 \leq i \neq j \leq r, \; \forall g \in G_i \smallsetminus \{1\}, \; g X_j \subset X_i, \]
+		maka homomorfisme natural dari produk bebas $G_1 \ast \cdots \ast G_r$ ke $G$ merupakan isomorfisme. \begin{hint} Kita dapat mengandaikan $|G_1| \geq 3$. Harus dibuktikan bahwa jika citra kata tereduksi $w$ beraksi secara trivial pada $X$, maka $w=1$. Untuk $w \neq 1$, ambil konjugat yang sesuai agar kata tereduksi tersebut berbentuk $w = g_1 \cdots g'_1$, lalu buktikan bahwa $j \neq 1 \implies w(X_j) \subset X_1$.\end{hint}
+	\item Tinjau grup profinit $\mathcal{G} := \varprojlim_U G/U$ dan $\mathcal{H} := \varprojlim_V H/V$. Tunjukkan bahwa
+		\[ \Hom_{\mathrm{c}}\left( \mathcal{G}, \mathcal{H} \right) \simeq \varprojlim_V \varinjlim_U \Hom\left(G/U, H/V \right), \]
+		dengan $\Hom_{\mathrm{c}}$ menyatakan himpunan homomorfisme kontinu.
+\end{Exercises}

@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan, seluruh Bab 1, seluruh Bab 2, seluruh Bab 3 termasuk latihannya, serta pembukaan Bab 4 sampai Bagian 4.9 telah diterjemahkan, diberi backend modular, dipublikasikan, dan diverifikasi byte demi byte dalam tiga puluh tiga unit pembaca. Bagian 4.10 telah diterjemahkan dan diterima secara lokal sebagai Unit 34; publikasi dan pembacaan balik byte masih berlangsung.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan serta Bab 1–4 lengkap telah diterjemahkan ke Bahasa Indonesia. Unit 001–034 telah dipublikasikan dan dibaca balik byte demi byte; Unit 035 menuntaskan Bagian 4.11 dan seluruh latihan Bab 4, telah lolos build dan inspeksi semua halaman, dan sedang dipublikasikan pada batas ini.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh checkpoint pembaca 0.3.0 (96 halaman; Unit 1-9)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf)
 
@@ -79,6 +79,8 @@ Status saat ini: **Pendahuluan, seluruh Bab 1, seluruh Bab 2, seluruh Bab 3 term
 [Baca atau unduh PDF Unit 33](artifacts/unit-033-bab-4-grup-simetris-id.pdf)
 
 [Baca atau unduh PDF Unit 34](artifacts/unit-034-bab-4-limit-dan-kompletisasi-grup-id.pdf)
+
+[Baca atau unduh PDF Unit 35](artifacts/unit-035-bab-4-grup-dalam-kategori-dan-latihan-id.pdf)
 
 Checkpoint `0.6.0` menggabungkan satu sampul pembaca dan seluruh 228 halaman
 Unit 001-024: pendahuluan serta Bab 1, Bab 2, dan Bab 3 lengkap. Build kedua
@@ -504,9 +506,17 @@ Artefak Unit 34 yang diterima dan dipublikasikan:
 - receipt penerimaan sumber/reader/backend ada di [`qa/UNIT_034_ADMISSION_20260828.md`](qa/UNIT_034_ADMISSION_20260828.md), bukti visual ada di [`qa/UNIT_034_VISUAL_QA_20260827.md`](qa/UNIT_034_VISUAL_QA_20260827.md), bukti backend ada di [`qa/unit-034-evidence/backend-validation.json`](qa/unit-034-evidence/backend-validation.json), dan audit akhir independen ada di [`qa/UNIT_034_FINAL_AUDIT_20260828.md`](qa/UNIT_034_FINAL_AUDIT_20260828.md). Provenance produksi dan peninjauan: `OpenAI Codex gpt-5.6-sol, Ultra`, atas instruksi pengguna; kredit Wen-Wei Li dan kontributor manusia tetap dipertahankan.
 - Unit 34 dipublikasikan pada commit isi `6ce7def3bb18fc272b1b3054fa96e14fec4c49a7`; seluruh 61 path / 5.186.751 byte cocok dengan blob komit pada pembacaan balik anonim. Inventaris lengkap ada di [`qa/PUBLICATION_GITHUB_UNIT_034_CONTENT_READBACK.json`](qa/PUBLICATION_GITHUB_UNIT_034_CONTENT_READBACK.json), dan receipt publikasi ada di [`qa/PUBLICATION_GITHUB_UNIT_034_20260828.md`](qa/PUBLICATION_GITHUB_UNIT_034_20260828.md).
 
+Artefak Unit 35 yang diterima pada batas ini:
+
+- 9 halaman; 135.943 byte; SHA-256 `1cf97dd523ae1a8c5185c4b22a8e6b0dab6e7514ab5387c34959c417f4e35442`.
+- rentang otoritas `chapter4.tex:1745-1898` memuat Bagian 4.11 serta seluruh latihan penutup Bab 4. Kandidat 18.089 byte / SHA-256 `5d9bf6e5c9c17c83821f1bba63078f4d28e3836428f4557e0727ee5b1046c2ca` menempati target kanonik baris 1740-1893 secara byte-identik. File target lengkap 193.626 byte / SHA-256 `2b682d67292e4c439ccc9f6d46f72d3d0eb7cb5bf8b3a3a5999210c45ef547c5`; dengan demikian Bab 4 selesai dan kursor berikutnya adalah `chapter5.tex:1`.
+- struktur mempertahankan 30 pasangan lingkungan, tiga label, 15 rujukan (14 eksternal), 247 zona matematika, delapan diagram `tikzcd` dengan 35 panah, dua indeks, 26 latihan utama / 36 butir termasuk subbutir, lima petunjuk, dan tanpa solusi sumber. Satu koreksi sumber memperbaiki pertukaran batas indeks pada pernyataan lema Neumann; tidak ada matematika lain yang diubah.
+- satu build hash-gated menghasilkan PDF sembilan halaman tanpa rujukan atau sitasi tak terdefinisi. Semua halaman dirender dan diperiksa; diagram kategori lebar pada halaman 5 tetap berada di dalam halaman dan terbaca. Tidak ada halaman kosong, terpotong, terputar, atau kehilangan isi. Bukti ada di [`qa/UNIT_035_VISUAL_QA_20260828.md`](qa/UNIT_035_VISUAL_QA_20260828.md).
+- teks utama/terjemahan tetap CC BY 4.0; fragmen AJbook yang dikreditkan tetap CC BY-SA 3.0; Noto tetap OFL 1.1; Fandol 0.3 tetap GPLv3 dengan pengecualian font. Provenans produksi: `OpenAI Codex gpt-5.6-sol, Ultra`; kredit sumber dan kontributor manusia tetap dipertahankan.
+
 ## Backend modular
 
-`backend/data/unit-001-pendahuluan.json` sampai `backend/data/unit-034-bab-4-limit-dan-kompletisasi-grup.json` adalah catatan kanonik tiga puluh empat unit yang telah diterima. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, Unit 7, Unit 18, dan Unit 24 mempertahankan latihan sebagai entitas bagian terurut serta setiap subbagian/petunjuk sebagai entitas stabil yang tertaut ke latihan induknya. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat. Unit 10-34 memakai identitas yang sama untuk permukaan matematika, diagram, rujukan eksternal, indeks, sitasi, koreksi atau normalisasi sumber, reflow digital, serta provenance model; receipt penerimaan masing-masing mengikat bukti lokal dan, setelah publikasi, bukti publiknya.
+`backend/data/unit-001-pendahuluan.json` sampai catatan Unit 035 adalah backend kanonik untuk tiga puluh lima unit yang telah diterima. ID berbasis UUIDv5 bersifat stabil dan tidak bergantung bahasa. Catatan tersebut memetakan sumber ke target sampai tingkat bagian, konsep, prasyarat, sitasi, diagram, indeks, latihan/petunjuk, hak komponen, build, dan peristiwa QA. Enam proyeksi CSV per unit dihasilkan secara deterministik. Karena skema v1.1.0 belum memiliki larik latihan/petunjuk kelas pertama, unit latihan mempertahankannya sebagai entitas terurut yang tertaut ke unit/bagian dan provenance sumber. Unit 8 memakai identitas kompatibel yang ditandai eksplisit untuk label, rujukan eksternal, tabel teks-native, dan semantik aksesibilitas linear. Unit 9 memakai identitas kemunculan yang stabil untuk rujukan dan sitasi berulang serta mengikat kelima diagram dan seluruh 31 entri indeks ke rentang sumber/target yang tepat. Unit 10–35 memakai identitas yang sama untuk permukaan matematika, diagram, rujukan eksternal, indeks, sitasi, latihan, koreksi atau normalisasi sumber, reflow digital, serta provenance model; receipt penerimaan masing-masing mengikat bukti lokal dan, setelah publikasi, bukti publiknya.
 
 Validasi:
 
@@ -544,6 +554,8 @@ python scripts/validate_backend.py --data backend/data/unit-030-bab-4-deret-komp
 python scripts/validate_backend.py --data backend/data/unit-031-bab-4-grup-solvabel-dan-nilpoten.json
 python scripts/validate_unit_032_backend.py
 python scripts/validate_unit_033_backend.py
+python scripts/validate_unit_034_backend.py
+python scripts/generate_unit_035_backend.py --check
 ```
 
 Validator memeriksa skema, keunikan dan relasi ID, urutan bagian, hash file dan rentang baris, penutupan sitasi/rujukan/diagram/indeks, bukti build, serta kesesuaian byte proyeksi CSV.
@@ -591,13 +603,18 @@ Teks sumber dan terjemahan ditangani menurut Creative Commons Attribution 4.0 In
   - [x] Bagian 3.4 — Kategori Diperkaya `chapter3.tex:513-722`
   - [x] Bagian 3.5 — Sekilas tentang 2-Kategori `chapter3.tex:723-872`
   - [x] Latihan Bab 3 `chapter3.tex:873-911`
-- [ ] Bab 4 — Teori grup
+- [x] Bab 4 — Teori grup
   - [x] Pembukaan bab dan Bagian 4.1 — Semigrup, Monoid, dan Grup `chapter4.tex:1-176`
   - [x] Bagian 4.2 — Homomorfisme dan Grup Hasil Bagi `chapter4.tex:177-364`
-- [x] Bagian 4.3 — Produk Langsung, Produk Semilangsung, dan Ekstensi Grup `chapter4.tex:365-517`
-- [x] Bagian 4.4 — Aksi Grup dan Prinsip Pencacahan `chapter4.tex:518-665`
-- [x] Bagian 4.5 — Teorema Sylow `chapter4.tex:666-795`
-- [x] Bagian 4.6 — Deret Komposisi Grup `chapter4.tex:796-935`
+  - [x] Bagian 4.3 — Produk Langsung, Produk Semilangsung, dan Ekstensi Grup `chapter4.tex:365-517`
+  - [x] Bagian 4.4 — Aksi Grup dan Prinsip Pencacahan `chapter4.tex:518-665`
+  - [x] Bagian 4.5 — Teorema Sylow `chapter4.tex:666-795`
+  - [x] Bagian 4.6 — Deret Komposisi Grup `chapter4.tex:796-935`
+  - [x] Bagian 4.7 — Grup Solvabel dan Nilpoten `chapter4.tex:936-1107`
+  - [x] Bagian 4.8 — Grup Bebas `chapter4.tex:1108-1388`
+  - [x] Bagian 4.9 — Grup Simetris `chapter4.tex:1389-1608`
+  - [x] Bagian 4.10 — Limit dan Pelengkapan Grup `chapter4.tex:1609-1744`
+  - [x] Bagian 4.11 — Grup dalam Kategori dan latihan Bab 4 `chapter4.tex:1745-1898`
 - [ ] Bab 5 — Dasar-dasar teori gelanggang
 - [ ] Bab 6 — Teori modul
 - [ ] Bab 7 — Dasar-dasar aljabar

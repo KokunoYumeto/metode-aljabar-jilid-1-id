@@ -1737,39 +1737,39 @@ komutatif, sehingga $T_\ell(E) \simeq \Z_\ell \oplus \Z_\ell$. Tetapkan $\Gamma 
 Ketika $\ell$ merentang semua bilangan prima, kita dapat membayangkan bahwa $T_\ell(E)$ secara aljabar ``menyimulasikan'' kisi yang mendefinisikan $E$, yaitu $\Gamma$, sedangkan bagi $E$ kisi tersebut merupakan invarian topologis $H_1(E, \Z)$. Cara ini tentu berputar-putar untuk torus kompleks. Akan tetapi, $E$ juga dapat dipandang sebagai kurva aljabar kubik di bidang proyektif $\mathbb{P}^2(\CC)$, bersama sebuah titik terpilih $O$ (yang bersesuaian dengan titik nol pada torus kompleks); inilah, di atas medan $\CC$, sebuah \emph{kurva eliptik}. Penafsiran terakhir dapat digunakan di atas sebarang medan tertutup secara aljabar, dan kurva yang bersesuaian tetap merupakan grup abelian. Kerangka aljabar ini sangat diperlukan untuk menangani masalah-masalah terkait dalam teori bilangan, karena teori homologi yang lazim tidak mudah diterapkan. Dalam keadaan demikian, modul Tate $T_\ell(E)$ menjadi alat yang sangat ampuh.
 \end{example}
 
-\section{范畴中的群}\label{sec:group-in-cat}
-群范畴 $\cate{Grp}$, $\cate{Ab}$ 的性质已经谈了不少, 现在我们反其道而行, 试着在一般范畴中辨识具有``群''特质的对象. 此节可以视为范畴论的初步练习.
+\section{Grup dalam Kategori}\label{sec:group-in-cat}
+Sifat-sifat kategori grup $\cate{Grp}$ dan $\cate{Ab}$ telah cukup banyak dibahas. Sekarang kita membalik sudut pandang dan mencoba mengenali objek-objek yang memiliki ciri ``grup'' di dalam suatu kategori umum. Bagian ini dapat dipandang sebagai latihan awal dalam teori kategori.
 
-以下取 $\mathcal{C}$ 为范畴, 并假设 $\mathcal{C}$ 具备有限积; 特别地, $\mathcal{C}$ 中有一个择定的终对象 $\munit$, 亦即空积.
+Selanjutnya, ambil $\mathcal{C}$ sebagai suatu kategori dan andaikan $\mathcal{C}$ mempunyai produk berhingga; khususnya, di dalam $\mathcal{C}$ terdapat objek terminal terpilih $\munit$, yaitu produk kosong.
 
-\begin{definition}\label{def:group-object}\index{duixiang!群对象 (group object)}
-	范畴 $\mathcal{C}$ 中的\emph{群对象}系指一族资料 $(G, m, i, e)$, 其中
+\begin{definition}\label{def:group-object}\index{duixiang!objek grup (group object)}
+	Di dalam kategori $\mathcal{C}$, sebuah \emph{objek grup} adalah suatu paket data $(G, m, i, e)$, dengan
 	\begin{compactitem}
-		\item $G$ 是 $\mathcal{C}$ 的对象,
-		\item $m: G \times G \to G$ (乘法), $i: G \to G$ (取逆) 及 $e: \munit \to G$ (幺元) 是 $\mathcal{C}$ 中的态射,
+		\item $G$ suatu objek dari $\mathcal{C}$,
+		\item $m: G \times G \to G$ (perkalian), $i: G \to G$ (pengambilan invers), dan $e: \munit \to G$ (unsur identitas) merupakan morfisme-morfisme di dalam $\mathcal{C}$,
 	\end{compactitem}
-	满足下列条件:
+	yang memenuhi syarat-syarat berikut:
 	\begin{description}
-		\item[结合律] 在 $\mathcal{C}$ 中有交换图表
+		\item[Hukum asosiatif] Di dalam $\mathcal{C}$ terdapat diagram komutatif
 			\[\begin{tikzcd}
 				G \times (G \times G) \arrow[dash, rr, "\sim"] \arrow[d, "\identity_G \times m"'] & & (G \times G) \times G \arrow[d, "m \times \identity_G"] \\
 				G \times G \arrow[r, "m"'] & G & G \times G \arrow[l, "m"]
 			\end{tikzcd}\]
-			其中的无名同构 $G \times (G \times G) \simeq (G \times G) \times G$ 是积的结合约束 (引理 \ref{prop:product-associativity}).
-		\item[幺元性质] 同样利用结合约束 (空积情形), 我们要求下图交换
+			di mana isomorfisme tanpa nama $G \times (G \times G) \simeq (G \times G) \times G$ merupakan kendala asosiativitas produk (Lema \ref{prop:product-associativity}).
+		\item[Sifat identitas] Dengan menggunakan kendala asosiativitas secara serupa (dalam kasus produk kosong), kita mensyaratkan diagram berikut komutatif:
 			\[ \begin{tikzcd}[row sep=small]
 				{} & G \arrow[ld, "\sim"'] \arrow[rd, "\sim"] \arrow[dd, "\identity_G"] &  \\
 				\munit \times G \arrow[rd, "m \circ (e \times \identity_G)"'] & & G \times \munit \arrow[ld, "m \circ(\identity_G \times e)"] \\
 				& G &
 			\end{tikzcd} \]
-		\item[逆元性质] 下图交换
+		\item[Sifat invers] Diagram berikut komutatif:
 			\[ \begin{tikzcd}[row sep=small]
 				& G \arrow[ld, "{(\identity_G, i)}"'] \arrow[rd, "{(i, \identity_G)}"] \arrow[d] & \\
 				G \times G \arrow[rd, "m"'] & \munit \arrow[d, "e" inner sep=0.6em] & G \times G \arrow[ld, "m"] \\
 				& G &
 			\end{tikzcd} \]
 	\end{description}
-	我们经常省去群对象中的 $(m, i, e)$. 群对象 $G_1$, $G_2$ 之间的同态是指保持 $m$, $i$, $e$ 的态射 $\varphi: G_1 \to G_2$, 这相当于说以下图表交换:
+	Kita sering menghilangkan $(m, i, e)$ dari notasi objek grup. Homomorfisme antara dua objek grup $G_1$, $G_2$ adalah morfisme yang mempertahankan $m$, $i$, dan $e$, yaitu $\varphi: G_1 \to G_2$; ini ekuivalen dengan komutativitas diagram-diagram berikut:
 	\[ \begin{tikzcd}
 		G_1 \times G_1 \arrow[d, "\varphi \times \varphi"'] \arrow[r, "m_1"] & G_1 \arrow[d, "\varphi"] \\
 		G_2 \times G_2 \arrow[r, "m_2"'] & G_2
@@ -1780,114 +1780,114 @@ Ketika $\ell$ merentang semua bilangan prima, kita dapat membayangkan bahwa $T_\
 		{} & \munit \arrow[ld, "e_1"'] \arrow[rd, "e_2"] & \\
 		G_1 \arrow[rr, "\varphi"'] & & G_2
 	\end{tikzcd} \]
-	据此可以定义群对象的同构, 自同构等概念. 如果合成态射 $G \times G \xrightarrow{\text{置换}} G \times G \xrightarrow{m} G$ (参看引理 \ref{prop:product-commutativity}) 等于 $G \times G \xrightarrow{m} G$, 则称 $G$ 为\emph{交换}的.
+	Dari sini dapat didefinisikan isomorfisme dan automorfisme objek grup, serta konsep-konsep serupa lainnya. Jika morfisme komposit $G \times G \xrightarrow{\text{permutasi}} G \times G \xrightarrow{m} G$ (lihat Lema \ref{prop:product-commutativity}) sama dengan $G \times G \xrightarrow{m} G$, maka $G$ disebut \emph{komutatif}.
 \end{definition}
 
-以上定义显然是用范畴语言重写群的定义, 取 $\mathcal{C} = \cate{Set}$ 就回到定义 \ref{def:group}; 差异在于这里的 $i$, $e$ 都是给定的, 不似抽象情形下是乘法结构的派生物. 群的抽象理论可以照搬到 $\mathcal{C}$ 上, 例如 $\mathcal{C}$ 中 $G$ 的群作用可以看作一个对象 $E \in \Obj(\mathcal{C})$ 配上作用态射
+Definisi di atas jelas merupakan penulisan ulang definisi grup dalam bahasa kategori; mengambil $\mathcal{C} = \cate{Set}$ mengembalikan kita pada Definisi \ref{def:group}. Perbedaannya ialah bahwa di sini $i$ dan $e$ sama-sama merupakan data yang diberikan, tidak seperti dalam keadaan abstrak ketika keduanya diturunkan dari struktur perkalian. Teori abstrak grup dapat dipindahkan ke $\mathcal{C}$. Sebagai contoh, di dalam $\mathcal{C}$ aksi suatu objek grup $G$ dapat dipandang sebagai objek $E \in \Obj(\mathcal{C})$ yang dilengkapi morfisme aksi
 \[ a: G \times E \to E \]
-使之满足定义 \ref{def:monoid-action} 诸条件, 由此出发建立范畴中的群作用, 等变态射等诸般概念. 当然这一切都得用箭头改写. 举例明之, 关于挠子的判准 (引理 \ref{prop:torsor-criterion}) 已然是范畴化了的. % 范畴 $\mathcal{C}$ 中满足该判准的群作用 $a: G \times E \to E$ 惯称作\emph{形式挠子}. 我们讨论完群函子后还要回到这个问题.
+yang memenuhi syarat-syarat dalam Definisi \ref{def:monoid-action}. Dari sini dapat dibangun konsep aksi grup di dalam kategori, morfisme ekuivarian, dan sebagainya. Tentu saja, semuanya harus ditulis ulang menggunakan panah. Sebagai contoh, kriteria bagi torsor (Lema \ref{prop:torsor-criterion}) sudah dinyatakan secara kategoris. % Di dalam kategori $\mathcal{C}$, aksi objek grup $a: G \times E \to E$ yang memenuhi kriteria tersebut lazim disebut \emph{torsor formal}. Kita akan kembali pada persoalan ini setelah membahas fungtor grup.
 
 \begin{example}
-	范畴 \cate{Top} 的群对象即是拓扑群, 而光滑流形范畴的群对象是 Lie 群. 这类群对象的作用是几何与拓扑学关注的重点. 若考虑 \cate{Top} 中由完全不连通紧空间构成的全子范畴, 则其中的群对象是 pro-有限群, 参看注记 \ref{rem:totally-disconnected}.
+	Objek grup di dalam kategori \cate{Top} tepat merupakan grup topologis, sedangkan objek grup di dalam kategori manifold mulus merupakan grup Lie. Aksi objek-objek grup semacam ini menjadi perhatian utama dalam geometri dan topologi. Jika kita mempertimbangkan subkategori penuh dari \cate{Top} yang terdiri atas ruang kompak tak terhubung total, objek grup di dalamnya tepat merupakan grup profinit; lihat Catatan \ref{rem:totally-disconnected}.
 \end{example}
 
-从定义 \ref{def:group-object} 中的大量图表可看出群对象的箭头定义并不便于操作, 可表函子在此派上用场. 下面设 $\mathcal{C}$ 为任意范畴. 我们引入 \S\ref{sec:representable-functors} 定义的范畴 $\mathcal{C}^\wedge := \text{Fct}(\mathcal{C}^\text{op}, \cate{Set})$ 及米田嵌入 $h_{\mathcal{C}}: \mathcal{C} \hookrightarrow \mathcal{C}^\wedge$.
+Banyaknya diagram dalam Definisi \ref{def:group-object} menunjukkan bahwa definisi objek grup dengan panah tidak mudah digunakan secara langsung. Fungtor representabel berguna di sini. Selanjutnya, misalkan $\mathcal{C}$ suatu kategori sebarang. Kita gunakan konstruksi dalam \S\ref{sec:representable-functors}, yaitu kategori $\mathcal{C}^\wedge := \text{Fct}(\mathcal{C}^\text{op}, \cate{Set})$ serta pembenaman Yoneda $h_{\mathcal{C}}: \mathcal{C} \hookrightarrow \mathcal{C}^\wedge$.
 
 \begin{definition}\label{def:group-functor}
-	范畴 $\mathcal{C}^\wedge$ 中的\emph{群函子}系指对象 $G$ 及以下一族资料: 对每个 $S \in \Obj(\mathcal{C})$, 给定集合 $G(S)$ 上的一个群结构, 并要求对任意 $\mathcal{C}$ 中的态射 $f: S \to T$, 相应的映射 $G(f): G(T) \to G(S)$ 都是群同态. 换言之, 群函子无非是形如
+	Di dalam kategori $\mathcal{C}^\wedge$, sebuah \emph{fungtor grup} adalah sebuah objek $G$ beserta paket data berikut: untuk setiap $S \in \Obj(\mathcal{C})$, diberikan suatu struktur grup pada himpunan $G(S)$, dan bagi setiap morfisme di dalam $\mathcal{C}$, yakni $f: S \to T$, peta yang bersesuaian $G(f): G(T) \to G(S)$ disyaratkan merupakan homomorfisme grup. Dengan kata lain, fungtor grup tidak lain adalah fungtor berbentuk
 	\[ G: \mathcal{C}^\text{op} \to \cate{Grp} \]
-	的函子, 其间的同态, 同构等概念有显然的定义.
-	%其在 $\mathcal{C}^\wedge$ 中的相应对象是合成函子 $G: \mathcal{C} \to \cate{Grp} \xrightarrow{\text{忘却函子}} \cate{Set}$.
+	dan konsep homomorfisme, isomorfisme, serta konsep-konsep serupa di antara fungtor-fungtor tersebut didefinisikan secara jelas.
+	%Objek yang bersesuaian di dalam $\mathcal{C}^\wedge$ adalah fungtor komposit $G: \mathcal{C} \to \cate{Grp} \xrightarrow{\text{fungtor pelupa}} \cate{Set}$.
 \end{definition}
 
-根据命题 \ref{prop:lim-Yoneda}, 函子范畴 $\mathcal{C}^\wedge$ 中存在任意小极限. 这些极限的定义是``逐点''的, 例如 $(X \times Y)(\cdot) = X(\cdot) \times Y(\cdot)$ 和 $\munit(\cdot) = \{ \text{pt} \}$ 等等. 于是
+Berdasarkan Proposisi \ref{prop:lim-Yoneda}, kategori fungtor $\mathcal{C}^\wedge$ mempunyai semua limit kecil. Limit-limit tersebut didefinisikan ``titik demi titik''; misalnya, $(X \times Y)(\cdot) = X(\cdot) \times Y(\cdot)$ dan $\munit(\cdot) = \{ \text{pt} \}$, dan seterusnya. Oleh karena itu,
 \[\begin{tikzcd}[column sep=tiny]
-	\left\{ \begin{array}{ll} G \in \Obj(\mathcal{C}^\wedge) \\ \text{资料}\; G(\cdot) \times G(\cdot) \xrightarrow{\text{自然}} G(\cdot), \ldots \end{array}\right. \arrow[Leftrightarrow, r] &
-	\left\{ \begin{array}{ll} G \in \Obj(\mathcal{C}^\wedge) \\ \text{资料}\; (G \times G)(\cdot) \xrightarrow{\text{自然}} G(\cdot), \ldots \end{array}\right. \\
-	\left\{ \begin{array}{ll} G \in \Obj(\mathcal{C}^\wedge) \\ S \xrightarrow{f} T \leadsto \text{群同态}\; G(T) \xrightarrow{G(f)} G(S), \ldots \end{array}\right. \arrow[Leftrightarrow, u] & \\
-	G: \mathcal{C}^{\text{op}} \to \cate{Grp} \arrow[equal, u] & G \in \Obj(\mathcal{C}^\wedge): \; \text{群对象} \arrow[Leftrightarrow, uu]
+	\left\{ \begin{array}{ll} G \in \Obj(\mathcal{C}^\wedge) \\ \text{data}\; G(\cdot) \times G(\cdot) \xrightarrow{\text{natural}} G(\cdot), \ldots \end{array}\right. \arrow[Leftrightarrow, r] &
+	\left\{ \begin{array}{ll} G \in \Obj(\mathcal{C}^\wedge) \\ \text{data}\; (G \times G)(\cdot) \xrightarrow{\text{natural}} G(\cdot), \ldots \end{array}\right. \\
+	\left\{ \begin{array}{ll} G \in \Obj(\mathcal{C}^\wedge) \\ S \xrightarrow{f} T \leadsto \text{homomorfisme grup}\; G(T) \xrightarrow{G(f)} G(S), \ldots \end{array}\right. \arrow[Leftrightarrow, u] & \\
+	G: \mathcal{C}^{\text{op}} \to \cate{Grp} \arrow[equal, u] & G \in \Obj(\mathcal{C}^\wedge): \; \text{objek grup} \arrow[Leftrightarrow, uu]
 \end{tikzcd}\]
-由此可见群函子正是 $\mathcal{C}^\wedge$ 中的群对象.
+Dengan demikian, fungtor grup tepat merupakan objek grup di dalam $\mathcal{C}^\wedge$.
 
-群函子比群对象更容易处理, 诸多性质很容易对 $S \in \Obj(\mathcal{C})$ 逐一验证, 亦即化约到群 $G(S)$ 的情形. 一般群对象的研究因而可以分两步走, 首先是 $\mathcal{C}^\wedge$ 的情形, 而第二步探讨是函子的可表性, 见定义 \ref{def:representable-functor}.
+Fungtor grup lebih mudah ditangani daripada objek grup karena banyak sifat dapat diperiksa satu demi satu untuk setiap $S \in \Obj(\mathcal{C})$, yakni dengan mereduksinya pada kasus grup $G(S)$. Oleh sebab itu, kajian objek grup umum dapat dibagi menjadi dua langkah: pertama menangani kasus $\mathcal{C}^\wedge$, lalu mempelajari representabilitas fungtornya; lihat Definisi \ref{def:representable-functor}.
 
 \begin{lemma}
-	假设 $\mathcal{C}$ 具有有限积, 则
+	Andaikan $\mathcal{C}$ mempunyai produk berhingga. Maka
 	\begin{align*}
-		h: \left\{ \mathcal{C} \text{的群对象} \right\} & \longrightarrow \left\{\mathcal{C}^\wedge \text{中的群函子} \right\}. \\
+		h: \left\{ \mathcal{C} \text{: objek grup} \right\} & \longrightarrow \left\{\mathcal{C}^\wedge \text{: fungtor grup} \right\}. \\
 		(G, \cdots) & \longmapsto (h_{\mathcal{C}}(G), \cdots)
 	\end{align*}
-	是全忠实函子, 满足 $G(\cdot)$ 可表的群函子 $(G(\cdot), \cdots)$ 都同构于 $h$ 的某个像.
+	merupakan fungtor penuh dan setia. Setiap fungtor grup yang fungtor dasarnya $G(\cdot)$ representabel, yaitu $(G(\cdot), \cdots)$, isomorfik dengan suatu objek dalam citra $h$.
 \end{lemma}
 \begin{proof}
-	这是定理 \ref{prop:Yoneda-lemma} 的直接推论.
+	Pernyataan ini merupakan akibat langsung dari Teorema \ref{prop:Yoneda-lemma}.
 \end{proof}
 
-群函子的实例之一是 \S\ref{sec:Witt-vector} 将介绍的 Witt 加法群函子 $\WittV: \cate{CRing} \to \cate{Ab}$, 这里 $\cate{CRing}$ 表交换环范畴.
+Salah satu contoh fungtor grup yang akan diperkenalkan dalam \S\ref{sec:Witt-vector} adalah fungtor grup aditif Witt $\WittV: \cate{CRing} \to \cate{Ab}$; di sini $\cate{CRing}$ adalah kategori gelanggang komutatif.
 
 \begin{remark}
-	同理, $\mathcal{C}^\wedge$ 中可以考虑群函子的作用: 给定群函子 $G$ 和任意 $E \in \Obj(\mathcal{C}^\wedge)$, 所谓的作用无非是对每个 $S$ 给定真正的群作用
+	Dengan cara yang sama, kita dapat mempertimbangkan aksi fungtor grup di dalam $\mathcal{C}^\wedge$: jika diberikan fungtor grup $G$ dan sebarang $E \in \Obj(\mathcal{C}^\wedge)$, suatu aksi tidak lain adalah pemberian, bagi setiap $S$, sebuah aksi grup yang sebenarnya,
 	\[ a(S): G(S) \times E(S) \to E(S) \]
-	使得对每个 $f: S \to T$, 图表
+	sedemikian sehingga, bagi setiap $f: S \to T$, diagram
 	\[ \begin{tikzcd}
 		G(T) \times E(T) \arrow[d] \arrow[r] & E(T) \arrow[d] \\
 		G(S) \times E(S) \arrow[r] & E(S)
 	\end{tikzcd} \]
-	交换. 如考虑可表的 $G$, $E$ 即导出 $\mathcal{C}$ 中群对象的作用 $a: G \times E \to E$.
+	komutatif. Jika $G$ dan $E$ representabel, di dalam $\mathcal{C}$ diperoleh aksi $a: G \times E \to E$ dari objek grup.
 \end{remark}
-准此要领可以处理环, 模等对象的范畴版本. 这里按下不表.
+Dengan asas yang sama, versi kategoris dari objek gelanggang, modul, dan sebagainya dapat ditangani. Kita tidak akan membahasnya lebih lanjut di sini.
 
 \begin{Exercises}
-	\item 设 $S$ 为半群. 证明元素 $1 \in S$ 是幺元当且仅当
+	\item Misalkan $S$ suatu semigrup. Buktikan bahwa unsur $1 \in S$ merupakan unsur identitas jika dan hanya jika
 		\begin{inparaenum}[(i)]
 			\item $1 \cdot 1 = 1$,
-			\item $1$ 满足左, 右消去律.
+			\item $1$ memenuhi hukum pembatalan kiri dan kanan.
 		\end{inparaenum}
-		读者不妨对照定义 \ref{def:monoidal-cat}.
-	\item 以泛性质解释命题 \ref{prop:quotient-monoid-univ-prop} (见 \S\ref{sec:cat-universals} 的讨论), 并说明它在何种意义下唯一地刻画了商幺半群 $M/\sim$.
-	\item 证明群 $G$ 的子集 $S$ 是子群当且仅当 $S$ 非空而且对运算 $(x,y) \mapsto xy^{-1}$ 封闭.
-	\item 假设群 $G$ 的每个元素 $x$ 都满足 $x^2=1$, 证明 $G$ 交换.
-	\item 证明群 $G$ 的全体内自同构 $\{\Ad_g: g \in G\}$ 成为 $\Aut(G)$ 的正规子群, 记之为 $\text{Inn}(G)$, 称商群 $\text{Out}(G) := \Aut(G)/\text{Inn}(G)$ 为 $G$ 的\emph{外自同构群}. 探讨如何对任意群扩张 $1 \to N \to G \to H \to 1$ 自然地导出同态 $H \to \text{Out}(N)$. \index{zitonggou!外自同构 (outer automorphism)}
-	\item 证明交换单群为素数阶循环群.
-	\item 对有限群 $G$ 的任意子群 $H, K$, 证明 $|HK| = \frac{|H||K|}{|H \cap K|}$.
-	\item (Neumann 引理) 设 $H_1, \ldots, H_n$ 为 $G$ 的子群, 并且存在 $\{ a_{ij} \in G \}_{\substack{1 \leq i \leq m \\ 1 \leq j \leq n}}$ 使得 $G = \bigcup_{i,j} H_i a_{ij}$. 证明必有某个 $H_i$ 使得 $(G:H_i)$ 有限.
-	\begin{hint} 不妨设 $n \geq 2$ 而 $(G:H_1)$ 无穷, 此时存在 $H_1 b$ 与 $\bigcup_j H_1 a_{1j}$ 无交; 证明 $H_1 \subset \bigcup_{i \geq 2} \bigcup_j H_i a_{ij} b^{-1}$ 以递归到 $n-1$ 的情形.\end{hint}
-	\item 证明任意有限群 $G$ 都能嵌入某个对称群 $\mathfrak{S}_n$. \begin{hint} 让 $G$ 在某个有限集上忠实作用.\end{hint}
-	\item 设 $H$ 是群 $G$ 的子群, $(G:H)$ 有限, 证明存在正规子群 $H' \lhd G$ 使得 $(G:H')$ 有限而且 $H' \subset H$. \begin{hint} 让 $G$ 在陪集空间 $G/H$ 上作用, 考虑同态 $G \to \Aut(G/H)$ 的核. \end{hint}
-	\item 证明若交换群中的元素 $x, y$ 的阶数 $a,b \in \Z_{\geq 1}$ 互素, 则 $xy$ 的阶数为 $ab$.
-	\item 设 $A$ 为有限交换群, $A'$ 为其子群, 证明任何同态 $A' \to \Q/\Z$ 都能延拓到 $A \to \Q/\Z$.
-	\item 群 $G$ 能表成半直积 $N \rtimes H$ 当且仅当存在可裂扩张 $1 \to N \to G \to H \to 1$. 这两类对象 (半直积分解/可裂扩张) 在什么意义下一一对应?
-	\item 设 $I$ 为集合, $(G_i)_{i \in I}$ 为一族以 $I$ 为指标的群. 假设 $I_0 \subset I$ 为有限子集, 而且对每个 $i \in I \setminus I_0$ 皆给定子群 $H_i \subset G_i$ (利索的讲法: 对\emph{几乎所有}指标 $i$ 给定 $H_i$), 定义\emph{受限积}为
-	    \[ \Resprod_{i \in I} G_i := \left\{ (x_i)_{i \in I} \in \prod_{i \in I} G_i : \exists \;\text{有限子集}\; I_x \subset I, \; i \notin I_x \implies x_i \in H_i \right\}; \]
-		换言之, 我们要求其中元素几乎所有的坐标 $x_i$ 都落在 $H_i$. 证明 $\Resprod_{i \in I} G_i$ 是 $\prod_{i \in I} G_i$ 的子群. 如取 $H_i = \{1\}$, 所得结构称为群的\emph{直和} $\bigoplus_{i \in I} G_i$.
-	\item 对于任意有限群 $G$ 在有限集 $X$ 上的左作用, 证明:
+		Bandingkan pernyataan ini dengan Definisi \ref{def:monoidal-cat}.
+	\item Jelaskan Proposisi \ref{prop:quotient-monoid-univ-prop} menggunakan sifat universal (lihat pembahasan dalam \S\ref{sec:cat-universals}), lalu terangkan dalam arti apa sifat tersebut mencirikan monoid hasil bagi $M/\sim$ secara unik.
+	\item Misalkan $G$ suatu grup. Buktikan bahwa himpunan bagian $S$ merupakan subgrup jika dan hanya jika $S$ tak kosong dan tertutup terhadap operasi $(x,y) \mapsto xy^{-1}$.
+	\item Andaikan $G$ suatu grup yang setiap unsurnya $x$ memenuhi $x^2=1$. Buktikan bahwa $G$ komutatif.
+	\item Buktikan bahwa, untuk grup $G$, semua automorfisme dalam $\{\Ad_g: g \in G\}$ membentuk subgrup normal dari $\Aut(G)$. Nyatakan subgrup tersebut sebagai $\text{Inn}(G)$, dan sebut grup hasil bagi $\text{Out}(G) := \Aut(G)/\text{Inn}(G)$ sebagai \emph{grup automorfisme luar} dari $G$. Selidiki cara memperoleh secara natural, dari sebarang ekstensi grup $1 \to N \to G \to H \to 1$, suatu homomorfisme $H \to \text{Out}(N)$. \index{zitonggou!automorfisme luar (outer automorphism)}
+	\item Buktikan bahwa setiap grup sederhana yang abelian merupakan grup siklik berorde prima.
+	\item Untuk grup berhingga $G$ dan sebarang subgrupnya $H, K$, buktikan bahwa $|HK| = \frac{|H||K|}{|H \cap K|}$.
+	\item (Lema Neumann) Misalkan $H_1, \ldots, H_n$ subgrup-subgrup dari $G$, dan andaikan terdapat $\{ a_{ij} \in G \}_{\substack{1 \leq i \leq n \\ 1 \leq j \leq m}}$ sedemikian sehingga $G = \bigcup_{i,j} H_i a_{ij}$. Buktikan bahwa terdapat suatu $H_i$ dengan indeks $(G:H_i)$ berhingga.
+	\begin{hint} Kita dapat mengandaikan $n \geq 2$ dan $(G:H_1)$ tak berhingga. Dalam keadaan ini terdapat $H_1 b$ yang tidak beririsan dengan $\bigcup_j H_1 a_{1j}$. Buktikan bahwa $H_1 \subset \bigcup_{i \geq 2} \bigcup_j H_i a_{ij} b^{-1}$ untuk mereduksi secara rekursif pada kasus $n-1$.\end{hint}
+	\item Buktikan bahwa setiap grup berhingga $G$ dapat dibenamkan ke dalam suatu grup simetris $\mathfrak{S}_n$. \begin{hint} Biarkan $G$ beraksi secara setia pada suatu himpunan berhingga.\end{hint}
+	\item Misalkan $H$ subgrup dari grup $G$ dan $(G:H)$ berhingga. Buktikan bahwa terdapat subgrup normal $H' \lhd G$ sedemikian sehingga $(G:H')$ berhingga dan $H' \subset H$. \begin{hint} Biarkan $G$ beraksi pada ruang koset $G/H$, lalu tinjau kernel homomorfisme $G \to \Aut(G/H)$. \end{hint}
+	\item Buktikan bahwa jika unsur-unsur $x, y$ dalam suatu grup abelian masing-masing memiliki orde $a,b \in \Z_{\geq 1}$ yang koprima, maka $xy$ berorde $ab$.
+	\item Misalkan $A$ grup abelian berhingga dan $A'$ suatu subgrupnya. Buktikan bahwa setiap homomorfisme $A' \to \Q/\Z$ dapat diperluas menjadi homomorfisme $A \to \Q/\Z$.
+	\item Suatu grup $G$ dapat dinyatakan sebagai produk semilangsung $N \rtimes H$ jika dan hanya jika terdapat ekstensi terpecah $1 \to N \to G \to H \to 1$. Dalam arti apa kedua jenis objek tersebut (dekomposisi produk semilangsung/ekstensi terpecah) berkorespondensi satu-satu?
+	\item Misalkan $I$ suatu himpunan dan $(G_i)_{i \in I}$ suatu keluarga grup berindeks $I$. Andaikan $I_0 \subset I$ suatu himpunan bagian berhingga dan, untuk setiap $i \in I \setminus I_0$, diberikan suatu subgrup $H_i \subset G_i$ (secara ringkas: untuk \emph{hampir semua} indeks $i$, diberikan $H_i$). Definisikan \emph{produk terbatas} sebagai
+	    \[ \Resprod_{i \in I} G_i := \left\{ (x_i)_{i \in I} \in \prod_{i \in I} G_i : \exists \;\text{himpunan bagian berhingga}\; I_x \subset I, \; i \notin I_x \implies x_i \in H_i \right\}; \]
+		Dengan kata lain, kita mensyaratkan agar hampir semua koordinat $x_i$ dari unsur-unsurnya terletak di dalam $H_i$. Buktikan bahwa $\Resprod_{i \in I} G_i$ merupakan subgrup dari $\prod_{i \in I} G_i$. Jika diambil $H_i = \{1\}$, struktur yang diperoleh disebut \emph{jumlah langsung} $\bigoplus_{i \in I} G_i$ dari grup-grup tersebut.
+	\item Untuk sebarang aksi kiri suatu grup berhingga $G$ pada himpunan berhingga $X$, buktikan bahwa:
 		\begin{compactenum}[(i)]
 			\item $|G| \cdot |G \backslash X| = \sum_{g \in G} |\{x \in X : gx=x \}|$;
-			\item 一个传递作用是 $2$-传递的当且仅当 $\sum_{g \in G} |\{x \in X : gx=x \}|^2 = 2|G|$.
+			\item suatu aksi transitif merupakan $2$-transitif jika dan hanya jika $\sum_{g \in G} |\{x \in X : gx=x \}|^2 = 2|G|$.
 		\end{compactenum}
-	\item 设 $G$ 为群.
+	\item Misalkan $G$ suatu grup.
 		\begin{compactenum}[(i)]
-			\item 对任意子群 $H \subset G$, 证明陪集空间 $G/H$ 在 $G$-集范畴中的自同构群等同于 $N_G(H)/H$. 
-			\item 对任意子群 $H, K \subset G$, 明确给出从双陪集空间 $H \backslash G / K$ 到商空间 $G \backslash \left(G/H \times G/K \right)$ 的双射, 这里 $G$ 按 $(aH, bK) \xmapsto{g} (gaH, gbK)$ 左作用于 $G/H \times G/K$.
-			\item 考虑 $G \times G$ 的子群 $\Delta := \{(g,g) : g \in G \}$. 命 $\text{Conj}(G)$ 为 $G$ 中共轭类所成之集合. 明确给出从 $\Delta \backslash (G \times G) /\Delta$ 到 $\text{Conj}(G)$ 的双射.
+			\item Untuk sebarang subgrup $H \subset G$, buktikan bahwa grup automorfisme dari ruang koset $G/H$ di dalam kategori himpunan-$G$ dapat diidentifikasi dengan $N_G(H)/H$.
+			\item Untuk sebarang subgrup $H, K \subset G$, berikan secara eksplisit bijeksi dari ruang koset ganda $H \backslash G / K$ ke ruang hasil bagi $G \backslash \left(G/H \times G/K \right)$, di mana $G$, melalui aturan $(aH, bK) \xmapsto{g} (gaH, gbK)$, beraksi dari kiri pada $G/H \times G/K$.
+			\item Tinjau, di dalam $G \times G$, subgrup $\Delta := \{(g,g) : g \in G \}$. Nyatakan $\text{Conj}(G)$ sebagai himpunan kelas-kelas konjugasi di dalam $G$. Berikan secara eksplisit bijeksi dari $\Delta \backslash (G \times G) /\Delta$ ke $\text{Conj}(G)$.
 		\end{compactenum}
-	\item 证明在阶数为 $pq$ ($p < q$ 为素数) 的群 $G$ 中, Sylow $q$-子群总是正规的, 而且当 $p \nmid q-1$ 时 $G \simeq \Z/q\Z \times \Z/p\Z$.
-	\item 证明阶数为 $30$ 的群总是有正规的 Sylow 子群, 故非单群.
-	\item 设 $F$ 为有限域, $|F|=q=p^m$, 其中 $p$ 是素数 (尚不熟悉有限域的读者不妨取 $F := \Z/p\Z$).
+	\item Buktikan bahwa untuk orde $pq$ (dengan $p < q$ bilangan prima), suatu grup $G$ selalu mempunyai subgrup Sylow $q$ yang normal dan, jika $p \nmid q-1$, berlaku $G \simeq \Z/q\Z \times \Z/p\Z$.
+	\item Buktikan bahwa grup berorde $30$ selalu mempunyai subgrup Sylow yang normal, sehingga bukan merupakan grup sederhana.
+	\item Misalkan $F$ medan berhingga dengan $|F|=q=p^m$, dengan $p$ bilangan prima (pembaca yang belum mengenal medan berhingga dapat mengambil $F := \Z/p\Z$).
 		\begin{compactenum}[(i)]
-			\item 确定系数在 $F$ 上的 $n \times n$-可逆矩阵所成乘法群 $\GL(n, F)$ 的阶数;
-			\item 验证幂幺上三角阵子群 $U$ 是 $\GL(n,F)$ 的 Sylow $p$-子群;
-			\item 证明 $N_{\GL(n,F)}(U)$ 是可逆上三角阵所成子群.
+			\item Tentukan orde grup perkalian semua matriks berkoefisien dalam $F$ yang berukuran $n \times n$ dan invertibel, yaitu $\GL(n, F)$;
+			\item Verifikasi bahwa subgrup $U$ dari $\GL(n,F)$ yang terdiri atas matriks-matriks segitiga atas unipoten merupakan subgrup Sylow $p$;
+			\item Buktikan bahwa $N_{\GL(n,F)}(U)$ merupakan subgrup yang terdiri atas semua matriks segitiga atas yang invertibel.
 		\end{compactenum}
-	\item 对素数 $p$ 证明对称群 $\mathfrak{S}_p$ 中的 $p$-子群个数有 $(p-2)!$ 个, 并从 Sylow 第三定理导出初等数论中的 Wilson 定理: $(p-1)! \equiv -1 \pmod p$.
-	\item 证明若 $G/Z_G$ 是循环群, 则 $G$ 交换; 证明阶数为 $p^2$ (这里 $p$ 为素数) 的群皆交换.
-	\item 设 $X$ 为集合, 证明幺半群族 $(\Z_{\geq 0})_{x \in X}$ 对 $A=\{1\}$ 的融合积是自由幺半群 $\mathbf{M}(X)$.
-	\item 证明 $\mathbf{F}(X)$ 的交换化是 $\Z^{\oplus X}$. \begin{hint} 利用泛性质. \end{hint}
-	\item 设子群 $H \subset G$ 满足 $(G:H)$ 有限, 证明以下方法给出良定的同态 $G_\text{ab} \xrightarrow{\text{Ver}} H_\text{ab}$, 称为转移: 任取陪集分解 $G = \bigsqcup_{i=1}^n \rho_i H$, 对 $g \in G$ 有 $g \rho_i = \rho_j h_i$, 其中 $h_i \in H$ 而 $1 \leq j \leq n$ 依赖于 $i$, 置 $\text{Ver}(g G_\text{der}) = \prod_{i=1}^n \left( h_i H_\text{der}\right)$.
-	\item 令群 $G$ 作用于集合 $X$ 而 $G_1, \ldots, G_r$ 为 $G$ 的非平凡子群, $G=\lrangle{G_1, \ldots, G_r}$, 且其中至少有一个子群的阶数 $> 2$. 证明以下俗称乒乓引理的结果: 设存在不交的非空集 $X_1, \ldots, X_r \subset X$ 使得
+	\item Untuk bilangan prima $p$, buktikan bahwa di dalam grup simetris $\mathfrak{S}_p$ banyaknya $p$-subgrup adalah $(p-2)!$. Kemudian, dari Teorema Sylow Ketiga, turunkan Teorema Wilson dalam teori bilangan elementer: $(p-1)! \equiv -1 \pmod p$.
+	\item Buktikan bahwa jika $G/Z_G$ merupakan grup siklik, maka $G$ komutatif; buktikan bahwa setiap grup berorde $p^2$ (dengan $p$ bilangan prima) komutatif.
+	\item Misalkan $X$ suatu himpunan. Buktikan bahwa produk amalgamasi dari keluarga monoid $(\Z_{\geq 0})_{x \in X}$ atas $A=\{1\}$ merupakan monoid bebas $\mathbf{M}(X)$.
+	\item Buktikan bahwa abelianisasi $\mathbf{F}(X)$ adalah $\Z^{\oplus X}$. \begin{hint} Gunakan sifat universal. \end{hint}
+	\item Misalkan subgrup $H \subset G$ memenuhi $(G:H)$ berhingga. Buktikan bahwa cara berikut memberikan homomorfisme yang terdefinisi dengan baik $G_\text{ab} \xrightarrow{\text{Ver}} H_\text{ab}$, yang disebut transfer: pilih sebarang dekomposisi koset $G = \bigsqcup_{i=1}^n \rho_i H$. Untuk $g \in G$, berlaku $g \rho_i = \rho_j h_i$, dengan $h_i \in H$ dan $1 \leq j \leq n$ bergantung pada $i$. Tetapkan $\text{Ver}(g G_\text{der}) = \prod_{i=1}^n \left( h_i H_\text{der}\right)$.
+	\item Misalkan grup $G$ beraksi pada himpunan $X$, sedangkan $G_1, \ldots, G_r$ merupakan subgrup-subgrup taktrivial dari $G$, dengan $G=\lrangle{G_1, \ldots, G_r}$ dan sedikitnya satu subgrup berorde $> 2$. Buktikan hasil berikut, yang lazim disebut Lema Ping-Pong: andaikan terdapat himpunan-himpunan tak kosong dan saling lepas $X_1, \ldots, X_r \subset X$ sedemikian sehingga
 		\[ \forall 1 \leq i \neq j \leq r, \; \forall g \in G_i \smallsetminus \{1\}, \; g X_j \subset X_i, \]
-		则从自由积 $G_1 \ast \cdots \ast G_r$ 到 $G$ 的自然同态是同构. \begin{hint} 不妨假设 $|G_1| \geq 3$, 须证明既约字 $w$ 的像在 $X$ 上作用若平凡, 则 $w=1$. 对 $w \neq 1$ 取适当共轭以确保该既约字为 $w = g_1 \cdots g'_1$ 的形式, 然后论证 $j \neq 1 \implies w(X_j) \subset X_1$.\end{hint}
-	\item 考虑 pro-有限群 $\mathcal{G} := \varprojlim_U G/U$ 和 $\mathcal{H} := \varprojlim_V H/V$, 说明
+		maka homomorfisme natural dari produk bebas $G_1 \ast \cdots \ast G_r$ ke $G$ merupakan isomorfisme. \begin{hint} Kita dapat mengandaikan $|G_1| \geq 3$. Harus dibuktikan bahwa jika citra kata tereduksi $w$ beraksi secara trivial pada $X$, maka $w=1$. Untuk $w \neq 1$, ambil konjugat yang sesuai agar kata tereduksi tersebut berbentuk $w = g_1 \cdots g'_1$, lalu buktikan bahwa $j \neq 1 \implies w(X_j) \subset X_1$.\end{hint}
+	\item Tinjau grup profinit $\mathcal{G} := \varprojlim_U G/U$ dan $\mathcal{H} := \varprojlim_V H/V$. Tunjukkan bahwa
 		\[ \Hom_{\mathrm{c}}\left( \mathcal{G}, \mathcal{H} \right) \simeq \varprojlim_V \varinjlim_U \Hom\left(G/U, H/V \right), \]
-		其中 $\Hom_{\mathrm{c}}$ 表连续同态集.
+		dengan $\Hom_{\mathrm{c}}$ menyatakan himpunan homomorfisme kontinu.
 \end{Exercises}
