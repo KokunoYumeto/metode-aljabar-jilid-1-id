@@ -274,3 +274,19 @@ index, build, and publish it as one chapter boundary. Chapters 7-9 are being
 translated in parallel. The terminal condition remains all Li, complete
 Duncan, six selected repaired CRing spans, and the separate connective/mastery
 layer; no intermediate chapter completes the goal.
+
+## Live cursor after public complete Chapter 6 — 2026-08-28
+
+Complete Chapter 6 is public at GitHub content commit `9b5fb65446413db03e9f6a877a92d622ef8b577e`, receipt
+commit `9831714187f74b8cc0ff9bc4e9ddc1e8041f5a1a`, and release-prep commit `8176740c69faa6f24c8c5052ad94655fe75d846a`. The
+460-page combined reader is 6,750,492 bytes, SHA-256
+`ff8a1fdb65e36bfa8dbb47dd707c96e10daf2d6bf33363ecd2da6f73f6d2f4cd`.
+Zenodo version 0.8.0 is public in the existing concept at DOI
+`10.5281/zenodo.22150334`; all five files / 75,934,888 bytes passed anonymous
+SHA-256 readback.
+
+The next source-order cursor is complete `chapter7.tex:1-1224`; Chapters 7-9
+are already in isolated chapter-level translation. Integrate full chapters,
+run one bounded gate per substantial boundary, and continue through Chapter 10,
+Duncan, the six repaired CRing spans, and the connective/mastery layer. No
+intermediate chapter completes the goal.

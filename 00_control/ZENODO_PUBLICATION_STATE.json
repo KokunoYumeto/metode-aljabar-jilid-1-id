@@ -1,18 +1,18 @@
 {
   "schema_version": 3,
   "updated": "2026-08-28",
-  "state": "published_reader_filename_primary_v0_7_0_anonymous_full_byte_readback_pass",
-  "record_id": 22149764,
+  "state": "published_reader_filename_primary_v0_8_0_anonymous_full_byte_readback_pass",
+  "record_id": 22150334,
   "concept_record_id": 22059759,
-  "doi": "10.5281/zenodo.22149764",
+  "doi": "10.5281/zenodo.22150334",
   "concept_doi": "10.5281/zenodo.22059759",
-  "public_url": "https://zenodo.org/records/22149764",
-  "version": "0.7.0",
+  "public_url": "https://zenodo.org/records/22150334",
+  "version": "0.8.0",
   "title": "Metode Aljabar, Jilid 1: Arsitektur Dasar — Edisi Bahasa Indonesia",
-  "edition_commit": "ed841157313e5a57f8dad5c4983c9ae0d54fd54f",
-  "checkpoint_content_commit": "77272543e77851dc799215bebbbcefad9c3b05fc",
+  "edition_commit": "8176740c69faa6f24c8c5052ad94655fe75d846a",
+  "checkpoint_content_commit": "9b5fb65446413db03e9f6a877a92d622ef8b577e",
   "status": "partial_public_active",
-  "coverage": "Complete prelude and complete Li Chapters 1-5; Chapters 6-10, Duncan, selected CRing spans, and connective/mastery material remain unfinished.",
+  "coverage": "Complete prelude and complete Li Chapters 1-6; Chapters 7-10, Duncan, selected CRing spans, and connective/mastery material remain unfinished.",
   "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
   "creator_names": [
     "Li, Wen-Wei"
@@ -29,60 +29,60 @@
   "language": "ind",
   "publication_date": "2026-08-28",
   "file_count": 5,
-  "public_bytes_verified": 75149703,
+  "public_bytes_verified": 75934888,
   "reader_filename_primary": true,
   "api_array_order_is_not_a_presentation_contract": true,
   "anonymous_public_api_readback": true,
   "anonymous_all_file_sha256_readback": true,
   "publication_receipt": {
-    "path": "qa/PUBLICATION_ZENODO_0.7.0_20260828.md",
-    "bytes": 1734,
-    "sha256": "4e03fdfd5faf09f6541b5b7692846c25bac131e9547885a3855d044cd082f4e4"
+    "path": "qa/PUBLICATION_ZENODO_0.8.0_20260828.md",
+    "bytes": 1710,
+    "sha256": "1d84281aec56c34e413b7df5c5fb80ac0b44122ffa75e1e128d9792b731dc35d"
   },
   "metadata_and_file_readback": {
-    "path": "qa/ZENODO_0.7.0_PUBLIC_READBACK_20260828.json",
-    "bytes": 3530,
-    "sha256": "c4614ffd8e527427abd48a5da437bf9724c68f9e88a485eae2b03c311212f0df"
+    "path": "qa/ZENODO_0.8.0_PUBLIC_READBACK_20260828.json",
+    "bytes": 3552,
+    "sha256": "3b1c7c2bb65ac5e101a15eb2fd77a5268162c11b7a3ad1649d796661fce64d40"
   },
   "files": [
     {
-      "name": "00-metode-aljabar-jilid-1-id-checkpoint-through-bab-5-reader.pdf",
-      "bytes": 6133398,
-      "sha256": "44f866552abbd52dfc17ed942fb291c9b58457d7452c409ec7808a48a3318bc4",
-      "file_id": "277717ae-c598-409f-8f0e-869129bc6a09",
+      "name": "00-metode-aljabar-jilid-1-id-checkpoint-through-bab-6-reader.pdf",
+      "bytes": 6750492,
+      "sha256": "ff8a1fdb65e36bfa8dbb47dd707c96e10daf2d6bf33363ecd2da6f73f6d2f4cd",
+      "file_id": "86b6933f-3dda-43e1-8b6d-960ca42db2e5",
       "anonymous_http_status": 200
     },
     {
-      "name": "10-metode-aljabar-jilid-1-id-source-backend-0.7.0.zip",
-      "bytes": 69008894,
-      "sha256": "af7094287bb37d5f40f10a08798804df798ec2bea97cdd7eba89c684d82e5483",
-      "file_id": "50a57a3a-d82c-46e2-b6c6-4584bf05e8fe",
+      "name": "10-metode-aljabar-jilid-1-id-source-backend-0.8.0.zip",
+      "bytes": 69176980,
+      "sha256": "af2367966c31788ef7bb7e37198870533b8d1f9d97dc2857c2b1a986abae1e7a",
+      "file_id": "967ebe92-4646-4907-9348-7ae7bf5e157c",
       "anonymous_http_status": 200
     },
     {
       "name": "20-LICENSES.md",
       "bytes": 2179,
       "sha256": "2ed0c233653830f5d939dfafd7a32d4adbe4e2ef8a3b265c0760ccedb07f2554",
-      "file_id": "b2b31185-d043-4744-8d87-8985335986c3",
+      "file_id": "74f502d5-22ad-46c6-a5ab-e3919ac6a142",
       "anonymous_http_status": 200
     },
     {
       "name": "30-MANIFEST.json",
-      "bytes": 4817,
-      "sha256": "ffdc26097c286f3414b3caff02d3e53ef2611b8d0b6fad617df434a86709c688",
-      "file_id": "098b2a33-a459-41ff-b938-59002952a7cd",
+      "bytes": 4822,
+      "sha256": "1b71f26dae3f1ea3d86e6b16c4d28f3b08bc832ae7dfe4bd620a5adc61c7d49f",
+      "file_id": "0ea16efe-a297-4211-a47a-8c79f548c35e",
       "anonymous_http_status": 200
     },
     {
       "name": "40-SHA256SUMS.txt",
       "bytes": 415,
-      "sha256": "dc63c9ca7dd5326562a4885f093ec860f0fc19ea968723ab1f885c87bc44483c",
-      "file_id": "091108fe-cea6-4480-a949-821f8ce7285d",
+      "sha256": "7588473b3e509b4c8850519b1e834fcfea4299254c88386e2a865c73b9503a69",
+      "file_id": "81992c21-1aed-451f-8ec9-b1ba7b15a136",
       "anonymous_http_status": 200
     }
   ],
-  "previous_public_record_id": 22088395,
-  "previous_public_doi": "10.5281/zenodo.22088395",
-  "previous_public_version": "0.6.0",
-  "next_action": "Promote the passing complete Chapter 6 candidate, merge its terminology deltas once, generate one chapter-level backend and reader, run one bounded deterministic gate, publish/read back, then continue complete Chapter 7. Translation remains dominant."
+  "previous_public_record_id": 22149764,
+  "previous_public_doi": "10.5281/zenodo.22149764",
+  "previous_public_version": "0.7.0",
+  "next_action": "Finish and integrate complete Chapter 7 in source order, then Chapters 8-10 in chapter-sized translation batches. Run one bounded deterministic gate per substantial chapter boundary; do not reopen passing Chapter 6 QA."
 }

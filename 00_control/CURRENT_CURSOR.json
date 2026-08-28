@@ -38,76 +38,84 @@
   "li_authority": {
     "commit": "c4f7a01f68f5f407906b4b970640cddbbad85f6b",
     "tree": "0f9fd52748165ec89a85ba602ccb949a2ce04694",
-    "source_path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter6.tex",
-    "source_records": 1994,
-    "source_bytes": 160950,
-    "source_sha256": "c825f51dc19c254c89a7ede05723b62d6cd2b18cc6ac8c78d9ea00c3b8434e49"
+    "source_path": "authority/source/AlJabr-1-c4f7a01f68f5f407906b4b970640cddbbad85f6b/chapter7.tex",
+    "source_records": 1224,
+    "source_bytes": 111676,
+    "source_sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6"
   },
   "last_admitted_unit": {
-    "id": "unit-043-complete-chapter-5",
+    "id": "unit-044-complete-chapter-6",
     "component": "li-volume-1-complete",
-    "source": "chapter5.tex:1-1382",
-    "authority_records": 1382,
-    "authority_bytes": 122998,
-    "authority_sha256": "e747d16b2ebacc95cf1c34da4bc8b7775a5ed8787b6d1edc2cc8e303535ac143",
+    "source": "chapter6.tex:1-1994",
+    "authority_records": 1994,
+    "authority_bytes": 160950,
+    "authority_sha256": "c825f51dc19c254c89a7ede05723b62d6cd2b18cc6ac8c78d9ea00c3b8434e49",
     "target": {
-      "path": "repo/source/chapter5.tex",
-      "bytes": 156081,
-      "sha256": "33a1c65ce1ddea061e02d32a9a250d6db4444eb2251d5b721c8501f95a7f0e3c"
+      "path": "repo/source/chapter6.tex",
+      "bytes": 193563,
+      "sha256": "15c09af18eeab6ce1a4c5a4cb69b1b3a42bc2422b015f21f77ccfbb3c94f7e14"
     },
     "chapter_reader": {
-      "path": "artifacts/unit-043-bab-5-pengantar-teori-gelanggang-id.pdf",
-      "bytes": 714227,
-      "sha256": "08fc765af88eea5bb1cb2181223c4217cbeee17a5ec28621cb79193491196762"
+      "path": "artifacts/unit-044-bab-6-modul-id.pdf",
+      "bytes": 465036,
+      "sha256": "2c493005920fdd757e5786477fdf99b20aced1653348be7a076fa7a829a5c1d3",
+      "pages": 75
     },
-    "combined_reader_through_chapter_5": {
-      "path": "output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-through-bab-5-reader.pdf",
-      "bytes": 6133398,
-      "sha256": "44f866552abbd52dfc17ed942fb291c9b58457d7452c409ec7808a48a3318bc4",
-      "pages": 385
+    "combined_reader_through_chapter_6": {
+      "path": "output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-through-bab-6-reader.pdf",
+      "bytes": 6750492,
+      "sha256": "ff8a1fdb65e36bfa8dbb47dd707c96e10daf2d6bf33363ecd2da6f73f6d2f4cd",
+      "pages": 460
     },
     "backend": {
-      "path": "backend/data/unit-043-bab-5-pengantar-teori-gelanggang.json",
-      "bytes": 226984,
-      "sha256": "50fe8288e70ae62f378a5f4091f8e5d337c450db9fe3fd2c531abd0bfeab6061"
+      "path": "backend/data/unit-044-bab-6-teori-modul.json",
+      "bytes": 225398,
+      "sha256": "aaf3db8135914ca8ceaef457883666da8b2f814833147792b819f0f09c2a5eac"
     },
     "backend_validation": {
-      "path": "qa/unit-043-evidence/backend-validation.json",
-      "bytes": 3131,
-      "sha256": "22bced23609b160b30c3c6af1b67d3cca48a4d381e0406f392c80b015b854717"
+      "path": "qa/unit-044-evidence/backend-validation.json",
+      "bytes": 2539,
+      "sha256": "68656b8a7c6a4d6b8ad8ec9c70a113935dc00e02362d15268616239013d970d3"
     },
     "admission_receipt": {
-      "path": "qa/UNIT_043_CHAPTER_5_ADMISSION_20260828.md",
-      "bytes": 5521,
-      "sha256": "29c56a6148c480553639d5e3304afb2a79809a410d73c8c8770085b484b33f87"
+      "path": "qa/UNIT_044_CHAPTER_6_ADMISSION_20260828.md",
+      "bytes": 4395,
+      "sha256": "90f6f61464943db541beea28beb1786631dc9c2142d7b1dcd1e3af6e1bde2e7e"
     },
-    "content_commit": "77272543e77851dc799215bebbbcefad9c3b05fc",
-    "content_tree": "f7505b3dceb651adce89f6c0637e38b4df002e05",
-    "content_readback_paths": 71,
-    "content_readback_bytes": 18916874,
-    "receipt_commit": "ed841157313e5a57f8dad5c4983c9ae0d54fd54f",
-    "receipt_tree": "078c3c705d43c1380248cf66c9f0a70135bc0674",
-    "receipt_readback": {
-      "path": "qa/PUBLICATION_GITHUB_UNIT_043_RECEIPT_READBACK.json",
-      "bytes": 3187,
-      "sha256": "564f21b04c12c95a7853753d2af67f95d93c9ff9c300a9286cafbd0a47a9d351"
+    "content_commit": "9b5fb65446413db03e9f6a877a92d622ef8b577e",
+    "content_tree": "e6d75ec61a697ecb5667378d246a286eb7c18d79",
+    "content_readback": {
+      "path": "qa/PUBLICATION_GITHUB_UNIT_044_CONTENT_READBACK.json",
+      "bytes": 19836,
+      "sha256": "599df8e7aa3e2f65e8835a59d99969eaae4cd17b8fdc28993c95763cc4c118c6"
     },
-    "zenodo_record_id": 22149764,
-    "zenodo_doi": "10.5281/zenodo.22149764",
+    "content_readback_paths": 46,
+    "content_readback_bytes": 8857965,
+    "receipt_commit": "9831714187f74b8cc0ff9bc4e9ddc1e8041f5a1a",
+    "receipt_tree": "f0ed69cb0765680aa28c157ae837ae343ccb791b",
+    "release_prep_commit": "8176740c69faa6f24c8c5052ad94655fe75d846a",
+    "release_prep_tree": "ce1bb5cf203a70d2f934e3c44425fd83408211cf",
+    "release_prep_readback": {
+      "path": "qa/PUBLICATION_GITHUB_UNIT_044_RELEASE_PREP_READBACK.json",
+      "bytes": 3419,
+      "sha256": "da5c75c57cb09db7feb540ae11eaacc7703e2a805246f8a0232534b2ccc8ce3b"
+    },
+    "zenodo_record_id": 22150334,
+    "zenodo_doi": "10.5281/zenodo.22150334",
     "zenodo_concept_doi": "10.5281/zenodo.22059759",
-    "zenodo_public_bytes": 75149703,
+    "zenodo_public_bytes": 75934888,
     "zenodo_receipt": {
-      "path": "qa/PUBLICATION_ZENODO_0.7.0_20260828.md",
-      "bytes": 1734,
-      "sha256": "4e03fdfd5faf09f6541b5b7692846c25bac131e9547885a3855d044cd082f4e4"
+      "path": "qa/PUBLICATION_ZENODO_0.8.0_20260828.md",
+      "bytes": 1710,
+      "sha256": "1d84281aec56c34e413b7df5c5fb80ac0b44122ffa75e1e128d9792b731dc35d"
     },
     "zenodo_readback": {
-      "path": "qa/ZENODO_0.7.0_PUBLIC_READBACK_20260828.json",
-      "bytes": 3530,
-      "sha256": "c4614ffd8e527427abd48a5da437bf9724c68f9e88a485eae2b03c311212f0df"
+      "path": "qa/ZENODO_0.8.0_PUBLIC_READBACK_20260828.json",
+      "bytes": 3552,
+      "sha256": "3b1c7c2bb65ac5e101a15eb2fd77a5268162c11b7a3ad1649d796661fce64d40"
     },
     "state": "public_github_and_zenodo_anonymous_full_byte_readback_passed",
-    "coverage": "complete prelude and complete Li Chapters 1-5",
+    "coverage": "complete prelude and complete Li Chapters 1-6",
     "model": "OpenAI Codex gpt-5.6-sol, Ultra"
   },
   "previous_public_unit_023": {
@@ -608,24 +616,13 @@
   },
   "next_action": "Promote the already-passing complete Chapter 5 candidate in one batch, merge its 22-row terminology delta, generate one chapter-level reader/backend, run one bounded deterministic gate, publish/read back, and continue Chapter 6 from the already-translated lines 1-337 candidate. The full Li/Duncan/CRing/connective-mastery goal remains active.",
   "next_cursor": {
-    "immediate_action": "Promote the passing complete Chapter 6 candidate, merge its terminology deltas once, generate one chapter-level backend and reader, run one bounded deterministic gate, publish/read back, then continue complete Chapter 7. Translation remains dominant.",
-    "next_admission_unit": "chapter-6-complete-modules",
-    "next_admission_source": "chapter6.tex:1-1994",
-    "next_authority_bytes": 160950,
-    "next_authority_sha256": "c825f51dc19c254c89a7ede05723b62d6cd2b18cc6ac8c78d9ea00c3b8434e49",
-    "next_candidate": {
-      "path": "build/chapter6-batch-candidate/chapter6-complete-id.tex",
-      "bytes": 193563,
-      "sha256": "15c09af18eeab6ce1a4c5a4cb69b1b3a42bc2422b015f21f77ccfbb3c94f7e14"
-    },
-    "next_candidate_checker": {
-      "path": "build/chapter6-batch-candidate/check_chapter6_complete.py",
-      "bytes": 4866,
-      "sha256": "d19acd54cd5bb96abe66fe678c8d5a8070fb6de5d681b8a81d6bc0c9c5001a86"
-    },
-    "candidate_result": "PASS; all four segment checkers and whole-chapter closure pass; 1994 records, 12 sections, 98 labels, 224 references, 6 citations, 70 indexes, 132 item tokens",
-    "cursor_after_next_admission": "chapter7.tex:1",
+    "immediate_action": "Finish and integrate complete Chapter 7 in source order, then Chapters 8-10 in chapter-sized translation batches. Run one bounded deterministic gate per substantial chapter boundary; do not reopen passing Chapter 6 QA.",
+    "next_admission_unit": "chapter-7-complete-field-theory",
+    "next_admission_source": "chapter7.tex:1-1224",
+    "next_authority_bytes": 111676,
+    "next_authority_sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
     "parallel_translation": "complete Chapters 7-9 are in isolated chapter-level production",
-    "terminal_scope": "remaining Li Chapters 7-10, complete Duncan, six selected repaired CRing spans, and separate connective/mastery layer"
+    "cursor_after_li": "complete Duncan, six selected repaired CRing spans, and separate connective/mastery layer",
+    "terminal_scope": "all Li Volume 1, complete Duncan, six selected repaired CRing spans, and separate connective/mastery layer"
   }
 }

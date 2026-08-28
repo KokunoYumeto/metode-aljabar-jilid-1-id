@@ -1524,3 +1524,12 @@ candidate. A real duplicate-paragraph/math-token assembly defect was corrected
 once; all four segment checkers and the whole-chapter closure now pass. Promote,
 backend-index, build, visually inspect, and publish Chapter 6 once rather than
 returning to microscopic unit ceremonies.
+
+## D096 — 2026-08-28 — Complete Chapter 6 preserved without reopening QA
+
+Publish complete Chapter 6 once at content commit `9b5fb65446413db03e9f6a877a92d622ef8b577e` and preserve
+the 460-page reader plus compact resumable source/backend package as Zenodo 0.8.0
+at DOI `10.5281/zenodo.22150334` in the existing concept. Anonymous readback
+proved all five files / 75,934,888 bytes. The API file array is unordered; the
+unique `00-` filename remains the deterministic reader-first contract. Advance
+directly to complete Chapter 7 and do not reopen the passing Chapter 6 gate.

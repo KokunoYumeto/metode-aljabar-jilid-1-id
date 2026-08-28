@@ -420,7 +420,10 @@ def main() -> None:
     require(len(public_names) == len(EXPECTED_NAMES)
             and set(public_names) == set(EXPECTED_NAMES),
             f"Published file inventory drifted: {public_names}")
-    require(public_names[0] == READER_NAME, "Primary visible public file is not the reader")
+    # Zenodo's public API does not promise presentation order for its files
+    # array.  The unique 00- prefix is the deterministic reader-first contract.
+    require(sorted(public_names)[0] == READER_NAME,
+            "Primary visible public filename is not the reader")
 
     readback: list[dict[str, object]] = []
     for item in public_files:
