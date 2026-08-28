@@ -2,7 +2,7 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Pendahuluan serta Bab 1–4 lengkap telah diterjemahkan ke Bahasa Indonesia. Unit 001–034 telah dipublikasikan dan dibaca balik byte demi byte; Unit 035 menuntaskan Bagian 4.11 dan seluruh latihan Bab 4, telah lolos build dan inspeksi semua halaman, dan sedang dipublikasikan pada batas ini.** Repositori ini belum merupakan terjemahan lengkap buku.
+Status saat ini: **Pendahuluan serta Bab 1–4 lengkap telah diterjemahkan ke Bahasa Indonesia. Unit 001–035 telah dipublikasikan dan dibaca balik byte demi byte; Unit 035 menuntaskan Bagian 4.11 dan seluruh latihan Bab 4. Bab 5 lengkap telah diterjemahkan sebagai satu kandidat bab dan sedang diproses sebagai satu batas produksi.** Repositori ini belum merupakan terjemahan lengkap buku.
 
 [Baca atau unduh checkpoint pembaca 0.3.0 (96 halaman; Unit 1-9)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-0.3.0-reader.pdf)
 
@@ -512,6 +512,8 @@ Artefak Unit 35 yang diterima pada batas ini:
 - rentang otoritas `chapter4.tex:1745-1898` memuat Bagian 4.11 serta seluruh latihan penutup Bab 4. Kandidat 18.089 byte / SHA-256 `5d9bf6e5c9c17c83821f1bba63078f4d28e3836428f4557e0727ee5b1046c2ca` menempati target kanonik baris 1740-1893 secara byte-identik. File target lengkap 193.626 byte / SHA-256 `2b682d67292e4c439ccc9f6d46f72d3d0eb7cb5bf8b3a3a5999210c45ef547c5`; dengan demikian Bab 4 selesai dan kursor berikutnya adalah `chapter5.tex:1`.
 - struktur mempertahankan 30 pasangan lingkungan, tiga label, 15 rujukan (14 eksternal), 247 zona matematika, delapan diagram `tikzcd` dengan 35 panah, dua indeks, 26 latihan utama / 36 butir termasuk subbutir, lima petunjuk, dan tanpa solusi sumber. Satu koreksi sumber memperbaiki pertukaran batas indeks pada pernyataan lema Neumann; tidak ada matematika lain yang diubah.
 - satu build hash-gated menghasilkan PDF sembilan halaman tanpa rujukan atau sitasi tak terdefinisi. Semua halaman dirender dan diperiksa; diagram kategori lebar pada halaman 5 tetap berada di dalam halaman dan terbaca. Tidak ada halaman kosong, terpotong, terputar, atau kehilangan isi. Bukti ada di [`qa/UNIT_035_VISUAL_QA_20260828.md`](qa/UNIT_035_VISUAL_QA_20260828.md).
+- backend kanonik memuat 429 entitas dan 379 konsep, dengan 20 tautan prasyarat, dua bagian, delapan diagram, dua indeks, serta enam proyeksi CSV deterministik; receipt penerimaan ada di [`qa/UNIT_035_ADMISSION_20260828.md`](qa/UNIT_035_ADMISSION_20260828.md).
+- Unit 35 dipublikasikan pada commit isi `d50b8944116b4f40eef7bcd487e0125226b412b8`; seluruh 39 path / 4.306.859 byte cocok dengan blob komit pada pembacaan balik anonim. Inventaris lengkap ada di [`qa/PUBLICATION_GITHUB_UNIT_035_CONTENT_READBACK.json`](qa/PUBLICATION_GITHUB_UNIT_035_CONTENT_READBACK.json), dan receipt publikasi ada di [`qa/PUBLICATION_GITHUB_UNIT_035_20260828.md`](qa/PUBLICATION_GITHUB_UNIT_035_20260828.md).
 - teks utama/terjemahan tetap CC BY 4.0; fragmen AJbook yang dikreditkan tetap CC BY-SA 3.0; Noto tetap OFL 1.1; Fandol 0.3 tetap GPLv3 dengan pengecualian font. Provenans produksi: `OpenAI Codex gpt-5.6-sol, Ultra`; kredit sumber dan kontributor manusia tetap dipertahankan.
 
 ## Backend modular
