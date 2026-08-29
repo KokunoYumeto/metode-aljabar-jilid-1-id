@@ -1,0 +1,238 @@
+\section{Teorema Terletak di Atas dan Naik}
+Sekarang kita menafsirkan keintegralan melalui geometri $\spec$.
+Secara umum, untuk suatu homomorfisme gelanggang $R \to S$, peta terinduksi $\spec S \to
+\spec R$ tidak harus berperilaku baik secara topologis; misalnya, meskipun $S$ merupakan
+aljabar-$R$ terbangkitkan hingga, citra $\spec S$ di dalam $\spec R$ tidak harus
+terbuka ataupun tertutup.\footnote{Namun, benar bahwa jika $R$
+\emph{noetherian} (lihat \rref{noetherian}) dan $S$ terbangkitkan hingga di atas
+$R$, maka citra $\spec S$ bersifat \emph{konstruktibel,} yakni gabungan hingga
+himpunan-himpunan tertutup lokal. Ini adalah teorema konstruktibilitas Chevalley; buktinya berada di luar suplemen pilihan ini.}
+
+Kita akan melihat bahwa lebih banyak hal dapat dikatakan di bawah syarat keintegralan.
+
+
+
+\subsection{Teorema terletak di atas}
+
+Secara umum, untuk suatu morfisme varietas aljabar $f: X \to Y$, citra
+himpunan bagian tertutup $Z \subset X$ sama sekali belum tentu tertutup. Sebagai contoh, fungsi reguler $f: X \to \mathbb{C}$ 
+yang merupakan pemetaan tertutup harus surjektif atau konstan (misalnya jika $X$
+terhubung).
+Meskipun demikian, kita dapat mengatakan lebih banyak di bawah hipotesis keintegralan.
+
+\begin{proposition}[Teorema terletak di atas] \label{lyingover}
+Jika $\phi: R \to R'$ merupakan morfisme integral, maka peta terinduksi
+\[  \spec R' \to \spec R  \]
+merupakan pemetaan tertutup; peta ini surjektif jika $\phi$ injektif.
+ \end{proposition}
+
+Cara lain untuk menyatakan klaim terakhir, tanpa menyebut $\spec R'$, adalah sebagai
+berikut. Andaikan $\phi$ injektif dan integral. Jika
+$\mathfrak{p} \subset R$ merupakan ideal prima, maka terdapat $\mathfrak{q} \subset R'$
+sedemikian sehingga $\mathfrak{p}$ adalah prapeta $\phi^{-1}(\mathfrak{q})$.
+
+\begin{proof} Pertama andaikan $\phi$ injektif; dalam hal ini kita harus membuktikan bahwa
+peta $\spec R' \to \spec R$ surjektif.
+Mari kita reduksi pembuktian ke kasus gelanggang lokal.
+Untuk suatu ideal prima $\mathfrak{p} \in \spec R$, kita harus menunjukkan bahwa $\mathfrak{p}$
+muncul sebagai prapeta suatu elemen $\spec R'$.
+Jadi, kita ganti $R$ dengan $R_{\mathfrak{p}}$. Kita memperoleh pemetaan
+\[ \phi_{\mathfrak{p}}: R_{\mathfrak{p}} \to (R- \mathfrak{p})^{-1} R'  \]
+yang injektif jika $\phi$ injektif, karena pelokalan merupakan funktor eksak. Di sini
+kita
+telah melokalkan $R, R'$ pada himpunan multiplikatif $R - \mathfrak{p}$.
+
+Perhatikan bahwa $\phi_{\mathfrak{p}}$ juga merupakan perluasan integral. Hal ini mengikuti
+karena keintegralan dipertahankan oleh perubahan basis.
+Sekarang kita akan membuktikan hasil tersebut untuk $\phi_{\mathfrak{p}}$; khususnya, kita
+akan menunjukkan
+bahwa terdapat ideal prima dari $(R- \mathfrak{p})^{-1} R'$ yang prapetanya adalah
+$\mathfrak{p}R_{\mathfrak{p}}$. Hal ini akan menyiratkan bahwa apabila ideal prima tersebut
+ditarik kembali ke $R'$, prapetanya adalah $\mathfrak{p}$ di dalam $R$. Secara terperinci, kita
+dapat mempertimbangkan diagram
+\[ \xymatrix{
+\spec (R-\mathfrak{p})^{-1} R'\ar[d]  \ar[r] & \spec R_{\mathfrak{p}} \ar[d] \\
+\spec R' \ar[r] &  \spec R
+}\]
+yang menunjukkan bahwa jika $\mathfrak{p} R_{\mathfrak{p}}$ muncul dalam citra pemetaan atas, maka
+$\mathfrak{p}$
+muncul sebagai citra sesuatu di $\spec R'$.
+Jadi, untuk membuktikan proposisi (yakni kasus ketika $\phi$
+injektif), cukup menangani kasus $R$ lokal dan
+$\mathfrak{p}$ merupakan ideal maksimal.
+
+
+Dengan kata lain, kita perlu menunjukkan bahwa:
+\begin{quote}
+Jika $R$ merupakan gelanggang \emph{lokal} dan $\phi: R \hookrightarrow R'$ suatu
+morfisme integral injektif, maka ideal maksimal $R$ merupakan prapeta
+suatu elemen $\spec R'$.
+\end{quote}
+
+Andaikan $R$ lokal dengan ideal maksimal $\mathfrak{p}$. Kita ingin mencari ideal prima $\mathfrak{q} \subset R'$ sedemikian sehingga
+$\mathfrak{p}  = \phi^{-1}(\mathfrak{q})$. Karena $\mathfrak{p}$ sudah
+maksimal, cukup ditunjukkan bahwa $\mathfrak{p} \subset
+\phi^{-1}(\mathfrak{q})$. Secara khusus, kita perlu menunjukkan bahwa terdapat ideal
+prima $\mathfrak{q}$ sedemikian sehingga
+\( \mathfrak{p} R' \subset \mathfrak{q}.  \)
+Prapeta ideal ini adalah $\mathfrak{p}$.
+
+Jika $\mathfrak{p}R' \neq R'$, maka
+$\mathfrak{q}$ ada, karena setiap ideal sejati suatu gelanggang termuat dalam
+ideal maksimal. Bahkan kita akan menunjukkan
+\begin{equation} \label{thingdoesn'tgenerate} \mathfrak{p} R' \neq R',
+\end{equation}
+atau bahwa $\mathfrak{p}$ tidak membangkitkan ideal satuan dalam $R'$.
+Jika kita membuktikan \eqref{thingdoesn'tgenerate}, kita dapat menemukan
+$\mathfrak{q}$ yang dicari, dan pembuktian selesai.
+
+Andaikan
+sebaliknya, yakni $\mathfrak{p}R' = R'$. Kita akan memperoleh kontradiksi menggunakan
+Lema Nakayama (\cref{nakayama}). 
+Saat ini kita tidak dapat menerapkan Lema Nakayama secara langsung karena $R'$ bukan
+modul-$R$ terbangkitkan hingga. Gagasannya ialah “menurunkan” “bukti” bahwa 
+\eqref{thingdoesn'tgenerate} gagal ke suatu subaljabar kecil dari $R'$, lalu
+memperoleh kontradiksi.
+Untuk melakukannya, perhatikan bahwa $1 \in \mathfrak{p}R'$, dan kita dapat menulis
+\[ 1 = \sum x_i \phi(y_i)  \]
+dengan $x_i \in R', y_i \in \mathfrak{p}$.
+Inilah “bukti” bahwa \eqref{thingdoesn'tgenerate} gagal, dan bukti tersebut
+hanya melibatkan data dalam jumlah hingga. 
+
+Misalkan $R''$ subaljabar dari $R'$ yang dibangkitkan oleh $\phi(R)$ dan semua $x_i$. Maka
+$R'' \subset R'$ dan merupakan aljabar-$R$ terbangkitkan hingga, karena dibangkitkan oleh
+semua $x_i$. Akan tetapi, $R''$ integral di atas $R$, sehingga terbangkitkan hingga sebagai
+modul-$R$ berdasarkan \cref{finitelygeneratedintegral}. Di sinilah
+keintegralan berperan.
+
+Jadi, $R''$ merupakan modul-$R$ terbangkitkan hingga. Selain itu, persamaan
+$1 = \sum x_i \phi(y_i)$ menunjukkan bahwa $\mathfrak{p}R'' = R''$. Namun, hal ini
+bertentangan dengan Lema Nakayama. Kontradiksi tersebut menunjukkan bahwa
+$\mathfrak{p}$ tidak dapat membangkitkan $(1)$ dalam $R'$, dan membuktikan bagian surjektivitas
+dari teorema terletak di atas.
+
+Terakhir, kita perlu menunjukkan bahwa jika $\phi: R \to R'$ adalah \emph{sebarang} morfisme
+integral, maka $\spec R' \to \spec R$ merupakan pemetaan tertutup. Misalkan $X = V(I) $ suatu
+himpunan bagian tertutup dari $\spec R'$. Maka citra $X$ di dalam $\spec R$ adalah citra
+pemetaan
+\[ \spec R'/I \to \spec R   \]
+yang diperoleh dari morfisme $R \to R' \to  R'/I$, yang integral; dengan demikian, kita
+direduksi untuk menunjukkan bahwa setiap morfisme integral $\phi$ mempunyai citra tertutup pada
+$\spec$. 
+Jadi, kita direduksi ke $X = \spec R'$ jika $R'$ dikesampingkan dan diganti dengan
+$R'/I$.
+
+Dengan kata lain, kita harus membuktikan pernyataan berikut. Misalkan $\phi: R \to R'$ suatu
+morfisme integral; maka citra $\spec R'$ di dalam $\spec R$ tertutup.
+Namun, dengan mengambil hasil bagi oleh $\ker \phi$ dan menggunakan pemetaan $R/\ker \phi \to R'$, kita
+dapat mereduksi ke kasus ketika $\phi$ injektif; dalam kasus tersebut, pernyataan ini mengikuti
+dari hasil surjektivitas yang telah dibuktikan.
+\end{proof}
+
+Secara umum, terdapat \emph{banyak} pengangkatan dari suatu ideal prima tertentu.
+Sebagai contoh, pertimbangkan penyertaan $\mathbb{Z} \subset \mathbb{Z}[i]$.
+Ideal prima $(5) \in \spec \mathbb{Z}$ dapat diangkat menjadi $(2+i)
+\in \spec \mathbb{Z}[i]$
+atau $(2-i) \in \spec \mathbb{Z}[i]$.
+Keduanya ideal prima yang berbeda: $\frac{2+i}{2-i} \notin \mathbb{Z}[i]$. Akan tetapi,
+perhatikan bahwa setiap elemen $\mathbb{Z}$ yang habis dibagi $2+i$ secara otomatis
+habis dibagi konjugatnya $2-i$, dan oleh karena itu habis dibagi hasil kali keduanya, $5$
+(karena $\mathbb{Z}[i]$ merupakan UFD, sebab ia domain Euklides).
+
+Meskipun demikian, berbagai pengangkatan tersebut tidak dapat dibandingkan.
+
+\begin{proposition} \label{incomparableintegral}
+Misalkan $\phi: R \to R'$ suatu morfisme integral. Untuk $\mathfrak{p} \in
+\spec R$ yang diberikan, tidak terdapat relasi penyertaan di antara elemen-elemen $\mathfrak{q} \in \spec
+R'$ yang mengangkat $\mathfrak{p}$.
+\end{proposition} 
+Dengan kata lain, jika $\mathfrak{q}, \mathfrak{q}' \in \spec R'$ mengangkat
+$\mathfrak{p}$, maka $\mathfrak{q} \not\subset \mathfrak{q}'$.
+\begin{proof} 
+Kita akan memberikan pembuktian yang “licin” melalui beberapa reduksi.
+Perhatikan bahwa operasi pelokalan dan pengambilan hasil bagi hanya memperkecil
+$\spec$: operasi tersebut tidak “menggabungkan” ideal-ideal prima yang sebelumnya berbeda menjadi satu.
+Jadi, dengan mengambil hasil bagi $R$ oleh $\mathfrak{p}$, kita boleh mengandaikan bahwa $R$ suatu
+\emph{domain} dan $\mathfrak{p} = 0$.
+Andaikan terdapat dua ideal prima $\mathfrak{q} \subsetneq \mathfrak{q}'$ dari $R'$
+yang mengangkat $(0) \in \spec R$.
+Dengan mengambil hasil bagi $R'$ oleh $\mathfrak{q}$, kita boleh mengandaikan bahwa $\mathfrak{q}  = 0$.
+Kita bahkan dapat mengandaikan $R \subset R'$ dengan mengambil hasil bagi oleh kernel $\phi$.
+Lema berikut dengan demikian menyelesaikan pembuktian, karena menunjukkan bahwa $\mathfrak{q}'
+= 0$, suatu kontradiksi.
+\end{proof} 
+
+\begin{lemma} 
+Misalkan $R \subset R'$ suatu penyertaan domain integral yang merupakan morfisme
+integral. Jika $\mathfrak{q} \in \spec R'$ merupakan ideal prima tak nol, maka
+$\mathfrak{q} \cap R$ tak nol.
+\end{lemma} 
+\begin{proof} 
+Ambil $x \in \mathfrak{q}'$ yang tak nol. Berdasarkan asumsi, terdapat persamaan
+\[ x^n + r_1 x^{n-1} + \dots + r_n = 0,  \quad r_i \in R, \]
+yang dipenuhi oleh $x$. 
+Di sini kita dapat mengandaikan $r_n \neq 0$; dengan langsung memperhatikan persamaan, diperoleh $r_n \in \mathfrak{q}' \cap R$.
+Jadi, irisan ini tak nol.
+
+\end{proof} 
+
+\begin{corollary} 
+Misalkan $R \subset R'$ suatu penyertaan domain integral sedemikian sehingga $R'$
+integral di atas $R$. Jika salah satu dari $R, R'$ merupakan medan, maka yang lainnya juga.
+\end{corollary} 
+\begin{proof} 
+Memang, $\spec R' \to \spec R$ surjektif berdasarkan \cref{lyingover}; jadi, jika $\spec
+R'$ mempunyai satu elemen (yakni $R'$ merupakan medan), hal yang sama berlaku untuk $\spec R$
+(yakni $R$ merupakan medan). Sebaliknya, andaikan $R$ suatu medan. 
+Maka, setiap dua ideal prima dalam $\spec R'$ ditarik kembali ke elemen yang sama di $\spec
+R$. Jadi, berdasarkan \cref{incomparableintegral}, tidak mungkin terdapat relasi penyertaan di antara ideal-ideal prima $\spec
+R'$. Namun, $R'$ suatu domain, sehingga harus merupakan medan.
+\end{proof} 
+
+
+\begin{exercise} Misalkan $k$ suatu medan.
+Tunjukkan bahwa $k[\mathbb{Q}_{\geq 0}]$ integral di atas gelanggang polinomial $k[T]$.
+Meskipun ini merupakan perluasan yang \emph{sangat besar}, ideal prima $(T)$ hanya dapat diangkat
+dengan satu cara ke $\spec k[\mathbb{Q}_{\geq 0}]$.
+\end{exercise} 
+
+\begin{exercise} 
+Misalkan $A \subset B$ suatu penyertaan gelanggang di atas medan berkarakteristik
+$p$. Andaikan $B^p \subset A$, sehingga $B/A$ integral dalam pengertian yang sangat kuat. 
+Tunjukkan bahwa pemetaan $\spec B \to \spec A$ merupakan suatu \emph{homeomorfisme.} 
+\end{exercise} 
+
+
+
+\subsection{Teorema naik}
+Misalkan $R \subset R'$ suatu penyertaan gelanggang dengan $R'$ integral di atas $R$. Kita telah melihat dalam
+teorema terletak di atas (\cref{lyingover}) bahwa setiap ideal prima $\mathfrak{p} \in \spec R$ 
+mempunyai ideal prima $\mathfrak{q} \in \spec R'$ yang “terletak di atas” $\mathfrak{p}$, yakni
+sedemikian sehingga $R \cap \mathfrak{q} = \mathfrak{p}$.
+Sekarang kita ingin menunjukkan bahwa penyertaan \emph{hingga} ideal-ideal prima dapat diangkat ke $R'$.
+
+\begin{proposition}[Teorema naik]
+Misalkan $R \subset R'$ suatu penyertaan integral gelanggang.
+Andaikan $\mathfrak{p}_1 \subset \mathfrak{p}_2 \subset \dots \subset
+\mathfrak{p}_n \subset R$ suatu 
+rantai menaik hingga ideal-ideal prima dalam $R$.
+Maka terdapat rantai menaik $\mathfrak{q}_1 \subset \mathfrak{q}_2 \subset
+\dots \subset \mathfrak{q}_n$ dalam $\spec R'$ yang mengangkat rantai tersebut. 
+
+Selain itu, $\mathfrak{q}_1$ dapat dipilih sembarang di antara ideal-ideal yang mengangkat
+$\mathfrak{p}_1$.
+\end{proposition} 
+\begin{proof} 
+Dengan induksi dan teorema terletak di atas (\cref{lyingover}), cukup ditunjukkan:
+\begin{quote}
+Misalkan $\mathfrak{p}_1 \subset \mathfrak{p}_2$ suatu penyertaan ideal prima dalam $\spec
+R$. Misalkan $\mathfrak{q}_1 \in \spec R'$ mengangkat $\mathfrak{p}_1$. Maka terdapat
+$\mathfrak{q}_2 \in \spec R'$ yang memenuhi dua syarat: mengangkat
+$\mathfrak{p}_2$ dan memuat $\mathfrak{q}_1$.
+\end{quote}
+Untuk menunjukkan hal tersebut, kita menerapkan \cref{lyingover} pada penyertaan
+$R/\mathfrak{p}_1 \hookrightarrow R'/\mathfrak{q}_1$. Terdapat suatu elemen
+$\spec R'/\mathfrak{q}_1$ yang mengangkat $\mathfrak{p}_2/\mathfrak{p}_1$; elemen
+$\spec R'$ yang bersesuaian dapat dipilih sebagai $\mathfrak{q}_2$.
+\end{proof} 
+

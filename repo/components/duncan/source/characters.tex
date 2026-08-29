@@ -1,0 +1,894 @@
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsthm}
+
+% gaya teorema (saya ingin semuanya menggunakan pencacah yang sama)
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{proposition}[theorem]{Proposisi}
+\newtheorem{corollary}[theorem]{Korolari}
+\newtheorem{conjecture}[theorem]{Konjektur}
+\newtheorem{exercise}[theorem]{Latihan}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definisi}
+\newtheorem{example}[theorem]{Contoh}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Catatan}
+
+% beberapa pengaturan penomoran
+\numberwithin{equation}{section}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\setlength{\headheight}{15.2pt}
+\renewcommand{\footrulewidth}{0.4pt}% nilai bawaan adalah 0pt
+\setlength{\footskip}{30pt}
+\pagestyle{fancy}
+
+\makeatletter
+\let\ps@plain\ps@fancy 
+\makeatother
+
+\lhead{MATH 742}
+\chead{Teori Karakter}
+\rhead{Musim Semi 2023}
+\lfoot{Terakhir Direvisi: \today}
+\cfoot{}
+\rfoot{\thepage\ dari \pageref{LastPage} }
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+\title{Teori Karakter}
+\author{Alexander Duncan}
+
+\maketitle
+
+{\bf
+Di seluruh dokumen ini, kita menggunakan asumsi tetap bahwa $G$
+adalah grup hingga dan $k$ adalah medan dengan karakteristik yang relatif prima terhadap
+orde $G$.}
+Dengan demikian, kita dapat menggunakan teorema Maschke:
+setiap representasi berdimensi hingga tereduksi sepenuhnya.
+Jadi, setiap representasi tak terurai juga tak tereduksi.
+
+Teori karakter merupakan inti teori representasi grup hingga.
+Sebagian besar materi di bawah ini dapat ditemukan, misalnya, dalam
+\cite[\S{14--15}]{AlperinBell},
+\cite[\S{18.3}]{DF},
+\cite[\S{4}]{Etingof},
+\cite[\S{2}]{FultonHarris},
+\cite[\S{XVIII.1--5}]{Lang}, atau
+\cite[\S{2}]{Serre}.
+
+\section{Gelanggang Representasi}
+
+Misalkan $R^+_k(G)$ adalah himpunan kelas isomorfisme
+representasi berdimensi hingga dari $G$ atas $k$.
+Untuk representasi $V$ dan $W$, misalkan $[V]$ dan $[W]$ menyatakan
+bayangannya dalam $R^+_k(G)$.
+Kita mendefinisikan penjumlahan pada $R^+_k(G)$ melalui
+\[ [V] + [W] := [V \oplus W] \]
+dan perkalian pada $R^+_k(G)$ melalui
+\[ [V] \cdot [W] := [V \otimes W]. \]
+Kita menulis $0$ untuk $[0]$ dan $1$ untuk $[k]$.
+(Perlu diperiksa bahwa operasi-operasi ini terdefinisi dengan baik.)
+
+Untuk representasi $U,V,W$, misalkan $u=[U]$, $v=[V]$, dan $w=[W]$.
+Tuliskan $0 = [0]$ untuk representasi nol dan $1=[k]$
+untuk representasi trivial.
+Sekarang, isomorfisme-isomorfisme standar memberikan sifat-sifat $R^+_k(G)$ berikut:
+\begin{align*}
+U \oplus V &\cong V \oplus U & u+v&=v+u\\
+U \oplus (V \oplus W) &\cong (U \oplus V) \oplus W & u+(v+w)&=(u+v)+w\\
+0 \oplus V &\cong V & 0+v&=v\\
+V \oplus 0 &\cong V & v+0&=v\\
+U \otimes V &\cong V \otimes U & uv&=vu\\
+U \otimes (V \otimes W) &\cong (U \otimes V) \otimes W & u(vw)&=(uv)w\\
+k \otimes V &\cong V & 1v&=v\\
+V \otimes k &\cong V & v1&=v\\
+0 \otimes V &\cong 0 & 0v&=0\\
+V \otimes 0 &\cong 0 & v0&=0\\
+U \otimes (V \oplus W) &\cong (U \otimes V) \oplus (U \otimes W) &
+u(v+w)&=uv+uw\\
+(V \oplus W) \otimes U &\cong (V \otimes U) \oplus (V \otimes U) &
+(v+w)u&=vu+wu
+\end{align*}
+
+Kita ingin menyimpulkan bahwa $R^+_k(G)$ adalah gelanggang,
+tetapi invers aditif belum tersedia. Memang, karena alasan dimensi, tidak ada
+representasi tak nol yang memiliki invers aditif.
+Meskipun demikian, $R^+_k(G)$ memiliki struktur \emph{rig} komutatif
+(``gelanggang tanpa bilangan negatif'').
+Secara khusus, $R^+_k(G)$ merupakan monoid komutatif terhadap penjumlahan,
+dan unsur-unsur tak nol dari $R^+_k(G)$ membentuk monoid komutatif terhadap
+perkalian.
+
+Misalkan $S_k(G)$ adalah himpunan kelas isomorfisme
+representasi tak tereduksi dari $G$ atas $k$.
+Menurut teorema Krull--Schmidt, setiap unsur $[V]$ dari $R^+_G(k)$
+dapat ditulis secara tunggal sebagai kombinasi linear hingga
+\[
+[V] = m_1 [W_1] + \cdots + m_r [W_r]
+\]
+di mana $[W_1],\ldots,[W_r] \in S_k(G)$ dan $m_1,\ldots, m_r$ adalah
+bilangan bulat tak negatif.
+Dengan demikian, terdapat isomorfisme monoid aditif
+$R^+_G(k) \cong \mathbb{N}^{\oplus S_k(G)}$.
+(Kita akan melihat bahwa $S_k(G)$ selalu hingga, tetapi sebelum hal itu
+dibuktikan, kita tetap membedakan jumlah langsung dari hasil kali langsung.)
+
+Walaupun struktur aditif pada $R^+_G(k)$ sangat sederhana,
+struktur \emph{perkaliannya} jauh lebih halus.
+Misalkan $X$ adalah himpunan indeks untuk $S_k(G) = \{[W_i]\}_{i \in X}$.
+Struktur perkalian ditentukan sepenuhnya oleh bilangan bulat tak negatif
+$c^{ij}_\ell$ dalam persamaan
+\[
+[W_i] \cdot [W_j] = \sum_{\ell \in X} c^{ij}_\ell [W_\ell]
+\]
+ketika $i,j$ bervariasi secara bebas pada semua unsur $X$.
+
+\begin{remark}
+Bilangan $c^{ij}_\ell$ disebut \emph{bilangan Clebsch--Gordan}
+untuk grup $G$. Setelah memilih basis bagi setiap $W_i$,
+kita memperoleh matriks eksplisit yang mendefinisikan isomorfisme antara
+$W_i \otimes W_j$ dan dekomposisinya menjadi representasi tak tereduksi;
+entri-entri matriks ini disebut \emph{koefisien
+Clebsch--Gordan}. Analognya untuk grup tak hingga, seperti grup ortogonal khusus
+$SO(3)$, sangat penting dalam fisika kuantum dan kimia
+kuantum.
+\end{remark}
+
+\subsection{Representasi Virtual}
+
+Suatu \emph{representasi virtual} $X$ adalah unsur grup abelian bebas
+yang dibangkitkan oleh $S_k(G)$.
+Secara lebih konkret, terdapat suatu persamaan
+\[
+X = m_1 [W_1] + m_2 [W_2] + \cdots + m_r [W_r]
+\]
+di mana $[W_1],\ldots,[W_r]$ merupakan kelas-kelas isomorfisme yang berbeda dari
+representasi tak tereduksi
+dan $m_1,\ldots, m_r$ adalah bilangan bulat.
+Jika semua $m_1,\ldots,m_r$ tak negatif,
+maka representasi virtual tersebut adalah (kelas isomorfisme dari) suatu
+representasi, menurut penafsiran yang jelas di $R^+_k(G)$.
+
+\begin{definition}
+\emph{Gelanggang representasi $R_k(G)$ dari $G$ atas $k$} adalah
+grup aditif representasi virtual, dengan perkalian yang
+diperoleh dengan memperluas perkalian $R^+_k(G)$ secara linear.
+Jika $k=\mathbb{C}$, kita cukup menuliskannya sebagai $R(G)$.
+\end{definition}
+
+\begin{example}
+Jika $G=1$ adalah grup trivial, representasi hanyalah ruang vektor.
+Dalam kasus ini, $R^+_k(1) \cong \mathbb{N}$ melalui $V \mapsto \dim_k(V)$.
+Gelanggang representasi virtual adalah $R_k(1) \cong \mathbb{Z}$.
+\end{example}
+
+\begin{remark}
+Teori \emph{gelanggang} jauh lebih ampuh daripada teori \emph{rig}.
+Oleh karena itu, kita ``menambahkan bilangan negatif'' untuk mengubah rig $R^+_k(G)$
+menjadi gelanggang $R_k(G)$.
+Prosedur ini merupakan analog aditif dari pembentukan gelanggang pecahan suatu gelanggang.
+Secara umum, dengan cara serupa kita dapat membentuk \emph{grup Grothendieck}
+atau \emph{pelengkapan grup} $G$ dari suatu monoid komutatif $M$.
+Jika monoid $M$ adalah rig, grup $G$ tersebut menjadi gelanggang.
+Namun, kita hanya memperoleh pembenaman $M \hookrightarrow G$ jika
+$M$ bersifat \emph{kanselatif}.
+\end{remark}
+
+\section{Karakter}
+
+Sepanjang bagian ini, kita mengasumsikan $k=\mathbb{C}$.
+Untuk $z \in \mathbb{C}$, notasi $\overline{z}$ menyatakan
+konjugat kompleks. Perhatikan bahwa jika $z$ adalah akar kesatuan, maka
+$\overline{z}=z^{-1}$. Pengamatan sederhana ini akan membawa konsekuensi
+penting.
+
+\begin{definition}
+Misalkan $G$ adalah grup hingga dan $(V,\rho)$ suatu representasi dari $G$.
+Kita mendefinisikan \emph{karakter dari $\rho$} sebagai fungsi
+\[
+\chi_V : G \to \mathbb{C}
+\]
+yang diberikan oleh $\chi_V(g)=\operatorname{tr}(\rho_g)$ untuk setiap $g \in G$.
+\end{definition}
+
+Karakter memiliki banyak sifat yang berguna.
+
+
+\begin{proposition}
+Misalkan $(V,\rho)$ dan $(W,\sigma)$ adalah representasi dari suatu grup hingga
+$G$.
+Maka:
+\begin{enumerate}
+\item $\chi_V(1)=\dim(V)$, dengan $1$ menyatakan unsur identitas $G$,
+\item $\chi_V(g^{-1}) = \overline{\chi_V(g)}$
+untuk setiap $g \in G$, dan
+\item $\chi_V(hgh^{-1})=\chi_V(g)$ untuk setiap $g,h \in G$.
+\item
+$\displaystyle
+\chi_{V \oplus W}(g) = \chi_V(g) + \chi_W(g)$ untuk $g \in G$.
+\item
+$\displaystyle
+\chi_{V \otimes W}(g) = \chi_V(g)\chi_W(g)$ untuk $g \in G$.
+\item
+$\displaystyle
+\chi_{V^\vee}(g) =  \overline{\chi_V(g)}$ untuk $g \in G$.
+\item
+$\displaystyle
+\chi_{\operatorname{Hom}_k(V,W)}(g) = \overline{\chi_V(g)} \chi_W(g)$ untuk $g \in G$.
+\end{enumerate}
+\end{proposition}
+
+
+\begin{proof}
+Tetapkan suatu unsur $g \in G$.
+Karena $\rho(g)$ dan $\sigma(g)$ adalah matriks kompleks berorde hingga,
+keduanya dapat didiagonalkan dan nilai eigennya adalah akar-akar kesatuan.
+Misalkan $e_1,\ldots,e_n$ adalah basis diagonal untuk $\rho(g)$
+dengan nilai eigen $\lambda_1, \ldots, \lambda_n$, dan
+misalkan $f_1, \ldots, f_m$ adalah basis diagonal untuk $\sigma(g)$
+dengan nilai eigen $\mu_1, \ldots, \mu_m$.
+Secara khusus,
+\[
+\chi_V(g) = \lambda_1 + \cdots + \lambda_n \textrm{ dan }
+\chi_W(g) = \mu_1 + \cdots + \mu_m.
+\]
+Sekarang kita buktikan setiap bagian pernyataan tersebut.
+
+(1.)
+$\chi_V(1)$ adalah matriks identitas $n \times n$, dengan $n=\dim(V)$.
+
+
+(2.)
+Ingat bahwa $\zeta^{-1}=\overline{\zeta}$ untuk setiap akar kesatuan
+$\zeta$.
+Dengan demikian,
+\[
+\rho_{g^{-1}}(e_i)=\lambda_i^{-1}=\overline{\lambda_i}=\overline{\rho_g(e_i)}
+\]
+untuk setiap $g \in G$ dan $i \in \{1,\ldots,n\}$.
+Karena teras hanyalah jumlah dari semua $\lambda_i$, hasilnya
+mengikuti.
+
+(3.) Ingat bahwa $\operatorname{tr}(AB)=\operatorname{tr}(BA)$ untuk sebarang
+matriks $A$ dan $B$. Jadi,
+$\operatorname{tr}(ABA^{-1})=\operatorname{tr}(A^{-1}AB)=\operatorname{tr}(B)$.
+
+
+
+(4.) Hal ini mengikuti karena $e_1, \ldots, e_n, f_1, \ldots, f_m$ merupakan
+basis diagonal untuk $(\rho \oplus \sigma)(g)$ dan karena
+\[
+(\lambda_1 + \cdots + \lambda_n) + (\mu_1 + \cdots + \mu_m) = 
+(\lambda_1 + \cdots + \lambda_n + \mu_1 + \cdots + \mu_m) \ .
+\]
+
+
+
+(5.) Perhatikan bahwa $\{ e_i \otimes f_j \}$ adalah basis diagonal untuk
+$(\rho \otimes \sigma)(g)$. Hasilnya mengikuti dari pengamatan
+bahwa
+\[
+(\lambda_1 + \cdots + \lambda_n) (\mu_1 + \cdots + \mu_m)
+= \sum_{i=1}^n \sum_{j=1}^m \lambda_i \mu_j \ .
+\]
+
+
+
+(6.) Misalkan $e_1^\vee, \ldots, e_n^\vee$ menyatakan basis dual dari $e_1,
+\ldots, e_n$.
+Perhatikan bahwa
+\[
+\rho^\vee(g)(e_i^\vee)(e_j)=e_i^\vee(\rho(g^{-1})(e_j))
+= \lambda_i^{-1}\delta_{ij}=\overline{\lambda_i}\delta_{ij} \ .
+\]
+
+
+
+(7.) Hal ini mengikuti dari isomorfisme
+$\operatorname{Hom}_k(V,W) \cong V^\vee \otimes W$.
+\end{proof}
+
+
+\begin{exercise}
+Gunakan notasi dari proposisi sebelumnya.
+\begin{enumerate}
+\item $\displaystyle
+\chi_{\operatorname{Sym}^2(V)}(g)=
+\chi_{\mathcal{S}^2(V)}(g)
+=  \frac{1}{2}\left(\chi(g)^2 + \chi(g^2)\right)$ untuk $g \in G$.
+\item $\displaystyle
+\chi_{\operatorname{Alt}^2(V)}(g)=
+\chi_{\Lambda^2(V)}(g)
+=  \frac{1}{2}\left(\chi(g)^2 - \chi(g^2)\right)$ untuk $g \in G$.
+\end{enumerate}
+\end{exercise}
+
+Proposisi di atas membuktikan bahwa semua karakter merupakan \emph{fungsi
+kelas}:
+
+\begin{definition}
+Fungsi $f : G \to \mathbb{C}$ disebut \emph{fungsi kelas}
+jika $f(hgh^{-1})=f(g)$ untuk semua $g,h \in G$.
+Himpunan semua fungsi kelas dinotasikan dengan $C(G)$.
+\end{definition}
+
+Secara ekuivalen, $C(G)$ tepat terdiri atas fungsi-fungsi $f : G \to
+\mathbb{C}$ sedemikian sehingga $f(g)=f(h)$ apabila $g, h$ berada dalam
+kelas konjugasi yang sama di $G$.
+
+Himpunan semua fungsi $f : G \to \mathbb{C}$ merupakan
+aljabar-$\mathbb{C}$ terhadap penjumlahan dan perkalian titik demi titik.
+Dengan kata lain, gelanggang tersebut adalah struktur gelanggang biasa pada
+pangkat Kartesius $\mathbb{C}^G$.
+Subhimpunan fungsi kelas $C(G)$ merupakan subaljabar gelanggang ini.
+Jika $c(G)$ menyatakan banyaknya kelas konjugasi dari $G$,
+maka $C(G)$ secara alami isomorfik dengan $\mathbb{C}^{c(G)}$.
+
+\begin{example} \label{eg:regular_rep}
+Misalkan $V$ adalah representasi reguler. Maka
+\[
+\chi_V(g) = \begin{cases}
+|G| & \textrm{jika $g=1$},\\
+0 & \textrm{selain itu}.
+\end{cases}
+\]
+Ini mengikuti karena $he_g=e_g$ hanya jika $h = 1$ dalam basis alami $\{e_g\}_{g \in G}$.
+\end{example}
+
+Sifat-sifat karakter yang telah dibuktikan di atas menghasilkan
+korolari berikut:
+
+\begin{corollary}
+Pemetaan suatu representasi ke karakternya
+menginduksi homomorfisme gelanggang
+\[
+\chi_{\bullet}: R(G) \to C(G)
+\]
+dari gelanggang representasi ke aljabar fungsi kelas pada $G$.
+\end{corollary}
+
+Sebentar lagi kita akan melihat bahwa $\chi_{\bullet}$ bersifat \emph{injektif}.
+Unsur dalam bayangan pemetaan $\chi_{\bullet}$ di atas disebut \emph{karakter
+virtual}. Perhatikan bahwa $R(G)$ hanyalah gelanggang, sedangkan $C(G)$ merupakan
+aljabar-$\mathbb{C}$. Keduanya tidak pernah isomorfik, tetapi kita akan melihat bahwa
+$R(G) \otimes_\mathbb{Z} \mathbb{C} \cong C(G)$ sebagai aljabar-$\mathbb{C}$.
+
+Karena himpunan kelas isomorfisme representasi tak tereduksi dari
+$G$ membentuk basis-$\mathbb{Z}$ untuk $R(G)$
+dan himpunan kelas konjugasi dari $G$
+menginduksi basis-$\mathbb{C}$ untuk $C(G)$,
+pemetaan $\chi_{\bullet}$ sepenuhnya ditentukan dengan memasangkan kedua basis ini.
+Matriks yang dihasilkan disebut \emph{tabel karakter} dari $G$.
+
+\begin{example}
+Ternyata grup simetris $S_4$ memiliki tepat $5$ representasi
+tak tereduksi; namai karakter-karakter tak tereduksi tersebut
+sebagai $\chi_1, \ldots, \chi_5$.
+Tabel karakternya adalah sebagai berikut:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+ & $e $ & $(12)$ & $(12)(34)$ & $(123)$ & $(1234)$\\
+\hline 
+\hline 
+$\chi_1$ & $1$ & $1$ & $1$ & $1$ & $1$\\
+\hline 
+$\chi_2$ & $1$ & $-1$ & $1$ & $1$ & $-1$\\
+\hline 
+$\chi_3$ & $2$ & $0$ & $2$ & $-1$ & $0$\\
+\hline 
+$\chi_4$ & $3$ & $1$ & $-1$ & $0$ & $-1$\\
+\hline 
+$\chi_5$ & $3$ & $-1$ & $-1$ & $0$ & $1$\\
+\hline 
+\end{tabular}
+\end{center}
+\end{example}
+
+Ada beberapa konvensi umum mengenai tabel karakter.
+Hampir selalu,
+representasi trivial menempati baris pertama dan kelas dari
+unsur identitas menempati kolom pertama.
+Konvensi lain adalah mengurutkan representasi tak tereduksi menurut
+dimensi yang meningkat.
+Terakhir, konvensi yang lebih jarang adalah mengurutkan kelas konjugasi menurut
+orde yang meningkat dari unsur mana pun yang mewakilinya.
+
+Paket aljabar komputer dapat menghasilkan (atau mencari) tabel karakter
+untuk grup hingga. Peringatan: urutan baris dan kolom pada
+tabel tersebut mungkin tidak konsisten, bahkan ketika program yang persis sama dijalankan pada
+data yang persis sama!
+
+\section{Relasi Ortogonalitas}
+
+Kita mulai dengan menunjukkan bahwa fungsi kelas menghasilkan
+endomorfisme $G$-ekuivarian.
+
+\begin{lemma} \label{lem:class_function_endo}
+Misalkan $(V,\rho)$ adalah representasi kompleks dari grup hingga $G$,
+misalkan $f : G \to \mathbb{C}$ adalah fungsi, dan misalkan $F \in
+\operatorname{End}_k(V)$ adalah endomorfisme yang didefinisikan oleh
+\[
+F(v) = \sum_{g \in G} f(g)\rho_g(v) .
+\]
+Maka $F$ bersifat $G$-ekuivarian jika $f$ merupakan fungsi kelas.
+\end{lemma}
+
+\begin{proof}
+Latihan. Ini serupa dengan argumen pengindeksan ulang dalam Teorema Maschke.
+\end{proof}
+
+Ingat bahwa jika $(V,\rho)$ adalah representasi linear dari grup hingga $G$,
+maka $V^G$ adalah subruang invarian yang terdiri atas vektor
+$v \in V$ sedemikian sehingga $\rho_g(v)=v$ untuk semua $g \in G$.
+
+\begin{lemma} \label{lem:proj_onto_invariants}
+Jika $(V,\rho)$ adalah representasi linear dari grup hingga $G$,
+maka
+\[ \dim(V^G) = \frac{1}{|G|} \sum_{g \in G} \chi_V(g). \]
+\end{lemma}
+
+\begin{proof}
+Dengan argumen yang sama seperti dalam pembuktian Teorema Maschke,
+transformasi linear $\pi : V \to V$ yang didefinisikan oleh
+\[
+\pi(v) = \frac{1}{|G|} \sum_{g \in G} \rho_g(v)
+\]
+merupakan proyeksi $G$-ekuivarian ke $V^G$.
+Dengan memilih basis yang sesuai untuk $V$, pemetaan $\pi$ bersesuaian dengan
+matriks yang memiliki $\dim(V^G)$ buah angka satu pada diagonal dan nol di tempat lain.
+Perhitungan
+\[
+\frac{1}{|G|} \sum_{g \in G} \chi_V(g)
+= \frac{1}{|G|} \sum_{g \in G} \operatorname{tr}( \rho(g) )
+= \operatorname{tr}\left( \frac{1}{|G|} \sum_{g \in G}\rho(g) \right)
+= \operatorname{tr}( \pi ) = \dim(V^G)
+\]
+menyelesaikan argumen.
+\end{proof}
+
+\begin{definition} \label{def:innerProduct}
+Definisikan pasangan
+\[
+( \phi , \psi ) := \frac{1}{|G|}
+\sum_{g \in G} \overline{\phi(g)} \psi(g)
+\]
+untuk sebarang dua fungsi $\phi, \psi : G \to \mathbb{C}$.
+\end{definition}
+
+\begin{proposition}
+Hasil kali $(-,-)$ menjadikan $C(G)$ ruang hasil kali dalam.
+\end{proposition}
+
+\begin{proof}
+Pasangan $(-,-)$ bersifat linear konjugat pada variabel pertama dan linear pada
+variabel kedua. Selain itu, $(\psi,\psi)$ adalah jumlah bilangan real tak negatif
+yang bernilai nol jika dan hanya jika $\psi(g)=0$ untuk setiap $g \in G$.
+\end{proof}
+
+
+Hasil kali dalam ini memiliki interpretasi penting:
+
+\begin{lemma}
+$\displaystyle
+(\chi_V, \chi_W) = \dim_k\left( \operatorname{Hom}^G_k\left(V,
+W\right)\right)$.
+\end{lemma}
+
+\begin{proof}
+Jika $\tau$ adalah karakter dari $\operatorname{Hom}_k(V,W)$, maka
+\[ ( \chi_V , \chi_W ) = \frac{1}{|G|}
+\sum_{g \in G} \overline{\chi_V(g)} \chi_W(g)
+= \frac{1}{|G|} \sum_{g \in G} \tau(g) .
+\]
+Dengan demikian:
+\[ ( \chi_V , \chi_W ) =
+\dim_k\left(\left( \operatorname{Hom}_k\left(V,W\right) \right)^G\right) =
+\dim_k( \operatorname{Hom}^G_k(V,W) ) \]
+seperti yang diinginkan.
+\end{proof}
+
+Suatu karakter disebut \emph{tak tereduksi} jika representasi yang bersesuaian
+tak tereduksi.
+Hasil utama bagian ini adalah sebagai berikut:
+
+\begin{theorem}
+Karakter-karakter tak tereduksi membentuk basis ortonormal untuk ruang
+fungsi kelas $C(G)$.
+\end{theorem}
+
+\begin{proof}
+Misalkan $V$ dan $W$ tak tereduksi.
+Maka Lema Schur memberikan
+\[
+\left( \chi_V, \chi_W \right)
+= \dim_k \operatorname{Hom}^G_k(V,W) =
+\begin{cases}
+1 & V \cong W\\
+0 & V \not\cong W
+\end{cases}.
+\]
+Jadi, karakter-karakter tak tereduksi merupakan himpunan ortonormal.
+Masih perlu ditunjukkan bahwa karakter-karakter tersebut merentang $C(G)$.
+
+Misalkan $f \in C(G)$ ortogonal terhadap setiap karakter tak tereduksi
+(dan karenanya terhadap setiap karakter).
+Untuk sebarang representasi $(V,\rho)$, endomorfisme
+\[
+F_\rho = \sum_{g \in G} \overline{f(g)} \rho_g
+\]
+bersifat ekuivarian menurut Lema~\ref{lem:class_function_endo}.
+Dengan mengambil teras, kita memperoleh
+\[
+\operatorname{tr}(F_\rho) =
+\sum_{g \in G} \overline{f(g)} \chi_V(g)
+= |G| (f,\chi_V),
+\]
+yang bernilai $0$ menurut syarat ortogonalitas.
+Ketika $V$ tak tereduksi,
+$F_\rho$ adalah perkalian dengan skalar menurut Lema Schur;
+lebih jauh, karena terasnya nol,
+$F_\rho=0$.
+Jika $W$ adalah subrepresentasi tak tereduksi dari $V$,
+maka $F_\rho(W) \subseteq W$ karena $F_\rho$ merupakan kombinasi linear dari
+fungsi-fungsi yang memiliki sifat tersebut.
+Dengan demikian, kita menyimpulkan bahwa $F_\rho=0$ untuk semua representasi $\rho$.
+
+Ketika $V$ adalah representasi reguler dengan basis $\{e_g\}_{g \in G}$,
+kita memperoleh
+\[
+0=F_\rho(e_1)=\sum_{g \in G} \overline{f(g)} e_g .
+\]
+Kita harus menyimpulkan bahwa $f(g)=0$ untuk semua $g \in G$. Jadi, tidak ada fungsi kelas yang
+ortogonal terhadap setiap karakter tak tereduksi.
+\end{proof}
+
+Teorema ini sangat kuat. Secara khusus, teorema ini memberitahukan bahwa
+banyaknya representasi tak tereduksi bukan hanya \emph{hingga}, melainkan
+juga tepat berapa jumlahnya:
+
+\begin{corollary}
+Banyaknya representasi tak tereduksi sama dengan banyaknya
+kelas konjugasi dalam $G$.
+\end{corollary}
+
+Tabel karakter dapat dipandang sebagai matriks ``perubahan basis''
+antara representasi tak tereduksi dalam $R(G)$ dan fungsi karakteristik
+dari kelas-kelas konjugasi dalam $C(G)$.
+Walaupun terdapat bijeksi antara kelas konjugasi
+dan representasi tak tereduksi, kita tidak membangunnya secara eksplisit.
+Memang, ada alasan kuat untuk tidak mengharapkan suatu ``bijeksi
+kombinatorial'' yang eksplisit secara umum.
+
+\begin{corollary}
+Jika $V$ adalah representasi dengan dekomposisi isotipik
+\[
+V \cong W_1^{\oplus m_1} \oplus \cdots \oplus W_r^{\oplus m_r}
+\]
+untuk representasi tak tereduksi $W_1, \ldots, W_r$,
+maka multiplisitasnya dapat diperoleh kembali melalui
+\[
+m_i = \left( \chi_V, \chi_{W_i} \right).
+\]
+\end{corollary}
+
+\begin{proof}
+Latihan.
+\end{proof}
+
+\begin{corollary}
+Suatu karakter $\chi$ tak tereduksi jika dan hanya jika $(\chi,\chi)=1$.
+\end{corollary}
+
+\begin{proof}
+Latihan.
+\end{proof}
+
+\begin{corollary}
+Misalkan $G$ memiliki representasi tak tereduksi $V_1,\ldots,V_r$
+dengan dimensi $n_1,\ldots, n_r$. Maka dekomposisi isotipik dari
+representasi reguler adalah
+\[
+V_1^{n_1} \oplus \cdots \oplus V_r^{n_r} .
+\]
+Secara khusus, $|G|=n_1^2 + n_2^2 + \cdots + n_r^2$.
+\end{corollary}
+
+\begin{proof}
+Misalkan $W$ adalah representasi reguler.
+Dengan menggunakan Contoh~\ref{eg:regular_rep}, kita menghitung
+\[
+( \chi_{V_i} , \chi_W ) = \frac{1}{|G|}
+\sum_{g \in G} \overline{\chi_{V_i}(g)} \chi_W(g)
+= \frac{1}{|G|} \overline{\chi_{V_i}(1)} |G|
+= \dim(V_i)=n_i.
+\]
+Pernyataan kedua mengikuti dengan membandingkan dimensi
+representasi reguler dengan dekomposisi isotipiknya.
+\end{proof}
+
+\subsection{Menghitung Hasil Kali Dalam}
+
+Dalam praktik, menghitung hasil kali dalam dengan menjumlahkan atas
+setiap unsur grup tidaklah efisien. Kita sudah mengetahui bahwa fungsi kelas
+memberikan nilai yang sama bagi setiap unsur dalam suatu kelas konjugasi.
+Oleh karena itu, kita dapat menulis ulang hasil kali dalam dengan memanfaatkan
+sifat ini.
+
+\begin{proposition}
+Misalkan $K_1, \ldots, K_r$ adalah kelas-kelas konjugasi dari $G$
+dan misalkan $g_1,\ldots, g_r$ adalah wakil dari masing-masing kelas.
+Maka
+\[
+( \psi, \phi ) = \sum_{i=1}^r \frac{|K_i|}{|G|}
+\overline{\psi(g_i)}\phi(g_i)
+\]
+untuk semua fungsi kelas $\psi,\phi \in C(G)$.
+\end{proposition}
+
+Ingat bahwa transpos suatu matriks ortogonal juga ortogonal.
+Rumus di atas memberikan pasangan ortonormal untuk
+\emph{baris-baris} tabel karakter (setelah diboboti secara tepat menurut banyaknya unsur dalam
+setiap kelas konjugasi). Kita juga memiliki ortogonalitas
+\emph{kolom-kolom}, seperti berikut:
+
+\begin{exercise}
+Misalkan $\chi_1,\ldots,\chi_r$ adalah karakter-karakter tak tereduksi.
+Misalkan $K(g)$ menyatakan banyaknya unsur dalam kelas konjugasi dari $g \in
+G$.
+Kita mempunyai
+\[
+\sum_{i=1}^r \overline{\chi_i(g)} \chi_i(h) =
+\begin{cases}
+\frac{|G|}{K(g)} & \textrm{jika $g$ berkonjugasi dengan $h$}\\
+0 & \textrm{selain itu}
+\end{cases}
+\]
+untuk $g, h \in G$.
+\end{exercise}
+
+\subsection{Dekomposisi Eksplisit}
+
+Jika karakternya diketahui, kita dapat menghitung secara eksplisit dekomposisi
+isotipik suatu representasi linear.
+
+\begin{theorem}
+Misalkan $W_1,\ldots, W_r$ adalah representasi-representasi tak tereduksi dari $G$ dengan
+karakter yang bersesuaian $\chi_1,\ldots, \chi_r$.
+Misalkan $(V,\rho)$ adalah suatu representasi dan $V_i$ komponen isotipik
+dari $V$ yang terkait dengan $W_i$.
+Maka pemetaan $\pi_i : V \to V$ yang diberikan oleh
+\[
+\pi_i(v) := \frac{\chi_i(1)}{|G|} \sum_{g \in G} \overline{\chi_i(g)} \rho_g(v)
+\]
+adalah proyeksi ke komponen isotipik $V_i$.
+\end{theorem}
+
+\begin{proof}
+Dari Lema~\ref{lem:class_function_endo}, kita melihat bahwa
+$\pi_i$ bersifat ekuivarian.
+Jadi, $\pi_i(U) \subseteq U$ untuk setiap subrepresentasi $U$ dari $V$.
+Menurut Lema Schur, $\pi_i|_U$ adalah perkalian dengan skalar apabila
+$U$ tak tereduksi.
+Jika $\psi$ adalah karakter suatu subrepresentasi tak tereduksi $U$ dari $V$,
+maka
+\[
+\operatorname{tr}(\pi_i|_U)=\chi_i(1) ( \chi_i, \psi ) .
+\]
+Kita menyimpulkan bahwa
+\[
+\pi_i|_U = \frac{\chi_i(1)}{\psi(1)} ( \chi_i, \psi ) \ .
+\]
+Jadi, $\pi_i|_U=0$ jika $W_i \not\cong U$ dan $\pi_i|_U=\operatorname{id}$
+jika $W_i \cong U$.
+\end{proof}
+
+Perhatikan bahwa teorema di atas memperumum proyeksi yang dibangun dalam
+pembuktian Lema~\ref{lem:proj_onto_invariants}.
+
+Ada pula rumus yang dapat mendekomposisi secara eksplisit suatu
+representasi isotipik menjadi suku-suku langsung tak tereduksi.
+Dekomposisi semacam itu jelas tidak mungkin kanonik.
+Lihat \S 2.7 dari \cite{Serre}.
+
+\section{Contoh}
+
+\begin{example}
+Misalkan $G = \mathbb{Z}/n\mathbb{Z}$. Misalkan $\zeta = e^{2\pi i/n}$
+adalah akar kesatuan primitif utama berorde $n$.
+Kelas-kelas konjugasi dari $G$ hanyalah unsur-unsur $G$.
+Karakter-karakter tak tereduksi hanyalah
+homomorfisme grup $G \to \mathbb{C}^\times$.
+Karakter-karakter tersebut tepat merupakan pemetaan
+\[
+\chi_i(j) = \zeta^{ij}
+\]
+untuk $i \in 1,\ldots,n$ dan $j \in G$.
+Tabel karakternya adalah sebagai berikut:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+ & $0 $ & $1$ & $2$ & $\cdots$ & ${n-1}$\\
+\hline 
+\hline 
+$\chi_0$ & $1$ & $1$ & $1$ & $\cdots$ & $1$\\
+\hline 
+$\chi_1$ & $1$ & $\zeta$ & $\zeta^2$ & $\cdots$ & $\zeta^{-1}$\\
+\hline 
+$\chi_2$ & $1$ & $\zeta^2$ & $\zeta^4$ & $\cdots$ & $\zeta^{-2}$\\
+\hline 
+$\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\ddots$ & $\vdots$\\
+\hline 
+$\chi_{n-1}$ & $1$ & $\zeta^{-1}$ & $\zeta^{-2}$ & $\cdots$ & $\zeta$\\
+\hline
+\end{tabular}
+\end{center}
+Ini tepat merupakan \emph{transformasi Fourier diskret}.
+\end{example}
+
+\begin{example}
+Secara lebih umum, jika $G$ adalah grup abelian hingga, maka
+tabel karakternya berukuran $|G| \times |G|$ karena setiap kelas konjugasi hanya memiliki
+satu unsur.
+Sekali lagi, karakter-karakter tak tereduksi adalah homomorfisme grup
+$G \to \mathbb{C}^\times$.
+Sebagai contoh, untuk grup empat Klein kita memperoleh:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+ & $(0,0)$ & $(1,0)$ & $(0,1)$ & $(1,1)$\\
+\hline 
+\hline 
+$\chi_{(0,0)}$ & $1$ & $1$ & $1$ & $1$\\
+\hline 
+$\chi_{(1,0)}$ & $1$ & $-1$ & $1$ & $-1$\\
+\hline 
+$\chi_{(0,1)}$ & $1$ & $1$ & $-1$ & $-1$\\
+\hline 
+$\chi_{(1,1)}$ & $1$ & $-1$ & $-1$ & $1$\\
+\hline
+\end{tabular}
+\end{center}
+\end{example}
+
+\begin{example}
+Misalkan $G$ adalah grup dihedral berorde $2n$:
+\[
+D_{2n} = \langle s,r \mid s^2, r^n, (sr)^2 \rangle
+\]
+dengan $n \ge 3$.
+
+Misalkan $\zeta$ adalah akar kesatuan primitif berorde $n$.
+Selain representasi trivial $\rho_0$,
+selalu terdapat representasi berdimensi $1$, yaitu $\rho_1$,
+dengan $\rho_1(s)=(-1)$ dan $\rho_1(r)=(1)$.
+Untuk setiap bilangan bulat $1 \le i \le n-1$, kita dapat membentuk representasi berdimensi dua
+$\sigma_i$ sebagai berikut:
+\[
+\sigma_i(s) = \begin{pmatrix} 0&1\\1&0 \end{pmatrix} \quad
+\sigma_i(r) = \begin{pmatrix} \zeta^i&0\\0&\zeta^{-i} \end{pmatrix} .
+\]
+Namun, perhatikan bahwa $\sigma_i$ isomorfik dengan $\sigma_{n-i}$
+dan, ketika $n$ genap, $\sigma_{n/2}$
+tidak tak tereduksi.
+Jadi, ketika $n$ genap, kita juga memiliki dua representasi
+berdimensi $1$ tambahan,
+$\chi_2$ dan $\chi_3$.
+
+Ingat bahwa $\zeta^i+\zeta^{-i}=2\cos(\frac{2\pi i}{n})$.
+Secara alami, tabel karakter untuk kasus genap dan ganjil perlu dibahas
+secara terpisah.
+Ketika $n$ ganjil, kita memperoleh:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+ & $1$ & $sr^i$ & $r^{\pm 1}$ & $\cdots$ & $r^{\pm (n-1)/2}$\\
+\hline 
+\hline 
+$\chi_0$ & $1$ & $1$ & $1$ & $\cdots$ & $1$\\
+\hline 
+$\chi_1$ & $1$ & $-1$ & $1$ & $\cdots$ & $1$\\
+\hline 
+$\sigma_{1}$ & $2$ & $0$ & $2\cos\left(\frac{2\pi}{n}\right)$ & $\cdots$
+& $2\cos\left(\frac{ (n-1) \pi}{n}\right)$\\
+\hline 
+$\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\ddots$ & $\vdots$\\
+\hline
+$\sigma_{(n-1)/2}$ & $2$ & $0$ & $2\cos\left(\frac{(n-1)\pi}{n}\right)$
+& $\cdots$ & $2\cos\left(\frac{ (n-1)^2 \pi}{n}\right)$\\
+\hline
+\end{tabular}
+\end{center}
+Ketika $n$ genap, kita memperoleh:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+ & $1$ & $sr^{2i}$ & $sr^{2i+1}$ & $r^{\pm 1}$ & $\cdots$ & $r^{n/2}$\\
+\hline 
+\hline 
+$\chi_0$ & $1$ & $1$ & $1$ & $1$ & $\cdots$ &  $1$\\
+\hline 
+$\chi_1$ & $1$ & $-1$ & $-1$ & $1$ & $\cdots$ & $1$\\
+\hline 
+$\chi_2$ & $1$ & $-1$ & $1$ & $-1$ & $\cdots$ &
+$(-1)^{n/2}$\\
+\hline 
+$\chi_3$ & $1$ & $1$ & $-1$ & $-1$ & $\cdots$ & $(-1)^{n/2}$\\
+\hline 
+$\sigma_{1}$ & $2$ & $0$ & $0$ & $2\cos\left(\frac{2\pi}{n}\right)$ & $\cdots$
+ & $-2$\\
+\hline 
+$\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\ddots$ & $\vdots$\\
+\hline
+$\sigma_{n/2-1}$ & $2$ & $0$ & $0$ &
+$2\cos\left(\frac{(n-2)\pi}{n}\right)$ & $\cdots$ & $-2$\\
+\hline
+\end{tabular}
+\end{center}
+Kita dapat memeriksa bahwa semua representasi ini tak tereduksi dengan memastikan normanya
+adalah $1$ terhadap hasil kali dalam. Dengan menjumlahkan kuadrat
+nilai-nilainya pada $1$, kita melihat bahwa daftar ini lengkap.
+\end{example}
+
+\begin{example}
+Tabel karakter untuk grup berganti pada $4$ huruf
+adalah:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+ & $()$ & $(1\ 2)(3\ 4)$ & $(1\ 2\ 3)$ & $(1\ 3\ 2)$\\
+\hline 
+\hline 
+$\chi_1$ & $1$ & $1$ & $1$ & $1$\\
+\hline 
+$\chi_2$ & $1$ & $1$ & $\zeta$ & $\zeta^{-1}$\\
+\hline 
+$\chi_3$ & $1$ & $1$ & $\zeta^{-1}$ & $\zeta$\\
+\hline 
+$\chi_4$ & $3$ & $-1$ & $0$ & $0$\\
+\hline
+\end{tabular}
+\end{center}
+di mana $\zeta$ adalah akar kesatuan primitif berorde tiga.
+\end{example}
+
+\begin{example}
+Tabel karakter untuk grup berganti pada $5$ huruf
+adalah:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+ & $()$ & $(1\ 2)(3\ 4)$ & $(1\ 2\ 3)$ & $(1\ 2\ 3\ 4\ 5)$ & $(1\ 3\ 5\ 2\ 4)$\\
+\hline 
+\hline 
+$\chi_1$ & $1$ & $1$ & $1$ & $1$ & $1$\\
+\hline 
+$\chi_2$ & $3$ & $-1$ & $0$ & $\varphi$ & $-1/\varphi$\\
+\hline 
+$\chi_3$ & $3$ & $-1$ & $0$ & $-1/\varphi$ & $\varphi$\\
+\hline 
+$\chi_4$ & $4$ & $0$ & $1$ & $-1$ & $-1$\\
+\hline 
+$\chi_5$ & $5$ & $1$ & $-1$ & $0$ & $0$\\
+\hline
+\end{tabular}
+\end{center}
+di mana $\varphi$ adalah rasio emas $\frac{1}{2}(1+\sqrt{5})$.
+\end{example}
+
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{alpha}
+\bibliography{rep_theory}
+
+\end{document} 
+
+

@@ -1,0 +1,330 @@
+\section{Nullstellensatz Hilbert}
+
+Nullstellensatz adalah fakta aljabar mendasar yang telah kita gunakan sebelumnya
+untuk membenarkan berbagai contoh, dan yang menghubungkan gagasan
+$\spec$ dari suatu gelanggang dengan geometri aljabar klasik.
+
+\subsection{Pernyataan dan bukti awal Nullstellensatz}
+
+Nullstellensatz dapat dinyatakan dalam beberapa cara. Mari kita
+mulai dengan versi konkret berikut.
+
+\begin{theorem} \label{nullstellensatzoverC}
+Semua ideal maksimal dalam gelanggang polinomial $R=\mathbb{C}[x_1, \dots, x_n]$ berasal
+dari titik-titik di $\mathbb{C}^n$. Dengan kata lain, jika $\mathfrak{m} \subset R$ adalah
+ideal maksimal, maka terdapat $a_1, \dots, a_n \in \mathbb{C}$ sedemikian sehingga
+$\mathfrak{m} = (x_1 - a_1, \dots, x_n - a_n)$.
+\end{theorem}
+
+
+Dengan demikian, spektrum maksimal dari $R=\mathbb{C}[x_1, \dots, x_n]$ diidentifikasi dengan
+$\mathbb{C}^n$.
+
+Sekarang kita akan mereduksi \rref{nullstellensatzoverC} menjadi pernyataan yang lebih mudah.
+Misalkan
+$\mathfrak{m}\subset R$ suatu ideal maksimal. Maka terdapat pemetaan
+\[ \mathbb{C} \to R \to R/\mathfrak{m}  \]
+dan karena itu $R/\mathfrak{m}$ merupakan aljabar-$\mathbb{C}$ terbangkitkan hingga, sebagaimana
+$R$. Berdasarkan kemaksimalan, gelanggang $R/\mathfrak{m}$ juga merupakan medan.
+
+Kita ingin menunjukkan bahwa $R/\mathfrak{m}$ merupakan ruang vektor
+$\mathbb{C}$ yang terbangkitkan
+hingga. Hal ini akan mengimplikasikan bahwa $R/\mathfrak{m}$ integral atas $\mathbb{C}$,
+sedangkan $\mathbb{C}$ tidak mempunyai perluasan aljabar sejati. Jadi, jika kita
+membuktikannya, pemetaan $\mathbb{C} \to R/\mathfrak{m}$ merupakan suatu
+isomorfisme. Jika $a_i \in \mathbb{C}$ ($1 \leq i \leq n$) adalah citra
+$x_i $ dalam $R/\mathfrak{m} =
+\mathbb{C}$, maka $(x_1 - a_1, \dots, x_n - a_n) \subset
+\mathfrak{m}$, sehingga $(x_1 - a_1, \dots, x_n - a_n)=
+\mathfrak{m}$.
+
+
+Akibatnya, Nullstellensatz dalam bentuk ini akan mengikuti dari
+pernyataan berikut:
+
+\begin{proposition}
+Misalkan $k$ suatu medan dan $L/k$ suatu perluasan medan. Andaikan $L$ merupakan aljabar-$k$
+terbangkitkan hingga. Maka $L$ adalah ruang vektor-$k$ berdimensi hingga.
+\end{proposition}
+Inilah yang akan kita buktikan.
+
+Kita mulai dengan pembuktian mudah dalam kasus khusus berikut.
+\begin{lemma}
+Andaikan $k$ tak terhitung (misalnya $\mathbb{C}$, kasus awal yang kita minati).
+Maka proposisi di atas berlaku.
+\end{lemma}
+\begin{proof}
+Karena $L$ merupakan aljabar-$k$ terbangkitkan hingga, cukup ditunjukkan bahwa $L/k$
+bersifat aljabar.
+Jika tidak, terdapat $x \in L$ yang tidak aljabar atas $k$. Jadi $x$ tidak memenuhi
+polinomial tak nol apa pun.
+Kita klaim bahwa unsur-unsur tak terhitung banyaknya $\frac{1}{x-\lambda}, \lambda
+\in K$ bebas secara linear
+atas $K$. Ini menghasilkan kontradiksi, sebab $L$ merupakan aljabar-$k$
+terbangkitkan hingga, sehingga dimensinya atas $k$ paling banyak terhitung. (Perhatikan bahwa
+gelanggang polinomial berdimensi terhitung atas $k$, dan $L$ merupakan suatu hasil bagi.)
+
+Mari kita buktikan klaim ini. Andaikan tidak. Maka terdapat ketergantungan linear tak trivial
+\[ \sum \frac{c_i}{x - \lambda_i}  = 0, \quad c_i, \lambda_i \in K. \]
+Di sini semua $\lambda_j$ berbeda agar relasi tersebut tak trivial. Setelah menyamakan
+penyebut, kita memperoleh
+\[ \sum_i c_i \prod_{j \neq i } (x- \lambda_j) = 0. \]
+Tanpa mengurangi keumuman, $c_1 \neq 0$.
+Persamaan ini mula-mula berada di medan $L$. Namun $x$ transenden atas $k$, sehingga kita
+dapat memandangnya sebagai relasi dalam gelanggang polinomial.
+Dengan memandangnya sebagai relasi dalam gelanggang polinomial, kita melihat bahwa
+semua suku dalam jumlah tersebut selain suku $i =1$ habis dibagi oleh $x - \lambda_1$
+sebagai polinomial.
+Akibatnya, sebagai polinomial dalam peubah tak tentu $x$,
+\[ x - \lambda_1 \mid c_1 \prod_{j \neq 1} (x - \lambda_j).  \]
+Ini suatu kontradiksi karena semua $\lambda_i$ berbeda.
+\end{proof}
+
+Pembuktian ini agak ganjil karena memanfaatkan fakta bahwa $\mathbb{C}$
+tak terhitung.
+Seharusnya fakta tersebut tidak relevan.
+
+\subsection{Lema normalisasi}
+
+Sekarang mari kita berikan pembuktian yang lebih aljabar.
+Kita akan menggunakan fakta berikut yang sangat berguna dalam aljabar komutatif.
+
+\begin{theorem}[Lema normalisasi Noether] Misalkan $k$ suatu medan, dan $R =
+k[x_1, \dots, x_n]/\mathfrak{p}$ suatu daerah integral terbangkitkan hingga atas $k$ (dengan
+$\mathfrak{p}$ suatu ideal prima dalam gelanggang polinomial).
+
+Maka terdapat subaljabar polinomial $k[y_1, \dots, y_m] \subset R$ sedemikian
+sehingga $R$ integral atas $k[y_1, \dots, y_m]$.
+\end{theorem}
+
+Kelak akan kita lihat bahwa $m$ adalah \emph{dimensi} dari $R$.
+
+Ada gambaran geometris di balik pernyataan ini. Spektrum $\spec R$ adalah suatu varietas aljabar tak tereduksi
+dalam $k^n$ (beserta beberapa titik tambahan), yang berdimensi lebih kecil daripada
+$n$ jika $\mathfrak{p} \neq 0$. Maka terdapat suatu \emph{pemetaan hingga} ke $k^m$.
+Khususnya, kita dapat memetakan $\spec R \to k^m$ secara surjektif melalui pemetaan integral.
+Serat-seratnya bahkan berhingga, sebab keintegralan mengimplikasikan serat berhingga. (Sebenarnya,
+kita belum membuktikan hal ini.)
+
+Bagaimana kita menemukan proyeksi hingga seperti itu? Dalam karakteristik
+nol, kita cukup mengambil suatu
+proyeksi ruang vektor $\mathbb{C}^n \to \mathbb{C}^m$. Untuk proyeksi ``generik''
+ke subruang berdimensi sesuai, proyeksi tersebut dapat berperan
+sebagai pemetaan hingga kita. Dalam karakteristik $p$, cara ini mungkin tidak berhasil.
+
+\begin{proof}
+Pertama, perhatikan bahwa $m$ ditentukan secara tunggal sebagai derajat transendensi
+medan hasil bagi $R$ atas $k$.
+
+Di antara peubah-peubah $x_1, \dots, x_n \in R$ (yang, dengan sedikit penyalahgunaan notasi,
+kita pandang sebagai unsur $R$), pilih suatu subhimpunan maksimal yang bebas secara aljabar.
+Subhimpunan ini tidak mempunyai relasi polinomial tak nol. Khususnya, gelanggang
+yang dibangkitkan oleh subhimpunan tersebut hanyalah gelanggang polinomial pada subhimpunan itu.
+Kita dapat mempermutasikan peubah-peubah ini dan mengandaikan bahwa
+$$\left\{x_1,\dots, x_m\right\}$$ adalah subhimpunan maksimal tersebut. Khususnya, $R$
+memuat \emph{gelanggang polinomial} $k[x_1, \dots, x_m]$ dan dibangkitkan oleh
+peubah-peubah selebihnya. Namun peubah-peubah selebihnya tidak diadjoin secara bebas
+begitu saja.
+
+Strateginya adalah sebagai berikut. Kita akan melakukan berhingga banyaknya perubahan
+peubah agar $R$ menjadi integral atas $k[x_1, \dots, x_m]$.
+
+Kasus pokok adalah $m=n-1$. Mari kita tangani kasus ini. Jadi,
+\[ R_0 = k[x_1, \dots, x_m]  \subset R = R_0[x_n]/\mathfrak{p}.  \]
+Karena $x_n$ tidak bebas secara aljabar, terdapat polinomial tak nol
+$f(x_1, \dots, x_m, x_n) \in \mathfrak{p}$.
+
+Kita ingin agar $f$ monik dalam $x_n$. Hal ini akan memberikan keintegralan. Mula-mula,
+sifat tersebut belum tentu berlaku. Namun kita akan mengubah sistem koordinat agar demikian.
+Pilih $N \gg 0$. Untuk $1 \leq i \leq m$, definisikan
+\[ x_i' = x_i + x_n^{N^i}.  \]
+Maka persamaannya menjadi
+\[ 0 = f(x_1, \dots, x_m, x_n) = f( \left\{x_i' - x_n^{N^i}\right\} , x_n). \]
+Sekarang $f(x_1, \dots, x_n, x_{n+1})$ berbentuk suatu jumlah
+\[ \sum \lambda_{a_1 \dots b} x_1^{a_1} \dots x_m^{a_m} x_n^{b} , \quad
+\lambda_{a_1 \dots b} \in k. \]
+Namun $N$ dipilih sangat besar. Mari kita uraikan ekspresi ini dalam $x_i'$ dan
+memperhatikan pangkat terbesar $x_n$ yang muncul.
+Kita memperoleh bahwa
+\[ f(\left\{x_i' - x_n^{N_i}\right\},x_n)
+\]
+mempunyai pangkat terbesar $x_n$ tepat pada suku yang, dalam ekspresi $f$,
+memaksimalkan $a_m$ terlebih dahulu, kemudian
+$a_{m-1}, $ dan seterusnya. Eksponen terbesar berbentuk
+\[ x_n^{a_m N^m + a_{m-1}N^{m-1} + \dots + b}.	\]
+Namun dalam ekspresi
+\( f(\left\{x_i' - x_n^{N_i}\right\},x_n)\), kita tidak mungkin memperoleh eksponen $x_n$ selain bentuk-bentuk tersebut. Jika $N$ amat
+besar, semua eksponen ini akan saling berbeda.
+Khususnya, setiap pangkat $x_n$ muncul tepat satu kali dalam uraian
+$f$. Dengan demikian, khususnya $x_n$ integral atas $x_1', \dots, x_n'$.
+Karena itu, setiap $x_i$ juga integral.
+
+Jadi kita memperoleh
+\begin{quote}
+$R$ integral atas $k[x_1', \dots, x_m']$.
+\end{quote}
+
+Dengan demikian kita telah membuktikan lema normalisasi dalam kasus kodimensi satu. Bagaimana
+dengan kasus umum? Kita mengulangi proses ini.
+Andaikan kita mempunyai
+\[ k[x_1, \dots, x_m] \subset R.  \]
+Misalkan $R'$ subgelanggang $R$ yang dibangkitkan oleh $x_{1}, \dots,x_m, x_{m+1}$. Argumen
+yang baru saja diberikan menunjukkan bahwa kita dapat memilih $x_1', \dots, x_m'$ sedemikian sehingga
+$R'$ integral atas $k[x_1', \dots, x_m']$, dan $x_i'$
+bebas secara aljabar.
+Sebenarnya, kita mengetahui bahwa $R' = k[x_1', \dots, x_m', x_{m+1}]$.
+
+Mari kita coba mengulangi argumen sambil meninjau $x_{m+2}$. Misalkan $R'' =
+k[x_1', \dots, x_m', x_{m+2}]$ modulo relasi apa pun yang harus dipenuhi oleh $x_{m+2}$.
+Jadi, ini merupakan subgelanggang dari $R$. Argumen yang sama menunjukkan bahwa kita dapat
+mengubah peubah sedemikian sehingga $x_1'', \dots, x_m''$ bebas secara aljabar
+dan $R''$ integral atas $k[x_1'', \dots, x_m'']$. Selain itu,
+$k[x_1'', \dots, x_m'', x_{m+2}] = R''$.
+
+Setelah melakukan ini, mari kita berikan argumen untuk $m=n-2$. Dari sini akan tampak
+cara menangani kasus umum. Kita klaim bahwa
+\begin{quote}
+$R$ integral atas $k[x_1'', \dots, x_m'']$.
+\end{quote}
+Untuk itu, kita perlu memeriksa bahwa $x_{m+1}, x_{m+2}$ integral (sebab unsur-unsur ini
+bersama $x''_i$ membangkitkan $R''[x_{m+2}][x_{m+2}]=R$.
+Namun berdasarkan konstruksi, $x_{m+2}$ integral atas gelanggang ini. Maka penutupan integral dari
+$k[x_1'', \dots, x_{m}'']$ di dalam $R$ memuat
+\[ k[x_1'', \dots, x''_m, x_{m+2}] = R''.  \]
+Akan tetapi, $R''$ memuat unsur-unsur $x_1', \dots, x_m'$. Berdasarkan konstruksi,
+$x_{m+1}$ integral atas $x_1', \dots, x_m'$. Penutupan integral dari
+$k[x_1'', \dots, x_{m}'']$ harus memuat $x_{m+2}$. Ini menyelesaikan pembuktian untuk
+kasus $m=n-2$. Kasus umum serupa; kita cukup melakukan beberapa perubahan
+peubah secara berturut-turut.
+
+\end{proof}
+\subsection{Kembali ke Nullstellensatz}
+
+Tinjau suatu aljabar-$k$ terbangkitkan hingga $R$ yang merupakan medan. Kita perlu
+menunjukkan bahwa $R$ adalah modul-$k$
+hingga. Hal ini akan membuktikan proposisi tersebut.
+Perhatikan bahwa $R$ integral atas suatu gelanggang polinomial $k[x_1, \dots, x_m]$ untuk
+suatu $m$.
+Jika $m > 0$, gelanggang polinomial ini mempunyai lebih dari satu ideal prima,
+misalnya $(0)$ dan $(x_1, \dots, x_m)$. Namun ideal-ideal ini harus terangkat menjadi ideal prima di
+$R$. Memang, kita telah melihat bahwa untuk setiap perluasan integral, pemetaan
+terinduksi pada spektrum bersifat surjektif. Jadi,
+\[ \spec R \to \spec k[x_1, \dots, x_m]  \]
+surjektif. Jika $R$ suatu medan, berarti $\spec k[x_1, \dots, x_m]$ hanya mempunyai satu
+titik, sehingga $m=0$. Jadi $R$ integral atas $k$, dan karenanya aljabar. Karena
+$R$ hingga karena terbangkitkan hingga. Dengan demikian terbuktilah satu bentuk
+Nullstellensatz.
+
+
+ Bentuk lain Nullstellensatz, yang
+lebih tepat, menyatakan sebagai berikut.
+
+\begin{theorem} \label{gennullstellensatz}
+Misalkan $I \subset \mathbb{C}[x_1, \dots, x_n]$. Misalkan $V \subset \mathbb{C}^n$ adalah
+subhimpunan $\mathbb{C}^n$ yang didefinisikan oleh ideal $I$ (yakni lokus nol dari
+$I$).
+
+Maka $\rad(I)$ tepat merupakan himpunan semua $f$ sedemikian sehingga $f|_V = 0$.
+Khususnya,
+\[ \rad(I) = \bigcap_{\mathfrak{m} \supset I, \mathfrak{m} \
+\mathrm{maksimal}} \mathfrak{m}.  \]
+\end{theorem}
+
+Khususnya, terdapat bijeksi antara ideal-ideal radikal dan subhimpunan-subhimpunan aljabar
+dari $\mathbb{C}^n$.
+
+Bentuk terakhir teorema tersebut, yang mengikuti dari deskripsi ideal-ideal maksimal
+dalam gelanggang polinomial, sangat mirip dengan hasil
+\[ \rad(I) = \bigcap_{\mathfrak{p} \supset I, \mathfrak{p} \
+\mathrm{prima}} \mathfrak{p},  \]
+yang berlaku dalam setiap gelanggang komutatif. Namun hasil umum ini belum tentu
+berlaku.
+
+\begin{example}
+Irisan semua ideal prima dalam suatu DVR adalah nol, tetapi irisan semua ideal
+maksimal tidak nol.
+\end{example}
+
+\begin{proof}[Bukti \cref{gennullstellensatz}] 
+Sekarang cukup ditunjukkan bahwa untuk setiap ideal prima $\mathfrak{p} \subset \mathbb{C}[x_1,
+\dots, x_n]$, berlaku
+\[ \mathfrak{p} = \bigcap_{\mathfrak{m} \supset I \ \mathrm{maksimal}}
+\mathfrak{m}  \]
+sebab setiap ideal radikal merupakan irisan ideal-ideal prima.
+
+Misalkan $R = \mathbb{C}[x_1, \dots,
+x_n]/\mathfrak{p}$. Ini suatu daerah integral terbangkitkan hingga atas $\mathbb{C}$. Kita
+ingin menunjukkan bahwa irisan semua ideal maksimal dalam $R$ adalah nol. Pernyataan ini
+ekuivalen dengan persamaan yang ditampilkan di atas.
+
+Tetapkan $f \in R - \left\{0\right\}$. Misalkan $R'$ pelokalan $R'= R_f$. Maka $R'$ juga suatu
+daerah integral yang terbangkitkan hingga atas $\mathbb{C}$.	$R'$ mempunyai suatu ideal maksimal
+$\mathfrak{m}$ (yang mula-mula mungkin saja nol). Jika kita
+meninjau pemetaan $R' \to R'/\mathfrak{m}$, diperoleh pemetaan ke suatu medan yang
+terbangkitkan hingga
+atas $\mathbb{C}$, sehingga medan itu sama dengan $\mathbb{C}$.
+Pemetaan komposit
+\[ R \to  R' \to R'/\mathfrak{m}   \]
+ditentukan oleh suatu $n$-tupel bilangan kompleks, yakni oleh suatu titik di
+$\mathbb{C}^n$ yang bahkan berada di $V$, sebab pemetaan tersebut berasal dari $R$. Titik ini bersesuaian
+dengan suatu ideal maksimal dalam $R$.
+Berdasarkan konstruksi, ideal maksimal ini tidak memuat $f$.
+\end{proof}
+
+\begin{exercise} 
+Buktikan hasil berikut, yang dikenal sebagai ``Lema Zariski'' (dan dengan mudah mengimplikasikan
+Nullstellensatz): jika $k$ suatu medan dan $k'$ suatu perluasan medan dari $k$ yang
+merupakan \emph{aljabar}-$k$ terbangkitkan hingga, maka $k'$ aljabar hingga atas
+$k$. Gunakan argumen McCabe berikut (dalam \cite{Mc76}):
+\begin{enumerate}
+\item $k'$ memuat suatu subgelanggang $S$ berbentuk $S= k[ x_1, \dots, x_t]$, dengan
+$x_1, \dots, x_t$ bebas secara aljabar atas $k$, dan $k'$ aljabar
+atas medan hasil bagi $S$ (yang merupakan suatu gelanggang polinomial). 
+\item Jika $k'$ tidak aljabar atas $k$, maka $S \neq k$ bukan suatu medan.
+\item Tunjukkan bahwa terdapat $y \in S$ sedemikian sehingga $k'$ integral atas $S_y$.
+Simpulkan bahwa $S_y$ suatu medan.
+\item Karena $\spec (S_y) = \left\{0\right\}$, buktikan bahwa $y$ berada dalam setiap
+ideal prima tak nol dari $\spec S$. Simpulkan bahwa $1+y \in k$, sehingga $S$ suatu
+medan---kontradiksi.
+\end{enumerate}
+\end{exercise} 
+
+\subsection{Sedikit geometri aljabar afin}
+
+Dalam pembahasan berikut, misalkan $k$ tertutup aljabar dan $A$ suatu aljabar-$k$ terbangkitkan hingga. Ingat bahwa $\Specm A$ menyatakan himpunan ideal maksimal dalam $A$. Tinjau struktur aljabar-$k$ alami pada $\mathrm{Funct}(\Specm A, k)$. Kita mempunyai pemetaan
+$$A \rightarrow \mathrm{Funct}(\Specm A, k)$$
+yang diperoleh dari Nullstellensatz Lemah sebagai berikut. Ideal-ideal maksimal $\mathfrak{m}\subset A$ berkorespondensi bijektif dengan pemetaan $\varphi_\mathfrak{m}:A\rightarrow k$ yang memenuhi $\ker(\varphi_\mathfrak{m})=\mathfrak{m}$; jadi kita definisikan $a\longmapsto [\mathfrak{m}\longmapsto \varphi_\mathfrak{m}(a)]$. Jika $A$ tereduksi, pemetaan ini injektif: jika $a\in A$ dipetakan ke fungsi nol, maka $a\in \cap\, \mathfrak{m}$ $\rightarrow$ $a$ nilpoten $\rightarrow$ $a=0$.\\
+
+\begin{definition} Suatu fungsi $f\in \mathrm{Funct}(\Specm A,k)$ disebut {\bf aljabar} jika berada dalam citra $A$ di bawah pemetaan di atas. (Istilah lain untuk sifat ini adalah {\bf polinomial} dan {\bf reguler}.) \end{definition}
+
+Misalkan $A$ dan $B$ aljabar-$k$ terbangkitkan hingga, dan $\phi:A\rightarrow B$ suatu homomorfisme. Pemetaan ini menghasilkan pemetaan $\Phi:\Specm B\rightarrow \Specm A$ dengan mengambil prapeta.
+
+\begin{definition} Suatu pemetaan $\Phi:\Specm B\rightarrow \Specm A$ disebut {\bf aljabar} jika berasal dari suatu homomorfisme $\phi$ seperti di atas.\end{definition}
+
+Untuk menunjukkan hubungan antara kedua definisi ini, kita mempunyai proposisi berikut.
+
+\begin{proposition} Suatu pemetaan $\Phi:\Specm B\rightarrow \Specm A$ bersifat aljabar jika dan hanya jika untuk setiap fungsi aljabar $f\in \mathrm{Funct}(\Specm A,k)$, tarikan balik $f\circ \Phi\in \mathrm{Funct}(\Specm B,k)$ bersifat aljabar.\end{proposition}
+
+\begin{proof}
+Andaikan $\Phi$ aljabar. Cukup diperiksa bahwa diagram berikut komutatif:
+\[ 
+\xymatrix{
+\mathrm{Funct}(\Specm A,k) \ar[r]^{-\circ\Phi} & \mathrm{Funct}(\Specm B,k) \\
+A \ar[u] \ar[r]_{\phi} & B \ar[u]\\
+}
+\]
+dengan $\phi:A\rightarrow B$ pemetaan yang menimbulkan $\Phi$.
+
+[$\Leftarrow$] Andaikan untuk setiap fungsi aljabar $f\in \mathrm{Funct}(\Specm A,k)$, tarikan balik $f\circ\Phi$ bersifat aljabar. Maka diperoleh pemetaan terinduksi dengan menelusuri diagram berlawanan arah jarum jam:
+$$
+\xymatrix{
+\mathrm{Funct}(\Specm A,k) \ar[r]^{-\circ\Phi} & \mathrm{Funct}(\Specm B,k) \\
+A \ar[u] \ar@{-->}[r]_{\phi} & B \ar[u]\\
+}
+$$
+Dari $\phi$, kita dapat membangun pemetaan $\Phi':\Specm B \rightarrow \Specm A$ yang diberikan oleh $\Phi'(\mathfrak{m})=\phi^{-1}(\mathfrak{m})$. Kita klaim bahwa $\Phi=\Phi'$. Jika tidak, untuk suatu $\mathfrak{m}\in \Specm B$ berlaku $\Phi(\mathfrak{m})\neq \Phi'(\mathfrak{m})$. Berdasarkan definisi, untuk setiap fungsi aljabar $f\in \mathrm{Funct}(\Specm A,k)$, berlaku $f\circ\Phi=f\circ\Phi'$; untuk memperoleh kontradiksi, kita buktikan lema berikut:\\
+Diberikan dua titik berbeda dalam $\Specm A=V(I)\subset k^n$, terdapat suatu
+fungsi aljabar $f$ yang memisahkan keduanya. Ini langsung terlihat ketika kita menyadari bahwa setiap
+fungsi polinomial bersifat aljabar, dan polinomial-polinomial semacam itu memisahkan titik.
+\end{proof}
+	

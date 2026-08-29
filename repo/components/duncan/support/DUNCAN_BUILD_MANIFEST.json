@@ -1,0 +1,336 @@
+{
+  "schema": "interlanguage.duncan-id-build-closure.v1",
+  "closure_status": "PASS",
+  "authority": {
+    "repository": "https://github.com/vtorsor/representation-theory-notes",
+    "commit": "c62d36f41189da4bd3da4671668f68720df54ff7",
+    "tree": "e83ee440666133b14dec440158a108069a13e9e4",
+    "commit_date_utc": "2023-04-21T14:35:56Z",
+    "source_date_epoch": 1682087756,
+    "archive_bytes": 92763,
+    "archive_sha256": "60dd9679c9ebe0c28f31794a7b2cb8552f4b7d68038061024972257280a1852c",
+    "source_author": "Alexander Duncan",
+    "course": "MATH 742, Spring 2023"
+  },
+  "rights_and_provenance": {
+    "license_name": "Creative Commons Attribution 4.0 International",
+    "spdx_expression": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "modification_notice": "Adaptasi bahasa Indonesia dan penyuntingan matematis dari tujuh akar TeX berbahasa Inggris yang disematkan.",
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra, atas instruksi pengguna",
+    "non_endorsement": "Adaptasi ini tidak menyatakan maupun menyiratkan dukungan, persetujuan, atau pengesahan oleh Alexander Duncan, University of South Carolina, Creative Commons, atau penerbit rujukan."
+  },
+  "canonical_source_prefix": "../source",
+  "selected_translation_roots": [
+    {
+      "path": "rep_intro.tex",
+      "authority": {
+        "bytes": 18613,
+        "sha256": "1f791f1030d8faec87f8ca66272576d5179c58455edc70219fb3aec4cca4a055",
+        "records": 586,
+        "blank_records": 77
+      },
+      "candidate": {
+        "bytes": 19770,
+        "sha256": "ec8a9d4cdd5073e16d1c80201fd16c23e32746d8ce4aa91b6b1bdef9c9c834bd",
+        "records": 586,
+        "blank_records": 77,
+        "encoding": "UTF-8",
+        "newline": "LF"
+      }
+    },
+    {
+      "path": "lin_alg.tex",
+      "authority": {
+        "bytes": 41343,
+        "sha256": "49dd2d2c2ef5a9605b53a103f0fd371deb805e2a6c2a03cf770a9b7953b36555",
+        "records": 1295,
+        "blank_records": 172
+      },
+      "candidate": {
+        "bytes": 43889,
+        "sha256": "1bdd39d81d913bcba4371f21a6d6a31d1e3080be002ff07ce8265b9580b5790b",
+        "records": 1295,
+        "blank_records": 172,
+        "encoding": "UTF-8",
+        "newline": "LF"
+      }
+    },
+    {
+      "path": "modules.tex",
+      "authority": {
+        "bytes": 66965,
+        "sha256": "8739e5660641762048ffffc0d43791a959bd90bdfd84c3c93486d654c38bd91c",
+        "records": 1894,
+        "blank_records": 255
+      },
+      "candidate": {
+        "bytes": 71213,
+        "sha256": "081dff069c724d5a86d974bb84cd385e974cbaec13860675b94d390f2ce84bad",
+        "records": 1894,
+        "blank_records": 255,
+        "encoding": "UTF-8",
+        "newline": "LF"
+      }
+    },
+    {
+      "path": "characters.tex",
+      "authority": {
+        "bytes": 27869,
+        "sha256": "a28f83f166c7516be7ce193c2abb78987a0243b034160d73ad4298e43a49a534",
+        "records": 894,
+        "blank_records": 113
+      },
+      "candidate": {
+        "bytes": 29092,
+        "sha256": "fc562f2fd1168e13e34167d6620b9091c44c5f80794dacbabcb3417076304008",
+        "records": 894,
+        "blank_records": 113,
+        "encoding": "UTF-8",
+        "newline": "LF"
+      }
+    },
+    {
+      "path": "induction.tex",
+      "authority": {
+        "bytes": 38576,
+        "sha256": "c8b435b8e22cc5d3d20c5dace35f08665232605a3114f9d608aa1bff3d394c76",
+        "records": 1153,
+        "blank_records": 151
+      },
+      "candidate": {
+        "bytes": 41046,
+        "sha256": "864938198c54134cfdd2a69adc9631f65a1fb9399a0e93319288005d03d30a16",
+        "records": 1153,
+        "blank_records": 151,
+        "encoding": "UTF-8",
+        "newline": "LF"
+      }
+    },
+    {
+      "path": "symmetric.tex",
+      "authority": {
+        "bytes": 49817,
+        "sha256": "67390893170ca9b976f17ad8729e3d8ea39a0d1f63a1c0541bfc5396dafff26b",
+        "records": 1574,
+        "blank_records": 162
+      },
+      "candidate": {
+        "bytes": 51216,
+        "sha256": "e049d7c8e8943131aacfe49f925aef4f6cbdac29019675c94c6d20308b5ec4f9",
+        "records": 1574,
+        "blank_records": 162,
+        "encoding": "UTF-8",
+        "newline": "LF"
+      }
+    },
+    {
+      "path": "nonclosed.tex",
+      "authority": {
+        "bytes": 24748,
+        "sha256": "df5b7b38502cde1b0d40394d8560d3030260613c402ead66b53de51d083e3d6a",
+        "records": 725,
+        "blank_records": 101
+      },
+      "candidate": {
+        "bytes": 26344,
+        "sha256": "656e0765dbdeff8cc0b43b78adf4ceecb862211e8d9598567b0edeab0c1eb47d",
+        "records": 725,
+        "blank_records": 101,
+        "encoding": "UTF-8",
+        "newline": "LF"
+      }
+    }
+  ],
+  "bibliography": {
+    "authority_path": "rep_theory.bib",
+    "closure_path": "rep_theory.bib",
+    "bytes": 7241,
+    "sha256": "1078825737921942c615450f0ef77610ac81475f777869acb26245ea4d18e439",
+    "records": 224,
+    "exact_authority_copy": true,
+    "processor": "Biber 2.21",
+    "cited_keys_found": 13
+  },
+  "retained_support": [
+    {
+      "authority_path": "LICENSE",
+      "closure_path": "DUNCAN-LICENSE-CC-BY-4.0.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "records": 396,
+      "exact_authority_copy": true
+    },
+    {
+      "authority_path": "README.md",
+      "closure_path": "DUNCAN-SOURCE-README.md",
+      "bytes": 121,
+      "sha256": "14547eb8d9700bb11c062e86ef61af6322a0b5783541c84115714b316d0da227",
+      "records": 2,
+      "exact_authority_copy": true
+    }
+  ],
+  "assets": {
+    "repository_local_media_count": 0,
+    "entries": [],
+    "closure_statement": "Tidak ada input, include, includegraphics, atau ketergantungan berkas media lokal aktif pada tujuh akar. Satu-satunya ketergantungan lokal bersama adalah rep_theory.bib."
+  },
+  "integration_files": [
+    {
+      "path": "duncan-id-preamble.tex",
+      "bytes": 3083,
+      "sha256": "ead14fd2fcc306bdd6f227383b344ebada182349e53add09c5da2707d6cd1154",
+      "records": 84
+    },
+    {
+      "path": "duncan-complete-id.tex",
+      "bytes": 3428,
+      "sha256": "ac5c2cad0c71f5b8955fcc93368bd74998e21247eea85060fd39e8088db88438",
+      "records": 90
+    },
+    {
+      "path": "build-duncan-id.ps1",
+      "bytes": 2008,
+      "sha256": "e9c7f3f62104a48c0e51f31643942e323a1bc590fbfcadb043718ca0748d7517",
+      "records": 63
+    }
+  ],
+  "build_closure": {
+    "working_directory": ".",
+    "driver": "duncan-complete-id.tex",
+    "job_name": "duncan-complete-id",
+    "output_directory": "build-output",
+    "environment": {
+      "SOURCE_DATE_EPOCH": "1682087756",
+      "FORCE_SOURCE_DATE": "1",
+      "TZ": "UTC",
+      "LC_ALL": "C",
+      "LANG": "C"
+    },
+    "toolchain": {
+      "xelatex": "MiKTeX-XeTeX 4.18 (MiKTeX 26.5), engine 3.141592653-2.6-0.999998",
+      "biber": "2.21",
+      "latex_format": "LaTeX2e 2025-11-01",
+      "l3_layer": "2026-03-20"
+    },
+    "command_sequence": [
+      "xelatex -interaction=nonstopmode -halt-on-error -file-line-error -no-shell-escape -disable-installer -recorder -synctex=0 -jobname=duncan-complete-id -output-directory=build-output duncan-complete-id.tex",
+      "biber --validate-datamodel --input-directory build-output --output-directory build-output duncan-complete-id",
+      "xelatex -interaction=nonstopmode -halt-on-error -file-line-error -no-shell-escape -disable-installer -recorder -synctex=0 -jobname=duncan-complete-id -output-directory=build-output duncan-complete-id.tex",
+      "xelatex -interaction=nonstopmode -halt-on-error -file-line-error -no-shell-escape -disable-installer -recorder -synctex=0 -jobname=duncan-complete-id -output-directory=build-output duncan-complete-id.tex"
+    ],
+    "clean_start_extensions": [
+      ".aux",
+      ".bbl",
+      ".bcf",
+      ".blg",
+      ".fls",
+      ".log",
+      ".out",
+      ".pdf",
+      ".run.xml",
+      ".toc",
+      ".xdv"
+    ],
+    "shell_escape": false,
+    "automatic_package_installation": false,
+    "tex_distribution_dependencies": [
+      "article",
+      "babel[indonesian]",
+      "fontspec",
+      "amssymb",
+      "amsmath",
+      "amsthm",
+      "ytableau",
+      "geometry",
+      "microtype",
+      "csquotes",
+      "docmute",
+      "fancyhdr",
+      "lastpage",
+      "biblatex",
+      "xurl",
+      "hyperref"
+    ],
+    "fonts": [
+      "TeX Gyre Termes",
+      "TeX Gyre Heros",
+      "Latin Modern Mono"
+    ],
+    "recorder_local_tex_inputs": [
+      "duncan-complete-id.tex",
+      "duncan-id-preamble.tex",
+      "rep_intro.tex",
+      "lin_alg.tex",
+      "modules.tex",
+      "characters.tex",
+      "induction.tex",
+      "symmetric.tex",
+      "nonclosed.tex"
+    ],
+    "biber_local_inputs": [
+      "rep_theory.bib"
+    ]
+  },
+  "excluded_external_material": {
+    "scope": "Six author-site assignment sheets (reported total: 49 problems) and one partial solution are outside the licensed repository closure.",
+    "action": "EXCLUDED; not downloaded, incorporated, adapted, or relicensed",
+    "reason": "outside the pinned CC BY 4.0 repository tree"
+  },
+  "excluded_task_local_aids": [
+    "draft_translate_duncan.py",
+    "DUNCAN_TRANSLATION_LOG.md",
+    "nllb-en-id-cache.json",
+    "nllb-paragraph-cache.json",
+    "residue_scan.txt",
+    "translate_duncan_paragraphs.py"
+  ],
+  "build_result": {
+    "status": "PASS",
+    "sequence_exit_code": 0,
+    "pdf": {
+      "path": "build-output/duncan-complete-id.pdf",
+      "bytes": 508546,
+      "sha256": "6779d6467463fde4ef0b4fae147dc63533dff0919eda684120d409f1f5f07d12",
+      "pages": 114,
+      "page_size": "A4, 595.28 x 841.89 pt",
+      "pdf_version": "1.7",
+      "encrypted": false
+    },
+    "evidence": [
+      {
+        "path": "build-output/duncan-complete-id.log",
+        "bytes": 63088,
+        "sha256": "034fd39b280380cdf1c2d48007ef297325102cc69cb78beb5139c7ccf307ddd3"
+      },
+      {
+        "path": "build-output/duncan-complete-id.blg",
+        "bytes": 8117,
+        "sha256": "1bb6e364e07615bf78301498c41c5bf87c668ee934cbf9eb41daafcdde8680ab"
+      },
+      {
+        "path": "build-output/duncan-complete-id.fls",
+        "bytes": 26912,
+        "sha256": "7c0a6ff2340734dff390ac5ed27405cd7537156bd0ca031080dd61c96f4fcbe2"
+      }
+    ],
+    "final_diagnostics": {
+      "fatal_errors": 0,
+      "undefined_references": 0,
+      "undefined_citations": 0,
+      "rerun_requests": 0,
+      "overfull_hboxes": 1,
+      "maximum_overfull_pt": 1.70824,
+      "underfull_hboxes": 11,
+      "hyperref_math_bookmark_warnings": 5,
+      "biblatex_biber_issue_blocks": 40,
+      "biber_warnings": 45,
+      "biber_warning_breakdown": {
+        "legacy_mr_fields_ignored": 35,
+        "semicolon_separated_isbn_warnings": 5,
+        "datamodel_invalid_isbn_warnings": 5
+      },
+      "diagnostic_note": "Peringatan Biber berasal dari metadata bibliografi tersemat yang dipertahankan byte-identik; peringatan box dan bookmark tidak menghentikan bangunan."
+    }
+  }
+}

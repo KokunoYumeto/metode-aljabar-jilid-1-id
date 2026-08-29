@@ -1,0 +1,220 @@
+{
+  "schema": "o013.cring-gfdl-reader-component.v1",
+  "component_id": "o013.cring-selected-id-reader",
+  "manifest_date": "2026-08-29",
+  "status": "PASS_INTEGRATED_READER",
+  "scope": "six exact CRing source spans, their recorded repairs, Indonesian translations, and integration-only reader material",
+  "provenance": {
+    "source_entity": "CRing Project",
+    "source_copyright": "Copyright (C) 2010 CRing Project",
+    "translation_editor_integration": "OpenAI Codex gpt-5.6-sol, Ultra, on instructions of the user",
+    "source_author_endorsement_claimed": false,
+    "non_endorsement": "Names of the CRing Project, source contributors, associated institutions, and the Free Software Foundation are used only for attribution and licensing; no affiliation, approval, endorsement, support, or sponsorship is stated or implied."
+  },
+  "license": {
+    "spdx": "GFDL-1.2-or-later",
+    "invariant_sections": [],
+    "front_cover_texts": [],
+    "back_cover_texts": [],
+    "notice_source": "authority/cring-project-official-20260828/source/cring/other/intro.tex:14-19",
+    "full_license_path": "authority/cring-project-official-20260828/source/cring/chapters/license.tex",
+    "full_license_bytes": 21574,
+    "full_license_sha256": "c491697410aceabdbc88cd724024b9faac6fe1308db1c732682574b95fab457f",
+    "full_license_included_in_pdf": true,
+    "history_section_included": true,
+    "component_treatment": "The translated selections and integration layer form one GFDL-1.2-or-later modified component; edition-original insertions remain separately identified."
+  },
+  "authority": {
+    "archive_url": "https://math.uchicago.edu/~amathew/CRing.zip",
+    "archive_path": "authority/cring-project-official-20260828/CRing.zip",
+    "archive_bytes": 442843,
+    "archive_sha256": "151cdf5498622251db9999b082c4b756a5a7e22b07ddd79538c0057472a4234d",
+    "semantic_boundary": "exact source line spans; not physical-page extraction",
+    "bibliography_path": "authority/cring-project-official-20260828/source/cring/other/references.bib",
+    "bibliography_bytes": 14998,
+    "bibliography_sha256": "e57221002c0fc62b63de39b0f01c279a85d32f0d4861507570f9fca6d09a3bc5",
+    "closure_files": [
+      {
+        "file": "threeimportantfunctors.tex",
+        "bytes": 101957,
+        "sha256": "26d208bede41a430d06d884f28b13fae4c0cf6d146a3876aca8a89d8048bb24e"
+      },
+      {
+        "file": "spec.tex",
+        "bytes": 61195,
+        "sha256": "cac1285a4b3a89742fe0b81a19da635c7f3be3c047839afcd6effb7e9c5eaf91"
+      },
+      {
+        "file": "noetherian.tex",
+        "bytes": 65142,
+        "sha256": "60bae3d39407bc139c933ebc385eec794a128545ef7bd4a3f7afb9819c0fb42d"
+      },
+      {
+        "file": "integrality.tex",
+        "bytes": 85577,
+        "sha256": "04cf80db334613e403464c17b466d1466826406e30536d3e42feb0abe6cbb7f5"
+      },
+      {
+        "file": "dimension.tex",
+        "bytes": 80294,
+        "sha256": "5961ba22222587eb08d3f09b7ff5ea65fe5f2372a33d944d734176fb9fca93cd"
+      }
+    ]
+  },
+  "canonical_paths": {
+    "source_segments": "../source-en-segments",
+    "repaired_english": "../source-en-repaired",
+    "translated_id": "../source-id"
+  },
+  "segments": [
+    {
+      "id": "CRING-S01",
+      "title_id": "Lema Nakayama",
+      "authority_file": "threeimportantfunctors.tex",
+      "authority_first_line": 362,
+      "authority_last_line": 570,
+      "source_segment": {"path": "source-segments/01-nakayama.tex", "records": 209, "bytes": 9018, "sha256": "039da90c1d951d811acef5ae6d5e4ca405bb4307b5cc4e0a6d42238314393dcf"},
+      "repaired_english": {"path": "repaired-source-en/01-nakayama.tex", "records": 209, "bytes": 9054, "sha256": "690bd9a088d4a2dcb5f0b52ac1940568cc0765a47a82975a77247af9c51b2978"},
+      "translated_id": {"path": "translated-id/01-nakayama.tex", "records": 209, "bytes": 10066, "sha256": "6304f3d7767234d3f082eab0147c04ba1bc5037739cae093176db7f29ddaafc8"}
+    },
+    {
+      "id": "CRING-S02",
+      "title_id": "Spec dan topologi Zariski",
+      "authority_file": "spec.tex",
+      "authority_first_line": 34,
+      "authority_last_line": 926,
+      "source_segment": {"path": "source-segments/02-spec-zariski.tex", "records": 893, "bytes": 30630, "sha256": "a295c74a010736b595286bd706a7ccbe2042b2d07e88df91eba120aa3c707e9d"},
+      "repaired_english": {"path": "repaired-source-en/02-spec-zariski.tex", "records": 903, "bytes": 31316, "sha256": "96e17c84fa1176f0f3a7cfb5ea7307b7ca707b86f8dd7dc226b04ff615855e3b"},
+      "translated_id": {"path": "translated-id/02-spec-zariski.tex", "records": 903, "bytes": 35124, "sha256": "a814e86a7034550310570bca32488f3b4953e9333ced5249efc4c0facf78139a"}
+    },
+    {
+      "id": "CRING-S03",
+      "title_id": "Dukungan, prima terkait, dan dekomposisi primer",
+      "authority_file": "noetherian.tex",
+      "authority_first_line": 335,
+      "authority_last_line": 1206,
+      "source_segment": {"path": "source-segments/03-associated-primary.tex", "records": 872, "bytes": 38379, "sha256": "23515a289430764d8dcf6f1ae10542d32ad6c26eebd666a369bd500920d22f1b"},
+      "repaired_english": {"path": "repaired-source-en/03-associated-primary.tex", "records": 881, "bytes": 38770, "sha256": "2f13f8b3aeb1ddbf922f7a985de796975d74a025a468124c361f1b9fa805aeaa"},
+      "translated_id": {"path": "translated-id/03-associated-primary.tex", "records": 881, "bytes": 42428, "sha256": "235781e45e240bc41382968c694c295b847e11d2183f5b00915405b3183410b3"}
+    },
+    {
+      "id": "CRING-S04",
+      "title_id": "Lying over dan going up",
+      "authority_file": "integrality.tex",
+      "authority_first_line": 524,
+      "authority_last_line": 761,
+      "source_segment": {"path": "source-segments/04-lying-over-going-up.tex", "records": 238, "bytes": 11284, "sha256": "904be80ef8471c1b62c00d18ec529e8a249673534e446f8b9e5baf33aa7c79f5"},
+      "repaired_english": {"path": "repaired-source-en/04-lying-over-going-up.tex", "records": 238, "bytes": 11335, "sha256": "a3c2ff0828374c11aecabe1c6d2566039bf375ec2071f7f22c26834214b2677b"},
+      "translated_id": {"path": "translated-id/04-lying-over-going-up.tex", "records": 238, "bytes": 12718, "sha256": "a7ab9ecfcc9414dba5c7a7cb9f080bdde0be09e7adacfeb55ade40bb3c3b488f"}
+    },
+    {
+      "id": "CRING-S05",
+      "title_id": "Nullstellensatz dan normalisasi",
+      "authority_file": "integrality.tex",
+      "authority_first_line": 1218,
+      "authority_last_line": 1547,
+      "source_segment": {"path": "source-segments/05-nullstellensatz-normalization.tex", "records": 330, "bytes": 16325, "sha256": "16c406d87354f7ff451313858dbb25b83a39d7d103788996295a607ecfe4752c"},
+      "repaired_english": {"path": "repaired-source-en/05-nullstellensatz-normalization.tex", "records": 330, "bytes": 16325, "sha256": "16c406d87354f7ff451313858dbb25b83a39d7d103788996295a607ecfe4752c"},
+      "translated_id": {"path": "translated-id/05-nullstellensatz-normalization.tex", "records": 330, "bytes": 17589, "sha256": "395287f8152a71c24b27e8b6db6ec8830c16521ec99a100729218b9cfd49a702"}
+    },
+    {
+      "id": "CRING-S06",
+      "title_id": "Dimensi lokal dan Krull serta Hauptidealsatz",
+      "authority_file": "dimension.tex",
+      "authority_first_line": 17,
+      "authority_last_line": 1044,
+      "source_segment": {"path": "source-segments/06-krull-dimension.tex", "records": 1028, "bytes": 45981, "sha256": "4265b41d635caac3661d4c48beefe3f7a632d09697742bdd02a05a05911bb88f"},
+      "repaired_english": {"path": "repaired-source-en/06-krull-dimension.tex", "records": 1028, "bytes": 46085, "sha256": "4d986cca14cf2f9396b8b340d660b4acae5fa106468cb4cfc4f5cdd936c4eef4"},
+      "translated_id": {"path": "translated-id/06-krull-dimension.tex", "records": 1028, "bytes": 49855, "sha256": "d49cf309f3d5d47ab2838741392ce9ebb06ed91b10624bfe106e626f8ab90c36"}
+    }
+  ],
+  "segment_totals": {
+    "source_segment_records": 3570,
+    "source_segment_bytes": 151617,
+    "repaired_english_records": 3589,
+    "repaired_english_bytes": 152885,
+    "translated_id_records": 3589,
+    "translated_id_bytes": 167780
+  },
+  "repairs": [
+    {"id": "CRING-R01-empty-projective-reference", "file": "01-nakayama.tex", "kind": "replace empty cross-reference with explicit prerequisite bridge", "provenance": "edition-original", "authority_lines": "546", "source_segment_records": "185", "repaired_records": "185", "translated_records": "185"},
+    {"id": "CRING-R02-empty-ufd-reference", "file": "02-spec-zariski.tex", "kind": "replace empty cross-reference with explicit prerequisite bridge", "provenance": "edition-original", "authority_lines": "182-183", "source_segment_records": "149-150", "repaired_records": "149", "translated_records": "149"},
+    {"id": "CRING-R03-missing-semilocal-proof", "file": "02-spec-zariski.tex", "kind": "supply omitted proof with explicit original provenance", "provenance": "edition-original", "authority_lines": "924", "source_segment_records": "891", "repaired_records": "890-901", "translated_records": "890-901"},
+    {"id": "CRING-R03A-malformed-mu-max", "file": "02-spec-zariski.tex", "kind": "repair two malformed mathematical operators in the theorem statement", "provenance": "edition-correction", "authority_lines": "920", "source_segment_records": "887", "repaired_records": "886", "translated_records": "886"},
+    {"id": "CRING-R04-undefined-annihilator-notation", "file": "03-associated-primary.tex", "kind": "replace authorial placeholder with the missing definition", "provenance": "edition-original", "authority_lines": "407-409", "source_segment_records": "73-75", "repaired_records": "73-76", "translated_records": "73-76"},
+    {"id": "CRING-R05-irreducibility-definition", "file": "03-associated-primary.tex", "kind": "replace authorial placeholder with the required definition", "provenance": "edition-original", "authority_lines": "775", "source_segment_records": "441", "repaired_records": "442-444", "translated_records": "442-444"},
+    {"id": "CRING-R06-embedded-prime-example", "file": "03-associated-primary.tex", "kind": "replace authorial placeholder with a checked example", "provenance": "edition-original", "authority_lines": "792", "source_segment_records": "458", "repaired_records": "461-467", "translated_records": "461-467"},
+    {"id": "CRING-R07-constructibility-placeholder", "file": "04-lying-over-going-up.tex", "kind": "replace authorial placeholder with an explicit theorem/scope note", "provenance": "edition-original", "authority_lines": "532", "source_segment_records": "9", "repaired_records": "9", "translated_records": "9"},
+    {"id": "CRING-R08-two-empty-dvr-references", "file": "06-krull-dimension.tex", "kind": "replace two empty cross-references with an explicit scope bridge", "provenance": "edition-original", "authority_lines": "202", "source_segment_records": "186", "repaired_records": "186", "translated_records": "186"}
+  ],
+  "repair_count": 9,
+  "original_bridge_records": [
+    {"id": "CRING-BRIDGE-01", "repair_id": "CRING-R04-undefined-annihilator-notation", "file": "03-associated-primary.tex", "translated_records": "73-76", "content": "annihilator notation definition"},
+    {"id": "CRING-BRIDGE-02", "repair_id": "CRING-R05-irreducibility-definition", "file": "03-associated-primary.tex", "translated_records": "442-444", "content": "irreducibility definition"},
+    {"id": "CRING-BRIDGE-03", "repair_id": "CRING-R06-embedded-prime-example", "file": "03-associated-primary.tex", "translated_records": "461-467", "content": "embedded-prime example"}
+  ],
+  "original_bridge_record_count": 3,
+  "bridge_classification_note": "The original semilocal proof at 02-spec-zariski.tex:890-901 is preserved as recorded repair CRING-R03; it is not counted among the three explicit bridge records in 03-associated-primary.tex.",
+  "integration_decisions": {
+    "translated_roots_modified": false,
+    "first_segment_heading": "The sole subsection command in 01-nakayama.tex is locally rendered at section level by the driver; source bytes are unchanged.",
+    "external_reference_registry": [
+      {"label": "Jacobson", "target": "foundations.tex:1398"},
+      {"label": "def-radical-ideal", "target": "foundations.tex:621"},
+      {"label": "anycontainedinmaximal", "target": "foundations.tex:1242"},
+      {"label": "primeavoidance", "target": "foundations.tex:1411"},
+      {"label": "assmfinite", "reference_location": "noetherian.tex:616", "available_target_label": "finiteassm", "available_target": "noetherian.tex:489", "treatment": "disclosed driver registry alias; fragment unchanged"},
+      {"label": "spec", "target": "spec.tex:2"},
+      {"label": "nilpcriterion", "target": "spec.tex:1013"},
+      {"label": "noetherian", "target": "noetherian.tex:2"},
+      {"label": "finitelygeneratedintegral", "target": "integrality.tex:319"},
+      {"label": "subsectiondimension", "target": "dimension.tex:1582"}
+    ]
+  },
+  "reader_sources": [
+    {"path": "cring-selected-id-preamble.tex", "records": 182, "bytes": 7198, "sha256": "ff447a9c99ae005f5be710b6d270f28ae5332f9e85f524943cab4f69b5d360f6"},
+    {"path": "cring-selected-id-reader.tex", "records": 155, "bytes": 6677, "sha256": "5baa7cf23d4c456e4fe4d99fed4d7552c02b424dd08b487d4549ca7553544be4"},
+    {"path": "build-cring-selected-id.ps1", "records": 99, "bytes": 3791, "sha256": "5fee3e2d246f104b7121735e980f4644199fc4a6eb41b484388054dbcedfe7cb"}
+  ],
+  "build": {
+    "script": "build-cring-selected-id.ps1",
+    "recipe": ["xelatex", "bibtex", "makeindex", "xelatex", "xelatex"],
+    "engine": "MiKTeX-XeTeX 4.18 (MiKTeX 26.5)",
+    "bibtex": "BibTeX 0.99e / MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "makeindex": "MakeIndex 2.18 (MiKTeX 26.5)",
+    "source_date_epoch": 1288569600,
+    "force_source_date": true,
+    "shell_escape": false,
+    "pinned_input_hash_gate": "PASS",
+    "result": "PASS",
+    "pdf": {"path": "reader-build/cring-selected-id-reader.pdf", "pages": 74, "bytes": 378716, "sha256": "4596fd6a84f829e1e9c14cb87468226d6ef49c653d41886af5fab9f2bd96b5db"},
+    "log": {"path": "reader-build/cring-selected-id-reader.log", "records": 1053, "bytes": 39543, "sha256": "2f6bed970e1de35b6386b7af9d67d8e5be9783e3564daf24ca6fc7f9c41d9ac7"},
+    "bibliography_output": {"path": "reader-build/cring-selected-id-reader.bbl", "records": 18, "bytes": 570, "sha256": "2324651c990f8d9ebf230afa1112a3d4de74e501c062b03aac4ce7d6bfe8aa93"},
+    "index_output": {"path": "reader-build/cring-selected-id-reader.ind", "records": 5, "bytes": 76, "sha256": "b9781f030548d2c5d4ca0a9ba8ce7745a31b80a048e65aea5816ab9c627c44b6"},
+    "diagnostics": {
+      "fatal_errors": 0,
+      "undefined_references": 0,
+      "undefined_hyperlinks": 0,
+      "undefined_citations": 0,
+      "rerun_requests": 0,
+      "overfull_hbox": 0,
+      "underfull_hbox": 10,
+      "underfull_vbox": 1,
+      "pdf_string_token_warnings": 6,
+      "bibtex_warnings": ["authority bibliography entry EGA has an empty year"],
+      "classification": "nonfatal typography/bookmark warnings only"
+    }
+  },
+  "checks": {
+    "six_translated_root_hashes_match_prebuild_pins": true,
+    "segment_count": 6,
+    "repair_count": 9,
+    "original_bridge_record_count": 3,
+    "full_gfdl_license_present": true,
+    "non_endorsement_present": true,
+    "model_provenance_present": true,
+    "bibliography_resolved": true,
+    "index_generated": true,
+    "result": "PASS"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "o013.original-connective-mastery-build-qa.v1",
+  "date": "2026-08-29",
+  "result": "pass",
+  "status": "edition-original",
+  "provenance": "OpenAI Codex gpt-5.6-sol, Ultra, on instructions of the user",
+  "source": {
+    "path": "repo/components/original/source/o013-rute-pembelajar.tex",
+    "bytes": 19762,
+    "sha256": "776fa0cfd9b9d1e20df691aa19a599aaa527bf8cb37ea4c81234d0f998011974"
+  },
+  "backend": {
+    "path": "repo/components/original/backend/o013-rute-pembelajar.json",
+    "bytes": 14156,
+    "sha256": "05eb379f4cad172b6b5cb067845718d9b12b6b469a9b6ff71ba18511721461f8",
+    "stable_ids": 71,
+    "closed_references": 114
+  },
+  "reader": {
+    "path": "artifacts/o013-rute-pembelajar-dan-penguasaan-id.pdf",
+    "pages": 7,
+    "bytes": 79365,
+    "sha256": "31af67adf897519a1fef0ed53757c2a3d9d12b5ccc3bdd4cb74e9ce01dd27a18",
+    "title": "O013: Rute Keterhubungan dan Penguasaan",
+    "author": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
+  "build": {
+    "engine": "MiKTeX XeLaTeX",
+    "passes": 2,
+    "builder": {
+      "path": "repo/components/original/support/build-original-layer.ps1",
+      "bytes": 2526,
+      "sha256": "852689a42eeb0798eba35d4a013ddba82bedf82d27d0dba6567ec575a2aa65e7"
+    },
+    "log": {
+      "path": "repo/components/original/qa/o013-rute-pembelajar.log",
+      "bytes": 21151,
+      "sha256": "e6afda695943ac0fc8c0b039a7b77bfa5aac82894ba0e1487d6a961e4acb8e8a"
+    },
+    "fatal_or_unresolved_diagnostics": 0,
+    "overfull_hboxes": 1,
+    "maximum_overfull_points": 9.70108
+  },
+  "visual": {
+    "rendered_pages": 7,
+    "overview": {
+      "path": "visual/overview.jpg",
+      "bytes": 404233,
+      "sha256": "466a0071628665afc687f033326b15a145988110c5e4f95a4f325b7c5a98ec30"
+    },
+    "finding": "All seven pages are centered, readable, unclipped, and free of overlap or malformed mathematics. The short final page is an intentional completion checklist, not a reflow failure. The single small box diagnostic is not visibly clipped."
+  },
+  "content_counts": {
+    "prerequisites": 6,
+    "dependency_nodes": 14,
+    "study_stages": 7,
+    "entry_diagnostics": 8,
+    "mastery_prompts": 8,
+    "progressive_hints_per_prompt": 2,
+    "answers": 8
+  },
+  "source_author_attribution_claimed": false,
+  "result_note": "This layer is separately provenanced original material and is not attributed to Li, Duncan, Mathew, CRing, or another source author."
+}

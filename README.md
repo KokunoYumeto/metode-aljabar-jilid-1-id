@@ -2,11 +2,17 @@
 
 Edisi Bahasa Indonesia independen dari *Methods in Algebra, Volume 1* karya Wen-Wei Li. Repositori ini mempertahankan rumus, penomoran, label, rujukan silang, sitasi, diagram, latihan, petunjuk, dan indeks sumber sambil menyediakan lapisan data modular yang terikat hash.
 
-Status saat ini: **Seluruh Pendahuluan dan Bab 1–10 telah diterjemahkan ke Bahasa Indonesia. Edisi lengkap Wen-Wei Li ini berjumlah 521 halaman dan mempertahankan 161 latihan tingkat atas serta 51 petunjuk. Sumber, backend JSON/CSV, build, dan inspeksi visual berbatas telah lulus.** Komponen kurikulum O013 lain—catatan teori representasi Duncan, enam pilihan CRing, serta lapisan penghubung/penguasaan—tetap dikerjakan terpisah dan tidak diklaim sebagai bagian karya Li.
+Status saat ini: **Paket O013 selesai diterjemahkan dan dibangun: edisi lengkap Li (521 halaman), catatan teori representasi Duncan (114 halaman), enam pilihan CRing (74 halaman), serta rute pembelajaran dan lapisan penguasaan orisinal (7 halaman), seluruhnya 716 halaman pembaca.** Keempat bagian dipertahankan sebagai komponen yang berbeda; tidak satu pun diklaim sebagai bagian karya sumber yang lain, dan hak masing-masing tidak diratakan menjadi satu lisensi.
 
 [Baca atau unduh edisi lengkap Bahasa Indonesia (521 halaman; Pendahuluan dan Bab 1–10)](artifacts/metode-aljabar-jilid-1-id-lengkap.pdf)
 
 [Unduh edisi lengkap terpreservasi — Zenodo 1.0.0, DOI 10.5281/zenodo.22151447](https://doi.org/10.5281/zenodo.22151447)
+
+[Baca catatan teori representasi Alexander Duncan — edisi Bahasa Indonesia (114 halaman)](artifacts/catatan-teori-representasi-duncan-id.pdf)
+
+[Baca enam pilihan aljabar komutatif dari CRing Project — edisi Bahasa Indonesia (74 halaman)](artifacts/pilihan-aljabar-komutatif-cring-id.pdf)
+
+[Mulai dari rute pembelajaran, diagnostik, dan tugas penguasaan O013 (7 halaman)](artifacts/o013-rute-pembelajar-dan-penguasaan-id.pdf)
 
 [Baca atau unduh checkpoint pembaca melalui Bab 6 (460 halaman; pendahuluan dan Bab 1–6 lengkap)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-through-bab-6-reader.pdf)
 
@@ -603,6 +609,9 @@ Validator memeriksa skema, keunikan dan relasi ID, urutan bagian, hash file dan 
 ## Tata letak repositori
 
 - `repo/source/` — sumber TeX beku dan sumber target yang sedang diterjemahkan
+- `repo/components/duncan/` — tujuh akar TeX terjemahan Duncan, driver, backend, dan bukti build
+- `repo/components/cring/` — enam pilihan CRing, sumber Inggris yang diperbaiki, backend, lisensi, dan bukti build
+- `repo/components/original/` — rute, diagnostik, dan tugas penguasaan yang diprovenanskan terpisah
 - `repo/fonts/` — font CJK yang diperlukan untuk build
 - `artifacts/` — reader PDF yang telah diterima
 - `backend/` — JSON, skema, dan proyeksi CSV modular
@@ -612,7 +621,7 @@ Validator memeriksa skema, keunikan dan relasi ID, urutan bagian, hash file dan 
 
 ## Lisensi
 
-Teks sumber dan terjemahan ditangani menurut Creative Commons Attribution 4.0 International (CC BY 4.0). Penutupan repositori memiliki pengecualian komponen yang tidak boleh diratakan menjadi satu klaim lisensi: fragmen teratribusi dalam `AJbook.cls` memerlukan CC BY-SA 3.0, `Lanzhou.png` berasal dari materi CC BY-SA 3.0, font Noto memakai SIL OFL 1.1, dan font Fandol memakai GPLv3 dengan pengecualian penyematan font. Lihat [LICENSES.md](LICENSES.md) dan proyeksi `backend/csv/*-rights.csv` untuk rincian.
+Teks Li dan Duncan masing-masing memakai CC BY 4.0. Pilihan CRing merupakan komponen termodifikasi GFDL 1.2-or-later tanpa Bagian Invarian dan tanpa Teks Sampul; sisipan orisinal diidentifikasi per rekaman. Lapisan rute/penguasaan orisinal diprovenanskan terpisah. Penutupan Li juga memiliki komponen CC BY-SA 3.0, OFL 1.1, dan GPLv3 dengan pengecualian font. Tidak ada lisensi payung. Lihat [LICENSES.md](LICENSES.md), `00_control/RIGHTS_COMPONENTS.csv`, dan catatan hak pada setiap backend.
 
 ## Kemajuan
 
@@ -670,7 +679,10 @@ Teks sumber dan terjemahan ditangani menurut Creative Commons Attribution 4.0 In
   - [x] Barisan eksak; modul projektif, injektif, dan datar
   - [x] Syarat rantai, deret komposisi, dan modul semisederhana
   - [x] Modul tak terurai serta seluruh latihan Bab 6 dengan 8 petunjuk
-- [ ] Bab 7 — Dasar-dasar aljabar
-- [ ] Bab 8 — Perluasan medan
-- [ ] Bab 9 — Teori Galois
-- [ ] Bab 10 — Valuasi medan
+- [x] Bab 7 — Dasar-dasar aljabar
+- [x] Bab 8 — Perluasan medan
+- [x] Bab 9 — Teori Galois
+- [x] Bab 10 — Valuasi medan
+- [x] Catatan teori representasi Duncan — tujuh akar sumber lengkap yang berlisensi
+- [x] Enam pilihan CRing — rentang tepat yang diperbaiki dan diterjemahkan
+- [x] Rute, diagnostik, dan lapisan penguasaan orisinal O013

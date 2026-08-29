@@ -1,0 +1,107 @@
+{
+  "schema": "o013.complete-local-boundary.v1",
+  "date": "2026-08-29",
+  "result": "PASS",
+  "state": "complete_local_publication_pending",
+  "coverage": {
+    "reader_pages_total": 716,
+    "components": 4,
+    "translation_backlog_records": 0,
+    "components_complete": [
+      "complete Wen-Wei Li Volume 1",
+      "complete seven-root licensed Duncan representation-theory notes",
+      "six exact repaired CRing selections",
+      "separately provenanced original route and mastery layer"
+    ]
+  },
+  "readers": [
+    {
+      "component": "li-volume-1",
+      "path": "artifacts/metode-aljabar-jilid-1-id-lengkap.pdf",
+      "pages": 521,
+      "bytes": 2875853,
+      "sha256": "c2994530e3da1711d44f8c36315c40874e87f1968d1a81c1432105de2251c2ee",
+      "license": "CC-BY-4.0 with separately tracked bundled component rights",
+      "public_doi": "10.5281/zenodo.22151447"
+    },
+    {
+      "component": "duncan-representation-theory",
+      "path": "artifacts/catatan-teori-representasi-duncan-id.pdf",
+      "pages": 114,
+      "bytes": 508546,
+      "sha256": "6779d6467463fde4ef0b4fae147dc63533dff0919eda684120d409f1f5f07d12",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "component": "cring-selected-spans",
+      "path": "artifacts/pilihan-aljabar-komutatif-cring-id.pdf",
+      "pages": 74,
+      "bytes": 378716,
+      "sha256": "4596fd6a84f829e1e9c14cb87468226d6ef49c653d41886af5fab9f2bd96b5db",
+      "license": "GFDL-1.2-or-later"
+    },
+    {
+      "component": "o013-original-route-mastery",
+      "path": "artifacts/o013-rute-pembelajar-dan-penguasaan-id.pdf",
+      "pages": 7,
+      "bytes": 79365,
+      "sha256": "31af67adf897519a1fef0ed53757c2a3d9d12b5ccc3bdd4cb74e9ce01dd27a18",
+      "license": "CC-BY-4.0",
+      "provenance": "OpenAI Codex gpt-5.6-sol, Ultra, on instructions of the user"
+    }
+  ],
+  "component_evidence": {
+    "li": {
+      "translation_freeze": "qa/LI_COMPLETE_TRANSLATION_FREEZE.json",
+      "build": "qa/LI_COMPLETE_BUILD_FINAL.log",
+      "visual": "qa/LI_COMPLETE_VISUAL_QA_20260829.json",
+      "github_content_commit": "b5dda2218c5fbd2b7e7fae7e05fdbbe88fdab10e",
+      "zenodo_doi": "10.5281/zenodo.22151447"
+    },
+    "duncan": {
+      "authority_commit": "c62d36f41189da4bd3da4671668f68720df54ff7",
+      "authority_tree": "e83ee440666133b14dec440158a108069a13e9e4",
+      "backend_receipt": "repo/components/duncan/backend/duncan-backend-validation.json",
+      "backend_receipt_sha256": "88c06fd72bb710585cebd5ec9264ec81c1da34e1e99e9722495451bd1521d3b2",
+      "visual_receipt": "repo/components/duncan/qa/DUNCAN_VISUAL_QA.json",
+      "visual_receipt_sha256": "7361b842730f94ec59183328b588a4244950baa41807dfaa55da633d6a1f9cdd",
+      "roots": 7,
+      "target_records": 8121,
+      "exercises": 41,
+      "formulas": 4632
+    },
+    "cring": {
+      "authority_zip_sha256": "151cdf5498622251db9999b082c4b756a5a7e22b07ddd79538c0057472a4234d",
+      "authority_pdf_sha256": "9d228183f549ab4a64dcacfa49884c0f7ef4d5d5f8c535f9066070bf909b580c",
+      "backend_receipt": "repo/components/cring/backend/cring-backend-validation.json",
+      "backend_receipt_sha256": "7c5c964c734a6f1fce0ebec73d38e33848e56cc984e03b4620c9519d975ad229",
+      "visual_receipt": "repo/components/cring/qa/CRING_VISUAL_QA.json",
+      "visual_receipt_sha256": "45784a8ecf036ede34ee4f5232d42bcef9d492c38d5d9aeb58e9f10611651e60",
+      "selected_roots": 6,
+      "target_records": 3589,
+      "repairs": 9,
+      "original_bridges": 3,
+      "exercises": 27,
+      "hints": 2,
+      "formulas": 2651
+    },
+    "original": {
+      "receipt": "repo/components/original/qa/ORIGINAL_LAYER_BUILD_QA.json",
+      "receipt_sha256": "5b97d574b977fdefaee6d2f92a11e70fda9c8b15cc55f6ed6f88674fe7861362",
+      "stable_ids": 71,
+      "closed_references": 114,
+      "diagnostics": 8,
+      "mastery_prompts": 8,
+      "answers": 8
+    }
+  },
+  "gates": {
+    "translation_complete": true,
+    "backend_regeneration": "PASS",
+    "reader_builds": "PASS",
+    "all_page_visual_review": "PASS",
+    "component_rights_separate": true,
+    "upstream_contact": false
+  },
+  "next_action": "Path-limited GitHub commit/push and anonymous byte readback, then reader-first Zenodo aggregate publication and anonymous full-byte readback. Do not rerun component QA."
+}

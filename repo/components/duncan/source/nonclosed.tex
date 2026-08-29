@@ -1,0 +1,725 @@
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsthm}
+
+% gaya teorema (saya menyukai semua lingkungan memakai pencacah yang sama); adaptasi berlisensi CC BY 4.0
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{proposition}[theorem]{Proposisi}
+\newtheorem{corollary}[theorem]{Korolari}
+\newtheorem{conjecture}[theorem]{Konjektur}
+\newtheorem{exercise}[theorem]{Latihan}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definisi}
+\newtheorem{example}[theorem]{Contoh}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Catatan}
+
+% beberapa pengaturan penomoran
+\numberwithin{equation}{section}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\setlength{\headheight}{15.2pt}
+\renewcommand{\footrulewidth}{0.4pt}% nilai bakunya 0pt
+\setlength{\footskip}{30pt}
+\pagestyle{fancy}
+
+\makeatletter
+\let\ps@plain\ps@fancy 
+\makeatother
+
+\lhead{MATH 742}
+\chead{Representasi atas medan yang tidak tertutup}
+\rhead{Musim Semi 2023}
+\lfoot{Revisi Terakhir: \today}
+\cfoot{}
+\rfoot{\thepage\ dari \pageref{LastPage} }
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+\title{Representasi atas medan yang tidak tertutup}
+\author{Alexander Duncan}
+
+\maketitle
+
+Di seluruh catatan ini, $k$ adalah medan berkarakteristik $0$
+dan $\overline{k}$ adalah penutupan aljabar dari $k$.
+(Bagi pembaca yang kurang nyaman dengan perluasan Galois tak hingga,
+$\overline{k}$ dapat diganti dengan penutupan Galois
+dari sejumlah hingga perluasan medan hingga yang relevan
+dan muncul dalam konteks-konteks yang dibahas di bawah.)
+
+Sebagian besar pembahasan ini terinspirasi oleh \cite[\S{12--13}]{Serre}.
+
+\section{Gelanggang Representasi melalui Modul}
+
+Misalkan $G$ suatu grup hingga.
+
+Ingat bahwa $kG$ adalah aljabar grup $G$ atas $k$.
+Karena $k$ berkarakteristik $0$, kita tahu bahwa $kG$ semisederhana.
+Kita memiliki dekomposisi kanonik
+\[
+kG \cong \bigoplus_{i=1}^r A_i
+\]
+dengan $A_1,\ldots,A_r$ aljabar-aljabar $k$ sederhana.
+
+Setiap $A_i$ merupakan aljabar sederhana sentral atas $F_i$
+untuk suatu perluasan medan hingga $F_i/k$.
+Misalkan $n_i = \deg(A_i)$ adalah \emph{derajat} dari $A_i$.
+Secara ekuivalen, berlaku $n_i^2 = \dim_{F_i}(A_i)$
+atau
+\[
+A_i \otimes_{F_i} \overline{k} \cong
+\operatorname{M}_{n_i}(\overline{k})
+\]
+sebagai aljabar-aljabar $\overline{k}$.
+
+Lebih tepatnya, terdapat suatu aljabar-$F_i$ pembagian sentral $D_i$
+dan suatu bilangan bulat positif $m_i$ sedemikian sehingga
+\[
+A_i \cong \operatorname{M}_{m_i}(D_i)
+\]
+sebagai aljabar-aljabar $F_i$.
+Baik $m_i$ maupun kelas isomorfisme $D_i$ ditentukan secara tunggal.
+Misalkan $d_i := \operatorname{ind}(A_i)$ menyatakan indeks Schur dari $A_i$.
+Kita mempunyai $d_i = \deg(D_i)$, yang ekuivalen dengan
+$d_i^2=\dim_{F_i}(D_i)$.  Selain itu, $n_i=m_id_i$.
+
+Setiap $A_i$ mempunyai modul sederhana $V_i$, yang tunggal hingga isomorfisme.
+Karena $V_i \cong D_i^{\oplus n_i}$, kita memperoleh
+\[
+\dim_k V_i = [F_i:k]m_id_i^2 = [F_i:k]d_in_i .
+\]
+Ruang-ruang vektor $V_1,\ldots,V_r$ tepat merupakan
+representasi tak tereduksi dari $G$ atas $k$.
+\emph{Indeks Schur} dari $V_i$ didefinisikan sebagai
+indeks Schur $d_i$ dari aljabar terkait $A_i$.
+
+Misalkan $\Gamma$ adalah grup Galois absolut
+$\operatorname{Gal}(\overline{k}/k)$.
+Misalkan $X_i :=
+\operatorname{Hom}_{k-\operatorname{alg}}(F_i,\overline{k})$.
+Perhatikan bahwa $X_i$ memiliki aksi kiri oleh $\Gamma$ melalui
+pascakomposisi.
+Secara informal, $X_i$ dapat dipandang sebagai himpunan akar polinomial
+minimal dari suatu elemen primitif bagi $F_i/k$.
+Kita mempunyai isomorfisme aljabar-$\overline{k}$
+\[
+\omega : F_i \otimes_k \overline{k} \cong
+\bigoplus_{\sigma \in X_i} \overline{k}
+\]
+melalui $\omega(f \otimes \ell)_{\sigma} := \sigma(f)\ell$.
+
+Untuk setiap $\sigma \in X_i$, kita dapat mendefinisikan hasil kali tensor
+$A_i \otimes_\sigma \overline{k}$ dari aljabar-aljabar $F_i$
+dengan memakai pemetaan struktur $F_i \to A_i$ di sebelah kiri dan
+homomorfisme $\sigma : F_i \to \overline{k}$ di sebelah kanan.
+Melalui rangkaian isomorfisme aljabar-$\overline{k}$
+\[
+A_i \otimes_k \overline{k} \cong 
+A_i \otimes_{F_i} F_i \otimes_k \overline{k}
+\cong A_i \otimes_{F_i} \bigoplus_{\sigma \in X_i} \overline{k}
+\]
+kita memperoleh isomorfisme
+\[
+\Omega : A_i \otimes_k \overline{k} \cong
+\bigoplus_{\sigma \in X_i} A_i \otimes_\sigma \overline{k} .
+\]
+
+Misalkan $W_{i,\sigma}$ adalah representasi tak tereduksi
+dari $\overline{k}G$ yang bersesuaian dengan $A_i \otimes_\sigma \overline{k}$.
+Dengan demikian, kita memperoleh dekomposisi berikut
+\[
+V_i \otimes_k \overline{k} \cong
+\bigoplus_{\sigma \in X_i} W_{i,\sigma}^{\oplus d_i}
+\]
+untuk setiap representasi tak tereduksi $V_i$ dari $kG$.
+
+Jika $\rho_{i,\sigma} : G \to \operatorname{GL}(W_{i,\sigma})$ adalah
+pemetaan-pemetaan yang bersesuaian, perhatikan bahwa
+\[
+\tau \circ \rho_{i,\sigma} = \rho_{i,\tau(\sigma)}
+\]
+untuk setiap $\tau \in \Gamma$.
+Jadi terdapat aksi kiri $\Gamma$ pada himpunan representasi tak tereduksi
+dari $G$ atas $\overline{k}$
+dengan orbit-orbit yang bersesuaian dengan himpunan-$\Gamma$ $X_i$.
+
+\section{Teori Karakter}
+
+Sejauh ini kita baru mengembangkan teori karakter atas $\mathbb{C}$.
+Namun, karena kita membahas representasi berdimensi hingga dari
+grup hingga, berdasarkan prinsip Lefschetz
+semua hasil yang telah dibahas berlaku atas sembarang medan tertutup secara aljabar
+yang berkarakteristik $0$.
+Khususnya, kita dapat mengidentifikasi gelanggang-gelanggang representasi
+$R(G)=R_{\mathbb{C}}(G)=R_{\overline{k}}(G)$
+dengan $\overline{k}$ penutupan aljabar dari $k$.
+
+Ingat bahwa gelanggang representasi $R_k(G)$ dari $G$ atas $k$
+adalah grup aditif representasi virtual atas $k$
+dengan perkalian yang diperoleh dengan memperluas hasil kali tensor
+pada subsemigelanggang $R_k^+(G)$.
+Dari pembahasan di atas, $R_k(G)$ adalah grup abelian bebas
+dengan basis $[V_1],\ldots,[V_r]$.
+
+Pemetaan $[V] \mapsto [V \otimes_k \overline{k}]$
+memberikan homomorfisme gelanggang injektif yang kanonik
+\[
+R_k(G) \hookrightarrow R_{\overline{k}} = R(G)
+\]
+dan karenanya homomorfisme gelanggang injektif kanonik
+\[
+R_k(G) \hookrightarrow C(G)
+\]
+dengan $C(G)$ himpunan fungsi kelas kompleks pada $G$.
+
+Seperti dalam kasus kompleks, untuk suatu representasi $(V,\rho)$
+dari $G$ atas $k$, kita mendefinisikan karakter
+$\chi_V : G \to k$
+melalui teras $\chi_V(g) := \operatorname{tr}(\rho(g))$.
+Definisi ini sesuai dengan pemetaan $R_k(G) \hookrightarrow C(G)$ di atas.
+Selanjutnya, kita mengidentifikasi $R_k(G)$ dengan subgelanggang dari $R(G)$ dan $C(G)$
+dalam pembahasan berikut.
+
+Misalkan $\chi_1,\ldots,\chi_r$ adalah karakter dari representasi tak tereduksi $G$
+atas $k$ yang bersesuaian dengan aljabar $A_1,\ldots, A_r$ di atas.
+Misalkan $\psi_{i,\sigma} : G \to \overline{k}$ adalah karakter
+yang bersesuaian dengan representasi tak tereduksi $W_{i,\sigma}$
+yang didefinisikan pada bagian sebelumnya.
+
+\begin{theorem}
+Untuk setiap $1 \le i \le r$, berlaku
+\[
+\chi_i = d_i \sum_{\sigma \in X_i} \psi_{i,\sigma} .
+\]
+Khususnya, karakter-karakter $\chi_1,\ldots, \chi_r$
+membentuk basis ortogonal bagi subruang $R_k(G)$ dari $C(G)$.
+\end{theorem}
+
+\begin{proof}
+Deskripsi $\chi_i$ diperoleh dari hasil-hasil pada bagian sebelumnya.
+Keortogonalan mengikuti dari fakta bahwa $\psi_{i,\sigma}$
+saling ortogonal.
+\end{proof}
+Perhatikan bahwa $\{\chi_1,\ldots,\chi_r\}$ hanya merupakan
+
+basis \emph{ortogonal}; basis ini tidak selalu ortonormal.
+Sebenarnya terdapat \emph{tiga} teras berbeda yang dapat dipertimbangkan
+
+untuk setiap representasi tak tereduksi $V_i$.
+Kita mempunyai teras biasa $\chi_i(g) \in k$ sebagai elemen dari
+$\operatorname{End}_k(V_i)$.
+Kita juga dapat mendefinisikan $\phi_i(g) \in F_i$ sebagai teras dari $g$ dalam
+$\operatorname{End}_{F_i}(V_i)$.
+Terakhir, kita mempunyai $\psi_i(g) \in F_i$ sebagai teras tereduksi
+$\operatorname{Trd}(g)$, dengan memandang $g$ sebagai elemen aljabar sederhana sentral
+$F_i$-$A_i$.
+Semua teras ini terkait melalui
+\[
+\chi_i = \operatorname{Tr}_{F_i/k} \circ \phi_i, \quad
+\phi_i = d_i \psi_i
+\]
+dengan mengingat bahwa $d_i$ adalah indeks Schur dari aljabar sederhana sentral
+$F_i$-$A_i$ (secara ekuivalen, dari representasi $V_i$).
+Terakhir, untuk setiap $\sigma \in X_i$, kita mempunyai $\psi_{i,\sigma} = \sigma
+\circ \psi_i$.
+Ini memberikan cara lain untuk memperoleh dekomposisi $V_i \otimes_k
+\overline{k}$ di atas.
+\subsection{Keterdefinisian Representasi}
+
+Ingat dari bagian sebelumnya bahwa grup Galois absolut
+
+mempermutasikan representasi-representasi tak tereduksi dari $\overline{k}G$.
+Memang, jika $\rho_{i,\sigma} : G \to \operatorname{GL}(W_{i,\sigma})$
+adalah pemetaannya, maka berlaku
+\[
+\tau \circ \rho_{i,\sigma} = \rho_{i,\tau(\sigma)}
+\]
+untuk $\tau \in \Gamma$.
+Aksi ini sama dengan aksi yang diperoleh dengan bertindak pada
+karakter-karakter
+\[
+\tau \circ \phi_{i,\sigma} = \phi_{i,\tau(\sigma)}
+\]
+dengan mengingat bahwa $\phi_{i,\sigma}: G \to \overline{k}$ hanyalah suatu
+fungsi kelas tertentu.
+\begin{theorem}
+
+Misalkan $\overline{R}_k(G)$ adalah subhimpunan $R(G)$ yang terdiri atas karakter
+yang fungsi kelasnya bernilai dalam $k$.
+Maka $\overline{R}_k(G)$ mempunyai basis
+\[
+\frac{\chi_1}{d_1},
+\frac{\chi_2}{d_2},
+\cdots,
+\frac{\chi_r}{d_r}.
+\]
+\end{theorem}
+Jadi $\overline{R}_k(G)$ dapat diperoleh kembali sepenuhnya dari tabel karakter
+
+atas $\mathbb{C}$. Tepatnya, $\chi_i/d_i$ dapat direkonstruksi
+sebagai jumlah atas orbit-orbit $\Gamma$ dari karakter kompleks.
+Untuk merekonstruksi $\overline{R}_k(G)$,
+kita perlu mengetahui indeks-indeks Schur.
+
+\begin{proposition}
+Jika $G$ adalah grup abelian,
+maka $R_k(G) = \overline{R}_k(G)$.
+\end{proposition}
+
+\begin{proof}
+Jika $G$ abelian, maka $kG$ komutatif, sehingga semua aljabar pembagian
+penyusunnya adalah medan. Jadi semua indeks Schur bernilai trivial.
+\end{proof}
+
+Kini kita siap membuktikan sebuah teorema penting dari Brauer, yang
+pada dasarnya mereduksi studi keterdefinisian representasi atas
+sembarang medan berkarakteristik $0$ ke kasus medan siklotomik.
+
+\begin{theorem} \label{thm:define_over_cyclotomic}
+Jika $G$ adalah grup hingga bereksponen $e$,
+maka setiap representasi $G$ atas sembarang medan
+berkarakteristik $0$
+konjugat dengan suatu representasi yang terdefinisi atas
+medan siklotomik $\mathbb{Q}(\zeta_e)$.
+\end{theorem}
+
+\begin{proof}
+Misalkan $K=\mathbb{Q}(\zeta_e)$. Kita hendak menunjukkan bahwa $R_K(G)=R(G)$.
+Menurut teorema Brauer, suatu elemen umum $\chi$ dari $R(G)$ dapat ditulis
+dalam bentuk
+\[
+\rho = \sum_{i=1}^m c_i\operatorname{Ind}_{H_i}^G(\tau_i)
+\]
+dengan $c_i$ bilangan-bilangan bulat, $H_i$ subgrup-subgrup dari $G$,
+dan setiap $\tau_i$ merupakan representasi berdimensi satu dalam $R(H_i)$.
+Representasi berdimensi satu dari $H_i$ terdefinisi atas
+$\mathbb{Q}(\zeta_e)$ karena eksponen $H_i$ paling besar $e$.
+Dengan demikian, $\chi$ adalah kombinasi linear integral dari
+representasi yang diinduksi dari $R_K(H_i)$, sehingga berada dalam
+$R_K(G)$ sebagaimana diinginkan.
+
+\end{proof}
+
+\section{Ortogonalitas Kolom}
+Kita telah melihat bahwa $\chi_1,\ldots,\chi_r$ membentuk basis ortogonal bagi
+$R_k(G)$. Hal ini sama dengan menunjukkan bahwa \emph{baris-baris} tabel karakter
+dari $G$ (atas $k$) saling ortogonal.
+Namun, kini terdapat ``terlalu banyak'' kolom jika kita mengharapkan
+tabel karakter berbentuk persegi.
+
+Di sini kita menyelidiki persoalan tersebut.
+Untuk setiap bilangan bulat positif $n$, definisikan \emph{operasi Adams}
+$\Psi^n : C(G) \to C(G)$ sebagai fungsi yang memetakan
+suatu fungsi kelas $\chi$ ke fungsi kelas $\Psi^n(\chi)$ yang didefinisikan oleh
+\[
+\Psi^n(\chi)(g) := \chi(g^n)
+\]
+
+untuk setiap $g \in G$.
+\begin{proposition}
+Setiap operasi Adams membatasi diri menjadi homomorfisme gelanggang
+dari $R_k(G)$ ke dirinya sendiri.
+
+\end{proposition}
+\begin{proof}
+Misalkan $\chi$ adalah karakter dari suatu representasi $(V,\rho)$.
+Untuk suatu $g$, tinjau multihimpunan nilai eigen
+\[
+a_1,\ldots, a_m
+\]
+dari $\rho(g)$.
+Jadi $\chi(g)=p_1$, dengan $p_1$ polinomial jumlah pangkat pertama
+dalam $a_1,\ldots, a_m$.
+Kita mempunyai $\chi(g^n)=p_n$, dengan $p_n$ polinomial jumlah pangkat
+\[
+a_1^n + \cdots + a_m^n.
+\]
+Menurut teorema dasar polinomial simetris, terdapat suatu
+polinomial $f_n$ dengan koefisien bilangan bulat sedemikian sehingga
+\[
+p_n = f_n(e_1,\ldots,e_m)
+\]
+dengan $e_1,\ldots,e_m$ polinomial-polynomial simetris elementer
+
+dalam $a_1,\ldots,a_n$.
+Fungsi $f_n$ tidak bergantung pada nilai-nilai eigen, sehingga kita mempunyai
+rumus
+\[
+\Psi^n(\chi) = f_n(\Lambda^1 \chi, \ldots, \Lambda^n \chi)
+\]
+dalam gelanggang $C(G)$. Karena pangkat eksterior suatu representasi adalah
+representasi, $\Psi^n(\chi)$ berada dalam $R_k(G)$ sebagaimana diinginkan.
+
+\end{proof}
+Ingat bahwa \emph{eksponen} $e$ dari grup hingga adalah kelipatan persekutuan terkecil
+dari orde semua elemen $g \in G$.
+Secara ekuivalen, eksponen $e$ adalah bilangan bulat positif terkecil sedemikian sehingga
+
+$g^e=1$ untuk semua $g \in G$.
+\begin{lemma}
+Jika $n$ relatif prima terhadap $e$,
+maka fungsi $g \mapsto g^t$ merupakan bijeksi dari $G$ ke dirinya sendiri,
+yang memetakan kelas konjugasi ke kelas konjugasi.
+
+\end{lemma}
+\begin{proof}
+Misalkan $s$ adalah invers perkalian dari $n$ modulo $e$,
+yang ada karena $t$ relatif prima terhadap $e$.
+Fungsi $g \mapsto g^s$ adalah fungsi invers dari
+$g \mapsto g^t$ karena $g^{ts}=g^1=g$.
+
+\end{proof}
+
+Dari sini segera diperoleh:
+\begin{corollary}
+Jika $t$ relatif prima terhadap $e$,
+maka $\Psi^t : R(G) \to R(G)$ adalah suatu isomorfisme.
+
+\end{corollary}
+Jadi, untuk $t$ yang sesuai, operasi Adams $\Psi^t$
+
+mempermutasikan \emph{kolom-kolom} tabel karakter dari $R(G)$.
+Mengingat Teorema~\ref{thm:define_over_cyclotomic},
+kita dapat mengasumsikan bahwa $k \subseteq K=\mathbb{Q}(\zeta_e)$
+dengan $e$ eksponen dari $G$.
+Misalkan $\Gamma$ adalah grup Galois dari $K/k$.
+Perhatikan bahwa $\Gamma$ adalah subgrup dari
+$(\mathbb{Z}/e\mathbb{Z})^\times$.
+Misalkan $\Gamma$ dibangkitkan oleh $\sigma_1,\ldots,\sigma_s$
+dengan $\sigma(\zeta_e)=\zeta_e^t$ untuk suatu $t_1,\ldots,t_s$ di
+
+$(\mathbb{Z}/e\mathbb{Z})^\times$.
+Kini kita mempunyai dua aksi $\Gamma$ pada $R(G)$.
+Untuk $\gamma \in \Gamma$ dan $\chi \in R(G)$, kita mempunyai
+\[
+(\gamma \ast \chi)(g) := \gamma(\chi(g)) 
+\]
+untuk semua $g \in G$,
+dengan memandang $\chi: G \to K$ sebagai fungsi berkodomain $K \subset
+\overline{k}$.
+Kita juga mempunyai aksi yang menggunakan operasi Adams,
+yang dibangkitkan oleh
+\[
+\sigma_i \ast' \chi := \Psi^{t_i}(\chi)
+\]
+
+untuk $1 \le i \le s$.
+\begin{proposition}
+Kedua aksi $\Gamma$ pada $R(G)$ tersebut berimpit.
+
+\end{proposition} 
+\begin{proof}
+Nilai eigen dari setiap matriks $M$ dalam setiap representasi $G$ merupakan
+akar kesatuan ke-$e$.
+Jadi, jika $\chi$ adalah karakter dalam $R(G)$, maka
+\[
+(\sigma_i \circ \chi)(g) = \Psi^{t_i}(\chi)(g)
+\] 
+untuk setiap $\sigma \in \Gamma$.
+
+\end{proof}
+Perhatikan bahwa kita dapat mendefinisikan aksi $\Gamma$ secara langsung pada kelas-kelas
+konjugasi $G$ dengan menggunakan identifikasi di atas.
+Berdasarkan hal ini, kita mendefinisikan \emph{kelas-$\Gamma$}
+(atau \emph{kelas-$K$}) dari $G$ sebagai gabungan orbit-orbit $\Gamma$ dari
+kelas-kelas konjugasi.
+
+Dengan demikian kita memperoleh:
+\begin{theorem}
+$\overline{R}_k(G)$ tepat merupakan subhimpunan $R(G)$ yang karakter-karakter
+terkaitnya tetap terhadap aksi $\Gamma$.
+
+\end{theorem}
+
+Sebagai akibat langsung, kita memperoleh:
+\begin{corollary}
+Jumlah karakter tak tereduksi dari $G$ atas $k$
+sama dengan jumlah kelas-$\Gamma$ dari $G$.
+
+\end{corollary}
+Perhatikan bahwa aksi khusus $\Gamma$ pada $G$ ditentukan oleh suatu
+pilihan isomorfisme antara $\Gamma$ dan citranya di dalam
+$(\mathbb{Z}/e\mathbb{Z})^\times$, tetapi kelas-kelas $\Gamma$ tidak
+bergantung pada pilihan ini.
+Jadi kelas-kelas $\Gamma$ dari $G$ sepenuhnya bersifat teori-grup.
+Khususnya, kita tidak perlu menghitung tabel karakter
+untuk menentukan jumlah representasi tak tereduksi (seperti halnya atas
+
+$\mathbb{C}$).
+Namun, dari analisis ini kita hanya memperoleh $\overline{R}_k(G)$.
+
+Masih diperlukan pekerjaan lebih lanjut untuk menentukan indeks-indeks Schur.
+
+\subsection{Representasi atas bilangan rasional}
+Di sini kita meninjau kasus khusus penting $k=\mathbb{Q}$.
+Misalkan $G$ suatu grup hingga dengan eksponen $e$.
+Seperti di atas, $K=\mathbb{Q}(\zeta_e)$ dengan $\zeta_e$ akar kesatuan primitif
+ke-$e$.
+Menurut hasil-hasil standar tentang medan siklotomik, grup Galois
+$\Gamma = \operatorname{Gal}(K/k)$ isomorfik
+
+dengan seluruh grup $(\mathbb{Z}/e\mathbb{Z})^\times$.
+
+Dalam kasus ini, kelas-kelas $\Gamma$ di atas mempunyai deskripsi sederhana:
+\begin{lemma}
+Dua elemen $g,h \in G$ termasuk dalam kelas-$\mathbb{Q}$ yang sama jika dan
+hanya jika keduanya membangkitkan subgrup siklik yang saling konjugat.
+
+\end{lemma}
+\begin{proof}
+Perhatikan bahwa $\langle g \rangle = \langle h \rangle$ jika dan hanya jika
+$g^s = h$ dan $h^t= g$ untuk suatu bilangan bulat $s$ dan $t$.
+Perhatikan bahwa $t,s$ relatif prima terhadap $n=\langle g \rangle$.
+Karena $n$ membagi eksponen $e$ dari $G$, kita mempunyai homomorfisme grup
+surjektif $(\mathbb{Z}/e\mathbb{Z})^\times \to (\mathbb{Z}/n\mathbb{Z})^\times$.
+Jadi kita dapat mengasumsikan $s$ dan $t$ relatif prima terhadap $e$.
+Karena $\Gamma \cong (\mathbb{Z}/e\mathbb{Z})^\times$,
+kita menyimpulkan bahwa $\langle g \rangle = \langle h \rangle$ jika dan hanya jika
+$g$ dan $h$ berada dalam orbit $\Gamma$ yang sama.
+Pernyataan ini tetap berlaku untuk kelas-kelas konjugasi. 
+\end{proof}
+
+Kita menyimpulkan teorema berikut:
+
+\begin{theorem}
+Jumlah kelas isomorfisme representasi tak tereduksi dari
+grup hingga $G$ atas $\mathbb{Q}$ sama dengan jumlah kelas konjugasi
+subgrup siklik dari $G$.
+\end{theorem}
+
+Kita menyoroti kesejajaran menarik berikut dengan representasi
+permutasi dan representasi kompleks:
+
+\begin{itemize}
+\item Jumlah representasi \textbf{permutasi} tak tereduksi berkorespondensi
+bijektif dengan jumlah kelas konjugasi \textbf{subgrup}.
+\item Jumlah representasi \textbf{rasional} tak tereduksi berkorespondensi
+bijektif dengan jumlah kelas konjugasi \textbf{subgrup
+siklik}.
+\item Jumlah representasi \textbf{kompleks} tak tereduksi berkorespondensi
+bijektif dengan jumlah kelas konjugasi \textbf{elemen}.
+\end{itemize}
+
+\section{Representasi atas bilangan real}
+
+Misalkan $V$ suatu representasi kompleks berdimensi hingga
+dari suatu grup hingga $G$.
+
+\begin{proposition} \label{prop:Ginner}
+$V$ mempunyai hasil kali dalam yang invarian-$G$.
+\end{proposition}
+
+\begin{proof}
+Misalkan $b : V \times V \to \mathbb{C}$ suatu hasil kali dalam (yang belum tentu
+invarian-$G$).
+Definisikan fungsi $B : V \times V \to \mathbb{C}$ dengan
+\[
+B(v,w) = \sum_{g \in G}b(gv,gw)
+\]
+untuk $v, w \in V$.
+Perhatikan bahwa $B$ juga seskuilinear
+dan bahwa $B(v,v) > 0$ untuk semua $v \ne 0$.
+Jadi $B$ juga merupakan hasil kali dalam.
+\end{proof}
+
+Proposisi sebelumnya mempunyai interpretasi berikut:
+
+\begin{corollary}
+Setiap subgrup hingga dari $\operatorname{GL}_n(\mathbb{C})$
+konjugat dengan suatu subgrup hingga dari grup uniter
+$\operatorname{U}(n)$.
+\end{corollary}
+
+Yang penting, secara umum kita hanya dapat menghasilkan bentuk \emph{seskuilinear};
+mungkin tidak ada bentuk \emph{bilinear} tak trivial.
+Sebagai contoh, suatu representasi kompleks berdimensi satu yang tak trivial dari
+$G=\mathbb{Z}/3\mathbb{Z}$ tidak mempunyai bentuk bilinear invarian-$G$ yang tak trivial;
+jika ada, kita memperoleh kontradiksi
+\[
+1=(v,v)=(gv,gv)=(\zeta_3v,\zeta_3,v)=\zeta_3^2(v,v)=\zeta_3^2
+\]
+untuk vektor $v$ bernorma satu dan pembangkit $g$ dari $G$.
+
+Namun, kita tahu bahwa bentuk seskuilinear dan bentuk bilinear
+pada dasarnya sama atas medan tertutup real.
+Fakta ini ternyata mengarah pada suatu teori yang menarik. 
+Kita mengatakan bahwa $V$ \emph{dapat direalisasikan atas $\mathbb{R}$} jika terdapat
+representasi real $W$ dari $G$ sedemikian sehingga $W \otimes_\mathbb{R}
+\mathbb{C} \cong V$.
+
+\begin{theorem}[Frobenius-Schur] \label{thm:FrobSchur}
+Suatu representasi kompleks $V$ dapat direalisasikan atas $\mathbb{R}$ jika dan hanya
+jika terdapat bentuk bilinear simetris tak degenerat yang invarian-$G$
+pada $V$.
+\end{theorem}
+
+\begin{proof}
+Pertama, andaikan $V$ dapat direalisasikan atas $\mathbb{R}$.
+Misalkan $W$ representasi real sedemikian sehingga $V = W \otimes_\mathbb{R}
+\mathbb{C}$. Perhatikan bahwa $W$ mempunyai bentuk bilinear simetris tak degenerat yang
+invarian-$G$, yakni $q$, dengan argumen yang sama seperti Proposisi~\ref{prop:Ginner}
+(hasil kali dalam sama dengan bentuk bilinear simetris tak degenerat
+atas $\mathbb{R}$). Maka $q \otimes_\mathbb{R} \mathbb{C}$
+adalah bentuk bilinear simetris tak degenerat yang invarian-$G$ pada $V$.
+
+Sebaliknya, andaikan kita mempunyai bentuk bilinear simetris tak degenerat $B$
+pada $V$. Kita juga mempunyai hasil kali dalam yang invarian-$G$, yakni $(-,-)$.
+Kita mendefinisikan fungsi $\varphi : V \to V$ sedemikian sehingga
+\[
+B(x,y)=(\varphi(x),y)
+\]
+untuk semua $x,y \in V$
+(fungsi ini tunggal dan terdefinisi dengan baik karena $B$ dan hasil kali dalam
+keduanya tak degenerat).
+Perhatikan bahwa $\varphi$ antilinear dan bijektif.
+Jadi $\varphi^2$ merupakan automorfisme linear dari $V$.
+
+Kita mengklaim bahwa $\varphi^2$ adalah operator Hermite definit positif.
+Memang,
+\[
+(\varphi^2(x),y)=B(\varphi(x),y)=B(y,\varphi(x))=(\varphi(y),\varphi(x))
+\]
+untuk semua $x,y \in V$.
+Dengan demikian,
+\[
+\overline{(\varphi(x),\varphi(y))}=\overline{(\varphi^2(y),x)}.
+\]
+Karena hasil kali dalam bersifat simetris-konjugat, kita memperoleh
+\[
+(\varphi^2(x),y)=(x,\varphi^2(y))
+\]
+dan menyimpulkan bahwa $\varphi^2$ bersifat Hermite.
+Selain itu, $(\varphi^2(x),x)=(\varphi(x),\varphi(x))$
+menunjukkan bahwa operator tersebut definit positif.
+
+Setiap operator Hermite definit positif $\varphi^2$ mempunyai akar kuadrat
+Hermite definit positif tunggal $\omega$ sedemikian sehingga
+$\omega^2=\varphi^2$. Selain itu, $\omega$ komutatif dengan $\varphi$.
+Misalkan $\sigma = \varphi \omega^{-1}$.
+Kita melihat bahwa $\sigma : V \to V$ adalah pemetaan antilinear dengan kuadrat
+sama dengan identitas.
+Selain itu, $\sigma$ ekuivarian-$G$.
+
+Karena $\sigma$ antilinear, khususnya ia
+linear-$\mathbb{R}$. 
+Misalkan $V_R$ adalah ruang eigen-$1$ (real) dari $\sigma$, dan $V_I$ adalah
+ruang eigen-$-1$ (real) dari $\sigma$. Karena $\sigma$ antilinear,
+kita memperoleh $V_I=iV_R$. Dengan demikian, $V=V_R \oplus iV_I$
+sebagaimana diinginkan.
+\end{proof}
+
+Sekarang andaikan $V$ tak tereduksi dan misalkan $\chi$ karakternya.
+
+\begin{definition}
+\emph{Indikator Frobenius--Schur} dari $V$ adalah bilangan
+\[
+\iota(V) := \frac{1}{|G|}\sum_{g \in G} \chi(g^2).
+\]
+\end{definition}
+
+Untuk memahami teori representasi atas $\mathbb{R}$,
+perlu dicatat bahwa hanya ada tiga aljabar pembagian
+atas $\mathbb{R}$:
+medan real $\mathbb{R}$,
+medan kompleks $\mathbb{C}$, dan
+kuaternion Hamilton $\mathbb{H}$.
+Representasi tak tereduksi $V$ merupakan modul sederhana dari
+$A \otimes_{\mathbb{R}} \mathbb{C}$, dengan $A$ subaljabar sederhana dari
+$\mathbb{R}G$ dan $A \cong \operatorname{M}_n(D)$, dengan $D$ salah satu
+dari ketiga kasus di atas.
+
+Jadi kita memperoleh trikotomi perilaku real dari representasi
+kompleks berdasarkan aljabar pembagian yang
+bersesuaian dengannya.
+
+\pagebreak
+
+\noindent
+\textbf{Kompleks:}
+\begin{itemize}
+\item Aljabar pembagian yang bersesuaian dengan $V$ adalah $\mathbb{C}$,
+\item indikator Frobenius--Schur adalah $\iota(V)=0$,
+\item $V$ tidak mempunyai bentuk bilinear tak degenerat yang invarian-$G$,
+\item $\chi$ tidak bernilai real,
+\item $V$ tidak dapat direalisasikan atas $\mathbb{R}$, dan
+\item $V$ tidak isomorfik dengan dualnya $V^\vee$.
+\end{itemize}
+
+\noindent
+\textbf{Real:}
+\begin{itemize}
+\item Aljabar pembagian yang bersesuaian dengan $V$ adalah $\mathbb{R}$,
+\item indikator Frobenius--Schur adalah $\iota(V)=1$,
+\item $V$ mempunyai bentuk bilinear simetris tak degenerat yang invarian-$G$,
+\item $\chi$ bernilai real,
+\item $V$ dapat direalisasikan atas $\mathbb{R}$, dan
+\item $V \cong V^\vee$.
+\end{itemize}
+
+\noindent
+\textbf{Kuaternionik:}
+\begin{itemize}
+\item Aljabar pembagian yang bersesuaian dengan $V$ adalah $\mathbb{H}$,
+\item indikator Frobenius--Schur adalah $\iota(V)=-1$,
+\item $V$ mempunyai bentuk bilinear antisimetris tak degenerat yang invarian-$G$,
+\item $\chi$ bernilai real,
+\item $V$ tidak dapat direalisasikan atas $\mathbb{R}$, tetapi
+\item $V \oplus V$ dapat direalisasikan atas $\mathbb{R}$, dan
+\item $V \cong V^\vee$.
+\end{itemize}
+
+Kita hanya menguraikan garis besar alasan karakterisasi di atas berlaku,
+dan menyerahkan rinciannya kepada pembaca (atau \cite[\S{13.2}]{Serre}).
+Sebagian besar karakterisasi segera mengikuti teori Wedderburn,
+sehingga kita berfokus pada bentuk-bentuk bilinear.
+
+Perhatikan bahwa bentuk bilinear ekuivalen dengan pemetaan antara $V$ dan
+$V^\vee$, sedangkan ketaktrivialan ekuivalen dengan ketakdegeneratan menurut
+Lema Schur karena kita menghendaki keinvarianan-$G$.
+Lema Schur juga mengatakan bahwa bentuk bilinear yang invarian-$G$
+tunggal hingga perkalian dengan skalar.
+Dekomposisi bentuk bilinear menjadi bagian simetris dan bagian antisimetris
+bersifat invarian-$G$, sehingga ketunggalan hingga skalar menyiratkan bahwa bentuk itu
+harus simetris atau antisimetris.
+Keberadaan bentuk bilinear \emph{simetris} ekuivalen dengan keterrealisasian atas
+bilangan real menurut Teorema~\ref{thm:FrobSchur} di atas.
+
+Terakhir, kita meninjau indikator Frobenius--Schur.
+Suatu bentuk bilinear simetris yang invarian-$G$ pada $V$ ekuivalen dengan
+keberadaan subrepresentasi trivial dari $\operatorname{Sym}^2(V)$.
+Demikian pula, bentuk bilinear antisimetris yang invarian-$G$ pada $V$
+ekuivalen dengan keberadaan subrepresentasi trivial dari
+$\operatorname{Alt}^2(V)$.
+Ingat kembali rumus untuk karakter dari
+kuadrat simetris dan kuadrat berselang-seling:
+\[
+\chi_{\operatorname{Sym}^2(V)} = \chi_V^2 + \Psi^2(\chi_V)
+\textrm{ dan }
+\chi_{\operatorname{Alt}^2(V)} = \chi_V^2 - \Psi^2(\chi_V).
+\]
+Jadi, $(1,\chi_{\operatorname{Sym}^2(V)})=1$ jika dan hanya jika $V$ real,
+$(1,\chi_{\operatorname{Alt}^2(V)})=1$ jika dan hanya jika $V$ kuaternionik,
+dan keduanya bernilai $0$ dalam kasus lainnya.
+
+Sekarang cukup kita perhatikan bahwa
+\[
+\chi_V^2 = \chi_{\operatorname{Sym}^2(V)} + \chi_{\operatorname{Alt}^2(V)}
+\]
+dan
+\[
+\iota(V) := \frac{1}{|G|}\sum_{g \in G} \chi(g^2)
+=(1, \Psi^2(\chi_V)).
+\]
+
+\bibliographystyle{alpha}
+\bibliography{rep_theory}
+
+\end{document}
+
+

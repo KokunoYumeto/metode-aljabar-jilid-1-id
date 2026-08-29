@@ -1,0 +1,881 @@
+\section{Prima terkait}
+
+Sekarang kita akan memulai teori struktur modul noetherian. Langkah pertama
+adalah mengaitkan suatu kumpulan ideal prima kepada setiap modul, yang disebut
+\emph{prima terkait}; kumpulan ini termuat dalam kumpulan ideal prima yang lebih besar (yaitu
+\emph{dukungan}), tempat
+pelokalan modul tersebut tak nol.
+
+\subsection{Dukungan}
+ Misalkan $R$ suatu gelanggang noetherian. Suatu modul-$R$, $M$, hendaknya dipandang
+ sebagai sesuatu yang menyerupai berkas vektor, yang dengan suatu cara
+tersebar di atas ruang topologis $\spec R$. Jika $\mathfrak{p} \in \spec R$, tetapkan
+\( \k(\mathfrak{p}) = \mathrm{medan \ pecahan \ } R/\mathfrak{p}  ,\)
+yang merupakan medan residu dari $R_{\mathfrak{p}}$. Jika $M$ sebarang modul-$R$, kita
+dapat mempertimbangkan $M \otimes_R \k(\mathfrak{p})$ untuk setiap $\mathfrak{p}$; objek ini merupakan
+ruang vektor di atas $\k(\mathfrak{p})$. Jika $M$ terbangkitkan hingga, maka $M \otimes_R
+\k(\mathfrak{p})$ merupakan ruang vektor berdimensi hingga.
+
+\begin{definition} 
+Misalkan $M$ suatu modul-$R$ terbangkitkan hingga. Maka $\supp M$, yaitu
+\textbf{dukungan} dari $M$, didefinisikan sebagai himpunan ideal prima
+$\mathfrak{p} \in \spec R$ sedemikian sehingga
+\( M \otimes_R \k(\mathfrak{p}) \neq 0.  \)
+\end{definition} 
+
+Kita hendaknya memandang suatu modul $M$ sebagai sesuatu yang menyerupai berkas vektor
+di atas ruang topologis
+$\spec R$. Kepada setiap $\mathfrak{p} \in \spec R$, kita kaitkan ruang vektor $M
+\otimes_R \k(\mathfrak{p})$; inilah “seratnya”. Tentu saja, intuisi bahwa
+$M$ merupakan berkas vektor agak terbatas, sebab serat-seratnya
+pada umumnya tidak mempunyai dimensi yang sama.
+Meskipun demikian, kita dapat membicarakan dukungan, yakni himpunan titik tempat
+“serat” tersebut tak nol.
+
+Perhatikan bahwa $\mathfrak{p} \in \supp M$ jika dan hanya jika $M_{\mathfrak{p}} \neq 0$. Hal ini
+karena
+\[ (M \otimes_R R_{\mathfrak{p}})/( \mathfrak{p} R_{\mathfrak{p}} (M \otimes_R
+R_{\mathfrak{p}}))  = M_{\mathfrak{p}}
+\otimes_{R_{\mathfrak{p}}} \k(\mathfrak{p})  \]
+dan kita dapat menggunakan Lema Nakayama di atas gelanggang lokal $R_{\mathfrak{p}}$. (Di sini kita
+menggunakan fakta bahwa $M$ terbangkitkan hingga.)
+
+Berkas vektor yang dukungannya kosong adalah nol. Karena itu, proposisi mudah
+berikut bersifat intuitif:
+
+\begin{proposition} 
+$M = 0$ jika dan hanya jika $\supp M = \emptyset$. 
+\end{proposition}
+\begin{proof} 
+Memang, $M=0$ jika dan hanya jika $M_{\mathfrak{p}} = 0$ untuk semua ideal prima
+$\mathfrak{p} \in \spec R$. Hal ini setara dengan $\supp M = \emptyset$.
+\end{proof} 
+ 
+\begin{exercise} 
+Misalkan $0 \to M' \to M \to M'' \to 0$ eksak. Maka 
+\[ \supp M = \supp M' \cup \supp M''.  \]
+\end{exercise} 
+
+
+Kita akan segera melihat bahwa $\supp M$ tertutup di dalam $\spec R$. Dalam suatu
+pengertian, kita membayangkan bahwa $M$ hidup pada himpunan bagian tertutup $\supp M$ ini.
+
+
+
+\subsection{Prima terkait}
+Di seluruh bagian ini, $R$ adalah gelanggang noetherian. \emph{Prima
+terkait} dari suatu modul $M$ adalah ideal-ideal prima yang muncul sebagai anihilator
+elemen-elemen dalam $M$. Seperti akan kita lihat, dukungan suatu modul ditentukan oleh
+prima terkaitnya. Secara khusus, prima terkait memuat “titik-titik generik”
+(yakni ideal-ideal prima minimal) dari dukungan tersebut. Namun, dalam beberapa kasus,
+prima terkait dapat memuat lebih banyak ideal. 
+
+\begin{quote}\small\textbf{Jembatan edisi (asli).}
+Untuk $x\in M$, tuliskan
+$\ann_R(x)=\{r\in R:rx=0\}$ untuk anihilator $x$; jika gelanggangnya
+sudah jelas, notasi ini disingkat menjadi $\ann(x)$.\end{quote}
+
+\begin{definition} 
+Misalkan $M$ suatu modul-$R$ terbangkitkan hingga. Ideal prima $\mathfrak{p}$ dikatakan
+\textbf{terkait} dengan $M$ jika terdapat elemen $x \in M$ sedemikian sehingga
+$\mathfrak{p}$ merupakan anihilator $x$. Himpunan prima terkait ditulis
+$\ass(M)$.
+\end{definition} 
+
+Perhatikan bahwa anihilator suatu elemen $x \in M$ belum tentu prima, tetapi
+mungkin saja anihilator tersebut prima; dalam hal itu, anihilator tersebut
+terkait.
+
+\begin{exercise} 
+Tunjukkan bahwa $\mathfrak{p} \in \ass(M)$ jika dan hanya jika terdapat penyisipan
+$R/\mathfrak{p} \hookrightarrow M$.
+\end{exercise} 
+
+\begin{exercise} 
+Misalkan $\mathfrak{p} \in \spec R$. Maka $\ass(R/\mathfrak{p}) =
+\left\{\mathfrak{p}\right\}$.
+\end{exercise} 
+
+\begin{example}
+Ambil $R=k[x,y,z]$, dengan $k$ suatu domain integral, dan misalkan $I = (x^2-yz,x(z-1))$. Setiap
+ ideal prima yang terkait dengan $I$ harus memuat $I$, jadi mari kita pertimbangkan
+   $\mathfrak{p}=(x^2-yz,z-1)=(x^2-y,z-1)$, yang sama dengan $I:x$. Ideal ini prima karena $R/\mathfrak{p} = k[x]$,
+   yang merupakan domain. Untuk melihat bahwa $(I:x)\subset \mathfrak{p}$, andaikan $tx\in I\subset \mathfrak{p}$; karena
+   $x\not\in \mathfrak{p}$, diperoleh $t\in p$, seperti yang dikehendaki.
+
+   Terdapat dua prima terkait lainnya, tetapi kita tidak akan mencarinya di sini.
+ \end{example}
+
+
+Kita mulai dengan membuktikan bahwa $\ass(M) \neq \emptyset$ untuk modul tak nol. 
+\begin{proposition} \label{assmnonempty} 
+Jika $M \neq 0$, maka $M$ mempunyai prima terkait.
+\end{proposition} 
+\begin{proof}  Pertimbangkan kumpulan ideal dalam $R$ yang muncul sebagai
+anihilator suatu elemen tak nol dalam $M$. 
+Misalkan $I \subset R$ elemen maksimal dari kumpulan tersebut. Keberadaan $I$ dijamin oleh sifat noetherian
+$R$.
+Maka $I = \ann(x)$ untuk suatu $x \in M$, sehingga $1 \notin I$ karena anihilator suatu elemen tak nol bukan seluruh
+gelanggang.
+
+Kita mengklaim bahwa
+$I$ prima, sehingga $I \in \ass(M)$.  
+Memang, andaikan $ab \in I$ dengan $a,b \in R$. Ini berarti
+\[ (ab)x = 0.  \]
+Pertimbangkan anihilator $\ann(bx)$ dari $bx$. Anihilator ini memuat anihilator $x$, yaitu $I$;
+anihilator tersebut juga memuat $a$.
+
+Ada dua kasus. Jika $bx = 0$, maka $ b \in I$ dan pembuktian selesai. Andaikan
+sebaliknya bahwa $bx \neq 0$. Dalam kasus ini, $\ann(bx)$ memuat $(a) + I$, yang
+ memuat $I$. Berdasarkan kemaksimalan, harus berlaku $\ann(bx) = I$ dan $ a \in
+ I$. 
+
+ Dalam kedua kasus tersebut, kita mendapati bahwa salah satu dari $a,b $ termasuk dalam $I$, sehingga $I$
+ prima. 
+
+\end{proof} 
+
+\begin{example}[Modul tanpa prima terkait]
+Tanpa hipotesis noetherian, \rref{assmnonempty}
+\emph{salah}. Pertimbangkan $R = \mathbb{C}[x_1, x_2, \dots]$, gelanggang polinomial
+di atas $\mathbb{C}$ dalam tak hingga banyak variabel, dan ideal $I = (x_1,
+x_2^2, x_3^3, \dots) \subset R$.
+Klaimnya adalah 
+\[ \ass(R/I ) = \emptyset.  \]
+Untuk melihatnya, andaikan suatu ideal prima $\mathfrak{p}$ merupakan anihilator dari
+$\overline{f}\in R/I$. Maka $\overline{f}$ dapat diangkat menjadi $f \in R$; akibatnya,
+$\mathfrak{p}$ tepat merupakan himpunan semua $g \in R$ sedemikian sehingga $fg \in I$.
+Sekarang $f$ hanya memuat sejumlah hingga variabel $x_i$, katakanlah $x_1, \dots,
+x_n$. Jelas bahwa $x_{n+1}^{n+1} f \in I$ (sehingga $x_{n+1}^{n+1} \in
+\mathfrak{p}$), tetapi $x_{n+1} f \notin I$ (sehingga $x_{n+1} \notin \mathfrak{p}$).
+Jadi, $\mathfrak{p}$ bukan ideal prima, suatu kontradiksi.
+\end{example} 
+
+Sekarang kita akan menunjukkan bahwa banyaknya prima terkait berhingga.
+
+\begin{proposition} \label{finiteassm}
+Jika $M$ terbangkitkan hingga, maka $\ass(M)$ berhingga.
+\end{proposition}
+
+Gagasannya ialah menggunakan fakta bahwa $M$ terbangkitkan hingga untuk menyusun
+$M$ dari sejumlah hingga bagian, lalu menggunakannya untuk membatasi banyaknya prima
+terkait pada setiap bagian. Untuk itu kita memerlukan:
+
+\begin{lemma} \label{assexact} 
+Andaikan terdapat barisan eksak modul-$R$ terbangkitkan hingga
+\[ 0 \to M' \to M \to M'' \to 0.  \]
+Maka 
+\[\ass(M') \subset \ass(M) \subset \ass(M') \cup \ass(M'')  \]
+\end{lemma} 
+\begin{proof} 
+Klaim pertama sudah jelas. Jika $\mathfrak{p}$ merupakan anihilator
+suatu $x \in M'$, maka ia juga merupakan anihilator sesuatu dalam $M$ (yaitu citra
+$x$), karena
+$M' \to M$ injektif. Jadi, $\ass(M') \subset \ass(M)$. 
+
+Arah yang lebih sulit adalah penyertaan lainnya. Andaikan $\mathfrak{p} \in \ass(M)$.
+Maka terdapat $x \in M$ sedemikian sehingga
+$\mathfrak{p} = \ann(x).$
+Pertimbangkan submodul $Rx \subset M$. Jika $Rx \cap M' \neq 0$, kita dapat
+memilih $y \in Rx \cap M' - \left\{0\right\}$. Kita mengklaim bahwa $\ann(y) =
+\mathfrak{p}$, sehingga $\mathfrak{p} \in \ass(M')$.
+Untuk melihatnya, $ y = ax$ untuk suatu $a \in R$. Anihilator $y$ adalah himpunan elemen
+$b \in R$ sedemikian sehingga
+\[ abx = 0  \]
+atau, secara ekuivalen, himpunan semua $b \in R$ sedemikian sehingga $ab \in \mathfrak{p} =
+\ann(x)$. Namun, $y = ax \neq 0$, sehingga $a \notin \mathfrak{p}$. Oleh
+karena itu, syarat $b \in \ann(y)$ sama dengan $b \in \mathfrak{p}$. Dengan
+kata lain, 
+\[ \ann(y) = \mathfrak{p}  \]
+yang membuktikan klaim tersebut.
+
+Sekarang andaikan $Rx \cap M' = 0$. Misalkan $\phi: M \twoheadrightarrow M''$
+pemetaan surjektif. Kita mengklaim bahwa $\mathfrak{p} = \ann(\phi(x))$, sehingga
+akibatnya
+$\mathfrak{p} \in \ass(M'')$. Pembuktiannya sebagai berikut. Jelas bahwa $\mathfrak{p}$
+menganihilasi $\phi(x)$ karena ia menganihilasi $x$. Andaikan $a \in \ann(\phi(x))$.
+Ini berarti $\phi(ax) = 0$, sehingga $ax \in \ker \phi=M'$; tetapi $\ker \phi \cap Rx =
+0$. Jadi, $ax = 0$, dan akibatnya $a \in \mathfrak{p}$. Maka $\ann(\phi(x)) = \mathfrak{p}$. 
+\end{proof} 
+
+Langkah berikutnya dalam pembuktian \rref{finiteassm} adalah bahwa setiap
+modul terbangkitkan hingga
+memiliki suatu filtrasi yang setiap hasil bagi berturutannya berbentuk sangat baik.
+Hasil ini cukup berguna dan akan dirujuk lagi kelak.
+
+\begin{proposition}[D{\'e}vissage] \label{filtrationlemma} \label{devissage}
+Untuk setiap modul-$R$ terbangkitkan hingga $M$, terdapat suatu filtrasi hingga
+\[ 0 = M_0 \subset M_1 \subset \dots \subset M_k = M  \]
+sedemikian sehingga hasil-hasil bagi berturutan $M_{i+1}/M_i$ isomorfik dengan berbagai
+$R/\mathfrak{p}_i$, dengan $\mathfrak{p}_i \subset R$ ideal prima.
+\end{proposition} 
+\begin{proof} 
+Misalkan $M' \subset M$ maksimal di antara submodul-submodul yang memiliki filtrasi semacam itu
+(yang berakhir pada $M'$).
+Kita ingin menunjukkan bahwa $M' = M$. Submodul $M'$ terdefinisi dengan baik karena
+$0$ mempunyai filtrasi semacam itu dan $M$
+noetherian.  
+
+Terdapat suatu filtrasi
+\[ 0 = M_0 \subset M_1 \subset \dots \subset M_l = M' \subset M  \]
+dengan hasil-hasil bagi berturutan, \emph{kecuali} mungkin yang terakhir $M/M'$, berbentuk
+$R/\mathfrak{p}_i $ untuk $\mathfrak{p}_i \in \spec R$.
+Jika $M' = M$, pembuktian selesai. Jika tidak, pertimbangkan
+hasil bagi $M/M' \neq 0$. Modul $M/M'$ mempunyai prima terkait. Jadi, terdapat
+ideal prima $\mathfrak{p}$ yang merupakan anihilator suatu $x \in M/M'$. Ini berarti
+terdapat penyisipan 
+\[ R/\mathfrak{p} \hookrightarrow M/M'.  \]
+Sekarang, ambil $M_{l+1}$ sebagai prapeta di dalam $M$
+dari $R/\mathfrak{p} \subset M/M'$. 
+Kemudian kita dapat mempertimbangkan filtrasi hingga
+\[ 0 = M_0 \subset M_1 \subset \dots \subset M_{l+1} , \]
+yang seluruh hasil bagi berturutannya berbentuk $R/\mathfrak{p}_i$; hal ini
+karena $M_{l+1}/M_l = M_{l+1}/M'$ mempunyai bentuk tersebut berdasarkan konstruksi.
+Dengan demikian, kita telah memperpanjang filtrasi ini satu
+langkah lagi, suatu kontradiksi karena
+$M'$ diasumsikan maksimal.
+\end{proof} 
+
+Sekarang kita siap mencapai tujuan dan membuktikan bahwa $\ass(M)$
+selalu merupakan himpunan berhingga. 
+\begin{proof}[Pembuktian \rref{finiteassm}]
+Andaikan $M$ terbangkitkan hingga. Ambil filtrasi kita
+\[ 0 = M_0 \subset M_1 \subset \dots \subset M_k = M.  \]
+Dengan induksi, kita tunjukkan bahwa $\ass(M_i)$ berhingga untuk setiap $i$. Hal ini jelas
+benar untuk $i=0$. Sekarang andaikan $\ass(M_i)$ berhingga; kita membuktikan hal yang sama untuk
+$\ass(M_{i+1})$. Kita mempunyai barisan eksak
+\[ 0 \to M_i \to M_{i+1} \to R/\mathfrak{p}_i \to 0  \]
+yang, berdasarkan \rref{assexact}, menyiratkan
+\[ \ass(M_{i+1}) \subset \ass(M_i) \cup \ass(R/\mathfrak{p}_i) = \ass(M_i)
+\cup \left\{\mathfrak{p}_i\right\} , \]
+sehingga $\ass(M_{i+1})$ juga berhingga.
+Dengan induksi, kini jelas bahwa $\ass(M_i)$ berhingga untuk setiap $i$.
+
+Ini membuktikan proposisi tersebut; pembuktian ini juga menunjukkan bahwa banyaknya
+prima terkait tidak melebihi panjang filtrasi. 
+\end{proof} 
+
+
+Terakhir, kita mencirikan pembagi nol pada $M$ melalui prima terkait.
+Pencirian terakhir dari hasil ini akan berguna kelak.
+Sebagai contoh, hasil tersebut menyiratkan bahwa jika $R$ lokal dan $\mathfrak{m}$ ideal
+maksimalnya, maka jika setiap elemen $\mathfrak{m}$ merupakan pembagi nol pada modul
+terbangkitkan hingga
+$M$, berlaku $\mathfrak{m} \in \ass(M)$.
+
+\begin{proposition} \label{assmdichotomy}
+Jika $M$ suatu modul terbangkitkan hingga di atas gelanggang noetherian $R$, maka semua
+pembagi nol pada $M$ adalah gabungan $\bigcup_{\mathfrak{p} \in \ass(M)}
+\mathfrak{p}$.
+
+Lebih kuat lagi, jika $I \subset R$ sebarang ideal yang terdiri atas pembagi nol pada
+$M$, maka $I$ termuat dalam suatu prima terkait.
+\end{proposition} 
+\begin{proof} 
+Setiap prima terkait merupakan anihilator suatu elemen $M$, sehingga terdiri
+atas pembagi nol. Sebaliknya, jika $a \in R$ menganihilasi $x \in M$, maka $a$
+termasuk dalam setiap prima terkait dari modul tak nol $Ra \subset M$. (Setidaknya
+ada satu berdasarkan \cref{finiteassm}.)
+
+Untuk pernyataan terakhir, kita menggunakan penghindaran prima (\cref{primeavoidance}): jika $I$ terdiri atas
+pembagi nol, maka berdasarkan bagian pertama pembuktian, $I$ termuat dalam gabungan $\bigcup_{\mathfrak{p} \in \ass(M)}
+\mathfrak{p}$. Ini merupakan gabungan berhingga berdasarkan
+\cref{assmfinite}, sehingga penghindaran prima menyiratkan bahwa $I$ termuat dalam salah satu
+ideal prima tersebut.
+\end{proof} 
+
+
+\begin{exercise} 
+Untuk setiap modul $M$ di atas sebarang gelanggang $R$ (yang tidak harus noetherian),
+himpunan pembagi nol-$M$, $\mathcal{Z}(M)$, merupakan gabungan ideal-ideal prima. Secara umum, terdapat
+ pencirian mudah bagi himpunan $Z$ yang merupakan gabungan ideal-ideal prima: tepat ketika
+ $R\smallsetminus Z$ merupakan \emph{himpunan multiplikatif jenuh}. Ini adalah
+ Teorema 2 Kaplansky.
+ \begin{definition}
+   Suatu himpunan multiplikatif $S\neq \varnothing$ disebut \emph{himpunan multiplikatif jenuh} jika
+   untuk semua $a,b\in R$, berlaku $a,b\in S$ jika dan hanya jika $ab\in S$. (“Himpunan multiplikatif” hanya
+   berarti bagian “jika”.)
+ \end{definition}
+ Untuk melihat bahwa $\mathcal{Z}(M)$ merupakan gabungan ideal-ideal prima, cukup periksa bahwa komplemennya adalah
+ himpunan multiplikatif jenuh.
+\end{exercise}
+
+\subsection{Pelokalan dan $\ass(M)$}
+
+Ternyata sangat memudahkan bahwa konstruksi $M  \to \ass(M)$
+berperilaku sebaik yang dapat kita harapkan terhadap
+pelokalan. Bahkan, hal ini memungkinkan kita mereduksi argumen ke kasus gelanggang lokal,
+yang jauh lebih sederhana.
+
+Seperti biasa, misalkan $R $ noetherian dan $M$ suatu modul-$R$ terbangkitkan hingga. 
+Misalkan pula $S \subset R$ suatu himpunan bagian multiplikatif. 
+Maka $S^{-1}M$ merupakan modul terbangkitkan hingga di atas gelanggang noetherian
+$S^{-1}M$. Jadi, masuk akal untuk mempertimbangkan $\ass(M) \subset \spec R$ dan
+$\ass(S^{-1}M) \subset \spec S^{-1}R$. Namun, kita juga mengetahui bahwa $\spec S^{-1}R
+\subset \spec R$ hanyalah himpunan ideal prima $R$ yang tidak beririsan dengan $S$.
+Dengan demikian, kita dapat membandingkan langsung $\ass(M)$ dan $\ass(S^{-1}M)$, serta dapat
+menduga (dan ternyata benar) bahwa $\ass(S^{-1}M) = \ass(M) \cap \spec
+S^{-1}R$.
+\begin{proposition} \label{assmlocalization}
+Misalkan $R$ noetherian, $M$ terbangkitkan hingga, dan $S \subset R$ tertutup secara multiplikatif. 
+Maka 
+\[ \ass(S^{-1}M)  = \left\{S^{-1}\mathfrak{p}: \mathfrak{p} \in \ass(M),
+\mathfrak{p}\cap S  = \emptyset \right\} . \]
+\end{proposition} 
+\begin{proof} 
+Pertama-tama kita membuktikan arah yang mudah, yakni bahwa $\ass(S^{-1}M)$
+\emph{memuat} ideal-ideal prima dalam $\spec S^{-1}R \cap \ass(M)$. 
+
+Andaikan $\mathfrak{p} \in \ass(M)$ dan
+$\mathfrak{p} \cap S = \emptyset$. Maka $\mathfrak{p} = \ann(x)$ untuk suatu $x
+\in M$. Anihilator $x/1 \in S^{-1}M$ tepat sama dengan $S^{-1}\mathfrak{p}$, seperti dapat
+diperiksa langsung. Jadi, $S^{-1}\mathfrak{p} \in \ass(S^{-1}M)$.
+Dengan demikian, kita memperoleh penyertaan yang mudah.
+
+Sekarang kita buktikan penyertaan yang lebih sulit.  
+Tuliskan pemetaan pelokalan $R \to S^{-1}R  $ sebagai $\phi$.
+Misalkan $\mathfrak{q} \in \ass(S^{-1}M)$. Berdasarkan definisi, ini berarti $\mathfrak{q} =
+\ann(x/s)$ untuk suatu $x \in M$, $s \in S$. Kita ingin melihat bahwa
+$\phi^{-1}(\mathfrak{q}) \in \ass(M) \subset \spec R$.
+Berdasarkan definisi, $\phi^{-1}(\mathfrak{q})$ adalah himpunan elemen $a \in R$ sedemikian sehingga
+\[ \frac{ax}{s} = 0 \in S^{-1}M . \]
+Dengan kata lain, berdasarkan definisi pelokalan, himpunan ini adalah 
+\[  \phi^{-1}(\mathfrak{q}) = \bigcup_{t \in S} \left\{a \in R: atx = 0 \in M\right\} = \bigcup \ann(tx)
+\subset R.\]
+Namun, kita mengetahui bahwa di antara elemen-elemen berbentuk $\ann(tx)$, terdapat
+elemen \emph{maksimal} $I=\ann(t_0 x)$ untuk suatu $t_0 \in S$, sebab $R$
+noetherian. Klaimnya adalah $I = \phi^{-1}(\mathfrak{q})$, sehingga
+$\phi^{-1}(\mathfrak{q}) \in \ass(M)$.
+
+Memang, setiap anihilator lain $I' = \ann(tx)$ (untuk $t \in S$) harus termuat dalam $\ann(t_0 t x)$. Akan tetapi, 
+\( I \subset \ann(t_0 x)  \)
+dan $I$ maksimal, sehingga $I = \ann(t_0 t x)$ dan
+\( I' \subset I.  \) Dengan kata lain, $I$ memuat semua anihilator lainnya
+$\ann(tx)$ untuk $t \in S$.
+Secara khusus, gabungan besar di atas, yakni $\phi^{-1}(\mathfrak{q})$, tepat sama dengan
+\( I = \ann(t_0 x).  \)
+Jadi, $\phi^{-1}(\mathfrak{q}) = \ann(t_0x)$ termasuk dalam $\ass(M)$.
+Ini berarti bahwa setiap prima terkait
+dari $S^{-1}M$ berasal dari prima terkait $M$, dan pembuktian selesai.
+\end{proof} 
+
+
+
+\begin{exercise} 
+Tunjukkan bahwa jika $M$ suatu modul terbangkitkan hingga di atas gelanggang noetherian, maka
+pemetaan
+\[ M \to \bigoplus_{\mathfrak{p} \in \ass(M)} M_{\mathfrak{p}}  \]
+injektif. Apakah hal ini benar jika $M$ tidak terbangkitkan hingga?
+\end{exercise} 
+
+\subsection{Prima terkait menentukan dukungan}
+Klaim berikutnya adalah bahwa dukungan dan prima terkait saling berhubungan.
+
+\begin{proposition}\label{supportassociated} Dukungan adalah penutupan dari prima terkait:
+\[ \supp M  = \bigcup_{\mathfrak{q} \in \ass(M)}
+\overline{\left\{\mathfrak{q}\right\}} \]
+\end{proposition} 
+
+Berdasarkan definisi topologi Zariski, ini berarti bahwa suatu ideal prima $\mathfrak{p}
+\in \spec R$ termasuk dalam $\supp M$ jika dan hanya jika ideal itu memuat prima
+terkait. 
+
+\begin{proof} 
+Pertama, kita menunjukkan bahwa $\supp(M)$ memuat himpunan ideal prima
+$\mathfrak{p} \in \spec R$ yang memuat suatu prima terkait; ini akan menyiratkan
+bahwa $\supp(M) \supset \bigcup_{\mathfrak{q} \in \ass(M)}
+\overline{\left\{\mathfrak{q}\right\}}$. Jadi, misalkan $\mathfrak{q}$ suatu
+prima terkait dan $\mathfrak{p} \supset \mathfrak{q}$. Kita harus menunjukkan bahwa
+\[ \mathfrak{p} \in \supp M, \ \text{yakni} \ M_{\mathfrak{p}} \neq 0.  \]
+Namun, karena $\mathfrak{q} \in \ass(M)$, terdapat pemetaan injektif
+\[ R/\mathfrak{q} \hookrightarrow M , \]
+sehingga pelokalan memberikan pemetaan injektif
+\[ (R/\mathfrak{q})_{\mathfrak{p}} \hookrightarrow M_{\mathfrak{p}}.  \]
+Di sini, objek pertama $(R/\mathfrak{q})_{\mathfrak{p}}$ tak nol karena tidak ada elemen tak nol dalam $R/\mathfrak{q}$ yang dapat
+dianihilasi oleh sesuatu di luar $\mathfrak{p}$. Jadi, $M_{\mathfrak{p}} \neq
+0$, dan $\mathfrak{p} \in \supp M$. 
+
+Sekarang kita buktikan penyertaan sebaliknya. Andaikan $\mathfrak{p} \in \supp M$. Kita
+harus menunjukkan bahwa $\mathfrak{p}$ memuat suatu prima terkait.  
+Berdasarkan asumsi, $M_{\mathfrak{p}} \neq 0$, dan $M_{\mathfrak{p}}$ merupakan modul
+terbangkitkan hingga di atas gelanggang noetherian $R_{\mathfrak{p}}$. Jadi, $M_{\mathfrak{p}}$ mempunyai
+prima terkait.
+Berdasarkan \rref{assmlocalization}, diperoleh bahwa $\ass(M) \cap \spec
+R_{\mathfrak{p}}$ tak kosong. Karena ideal-ideal prima $R_{\mathfrak{p}}$
+berkorespondensi dengan ideal-ideal prima yang termuat dalam $\mathfrak{p}$, terdapat
+ideal prima yang termuat dalam $\mathfrak{p}$ dan termasuk dalam $\ass(M)$. Inilah
+tepatnya yang ingin kita buktikan.
+\end{proof} 
+
+
+\begin{corollary} \label{suppisclosed} Untuk $M$ terbangkitkan hingga,  
+$\supp M$ tertutup. Lebih lanjut, setiap elemen minimal dari $\supp M$ termasuk dalam
+$\ass(M)$.
+\end{corollary} 
+\begin{proof} 
+Memang, hasil di atas menyatakan bahwa
+\[ \supp M  = \bigcup_{\mathfrak{q} \in \ass(M)}
+\overline{\left\{\mathfrak{q}\right\}}. \]
+Karena $\ass(M)$ berhingga, diperoleh bahwa $\supp M$ tertutup.
+Persamaan di atas juga menunjukkan bahwa setiap elemen minimal dari $\supp M$ harus merupakan
+prima terkait.
+\end{proof} 
+
+\begin{example} 
+\rref{suppisclosed} \emph{salah} untuk modul yang tidak terbangkitkan
+hingga. Sebagai contoh, pertimbangkan grup abelian $\bigoplus_p \mathbb{Z}/p$.
+Dukungan objek ini sebagai modul-$\mathbb{Z}$ tepat merupakan himpunan semua
+titik tertutup (yakni ideal maksimal) dari $\spec \mathbb{Z}$, sehingga
+tidak tertutup. 
+\end{example} 
+
+\begin{corollary} 
+Gelanggang $R$ mempunyai sejumlah hingga ideal prima minimal. 
+\end{corollary} 
+\begin{proof} 
+Jelas bahwa $\supp R = \spec R$. Jadi, setiap ideal prima $R$
+memuat prima terkait dari $R$ berdasarkan \rref{supportassociated}.
+\end{proof} 
+
+Dengan demikian, $\spec R$ merupakan gabungan hingga komponen tertutup tak tereduksi
+$\overline{\mathfrak{q}}$ jika $R$ noetherian.
+\begin{quote}\small\textbf{Jembatan edisi (asli).}
+Suatu himpunan bagian tertutup tak kosong disebut tak tereduksi jika bukan gabungan dua himpunan bagian
+tertutup sejati. Penutupan suatu titik dari $\spec R$ bersifat tak tereduksi.\end{quote}
+
+Kita baru saja melihat bahwa $\supp M$ merupakan himpunan bagian tertutup dari $\spec R$ dan merupakan gabungan
+sejumlah hingga himpunan bagian tak tereduksi. Lebih tepatnya, 
+\[ \supp M = \bigcup_{\mathfrak{q} \in \ass(M)}
+\overline{\left\{\mathfrak{q}\right\}}  \]
+meskipun mungkin terdapat pengulangan dalam pernyataan ini. Suatu prima terkait mungkin termuat
+dalam prima terkait lainnya.  
+
+\begin{definition} 
+Suatu ideal prima $\mathfrak{p} \in \ass(M)$ disebut prima terkait \textbf{terisolasi} dari
+$M$ jika minimal (terhadap urutan pada $\ass(M)$); selain itu, ideal tersebut disebut
+\textbf{tertanam}. 
+\end{definition} 
+
+Jadi, prima-prima tertanam tidak diperlukan untuk mendeskripsikan dukungan $M$. 
+
+\begin{quote}\small\textbf{Jembatan edisi (asli).}
+Misalkan $R=k[x,y]$ dan $M=R/(x^2,xy)$. Dekomposisi
+\[
+  (x^2,xy)=(x)\cap(x^2,y)
+\]
+menunjukkan bahwa $(x)$ merupakan prima terkait terisolasi dari $M$, sedangkan ideal
+maksimal $(x,y)$ tertanam.\end{quote}
+
+\begin{remark} 
+Akibatnya, dalam suatu gelanggang noetherian, setiap ideal prima minimal terdiri atas
+pembagi nol. Meskipun tidak akan digunakan kelak, pernyataan yang sama juga benar
+dalam gelanggang non-noetherian. Berikut suatu argumen.
+
+Misalkan $R$ suatu gelanggang dan $\mathfrak{p} \subset R$ suatu ideal prima minimal. Maka
+$R_{\mathfrak{p}}$ mempunyai tepat satu ideal prima.
+Sekarang kita gunakan:
+
+\begin{lemma} 
+Jika suatu gelanggang $R$ mempunyai tepat satu ideal prima $\mathfrak{p}$, maka setiap $x \in
+\mathfrak{p}$ nilpoten.
+\end{lemma} 
+\begin{proof} 
+Memang, cukup ditunjukkan bahwa $R_x = 0$ (\rref{nilpcriterion} dalam
+\rref{spec}) jika $x \in
+\mathfrak{p}$. Namun, $\spec R_x$
+terdiri atas ideal-ideal prima $R$ yang tidak memuat $x$. Akan tetapi, tidak ada ideal prima semacam itu.
+Jadi, $\spec R_x = \emptyset$, sehingga $R_x = 0$.
+\end{proof} 
+
+Akibatnya, setiap elemen dalam $\mathfrak{p}$ merupakan pembagi nol dalam
+$R_{\mathfrak{p}}$.
+Oleh karena itu, jika $x \in \mathfrak{p}$, terdapat $\frac{s}{t} \in
+R_{\mathfrak{p}}$ sedemikian sehingga $xs/t = 0$, tetapi $\frac{s}{t} \neq 0$.
+Secara khusus, terdapat $t' \notin \mathfrak{p}$ dengan 
+\[ xst' = 0, \quad st' \neq 0,  \]
+sehingga $x$ merupakan pembagi nol. 
+\end{remark}
+
+
+
+\subsection{Modul primer}
+
+Modul primer adalah modul yang hanya mempunyai satu prima terkait. Hal ini setara
+dengan mengatakan bahwa setiap homoteti bersifat injektif atau nilpoten. 
+Seperti akan kita lihat pada bagian berikutnya, setiap modul mempunyai suatu “dekomposisi
+primer”: bahkan, modul tersebut dapat disisipkan sebagai submodul dari suatu jumlah modul-modul
+primer.
+
+\begin{definition} 
+Misalkan $\mathfrak{p} \subset R$ suatu ideal prima dan $M$ suatu modul-$R$ terbangkitkan hingga. Maka $M$ disebut
+\textbf{$\mathfrak{p}$-primer} jika 
+\[ \ass(M) = \left\{\mathfrak{p}\right\}.  \]
+
+Suatu modul disebut \textbf{primer} jika $\mathfrak{p}$-primer untuk suatu
+ideal prima $\mathfrak{p}$, yakni mempunyai tepat satu prima terkait. 
+\end{definition} 
+
+\begin{proposition} \label{whenisprimary}
+Misalkan $M$ suatu modul-$R$ terbangkitkan hingga. Maka $M$ bersifat \textbf{$\mathfrak{p}$}-primer jika
+dan hanya jika, untuk setiap $m \in M - \left\{0\right\}$, 
+anihilator $\ann(m)$ mempunyai radikal $\mathfrak{p}$.
+\end{proposition} 
+\begin{proof} 
+Pertama-tama kita memerlukan suatu pengamatan kecil.
+
+\begin{lemma} 
+Jika $M$ bersifat $\mathfrak{p}$-primer, maka setiap submodul tak nol $M' \subset M$ juga
+bersifat $\mathfrak{p}$-primer.
+\end{lemma} 
+\begin{proof} 
+Memang, kita mengetahui bahwa $\ass(M') \subset \ass(M)$ berdasarkan \rref{assexact}.
+Karena $M' \neq 0$, kita juga mengetahui bahwa $M'$ mempunyai prima terkait
+(\rref{assmnonempty}). Jadi, $ \ass(M') = \{\mathfrak{p}\}$, sehingga
+$M'$ bersifat $\mathfrak{p}$-primer.
+\end{proof} 
+
+Sekarang kita kembali ke pembuktian hasil utama,
+\rref{whenisprimary}.
+Pertama, andaikan $M$ bersifat $\mathfrak{p}$-primer. Misalkan $x \in M$, $x \neq 0$. Tetapkan
+$I = \ann(x)$; kita harus menunjukkan bahwa $\rad(I)  =\mathfrak{p}$. Berdasarkan definisi, terdapat penyisipan
+\[ R/I \hookrightarrow M  \]
+yang memetakan $1 \to x$. Akibatnya, $R/I$ bersifat $\mathfrak{p}$-primer berdasarkan lema di atas.
+Kita ingin mengetahui bahwa $\mathfrak{p}  = \rad(I)$. 
+Kita telah melihat bahwa dukungan $\supp R/I = \left\{\mathfrak{q}: \mathfrak{q}
+\supset I\right\}$ merupakan gabungan penutupan prima terkait. Dalam
+kasus ini, 
+\[ \supp(R/I) = \left\{\mathfrak{q}: \mathfrak{q} \supset \mathfrak{p}\right\}
+.\]
+Namun, kita mengetahui bahwa $\rad(I) = \bigcap_{\mathfrak{q} \supset I} \mathfrak{q}$,
+yang berdasarkan keterangan di atas tepat sama dengan $\mathfrak{p}$. Ini membuktikan bahwa $\rad(I) =
+\mathfrak{p}$.
+Kita telah menunjukkan bahwa jika $R/I$ primer, maka $I$ mempunyai radikal $\mathfrak{p}$.
+
+Arah sebaliknya mudah. 
+Andaikan syarat tersebut berlaku dan $\mathfrak{q} \in \ass(M)$, sehingga $\mathfrak{q} =
+\ann(x)$ untuk $x \neq 0$. Namun, $\rad(\mathfrak{q}) = \mathfrak{p}$, sehingga 
+\[ \mathfrak{q} = \mathfrak{p}  \] dan $\ass(M) = \left\{\mathfrak{p}\right\}$.
+\end{proof} 
+
+Kita mempunyai pencirian lain.
+
+\begin{proposition} \label{whenisprimary2}
+Misalkan $M \neq 0$ suatu modul-$R$ terbangkitkan hingga. Maka $M$ primer jika dan
+hanya jika untuk setiap $a \in
+R$, homoteti $ M \stackrel{a}{\to} M$ bersifat injektif atau nilpoten.
+\end{proposition}
+\begin{proof} 
+Pertama, andaikan $M$ bersifat $\mathfrak{p}$-primer. Perkalian dengan setiap elemen
+$\mathfrak{p}$ bersifat nilpoten karena anihilator setiap elemen tak nol mempunyai
+radikal $\mathfrak{p}$ berdasarkan \rref{whenisprimary}. Namun, jika $a \notin \mathfrak{p}$, maka $\ann(x)$ untuk
+$x \in M - \left\{0\right\}$ mempunyai radikal $\mathfrak{p}$ dan tidak mungkin memuat $a$. 
+
+Sekarang kita buktikan arah sebaliknya. Andaikan setiap elemen $a$ bekerja secara injektif atau nilpoten pada $M$.
+Misalkan $I \subset R$ kumpulan elemen $a \in R$ sedemikian sehingga $a^n M = 0$
+untuk $n$ yang cukup besar. Maka $I$ merupakan ideal, sebab tertutup terhadap penjumlahan berdasarkan
+rumus binomial: jika $a, b \in I$ serta $a^n, b^n$ bekerja sebagai nol, maka $(a+b)^{2n}$
+juga bekerja sebagai nol.
+
+
+Kita mengklaim bahwa $I$ sebenarnya prima. Jika $a,b \notin I$, maka $a,b$ bekerja melalui
+perkalian secara injektif pada $M$. Jadi, $a: M \to M, b: M \to M$ injektif.
+Namun, komposisi pemetaan injektif bersifat injektif, sehingga $ab$ bekerja secara injektif dan
+$ab \notin I$. Jadi, $I$ prima.
+
+Sekarang kita perlu memeriksa bahwa jika $x \in M$ tak nol, maka $\ann(x)$ mempunyai radikal
+$I$. Memang, jika $a \in R$ menganihilasi $x$,
+maka homoteti $M \stackrel{a}{\to} M$ tidak mungkin injektif, sehingga harus
+nilpoten (yakni termasuk dalam $I$). Sebaliknya, jika $a \in I$, maka suatu pangkat $a$
+bersifat nilpoten, sehingga suatu pangkat $a$ 
+harus membunuh $x$. 
+Akibatnya, $\ann(x) = I$. Sekarang, berdasarkan \rref{whenisprimary}, kita melihat
+bahwa $M$ bersifat $I$-primer.
+\end{proof} 
+
+Sekarang kita mempunyai konsep modul primer. Gagasannya ialah bahwa seluruh torsi
+dalam suatu cara terkonsentrasi pada suatu ideal prima.
+
+\begin{example} 
+Jika $R$ suatu gelanggang noetherian dan $\mathfrak{p} \in \spec R$, maka
+$R/\mathfrak{p}$ bersifat $\mathfrak{p}$-primer. Secara lebih umum, jika $I \subset R$
+suatu ideal, maka $R/I$ primer jika dan hanya jika $\rad(I) $ prima. Hal ini
+mengikuti dari \rref{whenisprimary2}.
+\end{example} 
+
+\begin{exercise} 
+Jika $0 \to M' \to M \to M'' \to 0$ suatu barisan eksak dengan $M', M, M''$
+tak nol dan terbangkitkan hingga, maka $M$ bersifat $\mathfrak{p}$-primer jika dan hanya jika $M', M''$ demikian.
+\end{exercise} 
+
+\begin{exercise} 
+Misalkan $M$ suatu modul-$R$ terbangkitkan hingga. Misalkan $\mathfrak{p} \in \spec R$. Tunjukkan bahwa jumlah dua
+submodul $\mathfrak{p}$-primer juga $\mathfrak{p}$-primer. Simpulkan bahwa
+terdapat suatu submodul $\mathfrak{p}$-primer dari $M$ yang memuat setiap
+submodul $\mathfrak{p}$-primer. 
+\end{exercise} 
+
+\begin{exercise}[Bourbaki]
+Misalkan $M$ suatu modul-$R$ terbangkitkan hingga. Misalkan $T \subset \ass(M)$ suatu
+himpunan bagian dari prima terkait. Buktikan bahwa terdapat submodul $N \subset M$
+sedemikian sehingga 
+\[ \ass(N) = T, \quad \ass(M/N) = \ass(M) - T.  \]
+
+\end{exercise} 
+
+\section{Dekomposisi primer} Dalam suatu pengertian, inilah teorema struktur untuk modul
+di atas gelanggang noetherian.
+Di seluruh pembahasan, kita tetapkan suatu gelanggang noetherian $R$.
+
+\subsection{Modul tak tereduksi dan koprimer}
+
+\begin{definition} 
+Misalkan $M$ suatu modul-$R$ terbangkitkan hingga. Suatu submodul $N \subset M$ disebut
+\textbf{$\mathfrak{p}$-koprimer} jika $M/N$ bersifat $\mathfrak{p}$-primer.
+
+Demikian pula, kita dapat mengatakan bahwa $N \subset M$ bersifat \textbf{koprimer} jika
+$\mathfrak{p}$-koprimer untuk suatu $\mathfrak{p} \in \spec R$.
+\end{definition} 
+
+Sekarang kita akan menunjukkan bahwa setiap submodul $M$ dapat dinyatakan sebagai irisan
+submodul-submodul koprimer. Untuk melakukannya, kita definisikan suatu submodul $M$ sebagai
+\emph{tak tereduksi} jika tidak dapat ditulis sebagai irisan tak trivial dari
+submodul-submodul $M$. Berdasarkan penalaran umum,
+setiap submodul akan merupakan irisan submodul-submodul
+tak tereduksi. Kemudian kita akan melihat bahwa setiap submodul tak tereduksi bersifat
+koprimer. 
+
+\begin{definition} 
+Submodul $N \subsetneq M$ disebut \textbf{tak tereduksi} jika, setiap kali $N = N_1 \cap N_2$ untuk submodul $N_1,
+N_2 \subset M$, salah satu dari $N_1, N_2$ sama dengan $N$. Dengan kata lain, submodul ini bukan
+ irisan submodul-submodul yang lebih besar. 
+\end{definition} 
+
+\begin{proposition} \label{irrediscoprimary}
+Suatu submodul tak tereduksi $N \subset M$ bersifat koprimer.
+\end{proposition} 
+\begin{proof} 
+Misalkan $a \in R$. Kita ingin menunjukkan bahwa homoteti 
+\[ M/N \stackrel{a}{\to} M/N  \]
+bersifat injektif atau nilpoten.
+Pertimbangkan submodul-submodul $M/N$ berikut:
+\[ K(n) =  \left\{x \in M/N: a^n x = 0\right\} . \]
+Jelas bahwa $K(0) \subset K(1) \subset \dots$; rantai ini menjadi stasioner karena
+modul hasil bagi tersebut noetherian.
+Secara khusus, $K(n) = K(2n)$ untuk $n$ yang cukup besar. 
+
+Akibatnya, jika $x \in M/N$ habis dibagi $a^n$ ($n$ cukup besar) dan tak nol, maka $a^n x$
+juga tak nol. Memang, tuliskan $x = a^n y \neq 0$; maka $y \notin K(n)$, sehingga $a^{n}x =
+a^{2n}y \neq 0$, sebab jika tidak, kita memperoleh $y \in K(2n) = K(n)$. Dalam $M/N$, submodul-submodul
+\[ a^n(M/N) \cap \ker(a^n)  \]
+sama dengan nol untuk $n$ yang cukup besar. Namun, asumsi kita adalah bahwa $N$
+tak tereduksi. Jadi, salah satu dari submodul-submodul $M/N$ ini nol. Artinya, berlaku
+$a^n(M/N) = 0$ atau $\ker a^n = 0$. Kita memperoleh sifat injektif atau sifat nilpoten pada
+$M/N$. Ini membuktikan hasil tersebut.
+\end{proof} 
+ 
+\subsection{Dekomposisi tak tereduksi dan dekomposisi primer}
+
+Sekarang kita akan menunjukkan bahwa dalam modul terbangkitkan hingga di atas gelanggang noetherian,
+kita dapat menulis $0$ sebagai irisan modul-modul koprimer. Dekomposisi ini,
+yang disebut \emph{dekomposisi primer}, akan diturunkan dari penalaran yang sepenuhnya
+umum.
+
+\begin{definition} 
+Suatu \textbf{dekomposisi tak tereduksi} dari modul $M$ adalah penyajian
+$N_1 \cap N_2 \dots \cap N_k  = 0$, dengan $N_i \subset M$ merupakan submodul-submodul tak tereduksi
+dalam dekomposisi tersebut.
+\end{definition} 
+
+\begin{proposition} 
+Jika $M$ terbangkitkan hingga, maka $M$ mempunyai dekomposisi tak tereduksi. Terdapat sejumlah hingga submodul tak tereduksi
+$N_1, \dots, N_k$ dengan
+\[  N_1 \cap \dots \cap N_k = 0. \]
+\end{proposition} 
+Dengan kata lain,
+\[  M \to \bigoplus M/N_i  \]
+bersifat injektif.
+Jadi, suatu modul terbangkitkan hingga di atas gelanggang noetherian dapat disisipkan ke dalam jumlah langsung
+modul-modul primer, sebab berdasarkan \rref{irrediscoprimary}, semua $M/N_i$
+bersifat primer. 
+
+\begin{proof} Sekarang pembuktian sepenuhnya formal. 
+
+Di antara submodul-submodul $M$, beberapa mungkin dapat dinyatakan sebagai irisan
+sejumlah hingga submodul tak tereduksi, sedangkan yang lain mungkin tidak. Tujuan kita ialah menunjukkan bahwa
+$0$ merupakan irisan semacam itu.
+Misalkan $M' \subset M$ suatu submodul maksimal dari $M$ sedemikian sehingga $M'$ \emph{tidak dapat}
+ditulis sebagai irisan semacam itu. Jika tidak ada
+$M'$ seperti itu, pembuktian selesai, sebab $0$ dapat ditulis sebagai
+irisan sejumlah hingga submodul tak tereduksi.
+
+Sekarang $M'$ tidak tak tereduksi, sebab jika demikian, ia merupakan irisan satu submodul
+tak tereduksi.
+Akibatnya, $M'$ dapat ditulis sebagai $M'=M_1' \cap M_2'$ untuk dua submodul
+$M$ yang lebih besar secara ketat. Namun, berdasarkan kemaksimalan, $M_1', M_2'$ mempunyai dekomposisi sebagai
+irisan submodul-submodul tak tereduksi. Jadi, $M'$ juga mempunyai dekomposisi semacam itu, suatu kontradiksi. 
+\end{proof} 
+
+\begin{corollary} 
+Untuk setiap $M$ terbangkitkan hingga, terdapat submodul-submodul koprimer $N_1, \dots,
+N_k \subset M$ sedemikian sehingga $N_1 \cap \dots \cap N_k  = 0$.
+\end{corollary} 
+\begin{proof} 
+Memang, setiap submodul tak tereduksi bersifat koprimer.
+\end{proof} 
+
+
+Untuk setiap $M$, kita mempunyai \textbf{dekomposisi tak tereduksi}
+\[ 0 = \bigcap N_i  \]
+dengan $N_i$ suatu himpunan hingga submodul tak tereduksi (dan dengan demikian koprimer). 
+Dekomposisi ini sangat tidak tunggal dan tidak kanonik. Mari kita
+sederhanakan menjadi sesuatu yang jauh lebih kanonik.
+
+Klaim pertama adalah bahwa kita dapat mengelompokkan modul-modul yang koprimer terhadap
+ideal prima yang sama. 
+\begin{lemma} 
+Misalkan $N_1, N_2 \subset M$ submodul-submodul $\mathfrak{p}$-koprimer. Maka $N_1 \cap
+N_2$ juga $\mathfrak{p}$-koprimer.
+\end{lemma} 
+\begin{proof} 
+Kita harus menunjukkan bahwa $M/N_1 \cap N_2$ bersifat $\mathfrak{p}$-primer. Memang, kita mempunyai penyisipan
+\[ M/N_1 \cap N_2 \rightarrowtail  M/N_1 \oplus M/N_2  \]
+yang menyiratkan bahwa $\ass(M/N_1 \cap N_2) \subset \ass(M/N_1) \cup \ass(M/N_2) =
+\left\{\mathfrak{p}\right\}$. Jadi, pembuktian selesai. 
+\end{proof} 
+
+Secara khusus, jika kita tidak mensyaratkan sifat tak tereduksi dan hanya mensyaratkan sifat primer dalam
+dekomposisi
+\[ 0 = \bigcap N_i,  \]
+kita dapat mengandaikan bahwa setiap $N_i$ bersifat $\mathfrak{p}_i$-koprimer untuk suatu
+ ideal prima
+$\mathfrak{p}_i$, dengan semua $\mathfrak{p}_i$ \emph{berbeda}.
+
+\begin{definition} 
+Dekomposisi nol semacam itu, dengan modul-modul $N_i$ yang berbeda bersifat
+$\mathfrak{p}_i$-koprimer untuk $\mathfrak{p}_i$ yang berbeda, disebut suatu \textbf{dekomposisi primer}.
+\end{definition} 
+
+
+
+\subsection{Pertanyaan ketunggalan}
+
+Secara umum, dekomposisi primer \emph{tidak} tunggal. Meskipun demikian, kita akan
+melihat bahwa terdapat ketunggalan dalam kadar terbatas. Sebagai contoh, ideal-ideal prima
+yang muncul ditentukan secara tunggal.
+
+Misalkan $M$ suatu modul terbangkitkan hingga di atas gelanggang noetherian $R$, dan andaikan
+$N_1 \cap \dots \cap N_k = 0$ suatu dekomposisi primer.
+Kita andaikan bahwa dekomposisi tersebut
+\emph{minimal}: artinya, jika salah satu $N_i$ dihapus, irisannya tidak lagi
+nol.
+Hal ini menyiratkan bahwa
+\[ N_i \not\supset \bigcap_{j \neq i} N_j  \]
+sebab jika tidak, salah satu $N_i$ dapat dihilangkan. Dekomposisi tersebut lalu disebut \textbf{dekomposisi primer tereduksi}.
+
+Sekali lagi, hal ini menyatakan bahwa $M \rightarrowtail  \bigoplus M/N_i$. Kita telah
+menunjukkan bahwa $M$ dapat disisipkan ke dalam jumlah komponen, yang masing-masing
+bersifat $\mathfrak{p}$-primer untuk suatu ideal prima, dan semua ideal prima tersebut berbeda.
+
+Penyisipan ini \textbf{tidak} tunggal. Akan tetapi, 
+
+\begin{proposition} 
+Ideal-ideal prima $\mathfrak{p}_i$ yang muncul dalam suatu dekomposisi primer tereduksi dari nol
+ditentukan secara tunggal. Ideal-ideal tersebut adalah prima terkait dari $M$.
+\end{proposition} 
+\begin{proof} 
+Semua prima terkait dari $M$ harus muncul, karena kita mempunyai penyisipan
+\[ M \rightarrowtail  \bigoplus M/N_i  \]
+sehingga prima terkait dari $M$ termasuk di antara prima terkait dari $M/N_i$ (yakni semua
+$\mathfrak{p}_i$).
+
+Arah yang sulit adalah menunjukkan bahwa setiap $\mathfrak{p}_i$ merupakan prima terkait.
+Artinya, jika $M/N_i$ bersifat $\mathfrak{p}_i$-primer, maka $\mathfrak{p}_i \in \ass(M)$;
+kita tidak perlu menggunakan modul primer kecuali bagi ideal prima dalam prima terkait. 
+Di sini kita perlu menggunakan fakta bahwa dekomposisi kita tidak berulang. Tanpa
+mengurangi keumuman, cukup ditunjukkan bahwa, misalnya, $\mathfrak{p}_1$
+termasuk dalam $\ass(M)$. Kita akan menggunakan fakta bahwa
+\[ N_1 \not\supset N_2 \cap \dots .  \]
+Jadi, $N_2 \cap N_3 \cap \dots$ tidak sama dengan nol, sebab jika sama,
+kita akan memperoleh suatu penyertaan. Kita mempunyai pemetaan
+\[ N_2 \cap \dots \cap N_k \to M/N_1;  \]
+yang injektif, sebab kernelnya adalah $N_1 \cap N_2 \cap \dots \cap N_k = 0$ karena
+ini merupakan suatu dekomposisi.
+Namun, $M/N_1$ bersifat $\mathfrak{p}_1$-primer, sehingga $N_2 \cap \dots \cap N_k$ juga
+bersifat $\mathfrak{p}_1$-primer. Secara khusus, $\mathfrak{p}_1$ merupakan prima terkait
+dari $N_2 \cap \dots \cap N_k$, dan karena itu juga dari $M$.
+\end{proof} 
+
+Ideal-ideal primanya ditentukan secara tunggal; faktornya tidak. Namun, dalam beberapa kasus, faktornya tunggal.
+
+\begin{proposition} 
+Misalkan $\mathfrak{p}_i$ suatu prima terkait minimal dari $M$, yakni tidak memuat
+prima terkait yang lebih kecil. Maka submodul $N_i$ yang bersesuaian dengan
+$\mathfrak{p}_i$ dalam dekomposisi primer tereduksi ditentukan secara tunggal:
+submodul tersebut adalah kernel dari 
+\[ M \to M_{\mathfrak{p}_i}.  \]
+\end{proposition} 
+
+\begin{proof} 
+Kita mempunyai $\bigcap N_j = \left\{0\right\} \subset M$. Ketika dilokalkan pada
+$\mathfrak{p}_i$, kita memperoleh
+\[ (\bigcap N_j)_{\mathfrak{p}_i} = \bigcap (N_j)_{\mathfrak{p}_i} =0 \]
+karena pelokalan merupakan funktor eksak. Jika $j \neq i$, maka $M/N_j$ bersifat
+$\mathfrak{p}_j$-primer dan hanya mempunyai $\mathfrak{p}_j$ sebagai prima terkait.
+Akibatnya, $(M/N_j)_{\mathfrak{p}_i}$ tidak mempunyai prima terkait, karena satu-satunya
+prima terkait yang mungkin adalah $\mathfrak{p}_j$, dan ideal tersebut tidak termuat dalam
+$\mathfrak{p}_j$.
+Secara khusus, $(N_j)_{\mathfrak{p}_i} = M_{\mathfrak{p}_i}$.
+
+Jadi, ketika kita melokalkan dekomposisi primer pada $\mathfrak{p}_i$, kita memperoleh
+dekomposisi primer trivial: sebagian besar faktornya adalah seluruh
+$M_{\mathfrak{p}_i}$. Akibatnya, $(N_i)_{\mathfrak{p}_i}=0$. Ketika kita menggambar
+diagram komutatif
+\[ 
+\xymatrix{
+N_i \ar[r] \ar[d]  &  (N_i)_{\mathfrak{p}_i} = 0 \ar[d]  \\
+M \ar[r] &  M_{\mathfrak{p}_i}.
+}
+\]
+kita mendapati bahwa $N_i$ dipetakan ke nol dalam pelokalan.
+
+Sekarang, jika $x \in \ker(M \to M_{\mathfrak{p}_i}$, maka $sx = 0$ untuk suatu $s \notin
+\mathfrak{p}_i$. Ketika kita mengambil pemetaan $M \to M/N_i$, $sx$ dipetakan ke nol; tetapi $s$
+bekerja secara injektif pada $M/N_i$, sehingga $x$ dipetakan ke nol di $M/N_i$, yakni termasuk dalam
+$N_i$.
+\end{proof} 
+
+Pembahasan ini bersifat abstrak, jadi pertimbangkan contoh berikut:
+\begin{example} Misalkan $ R = \mathbb{Z}$.
+Misalkan $M = \mathbb{Z} \oplus \mathbb{Z}/p$. Maka nol dapat ditulis sebagai 
+\[ \mathbb{Z} \cap \mathbb{Z}/p  \]
+sebagai submodul-submodul $M$. Namun, $\mathbb{Z}$ bersifat $\mathfrak{p}$-koprimer, sedangkan
+$\mathbb{Z}/p$ bersifat $(0)$-koprimer. 
+
+Dekomposisi ini tidak tunggal. Kita dapat mempertimbangkan 
+\[ \{(n,n), n \in \mathbb{Z}\} \subset M.  \]
+Namun, bagian nol-koprimer haruslah torsi-$p$. Hal ini karena
+$(0)$ merupakan ideal minimal. 
+
+Secara umum, dekomposisi selalu tunggal jika
+tidak terdapat relasi penyertaan di antara ideal-ideal prima. Untuk modul-$\mathbb{Z}$, ini
+berarti bahwa dekomposisi primer tunggal untuk modul torsi. 
+Setiap grup torsi merupakan jumlah langsung dari torsi berpangkat-$p$ untuk semua bilangan prima $p$. 
+\end{example} 
+
+\begin{exercise} 
+Andaikan $R$ suatu gelanggang noetherian dan $R_{\mathfrak{p}}$ suatu domain untuk setiap ideal prima
+$\mathfrak{p} \subset R$. Maka $R$ merupakan hasil kali langsung hingga $\prod R_i$, dengan
+setiap $R_i$ suatu domain.
+
+Untuk melihatnya, pertimbangkan ideal-ideal prima minimal $\mathfrak{p}_i \in \spec R$. Terdapat
+sejumlah hingga ideal semacam itu; buktikan bahwa karena setiap pelokalan merupakan domain,
+$\spec R$ terpisah menjadi komponen-komponen $V(\mathfrak{p}_i)$.
+Akibatnya, terdapat dekomposisi $R = \prod R_{i}$ dengan $\spec R_i$
+mempunyai $\mathfrak{p}_i$ sebagai satu-satunya ideal prima minimal. 
+Setiap $R_i$ memenuhi syarat yang sama seperti $R$, sehingga kita dapat mereduksi ke kasus
+ketika $R$ mempunyai satu-satunya ideal prima minimal. Namun, dalam kasus ini $R$
+tereduksi, sehingga satu-satunya ideal prima minimal haruslah nol.
+\end{exercise} 
+
+
+

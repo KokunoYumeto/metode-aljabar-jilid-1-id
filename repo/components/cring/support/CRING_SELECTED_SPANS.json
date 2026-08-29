@@ -1,0 +1,75 @@
+{
+  "schema": "o013.cring-selected-spans.v1",
+  "authority_url": "https://math.uchicago.edu/~amathew/CRing.zip",
+  "authority_zip_sha256": "151cdf5498622251db9999b082c4b756a5a7e22b07ddd79538c0057472a4234d",
+  "license": "GFDL-1.2-or-later",
+  "invariant_sections": [],
+  "cover_texts": [],
+  "semantic_boundary": "exact source line spans; not physical-page extraction",
+  "repair_state": "required_before_translation",
+  "segments": [
+    {
+      "segment": "01-nakayama.tex",
+      "title_id": "Lema Nakayama",
+      "source_file": "threeimportantfunctors.tex",
+      "first_line": 362,
+      "last_line": 570,
+      "records": 209,
+      "bytes": 9018,
+      "sha256": "039da90c1d951d811acef5ae6d5e4ca405bb4307b5cc4e0a6d42238314393dcf"
+    },
+    {
+      "segment": "02-spec-zariski.tex",
+      "title_id": "Spec dan topologi Zariski",
+      "source_file": "spec.tex",
+      "first_line": 34,
+      "last_line": 926,
+      "records": 893,
+      "bytes": 30630,
+      "sha256": "a295c74a010736b595286bd706a7ccbe2042b2d07e88df91eba120aa3c707e9d"
+    },
+    {
+      "segment": "03-associated-primary.tex",
+      "title_id": "Dukungan, prima terkait, dan dekomposisi primer",
+      "source_file": "noetherian.tex",
+      "first_line": 335,
+      "last_line": 1206,
+      "records": 872,
+      "bytes": 38379,
+      "sha256": "23515a289430764d8dcf6f1ae10542d32ad6c26eebd666a369bd500920d22f1b"
+    },
+    {
+      "segment": "04-lying-over-going-up.tex",
+      "title_id": "Lying over dan going up",
+      "source_file": "integrality.tex",
+      "first_line": 524,
+      "last_line": 761,
+      "records": 238,
+      "bytes": 11284,
+      "sha256": "904be80ef8471c1b62c00d18ec529e8a249673534e446f8b9e5baf33aa7c79f5"
+    },
+    {
+      "segment": "05-nullstellensatz-normalization.tex",
+      "title_id": "Nullstellensatz dan normalisasi",
+      "source_file": "integrality.tex",
+      "first_line": 1218,
+      "last_line": 1547,
+      "records": 330,
+      "bytes": 16325,
+      "sha256": "16c406d87354f7ff451313858dbb25b83a39d7d103788996295a607ecfe4752c"
+    },
+    {
+      "segment": "06-krull-dimension.tex",
+      "title_id": "Dimensi lokal dan Krull serta Hauptidealsatz",
+      "source_file": "dimension.tex",
+      "first_line": 17,
+      "last_line": 1044,
+      "records": 1028,
+      "bytes": 45981,
+      "sha256": "4265b41d635caac3661d4c48beefe3f7a632d09697742bdd02a05a05911bb88f"
+    }
+  ],
+  "total_records": 3570,
+  "total_bytes": 151617,
+  "result": "PASS_EXACT_EXTRACTION"
+}

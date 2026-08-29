@@ -1,0 +1,457 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[indonesian]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[margin=2.4cm]{geometry}
+
+\hypersetup{
+  pdftitle={O013: Rute Keterhubungan dan Penguasaan},
+  pdfauthor={OpenAI Codex gpt-5.6-sol, Ultra},
+  pdfsubject={Lapisan orisinal penghubung dan penguasaan untuk edisi Bahasa Indonesia},
+  pdfkeywords={aljabar pascasarjana, teori representasi, aljabar komutatif, Bahasa Indonesia}
+}
+
+\setlist{nosep}
+\newcommand{\oid}[1]{\texttt{#1}}
+\newcommand{\jalur}[1]{\textbf{#1}}
+
+\title{O013: Rute Keterhubungan dan Penguasaan\\
+\large Dari Metode Aljabar ke Teori Representasi dan Aljabar Komutatif}
+\author{OpenAI Codex gpt-5.6-sol, Ultra\\\small disusun atas instruksi pengguna}
+\date{29 Agustus 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Status orisinal dan provenance}
+
+\textbf{Status:} seluruh unit O013 ini merupakan materi orisinal edisi.
+Unit ini bukan terjemahan, ringkasan, parafrasa, atau bagian dari akar sumber
+mana pun. Nama komponen pembelajaran di bawah hanya berfungsi sebagai tujuan
+navigasi. Tidak ada atribusi kepengarangan sumber yang diterapkan pada materi
+orisinal ini.
+
+\textbf{Provenance produksi:} \emph{OpenAI Codex gpt-5.6-sol, Ultra, on instructions of the user}.
+Unit disusun khusus sebagai lapisan penghubung dan
+penguasaan bagi edisi bahasa Indonesia ini. Backend ber-ID stabil terdapat
+dalam \texttt{o013-rute-pembelajar.json}.
+
+\section{Tujuan dan cara menggunakan unit}
+
+Unit ini membantu pembelajar berpindah dari landasan aljabar umum menuju dua
+jalur yang saling melengkapi:
+
+\begin{enumerate}
+\item \jalur{jalur R}, yakni teori representasi grup melalui representasi,
+modul, teori karakter, induksi, grup simetrik, dan medan dasar yang tidak
+tertutup; serta
+\item \jalur{jalur C}, yakni enam topik aljabar komutatif terpilih: Lema
+Nakayama; spektrum dan topologi Zariski; prima terkait dan dekomposisi primer;
+teorema terletak di atas dan naik; Nullstellensatz dan normalisasi; serta
+dimensi Krull.
+\end{enumerate}
+
+Rute ini bukan perintah untuk membaca semuanya secara linear. Kerjakan
+diagnostik terlebih dahulu, perbaiki prasyarat yang gagal, lalu ikuti simpul
+dependensi. Suatu simpul dianggap dikuasai apabila pembelajar dapat menjelaskan
+definisi utamanya, menghasilkan satu contoh dan satu bukan-contoh, serta
+menyelesaikan prompt penguasaan yang terkait tanpa membuka jawaban.
+
+\section{Prasyarat yang perlu tersedia}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{2.3cm}p{5.0cm}p{7.0cm}}
+\toprule
+ID & Prasyarat & Bukti kesiapan minimum \\
+\midrule
+\endhead
+\oid{O013-P01} & Bahasa fungsi, hasil bagi, dan pembuktian & Dapat membedakan
+definisi, implikasi, dan konvers; dapat memeriksa bahwa suatu pemetaan pada
+kelas ekuivalensi terdefinisi dengan baik. \\
+\oid{O013-P02} & Grup, subgrup, hasil bagi, dan aksi grup & Dapat menghitung
+orbit dan penstabil, menggunakan teorema orbit--penstabil, serta bekerja dengan
+koset dan konjugasi. \\
+\oid{O013-P03} & Gelanggang komutatif, ideal, dan pelokalan & Dapat membedakan
+ideal prima dan maksimal, menghitung ideal hasil bagi sederhana, dan
+menjelaskan apa yang dibalik dalam $S^{-1}R$. \\
+\oid{O013-P04} & Modul, ruang vektor, tensor, dan barisan eksak & Dapat
+menggunakan hasil kali tensor, mengenali modul terbangkitkan hingga, membaca
+barisan eksak pendek, dan menjelaskan jumlah langsung serta modul
+semisederhana. \\
+\oid{O013-P05} & Aljabar, integralitas, norma, dan teras & Dapat menguji bahwa
+suatu unsur integral dengan persamaan monik dan membedakan perluasan hingga,
+aljabar, dan transenden. \\
+\oid{O013-P06} & Ekstensi medan dan penutup aljabar & Dapat bekerja dengan
+polinomial minimal, medan pemisah, dan makna medan tertutup secara aljabar. \\
+\bottomrule
+\end{longtable}
+
+Prasyarat \oid{O013-P01} bersifat lintas jalur. Jalur R terutama memakai
+\oid{O013-P02} dan \oid{O013-P04}; jalur C terutama memakai
+\oid{O013-P03}--\oid{O013-P06}. Pembelajar tidak perlu menuntaskan jalur R
+sebelum memulai jalur C, atau sebaliknya.
+
+\section{Peta dependensi eksplisit}
+
+\subsection*{Simpul jalur R: teori representasi}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{2.3cm}p{5.2cm}p{6.8cm}}
+\toprule
+ID & Sasaran pembelajaran & Memerlukan \\
+\midrule
+\endhead
+\oid{O013-R10} & Representasi linear dan aljabar grup &
+\oid{O013-P02}, \oid{O013-P04} \\
+\oid{O013-R11} & Aljabar multilinear, tensor, dual, simetrik, dan eksterior &
+\oid{O013-P04}, \oid{O013-P05} \\
+\oid{O013-R12} & Modul, semisederhana, dan teori Wedderburn &
+\oid{O013-P03}, \oid{O013-P04}, \oid{O013-R10} \\
+\oid{O013-R13} & Gelanggang representasi, karakter, dan ortogonalitas &
+\oid{O013-R10}, \oid{O013-R11}, \oid{O013-R12} \\
+\oid{O013-R14} & Restriksi, representasi terinduksi, dan resiprositas Frobenius &
+\oid{O013-P02}, \oid{O013-R13} \\
+\oid{O013-R15} & Grup simetrik dan grup linear umum &
+\oid{O013-R11}, \oid{O013-R14} \\
+\oid{O013-R16} & Representasi atas medan yang tidak tertutup &
+\oid{O013-P06}, \oid{O013-R12}, \oid{O013-R13} \\
+\bottomrule
+\end{longtable}
+
+Tulang punggung jalur ini adalah
+\[
+\oid{O013-P02}+\oid{O013-P04}
+\longrightarrow \oid{O013-R10}
+\longrightarrow \oid{O013-R12}
+\longrightarrow \oid{O013-R13}
+\longrightarrow \oid{O013-R14}.
+\]
+Simpul \oid{O013-R11} memasok alat multilinear bagi
+\oid{O013-R13} dan \oid{O013-R15}; simpul \oid{O013-R16} merupakan cabang
+yang memerlukan kesiapan medan.
+
+\subsection*{Simpul jalur C: enam topik aljabar komutatif}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{2.3cm}p{5.2cm}p{6.8cm}}
+\toprule
+ID & Sasaran pembelajaran & Memerlukan \\
+\midrule
+\endhead
+\oid{O013-C10} & Lema Nakayama dan pembangkit minimal modul lokal &
+\oid{O013-P03}, \oid{O013-P04} \\
+\oid{O013-C11} & $\operatorname{Spec}(R)$ dan topologi Zariski &
+\oid{O013-P03} \\
+\oid{O013-C12} & Prima terkait, modul primer, dan dekomposisi primer &
+\oid{O013-C10}, \oid{O013-C11}, \oid{O013-P04} \\
+\oid{O013-C13} & Teorema terletak di atas dan naik untuk perluasan integral &
+\oid{O013-P05}, \oid{O013-P06}, \oid{O013-C11} \\
+\oid{O013-C14} & Nullstellensatz Hilbert dan normalisasi &
+\oid{O013-P05}, \oid{O013-P06}, \oid{O013-C11}, \oid{O013-C13} \\
+\oid{O013-C15} & Fungsi Hilbert dan dimensi Krull &
+\oid{O013-C10}, \oid{O013-C11}, \oid{O013-C12}, \oid{O013-C14} \\
+\bottomrule
+\end{longtable}
+
+Tulang punggung jalur ini adalah
+\[
+\oid{O013-P03}\longrightarrow\oid{O013-C11},\qquad
+\oid{O013-P03}+\oid{O013-P04}\longrightarrow\oid{O013-C10},
+\]
+diikuti dua cabang:
+\[
+\oid{O013-C10}+\oid{O013-C11}\longrightarrow\oid{O013-C12}
+\]
+dan
+\[
+\oid{O013-P05}+\oid{O013-P06}+\oid{O013-C11}
+\longrightarrow\oid{O013-C13}
+\longrightarrow\oid{O013-C14}.
+\]
+Kedua cabang bertemu kembali pada \oid{O013-C15}.
+
+\subsection*{Simpul sintesis}
+
+\oid{O013-S10} menghubungkan kedua jalur setelah
+\oid{O013-R12} dan \oid{O013-C11}. Gagasan penghubungnya adalah bahwa suatu
+representasi dapat dipandang sebagai modul atas aljabar grup, sedangkan
+anihilator, dukungan, dan pelokalan menjelaskan bagaimana suatu modul terlihat
+dari berbagai ideal prima. Hubungan ini bersifat struktural; karakter grup dan
+titik spektrum bukan objek yang sama dan tidak boleh disamakan.
+
+\section{Urutan studi yang disarankan}
+
+\begin{enumerate}[label=\textbf{Tahap \arabic*.}]
+\item \textbf{Masuk dan memilah.} Kerjakan \oid{O013-D01}--\oid{O013-D08}.
+Catat bukan hanya skor, tetapi juga alasan setiap jawaban.
+\item \textbf{Perbaikan landasan.} Ulangi hanya prasyarat yang ditunjukkan
+oleh diagnostik. Jangan menunda seluruh rute karena satu subtopik kecil.
+\item \textbf{Tulang punggung representasi.} Baca dan kerjakan
+\oid{O013-R10}, \oid{O013-R12}, \oid{O013-R13}, lalu
+\oid{O013-R14}. Sisipkan \oid{O013-R11} sebelum perhitungan karakter yang
+memakai tensor, dual, atau pangkat simetrik.
+\item \textbf{Cabang representasi.} Ambil \oid{O013-R15} untuk fokus
+kombinatorial atau \oid{O013-R16} untuk fokus pada pengaruh medan dasar.
+Keduanya boleh dipelajari dalam urutan mana pun setelah dependensinya terpenuhi.
+\item \textbf{Tulang punggung komutatif.} Kerjakan \oid{O013-C10} dan
+\oid{O013-C11}; keduanya dapat berjalan paralel setelah prasyaratnya siap.
+\item \textbf{Struktur dan geometri.} Lanjutkan ke \oid{O013-C12}, serta
+secara terpisah ke \oid{O013-C13} lalu \oid{O013-C14}.
+\item \textbf{Dimensi dan sintesis.} Kerjakan \oid{O013-C15}, kemudian
+\oid{O013-S10} dan prompt penguasaan yang belum tuntas.
+\end{enumerate}
+
+Untuk setiap simpul, gunakan siklus empat langkah: baca definisi; buat contoh;
+rekonstruksi satu pembuktian tanpa melihat; lalu kerjakan satu prompt. Jika
+gagal pada langkah ketiga, kembali ke dependensi langsung, bukan otomatis ke
+awal buku.
+
+\section{Diagnostik masuk}
+
+Jawablah tanpa catatan. Beri satu poin hanya jika kesimpulan dan alasan sama-sama
+benar.
+
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[\oid{O013-D01}] Untuk aksi $G$ pada $X$ dan $x\in X$, jelaskan hubungan antara
+$|Gx|$, $|G|$, dan $|\operatorname{Stab}_G(x)|$. Kapan rumus kardinalitas ini
+berlaku?
+\item[\oid{O013-D02}] Misalkan $k$ medan dan $G$ grup hingga. Tuliskan perkalian dua unsur
+umum $\sum_g a_g g$ dan $\sum_h b_h h$ dalam aljabar grup $kG$.
+\item[\oid{O013-D03}] Nyatakan sifat universal $V\otimes_k W$ dalam satu kalimat dan jelaskan
+mengapa pemetaan bilinear $V\times W\to U$ menghasilkan pemetaan linear dari
+$V\otimes_k W$.
+\item[\oid{O013-D04}] Jika $M$ modul terbangkitkan hingga atas gelanggang lokal $(R,\mathfrak
+m)$, informasi apa tentang pembangkit $M$ yang tersimpan dalam ruang vektor
+$M/\mathfrak mM$?
+\item[\oid{O013-D05}] Bedakan ideal prima, ideal maksimal, dan ideal radikal. Berikan satu
+implikasi yang selalu benar dan satu konvers yang dapat gagal.
+\item[\oid{O013-D06}] Apa arti suatu unsur $s$ integral atas subgelanggang $R$? Mengapa syarat
+``monik'' penting?
+\item[\oid{O013-D07}] Jika $T$ operator linear berorde hingga pada ruang vektor kompleks,
+mengapa $T$ dapat didiagonalkan dan apa bentuk nilai eigennya?
+\item[\oid{O013-D08}] Berikan definisi panjang rantai ideal prima dan jelaskan bagaimana rantai
+tersebut memberi batas bawah bagi dimensi Krull.
+\end{description}
+
+\paragraph{Indikator jawaban.}
+\oid{O013-D01}: teorema orbit--penstabil untuk grup hingga.
+\oid{O013-D02}: koefisien pada $u\in G$ adalah jumlah $a_gb_h$ atas
+$gh=u$. \oid{O013-D03}: faktorisasi tunggal pemetaan bilinear melalui pemetaan
+kanonik ke tensor. \oid{O013-D04}: dimensi $M/\mathfrak mM$ adalah banyaknya
+pembangkit minimal. \oid{O013-D05}: maksimal mengimplikasikan prima dan prima
+mengimplikasikan radikal, tetapi konversnya dapat gagal. \oid{O013-D06}:
+persamaan polinomial monik memberi kontrol keterhinggaan. \oid{O013-D07}:
+polinomial minimal membagi $X^n-1$, yang berakar sederhana dalam
+$\mathbb C$. \oid{O013-D08}: panjang adalah banyaknya inklusi ketat; supremumnya
+memberi dimensi.
+
+\paragraph{Keputusan masuk.}
+Skor $0$--$3$: perbaiki \oid{O013-P01}--\oid{O013-P04} sebelum memilih
+cabang. Skor $4$--$6$: mulai rute, tetapi pasangkan setiap jawaban gagal dengan
+prasyaratnya. Skor $7$--$8$: masuk langsung. Terlepas dari skor total,
+\oid{O013-D01}--\oid{O013-D03} adalah gerbang jalur R, sedangkan
+\oid{O013-D04}--\oid{O013-D06} adalah gerbang jalur C.
+
+\section{Prompt penguasaan orisinal}
+
+Semua prompt, petunjuk, dan jawaban pada bagian ini baru ditulis untuk O013.
+Gunakan petunjuk secara berurutan dan buka jawaban hanya setelah menuliskan
+upaya lengkap.
+
+\subsection*{\oid{O013-M01}: Representasi sebagai modul aljabar grup}
+
+\textbf{Prompt.} Misalkan $k$ medan dan $G$ grup hingga. Buktikan bahwa memberi
+representasi $\rho:G\to\operatorname{GL}(V)$ ekuivalen dengan memberi struktur
+modul kiri $kG$ pada $V$. Tunjukkan pula bahwa morfisme pada kedua sisi
+berkorespondensi.
+
+\textbf{Petunjuk \oid{O013-M01-H1}.} Perluas aksi setiap $g\in G$ secara
+$k$-linear ke kombinasi formal unsur grup.
+
+\textbf{Petunjuk \oid{O013-M01-H2}.} Untuk arah balik, batasi aksi $kG$ ke
+basis grup $G\subset kG$ dan gunakan $g^{-1}$ untuk menunjukkan bahwa aksinya
+dapat dibalik.
+
+\textbf{Jawaban \oid{O013-M01-A}.} Definisikan
+\[
+\left(\sum_{g\in G}a_gg\right)v=\sum_{g\in G}a_g\rho(g)v.
+\]
+Sifat modul mengikuti dari linearitas dan $\rho(gh)=\rho(g)\rho(h)$.
+Sebaliknya, struktur modul memberi $\rho(g)v=gv$; relasi dalam $kG$ memberi
+$\rho(gh)=\rho(g)\rho(h)$, dan $g^{-1}$ memberi invers. Pemetaan linear
+$f:V\to W$ adalah $G$-ekuivarian tepat ketika $f(gv)=gf(v)$ untuk setiap
+$g$, dan melalui linearitas hal ini tepat berarti $f$ linear terhadap $kG$.
+
+\subsection*{\oid{O013-M02}: Proyeksi perataan dan ketereduksian lengkap}
+
+\textbf{Prompt.} Misalkan $\operatorname{char}(k)$ tidak membagi $|G|$,
+$V$ representasi berdimensi hingga, dan $W\subseteq V$ subrepresentasi.
+Mulailah dengan sebarang proyeksi linear $p:V\to W$. Bentuk proyeksi
+$G$-ekuivarian dan deduksikan $V=W\oplus W'$ untuk suatu subrepresentasi $W'$.
+
+\textbf{Petunjuk \oid{O013-M02-H1}.} Rata-ratakan semua konjugat dari $p$:
+$gpg^{-1}$.
+
+\textbf{Petunjuk \oid{O013-M02-H2}.} Periksa secara terpisah bahwa hasil
+perataan tetap identitas pada $W$ dan komutatif dengan aksi setiap $h\in G$.
+
+\textbf{Jawaban \oid{O013-M02-A}.} Ambil
+\[
+\overline p=\frac1{|G|}\sum_{g\in G}gpg^{-1}.
+\]
+Penyebut sah menurut asumsi karakteristik. Pengindeksan ulang $g\mapsto h^{-1}g$
+menunjukkan $h\overline p=\overline ph$. Karena $W$ stabil dan $p|_W$ identitas,
+setiap $gpg^{-1}$ juga identitas pada $W$; jadi $\overline p$ adalah proyeksi
+ke $W$. Kernel $W'=\ker\overline p$ stabil terhadap $G$, sehingga
+$V=W\oplus W'$.
+
+\subsection*{\oid{O013-M03}: Membaca multiplisitas dari karakter}
+
+\textbf{Prompt.} Untuk $S_3$, gunakan urutan kelas identitas, transposisi, dan
+siklus-$3$, dengan kardinalitas kelas $1,3,2$. Karakter tak tereduksi adalah
+\[
+\mathbf{1}=(1,1,1),\qquad \varepsilon=(1,-1,1),\qquad \sigma=(2,0,-1).
+\]
+Suatu representasi memiliki karakter $\chi=(5,1,-1)$. Tentukan dekomposisinya.
+
+\textbf{Petunjuk \oid{O013-M03-H1}.} Gunakan hasil kali dalam berbobot
+$\langle\alpha,\beta\rangle=\frac16\sum_C|C|\overline{\alpha(C)}\beta(C)$.
+
+\textbf{Petunjuk \oid{O013-M03-H2}.} Hitung tiga hasil kali dalam dan periksa
+dimensi pada unsur identitas.
+
+\textbf{Jawaban \oid{O013-M03-A}.} Diperoleh
+\[
+\langle\mathbf1,\chi\rangle=1,\qquad
+\langle\varepsilon,\chi\rangle=0,\qquad
+\langle\sigma,\chi\rangle=2.
+\]
+Jadi $V\cong\mathbf1\oplus\sigma^{\oplus2}$. Pemeriksaan dimensi memberi
+$1+2\cdot2=5=\chi(1)$.
+
+\subsection*{\oid{O013-M04}: Nakayama dan pembangkit minimal}
+
+\textbf{Prompt.} Misalkan $(R,\mathfrak m,k)$ gelanggang lokal dan $M$ modul
+terbangkitkan hingga. Jika kelas $\overline m_1,\ldots,\overline m_r$ membentuk
+basis-$k$ dari $M/\mathfrak mM$, buktikan bahwa $m_1,\ldots,m_r$ merupakan
+sistem pembangkit minimal dari $M$.
+
+\textbf{Petunjuk \oid{O013-M04-H1}.} Bentuk $N=M/(Rm_1+\cdots+Rm_r)$ dan
+hitung $N/\mathfrak mN$.
+
+\textbf{Petunjuk \oid{O013-M04-H2}.} Terapkan Lema Nakayama pada $N$, lalu
+gunakan dimensi hasil bagi untuk membuktikan minimalitas.
+
+\textbf{Jawaban \oid{O013-M04-A}.} Kelas-kelas tersebut merentang hasil bagi,
+sehingga $N/\mathfrak mN=0$, yakni $N=\mathfrak mN$. Modul $N$ terbangkitkan
+hingga; Lema Nakayama memberi $N=0$. Jadi semua $m_i$ membangkitkan $M$.
+Setiap sistem pembangkit $s$ unsur memetakan ke himpunan perentang
+$M/\mathfrak mM$, sehingga $s\ge r$. Sistem yang ditemukan minimal.
+
+\subsection*{\oid{O013-M05}: Spektrum dan pelokalan}
+
+\textbf{Prompt.} Untuk $f\in R$, buktikan bahwa kontraksi memberi bijeksi
+\[
+\operatorname{Spec}(R_f)\longleftrightarrow
+D(f)=\{\mathfrak p\in\operatorname{Spec}(R):f\notin\mathfrak p\}.
+\]
+Uji hasilnya untuk $R=k[x,y]$, $f=x$, dengan ideal $(y)$ dan $(x,y)$.
+
+\textbf{Petunjuk \oid{O013-M05-H1}.} Gunakan korespondensi ideal prima pada
+$S^{-1}R$ dengan ideal prima pada $R$ yang tidak bertemu $S=\{1,f,f^2,\ldots\}$.
+
+\textbf{Petunjuk \oid{O013-M05-H2}.} Periksa ekstensi lalu kontraksi, serta
+kontraksi lalu ekstensi.
+
+\textbf{Jawaban \oid{O013-M05-A}.} Jika $\mathfrak q$ prima dalam $R_f$,
+kontraksinya tidak memuat $f$ karena $f$ satuan. Jika $\mathfrak p$ prima dan
+$f\notin\mathfrak p$, maka $\mathfrak pR_f$ prima dan kedua operasi saling
+invers. Untuk contoh, $(y)$ berada dalam $D(x)$ dan memberi ideal prima
+$(y)R_x$, sedangkan $(x,y)$ memuat $x$ sehingga tidak memberi titik
+$\operatorname{Spec}(R_x)$.
+
+\subsection*{\oid{O013-M06}: Prima terkait dan dekomposisi primer}
+
+\textbf{Prompt.} Dalam $R=k[x,y]$, ambil $I=(x^2,xy)$. Verifikasi
+\[
+I=(x)\cap(x^2,y),
+\]
+tentukan radikal kedua komponen, dan simpulkan kandidat untuk
+$\operatorname{Ass}_R(R/I)$.
+
+\textbf{Petunjuk \oid{O013-M06-H1}.} Untuk inklusi yang sukar, tulis unsur
+irisan sebagai $ax^2+by$ dan gunakan keterbagian oleh $x$.
+
+\textbf{Petunjuk \oid{O013-M06-H2}.} Ideal $(x)$ prima; hasil bagi oleh
+$(x^2,y)$ isomorfik dengan $k[x]/(x^2)$.
+
+\textbf{Jawaban \oid{O013-M06-A}.} Inklusi $I$ ke irisan langsung. Jika
+$ax^2+by$ berada dalam $(x)$, maka $x\mid by$; karena $x$ dan $y$ relatif
+prima, $x\mid b$, sehingga unsur tersebut berada dalam $(x^2,xy)$. Jadi
+persamaan benar. Komponen $(x)$ adalah $(x)$-primer, sedangkan $(x^2,y)$
+adalah $(x,y)$-primer dengan radikal $(x,y)$. Dekomposisi ini memberi
+\[
+\operatorname{Ass}_R(R/I)=\{(x),(x,y)\}.
+\]
+
+\subsection*{\oid{O013-M07}: Integralitas, normalisasi, dan dimensi}
+
+\textbf{Prompt.} Misalkan $A=k[t^2,t^3]\subset B=k[t]$. Buktikan bahwa
+$B$ integral dan terbangkitkan hingga atas $A$, jelaskan surjektivitas
+$\operatorname{Spec}(B)\to\operatorname{Spec}(A)$, lalu tentukan normalisasi
+dan dimensi $A$.
+
+\textbf{Petunjuk \oid{O013-M07-H1}.} Unsur $t$ memenuhi polinomial monik
+$X^2-t^2\in A[X]$ dan $B=A+At$.
+
+\textbf{Petunjuk \oid{O013-M07-H2}.} Gunakan teorema terletak di atas dan
+fakta bahwa perluasan integral mempertahankan dimensi Krull dalam kasus ini.
+
+\textbf{Jawaban \oid{O013-M07-A}.} Persamaan monik menunjukkan $t$ integral;
+karena $B=A[t]=A+At$, perluasannya hingga. Teorema terletak di atas membuat
+pemetaan spektrum surjektif. Gelanggang $B=k[t]$ tertutup integral dalam
+$k(t)$ dan merupakan penutupan integral $A$ di medan pecahannya, sehingga
+$B$ adalah normalisasi $A$. Karena $\dim k[t]=1$ dan $A\subset B$ integral,
+$\dim A=1$.
+
+\subsection*{\oid{O013-M08}: Nullstellensatz pada parabola afin}
+
+\textbf{Prompt.} Misalkan $k$ tertutup secara aljabar dan
+$A=k[x,y]/(y-x^2)$. Klasifikasikan ideal maksimal $A$, jelaskan titik geometri
+yang bersesuaian, dan hitung dimensi Krull $A$.
+
+\textbf{Petunjuk \oid{O013-M08-H1}.} Gunakan isomorfisme $A\cong k[x]$ yang
+mengirim kelas $y$ ke $x^2$.
+
+\textbf{Petunjuk \oid{O013-M08-H2}.} Terapkan Nullstellensatz pada ideal
+maksimal dan tampilkan satu rantai prima dengan panjang satu.
+
+\textbf{Jawaban \oid{O013-M08-A}.} Setiap ideal maksimal berbentuk
+\[
+\mathfrak m_a=(x-a,y-a^2)/(y-x^2),\qquad a\in k,
+\]
+dan bersesuaian dengan titik $(a,a^2)$ pada parabola. Isomorfisme dengan
+$k[x]$ memberi rantai prima $(0)\subset(x-a)$ dan tidak ada rantai prima yang
+lebih panjang. Jadi $\dim A=1$.
+
+\section{Kriteria selesai}
+
+Unit O013 selesai apabila pembelajar:
+
+\begin{enumerate}
+\item dapat menggambar ulang DAG dependensi tanpa melihat tabel;
+\item memperoleh sedikitnya tujuh dari delapan poin diagnostik setelah
+perbaikan terarah;
+\item menyelesaikan \oid{O013-M01}--\oid{O013-M03} secara mandiri untuk
+jalur R;
+\item menyelesaikan sedikitnya empat dari \oid{O013-M04}\allowbreak--\allowbreak\oid{O013-M08},
+termasuk satu prompt lokal/modul dan satu prompt spektrum/dimensi, untuk jalur C;
+dan
+\item dapat menjelaskan dengan contoh mengapa ``representasi sebagai modul''
+merupakan jembatan sah, tetapi karakter grup tidak boleh disamakan dengan
+titik spektrum gelanggang.
+\end{enumerate}
+
+\end{document}

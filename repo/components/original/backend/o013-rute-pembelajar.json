@@ -1,0 +1,433 @@
+{
+  "schema": "o013.learner-route.v1",
+  "unit": {
+    "id": "O013",
+    "language": "id-ID",
+    "kind": "edition-original",
+    "title": "Rute Keterhubungan dan Penguasaan",
+    "learner_file": "o013-rute-pembelajar.tex",
+    "original": true,
+    "source_author_attribution": false,
+    "provenance": {
+      "producer": "OpenAI Codex gpt-5.6-sol",
+      "reasoning_effort": "Ultra",
+      "instruction_basis": "on instructions of the user",
+      "statement": "OpenAI Codex gpt-5.6-sol, Ultra, on instructions of the user"
+    }
+  },
+  "components": [
+    {
+      "id": "O013-K01",
+      "role": "foundation",
+      "label": "Metode Aljabar Jilid 1, jalur lengkap"
+    },
+    {
+      "id": "O013-K02",
+      "role": "representation-route",
+      "label": "Catatan Teori Representasi"
+    },
+    {
+      "id": "O013-K03",
+      "role": "commutative-route",
+      "label": "Enam topik aljabar komutatif terpilih"
+    }
+  ],
+  "prerequisites": [
+    {
+      "id": "O013-P01",
+      "label": "Bahasa fungsi, hasil bagi, dan pembuktian",
+      "evidence": "Memeriksa keterdefinisian pemetaan pada kelas ekuivalensi dan membedakan implikasi dari konvers."
+    },
+    {
+      "id": "O013-P02",
+      "label": "Grup, subgrup, hasil bagi, dan aksi grup",
+      "evidence": "Menghitung orbit dan penstabil serta bekerja dengan koset dan konjugasi."
+    },
+    {
+      "id": "O013-P03",
+      "label": "Gelanggang komutatif, ideal, dan pelokalan",
+      "evidence": "Membedakan ideal prima dan maksimal serta menjelaskan unsur yang dibalik dalam pelokalan."
+    },
+    {
+      "id": "O013-P04",
+      "label": "Modul, ruang vektor, tensor, dan barisan eksak",
+      "evidence": "Menggunakan tensor, jumlah langsung, keterbangkitan hingga, dan semisederhana."
+    },
+    {
+      "id": "O013-P05",
+      "label": "Aljabar, integralitas, norma, dan teras",
+      "evidence": "Menguji integralitas dengan persamaan monik dan membedakan jenis perluasan."
+    },
+    {
+      "id": "O013-P06",
+      "label": "Ekstensi medan dan penutup aljabar",
+      "evidence": "Bekerja dengan polinomial minimal, medan pemisah, dan penutup aljabar."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "O013-R10",
+      "route": "R",
+      "label": "Representasi linear dan aljabar grup",
+      "requires": ["O013-P02", "O013-P04"]
+    },
+    {
+      "id": "O013-R11",
+      "route": "R",
+      "label": "Aljabar multilinear, tensor, dual, simetrik, dan eksterior",
+      "requires": ["O013-P04", "O013-P05"]
+    },
+    {
+      "id": "O013-R12",
+      "route": "R",
+      "label": "Modul, semisederhana, dan teori Wedderburn",
+      "requires": ["O013-P03", "O013-P04", "O013-R10"]
+    },
+    {
+      "id": "O013-R13",
+      "route": "R",
+      "label": "Gelanggang representasi, karakter, dan ortogonalitas",
+      "requires": ["O013-R10", "O013-R11", "O013-R12"]
+    },
+    {
+      "id": "O013-R14",
+      "route": "R",
+      "label": "Restriksi, representasi terinduksi, dan resiprositas Frobenius",
+      "requires": ["O013-P02", "O013-R13"]
+    },
+    {
+      "id": "O013-R15",
+      "route": "R",
+      "label": "Grup simetrik dan grup linear umum",
+      "requires": ["O013-R11", "O013-R14"]
+    },
+    {
+      "id": "O013-R16",
+      "route": "R",
+      "label": "Representasi atas medan yang tidak tertutup",
+      "requires": ["O013-P06", "O013-R12", "O013-R13"]
+    },
+    {
+      "id": "O013-C10",
+      "route": "C",
+      "label": "Lema Nakayama dan pembangkit minimal modul lokal",
+      "requires": ["O013-P03", "O013-P04"]
+    },
+    {
+      "id": "O013-C11",
+      "route": "C",
+      "label": "Spektrum dan topologi Zariski",
+      "requires": ["O013-P03"]
+    },
+    {
+      "id": "O013-C12",
+      "route": "C",
+      "label": "Prima terkait, modul primer, dan dekomposisi primer",
+      "requires": ["O013-C10", "O013-C11", "O013-P04"]
+    },
+    {
+      "id": "O013-C13",
+      "route": "C",
+      "label": "Teorema terletak di atas dan naik",
+      "requires": ["O013-P05", "O013-P06", "O013-C11"]
+    },
+    {
+      "id": "O013-C14",
+      "route": "C",
+      "label": "Nullstellensatz Hilbert dan normalisasi",
+      "requires": ["O013-P05", "O013-P06", "O013-C11", "O013-C13"]
+    },
+    {
+      "id": "O013-C15",
+      "route": "C",
+      "label": "Fungsi Hilbert dan dimensi Krull",
+      "requires": ["O013-C10", "O013-C11", "O013-C12", "O013-C14"]
+    },
+    {
+      "id": "O013-S10",
+      "route": "S",
+      "label": "Representasi sebagai modul; anihilator, dukungan, dan spektrum",
+      "requires": ["O013-R12", "O013-C11"]
+    }
+  ],
+  "study_sequence": [
+    {
+      "id": "O013-Q01",
+      "label": "Masuk dan memilah",
+      "items": ["O013-D01", "O013-D02", "O013-D03", "O013-D04", "O013-D05", "O013-D06", "O013-D07", "O013-D08"]
+    },
+    {
+      "id": "O013-Q02",
+      "label": "Perbaikan landasan",
+      "items": ["O013-P01", "O013-P02", "O013-P03", "O013-P04", "O013-P05", "O013-P06"]
+    },
+    {
+      "id": "O013-Q03",
+      "label": "Tulang punggung representasi",
+      "items": ["O013-R10", "O013-R12", "O013-R13", "O013-R14"]
+    },
+    {
+      "id": "O013-Q04",
+      "label": "Cabang representasi",
+      "items": ["O013-R11", "O013-R15", "O013-R16"]
+    },
+    {
+      "id": "O013-Q05",
+      "label": "Tulang punggung komutatif",
+      "items": ["O013-C10", "O013-C11"]
+    },
+    {
+      "id": "O013-Q06",
+      "label": "Struktur dan geometri",
+      "items": ["O013-C12", "O013-C13", "O013-C14", "O013-C15"]
+    },
+    {
+      "id": "O013-Q07",
+      "label": "Sintesis dan penguasaan",
+      "items": ["O013-S10", "O013-M01", "O013-M02", "O013-M03", "O013-M04", "O013-M05", "O013-M06", "O013-M07", "O013-M08"]
+    }
+  ],
+  "diagnostics": [
+    {
+      "id": "O013-D01",
+      "targets": ["O013-P02"],
+      "question": "Jelaskan hubungan kardinalitas orbit, grup, dan penstabil.",
+      "expected": "Untuk grup hingga, |Gx| = |G| / |Stab_G(x)|.",
+      "points": 1
+    },
+    {
+      "id": "O013-D02",
+      "targets": ["O013-P02", "O013-R10"],
+      "question": "Tuliskan perkalian dua unsur umum aljabar grup kG.",
+      "expected": "Koefisien u adalah jumlah a_g b_h atas semua pasangan gh=u.",
+      "points": 1
+    },
+    {
+      "id": "O013-D03",
+      "targets": ["O013-P04", "O013-R11"],
+      "question": "Nyatakan sifat universal hasil kali tensor.",
+      "expected": "Setiap pemetaan bilinear memfaktor secara tunggal melalui pemetaan linear dari tensor.",
+      "points": 1
+    },
+    {
+      "id": "O013-D04",
+      "targets": ["O013-P04", "O013-C10"],
+      "question": "Apa arti dimensi M/mM bagi modul hingga atas gelanggang lokal?",
+      "expected": "Dimensi tersebut adalah banyaknya pembangkit minimal M.",
+      "points": 1
+    },
+    {
+      "id": "O013-D05",
+      "targets": ["O013-P03", "O013-C11"],
+      "question": "Bedakan ideal prima, maksimal, dan radikal.",
+      "expected": "Maksimal mengimplikasikan prima dan prima mengimplikasikan radikal; konvers dapat gagal.",
+      "points": 1
+    },
+    {
+      "id": "O013-D06",
+      "targets": ["O013-P05", "O013-C13", "O013-C14"],
+      "question": "Apa arti integral atas subgelanggang dan mengapa persamaan harus monik?",
+      "expected": "Unsur memenuhi polinomial monik; kemonikan memberi kontrol modul hingga.",
+      "points": 1
+    },
+    {
+      "id": "O013-D07",
+      "targets": ["O013-R13"],
+      "question": "Mengapa operator kompleks berorde hingga dapat didiagonalkan?",
+      "expected": "Polinomial minimal membagi X^n-1, yang berakar sederhana; nilai eigen adalah akar kesatuan.",
+      "points": 1
+    },
+    {
+      "id": "O013-D08",
+      "targets": ["O013-C15"],
+      "question": "Bagaimana rantai ideal prima memberi batas dimensi Krull?",
+      "expected": "Panjang menghitung inklusi ketat dan supremum semua panjang adalah dimensi.",
+      "points": 1
+    }
+  ],
+  "diagnostic_policy": {
+    "total_points": 8,
+    "bands": [
+      {
+        "min": 0,
+        "max": 3,
+        "action": "Perbaiki O013-P01 sampai O013-P04 sebelum memilih cabang."
+      },
+      {
+        "min": 4,
+        "max": 6,
+        "action": "Mulai rute dan pasangkan setiap jawaban gagal dengan prasyaratnya."
+      },
+      {
+        "min": 7,
+        "max": 8,
+        "action": "Masuk langsung ke simpul yang dependensinya terpenuhi."
+      }
+    ],
+    "route_gates": {
+      "R": ["O013-D01", "O013-D02", "O013-D03"],
+      "C": ["O013-D04", "O013-D05", "O013-D06"]
+    }
+  },
+  "mastery": [
+    {
+      "id": "O013-M01",
+      "targets": ["O013-R10", "O013-R12"],
+      "prompt": "Buktikan ekuivalensi antara representasi G pada V dan struktur modul kiri kG pada V, termasuk korespondensi morfisme.",
+      "hints": [
+        {
+          "id": "O013-M01-H1",
+          "text": "Perluas aksi G secara k-linear ke kombinasi formal unsur grup."
+        },
+        {
+          "id": "O013-M01-H2",
+          "text": "Batasi aksi kG ke G dan gunakan g^{-1} untuk memperoleh invers."
+        }
+      ],
+      "answer": {
+        "id": "O013-M01-A",
+        "text": "Definisikan (Σ a_g g)v=Σ a_g ρ(g)v. Relasi representasi memberi aksi modul. Sebaliknya, ρ(g)v=gv dan g^{-1} memberi keterbalikan. Ekuivarian-G tepat sama dengan linear-kG."
+      }
+    },
+    {
+      "id": "O013-M02",
+      "targets": ["O013-R12", "O013-R13"],
+      "prompt": "Dari proyeksi V ke subrepresentasi W, bentuk proyeksi G-ekuivarian ketika char(k) tidak membagi |G| dan deduksikan komplemen stabil.",
+      "hints": [
+        {
+          "id": "O013-M02-H1",
+          "text": "Rata-ratakan semua gpg^{-1}."
+        },
+        {
+          "id": "O013-M02-H2",
+          "text": "Periksa identitas pada W dan komutasi dengan setiap h dalam G."
+        }
+      ],
+      "answer": {
+        "id": "O013-M02-A",
+        "text": "Ambil p̄=(1/|G|)Σ_g gpg^{-1}. Pengindeksan ulang memberi ekuivarians; p̄|W=id, sehingga V=W⊕ker(p̄) dan kernel stabil."
+      }
+    },
+    {
+      "id": "O013-M03",
+      "targets": ["O013-R13"],
+      "prompt": "Untuk tabel karakter S3 yang diberikan dalam unit, dekomposisikan χ=(5,1,-1).",
+      "hints": [
+        {
+          "id": "O013-M03-H1",
+          "text": "Gunakan hasil kali dalam berbobot kardinalitas kelas 1,3,2."
+        },
+        {
+          "id": "O013-M03-H2",
+          "text": "Hitung multiplisitas tiga karakter tak tereduksi dan periksa dimensi."
+        }
+      ],
+      "answer": {
+        "id": "O013-M03-A",
+        "text": "Multiplisitasnya 1,0,2; jadi V ≅ 1 ⊕ σ^{⊕2}, dengan dimensi 1+2·2=5."
+      }
+    },
+    {
+      "id": "O013-M04",
+      "targets": ["O013-C10"],
+      "prompt": "Buktikan bahwa lift basis M/mM adalah sistem pembangkit minimal M untuk modul hingga atas gelanggang lokal.",
+      "hints": [
+        {
+          "id": "O013-M04-H1",
+          "text": "Ambil N=M/(Rm_1+⋯+Rm_r) dan hitung N/mN."
+        },
+        {
+          "id": "O013-M04-H2",
+          "text": "Gunakan Nakayama lalu bandingkan dimensi hasil bagi."
+        }
+      ],
+      "answer": {
+        "id": "O013-M04-A",
+        "text": "N/mN=0, maka N=mN dan Nakayama memberi N=0. Setiap sistem pembangkit memetakan ke perentang M/mM, sehingga jumlah unsurnya sedikitnya dimensi ruang tersebut."
+      }
+    },
+    {
+      "id": "O013-M05",
+      "targets": ["O013-C11"],
+      "prompt": "Buktikan Spec(R_f) berkorespondensi bijektif dengan D(f), lalu uji ideal (y) dan (x,y) dalam k[x,y] untuk f=x.",
+      "hints": [
+        {
+          "id": "O013-M05-H1",
+          "text": "Gunakan korespondensi prima yang tidak bertemu {1,f,f²,…}."
+        },
+        {
+          "id": "O013-M05-H2",
+          "text": "Periksa ekstensi dan kontraksi sebagai operasi saling invers."
+        }
+      ],
+      "answer": {
+        "id": "O013-M05-A",
+        "text": "Kontraksi prima R_f tidak memuat f; ekstensi prima yang tidak memuat f tetap prima dan kedua operasi saling invers. Ideal (y) bertahan, sedangkan (x,y) tidak."
+      }
+    },
+    {
+      "id": "O013-M06",
+      "targets": ["O013-C12"],
+      "prompt": "Untuk I=(x²,xy) dalam k[x,y], verifikasi I=(x)∩(x²,y), tentukan radikal komponen, dan Ass(R/I).",
+      "hints": [
+        {
+          "id": "O013-M06-H1",
+          "text": "Tulis unsur irisan sebagai ax²+by dan gunakan x membagi by."
+        },
+        {
+          "id": "O013-M06-H2",
+          "text": "Gunakan k[x,y]/(x²,y) ≅ k[x]/(x²)."
+        }
+      ],
+      "answer": {
+        "id": "O013-M06-A",
+        "text": "I=(x)∩(x²,y); komponen masing-masing (x)-primer dan (x,y)-primer. Jadi Ass(R/I)={(x),(x,y)}."
+      }
+    },
+    {
+      "id": "O013-M07",
+      "targets": ["O013-C13", "O013-C14", "O013-C15"],
+      "prompt": "Untuk A=k[t²,t³]⊂B=k[t], buktikan keterhinggaan integral, surjektivitas spektrum, normalisasi, dan dimensi A.",
+      "hints": [
+        {
+          "id": "O013-M07-H1",
+          "text": "Gunakan X²-t² dan B=A+At."
+        },
+        {
+          "id": "O013-M07-H2",
+          "text": "Gunakan terletak di atas dan perilaku dimensi pada perluasan integral."
+        }
+      ],
+      "answer": {
+        "id": "O013-M07-A",
+        "text": "t integral dan B=A+At, sehingga B hingga integral. Terletak di atas memberi surjektivitas. B adalah penutupan integral A dalam k(t), dan dim A=dim B=1."
+      }
+    },
+    {
+      "id": "O013-M08",
+      "targets": ["O013-C14", "O013-C15"],
+      "prompt": "Untuk k tertutup secara aljabar dan A=k[x,y]/(y-x²), klasifikasikan ideal maksimal, titik geometri, dan dimensi Krull.",
+      "hints": [
+        {
+          "id": "O013-M08-H1",
+          "text": "Gunakan A ≅ k[x]."
+        },
+        {
+          "id": "O013-M08-H2",
+          "text": "Terapkan Nullstellensatz dan tampilkan rantai prima panjang satu."
+        }
+      ],
+      "answer": {
+        "id": "O013-M08-A",
+        "text": "Ideal maksimal adalah (x-a,y-a²)/(y-x²), bersesuaian dengan (a,a²). Karena A≅k[x], dim A=1."
+      }
+    }
+  ],
+  "completion": {
+    "diagnostic_minimum_after_repair": 7,
+    "route_R_required": ["O013-M01", "O013-M02", "O013-M03"],
+    "route_C_minimum_count": 4,
+    "route_C_pool": ["O013-M04", "O013-M05", "O013-M06", "O013-M07", "O013-M08"],
+    "synthesis_required": ["O013-S10"]
+  }
+}

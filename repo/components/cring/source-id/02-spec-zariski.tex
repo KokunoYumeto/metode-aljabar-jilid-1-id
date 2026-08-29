@@ -1,0 +1,903 @@
+\section{Spektrum suatu gelanggang}
+
+Sekarang kita akan mengaitkan setiap gelanggang komutatif dengan suatu ruang
+topologis $\spec R$
+secara funktorial.
+Artinya, akan terdapat suatu funktor kontravarian
+\[\spec:  \mathbf{CRing} \to \mathbf{Top}  \]
+dengan $\mathbf{Top}$ kategori ruang topologis.
+Konstruksi ini menjadi dasar geometri aljabar
+teoretis-skema dan akan sering digunakan selanjutnya. 
+
+Pengamatan yang memotivasinya adalah sebagai berikut. Jika $k$ suatu
+medan tertutup secara aljabar, maka ideal-ideal maksimal dalam $k[x_1, \dots, x_n]$ berbentuk
+$(x_1-a_1, \dots, x_n  - a_n)$ untuk $(a_1, \dots, a_n) \in k[x_1, \dots, x_n]$.
+Inilah Nullstellensatz, yang belum kita buktikan. Dengan demikian, kita dapat
+mengidentifikasi ideal-ideal maksimal dalam gelanggang polinomial dengan ruang $k^n$.
+Jika $I \subset k[x_1, \dots, x_n]$ suatu ideal, maka ideal-ideal maksimal dalam
+$k[x_1,\dots,x_n]$ berkorespondensi dengan titik-titik tempat semua elemen $I$ lenyap. Lihat 
+\rref{twovarpoly} untuk penjelasan yang lebih terperinci. Jadi, geometri aljabar afin klasik
+mengkaji himpunan ideal maksimal dalam suatu aljabar yang terbangkitkan
+hingga di atas medan tertutup secara aljabar.
+
+$\mathrm{Spec}$ suatu gelanggang merupakan generalisasi konstruksi ini.
+Secara umum, lebih wajar untuk 
+menggunakan semua ideal prima, bukan hanya ideal maksimal.
+\subsection{Definisi dan contoh}
+
+Kita mulai dengan mendefinisikan $\spec$ sebagai suatu himpunan. Selanjutnya kita akan
+mengkonstruksi
+topologi Zariski, lalu sifat funktorialnya.
+\begin{definition} 
+Misalkan $R$ suatu gelanggang komutatif. \textbf{Spektrum} $R$,
+yang dinotasikan dengan $\spec R$, adalah
+himpunan ideal prima dari $R$.
+\end{definition} 
+
+Sekarang kita akan menjadikan $\spec R$ suatu ruang topologis. Pertama-tama, kita
+deskripsikan suatu
+koleksi himpunan yang nantinya menjadi himpunan tertutup. 
+Jika $I \subset R$ suatu ideal, tetapkan
+\[ V(I) = \left\{\mathfrak{p}: \mathfrak{p} \supset I\right\}
+\subset \spec R.
+\]
+
+\begin{proposition} 
+Terdapat suatu topologi pada $\spec R$ sedemikian sehingga subhimpunan-subhimpunan tertutupnya
+berbentuk
+$V(I)$ untuk suatu ideal $I \subset R$.
+\end{proposition} 
+
+\begin{proof} 
+Kita memang harus memeriksa aksioma-aksioma yang lazim bagi suatu topologi:
+\begin{enumerate}
+\item $\emptyset = V((1))$ karena tidak ada ideal prima yang memuat $1$. Jadi
+$\emptyset$ tertutup.
+\item $\spec R = V((0))$ karena setiap ideal memuat nol. Jadi
+$\spec R$
+tertutup.
+\item Kita tunjukkan bahwa himpunan-himpunan tertutup stabil terhadap irisan.
+Misalkan
+$K_{\alpha} = V(I_{\alpha})$ subhimpunan tertutup dari $\spec R$ dengan
+$\alpha$
+merentang suatu himpunan indeks. Misalkan $I
+= \sum I_{\alpha}$. Maka 
+\[ V(I) = \bigcap K_{\alpha} = \bigcap V(I_{\alpha}),  \]
+yang berlaku karena $I$ adalah ideal terkecil yang memuat setiap
+$I_{\alpha}$;
+jadi suatu ideal prima memuat setiap $I_{\alpha}$ jika dan hanya jika ia memuat $I$.  
+\item Gabungan dua himpunan tertutup bersifat tertutup. Memang, jika $K,K'
+\subset \spec
+R$ tertutup, kita tunjukkan bahwa $K \cup K'$ tertutup. Tuliskan $K= V(I), K' =
+V(I')$. Maka
+kita menyatakan bahwa 
+\[ K \cup K'  = V(II').  \]
+Di sini, seperti biasa, $II'$ adalah ideal yang dibangkitkan oleh hasil kali $ii', i \in I, i'
+\in I'$. Jika
+$\mathfrak{p}$ \textbf{prima} dan memuat $II'$, maka ia harus
+memuat salah satu dari $I$, $I'$;
+hal ini menyiratkan persamaan yang ditampilkan di atas dan dengan demikian
+hasilnya.
+\end{enumerate}
+\end{proof} 
+\begin{definition} 
+Topologi pada $\spec R$ yang didefinisikan di atas disebut
+\textbf{topologi
+Zariski}. Dengan topologi ini, $\spec R$ kini merupakan suatu ruang topologis.
+\end{definition} 
+
+\begin{exercise} 
+Apakah $\spec$ dari gelanggang nol?
+\end{exercise} 
+
+Untuk melihat geometri konstruksi ini, mari kita kerjakan
+beberapa contoh.
+
+\begin{example} 
+Misalkan $R = \mathbb{Z}$, dan tinjau $\spec \mathbb{Z}$. Maka
+setiap ideal prima dibangkitkan oleh satu elemen, karena
+$\mathbb{Z}$ adalah suatu PID. Kita memiliki $\spec \mathbb{Z} = \{(0)\}
+\cup \bigcup_{p \
+\mathrm{prima}} \{ (p)\}$. Gambarannya adalah bahwa kita memiliki semua bilangan
+prima yang lazim, $(2), (3),
+(5), \dots, $ lalu suatu titik khusus $(0)$.
+
+Sekarang mari kita deskripsikan subhimpunan-subhimpunan tertutupnya. Himpunan-himpunan ini berbentuk
+$V(I)$ dengan $I
+\subset \mathbb{Z}$ suatu ideal, sehingga $I = (n)$ untuk suatu $n \in
+\mathbb{Z}$.
+
+\begin{enumerate}
+\item Jika $n=0$, subhimpunan tertutupnya adalah seluruh $\spec \mathbb{Z}$.
+\item Jika $n \neq 0$, maka $n$ memiliki berhingga banyak pembagi prima.
+Jadi $V((n))$ terdiri
+dari ideal-ideal prima yang bersesuaian dengan pembagi-pembagi prima tersebut.  
+\end{enumerate}
+
+Selain seluruh ruang, satu-satunya subhimpunan tertutup adalah subhimpunan
+hingga
+yang tidak memuat $(0)$.  
+\end{example} 
+
+\begin{example} \label{twovarpoly}
+Misalkan $R = \mathbb{C}[x,y]$ suatu gelanggang polinomial dalam dua peubah.
+Di sini kita tidak akan memberikan deskripsi lengkap tentang $\spec R$. Namun, kita akan menuliskan
+beberapa
+ideal prima.
+
+\begin{enumerate}
+\item Untuk setiap pasangan bilangan kompleks $s,t \in \mathbb{C}$,
+koleksi polinomial
+$f \in R$ sedemikian sehingga $f(s,t) = 0$ merupakan suatu ideal prima $\mathfrak{m}
+_{s,t} \subset R$. Sesungguhnya,
+ideal ini maksimal, karena gelanggang residunya adalah seluruh
+$\mathbb{C}$. Memang,
+$R/\mathfrak{m}_{s,t} \simeq \mathbb{C}$ di bawah pemetaan $f \to
+f(s,t)$.
+
+Sesungguhnya, 
+\begin{theorem}
+Ideal-ideal $\mathfrak{m}_{s,t}$ adalah semua ideal maksimal dalam $R$.
+\end{theorem} 
+Hal ini akan mengikuti dari \emph{Nullstellensatz Hilbert} yang akan
+dibuktikan kemudian
+(\rref{gennullstellensatz}).
+\item $(0) \subset R$ merupakan ideal prima karena $R$ suatu domain. 
+\item Jika $f(x,y) \in R$ suatu polinomial tak tereduksi, maka $(f)$
+merupakan ideal
+prima. Hal ini ekuivalen dengan faktorisasi tunggal dalam
+$R$.\footnote{Suatu pembuktian mengikuti dari hasil UFD bagi gelanggang polinomial yang dikembangkan dalam Li, Bab 5; pembuktian itu tidak diulang dalam suplemen pilihan ini.}  
+\end{enumerate}
+
+Untuk menggambar $\spec R$, kita mulai dengan menggambar $\mathbb{C}^2$, yang diidentifikasi
+dengan
+koleksi
+ideal maksimal $\mathfrak{m}_{s,t}, s, t \in \mathbb{C}$. $\spec R$ juga memiliki
+titik-titik tambahan (yang tidak tertutup),
+sebagaimana
+dideskripsikan di atas, tetapi untuk sekarang mari kita
+tinjau topologi yang diinduksi pada $\mathbb{C}^2$ sebagai subruang dari
+$\spec R$.
+
+Subhimpunan tertutup dari $\spec R$ adalah subhimpunan $V(I)$ dengan $I$
+suatu ideal,
+yang dibangkitkan oleh polinomial-polinomial $\left\{f_{\alpha}(x,y)\right\}$. Kita ingin
+menentukan subhimpunan $\mathbb{C}^2$ yang
+diinduksi oleh $V(I)$.
+Dengan kata lain, kita bertanya:
+\begin{quote}
+Titik-titik manakah dari $\mathbb{C}^2$ (dengan $(s,t)$ diidentifikasi dengan
+$\mathfrak{m}_{s,t}$) yang terletak dalam $V(I)$?
+\end{quote}
+Menurut definisi, kita mengetahui bahwa $(s,t)$ bersesuaian dengan suatu titik $V(I)$ jika
+dan hanya jika $I
+\subset \mathfrak{m}_{s,t}$.
+Hal ini berlaku jika dan hanya jika semua
+$f_{\alpha} $ terletak dalam $ \mathfrak{m}_{s,t}$, yaitu jika
+$f_{\alpha}(s,t) =0$ untuk setiap
+$\alpha$. Jadi subhimpunan tertutup dari $\mathbb{C}^2$ (dengan
+topologi Zariski
+yang diinduksi) \emph{tepat merupakan subhimpunan
+yang dapat didefinisikan oleh persamaan polinomial}.
+
+Topologi ini
+\textbf{jauh} lebih kasar
+daripada topologi biasa. Misalnya, $\left\{(z_1,z_2):
+\Re(z_1) \geq 0\right\}$
+tidak tertutup-Zariski. 
+Topologi Zariski begitu kasar karena kita hanya memiliki data
+aljabar (yakni,
+polinomial, atau elemen $R$) untuk mendefinisikan topologi tersebut.
+\end{example} 
+
+\begin{exercise} 
+Misalkan $R_1, R_2$ gelanggang-gelanggang komutatif. Berikan $R_1 \times R_2$ suatu
+struktur gelanggang yang alami,
+dan deskripsikan $\spec( R_1 \times R_2)$ dalam kaitannya dengan
+$\spec R_1$ dan
+$\spec R_2$.
+\end{exercise} 
+
+
+\begin{exercise} 
+Misalkan $X$ suatu ruang Hausdorff kompak, dan $C(X)$ gelanggang fungsi
+kontinu bernilai real
+$X \to \mathbb{R}$. 
+Ideal-ideal maksimal dalam $\spec C(X)$ berkorespondensi bijektif dengan
+titik-titik $X$,
+dan topologi yang diinduksi pada $X $ (sebagai subhimpunan $\spec C(X)$ dengan topologi
+Zariski)
+tidak lain ialah topologi biasa.
+\end{exercise}
+
+\begin{exercise}
+Buktikan hasil berikut: jika $X, Y$ adalah ruang Hausdorff
+kompak dan $C(X),
+C(Y)$ gelanggang-gelanggang fungsi kontinu yang bersesuaian, dan jika $C(X),
+C(Y)$
+isomorfik sebagai aljabar-$\mathbb{R}$, maka $X$ homeomorfik dengan
+$Y$.
+\end{exercise} 
+
+
+\subsection{Korespondensi ideal radikal--subhimpunan tertutup}
+
+Sekarang kita kembali ke kasus gelanggang komutatif sembarang $R$.
+Jika $I \subset R$, kita memperoleh suatu subhimpunan tertutup
+$V(I) \subset \spec R$. Himpunan itu disebut $V(I)$ karena kita
+dimaksudkan untuk
+memandangnya sebagai tempat-tempat di mana elemen-elemen $I$ ``lenyap'',
+sebab
+elemen-elemen $R$ menyerupai ``fungsi''. Analogi ini mungkin
+paling jelas
+terlihat dalam contoh gelanggang polinomial di atas medan
+tertutup secara aljabar,
+misalnya \rref{twovarpoly} di atas.
+
+Pemetaan dari ideal ke himpunan tertutup sangat jauh dari bersifat
+injektif secara
+umum, walaupun menurut definisi ia surjektif.
+
+\begin{example} 
+Jika $R = \mathbb{Z}$ dan $p$ prima, maka $I = (p), I' = (p^2)$
+mendefinisikan
+subhimpunan yang sama (yakni, $\left\{(p)\right\}$) dari
+$\spec R$. 
+\end{example} 
+
+Sekarang kita bertanya mengapa pemetaan dari ideal ke subhimpunan
+tertutup gagal
+bersifat injektif. Seperti yang akan kita lihat, seluruh masalah lenyap jika
+kita membatasi perhatian pada ideal-ideal
+\emph{radikal}.
+
+\begin{definition} 
+Jika $I$ suatu ideal, maka \textbf{radikal} $\rad(I) $ atau $
+\sqrt{I}$
+didefinisikan sebagai $$\rad(I) =
+\left\{x \in R: x^n \in I \ \mathrm{untuk} \ \mathrm{suatu} \ n
+\right\}.$$
+Suatu ideal disebut \textbf{radikal} jika sama dengan radikalnya.
+(Ini
+ekuivalen dengan \rref{def-radical-ideal} sebelumnya.) 
+\end{definition} 
+
+Sebelum melanjutkan, kita harus memeriksa hal berikut.
+\begin{lemma} 
+Jika $I$ suatu ideal, maka $\rad(I)$ juga suatu ideal.
+\end{lemma} 
+\begin{proof} 
+Jelas bahwa $\rad(I)$ tertutup terhadap perkalian karena $I$ demikian.
+Andaikan $x,y \in \rad(I)$; kita tunjukkan bahwa $x+y \in \rad(I)$. Maka $x^n,
+y^n \in I$
+untuk suatu $n$ (yang besar), dan dengan demikian untuk semua $n$ yang lebih besar. Ekspansi binomial kini
+memberikan
+\[ (x+y)^{2n} = x^{2n} + \binom{2n}{1} x^{2n-1}y + \dots +
+y^{2n}, \]
+dengan setiap suku memuat salah satu dari $x,y$ berpangkat $ \geq n$, sehingga
+setiap suku
+termasuk $I$. Jadi
+$(x+y)^{2n} \in I$, dan menurut definisi
+terlihat bahwa $x+y \in \rad(I)$.
+\end{proof} 
+
+Pemetaan $I \to V(I)$ sesungguhnya hanya bergantung pada radikal
+$I$. Memang, jika $I,J$ memiliki radikal yang sama, $\rad(I) =
+\rad(J)$, maka $V(I) = V(J)$.
+Memang, $V(I) = V(\rad(I)) = V(\rad(J)) = V(J)$ menurut:
+\begin{lemma} 
+Untuk setiap $I$, berlaku $V(I) = V(\rad(I))$.
+\end{lemma} 
+\begin{proof} 
+Memang, $I \subset \rad(I)$ dan karena itu jelas bahwa $V(\rad(I))
+\subset V(I)$. Kita harus menunjukkan
+inklusi sebaliknya. Tepatnya, kita harus membuktikan:
+\begin{quote}
+Jika $\mathfrak{p} \supset I$, maka $\mathfrak{p} \supset
+\rad(I).$
+\end{quote}
+Jadi andaikan $\mathfrak{p} \supset I$ prima dan $x \in
+\rad(I)$; maka $x^n \in I \subset \mathfrak{p}$ untuk suatu $n$.
+Namun, $\mathfrak{p}$ prima, sehingga jika suatu hasil kali elemen-elemen
+termasuk
+$\mathfrak{p}$, salah satu faktornya pun demikian. Karena $x^n = x \cdot x
+\cdots x$, kita harus
+memiliki $x \in \mathfrak{p}$. Jadi
+\[ \rad(I) \subset \mathfrak{p},  \]
+yang membuktikan pernyataan dalam kutipan dan dengan demikian lema tersebut.
+\end{proof} 
+
+Pernyataan ini memiliki suatu kebalikan:
+\begin{proposition} 
+Jika $V(I) = V(J)$, maka $\rad(I) = \rad(J)$. 
+\end{proposition} 
+Jadi dua ideal mendefinisikan subhimpunan tertutup yang sama jika dan hanya jika keduanya memiliki
+radikal yang sama.
+\begin{proof} 
+Kita tuliskan suatu rumus bagi $\rad(I)$ yang segera menyiratkan
+pernyataan tersebut.
+\begin{lemma} \label{radprimescontaining} Untuk gelanggang komutatif $R$ dan suatu
+ideal $I \subset
+R$,
+\[ \rad(I) = \bigcap_{\mathfrak{p} \supset I} \mathfrak{p}.  \]
+\end{lemma} 
+Dari sini, $V(I)$ menentukan $\rad(I)$. Karena itu, rumus ini
+menyiratkan
+proposisi tersebut.  
+Sekarang kita buktikan lema itu:
+\begin{proof} 
+\begin{enumerate}
+\item Kita tunjukkan $\rad(I) \subset \bigcap_{\mathfrak{p} \in V(I)}
+\mathfrak{p} $. Khususnya,
+hal ini berlaku jika kita menunjukkan bahwa apabila suatu ideal prima memuat
+$I$, ia juga memuat $\rad(I)$; tetapi hal ini sudah kita
+bahas di atas.  
+\item Jika $x \notin \rad(I)$, kita akan menunjukkan bahwa terdapat suatu ideal
+prima $\mathfrak{p}
+\supset I$ yang tidak memuat $x$. Hal ini menyiratkan inklusi
+sebaliknya dan
+lema tersebut.  
+\end{enumerate}
+
+
+Kita ingin mencari $\mathfrak{p}$ yang tidak memuat $x$, atau secara lebih
+umum tidak
+memuat pangkat mana pun dari $x$. Khususnya, kita menginginkan
+$\mathfrak{p} \cap \left\{1,
+x, x^2 \dots, \right\} = \emptyset$. Himpunan $S = \left\{1, x,
+\dots\right\}$ ini
+tertutup secara multiplikatif, yakni memuat 1 dan tertutup
+terhadap
+hasil kali hingga. Saat ini, himpunan itu tidak beririsan dengan $I$; kita ingin mencari
+suatu ideal
+\emph{prima} yang memuat $I$ tetapi tetap tidak beririsan dengan $\left\{x^n, n
+\geq 0\right\}$.
+
+
+Secara lebih umum, kita akan membuktikan:
+
+\begin{sublemma}\label{sublemmamultclosed}
+Misalkan $S$ suatu himpunan tertutup secara multiplikatif dalam sembarang gelanggang $R$, dan misalkan
+$I$ suatu ideal dengan $I \cap S =
+\emptyset$. Terdapat suatu ideal prima $\mathfrak{p} \supset I$ yang
+tidak
+beririsan dengan $S$ (sesungguhnya, setiap ideal yang maksimal sehubungan dengan syarat
+tidak beririsan dengan $S$ dapat digunakan).  
+\end{sublemma}
+Dengan kata lain, setiap ideal yang tidak bertemu $S$ dapat diperbesar menjadi suatu ideal
+prima yang juga tidak bertemu $S$.
+Ini sesungguhnya versi yang lebih canggih dari suatu argumen sebelumnya. Sebelumnya kita
+telah menunjukkan bahwa setiap ideal yang tidak
+memuat subhimpunan tertutup secara multiplikatif $\left\{1\right\}$
+dapat
+dimuat dalam suatu ideal prima yang tidak memuat $1$, dalam
+\rref{anycontainedinmaximal}.
+
+Perhatikan bahwa sublema tersebut jelas menyiratkan lema ketika diterapkan pada
+$S =
+\left\{1, x, \dots\right\}.$
+
+\begin{proof}[Bukti sublema]
+Misalkan $P = \left\{J: J \supset I, J \cap S = \emptyset \right\}$.
+Maka $P$ adalah suatu
+poset terhadap inklusi. Perhatikan bahwa $P \neq \emptyset$
+karena $I \in P$. Selain itu,
+untuk setiap subhimpunan tak kosong yang terurut linear dari $P$, gabungannya berada dalam
+$P$ (yakni, terdapat suatu
+batas atas).  
+Kita dapat menggunakan Lema Zorn untuk memperoleh suatu elemen maksimal dari $P$. Elemen ini
+adalah suatu
+ideal $\mathfrak{p} \supset I$ dengan $\mathfrak{p} \cap S =
+\emptyset$. Kita menyatakan
+bahwa $\mathfrak{p}$ prima.
+
+Pertama-tama, $1 \notin \mathfrak{p}$ karena $1 \in S$. Kita hanya perlu
+memeriksa
+bahwa jika $xy \in \mathfrak{p}$, maka $x \in \mathfrak{p}$ atau $y
+\in
+\mathfrak{p}$. Andaikan tidak demikian, sehingga $x,y \notin \mathfrak{p}$.
+Maka $(x,\mathfrak{p}) \notin P$, atau
+$\mathfrak{p}$ tidak maksimal. Hal yang sama berlaku bagi $(y,
+\mathfrak{p})$.
+
+Khususnya, kedua ideal yang lebih besar ini beririsan dengan
+$S$. Artinya,
+terdapat 
+\[ a \in \mathfrak{p} , r \in R \quad \text{sedemikian sehingga}\quad a+rx
+\in S \]
+dan 
+\[ b \in \mathfrak{p} , r' \in R \quad \text{sedemikian sehingga}\quad
+b+r'y \in S .\]
+Sekarang $S$ tertutup secara multiplikatif, maka kalikan $(a+rx)(b+r'y)
+\in S$.
+Kita memperoleh:
+\[ ab + ar'y+brx+rr'xy \in S.  \]
+Karena $a,b \in \mathfrak{p}$ dan $xy \in \mathfrak{p}$, semua
+suku di atas berada dalam $\mathfrak{p}$, demikian pula jumlahnya. Namun, ini bertentangan dengan
+$\mathfrak{p}
+\cap S = \emptyset$. 
+\end{proof}
+\end{proof} 
+\end{proof} 
+Kesimpulan dari lema-lema sebelumnya adalah:
+\begin{proposition}
+Terdapat suatu bijeksi antara subhimpunan tertutup dari $\spec R$ dan
+ideal-ideal radikal
+$I \subset R$.
+\end{proposition}
+
+\subsection{Suatu pengamatan meta tentang ideal prima}
+
+Dalam subbagian sebelumnya (\cref{sublemmamultclosed}), kita melihat
+bahwa suatu ideal yang maksimal sehubungan dengan sifat tidak beririsan dengan suatu
+subhimpunan tertutup secara multiplikatif adalah prima.
+Ternyata hal serupa berlaku bagi banyak sifat ideal semacam ini.
+Suatu metode umum untuk melihatnya dikembangkan dalam \cite{LaRe08}.
+Dalam subbagian (opsional) ini, kita menyimpang sejenak untuk menjelaskan fenomena tersebut.
+
+Jika $I$ suatu ideal dan $a \in R$, kita definisikan notasi
+\[ (I:a) = \left\{ x\in R: xa \in I\right\} . \]
+Secara lebih umum, jika $J$ suatu ideal, kita definisikan
+\[ (I:J) = \left\{x \in R: xJ \subset I\right\} . \]
+
+Misalkan $R$ suatu gelanggang dan $\mathcal{F}$ suatu koleksi ideal dari $R$. 
+Kita tertarik pada syarat-syarat yang menjamin bahwa elemen-elemen maksimal
+dari $\mathcal{F}$ bersifat \emph{prima}.
+Sesungguhnya, kita akan melakukan yang sebaliknya: syarat berikut akan menjamin bahwa
+ideal-ideal yang maksimal dalam hal \emph{tidak} termasuk $\mathcal{F}$ bersifat prima. 
+
+\begin{definition} \label{okafamily}
+Keluarga $\mathcal{F}$ disebut suatu \textbf{keluarga Oka} jika $R \in
+\mathcal{F}$ (dengan $R$ dipandang sebagai ideal), dan jika $I \subset R$ suatu
+ideal serta $(I:a), (I,a) \in \mathcal{F}$ (untuk suatu $a \in R$), maka $I \in
+\mathcal{F}$.
+\end{definition} 
+
+\begin{example} \label{exm:okacard}
+Mari kita mulai dengan suatu pengamatan sederhana. Jika $(I:a)$ dibangkitkan oleh
+$a_1, \dots, a_n$ dan $(I,a)$ dibangkitkan oleh $a, b_1, \dots, b_m$ (dengan
+tanpa mengurangi keumuman, kita dapat mengambil
+$b_1, \dots, b_m \in I$), maka $I$
+dibangkitkan oleh $aa_1, \dots, aa_n, b_1, \dots, b_m$.
+Untuk melihatnya, perhatikan bahwa jika $x \in I$, maka $x \in (I,a)$ merupakan kombinasi
+linear dari $\left\{a, b_1, \dots, b_m\right\}$, tetapi koefisien
+$a$ harus
+terletak dalam $(I:a)$.
+
+Akibatnya, kita dapat menyimpulkan bahwa
+keluarga ideal terbangkitkan hingga merupakan suatu keluarga Oka.
+\end{example} 
+
+\begin{example} 
+Sekarang kita tunjukkan bahwa keluarga ideal \emph{prinsipal} merupakan suatu keluarga Oka.
+Memang, andaikan $I \subset R$ suatu ideal, dan $(I,a)$ serta $(I:a)$ keduanya
+prinsipal.
+Kita dapat dengan mudah memeriksa bahwa
+$(I:a) = (I: (I, a))$.
+Dengan menetapkan $J = (I,a)$, kita memperoleh bahwa $J$ prinsipal dan $(I:J)$ juga demikian.
+Namun, untuk \emph{setiap} ideal prinsipal $J$, dan untuk setiap ideal $I \subset J$,
+\[ I = J (I: J)  \]
+seperti yang mudah diperiksa. Jadi, dalam situasi kita, karena $J=(I,a)$ dan
+$(I:J)$
+prinsipal, maka $I$ prinsipal.
+\end{example} 
+
+\begin{proposition}[\cite{LaRe08}]\label{okathm} Jika $\mathcal{F}$ suatu keluarga Oka
+dari
+ideal-ideal, maka setiap elemen maksimal dari komplemen $\mathcal{F}$ bersifat prima.
+\end{proposition} 
+\begin{proof} 
+Andaikan $I \notin \mathcal{F}$ maksimal sehubungan dengan 
+sifat tidak termasuk $\mathcal{F}$,
+tetapi $I$ tidak prima. Perhatikan bahwa $I \neq R$ menurut hipotesis.
+Maka terdapat $a \in R$ sedemikian sehingga $(I:a), (I,a)$ keduanya memuat $I$ secara ketat,
+sehingga keduanya harus termasuk $\mathcal{F}$.
+Memang, kita dapat menemukan $a,b \in R - I$ dengan $ab \in I$; akibatnya, $(I,a)
+\neq I$, dan $(I:a)$ memuat $b \notin I$.
+
+Menurut syarat Oka, kita memiliki $I \in
+\mathcal{F}$, suatu kontradiksi.
+\end{proof} 
+
+\begin{corollary}[Cohen] \label{primenoetherian}
+Jika setiap ideal prima $R$ terbangkitkan hingga, maka setiap ideal $R$
+terbangkitkan hingga.\footnote{Kelak kita akan mengatakan bahwa $R$ bersifat \emph{noetherian}.} 
+\end{corollary} 
+
+\begin{proof} 
+Andaikan terdapat ideal-ideal $I \subset R$ yang tidak terbangkitkan
+hingga.
+Gabungan suatu rantai terurut total $\left\{I_\alpha\right\}$ dari ideal-ideal yang
+tidak terbangkitkan hingga juga tidak
+terbangkitkan hingga; memang, jika $I = \bigcup I_\alpha$ dibangkitkan oleh $a_1, \dots,
+a_n$, maka semua pembangkit tersebut akan termasuk suatu $I_\alpha $ dan akibatnya
+membangkitkannya.
+
+Menurut Lema Zorn, terdapat suatu ideal yang maksimal sehubungan dengan sifat tidak
+terbangkitkan hingga. Namun, menurut \rref{okathm}, ideal ini harus
+prima (karena keluarga ideal terbangkitkan hingga merupakan suatu keluarga Oka). Hal ini bertentangan dengan hipotesis.
+\end{proof} 
+
+\begin{corollary} 
+Jika setiap ideal prima $R$ prinsipal, maka setiap ideal $R$ prinsipal.
+\end{corollary} 
+\begin{proof} 
+Pernyataan ini dibuktikan dengan cara yang sama.
+\end{proof} 
+
+\begin{exercise} 
+Andaikan setiap ideal prima tak nol dalam $R$ memuat suatu elemen yang bukan pembagi nol. Maka $R$
+merupakan suatu domain. (Petunjuk: tinjau himpunan $S$ dari elemen-elemen yang bukan pembagi nol, dan tunjukkan bahwa
+setiap ideal yang maksimal sehubungan dengan sifat tidak beririsan dengan $S$ bersifat prima. Dengan demikian, $(0)$
+prima.)
+\end{exercise} 
+
+
+\begin{remark}
+\label{remark-cohen-bound-cardinality}
+Misalkan $R$ suatu gelanggang. Misalkan $\kappa$ suatu kardinal tak hingga.
+Dengan menerapkan
+\rref{exm:okacard} dan
+\rref{okathm},
+kita melihat bahwa setiap ideal yang maksimal sehubungan dengan sifat tidak
+terbangkitkan oleh $\kappa$ elemen bersifat prima. Hasil ini tidak begitu
+berguna karena terdapat suatu gelanggang yang setiap ideal prima
+dari $R$ dapat dibangkitkan oleh $\aleph_0$ elemen, tetapi suatu
+idealnya tidak dapat. Tepatnya, misalkan $k$ suatu medan, $T$ suatu himpunan yang
+kardinalitasnya lebih besar daripada $\aleph_0$, dan tetapkan
+\[ R = k[\{x_n\}_{n \geq 1}, \{z_{t, n}\}_{t \in T, n \geq 0}]/
+(x_n^2, z_{t, n}^2, x_n z_{t, n} - z_{t, n - 1}) \]
+Ini adalah gelanggang lokal dengan ideal prima tunggal
+$\mathfrak m = (x_n)$. Namun, ideal $(z_{t, n})$ tidak dapat
+dibangkitkan oleh terhitung banyak elemen.
+\end{remark}
+
+\subsection{Sifat funktorial $\spec$}
+ Konstruksi $R \to \spec R$ bersifat funktorial dalam $R$ dalam arti
+ kontravarian. Artinya, jika $f: R \to R'$, terdapat suatu
+pemetaan kontinu $\spec
+R' \to \spec R$. Pemetaan ini mengirim $\mathfrak{p} \subset R'$ ke
+$f^{-1}(\mathfrak{p}) \subset R$, yang mudah dilihat sebagai suatu ideal
+prima
+dalam $R$. Sebut pemetaan ini $F: \spec R' \to \spec R$. Sejauh ini, kita telah
+melihat bahwa
+$\spec R$ menginduksi suatu funktor kontravarian dari $\mathbf{Rings}
+\to \mathbf{Sets}$.
+
+\begin{exercise} 
+Suatu funktor kontravarian $F: \mathcal{C} \to \mathbf{Sets}$ (untuk
+suatu kategori
+$\mathcal{C}$) disebut \textbf{terrepresentasikan} jika
+isomorfik secara alami
+dengan suatu funktor berbentuk $X \to \hom(X, X_0)$ untuk suatu $X_0 \in
+\mathcal{C}$,
+atau, secara ekuivalen, jika funktor kovarian terinduksi pada
+$\mathcal{C}^{\mathrm{op}}$ terkorepresentasikan. 
+
+Funktor $R \to \spec R $ tidak terrepresentasikan. (Petunjuk:
+memang, suatu funktor terrepresentasikan
+harus mengirim objek awal ke suatu himpunan satu titik.)
+\end{exercise} 
+
+Selanjutnya, kita periksa bahwa morfisme pada $\spec$ yang diinduksi oleh suatu
+homomorfisme gelanggang memang merupakan pemetaan \emph{kontinu} antarruang
+topologis.
+
+\begin{proposition} 
+$\spec $ menginduksi suatu funktor kontravarian dari $\mathbf{Rings}$
+ke kategori
+$\mathbf{Top}$ ruang topologis.
+\end{proposition} 
+\begin{proof} Misalkan $f : R \to R'$. 
+Kita perlu memeriksa bahwa pemetaan $ \spec R' \to \spec R$ ini, yang
+kita sebut $F$,
+kontinu.
+Artinya, kita harus memeriksa bahwa $F^{-1}$ mengirim subhimpunan tertutup
+dari $\spec R$ ke subhimpunan tertutup dari $\spec R'$.  
+
+Lebih tepatnya, jika $I \subset
+R$ dan kita mengambil prapeta $F^{-1}(V(I)) \subset \spec
+R'$, maka himpunan itu tepat
+himpunan tertutup $V(f(I))$. Hal ini sebaiknya diserahkan kepada pembaca, tetapi
+berikut alasannya. Jika $\mathfrak{p} \in \spec R'$, maka
+$F(\mathfrak{p}) = f^{-1}(\mathfrak{p})
+\supset I$ jika dan hanya jika $\mathfrak{p} \supset f(I)$. Jadi
+$F(\mathfrak{p}) \in
+V(I)$ jika dan hanya jika $\mathfrak{p} \in V(f(I))$.
+
+\end{proof} 
+
+
+
+\begin{example} 
+Misalkan $R$ suatu gelanggang komutatif, $I \subset R$ suatu ideal, dan $f: R \to
+R/I$. Terdapat suatu pemetaan
+ruang topologis
+\[ F: \spec (R/I) \to \spec R  .\]
+Pemetaan ini adalah suatu embedding tertutup dengan citra $V(I)$. Sebagian besar
+pernyataan ini berlaku karena
+terdapat suatu bijeksi antara ideal-ideal $R$ yang memuat $I$ dan
+ideal-ideal $R/I$, dan bijeksi ini mempertahankan keprimaan.
+
+\begin{exercise} 
+Tunjukkan bahwa pemetaan $\spec R/I \to \spec R$ ini memang suatu
+homeomorfisme dari $\spec R/I
+\to V(I)$.  
+\end{exercise} 
+\end{example} 
+
+
+\subsection{Suatu basis bagi topologi Zariski}
+Dalam bagian sebelumnya, kita membahas topologi Zariski.
+Jika $R$ suatu
+gelanggang komutatif, ingat bahwa $\spec R$ didefinisikan sebagai
+koleksi
+ideal prima dalam $R$. Himpunan ini memiliki topologi yang himpunan tertutupnya
+adalah himpunan-himpunan
+berbentuk
+\[ V(I) = \left\{\mathfrak{p} \in \spec R: \mathfrak{p} \supset
+I\right\} . \]
+Ada cara lain untuk mendeskripsikan topologi Zariski dalam kaitannya dengan
+himpunan
+\emph{terbuka}.  
+
+\begin{definition} 
+Jika $f \in R$, tetapkan 
+\[ U_f = \left\{\mathfrak{p}: f \notin \mathfrak{p}\right\}  \]
+sehingga $U_f$ adalah subhimpunan $\spec R$ yang terdiri dari ideal-ideal prima
+yang tidak memuat
+$f$. Himpunan ini adalah komplemen $V((f))$, sehingga terbuka.  
+\end{definition} 
+
+\begin{proposition} 
+Himpunan-himpunan $U_f$ membentuk suatu basis bagi topologi Zariski. 
+\end{proposition} 
+
+\begin{proof} 
+Andaikan $U \subset \spec R$ terbuka. Kita menyatakan bahwa $U$ merupakan suatu
+gabungan himpunan-himpunan
+terbuka basis $U_f$. 
+
+Sekarang $U = \spec R - V(I)$ untuk suatu ideal $I$. Maka
+\[ U = \bigcup_{f \in I} U_f  \]
+karena jika suatu ideal tidak berada dalam $V(I)$, maka ia gagal memuat
+suatu $f \in I$,
+yakni berada dalam $U_f$ untuk $f$ tersebut. Sebagai alternatif, kita dapat mengambil
+komplemen, sehingga
+pernyataan di atas menjadi
+\[ V(I) = \bigcap_{f \in I} V((f))  \]
+yang jelas.
+\end{proof} 
+
+Himpunan-himpunan terbuka basis memiliki sifat-sifat yang baik.
+\begin{enumerate}
+\item $U_1 = \spec R$ karena ideal prima tidak diperbolehkan memuat
+elemen
+unit. 
+\item $U_0 = \emptyset$ karena setiap ideal prima memuat $0$.
+\item $U_{fg} = U_f \cap U_g$ karena $fg$ terletak dalam suatu ideal prima
+$\mathfrak{p}$ jika dan hanya jika salah satu dari $f,g$ demikian.
+\end{enumerate}
+
+Sekarang mari kita deskripsikan hubungan topologi Zariski dengan
+lokalisasi.
+Misalkan $R$ suatu gelanggang dan $f \in R$. Tinjau $S = \left\{1, f, f^2,
+\dots
+\right\}$; ini suatu subhimpunan tertutup secara multiplikatif. Sebelumnya,
+kita mendefinisikan
+$S^{-1}R$.
+
+\begin{definition} 
+Jika $S$ adalah himpunan pangkat $f$, kita menulis $R_f$ atau $R[f^{-1}]$ untuk
+lokalisasi $S^{-1}R$. 
+\end{definition} 
+
+Terdapat suatu pemetaan $\phi: R \to R[f^{-1}]$ dan pemetaan yang bersesuaian
+\[ \spec R[f^{-1}] \to \spec R  \]
+yang mengirim suatu ideal prima $\mathfrak{p} \subset R[f^{-1}]$ ke
+$\phi^{-1}(\mathfrak{p})$.
+
+\begin{proposition} 
+Pemetaan ini menginduksi suatu homeomorfisme dari $\spec R[f^{-1}]$ ke $U_f
+\subset \spec
+R$. 
+\end{proposition} 
+Jadi, jika suatu elemen dalam gelanggang komutatif diinverskan, yang diperoleh hanyalah suatu subhimpunan
+terbuka dari $\spec$. Inilah alasan operasi tersebut disebut lokalisasi:
+kita
+membatasi perhatian pada
+suatu subhimpunan terbuka pada taraf $\spec $ ketika menginverskan sesuatu.
+
+\begin{proof}
+Pembaca dianjurkan mengerjakan sendiri pembuktian ini.
+
+\begin{enumerate}
+\item 
+Pertama, kita tunjukkan bahwa $\spec R[f^{-1}] \to \spec R$ mendarat dalam
+$U_f$. Jika
+$\mathfrak{p} \subset R[f^{-1}]$, maka kita harus menunjukkan bahwa
+prapeta
+$\phi^{-1}(\mathfrak{p})$ tidak dapat memuat $f$. Jika sebaliknya, hal itu
+akan menyiratkan bahwa
+$\phi(f) \in \mathfrak{p}$; namun, $\phi(f)$ invertibel,
+dan kemudian
+$\mathfrak{p}$ akan sama dengan $(1)$.  
+\item Mari kita tunjukkan bahwa pemetaan tersebut surjektif ke $U_f$. Jika
+$\mathfrak{p} \subset R$ suatu ideal
+prima yang tidak memuat $f$, yakni $\mathfrak{p} \in U_f$, kita ingin
+mengkonstruksi suatu
+ideal prima yang bersesuaian dalam gelanggang $R[f^{-1}]$ dengan prapeta
+$\mathfrak{p}$.
+
+Misalkan $\mathfrak{p}[f^{-1}]$ koleksi semua pecahan
+\[ \{\frac{x}{f^n}, x \in \mathfrak{p}\} \subset R[f^{-1}],  \]
+yang jelas merupakan suatu ideal. Perhatikan bahwa apakah pembilang berada
+dalam
+$\mathfrak{p}$ \textbf{tidak bergantung} pada
+pecahan representatif $\frac{x}{f^n}$ yang digunakan.\footnote{Andaikan
+$\frac{x}{f^n} =
+\frac{y}{f^k}$ untuk $y \in \mathfrak{p}$. Maka terdapat $N$ sedemikian
+sehingga
+$f^N(f^k x - f^n y) = 0 \in \mathfrak{p}$; karena $y \in
+\mathfrak{p}$ dan $f
+\notin \mathfrak{p}$, diperoleh $x \in \mathfrak{p}$.}
+Sesungguhnya, $\mathfrak{p}[f^{-1}]$ suatu ideal prima. Memang,
+andaikan
+\[  \frac{a}{f^m} \frac{b}{f^n} \in \mathfrak{p}[f^{-1}] .\]
+Maka $\frac{ab}{f^{m+n}}$ termasuk ideal ini, yang berarti $ab
+\in
+\mathfrak{p}$; jadi salah satu dari $a,b \in \mathfrak{p}$, dan salah satu
+dari kedua pecahan
+$\frac{a}{f^m}, \frac{b}{f^n}$ termasuk
+$\mathfrak{p}[f^{-1}]$. Selain itu, $1/1
+\notin \mathfrak{p}[f^{-1}]$.
+
+Jelas bahwa prapeta $\mathfrak{p}[f^{-1}]$ adalah
+$\mathfrak{p}$,
+karena citra $x \in R$ adalah $x/1$, dan elemen ini termasuk
+$\mathfrak{p}[f^{-1}]$ tepat ketika $x \in \mathfrak{p}$.
+\item Pemetaan $\spec R[f^{-1}] \to \spec R$ injektif.
+Andaikan
+$\mathfrak{p}, \mathfrak{p'}$ merupakan ideal prima dalam
+lokalisasi tersebut dan
+prapetanya sama.  
+Kita harus menunjukkan bahwa $\mathfrak{p} = \mathfrak{p'}$.
+
+Andaikan $\frac{x}{f^n} \in \mathfrak{p}$. Maka $x/1 \in
+\mathfrak{p}$, sehingga $x
+\in \phi^{-1}(\mathfrak{p}) = \phi^{-1}(\mathfrak{p}')$. Ini
+berarti bahwa $x/1
+\in \mathfrak{p}'$, sehingga 
+$\frac{x}{f^n} \in \mathfrak{p}'$ juga. Jadi setiap pecahan yang
+termasuk
+$\mathfrak{p}$ juga termasuk $\mathfrak{p}'$. Berdasarkan simetri, kedua ideal itu
+harus
+sama.  
+\item Sekarang kita mengetahui bahwa pemetaan $\psi: \spec R[f^{-1}] \to U_f$
+merupakan bijeksi
+kontinu. Tinggal diperiksa bahwa pemetaan itu suatu homeomorfisme. Kita akan
+menunjukkan bahwa pemetaan itu
+terbuka.  
+Khususnya, kita harus menunjukkan bahwa suatu himpunan terbuka basis di ruas kiri
+dipetakan
+ke himpunan terbuka di ruas kanan.
+Jika $y/f^n \in R[f^{-1}]$, kita harus menunjukkan bahwa $U_{y/f^n}
+\subset \spec
+R[f^{-1}]$ memiliki citra terbuka di bawah $\psi$. Bahkan, kita akan menunjukkan himpunan
+terbuka mana yang menjadi citranya.
+
+Kita menyatakan bahwa
+\[ \psi(U_{y/f^n}) = U_{fy} \subset \spec R.  \]
+Untuk melihatnya, $\mathfrak{p}$ termasuk dalam $U_{f/y^n}$. Ini
+berarti bahwa
+$\mathfrak{p}$ tidak memuat $y/f^n$. Khususnya,
+$\mathfrak{p}$ tidak
+memuat kelipatan $yf/1$. Jadi $\psi(\mathfrak{p})$ tidak
+memuat $yf$.
+Hal ini membuktikan inklusi $\subset$.  
+
+\item 
+Untuk menyelesaikan pembuktian pernyataan tersebut, dan
+hasilnya, kita harus menunjukkan bahwa jika $\mathfrak{p} \subset \spec
+R[f^{-1}]$ dan
+$\psi(\mathfrak{p}) = \phi^{-1}(\mathfrak{p}) \in U_{fy}$, maka
+$y/f^n$ tidak
+termasuk $\mathfrak{p}$. (Ini sah-sah saja karena
+kita memiliki suatu bijeksi.) Namun, hipotesis mengakibatkan $fy \notin
+\phi^{-1}(\mathfrak{p})$, sehingga $fy/1 \notin \mathfrak{p}$.
+Membagi dengan $f^{n+1}$
+mengakibatkan bahwa
+\[ y/f^{n} \notin \mathfrak{p}  \]
+dan $\mathfrak{p} \in U_{f/y^n}$. 
+\end{enumerate}
+\end{proof}
+
+Jika $\spec R$ suatu ruang, dan $f$ dipandang sebagai suatu ``fungsi'' yang
+didefinisikan pada
+$\spec R$, maka ruang $U_f$ harus dipandang sebagai himpunan
+titik tempat $f$
+``tidak lenyap'' atau ``invertibel''.
+Memandang gelanggang melalui spektrumnya merupakan gagasan yang sangat berguna.
+Kita akan kembali menggunakannya jika sesuai.  
+
+\begin{remark} 
+Konstruksi $R \to R[f^{-1}]$ yang dibahas di atas merupakan suatu
+contoh
+lokalisasi. Secara lebih umum, kita mendefinisikan $S^{-1}R$ untuk $S
+\subset R$
+yang tertutup secara multiplikatif. Dengan demikian, kita dapat mendefinisikan pemetaan
+\( \spec S^{-1}R \to \spec R . \)
+Untuk memahami $S^{-1}R$, mungkin membantu untuk mencatat bahwa
+\[ \varinjlim_{f \in S} R[f^{-1}]  \]
+merupakan limit langsung gelanggang-gelanggang yang menginverskan semakin banyak elemen.
+
+Sebagai contoh, tinjau $S = R - \mathfrak{p}$ untuk suatu ideal prima
+$\mathfrak{p}$, dan demi
+kesederhanaan andaikan $R$ terhitung. Kita dapat menulis $S =
+S_0 \cup S_1 \cup \dots$, dengan setiap $S_k$ dibangkitkan oleh
+sejumlah hingga
+elemen $f_0, \dots, f_k$. Maka $R_{\mathfrak{p}} = \varinjlim
+S_k^{-1} R$.
+Jadi kita memiliki
+\[ S^{-1}R = \varinjlim_k R[f_0^{-1} , f_1^{-1}, \dots, f_k^{-1}
+] = \varinjlim
+R[(f_0\dots f_k)^{-1}]. \]
+Elemen-elemen yang kita inverskan dalam konstruksi ini tepat merupakan elemen-elemen yang
+tidak
+termasuk $\mathfrak{p}$, atau tempat ``fungsi-fungsi tidak lenyap''.
+
+Gagasan geometrisnya adalah
+bahwa untuk mengkonstruksi $\spec S^{-1}R = \spec R_{\mathfrak{p}}$, kita
+terus membuang
+dari $\spec R$ lokus-lokus lenyap berbagai fungsi yang
+tidak
+beririsan dengan $\mathfrak{p}$. Pada akhirnya, kita tidak membatasi diri pada suatu
+himpunan terbuka, melainkan
+pada irisan himpunan-himpunan tersebut.
+\end{remark} 
+\begin{exercise} \label{semilocal} 
+Katakan bahwa $R$ \emph{semilokal} jika memiliki berhingga banyak ideal maksimal.
+Misalkan $\mathfrak{p}_1$, \dots, $\mathfrak{p}_n\subset R$ ideal-ideal prima. Komplemen
+gabungannya, $S=R\smallsetminus \bigcup \mathfrak{p}_i$, tertutup terhadap
+perkalian, sehingga kita dapat
+melokalkan. $R[S^{-1}] = R_S$ disebut \emph{semilokalisasi}
+ \index{semi-localization} dari $R$ di $\mathfrak{p}_i$.
+ 
+Hasil semilokalisasi selalu semilokal. Untuk melihatnya, ingat bahwa
+ ideal-ideal
+ dalam $R_S$ berkorespondensi bijektif dengan ideal-ideal dalam $R$ yang termuat dalam $\bigcup
+ \mathfrak{p}_i$. Sekarang gunakan penghindaran prima.
+\end{exercise}
+
+\begin{definition}
+Untuk suatu modul-$R$ terbangkitkan hingga $M$, definisikan $\mu_R(M)$ sebagai jumlah terkecil
+elemen
+   yang dapat membangkitkan $M$.
+ \end{definition}
+Ini tidak sama dengan kardinalitas suatu himpunan pembangkit minimal. Sebagai
+contoh, 2
+dan 3 merupakan suatu himpunan pembangkit minimal bagi $\mathbb{Z}$ atas dirinya sendiri, tetapi
+$\mu_\mathbb{Z} (\mathbb{Z}) =1$.
+
+ \begin{theorem}
+Misalkan $R$ semilokal dengan ideal-ideal maksimal $\mathfrak{m}_1,\dots,
+\mathfrak{m}_n$. Misalkan $k_i = R/\mathfrak{m}_i$. Maka
+   \[
+     \mu_R(M) = \max_i \{\dim_{k_i} M/\mathfrak{m}_i M\}
+   \]
+ \end{theorem}
+\begin{proof} 
+\begin{quote}\small\textbf{Jembatan edisi (asli).}
+Ketaksamaan ``$\geq$'' diperoleh dengan mereduksi setiap himpunan pembangkit modulo setiap
+$\mathfrak m_i$. Sebaliknya, tetapkan $d=\max_i\dim_{k_i}(M/\mathfrak m_iM)$
+dan lengkapi suatu basis dari setiap $M/\mathfrak m_iM$ menjadi tupel-$d$. Teorema
+Sisa Cina membuat pemetaan
+\[
+  M\longrightarrow\bigoplus_i M/\mathfrak m_iM
+\]
+surjektif, jadi pilih $x_1,\ldots,x_d\in M$ yang citranya adalah tupel-tupel tersebut.
+Jika $N=\sum_jRx_j$, maka $(M/N)_{\mathfrak m_i}=0$ untuk setiap ideal maksimal dari
+gelanggang semilokal $R$, menurut Lema Nakayama. Jadi $M/N=0$, dan elemen-elemen $x_j$
+membangkitkan $M$.\end{quote}
+\end{proof} 
+ 

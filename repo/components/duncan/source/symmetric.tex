@@ -1,0 +1,1574 @@
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage{ytableau}
+
+% gaya teorema (saya menyukai semua lingkungan memakai pencacah yang sama); adaptasi berlisensi CC BY 4.0
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{proposition}[theorem]{Proposisi}
+\newtheorem{corollary}[theorem]{Korolari}
+\newtheorem{conjecture}[theorem]{Konjektur}
+\newtheorem{exercise}[theorem]{Latihan}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definisi}
+\newtheorem{example}[theorem]{Contoh}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Catatan}
+
+% beberapa pengaturan penomoran
+\numberwithin{equation}{section}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\setlength{\headheight}{15.2pt}
+\renewcommand{\footrulewidth}{0.4pt}% nilai bakunya 0pt
+\setlength{\footskip}{30pt}
+\pagestyle{fancy}
+
+\makeatletter
+\let\ps@plain\ps@fancy 
+\makeatother
+
+\lhead{MATH 742}
+\chead{$S_n$ dan $\operatorname{GL}_n$}
+\rhead{Musim Semi 2023}
+\lfoot{Revisi Terakhir: \today}
+\cfoot{}
+\rfoot{\thepage\ dari \pageref{LastPage} }
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+\title{Grup Simetrik dan Grup Linear Umum}
+\author{Alexander Duncan}
+
+\maketitle
+
+Di sini kita membahas teori fungsi simetris, khususnya dengan
+tujuan mendeskripsikan representasi grup simetrik dan grup
+linear umum.
+Representasi tak tereduksi dari grup simetrik
+$S_n$ adalah \emph{modul Specht} $V_\lambda$, yang diparameterkan
+oleh partisi $\lambda$ berbobot $n$.
+Representasi polinomial tak tereduksi dari grup linear umum
+$\operatorname{GL}(\mathbb{V})$ tepat merupakan (citra dari)
+\emph{funktor Schur} $\mathbb{S}_\lambda(V)$, dengan $\lambda$
+partisi yang panjangnya $\ell(\lambda) \le \dim(V)$.
+Keduanya paling baik dipahami melalui bijeksi dengan \emph{fungsi
+Schur} $\{ s_\lambda \}$, yang membentuk basis ortonormal bagi
+gelanggang fungsi simetris. 
+
+Catatan ini tidak berdiri sendiri. Banyak bukti hanya akan dibuat sketsanya atau
+diserahkan sebagai rujukan. Alasannya bukan karena bukti-bukti itu sulit
+(keindahan bidang ini justru terletak pada bukti yang sering sangat cerdik!), melainkan karena
+teorinya terlalu kaya untuk dijelajahi secara memadai hanya dalam beberapa minggu.
+Sebagian besar materi ini diambil dari
+\cite[\S{4,6,A}]{FultonHarris},
+\cite[\S{5.12--5.19}]{Etingof},
+\cite[\S{I}]{Macdonald}, dan
+\cite[\S{7}]{Stanley2}.
+
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+
+\section{Partisi}
+
+Ingat bahwa suatu \emph{partisi} $\lambda$ adalah barisan bilangan bulat tak negatif
+yang menurun lemah,
+$\lambda_1 \ge \lambda_2 \ge \cdots$, dan akhirnya bernilai $0$.
+Beberapa istilah baku:
+\begin{itemize}
+\item Nilai tak nol $\lambda_i$ disebut \emph{bagian} dari $\lambda$.
+\item Banyaknya bagian, $\ell(\lambda)$, disebut \emph{panjang} dari $\lambda$.
+\item Jumlah $|\lambda|=\sum_{i \ge 0} \lambda_i$ disebut \emph{bobot} dari $\lambda$.
+\item ``Partisi dari $n$'' berarti partisi berbobot $n$.
+\item $\lambda \vdash n$ berarti bahwa $\lambda$ adalah partisi dari $n$.
+\item Banyaknya bagian $m_i(\lambda)$ yang sama dengan $i$ disebut
+\emph{multiplisitas} $i$ dalam $\lambda$.
+\item Partisi dapat ditulis sebagai $\lambda_1 + \lambda_2 + \cdots + \lambda_r$.
+\item Kita dapat memakai notasi ringkas $\lambda = (1^{m_1} 2^{m_2} \cdots r^{m_r})$.
+\item $\lambda+\mu$ adalah partisi $(\lambda_1+\mu_1, \ldots)$.
+\item $\lambda \subseteq \mu$ berarti $\lambda_i \le \mu_i$ untuk semua $i \ge 1$.
+\item Urutan dominasi $\lambda \le \mu$ berarti
+$\sum_{j=1}^i\lambda_j \le \sum_{j=1}^i\mu_j$ untuk semua $i \ge 1$.
+\end{itemize}
+
+Partisi sering digambar sebagai \emph{diagram Young}. Diagram ini berupa
+susunan kotak kosong dengan setiap baris berisi $\lambda_i$ kotak.
+Kita memakai \emph{notasi Inggris}, dengan $\lambda_1$ sebagai baris teratas.
+Konvensi di berbagai bidang matematika tidak selalu sama, jadi
+bacalah setiap sumber dengan cermat.
+
+Untuk suatu partisi $\lambda$, \emph{partisi konjugat}
+adalah partisi $\lambda^\dag$ yang diperoleh dengan mencerminkan diagram Young terhadap
+garis diagonal yang menurun ke kanan. Lebih eksplisit,
+$\lambda^\dag_i$ adalah banyaknya bagian yang memenuhi $\lambda_j \ge i$. 
+
+\begin{example}
+Partisi-partisi dari $4$ adalah sebagai berikut:
+\begin{center}
+\begin{tabular}{ccccc}
+4 & 3+1 & 2+2 & 2+1+1 & 1+1+1+1 \\
+\ydiagram{4} & \ydiagram{3,1} & \ydiagram{2,2} & \ydiagram{2,1,1} &
+\ydiagram{1,1,1,1}
+\end{tabular}
+\end{center}
+\end{example}
+
+\begin{example}
+Misalkan $\lambda = (4,4,2,2,2,1)$.
+Kita juga dapat menulis $\lambda$ sebagai $4+4+2+2+2+1$ atau $1^12^34^2$.
+Bagian-bagiannya adalah $\lambda_1=4$, $\lambda_2=4$,
+$\lambda_3=2$,
+$\lambda_4=2$,
+$\lambda_5=2$, dan
+$\lambda_6=1$.
+Panjangnya $\ell(\lambda)=6$, bobotnya $|\lambda|=15$,
+dan multiplisitasnya $m_1(\lambda)=1$, $m_2(\lambda)=3$,
+$m_3(\lambda)=0$, serta $m_4(\lambda)=2$.
+Diagram Young-nya adalah
+\begin{center}
+\ydiagram{4,4,2,2,2,1}.
+\end{center}
+Partisi konjugat $\lambda^\dag$ adalah $(6,5,2,2)$.
+\end{example}
+
+Ingat bahwa setiap permutasi $\sigma \in S_n$ dapat ditulis sebagai
+hasil kali siklus-siklus saling lepas, secara tunggal hingga pengurutan ulang
+siklus-siklus tersebut. Dengan turut menghitung siklus panjang $1$, orde
+siklus-siklus penyusunnya memberikan partisi $\lambda \vdash n$.
+Sebagai contoh, $(1\ 4\ 3)(2\ 8)(6\ 7) \in S_9$ mempunyai tipe siklus
+$3+2+2+1+1$.
+Hasil berikut merupakan hasil baku dalam sebagian besar buku teori grup:
+
+\begin{proposition}
+Dua permutasi dalam $S_n$ saling konjugat jika dan hanya jika keduanya mempunyai
+tipe siklus yang sama.
+Khususnya, kelas-kelas konjugasi dari $S_n$ berkorespondensi bijektif secara kanonik
+dengan partisi-partisi dari $n$.
+\end{proposition}
+
+Untuk setiap partisi $\lambda$, kita mendefinisikan bilangan bulat
+\[
+\epsilon_\lambda = (-1)^{|\lambda|-\ell(\lambda)} .
+\]
+dan
+\[
+z_\lambda = \prod_{i \ge 1} i^{m_i} m_i!
+\]
+dengan $m_i=m_i(\lambda)$ menyatakan multiplisitas,
+
+\begin{exercise}
+Buktikan bahwa jika $\sigma \in S_n$ mempunyai tipe siklus $\lambda$,
+maka $\operatorname{sgn}(\sigma)=\epsilon_\lambda$.
+\end{exercise}
+
+\begin{exercise}
+Buktikan bahwa jika $\sigma \in S_n$ mempunyai tipe siklus $\lambda$,
+maka pemusat $Z_{S_n}(\sigma)$ berorde $z_\lambda$.
+Secara ekuivalen, banyaknya elemen $S_n$ bertipe siklus $\lambda$
+adalah $n!/z_\lambda$.
+\end{exercise}
+
+\section{Polinomial Simetris}
+
+Terdapat aksi kiri alami dari grup simetrik $S_n$ pada gelanggang
+polinomial $R=\mathbb{Z}[x_1,\ldots,x_n]$ dengan mempermutasikan peubah.
+Lebih tepatnya, terdapat automorfisme gelanggang tunggal dari $R$ yang didefinisikan
+oleh $x_i \mapsto x_{\sigma(i)}$ untuk setiap peubah $x_i$ dan setiap
+permutasi $\sigma \in S_n$.
+Sebagai rumusan lain, jika $\sigma \in S_n$, maka
+\[
+(\sigma \cdot f)(a_1,\ldots,a_n) =
+f\left(a_{\sigma(1)}, \ldots, a_{\sigma}(n)\right)
+\]
+untuk $f \in R$ dan $a_1,\ldots,a_n \in \mathbb{Z}$.
+
+\begin{definition}
+Suatu polinomial $f \in \mathbb{Z}[x_1,\ldots, x_n]$ disebut \emph{simetris}
+jika $\sigma \cdot f = f$ untuk semua $\sigma \in \Sigma$.
+Kita menuliskan $\mathsf{SF}_n$ untuk himpunan polinomial simetris
+$\mathbb{Z}[x_1,\ldots,x_n]^{S_n}$ dalam $n$ peubah.
+\end{definition}
+
+Himpunan $\mathsf{SF}_n$ membentuk gelanggang bergradasi
+\[
+\mathsf{SF}_n = \bigoplus_{d \ge 0} \mathsf{SF}_n^d
+\]
+dengan $\mathsf{SF}_n^d = \mathbb{Z}[x_1,\ldots,x_n]_{(d)}^{S_n}$
+subgrup polinomial simetris homogen berderajat $d$.
+
+Untuk suatu tupel $\alpha = (\alpha_1,\ldots,\alpha_n) \in \mathbb{N}^n$,
+kita memakai notasi ringkas
+\[
+x^\alpha = x_1^{\alpha_1} \cdots x_n^{\alpha_n}
+\]
+untuk menyatakan monomial dalam $\mathbb{Z}[x_1,\ldots,x_n]$.
+
+Untuk suatu partisi $\lambda \vdash d$ yang panjangnya $\ell(\lambda) \le n$,
+\emph{polinomial simetris monomial yang terkait dengan $\lambda$}
+diberikan oleh
+\[
+m_\lambda := \sum_{\alpha} x^\alpha
+\]
+dengan $(\alpha_1,\ldots,\alpha_n)$ merentang semua permutasi
+\emph{berbeda} dari $(\lambda_1,\ldots,\lambda_n)$.
+
+\begin{exercise}
+Buktikan bahwa $\displaystyle z_\lambda m_\lambda = \sum_{\sigma \in S_n}
+x^{\sigma(\lambda)}$ untuk semua $\lambda$ dengan panjang $\ell(\lambda) \le n$.
+\end{exercise}
+
+\begin{example}
+Jika $n=3$, maka
+\begin{align*}
+m_\emptyset &= 1\\
+m_1 &= x_1 + x_2 + x_3\\
+m_2 &= x_1^2 + x_2^2 + x_3^2\\
+m_{11} &= x_1x_2 + x_1x_3 + x_2x_3\\
+m_{111} &= x_1x_2x_3 \\
+m_{14} &= x_1x_2^4 + x_1^4x_2 + x_1x_3^4 + x_1^4x_3 + x_2x_3^4 +
+x_2^4x_3.
+\end{align*}
+\end{example}
+
+Yang penting, kita mempunyai hasil berikut:
+
+\begin{proposition}
+Polinomial simetris monomial membentuk basis bagi $\mathsf{SF}_n$.
+Secara khusus,
+\[
+\mathsf{SF}_n^d = \operatorname{span}_{\mathbb{Z}}
+\{ m_\lambda \mid \lambda \vdash d, \ell(\lambda) \le n \}.
+\]
+\end{proposition}
+
+\begin{proof}
+Partisi dengan panjang paling besar $n$ membentuk sistem wakil yang berbeda
+bagi orbit-orbit $S_n$ dari $\mathbb{N}^n$.
+Monomial-monomial dalam $m_\lambda$ tepat merupakan monomial pada orbit
+$\lambda$.
+Koefisien setiap monomial
+dalam $m_\lambda$ adalah $0$ atau $1$, dan setiap monomial yang mungkin
+muncul dalam tepat satu $m_\lambda$.
+Jika $f$ polinomial simetris, maka koefisien
+monomial $x^\alpha$ harus sama dengan koefisien $x^{\sigma(\alpha)}$
+untuk setiap $\sigma \in S_n$.  
+\end{proof}
+
+Ada beberapa keluarga penting lain dari polinomial simetris
+yang sekarang kita definisikan.
+
+\begin{definition}
+Untuk bilangan bulat positif $d$, kita mendefinisikan
+\emph{polinomial simetris elementer $e_d$ berderajat $d$} sebagai
+\[
+e_d = m_{1^d} = \sum_{1 \le i_1 < i_2 < \cdots < i_d \le n} x_{i_1}x_{i_2}\cdots
+x_{i_d},
+\]
+\emph{polinomial simetris homogen lengkap $h_d$ berderajat $d$} sebagai
+\[
+h_d = \sum_{\lambda \vdash d} m_\lambda = \sum_{1 \le i_1 \le i_2 \le \cdots \le i_d \le n} x_{i_1}x_{i_2}\cdots
+x_{i_d},
+\]
+dan \emph{polinomial simetris jumlah pangkat $p_d$ berderajat $d$} sebagai
+\[
+p_d = m_d = \sum_{1 \le i \le n} x_i^d.
+\]
+Menurut konvensi, $e_0=h_0=p_0=1$.
+\end{definition}
+
+\begin{remark}
+Konvensi untuk $e_0$ dan $h_0$ tidak menimbulkan perdebatan,
+tetapi banyak rujukan membiarkan $p_0$ tak terdefinisi.
+Memang ada alasan baik untuk mendefinisikan $p_0=n$, tetapi definisi ini tidak
+meluas ke gelanggang fungsi simetris yang dibahas di bawah. 
+\end{remark}
+
+\begin{example}
+Jika $n=3$, maka
+\begin{align*}
+e_1 = h_1 = p_1 &= x_1 + x_2 + x_3\\
+e_2 &= x_1x_2 + x_1x_3 + x_2x_3\\
+e_3 &= x_1x_2x_3 \\
+e_4 &= 0 \\
+h_2 &= x_1^2 + x_2^2 + x_3^2 + x_1x_2 + x_1x_3 + x_2x_3\\
+h_3 &= x_1^3 + \cdots + x_1^2x_2 + \cdots + x_1x_2x_3\\
+p_2 &= x_1^2 + x_2^2 + x_3^2\\
+p_3 &= x_1^3 + x_2^3 + x_3^3
+\end{align*}
+\end{example}
+
+Patut disebutkan sejak awal (meskipun buktinya kita tunda)
+beberapa hasil mendasar. Pertama, kita mempunyai \emph{identitas Newton}:
+\[
+de_d = \sum_{i=1}^d (-1)^{i-1} p_i e_{d-i} ,
+\]
+serta relasi mendasar
+\[
+0 = \sum_{i=0}^d (-1)^i e_i h_{d-i},
+\]
+yang berlaku untuk semua bilangan bulat positif $d$.
+Relasi ini memungkinkan kita menghitung $p_i$ dan $h_i$ secara rekursif dalam
+$e_i$ (dan sebaliknya).
+
+Kita juga mempunyai \emph{Teorema Dasar Polinomial
+Simetris}, yang menyatakan bahwa $e_1,\ldots,e_n$ adalah pembangkit bebas secara aljabar
+dari gelanggang $\mathsf{SF}_n$.
+Bahkan, dengan menggabungkan hasil ini dan relasi di atas, kita memperoleh
+\begin{align*}
+\mathbb{Z}[x_1,\ldots,x_n]^{S_n} &= \mathbb{Z}[e_1,\ldots,e_n]\\
+\mathbb{Z}[x_1,\ldots,x_n]^{S_n} &= \mathbb{Z}[h_1,\ldots,h_n]\\
+\mathbb{Q}[x_1,\ldots,x_n]^{S_n} &= \mathbb{Q}[p_1,\ldots,p_n]
+\end{align*}
+dengan koefisien rasional diperlukan untuk kesamaan terakhir.
+Bukti kesamaan-kesamaan ini tidak terlalu sulit, tetapi kita menundanya
+karena semuanya merupakan akibat dari fakta yang lebih umum.
+
+\subsection{Polinomial Berselang-seling dan Polinomial Schur}
+
+Misalkan $\epsilon : S_n \to \{\pm 1\}$ adalah homomorfisme tanda
+dan $A_n = \ker(\epsilon)$ adalah grup berselang-seling pada $n$ huruf.
+
+\begin{definition}
+Polinomial $f \in \mathbb{Z}[x_1,\ldots,x_n]$ disebut \emph{berselang-seling} jika
+$\sigma \cdot f = \epsilon(\sigma)f$ untuk semua $\sigma \in S_n$.
+Untuk suatu elemen $\alpha \in \mathbb{N}^n$, definisikan \emph{alternan
+dari $\alpha$} sebagai
+\[
+a_\alpha = \sum_{\sigma \in S_n} \epsilon(\sigma) x^{\sigma(\alpha)},
+\]
+yang merupakan polinomial berselang-seling.
+\end{definition}
+
+Perhatikan bahwa $a_\alpha=0$ jika dan hanya jika entri-entri $\alpha$
+tidak semuanya berbeda. Kita juga melihat bahwa setiap polinomial berselang-seling
+adalah kombinasi
+linear dari $a_\lambda$ untuk partisi $\lambda$ yang semua bagiannya
+$\lambda_i$ berbeda.
+Perhatikan bahwa semua bagian $\lambda$ berbeda jika dan hanya jika
+$\delta \subseteq \lambda$, dengan
+$\delta=(n-1,n-2,\ldots,1,0)$.
+
+Kita mempunyai hasil berikut:
+\begin{lemma}
+Himpunan
+\[
+\{ a_\lambda \mid \ell(\lambda) \le n, \delta \subseteq \lambda \}
+\]
+merupakan basis bagi grup polinomial berselang-seling.
+
+\end{lemma}
+\begin{example}
+\emph{Polinomial Vandermonde} $\Delta \in \mathbb{Z}[x_1,\ldots,x_n]$
+didefinisikan oleh
+\[
+\Delta = \prod_{1 \le i < j \le n} (x_i-x_j).
+\]
+Perhatikan bahwa $(i\ j) \cdot \Delta = -\Delta$ untuk semua $i \ne j$.
+Kita menyimpulkan bahwa $\sigma(\Delta) = \operatorname{sgn}(\sigma)$
+untuk semua $\sigma \in S_n$.
+Jadi $\Delta$ berselang-seling.
+Perhatikan bahwa $\Delta=a_\delta$.
+
+\end{example}
+\begin{lemma}
+Setiap polinomial berselang-seling $f$ berbentuk $g \Delta$
+dengan $g$ polinomial simetris. 
+
+\end{lemma}
+\begin{proof}
+Cukup ditunjukkan bahwa $(x_i-x_j)$ membagi $f$ untuk semua $i \ne j$.
+Memang, andaikan $c_\alpha x^\alpha$ adalah monomial dalam $f$
+dan tulis $x^\alpha = x_i^u x_j^v x^\beta$ dengan $x_i$ dan $x_j$
+tidak membagi $x^\beta$.
+Karena $f$ berselang-seling, $-c_\alpha x_i^v x_j^u x^\beta$
+juga harus muncul dalam $f$.
+Jadi $c_\alpha (x_i^u x_j^v - x_i^v x_j^u) x^\beta$ muncul dalam $f$.
+Masing-masing suku ini habis dibagi oleh $(x_i-x_j)$ sebagaimana diinginkan.
+
+\end{proof}
+
+Definisi berikut kini bermakna:
+\begin{definition}
+Untuk partisi $\lambda$ dengan panjang $\le n$, \emph{polinomial Schur}
+adalah polinomial simetris
+$s_\lambda = a_{\lambda+\delta}/a_\delta$.
+
+\end{definition}
+Alternan $\{ a_{\lambda+\delta} \}$ membentuk basis bagi
+polinomial berselang-seling, sebagaimana polinomial simetris monomial
+$\{ m_\lambda \}$ membentuk basis bagi polinomial
+simetris.
+Karena $a_{\lambda+\delta}=s_\lambda a_\delta$, polinomial Schur dapat dipandang
+sebagai ``polinomial monomial berselang-seling'', tetapi faktor
+
+berselang-selingnya telah dibagi sehingga hasilnya simetris.
+
+Khususnya, kita mempunyai hasil berikut:
+\begin{proposition}
+Himpunan polinomial Schur
+\[
+\{ s_\lambda \mid \lambda \vdash d, \ell(\lambda) \le n \}
+\]
+merupakan basis bagi $\mathsf{SF}^d_n$.
+
+\end{proposition}
+\emph{Bilangan Kostka} $K_{\lambda \mu}$ adalah entri-entri matriks
+perubahan basis antara basis monomial dan basis Schur.
+Secara khusus, bilangan-bilangan ini adalah bilangan bulat tak negatif sedemikian sehingga
+\[
+s_\lambda = \sum_{\substack{\mu\, \vdash |\lambda|\\\ell(\mu) \le n}} K_{\lambda \mu} m_\mu
+\]
+untuk semua partisi $\lambda,\mu$. Bilangan Kostka tidak bergantung pada banyaknya
+
+peubah $n$ dalam gelanggang polinomial yang memuatnya
+(hal ini tidak kita buktikan di sini).
+\begin{example}
+Untuk $n \ge 4$, kita mempunyai matriks perubahan basis berikut:
+\[
+\begin{pmatrix}
+s_{1111}\\ s_{211} \\ s_{22}\\ s_{31}\\ s_4
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 0 & 0 & 0 & 0\\
+3 & 1 & 0 & 0 & 0\\
+2 & 1 & 1 & 0 & 0\\
+3 & 2 & 1 & 1 & 0\\
+1 & 1 & 1 & 1 & 1
+\end{pmatrix} 
+\begin{pmatrix}
+m_{1111}\\ m_{211} \\ m_{22}\\ m_{31}\\ m_4
+\end{pmatrix}
+\]
+
+Jadi, misalnya, $K_{(31)(1111)}=3$.
+\end{example}
+\begin{exercise}
+
+Buktikan bahwa $s_{(d)} = h_d$ dan $s_{(1^d)} = e_d$.
+
+\end{exercise}
+Kita tidak akan memerlukan hasil berikut nanti, tetapi hasil ini menarik secara umum:
+\begin{theorem}[Teorema Dasar Polinomial Berselang-seling]
+Gelanggang $\mathbb{Z}[x_1,\ldots,x_n]^{A_n}$ adalah modul-$\mathsf{SF}_n$
+bebas dengan basis $\{1, \Delta\}$.
+Dengan kata lain, setiap polinomial invarian-$A_n$ $f$ dapat ditulis secara tunggal
+
+sebagai $f=p+\Delta q$, dengan $p,q$ simetris.
+\end{theorem}
+\begin{remark}
+Jika $V$ representasi linear kompleks berdimensi $n$ dari $G$,
+maka terdapat aksi alami $G$ pada gelanggang polinomial
+$S=\mathbb{C}[x_1,\ldots,x_n]$ dengan memandangnya sebagai aljabar simetris
+$\mathcal{S}(V^\vee)$.
+Sebuah teorema terkenal Hochster--Roberts membuktikan bahwa gelanggang invarian
+$S^G=\mathbb{C}[x_1,\ldots,x_n]^G$ adalah gelanggang Cohen--Macaulay:
+terdapat subgelanggang polinomial $R=\mathbb{C}[f_1,\ldots,f_n]$
+sedemikian sehingga $S^G$ merupakan modul-$R$ bebas.
+``Teorema Dasar Polinomial Berselang-seling'' dapat dipandang sebagai
+kasus yang sangat khusus dari fakta ini (dengan subgelanggang dan basis
+
+yang mempunyai interpretasi tertentu).
+
+\end{remark}
+\subsection{Pangkat Simetris dan Eksterior}
+
+Kini kita melihat beberapa kaitan antara fungsi simetris dan
+teori representasi:
+\begin{proposition}
+Andaikan $V$ ruang vektor berdimensi $n$ dan
+$\varphi \in \operatorname{End}(V)$ mempunyai nilai-nilai eigen
+$\alpha_1,\ldots,\alpha_n$.
+Maka aksi alami $\varphi$ pada pangkat eksterior $\Lambda^d V$
+mempunyai teras
+\[
+\operatorname{tr}\left( \Lambda^d \varphi \right)
+= e_d(\alpha_1,\ldots,\alpha_n)
+\]
+dan aksi alami $\varphi$ pada pangkat simetris
+$\mathcal{S}^d V$ mempunyai teras
+\[
+\operatorname{tr}\left( \mathcal{S}^d \varphi \right)
+= h_d(\alpha_1,\ldots,\alpha_n).
+\]
+\end{proposition}
+
+\begin{proof}
+Cukup bekerja atas medan tertutup secara aljabar $k$.
+
+Kita membuktikan pernyataan untuk $\Lambda^d V$ karena argumen untuk
+$\mathcal{S}^d$ sangat serupa. 
+Pertama, andaikan $\varphi$ dapat didiagonalkan, dengan vektor-vektor eigen
+$v_1,\ldots, v_n$ yang bersesuaian dengan nilai-nilai eigen
+$\alpha_1,\ldots,\alpha_n$.
+Suatu basis eigen bagi $\Lambda^d V$ diberikan oleh
+\[
+\{ v_{i_1}\wedge v_{i_2}\wedge \cdots \wedge v_{i_d} \mid
+1 \le i_1 < i_2 < \cdots < i_d \le n \} \ .
+\]
+Jadi nilai-nilai eigen yang bersesuaian dari $\Lambda^d \varphi$ adalah
+\[
+\{ \alpha_{i_1} \alpha_{i_2} \cdots \alpha_{i_d} \mid
+1 \le i_1 < i_2 < \cdots < i_d \le n \} \ .
+\]
+
+Teras $\Lambda^d \phi$ hanyalah jumlah nilai-nilai eigen tersebut, yakni
+$e_d(\alpha_1,\ldots,\alpha_n)$ sebagaimana diinginkan.
+Sekarang tinjau kasus ketika $\varphi$ tidak dapat didiagonalkan.
+Dalam kasus ini $\varphi$ mempunyai bentuk kanonik Jordan. Jadi
+terdapat basis $v_1,\ldots, v_n$ bagi $V$ sehingga $\varphi$
+direpresentasikan oleh $D+N$, dengan $D$ matriks diagonal dan
+
+$N$ matriks segitiga bawah.
+Perhatikan bahwa $N(v_i)$ adalah kombinasi linear dari $v_{i+1},\ldots, v_n$.
+Definisikan urutan total pada $\mathbb{N}^n$, dengan
+$(a_1,\ldots,a_n) < (b_1,\ldots,b_n)$ jika $a_i < b_i$ untuk indeks terkecil $i$
+yang memenuhi $a_i \ne b_i$.
+Kini perhatikan bahwa
+\[
+(D+N)(v_{i_1}\wedge \cdots \wedge v_{i_d})
+= D(v_{i_1}\wedge \cdots \wedge v_{i_d})
++ \textrm{suku-suku lebih tinggi} 
+\]
+dengan ``suku-suku lebih tinggi'' merupakan kelipatan skalar dari
+$v_{j_1}\wedge \cdots \wedge v_{j_d}$
+dan $(j_1,\ldots,j_d) > (i_1,\ldots,i_d)$.
+Jadi, bila diurutkan secara tepat, basis kita bagi $\Lambda^d V$
+juga merepresentasikan $\Lambda^d V$ sebagai matriks segitiga bawah.
+Teras hanya bergantung pada entri diagonal, sehingga hasilnya mengikuti
+
+dari kasus yang dapat didiagonalkan.
+\end{proof}
+Cara lain memahami proposisi sebelumnya adalah bahwa
+$\Lambda^d V$ dan $\mathcal{S}^d V$ merupakan representasi dari
+$\operatorname{GL}(V)$ dengan karakter masing-masing $e_d$ dan
+$h_d$.
+Kita akan melihat bahwa terdapat suatu kelas polinomial simetris
+yang disebut \emph{polinomial Schur}, yang tepat merupakan karakter
+
+
+dari representasi \emph{polinomial} tak tereduksi
+
+$\operatorname{GL}(V)$.
+\section{Gelanggang Fungsi Simetris}
+Banyak relasi antara berbagai polinomial simetris khusus pada dasarnya
+tidak bergantung pada banyaknya peubah $n$, yakni $x_1,\ldots,x_n$,
+dalam gelanggang polinomial yang memuatnya. \emph{Gelanggang fungsi simetris}
+adalah objek baku dalam kombinatorika aljabar yang memudahkan
+
+pembahasan ini. Ada beberapa konstruksi yang ekuivalen; kita mengikuti
+konstruksi dalam \cite{Stanley2}, yang cukup konkret.
+Misalkan $\mathbb{Z}[[\{x_n\}_{n \in \mathbb{N}_{>0}}]]$ adalah gelanggang deret
+pangkat formal dalam terhitung banyak peubah. Ingat bahwa ini berarti
+setiap monomial hanya memuat hingga banyak $x_i$, tetapi setiap elemen boleh berupa
+kombinasi linear tak hingga dari monomial, dan mungkin tidak ada batas atas
+bagi subskrip $i$ yang muncul di antara $x_i$ dalam setiap
+monomial.
+Untuk bilangan bulat tak negatif $d$, subgrup
+$\mathbb{Z}[[\{x_n\}_{n \in \mathbb{N}_{>0}}]]_{(d)}$ terdiri atas
+
+elemen-elemen yang semua monomialnya tepat berderajat $d$ (dengan kata lain,
+tepat $d$ peubah $x_i$ dalam setiap monomial, dihitung beserta multiplisitasnya).
+Misalkan $S_{\mathbb{N}_{>0}}$ adalah grup simetrik pada $\mathbb{N}_{>0}$; dengan
+kata lain, grup semua bijeksi $\mathbb{N}_{>0} \to \mathbb{N}_{>0}$.
+Terdapat aksi alami $S_{\mathbb{N}_{>0}}$ pada
+$\mathbb{Z}[[\{x_n\}_{n \in \mathbb{N}_{>0}}]]$ dengan mempermutasikan peubah, dan aksi ini
+mempertahankan derajat.
+Suatu \emph{fungsi simetris homogen berderajat $d$} adalah elemen
+$f \in \mathbb{Z}[[\{x_n\}_{n \in \mathbb{N}_{>0}}]]_{(d)}^{S_{\mathbb{N}}}$.
+
+Misalkan $\mathsf{SF}^d$ adalah subgrup
+fungsi simetris homogen berderajat $d$.
+Kita mendefinisikan \emph{gelanggang fungsi simetris} sebagai jumlah langsung (internal)
+\[
+\mathsf{SF} = \bigoplus_{d \ge 0} \mathsf{SF}^d,
+\]
+
+yang merupakan subgelanggang bergradasi dari $\mathbb{Z}[[\{x_n\}_{n \in \mathbb{N}_{>0}}]]$.
+\begin{remark}
+Perhatikan bahwa ``fungsi simetris'' merupakan istilah baku,
+tetapi bukan nama yang ideal karena tidak benar-benar jelas
+apa yang menjadi argumen \emph{fungsi} tersebut.
+Selain itu, istilah fungsi simetris sering digunakan dalam kasus
+berhingga banyak peubah untuk membahas fungsi ``biasa'' seperti $e^{x+y}$,
+
+yang invarian terhadap simetri seperti $x \leftrightarrow y$.
+\end{remark}
+Terdapat homomorfisme gelanggang bergradasi surjektif kanonik
+$\rho_n : \mathsf{SF} \to \mathsf{SF}_n$, yang didefinisikan oleh
+\[
+\rho_n(f)(x_1,\ldots,x_n) = f(x_1,\ldots,x_n,0,0,\cdots) .
+\]
+
+Perhatikan bahwa konvergensi bukan masalah, karena semua kecuali hingga banyak monomial
+akan bernilai nol.
+\begin{remark}
+Sebagai rumusan ekuivalen, gelanggang fungsi simetris dapat didefinisikan sebagai limit
+invers
+\[
+\mathsf{SF} = \lim_{\substack{\longleftarrow\\n}} \mathsf{SF}^n
+\]
+dalam kategori gelanggang bergradasi (lihat \cite{Macdonald}).
+(Peringatan: ini \emph{bukan} limit invers dalam kategori gelanggang biasa.)
+Pemetaan $\rho_n$ di atas tepat merupakan proyeksi kanonik yang diperoleh dari
+
+konstruksi ini.
+\end{remark}
+Kita mendefinisikan \emph{fungsi simetris monomial yang terkait dengan $\lambda$}
+sebagai
+\[
+m_\lambda := \sum_{\alpha} x^\alpha
+\]
+dengan $(\alpha_1,\ldots) \in \mathbb{N}^{\mathbb{N}_{>0}}$ merentang semua permutasi
+
+\emph{berbeda} dari $(\lambda_1,\ldots)$.
+Perhatikan bahwa himpunan $\{ m_\lambda\}$ merupakan basis bagi $\mathsf{SF}$.
+Sekarang kita dapat mendefinisikan \emph{fungsi simetris elementer}
+\[
+e_d = m_{1^d},
+\]
+\emph{fungsi simetris homogen lengkap}
+\[
+h_d = \sum_{\lambda \vdash d} m_\lambda ,
+\]
+dan \emph{fungsi simetris jumlah pangkat}
+\[
+p_d = m_{d}.
+\]
+
+Pemakaian ulang notasi $m_\lambda$, $e_d$, $h_d$, dan $p_d$ untuk menyatakan
+objek berbeda dalam setiap $\mathsf{SF}^n$ pada umumnya tidak menimbulkan masalah,
+
+mengingat semuanya tepat merupakan citra objek yang
+bersesuaian dalam $\mathsf{SF}$ di bawah pemetaan ke $\rho_n$.
+Kita juga dapat mendefinisikan \emph{fungsi simetris Schur}
+$s_\lambda$ melalui 
+\[
+s_\lambda = \sum_{\mu} K_{\lambda \mu} m_\mu
+\]
+
+dengan memanfaatkan fakta bahwa bilangan Kostka
+
+tidak bergantung pada banyaknya peubah dalam gelanggang polinomial yang diberikan.
+\subsection{Relasi dan Identitas}
+\begin{proposition} \label{prop:fund_rel}
+
+$\displaystyle\sum_{i=0}^d (-1)^i e_i h_{d-i}=0$ untuk setiap $d \ge 1$.
+\end{proposition}
+\begin{proof}
+Tinjau fungsi pembangkit
+\[ E(t) = \sum_{r \ge 0} e_r t^r
+\textrm{ dan }
+H(t) = \sum_{r \ge 0} h_r t^r \]
+sebagai elemen dalam $\mathsf{SF}[[t]]$.
+Kita melihat bahwa
+\begin{align*}
+& E(t)\\
+ =& 1 + (x_1+x_2+\cdots)t
++ (x_1x_2+x_1x_3+\cdots)t^2 \\
+=&\prod_{i \ge 1} (1+x_i t)
+\end{align*}
+dalam gelanggang yang lebih besar $\mathbb{Z}[[x_1,\ldots]][[t]]$.
+Serupa dengan itu, dengan mengingat rumus deret geometri, kita mempunyai
+\[
+H(t) = \prod_{i \ge 1} (1-x_i t)^{-1} .
+\]
+Kesamaan $H(t)E(-t)=1$ diperoleh langsung.
+Identitas yang diinginkan hanyalah koefisien $t^d$
+
+dalam kesamaan tersebut.
+\end{proof}
+\begin{proposition}[Identitas Newton] Untuk semua $d \ge 1$,
+\begin{align*}
+dh_d&=\sum_{i=1}^d p_i h_{d-i} \textrm{ dan} \\ 
+de_d&=\sum_{i=1}^d (-1)^{i-1} p_i e_{d-i}.
+\end{align*}
+
+\end{proposition}
+\begin{proof}
+Kita menghitung
+\begin{align*}
+\sum_{r \ge 1} p_r t^{r-1}
+&= \sum_{i \ge 1} \sum_{d \ge 0} x_i^d t^{d-1}
+= \sum_{i \ge 1} \frac{x_i}{1-x_it}\\
+&= \sum_{i \ge 1} \frac{d}{dt}\log\left(
+\left(1-x_i\right)^{-1}\right)
+= \frac{H'(t)}{H(t)} = \frac{E'(-t)}{E(-t)}
+\end{align*}
+kemudian identitasnya dibaca dari
+koefisien $t^d$ dalam $P(t)H(t)=H'(t)$
+
+dan $P(t)E(-t)=E'(-t)$.
+\end{proof}
+Untuk $\lambda=(\lambda_1,\lambda_2,\ldots,\lambda_r)$ kita mendefinisikan
+$e_\lambda = e_{\lambda_1}\cdot e_{\lambda_2} \cdots e_{\lambda_r}$,
+
+$h_\lambda = h_{\lambda_1}\cdot h_{\lambda_2} \cdots h_{\lambda_r}$, dan
+$p_\lambda = p_{\lambda_1}\cdot p_{\lambda_2} \cdots p_{\lambda_r}$.
+Ingat \emph{urutan parsial dominasi} pada partisi, dengan $\lambda \ge \mu$
+jika dan hanya jika
+$\lambda_1 + \cdots + \lambda_i \ge \mu_1 + \cdots \mu_i$
+untuk semua $i \ge 1$.
+
+(Perhatikan bahwa ini hanya urutan parsial; sebagai contoh, $(31^3)$ dan $(2^3)$
+tidak dapat dibandingkan.
+\begin{proposition} \label{prop:01matrix}
+Kita mempunyai
+\[
+e_\lambda = \sum_{\mu \vdash |\lambda|} M_{\lambda \mu} m_\mu
+\]
+dengan $M_{\lambda \mu}$ banyaknya matriks-$\{0,1\}$ yang jumlah barisnya
+berturut-turut $\lambda_1,\lambda_2,\ldots$ dan jumlah kolomnya
+berturut-turut $\mu_1,\mu_2,\ldots$.
+Selain itu, $M_{\lambda\mu} \ne 0$ jika dan hanya jika $\mu \le \lambda^\dag$
+
+dan $M_{\lambda\lambda^\dag}=1$.
+\end{proposition}
+\begin{proof}
+Kita hanya membuat sketsa argumennya.
+Kita meninjau suku-suku $e_\lambda$ dan $m_\mu$ dengan mengacu pada
+matriks berikut:
+\[
+X = \begin{pmatrix}
+x_1 & x_2 & x_3 & \cdots \\
+x_1 & x_2 & x_3 & \cdots \\
+x_1 & x_2 & x_3 & \cdots \\
+\vdots & \vdots & \vdots & \ddots
+\end{pmatrix}.
+\]
+Perhatikan bahwa setiap matriks-$\{0,1\}$ $Y$ menghasilkan monomial $x^\alpha$
+dengan mengambil hasil kali entri-entri $X$ yang bersesuaian dengan
+entri tak nol dari $Y$.
+Monomial dalam $e_\lambda$ dikonstruksi secara tunggal dengan
+mengambil hasil kali tepat $\lambda_1$ entri berbeda dari baris $1$,
+tepat $\lambda_2$ dari baris $2$, dan seterusnya.
+Monomial $x^\mu$ dikonstruksi dengan
+
+mengambil hasil kali tepat $\mu_1$ entri berbeda dari kolom $1$,
+tepat $\mu_2$ dari kolom $2$, dan seterusnya.
+Syarat pada $M_{\lambda\mu}$ kini diperoleh dengan mencari
+
+matriks-$\{0,1\}$ yang memenuhi kendala-kendala tertentu.
+\end{proof}
+Setelah memperhalus urutan parsial kita menjadi urutan total
+pada partisi, $M=\left(M_{\lambda\mu}\right)$ dapat dipandang sebagai
+matriks bilangan bulat tak hingga.
+
+Perhatikan bahwa $M_{\lambda\mu^\dag}$ berbentuk segitiga dengan $1$ pada diagonal.
+Jadi $M$ dapat dibalik dan kita memperoleh korolari penting berikut:
+\begin{corollary}[Teorema Dasar Fungsi Simetris]
+Terdapat kesamaan gelanggang
+\[\mathsf{SF} = \mathbb{Z}[e_1,e_2,\ldots] \]
+
+dengan $e_1,e_2,\ldots$ bebas secara aljabar.
+\end{corollary}
+\begin{exercise}
+Carilah analog Proposisi~\ref{prop:01matrix} untuk $h_\lambda$
+dengan memakai matriks-$\mathbb{N}$ alih-alih matriks-$\{0,1\}$.
+Simpulkan bahwa 
+$\mathsf{SF} = \mathbb{Z}[h_1,h_2,\ldots]$
+
+dengan $h_1,h_2,\ldots$ bebas secara aljabar.
+\end{exercise}
+\begin{exercise}
+Gunakan identitas Newton untuk menunjukkan bahwa 
+$\mathsf{SF} \otimes_{\mathbb{Z}} \mathbb{Q} \cong \mathbb{Q}[p_1,p_2,\ldots]$
+
+dengan $p_1,p_2,\ldots$ bebas secara aljabar.
+\end{exercise}
+\begin{example}
+\[
+\begin{pmatrix} e_{11}\\ e_2\\ e_{111}\\ e_{21}\\ e_3\\
+e_{1111}\\ e_{211} \\ e_{22}\\ e_{31}\\ e_4
+\end{pmatrix}
+=
+\begin{pmatrix}
+2 & 1 &
+ & & &
+& & & & \\
+1 & &
+ & & &
+& & & & \\
+ & &
+6 & 3 & 1 &
+& & & & \\
+ & &
+3 & 1 & &
+& & & & \\
+ & &
+1 & & &
+& & & & \\
+ & &
+ & & &
+24 & 12 & 6 & 4 & 1 \\
+ & &
+ & & &
+12 & 5 & 2 & 1 & \\
+ & &
+ & & &
+6 & 2 & 1 & & \\
+ & &
+ & & &
+4 & 1 & & & \\
+ & &
+ & & &
+1 & & & &
+\end{pmatrix} 
+\begin{pmatrix} m_{11}\\ m_2\\ m_{111}\\ m_{21}\\ m_3\\
+m_{1111}\\ m_{211} \\ m_{22}\\ m_{31}\\ m_4
+\end{pmatrix}
+\]
+
+\end{example}
+\begin{example}
+\[
+\begin{pmatrix} h_{11}\\ h_2\\ h_{111}\\ h_{21}\\ h_3\\
+h_{1111}\\ h_{211} \\ h_{22}\\ h_{31}\\ h_4
+\end{pmatrix}
+=
+\begin{pmatrix}
+2 & 1 &
+ & & &
+& & & & \\
+1 & 1 &
+ & & &
+& & & & \\
+ & &
+6 & 3 & 1 &
+& & & & \\
+ & &
+3 & 2 & 1 &
+& & & & \\
+ & &
+1 & 1 & 1 &
+& & & & \\
+ & &
+ & & &
+24 & 12 & 6 & 4 & 1 \\
+ & &
+ & & &
+12 & 7 & 4 & 3 & 1 \\
+ & &
+ & & &
+6 & 4 & 3 & 2 & 1 \\
+ & &
+ & & &
+4 & 3 & 2 & 2 & 1 \\
+ & &
+ & & &
+1 & 1 & 1 & 1 & 1
+\end{pmatrix} 
+\begin{pmatrix} m_{11}\\ m_2\\ m_{111}\\ m_{21}\\ m_3\\
+m_{1111}\\ m_{211} \\ m_{22}\\ m_{31}\\ m_4
+\end{pmatrix}
+\]
+
+\end{example}
+\begin{example}
+\[
+\begin{pmatrix} e_{11}\\ e_2\\ e_{111}\\ e_{21}\\ e_3\\
+e_{1111}\\ e_{211} \\ e_{22}\\ e_{31}\\ e_4
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & &
+ & & &
+& & & & \\
+\frac{1}{2} & -\frac{1}{2} &
+ & & &
+& & & & \\
+ & &
+1 & & &
+& & & & \\
+ & &
+\frac{1}{2} & -\frac{1}{2} &  &
+& & & & \\
+ & &
+\frac{1}{6} & -\frac{1}{2} & \frac{1}{3} &
+& & & & \\
+ & &
+ & & &
+1 & & & & \\
+ & &
+ & & &
+\frac{1}{2} & -\frac{1}{2} & & & \\
+ & &
+ & & &
+\frac{1}{4} & -\frac{1}{2} & \frac{1}{4} & & \\
+ & &
+ & & &
+\frac{1}{6} & -\frac{1}{2} & & \frac{1}{3} & \\
+ & &
+ & & &
+\frac{1}{24} & -\frac{1}{4} & \frac{1}{8} & \frac{1}{3} & -\frac{1}{4}
+\end{pmatrix} 
+\begin{pmatrix}
+p_{11}\\ p_2\\ p_{111}\\ p_{21}\\ p_3\\
+p_{1111}\\ p_{211} \\ p_{22}\\ p_{31}\\ p_4
+\end{pmatrix}
+\]
+
+
+\end{example}
+\subsection{Tableau Young}
+Sekarang kita berikan interpretasi kombinatorial bagi fungsi Schur
+dan bilangan Kostka.
+Suatu \emph{tableau Young semistandar $T$ berbentuk $\lambda$}
+adalah diagram Young dari partisi $\lambda$ yang kotak-kotaknya diisi
+bilangan bulat positif yang meningkat lemah pada setiap baris
+dan meningkat ketat pada setiap kolom.
+\emph{Tipe} atau \emph{isi} $\alpha$ dari tableau Young semistandar
+$T$ adalah barisan
+$(\alpha_1,\alpha_2,\ldots)$ bilangan bulat tak negatif
+dengan $\alpha_i$ banyaknya kotak yang berisi $i$.
+Untuk tableau Young semistandar $T$ bertipe $\alpha$,
+kita mempunyai monomial
+\[
+x^T = x_1^{\alpha_1}x_2^{\alpha_2} \cdots .
+\]
+
+\begin{example}
+Berikut adalah tableau Young berbentuk $422$
+dan bertipe $(2,3,0,1,2)$:
+\begin{center}
+\begin{ytableau}
+1 & 1 & 2 & 5 \\
+2 & 2 \\
+4 & 5
+\end{ytableau}
+\end{center}
+
+Monomial yang bersesuaian adalah $x^T=x_1^2x_2^3x_4x_5^2$.
+\end{example}
+Hasil berikut dipakai sebagai \emph{definisi} fungsi Schur dalam
+
+\cite{Stanley2}; kesesuaiannya dengan definisi klasik
+di atas diberikan oleh \cite[Theorem 7.15.2]{Stanley2}.
+\begin{theorem}
+Jika $\lambda$ suatu partisi, maka
+\[
+s_\lambda = \sum_{T} x^T
+\]
+dengan jumlah diambil atas semua tableau Young semistandar berbentuk
+$\lambda$.
+Khususnya, $K_{\lambda \mu}$ adalah banyaknya tableau Young semistandar
+
+berbentuk $\lambda$ dan bertipe $\mu$.
+\end{theorem}
+
+Berbagai sifat bilangan Kostka lebih mudah diperiksa
+dengan definisi ini:
+\begin{exercise}
+Untuk partisi $\lambda, \mu$, berlaku
+$K_{\lambda \mu}=0$, kecuali jika $\mu \le \lambda$ dalam urutan dominasi.
+
+Selain itu, $K_{\lambda \lambda}=1$.
+\end{exercise}
+Bahkan, hampir semua matriks transisi dari
+$\mathsf{SF}$ dapat dipahami melalui bilangan Kostka
+(lihat \cite[\S{I.6}]{Macdonald} untuk pembahasan lengkap).
+Beberapa contoh penting:
+\begin{align*}
+s_\lambda &= \sum_{\mu} K_{\lambda \mu} m_\mu\\
+h_\lambda &= \sum_{\mu} K_{\mu\lambda} s_\mu\\
+e_\lambda &= \sum_{\mu} K_{\mu^\dag\lambda} s_\mu.
+\end{align*}
+
+Untuk partisi $\lambda \vdash n$, bilangan Kostka khusus
+$f^\lambda = K_{\lambda(1)^n}$ sangat penting.
+Tepatnya, $f^\lambda$ menghitung banyaknya \emph{tableau Young standar}
+yang kotak-kotaknya masing-masing memuat bilangan dalam $\{1,\ldots,n\}$ tepat sekali
+(dan tetap meningkat sepanjang baris dan kolom).
+Untuk kotak ke-$(i,j)$ dari diagram Young, misalkan \emph{panjang kait}
+
+$h(i,j)$ menghitung banyaknya kotak yang terletak tepat di bawah dan tepat
+di kanan kotak $(i,j)$, beserta kotak itu sendiri.
+\begin{theorem}[Rumus Panjang Kait] \label{thm:hook_length}
+$f^\lambda = \frac{n!}{\prod h(i,j)}$
+
+dengan hasil kali diambil atas semua kotak diagram Young dari $\lambda$.
+\end{theorem}
+\begin{example}
+Tinjau partisi $\lambda = (4,3,2)$.
+Kita mengisi setiap kotak diagram Young dengan panjang kaitnya:
+\begin{center}
+\begin{ytableau}
+6 & 5 & 3 & 1 \\
+4 & 3 & 1 \\
+2 & 1
+\end{ytableau}
+\end{center}
+Jadi,
+\[
+f^\lambda = \frac{9!}{6\cdot 5 \cdot 4 \cdot 3 \cdot 3 \cdot 2}
+= 168
+\]
+
+dalam kasus ini.
+\end{example}
+Perubahan basis antara jumlah pangkat dan fungsi Schur
+
+sangat menarik bagi teori representasi grup simetrik,
+seperti akan segera kita lihat.
+\begin{example} \label{ex:transSP}
+\[
+\begin{pmatrix}
+p_{11}\\ p_2\\ p_{111}\\ p_{21}\\ p_3\\
+p_{1111}\\ p_{211} \\ p_{22}\\ p_{31}\\ p_4
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 1 &
+ & & &
+& & & & \\
+-1 & 1 &
+ & & &
+& & & & \\
+ & &
+1 & 2 & 1 &
+& & & & \\
+ & &
+-1 & 0 & 1 &
+& & & & \\
+ & &
+1 & -1 & 1 &
+& & & & \\
+ & &
+ & & &
+1 & 3 & 2 & 3 & 1 \\
+ & &
+ & & &
+-1 & -1 & 0 & 1 & 1 \\
+ & &
+ & & &
+1 & -1 & 2 & -1 & 1 \\
+ & &
+ & & &
+1 & 0 & -1 & 0 & 1 \\
+ & &
+ & & &
+-1 & 1 & 0 & -1 & 1
+\end{pmatrix} 
+\begin{pmatrix} s_{11}\\ s_2\\ s_{111}\\ s_{21}\\ s_3\\
+s_{1111}\\ s_{211} \\ s_{22}\\ s_{31}\\ s_4
+\end{pmatrix}
+\]
+
+
+\end{example}
+Kita menyebutkan beberapa konstruksi berguna lainnya (tanpa bukti)
+
+yang semoga mendorong pembaca untuk
+mendalami \cite{Macdonald} dan \cite{Stanley2}.
+\emph{Hasil kali dalam Hall} adalah bentuk bilinear simetris
+definit positif tunggal $(-,-)$ pada $\mathsf{SF}$ yang memenuhi
+\begin{align*}
+( s_\lambda, s_\mu ) &= \delta_{\lambda \mu},\\
+( h_\lambda, m_\mu ) &= \delta_{\lambda \mu}, \textrm{ dan}\\
+( p_\lambda, p_\mu ) &= z_\lambda \delta_{\lambda \mu}
+\end{align*}
+
+untuk semua partisi $\lambda, \mu$.
+Salah satu akibat Teorema Dasar adalah adanya isomorfisme
+gelanggang
+\[
+\omega : \mathsf{SF} \to \mathsf{SF}
+\]
+yang diberikan oleh $\omega(e_\lambda)=h_\lambda$ untuk setiap partisi $\lambda$.
+Berdasarkan Proposisi~\ref{prop:fund_rel}, kita juga mempunyai
+$\omega(h_\lambda)=e_\lambda$.
+Dengan sedikit usaha tambahan, dapat ditunjukkan bahwa
+$\omega(p_\lambda)=\epsilon_\lambda p_\lambda$
+dan
+$\omega(s_\lambda)=s_{\lambda^\dag}$.
+Pengamatan terakhir ini menunjukkan bahwa $\omega$ adalah isometri
+terhadap hasil kali dalam Hall:
+$( \omega(f), \omega(g) ) = (f, g)$ untuk
+
+semua $f,g \in \mathsf{SF}$.
+
+\section{Representasi Grup Simetrik}
+Misalkan $S_n$ grup simetrik pada $n$ huruf.
+Ingat bahwa kelas-kelas konjugasi dari $S_n$ berkorespondensi bijektif dengan
+partisi dari $n$ melalui tipe siklusnya.
+Untuk partisi $\lambda \vdash n$ dan fungsi kelas
+$f \in C(S_n)$, kita mendefinisikan $f(\lambda):=f(\sigma)$, dengan
+$\sigma \in S_n$ sembarang permutasi bertipe siklus $\lambda$.
+Misalkan $\chi_\lambda \in C(S_n)$ menyatakan fungsi karakteristik
+\[
+\chi_\lambda(\sigma) :=
+\begin{cases}
+1 & \textrm{jika $\sigma$ mempunyai tipe siklus $\lambda$,}\\
+0 & \textrm{selainnya.}\\
+\end{cases}
+\]
+
+\begin{theorem}
+Terdapat isomorfisme grup isometrik
+\[
+\operatorname{ch} : R(S_n) \to \mathsf{SF}^n,
+\]
+yang disebut \emph{pemetaan karakteristik}, dan didefinisikan oleh
+\[
+\operatorname{ch}(f) :=
+\sum_{\lambda \vdash n} \frac{f(\lambda)}{z_\lambda} p_{\lambda}.
+\]
+Jika dipandang sebagai fungsi kelas, nilai $f \in R(S_n)$
+dapat dihitung melalui
+\[
+f(\lambda) = ( \operatorname{ch}(f), p_\lambda ).
+\]
+Fungsi karakteristik $\chi_\lambda \in C(S_n)$
+bersesuaian dengan $\frac{p_{\lambda}}{z_\lambda}$ dalam
+$\mathsf{SF}^n_{\mathbb{Q}}$.
+Karakter tak tereduksi dalam $R(S_n)$
+tepat merupakan $\chi^\lambda := \operatorname{chi}(s_\lambda)$
+untuk $\lambda \vdash n$.
+Karakter trivial $\chi^{(n)}$ bersesuaian dengan $h_n=s_n$, dan
+karakter tanda $\chi^{(1^n)}$ bersesuaian dengan $e_n=s_{(1)^n}$.
+Involusi $\omega : \mathsf{SF}^n \to \mathsf{SF}^n$
+bersesuaian dengan operasi tensor oleh karakter tanda.
+
+\end{theorem}
+\begin{proof}
+Kita hanya menunjukkan beberapa fakta menarik yang mudah dilihat.
+Pertama, kita mendefinisikan \emph{pemetaan karakteristik}
+$\operatorname{ch} : C(S_n) \to
+\mathsf{SF}^n \otimes_{\mathbb{Z}} \mathbb{C}$,
+karena belum jelas bahwa citra $R(S_n)$ bahkan
+termuat dalam $\mathsf{SF}^n$.
+Dengan mengingat $(p_\lambda,p_\mu)=z_\lambda \delta_{\mu \lambda}$, rumus
+\[
+f(\lambda) = ( \operatorname{ch}(f), p_\lambda )
+\]
+langsung diperoleh. Ini menunjukkan bahwa $\operatorname{ch}$ bijektif
+(pada ruang vektor kompleks).
+
+Korespondensi antara
+$\chi_\lambda$ dan $\frac{p_{\lambda}}{z_\lambda}$
+kini mengikuti dari pengamatan bahwa
+\[
+\chi_\lambda(\mu) = \delta_{\lambda \mu} =
+\left(\frac{p_{\lambda}}{z_\lambda}, p_\mu\right)
+\]
+untuk semua $\lambda$ dan $\mu$.
+
+Sekarang, ingat bahwa banyaknya elemen dalam $S_n$ bertipe siklus
+$\lambda$ diberikan oleh $\frac{n!}{z_\lambda}$. Jadi
+\[
+(\chi_\lambda, \chi_\mu) =
+\begin{cases}
+\frac{1}{z_\lambda} & \textrm{jika $\lambda=\mu$,}\\
+0 & \textrm{selainnya.}\\
+\end{cases}
+\]
+Namun, ini tepat sama dengan $(p_\lambda,p_\mu)$,
+sehingga $\operatorname{ch}$ adalah isometri.
+
+Kita tidak menyertakan bukti pernyataan-pernyataan sisanya
+(lihat \cite[\S{I.7}]{Macdonald} atau \cite[\S{7.18}]{Stanley2}).
+\end{proof}
+
+Korolari langsung dari teorema di atas adalah bahwa
+tabel karakter $S_n$ tepat sama dengan
+matriks perubahan basis antara $\{ p_\lambda \}$
+dan $\{ s_\lambda \}$ dalam $\mathsf{SF}_n$.
+Jika entri-entri tabel karakter $S_n$ dinotasikan
+$\chi_\mu^\lambda$, maka
+\[
+\chi_\lambda = \sum_{\mu} \chi_\lambda^\mu \chi^\mu
+\]
+ekuivalen dengan
+\[
+p_\lambda = \sum_{\mu} \chi_\lambda^\mu s_\mu .
+\]
+Kini dapat dilihat bahwa entri-entri matriks pada Contoh~\ref{ex:transSP}
+tepat merupakan entri-entri tabel karakter untuk $S_2$, $S_3$, dan
+$S_4$.
+
+\begin{definition}
+Representasi tak tereduksi $V_\lambda$ dari $S_n$ yang bersesuaian dengan
+$\chi^\lambda$ adalah \emph{modul Specht} yang terkait dengan $\lambda$.
+\end{definition}
+
+\begin{proposition}
+$\displaystyle \dim_{\mathbb{C}} V_\lambda = f^\lambda
+=\frac{n!}{\prod h(i,j)}$
+\end{proposition}
+
+\begin{proof}
+Jika $f \in R(S_n)$ adalah karakter dari $V_\lambda$,
+maka evaluasi pada identitas memberikan
+\[
+f(e)=f(1^d)= ( \operatorname{ch}(f), p_{(1^d)} )
+= (s_\lambda, h_{(1^d)}) = K_{\lambda(1)^f}=f^\lambda.
+\]
+Sekarang gunakan Teorema~\ref{thm:hook_length}.
+\end{proof}
+
+Dengan mendefinisikan grup bergradasi
+\[
+R(S_\ast) := \bigoplus_{n \ge 0} R(S_n)
+\]
+kita memperoleh pemetaan karakteristik
+\[
+\operatorname{ch} : R(S_\ast) \to \mathsf{SF}
+\]
+dengan menjumlahkan komponen-komponen bergradasi.
+Namun, perkalian yang sudah ada pada setiap $R(S_n)$
+\emph{tidak} bersesuaian dengan perkalian pada $\mathsf{SF}$.
+Kita mendefinisikan perkalian pada $R(S_\ast)$ yang menjadikan
+$\operatorname{ch}$ suatu isomorfisme gelanggang bergradasi.
+
+Terdapat pembenaman alami $S_n \times S_m \hookrightarrow S_{n+m}$;
+ada banyak cara melakukannya, tetapi semuanya saling konjugat.
+Untuk representasi $\rho$ dari $S_n$, kita memperoleh representasi
+$\widetilde{\rho}$ dari $S_n \times S_m$ dari $\rho$ melalui prakomposisi
+dengan proyeksi pertama. Serupa dengan itu, dari representasi $\sigma$
+dari $S_m$, kita memperoleh representasi $\widetilde{\sigma}$ dari
+$S_n \times S_m$.
+
+Misalkan $R(S_n)$ adalah gelanggang representasi grup simetrik $S_n$. 
+Kita mendefinisikan perkalian bilinear
+\[ \boxtimes : R(S_n) \times R(S_m) \to R(S_{n+m}) \]
+melalui
+\[
+\rho \boxtimes \sigma := \operatorname{Ind}_{S_n \times S_m}^{S_{n+m}}
+(\widetilde{\rho} \otimes \widetilde{\sigma}).
+\]
+Ini menjadikan $R(S_\ast)$ gelanggang komutatif bergradasi,
+dan $\operatorname{ch}$ merupakan isomorfisme gelanggang bergradasi.
+
+\subsection{Deskripsi Eksplisit Modul Specht}
+
+Modul Specht juga dapat dideskripsikan tanpa
+mengacu pada fungsi simetris
+(lihat \cite[\S{4}]{FultonHarris} dan \cite[\S{5.11-17}]{Etingof}).
+
+Di sini kita benar-benar mengonstruksi setiap modul Specht $V_\lambda$
+sebagai subrepresentasi dari representasi reguler $S_n$.
+Perhatikan bahwa komponen isotipik yang terkait dengan $V_\lambda$ biasanya mempunyai
+multiplisitas lebih besar dari $1$, sehingga wajar jika konstruksinya
+bergantung pada pilihan sembarang.
+
+\begin{definition}
+Suatu \emph{tableau Young} $T$ adalah diagram Young untuk partisi $\lambda$
+dari $n$, dengan setiap bilangan dalam $\{1,\ldots,n\}$ ditempatkan pada tepat satu
+kotak. (Perhatikan bahwa ini bukan kasus khusus maupun perumuman
+dari tableau Young standar dan semistandar yang dibahas di atas.)
+Untuk tableau Young $T$, kita mendefinisikan $P_T$ sebagai
+subgrup dari $S_n$ yang hanya mempermutasikan bilangan-bilangan dalam setiap baris $T$
+dan $Q_T$ sebagai subgrup yang hanya mempermutasikan bilangan-bilangan dalam setiap
+kolom $T$.  
+\end{definition}
+
+\begin{example}
+Berikut adalah tableau Young untuk partisi $322$:
+\begin{center}
+\begin{ytableau}
+3 & 1 & 5 \\
+6 & 2 \\
+4 & 7
+\end{ytableau}
+\end{center}
+Kita mempunyai
+\[
+P_T = S_{\{1,3,5\}} \times S_{\{2,6\}} \times S_{\{4,7\}}
+\textrm{ dan }
+Q_T = S_{\{3,4,6\}} \times S_{\{1,2,7\}}
+\]
+dengan $S_X$ grup permutasi dari himpunan $X$. 
+\end{example}
+
+Jika $\lambda = (\lambda_1,\ldots,\lambda_r)$ suatu partisi,
+definisikan $S_\lambda := S_{\lambda_1} \times \cdots \times S_{\lambda_r}$.
+Perhatikan bahwa $P_T \cong S_\lambda$
+dan $Q_T \cong S_{\lambda^\dag}$.
+Subgrup $P_T$ dan $Q_T$ bergantung pada pilihan tableau $T$, tetapi
+kelas konjugasinya hanya bergantung pada partisi yang bersesuaian,
+$\lambda$.
+
+Untuk tableau Young $T$ dan representasi $W$ dari $S_n$,
+definisikan \emph{proyektor Young}:
+\[
+a_T := \frac{1}{|P_T|}\sum_{\sigma \in P_T} \sigma
+\textrm{ dan }
+b_T := \frac{1}{|Q_T|}\sum_{\sigma \in Q_T} \epsilon(\sigma)\sigma
+\]
+yang mudah dilihat sebagai proyeksi dalam $\operatorname{End}(W)$.
+\emph{Penyimetris Young} adalah endomorfisme $c_T = a_T \circ b_T$.
+Dapat diperiksa bahwa $c_T = b_T \circ a_T$.
+
+\begin{theorem}
+Andaikan $\lambda$ partisi dari $n$.
+Jika $V_{reg}$ adalah representasi reguler dan $T$ suatu tableau Young
+untuk $\lambda$, maka citra $c_T(V_{reg})$ isomorfik dengan
+modul Specht $V_\lambda$.
+\end{theorem}
+
+\begin{proof}
+Kita hanya membuat sketsanya.
+Pertama, misalkan $U_T = a_T(V_{reg})$ dan $W_T = b_T(V_{reg})$.
+Kita mengamati bahwa
+\[
+U_T \cong \operatorname{Ind}_{P_T}^{S_n} 1_{P_T}
+\]
+dan
+\[
+W_T \cong \operatorname{Ind}_{Q_T}^{S_n} \epsilon_{Q_T}
+\]
+dengan $1_{P_T}$ representasi trivial dan $\epsilon_{Q_T}$ representasi
+tanda.
+Dengan kata lain, karakteristik $U_T$ adalah
+\[
+\operatorname{ch}(1 \boxtimes \cdots \boxtimes 1)
+= h_{\lambda_1} \cdots h_{\lambda_r} = h_\lambda,
+\]
+sedangkan karakteristik $W_T$ adalah
+\[
+\operatorname{ch}(\epsilon \boxtimes \cdots \boxtimes \epsilon)
+= e_{\lambda^\dag_1} \cdots e_{\lambda^\dag_r} = e_{\lambda^\dag}.
+\]
+Dengan menuliskan $h_\lambda$ dan $e_{\lambda^\dag}$ dalam basis Schur,
+kita melihat bahwa $s_\lambda$ adalah satu-satunya vektor basis dengan entri tak nol
+pada keduanya.
+Selain itu, $(s_\lambda,h_\lambda)=(s_\lambda,e_{\lambda^\dag})=1$.
+Jadi citra $c_T = a_T \circ b_T$ isomorfik dengan modul Specht
+$V_\lambda$, asalkan citranya tak nol.
+
+Misalkan $\{ v_\sigma \}_{\sigma \in S_n}$ adalah basis standar bagi representasi
+reguler $V_{reg}$.
+Kita mempunyai deskripsi konkret
+\[
+c_T(v_{1})  = \frac{1}{|P_T| |Q_T|}\sum_{\sigma \in P_T}\sum_{\tau \in Q_T}
+\epsilon(\tau) v_{\sigma\tau} .
+\]
+Karena $P_T \cap Q_T = \{1\}$, semua $v_{\sigma\tau}$ berbeda.
+Jadi $c_T \ne 0$ sebagaimana diinginkan.
+\end{proof}
+
+\section{Representasi dari $\operatorname{GL}(V)$}
+
+Funktor Schur dideskripsikan secara langsung dalam
+\cite[\S{6}]{FultonHarris} dan \cite[\S{5.19,5.20-23}]{Etingof}.
+Uraian yang sedikit lebih canggih dapat ditemukan dalam
+\cite[Appendix 7.2]{Stanley2} dan \cite[Appendix I.A]{Macdonald}.
+
+\begin{definition}
+Untuk ruang vektor kompleks berdimensi $n$ yang dinotasikan $V$,
+suatu \emph{representasi polinomial} (berturut-turut, \emph{representasi rasional}) dari
+$\operatorname{GL}(V)$ adalah representasi
+\[
+\rho : \operatorname{GL}(V) \to \operatorname{GL}_N(\mathbb{C})
+\]
+dengan entri-entri $\rho(g)$ merupakan fungsi polinomial (berturut-turut, rasional)
+dari entri-entri $g$.
+\end{definition}
+
+\begin{remark}
+Bagi pembaca yang mengenal geometri aljabar,
+representasi rasional merupakan pemetaan rasional pada gelanggang matriks
+yang memuatnya, $\mathbb{C}^{n^2}$, tetapi bersifat reguler pada himpunan terbuka
+$\operatorname{GL}_n(\mathbb{C})$.
+Representasi polinomial bersifat reguler pada seluruh
+$\mathbb{C}^{n^2}$.
+Perlu berhati-hati: sebagian penulis memakai ``representasi polinomial'' sebagai sinonim
+representasi rasional.
+\end{remark}
+
+\begin{example}
+Jika $V = \mathbb{C}^2$, maka $\mathcal{S}^2(V) \cong \mathbb{C}^3$
+mempunyai aksi alami $\operatorname{GL}(V)$.
+Memang, dengan memilih basis $\{x,y\}$ bagi $V$ dan $\{x^2,xy,y^2\}$
+bagi $\mathcal{S}^2(V)$, kita memperoleh representasi
+$\rho : \operatorname{GL}_2(k) \to \operatorname{GL}_3(k)$
+dengan
+\[
+\rho
+\begin{pmatrix} a & b \\ c & d \end{pmatrix}
+=
+\begin{pmatrix}
+a^2 & 2ab & b^2\\
+ac & ad+bc & bd\\
+c^2 & 2cd & d^2
+\end{pmatrix} 
+\]
+sebagai deskripsi eksplisit.
+\end{example}
+
+\begin{example}
+Jika $V$ berdimensi $n$, ingat bahwa $\Lambda^n(V)$ berdimensi $1$.
+Representasi alami
+$\rho: \operatorname{GL}(V) \to \operatorname{GL}(\Lambda^n(V)) \cong k$
+adalah determinan.
+\end{example}
+
+Secara lebih umum, $\mathcal{S}^k(V)$ dan $\Lambda^k(V)$
+mempunyai aksi kanonik $\operatorname{GL}(V)$ untuk semua $k \ge 0$.
+
+\begin{example}
+Tinjau representasi
+$\rho : \operatorname{GL}_1(\mathbb{C}) \to
+\operatorname{GL}_1(\mathbb{C})$
+yang diberikan oleh
+\[
+\rho(z) = \frac{z}{|z|} .
+\]
+Representasi ini bukan representasi polinomial maupun rasional.
+\end{example}
+
+\begin{example}
+\emph{Representasi dual} $V^\vee$ dari $V$ adalah aksi alami
+$\operatorname{GL}(V)$ pada $V^\vee$.
+Dengan memilih suatu basis beserta basis dualnya,
+representasi dual bersesuaian dengan mengambil invers transpos
+$(A^T)^{-1}$
+dari matriks $A$.
+Ini bukan representasi polinomial karena entri-entri $(A^T)^{-1}$ mempunyai
+penyebut.
+Namun, ingat bahwa matriks invers $A^{-1}$ berbentuk
+$\det(A)\operatorname{adj}(A)$ dengan
+$\operatorname{adj}(A)$ adalah \emph{matriks adjoin}.
+Entri-entri matriks adjoin merupakan fungsi polinomial dari
+entri-entri matriks semula.
+Karena $(A^T)^{-1}=\operatorname{adj}(A)^T \det(A)^{-1}$,
+kita menyimpulkan bahwa $V^\vee$ adalah representasi rasional.
+\end{example}
+
+Untungnya, perbedaan antara representasi polinomial dan rasional
+mudah dikarakterisasi. Memang, penyebut yang muncul
+dalam fungsi rasional hanya dapat berupa pangkat determinan; jika tidak,
+representasinya tidak terdefinisi di setiap titik
+$\operatorname{GL}(V)$.
+
+\begin{proposition}
+Jika $\rho$ representasi rasional dari $\operatorname{GL}(V)$,
+maka terdapat bilangan bulat tak negatif minimal tunggal $m$
+dan representasi polinomial tunggal $\sigma$
+sedemikian sehingga
+berlaku
+\[
+\rho(g) = \frac{\sigma(g)}{\det(g)^m}
+\]
+untuk semua $g \in \operatorname{GL}(V)$. 
+\end{proposition}
+
+Untuk ruang vektor kompleks berdimensi $n$ yang dinotasikan $V$,
+ingat bahwa terdapat aksi alami $S_d$ pada pangkat tensor
+$V^{\otimes d}$ yang memenuhi
+\[
+\sigma(v_1 \otimes \cdots \otimes v_d) =
+\sigma(v_{\sigma^{-1}(1)} \otimes \cdots \otimes v_{\sigma^{-1}(d)})
+\]
+untuk $\sigma \in S_d$.
+Terdapat pula aksi ``diagonal'' alami dari $\operatorname{GL}_n(V)$
+pada $V^{\otimes d}$ yang memenuhi
+\[
+g(v_1 \otimes \cdots \otimes v_d) = g(v_1) \otimes \cdots \otimes g(v_d)
+\]
+untuk semua $g \in \operatorname{GL}(V)$.
+Kedua aksi ini jelas komutatif, sehingga kita memperoleh aksi
+$S_d \times \operatorname{GL}(V)$ pada $V^{\otimes d}$.
+
+\begin{definition}
+Untuk partisi $\lambda \vdash d$, kita
+mempunyai \emph{funktor Schur} $\mathbb{S}_\lambda$,
+yang memetakan ruang vektor $W$ ke
+representasi-$\operatorname{GL}(W)$ berikut:
+\[
+\mathbb{S}_\lambda(W) :=
+\operatorname{Hom}^{S_d}_{\mathbb{C}}(V_\lambda,W^{\otimes d}) \ .
+\]
+\end{definition}
+
+\begin{remark}
+Bagi pembaca yang mengenal teori kategori,
+setiap funktor Schur $\mathbb{S}_\lambda$ adalah funktor kovarian
+dari kategori ruang vektor berdimensi hingga ke dirinya sendiri.
+Ini menyiratkan bahwa jika $f : W \to U$ suatu pemetaan linear,
+maka kita juga mempunyai pemetaan linear
+\[
+\mathbb{S}_\lambda(f) : \mathbb{S}_\lambda(W) \to \mathbb{S}_\lambda(U).
+\]
+Fakta bahwa objek-objek ini merupakan representasi $\operatorname{GL}(W)$ dapat
+dipandang sebagai akibat langsung dari sifatnya sebagai funktor.
+(Khususnya, funktor Schur dapat didefinisikan untuk
+kategori tensor yang lebih umum.)
+\end{remark}
+
+\begin{theorem}[Schur--Weyl]
+Misalkan $W$ ruang vektor kompleks berdimensi $n$
+dan misalkan $d \ge 0$.
+Sebagai representasi-$S_d \times \operatorname{GL}(W)$, terdapat
+dekomposisi kanonik
+\[
+W^{\otimes d} =
+\bigoplus_{\substack{\lambda \vdash d\\ \ell(\lambda) \le n}}
+V_\lambda \otimes \mathbb{S}_\lambda(W)
+\]
+dengan $V_\lambda$ modul Specht dari $\lambda$, dan setiap
+\[
+\mathbb{S}_\lambda(W) :=
+\operatorname{Hom}^{S_d}_{\mathbb{C}}(V_\lambda,W^{\otimes d})
+\]
+merupakan representasi tak tereduksi dari $\operatorname{GL}(W)$.
+\end{theorem}
+
+\begin{theorem}
+Kelas isomorfisme semua representasi \emph{polinomial}
+tak tereduksi
+dari $\operatorname{GL}(W)$ tepat merupakan $\mathbb{S}_\lambda(W)$
+dengan $\ell(\lambda) \le d$.
+Selain itu, jika $g \in \operatorname{GL}(W)$ mempunyai nilai-nilai eigen
+$\alpha_1,\ldots, \alpha_n$, maka
+\[
+\operatorname{tr}(\mathbb{S}_\lambda(g)) = s_\lambda(\alpha_1,\alpha_2,\cdots,
+\alpha_n,0,0,\cdots)
+\]
+sehingga $s_\lambda$ adalah karakter dari $\mathbb{S}_\lambda$.
+\end{theorem}
+
+Dengan mengevaluasi $\mathbb{S}_\lambda$ pada identitas, kita dapat menentukan
+dimensi representasi tak tereduksi yang diperoleh dari funktor
+Schur.
+
+\begin{corollary}[Rumus Dimensi Weyl]
+Jika $W$ ruang vektor berdimensi $n$ dan $\lambda$ suatu partisi.
+Jika $\ell(\lambda) \le n$, maka
+\[
+\dim\ \mathbb{S}_\lambda(W) = s_\lambda(1,1,\ldots,1,0,\ldots)
+= \prod_{1 \le i < j \le n} \frac{\lambda_i-\lambda_j +  j - i}{j-i}.
+\]
+Jika $\ell(\lambda) > n$, maka $\dim\ \mathbb{S}_\lambda(W) = 0$.
+\end{corollary}
+
+\begin{example}
+Karena $V_{(d)}$ adalah representasi trivial dari $S_d$,
+kita memperoleh
+\[
+\mathbb{S}_{(d)}(W) = \operatorname{Hom}^{S_d}_{\mathbb{C}}(\mathbb{C},W^{\otimes d})
+\cong \operatorname{Sym}^d(W) \cong \mathcal{S}^d(W) .
+\]
+\end{example}
+
+\begin{example}
+Karena $V_{(1^d)}$ adalah representasi tanda dari $S_d$, yakni $\epsilon$,
+kita memperoleh
+\[
+\mathbb{S}_{(1^d)}(W)L = \operatorname{Hom}^{S_d}_{\mathbb{C}}(\epsilon,W^{\otimes d})
+\cong \operatorname{Alt}^d(W) \cong \Lambda^d(W) .
+\]
+Perhatikan bahwa $\mathbb{S}_{(1^d)}(W)=0$ ketika $\dim(W) > d$.
+\end{example}
+
+\bibliographystyle{alpha}
+\bibliography{rep_theory}
+
+\end{document}
+
+

@@ -1,0 +1,15 @@
+surface_id,order,kind,path,role,required,generated,bytes,sha256
+surface.driver,1,tex-driver,repo/components/duncan/support/duncan-complete-id.tex,integrated document entry point,true,false,3428,ac5c2cad0c71f5b8955fcc93368bd74998e21247eea85060fd39e8088db88438
+surface.preamble,2,tex-preamble,repo/components/duncan/support/duncan-id-preamble.tex,"shared locale, theorem, provenance, and bibliography configuration",true,false,3083,ead14fd2fcc306bdd6f227383b344ebada182349e53add09c5da2707d6cd1154
+surface.bibliography,3,bib-database,repo/components/duncan/source/rep_theory.bib,shared bibliography resolved by Biber,true,false,7241,1078825737921942c615450f0ef77610ac81475f777869acb26245ea4d18e439
+surface.license,4,license,repo/components/duncan/support/DUNCAN-LICENSE-CC-BY-4.0.txt,CC BY 4.0 license text,true,false,18657,9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411
+surface.readme,5,provenance-readme,repo/components/duncan/support/DUNCAN-SOURCE-README.md,source attribution and component notes,true,false,121,14547eb8d9700bb11c062e86ef61af6322a0b5783541c84115714b316d0da227
+surface.builder,6,build-script,repo/components/duncan/support/build-duncan-id.ps1,deterministic XeLaTeX and Biber build orchestration,true,false,2008,e9c7f3f62104a48c0e51f31643942e323a1bc590fbfcadb043718ca0748d7517
+surface.root.rep_intro,11,translated-tex-root,repo/components/duncan/source/rep_intro.tex,ordered root 1 input,true,false,19770,ec8a9d4cdd5073e16d1c80201fd16c23e32746d8ce4aa91b6b1bdef9c9c834bd
+surface.root.lin_alg,12,translated-tex-root,repo/components/duncan/source/lin_alg.tex,ordered root 2 input,true,false,43889,1bdd39d81d913bcba4371f21a6d6a31d1e3080be002ff07ce8265b9580b5790b
+surface.root.modules,13,translated-tex-root,repo/components/duncan/source/modules.tex,ordered root 3 input,true,false,71213,081dff069c724d5a86d974bb84cd385e974cbaec13860675b94d390f2ce84bad
+surface.root.characters,14,translated-tex-root,repo/components/duncan/source/characters.tex,ordered root 4 input,true,false,29092,fc562f2fd1168e13e34167d6620b9091c44c5f80794dacbabcb3417076304008
+surface.root.induction,15,translated-tex-root,repo/components/duncan/source/induction.tex,ordered root 5 input,true,false,41046,864938198c54134cfdd2a69adc9631f65a1fb9399a0e93319288005d03d30a16
+surface.root.symmetric,16,translated-tex-root,repo/components/duncan/source/symmetric.tex,ordered root 6 input,true,false,51216,e049d7c8e8943131aacfe49f925aef4f6cbdac29019675c94c6d20308b5ec4f9
+surface.root.nonclosed,17,translated-tex-root,repo/components/duncan/source/nonclosed.tex,ordered root 7 input,true,false,26344,656e0765dbdeff8cc0b43b78adf4ceecb862211e8d9598567b0edeab0c1eb47d
+surface.output.pdf,100,pdf,artifacts/catatan-teori-representasi-duncan-id.pdf,promoted integrated reader artifact,true,true,,

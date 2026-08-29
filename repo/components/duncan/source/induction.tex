@@ -1,0 +1,1153 @@
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsthm}
+
+% gaya teorema (saya ingin semuanya menggunakan pencacah yang sama)
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{proposition}[theorem]{Proposisi}
+\newtheorem{corollary}[theorem]{Korolari}
+\newtheorem{conjecture}[theorem]{Konjektur}
+\newtheorem{exercise}[theorem]{Latihan}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definisi}
+\newtheorem{example}[theorem]{Contoh}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Catatan}
+
+% beberapa pengaturan penomoran
+\numberwithin{equation}{section}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\setlength{\headheight}{15.2pt}
+\renewcommand{\footrulewidth}{0.4pt}% nilai bawaan adalah 0pt
+\setlength{\footskip}{30pt}
+\pagestyle{fancy}
+
+\makeatletter
+\let\ps@plain\ps@fancy 
+\makeatother
+
+\lhead{MATH 742}
+\chead{Representasi Terinduksi}
+\rhead{Musim Semi 2023}
+\lfoot{Terakhir Direvisi: \today}
+\cfoot{}
+\rfoot{\thepage\ dari \pageref{LastPage} }
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+\title{Representasi Terinduksi}
+\author{Alexander Duncan}
+
+\maketitle
+
+``Dasar-dasar'' representasi terinduksi dapat ditemukan dalam hampir
+setiap buku pengantar teori karakter. Misalnya:
+\cite[\S{16}]{AlperinBell},
+\cite[\S{5.8-5.11}]{Etingof},
+\cite[\S{3.3}]{FultonHarris},
+\cite[\S{XVIII.6--9}]{Lang}, atau
+\cite[\S{3.3}]{Serre}.
+Namun, di sini kita membahas sedikit lebih jauh daripada ``dasar-dasarnya'';
+lihat \cite[\S{7--10}]{Serre}.
+
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+
+\section{Aksi Grup}
+
+Misalkan $G$ adalah grup.
+
+\begin{definition}
+Suatu \emph{himpunan-$G$} (kiri) adalah himpunan $X$ yang dilengkapi aksi (kiri) dari
+grup hingga $G$. Untuk himpunan-$G$ $X$ dan $Y$, suatu \emph{morfisme himpunan-$G$}
+atau \emph{pemetaan $G$-ekuivarian} adalah fungsi $f : X \to Y$
+sedemikian sehingga $f(gx)=gf(x)$ untuk semua $x \in X$ dan $g \in G$.
+Suatu \emph{isomorfisme himpunan-$G$} adalah bijeksi $G$-ekuivarian.
+\end{definition}
+
+Misalkan $H$ adalah subgrup dari $G$. Ingat bahwa suatu \emph{koset kiri dari $H$ dalam
+$G$} adalah subhimpunan $G$ berbentuk
+\[
+gH = \{ gh \mid h \in H \}
+\]
+untuk suatu $g \in G$. Ingat bahwa koset-koset kiri mempartisi $G$.
+Dengan $G/H$, kita menotasikan himpunan koset kiri dari $H$ dalam $G$.
+Kita \emph{tidak} mengharapkan $G/H$ memiliki struktur grup, kecuali jika $H$
+normal.
+
+\begin{proposition}
+Himpunan $G/H$ memiliki aksi kiri transitif kanonik dari $G$.
+\end{proposition}
+
+\begin{proof}
+Aksi tersebut didefinisikan oleh
+\[
+g \cdot (aH) := (ga)H
+\]
+untuk $g,a \in G$.
+Misalkan $aH=bH$ untuk $a,b \in G$. Maka $a=bh$ untuk suatu $h \in H$.
+Jadi, $ga=gbh$ untuk semua $g \in G$. Dengan demikian, $gaH=gbH$.
+Kita menyimpulkan bahwa aksi tersebut terdefinisi dengan baik.
+Pemeriksaan dua aksioma aksi grup yang tersisa diserahkan sebagai latihan.
+\end{proof}
+
+\begin{remark}
+Definisi aksi kiri pada $G/H$ lebih halus daripada yang mungkin tersirat oleh
+pembacaan sepintas atas pembuktian tersebut.
+Kita \emph{tidak} memiliki aksi kanan yang analog pada $G/H$
+karena aksi tersebut tidak terdefinisi dengan baik. Syarat agar aksi kanan itu
+terdefinisi dengan baik ekuivalen dengan syarat bahwa $H$ merupakan subgrup normal.
+\end{remark}
+
+\begin{exercise}
+Misalkan $H,K$ adalah subgrup dari $G$.
+Himpunan-$G$ $G/H$ dan $G/K$ isomorfik jika dan hanya jika
+$H$ dan $K$ merupakan subgrup-subgrup yang berkonjugasi dalam $G$.
+\end{exercise}
+
+Ingat bahwa himpunan-$G$ $X$ disebut \emph{transitif} jika $X$ tak kosong
+dan, untuk semua $x \in X$ dan
+$y \in Y$, terdapat $g \in G$ sedemikian sehingga $gx=y$.
+
+\begin{exercise}
+Setiap himpunan-$G$ dapat ditulis secara tunggal sebagai gabungan saling lepas dari
+himpunan-$G$ transitif.
+\end{exercise}
+
+\begin{proposition}
+Setiap himpunan-$G$ transitif tak kosong $X$ isomorfik dengan $G/H$
+untuk suatu subgrup $H \subseteq G$.
+\end{proposition}
+
+\begin{proof}
+Karena $X$ tak kosong, kita dapat memilih suatu $x \in X$.
+Misalkan $H$ adalah penstabil $x$ dalam $G$:
+\[
+H = \operatorname{Stab}_G(x) = \{ g \in G \mid gx=x \}.
+\]
+Kita mengklaim bahwa terdapat fungsi $G$-ekuivarian yang tunggal
+$f : X \to G/H$ sedemikian sehingga $f(x)=H$.
+Memang, karena $G$ bertindak secara transitif pada $X$,
+syarat $f(gx)=gf(x)$ menentukan nilai $f$ di setiap titik
+$X$. Untuk melihat bahwa fungsi ini terdefinisi dengan baik, cukup amati bahwa
+$f(gx)=f(g'x)$ ekuivalen dengan $g^{-1}g'x=x$, yang ekuivalen dengan
+$g^{-1}g' \in H$.
+\end{proof}
+
+\subsection{Aksi Kanan}
+
+Semua pernyataan di atas tentang aksi grup \emph{kiri} memiliki
+perumuman alami untuk aksi grup \emph{kanan}, yang sebagian besar kita serahkan sebagai
+latihan bagi pembaca.
+Kita menggunakan notasi $H \backslash G$ untuk himpunan koset kanan dari $H$
+dalam $G$.
+
+Latihan-latihan berikut sangat disarankan jika Anda belum pernah
+memikirkan perbedaan antara aksi kiri dan kanan:
+
+\begin{exercise}
+Jika $X$ merupakan himpunan-$G$ \emph{kiri} dan $G$ abelian, terdapat
+aksi \emph{kanan} pada $X$ melalui $x \cdot g := gx$ untuk $g \in G$ dan $x \in X$.
+\end{exercise}
+
+\begin{exercise}
+Jika $X$ merupakan himpunan-$G$ \emph{kiri}, kita memperoleh aksi \emph{kanan}
+pada $X$ melalui $x \cdot g := g^{-1}x$ untuk $g \in G$ dan $x \in X$.
+\end{exercise}
+
+\begin{exercise}
+Fungsi $f : G/H \to H\backslash G$ yang diberikan oleh $f(gH)=Hg$ merupakan
+bijeksi yang terdefinisi dengan baik jika dan hanya jika $H$ normal dalam $G$.
+\end{exercise}
+
+\subsection{Koset Ganda}
+
+Misalkan $H, K$ adalah subgrup dari $G$.
+
+\begin{definition}
+Suatu \emph{koset ganda (H,K) dari G} adalah himpunan berbentuk
+\[
+HgK := \{ hgk \mid h \in H, k \in K \}
+\]
+untuk suatu $g \in G$.
+Himpunan koset ganda dari $G$ dinotasikan dengan
+$H \backslash G / K$.
+\end{definition}
+
+Ada beberapa sudut pandang ekuivalen mengenai koset ganda.
+Koset ganda adalah kelas-kelas ekuivalensi dari relasi ekuivalensi
+dengan $g \sim hgk$ untuk semua $h \in H$ dan $k \in K$.
+Koset ganda adalah orbit-orbit aksi kiri $H$ pada $G/K$.
+Koset ganda adalah orbit-orbit aksi kanan $K$ pada $H\backslash G$.
+Terakhir, koset ganda adalah orbit-orbit aksi \emph{kiri}
+dari $H \times K$ pada $G$ melalui $(h,k)\cdot g := hgk^{-1}$.
+
+Masing-masing sudut pandang ini berguna dalam konteks yang berbeda.
+Salah satu konsekuensi langsungnya ialah koset-koset ganda mempartisi $G$;
+dengan kata lain, $HgK$ dan $Hg'K$ saling lepas atau sama,
+dan setiap unsur $G$ termuat dalam suatu koset ganda.
+Konsekuensi lain ialah setiap koset ganda sekaligus merupakan gabungan dari
+koset-koset kanan $H$ dalam $G$ dan gabungan dari koset-koset kiri $K$ dalam $G$.
+
+Perhatikan bahwa, tidak seperti koset biasa, semua koset ganda tidak selalu
+memiliki kardinalitas yang sama. Meskipun demikian, kardinalitasnya mudah dihitung
+dengan teorema orbit--penstabil:
+
+\begin{exercise}
+Jika $G$ hingga, maka
+\[
+|HgK| = \frac{|H| |K|}{|H \cap g K g^{-1}|}=
+\frac{|H| |K|}{|g^{-1}Hg \cap K|}.
+\]
+\end{exercise}
+
+\section{Definisi Representasi Terinduksi}
+
+Misalkan $H$ adalah subgrup dari grup hingga $G$.
+
+Untuk suatu representasi berdimensi hingga
+$(V,\rho)$ dari $G$, kita mendefinisikan \emph{restriksi ke
+$H$} sebagai representasi $(V,\rho|_H)$, dengan ruang vektor dasar
+yang sama, tetapi homomorfisme grup $\rho|_H : H \to
+\operatorname{GL}(V)$ memiliki domain $H$.
+Kita sering menulis $\operatorname{Res}_H^G(V)$ atau $V {\downarrow}^G_H$
+untuk menekankan aksi $H$, meskipun ruang vektornya tetap sama.
+
+Representasi terinduksi memungkinkan kita bergerak ke arah sebaliknya.
+Kita mulai dengan representasi dari $H$ dan menghasilkan representasi dari
+$G$.
+Representasi terinduksi dapat didefinisikan dengan mudah melalui sifat
+universalnya:
+
+\begin{definition}
+Misalkan $H$ adalah subgrup dari grup hingga $G$ dan
+$W$ suatu representasi berdimensi hingga dari $H$.
+\emph{Representasi terinduksi} adalah representasi
+$\operatorname{Ind}_H^G W$ dari $G$, bersama suatu
+pemetaan $H$-ekuivarian $\iota : W \to \operatorname{Ind}_H^G W$ sedemikian sehingga,
+untuk setiap representasi lain $V$ dari $G$ dan pemetaan $H$-ekuivarian
+$\varphi : W \to V$, terdapat pemetaan $G$-ekuivarian tunggal
+$\psi: \operatorname{Ind}_H^G W \to V$ sedemikian sehingga
+$\psi \circ \iota = \varphi$.
+\end{definition}
+
+Notasi alternatif untuk $\operatorname{Ind}_H^G W$ adalah $W
+{\uparrow}_H^G$.
+
+Seperti biasa, sifat universal ringkas untuk dinyatakan dan berguna
+secara teoretis, tetapi keberadaannya tidak langsung terlihat.
+Di sisi lain, suatu konstruksi eksplisit dapat memuat berbagai
+``detail implementasi'' yang tidak penting, berbeda-beda dari satu penulis ke penulis lain,
+dan tidak bersifat mendasar.
+Walaupun demikian, konstruksi langsung tetap harus diberikan dan kita
+akan memerlukannya nanti.
+
+\begin{proposition} \label{prop:ind_construction}
+Representasi terinduksi ada dan tunggal hingga isomorfisme tunggal.
+\end{proposition}
+
+\begin{proof}
+Ketunggalan mengikuti dari sifat pemetaan universal melalui
+argumen kategori abstrak. Bagian yang menarik adalah keberadaan.
+
+Misalkan diberikan grup hingga $G$ dengan subgrup $H$ dan representasi
+$(W,\sigma)$ dari $H$.
+Pilih suatu sistem wakil berbeda $X$ untuk $G/H$.
+Misalkan $V$ adalah jumlah langsung $\bigoplus_{x \in X} W$.
+Dengan melabeli suku langsung ke-$x$ dari $V$ sebagai $xW$,
+kita memperoleh isomorfisme $\phi_x : W \to xW$.
+
+Sekarang perhatikan bahwa
+\[
+\operatorname{End}_k(V) = \bigoplus_{x \in X} \bigoplus_{y \in X}
+\operatorname{Hom}_k(xW,yW)
+\]
+memiliki struktur ``matriks blok''.
+Untuk suatu unsur $\psi \in \operatorname{End}_k(V)$,
+notasikan dengan $\psi^{y,x}$ restriksinya ke setiap
+$\operatorname{Hom}_k(xW,yW)$.
+
+Tetapkan $g \in G$; kita akan mendefinisikan suatu pemetaan
+$\rho_g \in \operatorname{End}_k(V)$ dengan mendefinisikan setiap komponen
+$\rho_g^{y,x}$.
+Untuk semua $g \in G$ dan $x,y \in X$, kita definisikan
+\[
+\rho_g^{y,x} =
+\begin{cases}
+\phi_y \circ \sigma_{y^{-1}gx} \circ \phi_x^{-1} & \textrm{jika $gxH=yH$,}\\
+0 & \textrm{selain itu},
+\end{cases}
+\]
+dan perhatikan bahwa $y^{-1}gx \in H$, sehingga evaluasi $\sigma$
+bermakna.
+
+Memeriksa bahwa $(V,\rho)$ adalah representasi linear dari $G$
+yang memenuhi sifat universal yang diinginkan memang membosankan, tetapi langsung.
+\end{proof}
+
+\begin{remark}
+Pilih suatu sistem wakil berbeda $X$ untuk $G/H$ dan
+tuliskan $\operatorname{Ind}^G_H W = \bigoplus_{x \in X} W$
+seperti dalam pembuktian Proposisi~\ref{prop:ind_construction}.
+Terdapat pemetaan linear $H$-ekuivarian
+\[
+\pi : \operatorname{Ind}^G_H W \to W
+\]
+yang diperoleh dengan mengambil jumlah
+\[
+\pi\left( (w_x)_{x \in X} \right) :=
+\sum_{x \in X} w_x
+\]
+atas semua $x$ dalam suatu sistem wakil berbeda $X$.
+Ternyata pemetaan $\pi$ tidak bergantung pada pilihan $X$
+dan dapat dipandang sebagai perumuman teras.
+
+Mendefinisikan pemetaan ini memberikan sifat universal lain:
+untuk sebarang representasi $V$ dari $G$ bersama pemetaan $H$-ekuivarian
+$\varphi : V \to W$, terdapat pemetaan $G$-ekuivarian tunggal
+$\psi : V \to \operatorname{Ind}^G_H W$ sedemikian sehingga
+$\pi \circ \psi = \varphi$.
+Dalam konteks yang lebih umum, objek-objek yang memenuhi kedua sifat universal
+tersebut mungkin tidak berimpit; objek yang memenuhi
+konstruksi kedua ini disebut \emph{representasi koterinduksi}.
+\end{remark}
+
+\section{Representasi Monomial}
+
+Dalam praktik, banyak representasi diinduksi dari subgrup. Kita telah
+melihat banyak contohnya. Secara khusus:
+
+\begin{proposition}
+Jika $V$ adalah representasi permutasi dari grup hingga $G$,
+maka $V$ merupakan jumlah langsung representasi yang diinduksi dari representasi
+trivial suatu subgrup.
+\end{proposition}
+
+\begin{proof}
+Ingat bahwa $V$ memiliki basis $\{e_x\}_{x \in X}$, dengan $X$ suatu himpunan-$G$.
+Karena semua himpunan-$G$ adalah gabungan saling lepas dari himpunan-$G$ transitif,
+kita melihat bahwa $V$ merupakan jumlah langsung representasi permutasi
+yang bersesuaian dengan himpunan-$G$ transitif. Jadi, tanpa mengurangi keumuman,
+kita dapat mengasumsikan $X \cong G/H$ untuk suatu subgrup $H \subseteq G$.
+
+Dengan memilih suatu sistem wakil berbeda $S$ untuk $G/H$,
+kita sekarang mengidentifikasi suku-suku langsung $sW$ dalam pembuktian
+Proposisi~\ref{prop:ind_construction} dengan ruang yang direntang oleh
+unsur-unsur basis $\{ e_{sH} \}$ dalam $V$.
+Kita dapat memeriksa bahwa aksi grup $G$ identik dalam kedua kasus.
+\end{proof}
+
+\begin{example}
+Representasi reguler dari $G$ tepat merupakan
+representasi $\operatorname{Ind}^G_1 k$
+yang diperoleh dengan induksi dari representasi trivial milik grup
+trivial.
+\end{example}
+
+\begin{definition}
+Representasi $(V,\rho)$ dari grup $G$ disebut \emph{representasi
+monomial} atau \emph{representasi permutasi terpuntir} jika
+terdapat basis $\{e_1,\ldots,e_n\}$ dari $V$
+sedemikian sehingga, untuk semua $1 \le i \le n$ dan $g \in G$,
+kita mempunyai
+\[ \rho_g(e_i)=\lambda e_j\]
+untuk suatu $1 \le j \le n$ dan $\lambda \in k^\times$.
+\end{definition}
+
+Representasi monomial adalah representasi yang memiliki basis sedemikian sehingga
+matriks-matriks yang bersesuaian mempunyai
+tepat satu unsur tak nol pada setiap baris dan kolom.
+Representasi permutasi adalah representasi yang unsur tak nolnya
+selalu sama dengan satu.
+
+\begin{exercise}
+Jika $V$ adalah representasi monomial dari grup hingga $G$,
+maka $V$ merupakan jumlah langsung representasi yang diinduksi dari representasi
+berdimensi satu milik subgrup-subgrup.
+\end{exercise}
+
+\section{Karakter Representasi Terinduksi}
+
+Dalam bagian ini, kita mengasumsikan bahwa medan dasar $k$ adalah $\mathbb{C}$.
+
+\begin{definition}
+Untuk suatu fungsi kelas $f : G \to \mathbb{C}$, definisikan
+$\operatorname{Res}_H^G f : H \to \mathbb{C}$ sebagai
+fungsi kelas yang diperoleh dengan merestriksi domain ke $H$.
+\end{definition}
+
+Jelas bahwa karakter dari $\operatorname{Res}_H^G V$
+adalah $\operatorname{Res}_H^G \chi_V$.
+
+\begin{definition}
+Untuk suatu fungsi kelas $f : H \to \mathbb{C}$, kita membentuk fungsi kelas
+baru $\operatorname{Ind}_H^G f : G \to \mathbb{C}$ dengan rumus
+\[
+(\operatorname{Ind}_H^G f)(g) =
+\frac{1}{|H|}\sum_{\substack{a \in G\\a^{-1}ga \in H}} f(a^{-1}ga)
+\]
+untuk $g \in G$.
+\end{definition}
+
+\begin{proposition}
+Karakter dari $\operatorname{Ind}_H^G V$
+adalah $\operatorname{Ind}_H^G \chi_V$.
+\end{proposition}
+
+\begin{proof}
+Kita menggunakan notasi matriks blok dari
+Proposisi~\ref{prop:ind_construction}
+dan memilih $X$ sebagai sistem wakil berbeda untuk $G/H$.
+Kita ingin menghitung teras $\rho_g$ untuk suatu $g \in G$.
+Ini ekuivalen dengan menjumlahkan teras unsur-unsur
+$\rho_g^{x,x}$ untuk semua $x \in X$.
+Perhatikan bahwa $\rho_g^{x,x} = 0$, kecuali jika $gx=xh$ untuk suatu
+$h \in H$.
+Jadi, penjumlahan hanya dilakukan atas $x \in X$ sedemikian sehingga
+$x^{-1}gx \in H$. Dalam kasus ini, kita mempunyai
+$\rho_g^{x,x}=\phi_x \circ \sigma_h \circ \phi_x^{-1}$,
+yang memiliki teras sama dengan $\sigma_h$, dengan $h=x^{-1}gx$.
+Dengan demikian, kita memperoleh rumus
+\[
+(\operatorname{Ind}_H^G f)(g) =
+\sum_{\substack{x \in X\\x^{-1}gx \in H}} f(x^{-1}gx) .
+\]
+Karena $f$ adalah fungsi kelas pada $H$,
+kita mempunyai $f(x^{-1}gx)=f(y^{-1}gy)$ apabila $xH=yH$.
+Jadi, menjumlahkan atas $G$ alih-alih atas $X$ sama dengan
+mengalikan dengan kardinalitas koset, yaitu $|H|$.
+\end{proof}
+
+\begin{exercise}
+Buktikan bahwa fungsi
+$\operatorname{Res}_H^G : C(G) \to C(H)$
+adalah homomorfisme gelanggang.
+\end{exercise}
+
+\begin{exercise}
+Buktikan bahwa fungsi
+$\operatorname{Ind}_H^G : C(H) \to C(G)$
+adalah homomorfisme grup aditif,
+tetapi merupakan homomorfisme gelanggang hanya jika $G=H$.
+(Petunjuk: berapakah $(\operatorname{Ind}_H^G 1)(1)$?)
+\end{exercise}
+
+\begin{proposition}
+Jika $\varphi$ adalah fungsi kelas pada $H$ dan $\psi$ fungsi kelas
+pada $G$, maka
+$\operatorname{Ind}^G_H ( (\operatorname{Res^G_H} \psi) \cdot\varphi)
+= \psi \cdot (\operatorname{Ind}^G_H \varphi)$.
+\end{proposition}
+
+\begin{proof}
+Karena $\psi(a^{-1}ga)=\psi(g)$ untuk semua $a \in G$, kita mempunyai
+\[
+\frac{1}{|H|}\sum_{\substack{a \in G\\a^{-1}ga \in H}} \psi(a^{-1}ga)\varphi(a^{-1}ga)
+ =
+ \psi(g) \left(\frac{1}{|H|}\sum_{\substack{a \in G\\a^{-1}ga \in H}} \varphi(a^{-1}ga)
+\right)
+\]
+untuk semua $g \in G$.
+\end{proof}
+
+\begin{corollary}
+Bayangan dari $\operatorname{Ind}^G_H$ merupakan ideal dalam $C(G)$.
+\end{corollary}
+
+Fakta-fakta di atas dinyatakan untuk gelanggang fungsi kelas
+$C(G)$, tetapi dapat diperiksa bahwa fakta-fakta tersebut juga berlaku untuk
+gelanggang representasi $R(G)$.
+
+\section{Resiprositas Frobenius}
+
+\begin{theorem}
+Misalkan $V$ adalah representasi dari $G$
+dan $W$ representasi dari subgrup $H$ dari $G$.
+Terdapat isomorfisme kanonik
+\[
+\operatorname{Hom}^G_k(\operatorname{Ind}_H^G W, V) =
+\operatorname{Hom}^H_k(W,\operatorname{Res}_H^G  V).
+\]
+\end{theorem}
+
+\begin{proof}
+Ingat bahwa kita memiliki pemetaan $H$-ekuivarian
+$\iota : W \to \operatorname{Ind}_H^G(W)$ menurut definisi
+representasi terinduksi.
+Jadi, dari suatu unsur
+$\psi \in \operatorname{Hom}^G_k(\operatorname{Ind}_H^G W, V)$,
+kita memperoleh unsur
+$\varphi \in \operatorname{Hom}^H_k(W,\operatorname{Res}_H^G  V)$
+dengan komposisi $\varphi = \psi \circ \iota$.
+Sifat pemetaan universal memungkinkan kita memperoleh kembali $\psi$ secara tunggal dari $\varphi$,
+sehingga kedua himpunan tersebut berkorespondensi secara bijektif.
+Kita telah melihat bahwa komposisi pemetaan linear menginduksi transformasi linear
+pada ruang-ruang Hom; dengan demikian, kita memperoleh isomorfisme
+ruang vektor yang diinginkan.
+\end{proof}
+
+Korolari langsungnya adalah hasil terkenal berikut:
+
+\begin{theorem}[Resiprositas Frobenius]
+Jika $\varphi$ adalah fungsi kelas pada $H$ dan $\psi$ fungsi kelas
+pada $G$, maka
+\[
+(\operatorname{Ind}_H^G \varphi, \psi)_G
+=
+(\varphi, \operatorname{Res}_H^G \psi)_H
+\]
+di mana subskrip digunakan untuk menegaskan bahwa hasil kali dalam pertama berada dalam $C(G)$,
+sedangkan hasil kali dalam kedua berada dalam $C(H)$.
+\end{theorem}
+
+\begin{proof}
+Ketika $\varphi$ dan $\psi$ adalah karakter,
+kita mempunyai
+\begin{align*}
+&(\operatorname{Ind}_H^G \varphi, \psi)_G\\
+=& \dim_\mathbb{C}\ \operatorname{Hom}^G_\mathbb{C}(\operatorname{Ind}_H^G W, V)\\
+=& \dim_\mathbb{C}\ \operatorname{Hom}^H_\mathbb{C}(W,\operatorname{Res}_H^G  V)\\
+=&(\varphi, \operatorname{Res}_H^G \psi)_H .
+\end{align*}
+Melalui linearitas, hal ini meluas ke semua fungsi kelas karena karakter-karakter
+merentang ruang tersebut.
+\end{proof}
+
+\section{Dekomposisi Mackey}
+
+Di sini kita mempelajari interaksi antara restriksi dan induksi.
+
+\begin{theorem}[Dekomposisi Mackey]
+Misalkan $K,H$ adalah subgrup dari $G$ dan $(W,\sigma)$ suatu representasi dari
+$H$.
+Maka
+\[
+\operatorname{Res}^G_K \operatorname{Ind}^G_H W
+\cong
+\bigoplus_{[x] \in K\backslash G / H}
+\operatorname{Ind}_{H_x}^K W_x
+\]
+di mana $H_x = xHx^{-1} \cap K$, dan $(W_x,\sigma_x)$ adalah representasi
+dari $H_x$ dengan ruang vektor dasar $W$
+yang didefinisikan oleh $\sigma_x(g)=\sigma(x^{-1}gx)$ untuk semua $g \in H_x$.
+\end{theorem}
+
+\begin{proof}
+Misalkan $X$ adalah sistem wakil berbeda untuk $G/H$.
+Perhatikan bahwa $H_x$ merupakan penstabil dari aksi $K$ pada setiap $x \in X$.
+Misalkan $X_1,\ldots,X_r$ adalah subhimpunan-subhimpunan $X$ yang bersesuaian dengan
+orbit-orbit $K$ pada $G/H$.
+Perhatikan bahwa himpunan $\{X_i\}$ berkorespondensi secara bijektif dengan
+koset-koset ganda dalam $K \backslash G / H$.
+
+Kita mengingat deskripsi eksplisit $\tau = \operatorname{Ind}^G_H \rho$
+dari Proposisi~\ref{prop:ind_construction}
+sebagai jumlah langsung $\bigoplus_{x \in X} xW$,
+dengan isomorfisme $\phi_x: W \to xW$ dan $\tau_g$ yang terurai sebagai
+\[
+\rho_g^{y,x} =
+\begin{cases}
+\phi_y \circ \rho_{y^{-1}gx} \circ \phi_x^{-1} & \textrm{jika $gxH=yH$,}\\
+0 & \textrm{selain itu},
+\end{cases}
+\]
+dalam setiap $\operatorname{Hom}_k(xW,yW)$
+untuk $x,y \in X$ dan $g \in G$.
+
+Misalkan $W_i$ adalah jumlah subruang-subruang $xW$ untuk $x \in X_i$.
+Kita mempunyai
+\[
+\operatorname{Ind}^G_H W = \bigoplus_{i=1}^r W_i
+\]
+di mana setiap $W_i$ mudah dilihat stabil terhadap $K$.
+Masih perlu dibuktikan bahwa
+$W_i \cong \operatorname{Ind}_{H_x}^K W_x$ untuk suatu pilihan $x \in X_i$.
+
+Sekali lagi menurut Proposisi~\ref{prop:ind_construction},
+kita mempunyai $\tau_i = \operatorname{Ind}_{H_x}^K \sigma_x$
+dengan $\psi_y : W_x \to yW_x$ dan
+\[
+\rho_g^{z,y} =
+\begin{cases}
+\psi_z \circ \rho_{z^{-1}gy} \circ \psi_y^{-1} & \textrm{jika $gyH_x=zH_x$,}\\
+0 & \textrm{selain itu},
+\end{cases}
+\]
+dalam setiap $\operatorname{Hom}_k(yW,zW)$
+untuk $y,z \in X_i$ dan $g \in K$.
+
+Untuk setiap $y \in X_i$, definisikan $\pi_y : yW \to yW_x$
+melalui $\pi_y = \psi_y \circ \phi_y^{-1}$.
+Jumlah langsung $\bigoplus_{y \in X_i} \pi_y$
+merupakan isomorfisme dari $W_i$ ke $\operatorname{Ind}_{H_x}^K \sigma_x$.
+Dapat diperiksa bahwa pemetaan ini $K$-ekuivarian, seperti yang diinginkan.
+\end{proof}
+
+Sekarang kita beralih ke penerapan ketika $H=K$.
+Seperti dalam pernyataan Teorema Dekomposisi Mackey,
+untuk setiap unsur $x \in G$, kita definisikan $H_x = xHx^{-1} \cap H$.
+Perhatikan bahwa, meskipun $\operatorname{Res}^H_{H_x} W$
+dan $W_x$ sama-sama merupakan representasi dari $H_x$,
+keduanya secara umum tidak isomorfik!
+Jika $\chi$ adalah karakter dari $W$ dalam $C(H)$, misalkan $\chi_x$ menyatakan
+karakter dari $W_x$ dalam $C(H_x)$.
+
+\begin{theorem}[Kriteria Ketaktereduksian Mackey]
+Representasi $\operatorname{Ind}^G_H W$ tak tereduksi
+jika dan hanya jika $W$ tak tereduksi dan,
+untuk setiap $x \in G \setminus H$,
+kita mempunyai $( \chi_x, \operatorname{Res}^H_{H_x} \chi )=0$.
+\end{theorem}
+
+\begin{proof}
+Kita menggunakan Resiprositas Frobenius dan Dekomposisi Mackey berulang kali:
+\begin{align*}
+&( \operatorname{Ind}^G_H \chi, \operatorname{Ind}^G_H \chi )\\
+=&( \chi, \operatorname{Res}^G_H \operatorname{Ind}^G_H \chi )\\
+=&( \chi, \sum_{[x] \in H\backslash G / H}
+\operatorname{Ind}_{H_x}^H \chi_x )\\
+=&\sum_{[x] \in H\backslash G / H} ( \chi, 
+\operatorname{Ind}_{H_x}^H \chi_x )\\
+=&\sum_{[x] \in H\backslash G / H} ( \operatorname{Res}_{H_x}^H\chi, 
+ \chi_x ).
+\end{align*}
+Jika $x \in H$, maka keduanya sama dan
+$\chi=\operatorname{Res}_{H_x}^H\chi = \chi_x$.
+Jadi,
+\[
+( \operatorname{Ind}^G_H \chi, \operatorname{Ind}^G_H \chi )
+=(\chi,\chi)+
+\sum_{\substack{[x] \in H\backslash G / H\\x \not\in  H}}
+( \operatorname{Res}_{H_x}^H\chi,  \chi_x )
+\]
+Karena $\operatorname{Res}_{H_x}^H\chi$ dan $\chi_x$ adalah karakter sejati
+dari $H_x$, hasil kali dalamnya selalu merupakan bilangan bulat tak negatif.
+Selain itu, $(\chi,\chi)$ adalah bilangan bulat positif.
+Jadi,
+$( \operatorname{Ind}^G_H \chi, \operatorname{Ind}^G_H \chi )=1$
+jika dan hanya jika $(\chi,\chi)=1$ dan setiap suku langsung
+lainnya lenyap.
+Teorema pun mengikuti.
+\end{proof}
+
+\begin{corollary}
+Misalkan $H$ normal dalam $G$.
+Representasi $\operatorname{Ind}^G_H \rho$ tak tereduksi
+jika dan hanya jika $\rho$ tak tereduksi dan $\rho_x \ne \rho$
+untuk semua $x \not\in H$.
+\end{corollary}
+
+\begin{proof}
+Jika $H$ normal, $H_x=H$ karena $xHx^{-1}=H$ untuk semua $x \in G$.
+Secara khusus, $\operatorname{Res}^G_H(\rho)=\rho$.
+Dengan mengasumsikan $\chi$ tak tereduksi, syarat
+$\left(\chi_x,\operatorname{Res}^G_H(\chi)\right)=0$
+ekuivalen dengan $\chi_x \ne \chi$, dan hasilnya mengikuti dari
+Kriteria Ketaktereduksian Mackey.
+\end{proof}
+
+
+\section{Contoh}
+
+\subsection{Grup Dihedral}
+
+Misalkan $G$ adalah grup dihedral
+\[
+D_{2n} = \langle r,s \mid s^2, r^n, (sr)^2 \rangle
+\]
+dan misalkan $H$ adalah subgrup siklik $\langle r \rangle$.
+Misalkan $(W,\sigma)$ adalah representasi berdimensi $1$ dari $H$
+yang diberikan oleh $\sigma(r)=(\zeta)$, dengan $\zeta$ suatu akar kesatuan berorde $n$.
+
+Kita akan membentuk $\operatorname{Ind}^G_H W$, yang kita sebut $(V,\rho)$
+demi keringkasan.
+Kita menggunakan notasi dari Proposisi~\ref{prop:ind_construction}.
+Misalkan $X = \{e, s \}$ adalah suatu sistem wakil berbeda untuk $G/H$.
+Untuk menentukan $\rho$, kita perlu memahami $\rho_g^{x,y}$
+untuk pembangkit $g=r,s$ dan semua pasangan $x,y \in X$.
+Setelah menghitung
+\[
+r(eH)=eH,\ r(sH)=sH,\ s(eH)=sH,\ r(eH)=rH 
+\]
+kita memperoleh
+\[
+\rho(r)=
+\begin{pmatrix} \sigma(e^{-1}re) & 0 \\ 0 & \sigma(s^{-1}rs) \end{pmatrix}
+=\begin{pmatrix} \zeta & 0 \\ 0 & \zeta^{-1} \end{pmatrix}
+\]
+dan
+\[
+\rho(s)=
+\begin{pmatrix} 0 & \sigma(e^{-1}ss) \\ \sigma(s^{-1}se) & 0 \end{pmatrix}
+=\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}.
+\]
+
+\subsection{Grup Simetris pada $4$ Huruf}
+
+Misalkan $G$ adalah grup simetris $S_4$ pada $4$ huruf,
+dan misalkan $H$ subgrup yang dibangkitkan oleh $(1\ 2)(3\ 4)$
+dan $(2\ 3)$.
+Perhatikan bahwa $H$ adalah subgrup tak normal berindeks $3$
+yang isomorfik dengan $D_8$.
+Misalkan $(W,\sigma)$ adalah representasi berdimensi $1$ dari $H$
+yang diberikan oleh $\sigma((1\ 2)(3\ 4))=(-1)$ dan $\sigma((2\ 3))=(1)$.
+Perhatikan bahwa kernel dari $\sigma$ dibangkitkan oleh $(1\ 4)$ dan $(2\ 3)$.
+
+Seperti sebelumnya, kita membentuk representasi terinduksi $(V,\rho)$ menggunakan
+Proposisi~\ref{prop:ind_construction}.
+Pertama, ambil $X=\{ e, (1\ 2\ 3), (1\ 3\ 2) \}$ sebagai sistem
+wakil berbeda untuk $G/H$.
+Kita menghitung
+\begin{align*}
+(1\ 2)(3\ 4)&\mapsto
+\begin{pmatrix}
+-1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & -1\\
+\end{pmatrix}\\
+(2\ 3)&\mapsto
+\begin{pmatrix}
+1 & 0 & 0\\
+0 & 0 & 1\\
+0 & 1 & 0\\
+\end{pmatrix}\\
+(1\ 2\ 3)&\mapsto
+\begin{pmatrix}
+0 & 0 & 1\\
+1 & 0 & 0\\
+0 & 1 & 0\\
+\end{pmatrix}
+\end{align*}
+dalam kasus ini.
+
+\subsection{Representasi yang Tidak Terinduksi}
+
+Di sini kita mengembangkan contoh nonabelian berupa representasi tak tereduksi
+yang \emph{bukan} representasi terinduksi.
+Pada pembacaan pertama, saya menyarankan untuk sekadar membaca sepintas bagian ini.
+
+Ingat bahwa \emph{aljabar kuaternion Hamilton} $\mathbb{H}$
+adalah aljabar pembagian atas $\mathbb{R}$
+dengan basis $\{1,i,j,k\}$ dan perkalian yang ditentukan oleh
+$ij=k$, $jk=i$, $ki=j$, dan $i^2=j^2=k^2=-1$.
+Kita memiliki pembenaman
+$\mathbb{H} \hookrightarrow \operatorname{M}_2(\mathbb{C})$
+yang diperoleh dengan memperluas pemetaan
+\[
+1 \mapsto \begin{pmatrix} 1&0\\0&1 \end{pmatrix} \quad
+i \mapsto \begin{pmatrix} i&0\\0&-i \end{pmatrix} \quad
+j \mapsto \begin{pmatrix} 0&1\\-1&0 \end{pmatrix} \quad
+k \mapsto \begin{pmatrix} 0&i\\i&0 \end{pmatrix}
+\]
+secara linear.
+Pembenaman ini merupakan homomorfisme aljabar-$\mathbb{R}$.
+(Perhatikan bahwa tidak ada pembenaman $\mathbb{H}$ ke dalam
+matriks \emph{real} $2\times 2$.)
+
+Unsur umum $x$ dari $\mathbb{H}$ berbentuk
+\[
+x = a + bi + cj + dk
+\]
+dengan $a,b,c,d \in \mathbb{R}$.
+Kita mendefinisikan \emph{konjugat} dari $x$ sebagai
+\[
+\overline{x} = a -bi-cj-dk,
+\]
+dan \emph{norma} dari $x$ sebagai
+\[
+\|x\| = \sqrt{\overline{x} x} = \sqrt{a^2+b^2+c^2+d^2},
+\]
+yang merupakan bilangan real tak negatif.
+Kita melihat bahwa $\mathbb{H}$ adalah aljabar pembagian
+karena $x^{-1} = \overline{x}/\|x\|$ merupakan rumus eksplisit untuk
+invers ketika $x \ne 0$.
+
+Suatu unsur umum $x$ dari $\mathbb{H}$
+disebut \emph{kuaternion Lipschitz} jika
+$a,b,c,d \in \mathbb{Z}$.
+Unsur $x$ disebut \emph{kuaternion Hurwitz}
+jika $a,b,c,d$ semuanya bilangan bulat atau semuanya setengah bilangan bulat.
+Himpunan $L$ kuaternion Lipschitz dan himpunan $H$ kuaternion Hurwitz
+keduanya merupakan subgelanggang dari kuaternion Hamilton.
+Grup satuan gelanggang-gelanggang ini dapat ditemukan dengan mengamati bahwa norma
+suatu unsur yang dapat dibalik haruslah $1$.
+
+\emph{Grup kuaternion} $Q_8 = \{\pm 1, \pm i, \pm j, \pm k\}$ adalah
+grup satuan $U(L)$ dari gelanggang $L$.
+Dari pembenaman
+$\mathbb{H} \to \operatorname{M}_2(\mathbb{C})$ yang dijelaskan di atas, jelas bahwa
+$Q_8$ mempunyai representasi oleh ``matriks permutasi
+terpuntir''.
+Dengan kata lain, terdapat pilihan basis yang membuat grup bertindak dengan mempermutasikan
+unsur-unsur basis dan mengalikannya dengan skalar.
+
+Grup satuan $U(H)$ dari gelanggang $H$ memuat $Q_8$ dan 16 unsur
+\[
+\frac{ \pm 1 \pm i \pm j \pm k }{2}
+\]
+dengan semua kombinasi tanda yang mungkin diperbolehkan.
+Dapat diperiksa bahwa $\frac{1}{2}(1+i+j+k)$ berorde $6$, sehingga kita memperoleh
+representasi dengan bayangan
+\[
+\left\langle \begin{pmatrix} i&0\\0&-i \end{pmatrix},
+\begin{pmatrix} 0&1\\-1&0 \end{pmatrix},
+\frac{1}{2} \begin{pmatrix} 1+i&1+i\\-1+i&1-i \end{pmatrix}\right\rangle
+.
+\]
+
+\begin{exercise}
+Buktikan bahwa $U(H)$ tidak memiliki subgrup berindeks $2$.
+\end{exercise}
+
+Konsekuensi langsung latihan ini ialah $U(H)$ tidak mungkin
+diinduksi dari representasi berdimensi $1$.
+
+Ingat bahwa $A_4$ sering disebut ``grup tetrahedral''
+karena isomorfik dengan himpunan matriks ortogonal yang mempertahankan suatu
+tetrahedron beraturan.
+Oleh karena itu, grup $U(H)$ kadang-kadang disebut ``grup tetrahedral biner''
+karena latihan berikut.
+
+\begin{exercise}
+Misalkan $Z$ adalah pusat dari $U(H)$.
+Buktikan bahwa pusat $Z$ dari $U(H)$ berorde $2$ dan
+$U(H)/Z $ isomorfik dengan $A_4$.
+\end{exercise}
+
+
+\begin{exercise}
+Buktikan bahwa $U(H)$ isomorfik dengan $Q_8 \rtimes (\mathbb{Z}/3\mathbb{Z})$.
+\end{exercise}
+
+\begin{exercise}
+Buktikan bahwa $U(H)$ isomorfik dengan grup linear khusus
+$\operatorname{SL}_2(\mathbb{F}_3)$ atas medan dengan $3$ unsur.
+\end{exercise}
+
+\section{Penerapan}
+
+Misalkan $G$ adalah grup hingga dan $\phi: G \to G$
+suatu automorfisme grup. Untuk setiap fungsi kelas $\chi$,
+definisikan fungsi kelas $\phi \cdot \chi := \chi \circ \phi^{-1}$.
+
+\begin{exercise}
+Buktikan pernyataan-pernyataan berikut.
+Pemetaan $\chi \mapsto \phi \cdot \chi$ menginduksi suatu aksi
+dari $\operatorname{Aut}(G)$ pada $C(G)$.
+Aksi tersebut mempertahankan struktur gelanggang maupun struktur ruang hasil kali dalam pada
+$G$, memetakan karakter ke karakter,
+dan memetakan karakter tak tereduksi ke karakter tak tereduksi.
+Subgrup $\operatorname{Inn}(G)$ dari automorfisme dalam termuat dalam
+kernel aksi tersebut.
+\end{exercise}
+
+\begin{lemma} \label{lem:normal_restriction}
+Misalkan $N$ adalah subgrup normal dari $G$ dan $V$
+suatu representasi tak tereduksi dari $G$. Salah satu pernyataan berikut berlaku:
+\begin{enumerate}
+\item $\operatorname{Res}^G_N V$ isotipik, atau
+\item $V \cong \operatorname{Ind}^G_H W$, di mana $W$ adalah representasi tak tereduksi
+dari suatu subgrup sejati $H$ dari $G$ sedemikian sehingga $N
+\subseteq H$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Tinjau dekomposisi isotipik
+\[
+Res^G_N V \cong U_1 \oplus U_2 \oplus \cdots \oplus U_r
+\]
+di mana $U_1, \ldots, U_r$ adalah subrepresentasi-subrepresentasi isotipik berbeda dari $N$.
+Jika $r=1$, kita berada dalam kasus pertama; jadi kita dapat mengasumsikan $r \ge 2$.
+Untuk sebarang $g \in G$ dan indeks $i$, kita melihat bahwa $g(U_i)$ merupakan subruang
+$N$-stabil dari $V$; memang, untuk setiap $n\in N$ terdapat $n' \in N$
+sedemikian sehingga $ngU_i=gn'U_i=gU_i$.
+Misalkan $H$ adalah himpunan semua $g \in G$ sedemikian sehingga $g(U_1)=U_1$.
+Jadi, $U$ merupakan subrepresentasi-$H$ dari $V$.
+Menurut sifat pemetaan universal, terdapat morfisme $G$-ekuivarian
+$\operatorname{Ind}^G_H U_1 \to V$.
+Karena $G$ bertindak secara transitif pada semua $U_i$, kita memperoleh isomorfisme.
+\end{proof}
+
+\begin{definition}
+Grup hingga $G$ disebut \emph{supersolubel} jika terdapat rantai
+subgrup
+\[
+1=G_0 \subseteq G_1 \subseteq \cdots \subseteq G_r = G
+\]
+di mana setiap $G_i$ normal dalam $G$ dan $G_{i+1}/G_i$ siklik
+untuk setiap $i=0,\ldots, r$.
+\end{definition}
+
+\begin{exercise}
+Buktikan implikasi-implikasi berikut untuk grup hingga $G$:
+\[
+\textrm{grup-$p$} \implies
+\textrm{nilpoten} \implies \textrm{supersolubel} \implies
+\textrm{solubel},
+\]
+dan berikan contoh eksplisit yang menunjukkan bahwa konversnya tidak selalu berlaku.
+\end{exercise}
+
+\begin{exercise}
+Semua subgrup dan grup hasil bagi dari suatu grup supersolubel juga
+supersolubel.
+\end{exercise}
+
+\begin{lemma} \label{lem:ss_abel}
+Jika $G$ adalah grup supersolubel nonabelian, terdapat subgrup abelian normal
+$A$ dari $G$ sedemikian sehingga $A$ tidak termuat dalam pusat
+dari $G$.
+\end{lemma}
+
+\begin{proof}
+Misalkan $Z$ adalah pusat dari $G$. Maka $G/Z$ supersolubel dan
+terdapat subgrup siklik normal $C \subseteq G/Z$. Misalkan $A$ adalah
+prabayangan $C$ melalui pemetaan hasil bagi $G \to G/Z$.
+Karena $C$ normal dalam $G/Z$, kita melihat bahwa $A$ normal dalam $G$.
+Karena $A$ merupakan ekstensi pusat dengan hasil bagi siklik, subgrup tersebut harus
+abelian.
+\end{proof}
+
+\begin{theorem} \label{thm:ss_monomial}
+Setiap representasi dari grup supersolubel adalah monomial.
+\end{theorem}
+
+\begin{proof}
+Kita menggunakan induksi pada orde grup $G$.
+Tanpa mengurangi keumuman, kita dapat mengasumsikan bahwa representasi
+$(V,\rho)$ tak tereduksi.
+Karena grup hasil bagi dari grup supersolubel bersifat supersolubel,
+berdasarkan induksi kita dapat mengasumsikan bahwa $V$ merupakan representasi setia.
+Jika $G$ abelian, pembuktian selesai.
+Jadi, kita dapat mengasumsikan bahwa $G$ nonabelian dan, menurut Lema~\ref{lem:ss_abel},
+terdapat subgrup abelian normal $A$ dari $G$ yang tidak termuat dalam pusat.
+
+Kita mengklaim bahwa $\operatorname{Res}^G_A V$ \emph{tidak} isotipik.
+Representasi isotipik dari grup abelian terdiri atas matriks-matriks
+skalar. Karena matriks-matriks tersebut komutatif dengan setiap matriks lain dalam grup,
+dan representasinya setia, ini berarti $A$ berada dalam pusat
+$G$, suatu kontradiksi.
+Jadi, menurut Lema~\ref{lem:normal_restriction},
+kita dapat menyimpulkan bahwa $V$ diinduksi dari suatu subgrup sejati $H$.
+Karena $H$ supersolubel, hipotesis induksi menyatakan bahwa
+$V$ diinduksi dari representasi monomial.
+Jadi, $V$ monomial, seperti yang diinginkan.
+\end{proof}
+
+\section{Hasil Kali Semidirek}
+
+Sepanjang bagian ini, $G = A \rtimes H$,
+dengan $A$ grup abelian hingga dan $H$ grup hingga.
+
+Ingat bahwa $A^\vee :=
+\operatorname{Hom}_{\mathrm{grp}}(A,\mathbb{C}^\times)$
+adalah grup abelian yang isomorfik dengan $A$ sendiri (meskipun tidak
+secara kanonik).
+Terdapat aksi kiri dari $G$ pada $A^\vee$ melalui
+\[
+(g\chi)(a)=\chi(g^{-1}ag)
+\]
+dengan $g \in G$, $\chi \in A^\vee$, dan $a \in A$.
+Karena $A$ abelian, aksi $G$ tersebut memfaktor melalui proyeksi
+ke subgrup $H$.
+
+Misalkan $\chi_1,\ldots, \chi_r$ adalah sistem wakil berbeda
+untuk orbit-orbit $H$ dari $A^\vee$. Definisikan
+$H_i=\operatorname{Stab}_H(\chi_i)$.
+Secara khusus,
+\[
+A^\vee \cong H/H_1 \sqcup \cdots \sqcup H/H_r
+\]
+sebagai himpunan-$H$.
+
+Untuk suatu representasi tak tereduksi $\rho$ dari $H_i$,
+kita akan mendefinisikan representasi $\theta_{i,\rho}$ sebagai berikut.
+Misalkan $G_i= A \rtimes H_i$.
+Perluas $\rho$ menjadi representasi $\widetilde{\rho}$ dari $G_i$
+dengan mengomposisikannya dengan pemetaan $G_i \to H_i$.
+Perluas $\chi_i$ menjadi representasi $\widetilde{\chi_i}$ dari $G_i$
+dengan mendefinisikan $\widetilde{\chi_i}(ah)=\chi_i(a)$
+untuk semua $a \in A$ dan $h \in H_i$; ini bermakna karena
+$H_i$ bertindak secara trivial pada $\chi_i$.
+Terakhir, kita definisikan
+\[
+\theta_{i,\rho} := \operatorname{Ind}_{G_i}^G
+\widetilde{\chi_i} \otimes \widetilde{\rho},
+\]
+yang merupakan representasi dari $G$.
+
+\begin{theorem}
+Setiap representasi tak tereduksi dari $G$ isomorfik dengan suatu
+$\theta_{i,\rho}$,
+setiap $\theta_{i,\rho}$ tak tereduksi, dan
+$\theta_{i,\rho} \cong \theta_{i', \rho'}$ jika dan hanya jika
+$i=i'$ dan $\rho \cong \rho'$.
+\end{theorem}
+
+\begin{proof}
+Pertama, kita tunjukkan bahwa $\theta_{i,\rho}$ tak tereduksi.
+Misalkan $\eta = \widetilde{\chi_i} \otimes \widetilde{\rho}$,
+dengan $\theta_{i,\rho} = \operatorname{Ind}_{G_i}^G \eta$.
+Misalkan $x \in G \setminus G_i$ dan $K_x = G_i \cap xG_ix^{-1}$.
+Perhatikan bahwa $\operatorname{Res}^{K_x}_A \eta = n\chi_i$,
+dengan $n$ derajat dari $\eta$.
+Seperti dalam pernyataan Dekomposisi Mackey,
+kita mendefinisikan representasi dari $K_x$ melalui
+$\eta_x (g) = \eta(x^{-1}gx)$ untuk semua $g \in K_x$.
+Sekarang, $\operatorname{Res}^{K_x}_A \eta = n\chi'$
+dengan $\chi'(a) = \chi_i(x^{-1}ax)$ untuk semua $a \in A$.
+Karena $\chi_i(a) \ne \chi_i(x^{-1}ax)$ untuk suatu $a \in A$,
+kita menyimpulkan bahwa $\chi_i \ne \chi'$.
+Karena $\chi_i$ dan $\chi'$ tak tereduksi, kita menyimpulkan bahwa
+$(\chi_i, \chi')=0$. Jadi, $(\eta,\eta_x)=0$, dan kita
+menyimpulkan bahwa $\theta_{i,\rho}$ tak tereduksi menurut Kriteria
+Ketaktereduksian Mackey.
+
+Sekarang kita tunjukkan bahwa kelas isomorfisme dari $\theta_{i,\rho}$
+ditentukan oleh $i$ dan $\rho$.
+Restriksi $\operatorname{Res}^G_A \theta_{i,\rho}$
+merupakan jumlah langsung karakter-karakter $\nu_1,\ldots,\nu_s$ dalam $A^\vee$.
+Dari Teorema Dekomposisi Mackey, kita mengetahui bahwa setiap
+$\nu_j$ berbentuk $g \cdot \chi_i$ untuk suatu $g \in G$.
+Karena $A$ abelian, setiap $\nu_j$ berbentuk $h \cdot \chi_i$
+untuk suatu $h \in H$. Secara khusus, semua $\nu_j$ berasal dari orbit-$H$
+yang sama dalam $A^\vee$, sehingga indeks $i$ ditentukan.
+Misalkan $W$ adalah komponen isotipik dari $\operatorname{Res}^G_A V$
+yang terkait dengan representasi $\chi_i$.
+Grup $G_i$ membiarkan $W$ invarian, dan kita melihat bahwa
+$W$ isomorfik dengan representasi
+$\widetilde{\chi_i} \otimes \widetilde{\rho}$,
+yang menentukan $\rho$.
+
+Terakhir, kita tunjukkan bahwa setiap representasi tak tereduksi dari $G$ memiliki
+bentuk yang diinginkan. Misalkan $(V, \sigma)$ adalah representasi tak tereduksi dari $G$.
+Misalkan
+\[
+\operatorname{Res}^G_A V = \bigoplus_{\chi \in A^\vee} W_\chi
+\]
+adalah dekomposisi isotipiknya. Pilih suatu karakter $\chi_i \in A^\vee$
+dengan $W_{\chi_i} \ne 0$, dan misalkan $H_i = \operatorname{Stab}_H(\chi_i)$.
+Perhatikan bahwa $W_{\chi_i}$ merupakan subrepresentasi dari $V$
+untuk grup $H_i$; misalkan $\tau$ adalah representasi-$H_i$ ini.
+Kita melihat bahwa aksi $G_i$ pada $W_{\chi_i}$ merupakan representasi
+$\widetilde{\chi_i} \otimes \widetilde{\tau}$.
+Dengan menggunakan Resiprositas Frobenius, kita memperoleh rangkaian pertidaksamaan
+\[
+0 < \left( \widetilde{\chi_i} \otimes \widetilde{\tau},
+\operatorname{Res}^G_{G_i} \sigma \right)_{G_i}
+= \left( \operatorname{Ind}^G_{G_i} \widetilde{\chi_i} \otimes \widetilde{\tau},
+\sigma \right)_{G} \le 1
+\]
+di mana pertidaksamaan pertama mengikuti karena
+$W_{\chi_i}$ merupakan suku langsung dari $V$, sedangkan pertidaksamaan kedua
+mengikuti karena $\sigma$ tak tereduksi.
+Kita menyimpulkan bahwa $\sigma \cong \theta_{i,\tau}$, seperti yang diinginkan.
+\end{proof}
+
+\section{Teorema Artin dan Brauer}
+
+Misalkan $\mathcal{F}$ adalah keluarga subgrup dari grup hingga $G$.
+Definisikan pemetaan
+\[
+\Sigma_{\mathcal{F}} \operatorname{Ind} :
+\bigoplus_{H \in \mathcal{F}} R(H) \to R(G)
+\]
+melalui
+\[
+(\chi_H)_{H \in \mathcal{F}} \mapsto \sum_{H \in \mathcal{F}}
+\operatorname{Ind}_H^G \chi_H .
+\]
+
+\begin{theorem}[Teorema Artin]
+Jika $\mathcal{F}$ adalah himpunan subgrup siklik dari $G$,
+maka $\Sigma_{\mathcal{F}} \operatorname{Ind}$ memiliki kokernel hingga.
+\end{theorem}
+
+\begin{proof}
+Pertama, misalkan $V$ adalah ruang hasil kali dalam kompleks dan tinjau pemetaan-pemetaan
+\[
+\Sigma : \bigoplus_{i=1}^n V \to V \textrm{ dan }
+\Delta : V \to \bigoplus_{i=1}^n V
+\]
+yang didefinisikan melalui
+\[
+\Sigma\left(v_1,\ldots,v_n\right) = \sum_{i=1}^n v_i \textrm{ dan }
+\Delta(v) = (v,\ldots,v).
+\]
+Keduanya merupakan operator linear adjoin, dalam arti bahwa
+\[
+\left( \Sigma(w), v \right) = \left( w, \Delta(v) \right)
+\]
+untuk semua $w \in \bigoplus_{i=1}^n V$ dan $v \in V$.
+
+Sekarang, fungsi
+\[
+\left( \bigoplus_{H \in \mathcal{F}} \operatorname{Res}^G_H \right)
+\circ \Delta: C(G) \to \bigoplus_{H \in \mathcal{F}} C(H)
+\]
+bersifat injektif karena fungsi kelas ditentukan oleh nilai-nilainya pada
+subgrup-subgrup siklik.
+Jika suatu transformasi linear injektif, operator adjoinnya
+\[
+\Sigma_{\mathcal{F}} \operatorname{Ind} :
+\bigoplus_{H \in \mathcal{F}} C(H) \to C(G)
+\]
+bersifat surjektif.
+
+Sekarang, pemetaan linear
+\[
+\Sigma_{\mathcal{F}} \operatorname{Ind} :
+\mathbb{Q} \otimes_{\mathbb{Z}}
+\left(\bigoplus_{H \in \mathcal{F}} R(H)\right)
+\to \mathbb{Q} \otimes_{\mathbb{Z}} R(G)
+\]
+harus surjektif, karena penensoran dengan $\mathbb{C}$ menghasilkan
+pemetaan linear surjektif.
+Oleh karena itu, restriksinya ke $\bigoplus_{H \in \mathcal{F}} R(H)$
+memiliki kokernel hingga, karena bayangannya merupakan subgrup dari $R(G)$
+dengan rank maksimal.
+\end{proof}
+
+\begin{definition}
+Suatu grup $H$ disebut \emph{$p$-elementer} untuk bilangan prima $p$ jika
+$H \cong P \times C$, dengan $P$ grup-$p$ dan $C$ grup siklik
+yang ordenya relatif prima terhadap $p$.
+Kita menyebut grup $H$ \emph{elementer} jika $p$-elementer untuk suatu
+bilangan prima $p$.
+\end{definition}
+
+\begin{theorem}[Teorema Brauer]
+Jika $\mathcal{F}$ adalah himpunan subgrup elementer dari $G$,
+maka $\Sigma_{\mathcal{F}} \operatorname{Ind}$ surjektif.
+\end{theorem}
+
+\begin{proof}
+Lihat \cite[\S{10}]{Serre}.
+\end{proof}
+
+\begin{corollary}
+Setiap karakter merupakan kombinasi linear bilangan bulat dari karakter-karakter monomial.
+\end{corollary}
+
+\begin{proof}
+Teorema Brauer menyatakan bahwa setiap karakter merupakan kombinasi linear bilangan bulat
+dari karakter-karakter yang diinduksi dari subgrup elementer.
+Grup elementer bersifat nilpoten, sehingga supersolubel.
+Menurut Teorema~\ref{thm:ss_monomial}, semua representasinya
+monomial.
+Representasi yang diinduksi dari representasi monomial juga monomial.
+\end{proof}
+
+\bibliographystyle{alpha}
+\bibliography{rep_theory}
+
+\end{document} 
+
+

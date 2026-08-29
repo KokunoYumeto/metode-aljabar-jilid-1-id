@@ -1533,3 +1533,14 @@ at DOI `10.5281/zenodo.22150334` in the existing concept. Anonymous readback
 proved all five files / 75,934,888 bytes. The API file array is unordered; the
 unique `00-` filename remains the deterministic reader-first contract. Advance
 directly to complete Chapter 7 and do not reopen the passing Chapter 6 gate.
+
+## D097 — 2026-08-29 — Collapse remaining work to one preservation boundary
+
+The entire selected O013 corpus is now complete locally: Li 521 pages, Duncan
+114 pages, the six exact CRing selections 74 pages, and the separately
+provenanced route/mastery layer 7 pages. The promoted readers, reproducible
+builds, deterministic backends, component rights, and one all-page visual gate
+all pass; exact identities live in `qa/O013_COMPLETE_LOCAL_BOUNDARY_20260829.json`.
+There is no remaining translation or per-unit QA action. Preserve the boundary
+once on GitHub and once as a mixed-rights reader-first aggregate Zenodo record,
+with anonymous byte readback; never flatten CC BY 4.0 and GFDL rights.

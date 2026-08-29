@@ -1,0 +1,90 @@
+\documentclass[12pt,a4paper]{article}
+\input{duncan-id-preamble.tex}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{0.12\textheight}
+{\Huge\bfseries Catatan Teori Representasi\par}
+\vspace{1.5em}
+{\LARGE Adaptasi Bahasa Indonesia\par}
+\vspace{3em}
+{\Large Karya sumber: \DuncanSourceAuthor\par}
+\vspace{0.75em}
+{\large \DuncanSourceCourse\par}
+\vfill
+{\large Lisensi materi sumber dan adaptasi: \DuncanLicenseName\
+(\DuncanLicenseSPDX)\par}
+\vspace{0.75em}
+{\normalsize Adaptasi bahasa dan penyuntingan matematis berbantuan
+\DuncanModelProvenance.\par}
+\vspace*{0.08\textheight}
+\end{titlepage}
+
+\section*{Provenance, atribusi, dan batas komponen}
+\addcontentsline{toc}{section}{Provenance, atribusi, dan batas komponen}
+
+Karya sumber disusun oleh \DuncanSourceAuthor\ untuk mata kuliah
+\DuncanSourceCourse\ di University of South Carolina. Adaptasi ini diturunkan
+dari repositori \url{\DuncanSourceRepository}, komit
+\nolinkurl{\DuncanSourceCommit}, pohon \nolinkurl{\DuncanSourceTree}.
+
+Materi sumber tersedia menurut \href{\DuncanLicenseURL}{\DuncanLicenseName}
+(\DuncanLicenseSPDX). Berkas lisensi lengkap disertakan sebagai
+\texttt{DUNCAN-LICENSE-CC-BY-4.0.txt}. Adaptasi ini menandai perubahan bahasa
+dan penyuntingan; tidak ada dukungan, persetujuan, atau pengesahan oleh
+\DuncanSourceAuthor, University of South Carolina, Creative Commons, atau
+penerbit rujukan yang dinyatakan maupun tersirat.
+
+Adaptasi bahasa Indonesia dan penyuntingan matematis disiapkan dengan bantuan
+\DuncanModelProvenance. Model tersebut bukan penulis karya sumber dan tidak
+menggantikan atribusi kepada \DuncanSourceAuthor.
+
+Cakupan berlisensi yang dipakai tepat terdiri atas tujuh akar \TeX\ mandiri,
+bibliografi bersama, README, dan lisensi dalam pohon repositori tersemat.
+Enam lembar tugas pada situs penulis (dilaporkan berjumlah 49 soal) serta satu
+solusi parsial berada di luar pohon CC BY 4.0 yang disematkan; semuanya
+dikecualikan, tidak diunduh, tidak dimasukkan, tidak diadaptasi, dan tidak
+dilisensikan ulang dalam penutupan bangunan ini.
+
+\tableofcontents
+\clearpage
+
+% Akar-akar lama memakai BibTeX. Driver terpadu memakai satu bibliografi Biber.
+\renewcommand{\bibliographystyle}[1]{}
+\renewcommand{\bibliography}[1]{}
+
+% Ke-32 label sumber sudah unik di seluruh tujuh akar, sehingga nama label dan
+% rujukannya dipertahankan verbatim saat akar dimasukkan.
+\newcommand{\DuncanIncludeRoot}[2]{%
+  \clearpage
+  \phantomsection
+  \addcontentsline{toc}{part}{#2}%
+  \begingroup
+    \setcounter{section}{0}%
+    \setcounter{subsection}{0}%
+    \setcounter{subsubsection}{0}%
+    \setcounter{theorem}{0}%
+    \setcounter{equation}{0}%
+    \setcounter{figure}{0}%
+    \setcounter{table}{0}%
+    \setcounter{footnote}{0}%
+    \date{\DuncanEditionDate}%
+    \global\let\maketitle\DuncanArticleMakeTitle
+    \input{#1}%
+  \endgroup
+}
+
+\DuncanIncludeRoot{../source/rep_intro.tex}{Pengantar Teori Representasi}
+\DuncanIncludeRoot{../source/lin_alg.tex}{Aljabar Multilinear}
+\DuncanIncludeRoot{../source/modules.tex}{Modul dan Teori Wedderburn}
+\DuncanIncludeRoot{../source/characters.tex}{Teori Karakter}
+\DuncanIncludeRoot{../source/induction.tex}{Representasi Terinduksi}
+\DuncanIncludeRoot{../source/symmetric.tex}{Grup Simetrik dan Grup Linear Umum}
+\DuncanIncludeRoot{../source/nonclosed.tex}{Representasi atas Medan yang Tidak Tertutup}
+
+\clearpage
+\printbibliography[heading=bibintoc,title={Daftar Pustaka}]
+
+\end{document}

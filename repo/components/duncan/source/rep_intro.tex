@@ -1,0 +1,586 @@
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsthm}
+
+% gaya teorema (saya ingin semuanya memakai pencacah yang sama)
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{proposition}[theorem]{Proposisi}
+\newtheorem{corollary}[theorem]{Korolari}
+\newtheorem{conjecture}[theorem]{Konjektur}
+\newtheorem{exercise}[theorem]{Latihan}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definisi}
+\newtheorem{example}[theorem]{Contoh}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Catatan}
+
+% beberapa pengaturan penomoran
+\numberwithin{equation}{section}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\setlength{\headheight}{15.2pt}
+\renewcommand{\footrulewidth}{0.4pt}% nilai bakunya 0pt
+\setlength{\footskip}{30pt}
+\pagestyle{fancy}
+
+\makeatletter
+\let\ps@plain\ps@fancy 
+\makeatother
+
+\lhead{MATH 742}
+\chead{Pengantar Teori Representasi}
+\rhead{Semester Musim Semi 2023}
+\lfoot{Terakhir direvisi: \today}
+\cfoot{}
+\rfoot{\thepage\ dari \pageref{LastPage} }
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+\title{Pengantar Teori Representasi}
+\author{Alexander Duncan}
+
+\maketitle
+
+\section{Konsep Dasar}
+
+Beberapa konsep yang dibahas di sini juga dapat ditemukan dalam
+\cite[\S{1}]{Serre}.
+Kita akan menggunakan banyak sumber lain untuk materi ini,
+tetapi kebanyakan sumber tersebut (dengan tepat!) memakai sudut pandang teori modul,
+yang untuk sementara ingin kita tunda.
+
+\begin{definition}
+Misalkan $V$ suatu ruang vektor di atas medan $k$.
+\emph{Grup linear umum dari $V$}, yang dinotasikan dengan $\operatorname{GL}(V)$, adalah grup
+transformasi linear invertibel $V \to V$.
+Untuk bilangan bulat nonnegatif $n$, kita memakai notasi
+$\operatorname{GL}_n(k) := \operatorname{GL}(k^n)$.
+\end{definition}
+
+Grup $\operatorname{GL}_n(k)$ dapat diidentifikasi secara kanonik dengan himpunan matriks berukuran $n
+\times n$ yang invertibel dan entri-entrinya berada dalam $k$.
+
+\begin{definition}
+Misalkan $G$ suatu grup. Suatu \emph{representasi linear dari $G$} adalah
+homomorfisme grup $\rho : G \to \operatorname{GL}(V)$ untuk suatu ruang vektor $V$.
+\emph{Derajat} suatu representasi linear adalah dimensi
+ruang vektor $V$ yang bersesuaian.
+Representasi linear $\rho$ disebut \emph{setia} jika $\rho$ injektif
+sebagai pemetaan himpunan.
+\end{definition}
+
+Kita kerap menyebut “representasi $V$”, dengan menunjuk pada
+ruang vektor yang mendasarinya, bukan pada homomorfisme $\rho$.
+Kadang-kadang kita menulis $\rho_g$ alih-alih $\rho(g)$ karena notasi tersebut lebih mudah
+dibaca. Kelak, kita cukup menulis “$g$” untuk $\rho(g)$ apabila
+tidak ada risiko kebingungan.
+
+\begin{example}
+Untuk setiap grup $G$,
+\emph{representasi nol} adalah representasi berderajat
+$0$ (representasi ini tunggal hingga isomorfisme).
+\end{example}
+
+\begin{example}
+Untuk setiap grup $G$,
+\emph{representasi satuan} atau \emph{representasi trivial} adalah representasi
+\[ \rho: G \to \operatorname{GL}_1(k) \]
+yang diberikan oleh
+\[
+\rho(g)=\operatorname{id}_k
+\]
+untuk semua $g \in G$.
+\end{example}
+
+\begin{example}
+Misalkan $G = \langle g \rangle$ grup siklik berorde $n$.
+Terdapat representasi
+\[ \rho : G \to \operatorname{GL}_1(\mathbb{C}) \]
+yang didefinisikan oleh
+\[
+\rho(g^k)=e^{\frac{2\pi i}{n}k} \ .
+\]
+\end{example}
+
+\begin{example}
+Misalkan $D_8 = \langle s,r \mid s^2, r^4, (sr)^2 \rangle$
+grup dihedral berorde $8$.
+Terdapat representasi
+\[ \rho : G \to \operatorname{GL}_2(k) \]
+yang didefinisikan pada para pembangkit oleh
+\[
+\rho(s)=\begin{pmatrix} 0&1\\1&0 \end{pmatrix} ,\quad
+\rho(r)=\begin{pmatrix} 0&-1\\1&0 \end{pmatrix}
+\]
+dan diperluas ke elemen-elemen lain dengan menggunakan fakta bahwa $\rho$
+harus merupakan homomorfisme grup.
+Perhatikan bahwa $\rho$ merupakan representasi \emph{setia} jika dan hanya jika
+$\operatorname{char}(k) \ne 2$.
+\end{example}
+
+
+\begin{example}
+Untuk setiap grup $G$ yang beraksi dari kiri pada suatu himpunan $X$,
+misalkan $V$ ruang vektor dengan basis yang diindeks oleh $X$:
+\[
+V = \mathrm{span} \{ e_x : x \in X \} \ .
+\]
+Definisikan \emph{representasi permutasi} yang bersesuaian dengan $X$
+sebagai representasi
+\[
+\rho : G \to \operatorname{GL}(V)
+\]
+yang didefinisikan sedemikian sehingga
+\[
+\rho(g)(e_x) = e_{g(x)}
+\]
+untuk semua $g \in G$ dan $x \in X$.
+\end{example}
+
+\begin{example}
+Untuk setiap grup $G$, \emph{representasi reguler dari $G$}
+adalah representasi permutasi dari aksi $G$ pada dirinya sendiri melalui
+perkalian kiri.
+Dengan kata lain, 
+$V$ adalah ruang vektor dengan basis yang diindeks oleh $G$:
+\[
+V = \mathrm{span} \{ e_g : g \in G \}
+\]
+dan representasi
+\[
+\rho : G \to \operatorname{GL}(V)
+\]
+didefinisikan sedemikian sehingga
+\[
+\rho(g)(e_h) = e_{gh}
+\]
+untuk semua $g,h \in G$.
+\end{example}
+
+\begin{example} \label{ex:lin_alg_is_Z_rep_theory}
+Representasi linear $\rho : \mathbb{Z} \to \operatorname{GL}_n(k)$
+ditentukan sepenuhnya oleh citra $\rho(1)$
+karena $\rho(n)=\rho(1)^n$ untuk semua $n \in \mathbb{Z}$.
+Ini memberikan bijeksi kanonik antara representasi linear
+$\mathbb{Z}$ berderajat $n$ dan
+matriks invertibel berukuran $n \times n$.
+\end{example}
+
+\subsection{Pemetaan Ekuivarian}
+
+\begin{definition}
+Misalkan $V$ dan $W$ ruang vektor di atas medan yang sama.
+Andaikan
+\begin{align*}
+\rho &: G \to \operatorname{GL}(V), \textrm{ dan}\\
+\rho' &: G \to \operatorname{GL}(W)
+\end{align*}
+merupakan representasi linear dari grup $G$ yang sama.
+Suatu pemetaan linear $\tau : V \to W$ disebut \emph{$G$-ekuivarian} jika
+\[
+\rho'(g) \circ \tau = \tau \circ \rho(g)
+\]
+untuk semua $g \in G$.
+Kedua representasi tersebut disebut \emph{serupa} atau \emph{isomorfik} jika
+terdapat pemetaan linear $G$-ekuivarian yang invertibel, $\tau : V \to W$.
+Misalkan $\operatorname{Hom}_k^G(V,W)$ himpunan bagian dari
+pemetaan linear $G$-ekuivarian $f : V \to W$.
+\end{definition}
+
+Istilah lama untuk pemetaan $G$-ekuivarian adalah “operator penjalin”,
+tetapi istilah ini mulai menghilang (dan menurut saya, untunglah demikian).
+
+\begin{example}
+Jika $A$ dan $B$ merupakan matriks invertibel yang serupa, maka terdapat
+matriks invertibel $P$ sedemikian sehingga $A=PBP^{-1}$.
+Ingat bahwa $A^n=PB^nP^{-1}$ untuk semua bilangan bulat $n$.
+Berdasarkan Contoh~\ref{ex:lin_alg_is_Z_rep_theory}, kita menyimpulkan bahwa
+kelas ekuivalensi representasi linear
+$\mathbb{Z}$ berderajat $n$ berkorespondensi secara bijektif kanonik dengan
+kelas keserupaan matriks invertibel berukuran $n \times n$.
+\end{example}
+
+\begin{example}
+Misalkan $\rho : \mathbb{Z}/4\mathbb{Z} \to
+\operatorname{GL}_1(\mathbb{C})$
+representasi dengan $\rho(1)=(i)$,
+dan misalkan $\sigma : \mathbb{Z}/4\mathbb{Z} \to
+\operatorname{GL}_2(\mathbb{C})$
+representasi dengan
+\[
+\sigma(1) = \begin{pmatrix} 0&-1\\1&0 \end{pmatrix} .
+\]
+Definisikan $\rho'(g)=\rho(g^{-1})$
+dan $\sigma'(g)=\sigma(g^{-1})$ untuk semua $g \in G$.
+Dengan mempertimbangkan nilai eigen, kita menyimpulkan bahwa
+$\sigma'$ dan $\sigma$ ekuivalen, sedangkan $\rho'$ dan $\rho$ tidak.
+\end{example}
+
+\begin{example} \label{ex:S3_decomposition}
+Misalkan $\rho$ representasi permutasi berdimensi $3$ yang terkait dengan
+aksi $S_3$ pada $\{1,2,3\}$.
+Dalam basis biasa, kita mempunyai
+\[
+\rho(23) = \begin{pmatrix} 1&0&0\\ 0&0&1 \\ 0&1&0 \end{pmatrix}
+\textrm{ dan }
+\rho(123) = \begin{pmatrix} 0&0&1\\1&0&0\\0&1&0 \end{pmatrix}.
+\]
+Andaikan $\zeta \in k$ suatu akar satuan kubik primitif.
+Melalui matriks perubahan basis
+\[
+P = \begin{pmatrix} 1&1&1\\ 1&\zeta^2&\zeta\\1&\zeta&\zeta^2 \end{pmatrix} 
+\]
+kita memperoleh representasi baru $\sigma$ dengan
+\[
+\sigma(23) = \begin{pmatrix} 1&0&0\\ 0&0&1 \\ 0&1&0 \end{pmatrix}
+\textrm{ dan }
+\sigma(123) = \begin{pmatrix} 1&0&0\\ 0&\zeta&0 \\ 0&0&\zeta^2
+\end{pmatrix} .  
+\]
+Perhatikan bahwa $\rho$ dan $\sigma$ serupa berdasarkan konstruksi.
+\end{example}
+
+
+\subsection{Subrepresentasi}
+
+\begin{definition}
+Misalkan $\rho : G \to \operatorname{GL}(V)$ suatu representasi linear.
+Suatu subruang $W \subset V$ disebut \emph{stabil di bawah aksi $G$} jika
+$\rho_g(w) \in W$ untuk semua $g \in G$, $w \in W$.
+Definisikan $\rho^W : G \to \operatorname{GL}(W)$ dengan $\rho^W(g) := \rho(g)|_W$ untuk semua $g
+\in G$.
+Kita menyebut $\rho^W$ suatu \emph{subrepresentasi} dari $\rho$.
+\end{definition}
+
+Dalam situasi di atas, kita juga cukup mengatakan “$W$ adalah subrepresentasi dari $V$”
+saja.
+
+Jika $W$ merupakan subrepresentasi dari $V$, maka
+\[
+\rho_g(v+w) = \rho_g(v) + \rho_g(w) \in \rho_g(v)+W
+\]
+untuk setiap $v \in V$, $w \in W$, dan $g \in G$.
+Hal ini menghasilkan \emph{representasi hasil bagi} yang terdefinisi dengan baik,
+$\rho' : G \to \operatorname{GL}(V/W)$,
+pada ruang hasil bagi $V/W$.
+
+\begin{definition}
+Untuk representasi $(V,\rho)$ dan $(W,\sigma)$ dari suatu grup $G$,
+\emph{representasi jumlah langsung} $\rho \oplus \sigma$
+adalah representasi dengan ruang dasar $V \oplus W$ yang diberikan oleh
+\[ (\rho \oplus \sigma)_g (v,w) := ( \rho_g(v), \sigma_g(v) ) \]
+untuk semua $v \in V$, $w \in W$, dan $g \in G$.
+\end{definition}
+
+\begin{proposition}
+Misalkan $V$ dan $W$ representasi dari $G$, dan misalkan
+$f : V \to W$ suatu pemetaan $G$-ekuivarian.
+Maka $\ker(f)$ merupakan subrepresentasi dari $V$.
+\end{proposition}
+
+\begin{example}
+Dalam notasi
+Contoh~\ref{ex:S3_decomposition}, kita melihat bahwa $V$ dapat ditulis
+sebagai jumlah langsung $U \oplus W$, dengan
+\[
+U = \operatorname{span}\left\{ \begin{pmatrix} 1,1,1 \end{pmatrix}^T
+\right\}
+\]
+merupakan representasi trivial, dan
+\[
+W = \operatorname{span}\left\{
+\begin{pmatrix}1,\zeta,\zeta^2\end{pmatrix}^T,
+\begin{pmatrix}1,\zeta^2,\zeta\end{pmatrix}^T
+\right\}
+\]
+merupakan representasi setia berdimensi $2$ dari $S_3$.
+\end{example}
+
+\begin{example}
+Andaikan $G=\langle g \rangle$ suatu grup siklik hingga.
+Ingat bahwa setiap matriks berorde hingga dapat didiagonalkan
+di atas $\mathbb{C}$.
+Jadi, setiap representasi kompleks berdimensi hingga dari
+$G$ merupakan jumlah langsung representasi-representasi berdimensi $1$.
+\end{example}
+
+\begin{example}
+Jika $V$ suatu representasi dari $G$, definisikan \emph{ruang invarian}
+\[
+V^G = \{ v \in V \mid gv=v \textrm{ untuk semua } g \in G \}.
+\]
+Perhatikan bahwa $V^G$ merupakan subrepresentasi dari $V$ dan merupakan jumlah langsung
+representasi-representasi trivial.
+\end{example}
+
+\begin{definition}
+Representasi linear $V$ disebut \emph{tak tereduksi} jika $V \ne 0$ dan satu-satunya
+subrepresentasi dari $V$ adalah $0$ dan $V$ sendiri.
+Jika tidak demikian, representasi tersebut disebut \emph{tereduksi}.
+\end{definition}
+
+\begin{definition}
+Representasi linear $V$ disebut \emph{tak terdekomposisi} jika $V \ne 0$ dan
+$V$ tidak dapat ditulis sebagai jumlah langsung $V = W_1 \oplus W_2$ dengan
+$W_1, W_2$ subrepresentasi tak nol.
+Jika tidak demikian, representasi tersebut disebut \emph{terdekomposisi}.
+\end{definition}
+
+Representasi terdekomposisi jelas tereduksi, tetapi kebalikannya
+belum tentu berlaku, seperti diperlihatkan oleh contoh berikut.
+
+\begin{example}
+Misalkan $G=\mathbb{Z}/p\mathbb{Z}$ untuk suatu bilangan prima $p$,
+dan pertimbangkan representasi berdimensi dua $\rho$ di atas $\mathbb{F}_p$
+yang diberikan oleh
+\[
+\rho(1) = \begin{pmatrix} 1&1\\0&1 \end{pmatrix} .
+\]
+Suatu vektor $\begin{pmatrix} a\\b \end{pmatrix} $ merentang
+subruang stabil-$G$ hanya jika $b=0$.
+Subruang yang direntang oleh $\begin{pmatrix} 1\\0 \end{pmatrix}$
+merupakan subrepresentasi tak nol sejati
+dari $\rho$, sehingga $\rho$ tereduksi.
+Namun, inilah satu-satunya subrepresentasi, sehingga $\rho$
+tidak dapat ditulis sebagai jumlah langsung subrepresentasi-subrepresentasi sejati.
+Kita menyimpulkan bahwa $\rho$ tak terdekomposisi.
+\end{example}
+
+\begin{theorem}[Krull--Schmidt]
+Andaikan $V$ suatu representasi berdimensi hingga dari grup hingga $G$.
+Semua dekomposisi
+\[
+V \cong W_1 \oplus W_2 \oplus \cdots \oplus W_r
+\]
+menjadi representasi-representasi tak terdekomposisi bersifat tunggal hingga isomorfisme
+dan pengurutan ulang.
+\end{theorem}
+
+\begin{proof}
+Untuk sementara ditunda. Kita akan membuktikan hasil ini dalam keumuman yang lebih besar ketika membahas
+modul.
+\end{proof}
+
+\begin{remark}
+Teorema Krull--Schmidt gagal untuk representasi $G \to
+\operatorname{GL}(\mathbb{Z})$, sehingga fakta bahwa kita bekerja
+di atas medan sangat penting di sini.
+Sayangnya, contoh-contoh tandingnya cukup halus!
+\end{remark}
+
+\begin{theorem}[Lema Schur]
+Jika $V$ dan $W$ merupakan representasi tak tereduksi berdimensi hingga
+dan $k$ tertutup secara aljabar, maka
+\[
+\operatorname{Hom}_k^G(V,W) =
+\begin{cases}
+0 & \textrm{ jika } V \not\cong W\\
+k & \textrm{ jika } V \cong W.
+\end{cases}
+\]
+\end{theorem}
+
+\begin{proof}
+Misalkan $\phi : V \to W$ suatu pemetaan $G$-ekuivarian.
+Karena $V$ tak tereduksi, berlaku $\ker(\phi)=0$ atau $\ker(\phi)=V$.
+Karena $W$ tak tereduksi, berlaku $\operatorname{im}(\phi)=0$
+atau $\operatorname{im}(\phi)=W$.
+Jadi, $\phi$ adalah $0$ atau suatu isomorfisme.
+
+Dengan demikian, kita direduksi ke kasus $W=V$.
+Sekarang $\operatorname{End}^G_k(V)=\operatorname{Hom}_k^G(V,W)$
+merupakan aljabar-$k$ terhadap komposisi.
+Jika $\phi \in \operatorname{End}^G_k(V)$ tak nol, maka ia harus merupakan isomorfisme.
+Jadi, $\phi^{-1}$ juga termasuk dalam $\operatorname{End}^G_k(V)$.
+Kita menyimpulkan bahwa $\operatorname{End}^G_k(V)$ merupakan aljabar pembagian.
+Hasil tersebut sekarang mengikuti dari Lema~\ref{lem:division_over_kbar}.
+\end{proof}
+
+\begin{lemma} \label{lem:division_over_kbar}
+Jika $k$ suatu medan tertutup secara aljabar,
+maka setiap aljabar pembagian-$k$ berdimensi hingga $D$
+isomorfik dengan $k$. 
+\end{lemma}
+
+\begin{proof}
+Andaikan $a \in D \setminus \{0\} $.
+Karena $D$ berdimensi hingga, perkalian dengan $a$
+mempunyai polinomial minimal $m_a(t) \in k[t]$.
+Jika $m_a$ tidak berderajat $1$, maka $m_a(t)=f(t)g(t)$
+untuk polinomial tak konstan $f,g \in k[t]$, sebab $k$ tertutup secara
+aljabar.
+Persamaan $0=m_a(a)=f(a)g(a)$ memaksa $f(a)=0$ atau $g(a)=0$,
+sebab $D$ merupakan gelanggang pembagian. Namun, ini bertentangan dengan keminimalan
+polinomial minimal. Kita menyimpulkan bahwa $m_a(t)=t-\lambda$ untuk suatu
+$\lambda \in k$. Jadi, $a$ merupakan perkalian skalar dengan $\lambda$,
+dan dengan demikian merupakan elemen $k$.
+\end{proof}
+
+\begin{definition}
+Representasi linear $V$ disebut \emph{tereduksi lengkap}
+jika $V$ merupakan jumlah langsung representasi-representasi tak tereduksi.
+\end{definition}
+
+Andaikan $V$ tereduksi lengkap.
+Teorema Krull--Schmidt menyatakan bahwa terdapat
+representasi-representasi tak tereduksi $W_1, \ldots, W_r$ yang saling tak isomorfik,
+sedemikian sehingga
+\begin{equation} \label{eq:isotypic_decomposition}
+V = \bigoplus_{i=1}^r V_i
+\end{equation}
+dengan setiap $V_i$ isomorfik dengan
+\[
+V_i = W_i^{\oplus m_i}
+\]
+untuk suatu bilangan bulat positif $m_i$.
+Pernyataan \eqref{eq:isotypic_decomposition} disebut
+\emph{dekomposisi isotipik dari $V$}.
+Subrepresentasi $V_i$ disebut \emph{komponen isotipik dari
+$V$ yang terkait dengan $W_i$}, sedangkan bilangan bulat $m_i$ disebut
+\emph{multiplisitas $W_i$ dalam $V$}.
+
+Setiap $V_i$ merupakan subrepresentasi \emph{kanonik} dari $V$,
+sedangkan klasifikasi subrepresentasi yang isomorfik dengan $W_i$ dapat bergantung pada
+pilihan sebarang.
+Hal ini memperumum keadaan ketika ruang-ruang eigen dari suatu transformasi linear
+bersifat kanonik, sedangkan basis yang terdiri atas vektor-vektor eigen
+dapat bergantung pada pilihan sebarang.
+
+\begin{exercise}
+Buktikan Teorema Krull--Schmidt untuk kasus representasi
+tereduksi lengkap $V$ ketika medan $k$ tertutup secara aljabar.
+(Petunjuk: gunakan Lema Schur.)
+\end{exercise}
+
+Teorema berikut merupakan alasan utama bahwa teori representasi grup hingga
+dalam karakteristik “baik” sangat berbeda dari teori dalam
+karakteristik “buruk”.
+Berdasarkan konvensi, setiap bilangan bulat dianggap “relatif prima terhadap karakteristik $k$”
+ketika karakteristiknya $0$.
+
+\begin{theorem}[Maschke]
+Misalkan $G$ suatu grup hingga yang ordenya relatif prima terhadap karakteristik $k$.
+Setiap representasi berdimensi hingga dari $G$ tereduksi lengkap.
+\end{theorem}
+
+Teorema ini mengikuti melalui induksi dan lema berikut:
+
+\begin{lemma}
+Misalkan $G$ suatu grup hingga yang ordenya relatif prima terhadap karakteristik $k$.
+Jika $V$ suatu representasi dari $G$ dan $W$ subrepresentasi dari $V$,
+maka terdapat subrepresentasi $U$ dari $V$
+sedemikian sehingga $V= W \oplus U$.
+\end{lemma}
+
+\begin{proof}
+Misalkan $Q: V \to W$ suatu proyeksi dari $V$ ke subruang $W$.
+Proyeksi $Q$ ada berdasarkan alasan aljabar linear
+dan belum tentu \emph{$G$-ekuivarian}.
+Namun, kita akan menyesuaikannya agar \emph{menjadi} $G$-ekuivarian.
+Definisikan $P : V \to W$ melalui
+\[
+P(v) = \frac{1}{|G|} \sum_{g \in G} g\left( Q\left( g^{-1} v\right)\right)
+\]
+untuk semua $v \in V$. Perhatikan bahwa syarat pada karakteristik
+medan diperlukan agar kita dapat membagi dengan orde grup.
+
+Kita mengklaim bahwa $P : V \to W$ merupakan proyeksi $G$-ekuivarian ke $W$.
+Karena pembatasan $Q$ pada $W$ adalah identitas dan $W$ stabil-$G$,
+kita melihat bahwa
+$g \circ Q \circ g^{-1}$ merupakan proyeksi ke $W$
+untuk semua $g \in G$. Jadi, kita mempunyai
+\begin{align*}
+P^2(v) &=
+\frac{1}{|G|^2} \sum_{g,h \in G} gQg^{-1} hQh^{-1}v\\
+&=\frac{1}{|G|^2} \sum_{g,h \in G} hQh^{-1}v\\
+&=\frac{1}{|G|} \sum_{h \in G} hQh^{-1}v = P(v)
+\end{align*}
+dan menyimpulkan bahwa $P$ merupakan proyeksi. Karena
+$P|_W=\operatorname{id}_W$, kita menyimpulkan bahwa ia merupakan proyeksi ke $W$.
+
+Sekarang kita tunjukkan bahwa $P$ ekuivarian.
+Hal ini mengikuti dari kiat pengindeksan ulang $j=h^{-1}g$ berikut:
+\begin{align*}
+P(hv) &=
+\frac{1}{|G|} \sum_{g \in G} gQg^{-1} (hv)\\
+&=\frac{1}{|G|^2} \sum_{j \in G} hjQj^{-1}v\\
+&=h\left(\frac{1}{|G|} \sum_{j \in G} jQj^{-1}v\right) = hP(v).
+\end{align*}
+Kernel $P$ merupakan komplemen stabil-$G$, $U$, yang dicari.
+\end{proof}
+
+\subsection{Konstruksi}
+
+Andaikan $(V,\rho)$ dan $(W,\sigma)$ representasi linear berdimensi hingga
+dari suatu grup $G$ di atas medan $k$.
+
+Misalkan $\operatorname{Hom}_k(V,W)$ menyatakan ruang vektor transformasi linear
+$\tau : V \to W$.
+Misalkan $V^\vee$ ruang vektor dual dari $V$.
+Misalkan $V \otimes W$ hasil kali tensor di atas $k$.
+
+\begin{proposition}
+Ruang vektor $\operatorname{Hom}_k(V,W)$ mempunyai struktur kanonik sebagai representasi
+linear $\tau$, dengan
+\[
+ \tau_g(f) = \sigma(g) \circ f \circ \rho(g)^{-1}
+\]
+untuk semua $f : V \to W$ dan $g \in G$.
+\end{proposition}
+
+Aksi-$G$ yang didefinisikan di atas mempunyai sifat sangat berguna bahwa
+himpunan homomorfisme $G$-ekuivarian tepat merupakan himpunan invarian dari
+aksi-$G$ pada himpunan homomorfisme. Dengan kata lain,
+\[
+\operatorname{Hom}^G_k(V,W) = \operatorname{Hom}_k(V,W)^G .
+\]
+
+\begin{proposition}
+Ruang dual $V^\vee$ mempunyai struktur kanonik sebagai representasi
+linear $\rho^\vee$, dengan
+\[
+ (\rho^\vee)_g(f) = f \circ \rho(g)^{-1}
+\]
+untuk $f : V \to k$ dan $g \in G$.
+\end{proposition}
+
+Perhatikan bahwa proposisi di atas merupakan kasus khusus aksi pada
+homomorfisme ketika $W=k$ mempunyai aksi-$G$ trivial.
+
+\begin{proposition}
+Hasil kali tensor $V \otimes W$ mempunyai struktur kanonik sebagai representasi
+linear $\rho \otimes \sigma$, dengan
+\[
+(\rho \otimes \sigma)_g(v \otimes w) = \rho_g(v) \otimes \sigma_g(w)
+\]
+untuk $v \in V$, $w \in W$, dan $g \in G$.
+\end{proposition}
+
+Perhatikan bahwa proposisi di atas sesuai dengan aksi-$G$ yang
+diperoleh dari isomorfisme kanonik
+\[
+\operatorname{Hom}_k(W,V) \cong W^\vee \otimes V. 
+\]
+
+\begin{exercise}
+Untuk suatu ruang vektor $V$,
+tentukan aksi $G$ pada
+$\mathcal{T}^d(V)$, $\mathcal{S}^d(V)$, $\Lambda^d(V)$,
+$\operatorname{Sym}^n(V)$, dan $\operatorname{Alt}^n(V)$.
+Periksa bahwa berbagai pemetaan kanonik bersifat ekuivarian.
+\end{exercise}
+
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{alpha}
+\bibliography{rep_theory}
+
+\end{document}
+
+

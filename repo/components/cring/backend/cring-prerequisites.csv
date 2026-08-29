@@ -1,0 +1,3 @@
+order,prerequisite_id,from_external_id,from_author,from_chapter,topic,to_root_id,repair_id,relationship,source_records,target_records,evidence
+1,prerequisite.li.chapter_6.projective_modules.to.cring.nakayama,external.li.chapter_6.projective_modules,Li,6,projective modules,root.cring.nakayama,CRING-R01-empty-projective-reference,required-background,185,185,explicit repaired prerequisite bridge
+2,prerequisite.li.chapter_5.polynomial_ufd.to.cring.spec_zariski,external.li.chapter_5.polynomial_ufd,Li,5,polynomial-ring unique factorization,root.cring.spec_zariski,CRING-R02-empty-ufd-reference,required-background,149,149,explicit repaired prerequisite bridge

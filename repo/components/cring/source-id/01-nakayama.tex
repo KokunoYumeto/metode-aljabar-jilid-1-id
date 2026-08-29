@@ -1,0 +1,209 @@
+\subsection{Lema Nakayama}
+
+Sekarang kita nyatakan suatu kriteria yang sangat berguna untuk menentukan kapan suatu modul atas
+gelanggang \emph{lokal} bernilai nol.
+
+
+\begin{lemma}[Lema Nakayama] \label{nakayama} Jika $R$ adalah gelanggang lokal dengan
+ideal maksimal
+$\mathfrak{m}$. Misalkan $M$ suatu modul-$R$ yang terbangkitkan hingga. Jika
+$\mathfrak{m}M = M$, maka $M = 0$.
+\end{lemma}
+
+Perhatikan bahwa $\mathfrak{m}M$ adalah submodul yang dibangkitkan oleh hasil kali
+elemen-elemen $\mathfrak{m}$ dan $M$.
+
+\begin{remark}
+Setelah memiliki teori hasil kali tensor, pernyataan ini secara ekuivalen mengatakan bahwa
+jika $M$ terbangkitkan hingga, maka
+\[ M \otimes_R R/\mathfrak{m} = M/\mathfrak{m}M \neq 0.  \]
+Jadi, untuk membuktikan bahwa suatu modul terbangkitkan hingga atas gelanggang lokal bernilai nol, kita
+dapat mereduksi masalahnya dengan mengkaji reduksi ke $R/\mathfrak{m}$. Karena itu, kriteria ini sangat
+berguna.
+\end{remark}
+
+Lema Nakayama menegaskan mengapa bekerja di atas gelanggang lokal begitu berguna.
+Karena itu, pertanyaan tentang gelanggang umum sering berguna untuk direduksi menjadi pertanyaan tentang
+gelanggang lokal.
+Sebelum membuktikannya, kita catat sebuah korolari.
+
+\begin{corollary}
+Misalkan $R$ suatu gelanggang lokal dengan ideal maksimal $\mathfrak{m}$, dan $M$ suatu modul yang
+terbangkitkan hingga. Jika $N \subset M$ adalah submodul sedemikian sehingga $N +
+\mathfrak{m}N =
+M$, maka $N=M$.
+\end{corollary}
+\begin{proof}
+Terapkan Lema Nakayama di atas (\cref{nakayama}) pada $M/N$.
+\end{proof}
+
+
+Kita akan membuktikan pernyataan yang lebih umum berikut.
+
+\begin{proposition} 
+Misalkan $M$ suatu modul-$R$ yang terbangkitkan hingga, dan $J \subset R$ suatu ideal.
+Andaikan $JM = M$. Maka terdapat $a \in 1+J$ sedemikian sehingga $aM = 0$.
+\end{proposition} 
+
+Jika $J$ adalah ideal maksimal suatu gelanggang lokal, maka $a$ merupakan unit, sehingga $M=0$.
+
+\begin{proof}
+Andaikan $M$ dibangkitkan oleh $\left\{x_1, \dots, x_n\right\} \subset M$. Ini
+berarti bahwa setiap elemen $M$ merupakan kombinasi linear dari elemen-elemen
+$x_i$. Namun, menurut hipotesis, setiap $x_i \in JM$. Khususnya, setiap
+$x_i$ dapat ditulis sebagai
+\[ x_i = \sum a_{ij} x_j, \ \mathrm{dengan} \ a_{ij} \in \mathfrak{m}.  \]
+Jika $A$ adalah matriks $\left\{a_{ij}\right\}$, maka $A$ memetakan
+vektor $(x_i)$ ke dirinya sendiri. Khususnya, $I-A$ memusnahkan
+vektor $(x_i)$.
+
+Sekarang $I-A$ adalah matriks berukuran $n$ kali $n$ atas gelanggang $R$. Tentu saja, kita dapat
+mereduksi semuanya modulo $J$ sehingga memperoleh matriks identitas; hal ini
+karena semua entri $A$ merupakan elemen $J$. Akibatnya,
+determinannya kongruen dengan $1$ modulo $J$.
+
+Khususnya, $a=\det (I - A)$ terletak dalam $1+J$.  
+Menurut aljabar linear yang lazim, $aI$ dapat direpresentasikan sebagai hasil kali $A$
+dan matriks kofaktor; khususnya, $aI$ memusnahkan vektor
+$(x_i)$, sehingga $aM=0$.
+\end{proof}
+
+Sebelum kembali ke kasus khusus gelanggang lokal, kita perhatikan fakta berguna berikut
+dari teori ideal.
+
+\begin{proposition}  \label{idempotentideal}
+Misalkan $R$ suatu gelanggang komutatif dan $I \subset R$ suatu ideal terbangkitkan hingga sedemikian sehingga $I^2 = I$.
+Maka $I$ dibangkitkan oleh suatu elemen idempoten.
+\end{proposition} 
+\begin{proof} 
+Kita tahu bahwa terdapat $x \in 1+I$ sedemikian sehingga $xI =0$. Jika $x = 1+y, y \in I$, maka
+diperoleh bahwa 
+\[ yt = t  \]
+untuk setiap $t \in I$. Khususnya, $y$ idempoten dan $(y) = I$.
+\end{proof} 
+
+\begin{exercise} 
+\rref{idempotentideal} tidak berlaku jika idealnya tidak terbangkitkan hingga.
+\end{exercise} 
+
+\begin{exercise} 
+Misalkan $M$ suatu modul terbangkitkan hingga atas gelanggang $R$. Andaikan $f: M \to M$
+suatu surjeksi. Maka $f$ merupakan isomorfisme. Untuk melihatnya, pandang $M$ sebagai
+modul atas $R[t]$, dengan $t$ bertindak melalui $f$; karena $(t)M = M$, tunjukkan bahwa
+terdapat polinomial $Q(t) \in R[t]$ sedemikian sehingga $Q(t)t$ bertindak sebagai identitas pada
+$M$, yakni $Q(f)f=1_M$.
+\end{exercise} 
+
+\begin{exercise}
+Berikan contoh penyangkal bagi kesimpulan Lema Nakayama ketika modulnya
+tidak terbangkitkan hingga.
+\end{exercise}
+\begin{exercise}
+Misalkan $M$ suatu modul terbangkitkan hingga atas gelanggang $R$. Misalkan $\mathfrak{I}$
+adalah radikal Jacobson
+dari $R$ (bdk. \rref{Jacobson}). Jika $\mathfrak{I} M = M$,
+maka $M =
+0$.
+\end{exercise}
+
+\begin{exercise}[Kebalikan Lema Nakayama]
+Sebaliknya, andaikan $R$ suatu gelanggang dan $\mathfrak{a} \subset R$ suatu ideal
+sedemikian sehingga $\mathfrak{a} M \neq M$ untuk setiap modul-$R$ tak nol yang terbangkitkan
+hingga. Maka $\mathfrak{a}$ termuat dalam setiap ideal maksimal $R$.
+\end{exercise}
+
+
+\begin{exercise}
+Berikut ini pembuktian alternatif Lema Nakayama. Misalkan $R$ lokal dengan
+ideal maksimal $\mathfrak{m}$, dan misalkan $M$ suatu modul terbangkitkan hingga dengan
+$\mathfrak{m}M = M$. Misalkan $n$ adalah jumlah minimal pembangkit $M$. Jika
+$n>0$, pilih pembangkit $x_1, \dots, x_n$. Kemudian tuliskan $x_1 = a_1 x_1 + \dots +
+a_n x_n$, dengan setiap $a_i \in \mathfrak{m}$. Simpulkan bahwa $x_1$ berada dalam
+submodul yang dibangkitkan oleh $x_i, i \geq 2$, sehingga $n$ sebenarnya tidak
+minimal, suatu kontradiksi.
+\end{exercise}
+
+Misalkan $M, M'$ merupakan modul terbangkitkan hingga atas gelanggang lokal $(R,
+\mathfrak{m})$, dan misalkan $\phi: M \to M'$ suatu homomorfisme modul. Lema
+Nakayama memberikan kriteria agar $\phi$ menjadi surjeksi: tepatnya, pemetaan
+$\overline{\phi}: M/\mathfrak{m}M \to M'/\mathfrak{m}M'$ harus merupakan surjeksi.
+Untuk injeksi, pernyataan ini tidak benar. Misalnya, jika $\phi$ adalah perkalian dengan suatu elemen
+$\mathfrak{m}$, maka $\overline{\phi}$ bernilai nol, tetapi $\phi$ masih mungkin injektif.
+Meskipun demikian, kita berikan suatu kriteria agar pemetaan modul \emph{bebas} atas gelanggang lokal
+merupakan injeksi \emph{terbelah}.
+
+\begin{proposition} \label{splitcriterion1}
+Misalkan $R$ suatu gelanggang lokal dengan ideal maksimal $\mathfrak{m}$. Misalkan $F, F'$ dua
+modul-$R$ bebas yang terbangkitkan hingga, dan misalkan $\phi: F \to F'$ suatu homomorfisme. 
+Maka $\phi$ merupakan injeksi terbelah jika dan hanya jika reduksi $\overline{\phi}$
+\[ F/\mathfrak{m}F \stackrel{\overline{\phi}}{\to} F'/\mathfrak{m}F'  \]
+merupakan injeksi. 
+\end{proposition}
+\begin{proof} 
+Satu arah mudah. Jika $\phi$ merupakan injeksi terbelah, maka ia memiliki invers
+kiri
+$\psi: F' \to F$ sedemikian sehingga $\psi \circ \phi = 1_F$. Reduksi $\psi$ sebagai
+pemetaan $F'/\mathfrak{m}F' \to F/\mathfrak{m}F$ merupakan invers kiri bagi
+$\overline{\phi}$, yang dengan demikian injektif.
+
+Sebaliknya, andaikan $\overline{\phi}$ injektif. Misalkan $e_1, \dots, e_r$ suatu
+``basis'' bagi $F$, dan misalkan $f_1, \dots, f_r$ citranya di bawah $\phi$ dalam
+$F'$. Maka reduksi $\overline{f_1}, \dots, \overline{f_r}$ bebas
+linear dalam ruang vektor-$R/\mathfrak{m}$ $F'/\mathfrak{m}F'$. Lengkapi
+himpunan ini menjadi suatu basis $F'/\mathfrak{m}F'$ dengan menambahkan elemen-elemen
+$\overline{g_1}, \dots, \overline{g_s} \in F'/\mathfrak{m}F'$, yang dapat
+kita angkat menjadi elemen $g_1, \dots, g_s \in F'$. Jelas bahwa $F'$ berperingkat $r+s $
+karena reduksinya $F'/\mathfrak{m}F'$ juga demikian.
+
+Kita menyatakan bahwa himpunan $\left\{f_1, \dots, f_r, g_1, \dots, g_s\right\}$ merupakan
+basis bagi $F'$. Memang, kita memiliki pemetaan 
+\[ R^{r+s} \to F'  \]
+antara modul-modul bebas berperingkat $r+s$. Pemetaan ini dapat dinyatakan sebagai matriks berukuran $r+s$ kali $r+s$
+$M$; kita perlu menunjukkan bahwa $M$ invertibel. Namun, setelah direduksi modulo
+$\mathfrak{m}$, matriks itu invertibel karena reduksi $f_1, \dots, f_r,
+g_1, \dots, g_s$ membentuk suatu basis bagi $F'/\mathfrak{m}F'$. 
+Jadi determinan $M$ tidak berada dalam $\mathfrak{m}$, sehingga berdasarkan kelokalan ia
+invertibel. 
+Dengan demikian, pernyataan tentang $F'$ terbukti.
+
+Sekarang kita dapat mendefinisikan invers kiri $F' \to F$ bagi $\phi$. Memang, untuk $x \in F'$,
+kita dapat menuliskannya secara tunggal sebagai kombinasi linear $\sum a_i f_i + \sum b_j g_j$
+berdasarkan hasil di atas. Kita definisikan $\psi(\sum a_i f_i + \sum b_j g_j) = \sum a_i e_i \in
+F$. Jelas bahwa pemetaan ini merupakan invers kiri.
+\end{proof} 
+
+Selanjutnya kita catat sedikit penguatan dari hasil di atas, yang kadang-kadang
+berguna. Tepatnya, modul pertama tidak harus bebas.
+\begin{proposition} 
+Misalkan $R$ suatu gelanggang lokal dengan ideal maksimal $\mathfrak{m}$. Misalkan $M, F$ dua
+modul-$R$ terbangkitkan hingga dengan $F$ bebas, dan misalkan $\phi: M \to F'$ suatu homomorfisme. 
+Maka $\phi$ merupakan injeksi terbelah jika dan hanya jika reduksi $\overline{\phi}$
+\[ M/\mathfrak{m}M \stackrel{\overline{\phi}}{\to} F/\mathfrak{m}F  \]
+merupakan injeksi. 
+\end{proposition}
+Sesungguhnya akan diperoleh bahwa $M$ sendiri bebas, karena $M$ proyektif (lihat
+pembahasan modul proyektif dalam Li, Bab 6), sebab ia merupakan jumlah langsung dari suatu modul bebas.
+\begin{proof} 
+Misalkan $L$ suatu ``aproksimasi bebas'' bagi $M$.
+Artinya, pilih suatu basis $\overline{x_1}, \dots, \overline{x_n}$ bagi $M/\mathfrak{m}M$ (sebagai ruang
+vektor-$R/\mathfrak{m}$) dan angkat basis ini menjadi elemen $x_1, \dots, x_n \in M$. Definisikan pemetaan
+\[ L = R^n \to M  \]
+dengan mengirimkan vektor basis ke-$i$ ke $x_i$.
+Maka $L/\mathfrak{m} L \to M/\mathfrak{m}M$ merupakan isomorfisme.
+Menurut Lema Nakayama,
+$L \to M$ surjektif.
+
+Selanjutnya, pemetaan komposit
+$L \to M \to F$ sedemikian sehingga $L/\mathfrak{m}L \to F/\mathfrak{m}F$ injektif, sehingga
+$L \to F$ merupakan injeksi terbelah (menurut \cref{splitcriterion1}).
+Akibatnya, kita dapat menemukan pemisahan $F \to L$, yang setelah dikomposisikan dengan $L
+\to M$ merupakan pemisahan dari $M \to F$.
+\end{proof} 
+
+\begin{exercise} 
+Misalkan $A$ suatu gelanggang lokal, dan $B$ suatu gelanggang yang terbangkitkan hingga dan bebas sebagai
+modul-$A$. Andaikan $A \to B$ suatu injeksi. Maka $A \to B$ merupakan \emph{injeksi
+terbelah.} (Perhatikan bahwa setiap morfisme tak nol dari suatu medan
+bersifat injektif.) 
+\end{exercise} 
+ 

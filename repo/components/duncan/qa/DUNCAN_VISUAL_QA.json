@@ -1,0 +1,57 @@
+{
+  "schema": "o013.duncan-complete-visual-qa.v1",
+  "date": "2026-08-29",
+  "result": "pass",
+  "reader": {
+    "path": "artifacts/catatan-teori-representasi-duncan-id.pdf",
+    "pages": 114,
+    "bytes": 508546,
+    "sha256": "6779d6467463fde4ef0b4fae147dc63533dff0919eda684120d409f1f5f07d12",
+    "page_size_points": [595.28, 841.89],
+    "title": "Catatan Teori Representasi - adaptasi bahasa Indonesia",
+    "author": "Alexander Duncan",
+    "creator": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
+  "all_page_pass": {
+    "method": "All 114 pages of the promoted artifact were rendered at 45 dpi into one ordered overview and inspected once for page geometry, centering, clipping, malformed mathematics, accidental blanks, and density discontinuities.",
+    "rendered_pages": 114,
+    "contact_sheets": 1,
+    "overview": {
+      "path": "visual/overview.jpg",
+      "bytes": 1335550,
+      "sha256": "64dcf5d7d96f772aefbe3b450b227114a7120030ff6ddce24aa79a631a85b539"
+    },
+    "finding": "The reader uses a centered, consistently filled A4 text block. No clipping, overlap, malformed page, accidental blank page, or visible broken formula was found; short pages occur only at natural component or bibliography endings."
+  },
+  "targeted_pass": {
+    "physical_pages": [1, 57, 114],
+    "files": [
+      {
+        "path": "visual/page-001.png",
+        "bytes": 50362,
+        "sha256": "ec8bbd56235e6ffbe12da4448fc3b4d33205b866f2b5aad798eaaac80ff3715f"
+      },
+      {
+        "path": "visual/page-057.png",
+        "bytes": 258738,
+        "sha256": "7574581223eec8dacd553bf219f92f5a7d19582c119fd85262b6e85a35648480"
+      },
+      {
+        "path": "visual/page-114.png",
+        "bytes": 117620,
+        "sha256": "7826a1d8ee04e4e54d5caf47aac7ad4b2d7b3a43b4237e7cd68897d641e4f671"
+      }
+    ],
+    "finding": "The final cover shows exact source credit, CC BY 4.0, independent adaptation status, and exact model provenance; a dense mathematical page and the final bibliography page are readable and unclipped."
+  },
+  "build_diagnostics": {
+    "fatal_errors": 0,
+    "undefined_references": 0,
+    "undefined_citations": 0,
+    "rerun_requests": 0,
+    "overfull_hboxes": 1,
+    "maximum_overfull_points": 1.70824,
+    "adjudication": "The single 1.70824-point formula-line diagnostic is not visibly clipped or overlapping; no mathematical rewrite is justified. Pinned bibliography warnings concern retained legacy metadata only."
+  },
+  "model": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

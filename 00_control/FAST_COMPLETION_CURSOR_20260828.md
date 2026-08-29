@@ -27,23 +27,32 @@ finite terminal workflow and authority chain.
   passed anonymous full-byte readback. Receipt:
   `qa/ZENODO_PUBLICATION_LI_COMPLETE_1_0_0.md`.
 
+## Complete local four-component boundary
+
+- Duncan: `artifacts/catatan-teori-representasi-duncan-id.pdf`, 114 pages,
+  508,546 bytes, SHA-256
+  `6779d6467463fde4ef0b4fae147dc63533dff0919eda684120d409f1f5f07d12`;
+  seven roots / 8,121 target records / 41 exercises / 4,632 formulas. Backend,
+  reproducible build, and all-page visual inspection PASS.
+- CRing: `artifacts/pilihan-aljabar-komutatif-cring-id.pdf`, 74 pages,
+  378,716 bytes, SHA-256
+  `4596fd6a84f829e1e9c14cb87468226d6ef49c653d41886af5fab9f2bd96b5db`;
+  six roots / 3,589 target records / nine repairs / three original bridges /
+  27 exercises / two hints / 2,651 formulas. Full GFDL closure, backend,
+  reproducible build, and all-page visual inspection PASS.
+- Original route/mastery: `artifacts/o013-rute-pembelajar-dan-penguasaan-id.pdf`,
+  7 pages, 79,365 bytes, SHA-256
+  `31af67adf897519a1fef0ed53757c2a3d9d12b5ccc3bdd4cb74e9ce01dd27a18`;
+  71 stable IDs, 114 closed references, eight diagnostics, eight mastery
+  prompts with hints and answers. Build and all-page inspection PASS.
+- Aggregate total: 716 reader pages; translation backlog zero. Controlling
+  receipt: `qa/O013_COMPLETE_LOCAL_BOUNDARY_20260829.json`.
+
 ## Immediate executable action
 
-Close Duncan as one component. All seven licensed roots are translated. Rerun
-the integrated build after the concrete `symmetric.tex` math-blank repair,
-then perform one aggregate validator/backend/build/visual gate, promote the
-component, commit/push with path-limited Git, read it back anonymously, and
-preserve it in the existing work lineage. Do not reopen Li QA.
-
-## Parallel production after the Li push
-
-1. Admit/build/index the seven complete Duncan CC BY 4.0 TeX roots; external
-   assignment sheets remain excluded.
-2. Admit/build/index only the six selected repaired CRing GFDL 1.2-or-later
-   spans. The aggregate translation validator already passes for all six pairs:
-   3,589 records, nine tracked repairs, receipt
-   `qa/cring-selected-evidence/cring-selected-aggregate-validation.json`.
-3. Author only genuinely missing connective/mastery material with separate
-   provenance and rights; do not attribute it to Li, Duncan, or CRing.
-4. Publish each worthwhile component boundary once and continue until the full
-   terminal corpus is public and anonymously byte-verified.
+Commit and push only the promoted component paths, readers, rights, README, and
+durable controls. Anonymously compare every changed public blob. Then publish a
+new nonduplicative reader-first aggregate Zenodo record with the four PDFs,
+compact source/backend ZIP, rights notice, manifest, and checksums. Use record
+license `other-open`, preserve CC BY 4.0 and GFDL boundaries in prose/files,
+and anonymously read back every published byte. Do not rerun passing QA.

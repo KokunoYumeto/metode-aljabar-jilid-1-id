@@ -1,0 +1,155 @@
+\documentclass[11pt,openany]{book}
+\input{cring-selected-id-preamble.tex}
+
+\begin{document}
+
+\begin{titlepage}
+  \centering
+  \vspace*{0.12\textheight}
+  {\Huge\bfseries Pilihan CRing\par}
+  \vspace{0.6em}
+  {\LARGE Pembaca Bahasa Indonesia\par}
+  \vspace{2.5em}
+  {\large Enam pilihan tentang aljabar komutatif\par}
+  \vfill
+  \begin{minipage}{0.82\textwidth}
+  \centering
+  Sumber: \emph{The CRing Project}, hak cipta \textcopyright\ 2010 CRing Project.\\[0.8em]
+  Terjemahan, penyuntingan, dan integrasi edisi: OpenAI Codex
+  \texttt{gpt-5.6-sol}, Ultra, atas instruksi pengguna.\\[0.8em]
+  Komponen GFDL-1.2-or-later; tanpa Bagian Invarian, tanpa Teks Sampul Depan,
+  dan tanpa Teks Sampul Belakang.
+  \end{minipage}
+  \vfill
+  {\small Edisi kerja tersemat; 2026}
+\end{titlepage}
+
+\frontmatter
+
+\chapter*{Status edisi, lisensi, dan provenance}
+\addcontentsline{toc}{chapter}{Status edisi, lisensi, dan provenance}
+
+Pembaca ini merupakan versi termodifikasi dan terjemahan terpilih dari sumber
+\emph{The CRing Project}. Hak cipta sumber adalah \textcopyright\ 2010 CRing
+Project. Izin diberikan untuk menyalin, mendistribusikan, dan/atau memodifikasi
+dokumen ini menurut GNU Free Documentation License, Versi 1.2 atau versi lebih
+baru yang diterbitkan Free Software Foundation; tanpa Bagian Invarian, tanpa
+Teks Sampul Depan, dan tanpa Teks Sampul Belakang. Salinan lengkap lisensi
+berbahasa Inggris disertakan sebagai bab \emph{GNU Free Documentation License}.
+
+Terjemahan Indonesia, penyuntingan matematis atas sembilan perbaikan yang
+tercatat, dan lapisan integrasi dibuat oleh OpenAI Codex
+\texttt{gpt-5.6-sol}, Ultra, atas instruksi pengguna. Tiga jembatan edisi asli
+yang ditandai secara eksplisit tetap dibedakan dari teks sumber. Identitas byte,
+rentang baris sumber, klasifikasi perbaikan, dan provenance setiap lapisan
+tercatat dalam \texttt{CRING\_COMPONENT\_MANIFEST.json}.
+
+Nama CRing Project, para kontributor sumber, institusi yang disebut dalam sumber,
+dan Free Software Foundation digunakan hanya sejauh diperlukan untuk atribusi
+dan lisensi. Pembaca ini tidak menyatakan atau menyiratkan afiliasi, persetujuan,
+pengesahan, dukungan, atau sponsor dari pihak-pihak tersebut.
+
+\section*{Enam rentang sumber terpilih}
+\begin{longtable}{@{}p{0.28\textwidth}p{0.43\textwidth}p{0.18\textwidth}@{}}
+\toprule
+Topik & Berkas sumber resmi & Baris\cr
+\midrule
+Lema Nakayama & \texttt{threeimportantfunctors.tex} & 362--570\cr
+Spec dan topologi Zariski & \texttt{spec.tex} & 34--926\cr
+Prima terkait dan dekomposisi primer & \texttt{noetherian.tex} & 335--1206\cr
+Lying over dan going up & \texttt{integrality.tex} & 524--761\cr
+Nullstellensatz dan normalisasi & \texttt{integrality.tex} & 1218--1547\cr
+Dimensi lokal dan Krull & \texttt{dimension.tex} & 17--1044\cr
+\bottomrule
+\end{longtable}
+
+\clearpage
+\section*{Sembilan perbaikan tercatat}
+\begin{enumerate}
+\item \texttt{CRING-R01}: rujukan modul proyektif yang kosong.
+\item \texttt{CRING-R02}: rujukan UFD yang kosong.
+\item \texttt{CRING-R03}: bukti semilokal yang hilang.
+\item \texttt{CRING-R03A}: dua operator $\mu$ dan $\max$ yang rusak.
+\item \texttt{CRING-R04}: definisi notasi anihilator yang hilang.
+\item \texttt{CRING-R05}: definisi ketaktereduksian yang hilang.
+\item \texttt{CRING-R06}: contoh prima tertanam yang hilang.
+\item \texttt{CRING-R07}: catatan konstruktibilitas yang hilang.
+\item \texttt{CRING-R08}: dua rujukan DVR yang kosong.
+\end{enumerate}
+
+\section*{Tiga jembatan edisi asli}
+Ketiga rekaman yang secara khusus ditandai \emph{Jembatan edisi (asli)} berada
+dalam \texttt{03-associated-primary.tex}: definisi anihilator pada baris
+73--76, definisi ketaktereduksian pada baris 442--444, dan contoh prima
+tertanam pada baris 461--467. Bukti semilokal pada
+\texttt{02-spec-zariski.tex}, baris 890--901, juga bertanda provenance asli,
+tetapi dicatat sebagai perbaikan \texttt{CRING-R03}, bukan sebagai salah satu
+dari tiga rekaman jembatan tersebut.
+
+\chapter*{History}
+\addcontentsline{toc}{chapter}{History}
+\begin{description}
+\item[2010 --- sumber.] \emph{The CRing Project}, CRing Project. Lokasi
+jaringan yang direkam oleh edisi ini:
+\url{https://math.uchicago.edu/~amathew/CRing.zip}. Arsip sumber dipatok dengan
+SHA-256
+\texttt{151cdf5498622251db9999b082c4b756a5a7e22b07ddd79538c0057472a4234d}.
+\item[2026 --- versi termodifikasi.] \emph{Pilihan CRing: Pembaca Bahasa
+Indonesia}. Terjemahan, penyuntingan, dan integrasi oleh OpenAI Codex
+\texttt{gpt-5.6-sol}, Ultra, atas instruksi pengguna. Edisi kerja ini tidak
+menyatakan penerbit atau lokasi jaringan baru.
+\end{description}
+
+\tableofcontents
+
+\mainmatter
+\chapter{Pilihan aljabar komutatif}
+
+% Fragmen pertama hanya memuat satu \subsection; pengalihan lokal ini menaikkan
+% judul tersebut satu tingkat untuk menghindari nomor 1.0.1. Byte fragmen tidak
+% berubah dan pengalihan ini dicatat sebagai keputusan integrasi dalam manifest.
+\begingroup
+\let\subsection\section
+\input{../source-id/01-nakayama.tex}
+\endgroup
+
+\input{../source-id/02-spec-zariski.tex}
+\input{../source-id/03-associated-primary.tex}
+\input{../source-id/04-lying-over-going-up.tex}
+\input{../source-id/05-nullstellensatz-normalization.tex}
+\input{../source-id/06-krull-dimension.tex}
+
+\backmatter
+
+\chapter*{Registri rujukan ke sumber lengkap}
+\phantomsection\label{cring-external-reference-registry}
+\addcontentsline{toc}{chapter}{Registri rujukan ke sumber lengkap}
+Beberapa rujukan bernama dalam rentang pilihan menunjuk ke materi di luar enam
+rentang tersebut. Driver menampilkan rujukan itu sebagai tautan ke registri ini,
+tanpa mengubah fragmen. Target persis dalam penutupan sumber resmi adalah:
+\begin{description}
+\item[\texttt{Jacobson}] \texttt{foundations.tex:1398}.
+\item[\texttt{def-radical-ideal}] \texttt{foundations.tex:621}.
+\item[\texttt{anycontainedinmaximal}] \texttt{foundations.tex:1242}.
+\item[\texttt{primeavoidance}] \texttt{foundations.tex:1411}.
+\item[\texttt{assmfinite}] Sumber memakai rujukan ini pada
+\texttt{noetherian.tex:616}, sedangkan target yang tersedia berlabel
+\texttt{finiteassm} pada baris 489; driver mengungkapkan ketidakcocokan itu dan
+tidak mengubah fragmen.
+\item[\texttt{spec}] \texttt{spec.tex:2}.
+\item[\texttt{nilpcriterion}] \texttt{spec.tex:1013}.
+\item[\texttt{noetherian}] \texttt{noetherian.tex:2}.
+\item[\texttt{finitelygeneratedintegral}] \texttt{integrality.tex:319}.
+\item[\texttt{subsectiondimension}] \texttt{dimension.tex:1582}.
+\end{description}
+
+\bibliographystyle{alpha}
+\bibliography{CRING-references}
+
+\printindex
+
+% Salinan lisensi resmi dimasukkan langsung dari penutupan sumber yang hash-nya
+% dipatok oleh manifest dan skrip build.
+\input{GFDL-1.2-or-later.tex}
+
+\end{document}

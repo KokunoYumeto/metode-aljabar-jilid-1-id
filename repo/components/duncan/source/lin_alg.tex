@@ -1,0 +1,1295 @@
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsthm}
+
+% gaya teorema (semuanya memakai pencacah yang sama)
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{proposition}[theorem]{Proposisi}
+\newtheorem{corollary}[theorem]{Korolari}
+\newtheorem{conjecture}[theorem]{Konjektur}
+\newtheorem{exercise}[theorem]{Latihan}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definisi}
+\newtheorem{example}[theorem]{Contoh}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Catatan}
+
+% beberapa pengaturan penomoran
+\numberwithin{equation}{section}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\setlength{\headheight}{15.2pt}
+\renewcommand{\footrulewidth}{0.4pt}% nilai bakunya 0pt
+\setlength{\footskip}{30pt}
+\pagestyle{fancy}
+
+\makeatletter
+\let\ps@plain\ps@fancy 
+\makeatother
+
+\lhead{MATH 742}
+\chead{Aljabar Multilinear}
+\rhead{Musim Semi 2023}
+\lfoot{Terakhir Direvisi: \today}
+\cfoot{}
+\rfoot{\thepage\ dari \pageref{LastPage} }
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+\title{Aljabar Multilinear}
+\author{Alexander Duncan}
+
+\maketitle
+
+Di sini kita meninjau dan/atau memperkenalkan fakta-fakta baku dari aljabar
+(multi)linear. Sebagian besar materi ini semestinya sudah dijumpai dalam mata
+kuliah aljabar linear tingkat sarjana atau rangkaian ujian kualifikasi aljabar
+baku, tetapi beberapa gagasan (seperti hasil kali tensor) mungkin belum.
+
+Dua rujukan baku untuk aljabar tingkat pascasarjana ialah
+\cite{DF} dan \cite{Lang}. Kita berfokus pada kasus ketika gelanggang dasar
+merupakan medan, karena inilah penerapan utama kita.
+Banyak gagasan ini dapat digeneralisasi atau diperluas ke gelanggang sebarang,
+tetapi kita tidak melakukannya di sini.
+
+\section{Endomorfisme}
+
+Misalkan $k$ suatu medan.
+
+\begin{definition}
+Sebuah \emph{$k$-aljabar} $A$ sekaligus merupakan ruang vektor atas $k$ dan
+gelanggang dengan satuan sedemikian sehingga $r(ab)=(ra)b=a(rb)$ untuk semua $r \in k$ dan $a,b \in A$.
+Sebuah \emph{morfisme $k$-aljabar} $f \colon A \to B$ sekaligus merupakan
+transformasi linear atas $k$ dan homomorfisme gelanggang.
+\end{definition}
+
+Definisi alternatif (yang ekuivalen) bagi $k$-aljabar ialah gelanggang
+dengan satuan $A$ beserta homomorfisme gelanggang $\pi : k \to A$,
+yang disebut \emph{morfisme struktur}, dengan citra termuat dalam
+pusat $A$. Dengan definisi ini,
+morfisme $k$-aljabar adalah homomorfisme gelanggang $f\colon A \to B$ sedemikian
+sehingga $\pi_B = f \circ \pi_A$, dengan $\pi_A$ dan $\pi_B$ masing-masing
+merupakan morfisme struktur dari $A$ dan $B$.
+
+\begin{exercise}
+Buktikan bahwa kedua definisi $k$-aljabar (berturut-turut, morfisme $k$-aljabar)
+ekuivalen.
+\end{exercise}
+
+\begin{definition}
+Misalkan $\operatorname{M}_{n,m}(k)$ adalah himpunan matriks
+$n \times m$ dengan koefisien di $k$, dan
+misalkan $\operatorname{M}_{n}(k) = \operatorname{M}_{n,n}(k)$. 
+\end{definition}
+
+Himpunan matriks $\operatorname{M}_{n,m}(k)$ merupakan ruang vektor atas $k$,
+dan himpunan matriks persegi $\operatorname{M}_n(k)$ merupakan $k$-aljabar
+terhadap perkalian matriks.
+
+\begin{definition}
+Untuk ruang vektor atas $k$, yaitu $V,W$, misalkan
+$\operatorname{Hom}_k(V,W)$ adalah himpunan transformasi linear atas $k$
+dari $V$ ke $W$.
+Kita tulis $\operatorname{End}_k(V) = \operatorname{Hom}_k(V,V)$
+untuk himpunan \emph{endomorfisme} dari $V$.
+Kita tulis $V^\vee = \operatorname{Hom}_k(V,k)$
+untuk \emph{ruang dual} dari $V$.
+\end{definition}
+
+Himpunan $\operatorname{Hom}_k(V,W)$ merupakan ruang vektor atas $k$, sedangkan
+himpunan $\operatorname{End}_k(V)$ juga merupakan $k$-aljabar terhadap komposisi.
+
+Diberikan matriks $A \in \operatorname{M}_{n,m}(k)$, kita memperoleh
+dua peta kanonik.
+Yaitu, kita mempunyai \emph{perkalian kiri}
+$L_A \in \operatorname{Hom}(k^m,k^n)$ melalui $L_A(v)=Av$
+dengan memandang $v$ sebagai vektor kolom,
+dan \emph{perkalian kanan}
+$R_A \in \operatorname{Hom}(k^n,k^m)$ melalui $R_A(v)=vA$
+dengan memandang $v$ sebagai vektor baris.
+
+\begin{theorem}
+Misalkan $\psi: k^n \to V$ dan $\phi : k^m \to W$ merupakan isomorfisme
+ruang vektor.
+Maka terdapat isomorfisme ruang vektor
+$\operatorname{M}_{n,m}(k) \to \operatorname{Hom}_k(V,W)$ yang diberikan oleh
+$A \mapsto \phi \circ L_A \circ \psi^{-1}$.
+Dalam kasus $W=V$ dan $\phi=\psi$, ini menjadi isomorfisme $k$-aljabar
+$\operatorname{M}_n(k) \to \operatorname{End}_k(V)$.
+\end{theorem}
+
+\subsection{Ruang Dual}
+
+Jika $V$ adalah ruang vektor dengan basis hingga
+$\beta_1, \ldots, \beta_n$, maka terdapat \emph{basis dual} tunggal
+$\beta^\vee_1, \ldots, \beta^\vee_n$
+untuk $V^\vee$ sedemikian sehingga $\beta_i^\vee(\beta_j)=\delta_{ij}$,
+dengan $\delta_{ij}$ menyatakan delta Kronecker.
+
+Khususnya, untuk ruang vektor berdimensi hingga $V$,
+terdapat isomorfisme \emph{nonkanonik} $V \cong V^\vee$,
+yang bergantung pada pilihan basis.
+Sebaliknya, terdapat isomorfisme \emph{kanonik}
+$V \cong (V^\vee)^\vee$ dengan memetakan vektor $v \in V$ ke
+fungsional “evaluasi” $\operatorname{ev}_v : f \mapsto f(v)$. 
+
+\subsection{Polinomial Karakteristik}
+
+\begin{definition}
+Diberikan matriks persegi $A \in \operatorname{M}_n(k)$, kita definisikan
+\emph{polinomial karakteristik}:
+\[
+\chi_A(t) = \det(tI-A)
+\]
+yang merupakan unsur $k[t]$.
+Kita memakai konvensi tanda yang memastikan bahwa
+polinomial karakteristik selalu monik.
+
+\emph{Polinomial minimal} $m_A(t) \in k[t]$ adalah pembangkit monik
+dari ideal utama $\ker(\psi_A)$, dengan
+$\psi_A : k[t] \to \operatorname{M}_n(k)$ merupakan homomorfisme $k$-aljabar
+yang ditentukan oleh $\psi_A(t)=A$.
+\end{definition}
+
+\begin{theorem}[Cayley-Hamilton]
+$m_A(t)$ membagi $\chi_A(t)$
+\end{theorem}
+
+\begin{definition}
+Multihimpunan \emph{nilai eigen} dari $A \in \operatorname{M}_n(k)$ adalah
+multihimpunan akar $\chi_A(t)$ atas penutupan aljabar
+$\overline{k}$ dari $k$.
+\end{definition}
+
+Jika $\lambda_1, \ldots, \lambda_n$ adalah nilai-nilai eigen dari $\chi_A(t)$,
+dengan memperhitungkan multiplisitasnya,
+maka kita mempunyai
+\[
+\chi_A(t) = t^n - e_1 t^{n-1} + e_2 t^{n-2} - e_3 t^{n-3} + \cdots \pm e_n
+\]
+dengan $e_1,\ldots, e_n$ merupakan \emph{fungsi simetris elementer}
+dalam $\lambda_1,\ldots, \lambda_n$.
+
+Sebagai rumus, fungsi simetris elementer $e_i$
+diberikan oleh
+\[
+e_i = \sum_{X \in S(n,k)} \left(\prod_{i \in X} \lambda_i\right)
+\]
+dengan $S(n,k)$ merupakan himpunan semua subhimpunan $\{1,\ldots,n\}$ yang
+berukuran $k$.
+
+Kasus-kasus khusus yang penting ialah teras
+\[
+\operatorname{tr}(A) = e_1 = \lambda_1 + \ldots + \lambda_n
+\]
+dan determinan
+\[
+\det(A) = e_n = \lambda_1 \lambda_2 \cdots \lambda_{n-1} \lambda_n .
+\]
+
+Ingat bahwa dua matriks $A,B \in \operatorname{M}_n(k)$ disebut \emph{serupa}
+jika terdapat matriks $P$ sedemikian sehingga $A=PBP^{-1}$.
+Diberikan endomorfisme $f$ dari ruang vektor berdimensi $n$, yaitu $V$,
+kita memperoleh matriks-matriks representasi yang berbeda bagi $f$, bergantung
+pada pilihan basis. Namun, himpunan matriks yang merepresentasikan $f$
+merupakan satu kelas keserupaan dalam $\operatorname{M}_n(k)$.
+
+Polinomial minimal, polinomial karakteristik, nilai-nilai eigen,
+teras, dan determinan semuanya invarian terhadap keserupaan.
+Dengan demikian, kita dapat mendefinisikan polinomial minimal,
+polinomial karakteristik, nilai-nilai eigen, teras, dan determinan suatu
+endomorfisme secara kanonik tanpa bergantung pada pilihan
+basis.
+
+\subsection{Bentuk Kanonik Jordan}
+
+\emph{Blok Jordan berukuran $n$ dengan nilai eigen $\lambda$} adalah
+matriks berdimensi $n$
+\[
+J_n(\lambda) = \begin{pmatrix}
+\lambda & 1 & 0 & \cdots & 0 & 0\\
+0 & \lambda & 1 & \cdots & 0 & 0\\
+0 & 0& \lambda & \cdots & 0 & 0\\
+\vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+0 & 0 & 0 & \cdots & \lambda & 1\\
+0 & 0 & 0 & \cdots & 0 & \lambda\\
+ \end{pmatrix} .
+\]
+
+\begin{definition}
+Matriks $A$ berada dalam \emph{Bentuk Kanonik Jordan} jika $A$ berbentuk
+diagonal blok dengan blok-bloknya berupa blok Jordan:
+\[
+A = \begin{pmatrix}
+J_{n_1}(\lambda_1) & \cdots & 0\\
+\vdots & \ddots & \vdots\\
+0 & \cdots & J_{n_r}(\lambda_r)\\
+\end{pmatrix} 
+\]
+dengan $n_1,\ldots,n_r$ dan $\lambda_1,\ldots,\lambda_r$
+tidak harus berbeda.
+\end{definition}
+
+Perhatikan bahwa \emph{matriks diagonal} tepat merupakan matriks dalam bentuk
+kanonik Jordan dengan $n_1=\ldots=n_r=1$.
+Suatu matriks disebut \emph{dapat didiagonalkan} jika serupa dengan matriks diagonal.
+
+\begin{theorem}
+Misalkan $A$ adalah matriks persegi yang nilai-nilai eigennya terdefinisi atas $k$.
+Maka $A$ serupa dengan suatu matriks dalam Bentuk Kanonik Jordan,
+yang tunggal hingga pengurutan ulang blok-blok Jordan.
+\end{theorem}
+
+Perhatikan bahwa syarat dalam teorema di atas selalu berlaku ketika
+medan $k$ tertutup secara aljabar.
+
+\begin{exercise}
+\[J_n(\lambda)^m =
+\begin{pmatrix}
+\lambda^m & \binom{m}{1}\lambda^{m-1} & \binom{m}{2}\lambda^{m-2}
+& \cdots & \binom{m}{n-2}\lambda^{m-n-2} & \binom{m}{n-1}\lambda^{m-n-1}\\
+0 & \lambda^m & \binom{m}{1}\lambda^{m-1}
+& \cdots & \binom{m}{n-3}\lambda^{m-n-3} & \binom{m}{n-2}\lambda^{m-n-2}\\
+0 & 0 & \lambda^m & \cdots &
+\binom{m}{n-4}\lambda^{m-n-4} & \binom{m}{n-3}\lambda^{m-n-3}\\
+\vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+0 & 0 & 0 & \cdots & \lambda^m & \binom{m}{1}\lambda^{m-1}\\
+0 & 0 & 0 & \cdots & 0 & \lambda^m\\
+ \end{pmatrix} .\]
+\end{exercise}
+
+\begin{corollary}
+Misalkan $k$ adalah medan tertutup secara aljabar,
+dan $m$ merupakan bilangan bulat yang relatif prima terhadap karakteristiknya.
+Jika $A \in \operatorname{M}_n(k)$ berorde $m$,
+maka $A$ dapat didiagonalkan dan nilai-nilai eigennya merupakan akar kesatuan ke-$m$.
+\end{corollary}
+
+\begin{proof}
+Orde suatu matriks merupakan invarian keserupaan, karena
+$A=PBP^{-1}$ mengakibatkan $A^m=PB^mP^{-1}$.
+Jadi, kita dapat mengasumsikan bahwa $A$ berada dalam Bentuk Kanonik Jordan.
+Karena kita mengetahui $A^m=I$, dari latihan tersebut kita menyimpulkan bahwa
+untuk setiap nilai eigen $\lambda_i$ dari $A$, berlaku
+$\lambda_i^m = 1$,
+dan selain itu $m\lambda_i^{m-1}=0$ jika blok Jordan yang bersesuaian
+bukan berukuran $1\times 1$.
+Syarat pertama memaksa semua nilai eigen menjadi akar kesatuan ke-$m$,
+sedangkan syarat kedua memaksa semua blok berukuran $1 \times 1$
+(karena $m\ne 0$).
+\end{proof}
+
+Syarat bahwa bilangan bulat $m$ relatif prima terhadap karakteristik
+memang diperlukan. Jika $k$ berkarakteristik $p$, maka matriks
+\[
+\begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} 
+\]
+berorde $p$, tetapi tidak dapat didiagonalkan. 
+
+\subsection{Bentuk Kanonik Rasional}
+
+TODO
+
+\section{Peta Bilinear}
+
+\begin{definition}
+Misalkan $U$, $V$, dan $W$ adalah ruang vektor atas $k$.
+Sebuah \emph{peta bilinear} $b: V \times W \to U$
+adalah fungsi sedemikian sehingga
+\begin{itemize}
+\item $b(\lambda v_1+v_2,w) = \lambda b(v_1,w) + b(v_2,w)$, dan
+\item $b(v,\lambda w_1+w_2) = \lambda b(v,w_1) + b(v,w_2)$
+\end{itemize}
+untuk semua $v,v_1,v_2 \in V$, $w,w_1,w_2 \in W$, dan $\lambda \in k$.
+\end{definition}
+
+Himpunan peta bilinear $\operatorname{Bil}_k(V,W;U)$ merupakan ruang vektor atas $k$,
+yaitu ruang yang terdiri atas peta-peta bilinear tersebut.
+Kita memakai singkatan $\operatorname{Bil}_k(V,W)=\operatorname{Bil}_k(V,W;k)$
+jika kodomainnya adalah $k$.
+Kita mempunyai isomorfisme kanonik
+\[
+\operatorname{Bil}_k(V,W) \cong
+\operatorname{Hom}_k(V,W^\vee)
+\]
+dengan $b \in \operatorname{Bil}_k(V,W)$ dipetakan ke $b_1 : V \to W^\vee$
+yang didefinisikan oleh $b_1(v) = b(v,-)$ untuk setiap $v \in V$.
+Serupa dengan itu, kita mempunyai isomorfisme kanonik
+\[
+\operatorname{Bil}_k(V,W) \cong
+\operatorname{Hom}_k(W,V^\vee)
+\]
+dengan $b \in \operatorname{Bil}_k(V,W)$ dipetakan ke $b_2 : W \to V^\vee$
+yang didefinisikan oleh $b_2(w) = b(-,w)$ untuk setiap $w \in W$.
+
+Misalkan $V$ mempunyai basis $v_1,\ldots,v_n$ dan $W$ mempunyai basis $w_1,\ldots, w_m$,
+maka kita dapat membentuk \emph{matriks} $B$ dari peta bilinear $b$ dengan mendefinisikan
+$B_{ij} = b(v_i,w_i)$.
+
+\begin{exercise}
+Pernyataan-pernyataan berikut ekuivalen:
+\begin{itemize}
+\item $b_1 : W \to V^\vee$ merupakan isomorfisme.
+\item $b_2 : V \to W^\vee$ merupakan isomorfisme.
+\item $B$ merupakan matriks invertibel (apa pun basis yang dipilih).
+\end{itemize}
+Jika salah satu syarat ini berlaku, kita katakan bahwa peta bilinear tersebut
+\emph{tak degenerat}.
+\end{exercise}
+
+Peta bilinear tak degenerat $V \times W \to k$ sering disebut
+\emph{pasangan sempurna}. Berdasarkan latihan tersebut, pasangan sempurna
+menginduksi isomorfisme $V \cong W^\vee$ dan $W \cong V^\vee$.
+
+\subsection{Bentuk Bilinear}
+
+Sebuah \emph{bentuk bilinear} pada $V$ adalah peta bilinear $b : V \times V \to k$.
+Dengan kata lain, kedua komponen hasil kali dalam domain merupakan
+ruang vektor yang sama.
+Dalam kasus ini, \emph{matriks} $B$ dari bentuk bilinear $b$ biasanya dibentuk
+terhadap basis yang sama pada kedua komponen hasil kali.
+
+\begin{definition}
+Sebuah bentuk bilinear $b: V \times V \to k$ disebut
+\begin{itemize}
+\item \emph{simetris} jika $b(v,w)=b(w,v)$ untuk semua $v,w \in V$.
+\item \emph{simetris-miring} atau \emph{antisimetris}
+jika $b(v,w)=-b(w,v)$ untuk semua $v,w \in V$.
+\item \emph{berselang-seling} jika $b(v,v)=0$ untuk semua $v \in V$.
+\end{itemize}
+\end{definition}
+
+\begin{exercise}
+Himpunan bentuk bilinear simetris (berturut-turut simetris-miring dan
+berselang-seling) merupakan subruang dari $\operatorname{Bil}_k(V,V)$.
+\end{exercise}
+
+Jika $b: V \times V \to k$ merupakan bentuk bilinear simetris,
+maka kedua peta kanonik $b_1 : V \to V^\vee$ dan $b_2 : V \to
+V^\vee$ sama. Jadi, bentuk bilinear simetris menghasilkan
+satu pilihan isomorfisme $V \to V^\vee$ (alih-alih sepasang).
+
+\begin{example}
+\emph{Hasil kali titik} pada $k^n$ merupakan bentuk bilinear simetris.
+Dalam kasus $k$ tidak berkarakteristik $2$, bentuk tersebut
+tak degenerat, dan isomorfisme yang bersesuaian
+$k^n \to (k^n)^\vee$ dapat dipandang sebagai operasi
+transpos, yang memetakan vektor kolom menjadi vektor baris dan
+sebaliknya.
+\end{example}
+
+\begin{example}
+Perhatikan matriks blok berukuran $2n \times 2n$
+\[
+J = \begin{pmatrix} 0 & I_n \\ -I_n & 0 \end{pmatrix} 
+\]
+dalam $k^{2n}$.
+Bentuk bilinear yang bersesuaian merupakan bentuk bilinear
+berselang-seling yang tak degenerat.
+\end{example}
+
+\begin{example}
+Jika $k$ berkarakteristik $2$, maka “hasil kali titik”
+pada $k^n$ merupakan bentuk bilinear simetris yang \emph{degenerat}.
+Ini juga merupakan contoh bentuk bilinear simetris-miring yang tidak
+berselang-seling.
+\end{example}
+
+\begin{proposition}
+Setiap bentuk berselang-seling bersifat simetris-miring.
+\end{proposition}
+
+\begin{proof}
+Jika $b$ berselang-seling, maka
+\begin{align*}
+0 &= b(v+w,v+w)\\
+&= b(v,v) + b(v,w) + b(w,v) + b(w,w)\\
+&= b(v,w)+b(w,v)
+.\end{align*}
+Jadi, kita menyimpulkan bahwa $b$ bersifat simetris-miring.
+\end{proof}
+
+\begin{proposition}
+Jika $k$ \emph{tidak} berkarakteristik $2$, maka suatu bentuk bilinear
+berselang-seling jika dan hanya jika bentuk itu simetris-miring.
+\end{proposition}
+
+\begin{proof}
+Jika $b$ simetris-miring, maka $b(v,v)=-b(v,v)$ untuk semua $v \in V$.
+Dengan demikian $2b(v,v)=0$ dan, karena $\frac{1}{2} \in k$,
+kita melihat bahwa $b$ berselang-seling.
+\end{proof}
+
+\begin{proposition}
+Jika $k$ berkarakteristik $2$, maka suatu bentuk bilinear
+simetris jika dan hanya jika bentuk itu simetris-miring.
+Khususnya, setiap bentuk berselang-seling bersifat simetris.
+\end{proposition}
+
+\begin{proof}
+Jelas.
+\end{proof}
+
+\subsection{Bentuk Sesquilinear}
+
+Dalam subbagian ini, kita bekerja atas bilangan kompleks.
+Gagasan-gagasan ini dapat diperluas ke perluasan kuadratik dari medan-medan
+lain, tetapi kita tidak akan membahasnya terlalu jauh.
+Di bawah ini, jika $z=a+bi \in \mathbb{C}$, kita tulis
+$\overline{z}=a-bi$ untuk konjugat kompleksnya.
+
+\begin{definition}
+Misalkan $U$, $V$, dan $W$ adalah ruang vektor atas $\mathbb{C}$.
+Sebuah \emph{peta sesquilinear} $s: V \times W \to U$
+adalah fungsi sedemikian sehingga
+\begin{itemize}
+\item $s(\lambda v_1+v_2,w) = \overline{\lambda} s(v_1,w) + s(v_2,w)$, dan
+\item $s(v,\lambda w_1+w_2) = \lambda s(v,w_1) + s(v,w_2)$
+\end{itemize}
+untuk semua $v,v_1,v_2 \in V$, $w,w_1,w_2 \in W$, dan $\lambda \in \mathbb{C}$.
+\end{definition}
+
+Peta sesquilinear \emph{bukan} bentuk bilinear, karena peta itu linear
+konjugat pada entri pertama, bukan linear.
+Kita memakai “konvensi fisika”, yaitu entri pertama bersifat linear
+konjugat, bukan entri kedua. Ini berbeda dari konvensi dalam banyak bidang
+matematika, yang menetapkan bahwa entri \emph{kedua} bersifat linear konjugat.
+Konvensi pertama jauh lebih alami menurut konvensi matriks baku
+dan tampaknya makin banyak dipakai dalam teks-teks modern.
+
+\begin{definition}
+Sebuah \emph{bentuk sesquilinear} adalah peta sesquilinear $s: V \times V \to
+\mathbb{C}$.
+Bentuk sesquilinear disebut \emph{Hermitian} jika $s(v,w)=\overline{s(w,v)}$
+untuk semua $v,w \in V$.
+Bentuk Hermitian disebut \emph{definit positif} jika $s(v,v) > 0$ jika dan hanya
+jika $v \ne 0$.
+\end{definition}
+
+Secara informal, jika kita membatasi bentuk sesquilinear pada ruang vektor atas
+submedan real total $k \subseteq \mathbb{R}$, maka sifat Hermitian membatasi menjadi simetris,
+dan sifat definit positif membatasi menjadi tak degenerat.
+
+\subsection{Grup Klasik}
+
+TODO
+
+\subsection{Peta Multilinear}
+
+\begin{definition}
+Misalkan $U,V_1,\ldots, V_d$ adalah ruang vektor atas $k$.
+Sebuah \emph{peta multilinear} $m: V_1 \times \cdots \times V_d \to U$
+adalah fungsi yang linear pada setiap entri; dengan kata lain,
+\begin{align*}
+&m(v_1,\ldots,v_{i-1},\lambda v_i + v_i',v_{i+1},\ldots,v_d)\\
+=& \lambda m(v_1,\ldots,v_{i-1},v_i,v_{i+1},\ldots,v_d)
++ m(v_1,\ldots,v_{i-1},v_i',v_{i+1},\ldots,v_d)
+\end{align*}
+untuk setiap indeks $i$ dan semua $v_j,v_j' \in V_j$, $\lambda \in k$.
+Sebuah \emph{bentuk multilinear} adalah peta multilinear dengan $V_1 = \cdots = V_d$.
+\end{definition}
+
+\begin{definition}
+Sebuah bentuk multilinear disebut
+\emph{simetris} jika
+\[
+m(\cdots,v_i,\cdots,v_j,\cdots) = m(\cdots,v_j,\cdots,v_i,\cdots)
+\]
+untuk semua pasangan indeks $i,j$.
+\end{definition}
+
+\begin{definition}
+Sebuah bentuk multilinear disebut \emph{simetris-miring} atau \emph{antisimetris} jika
+\[
+m(\cdots,v_i,\cdots,v_j,\cdots) = -m(\cdots,v_j,\cdots,v_i,\cdots)
+\]
+untuk semua pasangan indeks berbeda $i,j$.
+\end{definition}
+
+\begin{definition}
+Sebuah bentuk multilinear disebut \emph{berselang-seling} jika
+\[
+m(v_1,\ldots,v_d) = 0
+\]
+setiap kali $v_i=v_j$ untuk suatu $i \ne j$.
+\end{definition}
+
+Seperti dalam kasus bilinear, peta-peta multilinear membentuk ruang vektor,
+sedangkan bentuk-bentuk simetris, simetris-miring, dan berselang-seling
+merupakan subruang dari ruang bentuk multilinear.
+
+\begin{exercise}
+Buktikan bahwa
+\begin{itemize}
+\item bentuk berselang-seling bersifat simetris-miring,
+\item jika $\operatorname{char}(k) \ne 2$, maka bentuk simetris-miring
+berselang-seling, dan
+\item jika $\operatorname{char}(k) = 2$, maka bentuk simetris-miring
+simetris, dan sebaliknya.
+\end{itemize}
+\end{exercise}
+
+\begin{example}
+Determinan $\det : M_n(k) \to k$ merupakan bentuk multilinear berselang-seling
+pada baris-baris (atau kolom-kolom) matriks.
+Selain itu, determinan merupakan satu-satunya bentuk demikian yang bernilai $1$ pada matriks identitas.
+\end{example}
+
+\section{Hasil Kali Tensor}
+
+Pembaca dapat merujuk \cite[10.4]{DF} atau \cite[XVI]{Lang}
+untuk uraian lebih lanjut tentang sifat-sifat hasil kali tensor dalam konteks
+teori modul yang umum.
+Di sini kita berfokus pada kasus ruang vektor berdimensi hingga,
+yang sedikit lebih mudah.
+
+Kita mendefinisikan hasil kali tensor melalui sifat pemetaan universalnya.
+
+\begin{definition}
+Misalkan $V_1,\ldots, V_n$ adalah ruang vektor atas $k$.
+Sebuah \emph{hasil kali tensor} $V_1 \otimes_k V_2 \otimes \cdots \otimes_k V_d$
+adalah ruang vektor atas $k$ beserta peta multilinear
+\[
+\pi : V_1 \times \cdots \times V_d
+\to  V_1 \otimes_k \cdots \otimes_k V_d
+\]
+sedemikian sehingga untuk setiap peta multilinear $\phi : V_1 \times \cdots \times V_d
+\to W$ terdapat peta linear tunggal
+$\psi : V_1 \otimes_k \cdots \otimes_k V_d \to W$ sedemikian sehingga
+$\phi = \psi \circ \pi$.
+\end{definition}
+
+Jika medan dasar $k$ sudah jelas, kita sering menghilangkannya dari
+notasi; dengan kata lain, $V \otimes U$ merupakan singkatan bagi $V \otimes_k U$.
+Kita juga dapat memakai notasi singkat
+\[
+\bigotimes_{i=1}^d V_i := V_1 \otimes \cdots \otimes V_d .
+\]
+
+Diberikan $(v_1,\ldots, v_d) \in V_1 \times \cdots \times V_d$,
+misalkan $v_1 \otimes v_2 \otimes \cdots \otimes v_d$ menyatakan citra
+$\pi(v_1,\ldots,v_d)$ dalam $V_1 \otimes_k \cdots \otimes_k V_d$.
+Unsur-unsur ini kita sebut \emph{tensor sederhana}.
+
+\begin{theorem}
+Hasil kali tensor ada dan tunggal hingga isomorfisme tunggal.
+\end{theorem}
+
+\begin{proof}
+Kita uraikan suatu konstruksi dan menyerahkan perincian sisanya sebagai latihan.
+Misalkan $\Omega$ adalah ruang vektor bebas atas $k$ dengan basis berupa unsur-unsur
+$V_1 \times \cdots \times V_d$. Misalkan $[x]$ adalah unsur basis
+yang bersesuaian dengan $x$.
+Misalkan $I$ adalah subruang $\Omega$ yang direntang oleh
+\[
+[(v_1, \ldots, (\lambda v_i + v'_i), \ldots, v_d)]
+-
+\lambda[(v_1, \ldots,v_i, \ldots, v_d)] -
+[(v_1, \ldots, v'_i, \ldots, v_d)]
+\]
+untuk setiap indeks $i$, setiap $\lambda \in k$, dan semua $v_j,v'_j \in V_j$
+untuk setiap $j$.
+Definisikan $V_1 \otimes \cdots \otimes V_n$ sebagai ruang hasil bagi
+$\Omega/I$, dengan $\pi$ berupa komposisi inklusi kanonik
+$\prod_{i=1}^d V_i \to \Omega$ dan peta hasil bagi $\Omega \to
+\bigotimes_{i=1}^d V_i$.
+\end{proof}
+
+Kita memperoleh korolari-korolari berikut:
+
+\begin{corollary}
+Ruang vektor $V_1 \otimes_k \cdots \otimes_k V_d$
+direntang oleh tensor-tensor sederhananya.
+Relasi
+\begin{align*}
+&v_1 \otimes \cdots \otimes (\lambda v_i + v'_i) \otimes \cdots \otimes
+v_d\\
+=&
+\lambda(v_1 \otimes \cdots \otimes v_i \otimes \cdots \otimes v_d) +
+v_1 \otimes \cdots \otimes v'_i \otimes \cdots \otimes v_d
+\end{align*}
+berlaku
+untuk setiap indeks $i$, setiap $\lambda \in k$, dan semua $v_j,v'_j \in V_j$.
+\end{corollary}
+
+\begin{proof}
+Latihan.
+\end{proof}
+
+\begin{proposition}
+Jika $B_1,\ldots B_d$ masing-masing merupakan basis bagi $V_1,\ldots,V_d$, maka
+\[
+\{ b_1 \otimes \cdots \otimes b_d \mid b_1 \in B_1, \ldots, b_d \in B_d
+\}
+\]
+merupakan basis bagi $V_1 \otimes_k \cdots \otimes_k V_d$.
+\end{proposition}
+
+\begin{proof}
+Latihan.
+\end{proof}
+
+\begin{remark}
+Transformasi linear sering didefinisikan dengan
+“memperluas secara linear”.
+Misalkan kita mempunyai ruang vektor $V,W$ dan himpunan perentang
+$S$ bagi $V$. Jika kita mendefinisikan fungsi $f : S \to W$,
+maka paling banyak terdapat satu transformasi linear $F : V \to W$
+yang memperluas $f$. Jika $S$ merupakan \emph{basis}, perluasan $F$ selalu ada,
+tetapi jika $S$ tidak bebas linear, kita harus memastikan bahwa setiap
+perluasan linear terdefinisi dengan baik.
+Dalam kasus hasil kali tensor, himpunan $S$ sering diambil sebagai
+himpunan tensor sederhana.
+\end{remark}
+
+\begin{theorem}
+Untuk ruang vektor berdimensi hingga $V$ dan ruang vektor sebarang
+$W$, kita mempunyai isomorfisme kanonik
+\[
+V^\vee \otimes W \cong \operatorname{Hom}_k(V,W) .
+\]
+\end{theorem}
+
+\begin{proof}
+Definisikan $\psi : V^\vee \otimes W \cong \operatorname{Hom}_k(V,W)$
+dengan menetapkan
+\[
+\psi(f \otimes w)(v) = f(v)w
+\]
+untuk $f \in V^\vee$, $w \in W$, $v \in V$, lalu memperluas secara linear.
+(Latihan: periksa bahwa perluasan secara linear sah di sini!)
+
+Kita mengonstruksi peta invers $\phi$ secara eksplisit.
+Misalkan $v_1,\ldots, v_d$ adalah basis bagi $V$.
+Diberikan peta linear $g : V \to W$, definisikan
+\[
+\phi(g) = \sum_{i=1}^d v^\vee_i \otimes g(v_i) \ .
+\]
+(Latihan: periksa bahwa $\phi \circ \psi$ dan $\psi \circ \phi$
+merupakan identitas.)
+\end{proof}
+
+\begin{exercise}
+Dengan mengidentifikasi $V^\vee \otimes V \cong \operatorname{Hom}_k(V,V)$,
+peta linear $T: V^\vee \otimes V \to k$ yang didefinisikan oleh
+\[
+T\left( \sum_{i=1}^d f_i \otimes v_i\right)
+= \sum_{i=1}^d f_i(v_i)
+\]
+dapat diidentifikasi dengan teras $\operatorname{tr} :
+\operatorname{Hom}_k(V,V) \to k$.
+\end{exercise}
+
+\begin{corollary}
+Untuk ruang vektor berdimensi hingga $V, W$,
+kita mempunyai isomorfisme kanonik
+\[
+V^\vee \otimes W^\vee \cong \operatorname{Bil}_k(V,W) .
+\]
+\end{corollary}
+
+\begin{proof}
+Keduanya secara kanonik isomorfik dengan $\operatorname{Hom}_k(V,W^\vee)$.
+\end{proof}
+
+\begin{proposition}
+Misalkan $U,V,W$ adalah ruang vektor berdimensi hingga.
+Terdapat isomorfisme-isomorfisme kanonik berikut:
+\begin{enumerate}
+\item $V \otimes W \cong W \otimes V$
+\item $U \otimes (V \oplus W) \cong (U \otimes V) \oplus (U \otimes W)$
+\item $U \otimes V \otimes W \cong U \otimes (V \otimes W)
+\cong (U \otimes V) \otimes W$
+\item $V \otimes k \cong V$
+\item $(V \otimes W)^\vee \cong V\vee \otimes W^\vee$
+\item $\operatorname{Hom}(U,\operatorname{Hom}(V,W)
+\cong \operatorname{Hom}(U \otimes V, W)$
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Semua ini kita serahkan sebagai latihan.
+Salah satu petunjuk yang berguna ialah bahwa
+$(V \otimes W)^\vee = \operatorname{Hom}(V \otimes W,k)$
+secara kanonik isomorfik dengan $\operatorname{Bil}(V,W)$
+berdasarkan Sifat Pemetaan Universal hasil kali tensor.
+\end{proof}
+
+\begin{proposition}
+Misalkan $L/k$ merupakan perluasan medan.
+Jika $V$ adalah ruang vektor atas $k$, maka $V \otimes_k L$ merupakan ruang vektor atas $L$.
+Jika $A$ adalah $k$-aljabar, maka $A \otimes_k L$ merupakan $L$-aljabar.
+\end{proposition}
+
+\begin{proof}
+Himpunan $V \otimes_k L$ sudah merupakan grup abelian.
+Kita mendefinisikan perkalian skalar dengan memperluas secara linear
+rumus $\lambda(v\otimes l)=v \otimes \lambda l$
+untuk $\lambda, l \in L$ dan $v \in V$.
+Untuk melihat bahwa $A$ merupakan $L$-aljabar, kita perlu mendefinisikan perkalian gelanggangnya.
+Kita menetapkan $(a_1 \otimes l_1)(a_2 \otimes l_2)=a_1a_2 \otimes l_1l_2$.
+\end{proof}
+
+\section{Aljabar Tensor}
+
+Untuk sebagian materi ini, kita merujuk ke \cite[\S{11.5}]{DF} atau \cite{Lang}.
+Materi dalam \cite[\S{A.2}]{Eisenbud} menyajikan sudut pandang alternatif
+yang sedikit lebih umum dan abstrak daripada yang kita perlukan.
+
+\begin{definition}
+Sebuah \emph{$k$-aljabar berderajat} adalah $k$-aljabar $A$ dengan dekomposisi
+jumlah langsung
+\[
+A = \bigoplus_{n \ge 0} A_n
+\]
+sedemikian sehingga $A_n \cdot A_m \subseteq A_{n+m}$ untuk semua bilangan bulat $n,m$.
+Unsur $f \in A_d$ disebut \emph{homogen berderajat $d$}.
+\end{definition}
+
+Contoh baku $k$-aljabar berderajat ialah
+$k$-aljabar polinomial $k[x_1,\ldots,x_n]$ yang diberi derajat menurut derajat polinomial.
+
+\begin{definition}
+Misalkan $V$ adalah ruang vektor berdimensi hingga atas $k$. Untuk bilangan bulat positif
+$n$, kita definisikan $\mathcal{T}^d(V)=\bigotimes_{i=1}^d V$ dan
+$\mathcal{T}^0(V)=k$. Kita definisikan \emph{$k$-aljabar tensor pada $V$}
+sebagai $k$-aljabar berderajat
+\[
+\mathcal{T}(V) := \bigoplus_{d \ge 0} \mathcal{T}^d(V)
+\]
+dengan perkalian
+\[\mathcal{T}^d(V) \times \mathcal{T}^e(V)
+\to \mathcal{T}^{d+e}(V)
+\]
+yang didefinisikan melalui
+\[
+(v_1 \otimes \cdots \otimes v_d) (w_1 \otimes \cdots \otimes w_e)
+=v_1 \otimes \cdots \otimes v_d \otimes w_1 \otimes \cdots \otimes w_e
+\]
+dan diperluas ke seluruh $\mathcal{T}(V)$ secara linear. 
+\end{definition}
+
+\begin{example}
+Jika $V=k^n$, maka $\mathcal{T}(V)$ dapat diidentifikasi dengan
+gelanggang polinomial nonkomutatif $k\langle x_1,\ldots, x_n\rangle$.
+Sebagai contoh, jika $e_1,\ldots, e_n$ adalah basis baku bagi $k^n$,
+maka
+\[
+e_1 \otimes e_1 \otimes e_1 + 3e_1 \otimes e_2 - e_2\otimes e_1 + 4\cdot 1
+\]
+dalam $\mathcal{T}(k^n)$
+bersesuaian dengan unsur tak homogen
+\[
+x_1^3 + 3x_1x_2 - x_2x_1 + 4
+\]
+dalam $k\langle x_1,\ldots, x_n\rangle$.
+\end{example}
+
+Pernyataan berikut langsung diperoleh dari uraian di atas,
+tetapi berguna untuk membandingkannya dengan aljabar simetris dan eksterior
+yang dibahas di bawah.
+
+\begin{proposition}
+Jika $e_1, \ldots, e_n$ adalah basis bagi $V$, maka
+\[
+\{
+e_{i_1} \otimes e_{i_2} \otimes \cdots \otimes e_{i_d}
+\mid
+(i_1,\ldots,i_d) \in \{1,\ldots,n\}^d
+\}
+\]
+merupakan basis bagi $\mathcal{T}^d(V)$.
+Khususnya, $\dim_k\ \mathcal{T}^d(k^n)=n^d$.
+\end{proposition}
+
+\subsection{Aljabar Simetris}
+
+\begin{definition}
+Misalkan $V$ adalah ruang vektor berdimensi hingga atas $k$.
+\emph{Aljabar simetris pada $V$} adalah $k$-aljabar berderajat
+\[
+\mathcal{S}(V) = \mathcal{T}(V)/I
+\]
+dengan $I$ merupakan ideal berderajat (dua sisi)
+\[
+I = ( v \otimes w - w \otimes v \mid w,v \in V ).
+\]
+Komponen berderajat $\mathcal{S}^d(V)$ disebut
+\emph{pangkat simetris ke-$d$}.
+\end{definition}
+
+Pangkat simetris memenuhi sifat pemetaan universal yang dibangun dari
+sifat bagi hasil kali tensor:
+
+\begin{proposition}
+Komposisi
+\[
+\pi : V^d \to \mathcal{T}^d(V) \to \mathcal{S}^d(V)
+\]
+merupakan peta multilinear simetris sedemikian sehingga untuk setiap
+peta multilinear simetris
+$\phi : V^d \to W$ terdapat peta linear tunggal
+$\psi : \mathcal{S}^d(V) \to W$
+sedemikian sehingga
+$\phi = \psi \circ \pi$.
+\end{proposition}
+
+Jika $V$ adalah ruang vektor berdimensi $n$, maka
+$\mathcal{S}(V) \cong k[x_1,\ldots,x_n]$ sebagai $k$-aljabar berderajat.
+Dengan demikian, aljabar simetris pada dasarnya merupakan versi “bebas koordinat” dari
+gelanggang polinomial.
+Karena alasan ini, perkalian dalam aljabar simetris biasanya cukup ditulis
+sebagai monomial dalam vektor-vektor penyusunnya.
+Sebagai contoh, citra $e_1 \otimes e_2 \otimes e_1$ dapat
+ditulis $e_1^2e_2$.
+
+Kita mempunyai proposisi kombinatorial berikut.
+
+\begin{proposition}
+Jika $e_1, \ldots, e_n$ adalah basis bagi $V$, maka
+\[
+\{
+e_{i_1}e_{i_2} \cdots e_{i_d}
+\mid
+1 \le i_1 \le \cdots \le i_d \le n
+\}
+\]
+merupakan basis bagi $\mathcal{S}^d(V)$.
+Khususnya, $\dim_k\ \mathcal{S}^d(k^n)=\binom{n+d-1}{d}$.
+\end{proposition}
+
+\subsection{Aljabar Eksterior}
+
+\begin{definition}
+Misalkan $V$ adalah ruang vektor berdimensi hingga atas $k$.
+\emph{Aljabar eksterior pada $V$} adalah $k$-aljabar berderajat
+\[
+\Lambda(V) = \mathcal{T}(V)/J
+\]
+dengan $J$ merupakan ideal berderajat (dua sisi)
+\[
+J = ( v \otimes v \mid v \in V ).
+\]
+Komponen berderajat $\Lambda^d(V)$ disebut
+\emph{pangkat eksterior ke-$d$}.
+\end{definition}
+
+Pangkat eksterior memenuhi sifat pemetaan universal yang dibangun dari
+sifat bagi hasil kali tensor:
+
+\begin{proposition}
+Komposisi
+\[
+\pi : V^d \to \mathcal{T}^d(V) \to \Lambda^d(V)
+\]
+merupakan peta multilinear berselang-seling sedemikian sehingga untuk setiap
+peta multilinear berselang-seling
+$\phi : V^d \to W$ terdapat peta linear tunggal
+$\psi : \Lambda^d(V) \to W$
+sedemikian sehingga
+$\phi = \psi \circ \pi$.
+\end{proposition}
+
+Citra tensor sederhana $v_1 \otimes v_2 \otimes \cdots \otimes v_d$
+ditulis $v_1 \wedge v_2 \wedge \cdots \wedge v_d$.
+Demikian pula, hasil kali dua unsur $f,g \in \Lambda(V)$
+ditulis $f \wedge g$.
+
+\begin{proposition}
+Jika $v,w \in V$, maka $v \wedge w = -w \wedge v$.
+\end{proposition}
+
+\begin{proof}
+Ini langsung diperoleh dari
+\begin{align*}
+0 &= (v+w) \wedge (v+w)\\
+&=v \wedge v + v \wedge w + w \wedge v + w \wedge w\\
+&=v \wedge w + w \wedge v
+\end{align*}
+\end{proof}
+
+\begin{proposition}
+Jika $v_1,\ldots,v_d \in V$ dan $\sigma \in S_d$,
+maka
+\[v_1 \wedge \cdots \wedge v_d =
+\operatorname{sgn}(\sigma)
+v_{\sigma(1)} \wedge \cdots \wedge v_{\sigma(d)}.
+\]
+\end{proposition}
+
+\begin{proof}
+Setiap permutasi dapat ditulis sebagai hasil kali $m$ transposisi
+berdampingan, dan menurut definisi $\operatorname{sgn}(\sigma)=(-1)^m$.
+Jadi, hasil tersebut diperoleh dari proposisi sebelumnya.
+\end{proof}
+
+\begin{proposition}
+Jika $f \in \Lambda^d(V)$ dan $g \in \Lambda^e(V)$,
+maka $f \wedge g = (-1)^{de} g \wedge f$.
+\end{proposition}
+
+\begin{proof}
+Ini diperoleh dari proposisi sebelumnya dengan memperhatikan bahwa
+permutasi
+\[
+(1,\ldots,d+e) \mapsto (d+1,\ldots,d+e,1,\ldots,d)
+\]
+bertanda $(-1)^{de}$.
+\end{proof}
+
+\begin{proposition}
+Vektor-vektor $v_1,\ldots , v_d \in V$ bergantung linear
+jika dan hanya jika $v_1 \wedge \cdots \wedge v_d=0$.
+\end{proposition}
+
+\begin{proof}
+Misalkan $v_1,\ldots, v_d$ bergantung linear.
+Tanpa mengurangi keumuman, kita dapat mengasumsikan
+\[
+v_d = \alpha_1 v_1 + \cdots + \alpha_{d-1} v_{d-1}
+\]
+dengan $\alpha_1, \ldots, \alpha_{d-1} \in k$.
+Dengan demikian,
+\[
+v_1 \wedge \cdots \wedge v_d =
+\sum_{i=1}^{d-1} \alpha_i(v_1 \wedge \cdots \wedge v_{d-1} \wedge v_i).
+\]
+Karena $v_i$ muncul dua kali dalam setiap suku, ruas kanan bernilai $0$.
+
+Misalkan $v_1,\ldots, v_d$ bebas linear.
+Kita dapat melengkapinya menjadi basis $v_1,\ldots,v_n$ bagi $V$.
+Misalkan $\beta : V \to k^n$ adalah peta koordinat yang bersesuaian.
+Misalkan $f : V^d \to k$ adalah fungsi
+\[
+f(w_1,\ldots,w_d) = \det
+\begin{pmatrix} \beta(w_1) & \cdots & \beta(w_d)
+& e_{d+1} & \cdots & e_n
+\end{pmatrix}
+\]
+dengan $\beta(w_i)$ dan $e_j$ dipandang sebagai kolom-kolom sebuah matriks.
+Karena determinan merupakan peta multilinear berselang-seling pada kolom-kolom
+matriks persegi, kita melihat bahwa $f$ merupakan peta multilinear berselang-seling
+sedemikian sehingga $f(v_1,\ldots,v_d)=1$.
+Berdasarkan sifat pemetaan universal, jika terdapat peta multilinear
+berselang-seling sedemikian sehingga $f(v_1,\ldots,v_d) \ne 1$,
+maka $v_1 \wedge \cdots \wedge v_d$ harus tak nol.
+\end{proof}
+
+Kita mempunyai proposisi kombinatorial berikut.
+
+\begin{proposition}
+Jika $e_1, \ldots, e_n$ adalah basis bagi $V$, maka
+\[
+\{
+e_{i_1} \wedge \cdots e_{i_2} \cdots \wedge e_{i_d}
+\mid
+1 \le i_1 < \cdots < i_d \le n
+\}
+\]
+merupakan basis bagi $\Lambda^d(V)$.
+Khususnya, $\dim_k\ \Lambda^d(k^n)=\binom{n}{d}$.
+\end{proposition}
+
+\subsection{Subruang dari Pangkat Tensor}
+
+Terdapat aksi kiri alami dari grup simetris $S_d$ pada
+pangkat tensor $\mathcal{T}^d(V)$ yang diberikan oleh
+\[
+\sigma(v_1 \otimes v_2 \otimes \cdots \otimes v_n)
+= v_{\sigma^{-1}(1)} \otimes v_{\sigma^{-1}(2)} \otimes \cdots
+\otimes v_{\sigma^{-1}(n)}
+\]
+untuk $\sigma \in S_d$.
+Inversnya penting untuk menjamin bahwa ini merupakan aksi \emph{kiri},
+tetapi hal tersebut tidak terlalu relevan bagi pembahasan berikut.
+
+\begin{definition}
+Misalkan $V$ adalah ruang vektor atas $k$.
+\emph{Ruang tensor-$d$ simetris pada $V$} adalah
+\[
+\operatorname{Sym}^d(V) = \operatorname{span}_k
+\left\{ t \in \mathcal{T}^d(V) \mid \sigma(t)=t
+\textrm{ untuk semua } t \in S_d  \right\} .
+\]
+\emph{Ruang tensor-$d$ berselang-seling pada $V$} adalah
+\[
+\operatorname{Alt}^d(V) = \operatorname{span}_k
+\left\{ t \in \mathcal{T}^d(V) \mid
+\sigma(t)=\operatorname{sgn}(\sigma)t
+\textrm{ untuk semua } t \in S_d  \right\} .
+\]
+\end{definition}
+
+Perhatikan bahwa meskipun $\mathcal{S}^d(V)$ dan $\Lambda^d(V)$ merupakan
+\emph{hasil bagi} dari $\mathcal{T}^d(V)$,
+ruang $\operatorname{Sym}^d(V)$
+dan $\operatorname{Alt}^d(V)$
+merupakan \emph{subruang}.
+
+\begin{example}
+Kita mempunyai
+\[
+e_1 \otimes e_2 \otimes e_2 + e_2 \otimes e_1 \otimes e_2
++ e_2 \otimes e_2 \otimes e_1 \in \operatorname{Sym}^d(k^5)
+\]
+dan
+\[
+3\left(e_1 \otimes e_2 - e_2 \otimes e_1\right)
++ 4\left( e_3 \otimes e_5 - e_5 \otimes e_3 \right) 
+\in \operatorname{Alt}^d(k^7).
+\]
+Perhatikan bahwa grup simetris \emph{tidak} beraksi pada
+ruang vektor $V$.
+\end{example}
+
+\begin{proposition} \label{prop:sym_alt_good_char}
+Misalkan $\operatorname{char}(k) =0$ atau $\operatorname{char}(k) > d$.
+Maka komposisi-komposisi
+\begin{align*}
+\operatorname{Sym}^d(V) &\to \mathcal{T}^d(V) \to \mathcal{S}^d(V)\\
+\operatorname{Alt}^d(V) &\to \mathcal{T}^d(V) \to \Lambda^d(V)
+\end{align*}
+merupakan isomorfisme.
+\end{proposition}
+
+\begin{proof}
+Kita mendefinisikan peta \emph{polarisasi}
+$P : \mathcal{S}^d(V) \to \operatorname{Sym}^d(V)$ sebagai berikut.
+Pertama-tama, perhatikan peta $p : \mathcal{T}^d \to \mathcal{T}^d$
+yang didefinisikan melalui
+\[
+p(v_1 \otimes v_2 \otimes \cdots \otimes v_d)
+= \frac{1}{d!}\sum_{\sigma \in S_d}
+v_{\sigma(1)} \otimes v_{\sigma(1)} \otimes \cdots \otimes v_{\sigma(d)}
+.
+\]
+Perhatikan bahwa $p$ merupakan proyeksi linear ke $\operatorname{Sym}^d(V)$
+dengan kernel tepat $I \cap \mathcal{T}^d(V)$ dari definisi
+$\mathcal{S}^d(V)$. Dengan demikian, kita memperoleh peta $P$ yang diinginkan.
+Dapat diperiksa bahwa $P$ merupakan invers dari komposisi dalam pernyataan
+proposisi.
+
+Terdapat konstruksi serupa untuk $\operatorname{Alt}^d(V)$
+dan $\Lambda^d(V)$.
+\end{proof}
+
+Isomorfisme-isomorfisme di atas digunakan secara luas, tetapi dapat
+sangat menyesatkan. Sebagai contoh, isomorfisme-isomorfisme tersebut memberikan
+struktur aljabar berderajat pada jumlah langsung tak hingga
+$\bigoplus_{d\ge 0}\operatorname{Sym}^d(V)$,
+tetapi perkaliannya \emph{tidak} sama dengan perkalian yang diwarisi dari
+$\mathcal{T}$.
+
+\begin{proposition}
+$\operatorname{Sym}^d(V^\vee)$ dan $\left(\mathcal{S}^d(V)\right)^\vee$
+secara kanonik isomorfik.
+\end{proposition}
+
+\begin{proof}
+Berdasarkan sifat pemetaan universal hasil kali tensor,
+$\mathcal{T}^d(V^\vee)$ secara kanonik isomorfik dengan ruang
+peta $d$-linear $V^d \to k$.
+Jadi, $\operatorname{Sym}^d(V^\vee)$ isomorfik dengan
+ruang bentuk $d$-linear \emph{simetris} $V^d \to k$.
+Bentuk-bentuk ini berkorespondensi bijektif secara kanonik dengan peta linear
+$\mathcal{S}^d(V) \to k$ berdasarkan sifat universal
+$\mathcal{S}^d(V)$. Dengan demikian, diperoleh isomorfisme tersebut.
+\end{proof}
+
+Tidak mungkin terdapat isomorfisme kanonik
+$\operatorname{Alt}^d(V^\vee) \cong \left(\Lambda^d(V)\right)^\vee$
+dalam semua kasus. Memang,
+$\operatorname{Alt}^d(V^\vee) = \operatorname{Sym}^d(V^\vee)$
+dalam karakteristik $2$, yang mungkin memiliki dimensi berbeda dari
+$\Lambda^d(V)^\vee$.
+Namun, pernyataan berikut berlaku dalam semua karakteristik.
+
+\begin{proposition}
+$\Lambda^d(V^\vee)$ dan $\left(\Lambda^d(V)\right)^\vee$
+secara kanonik isomorfik.
+\end{proposition}
+
+\begin{proof}
+Isomorfisme tersebut setara dengan pasangan sempurna
+\[
+\Lambda^d(V^\vee) \times \Lambda^d(V) \to k
+\]
+yang didefinisikan oleh
+\[
+(f_1 \wedge \cdots \wedge f_d)(v_1 \wedge \cdots \wedge v_d)
+= \det \begin{pmatrix}
+f_1(v_1) & \cdots & f_d(v_1)\\
+\vdots & \ddots & \vdots\\
+f_1(v_d) & \cdots & f_d(v_d)
+\end{pmatrix} 
+\]
+untuk semua $v_1,\ldots, v_d \in V$ dan $f_1,\ldots, f_d \in V^\vee$.
+Pemeriksaan perinciannya kita serahkan sebagai latihan.
+\end{proof}
+
+\subsection{Contoh}
+
+\begin{example}[Aljabar]
+Sebuah $k$-aljabar berdimensi hingga $A$ mempunyai perkalian $\mu: A \times
+A \to A$ yang linear pada setiap entri.
+(Aditivitas diperoleh dari sifat distributif gelanggang yang mendasarinya,
+sedangkan perkalian skalar diperoleh dari sifat kompatibilitas).
+Jadi, kita dapat memandang aljabar sebagai ruang vektor $A$
+beserta pilihan tensor $t$ dalam $A^\vee \otimes A^\vee \otimes A$.
+
+Jika $e_1,\ldots,e_n$ adalah basis bagi $A$,
+maka \emph{konstanta struktur} aljabar tersebut
+merupakan koleksi $\{ a^{ij}_\ell\}$ yang terdiri dari $n^3$ unsur $k$ sedemikian sehingga
+\[
+e_i\cdot e_j = \sum_{\ell=1}^n a^{ij}_\ell e_\ell
+\]
+untuk semua $1 \le i,j \le n$.
+Sekarang kita dapat menuliskan tensor tersebut secara eksplisit sebagai
+\[
+t = \sum_{i,k,\ell} a^{ij}_\ell e_i^\vee \otimes e_j^\vee \otimes
+e_\ell.
+\]
+
+Aljabar tersebut komutatif jika dan hanya jika $a^{ij}_\ell=a^{ji}_\ell$
+untuk semua indeks yang mungkin. Secara ekuivalen, aljabar tersebut komutatif jika
+dan hanya jika berada dalam subruang $\operatorname{Sym}^2(A^\vee) \otimes A$.
+Syarat asosiativitas \emph{tidak} linear dalam konstanta
+struktur. 
+\end{example}
+
+\begin{example}[Gelanggang koordinat]
+Jika $V$ adalah ruang vektor, maka fungsi polinomial umum $f: V \to k$
+jelas tidak linear maupun multilinear. Namun, himpunan fungsi
+semacam itu secara kanonik diidentifikasi dengan $\mathcal{S}(V^\vee)$.
+Hal ini sama sekali tidak mendalam, tetapi layak ditelaah sedikit.
+
+Jika $x_1,\ldots,x_n$ adalah basis bagi $V^\vee$, maka
+$f$ merupakan kombinasi linear unsur-unsur berbentuk
+$x_{i_1}\cdots x_{i_d}$. Penerapan fungsi dilakukan
+dengan memperluas secara linear aturan
+\[
+(x_{i_1}\cdots x_{i_d})(v) \mapsto x_{i_1}(v)\cdots x_{i_d}(v)
+\]
+untuk setiap $v \in V$.
+
+Peta $\alpha : \mathcal{S}^d(V^\vee) \times V \to k$
+dapat dipahami melalui pasangan kanonik (linear)
+\[
+\mathcal{S}^d(V^\vee) \times \operatorname{Sym}^d(V) \to k
+\]
+dan peta diagonal (nonlinear)
+$\Delta: V \to \operatorname{Sym}^d(V)$
+dengan $\Delta(v) = v \otimes \cdots \otimes v$.
+Kemudian berlaku $\alpha(f,v) = f(\Delta(v))$.
+\end{example}
+
+\begin{example}[Bentuk kuadratik]
+Bentuk-bentuk bilinear simetris pada ruang vektor berdimensi hingga $V$
+dapat diidentifikasi dengan $\operatorname{Sym}^2(V^\vee)$, karena bentuk
+bilinear biasa dapat diidentifikasi dengan
+$(V \otimes V)^\vee=V^\vee \otimes V^\vee$.
+Sebaliknya, bentuk-bentuk kuadratik pada $V$ dapat diidentifikasi dengan
+$\mathcal{S}^2(V^\vee)$, karena tepat merupakan fungsi polinomial homogen berderajat $2$
+pada $V$.
+
+Berdasarkan Proposisi~\ref{prop:sym_alt_good_char},
+terdapat isomorfisme kanonik di antara keduanya jika karakteristiknya
+bukan $2$. Bila $b$ merupakan bentuk bilinear
+simetris dan $q$ bentuk kuadratik yang bersesuaian,
+peta $\operatorname{Sym}^2(V^\vee) \to \mathcal{S}^2(V^\vee)$
+bersesuaian dengan
+\[
+q(v) = b(v,v)
+\]
+untuk $v\in V$, sedangkan peta \emph{polarisasi}
+$\mathcal{S}^2(V^\vee) \to \operatorname{Sym}^2(V^\vee)$
+bersesuaian dengan
+\[
+b(v,w) = \frac{1}{2}\left( q(v+w)-q(v)-q(w)\right)
+\]
+untuk $v,w \in V$.
+
+Dalam kasus berdimensi dua,
+bentuk bilinear simetris dengan matriks
+$\begin{pmatrix} a & b\\ b&c \end{pmatrix}$ bersesuaian dengan bentuk kuadratik
+$ax^2+2bxy+cz^2$. Isomorfisme dalam basis tensor bersesuaian dengan
+\[
+(e_1^2, e_1e_2, e_2^2) \leftrightarrow
+(e_1 \otimes e_1, e_1 \otimes e_2 + e_2 \otimes e_1, e_2 \otimes e_2)
+\]
+untuk $e_1, e_2$ basis bagi $V$.
+\end{example}
+
+\begin{example}[Bentuk volume]
+Diberikan ruang vektor berdimensi $n$, yaitu $V$,
+sebuah \emph{bentuk volume} adalah unsur tak nol $\omega \in \Lambda^n(V)^\vee$.
+Karena $\Lambda^n(V)$ berdimensi $1$, bentuk volume hanyalah
+pilihan isomorfisme $\omega : \Lambda^n(V) \cong k$.
+Diberikan basis terurut $e_1,\ldots, e_n$ dari $V$,
+kita memperoleh bentuk volume yang bersesuaian
+$\omega = (e_1 \wedge \cdots \wedge e_n)^\vee$.
+Perhatikan bahwa urutannya diperlukan; tanpa urutan itu kita hanya mengetahui $\omega$
+hingga tanda.
+
+Bentuk volume mempunyai interpretasi geometris yang membenarkan namanya.
+Dalam $\mathbb{R}^n$, terdapat bentuk volume baku
+$\omega=(e_1\wedge \cdots e_n)^\vee$ dengan
+$e_1,\ldots,e_n$ merupakan basis baku.
+Jika $v_1,\ldots,v_n$ adalah vektor-vektor dalam $\mathbb{R}^n$,
+maka $\omega(v_1\wedge \cdots \wedge v_n)$ adalah volume
+paralelotop yang dibangkitkannya. 
+
+Secara lebih umum, jika $k=\mathbb{R}$,
+maka suatu bentuk volume $\omega \in \Lambda^n(V)^\vee$
+bernilai positif atau negatif pada setiap basis terurut.
+Karena itu, dapat dikatakan bahwa bentuk volume menentukan suatu
+\emph{orientasi}.
+Hal ini menggeneralisasi pembedaan antara arah jarum jam dan berlawanan arah jarum jam
+untuk $\mathbb{R}^2$, serta pembedaan antara kaidah tangan kiri dan kaidah
+tangan kanan untuk $\mathbb{R}^3$.
+\end{example}
+
+\begin{example}[Pasangan hasil kali baji]
+Misalkan $V$ adalah ruang vektor berdimensi $n$.
+Diberikan pilihan bentuk volume $\omega : \Lambda^n(V) \cong k$,
+kita memperoleh pasangan sempurna
+\[
+\Lambda^d(V) \times \Lambda^{n-d}(V) \to
+\Lambda^n(V) \cong k
+\]
+untuk setiap $0 \le d \le n$ dari perkalian aljabar eksterior.
+Jadi, $\omega$ menentukan isomorfisme
+\[
+\omega_d : \Lambda^d(V) \cong \Lambda^{n-d}(V^\vee) \ .
+\]
+Pilihan $\omega$ yang berbeda hanya mengubah $\omega_d$ hingga suatu faktor
+penskalaan, sehingga $\omega_d$ bersifat kanonik \emph{hingga penskalaan}.
+
+Fungsi $\omega_d$ memetakan vektor-$d$ sederhana ke vektor
+$(n-d)$ sederhana. Selain itu, misalkan $v_1,\ldots,v_d \in V$
+dan $\ell_1,\ldots,\ell_{n-d} \in V^\vee$ memenuhi
+\[
+\omega_d(v_1 \wedge \ldots \wedge v_n) = \ell_1 \wedge \cdots \wedge
+\ell_{n-d} .
+\]
+Subruang yang direntang oleh $v_1,\ldots,v_n$ tepat merupakan subruang
+solusi $v$ bagi persamaan-persamaan
+\[
+\ell_1(v)=\cdots=\ell_{n-d}(v)=0 .
+\]
+\end{example}
+
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{alpha}
+\bibliography{rep_theory}
+
+\end{document}
+
+

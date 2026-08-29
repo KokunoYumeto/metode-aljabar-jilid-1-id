@@ -1,0 +1,182 @@
+% Preamble integrasi untuk pembaca pilihan CRing berbahasa Indonesia.
+% Berkas ini merupakan lapisan edisi; keenam fragmen terjemahan tetap terpisah.
+
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amscd}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage[amsmath,thmmarks]{ntheorem}
+\usepackage[capitalize,noabbrev]{cleveref}
+\usepackage{url}
+\usepackage[top=1.15in,bottom=1.15in,left=1.15in,right=1.15in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{verbatim}
+\usepackage{enumerate}
+\usepackage{makeidx}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage[all]{xy}
+
+\makeindex
+\renewcommand{\contentsname}{Daftar Isi}
+\renewcommand{\bibname}{Daftar Pustaka}
+\renewcommand{\indexname}{Indeks}
+\renewcommand{\figurename}{Gambar}
+\renewcommand{\tablename}{Tabel}
+\setlength{\emergencystretch}{3em}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!45!black,
+  citecolor=green!35!black,
+  urlcolor=blue!55!black,
+  pdftitle={Pilihan CRing: Pembaca Bahasa Indonesia},
+  pdfauthor={CRing Project; OpenAI Codex gpt-5.6-sol (Ultra)},
+  pdfsubject={Enam pilihan aljabar komutatif dengan provenance GFDL yang eksplisit},
+  pdfkeywords={aljabar komutatif, CRing, Bahasa Indonesia, GFDL}
+}
+
+\def\name{Pilihan CRing --- Bahasa Indonesia}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[CE,CO]{\itshape \name}
+\fancyfoot[CE,CO]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{14pt}
+
+\titleformat{\chapter}[display]
+  {\LARGE\bfseries\centering}{Bab \thechapter}{3pt}{}[\vspace{3pt}\hrule]
+\titleformat{\section}{\Large\bfseries}{\S\,\thesection}{10pt}{}
+
+% Makro matematika yang dipakai fragmen pilihan. Definisi ini mengikuti
+% antarmuka sumber CRing, tetapi berada di preamble integrasi yang mandiri.
+\newcommand{\lecture}[1]{}
+\newcommand{\rad}{\operatorname{Rad}}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\proj}{\operatorname{Proj}}
+\renewcommand{\hom}{\operatorname{Hom}}
+\newcommand{\id}{\operatorname{id}}
+\providecommand{\cal}[1]{\mathcal{#1}}
+\renewcommand{\cal}[1]{\mathcal{#1}}
+\newcommand{\et}{\mathrm{Et}}
+\newcommand{\supp}{\operatorname{supp}}
+\renewcommand{\k}{\kappa}
+\newcommand{\ann}{\operatorname{Ann}}
+\newcommand{\ass}{\operatorname{Ass}}
+\newcommand{\pic}{\operatorname{Pic}}
+\newcommand{\cart}{\operatorname{Cart}}
+\newcommand{\weil}{\operatorname{Weil}}
+\newcommand{\krdim}{\operatorname{Krdim}}
+\newcommand{\emdim}{\operatorname{Emdim}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\renewcommand{\a}{{a}}
+\renewcommand{\b}{{b}}
+\renewcommand{\d}{{d}}
+\newcommand{\e}{{e}}
+\newcommand{\g}{{g}}
+\newcommand{\het}{\operatorname{height}}
+\newcommand{\f}{{f}}
+\newcommand{\add}[1]{\textbf{AKAN DITAMBAHKAN:} #1}
+\newcommand{\spec}{\operatorname{Spec}}
+\newcommand{\cont}{\operatorname{Cont}}
+\DeclareMathOperator{\Emb}{Emb}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Char}{char}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\idem}{Idem}
+\newcommand{\res}{\operatorname{Res}}
+\newcommand{\coker}{\operatorname{Coker}}
+\newcommand{\hearts}{\heartsuit}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Specm}{\operatorname{Specm}}
+\newcommand{\Ann}{\operatorname{Ann}}
+\newcommand{\tor}{\operatorname{Tor}}
+\newcommand{\ext}{\operatorname{Ext}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\ob}{\operatorname{ob}}
+\newcommand{\ad}{\mathrm{ad}}
+\renewcommand{\log}{\mathrm{log}}
+\renewcommand{\dim}{\mathrm{dim}}
+\newcommand{\dd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\gr}{\operatorname{gr}}
+\newcommand{\st}{\ss:\ss}
+\newcommand{\Sym}{\mathrm{Sym}}
+\newcommand{\depth}{\operatorname{depth}}
+
+\newenvironment{xyxy}[1]
+  {\vspace{10pt}\begin{center}\xymatrix{#1}\end{center}\vspace{12pt}}
+  {}
+\newenvironment{qu}[2]
+  {\begin{list}{}{\setlength\leftmargin{#1}\setlength\rightmargin{#2}}\item[]\footnotesize}
+  {\end{list}}
+\newenvironment{random}[1]{\par\vspace{10pt}\noindent\textbf{#1}}{}
+\newenvironment{liszt}[1]
+  {\begin{list}{\labelitemi}{\setlength\leftmargin{#1em}\setlength\itemsep{0.1in}}}
+  {\end{list}}
+\newcommand{\sqxx}[4]{\begin{xyxy}{#1 \ar[r] \ar[d] & #2 \ar[d] \\ #3 \ar[r] & #4}\end{xyxy}}
+
+% Lingkungan teorema memakai nama Indonesia tanpa mengubah nama lingkungan
+% yang terdapat dalam keenam fragmen.
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{sublemma}[theorem]{Sublema}
+\newtheorem{corollary}[theorem]{Korolari}
+\newtheorem{proposition}[theorem]{Proposisi}
+\theorembodyfont{\normalfont}
+\newtheorem{definition}[theorem]{Definisi}
+\newtheorem*{remark}{Catatan}
+\newtheorem{example}[theorem]{Contoh}
+\newtheorem{exercise}{Latihan}[chapter]
+\newtheorem*{solution}{Penyelesaian}
+\newtheorem*{question}{Pertanyaan}
+\newtheorem*{problem}{Masalah}
+\newtheorem*{dbend}{Peringatan}
+\newtheorem*{prediction}{Prediksi}
+\theoremheaderfont{\itshape}
+\theoremseparator{.}
+\theoremsymbol{\ensuremath{\blacktriangle}}
+\newtheorem*{proof}{Bukti}
+
+\crefname{theorem}{teorema}{teorema}
+\crefname{lemma}{lema}{lema}
+\crefname{corollary}{korolari}{korolari}
+\crefname{proposition}{proposisi}{proposisi}
+\crefname{definition}{definisi}{definisi}
+\crefname{example}{contoh}{contoh}
+\crefname{exercise}{latihan}{latihan}
+\crefname{section}{bagian}{bagian}
+\crefname{subsection}{subbagian}{subbagian}
+
+% Referensi berikut memang berada di luar enam rentang terpilih. Registri ini
+% mengubahnya menjadi tautan yang jujur ke daftar dependensi sumber lengkap,
+% bukan tanda tanya LaTeX. Pemetaan persisnya juga dicatat dalam manifest JSON.
+\makeatletter
+\let\CRingNativeCref\cref
+\newcommand{\CRingDeclareExternalReference}[2]{%
+  \expandafter\gdef\csname CRingExternalRef@#1\endcsname{#2}}
+\CRingDeclareExternalReference{Jacobson}{latihan tentang radikal Jacobson dalam sumber lengkap}
+\CRingDeclareExternalReference{def-radical-ideal}{definisi ideal radikal dalam sumber lengkap}
+\CRingDeclareExternalReference{anycontainedinmaximal}{proposisi ideal maksimal dalam sumber lengkap}
+\CRingDeclareExternalReference{primeavoidance}{teorema penghindaran prima dalam sumber lengkap}
+\CRingDeclareExternalReference{assmfinite}{proposisi kefinitan prima terkait dalam sumber lengkap (label sumber: \texttt{finiteassm})}
+\CRingDeclareExternalReference{spec}{bab tentang spektrum dalam sumber lengkap}
+\CRingDeclareExternalReference{nilpcriterion}{kriteria nilpotensi dalam sumber lengkap}
+\CRingDeclareExternalReference{noetherian}{bab tentang gelanggang Noether dalam sumber lengkap}
+\CRingDeclareExternalReference{finitelygeneratedintegral}{proposisi tentang aljabar integral terbangkitkan hingga dalam sumber lengkap}
+\CRingDeclareExternalReference{subsectiondimension}{subbagian teori dimensi ruang topologis dalam sumber lengkap}
+\newcommand{\CRingResolvedReference}[1]{%
+  \@ifundefined{CRingExternalRef@#1}
+    {\CRingNativeCref{#1}}
+    {\hyperref[cring-external-reference-registry]{\csname CRingExternalRef@#1\endcsname}}}
+\renewcommand{\cref}[1]{\CRingResolvedReference{#1}}
+\newcommand{\rref}[1]{\CRingResolvedReference{#1}}
+\makeatother

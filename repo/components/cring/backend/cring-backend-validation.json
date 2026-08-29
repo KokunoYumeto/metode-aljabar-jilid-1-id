@@ -1,0 +1,121 @@
+{
+  "schema": "interlanguage.cring-selected-backend-validation.v1",
+  "result": "PASS",
+  "mode": "regenerate-and-validate",
+  "checks": {
+    "six_authority_line_spans_exact": true,
+    "authority_zip_bytes_and_sha256_exact": true,
+    "authority_pdf_bytes_and_sha256_exact": true,
+    "aggregate_translation_receipt_exact_and_pass": true,
+    "nine_repairs_exact": true,
+    "three_original_bridge_records_exact": true,
+    "semilocal_original_proof_record_separate": true,
+    "source_target_record_and_blank_maps_exact": true,
+    "section_and_semantic_environment_topology_exact": true,
+    "formula_normalized_multiset_and_bindings_exact": true,
+    "label_ref_citation_topology_exact": true,
+    "exercise_and_hint_topology_exact": true,
+    "citations_resolved_to_authority_bibliography": true,
+    "selected_and_external_authority_refs_classified": true,
+    "li_prerequisite_links_resolved": true,
+    "gfdl_1_2_or_later_rights_exact": true,
+    "independent_nonendorsement_present": true,
+    "exact_model_provenance_present": true,
+    "locale_neutral_ids_unique": true,
+    "utf8_lf_inputs_and_outputs": true,
+    "artifact_regeneration_byte_identical": true
+  },
+  "authority": {
+    "zip_bytes": 442843,
+    "zip_sha256": "151cdf5498622251db9999b082c4b756a5a7e22b07ddd79538c0057472a4234d",
+    "pdf_bytes": 2973918,
+    "pdf_sha256": "9d228183f549ab4a64dcacfa49884c0f7ef4d5d5f8c535f9066070bf909b580c",
+    "license_expression": "GFDL-1.2-or-later"
+  },
+  "upstream_aggregate": {
+    "receipt_sha256": "88d517bce56e50d090bce039c1786cd1dc75d0da5aa5644c87c8e585bcc344cb",
+    "validator_sha256": "3c6a8a1a10197c58fd65694d0b2eb61916fec710862113864320f0dc3989964e",
+    "pair_manifest_sha256": "05f6587857177c7bb92e5099b6bed5b6314679f9be2b7491747bcead4e7702a5",
+    "result": "PASS"
+  },
+  "counts": {
+    "roots": 6,
+    "authority_span_records": 3570,
+    "repaired_source_records": 3589,
+    "target_records": 3589,
+    "blank_records_each_repaired_side": 511,
+    "authority_span_bytes": 151617,
+    "repaired_source_bytes": 152885,
+    "target_bytes": 167780,
+    "repairs": 9,
+    "edition_original_repairs": 8,
+    "edition_corrections": 1,
+    "original_bridge_records": 3,
+    "edition_bridge_marker_occurrences": 4,
+    "li_prerequisites": 2,
+    "sections": 39,
+    "definitions": 25,
+    "theorems": 73,
+    "examples": 23,
+    "exercises": 27,
+    "remarks": 14,
+    "questions": 2,
+    "predictions": 1,
+    "formulas": 2651,
+    "hints": 2,
+    "labels": 39,
+    "refs": 59,
+    "refs_to_selected_labels": 48,
+    "refs_to_external_authority_labels": 11,
+    "external_authority_label_keys": 10,
+    "citations": 4,
+    "unique_citation_keys": 3,
+    "bibliography_entries": 40,
+    "entities": 2857,
+    "links": 102
+  },
+  "input_manifest_sha256": "8f51d5517898e6be62eb718b420ccd4156a89e389d7dd78d778d80264072cc23",
+  "validator": {
+    "path": "repo/components/cring/backend/validate_cring_backend.py",
+    "bytes": 69339,
+    "sha256": "52829e198bdeeedcf1bc37890763a90dc914fa9c991ae3f7e1ae70e0977fec5f"
+  },
+  "artifacts": [
+    {
+      "path": "repo/components/cring/backend/cring-component.json",
+      "bytes": 2195455,
+      "sha256": "797e0fc6d56aedae63071f54fdb166fe892477e4614a7862b31de18877d3508b",
+      "rows": null
+    },
+    {
+      "path": "repo/components/cring/backend/cring-roots.csv",
+      "bytes": 4196,
+      "sha256": "d7c04e8dc28f120136dc5098d9289d6f8407cd5799b96ba5713efc3c1cceb349",
+      "rows": 6
+    },
+    {
+      "path": "repo/components/cring/backend/cring-entities.csv",
+      "bytes": 927961,
+      "sha256": "0b660e4e8fd54d4385425aaed9dbb0e4400e8fb051a03638bfaf755bc79dc9ed",
+      "rows": 2857
+    },
+    {
+      "path": "repo/components/cring/backend/cring-links.csv",
+      "bytes": 20763,
+      "sha256": "58d92dd646a0deebe7d7bb6406911e5a67a142405fbcd1671f031f32720b84fe",
+      "rows": 102
+    },
+    {
+      "path": "repo/components/cring/backend/cring-repairs.csv",
+      "bytes": 2061,
+      "sha256": "58c2f38f1a220003d71759afdab38bbdbeec713e37c3eeca4eea8239933670db",
+      "rows": 9
+    },
+    {
+      "path": "repo/components/cring/backend/cring-prerequisites.csv",
+      "bytes": 660,
+      "sha256": "fa1cbe0b2f235383cbfa10b236aeaa61174dcc2ce4766f4f0be83c931634ff36",
+      "rows": 2
+    }
+  ]
+}

@@ -1,0 +1,1028 @@
+\section{Fungsi Hilbert dan dimensi gelanggang lokal}
+\subsection{Polinomial bernilai bulat}
+
+Sekarang kita perlu membahas sedikit aljabar umum.
+
+Misalkan $P \in \mathbb{Q}[t]$. Kita meninjau kapan $P$ memetakan
+bilangan-bilangan bulat $\mathbb{Z}$, atau lebih umum bilangan-bilangan bulat yang cukup besar, ke dalam
+$\mathbb{Z}$. Tentu saja, setiap polinomial dalam $\mathbb{Z}[t]$ mempunyai sifat ini, tetapi
+ada pula yang lain; misalnya, tinjau $\frac{1}{2}(t^2 -t)$.
+
+\begin{proposition}\label{integervalued} 
+Misalkan $P \in \mathbb{Q}[t]$. Maka $P(m)$ merupakan bilangan bulat untuk setiap bilangan bulat $m \gg 0$ jika dan hanya jika
+$P$ dapat dituliskan dalam bentuk
+\[ P(t) = \sum_n c_n \binom{t}{n}, \quad c_n \in \mathbb{Z}.  \]
+Khususnya, $P(\mathbb{Z}) \subset \mathbb{Z}$.
+\end{proposition} 
+Jadi $P$ merupakan kombinasi linear-$\mathbb{Z}$ dari koefisien-koefisien binomial. 
+\begin{proof} 
+Perhatikan bahwa himpunan $\left\{\binom{t}{n}\right\}_{n \in \mathbb{Z}_{\geq 0}}$ membentuk suatu basis bagi ruang
+polinomial $\mathbb{Q}[t]$. Karena itu, jelas bahwa $P(t)$ dapat dituliskan sebagai
+kombinasi rasional $\sum c_n \binom{t}{n}$ dengan $c_n \in \mathbb{Q}$.
+Kita perlu membuktikan bahwa sebenarnya $c_n \in \mathbb{Z}$.
+
+Tinjau operator $\Delta$ yang didefinisikan pada fungsi-fungsi $\mathbb{Z} \to
+\mathbb{C}$ sebagai berikut:
+\[( \Delta f)(m) = f(m) - f(m-1).  \]
+Jelas bahwa jika $f$ bernilai bulat untuk $m \gg 0$, maka demikian pula
+$\Delta f$. Mudah pula diperiksa bahwa $\Delta \binom{t}{n} =
+\binom{t}{n-1}$.
+
+Dengan meninjau
+fungsi $\Delta P = \sum c_n \binom{t}{n-1}$ (yang bernilai dalam $\mathbb{Z}$), mudah dilihat bahwa $c_n \in \mathbb{Z}$ melalui induksi
+pada derajat. 
+Mudah pula dilihat secara langsung bahwa koefisien binomial bernilai dalam
+$\mathbb{Z}$ pada \emph{semua} argumen.
+\end{proof} 
+
+
+
+\subsection{Definisi dan contoh}
+Misalkan $R$ suatu gelanggang. 
+\begin{question} 
+Apakah definisi yang baik untuk $\dim(R)$? Bahkan, secara lebih umum, 
+apakah dimensi $R$ pada suatu ``titik'' tertentu (yakni ideal prima)?
+\end{question} 
+
+Secara geometris, bayangkan $\spec R$ untuk sebarang gelanggang; pilih suatu titik yang bersesuaian dengan ideal
+maksimal $\mathfrak{m} \subset R$. Kita ingin mendefinisikan \textbf{dimensi $R$}
+pada $\mathfrak{m}$. Gagasan ini dapat dibayangkan menyerupai ``dimensi atas
+bilangan kompleks'' bagi varietas aljabar yang didefinisikan atas $\mathbb{C}$. Namun definisi itu
+harus murni aljabar. 
+Apa yang dapat kita lakukan?
+
+
+Berikut suatu gagasan. Agar ruang topologis $X$ berdimensi $n$ pada $x \in
+X$, seharusnya terdapat $n$ koordinat pada titik $x$. Dengan kata lain,
+titik $x$ seharusnya ditentukan secara tunggal
+oleh lokus nol dari $n$ koordinat pada ruang tersebut.
+Termotivasi oleh hal ini, kita dapat mencoba mendefinisikan $\dim_{\mathfrak{m}} R$
+sebagai banyaknya pembangkit $\mathfrak{m}$.
+Namun definisi ini buruk, sebab $\mathfrak{m}$ mungkin tidak mempunyai jumlah
+pembangkit yang sama dengan $\mathfrak{m}R_{\mathfrak{m}}$. Dengan kata lain, ini bukan definisi yang benar-benar
+\emph{lokal}.
+\begin{example} 
+Misalkan $R$ suatu daerah integral Noether yang tertutup secara integral tetapi bukan UFD. Misalkan $\mathfrak{p}
+\subset R$ suatu ideal prima yang minimal di atas suatu ideal utama, tetapi
+bukan ideal utama. Maka $\mathfrak{p}R_{\mathfrak{p}}$ dibangkitkan oleh
+satu unsur, sebagaimana kelak akan kita lihat, sedangkan $\mathfrak{p}$ tidak.
+\end{example} 
+
+Kita menginginkan definisi dimensi yang bersifat
+lokal.
+Hal ini membawa kita pada definisi berikut.
+\begin{definition} 
+Jika $R$ suatu gelanggang \emph{lokal} (Noether) dengan ideal maksimal $\mathfrak{m}$,
+maka \textbf{dimensi pembenaman} dari $R$, yang dilambangkan $\emdim R$, adalah
+jumlah minimal pembangkit $\mathfrak{m}$. Jika $R$ suatu gelanggang
+Noether dan $\mathfrak{p} \subset R$ suatu ideal prima, maka \textbf{dimensi pembenaman
+pada $\mathfrak{p}$} adalah dimensi pembenaman gelanggang lokal $R_{\mathfrak{p}}$.
+\end{definition} 
+
+Dalam definisi di atas, jelas bahwa cukup mempelajari apa yang terjadi untuk
+gelanggang lokal; untuk sementara kita memberlakukan pembatasan tersebut. Menurut Lema Nakayama,
+dimensi pembenaman adalah jumlah minimal pembangkit
+$\mathfrak{m}/\mathfrak{m}^2$, atau dimensi atas $R/\mathfrak{m}$ dari ruang vektor
+tersebut:
+\[ \emdim R = \dim_{R/\mathfrak{m}} \mathfrak{m}/ \mathfrak{m}^2.  \]
+
+
+Namun secara umum, dimensi pembenaman tidak sama dengan
+dimensi ``geometris'' intuitif suatu varietas
+aljabar.
+
+\begin{example} 
+Misalkan $R = \mathbb{C}[t^2, t^3] \subset \mathbb{C}[t]$, yaitu gelanggang koordinat
+kurva kubik $y^2 =x^3$, sebab $R \simeq \mathbb{C}[x,y]/(x^2 - y^3)$
+melalui $x = t^3, y = t^2$. Mari kita lokalkan pada ideal prima $\mathfrak{p} = (t^2,
+t^3)$; kita memperoleh $R_{\mathfrak{p}}$. 
+
+Spektrum $\spec R$ singular di titik asal. Sebagai akibatnya, $\mathfrak{p}
+R_{\mathfrak{p}} \subset R_{\mathfrak{p}}$ memerlukan dua pembangkit, tetapi
+varietas yang bersesuaian berdimensi satu.
+\end{example} 
+
+Jadi dimensi pembenaman adalah dimensi terkecil dari ruang mulus tempat kita dapat membenamkan
+$R$.
+Namun bagi varietas singular, ini bukan dimensi yang kita inginkan. 
+
+Alih-alih hanya meninjau $\mathfrak{m}/\mathfrak{m}^2$, mari kita
+tinjau \emph{barisan} ruang vektor berdimensi hingga
+\[ \mathfrak{m}^k/\mathfrak{m}^{k+1}.  \]
+Menghitung dimensi-dimensi ini sebagai fungsi $k$ menghasilkan suatu invarian yang mendeskripsikan geometri
+lokal dari $\spec R$.
+
+Kelak akan kita buktikan:
+\begin{theorem} \label{hilbfnispolynomial}
+Misalkan $(R, \mathfrak{m})$ suatu gelanggang lokal Noether. Maka terdapat suatu
+polinomial
+$f \in \mathbb{Q}[t]$ sedemikian sehingga
+\[ f(n) =  \ell(R/\mathfrak{m}^n) = \sum_{i=0}^{n-1} \dim
+\mathfrak{m}^i/\mathfrak{m}^{i+1} \quad \forall n \gg 0.  \]
+
+Selain itu, $\deg f \leq \dim \mathfrak{m}/\mathfrak{m}^2$.
+\end{theorem}
+
+
+Perhatikan bahwa polinomial ini terdefinisi dengan baik, sebab dua polinomial yang sama untuk $n$ besar
+pastilah identik. Perhatikan pula bahwa $R/\mathfrak{m}^n$ bersifat Artin sehingga mempunyai panjang hingga,
+dan kita telah menggunakan fakta bahwa panjang bersifat aditif pada barisan eksak
+pendek. Kita ingin menuliskan $\dim R/\mathfrak{m}^n$, tetapi secara umum
+hal itu tidak dapat dilakukan; sebagai gantinya kita menggunakan panjang. 
+
+Berdasarkan hal ini, kita mendefinisikan:
+\begin{definition} 
+\textbf{Dimensi} gelanggang lokal $R$ adalah derajat polinomial
+$f$ di atas. Untuk gelanggang Noether sebarang $R$, kita definisikan $\dim R =
+\sup_{\mathfrak{p} \in \spec R} \dim (R_{\mathfrak{p}})$.
+\end{definition} 
+
+
+Sekarang mari kita lakukan beberapa perhitungan contoh. 
+
+\begin{example}[Garis afin] \label{easydimcomputation}
+\label{dimaffineline}
+Tinjau gelanggang lokal $(R, \mathfrak{m}) = \mathbb{C}[t]_{(t)}$. Maka $\mathfrak{m} = (t)$ dan
+$\mathfrak{m}^k/\mathfrak{m}^{k+1}$ berdimensi satu, dibangkitkan oleh $t^k$. Khususnya,
+gelanggang tersebut berdimensi satu. 
+\end{example} 
+
+\begin{example}[Kurva singular] Tinjau $R = \mathbb{C}[t^2, t^3]_{(t^2, t^3)}$, gelanggang lokal dari $y^2 = x^3$
+di nol. Maka $\mathfrak{m}^n$ dibangkitkan oleh $t^{2n}, t^{2n+1}, \dots$.
+$\mathfrak{m}^{n+1}$ dibangkitkan oleh $t^{2n+2}, t^{2n+3}, \dots$. Jadi semua
+hasil bagi tersebut berdimensi dua. Dimensinya sedikit
+lebih besar daripada dalam \rref{easydimcomputation}, tetapi tidak bertumbuh. Gelanggang tersebut tetap berdimensi satu. 
+\end{example} 
+
+\begin{example}[Bidang afin] \label{dimaffineplane}
+Tinjau $R = \mathbb{C}[x,y]_{(x,y)}$. Maka $\mathfrak{m}^k$ dibangkitkan oleh
+polinomial-polinomial dalam $x,y$ yang homogen berderajat $k$. Jadi $\mathfrak{m}^k/\mathfrak{m}^{k+1}$
+mempunyai dimensi yang \emph{bertumbuh} secara linear dalam $k$. Ini benar-benar merupakan contoh
+berdimensi dua. 
+\end{example} 
+
+Perbedaan antara pertumbuhan konstan, linear, dan kuadratik dalam
+$R/\mathfrak{m}^n$ ketika $n \to \infty$, bukan ukuran suku-suku awalnya,
+itulah yang kita kehendaki dari definisi dimensi.
+
+Sekarang mari kita perumum \rref{dimaffineline} dan \rref{dimaffineplane}
+di atas ke ruang afin berdimensi sebarang. 
+\begin{example}[Ruang afin] 
+Tinjau $R = \mathbb{C}[x_1, \dots, x_n]_{(x_1, \dots, x_n)}$. 
+Secara geometris, gelanggang ini merepresentasikan varietas $\mathbb{C}^n = \mathbb{A}^n_{\mathbb{C}}$ di sekitar titik asal, sehingga
+secara intuitif seharusnya berdimensi $n$. Mari kita periksa hal ini. 
+
+Kita perlu menghitung polinomial $f$ di atas. Di sini $R/\mathfrak{m}^k$ menyerupai himpunan
+polinomial berderajat $<k$ atas $\mathbb{C}$. Dimensinya sebagai ruang vektor
+dari ruang ini
+diberikan oleh suatu koefisien binomial $\binom{n+k-1}{n}$. Ini merupakan polinomial dalam
+$k$ berderajat $n$. Khususnya, $\ell(R/\mathfrak{m}^k)$ bertumbuh seperti $k^n$.
+Jadi $R$ berdimensi $n$. 
+\end{example} 
+
+
+Terakhir, kita berikan satu contoh lagi yang menunjukkan bahwa DVR berdimensi satu. Bahkan,
+di antara daerah integral lokal Noether yang tertutup secara integral, DVR
+\emph{dicirikan} oleh sifat ini (karakterisasi DVR dibuktikan dalam bab mengenai gelanggang Dedekind pada sumber lengkap; pembuktian tersebut berada di luar suplemen terpilih ini).
+
+\begin{example}[Dimensi suatu DVR]
+Misalkan $R$ suatu DVR. Maka $\mathfrak{m}^k/\mathfrak{m}^{k+1}$ mempunyai panjang satu untuk
+setiap $k$. Jadi $R/\mathfrak{m}^k$ mempunyai panjang $k$. Dengan demikian kita dapat mengambil $f(t) = t$, sehingga
+$R$ berdimensi satu.
+\end{example} 
+
+\subsection{Fungsi Hilbert merupakan suatu polinomial} 
+
+Meskipun kita telah memberikan definisi dimensi dan menghitung berbagai contoh,
+kita belum memeriksa bahwa definisi tersebut terdefinisi dengan baik. 
+Kita harus membuktikan \rref{hilbfnispolynomial}.
+
+\begin{proof}[Bukti \rref{hilbfnispolynomial}]
+Tetapkan suatu gelanggang lokal Noether $(R, \mathfrak{m})$. Kita akan menunjukkan bahwa
+$\ell(R/\mathfrak{m}^n)$ merupakan polinomial untuk $n \gg 0$. Kita juga harus membatasi
+derajatnya oleh $\dim_{R/\mathfrak{m}} \mathfrak{m}/\mathfrak{m}^2$, yaitu
+dimensi pembenaman. Kita akan melakukannya dengan mereduksi pada suatu fakta umum mengenai
+modul bergradasi atas gelanggang polinomial.
+
+Misalkan $S = \bigoplus_n  \mathfrak{m}^n/\mathfrak{m}^{n+1}$. Maka $S$ mempunyai
+gradasi alami, dan bahkan secara alami merupakan gelanggang bergradasi melalui
+pemetaan perkalian 
+\[ \mathfrak{m}^{n_1} \times \mathfrak{m}^{n_2} \to \mathfrak{m}^{n_1 + n_2}.  \]
+Sebenarnya, $S$ adalah \emph{gelanggang bergradasi terkait} dari filtrasi $\mathfrak{m}$-adik.
+Perhatikan bahwa $S_0 = R/\mathfrak{m}$ merupakan suatu medan, yang akan kita lambangkan dengan $k$.
+Jadi $S$ merupakan aljabar-$k$ bergradasi.
+
+\begin{lemma} 
+$S$ merupakan aljabar-$k$ terbangkitkan hingga. Bahkan, $S$ dapat dibangkitkan oleh paling banyak
+$\emdim(R)$ unsur.
+\end{lemma} 
+\begin{proof} 
+Misalkan $x_1, \dots, x_r$ pembangkit-pembangkit $\mathfrak{m} $ dengan $r = \emdim(R)$.
+Unsur-unsur ini (atau lebih tepatnya, citra-citranya) membentuk suatu basis-$k$
+bagi $\mathfrak{m}/\mathfrak{m}^2$.
+Maka citra-citra mereka di $\mathfrak{m}/\mathfrak{m}^2 \subset S$ membangkitkan $S$.
+Hal ini mengikuti karena $S_1$ membangkitkan $S$ sebagai aljabar-$S_0$: hasil kali
+unsur-unsur dalam $\mathfrak{m}$ membangkitkan pangkat-pangkat $\mathfrak{m}$ yang lebih tinggi.
+\end{proof} 
+
+Jadi $S$ merupakan hasil bagi bergradasi dari gelanggang polinomial $k[t_1, \dots, t_r]$, dengan
+$t_i $ dipetakan ke $x_i$. Khususnya, $S$ merupakan modul bergradasi terbangkitkan hingga atas $k[t_1,
+\dots, t_r]$.
+Perhatikan pula bahwa $\ell(R/\mathfrak{m}^n)  = \dim_{k}(S_0) + \dots +
+\dim_{k}(S_{n-1})$ untuk setiap $n$, berkat filtrasi tersebut. Inilah
+invarian yang kita minati.
+
+Sekarang cukup dibuktikan proposisi yang lebih umum berikut.
+\begin{proposition} \label{hilbfngeneral}
+Misalkan $M$ sebarang modul bergradasi terbangkitkan hingga atas gelanggang polinomial
+$k[x_1, \dots, x_r]$. Maka
+terdapat polinomial $f_M^+ \in \mathbb{Q}[t]$ berderajat $ \leq r$, sedemikian sehingga
+\[ f_M^+(t) = \sum_{s \leq t} \dim M_s \quad t \gg 0.   \]
+\end{proposition} 
+Menerapkannya pada $M = S$ memberikan hasil yang diinginkan. Kita dapat melupakan
+semua hal lainnya dan hanya meninjau masalah ini untuk gelanggang polinomial bergradasi.
+
+Fungsi ini disebut \textbf{fungsi Hilbert}.
+
+\begin{proof}[Bukti \rref{hilbfngeneral}]
+Perhatikan bahwa jika kita mempunyai barisan eksak modul bergradasi atas gelanggang
+polinomial,
+\[ 0 \to M' \to M \to M'' \to 0,   \]
+dan polinomial $f_{M'}, f_{M''}$ seperti dalam proposisi, maka $f_M$ ada dan 
+\[ f_M = f_{M'} + f_{M''}.  \] Hal ini langsung dari definisi.
+Selanjutnya, kita amati bahwa jika $M$ merupakan modul bergradasi terbangkitkan hingga atas dua
+gelanggang polinomial berbeda, tetapi dengan gradasi yang sama, maka keberadaan (dan
+nilai) $f_M$ tidak bergantung pada gelanggang polinomial mana yang ditinjau.
+Terakhir, kita amati bahwa cukup dibuktikan bahwa $f_M(t) = \dim M_t$ merupakan
+polinomial dalam $t$ untuk $t \gg 0$.
+
+Kita akan
+menggunakan ketiga pengamatan ini dan melakukan induksi pada $n$.
+
+Jika $n  = 0$, maka $M$ merupakan ruang vektor bergradasi berdimensi hingga atas
+$k$, dan gradasinya harus terkonsentrasi pada berhingga banyaknya derajat. Jadi
+hasilnya jelas, sebab $f_{M}(t)$ sama dengan $\dim M$ (yang merupakan
+dimensi yang sesuai untuk $t \gg 0$). 
+
+Andaikan $n > 0$. Tinjau
+filtrasi $M$
+\[ 0 \subset \ker( x_1: M \to M) \subset \ker (x_1^2: M \to M) \subset \dots
+\subset M.  \]
+Karena sifat Noether, filtrasi ini harus stabil pada suatu $M' \subset M$. Setiap
+hasil bagi $\ker( x_1^i)/\ker (x_1^{i+1})$ merupakan modul terbangkitkan hingga atas
+$k[x_1, \dots,
+x_n]/(x_1)$, yaitu gelanggang polinomial yang lebih kecil. Jadi setiap hasil bagi tersebut
+$\ker (x_1^{i+1})/\ker (x_1^{i})$ mempunyai fungsi Hilbert berderajat $\leq n-1$ menurut
+hipotesis induksi. 
+
+Dengan menelusuri filtrasi tersebut, kita melihat bahwa $M'$ mempunyai fungsi Hilbert yang merupakan jumlah fungsi Hilbert
+dari hasil-hasil bagi $\ker(x_1^{i+1})/\ker(x_1^{i})$. Khususnya, $f_{M'}$ ada. Jika kita menunjukkan bahwa $f_{M/M'}$
+ada, maka $f_M$ pasti ada. Jadi cukup ditunjukkan bahwa
+fungsi Hilbert $f_M$ ada ketika $x_1$ bukan pembagi nol pada $M$. 
+
+Jadi kita telah mereduksi ke kasus ketika $M \stackrel{x_1}{\to} M$
+injektif.
+Sekarang $M$ mempunyai filtrasi
+\[ M \supset x_1 M \supset x_1^2 M \supset \dots  \]
+yang merupakan filtrasi menyeluruh dari $M$, dalam arti bahwa tidak ada unsur yang dapat terus-menerus habis dibagi oleh
+pangkat-pangkat $x_1$, sebab jika demikian derajatnya tidak akan berhingga. Jadi
+$\bigcap x_1^m M = 0$. 
+
+Misalkan $N = M/x_1 M $, yang isomorfik dengan $ x_1^m M/x_1^{m+1} M$ karena $M \stackrel{x_1}{\to} M$
+injektif. Di sini $N$ merupakan modul bergradasi terbangkitkan hingga atas $k[x_2, \dots, x_n]$, dan menurut
+hipotesis induksi pada $n$, terdapat polinomial $f_N^+$ berderajat $\leq n-1$ sedemikian sehingga
+\[ f_N^+(t) = \sum_{t' \leq t} \dim N_{t'}, \quad t \gg 0.  \]
+
+Tetapkan $t \gg 0$ dan tinjau ruang vektor-$k$ $M_t$, yang mempunyai filtrasi hingga 
+\[ M_t \supset (x_1 M)_t \supset (x_1^2 M)_t \supset \dots  \]
+dengan hasil-hasil bagi berturut-turut berupa komponen bergradasi dari $N \simeq
+M/x_1 M \simeq x_1 M/x_1^2 M \simeq \dots$ pada dimensi $t, t-1, \dots$. Kita
+memperoleh, misalnya,
+\[ (x_1^2 M)_t/(x_1^3 M)_t \simeq N_{t-2},  \]
+Dengan menjumlahkannya, kita memperoleh
+\[ \dim M_t = \dim N_t + \dim N_{t-1} + \dots . \]
+Jumlah di atas sebenarnya berhingga. Memang, dari keterbangkitan hingga terdapat $K
+\gg 0 $ sedemikian sehingga $\dim N_q  = 0$ untuk $q< -K$. Dari sini diperoleh 
+\[ \dim M_t = \sum_{t' = -K}^{t} \dim N_{t'},  \]
+yang mengimplikasikan bahwa $\dim M_t$ merupakan polinomial untuk $t \gg 0$. Ini menyelesaikan
+pembuktian.
+\end{proof} 
+\end{proof}
+
+
+Misalkan $(R, \mathfrak{m})$ suatu gelanggang lokal Noether dan $M$ suatu modul-$R$
+terbangkitkan hingga. 
+\begin{proposition} \label{hilbertlocalring} 
+$\ell(M/\mathfrak{m}^m M)$ merupakan polinomial untuk $m \gg 0$. 
+\end{proposition} 
+\begin{proof} 
+Pernyataan ini mengikuti dari \rref{hilbfngeneral}; bahkan, pada dasarnya kita telah
+melihat argumennya di atas. Tinjau
+modul bergradasi terkait
+\[ N = \bigoplus \mathfrak{m}^k M/\mathfrak{m}^{k+1}M , \]
+yang terbangkitkan hingga atas gelanggang bergradasi terkait
+\[ \bigoplus \mathfrak{m}^k/\mathfrak{m}^{k+1}.  \]
+Akibatnya, dimensi komponen-komponen bergradasi $N$ bertumbuh secara polinomial
+untuk derajat yang besar. Ini mengimplikasikan hasil tersebut. 
+
+\end{proof} 
+\begin{definition} 
+Kita definisikan \textbf{fungsi Hilbert} $H_M(m)$ sebagai polinomial tunggal
+sedemikian sehingga 
+\[ H_M(m) = \ell(M/ \mathfrak{m}^m M), \quad m \gg 0.  \]
+\end{definition} 
+
+Kebetulan, jelas bahwa $H_M$ bernilai bulat; jadi menurut
+\rref{integervalued}, $H_M$ merupakan kombinasi linear-$\mathbb{Z}$
+dari koefisien-koefisien binomial.
+
+\subsection{Dimensi suatu modul}
+Misalkan $R $ suatu gelanggang lokal Noether dengan ideal maksimal $\mathfrak{m}$. Kita
+telah melihat (\rref{hilbertlocalring}) bahwa terdapat polinomial $H(t)$ dengan
+\[ H(t) = \ell(R/\mathfrak{m}^t), \quad t \gg 0.  \]
+Sebelumnya, kita mendefinisikan \textbf{dimensi} $R$ sebagai derajat $f_M^+$. 
+Karena derajat fungsi Hilbert paling besar sama dengan jumlah pembangkit
+gelanggang polinomial, kita telah melihat bahwa 
+\[ \dim R \leq \emdim R.  \]
+
+Dengan perangkat fungsi Hilbert, kita dapat memperluas
+definisi ini ke modul.
+\begin{definition} 
+Jika $R$ lokal Noether dan $N$ suatu modul-$R$ hingga, maka $N$ mempunyai
+polinomial Hilbert $H_N(t)$ yang, ketika dievaluasi pada $t \gg 0$, memberikan
+panjang $\ell(N/\mathfrak{m}^t N)$.
+Kita menyebut \textbf{dimensi
+$N$} sebagai derajat polinomial Hilbert ini.
+\end{definition} 
+
+Jelas bahwa dimensi \emph{gelanggang} $R$ sama dengan dimensi
+\emph{modul} $R$.
+
+Berikutnya kita menunjukkan bahwa dimensi berperilaku baik terhadap barisan eksak
+pendek. Hal ini sebenarnya agak halus sebab, secara umum, penensoran dengan
+$R/\mathfrak{m}^t$ tidak eksak; ternyata, menurut Lema Artin--Rees, operasi itu \emph{hampir}
+eksak. 
+Di sisi lain, fakta yang bersesuaian untuk modul atas suatu \emph{gelanggang
+polinomial} sangat mudah, sebab 
+definisinya tidak melibatkan penensoran.
+
+\begin{proposition} 
+Andaikan kita mempunyai barisan eksak
+\[ 0 \to M' \to M \to M'' \to 0 \]
+modul bergradasi atas gelanggang polinomial $k[x_1, \dots, x_n]$.	Maka
+\[ f_M(t) = f_{M'}(t) + f_{M''}(t), \quad  f_M^+(t) = f_{M'}^+(t) +
+f_{M''}^+(t). \]
+Akibatnya, $\deg f_M = \max \deg f_{M'}, \deg f_{M''}$.
+\end{proposition} 
+\begin{proof} Bagian pertama langsung karena dimensi bersifat aditif pada ruang
+vektor. Bagian kedua mengikuti karena fungsi Hilbert mempunyai koefisien utama
+tak negatif.
+\end{proof} 
+
+\begin{proposition} \label{dimexactseq}
+Tetapkan suatu barisan eksak
+\[ 0 \to N' \to N \to N'' \to 0  \]
+modul-$R$ hingga. Maka $\dim N = \max (\dim N', \dim N'')$.
+\end{proposition} 
+\begin{proof} 
+Kita mempunyai barisan eksak
+\[ 0 \to K \to N/\mathfrak{m}^t N \to N''/\mathfrak{m}^t N'' \to 0  \]
+dengan $K$ sebagai kernel. Di sini $K = (N' + \mathfrak{m}^t N)/ \mathfrak{m}^t N
+= N'/( N' \cap \mathfrak{m}^t N)$. Ini tidak persis sama dengan $N'/\mathfrak{m}^t N'$,
+tetapi cukup dekat. 
+Kita mempunyai surjeksi
+\[ N'/\mathfrak{m}^t N \twoheadrightarrow N'/(N' \cap \mathfrak{m}^t N) = K. \]
+Khususnya, 
+\[ \ell(K) \leq \ell(N'/\mathfrak{m}^t N').  \]
+Di sisi lain, Lema Artin--Rees memberikan pertidaksamaan dalam
+arah sebaliknya. Kita mempunyai inklusi
+\[ \mathfrak{m}^t N' \subset N' \cap \mathfrak{m}^t N \subset
+\mathfrak{m}^{t-c} N'  \]
+untuk suatu $c$. Ini mengimplikasikan bahwa $\ell(K) \geq \ell( N'/\mathfrak{m}^{t-c} N')$. 
+
+Definisikan $M = \bigoplus \mathfrak{m}^t N/\mathfrak{m}^{t+1} N$, dan definisikan $M',
+M''$ dengan cara serupa menggunakan $N', N''$. Maka kita telah melihat bahwa 
+\[ \boxed{f_M^+(t-c) \leq \ell(K) \leq f_M^+(t).}  \]
+Kita juga mengetahui bahwa panjang $K$ ditambah panjang $N''/\mathfrak{m}^t N''$
+adalah $f_M^+(t)$, yakni
+\[ \ell(K) + f_{M''}^+(t) = f_M^+(t).  \]
+Sekarang panjang $K$ merupakan polinomial dalam $t$ yang sangat mirip dengan
+$f_{M'}^+$, yaitu koefisien utamanya sama. Jadi kita mempunyai
+persamaan hampiran $f_{M'}^+(t) + f_{M''}^+(t) \simeq f_M^+(t)$. Ini mengimplikasikan
+hasil tersebut karena derajat $f_M^+$ adalah $\dim N$ (dan demikian pula untuk yang lain). 
+\end{proof} 
+
+
+
+\begin{proposition} 
+$\dim R$ sama dengan $\dim R/\rad R$.
+\end{proposition} 
+Dengan kata lain, dimensi tidak berubah ketika unsur-unsur nilpoten dihilangkan, sebagaimana
+yang kita harapkan, sebab unsur nilpoten tidak memengaruhi $\spec (R)$.
+\begin{proof} 
+Untuk itu, kita memerlukan sedikit informasi tambahan mengenai fungsi Hilbert.
+Karena itu, kita akan menyimpang cukup jauh. 
+
+
+Terakhir, mari kita kembali ke pernyataan mengenai dimensi dan unsur nilpoten. Misalkan $R$
+suatu gelanggang lokal Noether dan $I = \rad (R)$. Maka $I$ suatu modul-$R$ hingga. Khususnya,
+$I$ nilpoten, sehingga $I^n  = 0$ untuk $n \gg 0$. Kita akan menunjukkan bahwa
+\[ \dim R/I = \dim R/I^2 = \dots \]
+yang akan mengimplikasikan hasil tersebut, sebab akhirnya pangkat-pangkat itu menjadi nol. 
+
+Khususnya, untuk setiap $k$ kita harus menunjukkan 
+\[ \dim R/I^k  = \dim R/I^{k+1}.  \]
+Terdapat barisan eksak
+\[ 0 \to I^k/I^{k+1} \to R/I^{k+1} \to R/I^k \to 0.  \]
+Dimensi gelanggang-gelanggang ini sama dengan dimensinya sebagai
+modul-$R$. Jadi kita dapat menggunakan barisan eksak pendek modul ini. Berdasarkan
+hasil sebelumnya, kita direduksi untuk menunjukkan bahwa
+\[ \dim I^k/I^{k+1} \leq \dim R/I^k.  \]
+Perhatikan bahwa $I$ menganihilasi $I^k/I^{k+1}$. Khususnya, $I^k/I^{k+1}$ merupakan modul
+terbangkitkan hingga atas $R/I^k$. Terdapat barisan eksak
+\[ \bigoplus_N R/I^k \to I^k/I^{k+1} \to 0  \]
+yang mengimplikasikan bahwa $\dim I^k/I^{k+1} \leq \dim \bigoplus_N R/I^k = \dim R/I^k$.
+\end{proof} 
+
+\begin{example} 
+Misalkan $\mathfrak{p} \subset \mathbb{C}[x_1, \dots, x_n]$ dan misalkan $R =
+(\mathbb{C}[x_1,\dots, x_n]/\mathfrak{p})_{\mathfrak{m}}$ untuk suatu ideal maksimal
+$\mathfrak{m}$. Berapakah $\dim R$? 
+Apakah arti dimensi bagi gelanggang koordinat atas $\mathbb{C}$?
+
+Ingat dari Teorema normalisasi Noether bahwa terdapat suatu gelanggang polinomial
+$\mathbb{C}[y_1, \dots, y_m]$ yang termuat dalam $S=\mathbb{C}[x_1,\dots,
+x_n]/\mathfrak{p}$, dan $S$ merupakan perluasan integral hingga atas gelanggang polinomial ini. 
+Kita klaim bahwa 
+\[ \dim R = m.  \]
+Hari ini tidak ada cukup waktu untuk membuktikannya. 
+\end{example} 
+
+\subsection{Dimensi hanya bergantung pada dukungan}
+
+Misalkan $(R, \mathfrak{m})$ suatu gelanggang lokal Noether. Misalkan $M$ suatu modul-$R$
+terbangkitkan hingga.	Kita mendefinisikan \textbf{polinomial Hilbert} dari $M$ sebagai
+polinomial yang pada $t \gg 0$ bernilai $\ell(M/\mathfrak{m}^tM)$. Sebelumnya kita membuktikan
+bahwa polinomial seperti itu selalu ada, dan menyebut derajatnya sebagai
+\textbf{dimensi $M$}. Namun, 
+sekarang akan kita lihat bahwa $\dim M$ sebenarnya hanya bergantung pada dukungan\footnote{
+Ingat bahwa $\supp M = \left\{\mathfrak{p}: M_{\mathfrak{p}}\neq 0\right\}$.} $\supp M$.
+Dalam pengertian ini, dimensi sesungguhnya merupakan pernyataan mengenai \emph{ruang
+topologis} $\supp M \subset \spec R$, bukan mengenai $M$ itu sendiri. 
+
+
+Dengan kata lain, kita akan membuktikan:
+\begin{proposition} 
+$\dim M$ hanya bergantung pada $\supp M$.
+\end{proposition} 
+
+Bahkan, kita akan menunjukkan:
+
+\begin{proposition} 
+$\dim M = \max_{\mathfrak{p} \in \supp M} \dim R/\mathfrak{p}$.
+\end{proposition} 
+\begin{proof} 
+Menurut \rref{filtrationlemma} dalam \rref{noetherian}, terdapat suatu filtrasi hingga 
+\[ 0 = M_0 \subset M_1 \subset \dots \subset M_m = M,  \]
+sedemikian sehingga setiap hasil bagi berturut-turut isomorfik dengan $R/\mathfrak{p}_i
+\subset R$
+untuk suatu ideal prima $\mathfrak{p}_i$. Diberikan suatu barisan eksak pendek
+modul, kita mengetahui bahwa dimensi suku tengah adalah maksimum dimensi kedua
+ujungnya (\rref{dimexactseq}). Dengan mengiterasikan ini, kita melihat bahwa
+dimensi $M$ adalah maksimum dari
+dimensi hasil-hasil bagi berturut-turut $M_i/M_{i-1}$.
+
+Namun semua $\mathfrak{p}_i$ yang muncul
+berada dalam $\supp M$, sehingga diperoleh 
+\[ \dim M = \max_{\mathfrak{p}_i} R/\mathfrak{p}_i \leq \max_{\mathfrak{p} \in \supp M} \dim R/\mathfrak{p}.  \]
+Kita harus menunjukkan pertidaksamaan sebaliknya. Tetapkan sebarang ideal prima $\mathfrak{p} \in \supp
+M$. Maka $M_{\mathfrak{p}} \neq 0$, sehingga salah satu $R/\mathfrak{p}_i$, setelah dilokalkan
+pada $\mathfrak{p}$, harus tak nol, sebab pelokalan merupakan funktor eksak. Jadi
+$\mathfrak{p}$ harus memuat suatu $\mathfrak{p}_i$. Maka $R/\mathfrak{p}$ merupakan
+hasil bagi dari $R/\mathfrak{p}_i$. Khususnya,
+\[ \dim R/\mathfrak{p} \leq \dim R/\mathfrak{p}_i.  \]
+\end{proof} 
+
+Setelah membuktikannya, kita tidak lagi menggunakan notasi $\dim M$, dan selanjutnya menuliskan
+$\dim \supp M$.
+
+
+
+%% Catatan: materi berikut mengenai gelanggang afin seharusnya ditambahkan dalam 
+\begin{comment}
+\subsection{Dimensi gelanggang afin} Sebelumnya kita membuat suatu klaim. Jika $R$
+suatu daerah integral dan modul hingga atas gelanggang polinomial $k[x_1, \dots, x_n]$,
+maka $R_{\mathfrak{m}}$ untuk setiap ideal maksimal $\mathfrak{m} \subset R$ berdimensi
+$n$. Hal ini menghubungkan dimensi dengan derajat transendensi. 
+
+Pertama, mari kita bahas perluasan hingga gelanggang. Misalkan $R$ suatu gelanggang komutatif
+dan $R \to R'$ suatu morfisme yang menjadikan $R'$ modul-$R$ terbangkitkan hingga (khususnya,
+integral atas $R$). Misalkan $\mathfrak{m}' \subset R'$ maksimal. Misalkan
+$\mathfrak{m}$ prapetanya di $R$, yang juga maksimal (sebab $R \to R'$
+integral). 
+Misalkan $M$ suatu modul-$R'$ terbangkitkan hingga, sehingga juga merupakan modul-$R$ terbangkitkan hingga. 
+
+Kita dapat memandang $M_{\mathfrak{m}}$ sebagai modul-$R_{\mathfrak{m}}$ atau
+$M_{\mathfrak{m}'}$ sebagai modul-$R'_{\mathfrak{m}'}$. Keduanya
+terbangkitkan hingga. 
+
+\begin{proposition} 
+$\dim \supp M_{\mathfrak{m}}  \geq \dim \supp M_{\mathfrak{m}'}$.
+\end{proposition} 
+Di sini $M_{\mathfrak{m}}$ merupakan modul-$R_{\mathfrak{m}}$, sedangkan $M_{\mathfrak{m}'}$
+merupakan modul-$R'_{\mathfrak{m}'}$. 
+
+\begin{proof} 
+Tinjau $R/\mathfrak{m} \to R'/\mathfrak{m} R' \to R'/\mathfrak{m}'$. Kita
+melihat bahwa $R'/\mathfrak{m} R'$ merupakan modul-$R/\mathfrak{m}$ hingga, sehingga menjadi
+ruang vektor-$R/\mathfrak{m}$ berdimensi hingga. Khususnya,
+$R'/\mathfrak{m} R'$ mempunyai panjang hingga sebagai modul-$R/\mathfrak{m}$, dan
+khususnya merupakan gelanggang Artin. Jadi gelanggang ini merupakan hasil kali gelanggang-gelanggang lokal Artin.
+Gelanggang-gelanggang Artin ini adalah pelokalan $R'/\mathfrak{m}R'$ pada ideal-ideal
+$R'$ yang terletak di atas $\mathfrak{m}$. Salah satu ideal tersebut adalah $\mathfrak{m}'$. 
+Jadi khususnya,
+\[ R'/\mathfrak{m}R \simeq R'/\mathfrak{m}'\times \mathrm{faktor \ lain}.  \]
+Karena nilradikal suatu gelanggang Artin nilpoten, kita melihat bahwa
+$\mathfrak{m}'^c R'_{\mathfrak{m}'} \subset \mathfrak{m} R'_{\mathfrak{m}}$ untuk
+suatu $c$.
+
+Baiklah, saya tidak dapat mengikuti ini---terlalu lelah. Akan saya lanjutkan suatu hari nanti.
+\end{proof} 
+
+
+\begin{proposition} 
+$\dim \supp M_{\mathfrak{m}} = \max_{\mathfrak{m}' \mid \mathfrak{m}} \dim
+\supp M_{\mathfrak{m}'}$.
+\end{proposition} 
+
+Ini berarti $\mathfrak{m}'$ terletak di atas $\mathfrak{m}$.
+\begin{proof} 
+Dibuktikan dengan cara serupa menggunakan teknik Artin. Saya agak lelah.
+\end{proof} 
+\end{comment}
+\begin{example} 
+Misalkan $R' = \mathbb{C}[x_1, \dots, x_n]/\mathfrak{p}$. Normalisasi Noether menyatakan
+bahwa terdapat pemetaan injektif hingga $\mathbb{C}[y_1, \dots, y_a] \to R'$.
+Klaimnya adalah
+\[ \dim R'_{\mathfrak{m}} =a  \]
+untuk setiap ideal maksimal $\mathfrak{m} \subset R'$. Kita telah siap membuktikan suatu
+pernyataan yang sedikit lebih lemah. Khususnya (lihat di bawah untuk definisi
+dimensi gelanggang nonlokal), berdasarkan proposisi kita
+memperoleh klaim yang lebih lemah
+\[ \dim R' = a,  \]
+sebab dimensi gelanggang polinomial $\mathbb{C}[y_1, \dots, y_a]$ adalah $a$.
+(\textbf{Saya rasa kita belum membuktikannya.})
+\end{example} 
+
+
+
+\section{Definisi dan karakterisasi lain dari dimensi}
+
+\subsection{Karakterisasi topologis dimensi} Sekarang kita menginginkan suatu karakterisasi topologis
+dimensi. Jadi, pertama-tama kita akan mempelajari bagaimana dimensi
+berubah ketika kita melakukan operasi terhadap suatu modul. Misalkan $M$ suatu modul-$R$ terbangkitkan hingga atas gelanggang lokal
+Noether $R$. Misalkan $x \in \mathfrak{m}$, dengan $\mathfrak{m}$ ideal
+maksimalnya.
+Kita dapat bertanya:
+\begin{quote}
+Apakah hubungan antara $\dim \supp M$ dan $\dim \supp M/xM$?
+\end{quote}
+Modul $M$ memetakan secara surjektif ke $M/xM$, sehingga kita mempunyai pertidaksamaan $\geq$. Namun kita memandang
+dimensi sebagai banyaknya parameter yang diperlukan untuk mendeskripsikan
+sesuatu. Banyaknya parameter seharusnya tidak berubah terlalu jauh ketika beralih dari
+$M$ ke $M/xM$. Memang, sebagaimana dapat diperiksa,
+\[ \supp M/xM = \supp M \cap V(x)  \]
+dan mengiris $\supp M$ dengan ``hiperpermukaan'' $V(x)$ seharusnya menurunkan
+dimensi sebesar satu. 
+
+
+Karena itu, kita membuat dugaan berikut.
+\begin{prediction}
+\[ \dim \supp M/xM = \dim \supp M - 1.  \]
+\end{prediction}
+Jelas bahwa hal ini tidak selalu benar, misalnya jika $x$ bekerja sebagai nol pada $M$. Namun kita ingin
+mengecualikan keadaan tersebut. 
+Dalam kasus-kasus yang wajar, dugaan itu memang benar:
+
+\begin{proposition} \label{dimdropsbyone}
+Andaikan $x \in \mathfrak{m}$ bukan pembagi nol pada $M$. Maka 
+\[ \dim \supp M/xM = \dim \supp M - 1.  \]
+\end{proposition} 
+\begin{proof} 
+Untuk melihatnya, kita meninjau polinomial Hilbert. Pertimbangkan barisan eksak
+\[ 0 \to xM \to M \to M/xM \to 0  \]
+yang untuk setiap $t$ menghasilkan barisan eksak
+\[ 0 \to xM/(xM \cap \mathfrak{m}^t M) \to M/\mathfrak{m}^t M \to M/(xM  +
+\mathfrak{m}^t M) \to 0 . \]
+Untuk $t$ besar, panjang unsur-unsur ini diberikan oleh polinomial Hilbert,
+sebab suku di kanan adalah $M/xM \otimes_R R/\mathfrak{m}^t$. 
+Kita mempunyai
+\[ f_M^+(t) = f_{M/xM}^+(t) + \ell(xM/ (x M \cap \mathfrak{m}^t M), \quad t
+\gg 0.  \]
+Khususnya, $\ell( xM/ (xM \cap \mathfrak{m}^t M))$ merupakan polinomial dalam $t$.
+Apa yang dapat kita katakan tentang polinomial itu? Perhatikan bahwa $xM \simeq M$ karena $x$ bukan pembagi nol.
+Khususnya,
+\[ xM / (xM \cap \mathfrak{m}^t M) \simeq M/N_t  \]
+dengan
+\[ N_t = \left\{a \in M: xa \in \mathfrak{m}^t M\right\} . \]
+Khususnya, $N_t \supset \mathfrak{m}^{t-1} M$. Ini memberi tahu kita bahwa
+$\ell(M/N_t) \leq \ell(M/\mathfrak{m}^{t-1} M) = f_M^+(t-1)$ untuk $t \gg 0$.
+Dengan menggabungkannya dengan informasi di atas, kita memperoleh
+\[ f_M^+(t) \leq f_{M/xM}^+(t) + f_M^+(t-1),   \]
+yang mengimplikasikan bahwa $f_{M/xM}^+(t)$ sekurang-kurangnya sebesar selisih berturut-turut
+$f_M^+(t) - f_M^+(t-1)$. Polinomial terakhir ini berderajat $\dim \supp M -1$. Khususnya,
+$f_{M/xM}^+(t)$ berderajat paling sedikit $\dim \supp M -1 $. Ini memberikan
+satu arah, bahkan arah yang sukar. Kita telah menunjukkan bahwa mengiris sesuatu dengan kodimensi satu
+tidak menurunkan dimensinya terlalu jauh. 
+
+Sekarang mari kita buktikan arah yang lain. Pada dasarnya, kita telah melakukannya sebelumnya melalui
+Lema Artin--Rees. Kita mengetahui bahwa $N_t = \left\{a \in M: xa \in
+\mathfrak{m}^t\right\}$. Lema Artin--Rees menyatakan bahwa terdapat konstanta
+$c$ sedemikian sehingga $N_{t+c} \subset \mathfrak{m}^t M$ untuk setiap $t$. Karena itu,
+$\ell(M/N_{t+c}) \geq \ell(M/\mathfrak{m}^t M) = f_M^+(t), t \gg 0$. Sekarang
+ingat barisan eksak $0 \to M/N_t \to M/\mathfrak{m}^t M \to M/(xM +
+\mathfrak{m}^t M) \to 0$. Dari sini kita melihat bahwa
+\[ \ell(M/ \mathfrak{m}^t M) = \ell(M/N_t) + f_{M/xM}^+(t) \geq f_M^+(t-c) +
+f_{M/xM}^+(t), \quad t \gg 0,  \]
+yang mengimplikasikan bahwa
+\[ f_{M/xM}^+(t) \leq f_M^+(t) - f_M^+(t-c),  \]
+sehingga derajatnya harus turun. Kita memperoleh $\deg f_{M/xM}^+ < \deg f_{M}^+$.
+\end{proof} 
+
+Ini memberi kita suatu algoritma untuk menghitung dimensi modul-$R$ $M$. 
+Pertama, masalahnya direduksi menjadi menghitung $\dim R/\mathfrak{p}$ untuk ideal prima $\mathfrak{p} \subset
+R$. Kita dapat mengandaikan bahwa $R$ suatu daerah integral dan bahwa kita mencari
+$\dim R$. Secara geometris, hal ini
+bersesuaian dengan mengambil suatu komponen tak tereduksi dari $\spec R$.
+
+Sekarang pilih sebarang $x
+\in R$ sedemikian sehingga $x$ tak nol tetapi tidak invertibel. Jika unsur seperti itu tidak ada,
+maka $R$ suatu medan dan berdimensi nol. Kemudian hitung $\dim R/x$
+secara rekursif dan tambahkan satu.
+
+Perhatikan bahwa algoritma ini tidak mengatakan apa pun mengenai polinomial Hilbert, dan hanya
+membahas struktur ideal prima.
+
+\subsection{Rekapitulasi}
+Sebelumnya kita membahas teori dimensi. 
+Ingat bahwa $R$ suatu gelanggang lokal Noether dengan ideal maksimal $\mathfrak{m}$,
+dan $M$ suatu modul-$R$ terbangkitkan hingga. Kita dapat meninjau panjang $\ell(M/\mathfrak{m}^t M)$
+untuk berbagai $t$; bagi $t \gg 0$, panjang ini merupakan fungsi polinomial. Derajat
+polinomial ini disebut \textbf{dimensi} dari $\supp M$. 
+
+\begin{remark} 
+Jika $M = 0$, berdasarkan konvensi kita definisikan $\dim \supp M = -1$.
+\end{remark} 
+
+Sebelumnya, kita menunjukkan bahwa jika $M \neq 0$ dan $x \in \mathfrak{m}$ sedemikian sehingga $x$
+bukan pembagi nol pada $M$ (yakni $M \stackrel{x}{\to} M$ injektif), maka 
+\[ \boxed{ \dim \supp M/xM = \dim \supp M - 1.}\]
+Dengan menggunakan hal ini, kita dapat memberikan suatu rekursi untuk menghitung dimensi. 
+Untuk menghitung $\dim R = \dim \spec R$, perhatikan tiga sifat berikut:
+\begin{enumerate}
+\item $\dim R = \sup_{\mathfrak{p} \ \mathrm{ideal \ prima \ minimal}}
+R/\mathfrak{p}$. Secara intuitif, ini mengatakan bahwa varietas yang merupakan gabungan
+komponen-komponen tak tereduksi mempunyai dimensi yang sama dengan maksimum dimensi komponen-komponen tersebut.
+\item $\dim R = 0$ jika $R$ suatu medan. Ini langsung dari definisi.
+\item Jika $R$ suatu daerah integral dan $x \in \mathfrak{m} - \left\{0\right\}$, maka
+$\dim R/(x) +1 = \dim R $. Ini langsung dari rumus berbingkai karena $x$ bukan pembagi nol.
+\end{enumerate}
+
+Ketiga sifat ini \emph{mencirikan secara tunggal} invarian dimensi. 
+
+\textbf{Lebih tepatnya, jika
+$d: \left\{\mathrm{gelanggang \ lokal \ Noether}\right\} \to \mathbb{Z}_{\geq 0}$
+memenuhi ketiga sifat di atas, maka $d = \dim $. }
+\begin{proof} 
+Induksi pada $\dim R$. Jelas bahwa cukup membuktikannya ketika $R$ suatu daerah integral. 
+Jika $R$ suatu medan, pernyataannya jelas; jika $\dim R>0$, syarat ketiga memungkinkan kita
+mereduksi ke kasus yang dicakup hipotesis induksi (yakni turun satu tingkat).
+\end{proof} 
+
+Mari kita nyatakan ulang sifat 3 di atas:
+\begin{quote}
+3': Jika $R$ suatu daerah integral dan bukan medan, maka 
+\[ \dim R = \sup_{x \in \mathfrak{m} - 0} \dim R/(x) + 1. \]
+\end{quote}
+Jelas bahwa 3' mengimplikasikan 3, dan dari argumen yang sama jelas bahwa 1, 2, dan 3'
+mencirikan gagasan dimensi.
+
+\subsection{Dimensi Krull} Sekarang kita akan mendefinisikan gagasan lain tentang
+dimensi dan menunjukkan bahwa gagasan tersebut ekuivalen dengan yang lama dengan membuktikan bahwa ia
+memenuhi aksioma-aksioma ini.
+
+\begin{definition} 
+Misalkan $R$ suatu gelanggang komutatif. Suatu \textbf{rantai ideal prima} dalam $R$ adalah barisan
+hingga
+\[ \mathfrak{p}_0 \subsetneq \mathfrak{p}_1 \subsetneq \dots \subsetneq
+\mathfrak{p}_n.  \]
+Rantai ini dikatakan mempunyai \textbf{panjang $n$.}
+\end{definition} 
+
+\begin{definition} 
+\textbf{Dimensi Krull} dari $R$ adalah panjang maksimum rantai
+ideal prima. Nilai ini mungkin saja $\infty$, tetapi segera akan kita lihat bahwa hal itu tidak dapat
+terjadi jika $R$ lokal dan Noether.
+\end{definition} 
+
+\begin{remark} 
+Untuk setiap rantai maksimal ideal prima $\left\{\mathfrak{p}_i, 0 \leq i \leq n\right\}$ (yakni yang tidak dapat diperpanjang),
+$\mathfrak{p}_0$ harus merupakan ideal prima minimal dan $\mathfrak{p}_n$ suatu ideal maksimal.
+\end{remark} 
+
+\begin{theorem} 
+Untuk gelanggang lokal Noether $R$, dimensi Krull dari $R$ ada dan sama
+dengan $\dim R$ yang biasa.
+\end{theorem}
+\begin{proof} 
+Kita akan menunjukkan bahwa dimensi Krull memenuhi aksioma-aksioma di atas. Untuk sementara,
+tuliskan $\krdim$ untuk dimensi Krull.
+
+\begin{enumerate}
+\item Pertama, perhatikan bahwa $\krdim(R) = \max_{\mathfrak{p} \in R \
+\mathrm{minimal}}  \krdim(R/\mathfrak{p})$. Hal ini karena setiap rantai ideal
+prima dalam $R$ memuat suatu ideal prima minimal. Jadi setiap rantai ideal prima dalam $R$ dapat
+dipandang sebagai suatu rantai dalam \emph{suatu} $R/\mathfrak{p}$, dan sebaliknya.
+\item Kedua, kita perlu memeriksa bahwa $\krdim(R) = 0$ jika $R$ suatu medan. Hal ini
+jelas, sebab hanya ada satu ideal prima.
+\item Syarat ketiga menarik. Kita harus memeriksa bahwa untuk $(R,
+\mathfrak{m})$ suatu gelanggang lokal yang merupakan
+daerah integral, 
+\[ \krdim(R) = \max_{x \in \mathfrak{m} - \left\{0\right\}} \krdim(R/(x)) + 1.  \]
+Jika kita membuktikannya, berarti kita telah menunjukkan bahwa syarat 3' dipenuhi oleh
+dimensi Krull. Dari argumen induktif di atas akan mengikuti bahwa $\krdim(R)
+= \dim (R)$ untuk setiap $R$. 
+Ada dua pertidaksamaan yang harus dibuktikan. Pertama, kita harus menunjukkan
+\[ \krdim(R) \geq \krdim(R/x) +1, \quad \forall x \in \mathfrak{m} - 0.  \]
+Andaikan $k = \krdim(R/x)$. Kita ingin menunjukkan bahwa terdapat rantai ideal
+prima panjang $k+1$ dalam $R$. Misalkan $\mathfrak{p}_0 \subsetneq \dots
+\subsetneq \mathfrak{p}_k$ suatu rantai panjang $k$ dalam $R/(x)$. Prapetanya
+di $R$ memberikan rantai sejati ideal prima dalam $R$ yang panjangnya $k$, semuanya
+memuat $(x)$ dan dengan demikian memuat $0$ secara sejati. Jadi, menambahkan nol menghasilkan rantai
+ideal prima dalam $R$ yang panjangnya $k+1$. 
+
+Sebaliknya, kita ingin menunjukkan bahwa jika terdapat rantai ideal prima dalam $R$ dengan
+panjang $k+1$, maka terdapat rantai panjang $k$ dalam $R/(x)$ untuk suatu $x \in
+\mathfrak{m} - \left\{0\right\}$. Tuliskan rantai panjang $k+1$ tersebut sebagai
+\[ \mathfrak{q}_{-1} \subset \mathfrak{q}_0 \subsetneq \dots \subsetneq
+\mathfrak{q}_k \subset R . \]
+Jelas bahwa $\mathfrak{q}_0$ memuat suatu $x \in \mathfrak{m} - 0$. Maka rantai
+$\mathfrak{q}_0 \subsetneq \dots \subsetneq \mathfrak{q}_k$ dapat
+diidentifikasi dengan suatu rantai dalam $R/(x)$ untuk $x$ ini. Jadi untuk $x$ ini berlaku
+$\krdim R \leq \sup \krdim R/(x) + 1$.
+\end{enumerate}
+\end{proof} 
+
+Dengan demikian terdapat definisi kombinatorial bagi dimensi.
+
+Secara geometris, misalkan $X = \spec R$ dengan $R$ suatu gelanggang afin atas $\mathbb{C}$ (suatu
+gelanggang polinomial modulo suatu ideal). Maka $R$ mempunyai dimensi Krull $\geq k$ jika dan hanya jika terdapat
+rantai subvarietas tak tereduksi dari $X$,
+\[ X_0 \supset X_1 \supset \dots \supset X_k . \]
+Pembenarannya akan dijumpai dalam \rref{subsectiondimension} di bawah.
+
+\begin{remark}[\textbf{Peringatan!}] Misalkan $R$ suatu gelanggang lokal Noether berdimensi $k$. Ini
+berarti terdapat rantai ideal prima panjang $k$, dan tidak ada rantai yang lebih
+panjang. Jadi terdapat suatu rantai maksimal yang panjangnya $k$. Namun tidak semua
+rantai maksimal dalam $\spec R$ mempunyai panjang $k$. 
+\end{remark} 
+
+\begin{example} 
+Misalkan $R =( \mathbb{C}[X,Y,Z]/(XY,XZ))_{(X,Y,Z)}$. Sebagai
+latihan, pembaca dapat memeriksa bahwa terdapat rantai-rantai maksimal yang
+panjangnya bukan dua.
+
+Terdapat \emph{daerah integral} lokal Noether yang lebih rumit dengan rantai-rantai maksimal
+ideal prima yang tidak semuanya sama panjang. Contoh-contoh ini bukan contoh yang
+dijumpai sehari-hari dan pasti rumit. Hal ini
+tidak dapat terjadi untuk daerah integral terbangkitkan hingga atas suatu medan.
+\end{example} 
+
+\begin{example} 
+Cara yang lebih sederhana agar tidak semua rantai maksimal mempunyai panjang yang sama adalah jika
+$\spec R$ mempunyai dua komponen (dalam hal ini $R = R_0 \times R_1$ untuk gelanggang
+$R_0, R_1$). 
+\end{example} 
+
+
+\subsection{Definisi lainnya lagi}
+Mari kita mulai dengan memikirkan definisi modul. Ingat bahwa jika $(R,
+\mathfrak{m})$ adalah
+gelanggang lokal Noether, $M$ suatu modul-$R$ terbangkitkan hingga, dan $x \in \mathfrak{m}$
+bukan pembagi nol pada $M$, maka
+\[ \dim \supp M/xM = \dim \supp M -1.  \]
+
+\begin{question} 
+Bagaimana jika $x$ merupakan pembagi nol? 
+\end{question} 
+
+Pernyataan tersebut belum tentu benar (misalnya jika $x \in \ann(M)$). Meskipun demikian, kita mengklaim
+bahwa bahkan dalam kasus ini:
+\begin{proposition} 
+Untuk setiap $x \in \mathfrak{m}$,
+\[ \boxed{ \dim \supp M \geq \dim \supp M/xM \geq \dim \supp M -1 .}\]
+\end{proposition} 
+Batas atas bagi $\dim M/xM$ jelas karena $M/xM$ merupakan hasil bagi dari $M$. Batas
+bawah lebih rumit. 
+
+\begin{proof} 
+Misalkan $N = \left\{a \in M: x^n a = 0 \ \mathrm{untuk \ suatu \ } n \right\}$. Kita dapat
+membentuk barisan eksak
+\[ 0 \to N \to M \to M/N \to 0.  \]
+Misalkan $M'' = M/N$.
+Berdasarkan konstruksi, $x$ bukan pembagi nol pada $M/N$. Kita klaim bahwa 
+\[ 0 \to N/xN \to M/xM \to M''/xM'' \to 0  \]
+juga eksak. Untuk itu kita hanya perlu melihat keeksakan pada bagian awal,
+yakni keininjektifan $N/xN \to M/xM$. Jadi
+kita perlu menunjukkan bahwa jika $a \in N$ dan $a \in xM$, maka $a \in x N$.
+
+Untuk melihatnya, andaikan $a = xb$ dengan $b \in M$. Jika $\phi: M \to M''$, maka
+$\phi(b) \in M''$ dianihilasi oleh $x$ sebab $x \phi(b) = \phi(bx) = \phi(a)$.
+Ini berarti $\phi(b)=0$ karena $M'' \stackrel{x}{\to} M''$ injektif. Jadi
+sebenarnya $b \in N$. Dengan demikian, $a \in xN$.
+
+Dari keeksakan kita melihat bahwa (karena $x$ bukan pembagi nol pada $M''$)
+\begin{align*} \dim M/xM & = \max (\dim M''/xM'', \dim N/xN) \geq \max(\dim M'' -1, \dim
+N)\\ &  \geq \max( \dim M'', \dim N)-1  .  \end{align*}
+Alasan untuk pernyataan terakhir adalah bahwa $\supp N/xN = \supp N$ sebab $N$ merupakan
+modul torsi-$x$, dan dimensi hanya bergantung pada dukungan. Namun ruas kanan tepat sama dengan $\dim M -1$. 
+\end{proof} 
+
+Sebagai akibatnya, kita memperoleh:
+
+\begin{proposition} 
+$\dim \supp M$ adalah bilangan bulat minimal $n$ sedemikian sehingga terdapat unsur-unsur $x_1,
+\dots, x_n \in \mathfrak{m}$ dan $M/(x_1 , \dots, x_n) M$ mempunyai panjang hingga. 
+\end{proposition} 
+Perhatikan bahwa $n$ selalu ada, sebab kita dapat mengambil sekumpulan pembangkit
+ideal maksimal, dan $M/\mathfrak{m}M $ merupakan ruang vektor berdimensi hingga sehingga
+mempunyai panjang hingga.
+\begin{proof} 
+Induksi pada $\dim \supp M$. Perhatikan bahwa $\dim \supp(M)=0$ jika dan hanya jika
+polinomial Hilbert berderajat nol, yakni $M$ mempunyai panjang hingga atau $n=0$
+(dengan $n$ didefinisikan seperti dalam pernyataan). 
+
+Andaikan $\dim \supp M > 0$. \begin{enumerate}
+\item Pertama-tama kita menunjukkan bahwa terdapat $x_1, \dots, x_{\dim M}$
+sedemikian sehingga $M/(x_1, \dots, x_{\dim M})M$ mempunyai panjang hingga. 
+Misalkan $M' \subset M$ submodul maksimal yang mempunyai panjang hingga. Terdapat
+barisan eksak
+\[ 0 \to M' \to M \to M'' \to 0  \]
+dengan $M'' = M/M'$ tidak mempunyai submodul berpanjang hingga. Dalam hal ini, pada dasarnya kita dapat
+mengabaikan $M'$ dan mengganti $M$ dengan $M''$. Alasannya adalah bahwa mengambil hasil bagi
+oleh $M'$ tidak memengaruhi $n$ maupun dimensi. 
+
+Jadi, ganti $M$ dengan
+$M''$, sehingga kita dapat mengandaikan bahwa $M$ tidak mempunyai submodul berpanjang hingga. Khususnya,
+$M$ tidak memuat salinan $R/\mathfrak{m}$, yakni $\mathfrak{m}
+\notin \ass(M)$. 
+Menurut penghindaran ideal prima, ini berarti terdapat $x_1 \in \mathfrak{m}$ yang bekerja sebagai
+bukan pembagi nol pada $M$. Jadi,
+\[ \dim M/x_1M = \dim M -1.  \]
+Hipotesis induksi menyatakan bahwa terdapat $x_2, \dots, x_{\dim M}$ sedemikian sehingga
+$$(M/x_1 M)/(x_2, \dots, x_{\dim M}) (M/xM) \simeq M/(x_1, \dots, x_{\dim M})M $$
+mempunyai panjang hingga. Ini membuktikan klaim tersebut.
+\item Sebaliknya, andaikan $M/(x_1, \dots, x_n)M$ mempunyai panjang hingga.
+Kita klaim bahwa $n \geq \dim M$. Hal ini mengikuti dari hasil sebelumnya
+bahwa mengambil hasil bagi oleh satu unsur dapat menurunkan dimensi paling banyak
+$1$. Dengan menerapkannya secara rekursif, dan menggunakan fakta bahwa $\dim$ dari modul
+berpanjang hingga adalah nol, diperoleh
+\[ 0 = \dim M/(x_1 , \dots, x_n )M \geq \dim M -n. \]
+\end{enumerate}
+\end{proof} 
+
+
+\begin{corollary} 
+Misalkan $(R, \mathfrak{m})$ suatu gelanggang lokal Noether. Maka $\dim R$ sama dengan $n$ minimal
+sedemikian sehingga terdapat $x_1, \dots, x_n \in R$ dengan $R/(x_1, \dots, x_n) R$
+bersifat Artin. Atau, secara ekuivalen, sedemikian sehingga $(x_1, \dots, x_n)$ memuat suatu pangkat
+$\mathfrak{m}$.
+\end{corollary}
+
+
+\begin{remark} 
+Di sini terlihat jelas bahwa dimensi $R$ paling besar sama dengan dimensi
+pembenaman. Di sini kita tidak menuntut pembangkitan ideal maksimal, melainkan
+hanya suatu ideal yang memuat pangkat ideal maksimal tersebut.
+\end{remark} 
+\lecture{11/5}
+
+Kita telah membahas dimensi. Misalkan $R$ suatu gelanggang lokal Noether dengan
+ideal maksimal $\mathfrak{m}$. Seperti yang dikatakan dalam kuliah sebelumnya, $\dim R$ dapat dicirikan oleh:
+\begin{enumerate}
+\item Bilangan minimal $n$ sedemikian sehingga terdapat suatu ideal $n$-primer yang dibangkitkan oleh $n$
+unsur $x_1, \dots, x_n \in \mathfrak{m}$. Artinya, titik tertutup
+$\mathfrak{m}$ dari
+$\spec R$ dipotong secara \emph{teoretis-himpunan} oleh irisan $\bigcap
+V(x_i)$. Ini merupakan salah satu cara mengatakan bahwa titik tertutup dapat didefinisikan oleh $n$
+parameter. 
+\item Bilangan \emph{maksimal} $n$ sedemikian sehingga terdapat rantai ideal prima
+\[ \mathfrak{p}_0 \subset \mathfrak{p}_1 \subset \dots \subset \mathfrak{p}_n. \]
+\item Derajat polinomial Hilbert $f^+(t)$, yang sama dengan
+$\ell(R/\mathfrak{m}^t)$ untuk $t \gg 0$.
+\end{enumerate}
+
+
+\subsection{Hauptidealsatz Krull}
+
+
+Misalkan $R$ suatu gelanggang lokal Noether.
+Pernyataan berikut sekarang jelas dari apa yang telah kita tunjukkan:
+
+\begin{theorem} \label{hauptv1}
+$R$ berdimensi $1$ jika dan hanya jika terdapat bukan pembagi nol $x \in \mathfrak{m}$ sedemikian sehingga
+$R/(x)$ bersifat Artin.
+\end{theorem} 
+
+
+
+\begin{remark} 
+Misalkan $R$ suatu daerah integral. Kita mengatakan bahwa ideal prima tak nol $\mathfrak{p} \subset R$
+\textbf{bertinggi satu} jika $\mathfrak{p}$ minimal di antara ideal-ideal prima
+yang memuat suatu $x \in R$ tak nol. 
+
+Menurut Hauptidealsatz Krull, $\mathfrak{p}$ bertinggi satu \textbf{jika
+dan hanya jika $\dim R_{\mathfrak{p}} = 1$.}
+\end{remark} 
+
+
+Kita dapat memperumum gagasan mengenai $\mathfrak{p}$ sebagai berikut.
+\begin{definition} 
+Misalkan $R$ suatu gelanggang Noether (tidak harus lokal), dan $\mathfrak{p} \in
+\spec R$. Kita definisikan \textbf{tinggi} dari $\mathfrak{p}$, yang dilambangkan
+$\het(\mathfrak{p})$, sebagai $\dim R_{\mathfrak{p}}$.
+Kita mengetahui bahwa nilai ini adalah panjang suatu rantai maksimal ideal prima dalam
+$R_{\mathfrak{p}}$. Jadi ini merupakan panjang maksimal rantai ideal prima dari $R$, 
+\[ \mathfrak{p}_0 \subset \dots \subset \mathfrak{p}_n = \mathfrak{p}  \]
+yang berakhir pada $\mathfrak{p}$. Inilah asal istilah ``tinggi''.
+\end{definition} 
+
+\begin{remark} 
+Kadang-kadang tinggi disebut \textbf{kodimensi}. Ini bersesuaian dengan
+kodimensi dalam $\spec R$ dari subhimpunan tertutup tak tereduksi yang bersesuaian dalam
+$\spec R$.
+\end{remark} 
+
+\begin{theorem}[Hauptidealsatz Krull] Misalkan $R$ suatu gelanggang Noether dan $x
+\in R$ bukan pembagi nol. Jika $\mathfrak{p} \in \spec R$ minimal di atas $x$,
+maka $\mathfrak{p}$ bertinggi satu.
+\end{theorem} 
+\begin{proof} 
+Langsung dari \cref{hauptv1}.
+\end{proof} 
+
+\begin{theorem}[Artin-Tate]
+Misalkan $A$ suatu daerah integral Noether. Maka pernyataan-pernyataan berikut ekuivalen:
+\begin{enumerate}
+\item Terdapat $f \in A-\left\{0\right\} $ sedemikian sehingga $A_f$ suatu medan.
+\item $A$ mempunyai berhingga banyak ideal maksimal dan berdimensi paling besar 1.
+\end{enumerate}
+\end{theorem} 
+\begin{proof} Kita mengikuti \cite{EGA}.
+
+Pertama, andaikan terdapat $f$ sedemikian sehingga $A_f$ suatu medan. 
+Maka semua ideal prima tak nol dari $A$ memuat $f$. 
+Kita perlu menyimpulkan bahwa $A$ berdimensi $\leq 1$. Tanpa mengurangi keumuman,
+kita dapat mengandaikan bahwa $A$ bukan medan.
+
+Terdapat berhingga banyak ideal prima $\mathfrak{p}_1,\dots, \mathfrak{p}_k$ yang
+minimal di atas $f$; semuanya bertinggi satu. Klaimnya adalah bahwa setiap ideal maksimal $A$ mempunyai
+bentuk ini. Andaikan $\mathfrak{m}$ maksimal dan bukan salah satu dari $\mathfrak{p}_i$.
+Menurut penghindaran ideal prima, terdapat $g \in \mathfrak{m}$ yang
+tidak berada dalam satu pun $\mathfrak{p}_i$. Suatu ideal prima minimal $\mathfrak{P}$ di atas $g$ bertinggi
+satu, sehingga berdasarkan asumsi kita memuat $f$. Namun dengan demikian ideal itu merupakan salah satu
+$\mathfrak{p}_i$; ini suatu kontradiksi karena $g \in \mathfrak{P}$.
+\end{proof} 
+
+
+\subsection{Catatan lebih lanjut}
+
+Kita dapat menyatakan kembali gagasan-gagasan sebelumnya dalam istilah dimensi.
+\begin{remark} 
+Suatu gelanggang Noether berdimensi nol jika dan hanya jika $R$ bersifat Artin. Memang,
+$R$ berdimensi nol jika dan hanya jika semua ideal prima bersifat maksimal.
+\end{remark} 
+
+
+\begin{remark} 
+Suatu daerah integral Noether berdimensi nol jika dan hanya jika merupakan medan. Memang, dalam hal ini
+$(0)$ maksimal.
+\end{remark} 
+
+\begin{remark} 
+$R$ berdimensi $\leq 1$ jika dan hanya jika setiap ideal prima nonminimal dari $R$
+bersifat maksimal. Artinya, tidak ada rantai yang panjangnya $\geq 2$.
+\end{remark} 
+
+\begin{remark} 
+Suatu daerah integral (Noether) $R$ berdimensi $\leq 1$ jika dan hanya jika setiap ideal prima tak nol
+bersifat maksimal.
+\end{remark} 
+
+Khususnya,
+\begin{proposition} 
+$R$ merupakan gelanggang Dedekind jika dan hanya jika merupakan daerah integral Noether yang tertutup secara integral dan berdimensi
+$1$. 
+\end{proposition} 
+	
+	

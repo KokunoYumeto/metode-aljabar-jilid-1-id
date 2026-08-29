@@ -1,0 +1,84 @@
+% Preambula terpadu untuk tujuh akar mandiri catatan teori representasi Duncan.
+% Berkas akar terjemahan tidak diubah; docmute mengabaikan preambula lokalnya.
+\usepackage[indonesian]{babel}
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\setmainfont{TeX Gyre Termes}
+\setsansfont{TeX Gyre Heros}
+\setmonofont{Latin Modern Mono}
+
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage{ytableau}
+\usepackage{geometry}
+\geometry{a4paper,margin=28mm,headheight=16pt,footskip=30pt}
+\usepackage{microtype}
+\usepackage{csquotes}
+\DeclareQuoteAlias{english}{indonesian}
+\usepackage{docmute}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage[
+  backend=biber,
+  style=alphabetic,
+  sorting=nyt,
+  giveninits=true,
+  maxbibnames=99,
+  maxcitenames=3
+]{biblatex}
+\DeclareLanguageMapping{indonesian}{english}
+\addbibresource{../source/rep_theory.bib}
+\usepackage{xurl}
+\usepackage[
+  unicode,
+  colorlinks=false,
+  pdfborder={0 0 0},
+  pdftitle={Catatan Teori Representasi - adaptasi bahasa Indonesia},
+  pdfauthor={Alexander Duncan},
+  pdfsubject={Adaptasi bahasa Indonesia dari catatan MATH 742},
+  pdfkeywords={teori representasi, aljabar, grup hingga, CC BY 4.0},
+  pdfcreator={OpenAI Codex gpt-5.6-sol, Ultra}
+]{hyperref}
+
+% Gaya teorema terpadu. Semua lingkungan bernomor memakai pencacah yang sama.
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{proposition}[theorem]{Proposisi}
+\newtheorem{corollary}[theorem]{Korolari}
+\newtheorem{conjecture}[theorem]{Konjektur}
+\newtheorem{exercise}[theorem]{Latihan}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definisi}
+\newtheorem{example}[theorem]{Contoh}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Catatan}
+\numberwithin{equation}{section}
+
+% Identitas edisi dan provenance yang tidak berubah antarbangunan.
+\newcommand{\DuncanSourceAuthor}{Alexander Duncan}
+\newcommand{\DuncanSourceCourse}{MATH 742, Musim Semi 2023}
+\newcommand{\DuncanSourceCommit}{c62d36f41189da4bd3da4671668f68720df54ff7}
+\newcommand{\DuncanSourceTree}{e83ee440666133b14dec440158a108069a13e9e4}
+\newcommand{\DuncanSourceRepository}{https://github.com/vtorsor/representation-theory-notes}
+\newcommand{\DuncanLicenseName}{Creative Commons Attribution 4.0 International}
+\newcommand{\DuncanLicenseSPDX}{CC-BY-4.0}
+\newcommand{\DuncanLicenseURL}{https://creativecommons.org/licenses/by/4.0/}
+\newcommand{\DuncanModelProvenance}{OpenAI Codex gpt-5.6-sol, Ultra, atas instruksi pengguna}
+\newcommand{\DuncanEditionDate}{Edisi sumber: Musim Semi 2023}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{MATH 742}
+\chead{Catatan Teori Representasi}
+\rhead{Adaptasi id-ID}
+\lfoot{\DuncanEditionDate}
+\rfoot{\thepage\ dari \pageref{LastPage}}
+\renewcommand{\footrulewidth}{0.4pt}
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{3em}
+\date{\DuncanEditionDate}
+
+% \maketitle pada kelas article menonaktifkan dirinya secara global.
+% Simpan definisi awal agar setiap akar mandiri tetap memperoleh halaman judul.
+\let\DuncanArticleMakeTitle\maketitle

@@ -1,0 +1,42 @@
+{
+  "schema": "o013.cring-selected-visual-qa.v1",
+  "date": "2026-08-29",
+  "result": "pass",
+  "reader": {
+    "path": "artifacts/pilihan-aljabar-komutatif-cring-id.pdf",
+    "pages": 74,
+    "bytes": 378716,
+    "sha256": "4596fd6a84f829e1e9c14cb87468226d6ef49c653d41886af5fab9f2bd96b5db",
+    "page_size_points": [612, 792],
+    "title": "Pilihan CRing: Pembaca Bahasa Indonesia",
+    "author": "CRing Project; OpenAI Codex gpt-5.6-sol (Ultra)"
+  },
+  "all_page_pass": {
+    "method": "All 74 promoted pages were rendered at 55 dpi into one ordered overview and inspected once for centering, clipping, overlap, malformed mathematics, accidental blanks, transition continuity, and license closure.",
+    "rendered_pages": 74,
+    "overview": {
+      "path": "visual/overview.jpg",
+      "bytes": 1086173,
+      "sha256": "9b5622b056c1811fefa6dd833e0a25bf8c8bd3d14df5dc5e4c751b54b82d0f1c"
+    },
+    "finding": "The full reader is centered and readable. No clipping, overlap, malformed page, accidental blank page, or visible broken formula was found; short pages occur only at deliberate front matter, section endings, index, bibliography, and license transitions."
+  },
+  "targeted_front_matter": {
+    "physical_pages": [3, 4, 5],
+    "files": [
+      {"path": "visual/page-003.png", "bytes": 199385, "sha256": "d6e884a00be6cc8f589073c06a58311d7e1cb57a626aa8b159c18e537a8a175f"},
+      {"path": "visual/page-004.png", "bytes": 134135, "sha256": "41779cd571d2759d3e2750c1f06f83197287579ae8c864d3118ff6abd1256beb"},
+      {"path": "visual/page-005.png", "bytes": 73709, "sha256": "4d23deb0b4001e9afa05e038986a1bd176f679ccc0294e3932ec547cf76c4d64"}
+    ],
+    "finding": "The corrected six-span table has no collision; all nine repairs, the three separately identified original bridges, and the GFDL History notice are readable and unclipped."
+  },
+  "build_diagnostics": {
+    "fatal_errors": 0,
+    "undefined_references": 0,
+    "undefined_citations": 0,
+    "rerun_requests": 0,
+    "overfull_boxes": 0,
+    "adjudication": "Only nonfatal underfull and PDF-bookmark token diagnostics remain; neither affects readable content or mathematical semantics."
+  },
+  "model": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

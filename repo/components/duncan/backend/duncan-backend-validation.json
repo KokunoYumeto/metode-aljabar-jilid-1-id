@@ -1,0 +1,90 @@
+{
+  "schema": "interlanguage.duncan-modular-backend-validation.v1",
+  "result": "PASS",
+  "mode": "regenerate-and-validate",
+  "checks": {
+    "authority_commit_exact": true,
+    "authority_tree_exact": true,
+    "authority_archive_bytes_and_sha256_exact": true,
+    "seven_root_driver_order_exact": true,
+    "source_target_section_topology_exact": true,
+    "source_target_semantic_environment_topology_exact": true,
+    "source_target_formula_topology_and_normalized_structure_exact": true,
+    "source_target_label_ref_citation_index_topology_exact": true,
+    "all_nonpackage_refs_resolved": true,
+    "all_citations_resolved": true,
+    "locale_neutral_ids_unique": true,
+    "prerequisites_resolved_and_acyclic_by_order": true,
+    "utf8_lf_inputs_and_outputs": true,
+    "independent_nonendorsement_provenance_present": true,
+    "external_assignment_boundary_present": true,
+    "model_provenance_present": true,
+    "artifact_regeneration_byte_identical": true
+  },
+  "authority": {
+    "commit_sha1": "c62d36f41189da4bd3da4671668f68720df54ff7",
+    "tree_sha1": "e83ee440666133b14dec440158a108069a13e9e4",
+    "archive_bytes": 92763,
+    "archive_sha256": "60dd9679c9ebe0c28f31794a7b2cb8552f4b7d68038061024972257280a1852c"
+  },
+  "counts": {
+    "roots": 7,
+    "sections": 73,
+    "definitions": 68,
+    "theorems": 144,
+    "examples": 67,
+    "exercises": 41,
+    "formulas": 4632,
+    "labels": 32,
+    "refs": 46,
+    "citations": 56,
+    "index_terms": 0,
+    "entities": 5025,
+    "links": 134,
+    "bibliography_entries": 14,
+    "unique_citation_keys": 13,
+    "build_surfaces": 14,
+    "source_records": 8121,
+    "target_records": 8121,
+    "source_bytes": 267931,
+    "target_bytes": 282570
+  },
+  "input_manifest_sha256": "6eda298d102db7e9f89301e35bebf65f2656bdc03194304bd1e061b4b245498c",
+  "validator": {
+    "path": "repo/components/duncan/backend/validate_duncan_backend.py",
+    "bytes": 50550,
+    "sha256": "c748934fd52c328cead969fa28e4613b0250d597c8cbd68cb55b25c7b99be03a"
+  },
+  "artifacts": [
+    {
+      "path": "repo/components/duncan/backend/duncan-component.json",
+      "bytes": 3653763,
+      "sha256": "14f74a3fd980e394a67facf54f2800056f753de1d462eb75a98ea5d52af195d5",
+      "rows": null
+    },
+    {
+      "path": "repo/components/duncan/backend/duncan-roots.csv",
+      "bytes": 3784,
+      "sha256": "439551d120049e13c424883c42bf4bb52aa029b92ce871dc1c1ead74112b6145",
+      "rows": 7
+    },
+    {
+      "path": "repo/components/duncan/backend/duncan-entities.csv",
+      "bytes": 1483839,
+      "sha256": "387e3978f4f31bd891d87c9c17606785367dae0b3df4b7dd49073003e7f5eecb",
+      "rows": 5025
+    },
+    {
+      "path": "repo/components/duncan/backend/duncan-links.csv",
+      "bytes": 20749,
+      "sha256": "f34083c88aa4e61dbeb2a7189a4eed8afdb23c519588d66a970f974a3dfe4219",
+      "rows": 134
+    },
+    {
+      "path": "repo/components/duncan/backend/duncan-build-surfaces.csv",
+      "bytes": 2781,
+      "sha256": "f2d3c709250f80d9178e8085618e2b7a4e7efabd45132074c56de861234cb15e",
+      "rows": 14
+    }
+  ]
+}

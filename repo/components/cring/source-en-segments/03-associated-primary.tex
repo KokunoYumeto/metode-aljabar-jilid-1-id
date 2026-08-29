@@ -1,0 +1,872 @@
+\section{Associated primes}
+
+We shall now begin the structure theory for noetherian modules. The first step
+will be to associate to each module a collection of primes, called the
+\emph{associated primes}, which lie in a bigger collection of primes (the
+\emph{support}) where the
+localizations are nonzero.
+
+\subsection{The support}
+ Let $R$ be a  noetherian ring.  An $R$-module $M$ is supposed to be thought
+ of as something like a vector bundle, somehow
+spread out over the topological space $\spec R$. If $\mathfrak{p} \in \spec R$, then  let
+\( \k(\mathfrak{p}) = \mathrm{fr.  \ field \ } R/\mathfrak{p}  ,\)
+which is the residue field of $R_{\mathfrak{p}}$. If $M$ is any $R$-module, we
+can consider $M \otimes_R \k(\mathfrak{p})$ for each $\mathfrak{p}$; it is a
+vector space over $\k(\mathfrak{p})$. If $M$ is finitely generated, then $M \otimes_R
+\k(\mathfrak{p})$ is a finite-dimensional vector space.
+
+\begin{definition} 
+Let $M$ be a finitely generated $R$-module. Then $\supp M$, the
+\textbf{support} of $M$,  is defined to be the set of primes
+$\mathfrak{p} \in \spec R$ such that
+\( M \otimes_R \k(\mathfrak{p}) \neq 0.  \)
+\end{definition} 
+
+One is  supposed to think of a module $M$ as something like a vector bundle
+over the topological space
+$\spec R$. At each $\mathfrak{p} \in \spec R$, we associate the vector space $M
+\otimes_R \k(\mathfrak{p})$; this is the ``fiber.'' Of course, the intuition
+of  $M$'s being a vector bundle is somewhat limited, since the fibers
+do not generally have  the same dimension.
+Nonetheless, we can talk about the support, i.e. the set of spaces where the
+``fiber'' is not zero.
+
+Note that $\mathfrak{p} \in \supp M$ if and only if $M_{\mathfrak{p}} \neq 0$. This is
+because
+\[ (M \otimes_R R_{\mathfrak{p}})/( \mathfrak{p} R_{\mathfrak{p}} (M \otimes_R
+R_{\mathfrak{p}}))  = M_{\mathfrak{p}}
+\otimes_{R_{\mathfrak{p}}} \k(\mathfrak{p})  \]
+and we can use Nakayama's lemma over the local ring $R_{\mathfrak{p}}$.  (We
+are using the fact that $M$ is finitely generated.)
+
+A vector bundle whose support is empty is zero. Thus the following easy
+proposition is intuitive:
+
+\begin{proposition} 
+$M = 0$ if and only if $\supp M = \emptyset$. 
+\end{proposition}
+\begin{proof} 
+Indeed, $M=0$ if and only if $M_{\mathfrak{p}} = 0$ for all primes
+$\mathfrak{p} \in \spec R$. This is equivalent to $\supp M = \emptyset$.
+\end{proof} 
+ 
+\begin{exercise} 
+Let $0 \to M' \to M \to M'' \to 0$ be exact. Then 
+\[ \supp M = \supp M' \cup \supp M''.  \]
+\end{exercise} 
+
+
+We will see soon that that $\supp M$ is closed in $\spec R$. One imagines that
+$M$ lives on this closed subset $\supp M$, in some sense.
+
+
+
+\subsection{Associated primes}
+Throughout this section, $R$ is a noetherian ring. The \emph{associated
+primes} of a module $M$ will refer to primes that arise as the annihilators of
+elements in $M$. As we shall see, the support of  a module is determined by
+the associated primes. Namely, the associated primes contain the ``generic
+points'' (that is, the minimal primes) of the support. In some cases, however,
+they may contain more. 
+
+\add{We are currently using the notation $\ann(x)$ for the annihilator of $x
+\in M$. This has not been defined before. Should we add this in a previous
+chapter?}
+
+\begin{definition} 
+Let $M$ be a finitely generated $R$-module.  The prime ideal $\mathfrak{p}$ is said to be
+\textbf{associated} to $M$ if there exists an element $x \in M$ such that
+$\mathfrak{p}$ is the annihilator of $x$.  The set of associated primes is
+$\ass(M)$.
+\end{definition} 
+
+Note that the annihilator of an element $x \in M$ is not necessarily prime, but
+it is possible that the annihilator might be prime, in which case it is
+associated.
+
+\begin{exercise} 
+Show that $\mathfrak{p} \in \ass(M)$ if and only if there is an injection
+$R/\mathfrak{p} \hookrightarrow M$.
+\end{exercise} 
+
+\begin{exercise} 
+Let $\mathfrak{p} \in \spec R$. Then $\ass(R/\mathfrak{p}) =
+\left\{\mathfrak{p}\right\}$.
+\end{exercise} 
+
+\begin{example}
+Take $R=k[x,y,z]$, where $k$ is an integral domain, and let $I = (x^2-yz,x(z-1))$. Any
+ prime associated to $I$ must contain $I$, so let's consider
+   $\mathfrak{p}=(x^2-yz,z-1)=(x^2-y,z-1)$, which is $I:x$. It is prime because $R/\mathfrak{p} = k[x]$,
+   which is a domain. To see that $(I:x)\subset \mathfrak{p}$, assume $tx\in I\subset \mathfrak{p}$; since
+   $x\not\in \mathfrak{p}$, $t\in p$, as desired.
+
+   There are two more associated primes, but we will not find them here.
+ \end{example}
+
+
+We shall start by proving that $\ass(M) \neq \emptyset$ for nonzero modules. 
+\begin{proposition} \label{assmnonempty} 
+If $M \neq 0$, then $M$ has an associated prime.
+\end{proposition} 
+\begin{proof}  Consider the collection of ideals in $R$ that arise as the
+annihilator of a nonzero element in $M$. 
+Let $I \subset R$ be a maximal element among this collection.  The existence of $I$ is guaranteed thanks to the noetherianness of
+$R$.
+Then $I = \ann(x)$ for some $x \in M$, so  $1 \notin I$ because the annihilator of a nonzero element is not the full
+ring.
+
+I claim that
+$I$ is prime,  and hence $I \in \ass(M)$.  
+Indeed, suppose $ab \in I$ where $a,b \in R$. This means that
+\[ (ab)x = 0.  \]
+Consider the annihilator $\ann(bx)$ of $bx$. This contains the annihilator of $x$, so $I$;
+it also contains $a$.
+
+There are two cases. If $bx = 0$, then $ b \in I$ and we are done. Suppose to
+the contrary $bx \neq 0$. In this case, $\ann(bx)$ contains $(a) + I$, which
+ contains $I$. By maximality, it must happen that $\ann(bx) = I$ and $ a \in
+ I$. 
+
+ In either case, we find that one of $a,b $ belongs to $I$, so that $I$ is
+ prime. 
+
+\end{proof} 
+
+\begin{example}[A module with no associated prime]
+Without the noetherian hypothesis, \rref{assmnonempty} is
+\emph{false}. Consider $R = \mathbb{C}[x_1, x_2, \dots]$, the polynomial ring
+over $\mathbb{C}$ in infinitely many variables, and the ideal $I = (x_1,
+x_2^2, x_3^3, \dots) \subset R$.
+The claim is that 
+\[ \ass(R/I ) = \emptyset.  \]
+To see this, suppose a prime $\mathfrak{p}$ was the annihilator of some
+$\overline{f}\in R/I$.  Then $\overline{f}$ lifts to $f \in R$; it follows
+that $\mathfrak{p}$ is precisely the set of $g \in R$ such that $fg \in I$.
+Now $f$ contains only finitely many of the variables $x_i$, say $x_1, \dots,
+x_n$. It is then clear that $x_{n+1}^{n+1} f \in I$  (so $x_{n+1}^{n+1} \in
+\mathfrak{p}$), but $x_{n+1} f \notin I$ (so $x_{n+1} \notin \mathfrak{p}$).
+It follows that $\mathfrak{p}$ is not a prime, a contradiction.
+\end{example} 
+
+We shall now show that the associated primes are finite in number.
+
+\begin{proposition} \label{finiteassm}
+If $M$ is finitely generated, then $\ass(M)$ is finite.
+\end{proposition}
+
+The idea is going to be to use the fact that $M$ is finitely generated to build
+$M$ out of finitely many pieces, and use that to bound the number of associated
+primes to each piece. For this, we need:
+
+\begin{lemma} \label{assexact} 
+Suppose we have an exact sequence of finitely generated $R$-modules
+\[ 0 \to M' \to M \to M'' \to 0.  \]
+Then 
+\[\ass(M') \subset \ass(M) \subset \ass(M') \cup \ass(M'')  \]
+\end{lemma} 
+\begin{proof} 
+The first claim is obvious. If $\mathfrak{p}$ is the annihilator of
+in $x \in M'$, it is an annihilator of something in $M$ (namely the image of
+$x$), because
+$M' \to M$ is injective. So $\ass(M') \subset \ass(M)$. 
+
+The harder direction is the other inclusion. Suppose $\mathfrak{p} \in \ass(M)$.
+Then there is $x \in M$ such that
+$\mathfrak{p} = \ann(x).$
+Consider the submodule $Rx \subset M$.  If $Rx \cap M' \neq 0$, then we can
+choose $y \in Rx \cap M' - \left\{0\right\}$. I claim that $\ann(y) =
+\mathfrak{p}$ and so $\mathfrak{p} \in \ass(M')$.
+To see this, $ y = ax$ for some $a \in R$. The annihilator of $y$ is the set of elements
+$b \in R$ such that
+\[ abx = 0  \]
+or, equivalently, the set of $b \in R$ such that $ab \in \mathfrak{p} =
+\ann(x)$. But $y = ax \neq 0$, so $a \notin \mathfrak{p}$. As a
+result, the condition $b \in \ann(y)$ is the same as $b \in \mathfrak{p}$. In
+other words, 
+\[ \ann(y) = \mathfrak{p}  \]
+which proves the claim.
+
+Suppose now that  $Rx \cap M' = 0$. Let $\phi: M \twoheadrightarrow M''$
+be the surjection. I claim that $\mathfrak{p} = \ann(\phi(x))$ and
+consequently that
+$\mathfrak{p} \in \ass(M'')$.  The proof is as follows. Clearly $\mathfrak{p}$
+annihilates $\phi(x)$ as it annihilates $x$. Suppose $a \in \ann(\phi(x))$.
+This means that $\phi(ax) = 0$, so $ax \in \ker \phi=M'$; but $\ker \phi \cap Rx =
+0$. So $ax = 0$ and consequently $a \in \mathfrak{p}$. It follows $\ann(\phi(x)) = \mathfrak{p}$. 
+\end{proof} 
+
+The next step in the proof of \rref{finiteassm} is that any
+finitely generated module
+admits a filtration each of whose quotients are of a particularly nice form.
+This result is quite useful and will be referred to in the future.
+
+\begin{proposition}[D{\'e}vissage] \label{filtrationlemma} \label{devissage}
+For any finitely generated $R$-module $M$, there exists a finite filtration
+\[ 0 = M_0 \subset M_1 \subset \dots \subset M_k = M  \]
+such that the successive quotients $M_{i+1}/M_i$ are isomorphic to various
+$R/\mathfrak{p}_i$ with the $\mathfrak{p}_i \subset R$ prime.
+\end{proposition} 
+\begin{proof} 
+Let $M' \subset M$ be maximal among submodules for which such a filtration
+(ending with $M'$)
+exists. We would like to show that $M' = M$.  Now $M'$ is well-defined since
+$0$ has such a filtration and $M$ is
+noetherian.  
+
+There is a filtration
+\[ 0 = M_0 \subset M_1 \subset \dots \subset M_l = M' \subset M  \]
+where the successive quotients, \emph{except} possibly the last $M/M'$, are of
+the form $R/\mathfrak{p}_i $ for $\mathfrak{p}_i \in \spec R$.
+If $M' = M$, we are done. Otherwise, consider
+the quotient $M/M' \neq 0$. There is an associated prime of $M/M'$. So there is
+a prime $\mathfrak{p}$ which is the annihilator of $x \in M/M'$. This means
+that there is an injection 
+\[ R/\mathfrak{p} \hookrightarrow M/M'.  \]
+Now, take $M_{l+1}$ as the inverse image in $M$
+of $R/\mathfrak{p} \subset M/M'$. 
+Then, we can consider the finite filtration
+\[ 0 = M_0 \subset M_1 \subset \dots \subset M_{l+1} , \]
+all of whose successive quotients are of the form $R/\mathfrak{p}_i$; this is
+because $M_{l+1}/M_l = M_{l+1}/M'$ is of this form by construction.
+We have thus extended this filtration one
+step further,  a contradiction since
+$M'$ was assumed to be maximal.
+\end{proof} 
+
+Now we are in a position to meet the goal, and prove that $\ass(M)$ is
+always a finite set. 
+\begin{proof}[Proof of \rref{finiteassm}]
+Suppose $M$ is finitely generated Take our filtration
+\[ 0 = M_0 \subset M_1 \subset \dots \subset M_k = M.  \]
+By induction, we show that $\ass(M_i)$ is finite for each $i$. It is obviously
+true for $i=0$. Assume now that $\ass(M_i)$ is finite; we prove the same for
+$\ass(M_{i+1})$. We have an exact sequence
+\[ 0 \to M_i \to M_{i+1} \to R/\mathfrak{p}_i \to 0  \]
+which implies that, by \rref{assexact},
+\[ \ass(M_{i+1}) \subset \ass(M_i) \cup \ass(R/\mathfrak{p}_i) = \ass(M_i)
+\cup \left\{\mathfrak{p}_i\right\} , \]
+so $\ass(M_{i+1})$ is also finite.
+By induction, it is now clear that $\ass(M_i)$ is finite for every $i$.
+
+This proves the proposition; it also shows that the number of
+associated primes is at most the length of the filtration. 
+\end{proof} 
+
+
+Finally, we characterize the zerodivisors on $M$ in terms of the associated
+primes. The last characterization of the result will be useful in the future.
+It implies, for instance, that if $R$ is local and $\mathfrak{m}$ the maximal
+ideal, then if every element of $\mathfrak{m}$ is a zerodivisor on a finitely
+generated module
+$M$, then $\mathfrak{m} \in \ass(M)$.
+
+\begin{proposition} \label{assmdichotomy}
+If $M$ is a finitely generated module over a noetherian ring $R$, then the
+zerodivisors on $M$ are the union $\bigcup_{\mathfrak{p} \in \ass(M)}
+\mathfrak{p}$.
+
+More strongly, if $I \subset R$ is any ideal consisting of zerodivisors on
+$M$, then $I$ is contained in an associated prime.
+\end{proposition} 
+\begin{proof} 
+Any associated prime is an annihilator of some element of $M$, so it consists
+of zerodivisors. Conversely, if $a \in R$ annihilates $x \in M$, then $a$
+belongs to every associated prime of the nonzero module $Ra \subset M$. (There
+is at least one by \cref{finiteassm}.)
+
+For the last statement, we use prime avoidance (\cref{primeavoidance}): if $I$ consists of
+zerodivisors, then $I$ is contained in the union $\bigcup_{\mathfrak{p} \in \ass(M)}
+\mathfrak{p}$ by the first part of the proof. This is a finite union by
+\cref{assmfinite}, so prime avoidance implies $I$ is contained one of these
+primes.
+\end{proof} 
+
+
+\begin{exercise} 
+For every module $M$ over any (not necessarily noetherian) ring $R$,
+the set of $M$-zerodivisors$\mathcal{Z}(M)$ is a union of prime ideals. In general, there is an easy
+ characterization of sets $Z$ which are a union of primes: it is exactly when
+ $R\smallsetminus Z$ is a \emph{saturated multiplicative set}. This is Kaplansky's
+ Theorem 2.
+ \begin{definition}
+   A multiplicative set $S\neq \varnothing$ is a \emph{saturated multiplicative set} if
+   for all $a,b\in R$, $a,b\in S$ if and only if $ab\in S$. (``multiplicative set'' just
+   means the ``if'' part)
+ \end{definition}
+ To see that $\mathcal{Z}(M)$ is a union of primes, just verify that its complement is a saturated
+ multiplicative set.
+\end{exercise}
+
+\subsection{Localization and $\ass(M)$}
+
+It turns out to be extremely convenient that the construction $M  \to \ass(M)$
+behaves about as nicely with respect to localization as we could possibly
+want. This lets us, in fact, reduce arguments to the case of a local ring,
+which is a significant simplification.
+
+So, as usual, let $R $ be noetherian, and $M$ a finitely generated $R$-module. 
+Let further $S \subset R$ be a multiplicative subset. 
+Then $S^{-1}M$ is a finitely generated module over the noetherian ring
+$S^{-1}M$. So it makes sense to consider both $\ass(M) \subset \spec R$ and
+$\ass(S^{-1}M) \subset \spec S^{-1}R$. But we also know that $\spec S^{-1}R
+\subset \spec R$ is just the set of primes of $R$ that do not intersect $S$.
+Thus, we can directly compare $\ass(M)$ and $\ass(S^{-1}M)$, and one might
+conjecture (correctly, as it happens) that $\ass(S^{-1}M) = \ass(M) \cap \spec
+S^{-1}R$.
+\begin{proposition} \label{assmlocalization}
+Let $R$ noetherian, $M$ finitely generated and $S \subset R$ multiplicatively closed. 
+Then 
+\[ \ass(S^{-1}M)  = \left\{S^{-1}\mathfrak{p}: \mathfrak{p} \in \ass(M),
+\mathfrak{p}\cap S  = \emptyset \right\} . \]
+\end{proposition} 
+\begin{proof} 
+We first prove the easy direction, namely that $\ass(S^{-1}M)$
+\emph{contains} primes in $\spec S^{-1}R \cap \ass(M)$. 
+
+Suppose $\mathfrak{p} \in \ass(M)$ and
+$\mathfrak{p} \cap S = \emptyset$. Then $\mathfrak{p} = \ann(x)$ for some $x
+\in M$. Then the annihilator of $x/1 \in S^{-1}M$ is just $S^{-1}\mathfrak{p}$, as one
+can directly check. Thus $S^{-1}\mathfrak{p} \in \ass(S^{-1}M)$.
+So we get the easy inclusion.
+
+Let us now do the harder inclusion.  
+Call the localization map $R \to S^{-1}R  $ as $\phi$.
+Let $\mathfrak{q} \in \ass(S^{-1}M)$. By definition, this means that $\mathfrak{q} =
+\ann(x/s)$ for some $x \in M$, $s \in S$. We want to see that
+$\phi^{-1}(\mathfrak{q}) \in \ass(M) \subset \spec R$.
+By definition $\phi^{-1}(\mathfrak{q})$ is the set of elements $a \in R$ such that
+\[ \frac{ax}{s} = 0 \in S^{-1}M . \]
+In other words, by definition of the localization, this is 
+\[  \phi^{-1}(\mathfrak{q}) = \bigcup_{t \in S} \left\{a \in R: atx = 0 \in M\right\} = \bigcup \ann(tx)
+\subset R.\]
+We know, however, that among elements of the form $\ann(tx)$, there is a
+\emph{maximal} element $I=\ann(t_0 x)$ for some $t_0 \in S$, since $R$ is
+noetherian.  The claim is that $I = \phi^{-1}(\mathfrak{q})$, so
+$\phi^{-1}(\mathfrak{q}) \in \ass(M)$.
+
+Indeed,  any other annihilator $I' = \ann(tx)$ (for $t \in S$) must be contained in $\ann(t_0 t x)$. However, 
+\( I \subset \ann(t_0 x)  \)
+and $I$ is maximal, so $I = \ann(t_0 t x)$ and
+\( I' \subset I.  \) In other words, $I$ contains all the other annihilators
+$\ann(tx)$ for $t \in S$.
+In particular, the big union above, i.e. $\phi^{-1}(\mathfrak{q})$, is just
+\( I = \ann(t_0 x).  \)
+In particular, $\phi^{-1}(\mathfrak{q}) = \ann(t_0x)$ is in $\ass(M)$.
+This means that every associated prime
+of $S^{-1}M$ comes from an associated prime of $M$, which completes the proof.
+\end{proof} 
+
+
+
+\begin{exercise} 
+Show that, if $M$ is a finitely generated module over a noetherian ring, that
+the map
+\[ M \to \bigoplus_{\mathfrak{p} \in \ass(M)} M_{\mathfrak{p}}  \]
+is injective. Is this true if $M$ is not finitely generated?
+\end{exercise} 
+
+\subsection{Associated primes determine the support}
+The next claim is that the support and the associated primes are related.
+
+\begin{proposition}\label{supportassociated} The support is the closure of the associated primes:
+\[ \supp M  = \bigcup_{\mathfrak{q} \in \ass(M)}
+\overline{\left\{\mathfrak{q}\right\}} \]
+\end{proposition} 
+
+By definition of the Zariski topology, this means that a prime $\mathfrak{p}
+\in \spec R$ belongs to $\supp M$ if and only if it contains an associated
+prime. 
+
+\begin{proof} 
+First,  we show that $\supp(M)$ contains the set of primes
+$\mathfrak{p} \in \spec R$ containing an associated prime; this will imply
+that $\supp(M) \supset \bigcup_{\mathfrak{q} \in \ass(M)}
+\overline{\left\{\mathfrak{q}\right\}}$. So let $\mathfrak{q}$ be an
+associated prime and $\mathfrak{p} \supset \mathfrak{q}$. We need to show that
+\[ \mathfrak{p} \in \supp M, \ \text{i.e.} \ M_{\mathfrak{p}} \neq 0.  \]
+But, since $\mathfrak{q} \in \ass(M)$,  there is an injective map
+\[ R/\mathfrak{q} \hookrightarrow M , \]
+so localization gives an injective map
+\[ (R/\mathfrak{q})_{\mathfrak{p}} \hookrightarrow M_{\mathfrak{p}}.  \]
+Here, however, the first object $(R/\mathfrak{q})_{\mathfrak{p}}$ is nonzero since nothing nonzero in $R/\mathfrak{q}$ can be
+annihilated by something outside $\mathfrak{p}$. So $M_{\mathfrak{p}} \neq
+0$, and $\mathfrak{p} \in \supp M$. 
+
+Let us now prove the converse inclusion. Suppose that $\mathfrak{p} \in \supp M$. We
+have to show that $\mathfrak{p}$ contains an associated prime.  
+By assumption, $M_{\mathfrak{p}} \neq 0$, and $M_{\mathfrak{p}}$ is a finitely generated
+module over the noetherian ring $R_{\mathfrak{p}}$. So $M_{\mathfrak{p}}$ has
+an associated prime.
+It follows by \rref{assmlocalization} that $\ass(M) \cap \spec
+R_{\mathfrak{p}}$ is nonempty. Since the primes of $R_{\mathfrak{p}}$
+correspond to the primes contained in $\mathfrak{p}$, it follows that there
+is  a prime contained in $\mathfrak{p}$ that lies in $\ass(M)$. This is
+precisely what we wanted to prove.
+\end{proof} 
+
+
+\begin{corollary} \label{suppisclosed} For $M$ finitely generated,  
+$\supp M$ is closed. Further, every minimal element of $\supp M$ lies in
+$\ass(M)$.
+\end{corollary} 
+\begin{proof} 
+Indeed, the above result says that
+\[ \supp M  = \bigcup_{\mathfrak{q} \in \ass(M)}
+\overline{\left\{\mathfrak{q}\right\}}. \]
+Since $\ass(M)$ is finite, it follows that $\supp M$ is closed.
+The above equality also shows that any minimal element of $\supp M$ must be an
+associated prime.
+\end{proof} 
+
+\begin{example} 
+\rref{suppisclosed} is \emph{false} for modules that are not finitely
+generated. Consider for instance the abelian group $\bigoplus_p \mathbb{Z}/p$.
+The support of this as a $\mathbb{Z}$-module is precisely the set of all
+closed points (i.e., maximal ideals) of $\spec \mathbb{Z}$, and is
+consequently is not closed. 
+\end{example} 
+
+\begin{corollary} 
+The ring $R$ has finitely many minimal prime ideals. 
+\end{corollary} 
+\begin{proof} 
+Clearly, $\supp R = \spec R$. Thus every prime ideal of $R$
+contains an associated prime of $R$ by \rref{supportassociated}.
+\end{proof} 
+
+So $\spec R$ is the finite union of the  irreducible closed  pieces
+$\overline{\mathfrak{q}}$ if $R$ is noetherian.
+\add{I am not sure if ``irreducibility'' has already been defined. Check this.}
+
+We have just seen that $\supp M$ is a closed subset of $\spec R$ and is a union
+of finitely many irreducible subsets.  More precisely, 
+\[ \supp M = \bigcup_{\mathfrak{q} \in \ass(M)}
+\overline{\left\{\mathfrak{q}\right\}}  \]
+though there might be some redundancy in this expression. Some associated prime might be contained
+in others.  
+
+\begin{definition} 
+A prime $\mathfrak{p} \in \ass(M)$ is an \textbf{isolated} associated prime of
+$M$ if it is minimal (with respect to the ordering on $\ass(M)$); it is
+\textbf{embedded} otherwise. 
+\end{definition} 
+
+So the embedded primes are not needed to describe the support of $M$. 
+
+\add{Examples of embedded primes}
+
+\begin{remark} 
+It follows that in a noetherian ring, every minimal prime consists of
+zerodivisors. Although we shall not use this in the future, the same is true
+in non-noetherian rings as well.  Here is an argument.
+
+Let $R$ be a ring and $\mathfrak{p} \subset R$ a minimal prime. Then
+$R_{\mathfrak{p}}$ has precisely one prime ideal.
+We now use:
+
+\begin{lemma} 
+If a ring $R$ has precisely one prime ideal $\mathfrak{p}$, then any $x \in
+\mathfrak{p}$ is nilpotent.
+\end{lemma} 
+\begin{proof} 
+Indeed, it suffices to see that $R_x = 0$ (\rref{nilpcriterion} in
+\rref{spec}) if $x \in
+\mathfrak{p}$. But $\spec R_x$
+consists of the primes of $R$ not containing $x$. However, there are no such
+primes. Thus $\spec R_x = \emptyset$, so $R_x = 0$.
+\end{proof} 
+
+It follows that every element in $\mathfrak{p}$ is a zerodivisor in
+$R_{\mathfrak{p}}$.
+As a result, if $x \in \mathfrak{p}$, there is $\frac{s}{t} \in
+R_{\mathfrak{p}}$ such that $xs/t = 0$ but $\frac{s}{t} \neq 0$.
+In particular, there is $t' \notin \mathfrak{p}$ with 
+\[ xst' = 0, \quad st' \neq 0,  \]
+so that $x$ is a zerodivisor. 
+\end{remark}
+
+
+
+\subsection{Primary modules}
+
+A primary modules are ones that has only one associated prime. It is equivalent
+to say that any homothety is either injective or nilpotent. 
+As we will see in the next section, any module has a ``primary
+decomposition:'' in fact, it embeds as a submodule of a sum of primary
+modules.
+
+\begin{definition} 
+Let $\mathfrak{p} \subset R$ be prime, $M$ a finitely generated  $R$-module. Then $M$ is
+\textbf{$\mathfrak{p}$-primary} if 
+\[ \ass(M) = \left\{\mathfrak{p}\right\}.  \]
+
+A module is \textbf{primary} if it is $\mathfrak{p}$-primary for some
+prime $\mathfrak{p}$, i.e., has precisely one associated prime. 
+\end{definition} 
+
+\begin{proposition} \label{whenisprimary}
+Let $M$ be a finitely generated $R$-module. Then $M$ is \textbf{$\mathfrak{p}$}-primary if
+and only if, for every $m \in M - \left\{0\right\}$, 
+the annihilator $\ann(m)$ has radical $\mathfrak{p}$.
+\end{proposition} 
+\begin{proof} 
+We first need a small observation.
+
+\begin{lemma} 
+If $M$ is $\mathfrak{p}$-primary, then any nonzero submodule $M' \subset M$ is
+$\mathfrak{p}$-primary.
+\end{lemma} 
+\begin{proof} 
+Indeed, we know that $\ass(M') \subset \ass(M)$ by \rref{assexact}.
+Since $M' \neq 0$, we also know that $M'$ has an associated prime
+(\rref{assmnonempty}). Thus $ \ass(M') = \{\mathfrak{p}\}$, so
+$M'$ is $\mathfrak{p}$-primary.
+\end{proof} 
+
+Let us now return to the proof of the main result,
+\rref{whenisprimary}.
+Assume first that $M$ is $\mathfrak{p}$-primary. Let $x \in M$, $x \neq 0$. Let
+$I = \ann(x)$; we are to show that $\rad(I)  =\mathfrak{p}$. By definition, there is an injection
+\[ R/I \hookrightarrow M  \]
+sending $1 \to x$. As a result, $R/I$ is $\mathfrak{p}$-primary by the above
+lemma. We want to know that $\mathfrak{p}  = \rad(I)$. 
+We saw that the support $\supp R/I = \left\{\mathfrak{q}: \mathfrak{q}
+\supset I\right\}$ is the union of the closures of the associated primes. In
+this case, 
+\[ \supp(R/I) = \left\{\mathfrak{q}: \mathfrak{q} \supset \mathfrak{p}\right\}
+.\]
+But we know that $\rad(I) = \bigcap_{\mathfrak{q} \supset I} \mathfrak{q}$,
+which by the above is just $\mathfrak{p}$. This proves that $\rad(I) =
+\mathfrak{p}$.
+We have shown that if $R/I$ is primary, then $I$ has radical $\mathfrak{p}$.
+
+The converse is easy. 
+Suppose the condition holds and $\mathfrak{q} \in \ass(M)$, so $\mathfrak{q} =
+\ann(x)$ for $x \neq 0$. But then $\rad(\mathfrak{q}) = \mathfrak{p}$, so 
+\[ \mathfrak{q} = \mathfrak{p}  \] and $\ass(M) = \left\{\mathfrak{p}\right\}$.
+\end{proof} 
+
+We have another characterization.
+
+\begin{proposition} \label{whenisprimary2}
+Let $M \neq 0$ be a finitely generated $R$-module. Then $M$ is primary if and
+only if for each $a \in
+R$, then the homothety $ M \stackrel{a}{\to} M$ is either injective or nilpotent.
+\end{proposition}
+\begin{proof} 
+Suppose first that $M$ is $\mathfrak{p}$-primary. Then multiplication by anything in
+$\mathfrak{p}$ is nilpotent because the annihilator of everything nonzero has
+radical $\mathfrak{p}$ by \rref{whenisprimary}. But if $a \notin \mathfrak{p}$, then $\ann(x)$ for
+$x \in M - \left\{0\right\}$ has radical $\mathfrak{p}$ and cannot contain $a$. 
+
+Let us now do the other direction. Assume that every element of $a$ acts either injectively or nilpotently on $M$.
+Let $I \subset R$ be the collection of elements $a \in R$ such that $a^n M = 0$
+for $n$ large. Then $I$ is an ideal, since it is closed under addition by the
+binomial formula: if $a, b \in I$ and $a^n, b^n$ act by zero, then $(a+b)^{2n}$
+acts by zero as well.
+
+
+I claim that $I$ is actually prime. If $a,b \notin I$, then  $a,b$ act by
+multiplication injectively on $M$. So $a: M \to M, b: M \to M$ are injective.
+However, a composition of injections is injective, so $ab$ acts injectively and
+$ab \notin I$. So $I$ is prime.
+
+We need now to check that if $x \in M$ is nonzero, then $\ann(x)$ has radical
+$I$. Indeed, if $a \in R$   annihilates $x$,
+then the homothety  $M \stackrel{a}{\to} M$ cannot be injective, so it must be
+nilpotent (i.e. in $I$). Conversely, if $a \in I$, then a power of $a$ is
+nilpotent, so a power of $a$ 
+must kill $x$. 
+It follows that $\ann(x) = I$. Now, by \rref{whenisprimary}, we see
+that $M$ is $I$-primary.
+\end{proof} 
+
+We now have this notion of a primary module. The idea is that all the torsion is
+somehow concentrated in some prime.
+
+\begin{example} 
+If $R$ is a noetherian ring and $\mathfrak{p} \in \spec R$, then
+$R/\mathfrak{p}$ is $\mathfrak{p}$-primary. More generally, if $I \subset R$
+is an ideal, then $R/I$ is ideal if and only if $\rad(I) $ is prime. This
+follows from \rref{whenisprimary2}.
+\end{example} 
+
+\begin{exercise} 
+If $0 \to M' \to M \to M'' \to 0$ is an exact sequence with $M', M, M''$
+nonzero and finitely generated, then $M$ is $\mathfrak{p}$-primary if and only if $M', M''$ are.
+\end{exercise} 
+
+\begin{exercise} 
+Let $M$ be a finitely generated $R$-module. Let $\mathfrak{p} \in \spec R$. Show that the sum of two
+$\mathfrak{p}$-primary  submodules is $\mathfrak{p}$-primary. Deduce that
+there is a $\mathfrak{p}$-primary submodule of $M$ which contains every
+$\mathfrak{p}$-primary submodule. 
+\end{exercise} 
+
+\begin{exercise}[Bourbaki]
+Let $M$ be a finitely generated $R$-module. Let $T \subset \ass(M)$ be a
+subset of the associated primes. Prove that there is a submodule $N \subset M$
+such that 
+\[ \ass(N) = T, \quad \ass(M/N) = \ass(M) - T.  \]
+
+\end{exercise} 
+
+\section{Primary decomposition} This is the structure theorem for modules
+over a noetherian ring, in some sense.
+Throuoghout, we fix a noetherian ring $R$.
+
+\subsection{Irreducible and coprimary modules}
+
+\begin{definition} 
+Let $M$ be a finitely generated $R$-module. A submodule $N \subset M$ is
+\textbf{$\mathfrak{p}$-coprimary} if $M/N$ is $\mathfrak{p}$-primary.
+
+Similarly, we can say that $N \subset M$ is \textbf{coprimary} if it is
+$\mathfrak{p}$-coprimary for some $\mathfrak{p} \in \spec R$.
+\end{definition} 
+
+We shall now show we can represent any submodule of $M$ as an intersection of
+coprimary submodules. In order to do this, we will define a submodule of $M$ to be
+\emph{irreducible} if it cannot be written as a nontrivial intersection of
+submodules of $M$. It
+will follow by general nonsense that any submodule is an intersection of
+irreducible submodueles. We will then see that any irreducible submodule is
+coprimary. 
+
+\begin{definition} 
+The submomdule $N \subsetneq M$ is \textbf{irreducible} if whenever $N = N_1 \cap N_2$ for $N_1,
+N_2 \subset M$ submodules, then either one of $N_1, N_2$ equals $N$. In other words, it is not
+ the intersection of larger submodules. 
+\end{definition} 
+
+\begin{proposition} \label{irrediscoprimary}
+An irreducible submodule $N \subset M$ is coprimary.
+\end{proposition} 
+\begin{proof} 
+Say $a \in R$. We would like to show that the homothety 
+\[ M/N \stackrel{a}{\to} M/N  \]
+is either injective or nilpotent.
+Consider  the following submodules of $M/N$:
+\[ K(n) =  \left\{x \in M/N: a^n x = 0\right\} . \]
+Then clearly $K(0) \subset K(1) \subset \dots$; this chain stabilizes  as
+the quotient module is noetherian.
+In particular, $K(n) = K(2n)$ for large $n$. 
+
+It follows that if $x \in M/N$ is divisible by $a^n$ ($n$ large) and nonzero, then $a^n x$
+is also nonzero. Indeed, say $x = a^n y \neq 0$; then $y \notin K(n)$, so $a^{n}x =
+a^{2n}y \neq 0$ or we would have $y \in K(2n) = K(n)$. In $M/N$, the submodules
+\[ a^n(M/N) \cap \ker(a^n)  \]
+are equal to zero for large $n$. But our assumption was that $N$ is
+irreducible.  So one of these submodules of $M/N$ is zero. That is, either
+$a^n(M/N) = 0$ or $\ker a^n = 0$. We get either injectivity or nilpotence on
+$M/N$. This proves the result.
+\end{proof} 
+ 
+\subsection{Irreducible and primary decompositions}
+
+We shall now show that in a finitely generated module over a noetherian ring,
+we can write $0$ as an intersection of coprimary modules. This decomposition,
+which is called a \emph{primary decomposition}, will be deduced from purely
+general reasoning.
+
+\begin{definition} 
+An \textbf{irreducible decomposition} of the module $M$ is a representation
+$N_1 \cap N_2 \dots \cap N_k  = 0$, where the $N_i \subset M$ are irreducible
+submodules.
+\end{definition} 
+
+\begin{proposition} 
+If $M$ is finitely generated, then $M$ has an irreducible decomposition. There exist finitely many irreducible
+submodules $N_1, \dots, N_k$ with
+\[  N_1 \cap \dots \cap N_k = 0. \]
+\end{proposition} 
+In other words,
+\[  M \to \bigoplus M/N_i  \]
+is injective.
+So a finitely generated module over a noetherian ring can be imbedded in a direct sum of
+primary modules, since by \rref{irrediscoprimary} the $M/N_i$ are
+primary. 
+
+\begin{proof} This is now purely formal. 
+
+Among the submodules of $M$, some may be expressible as intersections of
+finitely many irreducibles, while some may not be. Our goal is to show that
+$0$ is such an intersection.
+Let $M' \subset M$ be a maximal submodule of $M$ such that $M'$ \emph{cannot} be
+written as such an intersection. If no such
+$M'$ exists, then we are done, because then $0$ can be written as an
+intersection of finitely many irreducible submodules.
+
+Now $M'$ is not irreducible, or it would be the intersection of one irreducible
+submodule.
+It follows $M'$ can be written as $M'=M_1' \cap M_2'$ for two strictly
+larger submodules of $M$.  But by maximality, $M_1', M_2'$ admit decompositions as
+intersections of irreducibles. So $M'$ admits such a decomposition as well, a contradiction. 
+\end{proof} 
+
+\begin{corollary} 
+For any finitely generated $M$, there exist coprimary submodules $N_1, \dots,
+N_k \subset M$ such that $N_1 \cap \dots \cap N_k  = 0$.
+\end{corollary} 
+\begin{proof} 
+Indeed, every irreducible submodule is coprimary.
+\end{proof} 
+
+
+For any $M$, we have an \textbf{irreducible decomposition}
+\[ 0 = \bigcap N_i  \]
+for the $N_i$ a finite set of irreducible (and thus coprimary) submodules. 
+This decomposition here is highly non-unique and non-canonical. Let's try to
+pare it down to something which is a lot more canonical.
+
+The first claim is that we can collect together modules which are coprimary for
+some prime. 
+\begin{lemma} 
+Let $N_1, N_2 \subset M$ be $\mathfrak{p}$-coprimary submodules. Then $N_1 \cap
+N_2$ is also $\mathfrak{p}$-coprimary.
+\end{lemma} 
+\begin{proof} 
+We have to show that $M/N_1 \cap N_2$ is $\mathfrak{p}$-primary. Indeed, we have an injection
+\[ M/N_1 \cap N_2 \rightarrowtail  M/N_1 \oplus M/N_2  \]
+which implies that $\ass(M/N_1 \cap N_2) \subset \ass(M/N_1) \cup \ass(M/N_2) =
+\left\{\mathfrak{p}\right\}$. So we are done. 
+\end{proof} 
+
+In particular, if we do not want irreducibility but only primariness in the
+decomposition
+\[ 0 = \bigcap N_i,  \]
+we can assume that each $N_i$ is $\mathfrak{p}_i$ coprimary for some
+ prime
+$\mathfrak{p}_i$ with the $\mathfrak{p}_i$ \emph{distinct}.
+
+\begin{definition} 
+Such a decomposition of zero, where the different modules $N_i$ are
+$\mathfrak{p}_i$-coprimary for different $\mathfrak{p}_i$, is called a \textbf{primary decomposition}.
+\end{definition} 
+
+
+
+\subsection{Uniqueness questions}
+
+In general, primary decomposition is \emph{not} unique. Nonetheless, we shall
+see that a limited amount of uniqueness does hold. For instance, the primes
+that occur are determined.
+
+Let $M$ be a finitely generated module over a noetherian ring $R$, and suppose
+$N_1 \cap \dots \cap N_k = 0$ is a primary decomposition.
+Let us assume that the decomposition is
+\emph{minimal}: that is, if we dropped one of the $N_i$, the intersection would no
+longer be zero.
+This implies that
+\[ N_i \not\supset \bigcap_{j \neq i} N_j  \]
+or we could omit one of the $N_i$. Then the decomposition is called a \textbf{reduced primary decomposition}.
+
+Again, what this tells us is that $M \rightarrowtail  \bigoplus M/N_i$. What we
+have shown is that $M$ can be imbedded in a sum of pieces, each of which is
+$\mathfrak{p}$-primary for some prime, and the different primes are distinct.
+
+This is \textbf{not} unique. However, 
+
+\begin{proposition} 
+The primes $\mathfrak{p}_i$ that appear in a reduced primary decomposition of zero are
+uniquely determined. They are the associated primes of $M$.
+\end{proposition} 
+\begin{proof} 
+All the associated primes of $M$ have to be there, because we have the injection
+\[ M \rightarrowtail  \bigoplus M/N_i  \]
+so the associated primes of $M$ are among those of $M/N_i$ (i.e. the
+$\mathfrak{p}_i$).
+
+The hard direction is to see that each $\mathfrak{p}_i$ is an associated prime.
+I.e. if $M/N_i$ is $\mathfrak{p}_i$-primary, then $\mathfrak{p}_i \in \ass(M)$;
+we don't need to use primary modules except for primes in the associated primes. 
+Here we need to use the fact that our decomposition has no redundancy.  Without
+loss of generality, it suffices to show that $\mathfrak{p}_1$, for instance,
+belongs to $\ass(M)$. We will use the fact that
+\[ N_1 \not\supset N_2 \cap \dots .  \]
+So this tells us that $N_2 \cap N_3 \cap \dots$ is not equal to zero, or we
+would have a containment. We have a map
+\[ N_2 \cap \dots \cap N_k \to M/N_1;  \]
+it is injective, since the kernel is $N_1 \cap N_2 \cap \dots \cap N_k = 0$ as
+this is a decomposition.
+However, $M/N_1$ is $\mathfrak{p}_1$-primary, so $N_2 \cap \dots \cap N_k$ is
+$\mathfrak{p}_1$-primary. In particular, $\mathfrak{p}_1$ is an associated
+prime of $N_2 \cap \dots \cap N_k$, hence of  $M$.
+\end{proof} 
+
+The primes are determined. The factors are not. However, in some cases they are.
+
+\begin{proposition} 
+Let $\mathfrak{p}_i$ be a minimal associated prime of $M$, i.e. not containing
+any smaller associated prime. Then the submodule $N_i$  corresponding to
+$\mathfrak{p}_i$ in the reduced primary decomposition is uniquely determined:
+it is the kernel of 
+\[ M \to M_{\mathfrak{p}_i}.  \]
+\end{proposition} 
+
+\begin{proof} 
+We have that $\bigcap N_j = \left\{0\right\} \subset M$. When we localize at
+$\mathfrak{p}_i$, we find that
+\[ (\bigcap N_j)_{\mathfrak{p}_i} = \bigcap (N_j)_{\mathfrak{p}_i} =0 \]
+as localization is an exact functor. If $j \neq i$, then $M/N_j$ is
+$\mathfrak{p}_j$ primary, and has only $\mathfrak{p}_j$ as an associated prime.
+It follows that $(M/N_j)_{\mathfrak{p}_i}$ has no associated primes, since the
+only associated prime could be $\mathfrak{p}_j$, and that's not contained in
+$\mathfrak{p}_j$.
+In particular, $(N_j)_{\mathfrak{p}_i} = M_{\mathfrak{p}_i}$.
+
+Thus, when we localize the primary decomposition at $\mathfrak{p}_i$, we get
+a trivial primary decomposition: most of the factors are the full
+$M_{\mathfrak{p}_i}$.  It follows that $(N_i)_{\mathfrak{p}_i}=0$. When we draw
+a commutative diagram
+\[ 
+\xymatrix{
+N_i \ar[r] \ar[d]  &  (N_i)_{\mathfrak{p}_i} = 0 \ar[d]  \\
+M \ar[r] &  M_{\mathfrak{p}_i}.
+}
+\]
+we find that $N_i$ goes to zero in the localization.
+
+Now if $x \in \ker(M \to M_{\mathfrak{p}_i}$, then $sx = 0$ for some $s \notin
+\mathfrak{p}_i$. When we take the map $M \to M/N_i$, $sx$ maps to zero; but $s$
+acts injectively on $M/N_i$, so $x$ maps to zero in $M/N_i$, i.e. is zero in
+$N_i$.
+\end{proof} 
+
+This has been abstract, so:
+\begin{example} Let $ R = \mathbb{Z}$.
+Let $M = \mathbb{Z} \oplus \mathbb{Z}/p$. Then zero can be written as 
+\[ \mathbb{Z} \cap \mathbb{Z}/p  \]
+as submodules of $M$. But $\mathbb{Z}$ is $\mathfrak{p}$-coprimary, while
+$\mathbb{Z}/p$ is $(0)$-coprimary. 
+
+This is not unique. We could have considered 
+\[ \{(n,n), n \in \mathbb{Z}\} \subset M.  \]
+However, the zero-coprimary part has to be the $p$-torsion. This is because
+$(0)$ is the minimal ideal. 
+
+The decomposition is always unique, in general, if
+we have no inclusions among the prime ideals. For $\mathbb{Z}$-modules, this
+means that primary decomposition is unique for torsion modules. 
+Any torsion group is a direct sum of the $p$-power torsion over all primes $p$. 
+\end{example} 
+
+\begin{exercise} 
+Suppose $R$ is a noetherian ring and $R_{\mathfrak{p}}$ is a domain for each prime ideal
+$\mathfrak{p} \subset R$. Then $R$ is a finite direct product $\prod R_i$ for
+each $R_i$ a domain.
+
+To see this, consider the minimal primes $\mathfrak{p}_i \in \spec R$. There
+are finitely many of them, and argue that since every localization is a domain,
+$\spec R$ is disconnected into the pieces $V(\mathfrak{p}_i)$.
+It follows that there is a decomposition $R = \prod R_{i}$ where $\spec R_i$
+has $\mathfrak{p}_i$ as the unique minimal prime. 
+Each $R_i$ satisfies the same condition as $R$, so we may reduce to the case
+of $R$ having a unique minimal prime ideal. In this case, however, $R$ is
+reduced, so its unique minimal prime ideal must be zero.
+\end{exercise} 
+
+
+

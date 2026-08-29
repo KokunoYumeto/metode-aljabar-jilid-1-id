@@ -1,0 +1,102 @@
+{
+  "schema": "o013.cring-repair-gate.v1",
+  "license_boundary": "CRing source remains GFDL-1.2-or-later; inserted bridges are separately identified as edition-original and the malformed-operator fix as an edition correction",
+  "repairs": [
+    {
+      "id": "CRING-R01-empty-projective-reference",
+      "file": "01-nakayama.tex",
+      "kind": "replace empty cross-reference with explicit prerequisite bridge",
+      "provenance": "edition-original"
+    },
+    {
+      "id": "CRING-R02-empty-ufd-reference",
+      "file": "02-spec-zariski.tex",
+      "kind": "replace empty cross-reference with explicit prerequisite bridge",
+      "provenance": "edition-original"
+    },
+    {
+      "id": "CRING-R03-missing-semilocal-proof",
+      "file": "02-spec-zariski.tex",
+      "kind": "supply omitted proof with explicit original provenance",
+      "provenance": "edition-original"
+    },
+    {
+      "id": "CRING-R03A-malformed-mu-max",
+      "file": "02-spec-zariski.tex",
+      "kind": "repair two malformed mathematical operators in the theorem statement",
+      "provenance": "edition-correction"
+    },
+    {
+      "id": "CRING-R04-undefined-annihilator-notation",
+      "file": "03-associated-primary.tex",
+      "kind": "replace authorial placeholder with the missing definition",
+      "provenance": "edition-original"
+    },
+    {
+      "id": "CRING-R05-irreducibility-definition",
+      "file": "03-associated-primary.tex",
+      "kind": "replace authorial placeholder with the required definition",
+      "provenance": "edition-original"
+    },
+    {
+      "id": "CRING-R06-embedded-prime-example",
+      "file": "03-associated-primary.tex",
+      "kind": "replace authorial placeholder with a checked example",
+      "provenance": "edition-original"
+    },
+    {
+      "id": "CRING-R07-constructibility-placeholder",
+      "file": "04-lying-over-going-up.tex",
+      "kind": "replace authorial placeholder with an explicit theorem/scope note",
+      "provenance": "edition-original"
+    },
+    {
+      "id": "CRING-R08-two-empty-dvr-references",
+      "file": "06-krull-dimension.tex",
+      "kind": "replace two empty cross-references with an explicit scope bridge",
+      "provenance": "edition-original"
+    }
+  ],
+  "repair_count": 9,
+  "outputs": [
+    {
+      "file": "01-nakayama.tex",
+      "records": 209,
+      "bytes": 9054,
+      "sha256": "690bd9a088d4a2dcb5f0b52ac1940568cc0765a47a82975a77247af9c51b2978"
+    },
+    {
+      "file": "02-spec-zariski.tex",
+      "records": 903,
+      "bytes": 31316,
+      "sha256": "96e17c84fa1176f0f3a7cfb5ea7307b7ca707b86f8dd7dc226b04ff615855e3b"
+    },
+    {
+      "file": "03-associated-primary.tex",
+      "records": 881,
+      "bytes": 38770,
+      "sha256": "2f13f8b3aeb1ddbf922f7a985de796975d74a025a468124c361f1b9fa805aeaa"
+    },
+    {
+      "file": "04-lying-over-going-up.tex",
+      "records": 238,
+      "bytes": 11335,
+      "sha256": "a3c2ff0828374c11aecabe1c6d2566039bf375ec2071f7f22c26834214b2677b"
+    },
+    {
+      "file": "05-nullstellensatz-normalization.tex",
+      "records": 330,
+      "bytes": 16325,
+      "sha256": "16c406d87354f7ff451313858dbb25b83a39d7d103788996295a607ecfe4752c"
+    },
+    {
+      "file": "06-krull-dimension.tex",
+      "records": 1028,
+      "bytes": 46085,
+      "sha256": "4d986cca14cf2f9396b8b340d660b4acae5fa106468cb4cfc4f5cdd936c4eef4"
+    }
+  ],
+  "empty_reference_count": 0,
+  "authorial_placeholder_count": 0,
+  "result": "PASS_REPAIRED_ENGLISH_SOURCE_READY_FOR_TRANSLATION"
+}

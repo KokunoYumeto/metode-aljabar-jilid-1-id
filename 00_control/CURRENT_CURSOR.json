@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated": "2026-08-28",
+  "updated": "2026-08-29",
   "task_id": "01a02163-e2bf-7a93-950a-b9ab84d7e8b9",
   "role": "O013",
   "course": "D70 Graduate Algebra",
@@ -637,17 +637,19 @@
     "backend_units": [45, 46, 47, 48],
     "csv_projections": 24
   },
-  "next_action": "Commit and push the passing complete-Li boundary with path-limited Git, anonymously read it back, publish reader-first version 1.0.0 in existing Zenodo concept 10.5281/zenodo.22059759, read back all public bytes, then continue Duncan and CRing production.",
+  "complete_o013_local_boundary": {
+    "receipt": "qa/O013_COMPLETE_LOCAL_BOUNDARY_20260829.json",
+    "reader_pages": 716,
+    "translation_backlog_records": 0,
+    "components": ["li-complete", "duncan-complete", "cring-six-selected-complete", "original-route-mastery-complete"],
+    "state": "translation_build_backend_visual_pass_publication_pending"
+  },
+  "next_action": "Path-limited GitHub commit/push and anonymous changed-blob readback, then reader-first nonduplicative aggregate Zenodo publication and anonymous full-byte readback. Do not rerun passing component QA.",
   "next_cursor": {
-    "immediate_action": "Complete-Li GitHub push/readback and Zenodo 1.0.0 publication/readback; do not rerun passing Li QA.",
-    "next_admission_unit": "complete-duncan-seven-root-component",
-    "next_admission_source": "seven pinned Duncan TeX roots after final fluent id-ID editing",
-    "chapter7_candidate_sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
-    "chapter8_candidate_sha256": "97a08d3da1ee715d97e209cb93ebc1370fa4ef24ba071d312b17f4f7902aeb31",
-    "chapter9_candidate_sha256": "cb753a347ac047dff772f08916cca940fab617440e2ea50c602e8ea4e29f762d",
-    "chapter10_authority_sha256": "dae0d60d2319f62112ea1361bc567c4b0758a805e14aea06be4c71dd10b26489",
-    "parallel_translation": "complete Duncan seven-root component and all six repaired CRing selections are in final prose editing",
-    "cursor_after_li": "complete Duncan, six selected repaired CRing spans, then separate connective/mastery layer",
+    "immediate_action": "Publish the complete four-component boundary once and prove public-byte identity.",
+    "next_admission_unit": null,
+    "translation_backlog": 0,
+    "publication_gate": "github_then_zenodo_then_anonymous_readback",
     "terminal_scope": "all Li Volume 1, complete Duncan, six selected repaired CRing spans, and separate connective/mastery layer"
   }
 }

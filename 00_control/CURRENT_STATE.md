@@ -1,27 +1,25 @@
 # Current state
 
 Updated: 2026-08-29
-Status: active. The complete Wen-Wei Li Volume 1 Bahasa Indonesia source is now
-canonically admitted and public: prelude plus Chapters 1–10, 13,599 records / 1,459,865
-bytes, with all protected mathematics and identifiers preserved, 161 active
-top-level exercises, and 51 hints. The complete 521-page reader is 2,875,853
-bytes, SHA-256
-`c2994530e3da1711d44f8c36315c40874e87f1968d1a81c1432105de2251c2ee`;
-its deterministic multi-pass build has no fatal or unresolved diagnostics.
-All 521 pages passed one bounded overview inspection and 24 boundary/severe-
-diagnostic pages passed a 110-dpi targeted inspection, with no visible clipping,
-overlap, malformed page, or accidental blank page. Final modular backends
-Units 045–048 and their 24 CSV projections pass schema, semantic, binding, and
-deterministic regeneration checks. GitHub commit
-`b5dda2218c5fbd2b7e7fae7e05fdbbe88fdab10e` passed anonymous readback for 58
-paths / 8,134,778 bytes. Zenodo `1.0.0` is public at DOI
-`10.5281/zenodo.22151447` in concept `10.5281/zenodo.22059759`; all five files /
-70,149,331 bytes passed anonymous full-byte readback. All six repaired CRing
-selections and all seven Duncan roots are translated. The immediate action is
-one Duncan aggregate build/backend/publication boundary, followed by CRing
-integration and the separate original layer. The terminal objective remains the complete Li + Duncan + six CRing
-selections + separately provenanced connective/mastery corpus; this Li boundary
-is not a terminal completion claim.
+Status: active, publication only. The entire four-component O013 corpus is
+translated/authored, promoted, reproducibly built, backend-indexed, and visually
+admitted: complete Li (521 pages), all seven licensed Duncan roots (114 pages),
+the six exact repaired CRing selections (74 pages), and the separately
+provenanced original route/mastery layer (7 pages), totaling 716 reader pages.
+There is no remaining translation backlog. Li is already public at GitHub commit
+`b5dda2218c5fbd2b7e7fae7e05fdbbe88fdab10e` and Zenodo DOI
+`10.5281/zenodo.22151447`, with anonymous byte readback passed. Duncan's final
+reader SHA-256 is
+`6779d6467463fde4ef0b4fae147dc63533dff0919eda684120d409f1f5f07d12`;
+CRing's is
+`4596fd6a84f829e1e9c14cb87468226d6ef49c653d41886af5fab9f2bd96b5db`;
+the original route reader's is
+`31af67adf897519a1fef0ed53757c2a3d9d12b5ccc3bdd4cb74e9ce01dd27a18`.
+Both component backends regenerate byte-identically and all final pages passed
+one aggregate visual review. Exact evidence is in
+`qa/O013_COMPLETE_LOCAL_BOUNDARY_20260829.json`. Immediate action: one
+path-limited GitHub push/readback and one reader-first aggregate Zenodo
+publication/readback. Do not rerun passing component QA.
 
 ## Completed
 

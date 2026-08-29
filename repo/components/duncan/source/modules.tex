@@ -1,0 +1,1894 @@
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsthm}
+
+% gaya teorema (semuanya memakai pencacah yang sama)
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{proposition}[theorem]{Proposisi}
+\newtheorem{corollary}[theorem]{Korolari}
+\newtheorem{conjecture}[theorem]{Konjektur}
+\newtheorem{exercise}[theorem]{Latihan}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definisi}
+\newtheorem{example}[theorem]{Contoh}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Catatan}
+
+% beberapa pengaturan penomoran
+\numberwithin{equation}{section}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\setlength{\headheight}{15.2pt}
+\renewcommand{\footrulewidth}{0.4pt}% nilai bakunya 0pt
+\setlength{\footskip}{30pt}
+\pagestyle{fancy}
+
+\makeatletter
+\let\ps@plain\ps@fancy 
+\makeatother
+
+\lhead{MATH 742}
+\chead{Modul dan Teori Wedderburn}
+\rhead{Musim Semi 2023}
+\lfoot{Terakhir Direvisi: \today}
+\cfoot{}
+\rfoot{\thepage\ dari \pageref{LastPage} }
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+\title{Modul dan Teori Wedderburn}
+\author{Alexander Duncan}
+
+\maketitle
+
+Teori representasi modern biasanya dirumuskan dalam bahasa
+gelanggang/aljabar nonkomutatif dan modul-modulnya.
+Sampai sekarang saya menghindari bahasa ini agar dapat berfokus pada dasar-dasarnya.
+Namun, sudut pandang teori modul jauh lebih serbaguna --- bahkan
+untuk grup hingga atas $\mathbb{C}$.
+Sudut pandang ini jauh lebih mendesak diperlukan ketika membahas teori
+representasi atas medan-medan lain. 
+
+Objek utamanya adalah \emph{gelanggang grup} $\mathbb{Z}G$
+atau \emph{aljabar grup} $kG$. Kita akan melihat bahwa sebagian besar bahasa
+teori representasi grup hingga dapat dinyatakan secara efisien
+sebagai kasus khusus teori modul atas $kG$.
+Kemudian kita akan memakai bahasa tersebut untuk melangkah lebih jauh.
+
+Karena teori modul merupakan bagian dari rangkaian ujian kualifikasi aljabar baku,
+saya akan sering menghilangkan bukti, bahkan banyak definisi, dengan
+asumsi bahwa pembaca sudah pernah menjumpainya.
+Namun, mata kuliah persiapan ujian kualifikasi biasanya menekankan gelanggang
+\emph{komutatif}, sehingga beberapa pengingat tetap diperlukan.
+Saya menyarankan pembaca mencari buku teks aljabar tingkat pascasarjana yang
+membahas modul dengan baik, seperti \cite[\S{10}]{DF} atau \cite[\S{III}]{Lang},
+untuk dijadikan rujukan jika ada hal yang belum dikenal.
+
+“Dasar-dasar” teori representasi berbasis modul terdapat dalam
+hampir setiap teks yang telah saya rujuk, sering kali pada tahap yang sangat awal; 
+lihat \cite{DF}, \cite{Etingof}, \cite{FultonHarris}, \cite{Lang}, dan sebagainya.
+Buku Serre \cite{Serre} mula-mula tidak memakai sudut pandang teori
+modul, tetapi kemudian mendadak mengubah haluan pada bab 6 dan
+mengasumsikan pembaca sudah mengenal teori Wedderburn (yang dikembangkan di bawah).
+Saya juga akan banyak mengambil materi dari \cite[\S{12,13}]{AlperinBell},
+\cite{AlperinLRT}, dan \cite{CurtisReiner}.
+
+\subsection*{Konvensi}
+
+Sepanjang pembahasan, kita mengasumsikan semua gelanggang dan aljabar mempunyai satuan
+(memiliki unsur identitas), tetapi \emph{tidak harus} komutatif.
+Kita mencadangkan $k$ untuk gelanggang komutatif, yang biasanya berupa
+medan atau $\mathbb{Z}$.
+Ketika gelanggang $R$ komutatif, kita biasanya mengabaikan
+pembedaan antara modul kiri dan kanan atas $R$, lalu
+menyebut keduanya modul atas $R$.
+
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+
+\section{Pemanasan: Aljabar Matriks atas Medan}
+
+Dalam bagian ini, kita meninjau kasus khusus aljabar nonkomutatif
+atas $k$, yaitu $\operatorname{M}_n(k)$, dengan $k$ suatu medan.
+Banyak kekhasan gelanggang nonkomutatif sudah tampak bahkan dalam
+konteks ini.
+
+\begin{example}
+Ruang $k^n$ dari vektor-vektor kolom merupakan modul kiri atas $\operatorname{M}_n(k)$.
+Ruang $(k^n)^T$ dari vektor-vektor baris merupakan modul kanan atas $\operatorname{M}_n(k)$.
+Secara lebih umum, untuk bilangan bulat $m$, ruang matriks berukuran $n \times m$
+$\operatorname{M}_{n \times m}(k)$ merupakan modul kiri atas $\operatorname{M}_n(k)$,
+dan ruang matriks berukuran $m \times n$
+$\operatorname{M}_{m \times n}(k)$ merupakan modul kanan atas $\operatorname{M}_n(k)$.
+\end{example}
+
+Sebentar lagi kita akan melihat bahwa contoh di atas telah
+menampilkan semua kelas isomorfisme modul yang terbangkitkan hingga,
+baik kiri maupun kanan, atas $\operatorname{M}_{m \times n}(k)$.
+
+\begin{definition}
+Misalkan $R$ suatu gelanggang dan $M$ suatu modul (kiri atau kanan) atas $R$.
+Kita menyebut $M$ \emph{sederhana} jika $M\ne 0$ tidak mempunyai submodul selain
+$0$ dan $M$ sendiri.
+Kita menyebut $M$ \emph{tak terdekomposisi} jika $M$ tidak dapat ditulis sebagai jumlah langsung
+submodul-submodul tak nol.
+Kita menyebut $M$ \emph{semisederhana} jika $M$ merupakan jumlah langsung
+submodul-submodul sederhana.
+\end{definition}
+
+Dari contoh di atas, kita melihat bahwa $k^n$ bersifat sederhana sekaligus
+tak terdekomposisi sebagai modul kiri atas $\operatorname{M}_n(k)$.
+Kita mempunyai dekomposisi
+\[
+\operatorname{M}_{n \times m}(k) \cong (k^n)^{\oplus m}
+\]
+sebagai modul kiri atas $\operatorname{M}_n(k)$,
+sehingga $\operatorname{M}_{n \times m}(k)$ tidak sederhana maupun
+tak terdekomposisi; namun, modul itu semisederhana.
+
+\subsection{Ideal}
+
+Diberikan subruang $V \subseteq k^n$, misalkan
+$I$ adalah subhimpunan $\operatorname{M}_n(k)$
+yang setiap barisnya diambil dari $V$,
+dan misalkan $J$ adalah subhimpunan $\operatorname{M}_n(k)$
+yang setiap kolomnya diambil dari $V$.
+Perhatikan bahwa perkalian kiri pada $I$ memetakan setiap baris ke suatu
+kombinasi linear unsur-unsur $V$, sehingga kita menyimpulkan bahwa $I$ merupakan
+ideal kiri. Serupa dengan itu, $J$ merupakan ideal kanan.
+
+Prosedur ini dapat dibalik.
+Diberikan ideal kiri $I$ dari $\operatorname{M}_n(k)$,
+kita dapat merekonstruksi subruang $V$
+sebagai himpunan baris yang muncul di antara unsur-unsur $I$.
+Demikian pula untuk ideal kanan. Kita menyimpulkan:
+
+\begin{proposition}
+Ideal kiri (berturut-turut, ideal kanan) dari $\operatorname{M}_n(k)$
+berkorespondensi bijektif secara kanonik dengan subruang-subruang vektor dari $k^n$.
+\end{proposition}
+
+\begin{example}
+Menurut saya, korespondensi-korespondensi tersebut entah bagaimana lebih mudah dipahami
+melalui contoh konkret. Misalkan $V$ suatu subruang,
+$I$ ideal kiri yang bersesuaian, dan $J$ ideal kanan yang bersesuaian.
+Nilai $a,b,c,d,e,f$ menyatakan unsur-unsur sebarang dari $k$.
+Dalam $\operatorname{M}_2(k)$, kita mempunyai contoh:
+\[
+V = \operatorname{span}_k \left\{
+\begin{pmatrix} 1 \\ 0 \end{pmatrix} \right\}
+\quad
+I = \left\{ \begin{pmatrix} a & 0 \\ b & 0 \end{pmatrix} \right\} 
+\quad
+J = \left\{ \begin{pmatrix} a & b \\ 0 & 0 \end{pmatrix} \right\}
+\]
+Dalam $\operatorname{M}_3(k)$, kita mempunyai
+\[
+V = \operatorname{span}_k \left\{
+\begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix},
+\begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix} \right\}
+\quad
+J = \left\{ \begin{pmatrix}
+a & b & c \\
+a+d & b+e & c+f \\
+d & e & f
+\end{pmatrix} \right\}
+\]
+dan $I$ hanyalah transposnya.
+\end{example}
+
+\begin{remark}
+Bagi pembaca yang mengenal sedikit geometri aljabar,
+himpunan subruang berdimensi tetap $r$ dalam $k^n$ adalah
+\emph{Grassmannian} $\operatorname{Gr}(n,r)$.
+Khususnya, himpunan subruang berdimensi $1$ adalah ruang projektif
+$\mathbb{P}^{n-1}$.
+Korespondensi di atas memungkinkan kita mendefinisikan Grassmannian dan
+ruang projektif sebagai himpunan ideal kiri dari $\operatorname{M}_n(k)$.
+Pergeseran sudut pandang ini berguna ketika kita mendefinisikan objek yang
+lebih umum, seperti varietas Severi--Brauer, ketika aljabarnya bukan aljabar
+matriks.
+\end{remark}
+
+Dengan memilih basis $v_1,\ldots v_m$ bagi subruang $V$, perhatikan matriks
+\[
+M_V := \begin{pmatrix}
+\vdots & \cdots & \vdots & \vdots & \cdots & \vdots\\
+v_1 & \cdots & v_n & 0 & \cdots & 0\\
+\vdots & \cdots & \vdots & \vdots & \cdots & \vdots\\
+\end{pmatrix} 
+\]
+yang $m$ kolom pertamanya merupakan vektor-vektor basis $v_1,\ldots,v_m$ dan
+kolom sisanya bernilai $0$.
+Kita mengamati bahwa ideal kanan $J$ yang bersesuaian dibangkitkan oleh $M_V$.
+Serupa dengan itu, $I$ dibangkitkan oleh $M_V^T$.
+
+Ingat bahwa suatu ideal disebut \emph{utama}
+jika dibangkitkan oleh satu unsur.
+Dengan demikian, kita memperoleh:
+
+\begin{corollary}
+Setiap ideal kiri (berturut-turut, ideal kanan) dari $\operatorname{M}_n(k)$ bersifat utama.
+\end{corollary}
+
+\begin{definition}
+Kita menyebut gelanggang $R$ \emph{sederhana} jika dua-sisi idealnya hanya $0$ dan
+$R$ sendiri.
+Kita menyebut gelanggang $R$ \emph{semisederhana} jika merupakan hasil kali
+gelanggang-gelanggang sederhana.
+\end{definition}
+
+Dari deskripsi eksplisit ideal kiri dan kanan
+dari $\operatorname{M}_n(k)$, kita melihat bahwa:
+
+\begin{proposition}
+$\operatorname{M}_n(k)$ merupakan gelanggang sederhana.
+\end{proposition}
+
+Berhati-hatilah terhadap kemungkinan ketaksaan pada kata
+“sederhana”.
+Ingat bahwa $\operatorname{M}_n(k)$ juga dapat dipandang sebagai modul kiri
+(atau kanan) atas dirinya sendiri.
+Sebagai modul kiri,
+$\operatorname{M}_n(k)$ biasanya \emph{tidak} sederhana karena mempunyai banyak
+submodul (ideal kiri).
+
+Kelak kita akan melihat bahwa aljabar berdimensi hingga semisederhana sebagai
+gelanggang jika dan hanya jika semisederhana sebagai modul (kiri atau kanan),
+tetapi hal ini tidak jelas: suku-suku sederhana dalam kedua
+konteks tersebut tidak sama!
+
+\subsection{Idempoten}
+
+\begin{definition}
+Misalkan $R$ suatu gelanggang. Unsur $e$ disebut \emph{idempoten} jika $e^2=e$.
+Dua idempoten $e_1,e_2$ disebut \emph{ortogonal} jika $e_1e_2=e_2e_1=0$.
+Sebuah \emph{idempoten primitif} adalah idempoten tak nol
+yang bukan jumlah dua idempoten ortogonal tak nol.
+\end{definition}
+
+Idempoten-idempoten $\operatorname{M}_n(k)$ tepat merupakan (matriks yang
+merepresentasikan) proyeksi $\pi : k^n \to k^n$.
+Diberikan idempoten $e \in \operatorname{M}_n(k)$ dengan proyeksi
+yang bersesuaian $\pi_e$, kita memperoleh dekomposisi jumlah langsung
+\[
+k^n = \ker(\pi_e) \oplus \operatorname{im}(\pi_e)
+\ .
+\]
+Perhatikan bahwa idempoten $1-e$ ortogonal terhadap $e$ dan bahwa
+\[
+\ker(\pi_{1-e}) = \operatorname{im}(\pi_{e})
+\textrm{ dan }
+\operatorname{im}(\pi_{1-e}) = \ker(\pi_e).
+\]
+Jadi, kita mempunyai dekomposisi ruang vektor
+\[
+k^n = e(k^n) + (1-e)(k^n)
+\]
+dan kita ingatkan bahwa $e(k^n)$ serta $(1-e)(k^n)$ \emph{bukan}
+modul atas $\operatorname{M}_n(k)$.
+
+Secara lebih umum, himpunan idempoten ortogonal $e_1,\ldots,e_r$
+sedemikian sehingga $1=e_1+\ldots+e_r$ memberikan dekomposisi
+\[
+k^n = V_1 \oplus V_2 \oplus \cdots \oplus V_r
+\]
+dengan $V_i = \operatorname{im}(\pi_i) = e_i(k^n)$ untuk $1 \le i \le r$.
+
+Kita melihat bahwa idempoten primitif dari $\operatorname{M}_n(k)$
+bersesuaian dengan proyeksi berperingkat $1$.
+Selain itu, suatu himpunan maksimal $e_1,\ldots,e_r$ dari idempoten
+primitif ortogonal sama artinya dengan pilihan basis bagi $k^n$.
+
+\begin{example}
+Perhatikan aljabar matriks $\operatorname{M}_2(\mathbb{C})$
+dan tetapkan
+\[
+a = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix},
+b = \begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix},
+c = \begin{pmatrix} \frac{1}{2} & \frac{1}{2} \\ \frac{1}{2} & \frac{1}{2} \end{pmatrix},
+\textrm{ dan }
+d = \begin{pmatrix} \frac{1}{2} & -\frac{1}{2} \\ -\frac{1}{2} & \frac{1}{2} \end{pmatrix}.
+\]
+Masing-masing $a,b,c,d$ merupakan idempoten primitif.
+Kita melihat bahwa $a,b$ ortogonal dan $c,d$ ortogonal.
+Namun, $a,c$ tidak ortogonal.
+\end{example}
+
+Idempoten merupakan bahasa yang praktis untuk memahami
+dekomposisi ideal.
+Jika $V$ adalah subruang yang bersesuaian dengan ideal kiri $I$,
+maka $I = \operatorname{M}_n(k)e$, dengan $e$ idempoten yang
+bersesuaian dengan proyeksi $k^n \to V$.
+
+Secara lebih umum, jika $e_1,\ldots,e_r$ adalah himpunan idempoten
+ortogonal yang memenuhi $e_1+\cdots+e_r=1$, maka
+\[
+\operatorname{M}_n(k) = \operatorname{M}_n(k)e_1
+\oplus \cdots \oplus \operatorname{M}_n(k)e_r
+\]
+sebagai modul kiri atas $\operatorname{M}_n(k)$, dan
+\[
+\operatorname{M}_n(k) = e_1\operatorname{M}_n(k)
+\oplus \cdots \oplus e_r\operatorname{M}_n(k)
+\]
+sebagai modul kanan atas $\operatorname{M}_n(k)$.
+Selain itu, kita mempunyai dekomposisi
+\[
+\operatorname{M}_n(k) = \bigoplus_{1\le i,j \le r}
+e_i\operatorname{M}_n(k)e_j
+\]
+sebagai ruang vektor atas $k$, yang dapat dipandang sebagai sejenis dekomposisi
+matriks blok.
+
+\begin{definition}
+Misalkan $R$ suatu gelanggang.
+\emph{Pusat} dari $R$ adalah subhimpunan
+\[
+Z(R) := \{ z \in R \mid rz=zr \textrm{ untuk semua } r \in R \},
+\]
+yang merupakan subgelanggang komutatif dari $R$.
+\end{definition}
+
+Perhatikan bahwa $Z(\operatorname{M}_n(k)) \cong k$ hanyalah himpunan matriks
+skalar.
+
+\begin{definition}
+Idempoten $e$ disebut \emph{sentral} jika $e$ termuat dalam pusat
+$Z(R)$ dari $R$.
+Sebuah \emph{idempoten sentral primitif} adalah idempoten sentral tak nol
+yang bukan jumlah dua idempoten sentral ortogonal tak nol.
+\end{definition}
+
+Peringatan: idempoten sentral primitif selalu sentral,
+tetapi belum tentu primitif!
+Kadang-kadang istilah “primitif secara sentral” dipakai
+sebagai ganti “sentral primitif”, yang terasa lebih atau kurang membingungkan,
+bergantung pada bagaimana suasana hati Anda pagi itu.
+
+Aljabar matriks $\operatorname{M}_n(k)$ mempunyai tepat dua idempoten
+sentral: matriks nol dan matriks identitas.
+Hanya matriks identitas yang merupakan idempoten sentral primitif.
+(Identitas \emph{bukan} idempoten primitif kecuali $n=1$.)
+
+Idempoten sentral tidak begitu menarik bagi gelanggang matriks, tetapi
+menarik bagi hasil kali gelanggang.
+
+\begin{exercise}
+Misalkan $R$ suatu gelanggang dan $e$ suatu idempoten sentral.
+Maka $eRe$ merupakan gelanggang terhadap penjumlahan dan perkalian yang sama,
+dengan $e$ sebagai identitas.
+(Perhatikan bahwa $eRe$ menjadi subgelanggang hanya ketika $eRe$ memuat
+identitas, yang hanya terjadi jika $e=1$.)
+\end{exercise}
+
+\begin{exercise}
+Misalkan $R$ suatu gelanggang. Sebuah dekomposisi
+\[
+R= R_1 \times \cdots \times R_n
+\]
+dengan $R_1,\ldots,R_n$ gelanggang-gelanggang berkorespondensi dengan himpunan
+idempoten sentral ortogonal $e_1,\ldots,e_n$ sedemikian
+sehingga $R_i \cong e_iRe_i$ untuk setiap $1 \le i \le n$.
+\end{exercise}
+
+\begin{exercise}
+Misalkan $R$ suatu gelanggang dan $e$ suatu idempoten sentral primitif.
+Maka $eRe$ tidak dapat ditulis sebagai hasil kali dua gelanggang tak nol.
+\end{exercise}
+
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+
+
+\section{Gelanggang Grup}
+
+\begin{definition}
+Misalkan $G$ suatu grup hingga.
+\emph{Gelanggang grup} $\mathbb{Z}G$ adalah grup abelian bebas
+pada $G$ dengan perkalian yang diberikan oleh
+\[
+\left( \sum_{g \in G} a_g g \right) \cdot
+\left( \sum_{g \in G} b_g g \right)
+:= \sum_{g \in G} \sum_{h \in G} a_gb_h gh
+\]
+untuk bilangan bulat $\{a_g\}_{g\in G}$ dan $\{b_g\}_{g\in G}$.
+Secara lebih umum, diberikan gelanggang komutatif $k$,
+\emph{aljabar grup} $kG$ adalah modul bebas atas $k$ pada $G$
+dengan perkalian seperti di atas.
+\end{definition}
+
+Langsung dapat diperiksa bahwa $\mathbb{Z}G$ merupakan gelanggang nonkomutatif dengan
+identitas $1$ yang bersesuaian dengan unsur basis dari identitas dalam $G$.
+Serupa dengan itu, $kG$ merupakan $k$-aljabar dengan identitas $1$.
+Karena $1 \in G$ bersesuaian dengan $1 \in \mathbb{Z}G$,
+mengidentifikasi basis $\mathbb{Z}G$ dengan unsur-unsur
+$G$ pada umumnya tidak menimbulkan masalah jika $G$ ditulis secara multiplikatif.
+
+\begin{example}
+Misalkan $G=D_6=\langle s,r \mid s^2, r^3, (sr)^2 \rangle$
+adalah grup dihedral berorde $6$.
+Kita mempunyai perhitungan berikut dalam $\mathbb{Z}G$:
+\begin{align*}
+&(3 + 2s + 5r)(r-sr + 5r^2)\\
+=& 3r -3sr +15r^2 + 2sr -2r+10sr^2 +5r^2 -5s+25\\
+=& 25 -5s + r + 20r^2 -sr +10sr^2
+\end{align*}
+\end{example}
+
+\begin{example}
+Misalkan $G = \langle r \mid r^n \rangle$ adalah grup siklik berorde $n$.
+Jadi, $G$ mempunyai basis $\{1,r,r^2,\ldots, r^{n-1} \}$
+dengan $r^i\cdot r^j=r^{i+j}$ tunduk pada relasi $r^n=1$.
+Dengan kata lain, $\mathbb{Z}G$ isomorfik dengan gelanggang
+$\mathbb{Z}[x]/(x^n-1)$.
+\end{example}
+
+Perhatikan bahwa memakai notasi aditif $\mathbb{Z}/n\mathbb{Z}$
+untuk grup siklik berorde $n$ dapat menimbulkan ketaksaan
+yang berbahaya dalam contoh di atas.
+Karena alasan ini, kita biasanya memakai “notasi eksponensial”
+untuk gelanggang grup dari grup aditif.
+Jika $a+b=c$ dalam suatu grup aditif, maka
+kita tulis $x^ax^b=x^{a+b}=x^c$ dalam gelanggang grupnya.
+
+\begin{exercise}
+Buktikan bahwa $\mathbb{Z}G$ komutatif jika dan hanya jika $G$ abelian.
+\end{exercise}
+
+Berguna untuk menuliskan koefisien hasil kali sebagai rumus dalam
+faktor-faktornya. Secara khusus, jika
+\[
+\left( \sum_{g \in G} a_g g \right) \cdot
+\left( \sum_{g \in G} b_g g \right)
+= \sum_{g \in G} c_g g
+\]
+maka
+\[
+c_g = \sum_{h \in G} a_hb_{h^{-1}g}
+\]
+untuk setiap $g \in G$.
+
+Karena $G$ hingga, deskripsi ekuivalen bagi $\mathbb{Z}G$ adalah himpunan
+$\operatorname{Hom}_{\mathrm{Set}}(G,\mathbb{Z})$
+fungsi-fungsi dari $G$ ke $\mathbb{Z}$.
+Namun, struktur gelanggangnya \emph{bukan} struktur yang “sudah jelas”.
+Struktur aditifnya memang berupa penjumlahan titik demi titik,
+tetapi kita memakai \emph{hasil kali konvolusi}
+dari dua fungsi $f_1,f_2$ yang didefinisikan melalui
+\[
+(f_1 \ast f_2)(g) = \sum_{ij=g} f_1(i)f_2(j)
+\]
+untuk $g \in G$, dengan indeks penjumlahan $i,j$
+bervariasi atas semua pasangan unsur $G$ sedemikian sehingga $ij=g$.
+Isomorfisme dengan $\mathbb{Z}G$ diperoleh dengan mengidentifikasi setiap unsur basis
+$g \in \mathbb{Z}G$ dengan fungsi karakteristik $\chi_g$
+dalam $\operatorname{Hom}_{\mathrm{Set}}(G,\mathbb{Z})$
+yang memenuhi $\chi_g(h) = \delta_{gh}$ untuk semua $h \in G$.
+
+\subsection{Modul dari Gelanggang Grup}
+
+Kaitan gelanggang grup dengan teori grup tampak dari
+proposisi berikut:
+
+\begin{proposition} \label{prop:equivalence}
+Misalkan $G$ grup hingga dan $k$ medan.
+Struktur representasi $G$ atas medan $k$
+ekuivalen dengan struktur modul kiri atas $kG$.
+Representasi berdimensi hingga bersesuaian dengan
+modul yang terbangkitkan hingga.
+Selain itu, transformasi linear yang $G$-ekuivarian tepat merupakan
+homomorfisme modul atas $kG$.
+\end{proposition}
+
+\begin{proof}
+Misalkan $M$ suatu modul kiri atas $kG$.
+Khususnya, $M$ merupakan ruang vektor atas $k$.
+Kita mengonstruksi representasi linear $\rho : G \to \operatorname{GL}(M)$
+melalui $\rho_g(m)=gm$ untuk $g \in G$ dan $m\in M$.
+Sebaliknya, diberikan representasi linear $\sigma : G \to
+\operatorname{GL}(V)$, kita lengkapi $V$ dengan struktur modul kiri atas $kG$ melalui
+\[
+\left( \sum_{g \in G} a_g g \right) v := \sum_{g \in G} a_g \sigma_g(v)
+\]
+untuk $\{a_g\}$ dari $k$ dan $v \in V$.
+Kedua operasi ini saling invers.
+
+Jika $M$ merupakan modul kiri atas $kG$ yang terbangkitkan hingga,
+misalnya oleh $\{s_1,\ldots,s_n\}$, maka $M$ sebagai ruang vektor atas $k$
+direntang oleh $\{ gs_i \mid g \in G, 1 \le i \le n \}$.
+Jadi, $\rho$ merupakan representasi berdimensi hingga.
+Sebaliknya, jika $V$ berdimensi hingga, maka basis bagi $V$
+sebagai ruang vektor atas $k$ terlebih lagi merupakan himpunan pembangkit bagi $V$ sebagai
+modul atas $kG$.
+
+Terakhir, kita mengamati bahwa transformasi linear yang $G$-ekuivarian
+$f : (V,\rho) \to (W,\sigma)$ antara representasi tepat merupakan homomorfisme modul atas $kG$
+menurut korespondensi di atas.
+Memang,
+\begin{align*}
+&f\left( \left( \sum_{g\in G} c_g g \right) v \right)\\
+=& f\left( \sum_{g\in G} c_g \rho_g(v) \right)\\
+=& \sum_{g\in G} c_g f\left( \rho_g(v) \right)\\
+=& \sum_{g\in G} c_g \sigma_g\left(f(v)\right)\\
+=& \left(\sum_{g\in G} c_g g\right) f(v)
+\end{align*}
+dengan menggunakan fakta bahwa $f$ linear dan $G$-ekuivarian.
+\end{proof}
+
+Kita langsung melihat bahwa subrepresentasi bersesuaian dengan submodul,
+representasi hasil bagi bersesuaian dengan modul hasil bagi, dan jumlah langsung
+bersesuaian dengan jumlah langsung.
+Namun, meskipun $V \otimes_k W$ dan $\operatorname{Hom}_k(V,W)$ mempunyai
+struktur modul atas $kG$ yang terinduksi, keduanya \emph{tidak} sama dengan
+konstruksi teori modul $V \otimes_{kG} W$
+dan $\operatorname{Hom}_{kG}(V,W)$ yang dibahas di bawah.
+Selain itu, “modul trivial” adalah representasi nol,
+\emph{bukan} “representasi trivial”.
+
+\begin{example}
+Setiap gelanggang sekaligus merupakan modul kiri dan kanan atas dirinya sendiri.
+Aljabar grup $kG$ yang dipandang sebagai modul kiri atas $kG$ bersesuaian dengan
+representasi reguler $G$.
+\end{example}
+
+Kehalusan penting lainnya di atas ialah bahwa dimensi suatu
+representasi secara umum \emph{tidak} sama dengan banyak minimal
+pembangkit modul atas $kG$ yang bersesuaian.
+
+Modul kiri atas $kG$ tak terdekomposisi jika modul itu tak terdekomposisi sebagai
+representasi.
+Modul kiri atas $kG$ sederhana jika dan hanya jika tak tereduksi
+sebagai representasi $G$.
+Khususnya, representasi tak tereduksi dapat
+dibangkitkan oleh satu unsur sebagai modul kiri atas $kG$ (meskipun kebalikannya mungkin
+tidak benar).
+
+\begin{theorem}[Teorema Maschke, dirumuskan kembali]
+Jika $G$ hingga dengan orde yang relatif prima terhadap karakteristik medan $k$,
+maka setiap modul kiri atas $kG$ yang terbangkitkan hingga bersifat semisederhana.
+\end{theorem}
+
+\subsection{Pusat Gelanggang Grup}
+
+Pusat gelanggang grup sangat penting.
+Perhatikan bahwa kita juga memiliki pengertian pusat $Z(G)$ dari grup $G$.
+Memang, gelanggang grup dari pusat suatu grup termuat dalam
+pusat gelanggang grup; dengan kata lain,
+\[
+kZ(G) \subseteq Z(kG).
+\]
+Namun, kesamaan hanya berlaku ketika $G=Z(G)$, sebagai akibat dari
+hasil berikut.
+
+\begin{proposition}
+Pusat $Z(kG)$ dari aljabar grup $kG$ mempunyai basis
+\[
+\left\{
+\sum_{g \in K} g\ \middle|\ K \in \mathcal{K}
+\right\}
+\]
+dengan $\mathcal{K}$ himpunan kelas-kelas konjugasi dari $G$.
+\end{proposition}
+
+\begin{proof}
+Misalkan $K$ suatu kelas konjugasi dalam $\mathcal{K}$.
+Perhatikan bahwa $g \in K$ mengakibatkan
+$hgh^{-1} \in K$.
+Jadi, kita mengamati bahwa
+\[
+h\left(\sum_{g \in K} g\right)
+=\left(\sum_{g \in K} g\right) h
+\]
+untuk semua $h \in H$. 
+Sebaliknya, setiap unsur $x$ dari aljabar grup
+yang memenuhi $hx=xh$ harus mempunyai koefisien yang sama
+pada unsur-unsur basis dalam kelas konjugasi yang sama.
+\end{proof}
+
+\begin{example}
+Misalkan $G=D_6=\langle s,r \mid s^2, r^3, (sr)^2 \rangle$
+adalah grup dihedral berorde $6$.
+Kita memperoleh bahwa
+$Z(\mathbb{Z}G)$ mempunyai basis
+\[
+\{ 1, a = s+sr+sr^2, b = r+r^2 \}.
+\]
+Tabel perkaliannya ditentukan oleh beberapa perhitungan:
+\begin{align*}
+a^2 &= 3+3b\\
+ab=ba &= 2a\\
+b^2 &=2+b.
+\end{align*}
+Jadi, struktur pusatnya agak sukar dilihat dalam basis ini.
+\end{example}
+
+Ketika $k=\mathbb{C}$, pusatnya sangat mudah dideskripsikan.
+Dalam Korolari~\ref{cor:CGcenter} di bawah, kita akan melihat bahwa
+$Z(\mathbb{C}G) \cong \mathbb{C}^{|K|}$ sebagai $\mathbb{C}$-aljabar.
+Namun, hal ini sama sekali tidak jelas dalam
+basis yang diuraikan di atas!
+
+\subsection{Dekomposisi Aljabar Grup Kompleks}
+
+Misalkan $G$ suatu grup hingga.
+Misalkan $W_1,\ldots,W_r$ adalah representasi
+kompleks tak tereduksi yang berbeda dari $G$,
+dan misalkan $n_1,\ldots, n_r$ dimensinya.
+
+\begin{theorem}
+Terdapat isomorfisme kanonik
+\[
+\mathbb{C}G \cong \bigoplus_{i=1}^r \operatorname{End}_{\mathbb{C}}(W_i)
+\]
+antara $\mathbb{C}$-aljabar.
+\end{theorem}
+
+\begin{proof}
+Jika $V$ modul kiri atas $\mathbb{C}G$ dan $x$ unsur dari $kG$,
+maka peta perkalian $v \mapsto xv$ merupakan endomorfisme
+dari $V$.
+Ini memberikan peta dari $\mathbb{C}G$ ke setiap
+$\operatorname{End}_C(W_i)$ dan kita memperoleh
+peta ke jumlah langsungnya.
+Peta tersebut injektif karena aksi pada representasi reguler
+setia.
+Karena kedua aljabar berdimensi $n_1^2+\cdots+n_r^2$,
+peta ini harus merupakan isomorfisme.
+\end{proof}
+
+Perhatikan bahwa untuk setiap ruang vektor kompleks $V$ berdimensi $n$, kita mempunyai
+isomorfisme (nonkanonik)
+$\operatorname{End}(V) \cong \operatorname{M}_n(\mathbb{C})$.
+Jadi, teorema di atas dapat kita tulis kembali sebagai:  
+
+\begin{corollary} \label{cor:fourier_as_matrices}
+$\displaystyle
+\mathbb{C}G \cong \bigoplus_{i=1}^r \operatorname{M}_{n_i}(\mathbb{C})$
+\end{corollary}
+
+Ingat bahwa pusat aljabar matriks
+$\operatorname{M}_n(\mathbb{C})$ hanyalah subaljabar matriks
+skalar, yang isomorfik dengan $\mathbb{C}$.
+Berdasarkan Korolari~\ref{cor:fourier_as_matrices}, karena itu kita
+memperoleh:
+
+\begin{corollary} \label{cor:CGcenter}
+$\displaystyle Z(\mathbb{C}G) \cong \mathbb{C}^r$
+sebagai $\mathbb{C}$-aljabar.
+\end{corollary}
+
+Jadi, kita mempunyai dua basis bagi $Z(\mathbb{C}G)$: satu diindeks oleh kelas
+konjugasi dan satu lagi diindeks oleh representasi tak tereduksi.
+Tabel karakter $G$ tepat merupakan matriks perubahan basis antara
+kedua basis ini.
+
+\begin{example}
+Misalkan $G = \mathbb{Z}/3\mathbb{Z}$ adalah grup siklik berorde $3$.
+Perhatikan bahwa $kG \cong k[x]/(x^3-1)$ untuk setiap medan $k$.
+Kita memperoleh $\mathbb{R}G \cong \mathbb{R} \oplus \mathbb{C}$,
+sehingga korolari tersebut lebih halus atas medan yang tidak tertutup.
+Selain itu, unsur $x-1$ dalam $\mathbb{F}_3G$ nilpoten,
+sehingga keadaan berpotensi jauh lebih buruk ketika teorema Maschke
+tidak berlaku.
+\end{example}
+
+\subsection{Idempoten Gelanggang Grup}
+
+Sebelumnya dalam mata kuliah ini, kita telah melihat beberapa contoh proyeksi dalam
+$\operatorname{End}_k^G(V)$ untuk berbagai representasi $(V,\rho)$.
+Sebagai contoh, proyeksi $\pi : V \to V^G$ ke subruang
+invarian mempunyai rumus
+\[
+\pi(v) = \frac{1}{|G|} \sum_{g \in G} \rho_g(v)
+\]
+untuk $v \in V$.
+Contoh lain mencakup proyektor Young, penyimetris Young,
+dan proyeksi ke komponen-komponen isotipik.
+Semuanya lebih alami dipandang berasal dari unsur-unsur
+aljabar grup.
+
+Diberikan representasi $\rho : G \to \operatorname{GL}(V)$
+dan unsur
+\[
+f = \sum_{g \in G} c_g g
+\]
+dalam aljabar grup $kG$,
+definisikan $\widehat{f}(\rho) \in \operatorname{End}(V)$ melalui
+\[
+\widehat{f}(\rho)(v) = \sum_{g \in G} c_g \rho_g(v)
+\]
+untuk semua $v \in V$.
+Jadi, proyeksi $\pi$ di atas hanyalah endomorfisme
+$\widehat{f}(\rho)$,
+dengan $f = |G|^{-1} \sum_{g \in G} g$.
+Dalam praktiknya, kita cukup menulis $f$ sebagai ganti $\widehat{f}(\rho)$,
+karena jarang ada risiko kebingungan.
+
+Pertama, amati bahwa jika $p \in kG$ suatu idempoten,
+maka $\widehat{p}(\rho)$ merupakan proyeksi untuk setiap representasi $\rho$.
+(Kebalikannya tidak benar; perhatikan jumlah langsung dua salinan representasi
+reguler dan proyeksi ke salah satu sukunya.)
+Kedua, jika $p$ suatu idempoten primitif, maka proyeksi
+yang bersesuaian $\pi$ pada representasi reguler bercitra suatu
+subrepresentasi tak terdekomposisi.
+
+Untuk gelanggang grup kompleks, kita bahkan dapat mengatakan lebih banyak.
+
+\begin{proposition}
+Misalkan $\chi_1,\ldots \chi_r$ adalah karakter kompleks tak tereduksi dari $G$.
+Idempoten sentral primitif dari $\mathbb{C}G$ tepat merupakan
+unsur-unsur
+\[
+e_i := \frac{\chi_i(1)}{|G|} \sum_{g\in G} \overline{\chi_i(g)} g
+\]
+untuk setiap $i=1,\ldots,r$.
+Jika $(V,\rho)$ merupakan representasi $G$, maka
+$\widehat{e_i}(\rho) : V \to V$ adalah proyeksi ke komponen
+isotipik $V$ yang bersesuaian dengan $\chi_i$.
+\end{proposition}
+
+\begin{proof}
+Dari isomorfisme
+\[
+\mathbb{C}G \cong \bigoplus_{i=1}^r \operatorname{End}(W_i)
+\]
+kita ingat bahwa pusatnya adalah $\mathbb{C}^r$,
+yang bersesuaian dengan perkalian skalar dalam setiap
+$\operatorname{End}(W_i)$.
+Idempoten sentral dari $\mathbb{C}G$
+bersesuaian dengan kasus ketika setiap perkalian skalar bernilai $1$ atau $0$.
+Idempoten sentral primitif adalah idempoten yang menjadi identitas
+dalam tepat satu $\operatorname{End}(W_i)$ dan trivial di tempat lain.
+Rumus eksplisit untuk idempoten sentral primitif kini diperoleh
+dari rumus eksplisit untuk proyeksi ke komponen-komponen
+isotipik suatu representasi. 
+\end{proof}
+
+\section{Bimodul dan Hasil Kali Tensor}
+
+Ingat bahwa jika $R$ gelanggang komutatif, kita sering cukup mengatakan modul atas $R$
+tanpa menyebut apakah modul itu kiri atau kanan.
+
+\begin{definition}
+Jika $k$ suatu gelanggang \emph{komutatif}, kita mendefinisikan
+\emph{$k$-aljabar} sebagai gelanggang $R$ (yang tidak harus komutatif) beserta
+homomorfisme gelanggang $\pi : k \to R$ sedemikian sehingga $\pi(k) \subseteq Z(R)$.
+Sebuah \emph{homomorfisme $k$-aljabar} $f : R \to S$ hanyalah homomorfisme
+gelanggang sedemikian sehingga $\pi_S = f \circ \pi_R$.
+\end{definition}
+
+Secara ekuivalen, $k$-aljabar sekaligus merupakan modul atas $k$ dan gelanggang
+yang kedua strukturnya kompatibel.
+Perhatikan bahwa pencirian alternatif ini gagal jika $k$ tidak berada
+dalam pusat gelanggang perluasan $R$, karena tidak jelas apakah
+$R$ seharusnya menjadi modul kiri atau kanan atas $R$.
+Jadi, pembatasan pada gelanggang dasar komutatif di pusat
+gelanggang perluasan cukup beralasan.
+
+Atas gelanggang nonkomutatif, terdapat beberapa kehalusan pada homomorfisme
+dan hasil kali tensor yang dapat diabaikan dalam konteks komutatif.
+Di sini kita membahas beberapa kehalusan tersebut.
+
+\begin{definition}
+Diberikan gelanggang $R$, \emph{gelanggang lawan} $R^{\mathrm{op}}$ mempunyai
+grup abelian dasar yang sama, tetapi perkaliannya berlangsung dalam
+urutan terbalik; dengan kata lain, $a \cdot_{\mathrm{op}} b := ba$.
+\end{definition}
+
+Perhatikan bahwa gelanggang komutatif secara kanonik isomorfik dengan
+gelanggang lawannya melalui peta identitas.
+Karena gelanggang dasar $k$ dari $k$-aljabar selalu komutatif,
+gelanggang lawan dari suatu aljabar (yang mungkin nonkomutatif)
+atas $k$ tetap merupakan $k$-aljabar.
+
+Peta transpos $A \mapsto A^T$ memberikan isomorfisme kanonik
+antara gelanggang matriks $\operatorname{M}_n(k)$ dan gelanggang lawannya
+$\operatorname{M}_n(k)^{\mathrm{op}}$.
+Peta invers $g \to g^{-1}$ memberikan isomorfisme kanonik
+antara gelanggang grup $\mathbb{Z}G$ dan gelanggang lawannya
+$\mathbb{Z}G^{\mathrm{op}}$.
+
+Sebuah contoh penting bagi tujuan kita menunjukkan bahwa secara umum
+kita tidak dapat mengharapkan isomorfisme kanonik:
+
+\begin{example}
+Misalkan $V$ ruang vektor berdimensi hingga dengan dual $V^\vee$,
+dan perhatikan gelanggang $\operatorname{End}(V)$.
+Kita mempunyai isomorfisme kanonik
+\[
+\psi : \operatorname{End}(V)^{\mathrm{op}} \to \operatorname{End}(V^\vee)
+\]
+melalui $\psi(f)(g):=g \circ f$ untuk $f \in
+\operatorname{End}(V)^{\mathrm{op}}$ dan $g \in V^\vee$.
+Kita memperoleh isomorfisme (nonkanonik) antara
+$\operatorname{End}(V)^{\mathrm{op}}$ dan $\operatorname{End}(V)$
+melalui pilihan isomorfisme $V \cong V^\vee$.
+\end{example}
+
+Meskipun contoh-contoh tadi demikian, gelanggang tidak harus isomorfik dengan lawannya.
+Kelak kita akan melihat bahwa hal ini bahkan tidak berlaku bagi \emph{gelanggang
+divisi}, yang penting bagi teori representasi.
+Berikut contoh kecil yang agak dibuat-buat bagi pembaca yang tidak sabar: 
+
+\begin{exercise}
+Perhatikan subgelanggang $R \subseteq \operatorname{M}_2(\mathbb{Q})$
+yang diberikan oleh
+\[
+R = \left\{ \begin{pmatrix} a & b\\ 0 & c \end{pmatrix}\ \middle|\
+a \in \mathbb{Z}, b \in \mathbb{Q}, c \in \mathbb{Q} \right\}.
+\]
+Buktikan bahwa $R$ tidak isomorfik dengan $R^{\mathrm{op}}$.
+\end{exercise}
+
+Amati bahwa setiap modul kiri atas $R$ merupakan modul kanan atas $R^{\mathrm{op}}$
+melalui perkalian skalar $m \cdot_{\mathrm{op}} r := rm$.
+Demikian pula, setiap modul kanan atas $R$ merupakan modul kiri atas $R^{\mathrm{op}}$.
+Khususnya, seperti sudah kita amati,
+pembedaan antara modul kiri dan kanan
+atas $R$ tidak berpengaruh tepat ketika $R$ komutatif.
+
+\begin{definition}
+Misalkan $R$ dan $S$ gelanggang. Sebuah \emph{$(R,S)$-bimodul} $M$ adalah modul
+kiri atas $R$ yang juga merupakan modul kanan atas $S$, sedemikian sehingga $(rm)s=r(ms)$ untuk
+semua $r$.
+\end{definition}
+
+\begin{exercise}
+Tunjukkan bahwa menjadi $(R,S)$-bimodul ekuivalen dengan menjadi
+modul kiri atas $R \times S^{\mathrm{op}}$, dan juga dengan menjadi
+modul kanan atas $R^{\mathrm{op}} \times S$.
+\end{exercise}
+
+Bimodul merupakan objek yang cukup alami:
+
+\begin{example}
+Gelanggang $R$ khususnya merupakan $(R,R)$-bimodul.
+\end{example}
+
+\begin{example}
+Misalkan $V$ dan $W$ modul atas $k$. Himpunan homomorfisme
+$\operatorname{Hom}_k(V,W)$ merupakan
+$(\operatorname{End}_k(W),\operatorname{End}_k(V))$-bimodul
+melalui $fgh := f \circ g \circ h$.
+\end{example}
+
+Setiap modul kiri atas $R$ mempunyai struktur kanonik sebagai
+$(R,\mathbb{Z})$-bimodul; bahkan sebagai $(R,Z(R))$-bimodul, dengan
+$Z(R)$ pusat dari $R$.
+Demikian pula, setiap modul kanan atas $R$ mempunyai struktur kanonik sebagai
+$(Z(R),R)$-bimodul.
+Akibatnya, jika $R$ suatu $k$-aljabar, maka setiap modul kiri atau kanan
+atas $R$ secara kanonik sekaligus merupakan modul kiri dan kanan atas $k$.
+
+\begin{definition}
+Jika $M$ dan $N$ merupakan modul kiri atas $R$, maka
+\[
+\operatorname{Hom}_R(M,N) = \operatorname{Hom}_{R-\operatorname{mod}}(M,N)
+\]
+adalah himpunan homomorfisme modul kiri atas $R$, yaitu $f : M \to N$.
+Jika $M$ dan $N$ merupakan modul kanan atas $R$, maka
+\[
+\operatorname{Hom}_{\operatorname{mod}-R}(M,N)
+\]
+adalah himpunan homomorfisme modul kanan atas $R$, yaitu $f : M \to N$.
+\end{definition}
+
+Misalkan $S$ dan $T$ gelanggang,
+$M$ suatu $(R,S)$-bimodul, dan $N$ suatu $(R,T)$-bimodul.
+Maka $\operatorname{Hom}_R(M,N)$ mempunyai struktur $(S,T)$-bimodul
+melalui $(s\phi t)(m):=\phi(ms)t$ untuk $s \in S, m \in M, t\in T$.
+Demikian pula, jika $M$ suatu $(S,R)$-bimodul dan $N$ suatu $(T,R)$-bimodul,
+maka $\operatorname{Hom}_{\operatorname{mod}-R}(M,N)$
+mempunyai struktur $(T,S)$-bimodul.
+
+Jadi, ketika $R$ komutatif, $\operatorname{Hom}_R(M,N)$
+mempunyai struktur modul kanonik atas $R$ berkat struktur
+$(R,R)$-bimodul kanonik pada $M$ (dan $N$).
+Secara lebih umum, $\operatorname{Hom}_R(M,N)$ hanya mempunyai struktur modul atas $Z(R)$
+saja.
+Jika $R$ suatu $k$-aljabar, maka $\operatorname{Hom}_R(M,N)$
+secara kanonik merupakan modul atas $k$.
+Setidaknya, $\operatorname{Hom}_R(M,N)$ selalu merupakan
+grup abelian berkat struktur modul kanonik atas $\mathbb{Z}$.
+
+\begin{example}
+Misalkan $V$ dan $W$ adalah representasi grup hingga $G$
+atas medan $k$.
+Maka
+\[
+\operatorname{Hom}_{kG}(V,W) = \operatorname{Hom}^G_k(V,W)
+\]
+adalah ruang vektor atas $k$ dari transformasi linear yang $G$-ekuivarian
+$f : V \to W$.
+\end{example}
+
+\begin{definition}
+Misalkan $M$ suatu modul kanan atas $R$, $N$ suatu modul kiri atas $R$,
+dan $A$ suatu grup abelian.
+Homomorfisme grup $f: M \times N \to A$ disebut \emph{seimbang atas $R$}
+jika $f(mr,n)=f(m,rn)$ untuk semua $r \in R$, $m \in M$, dan $n \in N$.
+Sebuah \emph{hasil kali tensor} $M \otimes_R N$ adalah grup abelian
+beserta homomorfisme grup yang seimbang atas $R$,
+$\pi : M \times N \to M \otimes_R N$, sedemikian sehingga
+untuk setiap homomorfisme grup yang seimbang atas $R$,
+$\phi : M \times N \to A$, terdapat homomorfisme grup tunggal
+$\psi :  M \otimes_R N \to A$
+sedemikian sehingga $\phi = \psi \circ \pi$.
+\end{definition}
+
+Sekali lagi, kita mempunyai:
+
+\begin{proposition}
+Hasil kali tensor ada dan tunggal hingga isomorfisme tunggal.
+\end{proposition}
+
+Seperti himpunan homomorfisme, hasil kali tensor membawa struktur
+tambahan ketika unsur-unsur pembentuknya bimodul.
+Jika $M$ suatu $(S,R)$-bimodul dan $N$ suatu $(R,U)$-bimodul,
+maka $M \otimes_R N$ merupakan $(S,U)$-bimodul melalui perkalian
+$s(m\otimes n)r := (sm) \otimes (nr)$ yang diperluas secara linear.
+
+Banyak konstruksi memakai berbagai struktur bimodul kanonik
+secara tersirat.
+Sebagai contoh, jika $R$ komutatif, dan $M$ serta $N$ keduanya merupakan
+modul \emph{kiri} atas $R$, maka kita dapat memakai struktur
+modul \emph{kanan} kanonik atas $R$ pada $M$
+untuk memaknai $M \otimes_R N$.
+Kemudian $M \otimes_R N$ mempunyai struktur modul atas $R$ dengan memakai struktur
+modul kiri atas $R$ pada $M$ atau struktur modul kanan atas $R$ pada $N$
+(yang berimpit).
+Sebagai contoh lain, jika $R$ suatu $k$-aljabar, maka $M \otimes_R N$
+mempunyai struktur modul kanonik atas $k$.
+
+Sekarang kita siap menyatakan suatu hasil penting:
+
+\begin{theorem}[Adjoin Tensor--Hom]
+Misalkan $R$, $S$, $U$, $V$ gelanggang.
+Misalkan $M$ suatu $(R,S)$-bimodul, $N$ suatu $(S,U)$-bimodul,
+dan $P$ suatu $(R,V)$-bimodul.
+Maka terdapat isomorfisme alami
+\[
+\operatorname{Hom}_R(M \otimes_S N,P)
+\cong \operatorname{Hom}_S(N,\operatorname{Hom}_R(M,P))
+\]
+antara $(U,V)$-bimodul.
+\end{theorem}
+
+\begin{exercise}
+Himpunan homomorfisme dalam pernyataan Adjoin Tensor--Hom
+memakai struktur modul \emph{kiri} pada $M,N,P$, dan seterusnya.
+Tentukan pernyataan serupa ketika himpunan homomorfisme tersebut
+merujuk pada struktur modul \emph{kanan}.
+\end{exercise}
+
+Jarang sekali semua struktur bimodul diperlukan sekaligus!
+Kasus khusus yang terpenting terjadi ketika $M$ suatu $(R,S)$-bimodul,
+$N$ suatu modul kiri atas $S$, dan $P$ suatu modul kiri atas $R$;
+isomorfisme yang dihasilkan ketika itu hanyalah isomorfisme grup abelian.
+
+Salah satu penerapan utama Adjoin Tensor--Hom adalah
+memahami restriksi dan perluasan skalar.
+
+\begin{definition}
+Misalkan $f : R \to S$ suatu homomorfisme gelanggang.
+Jika $N$ suatu modul kiri atas $S$, maka \emph{restriksi skalar
+dari $N$} adalah struktur modul kiri atas $R$ pada $N$ yang diberikan oleh
+$r \cdot_R n := f(r)n$ untuk $r \in R$ dan $n \in N$.
+Kita sering menyatakan restriksi skalar dengan ${}_RN$
+atau ${}_fN$ untuk menekankan pembedaan dengan $N$ semula
+yang dipandang sebagai modul kiri atas $S$.
+\end{definition} 
+
+Ketika $f$ merupakan inklusi subgelanggang, restriksi
+skalar dapat dipandang sebagai “melupakan” sebagian struktur $N$.
+Sebagai contoh, ruang vektor kompleks $\mathbb{C}^n$ menjadi ruang
+vektor real $\mathbb{R}^{2n}$ melalui restriksi oleh inklusi
+$\mathbb{R} \to \mathbb{C}$.
+
+\begin{example}
+Jika $H$ subgrup dari grup $G$, kita mempunyai inklusi
+$kH \to kG$ antara aljabar grup.
+Misalkan $V$ suatu representasi grup hingga $G$ atas medan $k$.
+Maka $V$ mempunyai struktur modul kiri atas $kG$.
+Restriksi skalar ${}_{kH}V$ adalah modul kiri atas $kH$
+yang bersesuaian dengan $\operatorname{Res}_H^G V$. 
+\end{example}
+
+Beralih ke arah sebaliknya sedikit lebih rumit.
+
+\begin{definition}
+Misalkan $f : R \to S$ suatu homomorfisme gelanggang dan $M$ suatu modul atas $R$.
+Misalkan $S_R$ adalah struktur $(S,R)$-bimodul yang bersesuaian pada $S$,
+dan misalkan ${}_RS$ adalah struktur $(R,S)$-bimodul yang bersesuaian pada $S$.
+\emph{Perluasan skalar dari $M$}
+adalah modul kiri atas $S$, yaitu $S_R \otimes_R M$.
+\emph{Koperluasan skalar dari $M$}
+adalah modul kiri atas $S$, yaitu $\operatorname{Hom}_R({}_RS,M)$.
+\end{definition}
+
+Perhatikan bahwa notasi $S_R$ dan ${}_RS$ biasanya dianggap
+terlalu terperinci.
+Kita biasanya cukup menulis $S \otimes_R M$ untuk perluasan skalar
+dan $\operatorname{Hom}_R(S,M)$ untuk koperluasan skalar.
+Notasi ini biasanya tak taksa, walaupun mungkin membingungkan bagi pemula.
+
+Adjoin Tensor--Hom menunjukkan bahwa perluasan skalar
+dan restriksi skalar saling adjoin.
+Memang, dengan memandang $S$ sebagai $(S,R)$-bimodul,
+kita mempunyai $\operatorname{Hom}_S(S,M) \cong {}_RM$.
+Jadi, adjoin tersebut menjadi
+\[
+\operatorname{Hom}_R(S \otimes_R N,M)
+\cong \operatorname{Hom}_R(N,{}_RM)
+\]
+untuk modul kiri atas $R$, yaitu $N$, dan modul kiri atas $S$, yaitu $M$.
+
+Sekali lagi, hal-hal ini langsung berkaitan dengan teori representasi:
+
+\begin{example}
+Jika $H$ subgrup dari grup $G$, kita mempunyai inklusi
+$kH \to kG$ antara aljabar grup.
+Misalkan $W$ suatu representasi grup hingga $H$ atas medan $k$.
+Maka $W$ mempunyai struktur modul kiri atas $kH$.
+Perluasan skalar $kG \otimes_{kH} W$
+adalah modul kiri atas $kG$ yang bersesuaian dengan $\operatorname{Ind}_H^G W$.
+\end{example} 
+
+Untuk melihat mengapa perluasan skalar bersesuaian dengan induksi, kita hanya perlu
+mengingat bahwa kita pada dasarnya \emph{mendefinisikan} induksi sebagai representasi
+linear yang memenuhi (suatu versi) resiprositas Frobenius.
+Adjoin Tensor--Hom memberikan isomorfisme ruang vektor atas $k$
+\[
+\operatorname{Hom}_{kG}(kG \otimes_{kH} W,V)
+\cong \operatorname{Hom}_{kH}(W,{}_{kH}V))
+\]
+yang tepat merupakan isomorfisme
+\[
+\operatorname{Hom}_k^G(\operatorname{Ind}_H^G W,V)
+\cong \operatorname{Hom}_k^H(W,\operatorname{Res}_H^G V)
+\]
+dari Resiprositas Frobenius!
+
+Kita serahkan sebagai latihan pemeriksaan bahwa koperluasan skalar
+bersesuaian dengan koinduksi. Memang, pembedaan itu tidak penting
+(setidaknya dalam konteks kita) berdasarkan pernyataan berikut:
+
+\begin{exercise}
+Misalkan $H$ subgrup dari grup hingga $G$, dan $W$ suatu modul atas $kH$.
+Buktikan bahwa
+\[
+kG \otimes_{kH} W \cong \operatorname{Hom}_{kH}(kG,W)
+\]
+sebagai modul kiri atas $kG$.
+\end{exercise}
+
+\section{Dekomposisi Wedderburn}
+
+Sepanjang bagian ini, $k$ adalah medan.
+Tujuan utama bagian ini ialah membuktikan hasil berikut:
+
+\begin{theorem}[Teorema Wedderburn] \label{thm:Wedderburn}
+Sebuah $k$-aljabar berdimensi hingga $A$ bersifat \emph{semisederhana}
+jika dan hanya jika
+\[
+A \cong \bigoplus_{i=1}^r \operatorname{M}_{n_i}(D_i)
+\]
+dengan $D_1, \ldots, D_r$ merupakan $k$-aljabar berdimensi hingga
+dan $n_1,\ldots, n_r$ bilangan bulat positif.
+\end{theorem}
+
+\begin{definition}
+Misalkan $A$ suatu $k$-aljabar dan $M$ suatu modul kiri atas $A$.
+Sebuah \emph{deret komposisi} atau \emph{filtrasi sederhana hingga}
+adalah barisan menurun submodul
+\[
+M=M_0 \supsetneq M_1 \supsetneq \cdots \supsetneq M_r = 0
+\]
+sedemikian sehingga setiap hasil bagi $M_i/M_{i+1}$ sederhana.
+Bilangan bulat $r$ adalah \emph{panjang} filtrasi tersebut.
+Modul $M$ disebut \emph{berpanjang hingga} jika memiliki filtrasi sederhana
+hingga atau $M=0$.
+\end{definition}
+
+\begin{theorem}[Jordan-H\"older]
+Setiap dua deret komposisi dari modul kiri $M$ bersifat \emph{ekuivalen}:
+kelas-kelas isomorfisme hasil bagi $M_i/M_{i+1}$
+tunggal hingga pengurutan ulang.
+\end{theorem}
+
+Berdasarkan teorema Jordan-H\"older, pengertian berikut
+terdefinisi dengan baik:
+
+\begin{definition}
+\emph{Panjang} modul $M$ berpanjang hingga adalah panjang dari sebarang
+deret komposisinya (atau $0$ jika $M=0$).
+\end{definition}
+
+Ingat bahwa gelanggang disebut Artin (berturut-turut, Noether) jika memenuhi
+syarat rantai menurun (berturut-turut, syarat rantai menaik) pada ideal.
+Demikian pula, modul disebut Artin (berturut-turut, Noether) jika memenuhi
+syarat rantai menurun (berturut-turut, syarat rantai menaik) pada
+submodul. Khususnya, ruang vektor atas medan bersifat Artin
+sekaligus Noether, sehingga kita langsung memperoleh pernyataan berikut.
+
+\begin{proposition}
+Misalkan $A$ suatu $k$-aljabar berdimensi hingga,
+dan $M$ suatu modul kiri atas $A$ yang terbangkitkan hingga.
+Maka $A$ dan $M$ keduanya bersifat Noether dan Artin.
+Khususnya, kita melihat bahwa $M$ berpanjang hingga.
+\end{proposition}
+
+Jika $M$ suatu modul kiri semisederhana, maka terdapat dekomposisi
+\begin{equation} \label{eq:isoDecomp}
+M = M_1 \oplus \cdots \oplus M_r,
+\end{equation}
+dengan setiap $M_i$ submodul yang isomorfik dengan $S_i^{\oplus a_i}$,
+$S_i$ sederhana, $a_i$ bilangan bulat positif,
+dan $S_i \not\cong S_j$ ketika $i \ne j$.
+Perhatikan bahwa setiap submodul $M_i$ bersifat kanonik, tetapi
+isomorfisme $M_i \cong S_i^{\oplus a_i}$ tidak.
+Submodul-submodul $M_1, \ldots, M_r$ disebut \emph{komponen
+isotipik} dari $M$, dan \eqref{eq:isoDecomp} disebut \emph{dekomposisi
+isotipik} dari $M$.
+
+\begin{lemma} \label{lem:ssModule}
+Misalkan $A$ suatu $k$-aljabar berdimensi hingga dan $M$ suatu modul kiri
+atas $A$ yang terbangkitkan hingga.
+Pernyataan-pernyataan berikut ekuivalen:
+\begin{enumerate}
+\item[(a)] setiap submodul $M$ merupakan suku langsung,
+\item[(b)] $M$ semisederhana, dan
+\item[(c)] $M$ merupakan jumlah submodul-submodul sederhana (belum tentu langsung).
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Jika $N_1 \subset N_2 \subset M$ suatu rantai submodul dan $N_1$ merupakan
+suku langsung dari $M$, maka $N_1$ merupakan suku langsung dari $N_2$.
+Jadi, (a) $\implies$ (b) diperoleh melalui induksi pada dimensi $M$,
+dengan modul sederhana sebagai kasus dasar. Implikasi (b) $\implies$
+(c) langsung. Tinggal menunjukkan (c) $\implies$ (a).
+
+Misalkan $N$ suatu submodul dari $M$.
+Misalkan $N'$ submodul maksimal dari $M$ sedemikian sehingga $N \cap N' = 0$
+(yang ada karena $M$ berdimensi hingga).
+Jika $N + N' = M$, pembuktian selesai; jadi, andaikan $N + N' \subsetneq M$.
+Maka terdapat submodul sederhana $S$ dari $M$ yang tidak termuat dalam $N+N'$;
+bahkan, $S \cap (N+N')=0$ karena submodul itu sederhana.
+
+Khususnya, $N' \subsetneq N'+S$.
+Perhatikan $m \in (N'+S) \cap N$. Kita mempunyai $m=n+s$, dengan $n \in N'$
+dan $s \in S$. Unsur $s=m-n$ termuat dalam $S$ sekaligus $N+N'$, sehingga
+nol. Jadi, $m \in N' \cap N$ juga nol.
+Kita menyimpulkan bahwa $(N'+S) \cap N$ nol.
+Modul $N'+S$ bertentangan dengan asumsi kemaksimalan
+$N'$.
+\end{proof}
+
+\begin{lemma} \label{lem:subquot}
+Submodul dan modul hasil bagi dari modul semisederhana bersifat semisederhana.
+\end{lemma}
+
+\begin{proof}
+Submodul bersifat semisederhana melalui argumen yang serupa dengan
+(1) $\implies$ (2) dari Lema~\ref{lem:ssModule}.
+Modul hasil bagi bersifat semisederhana berdasarkan lema Schur dan
+syarat (3) dari Lema~\ref{lem:ssModule}.
+\end{proof}
+
+Ingat bahwa aljabar $A$ semisederhana jika dan hanya jika merupakan hasil kali
+langsung gelanggang-gelanggang sederhana. Kita akan melihat bahwa ini ekuivalen dengan $A$
+semisederhana sebagai modul kiri atas dirinya sendiri. Sementara itu, kita membuktikan
+rumusan ekuivalen ketiga:
+
+\begin{lemma}
+Misalkan $A$ suatu $k$-aljabar berdimensi hingga.
+Setiap modul kiri atas $A$ yang terbangkitkan hingga semisederhana jika dan hanya jika
+${}_AA$ semisederhana sebagai modul kiri atas $A$ itu sendiri.
+\end{lemma}
+
+\begin{proof}
+Andaikan ${}_AA$ semisederhana sebagai modul kiri atas $A$.
+Setiap modul atas $A$, yaitu $M$, dapat ditulis sebagai hasil bagi modul bebas atas $A$,
+$A^n$, untuk suatu bilangan bulat positif $n$.
+Jadi, setiap submodul $M$ semisederhana berdasarkan Lema~\ref{lem:subquot}.
+Kebalikannya berlaku terlebih lagi.
+\end{proof}
+
+Sebagai akibat lema sebelumnya, bersama dengan
+Jordan-H\"older, kita menyimpulkan bahwa aljabar semisederhana hanya mempunyai
+berhingga banyak kelas isomorfisme modul sederhana!
+
+\begin{lemma}
+Misalkan $A$ suatu $k$-aljabar berdimensi hingga.
+Jika $A$ aljabar sederhana, maka ${}_AA$ semisederhana.
+\end{lemma}
+
+\begin{proof}
+Misalkan $M$ jumlah semua submodul sederhana dalam ${}_AA$.
+Jika $S$ suatu submodul sederhana dalam ${}_AA$ dan $a \in A$, maka ideal
+kiri $Sa$ adalah $0$ atau submodul sederhana dari ${}_AA$.
+Jadi, $Ma \subseteq M$ untuk setiap $a \in A$.
+Karena itu, $M$ ideal kanan dari $A$, bahkan ideal dua sisi.
+Karena $M \ne 0$ dan $A$ sederhana sebagai gelanggang, berlaku $M=A$.
+Jadi, ${}_AA$ merupakan jumlah submodul-submodul sederhana dan karena itu semisederhana.
+\end{proof}
+
+\begin{corollary} \label{cor:semisimple_def}
+Misalkan $A$ suatu $k$-aljabar berdimensi hingga.
+Jika $A$ aljabar semisederhana, maka ${}_AA$ semisederhana.
+\end{corollary}
+
+\begin{proof}
+Misalkan $A = A_1 \oplus \cdots \oplus A_n$, dengan setiap $A_i$ suatu
+$k$-aljabar sederhana. Amati bahwa struktur modul kiri atas $A$ pada ${}_AA_i$
+memfaktor melalui struktur modul atas $A_i$.
+Setiap $A_i$, khususnya, merupakan submodul dari ${}_AA$.
+Karena semuanya semisederhana, jumlahnya juga semisederhana.
+\end{proof}
+
+(Kebalikan korolari ini akan diperoleh sebagai akibat
+teorema Wedderburn.)
+
+Bukti pernyataan berikut diserahkan sebagai latihan:
+
+\begin{lemma} \label{lem:fancyMatrix}
+Misalkan $A$ suatu gelanggang.
+Misalkan $M= M_1 \oplus \cdots \oplus M_m$ dan
+$N=N_1 \oplus \cdots \oplus N_n$ merupakan jumlah langsung modul-modul atas $A$.
+Maka
+\[ \operatorname{Hom}_A\left(\bigoplus_iM_i,\ \bigoplus_jN_i\right)
+\cong \bigoplus_{i,j}\operatorname{Hom}_A(M_i, N_j) \ . \]
+\end{lemma}
+
+\begin{lemma}
+Misalkan $A$ suatu $k$-aljabar berdimensi hingga, dan
+misalkan $M$ suatu modul kiri semisederhana atas $A$.
+Andaikan
+\[
+M = M_1 \oplus \cdots \oplus M_r
+\]
+adalah dekomposisi isotipik dengan $M_i=S_i^{\oplus n_i}$
+untuk suatu modul sederhana atas $A$, yaitu $S_i$.
+Terdapat isomorfisme kanonik $k$-aljabar
+\[
+\operatorname{End}_A(M) \cong \operatorname{M}_{n_1}(\operatorname{End}_A(S_1))
+\oplus \cdots \oplus
+\operatorname{M}_{n_r}(\operatorname{End}_A(S_r)) .
+\]
+\end{lemma}
+
+\begin{proof}
+Berdasarkan Lema~\ref{lem:fancyMatrix},
+kita mempunyai $\operatorname{End}_A(N) = \operatorname{Hom}_A(N,N)$ dan
+$\operatorname{End}_A(M^{\oplus n}) \cong M_n(\operatorname{End}_A(N))$
+untuk setiap modul kiri atas $A$, yaitu $N$, dan setiap bilangan bulat positif $n$.
+Jadi, cukup
+ditunjukkan bahwa $\operatorname{Hom}_A(M_i,M_j)=0$ setiap kali $i \ne j$.
+Perhatikan bahwa $M_i=S_i^{\oplus n_i}$ dan $M_j=S_j^{\oplus n_j}$
+untuk bilangan bulat $n_i, n_j$ dan
+modul sederhana tak isomorfik $S_i$ dan $S_j$.
+Dengan kembali memakai lema sebelumnya, $\operatorname{Hom}_A(M_i,M_j)$ merupakan jumlah langsung
+modul-modul berbentuk $\operatorname{Hom}_A(S_i,S_j)$. Modul-modul ini bernilai $0$ berdasarkan lema Schur.
+\end{proof}
+
+\begin{lemma}
+Misalkan $A$ suatu $k$-aljabar.
+Terdapat isomorfisme kanonik $A^{\mathrm{op}} \cong \operatorname{End}_A({}_AA)$ antara
+$k$-aljabar.
+\end{lemma}
+
+\begin{proof}
+Diberikan unsur $a \in A^{\mathrm{op}}$,
+terdapat endomorfisme tunggal $\phi_a \in A^{\mathrm{op}}$
+sedemikian sehingga $\phi_a(1)=a$.
+Ini memberikan korespondensi yang komutatif dengan penjumlahan dan
+perkalian skalar.
+Jadi, terdapat isomorfisme antara ruang-ruang vektor yang mendasarinya.
+Perhitungan
+\[ (\phi_a \circ \phi_b)(1)=\phi_a(b)=b\phi_a(1)=ba \]
+menunjukkan bahwa perkaliannya berimpit.
+Jadi, kedua aljabar tersebut isomorfik.
+\end{proof}
+
+Satu pengamatan lagi sebelum teorema utama:
+
+\begin{lemma}
+Untuk $k$-aljabar $A$, terdapat
+isomorfisme $k$-aljabar $\operatorname{M}_n(A)^{\mathrm{op}}
+\cong \operatorname{M}_n(A^{\mathrm{op}})$.
+\end{lemma}
+
+\begin{proof}
+Petakan suatu matriks ke transposnya. Ini jelas merupakan
+isomorfisme ruang vektor. Perhitungan singkat menunjukkan bahwa perkaliannya
+juga kompatibel. 
+\end{proof}
+
+Sekarang kita membuktikan teorema Wedderburn.
+
+\begin{proof}[Bukti Teorema~\ref{thm:Wedderburn}]
+Andaikan $A$ semisederhana sebagai $k$-aljabar.
+Maka ${}_AA$ semisederhana sebagai modul kiri atas $A$
+berdasarkan Korolari~\ref{cor:semisimple_def}.
+
+Karena ${}_AA$ semisederhana, ia mempunyai dekomposisi isotipik
+\[
+{}_AA = S_1^{\oplus n_1} \oplus \cdots \oplus S_r^{\oplus n_r}
+\]
+dengan $S_i$ modul-modul sederhana yang dua-dua tidak isomorfik.
+Misalkan $D_i=\operatorname{End}_A(S_i)$,
+yang merupakan aljabar divisi berdasarkan Lema Schur.
+
+Dengan demikian,
+\begin{align*}
+A^{\operatorname{op}} &\cong \operatorname{End}_A(A)\\
+&\cong \operatorname{End}_A(S_1^{\oplus n_1}) \oplus \cdots
+\oplus \operatorname{End}_A(S_r^{\oplus n_r})\\
+&\cong M_{n_1}(D_1) \oplus \cdots \oplus M_{n_r}(D_r) \ ,
+\intertext{dan dengan menerapkan lema terakhir:}
+A &\cong M_{n_1}(D_1^{\operatorname{op}}) \oplus \cdots \oplus
+M_{n_r}(D_r^{\operatorname{op}}) \ .
+\end{align*}
+
+Kebalikannya kita serahkan sebagai latihan.
+\end{proof}
+
+Perhatikan bahwa korolari dari uraian di atas (yang salah satu arahnya dipakai
+dalam bukti) adalah pencirian berikut bagi kesemisederhanaan suatu
+aljabar.
+
+\begin{corollary}
+Misalkan $A$ suatu $k$-aljabar berdimensi hingga.
+Pernyataan-pernyataan berikut ekuivalen:
+\begin{itemize}
+\item $A$ semisederhana sebagai gelanggang (suatu jumlah langsung gelanggang sederhana).
+\item $A$ semisederhana sebagai modul kiri atas $A$ (suatu jumlah langsung modul
+sederhana).
+\item Setiap modul kiri atas $A$ yang terbangkitkan hingga semisederhana.
+\end{itemize}
+\end{corollary}
+
+\section{Aljabar Sederhana Sentral}
+
+Seperti dalam bagian sebelumnya, $k$ adalah medan.
+Kita menyatakan penutupan aljabar $k$ dengan $\overline{k}$.
+Beberapa hasil di sini diuraikan lebih lanjut dalam teks tentang aljabar sederhana
+sentral dan grup Brauer (misalnya, \cite{GS} atau \cite{Saltman}). 
+
+Karena aljabar semisederhana merupakan jumlah langsung aljabar sederhana,
+sekarang kita tertarik mempelajari aljabar sederhana.
+Invarian terpenting suatu aljabar sederhana adalah pusatnya,
+yang selalu merupakan medan; jika tidak, terdapat ideal dua sisi
+nontrivial. Hal ini memotivasi definisi berikut.
+
+\begin{definition}
+Sebuah \emph{$k$-aljabar sederhana sentral} adalah $k$-aljabar berdimensi hingga
+$A$ dengan pusat $Z(A)=k$.
+Sebuah \emph{$k$-aljabar divisi sentral} adalah $k$-aljabar berdimensi hingga
+$A$ dengan pusat $Z(A)=k$.
+\end{definition}
+
+Ingat pernyataan berikut, yang kita buktikan ketika menegakkan Lema Schur
+dalam kasus kompleks:
+
+\begin{proposition} \label{prop:division_ac}
+Jika $k$ tertutup secara aljabar, maka setiap $k$-aljabar divisi sentral
+isomorfik dengan $k$.
+\end{proposition}
+
+Berdasarkan teorema Wedderburn, kita mempunyai deskripsi yang baik tentang aljabar
+sederhana sentral dan hubungannya dengan jenis-jenis
+aljabar lain yang sudah kita lihat. Jika $A$ suatu $k$-aljabar berdimensi hingga,
+maka:
+
+\begin{enumerate}
+\item Jika $A$ semisederhana, maka aljabar itu merupakan hasil kali $k$-aljabar sederhana.
+\item Jika $A$ sederhana, maka aljabar itu merupakan $K$-aljabar sederhana sentral, dengan
+$K$ suatu perluasan medan hingga dari $k$.
+\item Jika $A$ suatu $k$-aljabar sederhana sentral, maka $A \cong
+\operatorname{M_n}(D)$, dengan $D$ suatu $k$-aljabar divisi sentral.
+\end{enumerate}
+
+Aljabar sederhana sentral dan aljabar divisi berhubungan erat.
+Dalam suatu arti, jenis pertama dapat dipahami sepenuhnya melalui jenis kedua:
+
+\begin{proposition}
+Jika $A$ suatu $k$-aljabar sederhana sentral, maka terdapat aljabar divisi sentral tunggal
+atas $k$, yaitu $D$ (hingga isomorfisme), dan bilangan bulat positif $n$
+sedemikian sehingga $A \cong \operatorname{M}_n(D)$.
+\end{proposition}
+
+\begin{proof}
+Andaikan $A \cong M_n(D) \cong M_m(E)$ untuk $k$-aljabar divisi sentral
+$D$ dan $E$.
+Misalkan $L$ suatu ideal kiri minimal dari $A$.
+Maka $D^{\oplus n} \cong L \cong E^{\oplus m}$ karena semua aljabar
+tersebut sederhana dan hanya mempunyai satu kelas isomorfisme modul sederhana.
+Kita dapat memandang $D^{\oplus n}$ sebagai himpunan vektor kolom dengan
+entri-entri dalam $D$.
+Amati bahwa endomorfisme $D^{\oplus n} \to D^{\oplus n}$
+sebagai modul kiri atas $A$ sepenuhnya ditentukan oleh citra
+unsur $(1,0,\ldots,0)$. Dapat diperiksa bahwa satu-satunya
+citra yang diperbolehkan berbentuk $(a,0,\ldots,0)$ untuk $a \in A$.
+Jadi, $\operatorname{End}_A(D^{\oplus n}) \cong D$.
+Dengan demikian,
+\[
+D \cong \operatorname{End}_A(D^{\oplus n})
+\cong L
+\cong \operatorname{End}_A(E^{\oplus m}) \cong E
+\]
+dan $m=n$ diperoleh dengan menghitung dimensi.
+\end{proof}
+
+Namun, aljabar sederhana sentral muncul secara alami dalam konstruksi-konstruksi
+yang agak canggung jika dibatasi pada aljabar divisi saja.
+
+\begin{lemma} \label{lem:center_of_tensor}
+Jika $A$ dan $B$ merupakan $k$-aljabar, maka $Z(A \otimes_k B) = Z(A) \otimes_k
+Z(B)$.
+\end{lemma}
+
+\begin{proof}
+Jelas bahwa $Z(A) \otimes_k Z(B) \subseteq Z(A \otimes_k B)$.
+Sekarang, andaikan $z = \sum_i a_i \otimes b_i$ suatu unsur
+$Z(A \otimes_k B)$. Kita dapat mengasumsikan $a_i$ bebas linear.
+Ambil $x \in B$ dan amati bahwa
+\[
+0 = z(1 \otimes x) - (1 \otimes x)z =
+\sum_i a_i \otimes (b_ix-xb_i),
+\]
+yang mengakibatkan setiap $b_ix-xb_i=0$.
+Jadi, setiap $b_i \in Z(B)$.
+Dengan demikian, $z \in A \otimes_k Z(B)$.
+Sekarang, kita dapat mengasumsikan (setelah mungkin menulis ulang $z$) bahwa $b_i$
+bebas linear dalam $Z(B)$
+dan serupa dengan itu menyimpulkan bahwa setiap $a_i$ berada dalam $Z(A)$.
+\end{proof}
+
+\begin{lemma} \label{lem:csa_simple_simple}
+Jika $A$ suatu $k$-aljabar sederhana sentral dan
+$B$ suatu $k$-aljabar sederhana, maka $A \otimes_k B$ merupakan
+$k$-aljabar sederhana.
+\end{lemma}
+
+\begin{proof}
+Misalkan $I$ suatu ideal dua sisi nontrivial dalam $A \otimes_k B$.
+Misalkan $r$ bilangan bulat positif minimal sedemikian sehingga
+terdapat unsur $x \in I$ yang dapat ditulis
+\[
+x = \sum_{i=1}^r a_i \otimes b_i.
+\]
+Karena $I$ berada dalam $A$ yang sederhana, $Aa_1A=A$. Jadi, kita mempunyai $y,z \in A \otimes 1$
+sedemikian sehingga
+\[
+x'=yxz = 1 \otimes b_1 + \sum_{i=2}^r a_i' \otimes b_i
+\]
+untuk $a_i'=ya_iz$, dengan $x' \in I$ pula.
+Untuk semua $w \in A$, kita melihat bahwa
+\[
+(w \otimes 1)x' - x'(w \otimes 1) = -\sum_{i=2}^r (wa_i'-a_i'w) \otimes
+b_i = 0
+\]
+berdasarkan keminimalan $r$. Jadi, $x' \in Z(A) \otimes_k B = k \otimes_k B$.
+Dengan demikian, $x'=1 \otimes b \in I$ untuk suatu $b \in B$.
+Namun, $B$ sederhana, sehingga $BbB=B$. Maka $1 \otimes 1 \in I$.
+Kita menyimpulkan bahwa $A \otimes B = I$, seperti diinginkan.
+\end{proof}
+
+Perhatikan bahwa hipotesis bahwa $A$ sentral atas $k$ sangat penting
+dalam Lema~\ref{lem:csa_simple_simple} --- perhatikan $\mathbb{C}
+\otimes_{\mathbb{R}} \mathbb{C}$.
+
+\begin{lemma}
+Jika $A$ suatu $k$-aljabar sederhana sentral berdimensi hingga,
+maka terdapat isomorfisme $k$-aljabar
+$A \otimes_k A^{\mathrm{op}} \cong M_n(k)$
+untuk $n = \dim_k(A)$.
+\end{lemma}
+
+\begin{proof}
+Dengan memperluas secara linear, terdapat homomorfisme $k$-aljabar
+$\Psi : A \otimes_k A^{\mathrm{op}} \to \operatorname{End}_k(A)$
+sedemikian sehingga $\Psi(x \otimes y)(z)=xzy$ untuk $x,z \in A$ dan
+$y \in A^{\mathrm{op}}$. Peta tersebut injektif karena
+$A \otimes A^{\mathrm{op}}$ sederhana.
+Kesurjektifan diperoleh dengan menghitung dimensi.
+\end{proof}
+
+(Sebenarnya, kebalikan lema sebelumnya juga benar, tetapi kita tidak
+memerlukannya.)
+
+\begin{definition}
+Dua $k$-aljabar sederhana sentral $A$ dan $B$ disebut
+\emph{ekuivalen Brauer} jika $A \otimes_k M_n(k) \cong B \otimes_k
+M_m(k)$ untuk suatu bilangan bulat positif $m,n$.
+\emph{Grup Brauer}, yang dinyatakan dengan $\operatorname{Br}(k)$,
+adalah himpunan kelas ekuivalensi Brauer
+dari $k$-aljabar sederhana sentral.
+\end{definition}
+
+Dari lema-lema di atas, kita memperoleh:
+
+\begin{proposition}
+Grup Brauer $\operatorname{Br}(k)$ merupakan grup terhadap
+hasil kali tensor wakil-wakilnya,
+dengan identitas berupa kelas aljabar matriks $M_n(k)$
+dan invers diberikan oleh $[A] \mapsto [A^{\mathrm{op}}]$.
+\end{proposition}
+
+Secara ekuivalen, $A$ dan $B$ ekuivalen Brauer jika $A$ dan $B$ keduanya
+merupakan gelanggang matriks atas $k$-aljabar divisi sentral yang sama.
+Jadi, $\operatorname{Br}(k)$ juga dapat dipandang sebagai himpunan kelas
+isomorfisme $k$-aljabar divisi sentral; namun, struktur grupnya
+lebih sukar dilihat dengan definisi ini.
+
+Alasan lain kita mempelajari aljabar sederhana sentral, bukan hanya
+aljabar divisi yang mendasarinya, ialah bahwa sifat menjadi aljabar sederhana
+sentral invarian terhadap perluasan medan.
+
+\begin{proposition}
+Misalkan $A$ suatu $k$-aljabar berdimensi hingga.
+Pernyataan-pernyataan berikut ekuivalen:
+\begin{enumerate}
+\item[(a)] $A$ merupakan $k$-aljabar sederhana sentral.
+\item[(b)] $A \otimes_k K$ merupakan $K$-aljabar sederhana sentral untuk suatu perluasan
+medan $K/k$.
+\item[(c)] $A \cong \operatorname{M}_n(D)$ untuk suatu $k$-aljabar divisi sentral
+$D$ dan suatu $n$.
+\item[(d)] $A \otimes_k \overline{k} \cong \operatorname{M}_n(\overline{k})$
+untuk suatu $n$.
+\item[(e)] $A \otimes_k K \cong \operatorname{M}_n(K)$
+untuk suatu perluasan medan hingga $K/k$ dan suatu $n$.
+\item[(f)] $A \otimes_k K \cong \operatorname{M}_n(K)$
+untuk suatu perluasan medan Galois hingga $K/k$ dan suatu $n$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Ekuivalensi (e) dan (f) pada dasarnya bergantung pada pembuktian bahwa kita dapat
+memilih perluasan medan \emph{separabel}.
+Karena kita terutama bekerja dalam
+karakteristik $0$, kita tidak akan membahas (f) di sini;
+lihat \cite[Proposition 2.2.5]{GS} untuk buktinya.
+
+Kita mulai dengan menegakkan (a) $\implies$ (b).
+Berdasarkan Lema~\ref{lem:csa_simple_simple}, kita menyimpulkan bahwa $A \otimes_k K$
+sederhana karena $K$ sederhana. Pusat $A \otimes_k K$
+adalah $k \otimes_k K=K$ berdasarkan Lema~\ref{lem:center_of_tensor}.
+Jadi, $A \otimes_k K$ merupakan $K$-aljabar sederhana sentral, seperti diinginkan.
+
+Sekarang perhatikan (b) $\implies$ (a).
+Jika $J$ ideal dua sisi dari $A$, maka $J \otimes_k K$ merupakan
+ideal dua sisi dari $A \otimes_k K$; jadi, $A$ sederhana.
+Jika $z$ berada dalam pusat $Z(A)$, maka $z \otimes 1$ berada dalam
+pusat $Z(A \otimes K)$. Jadi, $z \in K \cap k = k$.
+
+Implikasi (a) $\implies$ (c) sudah kita lihat diperoleh dari
+teori Wedderburn.
+Implikasi (c) $\implies$ (d) diperoleh dari
+Proposisi~\ref{prop:division_ac},
+dengan memakai fakta bahwa kita sudah menunjukkan (a) $\implies$ (b).
+Implikasi (d) $\implies$ (e) diperoleh dari prinsip Lefschetz:
+koefisien-koefisien dalam isomorfisme eksplisit
+$A \otimes_k \overline{k} \cong \operatorname{M}_n(\overline{k})$
+harus terdefinisi atas suatu perluasan hingga dari $k$.
+Implikasi (e) $\implies$ (b) langsung.
+\end{proof}
+
+Berdasarkan proposisi sebelumnya, kita dapat membahas beberapa
+konsep baku yang terkait dengan aljabar sederhana sentral.
+
+\begin{definition}
+Misalkan $A$ suatu $k$-aljabar sederhana sentral.
+Aljabar $A$ disebut \emph{terurai} jika $A \cong \operatorname{M}_n(k)$
+untuk suatu bilangan bulat $n$. Sebuah \emph{medan pengurai} dari $A$ adalah
+perluasan medan $K/k$ sedemikian sehingga $A \otimes_k K \cong \operatorname{M}_n(K)$.
+\end{definition}
+
+Perhatikan bahwa jika $V$ suatu ruang vektor atas $k$,
+maka $\dim_k(V) = \dim_K(V \otimes_k K)$
+untuk semua perluasan medan $K/k$.
+Jadi, dimensi $\dim_k(A)$ dari $k$-aljabar sederhana sentral $A$
+selalu merupakan kuadrat, karena
+$A \otimes_k K \cong \operatorname{M}_n(K)$ untuk suatu perluasan medan
+$K/k$.
+
+\begin{definition}
+Misalkan $A$ suatu $k$-aljabar sederhana sentral.
+\emph{Derajat} dari $A$ adalah bilangan bulat positif tunggal
+$\deg(A)$ sedemikian sehingga
+$\dim_k(A)=\deg(A)^2$.
+\emph{Indeks (Schur)} dari $A$ diberikan oleh $\operatorname{ind}(A)=\deg(D)$,
+dengan $D$ suatu $k$-aljabar divisi sentral sedemikian sehingga
+$A\cong \operatorname{M}_n(D)$.
+\end{definition}
+
+\begin{proposition}
+Jika $A$ suatu $k$-aljabar sederhana sentral dan
+$M$ suatu modul kiri sederhana atas $A$, maka
+$\dim_k(M) =\deg(A) \operatorname{ind}(A)$.
+\end{proposition}
+
+\begin{proof}
+Perhatikan bahwa $A \cong \operatorname{M}_r(D)$ untuk suatu $k$-aljabar divisi
+sentral $D$.
+Karena $M$ sederhana, kita mempunyai $M \cong D^{\oplus r}$.
+Jadi, $\dim_k(M) = r \deg(D)^2=\deg(A) \operatorname{ind}(A)$.
+\end{proof}
+
+Misalkan $A$ suatu $k$-aljabar sederhana sentral dengan medan pengurai $K$,
+dan misalkan $\Psi : A \hookrightarrow M_n(K)$ adalah pembenaman
+yang diperoleh melalui komposisi dengan isomorfisme $A \otimes_k K \cong
+M_n(K)$.
+Diberikan unsur $a \in A$, kita mendefinisikan
+\emph{polinomial karakteristik tereduksi}
+\[
+\operatorname{Prd}_{A,a}(t) := \chi_{\Psi(a)}(t)
+\]
+dengan $\chi_{\Psi(a)}(t)$ polinomial karakteristik
+dari $\Psi(a)$ dalam $M_n(K)$.
+
+\begin{proposition}
+Polinomial karakteristik tereduksi
+$\operatorname{Prd}_{A,a}(t)$ mempunyai koefisien dalam $k$ dan tidak bergantung pada
+pilihan medan pengurai $K$ maupun pilihan isomorfisme
+$A \otimes_k K \cong M_n(K)$.
+\end{proposition}
+
+\begin{proof}
+Kita menghilangkan bukti karena hasil ini tidak mendasar bagi alur pembahasan kita.
+\end{proof}
+
+Dengan menulis
+\[
+\operatorname{Prd}_{A,a}(t) = t^n - e_1t^{n-1} + \cdots + (-1)^n e_n
+\]
+sebagai polinomial dalam $k[t]$, kita mendefinisikan
+\emph{teras tereduksi} $\operatorname{Trd}_A(a)=e_1$
+dan \emph{norma tereduksi} $\operatorname{Nrd}_A(a)=e_n$.
+
+\begin{proposition}
+Misalkan $A$ suatu $k$-aljabar sederhana sentral.
+Misalkan $\chi_{A/k,a}(t)$, $\operatorname{Tr}_{A/k}(a)$, dan
+$\operatorname{N}_{A/k}(a)$
+berturut-turut merupakan polinomial karakteristik, teras, dan norma “biasa”
+dari $a$ sebagai unsur $k$-aljabar $A$.
+Maka kita mempunyai
+\[
+\chi_{A,a}(t)=\operatorname{Prd}_{A,a}^n(t) \quad
+\operatorname{Tr}_{A/k}(a)=n\operatorname{Trd}_A(a) \quad
+\operatorname{N}_{A/k}(a)=\left(\operatorname{Nrd}_A(a)\right)^n
+\]
+dengan $n=\deg(A)$.
+\end{proposition}
+
+\subsection{Aljabar Kuaternion}
+
+Misalkan $k$ suatu medan berkarakteristik $\ne 2$.
+Andaikan $a,b \in k^\times$.
+Misalkan $Q_{a,b}$ suatu $k$-aljabar dengan basis $\{1,i,j,ij\}$ yang
+perkaliannya memenuhi
+\[
+i^2=a, j^2=b, ij=-ij .
+\]
+Aljabar $Q_{a,b}$ adalah \emph{$k$-aljabar kuaternion (tergeneralisasi)}.
+Amati bahwa $Q_{-1,-1} \cong \mathbb{H}$ ketika $k=\mathbb{R}$.
+
+Misalkan $K=k(\sqrt{a})$. Kita mempunyai homomorfisme $k$-aljabar
+injektif $\Phi : Q_{a,b} \to \operatorname{M}_2(K)$ melalui
+\[
+x+yi+zj+wij \mapsto
+\begin{pmatrix}
+x+\sqrt{a}y & bz+b\sqrt{a}w\\
+z-\sqrt{a}w & x-\sqrt{a}y
+\end{pmatrix}
+\]
+untuk $x,y,z,w \in k$.
+Ini menunjukkan bahwa $Q_{a,b}$ merupakan $k$-aljabar sederhana sentral dan $K$
+suatu medan pengurai.
+Perhatikan bahwa $k(\sqrt{b})$ juga merupakan medan pengurai dari $Q_{a,b}$.
+
+Norma tereduksi diberikan oleh
+\[
+\operatorname{Nrd}(x+yi+zj+wij) = x^2-ay^2-bz^2+abw^2 .
+\]
+Amati bahwa jika $q \in Q_{a,b}$, maka $\Phi(q)$ invertibel
+jika dan hanya jika $\operatorname{Nrd}(q) \ne 0$.
+Dalam kasus ini, invers dari $q$ adalah
+$\overline{q}/\operatorname{Nrd}(q)$, dengan
+\[
+\overline{q} = x-yi-zj-wij
+\]
+merupakan \emph{konjugat} dari $q$.
+Jadi, invers dari $q$, jika ada dalam $\operatorname{M}_2(K)$,
+juga berada dalam $Q_{a,b}$.
+
+\begin{proposition}
+Misalkan $Q_{a,b}$ suatu $k$-aljabar kuaternion.
+Pernyataan-pernyataan berikut ekuivalen:
+\begin{enumerate}
+\item[(a)] $Q_{a,b}$ terurai.
+\item[(b)] $Q_{a,b}$ bukan $k$-aljabar divisi.
+\item[(c)] $\operatorname{Nrd} : Q_{a,b} \to k$ mempunyai nol nontrivial. 
+\item[(d)] $ax^2+by^2=1$ mempunyai solusi $(x,y)$ atas $k$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Ekuivalensi (a) dan (b) diperoleh dari teorema Wedderburn
+karena $Q_{a,b}=M_n(D)$ untuk suatu $k$-aljabar divisi $D$, dan
+$n$ hanya mungkin bernilai $1$ atau $2$.
+Ekuivalensi (b) dan (c) diperoleh dari pembahasan invers
+di atas.
+Kita melihat bahwa (d) mengakibatkan (c) melalui unsur $1-xi-yj$.
+
+Sekarang andaikan (c).
+Jika $a$ suatu kuadrat, pembuktian sudah selesai. Jadi,
+kita dapat mengasumsikan $k(\sqrt{a})/k$
+merupakan perluasan medan nontrivial.
+Maka terdapat $x,y,z,w \in k$, tidak semuanya nol,
+sedemikian sehingga
+\[
+(x^2-ay^2)=b(z^2-aw^2).
+\]
+Amati bahwa $N(x+y\sqrt{a})=x^2-ay^2$, dengan $N : k(\sqrt{a}) \to k$
+norma biasa dari perluasan medan $k(\sqrt{a})/k$.
+Jadi, $b=N(x+y\sqrt{a})N(z+w\sqrt{a})^{-1}=N(u+v\sqrt{a})$
+untuk suatu $u,v \in k$ berdasarkan kemultiplikatifan peta norma.
+Dengan kata lain, $b = u^2-av^2$, sehingga kita mempunyai $a(v/u)^2 + b(1/v)^2=1$.
+Jadi, $(u/v,1/v)$ memberikan solusi yang diinginkan dan menegakkan (d).
+\end{proof}
+
+\subsection{Aljabar Siklik}
+
+Misalkan $L/k$ suatu perluasan Galois siklik berderajat $n$,
+andaikan $\sigma$ suatu pembangkit $\operatorname{Gal}(K/k)$,
+dan andaikan $b \in k$.
+Perhatikan matriks-matriks
+\[
+Y = \begin{pmatrix}
+0 & 0 & \cdots & 0 & b\\
+1 & 0 & \cdots & 0 & 0\\
+0 & 1 & \cdots & 0 & 0\\
+\vdots & \vdots & \vdots &\ddots & \vdots\\
+0 & 0 & \cdots & 1 & 0
+\end{pmatrix}
+\quad
+X(\ell) = \begin{pmatrix}
+\ell & 0 & 0 &\cdots & 0\\
+0 & \sigma(\ell) & 0 &\cdots & 0\\
+0 & 0 & \sigma^2(\ell) &\cdots & 0\\
+\vdots & \vdots & \vdots &\ddots & \vdots\\
+0 & 0 & 0 &\cdots & \sigma^{n-1}(\ell)
+\end{pmatrix}
+\]
+dengan $\ell \in L$.
+Amati bahwa $YX(\ell)=X(\sigma(\ell))Y$, $Y^n=1$,
+dan $X(\ell)$ memenuhi polinomial minimal yang sama dengan $\ell$.
+
+Perhatikan $k$-aljabar $A=A(L,\sigma,b)$ yang dibangkitkan oleh $X$ dan $Y$.
+Aljabar semacam itu disebut \emph{aljabar siklik}.
+Amati bahwa, setidaknya ketika $a$ bukan kuadrat dalam $k$,
+aljabar kuaternion di atas merupakan kasus khusus
+dengan $Q_{a,b} \cong A(k(\sqrt{a}),\sqrt{a}\mapsto -\sqrt{a},b)$.
+
+Pilih $X=X(\ell)$ dengan $\ell$ suatu unsur primitif dari $L/k$.
+Amati bahwa $X^n$ berada dalam rentang himpunan bebas linear atas $k$
+$\{1,X,X^2,\ldots,X^{n-1}\}$.
+Kita melihat bahwa
+\[
+\{ X^iY^j \mid 0 \le i,j < n \}
+\]
+merupakan basis bagi $A$ sebagai ruang vektor atas $k$.
+Karena $\dim_k A = n^2$ dan kita mempunyai pembenaman sebagai $k$-aljabar
+ke dalam $M_n(L)$, kita melihat bahwa setiap aljabar siklik merupakan aljabar sederhana
+sentral berderajat $n$.
+
+\subsection{Grup Brauer atas medan khusus}
+
+Secara umum, aljabar sederhana sentral atas medan sebarang dapat sangat
+sulit dipahami. Bidang ini benar-benar merupakan ranah penelitian yang
+aktif dan terus berkembang. Namun, dalam kasus-kasus khusus yang sangat relevan
+bagi teori representasi grup hingga, kita dapat mengatakan jauh
+lebih banyak. Sekarang kita merangkum beberapa di antaranya.
+
+Pertama-tama, sebuah pengamatan yang sepele tetapi penting:
+
+\begin{proposition}
+Jika $k$ tertutup secara aljabar, maka $\operatorname{Br}(k)=0$.
+Dengan kata lain, setiap aljabar sederhana sentral atas medan hingga terurai. 
+\end{proposition}
+
+Berikutnya, kita meninjau bilangan real.
+
+\begin{theorem}[Frobenius]
+Satu-satunya $\mathbb{R}$-aljabar divisi sentral adalah
+$\mathbb{R}$ dan $\mathbb{H}$.
+Khususnya, $\operatorname{Br}(\mathbb{R})=\mathbb{Z}/2\mathbb{Z}$
+\end{theorem}
+
+Demikian pula untuk medan hingga:
+
+\begin{theorem}[Teorema Kecil Wedderburn]
+Jika $k$ medan hingga, maka $\operatorname{Br}(k)=0$.
+Dengan kata lain, setiap aljabar sederhana sentral atas medan hingga terurai.
+\end{theorem}
+
+Ingat bahwa \emph{medan bilangan} $k$ adalah perluasan hingga dari
+$\mathbb{Q}$. Secara kasar, segala hal menarik dalam
+teori representasi grup hingga terjadi atas medan bilangan.
+Berkat karya Albert--Brauer--Hasse--Noether, kita mempunyai jawaban yang sangat lengkap
+dalam kasus ini. Yakni, konstruksi dalam bagian sebelumnya
+cukup umum untuk mencakup setiap contoh:
+
+\begin{theorem}
+Misalkan $k$ suatu medan bilangan.
+Setiap $k$-aljabar sederhana sentral ekuivalen Brauer dengan suatu
+$k$-aljabar siklik.
+\end{theorem}
+
+Sebenarnya, kita mengetahui lebih banyak lagi jika mengenal sedikit teori bilangan aljabar.
+Ingat bahwa medan bilangan $k$ mempunyai \emph{prima-prima}
+yang mungkin “hingga” atau “tak hingga”.
+Untuk setiap prima, terdapat medan lokal $k_p$ yang bersesuaian.
+Contoh prototipe ialah $k=\mathbb{Q}$, dengan prima-prima $p$ berupa
+prima biasa dalam $\mathbb{N}$ beserta prima real “tak hingga”
+$\infty$. Di sini $\mathbb{Q}_p$ merupakan medan $p$-adik untuk setiap
+prima hingga $p$, dan $\mathbb{Q}_\infty = \mathbb{R}$.
+
+\begin{theorem}
+Misalkan $k$ medan bilangan dengan prima $p$. Maka
+\[
+\operatorname{Br}(k_p) \cong
+\begin{cases}
+\mathbb{Q}/\mathbb{Z} & \textrm{jika $p$ hingga,}\\
+\frac{1}{2}\mathbb{Z}/\mathbb{Z} & \textrm{jika $p$ real,}\\
+0 & \textrm{jika $p$ kompleks.}\\
+\end{cases}
+\]
+\end{theorem}
+
+Khususnya, teorema di atas memungkinkan kita mendefinisikan
+\emph{invarian Hasse}:
+\[
+\operatorname{inv}_p : \operatorname{Br}(k_p) \to \mathbb{Q}/\mathbb{Z}
+\]
+yang merupakan homomorfisme grup injektif.
+Notasi $\frac{1}{2}\mathbb{Z}/\mathbb{Z}$ untuk kasus real
+dimaksudkan untuk menekankan bahwa $\operatorname{inv}_\infty([\mathbb{R}])=1$,
+sedangkan $\operatorname{inv}_\infty([\mathbb{H}])=\frac{1}{2}$.
+
+Diberikan aljabar divisi sentral $A$ atas medan bilangan $k$
+dan prima $p$, perluasan dasar $A \otimes_k k_p$ merupakan
+$k_p$-aljabar divisi sentral.
+Jadi, untuk setiap prima $p$, kita mempunyai homomorfisme grup
+\[
+\operatorname{Br}(k) \to \operatorname{Br}(k_p).
+\]
+Sekarang kita mempunyai prinsip lokal-ke-global berikut,
+yang sepenuhnya mengklasifikasikan aljabar divisi sentral atas suatu medan
+bilangan.
+
+\begin{theorem}
+Misalkan $k$ suatu medan bilangan.
+Terdapat barisan eksak grup-grup abelian
+\[
+0 \to \operatorname{Br}(k) \to
+\bigoplus_p \operatorname{Br}(k_p) \to \mathbb{Q}/\mathbb{Z} \to 0
+\]
+dengan jumlah langsung diambil atas semua prima $p$ dari $k$.
+\end{theorem}
+
+\bibliographystyle{alpha}
+\bibliography{rep_theory}
+
+\end{document}
+
+

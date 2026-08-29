@@ -1,0 +1,10 @@
+repair_id,root_id,file,kind,provenance,source_records,target_records,anchor_occurrences,original_bridge_record,bridge_id,record_class
+CRING-R01-empty-projective-reference,root.cring.nakayama,01-nakayama.tex,replace empty cross-reference with explicit prerequisite bridge,edition-original,185,185,1,false,,edition-original-inline
+CRING-R02-empty-ufd-reference,root.cring.spec_zariski,02-spec-zariski.tex,replace empty cross-reference with explicit prerequisite bridge,edition-original,149,149,1,false,,edition-original-inline
+CRING-R03-missing-semilocal-proof,root.cring.spec_zariski,02-spec-zariski.tex,supply omitted proof with explicit original provenance,edition-original,898,898,1,false,,edition-original-proof
+CRING-R03A-malformed-mu-max,root.cring.spec_zariski,02-spec-zariski.tex,repair two malformed mathematical operators in the theorem statement,edition-correction,886,886,1,false,,edition-correction
+CRING-R04-undefined-annihilator-notation,root.cring.associated_primary,03-associated-primary.tex,replace authorial placeholder with the missing definition,edition-original,75,75,1,true,bridge.cring.associated_primary.0001,edition-original-bridge
+CRING-R05-irreducibility-definition,root.cring.associated_primary,03-associated-primary.tex,replace authorial placeholder with the required definition,edition-original,443,443,1,true,bridge.cring.associated_primary.0002,edition-original-bridge
+CRING-R06-embedded-prime-example,root.cring.associated_primary,03-associated-primary.tex,replace authorial placeholder with a checked example,edition-original,467,467,1,true,bridge.cring.associated_primary.0003,edition-original-bridge
+CRING-R07-constructibility-placeholder,root.cring.lying_over_going_up,04-lying-over-going-up.tex,replace authorial placeholder with an explicit theorem/scope note,edition-original,9,9,1,false,,edition-original-inline
+CRING-R08-two-empty-dvr-references,root.cring.krull_dimension,06-krull-dimension.tex,replace two empty cross-references with an explicit scope bridge,edition-original,186,186,1,false,,edition-original-inline

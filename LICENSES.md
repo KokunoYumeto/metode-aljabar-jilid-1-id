@@ -8,6 +8,18 @@ Repositori ini adalah karya gabungan. Tidak ada satu label lisensi yang menggant
 
 Salinan pemberitahuan sumber terdapat di `repo/source/LICENSE`.
 
+## Catatan teori representasi Duncan
+
+Tujuh akar TeX yang dipilih dari repositori *Representation Theory Notes* karya Alexander Duncan beserta terjemahan Bahasa Indonesianya didistribusikan menurut [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/). Enam lembar tugas di situs penulis, 49 soal di dalamnya, dan satu solusi parsial berada di luar repositori berlisensi dan tidak disertakan. Sumber, pemberitahuan, backend, serta manifest build ada di `repo/components/duncan/`.
+
+## Pilihan CRing Project
+
+Enam rentang yang dipilih dari *CRing Project*, terjemahan Bahasa Indonesia, dan integrasi pembacanya merupakan komponen termodifikasi menurut [GNU Free Documentation License 1.2 atau versi lebih baru](https://www.gnu.org/licenses/old-licenses/fdl-1.2.html), tanpa Bagian Invarian, tanpa Teks Sampul Depan, dan tanpa Teks Sampul Belakang. Salinan penuh lisensi ada di `repo/components/cring/support/GFDL-1.2-or-later.tex` dan disertakan di dalam PDF pembaca. Sembilan perbaikan serta sisipan orisinal ditandai dalam manifest/backend; enam rentang tepat tidak boleh disalahartikan sebagai terjemahan seluruh CRing Project.
+
+## Lapisan rute dan penguasaan orisinal
+
+`repo/components/original/` adalah materi edisi-orisinal yang disusun oleh `OpenAI Codex gpt-5.6-sol, Ultra`, atas instruksi pengguna. Materi ini disediakan menurut CC BY 4.0 dan tidak diatributkan kepada Li, Duncan, Mathew, CRing Project, atau penulis sumber lain. Rujukan ke komponen sumber tidak mengubah hak komponen tersebut.
+
 ## Komponen CC BY-SA 3.0
 
 - Fragmen `DeclareSourcemap` di `repo/source/AJbook.cls` berasal dari jawaban TeX.StackExchange tahun 2013 oleh Guido dan suntingan dpprdan; perlakukan fragmen tersebut menurut CC BY-SA 3.0 dan pertahankan kredit sumber di dalam file.

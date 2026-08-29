@@ -1,11 +1,13 @@
 {
   "schema_version": 2,
-  "updated": "2026-08-28",
+  "updated": "2026-08-29",
   "task_id": "01a02163-e2bf-7a93-950a-b9ab84d7e8b9",
   "goal_status": "active",
   "lane_root": ".",
   "read_first": [
     "00_control/CURRENT_GOAL_AND_WORKFLOW.md",
+    "00_control/FAST_COMPLETION_CURSOR_20260828.md",
+    "qa/O013_COMPLETE_LOCAL_BOUNDARY_20260829.json",
     "00_control/CURRENT_STATE.md",
     "00_control/CURRENT_CURSOR.json",
     "00_control/O013_COMPOSITE_SELECTION_REVISED_20260824.md",
@@ -21,7 +23,7 @@
     "00_control/FIGSHARE_PUBLICATION_STATE.json"
   ],
   "duncan_component_admission": {
-    "state": "source_and_build_admitted_pending_translation",
+    "state": "complete_translated_built_backend_indexed_visual_pass_publication_pending",
     "commit": "c62d36f41189da4bd3da4671668f68720df54ff7",
     "archive_sha256": "60dd9679c9ebe0c28f31794a7b2cb8552f4b7d68038061024972257280a1852c",
     "source_freeze": "authority/duncan-representation-theory-notes-c62d36f41189da4bd3da4671668f68720df54ff7/DUNCAN_SOURCE_FREEZE.json",
@@ -184,12 +186,14 @@
     "candidate_rule": "Unit 024 is complete and public. Its immediate navigation repair is pixel-neutral and closes the sole index destination. Content/correction commits and receipt were anonymously read back."
   },
   "next_cursor": {
-    "immediate_action": "Finish and integrate complete Chapter 7 in source order, then Chapters 8-10 in chapter-sized translation batches. Run one bounded deterministic gate per substantial chapter boundary; do not reopen passing Chapter 6 QA.",
-    "next_admission_unit": "chapter-7-complete-field-theory",
-    "next_admission_source": "chapter7.tex:1-1224",
-    "next_authority_bytes": 111676,
-    "next_authority_sha256": "18c0f3c91db7f3e4d73fb0b79e4bc719f70475e83af3123f4b0dd0fd4e2ccee6",
-    "parallel_translation": "complete Chapters 7-9 are in isolated chapter-level production",
+    "immediate_action": "Finish the three non-overlapping Chapter 10 editorial ranges, assemble/check once, reconcile Chapters 7-10 terminology once, and promote the four final chapters together.",
+    "next_admission_unit": "complete-li-chapters-7-10",
+    "next_admission_source": "chapter7.tex:1-1224; chapter8.tex:1-1144; chapter9.tex:1-1204; chapter10.tex:1-1472",
+    "chapter7_candidate_sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
+    "chapter8_candidate_sha256": "97a08d3da1ee715d97e209cb93ebc1370fa4ef24ba071d312b17f4f7902aeb31",
+    "chapter9_candidate_sha256": "cb753a347ac047dff772f08916cca940fab617440e2ea50c602e8ea4e29f762d",
+    "chapter10_authority_sha256": "dae0d60d2319f62112ea1361bc567c4b0758a805e14aea06be4c71dd10b26489",
+    "parallel_translation": "complete Duncan seven-root component and six repaired CRing selections",
     "cursor_after_li": "complete Duncan, six selected repaired CRing spans, and separate connective/mastery layer",
     "terminal_scope": "all Li Volume 1, complete Duncan, six selected repaired CRing spans, and separate connective/mastery layer"
   },
