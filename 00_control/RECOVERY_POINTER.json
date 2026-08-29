@@ -2,7 +2,7 @@
   "schema_version": 2,
   "updated": "2026-08-29",
   "task_id": "01a02163-e2bf-7a93-950a-b9ab84d7e8b9",
-  "goal_status": "active",
+  "goal_status": "complete",
   "lane_root": ".",
   "read_first": [
     "00_control/CURRENT_GOAL_AND_WORKFLOW.md",
@@ -20,10 +20,23 @@
     "00_control/ADVERSE_LEDGER.jsonl",
     "00_control/WORKLOG.jsonl",
     "00_control/ZENODO_PUBLICATION_STATE.json",
+    "00_control/ZENODO_O013_AGGREGATE_PUBLICATION_STATE.json",
     "00_control/FIGSHARE_PUBLICATION_STATE.json"
   ],
+  "terminal_publication": {
+    "state": "complete_public_github_and_zenodo_anonymous_readback_pass",
+    "github_content_commit": "91b76d0381aa0d4c6614ad6556fe779fe8039f93",
+    "github_content_readback": "qa/PUBLICATION_GITHUB_O013_COMPLETE_CONTENT_READBACK.json",
+    "github_receipt_commit": "c324cd176a61a414fe5bf4b4a1eebd101975d8c3",
+    "github_receipt_readback": "qa/PUBLICATION_GITHUB_O013_COMPLETE_RECEIPT_READBACK.json",
+    "zenodo_doi": "10.5281/zenodo.22160944",
+    "zenodo_concept_doi": "10.5281/zenodo.22160943",
+    "zenodo_files": 9,
+    "zenodo_bytes": 5155778,
+    "zenodo_readback": "qa/ZENODO_O013_AGGREGATE_1.0.0_METADATA_READBACK_20260829.json"
+  },
   "duncan_component_admission": {
-    "state": "complete_translated_built_backend_indexed_visual_pass_publication_pending",
+    "state": "complete_translated_built_backend_indexed_visual_pass_public",
     "commit": "c62d36f41189da4bd3da4671668f68720df54ff7",
     "archive_sha256": "60dd9679c9ebe0c28f31794a7b2cb8552f4b7d68038061024972257280a1852c",
     "source_freeze": "authority/duncan-representation-theory-notes-c62d36f41189da4bd3da4671668f68720df54ff7/DUNCAN_SOURCE_FREEZE.json",
@@ -186,22 +199,18 @@
     "candidate_rule": "Unit 024 is complete and public. Its immediate navigation repair is pixel-neutral and closes the sole index destination. Content/correction commits and receipt were anonymously read back."
   },
   "next_cursor": {
-    "immediate_action": "Finish the three non-overlapping Chapter 10 editorial ranges, assemble/check once, reconcile Chapters 7-10 terminology once, and promote the four final chapters together.",
-    "next_admission_unit": "complete-li-chapters-7-10",
-    "next_admission_source": "chapter7.tex:1-1224; chapter8.tex:1-1144; chapter9.tex:1-1204; chapter10.tex:1-1472",
-    "chapter7_candidate_sha256": "6647f499bbe7ea82711bb550004e8bcaa264f1e5ba9c742128acb7b764d039b3",
-    "chapter8_candidate_sha256": "97a08d3da1ee715d97e209cb93ebc1370fa4ef24ba071d312b17f4f7902aeb31",
-    "chapter9_candidate_sha256": "cb753a347ac047dff772f08916cca940fab617440e2ea50c602e8ea4e29f762d",
-    "chapter10_authority_sha256": "dae0d60d2319f62112ea1361bc567c4b0758a805e14aea06be4c71dd10b26489",
-    "parallel_translation": "complete Duncan seven-root component and six repaired CRing selections",
-    "cursor_after_li": "complete Duncan, six selected repaired CRing spans, and separate connective/mastery layer",
+    "immediate_action": null,
+    "next_admission_unit": null,
+    "translation_backlog": 0,
+    "publication_gate": "PASS",
+    "goal_status": "complete",
     "terminal_scope": "all Li Volume 1, complete Duncan, six selected repaired CRing spans, and separate connective/mastery layer"
   },
   "publication_resume": {
-    "github": "Complete Chapter 6 content commit 9b5fb65446413db03e9f6a877a92d622ef8b577e, receipt commit 9831714187f74b8cc0ff9bc4e9ddc1e8041f5a1a, and release-prep commit 8176740c69faa6f24c8c5052ad94655fe75d846a passed anonymous readback. Do not duplicate the repository or lineage.",
-    "zenodo": "Version 0.8.0 is public at DOI 10.5281/zenodo.22150334 under concept DOI 10.5281/zenodo.22059759. All five files / 75934888 bytes passed anonymous SHA-256 readback. Do not create a duplicate concept.",
+    "github": "Complete O013 content commit 91b76d0381aa0d4c6614ad6556fe779fe8039f93 and receipt commit c324cd176a61a414fe5bf4b4a1eebd101975d8c3 passed anonymous byte readback. Do not duplicate the repository.",
+    "zenodo": "Complete aggregate 1.0.0 is public at DOI 10.5281/zenodo.22160944 under concept DOI 10.5281/zenodo.22160943. All nine files / 5155778 bytes passed anonymous SHA-256 readback. Li-only DOI 10.5281/zenodo.22151447 remains a linked component.",
     "figshare": "Retain the existing item only; mixed component rights require the established metadata/link route rather than false-license byte mirroring.",
-    "next": "Integrate and publish complete Chapter 7, then continue Chapters 8-10 without reopening Chapter 6."
+    "next": null
   },
-  "terminal_condition": "Continue complete Li Volume 1, then translate Alexander Duncan's complete pinned CC BY 4.0 repository, then repair and translate only the six selected CRing spans, and author the separately provenanced connective/mastery layer; keep Etingof reference-only, preserve separate component rights, and publish verified nonduplicative boundaries."
+  "terminal_condition": "SATISFIED: complete Li Volume 1, complete pinned Duncan repository, six selected repaired CRing spans, and separately provenanced connective/mastery layer are public with separate rights and anonymous byte readback."
 }

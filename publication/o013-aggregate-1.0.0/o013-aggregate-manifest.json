@@ -1,0 +1,193 @@
+{
+  "$schema": "o013-aggregate-manifest.schema.json",
+  "schema": "interlanguage.o013.aggregate-release-manifest.v1",
+  "release": {
+    "version": "1.0.0",
+    "generated_on": "2026-08-29",
+    "language": "id-ID",
+    "role": "O013",
+    "title": "Aljabar Pascasarjana: Paket Pembelajaran Bahasa Indonesia (O013)",
+    "status": "complete",
+    "coverage": "Empat pembaca: Methods in Algebra Volume 1 lengkap; tujuh akar catatan teori representasi Duncan lengkap dalam penutupan berlisensi; enam rentang CRing yang dipilih secara tepat; dan lapisan rute serta penguasaan orisinal.",
+    "total_reader_pages": 716,
+    "reader_order": [
+      "01_metode-aljabar-jilid-1-id-lengkap.pdf",
+      "02_catatan-teori-representasi-duncan-id.pdf",
+      "03_pilihan-aljabar-komutatif-cring-id.pdf",
+      "04_o013-rute-pembelajar-dan-penguasaan-id.pdf"
+    ],
+    "package_size_limit_bytes": 500000000,
+    "record_license_hint": "other-open"
+  },
+  "aggregate_rights": {
+    "spdx_expression": "NOASSERTION",
+    "statement": "Karya gabungan ini tidak memiliki satu lisensi payung. Setiap komponen mempertahankan lisensi, atribusi, riwayat perubahan, dan batas distribusinya sendiri.",
+    "license_file": "LICENSES.md"
+  },
+  "production_provenance": {
+    "model": "OpenAI Codex gpt-5.6-sol, Ultra",
+    "instruction_basis": "on instructions of the user",
+    "source_authorship_preserved": true,
+    "non_endorsement": "Edisi dan integrasi ini independen; tidak ada afiliasi, persetujuan, dukungan, atau pengesahan oleh penulis sumber, institusi mereka, penerbit, atau pemegang merek yang dinyatakan maupun disiratkan."
+  },
+  "components": [
+    {
+      "component_id": "O013-K01",
+      "title": "Metode Aljabar, Jilid 1",
+      "role": "organizing graduate-algebra spine",
+      "scope": "Complete ten-chapter Methods in Algebra, Volume 1 Indonesian edition",
+      "source_creator": "Wen-Wei Li",
+      "source_authority": {
+        "repository": "https://github.com/wenweili/AlJabr-1",
+        "commit": "c4f7a01f68f5f407906b4b970640cddbbad85f6b",
+        "tree": "0f9fd52748165ec89a85ba602ccb949a2ce04694"
+      },
+      "license": {
+        "spdx": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "https://creativecommons.org/licenses/by/4.0/",
+        "additional_component_rights": [
+          "CC-BY-SA-3.0",
+          "OFL-1.1",
+          "GPL-3.0-with-Fandol-font-exception"
+        ],
+        "rights_note": "Substantive book and Indonesian adaptation are CC BY 4.0; embedded fragments, image/source closure, and fonts retain the separate rights recorded in LICENSES.md."
+      },
+      "reader_file": "01_metode-aljabar-jilid-1-id-lengkap.pdf",
+      "reader_pages": 521
+    },
+    {
+      "component_id": "O013-K02",
+      "title": "Catatan Teori Representasi",
+      "role": "representation-theory component",
+      "scope": "Complete Indonesian edition of the seven TeX roots in the licensed repository closure; six external assignment sheets, their 49 problems, and one partial solution are excluded.",
+      "source_creator": "Alexander Duncan",
+      "source_authority": {
+        "repository": "https://github.com/vtorsor/representation-theory-notes",
+        "commit": "c62d36f41189da4bd3da4671668f68720df54ff7",
+        "tree": "e83ee440666133b14dec440158a108069a13e9e4",
+        "archive_sha256": "60dd9679c9ebe0c28f31794a7b2cb8552f4b7d68038061024972257280a1852c"
+      },
+      "license": {
+        "spdx": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "reader_file": "02_catatan-teori-representasi-duncan-id.pdf",
+      "reader_pages": 114
+    },
+    {
+      "component_id": "O013-K03",
+      "title": "Pilihan Aljabar Komutatif dari CRing Project",
+      "role": "commutative-algebra completion",
+      "scope": "Only six exact source-line spans, with nine recorded repairs and separately identified original bridges; not a translation of the full CRing Project.",
+      "source_creator": "CRing Project",
+      "source_authority": {
+        "official_page": "https://math.uchicago.edu/~amathew/cr.html",
+        "archive_url": "https://math.uchicago.edu/~amathew/CRing.zip",
+        "archive_sha256": "151cdf5498622251db9999b082c4b756a5a7e22b07ddd79538c0057472a4234d",
+        "semantic_boundary": "six exact source line spans"
+      },
+      "license": {
+        "spdx": "GFDL-1.2-or-later",
+        "name": "GNU Free Documentation License 1.2 or later",
+        "url": "https://www.gnu.org/licenses/old-licenses/fdl-1.2.html",
+        "invariant_sections": [],
+        "front_cover_texts": [],
+        "back_cover_texts": [],
+        "full_license_included": true
+      },
+      "reader_file": "03_pilihan-aljabar-komutatif-cring-id.pdf",
+      "reader_pages": 74
+    },
+    {
+      "component_id": "O013-K04",
+      "title": "Rute Keterhubungan dan Penguasaan O013",
+      "role": "edition-original connective and mastery layer",
+      "scope": "Prerequisites, dependency graph, seven-stage route, eight diagnostics, and eight mastery tasks with two hints and one answer each.",
+      "source_creator": "OpenAI Codex gpt-5.6-sol, Ultra, on instructions of the user",
+      "source_authority": {
+        "kind": "edition-original",
+        "source_authors_not_attributed": [
+          "Wen-Wei Li",
+          "Alexander Duncan",
+          "CRing Project"
+        ]
+      },
+      "license": {
+        "spdx": "CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "reader_file": "04_o013-rute-pembelajar-dan-penguasaan-id.pdf",
+      "reader_pages": 7
+    }
+  ],
+  "files": [
+    {
+      "name": "01_metode-aljabar-jilid-1-id-lengkap.pdf",
+      "role": "primary reader; complete Li Volume 1 Indonesian edition",
+      "media_type": "application/pdf",
+      "bytes": 2875853,
+      "sha256": "c2994530e3da1711d44f8c36315c40874e87f1968d1a81c1432105de2251c2ee",
+      "license": "CC-BY-4.0 with separately identified embedded/build-closure rights in LICENSES.md",
+      "component_id": "O013-K01",
+      "pages": 521
+    },
+    {
+      "name": "02_catatan-teori-representasi-duncan-id.pdf",
+      "role": "representation-theory reader",
+      "media_type": "application/pdf",
+      "bytes": 508546,
+      "sha256": "6779d6467463fde4ef0b4fae147dc63533dff0919eda684120d409f1f5f07d12",
+      "license": "CC-BY-4.0",
+      "component_id": "O013-K02",
+      "pages": 114
+    },
+    {
+      "name": "03_pilihan-aljabar-komutatif-cring-id.pdf",
+      "role": "commutative-algebra selected-spans reader",
+      "media_type": "application/pdf",
+      "bytes": 378716,
+      "sha256": "4596fd6a84f829e1e9c14cb87468226d6ef49c653d41886af5fab9f2bd96b5db",
+      "license": "GFDL-1.2-or-later; no invariant sections or cover texts",
+      "component_id": "O013-K03",
+      "pages": 74
+    },
+    {
+      "name": "04_o013-rute-pembelajar-dan-penguasaan-id.pdf",
+      "role": "edition-original learner route and mastery reader",
+      "media_type": "application/pdf",
+      "bytes": 79365,
+      "sha256": "31af67adf897519a1fef0ed53757c2a3d9d12b5ccc3bdd4cb74e9ce01dd27a18",
+      "license": "CC-BY-4.0",
+      "component_id": "O013-K04",
+      "pages": 7
+    },
+    {
+      "name": "05_o013-sumber-backend-1.0.0.zip",
+      "role": "deterministic compact source, build, backend, and compact QA-receipt closure for components O013-K02 through O013-K04",
+      "media_type": "application/zip",
+      "bytes": 1295518,
+      "sha256": "6273206ffb42277f3040d638e1a0f0870596b823a239fa9d3947d964aa094ef9",
+      "license": "LicenseRef-Component-Specific"
+    },
+    {
+      "name": "LICENSES.md",
+      "role": "component rights, attribution, font, and embedded-material notices",
+      "media_type": "text/markdown",
+      "bytes": 3723,
+      "sha256": "5185c0b42b59e38bb4533fb902c12f3d31061c773fd6d5bcd9fb84be18bd1cbf",
+      "license": "LicenseRef-Documentation"
+    }
+  ],
+  "source_archive": {
+    "file": "05_o013-sumber-backend-1.0.0.zip",
+    "deterministic": true,
+    "archive_entry_count": 68,
+    "content_entry_count": 67,
+    "content_uncompressed_bytes": 9392140,
+    "canonical_entry_list_sha256": "3ccae157aeb93fd6af86d2a9241817d4d41d1fd1f693f28a7668f14af4dce55a",
+    "embedded_manifest": "SOURCE_ARCHIVE_MANIFEST.json"
+  }
+}

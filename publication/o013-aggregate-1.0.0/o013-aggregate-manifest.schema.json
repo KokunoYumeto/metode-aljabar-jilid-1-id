@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.invalid/schemas/interlanguage.o013.aggregate-release-manifest.v1.json",
+  "title": "O013 aggregate release manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "schema", "release", "aggregate_rights", "production_provenance", "components", "files", "source_archive"],
+  "properties": {
+    "$schema": {"const": "o013-aggregate-manifest.schema.json"},
+    "schema": {"const": "interlanguage.o013.aggregate-release-manifest.v1"},
+    "release": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version", "generated_on", "language", "role", "title", "status", "coverage", "total_reader_pages", "reader_order", "package_size_limit_bytes", "record_license_hint"],
+      "properties": {
+        "version": {"const": "1.0.0"},
+        "generated_on": {"type": "string", "format": "date"},
+        "language": {"const": "id-ID"},
+        "role": {"const": "O013"},
+        "title": {"type": "string", "minLength": 1},
+        "status": {"enum": ["complete", "partial", "finishing"]},
+        "coverage": {"type": "string", "minLength": 1},
+        "total_reader_pages": {"type": "integer", "minimum": 1},
+        "reader_order": {"type": "array", "minItems": 4, "maxItems": 4, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "package_size_limit_bytes": {"type": "integer", "minimum": 1},
+        "record_license_hint": {"const": "other-open"}
+      }
+    },
+    "aggregate_rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["spdx_expression", "statement", "license_file"],
+      "properties": {
+        "spdx_expression": {"const": "NOASSERTION"},
+        "statement": {"type": "string", "minLength": 1},
+        "license_file": {"const": "LICENSES.md"}
+      }
+    },
+    "production_provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model", "instruction_basis", "source_authorship_preserved", "non_endorsement"],
+      "properties": {
+        "model": {"const": "OpenAI Codex gpt-5.6-sol, Ultra"},
+        "instruction_basis": {"const": "on instructions of the user"},
+        "source_authorship_preserved": {"const": true},
+        "non_endorsement": {"type": "string", "minLength": 1}
+      }
+    },
+    "components": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["component_id", "title", "role", "scope", "source_creator", "license", "reader_file"],
+        "properties": {
+          "component_id": {"type": "string", "pattern": "^O013-K0[1-4]$"},
+          "title": {"type": "string", "minLength": 1},
+          "role": {"type": "string", "minLength": 1},
+          "scope": {"type": "string", "minLength": 1},
+          "source_creator": {"type": "string", "minLength": 1},
+          "license": {"type": "object", "required": ["spdx", "name", "url"], "properties": {"spdx": {"type": "string", "minLength": 1}, "name": {"type": "string", "minLength": 1}, "url": {"type": "string", "format": "uri"}}},
+          "reader_file": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "files": {
+      "type": "array",
+      "minItems": 6,
+      "items": {"$ref": "#/definitions/file"}
+    },
+    "source_archive": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["file", "deterministic", "archive_entry_count", "content_entry_count", "content_uncompressed_bytes", "canonical_entry_list_sha256", "embedded_manifest"],
+      "properties": {
+        "file": {"type": "string", "minLength": 1},
+        "deterministic": {"const": true},
+        "archive_entry_count": {"type": "integer", "minimum": 1},
+        "content_entry_count": {"type": "integer", "minimum": 1},
+        "content_uncompressed_bytes": {"type": "integer", "minimum": 1},
+        "canonical_entry_list_sha256": {"$ref": "#/definitions/sha256"},
+        "embedded_manifest": {"const": "SOURCE_ARCHIVE_MANIFEST.json"}
+      }
+    }
+  },
+  "definitions": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "file": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "role", "media_type", "bytes", "sha256", "license"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "role": {"type": "string", "minLength": 1},
+        "media_type": {"type": "string", "minLength": 1},
+        "bytes": {"type": "integer", "minimum": 1},
+        "sha256": {"$ref": "#/definitions/sha256"},
+        "license": {"type": "string", "minLength": 1},
+        "component_id": {"type": "string", "minLength": 1},
+        "pages": {"type": "integer", "minimum": 1}
+      }
+    }
+  }
+}

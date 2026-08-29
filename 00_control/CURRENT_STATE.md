@@ -1,25 +1,22 @@
 # Current state
 
 Updated: 2026-08-29
-Status: active, publication only. The entire four-component O013 corpus is
-translated/authored, promoted, reproducibly built, backend-indexed, and visually
-admitted: complete Li (521 pages), all seven licensed Duncan roots (114 pages),
-the six exact repaired CRing selections (74 pages), and the separately
-provenanced original route/mastery layer (7 pages), totaling 716 reader pages.
-There is no remaining translation backlog. Li is already public at GitHub commit
-`b5dda2218c5fbd2b7e7fae7e05fdbbe88fdab10e` and Zenodo DOI
-`10.5281/zenodo.22151447`, with anonymous byte readback passed. Duncan's final
-reader SHA-256 is
-`6779d6467463fde4ef0b4fae147dc63533dff0919eda684120d409f1f5f07d12`;
-CRing's is
-`4596fd6a84f829e1e9c14cb87468226d6ef49c653d41886af5fab9f2bd96b5db`;
-the original route reader's is
-`31af67adf897519a1fef0ed53757c2a3d9d12b5ccc3bdd4cb74e9ce01dd27a18`.
-Both component backends regenerate byte-identically and all final pages passed
-one aggregate visual review. Exact evidence is in
-`qa/O013_COMPLETE_LOCAL_BOUNDARY_20260829.json`. Immediate action: one
-path-limited GitHub push/readback and one reader-first aggregate Zenodo
-publication/readback. Do not rerun passing component QA.
+Status: complete and public. The entire four-component O013 corpus is
+translated/authored, promoted, reproducibly built, backend-indexed, visually
+admitted, and preserved: complete Li (521 pages), all seven licensed Duncan
+roots (114 pages), the six exact repaired CRing selections (74 pages), and the
+separately provenanced original route/mastery layer (7 pages), totaling 716
+reader pages. Translation backlog is zero. GitHub content commit
+`91b76d0381aa0d4c6614ad6556fe779fe8039f93` passed anonymous readback for all
+94 changed blobs / 14,478,697 bytes; receipt commit
+`c324cd176a61a414fe5bf4b4a1eebd101975d8c3` also passed. The aggregate is
+public at Zenodo DOI `10.5281/zenodo.22160944`, concept DOI
+`10.5281/zenodo.22160943`; all nine files / 5,155,778 bytes passed anonymous
+SHA-256 readback. Exact terminal evidence is in
+`qa/O013_COMPLETE_LOCAL_BOUNDARY_20260829.json`,
+`qa/PUBLICATION_GITHUB_O013_COMPLETE_CONTENT_READBACK.json`, and
+`qa/ZENODO_O013_AGGREGATE_1.0.0_METADATA_READBACK_20260829.json`. No production
+or QA action remains; reopen only for a concrete future defect.
 
 ## Completed
 

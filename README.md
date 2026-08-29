@@ -14,6 +14,8 @@ Status saat ini: **Paket O013 selesai diterjemahkan dan dibangun: edisi lengkap 
 
 [Mulai dari rute pembelajaran, diagnostik, dan tugas penguasaan O013 (7 halaman)](artifacts/o013-rute-pembelajar-dan-penguasaan-id.pdf)
 
+[Unduh paket O013 lengkap — empat pembaca, sumber/backend ringkas, manifest, dan checksum — Zenodo DOI 10.5281/zenodo.22160944](https://doi.org/10.5281/zenodo.22160944)
+
 [Baca atau unduh checkpoint pembaca melalui Bab 6 (460 halaman; pendahuluan dan Bab 1–6 lengkap)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-through-bab-6-reader.pdf)
 
 [Baca atau unduh checkpoint pembaca melalui Bab 5 (385 halaman; pendahuluan dan Bab 1–5 lengkap)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-through-bab-5-reader.pdf)

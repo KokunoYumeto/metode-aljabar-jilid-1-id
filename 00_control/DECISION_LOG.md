@@ -1544,3 +1544,14 @@ all pass; exact identities live in `qa/O013_COMPLETE_LOCAL_BOUNDARY_20260829.jso
 There is no remaining translation or per-unit QA action. Preserve the boundary
 once on GitHub and once as a mixed-rights reader-first aggregate Zenodo record,
 with anonymous byte readback; never flatten CC BY 4.0 and GFDL rights.
+
+## D098 — 2026-08-29 — Complete O013 terminal publication
+
+Close the finite O013 pursuit after preserving the complete four-component
+corpus at GitHub content commit
+`91b76d0381aa0d4c6614ad6556fe779fe8039f93` and Zenodo DOI
+`10.5281/zenodo.22160944`. Anonymous GitHub readback matched all 94 changed
+blobs / 14,478,697 bytes. Anonymous Zenodo readback matched all nine files /
+5,155,778 bytes. The Li-only DOI remains intact as a linked component; the
+aggregate keeps CC BY 4.0, GFDL 1.2-or-later, embedded-source, image, and font
+rights distinct. Translation backlog is zero and no further QA loop remains.

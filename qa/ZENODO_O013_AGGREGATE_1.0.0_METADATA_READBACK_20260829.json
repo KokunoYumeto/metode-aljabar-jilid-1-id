@@ -1,0 +1,166 @@
+{
+  "schema": "o013.zenodo-aggregate-public-readback.v1",
+  "result": "PASS",
+  "record_id": 22160944,
+  "public_url": "https://zenodo.org/records/22160944",
+  "doi": "10.5281/zenodo.22160944",
+  "concept_doi": "10.5281/zenodo.22160943",
+  "li_component_doi": "10.5281/zenodo.22151447",
+  "github_content_commit": "91b76d0381aa0d4c6614ad6556fe779fe8039f93",
+  "public_access": true,
+  "anonymous_api_readback": true,
+  "anonymous_full_file_readback": true,
+  "file_count": 9,
+  "total_bytes": 5155778,
+  "files": [
+    {
+      "name": "01_metode-aljabar-jilid-1-id-lengkap.pdf",
+      "bytes": 2875853,
+      "sha256": "c2994530e3da1711d44f8c36315c40874e87f1968d1a81c1432105de2251c2ee",
+      "file_id": "60e38bdf-1de9-44eb-9e3b-68ab961e7dde"
+    },
+    {
+      "name": "02_catatan-teori-representasi-duncan-id.pdf",
+      "bytes": 508546,
+      "sha256": "6779d6467463fde4ef0b4fae147dc63533dff0919eda684120d409f1f5f07d12",
+      "file_id": "2d0ed762-716f-4054-9390-8bedfe9e9a89"
+    },
+    {
+      "name": "03_pilihan-aljabar-komutatif-cring-id.pdf",
+      "bytes": 378716,
+      "sha256": "4596fd6a84f829e1e9c14cb87468226d6ef49c653d41886af5fab9f2bd96b5db",
+      "file_id": "e7670d8e-be7d-4b3c-8187-556b0925e6b2"
+    },
+    {
+      "name": "04_o013-rute-pembelajar-dan-penguasaan-id.pdf",
+      "bytes": 79365,
+      "sha256": "31af67adf897519a1fef0ed53757c2a3d9d12b5ccc3bdd4cb74e9ce01dd27a18",
+      "file_id": "07dc19f1-5556-4ddc-b84a-126d41ecb87f"
+    },
+    {
+      "name": "05_o013-sumber-backend-1.0.0.zip",
+      "bytes": 1295518,
+      "sha256": "6273206ffb42277f3040d638e1a0f0870596b823a239fa9d3947d964aa094ef9",
+      "file_id": "512a275f-8b74-4583-9b9d-253b0a61431a"
+    },
+    {
+      "name": "LICENSES.md",
+      "bytes": 3723,
+      "sha256": "5185c0b42b59e38bb4533fb902c12f3d31061c773fd6d5bcd9fb84be18bd1cbf",
+      "file_id": "22c2d956-6b02-46c1-83bc-b848b658d438"
+    },
+    {
+      "name": "o013-aggregate-manifest.schema.json",
+      "bytes": 4840,
+      "sha256": "70de69436b93ded48fd1b94791c0b56efa98a94f5c7ce01e08281b14404813a6",
+      "file_id": "03e87132-1bba-4aa9-88ae-4de8e8265469"
+    },
+    {
+      "name": "o013-aggregate-manifest.json",
+      "bytes": 8406,
+      "sha256": "3f19fd77fe9b5d54b6efa6b3558f02c704f2e16504315444edcdfc7fd40c089c",
+      "file_id": "e3b05edd-fc3e-4e07-884e-a030b3d3608b"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 811,
+      "sha256": "ec4cca7cb9277fe339f0269195e9f102251e9f3f5b6a4be45fa30c2ca8d3799a",
+      "file_id": "3549b57a-61ed-44da-b2cd-0254aa2790c4"
+    }
+  ],
+  "metadata": {
+    "title": "Aljabar Pascasarjana: Paket Pembelajaran Bahasa Indonesia (O013)",
+    "doi": "10.5281/zenodo.22160944",
+    "publication_date": "2026-08-29",
+    "description": "<p>Paket pembelajaran aljabar pascasarjana Bahasa Indonesia yang lengkap untuk peran kurikulum O013. Paket ini memuat empat pembaca, total 716 halaman: edisi lengkap <em>Methods in Algebra, Volume 1</em> karya Wen-Wei Li; edisi lengkap tujuh akar TeX catatan teori representasi berlisensi karya Alexander Duncan; enam pilihan tepat dari <em>CRing Project</em>; serta lapisan rute, diagnostik, dan penguasaan yang diprovenanskan terpisah.</p><p>Berkas ditata dengan pembaca PDF utama lebih dahulu. Arsip ringkas menyertakan sumber, skrip build, backend ID stabil dan proyeksi mesin yang diperlukan untuk melanjutkan komponen Duncan, CRing, dan lapisan orisinal. Sumber serta backend Li lengkap dipertahankan pada DOI komponen yang ditautkan.</p><p>Provenance produksi: OpenAI Codex gpt-5.6-sol, Ultra. Keterangan ini terpisah dari kepengarangan sumber dan tidak menggantikan kredit penulis atau kontributor manusia.</p><p>Hak tidak diratakan. Edisi Li lengkap dan adaptasinya menggunakan CC BY 4.0, dengan komponen terpisah CC BY-SA 3.0, OFL 1.1, dan GPLv3 dengan pengecualian font sebagaimana dirinci dalam LICENSES.md. Tujuh akar TeX Duncan dan terjemahannya menggunakan CC BY 4.0; enam lembar tugas situs penulis, 49 soal, dan solusi parsial tidak disertakan. Hanya enam pilihan CRing yang disertakan sebagai komponen termodifikasi menurut GFDL 1.2-or-later, tanpa Bagian Invarian atau Teks Sampul; ini bukan terjemahan seluruh CRing Project. Lapisan rute dan penguasaan orisinal menggunakan CC BY 4.0 dan diprovenanskan terpisah.</p><p>Paket ini merupakan turunan dan integrasi independen. Nama para penulis, kontributor, institusi, dan proyek sumber dipakai untuk atribusi; tidak ada afiliasi, persetujuan, dukungan, atau pengesahan yang dinyatakan maupun disiratkan.</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Li, Wen-Wei",
+        "affiliation": null
+      },
+      {
+        "name": "Duncan, Alexander",
+        "affiliation": null
+      },
+      {
+        "name": "CRing Project",
+        "affiliation": null
+      }
+    ],
+    "contributors": [
+      {
+        "name": "TTP",
+        "affiliation": null,
+        "type": "ProjectMember"
+      }
+    ],
+    "keywords": [
+      "aljabar pascasarjana",
+      "teori representasi",
+      "aljabar komutatif",
+      "teori Galois",
+      "teori kategori",
+      "Bahasa Indonesia",
+      "buku teks terbuka",
+      "graduate algebra",
+      "matematika",
+      "O013"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/wenweili/AlJabr-1/commit/c4f7a01f68f5f407906b4b970640cddbbad85f6b",
+        "relation": "isDerivedFrom",
+        "scheme": "url"
+      },
+      {
+        "identifier": "978-7-04-050725-6",
+        "relation": "isDerivedFrom",
+        "scheme": "isbn"
+      },
+      {
+        "identifier": "https://github.com/vtorsor/representation-theory-notes/commit/c62d36f41189da4bd3da4671668f68720df54ff7",
+        "relation": "isDerivedFrom",
+        "scheme": "url"
+      },
+      {
+        "identifier": "https://math.uchicago.edu/~amathew/CRing.zip",
+        "relation": "isDerivedFrom",
+        "scheme": "url"
+      },
+      {
+        "identifier": "10.5281/zenodo.22151447",
+        "relation": "hasPart",
+        "scheme": "doi"
+      },
+      {
+        "identifier": "https://github.com/KokunoYumeto/metode-aljabar-jilid-1-id/commit/91b76d0381aa0d4c6614ad6556fe779fe8039f93",
+        "relation": "isSupplementTo",
+        "scheme": "url"
+      }
+    ],
+    "version": "1.0.0",
+    "language": "ind",
+    "resource_type": {
+      "title": "Book",
+      "type": "publication",
+      "subtype": "book"
+    },
+    "license": {
+      "id": "other-open"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 0,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "22160943"
+          }
+        }
+      ]
+    },
+    "notes": "Status: lengkap untuk paket empat komponen O013, total 716 halaman pembaca. Li Volume 1 lengkap; tujuh akar TeX Duncan lengkap dalam batas repositori berlisensi; tepat enam pilihan CRing; dan lapisan rute/penguasaan orisinal. LICENSES.md dan manifest mengendalikan batas hak, cakupan, atribusi, dan provenance setiap komponen."
+  }
+}

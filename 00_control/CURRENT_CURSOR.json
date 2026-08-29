@@ -615,7 +615,7 @@
     "unit_035_state": "complete Chapter 4 public; content and receipt anonymous readback passed"
   },
   "li_complete_local_boundary": {
-    "state": "translation_build_visual_backend_pass_publication_pending",
+    "state": "translation_build_visual_backend_pass_public",
     "coverage": "complete prelude and complete Li Chapters 1-10",
     "source_records": 13599,
     "source_bytes": 1459865,
@@ -642,14 +642,30 @@
     "reader_pages": 716,
     "translation_backlog_records": 0,
     "components": ["li-complete", "duncan-complete", "cring-six-selected-complete", "original-route-mastery-complete"],
-    "state": "translation_build_backend_visual_pass_publication_pending"
+    "state": "complete_public_github_and_zenodo_anonymous_readback_pass"
   },
-  "next_action": "Path-limited GitHub commit/push and anonymous changed-blob readback, then reader-first nonduplicative aggregate Zenodo publication and anonymous full-byte readback. Do not rerun passing component QA.",
+  "terminal_publication": {
+    "github_content_commit": "91b76d0381aa0d4c6614ad6556fe779fe8039f93",
+    "github_content_tree": "a017f0a2efc016d1a2b6b422577de77e0db9b6ac",
+    "github_changed_paths": 94,
+    "github_changed_bytes": 14478697,
+    "github_content_readback": "qa/PUBLICATION_GITHUB_O013_COMPLETE_CONTENT_READBACK.json",
+    "github_receipt_commit": "c324cd176a61a414fe5bf4b4a1eebd101975d8c3",
+    "github_receipt_readback": "qa/PUBLICATION_GITHUB_O013_COMPLETE_RECEIPT_READBACK.json",
+    "zenodo_record_id": 22160944,
+    "zenodo_doi": "10.5281/zenodo.22160944",
+    "zenodo_concept_doi": "10.5281/zenodo.22160943",
+    "zenodo_files": 9,
+    "zenodo_bytes": 5155778,
+    "zenodo_anonymous_all_file_sha256_readback": true
+  },
+  "next_action": null,
   "next_cursor": {
-    "immediate_action": "Publish the complete four-component boundary once and prove public-byte identity.",
+    "immediate_action": null,
     "next_admission_unit": null,
     "translation_backlog": 0,
-    "publication_gate": "github_then_zenodo_then_anonymous_readback",
+    "publication_gate": "PASS",
+    "goal_status": "complete",
     "terminal_scope": "all Li Volume 1, complete Duncan, six selected repaired CRing spans, and separate connective/mastery layer"
   }
 }
