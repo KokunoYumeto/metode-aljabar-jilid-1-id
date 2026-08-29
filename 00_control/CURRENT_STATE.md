@@ -2,7 +2,7 @@
 
 Updated: 2026-08-29
 Status: active. The complete Wen-Wei Li Volume 1 Bahasa Indonesia source is now
-canonically admitted: prelude plus Chapters 1–10, 13,599 records / 1,459,865
+canonically admitted and public: prelude plus Chapters 1–10, 13,599 records / 1,459,865
 bytes, with all protected mathematics and identifiers preserved, 161 active
 top-level exercises, and 51 hints. The complete 521-page reader is 2,875,853
 bytes, SHA-256
@@ -12,10 +12,14 @@ All 521 pages passed one bounded overview inspection and 24 boundary/severe-
 diagnostic pages passed a 110-dpi targeted inspection, with no visible clipping,
 overlap, malformed page, or accidental blank page. Final modular backends
 Units 045–048 and their 24 CSV projections pass schema, semantic, binding, and
-deterministic regeneration checks. The immediate action is the single complete-
-Li GitHub/Zenodo publication and anonymous byte readback. In parallel, all six
-repaired CRing selections and all seven Duncan roots are undergoing final prose
-editing. The terminal objective remains the complete Li + Duncan + six CRing
+deterministic regeneration checks. GitHub commit
+`b5dda2218c5fbd2b7e7fae7e05fdbbe88fdab10e` passed anonymous readback for 58
+paths / 8,134,778 bytes. Zenodo `1.0.0` is public at DOI
+`10.5281/zenodo.22151447` in concept `10.5281/zenodo.22059759`; all five files /
+70,149,331 bytes passed anonymous full-byte readback. All six repaired CRing
+selections and all seven Duncan roots are translated. The immediate action is
+one Duncan aggregate build/backend/publication boundary, followed by CRing
+integration and the separate original layer. The terminal objective remains the complete Li + Duncan + six CRing
 selections + separately provenanced connective/mastery corpus; this Li boundary
 is not a terminal completion claim.
 

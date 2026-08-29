@@ -6,6 +6,8 @@ Status saat ini: **Seluruh Pendahuluan dan Bab 1–10 telah diterjemahkan ke Bah
 
 [Baca atau unduh edisi lengkap Bahasa Indonesia (521 halaman; Pendahuluan dan Bab 1–10)](artifacts/metode-aljabar-jilid-1-id-lengkap.pdf)
 
+[Unduh edisi lengkap terpreservasi — Zenodo 1.0.0, DOI 10.5281/zenodo.22151447](https://doi.org/10.5281/zenodo.22151447)
+
 [Baca atau unduh checkpoint pembaca melalui Bab 6 (460 halaman; pendahuluan dan Bab 1–6 lengkap)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-through-bab-6-reader.pdf)
 
 [Baca atau unduh checkpoint pembaca melalui Bab 5 (385 halaman; pendahuluan dan Bab 1–5 lengkap)](output/pdf/00-metode-aljabar-jilid-1-id-checkpoint-through-bab-5-reader.pdf)
@@ -124,7 +126,7 @@ Checkpoint GitHub dipublikasikan pada commit
 byte cocok pada pembacaan balik anonim. Receipt publikasinya tersedia di
 [`qa/PUBLICATION_GITHUB_CHECKPOINT_0.6.0_20260825.md`](qa/PUBLICATION_GITHUB_CHECKPOINT_0.6.0_20260825.md).
 
-Versi preservasi saat ini, `0.8.0`, tersedia pada [Zenodo DOI 10.5281/zenodo.22150334](https://doi.org/10.5281/zenodo.22150334). Seluruh pembaruan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat. Rekaman ini memuat checkpoint gabungan 460 halaman melalui Bab 6, paket sumber/backend ringkas, pemberitahuan hak, manifest, dan checksum: lima berkas / 75.934.888 byte yang seluruhnya cocok pada pembacaan balik anonim. Bab 7–10, komponen Duncan, enam segmen CRing, dan lapisan penghubung/penguasaan belum disertakan dalam versi Zenodo tersebut. Receipt tersedia di [`qa/PUBLICATION_ZENODO_0.8.0_20260828.md`](qa/PUBLICATION_ZENODO_0.8.0_20260828.md) dan [`qa/ZENODO_0.8.0_PUBLIC_READBACK_20260828.json`](qa/ZENODO_0.8.0_PUBLIC_READBACK_20260828.json).
+Versi preservasi saat ini, `1.0.0`, tersedia pada [Zenodo DOI 10.5281/zenodo.22151447](https://doi.org/10.5281/zenodo.22151447). Seluruh pembaruan tetap berada dalam [concept DOI 10.5281/zenodo.22059759](https://doi.org/10.5281/zenodo.22059759), bukan membuat seri duplikat. Rekaman ini memuat edisi Li lengkap 521 halaman, paket sumber/backend yang dapat dilanjutkan, pemberitahuan hak, manifest, dan checksum: lima berkas / 70.149.331 byte yang seluruhnya cocok pada pembacaan balik anonim. Komponen Duncan, enam segmen CRing, dan lapisan penghubung/penguasaan adalah komponen O013 terpisah dan tidak diklaim sebagai bagian karya Li. Receipt tersedia di [`qa/ZENODO_PUBLICATION_LI_COMPLETE_1_0_0.md`](qa/ZENODO_PUBLICATION_LI_COMPLETE_1_0_0.md).
 
 Item karya Figshare yang sama tetap dipertahankan sebagai satu garis versi, bukan diduplikasi. Pemilih lisensi Figshare tidak menyediakan pilihan yang dapat mewakili gabungan hak komponen edisi ini; karena itu versi berikutnya harus berupa rekaman metadata CC0 yang menautkan checkpoint Zenodo, bukan salinan berkas dengan lisensi yang diratakan secara keliru. Lisensi teks utama/adaptasi adalah CC BY 4.0; `Lanzhou.png` dan fragmen `AJbook.cls` yang dikreditkan tetap CC BY-SA 3.0, font Noto tetap OFL 1.1, dan Fandol 0.3 tetap GPLv3 dengan pengecualian font, sebagaimana dirinci dalam `LICENSES.md`.
 

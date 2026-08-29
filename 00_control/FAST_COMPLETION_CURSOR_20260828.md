@@ -3,7 +3,7 @@
 This is the short live cursor. `CURRENT_GOAL_AND_WORKFLOW.md` retains the full
 finite terminal workflow and authority chain.
 
-## Complete Li boundary ready for publication
+## Complete Li boundary public
 
 - Canonical source: `repo/source/prelude.tex` and `chapter1.tex` through
   `chapter10.tex`; 13,599 normalized-LF records / 1,459,865 bytes; 161 active
@@ -20,21 +20,29 @@ finite terminal workflow and authority chain.
 - Final modular backends: `backend/data/unit-045-*` through
   `backend/data/unit-048-*`, with 24 matching CSV projections and four
   `qa/li-complete-evidence/unit-*-backend-validation.json` receipts; all PASS.
+- GitHub content commit: `b5dda2218c5fbd2b7e7fae7e05fdbbe88fdab10e`;
+  anonymous readback passed for 58 paths / 8,134,778 bytes.
+- Zenodo version `1.0.0`: DOI `10.5281/zenodo.22151447` in existing concept
+  `10.5281/zenodo.22059759`; five reader-first files / 70,149,331 bytes all
+  passed anonymous full-byte readback. Receipt:
+  `qa/ZENODO_PUBLICATION_LI_COMPLETE_1_0_0.md`.
 
 ## Immediate executable action
 
-Update the public-facing controls, commit/push the complete-Li boundary with
-path-limited Git, anonymously read back every published path, then publish a
-reader-first `1.0.0` version in the existing Zenodo concept DOI
-`10.5281/zenodo.22059759` and read back all public bytes. Do not create a
-duplicate concept and do not wait for confirmation.
+Close Duncan as one component. All seven licensed roots are translated. Rerun
+the integrated build after the concrete `symmetric.tex` math-blank repair,
+then perform one aggregate validator/backend/build/visual gate, promote the
+component, commit/push with path-limited Git, read it back anonymously, and
+preserve it in the existing work lineage. Do not reopen Li QA.
 
 ## Parallel production after the Li push
 
-1. Admit/build/index the seven complete Duncan CC BY 4.0 TeX roots after final
-   fluent id-ID editing; external assignment sheets remain excluded.
+1. Admit/build/index the seven complete Duncan CC BY 4.0 TeX roots; external
+   assignment sheets remain excluded.
 2. Admit/build/index only the six selected repaired CRing GFDL 1.2-or-later
-   spans after the aggregate topology/residue check.
+   spans. The aggregate translation validator already passes for all six pairs:
+   3,589 records, nine tracked repairs, receipt
+   `qa/cring-selected-evidence/cring-selected-aggregate-validation.json`.
 3. Author only genuinely missing connective/mastery material with separate
    provenance and rights; do not attribute it to Li, Duncan, or CRing.
 4. Publish each worthwhile component boundary once and continue until the full
