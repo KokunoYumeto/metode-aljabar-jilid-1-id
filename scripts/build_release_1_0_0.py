@@ -4,9 +4,12 @@
 from __future__ import annotations
 
 import json
+import subprocess
 import sys
+import zipfile
 from pathlib import Path
-from typing import Any
+from pathlib import PurePosixPath
+from typing import Any, Iterable
 
 from pypdf import PdfReader
 
@@ -34,11 +37,88 @@ EXPECTED_COMPONENTS = 11
 EXPECTED_SOURCE_PAGES = 445
 EXPECTED_READER_BYTES = 2_875_853
 EXPECTED_READER_SHA256 = "c2994530e3da1711d44f8c36315c40874e87f1968d1a81c1432105de2251c2ee"
+ARCHIVE_ROOTS = [
+    ".gitattributes",
+    "README.md",
+    "LICENSES.md",
+    "00_control/BUILD_BASELINE.md",
+    "00_control/CURRENT_CURSOR.json",
+    "00_control/CURRENT_GOAL_AND_WORKFLOW.md",
+    "00_control/CURRENT_STATE.md",
+    "00_control/RIGHTS_COMPONENTS.csv",
+    "00_control/SOURCE_AUTHORITY.md",
+    "00_control/SOURCE_MANIFEST.csv",
+    "00_control/SOURCE_SELECTION.md",
+    "00_control/TERMINOLOGY.id-ID.csv",
+    "backend",
+    "repo",
+    "scripts/build_li_complete.ps1",
+    "scripts/build_release_1_0_0.py",
+    "scripts/check_li_complete_translation.py",
+    "scripts/generate_li_final_chapters_backend.py",
+    "scripts/publish_zenodo_1_0_0.py",
+    "scripts/reserve_zenodo_1_0_0.py",
+    "scripts/validate_backend.py",
+    "scripts/verify_github_commit_readback.py",
+    "scripts/verify_zenodo_1_0_0_readback.py",
+    "scripts/write_li_complete_freeze.py",
+    "scripts/write_li_final_admission.py",
+    "qa/LI_COMPLETE_ADMISSION_20260829.md",
+    "qa/LI_COMPLETE_TRANSLATION_FREEZE.json",
+    "qa/LI_COMPLETE_VISUAL_QA_20260829.json",
+    "qa/PUBLICATION_GITHUB_LI_COMPLETE_CONTENT_READBACK.json",
+    "qa/li-complete-evidence/unit-045-backend-validation.json",
+    "qa/li-complete-evidence/unit-046-backend-validation.json",
+    "qa/li-complete-evidence/unit-047-backend-validation.json",
+    "qa/li-complete-evidence/unit-048-backend-validation.json",
+]
+ORIGINAL_WRITE_DETERMINISTIC_ZIP = foundation.write_deterministic_zip
 
 
 def require(condition: bool, message: str) -> None:
     if not condition:
         raise RuntimeError(message)
+
+
+def committed_archive_roots(commit: str) -> list[str]:
+    """Return the intentionally small, reproducible release pathspec."""
+    for relative in ARCHIVE_ROOTS:
+        probe = subprocess.run(
+            ["git", "cat-file", "-e", f"{commit}:{relative}"],
+            cwd=ROOT,
+            check=False,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+        require(probe.returncode == 0, f"missing committed release path: {relative}")
+    return list(ARCHIVE_ROOTS)
+
+
+def write_release_zip(
+    destination: Path,
+    paths: Iterable[str],
+    *,
+    commit: str | None,
+) -> tuple[int, int, int]:
+    """Use one Git archive transaction instead of one process per blob."""
+    entries = list(paths)
+    if commit is None:
+        return ORIGINAL_WRITE_DETERMINISTIC_ZIP(destination, entries, commit=None)
+    require(entries == ARCHIVE_ROOTS, "release archive pathspec drifted")
+    subprocess.run(
+        ["git", "archive", "--format=zip", f"--output={destination}", commit, "--", *entries],
+        cwd=ROOT,
+        check=True,
+    )
+    with zipfile.ZipFile(destination) as archive:
+        members = [item for item in archive.infolist() if not item.is_dir()]
+        require(bool(members) and archive.testzip() is None, "release ZIP is empty or corrupt")
+        for item in members:
+            member = PurePosixPath(item.filename)
+            require(not member.is_absolute() and ".." not in member.parts,
+                    f"unsafe ZIP member: {item.filename}")
+        expanded = sum(item.file_size for item in members)
+    return len(members), expanded, len(entries)
 
 
 def validate_reader_and_base_evidence() -> tuple[dict[str, object], list[dict[str, object]]]:
@@ -188,6 +268,9 @@ def configure() -> None:
     base.validate_reader_and_base_evidence = validate_reader_and_base_evidence
     base.validate_stage = validate_stage
     base.finalize_stage = finalize_stage
+    foundation.ARCHIVE_ROOTS = list(ARCHIVE_ROOTS)
+    foundation.committed_paths = committed_archive_roots
+    foundation.write_deterministic_zip = write_release_zip
 
 
 def main() -> None:
